@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{63FAF70E-585F-4C24-B7EA-BC60A41A222F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E8DE31E-A245-4025-9091-194D3029CC56}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Common", "src\Google.Apis.Common\Google.Apis.Common.xproj", "{16E01144-C66A-4267-AE2C-40FECF562BBB}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Common.Tests", "src\Google.Apis.Common.Tests\Google.Apis.Common.Tests.xproj", "{911A7CDE-2F97-4D82-A25F-9DCC89ADF481}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Common.Embeddable", "..\Google.Common\src\Google.Common.Embeddable\Google.Common.Embeddable.xproj", "{939EE9F1-9F98-441B-851C-4B0F56F177BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911A7CDE-2F97-4D82-A25F-9DCC89ADF481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911A7CDE-2F97-4D82-A25F-9DCC89ADF481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911A7CDE-2F97-4D82-A25F-9DCC89ADF481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911A7CDE-2F97-4D82-A25F-9DCC89ADF481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939EE9F1-9F98-441B-851C-4B0F56F177BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939EE9F1-9F98-441B-851C-4B0F56F177BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939EE9F1-9F98-441B-851C-4B0F56F177BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939EE9F1-9F98-441B-851C-4B0F56F177BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16E01144-C66A-4267-AE2C-40FECF562BBB} = {63FAF70E-585F-4C24-B7EA-BC60A41A222F}
+		{911A7CDE-2F97-4D82-A25F-9DCC89ADF481} = {63FAF70E-585F-4C24-B7EA-BC60A41A222F}
+	EndGlobalSection
+EndGlobal
