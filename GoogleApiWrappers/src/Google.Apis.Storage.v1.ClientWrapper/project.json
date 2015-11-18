@@ -1,0 +1,16 @@
+﻿{
+  "version": "0.0.0-*",
+  "description": "Wrapper library for Google.Apis.Storage.v1",
+  "authors": [ "googleapis-packages" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "Google.Apis.Auth": "1.9.3",
+    "Google.Apis.Storage.v1": "1.9.2.490"
+  },
+  "frameworks": {
+    "dnx451": { }
+  }
+}
