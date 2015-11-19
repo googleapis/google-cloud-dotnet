@@ -35,7 +35,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         }
 
         /// <summary>
-        /// Constructs a new client by creating a <see cref="StorageService"/> for the given <see cref="BaseClientService.Initializer"/>.
+        /// Constructs a new client by creating a <see cref="StorageService"/> which uses the
+        /// given <see cref="BaseClientService.Initializer"/> for request initialization.
         /// </summary>
         /// <param name="initializer">The initializer to use in the service. Must not be null.</param>
         public StorageClient(BaseClientService.Initializer initializer) : this(new StorageService(initializer))
@@ -70,7 +71,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
         public Task<List<Bucket>> ListAllBucketsAsync(string project)
         {
-            return ListAllBucketsAsync(project, token: default(CancellationToken));
+            return ListAllBucketsAsync(project, cancellationToken: default(CancellationToken));
         }
 
         /// <summary>
@@ -81,9 +82,9 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// This does not support reporting progress, or streaming the results.
         /// </remarks>
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
-        /// <param name="token">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of all buckets within the project.</returns>
-        public async Task<List<Bucket>> ListAllBucketsAsync(string project, CancellationToken token = default(CancellationToken))
+        public async Task<List<Bucket>> ListAllBucketsAsync(string project, CancellationToken cancellationToken)
         {
             List<Bucket> result = new List<Bucket>();
             string pageToken = null;
@@ -94,7 +95,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
                 {
                     request.PageToken = pageToken;
                 }
-                var page = await request.ExecuteAsync(token).ConfigureAwait(false);
+                var page = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
                 result.AddRange(page.Items);
                 pageToken = page.NextPageToken;
             } while (pageToken != null);
