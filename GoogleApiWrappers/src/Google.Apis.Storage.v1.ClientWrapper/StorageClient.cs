@@ -69,7 +69,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// This is a convenience method for calling <see cref="ListAllBucketsAsync(string, CancellationToken)"/>.
         /// </remarks>
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
-        public Task<List<Bucket>> ListAllBucketsAsync(string project)
+        public Task<IList<Bucket>> ListAllBucketsAsync(string project)
         {
             return ListAllBucketsAsync(project, cancellationToken: default(CancellationToken));
         }
@@ -84,22 +84,47 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of all buckets within the project.</returns>
-        public async Task<List<Bucket>> ListAllBucketsAsync(string project, CancellationToken cancellationToken)
+        public async Task<IList<Bucket>> ListAllBucketsAsync(string project, CancellationToken cancellationToken)
         {
-            List<Bucket> result = new List<Bucket>();
+            // TODO: Support paging with common infrastructure.
+            var result = new List<Bucket>();
             string pageToken = null;
             do
             {
                 var request = Service.Buckets.List(project);
-                if (pageToken != null)
-                {
-                    request.PageToken = pageToken;
-                }
+                request.PageToken = pageToken;
                 var page = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
                 result.AddRange(page.Items);
                 pageToken = page.NextPageToken;
             } while (pageToken != null);
             return result;
+        }
+
+        /// <summary>
+        /// Lists the buckets for a given project, synchronously but lazily.
+        /// </summary>
+        /// <remarks>
+        /// This method fetches the buckets lazily, making requests to the underlying service
+        /// for a page of results at a time, as required. To retrieve all the buckets in a single collection,
+        /// simply call LINQ's <c>ToList()</c> method on the returned sequence.
+        /// </remarks>
+        /// <param name="project">The project to list the buckets from. Must not be null.</param>
+        /// <returns>A sequence of all buckets within the project.</returns>
+        public IEnumerable<Bucket> ListBuckets(string project)
+        {
+            // TODO: Support paging with common infrastructure.
+            string pageToken = null;
+            do
+            {
+                var request = Service.Buckets.List(project);
+                request.PageToken = pageToken;
+                var page = request.Execute();
+                foreach (var item in page.Items)
+                {
+                    yield return item;
+                }
+                pageToken = page.NextPageToken;
+            } while (pageToken != null);
         }
     }
 }
