@@ -1,0 +1,19 @@
+﻿{
+  "version": "0.0.0-*",
+  "description": "Embeddable library of commonly-used code",
+  "authors": [ "Google" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "shared": "**/*.cs",
+
+  "frameworks": {
+    "dnx451": { },
+    "dnxcore50": {
+      "dependencies": {
+        "System.Runtime": "4.0.21-beta-23516"
+      }
+    }
+  }
+}
