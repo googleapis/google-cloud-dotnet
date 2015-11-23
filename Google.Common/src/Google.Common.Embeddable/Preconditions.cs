@@ -69,5 +69,36 @@ namespace Google.Common
                 throw new InvalidOperationException(message);
             }
         }
+
+        /// <summary>
+        /// Checks that given condition is met, throwing an <see cref="InvalidOperationException"/> otherwise.
+        /// </summary>
+        /// <param name="condition">The condition to test.</param>
+        /// <param name="format">The format string to use to create the exception message if the
+        /// condition is not met.</param>
+        /// <param name="arg0">The argument to the format string.</param>
+        internal static void CheckState<T>(bool condition, string format, T arg0)
+        {
+            if (!condition)
+            {
+                throw new InvalidOperationException(string.Format(format, arg0));
+            }
+        }
+
+        /// <summary>
+        /// Checks that given condition is met, throwing an <see cref="InvalidOperationException"/> otherwise.
+        /// </summary>
+        /// <param name="condition">The condition to test.</param>
+        /// <param name="format">The format string to use to create the exception message if the
+        /// condition is not met.</param>
+        /// <param name="arg0">The first argument to the format string.</param>
+        /// <param name="arg1">The second argument to the format string.</param>
+        internal static void CheckState<T1, T2>(bool condition, string format, T1 arg0, T2 arg1)
+        {
+            if (!condition)
+            {
+                throw new InvalidOperationException(string.Format(format, arg0, arg1));
+            }
+        }
     }
 }
