@@ -1,10 +1,12 @@
+[![Build Status](https://travis-ci.org/GoogleCloudPlatform/gcloud-dotnet.svg?branch=master)](https://travis-ci.org/GoogleCloudPlatform/gcloud-dotnet)
+
 Google Cloud .NET Client
 ========================
 
-.NET client library for [Google Cloud Platform][cloud-platform] services.
+.NET client libraries for [Google Cloud Platform][cloud-platform] services.
 
 > Note: This client is a work-in-progress, and may occasionally
-> make backwards-incompatible changes.
+> make backwards-incompatible changes. The naming in particular is 
 
 Contributing
 ------------
@@ -16,11 +18,10 @@ See [CONTRIBUTING] for more information on how to get started.
 Versioning
 ----------
 
-This library follows [Semantic Versioning] (http://semver.org/).
+These libraries follow [Semantic Versioning] (http://semver.org/).
 
-It is currently in major version zero (``0.y.z``), which means that anything
-may change at any time and the public API should not be considered
-stable.
+Anything with a major version of zero (``0.y.z``) should not be
+considered stable - anything may change at any time.
 
 License
 -------
