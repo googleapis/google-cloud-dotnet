@@ -1,0 +1,15 @@
+language: csharp
+
+mono:
+  - latest
+
+install:
+  - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
+  - dnvm upgrade
+  - dnu restore
+
+script:
+  - dnu build GoogleApiWrappers\src\*
+
+
+# Currently no tests, as they're all integration tests.
