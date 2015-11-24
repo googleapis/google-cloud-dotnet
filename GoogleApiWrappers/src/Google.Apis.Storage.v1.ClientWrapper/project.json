@@ -11,6 +11,6 @@
     "Google.Apis.Storage.v1": "1.9.2.490"
   },
   "frameworks": {
-    "dnx451": { }
+    "net451": { }
   }
 }
