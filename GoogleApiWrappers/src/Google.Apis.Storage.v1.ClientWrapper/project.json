@@ -8,7 +8,11 @@
 
   "dependencies": {
     "Google.Apis.Auth": "1.9.3",
-    "Google.Apis.Storage.v1": "1.9.2.490"
+    "Google.Apis.Storage.v1": "1.9.2.490",
+    "Google.Common.Embeddable": {
+      "type": "build",
+      "version": "0.0.0-*"
+    }
   },
   "frameworks": {
     "net451": { }

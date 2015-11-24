@@ -3,6 +3,7 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Storage.v1.Data;
+using Google.Common;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -31,6 +32,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="service">The service to wrap. Must not be null.</param>
         public StorageClient(StorageService service)
         {
+            Preconditions.CheckNotNull(service, nameof(service));
             Service = service;
         }
 
@@ -39,7 +41,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// given <see cref="BaseClientService.Initializer"/> for request initialization.
         /// </summary>
         /// <param name="initializer">The initializer to use in the service. Must not be null.</param>
-        public StorageClient(BaseClientService.Initializer initializer) : this(new StorageService(initializer))
+        public StorageClient(BaseClientService.Initializer initializer)
+            : this(new StorageService(Preconditions.CheckNotNull(initializer, nameof(initializer))))
         {
         }
 
@@ -54,6 +57,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <returns>A client configured with the application-default credentials.</returns>
         public static async Task<StorageClient> FromApplicationCredentials(string applicationName)
         {
+            Preconditions.CheckNotNull(applicationName, nameof(applicationName));
             var initializer = new BaseClientService.Initializer
             {
                 HttpClientInitializer = await GoogleCredential.GetApplicationDefaultAsync(),
@@ -71,6 +75,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
         public Task<IList<Bucket>> ListAllBucketsAsync(string project)
         {
+            Preconditions.CheckNotNull(project, nameof(project));
             return ListAllBucketsAsync(project, cancellationToken: default(CancellationToken));
         }
 
@@ -86,6 +91,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <returns>A list of all buckets within the project.</returns>
         public async Task<IList<Bucket>> ListAllBucketsAsync(string project, CancellationToken cancellationToken)
         {
+            Preconditions.CheckNotNull(project, nameof(project));
             // TODO: Support paging with common infrastructure.
             var result = new List<Bucket>();
             string pageToken = null;
@@ -112,6 +118,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <returns>A sequence of all buckets within the project.</returns>
         public IEnumerable<Bucket> ListBuckets(string project)
         {
+            Preconditions.CheckNotNull(project, nameof(project));
             // TODO: Support paging with common infrastructure.
             string pageToken = null;
             do

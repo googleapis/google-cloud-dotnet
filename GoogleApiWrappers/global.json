@@ -1,5 +1,6 @@
 ﻿{
-  "projects": [ "src", "test" ],
+  "projects": [ "src", "test", "../Google.Common/src" ],
+  
   "sdk": {
     "version": "1.0.0-beta8"
   }
