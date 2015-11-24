@@ -1,0 +1,23 @@
+﻿{
+  "version": "0.0.0-*",
+  "description": "Console application to demonstrate (and test) the client wrapper library",
+  "authors": [ "googleapis-packages" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "Google.Apis.Auth": "1.9.3",
+    "Google.Apis.Storage.v1": "1.9.2.490",
+    "Google.Apis.Storage.v1.ClientWrapper": "0.0.0-*",
+    "Microsoft.Framework.CommandLineUtils.Sources": { "version": "1.0.0-*", "type": "build"}
+  },
+
+  "commands": {
+    "storage-demo": "Google.Apis.Storage.v1.Demo"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}
