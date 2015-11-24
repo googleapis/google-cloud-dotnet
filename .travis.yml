@@ -9,7 +9,7 @@ install:
   - dnu restore
 
 script:
-  - dnu build GoogleApiWrappers\src\*
+  - dnu build GoogleApiWrappers/src/*
 
 
 # Currently no tests, as they're all integration tests.
