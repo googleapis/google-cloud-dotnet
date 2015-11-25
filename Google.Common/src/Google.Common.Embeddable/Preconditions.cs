@@ -1,6 +1,13 @@
 ﻿// Copyright 2015 Google Inc. All Rights Reserved.
 // Licensed under the Apache License Version 2.0.
 
+// Note that this code file may be included directly in other projects
+// either using the DNX build system with a dependency with "type": "build",
+// or by copying and pasting. For the latter approach, developers should regularly
+// review the original code at
+// http://github.com/GoogleCloudPlatform/gcloud-dotnet/tree/master/Google.Common/src/Preconditions.cs
+// for changes.
+
 using System;
 
 namespace Google.Common
