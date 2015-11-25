@@ -6,10 +6,11 @@ mono:
 install:
   - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
   - dnvm upgrade
-  - dnu restore
+  - dnu restore --parallel
 
+# TODO: See if there's a better way of finding all test projects.
+# Note that we want to exclude integration tests; currently this is
+# performed by the convention of a suffix of ".Tests" meaning unit tests.
 script:
-  - dnu build GoogleApiWrappers/src/*
-
-
-# Currently no tests, as they're all integration tests.
+  - dnu build */src/*
+  - for project in `find . -name '*.Tests'`; do dnx -p $project test; done
