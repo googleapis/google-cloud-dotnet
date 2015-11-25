@@ -1,0 +1,19 @@
+﻿{
+  "version": "0.0.0-*",
+  "description": "Embeddable library of commonly-used code",
+  "authors": [ "Google" ],
+  "tags": [ "" ],
+  "projectUrl": "http://github.com/GoogleCloudPlatform/gcloud-dotnet",
+  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+
+  "shared": "**/*.cs",
+
+  "frameworks": {
+    "net451": { },
+    "dotnet5.4": {
+      "dependencies": {
+        "System.Runtime": "4.0.21-beta-23516"
+      }
+    }
+  }
+}
