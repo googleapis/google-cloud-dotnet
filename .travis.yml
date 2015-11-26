@@ -9,9 +9,10 @@ install:
 
 # TODO: See if there's a better way of finding all test projects.
 # Note that we want to exclude integration tests; currently this is
-# performed by the convention of a suffix of ".Tests" meaning unit tests.
+# performed by the convention of a suffix of .Tests meaning unit tests.
 script:
   - dnu restore Google.Common
   - dnu restore GoogleApiWrappers
+  - dnu restore Google.Apis.Common
   - dnu build */src/*
   - for project in `find . -name '*.Tests'`; do dnx -p $project test; done
