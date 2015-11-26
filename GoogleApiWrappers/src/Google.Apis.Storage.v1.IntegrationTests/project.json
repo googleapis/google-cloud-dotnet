@@ -9,7 +9,8 @@
   "dependencies": {
     "Google.Apis.Storage.v1.ClientWrapper": "0.0.0-*",
     "xunit": "2.1.0",
-    "xunit.runner.dnx": "2.1.0-rc1-build204"
+    "xunit.runner.dnx": "2.1.0-rc1-build204",
+    "Ix-Async": "1.2.5"
   },
 
   "commands": {

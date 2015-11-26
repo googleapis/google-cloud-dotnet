@@ -10,7 +10,11 @@
     "Google.Apis.Auth": "1.9.3",
     "Google.Apis.Storage.v1": "1.9.2.490",
     "Google.Apis.Storage.v1.ClientWrapper": "0.0.0-*",
-    "Microsoft.Framework.CommandLineUtils.Sources": { "version": "1.0.0-*", "type": "build"}
+    "Ix-Async": "1.2.5",
+    "Microsoft.Framework.CommandLineUtils.Sources": {
+      "version": "1.0.0-*",
+      "type": "build"
+    }
   },
 
   "commands": {

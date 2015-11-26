@@ -3,6 +3,7 @@
 using Google.Apis.Storage.v1.ClientWrapper;
 using Microsoft.Framework.Runtime.Common.CommandLine;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Google.Apis.Storage.v1.Demo
@@ -68,14 +69,11 @@ namespace Google.Apis.Storage.v1.Demo
             });
         }
 
-        private static async Task ListBuckets(StorageClient client, string project)
+        private static Task ListBuckets(StorageClient client, string project)
         {
-            var results = await client.ListAllBucketsAsync(project);
-            Console.WriteLine($"Buckets in {project}:");
-            foreach (var bucket in results)
-            {
-                Console.WriteLine($"  {bucket.Name}");
-            }
+            var results = client.ListBucketsAsync(project, new ListBucketsOptions { PageSize = 3 });
+            Console.WriteLine($"Buckets in {project} (3 at a time):");
+            return results.ForEachAsync(bucket => Console.WriteLine($"  {bucket.Name}"));
         }
     }
 }
