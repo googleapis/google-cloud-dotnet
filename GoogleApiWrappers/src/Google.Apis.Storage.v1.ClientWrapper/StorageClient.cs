@@ -70,13 +70,13 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// Asynchronously lists all the buckets for a given project.
         /// </summary>
         /// <remarks>
-        /// This is a convenience method for calling <see cref="ListAllBucketsAsync(string, CancellationToken)"/>.
+        /// This is a convenience method for calling <see cref="ListAllBucketsAsync(string, ListBucketsOptions, CancellationToken)"/>.
         /// </remarks>
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
         public Task<IList<Bucket>> ListAllBucketsAsync(string project)
         {
             Preconditions.CheckNotNull(project, nameof(project));
-            return ListAllBucketsAsync(project, cancellationToken: default(CancellationToken));
+            return ListAllBucketsAsync(project, null, default(CancellationToken));
         }
 
         /// <summary>
@@ -87,9 +87,11 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// This does not support reporting progress, or streaming the results.
         /// </remarks>
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case
+        /// defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of all buckets within the project.</returns>
-        public async Task<IList<Bucket>> ListAllBucketsAsync(string project, CancellationToken cancellationToken)
+        public async Task<IList<Bucket>> ListAllBucketsAsync(string project, ListBucketsOptions options, CancellationToken cancellationToken)
         {
             Preconditions.CheckNotNull(project, nameof(project));
             // TODO: Support paging with common infrastructure.
@@ -97,8 +99,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             string pageToken = null;
             do
             {
-                var request = Service.Buckets.List(project);
-                request.PageToken = pageToken;
+                BucketsResource.ListRequest request = CreateRequest(project, options, pageToken);
                 var page = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
                 result.AddRange(page.Items);
                 pageToken = page.NextPageToken;
@@ -118,13 +119,29 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <returns>A sequence of all buckets within the project.</returns>
         public IEnumerable<Bucket> ListBuckets(string project)
         {
+            return ListBuckets(project, null);
+        }
+
+        /// <summary>
+        /// Lists the buckets for a given project, synchronously but lazily.
+        /// </summary>
+        /// <remarks>
+        /// This method fetches the buckets lazily, making requests to the underlying service
+        /// for a page of results at a time, as required. To retrieve all the buckets in a single collection,
+        /// simply call LINQ's <c>ToList()</c> method on the returned sequence.
+        /// </remarks>
+        /// <param name="project">The project to list the buckets from. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case
+        /// defaults will be supplied.</param>
+        /// <returns>A sequence of all buckets within the project.</returns>
+        public IEnumerable<Bucket> ListBuckets(string project, ListBucketsOptions options)
+        {
             Preconditions.CheckNotNull(project, nameof(project));
             // TODO: Support paging with common infrastructure.
             string pageToken = null;
             do
             {
-                var request = Service.Buckets.List(project);
-                request.PageToken = pageToken;
+                var request = CreateRequest(project, options, pageToken);
                 var page = request.Execute();
                 foreach (var item in page.Items)
                 {
@@ -132,6 +149,14 @@ namespace Google.Apis.Storage.v1.ClientWrapper
                 }
                 pageToken = page.NextPageToken;
             } while (pageToken != null);
+        }
+
+        private BucketsResource.ListRequest CreateRequest(string project, ListBucketsOptions options, string pageToken)
+        {
+            var request = Service.Buckets.List(project);
+            options?.ModifyRequest(request);
+            request.PageToken = pageToken;
+            return request;
         }
     }
 }
