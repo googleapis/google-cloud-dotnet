@@ -12,7 +12,9 @@
     "Google.Common.Embeddable": {
       "type": "build",
       "version": "0.0.0-*"
-    }
+    },
+    "Google.Apis.Common": "0.0.0-*",
+    "Ix-Async": "1.2.5"
   },
   "frameworks": {
     "net451": { }
