@@ -1,6 +1,7 @@
 ﻿// Copyright 2015 Google Inc. All Rights Reserved.
 // Licensed under the Apache License Version 2.0.
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Common;
 using Google.Apis.Services;
 using Google.Apis.Storage.v1.Data;
 using Google.Common;
@@ -15,6 +16,13 @@ namespace Google.Apis.Storage.v1.ClientWrapper
     /// </summary>
     public class StorageClient
     {
+        private static readonly Paginator<Bucket, BucketsResource.ListRequest, Buckets, string> s_paginator =
+            new Paginator<Bucket, BucketsResource.ListRequest, Buckets, string>(
+                (request, token) => { request.PageToken = token; return request; },
+                buckets => buckets.NextPageToken,
+                buckets => buckets.Items,
+                null);
+
         /// <summary>
         /// The underlying storage service object used by this client.
         /// </summary>
@@ -91,20 +99,11 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of all buckets within the project.</returns>
-        public async Task<IList<Bucket>> ListAllBucketsAsync(string project, ListBucketsOptions options, CancellationToken cancellationToken)
+        public Task<IList<Bucket>> ListAllBucketsAsync(string project, ListBucketsOptions options, CancellationToken cancellationToken)
         {
             Preconditions.CheckNotNull(project, nameof(project));
-            // TODO: Support paging with common infrastructure.
-            var result = new List<Bucket>();
-            string pageToken = null;
-            do
-            {
-                BucketsResource.ListRequest request = CreateRequest(project, options, pageToken);
-                var page = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
-                result.AddRange(page.Items);
-                pageToken = page.NextPageToken;
-            } while (pageToken != null);
-            return result;
+            var initialRequest = CreateRequest(project, options);
+            return s_paginator.FetchAllAsync(initialRequest, (req, token) => req.ExecuteAsync(token), cancellationToken);
         }
 
         /// <summary>
@@ -137,25 +136,14 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public IEnumerable<Bucket> ListBuckets(string project, ListBucketsOptions options)
         {
             Preconditions.CheckNotNull(project, nameof(project));
-            // TODO: Support paging with common infrastructure.
-            string pageToken = null;
-            do
-            {
-                var request = CreateRequest(project, options, pageToken);
-                var page = request.Execute();
-                foreach (var item in page.Items)
-                {
-                    yield return item;
-                }
-                pageToken = page.NextPageToken;
-            } while (pageToken != null);
+            var initialRequest = CreateRequest(project, options);
+            return s_paginator.Fetch(initialRequest, req => req.Execute());
         }
 
-        private BucketsResource.ListRequest CreateRequest(string project, ListBucketsOptions options, string pageToken)
+        private BucketsResource.ListRequest CreateRequest(string project, ListBucketsOptions options)
         {
             var request = Service.Buckets.List(project);
             options?.ModifyRequest(request);
-            request.PageToken = pageToken;
             return request;
         }
     }
