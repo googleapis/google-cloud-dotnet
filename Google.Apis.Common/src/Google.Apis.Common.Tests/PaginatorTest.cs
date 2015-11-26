@@ -51,13 +51,6 @@ namespace Google.Apis.Common.Tests
             Assert.Equal(resource.AllItems, actual);
         }
 
-        [Theory, MemberData(nameof(AllResources))]
-        public async Task FetchAllAsync(PaginatedResource resource)
-        {
-            var actual = await PaginatedResource.Paginator.FetchAllAsync(new Request { Check = resource.RequestCheck }, resource.GetPageAsync);
-            Assert.Equal(resource.AllItems, actual);
-        }
-
         [Fact]
         public async Task Cancellation()
         {

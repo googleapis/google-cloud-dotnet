@@ -36,7 +36,7 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         [Fact]
         public async Task AllBuckets_AsyncListAll()
         {
-            var buckets = await config.Client.ListAllBucketsAsync(config.Project);
+            var buckets = await config.Client.ListBucketsAsync(config.Project).ToList(CancellationToken.None);
             ValidateBuckets(buckets);
         }
 
@@ -50,8 +50,8 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         [Fact]
         public async Task AllBuckets_PageSize4_AsyncListAll()
         {
-            var buckets = await config.Client.ListAllBucketsAsync(
-                config.Project, new ListBucketsOptions { PageSize = 4 }, CancellationToken.None);
+            var buckets = await config.Client.ListBucketsAsync(config.Project, new ListBucketsOptions { PageSize = 4 })
+                .ToList(CancellationToken.None);
             ValidateBuckets(buckets);
         }
 
@@ -68,9 +68,11 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
+            var enumerable = config.Client.ListBucketsAsync(config.Project, null);
+            var enumerator = enumerable.GetEnumerator();
+            Assert.True(await enumerator.MoveNext(cts.Token));
             cts.Cancel();
-            await Assert.ThrowsAnyAsync<OperationCanceledException>
-                (async () => await config.Client.ListAllBucketsAsync(config.Project, null, cts.Token));
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await enumerator.MoveNext(cts.Token));
         }
 
         private void ValidateBuckets(IEnumerable<Bucket> buckets)
