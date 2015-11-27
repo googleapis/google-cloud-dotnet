@@ -19,9 +19,6 @@ namespace Google.Apis.Storage.v1.IntegrationTests
     public class ListBucketsTest
     {
         // TODO:
-        // - Test actual pagination when we can set the page size
-        // - Test searching likewise
-        // - Test async lazy listing when we have that
         // - Automate creating the buckets etc
 
         private readonly CloudConfiguration config = CloudConfiguration.Instance;
@@ -59,6 +56,15 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         public void Prefix_SyncList()
         {
             var buckets = config.Client.ListBuckets(config.Project,
+                new ListBucketsOptions { Prefix = config.TempBucketPrefix + "e" }).ToList();
+            Assert.Equal(1, buckets.Count);
+            Assert.Equal(config.TempBucketPrefix + "extra", buckets[0].Name);
+        }
+
+        [Fact]
+        public async Task Prefix_AsyncSyncList()
+        {
+            var buckets = await config.Client.ListBucketsAsync(config.Project,
                 new ListBucketsOptions { Prefix = config.TempBucketPrefix + "e" }).ToList();
             Assert.Equal(1, buckets.Count);
             Assert.Equal(config.TempBucketPrefix + "extra", buckets[0].Name);

@@ -1,5 +1,6 @@
 ﻿// Copyright 2015 Google Inc. All Rights Reserved.
 // Licensed under the Apache License Version 2.0.
+
 using Google.Apis.Common;
 using Google.Apis.Storage.v1.Data;
 using Google.Common;
@@ -13,27 +14,28 @@ namespace Google.Apis.Storage.v1.ClientWrapper
     // ListBuckets methods on StorageClient
     public partial class StorageClient
     {
-        private static readonly Paginator<Bucket, BucketsResource.ListRequest, Buckets, string> s_paginator =
+        private static readonly Paginator<Bucket, BucketsResource.ListRequest, Buckets, string> s_bucketPaginator =
             new Paginator<Bucket, BucketsResource.ListRequest, Buckets, string>(
                 (request, token) => { request.PageToken = token; return request; },
                 buckets => buckets.NextPageToken,
-                buckets => buckets.Items,
+                buckets => buckets.Items ?? Enumerable.Empty<Bucket>(),
                 null);
 
         /// <summary>
-        /// Asynchronously lists all the buckets for a given project.
+        /// Asynchronously lists the buckets in a given project, returning the results as a list.
         /// </summary>
         /// <remarks>
         /// This is a convenience method for calling <see cref="ListAllBucketsAsync(string, ListBucketsOptions, CancellationToken)"/>.
         /// </remarks>
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
+        /// <returns>A list of buckets within the project.</returns>
         public Task<IList<Bucket>> ListAllBucketsAsync(string project)
         {
             return ListAllBucketsAsync(project, null, default(CancellationToken));
         }
 
         /// <summary>
-        /// Asynchronously lists all the buckets for a given project.
+        /// Asynchronously lists the buckets in a given project, returning the results as a list.
         /// </summary>
         /// <remarks>
         /// This lists all the buckets within a project before the returned task completes.
@@ -43,7 +45,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A list of all buckets within the project.</returns>
+        /// <returns>A list of buckets within the project.</returns>
         public async Task<IList<Bucket>> ListAllBucketsAsync(string project, ListBucketsOptions options, CancellationToken cancellationToken)
         {
             return await ListBucketsAsync(project, options).ToList(cancellationToken);
@@ -73,12 +75,12 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
-        /// <returns>A list of all buckets within the project.</returns>
+        /// <returns>An asynchronous sequence of buckets within the project.</returns>
         public IAsyncEnumerable<Bucket> ListBucketsAsync(string project, ListBucketsOptions options)
         {
             Preconditions.CheckNotNull(project, nameof(project));
             var initialRequest = CreateListBucketsRequest(project, options);
-            return s_paginator.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
+            return s_bucketPaginator.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
         }
 
         /// <summary>
@@ -90,7 +92,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// simply call LINQ's <c>ToList()</c> method on the returned sequence.
         /// </remarks>
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
-        /// <returns>A sequence of all buckets within the project.</returns>
+        /// <returns>A sequence of buckets within the project.</returns>
         public IEnumerable<Bucket> ListBuckets(string project)
         {
             return ListBuckets(project, null);
@@ -107,12 +109,12 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="project">The project to list the buckets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
-        /// <returns>A sequence of all buckets within the project.</returns>
+        /// <returns>A sequence of buckets within the project.</returns>
         public IEnumerable<Bucket> ListBuckets(string project, ListBucketsOptions options)
         {
             Preconditions.CheckNotNull(project, nameof(project));
             var initialRequest = CreateListBucketsRequest(project, options);
-            return s_paginator.Fetch(initialRequest, req => req.Execute());
+            return s_bucketPaginator.Fetch(initialRequest, req => req.Execute());
         }
 
         private BucketsResource.ListRequest CreateListBucketsRequest(string project, ListBucketsOptions options)
