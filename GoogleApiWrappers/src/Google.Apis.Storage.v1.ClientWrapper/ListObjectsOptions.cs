@@ -4,14 +4,23 @@
 namespace Google.Apis.Storage.v1.ClientWrapper
 {
     /// <summary>
-    /// Options for <c>ListBuckets</c> operations.
+    /// Options for <c>ListObjects</c> operations.
     /// </summary>
-    public class ListBucketsOptions
+    public class ListObjectsOptions
     {
         /// <summary>
-        /// The prefix to match. Only buckets with names that start with this string will be returned.
+        /// The prefix to match. Only objects with names that start with this string will be returned.
         /// </summary>
         public string Prefix { get; set; }
+
+        // TODO: We can't currently return both objects *and* prefixes. Should we have a separate ListPrefixes method?
+        // Something more complex? It's unclear how common this is.
+
+        /// <summary>
+        /// Used to list in "directory mode". Only objects whose names (aside from the prefix) do not contain delimiter
+        /// will be returned.
+        /// </summary>
+        public string Delimiter { get; set; }
 
         /// <summary>
         /// The number of results to return per page. (This modifies the per-request page size;
@@ -23,7 +32,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>
-        internal void ModifyRequest(BucketsResource.ListRequest request)
+        internal void ModifyRequest(ObjectsResource.ListRequest request)
         {
             if (Prefix != null)
             {
@@ -32,6 +41,10 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             if (PageSize != null)
             {
                 request.MaxResults = PageSize.Value;
+            }
+            if (Delimiter != null)
+            {
+                request.Delimiter = Delimiter;
             }
         }
     }
