@@ -21,72 +21,59 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         // TODO:
         // - Automate creating the buckets etc
 
-        private readonly CloudConfiguration config = CloudConfiguration.Instance;
+        private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
 
-        [Fact]
-        public void AllBuckets_SyncList()
+        private static readonly string s_extraBucket = s_config.TempBucketPrefix + "extra";
+        private static readonly string[] s_allKnownBuckets = Enumerable
+                .Range(0, 10)
+                .Select(x => s_config.TempBucketPrefix + x)
+                .Concat(new[] { s_extraBucket })
+                .ToArray();
+
+        [Theory]
+        [InlineData(null, null)]
+        [InlineData(null, "integ")]
+        [InlineData(4, null)]
+        public async Task AllBuckets(int? pageSize, string prefix)
         {
-            var buckets = config.Client.ListBuckets(config.Project);
-            ValidateBuckets(buckets);
+            var options = new ListBucketsOptions { PageSize = pageSize, Prefix = prefix };
+            await AssertBuckets(options, s_allKnownBuckets);
         }
 
         [Fact]
-        public async Task AllBuckets_AsyncListAll()
+        public async Task Prefix()
         {
-            var buckets = await config.Client.ListAllBucketsAsync(config.Project);
-            ValidateBuckets(buckets);
-        }
-
-        [Fact]
-        public void AllBuckets_PageSize4_SyncList()
-        {
-            var buckets = config.Client.ListBuckets(config.Project, new ListBucketsOptions { PageSize = 4 });
-            ValidateBuckets(buckets);
-        }
-
-        [Fact]
-        public async Task AllBuckets_PageSize4_AsyncListAll()
-        {
-            var buckets = await config.Client.ListAllBucketsAsync(
-                config.Project, new ListBucketsOptions { PageSize = 4 }, CancellationToken.None);
-            ValidateBuckets(buckets);
-        }
-
-        [Fact]
-        public void Prefix_SyncList()
-        {
-            var buckets = config.Client.ListBuckets(config.Project,
-                new ListBucketsOptions { Prefix = config.TempBucketPrefix + "e" }).ToList();
-            Assert.Equal(1, buckets.Count);
-            Assert.Equal(config.TempBucketPrefix + "extra", buckets[0].Name);
-        }
-
-        [Fact]
-        public async Task Prefix_AsyncSyncList()
-        {
-            var buckets = await config.Client.ListBucketsAsync(config.Project,
-                new ListBucketsOptions { Prefix = config.TempBucketPrefix + "e" }).ToList();
-            Assert.Equal(1, buckets.Count);
-            Assert.Equal(config.TempBucketPrefix + "extra", buckets[0].Name);
+            var options = new ListBucketsOptions { Prefix = s_config.TempBucketPrefix + "e" };
+            await AssertBuckets(options, s_extraBucket);
         }
 
         [Fact]
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
+            var enumerable = s_config.Client.ListBucketsAsync(s_config.Project, null);
+            var enumerator = enumerable.GetEnumerator();
+            Assert.True(await enumerator.MoveNext(cts.Token));
             cts.Cancel();
-            await Assert.ThrowsAnyAsync<OperationCanceledException>
-                (async () => await config.Client.ListAllBucketsAsync(config.Project, null, cts.Token));
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await enumerator.MoveNext(cts.Token));
         }
 
-        private void ValidateBuckets(IEnumerable<Bucket> buckets)
+        // Fetches buckets using the given options in each possible way, validating that the expected bucket names are returned.
+        private async Task AssertBuckets(ListBucketsOptions options, params string[] expectedBucketNames)
         {
-            var names = buckets.Select(b => b.Name).ToList();
-            for (int i = 0; i < 9; i++)
-            {
-                Assert.Contains(config.TempBucketPrefix + i, names);
-            }
-            Assert.Contains(config.TempBucketPrefix + "extra", names);
+            IEnumerable<Bucket> actual = s_config.Client.ListBuckets(s_config.Project, options);
+            AssertBucketNames(actual, expectedBucketNames);
+            actual = await s_config.Client.ListAllBucketsAsync(s_config.Project, options, CancellationToken.None);
+            AssertBucketNames(actual, expectedBucketNames);
+            actual = await s_config.Client.ListBucketsAsync(s_config.Project, options).ToList(CancellationToken.None);
+            AssertBucketNames(actual, expectedBucketNames);
+        }
+
+        private void AssertBucketNames(IEnumerable<Bucket> actualBuckets, string[] expectedNames)
+        {
+            // Intersection with known buckets to avoid non-test buckets causing issues.
+            var actualNames = actualBuckets.Select(b => b.Name).Intersect(s_allKnownBuckets).OrderBy(x => x).ToList();
+            Assert.Equal(expectedNames.OrderBy(x => x), actualNames);
         }
     }
 }
