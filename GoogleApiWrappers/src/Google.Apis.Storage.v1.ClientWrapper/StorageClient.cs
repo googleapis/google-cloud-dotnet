@@ -6,6 +6,7 @@ using Google.Apis.Services;
 using Google.Apis.Storage.v1.Data;
 using Google.Common;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -99,11 +100,43 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of all buckets within the project.</returns>
-        public Task<IList<Bucket>> ListAllBucketsAsync(string project, ListBucketsOptions options, CancellationToken cancellationToken)
+        public async Task<IList<Bucket>> ListAllBucketsAsync(string project, ListBucketsOptions options, CancellationToken cancellationToken)
+        {
+            Preconditions.CheckNotNull(project, nameof(project));
+            return await ListBucketsAsync(project, options).ToList(cancellationToken);
+        }
+
+        /// <summary>
+        /// Asynchronously lists the buckets for a given project.
+        /// </summary>
+        /// <remarks>
+        /// This lists the buckets within a project asynchronously and lazily.
+        /// </remarks>
+        /// <remarks>
+        /// This is a convenience method for calling <see cref="ListAllBucketsAsync(string, ListBucketsOptions, CancellationToken)"/>.
+        /// </remarks>
+        /// <param name="project">The project to list the buckets from. Must not be null.</param>
+        public IAsyncEnumerable<Bucket> ListBucketsAsync(string project)
+        {
+            Preconditions.CheckNotNull(project, nameof(project));
+            return ListBucketsAsync(project, null);
+        }
+
+        /// <summary>
+        /// Asynchronously lists the buckets for a given project.
+        /// </summary>
+        /// <remarks>
+        /// This lists the buckets within a project asynchronously and lazily.
+        /// </remarks>
+        /// <param name="project">The project to list the buckets from. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case
+        /// defaults will be supplied.</param>
+        /// <returns>A list of all buckets within the project.</returns>
+        public IAsyncEnumerable<Bucket> ListBucketsAsync(string project, ListBucketsOptions options)
         {
             Preconditions.CheckNotNull(project, nameof(project));
             var initialRequest = CreateRequest(project, options);
-            return s_paginator.FetchAllAsync(initialRequest, (req, token) => req.ExecuteAsync(token), cancellationToken);
+            return s_paginator.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
         }
 
         /// <summary>
