@@ -113,37 +113,6 @@ namespace Google.Apis.Common
             });
         }
 
-        /// <summary>
-        /// Eagerly (but asynchronously) fetches a complete set of resources, potentially making multiple requests.
-        /// </summary>
-        /// <param name="initialRequest">The initial request to send. If this contains a page token,
-        /// that token is maintained. This is also passed to the request provider along with a token
-        /// to provide another request. (The provider may build a new object, or modify the existing request.)</param>
-        /// <param name="responseFetcher">A function to asynchronously fetch a response containing a
-        /// page of results given a request. Must not be null.</param>
-        /// <returns>A sequence of resources, which are fetched asynchronously and a page at a time.</returns>
-        /// <param name="cancellationToken"></param>
-        /// <returns>A task </returns>
-        public async Task<IList<TResource>> FetchAllAsync(
-            TRequest initialRequest,
-            Func<TRequest, CancellationToken, Task<TResponse>> responseFetcher,
-            CancellationToken cancellationToken = default(CancellationToken))
-        {
-            Preconditions.CheckNotNull(responseFetcher, nameof(responseFetcher));
-            List<TResource> results = new List<TResource>();
-            TToken token;
-            TRequest nextRequest = initialRequest;
-            do
-            {
-                cancellationToken.ThrowIfCancellationRequested();
-                TResponse response = await responseFetcher(nextRequest, cancellationToken).ConfigureAwait(false);
-                token = _tokenExtractor(response);
-                nextRequest = _requestProvider(initialRequest, token);
-                results.AddRange(_resourceExtractor(response));
-            } while (!IsEmptyToken(token));
-            return results;
-        }
-
         private bool IsEmptyToken(TToken token)
         {
             return EqualityComparer<TToken>.Default.Equals(token, _emptyToken);
