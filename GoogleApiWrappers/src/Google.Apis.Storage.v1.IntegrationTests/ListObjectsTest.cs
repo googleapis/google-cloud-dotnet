@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Apis.Storage.v1.IntegrationTests
 {
@@ -17,99 +18,58 @@ namespace Google.Apis.Storage.v1.IntegrationTests
     // - Bucket called "integrationtests-0" containing the objects listed in s_expectedObjects.
     public class ListObjectsTest
     {
-        private static readonly string[] s_expectedObjectNames =
+        private static readonly string[] s_allObjectNames =
             { "foo.txt", "bar.txt", "a/", "a/o1.txt", "a/o2.txt", "a/x/", "a/x/o3.txt", "a/x/o4.txt", "b/", "b/o5.txt" };
 
-        private readonly CloudConfiguration config = CloudConfiguration.Instance;
-        private readonly string bucket;
+        private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
+        private static readonly string s_bucket = s_config.TempBucketPrefix + "0";
 
-        public ListObjectsTest()
+        [Theory]
+        [InlineData(null)]
+        [InlineData(4)]
+        public async Task AllObjects(int? pageSize)
         {
-            bucket = config.TempBucketPrefix + "0";
-        }
-
-        [Fact]
-        public void AllObjects_SyncList()
-        {
-            var objects = config.Client.ListObjects(bucket);
-            ValidateObjects(objects, s_expectedObjectNames);
-        }
-
-        [Fact]
-        public async Task AllObjects_AsyncListAll()
-        {
-            var objects = await config.Client.ListAllObjectsAsync(bucket);
-            ValidateObjects(objects, s_expectedObjectNames);
-        }
-
-        [Fact]
-        public void AllObjects_PageSize4_SyncList()
-        {
-            var objects = config.Client.ListObjects(bucket, new ListObjectsOptions { PageSize = 4 });
-            ValidateObjects(objects, s_expectedObjectNames);
-        }
-
-        [Fact]
-        public async Task AllObjects_PageSize4_AsyncListAll()
-        {
-            var objects = await config.Client.ListAllObjectsAsync(
-                bucket, new ListObjectsOptions { PageSize = 4 }, CancellationToken.None);
-            ValidateObjects(objects, s_expectedObjectNames);
-        }
-
-        [Fact]
-        public void Prefix_SyncList()
-        {
-            var objects = config.Client.ListObjects(bucket,
-                new ListObjectsOptions { Prefix = "fo" }).ToList();
-            ValidateObjects(objects, new[] { "foo.txt" });
-        }
-
-        [Fact]
-        public async Task Prefix_AsyncList()
-        {
-            var objects = await config.Client.ListObjectsAsync(bucket,
-                new ListObjectsOptions { Prefix = "fo" }).ToList();
-            ValidateObjects(objects, new[] { "foo.txt" });
+            var options = new ListObjectsOptions { PageSize = pageSize };
+            await AssertObjects(options, s_allObjectNames);
         }
 
         [Theory]
         [InlineData(null, "foo.txt,bar.txt")]
+        [InlineData("fo", "foo.txt")]
         [InlineData("a/", "a/,a/o1.txt,a/o2.txt")]
         [InlineData("a/x/", "a/x/,a/x/o3.txt,a/x/o4.txt")]
         [InlineData("missing/", "")]
-        public void PrefixAndDelimiter_SyncList(string prefix, string expectedNames)
+        public async Task PrefixAndDelimiter(string prefix, string expectedNames)
         {
-            var objects = config.Client.ListObjects(bucket,
-                new ListObjectsOptions { Prefix = prefix, Delimiter = "/" }).ToList();
-            ValidateObjects(objects, expectedNames.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
-        }
-
-        [Theory]
-        [InlineData(null, "foo.txt,bar.txt")]
-        [InlineData("a/", "a/,a/o1.txt,a/o2.txt")]
-        [InlineData("a/x/", "a/x/,a/x/o3.txt,a/x/o4.txt")]
-        [InlineData("missing/", "")]
-        public async Task PrefixAndDelimiter_AsyncList(string prefix, string expectedNames)
-        {
-            var objects = await config.Client.ListObjectsAsync(bucket,
-                new ListObjectsOptions { Prefix = prefix, Delimiter = "/" }).ToList();
-            ValidateObjects(objects, expectedNames.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+            var options = new ListObjectsOptions { Delimiter = "/", Prefix = prefix };
+            await AssertObjects(options, expectedNames.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
         }
 
         [Fact]
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
+            var enumerable = s_config.Client.ListObjectsAsync(s_bucket, null);
+            var enumerator = enumerable.GetEnumerator();
+            Assert.True(await enumerator.MoveNext(cts.Token));
             cts.Cancel();
-            await Assert.ThrowsAnyAsync<OperationCanceledException>
-                (async () => await config.Client.ListAllObjectsAsync(bucket, null, cts.Token));
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await enumerator.MoveNext(cts.Token));
         }
 
-        private void ValidateObjects(IEnumerable<Google.Apis.Storage.v1.Data.Object> objects, IEnumerable<string> expectedNames)
+        private async Task AssertObjects(ListObjectsOptions options, string[] expectedNames)
         {
-            var names = objects.Select(b => b.Name).OrderBy(x => x).ToList();
-            Assert.Equal(expectedNames.OrderBy(x => x), names);
+            var actual = s_config.Client.ListObjects(s_bucket, options);
+            AssertObjectNames(actual, expectedNames);
+            actual = await s_config.Client.ListAllObjectsAsync(s_bucket, options, CancellationToken.None);
+            AssertObjectNames(actual, expectedNames);
+            actual = await s_config.Client.ListObjectsAsync(s_bucket, options).ToList(CancellationToken.None);
+            AssertObjectNames(actual, expectedNames);
+        }
+
+        private void AssertObjectNames(IEnumerable<Object> actualObjects, string[] expectedNames)
+        {
+            var actualNames = actualObjects.Select(x => x.Name).OrderBy(x => x).ToList();
+            Assert.Equal(expectedNames.OrderBy(x => x), actualNames);
         }
     }
 }
