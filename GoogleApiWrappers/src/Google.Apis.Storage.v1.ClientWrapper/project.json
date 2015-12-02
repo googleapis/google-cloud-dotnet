@@ -14,6 +14,7 @@
       "version": "0.0.0-*"
     },
     "Google.Apis.Common": "0.0.0-*",
+    "Google.Apis.Core": "1.9.3",
     "Ix-Async": "1.2.5"
   },
   "frameworks": {
