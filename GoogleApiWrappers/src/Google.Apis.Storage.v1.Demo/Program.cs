@@ -4,6 +4,7 @@ using Google.Apis.Download;
 using Google.Apis.Storage.v1.ClientWrapper;
 using Microsoft.Framework.Runtime.Common.CommandLine;
 using System;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -101,13 +102,17 @@ namespace Google.Apis.Storage.v1.Demo
             return results.ForEachAsync(obj => Console.WriteLine($"  {obj.Name}"));
         }
 
-        private static Task DownloadObject(StorageClient client, string bucket, string source, string destination)
+        private static async Task DownloadObject(StorageClient client, string bucket, string source, string destination)
         {
-            var progress = new Progress<IDownloadProgress>(
-                p => Console.WriteLine($"Downloaded {p.BytesDownloaded} bytes; status: {p.Status}"));
-            return client.DownloadObjectAsync(bucket, source, destination,
-                new DownloadObjectOptions { ChunkSize = 256 * 1024 },
-                CancellationToken.None, progress);
+            using (var output = File.Create(destination))
+            {
+                var progress = new Progress<IDownloadProgress>(
+                    p => Console.WriteLine($"Downloaded {p.BytesDownloaded} bytes; status: {p.Status}"));
+
+                await client.DownloadObjectAsync(bucket, source, output,
+                    new DownloadObjectOptions { ChunkSize = 256 * 1024 },
+                    CancellationToken.None, progress);
+            }
         }
     }
 }

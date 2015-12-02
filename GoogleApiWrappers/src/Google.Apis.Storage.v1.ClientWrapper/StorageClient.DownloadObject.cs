@@ -16,47 +16,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         // Note: documentation will be provided when we've worked out if we really want 16 methods here.
         // See issue #21.
 
-        public void DownloadObject(string bucket, string sourceName, string targetPath)
-        {
-            DownloadObject(bucket, sourceName, targetPath, options: null, progress: null);
-        }
-
-        public void DownloadObject(
-            string bucket,
-            string sourceName,
-            string targetPath,
-            DownloadObjectOptions options,
-            IProgress<IDownloadProgress> progress)
-        {
-            string uri = GetUri(bucket, sourceName);
-            targetPath.CheckNotNull(nameof(targetPath));
-            using (var destination = File.Create(targetPath))
-            {
-                DownloadObject(bucket, sourceName, destination, options, progress);
-            }
-        }
-
-        public Task DownloadObjectAsync(string bucket, string sourceName, string targetPath)
-        {
-            return DownloadObjectAsync(bucket, sourceName, targetPath, options: null, cancellationToken: CancellationToken.None, progress: null);
-        }
-
-        public async Task DownloadObjectAsync(
-            string bucket,
-            string sourceName,
-            string targetPath,
-            DownloadObjectOptions options,
-            CancellationToken cancellationToken,
-            IProgress<IDownloadProgress> progress)
-        {
-            string uri = GetUri(bucket, sourceName);
-            targetPath.CheckNotNull(nameof(targetPath));
-            using (var destination = File.Create(targetPath))
-            {
-                await DownloadObjectAsync(bucket, sourceName, destination);
-            }
-        }
-
         public void DownloadObject(string bucket, string sourceName, Stream destination)
         {
             DownloadObject(bucket, sourceName, destination, options: null, progress: null);
@@ -89,48 +48,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         {
             string uri = GetUri(bucket, sourceName);
             return DownloadObjectAsyncImpl(uri, destination, options, cancellationToken, progress);
-        }
-
-        public void DownloadObject(Object source, string targetPath)
-        {
-            DownloadObject(source, targetPath, options: null, progress: null);
-        }
-
-        public void DownloadObject(
-            Object source,
-            string targetPath,
-            DownloadObjectOptions options,
-            IProgress<IDownloadProgress> progress)
-        {
-            string uri = GetUri(source);
-            targetPath.CheckNotNull(nameof(targetPath));
-            using (var destination = File.Create(targetPath))
-            {
-                DownloadObject(source, destination, options, progress);
-            }
-        }
-
-        public Task DownloadObjectAsync(Object source, string targetPath)
-        {
-            return DownloadObjectAsync(source, targetPath,
-                options: null, cancellationToken: CancellationToken.None, progress: null);
-        }
-
-        public async Task DownloadObjectAsync(
-            Object source,
-            string targetPath,
-            DownloadObjectOptions options,
-            CancellationToken cancellationToken,
-            IProgress<IDownloadProgress> progress)
-        {
-            // Note: duplicate checks here so that we don't create the file
-            // *before* finding that the source/targetPath is null
-            string uri = GetUri(source);
-            targetPath.CheckNotNull(nameof(targetPath));
-            using (var destination = File.Create(targetPath))
-            {
-                await DownloadObjectAsyncImpl(uri, destination, options, cancellationToken, progress);
-            }
         }
 
         public Task DownloadObjectAsync(Object source, Stream destination)
@@ -196,7 +113,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         {
             // URI will definitely not be null; that's constructed internally.
             destination.CheckNotNull(nameof(destination));
-            Console.WriteLine($"Downloading {uri}");
             var downloader = new MediaDownloader(Service);
             options?.ModifyDownloader(downloader);
             if (progress != null)
@@ -229,7 +145,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
                 progress.Report(InitialDownloadProgress.Instance);
             }
             var result = await downloader.DownloadAsync(uri, destination, cancellationToken).ConfigureAwait(false);
-            Console.WriteLine(result.Status);
             if (result.Status == DownloadStatus.Failed)
             {
                 throw result.Exception;
