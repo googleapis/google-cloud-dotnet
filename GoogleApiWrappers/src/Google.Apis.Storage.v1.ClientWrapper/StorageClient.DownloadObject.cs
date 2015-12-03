@@ -87,9 +87,9 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// </summary>
         private static string GetUri(string bucket, string sourceName)
         {
-            bucket.CheckNotNull(nameof(bucket));
+            ValidateBucket(bucket);
             sourceName.CheckNotNull(nameof(sourceName));
-            return $"https://www.googleapis.com/download/storage/v1/b/{Uri.EscapeDataString(bucket)}/o/{Uri.EscapeDataString(sourceName)}?alt=media";
+            return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(sourceName)}?alt=media";
         }
 
         /// <summary>

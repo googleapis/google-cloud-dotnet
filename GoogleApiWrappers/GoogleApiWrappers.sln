@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AC0CC83C-0448-419E-914E-E63036A77BD9}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Common.Embeddable", "..\Google.Common\src\Google.Common.Embeddable\Google.Common.Embeddable.xproj", "{939EE9F1-9F98-441B-851C-4B0F56F177BD}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Common", "..\Google.Apis.Common\src\Google.Apis.Common\Google.Apis.Common.xproj", "{16E01144-C66A-4267-AE2C-40FECF562BBB}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Storage.v1.Tests", "src\Google.Apis.Storage.v1.Tests\Google.Apis.Storage.v1.Tests.xproj", "{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +61,6 @@ Global
 		{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
 		{2BB8D957-102E-46BB-8EB4-5F29FBC1EA9D} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
 		{077DDB17-CF46-4285-8853-D9AE576320F5} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
+		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
 	EndGlobalSection
 EndGlobal
