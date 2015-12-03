@@ -79,7 +79,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <returns>An asynchronus sequence of objects within the bucket.</returns>
         public IAsyncEnumerable<Object> ListObjectsAsync(string bucket, ListObjectsOptions options)
         {
-            Preconditions.CheckNotNull(bucket, nameof(bucket));
             var initialRequest = CreateListObjectsRequest(bucket, options);
             return s_objectPaginator.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
         }
@@ -113,13 +112,13 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <returns>A sequence of objects within the bucket.</returns>
         public IEnumerable<Object> ListObjects(string bucket, ListObjectsOptions options)
         {
-            Preconditions.CheckNotNull(bucket, nameof(bucket));
             var initialRequest = CreateListObjectsRequest(bucket, options);
             return s_objectPaginator.Fetch(initialRequest, req => req.Execute());
         }
 
         private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, ListObjectsOptions options)
         {
+            ValidateBucket(bucket);
             var request = Service.Objects.List(bucket);
             options?.ModifyRequest(request);
             return request;

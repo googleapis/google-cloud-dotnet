@@ -4,9 +4,7 @@
 using Google.Apis.Download;
 using Google.Apis.Storage.v1.ClientWrapper;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -83,6 +81,12 @@ namespace Google.Apis.Storage.v1.IntegrationTests
                     cts.Token,
                     progress));
             }
+        }
+
+        [Fact]
+        public void DownloadObjectFromInvalidBucket()
+        {
+            Assert.Throws<ArgumentException>(() => s_config.Client.DownloadObject("!!!", s_name, new MemoryStream()));
         }
     }
 }

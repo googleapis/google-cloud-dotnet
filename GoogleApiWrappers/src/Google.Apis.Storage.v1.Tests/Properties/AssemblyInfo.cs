@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Google.Apis.Storage.v1.ClientWrapper")]
+[assembly: AssemblyTitle("Google.Apis.Storage.v1.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Google.Apis.Storage.v1.ClientWrapper")]
+[assembly: AssemblyProduct("Google.Apis.Storage.v1.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,6 +20,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e8814844-5fa9-4f2b-aead-e7ce427de48a")]
-
-[assembly: InternalsVisibleTo("Google.Apis.Storage.v1.Tests")]
+[assembly: Guid("c9b4d3e8-47c4-4498-beff-276060d1ea13")]
