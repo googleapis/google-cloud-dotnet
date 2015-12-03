@@ -12,11 +12,6 @@ using Xunit;
 
 namespace Google.Apis.Storage.v1.IntegrationTests
 {
-    // Preconditions:
-    // - Logged in locally with gcloud auth
-    // - Environment variable TEST_PROJECT identifies an existing project
-    // - One bucket called "integrationtests-1" containing a "large" file (more than 10K)
-    //   folder/sampledata.txt beginning with "START" and ending with "END".
     public class DownloadObjectTest
     {
         private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;

@@ -12,16 +12,8 @@ using Xunit;
 
 namespace Google.Apis.Storage.v1.IntegrationTests
 {
-    // Preconditions:
-    // - Logged in locally with gcloud auth
-    // - Environment variable TEST_PROJECT identifies an existing project
-    // - Buckets exist called "integrationtests-0", "integrationtests-1" etc.
-    // - One bucket called "integrationtests-extra"
     public class ListBucketsTest
     {
-        // TODO:
-        // - Automate creating the buckets etc
-
         private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
 
         private static readonly string s_extraBucket = s_config.TempBucketPrefix + "extra";
@@ -33,11 +25,11 @@ namespace Google.Apis.Storage.v1.IntegrationTests
 
         [Theory]
         [InlineData(null, null)]
-        [InlineData(null, "integ")]
+        [InlineData(null, "_integ")]
         [InlineData(4, null)]
         public async Task AllBuckets(int? pageSize, string prefix)
         {
-            var options = new ListBucketsOptions { PageSize = pageSize, Prefix = prefix };
+            var options = new ListBucketsOptions { PageSize = pageSize, Prefix = s_config.Project + prefix };
             await AssertBuckets(options, s_allKnownBuckets);
         }
 
