@@ -12,14 +12,10 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Apis.Storage.v1.IntegrationTests
 {
-    // Preconditions:
-    // - Logged in locally with gcloud auth
-    // - Environment variable TEST_PROJECT identifies an existing project
-    // - Bucket called "integrationtests-0" containing the objects listed in s_expectedObjects.
     public class ListObjectsTest
     {
         private static readonly string[] s_allObjectNames =
-            { "foo.txt", "bar.txt", "a/", "a/o1.txt", "a/o2.txt", "a/x/", "a/x/o3.txt", "a/x/o4.txt", "b/", "b/o5.txt" };
+            { "foo.txt", "bar.txt", "a/o1.txt", "a/o2.txt", "a/x/o3.txt", "a/x/o4.txt", "b/o5.txt" };
 
         private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
         private static readonly string s_bucket = s_config.TempBucketPrefix + "0";
@@ -36,8 +32,8 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         [Theory]
         [InlineData(null, "foo.txt,bar.txt")]
         [InlineData("fo", "foo.txt")]
-        [InlineData("a/", "a/,a/o1.txt,a/o2.txt")]
-        [InlineData("a/x/", "a/x/,a/x/o3.txt,a/x/o4.txt")]
+        [InlineData("a/", "a/o1.txt,a/o2.txt")]
+        [InlineData("a/x/", "a/x/o3.txt,a/x/o4.txt")]
         [InlineData("missing/", "")]
         public async Task PrefixAndDelimiter(string prefix, string expectedNames)
         {

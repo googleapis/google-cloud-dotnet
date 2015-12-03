@@ -19,13 +19,14 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         internal static CloudConfiguration Instance { get; } = FromEnvironmentVariables();
 
         internal string Project { get; }
-        internal string TempBucketPrefix { get; } = "integrationtests-";
+        internal string TempBucketPrefix { get; }
         internal StorageClient Client { get; }
 
         private CloudConfiguration(string project)
         {
             Project = project;
             Client = Task.Run(async () => await StorageClient.FromApplicationCredentials("Test")).Result;
+            TempBucketPrefix = Project + "_integrationtests-";
         }
 
         private static CloudConfiguration FromEnvironmentVariables()
