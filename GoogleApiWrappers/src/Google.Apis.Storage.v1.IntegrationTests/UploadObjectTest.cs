@@ -95,7 +95,7 @@ namespace Google.Apis.Storage.v1.IntegrationTests
 
             // When we ask for the first generation, we get the original data back.
             var firstGenerationData = new MemoryStream();
-            s_config.Client.DownloadObject(firstVersion, firstGenerationData);
+            s_config.Client.DownloadObject(firstVersion, firstGenerationData, new DownloadObjectOptions { Generation = firstVersion.Generation }, null);
             Assert.Equal(source1.ToArray(), firstGenerationData.ToArray());
         }
 

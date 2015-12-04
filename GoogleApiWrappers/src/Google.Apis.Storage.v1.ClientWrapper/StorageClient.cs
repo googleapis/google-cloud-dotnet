@@ -97,12 +97,12 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         {
             obj.CheckNotNull(paramName);
             Preconditions.CheckArgument(
-                obj.Name != null && obj.Bucket != null && obj.ContentType != null,
+                obj.Name != null && obj.Bucket != null,
                 paramName,
-                "Destination object must have a name, bucket and content type");
+                "Object must have a name and bucket");
             Preconditions.CheckArgument(ValidBucketName.IsMatch(obj.Bucket),
                 paramName,
-                "Destination bucket '{0}' is invalid", obj.Bucket);
+                "Object bucket '{0}' is invalid", obj.Bucket);
         }
     }
 }

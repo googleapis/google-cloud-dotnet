@@ -40,8 +40,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             DownloadObjectOptions options,
             IProgress<IDownloadProgress> progress)
         {
-            string uri = GetUri(bucket, objectName);
-            DownloadObjectImpl(uri, destination, options, progress);
+            var baseUri = GetBaseUri(bucket, objectName);
+            DownloadObjectImpl(baseUri, destination, options, progress);
         }
 
         /// <summary>
@@ -76,13 +76,16 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             CancellationToken cancellationToken,
             IProgress<IDownloadProgress> progress)
         {
-            string uri = GetUri(bucket, objectName);
-            return DownloadObjectAsyncImpl(uri, destination, options, cancellationToken, progress);
+            var baseUri = GetBaseUri(bucket, objectName);
+            return DownloadObjectAsyncImpl(baseUri, destination, options, cancellationToken, progress);
         }
 
         /// <summary>
         /// Downloads the data for an object from storage asynchronously, into a specified stream.
         /// </summary>
+        /// <remarks>The generation number within <paramref name="source"/> is ignored by this method.
+        /// To download a specific generation, use <see cref="DownloadObjectOptions.Generation"/>.
+        /// </remarks>
         /// <param name="source">Source object to download the data from. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
@@ -93,8 +96,11 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         }
 
         /// <summary>
-        /// Downloads the data for an object from storage synchronously, into a specified stream.
+        /// Downloads the latest data for an object from storage synchronously, into a specified stream.
         /// </summary>
+        /// <remarks>The generation number within <paramref name="source"/> is ignored by this method.
+        /// To download a specific generation, use <see cref="DownloadObjectOptions.Generation"/>.
+        /// </remarks>
         /// <param name="source">Source object to download the data from. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
         public void DownloadObject(Object source, Stream destination)
@@ -105,6 +111,9 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <summary>
         /// Downloads the data for an object from storage synchronously, into a specified stream.
         /// </summary>
+        /// <remarks>The generation number within <paramref name="source"/> is ignored by this method.
+        /// To download a specific generation, use <see cref="DownloadObjectOptions.Generation"/>.
+        /// </remarks>
         /// <param name="source">Source object to download the data from. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
@@ -116,13 +125,16 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             DownloadObjectOptions options,
             IProgress<IDownloadProgress> progress)
         {
-            string uri = GetUri(source);
-            DownloadObjectImpl(uri, destination, options, progress);
+            var baseUri = GetBaseUri(source);
+            DownloadObjectImpl(baseUri, destination, options, progress);
         }
 
         /// <summary>
         /// Downloads the data for an object from storage asynchronously, into a specified stream.
         /// </summary>
+        /// <remarks>The generation number within <paramref name="source"/> is ignored by this method.
+        /// To download a specific generation, use <see cref="DownloadObjectOptions.Generation"/>.
+        /// </remarks>
         /// <param name="source">Source object to download the data from. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
@@ -137,14 +149,16 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             CancellationToken cancellationToken,
             IProgress<IDownloadProgress> progress)
         {
-            string uri = GetUri(source);
-            return DownloadObjectAsyncImpl(uri, destination, options, cancellationToken, progress);
+            var baseUri = GetBaseUri(source);
+            return DownloadObjectAsyncImpl(baseUri, destination, options, cancellationToken, progress);
         }
 
         /// <summary>
-        /// Constructs the media URL of an object from its bucket and name.
+        /// Constructs the media URL of an object from its bucket and name. This does not include the generation
+        /// or any preconditions. The returned string will always have a query parameter, so later query parameters
+        /// can unconditionally be appended with an "&amp;" prefix.
         /// </summary>
-        private static string GetUri(string bucket, string objectName)
+        private static string GetBaseUri(string bucket, string objectName)
         {
             ValidateBucket(bucket);
             objectName.CheckNotNull(nameof(objectName));
@@ -152,28 +166,27 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         }
 
         /// <summary>
-        /// Obtains the media URL of an object from eiteher the MediaLink property, or its bucket and name.
+        /// Obtains the media URL of an object from its bucket and name.
+        /// The returned string will always have a query parameter, so later query parameters
+        /// can unconditionally be appended with an "&amp;" prefix.
         /// </summary>
-        private static string GetUri(Object source)
+        private string GetBaseUri(Object source)
         {
-            source.CheckNotNull(nameof(source));
-            if (source.MediaLink != null)
-            {
-                return source.MediaLink;
-            }
-            if (source.Bucket != null && source.Name != null)
-            {
-                return GetUri(source.Bucket, source.Name);
-            }
-            throw new ArgumentException("Object must have either MediaLink or both Bucket and Name set");
+            ValidateObject(source, nameof(source));
+            return GetBaseUri(source.Bucket, source.Name);
         }
 
-        private void DownloadObjectImpl(string uri, Stream destination, DownloadObjectOptions options, IProgress<IDownloadProgress> progress)
+        private void DownloadObjectImpl(
+            string baseUri,
+            Stream destination,
+            DownloadObjectOptions options,
+            IProgress<IDownloadProgress> progress)
         {
             // URI will definitely not be null; that's constructed internally.
             destination.CheckNotNull(nameof(destination));
             var downloader = new MediaDownloader(Service);
             options?.ModifyDownloader(downloader);
+            string uri = options == null ? baseUri : options.GetUri(baseUri);
             if (progress != null)
             {
                 downloader.ProgressChanged += progress.Report;
@@ -187,7 +200,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         }
 
         private async Task DownloadObjectAsyncImpl(
-            string uri,
+            string baseUri,
             Stream destination,
             DownloadObjectOptions options,
             CancellationToken cancellationToken,
@@ -196,6 +209,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             destination.CheckNotNull(nameof(destination));
             var downloader = new MediaDownloader(Service);
             options?.ModifyDownloader(downloader);
+            string uri = options == null ? baseUri : options.GetUri(baseUri);
             if (progress != null)
             {
                 downloader.ProgressChanged += progress.Report;
