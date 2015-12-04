@@ -6,6 +6,7 @@ using Google.Apis.Storage.v1.ClientWrapper;
 using System;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace Google.Apis.Storage.v1.IntegrationTests
             }
         }
 
-        [Fact(Skip = "Waiting for change in MediaDownloader to land in NuGet")]
+        [Fact]
         public async Task WrongName()
         {
             using (var stream = new MemoryStream())
@@ -85,13 +86,14 @@ namespace Google.Apis.Storage.v1.IntegrationTests
             Assert.Throws<ArgumentException>(() => s_config.Client.DownloadObject("!!!", s_name, new MemoryStream()));
         }
 
-        [Fact(Skip = "Waiting for change in MediaDownloader to land in NuGet")]
+        [Fact]
         public void DownloadObjectWrongGeneration()
         {
             var existing = GetExistingObject();
             var stream = new MemoryStream();
-            Assert.Throws<ArgumentException>(() => s_config.Client.DownloadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { Generation = existing.Generation + 1 }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
             Assert.Equal(0, stream.Length);
         }
 
@@ -134,6 +136,106 @@ namespace Google.Apis.Storage.v1.IntegrationTests
             s_config.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { Generation = existing.Generation }, null);
             Assert.NotEqual(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObjectIfGenerationMatch_Matching()
+        {
+            var existing = GetExistingObject();
+            var stream = new MemoryStream();
+            s_config.Client.DownloadObject(existing, stream,
+                new DownloadObjectOptions { IfGenerationMatch = existing.Generation}, null);
+            Assert.NotEqual(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObjectIfGenerationMatch_NotMatching()
+        {
+            var existing = GetExistingObject();
+            var stream = new MemoryStream();
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+                new DownloadObjectOptions { IfGenerationMatch = existing.Generation + 1 }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObjectIfGenerationNotMatch_Matching()
+        {
+            var existing = GetExistingObject();
+            var stream = new MemoryStream();
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+                new DownloadObjectOptions { IfGenerationNotMatch = existing.Generation }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObjectIfGenerationNotMatch_NotMatching()
+        {
+            var existing = GetExistingObject();
+            var stream = new MemoryStream();
+            s_config.Client.DownloadObject(existing, stream,
+                new DownloadObjectOptions { IfGenerationNotMatch = existing.Generation + 1 }, null);
+            Assert.NotEqual(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObject_IfGenerationMatchAndNotMatch()
+        {
+            Assert.Throws<ArgumentException>(() => s_config.Client.DownloadObject(s_bucket, s_name, new MemoryStream(),
+                new DownloadObjectOptions { IfGenerationMatch = 1, IfGenerationNotMatch = 2 },
+                null));
+        }
+
+        [Fact]
+        public void DownloadObjectIfMetagenerationMatch_Matching()
+        {
+            var existing = GetExistingObject();
+            var stream = new MemoryStream();
+            s_config.Client.DownloadObject(existing, stream,
+                new DownloadObjectOptions { IfMetagenerationMatch = existing.Metageneration}, null);
+            Assert.NotEqual(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObjectIfMetagenerationMatch_NotMatching()
+        {
+            var existing = GetExistingObject();
+            var stream = new MemoryStream();
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+                new DownloadObjectOptions { IfMetagenerationMatch = existing.Metageneration + 1 }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObjectIfMetagenerationNotMatch_Matching()
+        {
+            var existing = GetExistingObject();
+            var stream = new MemoryStream();
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+                new DownloadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObjectIfMetagenerationNotMatch_NotMatching()
+        {
+            var existing = GetExistingObject();
+            var stream = new MemoryStream();
+            s_config.Client.DownloadObject(existing, stream,
+                new DownloadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration + 1 }, null);
+            Assert.NotEqual(0, stream.Length);
+        }
+
+        [Fact]
+        public void DownloadObject_IfMetagenerationMatchAndNotMatch()
+        {
+            Assert.Throws<ArgumentException>(() => s_config.Client.DownloadObject(s_bucket, s_name, new MemoryStream(),
+                new DownloadObjectOptions { IfMetagenerationMatch = 1, IfMetagenerationNotMatch = 2 },
+                null));
         }
 
         private Data.Object GetExistingObject()
