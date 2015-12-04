@@ -26,7 +26,7 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         public async Task AllObjects(int? pageSize)
         {
             var options = new ListObjectsOptions { PageSize = pageSize };
-            await AssertObjects(options, s_allObjectNames);
+            await AssertObjects(null, options, s_allObjectNames);
         }
 
         [Theory]
@@ -37,8 +37,8 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         [InlineData("missing/", "")]
         public async Task PrefixAndDelimiter(string prefix, string expectedNames)
         {
-            var options = new ListObjectsOptions { Delimiter = "/", Prefix = prefix };
-            await AssertObjects(options, expectedNames.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+            var options = new ListObjectsOptions { Delimiter = "/" };
+            await AssertObjects(prefix, options, expectedNames.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
         }
 
         [Fact]
@@ -52,13 +52,13 @@ namespace Google.Apis.Storage.v1.IntegrationTests
             await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await enumerator.MoveNext(cts.Token));
         }
 
-        private async Task AssertObjects(ListObjectsOptions options, string[] expectedNames)
+        private async Task AssertObjects(string prefix, ListObjectsOptions options, string[] expectedNames)
         {
-            var actual = s_config.Client.ListObjects(s_bucket, options);
+            var actual = s_config.Client.ListObjects(s_bucket, prefix, options);
             AssertObjectNames(actual, expectedNames);
-            actual = await s_config.Client.ListAllObjectsAsync(s_bucket, options, CancellationToken.None);
+            actual = await s_config.Client.ListAllObjectsAsync(s_bucket, prefix, options, CancellationToken.None);
             AssertObjectNames(actual, expectedNames);
-            actual = await s_config.Client.ListObjectsAsync(s_bucket, options).ToList(CancellationToken.None);
+            actual = await s_config.Client.ListObjectsAsync(s_bucket, prefix, options).ToList(CancellationToken.None);
             AssertObjectNames(actual, expectedNames);
         }
 

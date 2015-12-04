@@ -26,13 +26,15 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// Asynchronously lists the objects in a given bucket, returning the results as a list.
         /// </summary>
         /// <remarks>
-        /// This is a convenience method for calling <see cref="ListAllObjectsAsync(string, ListObjectsOptions, CancellationToken)"/>.
+        /// This is a convenience method for calling <see cref="ListAllObjectsAsync(string, string, ListObjectsOptions, CancellationToken)"/>.
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
+        /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
+        /// This parameter may be null, in which case no filtering is performed.</param>
         /// <returns>A list of objects within the bucket.</returns>
-        public Task<IList<Object>> ListAllObjectsAsync(string bucket)
+        public Task<IList<Object>> ListAllObjectsAsync(string bucket, string prefix)
         {
-            return ListAllObjectsAsync(bucket, null, default(CancellationToken));
+            return ListAllObjectsAsync(bucket, prefix, null, default(CancellationToken));
         }
 
         /// <summary>
@@ -43,13 +45,15 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// This does not support reporting progress, or streaming the results.
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
+        /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
+        /// This parameter may be null, in which case no filtering is performed.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of objects within the bucket.</returns>
-        public async Task<IList<Object>> ListAllObjectsAsync(string bucket, ListObjectsOptions options, CancellationToken cancellationToken)
+        public async Task<IList<Object>> ListAllObjectsAsync(string bucket, string prefix, ListObjectsOptions options, CancellationToken cancellationToken)
         {
-            return await ListObjectsAsync(bucket, options).ToList(cancellationToken);
+            return await ListObjectsAsync(bucket, prefix, options).ToList(cancellationToken);
         }
 
         /// <summary>
@@ -59,12 +63,14 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// This lists the objects within a bucket asynchronously and lazily.
         /// </remarks>
         /// <remarks>
-        /// This is a convenience method for calling <see cref="ListAllObjectsAsync(string, ListObjectsOptions, CancellationToken)"/>.
+        /// This is a convenience method for calling <see cref="ListAllObjectsAsync(string, string, ListObjectsOptions, CancellationToken)"/>.
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
-        public IAsyncEnumerable<Object> ListObjectsAsync(string bucket)
+        /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
+        /// This parameter may be null, in which case no filtering is performed.</param>
+        public IAsyncEnumerable<Object> ListObjectsAsync(string bucket, string prefix)
         {
-            return ListObjectsAsync(bucket, null);
+            return ListObjectsAsync(bucket, prefix, null);
         }
 
         /// <summary>
@@ -74,12 +80,14 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// This lists the objects within a bucket asynchronously and lazily.
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
+        /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
+        /// This parameter may be null, in which case no filtering is performed.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>An asynchronus sequence of objects within the bucket.</returns>
-        public IAsyncEnumerable<Object> ListObjectsAsync(string bucket, ListObjectsOptions options)
+        public IAsyncEnumerable<Object> ListObjectsAsync(string bucket, string prefix, ListObjectsOptions options)
         {
-            var initialRequest = CreateListObjectsRequest(bucket, options);
+            var initialRequest = CreateListObjectsRequest(bucket, prefix, options);
             return s_objectPaginator.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
         }
 
@@ -92,10 +100,12 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// simply call LINQ's <c>ToList()</c> method on the returned sequence.
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
+        /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
+        /// This parameter may be null, in which case no filtering is performed.</param>
         /// <returns>A sequence of objects within the bucket.</returns>
-        public IEnumerable<Object> ListObjects(string bucket)
+        public IEnumerable<Object> ListObjects(string bucket, string prefix)
         {
-            return ListObjects(bucket, null);
+            return ListObjects(bucket, prefix, null);
         }
 
         /// <summary>
@@ -107,19 +117,22 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// simply call LINQ's <c>ToList()</c> method on the returned sequence.
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
+        /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
+        /// This parameter may be null, in which case no filtering is performed.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>A sequence of objects within the bucket.</returns>
-        public IEnumerable<Object> ListObjects(string bucket, ListObjectsOptions options)
+        public IEnumerable<Object> ListObjects(string bucket, string prefix, ListObjectsOptions options)
         {
-            var initialRequest = CreateListObjectsRequest(bucket, options);
+            var initialRequest = CreateListObjectsRequest(bucket, prefix, options);
             return s_objectPaginator.Fetch(initialRequest, req => req.Execute());
         }
 
-        private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, ListObjectsOptions options)
+        private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, string prefix, ListObjectsOptions options)
         {
             ValidateBucket(bucket);
             var request = Service.Objects.List(bucket);
+            request.Prefix = prefix;
             options?.ModifyRequest(request);
             return request;
         }

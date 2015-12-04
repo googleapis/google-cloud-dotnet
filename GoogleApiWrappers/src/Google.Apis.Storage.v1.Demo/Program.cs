@@ -44,7 +44,8 @@ namespace Google.Apis.Storage.v1.Demo
                 config.Description = "List objects in a bucket";
                 config.HelpOption("-?|-h|--help");
                 var bucket = config.Argument("bucket", "Bucket to list objects from");
-                ConfigureForExecution(config, client => ListObjects(client, bucket.Value));
+                var prefix = config.Option("--prefix", "Prefix to match", CommandOptionType.SingleValue);
+                ConfigureForExecution(config, client => ListObjects(client, bucket.Value, prefix.Value()));
             });
             app.Command("download-object", config => {
                 config.HelpOption("-?|-h|--help");
@@ -95,9 +96,9 @@ namespace Google.Apis.Storage.v1.Demo
             return results.ForEachAsync(bucket => Console.WriteLine($"  {bucket.Name}"));
         }
 
-        private static Task ListObjects(StorageClient client, string bucket)
+        private static Task ListObjects(StorageClient client, string bucket, string prefix)
         {
-            var results = client.ListObjectsAsync(bucket, new ListObjectsOptions { PageSize = 3 });
+            var results = client.ListObjectsAsync(bucket, prefix, new ListObjectsOptions { PageSize = 3 });
             Console.WriteLine($"Objects in {bucket} (3 at a time):");
             return results.ForEachAsync(obj => Console.WriteLine($"  {obj.Name}"));
         }
