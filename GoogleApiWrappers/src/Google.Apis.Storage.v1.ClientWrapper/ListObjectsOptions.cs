@@ -8,11 +8,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
     /// </summary>
     public class ListObjectsOptions
     {
-        /// <summary>
-        /// The prefix to match. Only objects with names that start with this string will be returned.
-        /// </summary>
-        public string Prefix { get; set; }
-
         // TODO: We can't currently return both objects *and* prefixes. Should we have a separate ListPrefixes method?
         // Something more complex? It's unclear how common this is.
 
@@ -34,10 +29,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="request">The request to modify</param>
         internal void ModifyRequest(ObjectsResource.ListRequest request)
         {
-            if (Prefix != null)
-            {
-                request.Prefix = Prefix;
-            }
             if (PageSize != null)
             {
                 request.MaxResults = PageSize.Value;
