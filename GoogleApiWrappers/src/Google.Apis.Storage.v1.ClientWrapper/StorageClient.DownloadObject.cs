@@ -13,14 +13,26 @@ namespace Google.Apis.Storage.v1.ClientWrapper
 {
     public partial class StorageClient
     {
-        // Note: documentation will be provided when we've worked out if we really want 16 methods here.
-        // See issue #21.
-
+        /// <summary>
+        /// Downloads the data for an object from storage synchronously, into a specified stream.
+        /// </summary>
+        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
+        /// <param name="sourceName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
         public void DownloadObject(string bucket, string sourceName, Stream destination)
         {
             DownloadObject(bucket, sourceName, destination, options: null, progress: null);
         }
 
+        /// <summary>
+        /// Downloads the data for an object from storage synchronously, into a specified stream.
+        /// </summary>
+        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
+        /// <param name="sourceName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <param name="options">Additional options for the download. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="progress">Progress reporter for the download. May be null.</param>
         public void DownloadObject(
             string bucket,
             string sourceName,
@@ -32,12 +44,30 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             DownloadObjectImpl(uri, destination, options, progress);
         }
 
+        /// <summary>
+        /// Downloads the data for an object from storage asynchronously, into a specified stream.
+        /// </summary>
+        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
+        /// <param name="sourceName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task DownloadObjectAsync(string bucket, string sourceName, Stream destination)
         {
             return DownloadObjectAsync(bucket, sourceName, destination,
                 options: null, cancellationToken: CancellationToken.None, progress: null);
         }
 
+        /// <summary>
+        /// Downloads the data for an object from storage asynchronously, into a specified stream.
+        /// </summary>
+        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
+        /// <param name="sourceName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <param name="options">Additional options for the download. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <param name="progress">Progress reporter for the download. May be null.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task DownloadObjectAsync(
             string bucket,
             string sourceName,
@@ -50,17 +80,36 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             return DownloadObjectAsyncImpl(uri, destination, options, cancellationToken, progress);
         }
 
+        /// <summary>
+        /// Downloads the data for an object from storage asynchronously, into a specified stream.
+        /// </summary>
+        /// <param name="source">Source object to download the data from. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task DownloadObjectAsync(Object source, Stream destination)
         {
             return DownloadObjectAsync(source, destination,
                 options: null, cancellationToken: CancellationToken.None, progress: null);
         }
 
+        /// <summary>
+        /// Downloads the data for an object from storage synchronously, into a specified stream.
+        /// </summary>
+        /// <param name="source">Source object to download the data from. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
         public void DownloadObject(Object source, Stream destination)
         {
             DownloadObject(source, destination, options: null, progress: null);
         }
 
+        /// <summary>
+        /// Downloads the data for an object from storage synchronously, into a specified stream.
+        /// </summary>
+        /// <param name="source">Source object to download the data from. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <param name="options">Additional options for the download. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="progress">Progress reporter for the download. May be null.</param>
         public void DownloadObject(
             Object source,
             Stream destination,
@@ -71,6 +120,16 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             DownloadObjectImpl(uri, destination, options, progress);
         }
 
+        /// <summary>
+        /// Downloads the data for an object from storage asynchronously, into a specified stream.
+        /// </summary>
+        /// <param name="source">Source object to download the data from. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <param name="options">Additional options for the download. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <param name="progress">Progress reporter for the download. May be null.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task DownloadObjectAsync(
             Object source,
             Stream destination,
