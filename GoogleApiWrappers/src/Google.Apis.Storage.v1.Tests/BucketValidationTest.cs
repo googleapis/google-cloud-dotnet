@@ -33,6 +33,7 @@ namespace Google.Apis.Storage.v1.Tests
         {
             var exception = Assert.ThrowsAny<ArgumentException>(() => StorageClient.ValidateBucket(bucket));
             Assert.Equal("bucket", exception.ParamName);
+            Assert.Contains(bucket, exception.Message);
         }
     }
 }

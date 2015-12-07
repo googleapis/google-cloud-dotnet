@@ -78,7 +78,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             bucket.CheckNotNull(nameof(bucket));
             if (!ValidBucketName.IsMatch(bucket))
             {
-                throw new ArgumentException("Invalid bucket name - see https://cloud.google.com/storage/docs/bucket-naming", nameof(bucket));
+                throw new ArgumentException($"Invalid bucket name '{bucket}' - see https://cloud.google.com/storage/docs/bucket-naming", nameof(bucket));
             }
         }
     }
