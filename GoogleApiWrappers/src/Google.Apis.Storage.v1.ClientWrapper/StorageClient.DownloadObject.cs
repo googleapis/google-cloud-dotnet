@@ -17,30 +17,30 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// Downloads the data for an object from storage synchronously, into a specified stream.
         /// </summary>
         /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="sourceName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
-        public void DownloadObject(string bucket, string sourceName, Stream destination)
+        public void DownloadObject(string bucket, string objectName, Stream destination)
         {
-            DownloadObject(bucket, sourceName, destination, options: null, progress: null);
+            DownloadObject(bucket, objectName, destination, options: null, progress: null);
         }
 
         /// <summary>
         /// Downloads the data for an object from storage synchronously, into a specified stream.
         /// </summary>
         /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="sourceName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
         public void DownloadObject(
             string bucket,
-            string sourceName,
+            string objectName,
             Stream destination,
             DownloadObjectOptions options,
             IProgress<IDownloadProgress> progress)
         {
-            string uri = GetUri(bucket, sourceName);
+            string uri = GetUri(bucket, objectName);
             DownloadObjectImpl(uri, destination, options, progress);
         }
 
@@ -48,12 +48,12 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// Downloads the data for an object from storage asynchronously, into a specified stream.
         /// </summary>
         /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="sourceName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DownloadObjectAsync(string bucket, string sourceName, Stream destination)
+        public Task DownloadObjectAsync(string bucket, string objectName, Stream destination)
         {
-            return DownloadObjectAsync(bucket, sourceName, destination,
+            return DownloadObjectAsync(bucket, objectName, destination,
                 options: null, cancellationToken: CancellationToken.None, progress: null);
         }
 
@@ -61,7 +61,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// Downloads the data for an object from storage asynchronously, into a specified stream.
         /// </summary>
         /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="sourceName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
         /// defaults will be used.</param>
@@ -70,13 +70,13 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <returns>A task representing the asynchronous operation.</returns>
         public Task DownloadObjectAsync(
             string bucket,
-            string sourceName,
+            string objectName,
             Stream destination,
             DownloadObjectOptions options,
             CancellationToken cancellationToken,
             IProgress<IDownloadProgress> progress)
         {
-            string uri = GetUri(bucket, sourceName);
+            string uri = GetUri(bucket, objectName);
             return DownloadObjectAsyncImpl(uri, destination, options, cancellationToken, progress);
         }
 
@@ -144,11 +144,11 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <summary>
         /// Constructs the media URL of an object from its bucket and name.
         /// </summary>
-        private static string GetUri(string bucket, string sourceName)
+        private static string GetUri(string bucket, string objectName)
         {
             ValidateBucket(bucket);
-            sourceName.CheckNotNull(nameof(sourceName));
-            return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(sourceName)}?alt=media";
+            objectName.CheckNotNull(nameof(objectName));
+            return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(objectName)}?alt=media";
         }
 
         /// <summary>
