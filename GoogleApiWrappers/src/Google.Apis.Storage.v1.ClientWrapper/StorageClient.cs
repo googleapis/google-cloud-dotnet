@@ -65,6 +65,10 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             return new StorageClient(initializer);
         }
 
+        /// <summary>
+        /// Regular expression to be used for bucket validation when <see cref="ValidateBucket"/>
+        /// would throw the wrong exception.
+        /// </summary>
         private static readonly Regex ValidBucketName = new Regex(@"^[0-9a-z.\-_]{1,222}$");
 
         /// <summary>

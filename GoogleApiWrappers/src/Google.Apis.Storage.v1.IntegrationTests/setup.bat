@@ -17,6 +17,9 @@ FOR /D %%D in (data\*) DO (
 
 )
 
+REM UploadObjectsTest requires versioning on bucket 2
+gsutil versioning set on gs://%TEST_PROJECT%_integrationtests-2
+
 echo Done!
 
 :end
