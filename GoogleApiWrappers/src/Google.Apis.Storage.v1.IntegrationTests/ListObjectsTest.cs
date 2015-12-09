@@ -15,7 +15,7 @@ namespace Google.Apis.Storage.v1.IntegrationTests
     public class ListObjectsTest
     {
         private static readonly string[] s_allObjectNames =
-            { "foo.txt", "bar.txt", "a/o1.txt", "a/o2.txt", "a/x/o3.txt", "a/x/o4.txt", "b/o5.txt" };
+            { "foo.txt", "bar.txt", "a/o1.txt", "a/o2.txt", "a/x/o3.txt", "a/x/o4.txt", "b/o5.txt", "multiversion.txt", "updated.txt" };
 
         private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
         private static readonly string s_bucket = s_config.TempBucketPrefix + "0";
@@ -30,7 +30,7 @@ namespace Google.Apis.Storage.v1.IntegrationTests
         }
 
         [Theory]
-        [InlineData(null, "foo.txt,bar.txt")]
+        [InlineData(null, "foo.txt,bar.txt,multiversion.txt,updated.txt")]
         [InlineData("fo", "foo.txt")]
         [InlineData("a/", "a/o1.txt,a/o2.txt")]
         [InlineData("a/x/", "a/x/o3.txt,a/x/o4.txt")]
@@ -52,7 +52,20 @@ namespace Google.Apis.Storage.v1.IntegrationTests
             await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await enumerator.MoveNext(cts.Token));
         }
 
-        private async Task AssertObjects(string prefix, ListObjectsOptions options, string[] expectedNames)
+        [Fact]
+        public async Task MultipleVersions()
+        {
+            var name = "multiversion.txt";
+
+            // List the versions separately
+            await AssertObjects(name, new ListObjectsOptions { Versions = true }, name, name);
+            // Explicitly don't list the versions separately
+            await AssertObjects(name, new ListObjectsOptions { Versions = false }, name);
+            // Implicitly don't list the versions separately (the API default)
+            await AssertObjects(name, null, name);
+        }
+
+        private async Task AssertObjects(string prefix, ListObjectsOptions options, params string[] expectedNames)
         {
             var actual = s_config.Client.ListObjects(s_bucket, prefix, options);
             AssertObjectNames(actual, expectedNames);

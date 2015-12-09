@@ -24,6 +24,14 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// Controls whether or not multiple versions of an object are listed separately (true)
+        /// or not (false). The default API behavior is equivalent to setting this to false, but
+        /// it is still a nullable property to allow the intention of "definitely false" to be
+        /// separate from "not set".
+        /// </summary>
+        public bool? Versions { get; set; }
+
+        /// <summary>
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>
@@ -36,6 +44,10 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             if (Delimiter != null)
             {
                 request.Delimiter = Delimiter;
+            }
+            if (Versions != null)
+            {
+                request.Versions = Versions.Value;
             }
         }
     }
