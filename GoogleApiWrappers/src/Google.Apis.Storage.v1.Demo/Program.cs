@@ -3,6 +3,7 @@
 using Google.Apis.Download;
 using Google.Apis.Storage.v1.ClientWrapper;
 using Microsoft.Framework.Runtime.Common.CommandLine;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Linq;
@@ -50,10 +51,17 @@ namespace Google.Apis.Storage.v1.Demo
             app.Command("download-object", config => {
                 config.HelpOption("-?|-h|--help");
                 config.Description = "Downloads an object, saving it to the local disk";
-                var bucket = config.Argument("bucket", "Bucket to list objects from");
+                var bucket = config.Argument("bucket", "Bucket containing the object");
                 var source = config.Argument("source", "Name of object to download");
                 var destination = config.Argument("destination", "Destination filename");
                 ConfigureForExecution(config, client => DownloadObject(client, bucket.Value, source.Value, destination.Value));
+            });
+            app.Command("get-object", config => {
+                config.HelpOption("-?|-h|--help");
+                config.Description = "Gets information about an object, displaying it as JSON";
+                var bucket = config.Argument("bucket", "Bucket containing the object");
+                var name = config.Argument("name", "Name of object to fetch information about");
+                ConfigureForExecution(config, client => GetObject(client, bucket.Value, name.Value));
             });
 
             return app.Execute(args);
@@ -114,6 +122,12 @@ namespace Google.Apis.Storage.v1.Demo
                     new DownloadObjectOptions { ChunkSize = 256 * 1024 },
                     CancellationToken.None, progress);
             }
+        }
+
+        private static async Task GetObject(StorageClient client, string bucket, string name)
+        {
+            var obj = await client.GetObjectAsync(bucket, name);
+            Console.WriteLine(JsonConvert.SerializeObject(obj, Formatting.Indented));
         }
     }
 }
