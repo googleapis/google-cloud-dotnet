@@ -143,7 +143,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             UploadObjectOptions options,
             IProgress<IUploadProgress> progress)
         {
-            ValidateObject(destination);
+            ValidateObject(destination, nameof(destination));
             source.CheckNotNull(nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
@@ -178,7 +178,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             CancellationToken cancellationToken,
             IProgress<IUploadProgress> progress)
         {
-            ValidateObject(destination);
+            ValidateObject(destination, nameof(destination));
             source.CheckNotNull(nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
@@ -192,18 +192,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
                 throw finalProgress.Exception;
             }
             return mediaUpload.ResponseBody;
-        }
-
-        private void ValidateObject(Object destination)
-        {
-            destination.CheckNotNull(nameof(destination));
-            Preconditions.CheckArgument(
-                destination.Name != null && destination.Bucket != null && destination.ContentType != null,
-                nameof(destination),
-                "Destination object must have a name, bucket and content type");
-            Preconditions.CheckArgument(ValidBucketName.IsMatch(destination.Bucket),
-                nameof(destination),
-                "Destination bucket '{0}' is invalid", destination.Bucket);
         }
     }
 }

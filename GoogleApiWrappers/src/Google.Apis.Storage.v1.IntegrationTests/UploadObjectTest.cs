@@ -6,10 +6,10 @@ using Google.Apis.Upload;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Apis.Storage.v1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Apis.Storage.v1.IntegrationTests
@@ -97,19 +97,6 @@ namespace Google.Apis.Storage.v1.IntegrationTests
             var firstGenerationData = new MemoryStream();
             s_config.Client.DownloadObject(firstVersion, firstGenerationData);
             Assert.Equal(source1.ToArray(), firstGenerationData.ToArray());
-        }
-
-        private static string GenerateName()
-        {
-            return Guid.NewGuid().ToString();
-        }
-
-        private static MemoryStream GenerateData(int size)
-        {
-            var rng = RandomNumberGenerator.Create();
-            byte[] data = new byte[size];
-            rng.GetBytes(data);
-            return new MemoryStream(data);
         }
 
         private static void ValidateData(MemoryStream original, string objectName)

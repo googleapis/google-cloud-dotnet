@@ -73,6 +73,14 @@ namespace Google.Apis.Storage.v1.Demo
                 var name = config.Argument("name", "Name of object to fetch information about");
                 ConfigureForExecution(config, client => GetObject(client, bucket.Value, name.Value));
             });
+            app.Command("delete-object", config => {
+                config.HelpOption("-?|-h|--help");
+                config.Description = "Deletes the latest generation of an object from storage";
+                var bucket = config.Argument("bucket", "Bucket containing the object");
+                var name = config.Argument("name", "Name of object to delete");
+                var generation = config.Option("--generation", "Generation", CommandOptionType.SingleValue);
+                ConfigureForExecution(config, client => DeleteObject(client, bucket.Value, name.Value, generation.Value()));
+            });
 
             return app.Execute(args);
         }
@@ -151,6 +159,13 @@ namespace Google.Apis.Storage.v1.Demo
         {
             var obj = await client.GetObjectAsync(bucket, name);
             Console.WriteLine(JsonConvert.SerializeObject(obj, Formatting.Indented));
+        }
+
+        private static async Task DeleteObject(StorageClient client, string bucket, string name, string generation)
+        {
+            long? generationOption = generation == null ? default(long?) : long.Parse(generation);
+            await client.DeleteObjectAsync(bucket, name, new DeleteObjectOptions { Generation = generationOption }, CancellationToken.None);
+            Console.WriteLine($"Deleted object {bucket}/{name}");
         }
     }
 }
