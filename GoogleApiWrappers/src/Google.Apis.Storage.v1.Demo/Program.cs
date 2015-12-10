@@ -2,6 +2,7 @@
 // Licensed under the Apache License Version 2.0.
 using Google.Apis.Download;
 using Google.Apis.Storage.v1.ClientWrapper;
+using Google.Apis.Upload;
 using Microsoft.Framework.Runtime.Common.CommandLine;
 using Newtonsoft.Json;
 using System;
@@ -55,6 +56,15 @@ namespace Google.Apis.Storage.v1.Demo
                 var source = config.Argument("source", "Name of object to download");
                 var destination = config.Argument("destination", "Destination filename");
                 ConfigureForExecution(config, client => DownloadObject(client, bucket.Value, source.Value, destination.Value));
+            });
+            app.Command("upload-object", config => {
+                config.HelpOption("-?|-h|--help");
+                config.Description = "Uploads an object from the local disk";
+                var source = config.Argument("source", "Name of file to upload");
+                var bucket = config.Argument("bucket", "Bucket to upload the object to");
+                var destination = config.Argument("destination", "Name of object to create/update in the bucket");
+                var contentType = config.Option("--contentType", "Content type", CommandOptionType.SingleValue);
+                ConfigureForExecution(config, client => UploadObject(client, source.Value, bucket.Value, destination.Value, contentType.Value()));
             });
             app.Command("get-object", config => {
                 config.HelpOption("-?|-h|--help");
@@ -120,6 +130,19 @@ namespace Google.Apis.Storage.v1.Demo
 
                 await client.DownloadObjectAsync(bucket, source, output,
                     new DownloadObjectOptions { ChunkSize = 256 * 1024 },
+                    CancellationToken.None, progress);
+            }
+        }
+
+        private static async Task UploadObject(StorageClient client, string source, string bucket, string destination, string contentType)
+        {
+            using (var input = File.OpenRead(source))
+            {
+                var progress = new Progress<IUploadProgress>(
+                    p => Console.WriteLine($"Uploaded {p.BytesSent} bytes; status: {p.Status}"));
+
+                await client.UploadObjectAsync(bucket, destination, contentType ?? "", input,
+                    new UploadObjectOptions { ChunkSize = 256 * 1024 },
                     CancellationToken.None, progress);
             }
         }
