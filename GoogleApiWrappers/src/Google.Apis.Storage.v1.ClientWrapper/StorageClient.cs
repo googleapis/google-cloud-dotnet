@@ -6,6 +6,7 @@ using Google.Common;
 using System;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Apis.Storage.v1.ClientWrapper
 {
@@ -84,6 +85,24 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             {
                 throw new ArgumentException($"Invalid bucket name '{bucket}' - see https://cloud.google.com/storage/docs/bucket-naming", nameof(bucket));
             }
+        }
+
+
+        /// <summary>
+        /// Validates that the given Object has a "somewhat valid" (no URI encoding required) bucket name and an object name.
+        /// </summary>
+        /// <param name="obj">Object to validate</param>
+        /// <param name="paramName">The parameter name in the calling method</param>
+        private void ValidateObject(Object obj, string paramName)
+        {
+            obj.CheckNotNull(paramName);
+            Preconditions.CheckArgument(
+                obj.Name != null && obj.Bucket != null && obj.ContentType != null,
+                paramName,
+                "Destination object must have a name, bucket and content type");
+            Preconditions.CheckArgument(ValidBucketName.IsMatch(obj.Bucket),
+                paramName,
+                "Destination bucket '{0}' is invalid", obj.Bucket);
         }
     }
 }
