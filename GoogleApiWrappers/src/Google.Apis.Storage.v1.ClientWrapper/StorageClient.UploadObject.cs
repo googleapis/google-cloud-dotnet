@@ -144,6 +144,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             IProgress<IUploadProgress> progress)
         {
             ValidateObject(destination, nameof(destination));
+            Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
             source.CheckNotNull(nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
@@ -179,6 +180,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             IProgress<IUploadProgress> progress)
         {
             ValidateObject(destination, nameof(destination));
+            Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
             source.CheckNotNull(nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
