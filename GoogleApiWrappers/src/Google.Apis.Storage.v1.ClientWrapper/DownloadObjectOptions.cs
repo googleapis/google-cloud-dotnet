@@ -24,6 +24,30 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// </summary>
         public long? Generation;
 
+        /// <summary>
+        /// Precondition for download: if the object's generation does not match the
+        /// given generation, it is not downloaded.
+        /// </summary>
+        public long? IfGenerationMatch;
+
+        /// <summary>
+        /// Precondition for download: if the object's generation matches the
+        /// given generation, it is not downloaded.
+        /// </summary>
+        public long? IfGenerationNotMatch;
+
+        /// <summary>
+        /// Precondition for download: if the object's meta-generation does not match the
+        /// given generation, it is not downloaded.
+        /// </summary>
+        public long? IfMetagenerationMatch;
+
+        /// <summary>
+        /// Precondition for download: if the object's meta-generation matches the
+        /// given generation, it is not downloaded.
+        /// </summary>
+        public long? IfMetagenerationNotMatch;
+
         internal void ModifyDownloader(MediaDownloader downloader)
         {
             if (ChunkSize != null)
@@ -39,9 +63,23 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <returns>The URI including the specified options.</returns>
         internal string GetUri(string baseUri)
         {
+            // Note the use of ArgumentException here, as this will basically be the result of invalid
+            // options being passed to a public method.
+            if (IfGenerationMatch != null && IfGenerationNotMatch != null)
+            {
+                throw new ArgumentException($"Cannot specify {nameof(IfGenerationMatch)} and {nameof(IfGenerationNotMatch)} in the same options", "options");
+            }
+            if (IfMetagenerationMatch != null && IfMetagenerationNotMatch != null)
+            {
+                throw new ArgumentException($"Cannot specify {nameof(IfMetagenerationMatch)} and {nameof(IfMetagenerationNotMatch)} in the same options", "options");
+            }
+
             Debug.Assert(!string.IsNullOrEmpty(new Uri(baseUri).Query));
             string uri = MaybeAppendParameter(baseUri, "generation", Generation);
-            // Further calls would be uri = MaybeAppendParameter(baseUri, "...", SomeProperty)
+            uri = MaybeAppendParameter(uri, "ifGenerationMatch", IfGenerationMatch);
+            uri = MaybeAppendParameter(uri, "ifGenerationNotMatch", IfGenerationNotMatch);
+            uri = MaybeAppendParameter(uri, "ifMetagenerationMatch", IfMetagenerationMatch);
+            uri = MaybeAppendParameter(uri, "ifMetagenerationNotMatch", IfMetagenerationNotMatch);
             return uri;
         }        
 
