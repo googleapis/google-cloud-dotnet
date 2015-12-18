@@ -16,20 +16,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <summary>
         /// Uploads the data for an object in storage synchronously, from a specified stream.
         /// </summary>
-        /// <param name="bucket">The name of the bucket in which to store the object. Must not be null.</param>
-        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
-        /// <param name="contentType">The content type of the object. This should be a MIME type
-        /// such as "text/html" or "application/octet-stream". Must not be null, but may be empty.</param>
-        /// <param name="source">The stream to read the data from. Must not be null.</param>
-        /// <returns>The <see cref="Object"/> representation of the uploaded object.</returns>
-        public Object UploadObject(string bucket, string objectName, string contentType, Stream source)
-        {
-            return UploadObject(bucket, objectName, contentType, source, options: null, progress: null);
-        }
-
-        /// <summary>
-        /// Uploads the data for an object in storage synchronously, from a specified stream.
-        /// </summary>
         /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
         /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
         /// <param name="contentType">The content type of the object. This should be a MIME type
@@ -44,8 +30,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             string objectName,
             string contentType,
             Stream source,
-            UploadObjectOptions options,
-            IProgress<IUploadProgress> progress)
+            UploadObjectOptions options = null,
+            IProgress<IUploadProgress> progress = null)
         {
             ValidateBucket(bucket);
             objectName.CheckNotNull(nameof(objectName));
@@ -90,41 +76,15 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             string objectName,
             string contentType,
             Stream source,
-            UploadObjectOptions options,
-            CancellationToken cancellationToken,
-            IProgress<IUploadProgress> progress)
+            UploadObjectOptions options = null,
+            CancellationToken cancellationToken = default(CancellationToken),
+            IProgress<IUploadProgress> progress = null)
         {
             ValidateBucket(bucket);
             objectName.CheckNotNull(nameof(objectName));
             contentType.CheckNotNull(nameof(contentType));
             return UploadObjectAsync(new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
                 source, options, cancellationToken, progress);
-        }
-
-        /// <summary>
-        /// Uploads the data for an object in storage asynchronously, from a specified stream.
-        /// </summary>
-        /// <param name="destination">Object to create or update. Must not be null, and must have the name,
-        /// bucket and content type populated.</param>
-        /// <param name="source">The stream to read the data from. Must not be null.</param>
-        /// <returns>A task representing the asynchronous operation, with a result returning the
-        /// <see cref="Object"/> representation of the uploaded object.</returns>
-        public Task UploadObjectAsync(Object destination, Stream source)
-        {
-            return UploadObjectAsync(destination, source,
-                options: null, cancellationToken: CancellationToken.None, progress: null);
-        }
-
-        /// <summary>
-        /// Uploads the data for an object in storage synchronously, from a specified stream.
-        /// </summary>
-        /// <param name="destination">Object to create or update. Must not be null, and must have the name,
-        /// bucket and content type populated.</param>
-        /// <param name="source">The stream to read the data from. Must not be null.</param>
-        /// <returns>The <see cref="Object"/> representation of the uploaded object.</returns>
-        public Object UploadObject(Object destination, Stream source)
-        {
-            return UploadObject(destination, source, options: null, progress: null);
         }
 
         /// <summary>
@@ -140,8 +100,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public Object UploadObject(
             Object destination,
             Stream source,
-            UploadObjectOptions options,
-            IProgress<IUploadProgress> progress)
+            UploadObjectOptions options = null,
+            IProgress<IUploadProgress> progress = null)
         {
             ValidateObject(destination, nameof(destination));
             Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
@@ -175,9 +135,9 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public async Task<Object> UploadObjectAsync(
             Object destination,
             Stream source,
-            UploadObjectOptions options,
-            CancellationToken cancellationToken,
-            IProgress<IUploadProgress> progress)
+            UploadObjectOptions options = null,
+            CancellationToken cancellationToken = default(CancellationToken),
+            IProgress<IUploadProgress> progress = null)
         {
             ValidateObject(destination, nameof(destination));
             Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
