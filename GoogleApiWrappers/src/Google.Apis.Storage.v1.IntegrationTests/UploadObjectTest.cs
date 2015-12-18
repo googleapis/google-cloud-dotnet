@@ -99,6 +99,117 @@ namespace Google.Apis.Storage.v1.IntegrationTests
             Assert.Equal(source1.ToArray(), firstGenerationData.ToArray());
         }
 
+        [Fact]
+        public void UploadObjectIfGenerationMatch_NewFile()
+        {
+            var stream = GenerateData(50);
+            var name = GenerateName();
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(s_bucket, name, "", stream,
+                new UploadObjectOptions { IfGenerationMatch = 100 }, null));
+        }
+
+        [Fact]
+        public void UploadObjectIfGenerationMatch_Matching()
+        {
+            var existing = GetExistingObject();
+            var stream = GenerateData(50);
+            s_config.Client.UploadObject(existing, stream,
+                new UploadObjectOptions { IfGenerationMatch = existing.Generation }, null);
+        }
+
+        [Fact]
+        public void UploadObjectIfGenerationMatch_NotMatching()
+        {
+            var existing = GetExistingObject();
+            var stream = GenerateData(50);
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
+                new UploadObjectOptions { IfGenerationMatch = existing.Generation + 1 }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+        }
+
+        [Fact]
+        public void UploadObjectIfGenerationNotMatch_Matching()
+        {
+            var existing = GetExistingObject();
+            var stream = GenerateData(50);
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
+                new UploadObjectOptions { IfGenerationNotMatch = existing.Generation }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+        }
+
+        [Fact]
+        public void UploadObjectIfGenerationNotMatch_NotMatching()
+        {
+            var existing = GetExistingObject();
+            var stream = GenerateData(50);
+            s_config.Client.UploadObject(existing, stream,
+                new UploadObjectOptions { IfGenerationNotMatch = existing.Generation + 1 }, null);
+        }
+
+        [Fact]
+        public void UploadObject_IfGenerationMatchAndNotMatch()
+        {
+            Assert.Throws<ArgumentException>(() => s_config.Client.UploadObject(s_bucket, GenerateName(), "", new MemoryStream(),
+                new UploadObjectOptions { IfGenerationMatch = 1, IfGenerationNotMatch = 2 },
+                null));
+        }
+
+        [Fact]
+        public void UploadObjectIfMetagenerationMatch_Matching()
+        {
+            var existing = GetExistingObject();
+            var stream = GenerateData(50);
+            s_config.Client.UploadObject(existing, stream,
+                new UploadObjectOptions { IfMetagenerationMatch = existing.Metageneration }, null);
+        }
+
+        [Fact]
+        public void UploadObjectIfMetagenerationMatch_NotMatching()
+        {
+            var existing = GetExistingObject();
+            var stream = GenerateData(50);
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
+                new UploadObjectOptions { IfMetagenerationMatch = existing.Metageneration + 1 }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+        }
+
+        [Fact]
+        public void UploadObjectIfMetagenerationNotMatch_Matching()
+        {
+            var existing = GetExistingObject();
+            var stream = GenerateData(50);
+            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
+                new UploadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration }, null));
+            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+        }
+
+        [Fact]
+        public void UploadObjectIfMetagenerationNotMatch_NotMatching()
+        {
+            var existing = GetExistingObject();
+            var stream = GenerateData(50);
+            s_config.Client.UploadObject(existing, stream,
+                new UploadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration + 1 }, null);
+        }
+
+        [Fact]
+        public void UploadObject_IfMetagenerationMatchAndNotMatch()
+        {
+            Assert.Throws<ArgumentException>(() => s_config.Client.UploadObject(s_bucket, GenerateName(), "", new MemoryStream(),
+                new UploadObjectOptions { IfMetagenerationMatch = 1, IfMetagenerationNotMatch = 2 },
+                null));
+        }
+
+        private Object GetExistingObject()
+        {
+            var obj = s_config.Client.UploadObject(s_bucket, GenerateName(), "application/octet-stream", GenerateData(100));
+            // Clear hash and cache information, ready for a new version.
+            obj.Crc32c = null;
+            obj.ETag = null;
+            obj.Md5Hash = null;
+            return obj;
+        }
+
         private static void ValidateData(MemoryStream original, string objectName)
         {
             var downloaded = new MemoryStream();
