@@ -25,26 +25,22 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public long? Generation;
 
         /// <summary>
-        /// Precondition for download: if the object's generation does not match the
-        /// given generation, it is not downloaded.
+        /// Precondition for download: the object is only downloaded if its generation matches the given value.
         /// </summary>
         public long? IfGenerationMatch;
 
         /// <summary>
-        /// Precondition for download: if the object's generation matches the
-        /// given generation, it is not downloaded.
+        /// Precondition for download: the object is only uploaded if its generation does not match the given value.
         /// </summary>
         public long? IfGenerationNotMatch;
 
         /// <summary>
-        /// Precondition for download: if the object's meta-generation does not match the
-        /// given generation, it is not downloaded.
+        /// Precondition for download: the object is only uploaded if its meta-generation matches the given value.
         /// </summary>
         public long? IfMetagenerationMatch;
 
         /// <summary>
-        /// Precondition for download: if the object's meta-generation matches the
-        /// given generation, it is not downloaded.
+        /// Precondition for download: the object is only uploaded if its meta-generation does not match the given value.
         /// </summary>
         public long? IfMetagenerationNotMatch;
 
