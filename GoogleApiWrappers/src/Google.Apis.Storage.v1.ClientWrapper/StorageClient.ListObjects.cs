@@ -15,8 +15,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
     // ListObjects methods on StorageClient
     public partial class StorageClient
     {
-        private static readonly Paginator<Object, ObjectsResource.ListRequest, Objects, string> s_objectPaginator =
-            new Paginator<Object, ObjectsResource.ListRequest, Objects, string>(
+        private static readonly PageStreamer<Object, ObjectsResource.ListRequest, Objects, string> s_objectPageStreamer =
+            new PageStreamer<Object, ObjectsResource.ListRequest, Objects, string>(
                 (request, token) => { request.PageToken = token; return request; },
                 objects => objects.NextPageToken,
                 objects => objects.Items ?? Enumerable.Empty<Object>(),
@@ -60,7 +60,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public IAsyncEnumerable<Object> ListObjectsAsync(string bucket, string prefix, ListObjectsOptions options = null)
         {
             var initialRequest = CreateListObjectsRequest(bucket, prefix, options);
-            return s_objectPaginator.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
+            return s_objectPageStreamer.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public IEnumerable<Object> ListObjects(string bucket, string prefix, ListObjectsOptions options = null)
         {
             var initialRequest = CreateListObjectsRequest(bucket, prefix, options);
-            return s_objectPaginator.Fetch(initialRequest, req => req.Execute());
+            return s_objectPageStreamer.Fetch(initialRequest, req => req.Execute());
         }
 
         private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, string prefix, ListObjectsOptions options)

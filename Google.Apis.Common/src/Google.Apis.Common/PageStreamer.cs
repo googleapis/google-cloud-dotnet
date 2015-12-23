@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Google.Apis.Common
 {
     /// <summary>
-    /// A paginator is a helper to provide both synchronous and asynchronous pagination
+    /// A page streamer is a helper to provide both synchronous and asynchronous page streaming
     /// of a listable or queryable resource.
     /// </summary>
     /// <remarks>
@@ -29,7 +29,7 @@ namespace Google.Apis.Common
     /// <typeparam name="TRequest">The type of request used to fetch pages</typeparam>
     /// <typeparam name="TResponse">The type of response obtained when fetching pages</typeparam>
     /// <typeparam name="TToken">The type of the "next page token", which must be equatable to itself</typeparam>
-    public sealed class Paginator<TResource, TRequest, TResponse, TToken>
+    public sealed class PageStreamer<TResource, TRequest, TResponse, TToken>
         where TToken : IEquatable<TToken>
     {
         private readonly Func<TRequest, TToken, TRequest> _requestProvider;
@@ -47,7 +47,7 @@ namespace Google.Apis.Common
         /// <param name="resourceExtractor">Function to extract a sequence of resources from a response.
         /// Must not be null.</param>
         /// <param name="emptyToken">The token to use to detect when there are no more pages available.</param>
-        public Paginator(
+        public PageStreamer(
             Func<TRequest, TToken, TRequest> requestProvider,
             Func<TResponse, TToken> tokenExtractor,
             Func<TResponse, IEnumerable<TResource>> resourceExtractor,
@@ -98,7 +98,7 @@ namespace Google.Apis.Common
             Preconditions.CheckNotNull(responseFetcher, nameof(responseFetcher));
             TRequest nextRequest = initialRequest;
             bool done = false;
-            return new PagingAsyncEnumerable<TResource>(async cancellationToken =>
+            return new PageStreamingAsyncEnumerable<TResource>(async cancellationToken =>
             {
                 cancellationToken.ThrowIfCancellationRequested();
                 if (done)
