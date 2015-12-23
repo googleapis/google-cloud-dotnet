@@ -19,17 +19,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
         /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
         /// <param name="destination">The stream to write the data into. Must not be null.</param>
-        public void DownloadObject(string bucket, string objectName, Stream destination)
-        {
-            DownloadObject(bucket, objectName, destination, options: null, progress: null);
-        }
-
-        /// <summary>
-        /// Downloads the data for an object from storage synchronously, into a specified stream.
-        /// </summary>
-        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
-        /// <param name="destination">The stream to write the data into. Must not be null.</param>
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
@@ -37,24 +26,11 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             string bucket,
             string objectName,
             Stream destination,
-            DownloadObjectOptions options,
-            IProgress<IDownloadProgress> progress)
+            DownloadObjectOptions options = null,
+            IProgress<IDownloadProgress> progress = null)
         {
             var baseUri = GetBaseUri(bucket, objectName);
             DownloadObjectImpl(baseUri, destination, options, progress);
-        }
-
-        /// <summary>
-        /// Downloads the data for an object from storage asynchronously, into a specified stream.
-        /// </summary>
-        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
-        /// <param name="destination">The stream to write the data into. Must not be null.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DownloadObjectAsync(string bucket, string objectName, Stream destination)
-        {
-            return DownloadObjectAsync(bucket, objectName, destination,
-                options: null, cancellationToken: CancellationToken.None, progress: null);
         }
 
         /// <summary>
@@ -72,40 +48,12 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             string bucket,
             string objectName,
             Stream destination,
-            DownloadObjectOptions options,
-            CancellationToken cancellationToken,
-            IProgress<IDownloadProgress> progress)
+            DownloadObjectOptions options = null,
+            CancellationToken cancellationToken = default(CancellationToken),
+            IProgress<IDownloadProgress> progress = null)
         {
             var baseUri = GetBaseUri(bucket, objectName);
             return DownloadObjectAsyncImpl(baseUri, destination, options, cancellationToken, progress);
-        }
-
-        /// <summary>
-        /// Downloads the data for an object from storage asynchronously, into a specified stream.
-        /// </summary>
-        /// <remarks>The generation number within <paramref name="source"/> is ignored by this method.
-        /// To download a specific generation, use <see cref="DownloadObjectOptions.Generation"/>.
-        /// </remarks>
-        /// <param name="source">Source object to download the data from. Must not be null.</param>
-        /// <param name="destination">The stream to write the data into. Must not be null.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DownloadObjectAsync(Object source, Stream destination)
-        {
-            return DownloadObjectAsync(source, destination,
-                options: null, cancellationToken: CancellationToken.None, progress: null);
-        }
-
-        /// <summary>
-        /// Downloads the latest data for an object from storage synchronously, into a specified stream.
-        /// </summary>
-        /// <remarks>The generation number within <paramref name="source"/> is ignored by this method.
-        /// To download a specific generation, use <see cref="DownloadObjectOptions.Generation"/>.
-        /// </remarks>
-        /// <param name="source">Source object to download the data from. Must not be null.</param>
-        /// <param name="destination">The stream to write the data into. Must not be null.</param>
-        public void DownloadObject(Object source, Stream destination)
-        {
-            DownloadObject(source, destination, options: null, progress: null);
         }
 
         /// <summary>
@@ -122,8 +70,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public void DownloadObject(
             Object source,
             Stream destination,
-            DownloadObjectOptions options,
-            IProgress<IDownloadProgress> progress)
+            DownloadObjectOptions options = null,
+            IProgress<IDownloadProgress> progress = null)
         {
             var baseUri = GetBaseUri(source);
             DownloadObjectImpl(baseUri, destination, options, progress);
@@ -145,9 +93,9 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public Task DownloadObjectAsync(
             Object source,
             Stream destination,
-            DownloadObjectOptions options,
-            CancellationToken cancellationToken,
-            IProgress<IDownloadProgress> progress)
+            DownloadObjectOptions options = null,
+            CancellationToken cancellationToken = default(CancellationToken),
+            IProgress<IDownloadProgress> progress = null)
         {
             var baseUri = GetBaseUri(source);
             return DownloadObjectAsyncImpl(baseUri, destination, options, cancellationToken, progress);

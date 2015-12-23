@@ -12,27 +12,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
     public partial class StorageClient
     {
         /// <summary>
-        /// Deletes the latest version of the specified object synchronously.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// If the bucket containing the object supports versioning, after this operation
-        /// completes successfully there may still be another version of the same object, and the
-        /// deleted version will still be available (but marked as deleted). In buckets which
-        /// do not support versioning, this operation will permanently delete the object.
-        /// </para>
-        /// <para>
-        /// If the request attempts to delete an object that does not exist, this counts as a failure with an HTTP status code of 404.
-        /// </para>
-        /// </remarks>
-        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
-        public void DeleteObject(string bucket, string objectName)
-        {
-            DeleteObject(bucket, objectName, null);
-        }
-
-        /// <summary>
         /// Deletes a version of the specified object synchronously.
         /// </summary>
         /// <remarks>
@@ -57,31 +36,9 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
         /// <param name="options">Additional options for the operation. May be null, in which case appropriate
         /// defaults will be used.</param>
-        public void DeleteObject(string bucket, string objectName, DeleteObjectOptions options)
+        public void DeleteObject(string bucket, string objectName, DeleteObjectOptions options = null)
         {
             CreateDeleteObjectRequest(bucket, objectName, options).Execute();
-        }
-
-        /// <summary>
-        /// Deletes the latest version of the specified object asynchronously.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// If the bucket containing the object supports versioning, after this operation
-        /// completes successfully there may still be another version of the same object, and the
-        /// deleted version will still be available (but marked as deleted). In buckets which
-        /// do not support versioning, this operation will permanently delete the object.
-        /// </para>
-        /// <para>
-        /// If the request attempts to delete an object that does not exist, this counts as a failure with an HTTP status code of 404.
-        /// </para>
-        /// </remarks>
-        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DeleteObjectAsync(string bucket, string objectName)
-        {
-            return DeleteObjectAsync(bucket, objectName, null, CancellationToken.None);
         }
 
         /// <summary>
@@ -111,7 +68,11 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DeleteObjectAsync(string bucket, string objectName, DeleteObjectOptions options, CancellationToken cancellationToken)
+        public Task DeleteObjectAsync(
+            string bucket,
+            string objectName,
+            DeleteObjectOptions options = null,
+            CancellationToken cancellationToken = default(CancellationToken))
         {
             return CreateDeleteObjectRequest(bucket, objectName, options).ExecuteAsync(cancellationToken);
         }
@@ -121,36 +82,6 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// </summary>
         /// <remarks>
         /// <para>
-        /// Note that any generation information contained within <paramref name="obj"/> is ignored;
-        /// this overload will always delete the latest version. Use <see cref="DeleteObject(Object, DeleteObjectOptions)"/>
-        /// if you wish to specify a particular version to delete.
-        /// If the bucket containing the object supports versioning, after this operation
-        /// completes successfully there may still be another version of the same object, and the
-        /// deleted version will still be available (but marked as deleted). In buckets which
-        /// do not support versioning, this operation will permanently delete the object.
-        /// </para>
-        /// <para>
-        /// If the bucket containing the object supports versioning, after this operation
-        /// completes successfully there may still be another version of the same object. In buckets which
-        /// do not support versioning, this operation will permanently delete the object.
-        /// </para>
-        /// <para>
-        /// If the request attempts to delete an object that does not exist, this counts as a failure with an HTTP status code of 404.
-        /// </para>
-        /// </remarks>
-        /// <param name="obj">Object to delete. Must not be null, and must have the name and bucket populated.</param>
-        /// <param name="options">Additional options for the operation. May be null, in which case appropriate
-        /// defaults will be used.</param>
-        public void DeleteObject(Object obj)
-        {
-            DeleteObject(obj, null);
-        }
-
-        /// <summary>
-        /// Deletes a version of the specified object synchronously.
-        /// </summary>
-        /// <remarks>
-        /// <para>
         /// By default this will delete the latest version of the object, but this can be
         /// controlled using <see cref="DeleteObjectOptions.Generation"/>. Note that any generation information
         /// contained within <paramref name="obj"/> is ignored; the generation to delete is only controlled
@@ -172,41 +103,9 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="obj">Object to delete. Must not be null, and must have the name and bucket populated.</param>
         /// <param name="options">Additional options for the operation. May be null, in which case appropriate
         /// defaults will be used.</param>
-        public void DeleteObject(Object obj, DeleteObjectOptions options)
+        public void DeleteObject(Object obj, DeleteObjectOptions options = null)
         {
             CreateDeleteObjectRequest(obj, options).Execute();
-        }
-
-        /// <summary>
-        /// Deletes the latest version of the specified object asynchronously.
-        /// </summary>
-        /// <remarks>
-        /// <para>
-        /// Note that any generation information contained within <paramref name="obj"/> is ignored;
-        /// this overload will always delete the latest version. Use <see cref="DeleteObjectAsync(Object, DeleteObjectOptions)"/>
-        /// if you wish to specify a particular version to delete.
-        /// If the bucket containing the object supports versioning, after this operation
-        /// completes successfully there may still be another version of the same object, and the
-        /// deleted version will still be available (but marked as deleted). In buckets which
-        /// do not support versioning, this operation will permanently delete the object.
-        /// </para>
-        /// <para>
-        /// If the bucket containing the object supports versioning, after this operation
-        /// completes successfully there may still be another version of the same object. In buckets which
-        /// do not support versioning, this operation will permanently delete the object.
-        /// </para>
-        /// <para>
-        /// If the request attempts to delete an object that does not exist, this counts as a failure with an HTTP status code of 404.
-        /// </para>
-        /// </remarks>
-        /// <param name="obj">Object to delete. Must not be null, and must have the name and bucket populated.</param>
-        /// <param name="options">Additional options for the operation. May be null, in which case appropriate
-        /// defaults will be used.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DeleteObjectAsync(Object obj)
-        {
-            return DeleteObjectAsync(obj, null, CancellationToken.None);
         }
 
         /// <summary>
@@ -237,7 +136,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DeleteObjectAsync(Object obj, DeleteObjectOptions options, CancellationToken cancellationToken)
+        public Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             return CreateDeleteObjectRequest(obj, options).ExecuteAsync(cancellationToken);
         }
