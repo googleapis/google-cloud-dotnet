@@ -70,7 +70,7 @@ Optional parameters
 Optional parameters are discouraged, except in cases where these
 conventions specifically recommend their use. The default value for
 default arguments must be the default value for the parameter type
-(e.g. `default(T)`, `""`, `0`).
+(e.g. `default(T)`, `null` or `0`).
 
 Note that changing any aspect of a parameter can be a breaking
 change. Making a parameter optional may not be a breaking change if
