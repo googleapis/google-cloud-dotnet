@@ -14,8 +14,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
     // ListBuckets methods on StorageClient
     public partial class StorageClient
     {
-        private static readonly Paginator<Bucket, BucketsResource.ListRequest, Buckets, string> s_bucketPaginator =
-            new Paginator<Bucket, BucketsResource.ListRequest, Buckets, string>(
+        private static readonly PageStreamer<Bucket, BucketsResource.ListRequest, Buckets, string> s_bucketPageStreamer =
+            new PageStreamer<Bucket, BucketsResource.ListRequest, Buckets, string>(
                 (request, token) => { request.PageToken = token; return request; },
                 buckets => buckets.NextPageToken,
                 buckets => buckets.Items ?? Enumerable.Empty<Bucket>(),
@@ -55,7 +55,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         {
             Preconditions.CheckNotNull(project, nameof(project));
             var initialRequest = CreateListBucketsRequest(project, options);
-            return s_bucketPaginator.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
+            return s_bucketPageStreamer.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         {
             Preconditions.CheckNotNull(project, nameof(project));
             var initialRequest = CreateListBucketsRequest(project, options);
-            return s_bucketPaginator.Fetch(initialRequest, req => req.Execute());
+            return s_bucketPageStreamer.Fetch(initialRequest, req => req.Execute());
         }
 
         private BucketsResource.ListRequest CreateListBucketsRequest(string project, ListBucketsOptions options)

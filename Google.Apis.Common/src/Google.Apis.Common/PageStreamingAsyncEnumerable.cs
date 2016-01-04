@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace Google.Apis.Common
 {
     /// <summary>
-    /// Implementation of <see cref="IAsyncEnumerable{T}"/> used for pagination.
+    /// Implementation of <see cref="IAsyncEnumerable{T}"/> used for page streaming.
     /// </summary>
-    internal sealed class PagingAsyncEnumerable<T> : IAsyncEnumerable<T>
+    internal sealed class PageStreamingAsyncEnumerable<T> : IAsyncEnumerable<T>
     {
         private readonly Func<CancellationToken, Task<IEnumerable<T>>> _provider;
 
-        internal PagingAsyncEnumerable(Func<CancellationToken, Task<IEnumerable<T>>> provider)
+        internal PageStreamingAsyncEnumerable(Func<CancellationToken, Task<IEnumerable<T>>> provider)
         {
             _provider = provider;
         }
