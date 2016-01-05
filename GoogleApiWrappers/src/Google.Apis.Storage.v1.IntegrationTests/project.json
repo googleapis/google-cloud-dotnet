@@ -1,5 +1,5 @@
 ﻿{
-  "version": "0.0.0-*",
+  "version": "0.1.0-alpha-*",
   "description": "Integration tests for the Cloud Storage client wrapper library",
   "authors": [ "googleapis-packages" ],
   "tags": [ "" ],
@@ -7,7 +7,7 @@
   "licenseUrl": "",
 
   "dependencies": {
-    "Google.Apis.Storage.v1.ClientWrapper": "0.0.0-*",
+    "Google.Apis.Storage.v1.ClientWrapper": "0.1.0-alpha-*",
     "xunit": "2.1.0",
     "xunit.runner.dnx": "2.1.0-rc1-build204"
   },
