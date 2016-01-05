@@ -1,5 +1,5 @@
 ﻿{
-  "version": "0.0.0-*",
+  "version": "0.1.0-alpha-*",
   "description": "Wrapper library for Google.Apis.Storage.v1",
   "authors": [ "googleapis-packages" ],
   "tags": [ "" ],
@@ -11,9 +11,9 @@
     "Google.Apis.Storage.v1": "1.10.0.550",
     "Google.Common.Embeddable": {
       "type": "build",
-      "version": "0.0.0-*"
+      "version": "0.1.0-alpha-*"
     },
-    "Google.Apis.Common": "0.0.0-*",
+    "Google.Apis.Common": "0.1.0-alpha-*",
     "Google.Apis.Core": "1.10.0",
     "Ix-Async": "1.2.5"
   },

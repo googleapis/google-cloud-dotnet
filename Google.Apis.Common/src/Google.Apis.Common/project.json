@@ -1,5 +1,5 @@
 ﻿{
-  "version": "0.0.0-*",
+  "version": "0.1.0-alpha-*",
   "description": "Support classes for API client libraries",
   "authors": [ "Google" ],
   "tags": [ "" ],
@@ -7,7 +7,10 @@
   "licenseUrl": "",
 
   "dependencies": {
-    "Google.Common.Embeddable": { "type": "build", "version": "0.0.0-*" },
+    "Google.Common.Embeddable": {
+      "type": "build",
+      "version": "0.1.0-alpha-*"
+    },
     "Ix-Async": "1.2.5"
   },
 
