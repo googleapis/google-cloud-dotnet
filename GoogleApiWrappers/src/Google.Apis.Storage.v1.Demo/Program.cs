@@ -39,7 +39,7 @@ namespace Google.Apis.Storage.v1.Demo
             app.Command("list-buckets", config => {
                 config.HelpOption("-?|-h|--help");
                 config.Description = "List buckets in a Google Cloud Project";
-                var project = config.Argument("project", "Google Cloud Project to list buckets from");
+                var project = config.Argument("project", "Google Cloud Project ID to list buckets from");
                 ConfigureForExecution(config, client => ListBuckets(client, project.Value));
             });
             app.Command("list-objects", config => {
@@ -115,10 +115,10 @@ namespace Google.Apis.Storage.v1.Demo
             });
         }
 
-        private static Task ListBuckets(StorageClient client, string project)
+        private static Task ListBuckets(StorageClient client, string projectId)
         {
-            var results = client.ListBucketsAsync(project, new ListBucketsOptions { PageSize = 3 });
-            Console.WriteLine($"Buckets in {project} (3 at a time):");
+            var results = client.ListBucketsAsync(projectId, new ListBucketsOptions { PageSize = 3 });
+            Console.WriteLine($"Buckets in {projectId} (3 at a time):");
             return results.ForEachAsync(bucket => Console.WriteLine($"  {bucket.Name}"));
         }
 
