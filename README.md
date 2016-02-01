@@ -6,7 +6,9 @@ Google Cloud .NET Client
 .NET client libraries for [Google Cloud Platform][cloud-platform] services.
 
 > Note: This client is a work-in-progress, and may occasionally
-> make backwards-incompatible changes. The naming in particular is 
+> make backwards-incompatible changes. The layout of the repository
+> is likely to change, and names (of everything - assemblies,
+> namespaces, types, members...) should be regarded as provisional.
 
 Contributing
 ------------
