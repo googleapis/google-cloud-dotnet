@@ -11,8 +11,8 @@ install:
 # Note that we want to exclude integration tests; currently this is
 # performed by the convention of a suffix of .Tests meaning unit tests.
 script:
-  - dnu restore Google.Common
-  - dnu restore GoogleApiWrappers
-  - dnu restore Google.Apis.Common
-  - dnu build */src/*
+  - dnu restore
+  - dnu build src/*
+  - dnu build demo/*
+  - dnu build test/*
   - for project in `find . -name '*.Tests'`; do dnx -p $project test; done

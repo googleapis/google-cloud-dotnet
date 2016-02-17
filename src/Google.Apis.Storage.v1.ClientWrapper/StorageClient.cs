@@ -2,7 +2,6 @@
 // Licensed under the Apache License Version 2.0.
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
-using Google.Common;
 using System;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -80,7 +79,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// </summary>
         internal static void ValidateBucket(string bucket)
         {
-            bucket.CheckNotNull(nameof(bucket));
+            Preconditions.CheckNotNull(bucket, nameof(bucket));
             if (!ValidBucketName.IsMatch(bucket))
             {
                 throw new ArgumentException($"Invalid bucket name '{bucket}' - see https://cloud.google.com/storage/docs/bucket-naming", nameof(bucket));
@@ -95,7 +94,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         /// <param name="paramName">The parameter name in the calling method</param>
         private void ValidateObject(Object obj, string paramName)
         {
-            obj.CheckNotNull(paramName);
+            Preconditions.CheckNotNull(obj, paramName);
             Preconditions.CheckArgument(
                 obj.Name != null && obj.Bucket != null,
                 paramName,

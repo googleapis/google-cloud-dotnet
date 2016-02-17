@@ -1,30 +1,21 @@
-﻿// Copyright 2015 Google Inc. All Rights Reserved.
+// Copyright 2015 Google Inc. All Rights Reserved.
 // Licensed under the Apache License Version 2.0.
-
-// Note that this code file may be included directly in other projects
-// either using the DNX build system with a dependency with "type": "build",
-// or by copying and pasting. For the latter approach, developers should regularly
-// review the original code at
-// http://github.com/GoogleCloudPlatform/gcloud-dotnet/tree/master/Google.Common/src/Preconditions.cs
-// for changes.
 
 using System;
 
-namespace Google.Common
+// Note: we'd really like to have a Google.Common package, but at the moment
+// it would only contain Preconditions, which seems a small benefit for the cost
+// of a dependency (and repo). Until then, this class will be copied and pasted in various
+// places. Where it needs to be public, it should be given a project-specific name; where it
+// can be entirely internal, we can leave it as "Preconditions".
+
+namespace Google.Apis.Storage.v1.ClientWrapper
 {
     /// <summary>
     /// Preconditions for checking method arguments, state etc.
     /// </summary>
     internal static class Preconditions
     {
-        // Possible future directions:
-        // - Debug-only preconditions, as used extensively in Noda Time (for checking and self-documenting internal assumptions)
-        // - Methods that return null or "something that will throw an exception" to be chained with string interpolation
-        // - Methods accepting a string format and one or two arguments (to avoid any arrays being created at execution time,
-        //   but still allow for string formatting)
-        // - Conditional public/internal access, so that we can create a Google.Common assembly exposing all of this publicly, without
-        //   duplication.
-
         /// <summary>
         /// Checks that the given argument (to the calling method) is non-null.
         /// </summary>
@@ -33,7 +24,7 @@ namespace Google.Common
         /// <param name="paramName">The name of the parameter in the calling method.</param>
         /// <exception cref="ArgumentNullException"><paramref name="argument"/> is null</exception>
         /// <returns><paramref name="argument"/> if it is not null</returns>
-        internal static T CheckNotNull<T>(this T argument, string paramName) where T : class
+        internal static T CheckNotNull<T>(T argument, string paramName) where T : class
         {
             if (argument == null)
             {
@@ -46,7 +37,7 @@ namespace Google.Common
         /// Checks that the given argument value is valid.
         /// </summary>
         /// <remarks>
-        /// Note that the upper bound (<paramref name="maxExclusive"/>) is inclusive,
+        /// Note that the upper bound (<paramref name="maxInclusive"/>) is inclusive,
         /// not exclusive. This is deliberate, to allow the specification of ranges which include
         /// <see cref="Int32.MaxValue"/>.
         /// </remarks>
@@ -54,13 +45,17 @@ namespace Google.Common
         /// <param name="paramName">The name of the parameter in the calling method.</param>
         /// <param name="minInclusive">The smallest valid value.</param>
         /// <param name="maxInclusive">The largest valid value.</param>
+        /// <returns><paramref name="argument"/> if it was in range</returns>
         /// <exception cref="ArgumentOutOfRangeException">The argument was outside the specified range.</exception>
-        internal static void CheckArgumentRange(int argument, string paramName, int minInclusive, int maxInclusive)
+        internal static int CheckArgumentRange(int argument, string paramName, int minInclusive, int maxInclusive)
         {
             if (argument < minInclusive || argument > maxInclusive)
             {
-                throw new ArgumentOutOfRangeException(paramName, $"Value {argument} should be in range [{minInclusive}, {maxInclusive}]");
+                throw new ArgumentOutOfRangeException(
+                    paramName,
+                    $"Value {argument} should be in range [{minInclusive}, {maxInclusive}]");
             }
+            return argument;
         }
 
         /// <summary>
@@ -68,7 +63,8 @@ namespace Google.Common
         /// </summary>
         /// <param name="condition">The (already evaluated) condition to check.</param>
         /// <param name="message">The message to include in the exception, if generated. This should not
-        /// use interpolation, as the interpolation would be performed regardless of whether or not an exception is thrown.</param>
+        /// use interpolation, as the interpolation would be performed regardless of whether or
+        /// not an exception is thrown.</param>
         internal static void CheckState(bool condition, string message)
         {
             if (!condition)
@@ -115,7 +111,8 @@ namespace Google.Common
         /// <param name="condition">The (already evaluated) condition to check.</param>
         /// <param name="paramName">The name of the parameter whose value is being tested.</param>
         /// <param name="message">The message to include in the exception, if generated. This should not
-        /// use interpolation, as the interpolation would be performed regardless of whether or not an exception is thrown.</param>
+        /// use interpolation, as the interpolation would be performed regardless of whether or not an exception
+        /// is thrown.</param>
         internal static void CheckArgument(bool condition, string paramName, string message)
         {
             if (!condition)

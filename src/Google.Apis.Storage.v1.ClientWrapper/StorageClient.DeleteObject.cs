@@ -1,7 +1,6 @@
 ﻿// Copyright 2015 Google Inc. All Rights Reserved.
 // Licensed under the Apache License Version 2.0.
 
-using Google.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using Object = Google.Apis.Storage.v1.Data.Object;
@@ -152,7 +151,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         private ObjectsResource.DeleteRequest CreateDeleteObjectRequest(string bucket, string name, DeleteObjectOptions options)
         {
             ValidateBucket(bucket);
-            name.CheckNotNull(nameof(name));
+            Preconditions.CheckNotNull(name, nameof(name));
             var request = Service.Objects.Delete(bucket, name);
             options?.ModifyRequest(request);
             return request;

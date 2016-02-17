@@ -1,7 +1,6 @@
 ﻿// Copyright 2015 Google Inc. All Rights Reserved.
 // Licensed under the Apache License Version 2.0.
 
-using Google.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using Object = Google.Apis.Storage.v1.Data.Object;
@@ -23,7 +22,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         public Object GetObject(string bucket, string objectName, GetObjectOptions options = null)
         {
             ValidateBucket(bucket);
-            objectName.CheckNotNull(nameof(objectName));
+            Preconditions.CheckNotNull(objectName, nameof(objectName));
             return CreateRequest(bucket, objectName, options).Execute();
         }
 
@@ -46,7 +45,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             CancellationToken cancellationToken = default(CancellationToken))
         {
             ValidateBucket(bucket);
-            objectName.CheckNotNull(nameof(objectName));
+            Preconditions.CheckNotNull(objectName, nameof(objectName));
             return CreateRequest(bucket, objectName, options).ExecuteAsync(cancellationToken);
         }
 

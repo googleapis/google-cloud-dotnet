@@ -1,0 +1,6 @@
+﻿{
+  "projects": [ "demo", "src", "test", "testing", "Google.Apis.Common/src" ],
+  "sdk": {
+    "version": "1.0.0-rc1-update1"
+  }
+}
