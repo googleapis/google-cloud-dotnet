@@ -2,7 +2,6 @@
 // Licensed under the Apache License Version 2.0.
 
 using Google.Apis.Upload;
-using Google.Common;
 using System;
 using static Google.Apis.Storage.v1.ObjectsResource;
 using static Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload;

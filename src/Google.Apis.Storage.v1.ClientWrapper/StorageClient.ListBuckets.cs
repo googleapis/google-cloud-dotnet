@@ -3,7 +3,6 @@
 
 using Google.Apis.Common;
 using Google.Apis.Storage.v1.Data;
-using Google.Common;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;

@@ -2,7 +2,6 @@
 // Licensed under the Apache License Version 2.0.
 
 using Google.Apis.Download;
-using Google.Common;
 using System;
 using System.IO;
 using System.Threading;
@@ -109,7 +108,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         private static string GetBaseUri(string bucket, string objectName)
         {
             ValidateBucket(bucket);
-            objectName.CheckNotNull(nameof(objectName));
+            Preconditions.CheckNotNull(objectName, nameof(objectName));
             return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(objectName)}?alt=media";
         }
 
@@ -131,7 +130,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             IProgress<IDownloadProgress> progress)
         {
             // URI will definitely not be null; that's constructed internally.
-            destination.CheckNotNull(nameof(destination));
+            Preconditions.CheckNotNull(destination, nameof(destination));
             var downloader = new MediaDownloader(Service);
             options?.ModifyDownloader(downloader);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
@@ -154,7 +153,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             CancellationToken cancellationToken,
             IProgress<IDownloadProgress> progress)
         {
-            destination.CheckNotNull(nameof(destination));
+            Preconditions.CheckNotNull(destination, nameof(destination));
             var downloader = new MediaDownloader(Service);
             options?.ModifyDownloader(downloader);
             string uri = options == null ? baseUri : options.GetUri(baseUri);

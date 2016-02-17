@@ -2,7 +2,6 @@
 // Licensed under the Apache License Version 2.0.
 
 using Google.Apis.Upload;
-using Google.Common;
 using System;
 using System.IO;
 using System.Threading;
@@ -34,8 +33,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             IProgress<IUploadProgress> progress = null)
         {
             ValidateBucket(bucket);
-            objectName.CheckNotNull(nameof(objectName));
-            contentType.CheckNotNull(nameof(contentType));
+            Preconditions.CheckNotNull(objectName, nameof(objectName));
+            Preconditions.CheckNotNull(contentType, nameof(contentType));
             return UploadObject(
                 new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
                 source, options, progress);
@@ -81,8 +80,8 @@ namespace Google.Apis.Storage.v1.ClientWrapper
             IProgress<IUploadProgress> progress = null)
         {
             ValidateBucket(bucket);
-            objectName.CheckNotNull(nameof(objectName));
-            contentType.CheckNotNull(nameof(contentType));
+            Preconditions.CheckNotNull(objectName, nameof(objectName));
+            Preconditions.CheckNotNull(contentType, nameof(contentType));
             return UploadObjectAsync(new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
                 source, options, cancellationToken, progress);
         }
@@ -105,7 +104,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         {
             ValidateObject(destination, nameof(destination));
             Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
-            source.CheckNotNull(nameof(source));
+            Preconditions.CheckNotNull(source, nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
             if (progress != null)
@@ -141,7 +140,7 @@ namespace Google.Apis.Storage.v1.ClientWrapper
         {
             ValidateObject(destination, nameof(destination));
             Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
-            source.CheckNotNull(nameof(source));
+            Preconditions.CheckNotNull(source, nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
             if (progress != null)
