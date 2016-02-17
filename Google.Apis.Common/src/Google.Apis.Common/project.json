@@ -7,10 +7,6 @@
   "licenseUrl": "",
 
   "dependencies": {
-    "Google.Common.Embeddable": {
-      "type": "build",
-      "version": "0.1.0-alpha-*"
-    },
     "Ix-Async": "1.2.5"
   },
 
