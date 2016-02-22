@@ -11,7 +11,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Apis.Storage.v1.Demo
+namespace Google.Storage.V1.Demo
 {
     /// <summary>
     /// Command line application to demonstrate features of the Google Cloud Storage client wrapper library.
