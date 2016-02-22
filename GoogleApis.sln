@@ -11,15 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Storage.v1.ClientWrapper", "src\Google.Apis.Storage.v1.ClientWrapper\Google.Apis.Storage.v1.ClientWrapper.xproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Storage.V1", "src\Google.Storage.V1\Google.Storage.V1.xproj", "{E8814844-5FA9-4F2B-AEAD-E7CE427DE48A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Storage.v1.Demo", "demo\Google.Apis.Storage.v1.Demo\Google.Apis.Storage.v1.Demo.xproj", "{2BB8D957-102E-46BB-8EB4-5F29FBC1EA9D}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Storage.V1.Demo", "demo\Google.Storage.V1.Demo\Google.Storage.V1.Demo.xproj", "{2BB8D957-102E-46BB-8EB4-5F29FBC1EA9D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Storage.v1.IntegrationTests", "test\Google.Apis.Storage.v1.IntegrationTests\Google.Apis.Storage.v1.IntegrationTests.xproj", "{077DDB17-CF46-4285-8853-D9AE576320F5}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Storage.V1.IntegrationTests", "test\Google.Storage.V1.IntegrationTests\Google.Storage.V1.IntegrationTests.xproj", "{077DDB17-CF46-4285-8853-D9AE576320F5}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Common", "Google.Apis.Common\src\Google.Apis.Common\Google.Apis.Common.xproj", "{16E01144-C66A-4267-AE2C-40FECF562BBB}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Storage.v1.Tests", "test\Google.Apis.Storage.v1.Tests\Google.Apis.Storage.v1.Tests.xproj", "{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Storage.V1.Tests", "test\Google.Storage.V1.Tests\Google.Storage.V1.Tests.xproj", "{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{DB076941-24F5-4F6C-9060-1EA9E2AC9887}"
 EndProject

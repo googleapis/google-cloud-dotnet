@@ -1,0 +1,185 @@
+﻿// Copyright 2015 Google Inc. All Rights Reserved.
+// Licensed under the Apache License Version 2.0.
+
+using Google.Apis.Download;
+using System;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+using Object = Google.Apis.Storage.v1.Data.Object;
+
+namespace Google.Storage.V1
+{
+    public partial class StorageClient
+    {
+        /// <summary>
+        /// Downloads the data for an object from storage synchronously, into a specified stream.
+        /// </summary>
+        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <param name="options">Additional options for the download. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="progress">Progress reporter for the download. May be null.</param>
+        public void DownloadObject(
+            string bucket,
+            string objectName,
+            Stream destination,
+            DownloadObjectOptions options = null,
+            IProgress<IDownloadProgress> progress = null)
+        {
+            var baseUri = GetBaseUri(bucket, objectName);
+            DownloadObjectImpl(baseUri, destination, options, progress);
+        }
+
+        /// <summary>
+        /// Downloads the data for an object from storage asynchronously, into a specified stream.
+        /// </summary>
+        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <param name="options">Additional options for the download. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <param name="progress">Progress reporter for the download. May be null.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public Task DownloadObjectAsync(
+            string bucket,
+            string objectName,
+            Stream destination,
+            DownloadObjectOptions options = null,
+            CancellationToken cancellationToken = default(CancellationToken),
+            IProgress<IDownloadProgress> progress = null)
+        {
+            var baseUri = GetBaseUri(bucket, objectName);
+            return DownloadObjectAsyncImpl(baseUri, destination, options, cancellationToken, progress);
+        }
+
+        /// <summary>
+        /// Downloads the data for an object from storage synchronously, into a specified stream.
+        /// </summary>
+        /// <remarks>The generation number within <paramref name="source"/> is ignored by this method.
+        /// To download a specific generation, use <see cref="DownloadObjectOptions.Generation"/>.
+        /// </remarks>
+        /// <param name="source">Source object to download the data from. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <param name="options">Additional options for the download. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="progress">Progress reporter for the download. May be null.</param>
+        public void DownloadObject(
+            Object source,
+            Stream destination,
+            DownloadObjectOptions options = null,
+            IProgress<IDownloadProgress> progress = null)
+        {
+            var baseUri = GetBaseUri(source);
+            DownloadObjectImpl(baseUri, destination, options, progress);
+        }
+
+        /// <summary>
+        /// Downloads the data for an object from storage asynchronously, into a specified stream.
+        /// </summary>
+        /// <remarks>The generation number within <paramref name="source"/> is ignored by this method.
+        /// To download a specific generation, use <see cref="DownloadObjectOptions.Generation"/>.
+        /// </remarks>
+        /// <param name="source">Source object to download the data from. Must not be null.</param>
+        /// <param name="destination">The stream to write the data into. Must not be null.</param>
+        /// <param name="options">Additional options for the download. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <param name="progress">Progress reporter for the download. May be null.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public Task DownloadObjectAsync(
+            Object source,
+            Stream destination,
+            DownloadObjectOptions options = null,
+            CancellationToken cancellationToken = default(CancellationToken),
+            IProgress<IDownloadProgress> progress = null)
+        {
+            var baseUri = GetBaseUri(source);
+            return DownloadObjectAsyncImpl(baseUri, destination, options, cancellationToken, progress);
+        }
+
+        /// <summary>
+        /// Constructs the media URL of an object from its bucket and name. This does not include the generation
+        /// or any preconditions. The returned string will always have a query parameter, so later query parameters
+        /// can unconditionally be appended with an "&amp;" prefix.
+        /// </summary>
+        private static string GetBaseUri(string bucket, string objectName)
+        {
+            ValidateBucket(bucket);
+            Preconditions.CheckNotNull(objectName, nameof(objectName));
+            return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(objectName)}?alt=media";
+        }
+
+        /// <summary>
+        /// Obtains the media URL of an object from its bucket and name.
+        /// The returned string will always have a query parameter, so later query parameters
+        /// can unconditionally be appended with an "&amp;" prefix.
+        /// </summary>
+        private string GetBaseUri(Object source)
+        {
+            ValidateObject(source, nameof(source));
+            return GetBaseUri(source.Bucket, source.Name);
+        }
+
+        private void DownloadObjectImpl(
+            string baseUri,
+            Stream destination,
+            DownloadObjectOptions options,
+            IProgress<IDownloadProgress> progress)
+        {
+            // URI will definitely not be null; that's constructed internally.
+            Preconditions.CheckNotNull(destination, nameof(destination));
+            var downloader = new MediaDownloader(Service);
+            options?.ModifyDownloader(downloader);
+            string uri = options == null ? baseUri : options.GetUri(baseUri);
+            if (progress != null)
+            {
+                downloader.ProgressChanged += progress.Report;
+                progress.Report(InitialDownloadProgress.Instance);
+            }
+            var result = downloader.Download(uri, destination);
+            if (result.Status == DownloadStatus.Failed)
+            {
+                throw result.Exception;
+            }
+        }
+
+        private async Task DownloadObjectAsyncImpl(
+            string baseUri,
+            Stream destination,
+            DownloadObjectOptions options,
+            CancellationToken cancellationToken,
+            IProgress<IDownloadProgress> progress)
+        {
+            Preconditions.CheckNotNull(destination, nameof(destination));
+            var downloader = new MediaDownloader(Service);
+            options?.ModifyDownloader(downloader);
+            string uri = options == null ? baseUri : options.GetUri(baseUri);
+            if (progress != null)
+            {
+                downloader.ProgressChanged += progress.Report;
+                // Avoid reporting progress synchronously in the original call.
+                await Task.Yield();
+                progress.Report(InitialDownloadProgress.Instance);
+            }
+            var result = await downloader.DownloadAsync(uri, destination, cancellationToken).ConfigureAwait(false);
+            if (result.Status == DownloadStatus.Failed)
+            {
+                throw result.Exception;
+            }
+        }
+
+        // MediaDownloader doesn't report progress until the first chunk has been fetched. It can be useful to
+        // report a status of "not started" immediately. This implementation of IDownloadProgress does that.
+        private sealed class InitialDownloadProgress : IDownloadProgress
+        {
+            internal static readonly IDownloadProgress Instance = new InitialDownloadProgress();
+
+            public long BytesDownloaded => 0;
+            public Exception Exception => null;
+            public DownloadStatus Status => DownloadStatus.NotStarted;
+        }
+    }
+}
