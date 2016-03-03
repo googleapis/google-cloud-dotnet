@@ -6,6 +6,10 @@
   "projectUrl": "",
   "licenseUrl": "",
 
+  "compilationOptions": {
+    "keyFile": "../../../GoogleApis.snk"
+  },
+
   "dependencies": {
     "Ix-Async": "1.2.5"
   },

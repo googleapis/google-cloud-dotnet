@@ -6,6 +6,10 @@
   "projectUrl": "",
   "licenseUrl": "",
 
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
   "dependencies": {
     "Google.Storage.V1": "0.1.0-alpha-*",
     "xunit": "2.1.0",
