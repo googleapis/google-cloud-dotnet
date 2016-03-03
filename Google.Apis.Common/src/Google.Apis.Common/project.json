@@ -1,5 +1,5 @@
 ﻿{
-  "version": "0.1.0-alpha-*",
+  "version": "0.1.0-*",
   "description": "Support classes for API client libraries",
   "authors": [ "Google" ],
   "tags": [ "" ],
