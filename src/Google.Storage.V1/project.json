@@ -1,10 +1,14 @@
 ﻿{
   "version": "0.1.0-alpha-*",
-  "description": "Wrapper library for Google.Apis.Storage.v1",
-  "authors": [ "googleapis-packages" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+  "summary": "Wrapper library for Google.Apis.Storage.v1",
+  "description": "Wrapper library for Google.Apis.Storage.v1, making common operations simpler in client code.",
+  "authors": [ "Google Inc." ],
+  "owners": [ "google-apis-packages" ],
+  "tags": [ "Google" ],
+  "projectUrl": "https://github.com/GoogleCloudPlatform/gcloud-dotnet",
+  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+  "requireLicenseAcceptance": false,
+
 
   "compilationOptions": {
     "keyFile": "../../GoogleApis.snk"
@@ -13,7 +17,7 @@
   "dependencies": {
     "Google.Apis.Auth": "1.10.0",
     "Google.Apis.Storage.v1": "1.10.0.550",
-    "Google.Apis.Common": "0.1.0-alpha-*",
+    "Google.Apis.Common": "",
     "Google.Apis.Core": "1.10.0",
     "Ix-Async": "1.2.5"
   },
