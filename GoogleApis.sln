@@ -17,8 +17,6 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Storage.V1.Demo", "d
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Storage.V1.IntegrationTests", "test\Google.Storage.V1.IntegrationTests\Google.Storage.V1.IntegrationTests.xproj", "{077DDB17-CF46-4285-8853-D9AE576320F5}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.Common", "Google.Apis.Common\src\Google.Apis.Common\Google.Apis.Common.xproj", "{16E01144-C66A-4267-AE2C-40FECF562BBB}"
-EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Storage.V1.Tests", "test\Google.Storage.V1.Tests\Google.Storage.V1.Tests.xproj", "{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{DB076941-24F5-4F6C-9060-1EA9E2AC9887}"
@@ -49,10 +47,6 @@ Global
 		{077DDB17-CF46-4285-8853-D9AE576320F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{077DDB17-CF46-4285-8853-D9AE576320F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{077DDB17-CF46-4285-8853-D9AE576320F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16E01144-C66A-4267-AE2C-40FECF562BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13}.Release|Any CPU.ActiveCfg = Release|Any CPU

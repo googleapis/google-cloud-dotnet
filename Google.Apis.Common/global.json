@@ -1,6 +1,0 @@
-﻿{
-  "projects": [ "src", "test", "../Google.Common/src" ],
-  "sdk": {
-    "version": "1.0.0-rc1-final"
-  }
-}
