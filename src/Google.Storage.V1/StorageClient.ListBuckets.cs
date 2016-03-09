@@ -1,7 +1,7 @@
 ﻿// Copyright 2015 Google Inc. All Rights Reserved.
 // Licensed under the Apache License Version 2.0.
 
-using Google.Apis.Common;
+using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System.Collections.Generic;
@@ -16,10 +16,9 @@ namespace Google.Storage.V1
     {
         private static readonly PageStreamer<Bucket, BucketsResource.ListRequest, Buckets, string> s_bucketPageStreamer =
             new PageStreamer<Bucket, BucketsResource.ListRequest, Buckets, string>(
-                (request, token) => { request.PageToken = token; return request; },
+                (request, token) => request.PageToken = token,
                 buckets => buckets.NextPageToken,
-                buckets => buckets.Items ?? Enumerable.Empty<Bucket>(),
-                null);
+                buckets => buckets.Items);
 
         /// <summary>
         /// Asynchronously lists the buckets in a given project, returning the results as a list.
@@ -33,29 +32,14 @@ namespace Google.Storage.V1
         /// defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of buckets within the project.</returns>
-        public async Task<IList<Bucket>> ListAllBucketsAsync(
+        public Task<IList<Bucket>> ListAllBucketsAsync(
             string projectId,
             ListBucketsOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            return await ListBucketsAsync(projectId, options).ToList(cancellationToken);
-        }
-
-        /// <summary>
-        /// Asynchronously lists the buckets for a given project.
-        /// </summary>
-        /// <remarks>
-        /// This lists the buckets within a project asynchronously and lazily.
-        /// </remarks>
-        /// <param name="projectId">The ID of the project to list the buckets from. Must not be null.</param>
-        /// <param name="options">The options for the operation. May be null, in which case
-        /// defaults will be supplied.</param>
-        /// <returns>An asynchronous sequence of buckets within the project.</returns>
-        public IAsyncEnumerable<Bucket> ListBucketsAsync(string projectId, ListBucketsOptions options = null)
-        {
             Preconditions.CheckNotNull(projectId, nameof(projectId));
             var initialRequest = CreateListBucketsRequest(projectId, options);
-            return s_bucketPageStreamer.FetchAsync(initialRequest, (req, cancellationToken) => req.ExecuteAsync(cancellationToken));
+            return s_bucketPageStreamer.FetchAllAsync(initialRequest, cancellationToken);
         }
 
         /// <summary>
@@ -74,7 +58,7 @@ namespace Google.Storage.V1
         {
             Preconditions.CheckNotNull(projectId, nameof(projectId));
             var initialRequest = CreateListBucketsRequest(projectId, options);
-            return s_bucketPageStreamer.Fetch(initialRequest, req => req.Execute());
+            return s_bucketPageStreamer.Fetch(initialRequest);
         }
 
         private BucketsResource.ListRequest CreateListBucketsRequest(string projectId, ListBucketsOptions options)

@@ -95,7 +95,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = new MemoryStream();
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { Generation = existing.Generation + 1 }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
         }
 
@@ -157,7 +157,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = new MemoryStream();
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfGenerationMatch = existing.Generation + 1 }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
         }
 
@@ -168,7 +168,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = new MemoryStream();
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfGenerationNotMatch = existing.Generation }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.NotModified, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
         }
 
@@ -207,7 +207,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = new MemoryStream();
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfMetagenerationMatch = existing.Metageneration + 1 }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
         }
 
@@ -218,7 +218,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = new MemoryStream();
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.NotModified, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
         }
 

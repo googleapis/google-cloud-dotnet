@@ -15,11 +15,11 @@
   },
 
   "dependencies": {
-    "Google.Apis.Auth": "1.10.0",
+    "Google.Apis": "1.10.1-rc2",
+    "Google.Apis.Auth": "1.10.1-rc2",
+    "Google.Apis.Core": "1.10.1-rc2",
     "Google.Apis.Storage.v1": "1.10.0.550",
-    "Google.Apis.Common": "",
-    "Google.Apis.Core": "1.10.0",
-    "Ix-Async": "1.2.5"
+    "Microsoft.Bcl.Async":  "1.0.14-rc"
   },
   "frameworks": {
     "net451": { }

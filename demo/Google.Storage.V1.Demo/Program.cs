@@ -115,18 +115,24 @@ namespace Google.Storage.V1.Demo
             });
         }
 
-        private static Task ListBuckets(StorageClient client, string projectId)
+        private static async Task ListBuckets(StorageClient client, string projectId)
         {
-            var results = client.ListBucketsAsync(projectId, new ListBucketsOptions { PageSize = 3 });
-            Console.WriteLine($"Buckets in {projectId} (3 at a time):");
-            return results.ForEachAsync(bucket => Console.WriteLine($"  {bucket.Name}"));
+            Console.WriteLine($"Buckets in {projectId}:");
+            var results = await client.ListAllBucketsAsync(projectId, new ListBucketsOptions { PageSize = 3 });
+            foreach (var bucket in results)
+            {
+                Console.WriteLine($"  {bucket.Name}");
+            }
         }
 
-        private static Task ListObjects(StorageClient client, string bucket, string prefix)
+        private static async Task ListObjects(StorageClient client, string bucket, string prefix)
         {
-            var results = client.ListObjectsAsync(bucket, prefix, new ListObjectsOptions { PageSize = 3 });
-            Console.WriteLine($"Objects in {bucket} (3 at a time):");
-            return results.ForEachAsync(obj => Console.WriteLine($"  {obj.Name}"));
+            Console.WriteLine($"Objects in {bucket}:");
+            var results = await client.ListAllObjectsAsync(bucket, prefix, new ListObjectsOptions { PageSize = 3 });
+            foreach (var obj in results)
+            {
+                Console.WriteLine($"  {obj.Name}");
+            }
         }
 
         private static async Task DownloadObject(StorageClient client, string bucket, string source, string destination)
