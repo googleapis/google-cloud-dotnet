@@ -58,9 +58,14 @@ namespace Google.Storage.V1
         public static async Task<StorageClient> FromApplicationCredentials(string applicationName)
         {
             Preconditions.CheckNotNull(applicationName, nameof(applicationName));
+            var credentials = await GoogleCredential.GetApplicationDefaultAsync();
+            if (credentials.IsCreateScopedRequired)
+            {
+                credentials = credentials.CreateScoped(StorageService.Scope.DevstorageFullControl);
+            }
             var initializer = new BaseClientService.Initializer
             {
-                HttpClientInitializer = await GoogleCredential.GetApplicationDefaultAsync(),
+                HttpClientInitializer = credentials,
                 ApplicationName = applicationName,
             };
             return new StorageClient(initializer);
