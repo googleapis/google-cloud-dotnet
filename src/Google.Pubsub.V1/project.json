@@ -14,7 +14,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax": "0.1.0-*",
+    "Google.Api.Gax": "0.1.0-CI00024",
     "Google.Apis.Auth": "1.10.0",
     "Google.Protobuf": "3.0.0-beta2",
     "Grpc.Auth": "0.13.0",

@@ -4,8 +4,6 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
-using Google.Apis.Auth.OAuth2;
-using Grpc.Auth;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -39,7 +37,7 @@ namespace Google.Pubsub.V1
     /// <summary>
     /// Settings for a Publisher wrapper.
     /// </summary>
-    public sealed partial class PublisherSettings : ServiceSettingsBase
+    public sealed partial class PublisherSettings : ServiceSettingsBase<PublisherSettings>
     {
         /// <summary>
         /// Get a new instance of the default <see cref="PublisherSettings">.
@@ -51,7 +49,7 @@ namespace Google.Pubsub.V1
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of Publisher settings.</returns>
-        public PublisherSettings Clone() => CloneInto(new PublisherSettings
+        public override PublisherSettings Clone() => CloneInto(new PublisherSettings
         {
         });
     }
@@ -112,24 +110,7 @@ namespace Google.Pubsub.V1
         {
             Host = ServiceDefaults.Host,
             Port = ServiceDefaults.Port,
-        };
-
-        private static async Task<PublisherClient> CreateFromDefaultCredentialsUnsafeAsync(
-            PublisherSettings settings = null,
-            ServiceEndpointSettings serviceEndpointSettings = null,
-            IEnumerable<string> credentialScopes = null)
-        {
-            // Get the default credentials, and add scopes if required
-            var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-            if (credentials.IsCreateScopedRequired)
-            {
-                credentials = credentials.CreateScoped(credentialScopes ?? ServiceDefaults.Scopes);
-            }
-            var channelCredentials = ChannelCredentials.Create(
-                new SslCredentials(),
-                credentials.ToCallCredentials());
-            return CreateFromCredentials(channelCredentials, settings, serviceEndpointSettings);
-        }
+        };        
 
         /// <summary>
         /// Asynchonously create a <see cref="PublisherClient"/> from default credentials.
@@ -143,11 +124,7 @@ namespace Google.Pubsub.V1
             ServiceEndpointSettings serviceEndpointSettings = null,
             IEnumerable<string> credentialScopes = null)
         {
-            // Clone all settings, as Create can be async.
-            return CreateFromDefaultCredentialsUnsafeAsync(
-                settings?.Clone(),
-                serviceEndpointSettings?.Clone(),
-                credentialScopes?.ToList());
+            return ClientHelper.CreateFromDefaultCredentialsAsync(settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
         }
 
         /// <summary>
@@ -162,12 +139,7 @@ namespace Google.Pubsub.V1
             ServiceEndpointSettings serviceEndpointSettings = null,
             IEnumerable<string> credentialScopes = null)
         {
-            // Clone all settings, as Create can be async
-            return Task.Run(() => CreateFromDefaultCredentialsUnsafeAsync(
-                settings?.Clone(),
-                serviceEndpointSettings?.Clone(),
-                credentialScopes == null ? null : new List<string>(credentialScopes)
-            )).Result;
+            return ClientHelper.CreateFromDefaultCredentials(settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
         }
 
         /// <summary>
@@ -182,11 +154,7 @@ namespace Google.Pubsub.V1
             PublisherSettings settings = null,
             ServiceEndpointSettings serviceEndpointSettings = null)
         {
-            serviceEndpointSettings = serviceEndpointSettings ?? GetDefaultServiceEndpointSettings();
-            Channel channel = new Channel(
-                serviceEndpointSettings.Host ?? ServiceDefaults.Host,
-                serviceEndpointSettings.Port ?? ServiceDefaults.Port,
-                credentials);
+            Channel channel = ClientHelper.CreateChannel(serviceEndpointSettings ?? GetDefaultServiceEndpointSettings(), ServiceDefaults.Host, ServiceDefaults.Port, credentials);
             Publisher.IPublisherClient grpcClient = new Publisher.PublisherClient(channel);
             return new PublisherClientImpl(grpcClient, settings);
         }
@@ -314,35 +282,16 @@ namespace Google.Pubsub.V1
                 "" // An empty page-token
             );
 
-        private readonly Func<DateTime?> _calcDeadline;
+        private readonly ClientHelper _clientHelper;
 
         public PublisherClientImpl(Publisher.IPublisherClient grpcClient, PublisherSettings settings)
         {
-            settings = settings ?? PublisherSettings.GetDefault();
             this.GrpcClient = grpcClient;
-            if (settings.Timeout == null)
-            {
-                this._calcDeadline = () => null;
-            }
-            else
-            {
-                IClock clock = settings.Clock ?? SystemClock.Instance;
-                TimeSpan timeout = settings.Timeout.Value;
-                this._calcDeadline = () => clock.GetCurrentDateTimeUtc() + timeout;
-            }
+            var effectiveSettings = settings ?? PublisherSettings.GetDefault();
+            _clientHelper = new ClientHelper(effectiveSettings);
         }
 
         public override Publisher.IPublisherClient GrpcClient { get; }
-
-        private CallOptions BuildCallOptions(
-            CancellationToken cancellationToken,
-            Func<CallOptions, CallOptions> callOptionsOverride)
-        {
-            CallOptions callOptions = new CallOptions(
-                deadline: _calcDeadline(),
-                cancellationToken: cancellationToken);
-            return callOptionsOverride?.Invoke(callOptions) ?? callOptions;
-        }
 
         public override Task<Topic> CreateTopicAsync(
             string name,
@@ -355,7 +304,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateTopicAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -369,7 +318,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateTopic(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride));
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride));
         }
 
         public override Task<PublishResponse> PublishAsync(
@@ -385,7 +334,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.PublishAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -401,7 +350,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.Publish(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride));
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride));
         }
 
         public override Task<Topic> GetTopicAsync(
@@ -415,7 +364,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetTopicAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -429,7 +378,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetTopic(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride));
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride));
         }
 
         public override IAsyncEnumerable<Topic> ListTopicsAsync(
@@ -444,7 +393,7 @@ namespace Google.Pubsub.V1
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListTopicsAsync(
                     pageStreamRequest,
-                    BuildCallOptions(cancellationToken, callOptionsOverride)
+                    _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
                 ).ResponseAsync
             );
         }
@@ -461,7 +410,7 @@ namespace Google.Pubsub.V1
                 request,
                 pageStreamRequest => GrpcClient.ListTopics(
                     pageStreamRequest,
-                    BuildCallOptions(default(CancellationToken), callOptionsOverride))
+                    _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride))
             );
         }
 
@@ -477,7 +426,7 @@ namespace Google.Pubsub.V1
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListTopicSubscriptionsAsync(
                     pageStreamRequest,
-                    BuildCallOptions(cancellationToken, callOptionsOverride)
+                    _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
                 ).ResponseAsync
             );
         }
@@ -494,7 +443,7 @@ namespace Google.Pubsub.V1
                 request,
                 pageStreamRequest => GrpcClient.ListTopicSubscriptions(
                     pageStreamRequest,
-                    BuildCallOptions(default(CancellationToken), callOptionsOverride))
+                    _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride))
             );
         }
 
@@ -509,7 +458,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.DeleteTopicAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -523,7 +472,7 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.DeleteTopic(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride));
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride));
         }
 
     }
