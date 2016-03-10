@@ -1,14 +1,13 @@
 ﻿{
   "version": "0.1.0-*",
-  "summary": "GAPIC library for Google.Pubsub.V1",
-  "description": "GAPIC library for Google.Pubsub.V1, making common operations simpler in client code.",
+  "summary": "Google Pubsub v1 client library",
+  "description": "Google Pubsub v1 client library",
   "authors": [ "Google Inc." ],
   "owners": [ "google-apis-packages" ],
   "tags": [ "Google" ],
   "projectUrl": "https://github.com/GoogleCloudPlatform/gcloud-dotnet",
   "licenseUrl": "https://developers.google.com/open-source/licenses/bsd",
   "requireLicenseAcceptance": false,
-
 
   "compilationOptions": {
     "keyFile": "../../GoogleApis.snk"
@@ -22,6 +21,7 @@
     "Grpc.Core": "0.13.0",
     "Ix-Async": "1.2.5"
   },
+
   "frameworks": {
     "net451": { }
   }

@@ -14,6 +14,7 @@ using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -25,7 +26,7 @@ namespace Google.Pubsub.V1
     public static partial class SubscriberExtensions
     {
         /// <summary>
-        /// Wrap a GRPC Publisher client for more convinient use.
+        /// Wrap a GRPC Publisher client for more convenient use.
         /// </summary>
         /// <param name="grpcClient">A GRPC client to wrap.</param>
         /// <param name="settings">
@@ -95,7 +96,7 @@ namespace Google.Pubsub.V1
             /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
             /// </list>
             /// </remarks>
-            public static ReadOnlyCollection<string> Scopes { get; } = new ReadOnlyCollection<string>(new[] {
+            public static IReadOnlyList<string> Scopes { get; } = new ReadOnlyCollection<string>(new[] {
                 "https://www.googleapis.com/auth/pubsub",
                 "https://www.googleapis.com/auth/cloud-platform",
             });
@@ -150,7 +151,7 @@ namespace Google.Pubsub.V1
             return CreateFromDefaultCredentialsUnsafeAsync(
                 settings?.Clone(),
                 serviceEndpointSettings?.Clone(),
-                credentialScopes == null ? null : new List<string>(credentialScopes));
+                credentialScopes?.ToList());
         }
 
         /// <summary>
@@ -354,6 +355,8 @@ namespace Google.Pubsub.V1
                 "" // An empty page-token
             );
 
+        private readonly Func<DateTime?> _calcDeadline;
+
         public SubscriberClientImpl(Subscriber.ISubscriberClient grpcClient, SubscriberSettings settings)
         {
             settings = settings ?? SubscriberSettings.GetDefault();
@@ -369,8 +372,6 @@ namespace Google.Pubsub.V1
                 this._calcDeadline = () => clock.GetCurrentDateTimeUtc() + timeout;
             }
         }
-
-        private readonly Func<DateTime?> _calcDeadline;
 
         public override Subscriber.ISubscriberClient GrpcClient { get; }
 
