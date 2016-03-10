@@ -33,7 +33,7 @@ namespace Google.Pubsub.V1
         /// An optional <see cref="SubscriberSettings"/> to configure this wrapper.
         /// If null or not specified, then the default settings are used.
         /// </param>
-        /// <returns>A <see cref="SubscriberSettings"/> that wraps the specified GRPC client.</returns>
+        /// <returns>A <see cref="SubscriberClient"/> that wraps the specified GRPC client.</returns>
         public static SubscriberClient ToClient(
             this Subscriber.ISubscriberClient grpcClient,
             SubscriberSettings settings = null
