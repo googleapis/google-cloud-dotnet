@@ -1,0 +1,28 @@
+﻿{
+  "version": "0.1.0-*",
+  "summary": "Google Pubsub v1 client library",
+  "description": "Google Pubsub v1 client library",
+  "authors": [ "Google Inc." ],
+  "owners": [ "google-apis-packages" ],
+  "tags": [ "Google" ],
+  "projectUrl": "https://github.com/GoogleCloudPlatform/gcloud-dotnet",
+  "licenseUrl": "https://developers.google.com/open-source/licenses/bsd",
+  "requireLicenseAcceptance": false,
+
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Api.Gax": "0.1.0-*",
+    "Google.Apis.Auth": "1.10.0",
+    "Google.Protobuf": "3.0.0-beta2",
+    "Grpc.Auth": "0.13.0",
+    "Grpc.Core": "0.13.0",
+    "Ix-Async": "1.2.5"
+  },
+
+  "frameworks": {
+    "net451": { }
+  }
+}
