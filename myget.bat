@@ -23,3 +23,8 @@ call dnx -p test\Google.Storage.V1.Tests test
 IF ERRORLEVEL 1 EXIT /B 1
 call dnu pack src\Google.Storage.V1
 IF ERRORLEVEL 1 EXIT /B 1
+
+call dnu build src\Google.Pubsub.V1
+IF ERRORLEVEL 1 EXIT /B 1
+call dnu pack src\Google.Pubsub.V1
+IF ERRORLEVEL 1 EXIT /B 1
