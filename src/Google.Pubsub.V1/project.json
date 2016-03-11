@@ -6,7 +6,7 @@
   "owners": [ "google-apis-packages" ],
   "tags": [ "Google" ],
   "projectUrl": "https://github.com/GoogleCloudPlatform/gcloud-dotnet",
-  "licenseUrl": "https://developers.google.com/open-source/licenses/bsd",
+  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
   "requireLicenseAcceptance": false,
 
   "compilationOptions": {
