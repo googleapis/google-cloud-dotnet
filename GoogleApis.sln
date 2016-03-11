@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "testing", "testing", "{FC41
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Pubsub.V1", "src\Google.Pubsub.V1\Google.Pubsub.V1.xproj", "{768566BC-8F77-4F7C-8A15-F8A11308B74B}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Pubsub.V1.Demo", "demo\Google.Pubsub.V1.Demo\Google.Pubsub.V1.Demo.xproj", "{F013989D-21A1-41E5-9AF0-967E42CBEB62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{768566BC-8F77-4F7C-8A15-F8A11308B74B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{768566BC-8F77-4F7C-8A15-F8A11308B74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{768566BC-8F77-4F7C-8A15-F8A11308B74B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F013989D-21A1-41E5-9AF0-967E42CBEB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F013989D-21A1-41E5-9AF0-967E42CBEB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F013989D-21A1-41E5-9AF0-967E42CBEB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F013989D-21A1-41E5-9AF0-967E42CBEB62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,5 +75,6 @@ Global
 		{077DDB17-CF46-4285-8853-D9AE576320F5} = {F87E02E7-3142-4439-8938-42DD79337135}
 		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13} = {F87E02E7-3142-4439-8938-42DD79337135}
 		{768566BC-8F77-4F7C-8A15-F8A11308B74B} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
+		{F013989D-21A1-41E5-9AF0-967E42CBEB62} = {DB076941-24F5-4F6C-9060-1EA9E2AC9887}
 	EndGlobalSection
 EndGlobal
