@@ -39,7 +39,7 @@ namespace Google.Pubsub.V1
     /// <summary>
     /// Settings for a Subscriber wrapper.
     /// </summary>
-    public sealed partial class SubscriberSettings : ServiceSettingsBase
+    public sealed partial class SubscriberSettings : ServiceSettingsBase<SubscriberSettings>
     {
         /// <summary>
         /// Get a new instance of the default <see cref="PublisherSettings">.
@@ -51,7 +51,7 @@ namespace Google.Pubsub.V1
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of Subscriber settings.</returns>
-        public SubscriberSettings Clone() => CloneInto(new SubscriberSettings
+        public override SubscriberSettings Clone() => CloneInto(new SubscriberSettings
         {
         });
     }
@@ -108,28 +108,11 @@ namespace Google.Pubsub.V1
         /// <item><description>Port 443</description></item>
         /// </list>
         /// </remarks>
-        public static ServiceEndpointSettings GetDefaultServiceApiSettings() => new ServiceEndpointSettings
+        public static ServiceEndpointSettings GetDefaultServiceEndpointSettings() => new ServiceEndpointSettings
         {
             Host = ServiceDefaults.Host,
             Port = ServiceDefaults.Port,
         };
-
-        private static async Task<SubscriberClient> CreateFromDefaultCredentialsUnsafeAsync(
-            SubscriberSettings settings = null,
-            ServiceEndpointSettings serviceEndpointSettings = null,
-            IEnumerable<string> credentialScopes = null)
-        {
-            // Get the default credentials, and add scopes if required
-            var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-            if (credentials.IsCreateScopedRequired)
-            {
-                credentials = credentials.CreateScoped(credentialScopes ?? ServiceDefaults.Scopes);
-            }
-            var channelCredentials = ChannelCredentials.Create(
-                new SslCredentials(),
-                credentials.ToCallCredentials());
-            return CreateFromCredentials(channelCredentials, settings, serviceEndpointSettings);
-        }
 
         /// <summary>
         /// Asynchronously create a <see cref="SubscriberClient"/> from default credentials.
@@ -143,11 +126,7 @@ namespace Google.Pubsub.V1
             ServiceEndpointSettings serviceEndpointSettings = null,
             IEnumerable<string> credentialScopes = null)
         {
-            // Clone all settings, as Create can be async.
-            return CreateFromDefaultCredentialsUnsafeAsync(
-                settings?.Clone(),
-                serviceEndpointSettings?.Clone(),
-                credentialScopes?.ToList());
+            return ClientHelper.CreateFromDefaultCredentialsAsync(settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
         }
 
         /// <summary>
@@ -162,12 +141,7 @@ namespace Google.Pubsub.V1
             ServiceEndpointSettings serviceEndpointSettings = null,
             IEnumerable<string> credentialScopes = null)
         {
-            // Clone all settings, as Create can be async
-            return Task.Run(() => CreateFromDefaultCredentialsUnsafeAsync(
-                settings?.Clone(),
-                serviceEndpointSettings?.Clone(),
-                credentialScopes == null ? null : new List<string>(credentialScopes)
-            )).Result;
+            return ClientHelper.CreateFromDefaultCredentials(settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
         }
 
         /// <summary>
@@ -180,13 +154,9 @@ namespace Google.Pubsub.V1
         public static SubscriberClient CreateFromCredentials(
             ChannelCredentials credentials,
             SubscriberSettings settings = null,
-            ServiceEndpointSettings serviceApiSettings = null)
+            ServiceEndpointSettings serviceEndpointSettings = null)
         {
-            serviceApiSettings = serviceApiSettings ?? GetDefaultServiceApiSettings();
-            Channel channel = new Channel(
-                serviceApiSettings.Host ?? ServiceDefaults.Host,
-                serviceApiSettings.Port ?? ServiceDefaults.Port,
-                credentials);
+            Channel channel = ClientHelper.CreateChannel(serviceEndpointSettings ?? GetDefaultServiceEndpointSettings(), ServiceDefaults.Host, ServiceDefaults.Port, credentials);
             Subscriber.ISubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
             return new SubscriberClientImpl(grpcClient, settings);
         }
@@ -351,35 +321,16 @@ namespace Google.Pubsub.V1
                 "" // An empty page-token
             );
 
-        private readonly Func<DateTime?> _calcDeadline;
+        private readonly ClientHelper _clientHelper;
 
         public SubscriberClientImpl(Subscriber.ISubscriberClient grpcClient, SubscriberSettings settings)
         {
-            settings = settings ?? SubscriberSettings.GetDefault();
             this.GrpcClient = grpcClient;
-            if (settings.Timeout == null)
-            {
-                this._calcDeadline = () => null;
-            }
-            else
-            {
-                IClock clock = settings.Clock ?? SystemClock.Instance;
-                TimeSpan timeout = settings.Timeout.Value;
-                this._calcDeadline = () => clock.GetCurrentDateTimeUtc() + timeout;
-            }
+            var effectiveSettings = settings ?? SubscriberSettings.GetDefault();
+            _clientHelper = new ClientHelper(effectiveSettings);
         }
 
         public override Subscriber.ISubscriberClient GrpcClient { get; }
-
-        private CallOptions BuildCallOptions(
-            CancellationToken cancellationToken,
-            Func<CallOptions, CallOptions> callOptionsOverride)
-        {
-            CallOptions callOptions = new CallOptions(
-                deadline: _calcDeadline(),
-                cancellationToken: cancellationToken);
-            return callOptionsOverride?.Invoke(callOptions) ?? callOptions;
-        }
 
         public override Task<Subscription> CreateSubscriptionAsync(
             string name,
@@ -398,7 +349,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateSubscriptionAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -418,7 +369,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateSubscription(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride)
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
             );
         }
 
@@ -433,7 +384,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetSubscriptionAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -447,7 +398,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetSubscription(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride)
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
             );
         }
 
@@ -463,7 +414,7 @@ namespace Google.Pubsub.V1
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListSubscriptionsAsync(
                     pageStreamRequest,
-                    BuildCallOptions(cancellationToken, callOptionsOverride)
+                    _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
                 ).ResponseAsync
             );
         }
@@ -480,7 +431,7 @@ namespace Google.Pubsub.V1
                 request,
                 pageStreamRequest => GrpcClient.ListSubscriptions(
                     pageStreamRequest,
-                    BuildCallOptions(default(CancellationToken), callOptionsOverride))
+                    _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride))
             );
         }
 
@@ -495,7 +446,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.DeleteSubscriptionAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -509,7 +460,7 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.DeleteSubscription(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride)
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
             );
         }
 
@@ -528,7 +479,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.ModifyAckDeadlineAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -546,7 +497,7 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.ModifyAckDeadline(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride)
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
             );
         }
 
@@ -563,7 +514,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.AcknowledgeAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -579,7 +530,7 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.AcknowledgeAsync(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride)
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
             );
         }
 
@@ -598,7 +549,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.PullAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -616,7 +567,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.Pull(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride)
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
             );
         }
 
@@ -633,7 +584,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.ModifyPushConfigAsync(
                 request,
-                BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
             ).ResponseAsync;
         }
 
@@ -649,7 +600,7 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.ModifyPushConfig(
                 request,
-                BuildCallOptions(default(CancellationToken), callOptionsOverride)
+                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
             );
         }
 
