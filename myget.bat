@@ -26,5 +26,7 @@ IF ERRORLEVEL 1 EXIT /B 1
 
 call dnu build src\Google.Pubsub.V1
 IF ERRORLEVEL 1 EXIT /B 1
+call dnu build test\Google.Pubsub.V1.IntegrationTests
+IF ERRORLEVEL 1 EXIT /B 1
 call dnu pack src\Google.Pubsub.V1
 IF ERRORLEVEL 1 EXIT /B 1
