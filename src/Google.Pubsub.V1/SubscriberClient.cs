@@ -99,6 +99,38 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
+        /// Path template for a project resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
+
+        /// <summary>
+        /// Path template for a subscription resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>subscription</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate SubscriptionTemplate { get; } = new PathTemplate("projects/{project}/subscriptions/{subscription}");
+
+        /// <summary>
+        /// Creates a project resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <returns>The full project resource name.</returns>
+        public static string GetProjectName(string projectId) => ProjectTemplate.Expand(projectId);
+
+        /// <summary>
+        /// Creates a subscription resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="subscriptionId">The subscription ID.</param>
+        /// <returns>The full topic resource name.</returns>
+        public static string GetSubscriptionName(string projectId, string subscriptionId) => SubscriptionTemplate.Expand(projectId, subscriptionId);
+
+        /// <summary>
         /// Get a new instance of the default <see cref="ServiceEndpointSettings"/>.
         /// </summary>
         /// <remarks>
