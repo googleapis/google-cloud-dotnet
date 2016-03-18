@@ -44,11 +44,9 @@ namespace Google.Storage.V1.IntegrationTests
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
-            var enumerable = s_config.Client.ListBucketsAsync(s_config.Project, null);
-            var enumerator = enumerable.GetEnumerator();
-            Assert.True(await enumerator.MoveNext(cts.Token));
+            var task = s_config.Client.ListAllBucketsAsync(s_config.Project, cancellationToken: cts.Token);
             cts.Cancel();
-            await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await enumerator.MoveNext(cts.Token));
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);
         }
 
         // Fetches buckets using the given options in each possible way, validating that the expected bucket names are returned.
@@ -57,8 +55,6 @@ namespace Google.Storage.V1.IntegrationTests
             IEnumerable<Bucket> actual = s_config.Client.ListBuckets(s_config.Project, options);
             AssertBucketNames(actual, expectedBucketNames);
             actual = await s_config.Client.ListAllBucketsAsync(s_config.Project, options, CancellationToken.None);
-            AssertBucketNames(actual, expectedBucketNames);
-            actual = await s_config.Client.ListBucketsAsync(s_config.Project, options).ToList(CancellationToken.None);
             AssertBucketNames(actual, expectedBucketNames);
         }
 

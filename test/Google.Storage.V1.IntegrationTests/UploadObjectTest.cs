@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Xunit;
 using static Google.Storage.V1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
+using System.Net;
 
 namespace Google.Storage.V1.IntegrationTests
 {
@@ -124,7 +125,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = GenerateData(50);
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfGenerationMatch = existing.Generation + 1 }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
         [Fact]
@@ -134,7 +135,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = GenerateData(50);
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfGenerationNotMatch = existing.Generation }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.NotModified, exception.HttpStatusCode);
         }
 
         [Fact]
@@ -170,7 +171,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = GenerateData(50);
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfMetagenerationMatch = existing.Metageneration + 1 }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
         [Fact]
@@ -180,7 +181,7 @@ namespace Google.Storage.V1.IntegrationTests
             var stream = GenerateData(50);
             var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration }, null));
-            // TODO: Assert status code when https://github.com/google/google-api-dotnet-client/issues/645 is fixed.
+            Assert.Equal(HttpStatusCode.NotModified, exception.HttpStatusCode);
         }
 
         [Fact]
