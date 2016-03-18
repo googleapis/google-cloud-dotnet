@@ -42,7 +42,7 @@ namespace Google.Pubsub.V1
     public sealed partial class SubscriberSettings : ServiceSettingsBase<SubscriberSettings>
     {
         /// <summary>
-        /// Get a new instance of the default <see cref="PublisherSettings">.
+        /// Get a new instance of the default <see cref="PublisherSettings"/>.
         /// </summary>
         /// <returns>A new instance of the default SubscriberSettings.</returns>
         public static SubscriberSettings GetDefault() => new SubscriberSettings();
