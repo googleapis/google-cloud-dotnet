@@ -13,7 +13,7 @@ namespace Google.Storage.V1
         /// <summary>
         /// Fetches the information about an object synchronously.
         /// </summary>
-        /// <remarks>This does not retrieve the content of the object itself. Use <see cref="DownloadObject(string, string,  System.IO.Stream)"/>
+        /// <remarks>This does not retrieve the content of the object itself. Use <see cref="DownloadObject(string, string, System.IO.Stream, DownloadObjectOptions, System.IProgress{Apis.Download.IDownloadProgress})"/>
         /// to download the content.</remarks>
         /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
         /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
@@ -30,7 +30,7 @@ namespace Google.Storage.V1
         /// <summary>
         /// Fetches the information about an object asynchronously.
         /// </summary>
-        /// <remarks>This does not retrieve the content of the object itself. Use <see cref="DownloadObject(string, string, System.IO.Stream)"/>
+        /// <remarks>This does not retrieve the content of the object itself. Use <see cref="DownloadObjectAsync(string, string, System.IO.Stream, DownloadObjectOptions, CancellationToken, System.IProgress{Apis.Download.IDownloadProgress})"/>
         /// to download the content.</remarks>
         /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
         /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>

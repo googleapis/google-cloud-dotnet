@@ -40,7 +40,7 @@ namespace Google.Pubsub.V1
     public sealed partial class PublisherSettings : ServiceSettingsBase<PublisherSettings>
     {
         /// <summary>
-        /// Get a new instance of the default <see cref="PublisherSettings">.
+        /// Get a new instance of the default <see cref="PublisherSettings"/>.
         /// </summary>
         /// <returns>A new instance of the default PublisherSettings.</returns>
         public static PublisherSettings GetDefault() => new PublisherSettings();
