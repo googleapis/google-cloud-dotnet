@@ -201,15 +201,15 @@ namespace Google.Pubsub.V1
 
         public virtual Task<Topic> CreateTopicAsync(
             string name,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual Topic CreateTopic(
             string name,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -217,8 +217,8 @@ namespace Google.Pubsub.V1
         public virtual Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -226,65 +226,65 @@ namespace Google.Pubsub.V1
         public virtual PublishResponse Publish(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual Task<Topic> GetTopicAsync(
             string topic,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual Topic GetTopic(
             string topic,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual IAsyncEnumerable<Topic> ListTopicsAsync(
             string project,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual IEnumerable<Topic> ListTopics(
             string project,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual IAsyncEnumerable<string> ListTopicSubscriptionsAsync(
             string topic,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual IEnumerable<string> ListTopicSubscriptions(
             string topic,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual Task DeleteTopicAsync(
             string topic,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual void DeleteTopic(
             string topic,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -327,8 +327,8 @@ namespace Google.Pubsub.V1
 
         public override Task<Topic> CreateTopicAsync(
             string name,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             Topic request = new Topic
             {
@@ -336,13 +336,13 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateTopicAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
         public override Topic CreateTopic(
             string name,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             Topic request = new Topic
             {
@@ -350,14 +350,14 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateTopic(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride));
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             PublishRequest request = new PublishRequest
             {
@@ -366,14 +366,14 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.PublishAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
         public override PublishResponse Publish(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             PublishRequest request = new PublishRequest
             {
@@ -382,13 +382,13 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.Publish(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride));
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override Task<Topic> GetTopicAsync(
             string topic,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             GetTopicRequest request = new GetTopicRequest
             {
@@ -396,13 +396,13 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetTopicAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
         public override Topic GetTopic(
             string topic,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             GetTopicRequest request = new GetTopicRequest
             {
@@ -410,79 +410,83 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetTopic(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride));
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override IAsyncEnumerable<Topic> ListTopicsAsync(
             string project,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             ListTopicsRequest request = new ListTopicsRequest
             {
                 Project = project
             };
+            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listTopicsPageStreamer.FetchAsync(
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListTopicsAsync(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                    _clientHelper.BuildCallOptions(cancellationToken, clonedCallSettings)
                 ).ResponseAsync
             );
         }
 
         public override IEnumerable<Topic> ListTopics(
             string project,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             ListTopicsRequest request = new ListTopicsRequest
             {
                 Project = project
             };
+            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listTopicsPageStreamer.Fetch(
                 request,
                 pageStreamRequest => GrpcClient.ListTopics(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride))
+                    _clientHelper.BuildCallOptions(null, clonedCallSettings))
             );
         }
 
         public override IAsyncEnumerable<string> ListTopicSubscriptionsAsync(
             string topic,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
                 Topic = topic
             };
+            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listTopicSubscriptionsPageStreamer.FetchAsync(
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListTopicSubscriptionsAsync(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                    _clientHelper.BuildCallOptions(cancellationToken, clonedCallSettings)
                 ).ResponseAsync
             );
         }
 
         public override IEnumerable<string> ListTopicSubscriptions(
             string topic,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
                 Topic = topic
             };
+            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listTopicSubscriptionsPageStreamer.Fetch(
                 request,
                 pageStreamRequest => GrpcClient.ListTopicSubscriptions(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride))
+                    _clientHelper.BuildCallOptions(null, clonedCallSettings))
             );
         }
 
         public override Task DeleteTopicAsync(
             string topic,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             DeleteTopicRequest request = new DeleteTopicRequest
             {
@@ -490,13 +494,13 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.DeleteTopicAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
         public override void DeleteTopic(
             string topic,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             DeleteTopicRequest request = new DeleteTopicRequest
             {
@@ -504,7 +508,7 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.DeleteTopic(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride));
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
     }

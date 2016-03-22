@@ -206,8 +206,8 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -217,51 +217,51 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual Task<Subscription> GetSubscriptionAsync(
             string subscription,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual Subscription GetSubscription(
             string subscription,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual IAsyncEnumerable<Subscription> ListSubscriptionsAsync(
             string project,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual IEnumerable<Subscription> ListSubscriptions(
             string project,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual Task DeleteSubscriptionAsync(
             string subscription,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         public virtual void DeleteSubscription(
             string subscription,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -270,8 +270,8 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -280,7 +280,7 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -288,8 +288,8 @@ namespace Google.Pubsub.V1
         public virtual Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -297,7 +297,7 @@ namespace Google.Pubsub.V1
         public virtual void Acknowledge(
             string subscription,
             IEnumerable<string> ackIds,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -306,8 +306,8 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -316,7 +316,7 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -324,8 +324,8 @@ namespace Google.Pubsub.V1
         public virtual Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -333,7 +333,7 @@ namespace Google.Pubsub.V1
         public virtual void ModifyPushConfig(
             string subscription,
             PushConfig pushConfig,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -369,8 +369,8 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             Subscription request = new Subscription
             {
@@ -381,7 +381,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateSubscriptionAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
@@ -390,7 +390,7 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             Subscription request = new Subscription
             {
@@ -401,14 +401,13 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateSubscription(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
-            );
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override Task<Subscription> GetSubscriptionAsync(
             string subscription,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
@@ -416,13 +415,13 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetSubscriptionAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
         public override Subscription GetSubscription(
             string subscription,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
@@ -430,47 +429,48 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetSubscription(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
-            );
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override IAsyncEnumerable<Subscription> ListSubscriptionsAsync(
             string project,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
                 Project = project,
             };
+            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listSubscriptionsPageStreamer.FetchAsync(
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListSubscriptionsAsync(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                    _clientHelper.BuildCallOptions(cancellationToken, clonedCallSettings)
                 ).ResponseAsync
             );
         }
 
         public override IEnumerable<Subscription> ListSubscriptions(
             string project,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
                 Project = project,
             };
+            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listSubscriptionsPageStreamer.Fetch(
                 request,
                 pageStreamRequest => GrpcClient.ListSubscriptions(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride))
+                    _clientHelper.BuildCallOptions(null, clonedCallSettings))
             );
         }
 
         public override Task DeleteSubscriptionAsync(
             string subscription,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
@@ -478,13 +478,13 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.DeleteSubscriptionAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
         public override void DeleteSubscription(
             string subscription,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
@@ -492,16 +492,15 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.DeleteSubscription(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
-            );
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override Task ModifyAckDeadlineAsync(
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
@@ -511,7 +510,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.ModifyAckDeadlineAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
@@ -519,7 +518,7 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
@@ -529,15 +528,14 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.ModifyAckDeadline(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
-            );
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             AcknowledgeRequest request = new AcknowledgeRequest
             {
@@ -546,14 +544,14 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.AcknowledgeAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
         public override void Acknowledge(
             string subscription,
             IEnumerable<string> ackIds,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             AcknowledgeRequest request = new AcknowledgeRequest
             {
@@ -562,16 +560,15 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.AcknowledgeAsync(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
-            );
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override Task<PullResponse> PullAsync(
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             PullRequest request = new PullRequest
             {
@@ -581,7 +578,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.PullAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
@@ -589,7 +586,7 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             PullRequest request = new PullRequest
             {
@@ -599,15 +596,14 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.Pull(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
-            );
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
         public override Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
-            CancellationToken cancellationToken = default(CancellationToken),
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CancellationToken? cancellationToken = null,
+            CallSettings callSettings = null)
         {
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
@@ -616,14 +612,14 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.ModifyPushConfigAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callOptionsOverride)
+                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
             ).ResponseAsync;
         }
 
         public override void ModifyPushConfig(
             string subscription,
             PushConfig pushConfig,
-            Func<CallOptions, CallOptions> callOptionsOverride = null)
+            CallSettings callSettings = null)
         {
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
@@ -632,8 +628,7 @@ namespace Google.Pubsub.V1
             };
             GrpcClient.ModifyPushConfig(
                 request,
-                _clientHelper.BuildCallOptions(default(CancellationToken), callOptionsOverride)
-            );
+                _clientHelper.BuildCallOptions(null, callSettings));
         }
 
     }
