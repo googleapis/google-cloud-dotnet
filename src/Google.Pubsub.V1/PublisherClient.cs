@@ -37,7 +37,7 @@ namespace Google.Pubsub.V1
     /// <summary>
     /// Settings for a Publisher wrapper.
     /// </summary>
-    public sealed partial class PublisherSettings : ServiceSettingsBase<PublisherSettings>
+    public sealed partial class PublisherSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="PublisherSettings"/>.
@@ -49,7 +49,7 @@ namespace Google.Pubsub.V1
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of Publisher settings.</returns>
-        public override PublisherSettings Clone() => CloneInto(new PublisherSettings
+        public PublisherSettings Clone() => CloneInto(new PublisherSettings
         {
         });
     }
@@ -421,12 +421,11 @@ namespace Google.Pubsub.V1
             {
                 Project = project
             };
-            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listTopicsPageStreamer.FetchAsync(
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListTopicsAsync(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, clonedCallSettings)
+                    _clientHelper.BuildCallOptions(cancellationToken, callSettings)
                 ).ResponseAsync
             );
         }
@@ -439,12 +438,11 @@ namespace Google.Pubsub.V1
             {
                 Project = project
             };
-            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listTopicsPageStreamer.Fetch(
                 request,
                 pageStreamRequest => GrpcClient.ListTopics(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(null, clonedCallSettings))
+                    _clientHelper.BuildCallOptions(null, callSettings))
             );
         }
 
@@ -456,12 +454,11 @@ namespace Google.Pubsub.V1
             {
                 Topic = topic
             };
-            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listTopicSubscriptionsPageStreamer.FetchAsync(
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListTopicSubscriptionsAsync(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, clonedCallSettings)
+                    _clientHelper.BuildCallOptions(cancellationToken, callSettings)
                 ).ResponseAsync
             );
         }
@@ -474,12 +471,11 @@ namespace Google.Pubsub.V1
             {
                 Topic = topic
             };
-            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listTopicSubscriptionsPageStreamer.Fetch(
                 request,
                 pageStreamRequest => GrpcClient.ListTopicSubscriptions(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(null, clonedCallSettings))
+                    _clientHelper.BuildCallOptions(null, callSettings))
             );
         }
 

@@ -39,7 +39,7 @@ namespace Google.Pubsub.V1
     /// <summary>
     /// Settings for a Subscriber wrapper.
     /// </summary>
-    public sealed partial class SubscriberSettings : ServiceSettingsBase<SubscriberSettings>
+    public sealed partial class SubscriberSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="PublisherSettings"/>.
@@ -51,7 +51,7 @@ namespace Google.Pubsub.V1
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of Subscriber settings.</returns>
-        public override SubscriberSettings Clone() => CloneInto(new SubscriberSettings
+        public SubscriberSettings Clone() => CloneInto(new SubscriberSettings
         {
         });
     }
@@ -440,12 +440,11 @@ namespace Google.Pubsub.V1
             {
                 Project = project,
             };
-            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listSubscriptionsPageStreamer.FetchAsync(
                 request,
                 (pageStreamRequest, cancellationToken) => GrpcClient.ListSubscriptionsAsync(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, clonedCallSettings)
+                    _clientHelper.BuildCallOptions(cancellationToken, callSettings)
                 ).ResponseAsync
             );
         }
@@ -458,12 +457,11 @@ namespace Google.Pubsub.V1
             {
                 Project = project,
             };
-            CallSettings clonedCallSettings = callSettings?.Clone();
             return s_listSubscriptionsPageStreamer.Fetch(
                 request,
                 pageStreamRequest => GrpcClient.ListSubscriptions(
                     pageStreamRequest,
-                    _clientHelper.BuildCallOptions(null, clonedCallSettings))
+                    _clientHelper.BuildCallOptions(null, callSettings))
             );
         }
 
