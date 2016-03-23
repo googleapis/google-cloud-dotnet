@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // Licensed under the Apache License Version 2.0.
 
 // Generated code. DO NOT EDIT!
@@ -8,12 +8,12 @@ using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Pubsub.V1
 {
+
     /// <summary>
     /// Extension methods to assist with using <see cref="PublisherClient"/>.
     /// </summary>
@@ -55,7 +55,7 @@ namespace Google.Pubsub.V1
     }
 
     /// <summary>
-    /// Publisher client wrapper, for convinient use.
+    /// Publisher client wrapper, for convenient use.
     /// </summary>
     public abstract partial class PublisherClient
     {
@@ -102,7 +102,14 @@ namespace Google.Pubsub.V1
         /// <item><description>project</description></item>
         /// </list>
         /// </summary>
-        public static PathTemplate ProjectTemplate { get; }  = new PathTemplate("projects/{project}");
+        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
+
+        /// <summary>
+        /// Creates a project resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <returns>The full project resource name.</returns>
+        public static string GetProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         /// <summary>
         /// Path template for a topic resource. Parameters:
@@ -114,19 +121,13 @@ namespace Google.Pubsub.V1
         public static PathTemplate TopicTemplate { get; } = new PathTemplate("projects/{project}/topics/{topic}");
 
         /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>The full project resource name.</returns>
-        public static string GetProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
         /// Creates a topic resource name from its component IDs.
         /// </summary>
         /// <param name="projectId">The project ID.</param>
         /// <param name="topicId">The topic ID.</param>
         /// <returns>The full topic resource name.</returns>
         public static string GetTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
+
 
         /// <summary>
         /// Get a new instance of the default <see cref="ServiceEndpointSettings"/>.
@@ -142,10 +143,10 @@ namespace Google.Pubsub.V1
         {
             Host = ServiceDefaults.Host,
             Port = ServiceDefaults.Port,
-        };        
+        };
 
         /// <summary>
-        /// Asynchonously create a <see cref="PublisherClient"/> from default credentials.
+        /// Asynchronously create a <see cref="PublisherClient"/> from default credentials.
         /// </summary>
         /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
         /// <param name="serviceEndpointSettings">Optional <see cref="ServiceEndpointSettings"/>.</param>
@@ -156,7 +157,8 @@ namespace Google.Pubsub.V1
             ServiceEndpointSettings serviceEndpointSettings = null,
             IEnumerable<string> credentialScopes = null)
         {
-            return ClientHelper.CreateFromDefaultCredentialsAsync(settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
+            return ClientHelper.CreateFromDefaultCredentialsAsync(
+                settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
         }
 
         /// <summary>
@@ -171,7 +173,8 @@ namespace Google.Pubsub.V1
             ServiceEndpointSettings serviceEndpointSettings = null,
             IEnumerable<string> credentialScopes = null)
         {
-            return ClientHelper.CreateFromDefaultCredentials(settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
+            return ClientHelper.CreateFromDefaultCredentials(
+                settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
         }
 
         /// <summary>
@@ -186,7 +189,9 @@ namespace Google.Pubsub.V1
             PublisherSettings settings = null,
             ServiceEndpointSettings serviceEndpointSettings = null)
         {
-            Channel channel = ClientHelper.CreateChannel(serviceEndpointSettings ?? GetDefaultServiceEndpointSettings(), ServiceDefaults.Host, ServiceDefaults.Port, credentials);
+            Channel channel = ClientHelper.CreateChannel(
+                serviceEndpointSettings ?? GetDefaultServiceEndpointSettings(),
+                ServiceDefaults.Host, ServiceDefaults.Port, credentials);
             Publisher.IPublisherClient grpcClient = new Publisher.PublisherClient(channel);
             return new PublisherClientImpl(grpcClient, settings);
         }
@@ -199,6 +204,20 @@ namespace Google.Pubsub.V1
             get { throw new NotImplementedException(); }
         }
 
+        /// <summary>
+        /// Creates the given topic with the given name.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the topic. It must have the format
+        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+        /// signs (`%`). It must be between 3 and 255 characters in length, and it
+        /// must not start with `"goog"`.
+        /// </param>
+        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Topic> CreateTopicAsync(
             string name,
             CancellationToken? cancellationToken = null,
@@ -207,6 +226,19 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Creates the given topic with the given name.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the topic. It must have the format
+        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+        /// signs (`%`). It must be between 3 and 255 characters in length, and it
+        /// must not start with `"goog"`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual Topic CreateTopic(
             string name,
             CallSettings callSettings = null)
@@ -214,6 +246,16 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
+        /// </summary>
+        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="messages">The messages to publish.</param>
+        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
@@ -223,6 +265,15 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
+        /// </summary>
+        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="messages">The messages to publish.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual PublishResponse Publish(
             string topic,
             IEnumerable<PubsubMessage> messages,
@@ -231,6 +282,13 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Topic> GetTopicAsync(
             string topic,
             CancellationToken? cancellationToken = null,
@@ -239,6 +297,12 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual Topic GetTopic(
             string topic,
             CallSettings callSettings = null)
@@ -246,6 +310,12 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists matching topics.
+        /// </summary>
+        /// <param name="project">The name of the cloud project that topics belong to.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public virtual IAsyncEnumerable<Topic> ListTopicsAsync(
             string project,
             CallSettings callSettings = null)
@@ -253,6 +323,12 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists matching topics.
+        /// </summary>
+        /// <param name="project">The name of the cloud project that topics belong to.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual IEnumerable<Topic> ListTopics(
             string project,
             CallSettings callSettings = null)
@@ -260,6 +336,12 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists the name of the subscriptions for this topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public virtual IAsyncEnumerable<string> ListTopicSubscriptionsAsync(
             string topic,
             CallSettings callSettings = null)
@@ -267,6 +349,12 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists the name of the subscriptions for this topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual IEnumerable<string> ListTopicSubscriptions(
             string topic,
             CallSettings callSettings = null)
@@ -274,6 +362,17 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public virtual Task DeleteTopicAsync(
             string topic,
             CancellationToken? cancellationToken = null,
@@ -282,12 +381,23 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public virtual void DeleteTopic(
             string topic,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
     }
 
     public sealed partial class PublisherClientImpl : PublisherClient
@@ -319,12 +429,26 @@ namespace Google.Pubsub.V1
         public PublisherClientImpl(Publisher.IPublisherClient grpcClient, PublisherSettings settings)
         {
             this.GrpcClient = grpcClient;
-            var effectiveSettings = settings ?? PublisherSettings.GetDefault();
+            PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
             _clientHelper = new ClientHelper(effectiveSettings);
         }
 
         public override Publisher.IPublisherClient GrpcClient { get; }
 
+        /// <summary>
+        /// Creates the given topic with the given name.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the topic. It must have the format
+        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+        /// signs (`%`). It must be between 3 and 255 characters in length, and it
+        /// must not start with `"goog"`.
+        /// </param>
+        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> CreateTopicAsync(
             string name,
             CancellationToken? cancellationToken = null,
@@ -332,7 +456,7 @@ namespace Google.Pubsub.V1
         {
             Topic request = new Topic
             {
-                Name = name
+                Name = name,
             };
             return GrpcClient.CreateTopicAsync(
                 request,
@@ -340,19 +464,42 @@ namespace Google.Pubsub.V1
             ).ResponseAsync;
         }
 
+        /// <summary>
+        /// Creates the given topic with the given name.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the topic. It must have the format
+        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+        /// signs (`%`). It must be between 3 and 255 characters in length, and it
+        /// must not start with `"goog"`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public override Topic CreateTopic(
             string name,
             CallSettings callSettings = null)
         {
             Topic request = new Topic
             {
-                Name = name
+                Name = name,
             };
             return GrpcClient.CreateTopic(
                 request,
                 _clientHelper.BuildCallOptions(null, callSettings));
         }
 
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
+        /// </summary>
+        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="messages">The messages to publish.</param>
+        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public override Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
@@ -370,6 +517,15 @@ namespace Google.Pubsub.V1
             ).ResponseAsync;
         }
 
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
+        /// </summary>
+        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="messages">The messages to publish.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public override PublishResponse Publish(
             string topic,
             IEnumerable<PubsubMessage> messages,
@@ -385,6 +541,13 @@ namespace Google.Pubsub.V1
                 _clientHelper.BuildCallOptions(null, callSettings));
         }
 
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> GetTopicAsync(
             string topic,
             CancellationToken? cancellationToken = null,
@@ -392,7 +555,7 @@ namespace Google.Pubsub.V1
         {
             GetTopicRequest request = new GetTopicRequest
             {
-                Topic = topic
+                Topic = topic,
             };
             return GrpcClient.GetTopicAsync(
                 request,
@@ -400,26 +563,38 @@ namespace Google.Pubsub.V1
             ).ResponseAsync;
         }
 
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public override Topic GetTopic(
             string topic,
             CallSettings callSettings = null)
         {
             GetTopicRequest request = new GetTopicRequest
             {
-                Topic = topic
+                Topic = topic,
             };
             return GrpcClient.GetTopic(
                 request,
                 _clientHelper.BuildCallOptions(null, callSettings));
         }
 
+        /// <summary>
+        /// Lists matching topics.
+        /// </summary>
+        /// <param name="project">The name of the cloud project that topics belong to.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public override IAsyncEnumerable<Topic> ListTopicsAsync(
             string project,
             CallSettings callSettings = null)
         {
             ListTopicsRequest request = new ListTopicsRequest
             {
-                Project = project
+                Project = project,
             };
             return s_listTopicsPageStreamer.FetchAsync(
                 request,
@@ -430,13 +605,19 @@ namespace Google.Pubsub.V1
             );
         }
 
+        /// <summary>
+        /// Lists matching topics.
+        /// </summary>
+        /// <param name="project">The name of the cloud project that topics belong to.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public override IEnumerable<Topic> ListTopics(
             string project,
             CallSettings callSettings = null)
         {
             ListTopicsRequest request = new ListTopicsRequest
             {
-                Project = project
+                Project = project,
             };
             return s_listTopicsPageStreamer.Fetch(
                 request,
@@ -446,13 +627,19 @@ namespace Google.Pubsub.V1
             );
         }
 
+        /// <summary>
+        /// Lists the name of the subscriptions for this topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public override IAsyncEnumerable<string> ListTopicSubscriptionsAsync(
             string topic,
             CallSettings callSettings = null)
         {
             ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
-                Topic = topic
+                Topic = topic,
             };
             return s_listTopicSubscriptionsPageStreamer.FetchAsync(
                 request,
@@ -463,13 +650,19 @@ namespace Google.Pubsub.V1
             );
         }
 
+        /// <summary>
+        /// Lists the name of the subscriptions for this topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public override IEnumerable<string> ListTopicSubscriptions(
             string topic,
             CallSettings callSettings = null)
         {
             ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
-                Topic = topic
+                Topic = topic,
             };
             return s_listTopicSubscriptionsPageStreamer.Fetch(
                 request,
@@ -479,6 +672,17 @@ namespace Google.Pubsub.V1
             );
         }
 
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteTopicAsync(
             string topic,
             CancellationToken? cancellationToken = null,
@@ -486,7 +690,7 @@ namespace Google.Pubsub.V1
         {
             DeleteTopicRequest request = new DeleteTopicRequest
             {
-                Topic = topic
+                Topic = topic,
             };
             return GrpcClient.DeleteTopicAsync(
                 request,
@@ -494,13 +698,23 @@ namespace Google.Pubsub.V1
             ).ResponseAsync;
         }
 
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
         public override void DeleteTopic(
             string topic,
             CallSettings callSettings = null)
         {
             DeleteTopicRequest request = new DeleteTopicRequest
             {
-                Topic = topic
+                Topic = topic,
             };
             GrpcClient.DeleteTopic(
                 request,
