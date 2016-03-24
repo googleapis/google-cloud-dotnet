@@ -80,12 +80,12 @@ namespace Google.Pubsub.V1.Demo
         /// </summary>
         private static void ConfigureForExecution(CommandLineApplication config, Func<PublisherClient, Task> command)
         {
-            ConfigureForExecution(config, () => PublisherClient.CreateFromDefaultCredentialsAsync(), command);
+            ConfigureForExecution(config, () => PublisherClient.CreateAsync(), command);
         }
 
         private static void ConfigureForExecution(CommandLineApplication config, Func<SubscriberClient, Task> command)
         {
-            ConfigureForExecution(config, () => SubscriberClient.CreateFromDefaultCredentialsAsync(), command);
+            ConfigureForExecution(config, () => SubscriberClient.CreateAsync(), command);
         }
 
         private static void ConfigureForExecution<TClient>(CommandLineApplication config, Func<Task<TClient>> clientProvider, Func<TClient, Task> command)

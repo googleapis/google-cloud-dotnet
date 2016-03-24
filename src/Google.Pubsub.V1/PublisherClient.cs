@@ -4,6 +4,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -60,41 +61,24 @@ namespace Google.Pubsub.V1
     public abstract partial class PublisherClient
     {
         /// <summary>
-        /// Default service parameters for the Publisher service.
+        /// The default endpoint for the service, which is a host of "pubsub-experimental.googleapis.com" and a port of 443.
         /// </summary>
-        public static class ServiceDefaults
-        {
-            /// <summary>
-            /// The default Publisher network host.
-            /// </summary>
-            /// <remarks>
-            /// The default Publisher network host is "pubsub-experimental.googleapis.com".
-            /// </remarks>
-            public static string Host { get; } = "pubsub-experimental.googleapis.com";
+        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("pubsub-experimental.googleapis.com", 443);
 
-            /// <summary>
-            /// The default Publisher network port.
-            /// </summary>
-            /// <remarks>
-            /// The default Publisher network port is 443.
-            /// </remarks>
-            public static int Port { get; } = 443;
-
-            /// <summary>
-            /// The default Publisher scopes
-            /// </summary>
-            /// <remarks>
-            /// The default Publisher scopes are:
-            /// <list type="bullet">
-            /// <item><description>"https://www.googleapis.com/auth/pubsub"</description></item>
-            /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
-            /// </list>
-            /// </remarks>
-            public static IReadOnlyList<string> Scopes { get; } = new ReadOnlyCollection<string>(new[] {
-                "https://www.googleapis.com/auth/pubsub",
-                "https://www.googleapis.com/auth/cloud-platform",
-            });
-        }
+        /// <summary>
+        /// The default Publisher scopes
+        /// </summary>
+        /// <remarks>
+        /// The default Publisher scopes are:
+        /// <list type="bullet">
+        /// <item><description>"https://www.googleapis.com/auth/pubsub"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// </list>
+        /// </remarks>
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+            "https://www.googleapis.com/auth/pubsub",
+            "https://www.googleapis.com/auth/cloud-platform",
+        });
 
         /// <summary>
         /// Path template for a project resource. Parameters:
@@ -128,74 +112,47 @@ namespace Google.Pubsub.V1
         /// <returns>The full topic resource name.</returns>
         public static string GetTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
 
+        // Note: we could have parameterless overloads of Create and CreateAsync,
+        // documented to just use the default endpoint, settings and credentials.
+        // Pros: 
+        // - Might be more reassuring on first use
+        // - Allows method group conversions
+        // Con: overloads!
 
         /// <summary>
-        /// Get a new instance of the default <see cref="ServiceEndpointSettings"/>.
+        /// Asynchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings.
         /// </summary>
-        /// <remarks>
-        /// The default service endpoint settings are:
-        /// <list type="bullet">
-        /// <item><description>Host "pubsub-experimental.googleapis.com"</description></item>
-        /// <item><description>Port 443</description></item>
-        /// </list>
-        /// </remarks>
-        public static ServiceEndpointSettings GetDefaultServiceEndpointSettings() => new ServiceEndpointSettings
-        {
-            Host = ServiceDefaults.Host,
-            Port = ServiceDefaults.Port,
-        };
-
-        /// <summary>
-        /// Asynchronously create a <see cref="PublisherClient"/> from default credentials.
-        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <param name="serviceEndpointSettings">Optional <see cref="ServiceEndpointSettings"/>.</param>
-        /// <param name="credentialScopes">Optional scopes for default credentials.</param>
-        /// <returns>A newly created <see cref="PublisherClient"/>.</returns>
-        public static Task<PublisherClient> CreateFromDefaultCredentialsAsync(
-            PublisherSettings settings = null,
-            ServiceEndpointSettings serviceEndpointSettings = null,
-            IEnumerable<string> credentialScopes = null)
-        {
-            return ClientHelper.CreateFromDefaultCredentialsAsync(
-                settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
-        }
-
-        /// <summary>
-        /// Create a <see cref="PublisherClient"/> from default credentials.
-        /// </summary>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <param name="serviceEndpointSettings">Optional <see cref="ServiceEndpointSettings"/>.</param>
-        /// <param name="credentialScopes">Optional scopes for default credentials.</param>
-        /// <returns>A newly created <see cref="PublisherClient"/>.</returns>
-        public static PublisherClient CreateFromDefaultCredentials(
-            PublisherSettings settings = null,
-            ServiceEndpointSettings serviceEndpointSettings = null,
-            IEnumerable<string> credentialScopes = null)
-        {
-            return ClientHelper.CreateFromDefaultCredentials(
-                settings, serviceEndpointSettings, credentialScopes, ServiceDefaults.Scopes, CreateFromCredentials);
-        }
-
-        /// <summary>
-        /// Create a <see cref="PublisherClient"/> from the specified credentials.
-        /// </summary>
-        /// <param name="credentials">The credentials with which to configure the GRPC channel.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <param name="serviceEndpointSettings">Optional <see cref="ServiceEndpointSettings"/>.</param>
+        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
         /// <returns></returns>
-        public static PublisherClient CreateFromCredentials(
-            ChannelCredentials credentials,
+        public static async Task<PublisherClient> CreateAsync(
+            ServiceEndpoint endpoint = null,
             PublisherSettings settings = null,
-            ServiceEndpointSettings serviceEndpointSettings = null)
+            ChannelCredentials credentials = null)
         {
-            Channel channel = ClientHelper.CreateChannel(
-                serviceEndpointSettings ?? GetDefaultServiceEndpointSettings(),
-                ServiceDefaults.Host, ServiceDefaults.Port, credentials);
-            Publisher.IPublisherClient grpcClient = new Publisher.PublisherClient(channel);
+            var channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            var grpcClient = new Publisher.PublisherClient(channel);
             return new PublisherClientImpl(grpcClient, settings);
         }
 
+        /// <summary>
+        /// Synchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
+        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
+        /// <returns></returns>
+        public static PublisherClient Create(
+            ServiceEndpoint endpoint = null,
+            PublisherSettings settings = null,
+            ChannelCredentials credentials = null)
+        {
+            var channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
+            var grpcClient = new Publisher.PublisherClient(channel);
+            return new PublisherClientImpl(grpcClient, settings);
+        }
+        
         /// <summary>
         /// The underlying GRPC Publisher client.
         /// </summary>
