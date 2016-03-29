@@ -27,7 +27,7 @@ namespace Google.Pubsub.V1.Demo
             // other applications may want to use IDs and convert to resource names where required.
             string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
 
-            // This creates a subscription by creating a PullRequest and passing it on to the
+            // This pulls messages from a subscription by creating a PullRequest and passing it on to the
             // underlying gRPC client. You can specify whether you want to return immediately whether or not there
             // are any messages waiting, as well as the maximum number of messages to retrieve in a single call.
             // This method completes synchronously; use PullAsync for an asynchronous equivalent.
