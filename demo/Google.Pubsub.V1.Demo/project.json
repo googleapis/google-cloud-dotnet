@@ -6,10 +6,6 @@
   },
 
   "dependencies": {
-    "Microsoft.Framework.CommandLineUtils.Sources": {
-      "version": "1.0.0-*",
-      "type": "build"
-    },
     "Google.Pubsub.V1": ""
   },
 
