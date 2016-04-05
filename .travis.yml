@@ -15,4 +15,4 @@ script:
   - dnu build src/*
   - dnu build demo/*
   - dnu build test/*
-  - for project in `find . -name '*.Tests'`; do dnx -p $project test; done
+  - for project in `find . -name '*.Tests'`; do dnx -p $project test -parallel none; done

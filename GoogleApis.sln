@@ -29,6 +29,10 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Pubsub.V1", "src\Goo
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Pubsub.V1.Demo", "demo\Google.Pubsub.V1.Demo\Google.Pubsub.V1.Demo.xproj", "{F013989D-21A1-41E5-9AF0-967E42CBEB62}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Pubsub.V1.IntegrationTests", "test\Google.Pubsub.V1.IntegrationTests\Google.Pubsub.V1.IntegrationTests.xproj", "{FCE8490B-64F8-41F3-B943-8DFE45A45CE9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Api.Gax", "..\gax-dotnet\src\Google.Api.Gax\Google.Api.Gax.xproj", "{0AF80704-5E2F-4F27-91BF-280164A0BA13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,14 @@ Global
 		{F013989D-21A1-41E5-9AF0-967E42CBEB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F013989D-21A1-41E5-9AF0-967E42CBEB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F013989D-21A1-41E5-9AF0-967E42CBEB62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE8490B-64F8-41F3-B943-8DFE45A45CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE8490B-64F8-41F3-B943-8DFE45A45CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE8490B-64F8-41F3-B943-8DFE45A45CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE8490B-64F8-41F3-B943-8DFE45A45CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF80704-5E2F-4F27-91BF-280164A0BA13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF80704-5E2F-4F27-91BF-280164A0BA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF80704-5E2F-4F27-91BF-280164A0BA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF80704-5E2F-4F27-91BF-280164A0BA13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +82,6 @@ Global
 		{C9B4D3E8-47C4-4498-BEFF-276060D1EA13} = {F87E02E7-3142-4439-8938-42DD79337135}
 		{768566BC-8F77-4F7C-8A15-F8A11308B74B} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
 		{F013989D-21A1-41E5-9AF0-967E42CBEB62} = {DB076941-24F5-4F6C-9060-1EA9E2AC9887}
+		{FCE8490B-64F8-41F3-B943-8DFE45A45CE9} = {F87E02E7-3142-4439-8938-42DD79337135}
 	EndGlobalSection
 EndGlobal

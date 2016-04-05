@@ -1,0 +1,18 @@
+﻿{
+  "description": "Integration tests for Google.Pubsub.V1",
+
+  "dependencies": {
+    "Google.Pubsub.V1": "",
+    "Grpc.Core": "0.13.0",
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-rc1-build204"
+  },
+
+  "commands": {
+    "test": "xunit.runner.dnx"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}
