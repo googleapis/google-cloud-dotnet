@@ -15,13 +15,21 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax": "0.1.0-CI00029",
-    "Google.Apis": "1.11.0",
-    "Google.Apis.Auth": "1.11.0",
-    "Google.Apis.Core": "1.11.0",
-    "Google.Apis.Storage.v1": "1.10.0.550"
+    "Google.Apis": "1.11.1",
+    "Google.Apis.Auth": "1.11.1",
+    "Google.Apis.Core": "1.11.1",
+    "Google.Apis.Storage.v1": "1.12.0.448"
   },
   "frameworks": {
-    "net451": { }
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Runtime": {
+          "type": "build"
+        },
+        "System.IO": {
+          "type": "build"
+        }
+      }
+    }
   }
 }
