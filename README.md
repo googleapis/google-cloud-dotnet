@@ -10,6 +10,12 @@ Google Cloud .NET Client
 > is likely to change, and names (of everything - assemblies,
 > namespaces, types, members...) should be regarded as provisional.
 
+Documentation
+-------------
+
+- [C# API reference](http://googlecloudplatform.github.io/gcloud-dotnet/)
+- [Google Cloud Platform](https://cloud.google.com/docs/)
+
 Contributing
 ------------
 
