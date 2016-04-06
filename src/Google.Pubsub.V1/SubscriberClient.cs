@@ -60,7 +60,7 @@ namespace Google.Pubsub.V1
     public abstract partial class SubscriberClient
     {
         /// <summary>
-        /// The default endpoint for the service, which is a host of "pubsub-experimental.googleapis.com" and a port of 443.
+        /// The default endpoint for the Subscriber service, which is a host of "pubsub-experimental.googleapis.com" and a port of 443.
         /// </summary>
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("pubsub-experimental.googleapis.com", 443);
 
@@ -74,11 +74,11 @@ namespace Google.Pubsub.V1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> Scopes { get; } = new ReadOnlyCollection<string>(new[] {
-                "https://www.googleapis.com/auth/pubsub",
-                "https://www.googleapis.com/auth/cloud-platform",
-            });
-        
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+            "https://www.googleapis.com/auth/pubsub",
+            "https://www.googleapis.com/auth/cloud-platform",
+        });
+
         /// <summary>
         /// Path template for a project resource. Parameters:
         /// <list type="bullet">
@@ -111,20 +111,27 @@ namespace Google.Pubsub.V1
         /// <returns>The full subscription resource name.</returns>
         public static string GetSubscriptionName(string projectId, string subscriptionId) => SubscriptionTemplate.Expand(projectId, subscriptionId);
 
+        // Note: we could have parameterless overloads of Create and CreateAsync,
+        // documented to just use the default endpoint, settings and credentials.
+        // Pros:
+        // - Might be more reassuring on first use
+        // - Allows method group conversions
+        // Con: overloads!
+
         /// <summary>
         /// Asynchronously creates a <see cref="SubscriberClient"/>, applying defaults for all unspecified settings.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
+        /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
         /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns></returns>
+        /// <returns>The task representing the created <see cref="SubscriberClient"/>.</returns>
         public static async Task<SubscriberClient> CreateAsync(
             ServiceEndpoint endpoint = null,
             SubscriberSettings settings = null,
             ChannelCredentials credentials = null)
         {
-            var channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
-            var grpcClient = new Subscriber.SubscriberClient(channel);
+            Channel channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
             return new SubscriberClientImpl(grpcClient, settings);
         }
 
@@ -132,18 +139,18 @@ namespace Google.Pubsub.V1
         /// Synchronously creates a <see cref="SubscriberClient"/>, applying defaults for all unspecified settings.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
+        /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
         /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns></returns>
+        /// <returns>The created <see cref="SubscriberClient"/>.</returns>
         public static SubscriberClient Create(
             ServiceEndpoint endpoint = null,
             SubscriberSettings settings = null,
             ChannelCredentials credentials = null)
         {
-            var channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
-            var grpcClient = new Subscriber.SubscriberClient(channel);
+            Channel channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
+            Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
             return new SubscriberClientImpl(grpcClient, settings);
-        }        
+        }
 
         /// <summary>
         /// The underlying GRPC Subscriber client.
@@ -155,8 +162,8 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+        /// If the subscription already exists, generates `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -169,11 +176,7 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
-        /// </param>
+        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -215,8 +218,8 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+        /// If the subscription already exists, generates `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -229,11 +232,7 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
-        /// </param>
+        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -273,6 +272,9 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Gets the configuration details of a subscription.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
@@ -288,6 +290,9 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Gets the configuration details of a subscription.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -301,6 +306,9 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Lists matching subscriptions.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -314,6 +322,9 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Lists matching subscriptions.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -327,7 +338,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
+        /// are immediately dropped. Calls to `Pull` after deletion will generate
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -346,7 +357,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
+        /// are immediately dropped. Calls to `Pull` after deletion will generate
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -467,7 +478,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -476,8 +487,7 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// than returning no messages.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -498,7 +508,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -507,8 +517,7 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// than returning no messages.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -609,8 +618,8 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+        /// If the subscription already exists, generates `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -623,11 +632,7 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
-        /// </param>
+        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -679,8 +684,8 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+        /// If the subscription already exists, generates `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -693,11 +698,7 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
-        /// </param>
+        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -746,6 +747,9 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Gets the configuration details of a subscription.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
@@ -768,6 +772,9 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Gets the configuration details of a subscription.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -787,6 +794,9 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Lists matching subscriptions.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -810,6 +820,9 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Lists matching subscriptions.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -832,7 +845,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
+        /// are immediately dropped. Calls to `Pull` after deletion will generate
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -858,7 +871,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
+        /// are immediately dropped. Calls to `Pull` after deletion will generate
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -1017,7 +1030,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -1026,8 +1039,7 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// than returning no messages.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -1057,7 +1069,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -1066,8 +1078,7 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// than returning no messages.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub

@@ -4,7 +4,6 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
-using Google.Apis.Auth.OAuth2;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -61,7 +60,7 @@ namespace Google.Pubsub.V1
     public abstract partial class PublisherClient
     {
         /// <summary>
-        /// The default endpoint for the service, which is a host of "pubsub-experimental.googleapis.com" and a port of 443.
+        /// The default endpoint for the Publisher service, which is a host of "pubsub-experimental.googleapis.com" and a port of 443.
         /// </summary>
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("pubsub-experimental.googleapis.com", 443);
 
@@ -114,7 +113,7 @@ namespace Google.Pubsub.V1
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
-        // Pros: 
+        // Pros:
         // - Might be more reassuring on first use
         // - Allows method group conversions
         // Con: overloads!
@@ -125,14 +124,14 @@ namespace Google.Pubsub.V1
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
         /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns></returns>
+        /// <returns>The task representing the created <see cref="PublisherClient"/>.</returns>
         public static async Task<PublisherClient> CreateAsync(
             ServiceEndpoint endpoint = null,
             PublisherSettings settings = null,
             ChannelCredentials credentials = null)
         {
-            var channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
-            var grpcClient = new Publisher.PublisherClient(channel);
+            Channel channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(channel);
             return new PublisherClientImpl(grpcClient, settings);
         }
 
@@ -142,17 +141,17 @@ namespace Google.Pubsub.V1
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
         /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns></returns>
+        /// <returns>The created <see cref="PublisherClient"/>.</returns>
         public static PublisherClient Create(
             ServiceEndpoint endpoint = null,
             PublisherSettings settings = null,
             ChannelCredentials credentials = null)
         {
-            var channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
-            var grpcClient = new Publisher.PublisherClient(channel);
+            Channel channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
+            Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(channel);
             return new PublisherClientImpl(grpcClient, settings);
         }
-        
+
         /// <summary>
         /// The underlying GRPC Publisher client.
         /// </summary>
@@ -204,7 +203,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -223,7 +222,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -320,7 +319,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
@@ -339,7 +338,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
@@ -448,7 +447,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -475,7 +474,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -630,7 +629,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
@@ -656,7 +655,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
