@@ -1,0 +1,33 @@
+{
+  "version": "0.1.0-*",
+  "summary": "Google Logging version-agnostic types",
+  "description": "Google Logging version-agnostic types",
+  "authors": [ "Google Inc." ],
+  "owners": [ "google-apis-packages" ],
+  "tags": [ "Google" ],
+  "projectUrl": "https://github.com/GoogleCloudPlatform/gcloud-dotnet",
+  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+  "requireLicenseAcceptance": false,
+
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Api.Gax": "0.1.0-CI00037",
+    "Google.Protobuf": "3.0.0-beta2"
+  },
+
+  "frameworks": {
+    "net45": {
+      "frameworkAssemblies": {
+        "System.Runtime": {
+          "type": "build"
+        },
+        "System.IO": {
+          "type": "build"
+        }
+      }
+    }
+  }
+}
