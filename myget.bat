@@ -28,3 +28,13 @@ call dnu build src\Google.Pubsub.V1
 IF ERRORLEVEL 1 EXIT /B 1
 call dnu pack src\Google.Pubsub.V1
 IF ERRORLEVEL 1 EXIT /B 1
+
+call dnu build src\Google.Logging.Type
+IF ERRORLEVEL 1 EXIT /B 1
+call dnu pack src\Google.Logging.Type
+IF ERRORLEVEL 1 EXIT /B 1
+
+call dnu build src\Google.Logging.V2
+IF ERRORLEVEL 1 EXIT /B 1
+call dnu pack src\Google.Logging.V2
+IF ERRORLEVEL 1 EXIT /B 1
