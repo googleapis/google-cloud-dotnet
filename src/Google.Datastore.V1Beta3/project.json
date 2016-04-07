@@ -1,0 +1,37 @@
+﻿{
+  "version": "0.1.0-*",
+  "summary": "Google Datastore v1beta3 client library",
+  "description": "Google Datastore v1beta3 client library",
+  "authors": [ "Google Inc." ],
+  "owners": [ "google-apis-packages" ],
+  "tags": [ "Google" ],
+  "projectUrl": "https://github.com/GoogleCloudPlatform/gcloud-dotnet",
+  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+  "requireLicenseAcceptance": false,
+
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Api.Gax": "0.1.0-CI00038",
+    "Google.Apis.Auth": "1.11.1",
+    "Google.Protobuf": "3.0.0-beta2",
+    "Grpc.Auth": "0.13.1",
+    "Grpc.Core": "0.13.1",
+    "Ix-Async": "1.2.5"
+  },
+
+  "frameworks": {
+    "net45": {
+      "frameworkAssemblies": {
+        "System.Runtime": {
+          "type": "build"
+        },
+        "System.IO": {
+          "type": "build"
+        }
+      }
+    }
+  }
+}
