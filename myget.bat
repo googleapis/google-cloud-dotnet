@@ -38,3 +38,8 @@ call dnu build src\Google.Logging.V2
 IF ERRORLEVEL 1 EXIT /B 1
 call dnu pack src\Google.Logging.V2
 IF ERRORLEVEL 1 EXIT /B 1
+
+call dnu build src\Google.Datastore.V1Beta3
+IF ERRORLEVEL 1 EXIT /B 1
+call dnu pack src\Google.Datastore.V1Beta3
+IF ERRORLEVEL 1 EXIT /B 1
