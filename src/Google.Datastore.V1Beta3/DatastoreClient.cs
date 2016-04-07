@@ -72,9 +72,9 @@ namespace Google.Datastore.V1Beta3
     public abstract partial class DatastoreClient
     {
         /// <summary>
-        /// The default endpoint for the Datastore service, which is a host of "datastore-experimental.googleapis.com" and a port of 443.
+        /// The default endpoint for the Datastore service, which is a host of "datastore.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("datastore-experimental.googleapis.com", 443);
+        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("datastore.googleapis.com", 443);
 
         /// <summary>
         /// The default Datastore scopes
