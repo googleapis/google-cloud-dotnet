@@ -54,4 +54,4 @@ Apache 2.0 - See [LICENSE] for more information.
 [cloud-platform]: https://cloud.google.com/
 [dnvm]: http://docs.asp.net/en/latest/getting-started/index.html
 [gRPC]: http://grpc.io
-[grpc-workaround](https://github.com/grpc/grpc/issues/4872)
+[grpc-workaround]: https://github.com/grpc/grpc/issues/4872
