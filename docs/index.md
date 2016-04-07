@@ -10,7 +10,7 @@ A wrapper library over
 for working with [Google Cloud Storage](https://cloud.google.com/storage/)
 
 Common operations are exposed via the
-[`StorageClient`](../obj/api/Google.Storage.V1.StorageClient.yml) class.
+[`StorageClient`](obj/api/Google.Storage.V1.StorageClient.yml) class.
 
 ## Google.Pubsub.V1
 
@@ -20,13 +20,13 @@ The API operates at three abstractions:
 
 - `SimplePubsub` (coming soon) is a simplified API making common
 scenarios extremely straightforward.
-- [`PublisherClient`](../obj/api/Google.Pubsub.V1.PublisherClient.yml) and
-[`SubscriberClient`](../obj/api/Google.Pubsub.V1.SubscriberClient.yml)
+- [`PublisherClient`](obj/api/Google.Pubsub.V1.PublisherClient.yml) and
+[`SubscriberClient`](obj/api/Google.Pubsub.V1.SubscriberClient.yml)
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.
-- [`IPublisherClient`](../obj/api/Google.Pubsub.V1.Publisher.IPublisherClient.yml)
-and [`ISubscriberClient`](../obj/api/Google.Pubsub.V1.Subscriber.ISubscriberClient.yml)
+- [`IPublisherClient`](obj/api/Google.Pubsub.V1.Publisher.IPublisherClient.yml)
+and [`ISubscriberClient`](obj/api/Google.Pubsub.V1.Subscriber.ISubscriberClient.yml)
 expose the raw RPC API. Most clients will never need to use this
 abstraction, but it provides the most flexibility for via specific
 scenarios.
