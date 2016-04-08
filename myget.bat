@@ -11,37 +11,7 @@ rmdir /s /q %USERPROFILE%\.dnx\packages\Google.Apis.Auth
 call dnu restore
 IF ERRORLEVEL 1 EXIT /B 1
 
-call dnu build src\Google.Storage.V1
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu build test\Google.Storage.V1.Tests
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu build test\Google.Storage.V1.IntegrationTests
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu build demo\Google.Storage.V1.Demo
-IF ERRORLEVEL 1 EXIT /B 1
-call dnx -p test\Google.Storage.V1.Tests test
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu pack src\Google.Storage.V1
-IF ERRORLEVEL 1 EXIT /B 1
-
-call dnu build src\Google.Pubsub.V1
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu pack src\Google.Pubsub.V1
-IF ERRORLEVEL 1 EXIT /B 1
-
-call dnu build src\Google.Logging.Type
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu pack src\Google.Logging.Type
-IF ERRORLEVEL 1 EXIT /B 1
-
-call dnu build src\Google.Logging.V2
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu pack src\Google.Logging.V2
-IF ERRORLEVEL 1 EXIT /B 1
-
-call dnu build src\Google.Datastore.V1Beta3
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu build test\Google.Datastore.V1Beta3
-IF ERRORLEVEL 1 EXIT /B 1
-call dnu pack src\Google.Datastore.V1Beta3
+REM We want to build and package everthing under src.
+REM We're not building any tests etc; that's what Travis is for.
+call dnu pack src\*
 IF ERRORLEVEL 1 EXIT /B 1
