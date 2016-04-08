@@ -1,7 +1,7 @@
 ﻿{
   "version": "0.1.0-*",
-  "summary": "Google Datastore v1beta3 client library",
-  "description": "Google Datastore v1beta3 client library",
+  "summary": "Google Cloud Datastore v1beta3 client library",
+  "description": "Google Cloud Datastore v1beta3 client library",
   "authors": [ "Google Inc." ],
   "owners": [ "google-apis-packages" ],
   "tags": [ "Google" ],
