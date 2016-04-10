@@ -1,0 +1,30 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "*/project.json" ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "cwd": "../src"
+        }
+      ],
+      "dest": "obj/api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "**/*.yml" ],
+        "src": "obj/api",
+        "dest": "api"
+      },
+      {
+        "files": [ "*.md", "toc.yml" ],
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "Google Cloud APIs"
+    },
+    "dest": "_site"
+  }
+}
