@@ -14,7 +14,7 @@ Common operations are exposed via the
 
 ## Google.Pubsub.V1
 
-A library for working with [Google Cloud Pub/sub](https://cloud.google.com/pubsub/).
+A library for working with [Cloud Pub/sub](https://cloud.google.com/pubsub/).
 
 The API operates at three abstractions:
 
@@ -35,3 +35,39 @@ Each abstraction is built over the lower-level one, and client code
 can mix and match abstractions very easily: you may be able to use
 `SimplePubsub` for most of your code, dropping down to
 `PublisherClient` and `SubscriberClient` occasionally, for example.
+
+## Google.Datastore.V1Beta3
+
+A library for working with [Cloud Datastore](https://cloud.google.com/datastore/).
+
+Sample code:
+
+```csharp
+var client = DatastoreClient.Create();
+
+var projectId = ...;
+var partitionId = new PartitionId { ProjectId = projectId };
+var entity = new Entity
+{
+    Key = new Key { PartitionId = partitionId, Path = { new PathElement { Kind = "message" } } },
+    ["created"] = DateTime.UtcNow,
+    ["text"] = "Text of the message"
+};
+var transaction = client.BeginTransaction(projectId).Transaction;
+var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
+var insertedKey = commitResponse.MutationResults[0].Key;
+```
+
+See [`DatastoreClient`](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml)
+for details. Note that custom conversions are provided to make
+working with the [`Value`](obj/api/Google.Datastore.V1Beta3.Value.yml) type much
+simpler than it would otherwise be.
+
+## Google.Logging.V2
+
+A library for working with [Stackdriver Logging](https://cloud.google.com/logging/).
+
+(Depends on `Google.Logging.Type` for version-agnostic types.)
+
+See [`LoggingServiceV2Client`](obj/api/Google.Logging.V2.LoggingServiceV2Client.yml)
+for details.
