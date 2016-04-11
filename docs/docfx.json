@@ -23,7 +23,8 @@
       }
     ],
     "globalMetadata": {
-      "_appTitle": "Google Cloud APIs"
+      "_appTitle": "Google Cloud APIs",
+      "_disableContribution": true
     },
     "dest": "_site"
   }
