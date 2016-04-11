@@ -12,7 +12,7 @@
   },
 
   "commands": {
-    "storage-demo": "Google.Apis.Storage.v1.Demo"
+    "storage-demo": "Google.Storage.V1.Demo"
   },
 
   "frameworks": {
