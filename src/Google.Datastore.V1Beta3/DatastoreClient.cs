@@ -174,6 +174,7 @@ namespace Google.Datastore.V1Beta3
                 readOptions,
                 keys,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Look up entities by key.
         /// </summary>
@@ -240,6 +241,7 @@ namespace Google.Datastore.V1Beta3
                 readOptions,
                 query,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Query for entities.
         /// </summary>
@@ -313,6 +315,7 @@ namespace Google.Datastore.V1Beta3
                 readOptions,
                 gqlQuery,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Query for entities.
         /// </summary>
@@ -361,6 +364,7 @@ namespace Google.Datastore.V1Beta3
             CancellationToken cancellationToken) => BeginTransactionAsync(
                 projectId,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Begin a new transaction.
         /// </summary>
@@ -441,6 +445,7 @@ namespace Google.Datastore.V1Beta3
                 transaction,
                 mutations,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Commit a transaction, optionally creating, deleting or modifying some
         /// entities.
@@ -536,6 +541,7 @@ namespace Google.Datastore.V1Beta3
                 mode,
                 mutations,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Commit a transaction, optionally creating, deleting or modifying some
         /// entities.
@@ -602,6 +608,7 @@ namespace Google.Datastore.V1Beta3
                 projectId,
                 transaction,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Roll back a transaction.
         /// </summary>
@@ -657,6 +664,7 @@ namespace Google.Datastore.V1Beta3
                 projectId,
                 keys,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Allocate IDs for the given keys (useful for referencing an entity before
         /// it is inserted).

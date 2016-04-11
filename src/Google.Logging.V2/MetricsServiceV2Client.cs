@@ -239,6 +239,7 @@ namespace Google.Logging.V2
             CancellationToken cancellationToken) => GetLogMetricAsync(
                 metricName,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
@@ -300,6 +301,7 @@ namespace Google.Logging.V2
                 projectName,
                 metric,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
@@ -374,6 +376,7 @@ namespace Google.Logging.V2
                 metricName,
                 metric,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
@@ -430,6 +433,7 @@ namespace Google.Logging.V2
             CancellationToken cancellationToken) => DeleteLogMetricAsync(
                 metricName,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>

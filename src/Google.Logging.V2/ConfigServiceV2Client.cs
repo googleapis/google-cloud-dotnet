@@ -239,6 +239,7 @@ namespace Google.Logging.V2
             CancellationToken cancellationToken) => GetSinkAsync(
                 sinkName,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Gets a sink.
         /// </summary>
@@ -300,6 +301,7 @@ namespace Google.Logging.V2
                 projectName,
                 sink,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Creates a sink.
         /// </summary>
@@ -374,6 +376,7 @@ namespace Google.Logging.V2
                 sinkName,
                 sink,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Creates or updates a sink.
         /// </summary>
@@ -430,6 +433,7 @@ namespace Google.Logging.V2
             CancellationToken cancellationToken) => DeleteSinkAsync(
                 sinkName,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Deletes a sink.
         /// </summary>

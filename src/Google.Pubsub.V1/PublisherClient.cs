@@ -209,6 +209,7 @@ namespace Google.Pubsub.V1
             CancellationToken cancellationToken) => CreateTopicAsync(
                 name,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
@@ -262,6 +263,7 @@ namespace Google.Pubsub.V1
                 topic,
                 messages,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
@@ -303,6 +305,7 @@ namespace Google.Pubsub.V1
             CancellationToken cancellationToken) => GetTopicAsync(
                 topic,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
@@ -400,6 +403,7 @@ namespace Google.Pubsub.V1
             CancellationToken cancellationToken) => DeleteTopicAsync(
                 topic,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with

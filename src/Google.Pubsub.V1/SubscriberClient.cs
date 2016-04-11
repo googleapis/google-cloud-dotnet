@@ -280,6 +280,7 @@ namespace Google.Pubsub.V1
                 pushConfig,
                 ackDeadlineSeconds,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
         /// If the subscription already exists, generates `ALREADY_EXISTS`.
@@ -364,6 +365,7 @@ namespace Google.Pubsub.V1
             CancellationToken cancellationToken) => GetSubscriptionAsync(
                 subscription,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Gets the configuration details of a subscription.
         ///
@@ -444,6 +446,7 @@ namespace Google.Pubsub.V1
             CancellationToken cancellationToken) => DeleteSubscriptionAsync(
                 subscription,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
         /// are immediately dropped. Calls to `Pull` after deletion will generate
@@ -513,6 +516,7 @@ namespace Google.Pubsub.V1
                 ackIds,
                 ackDeadlineSeconds,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
         /// to indicate that more time is needed to process a message by the
@@ -586,6 +590,7 @@ namespace Google.Pubsub.V1
                 subscription,
                 ackIds,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
         /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
@@ -666,6 +671,7 @@ namespace Google.Pubsub.V1
                 returnImmediately,
                 maxMessages,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
         /// messages available in the backlog. The server may generate `UNAVAILABLE` if
@@ -747,6 +753,7 @@ namespace Google.Pubsub.V1
                 subscription,
                 pushConfig,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
         ///

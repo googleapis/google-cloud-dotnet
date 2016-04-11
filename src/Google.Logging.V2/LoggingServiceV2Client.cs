@@ -210,6 +210,7 @@ namespace Google.Logging.V2
             CancellationToken cancellationToken) => DeleteLogAsync(
                 logName,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Deletes a log and all its log entries.
         /// The log will reappear if it receives new entries.
@@ -300,6 +301,7 @@ namespace Google.Logging.V2
                 labels,
                 entries,
                 new CallSettings { CancellationToken = cancellationToken });
+
         /// <summary>
         /// Writes log entries to Cloud Logging.
         /// All log entries in Cloud Logging are written by this method.
