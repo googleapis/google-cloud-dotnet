@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -182,17 +182,33 @@ namespace Google.Pubsub.V1
         /// signs (`%`). It must be between 3 and 255 characters in length, and it
         /// must not start with `"goog"`.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Topic> CreateTopicAsync(
             string name,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Creates the given topic with the given name.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the topic. It must have the format
+        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+        /// signs (`%`). It must be between 3 and 255 characters in length, and it
+        /// must not start with `"goog"`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<Topic> CreateTopicAsync(
+            string name,
+            CancellationToken cancellationToken) => CreateTopicAsync(
+                name,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
@@ -220,18 +236,32 @@ namespace Google.Pubsub.V1
         /// </summary>
         /// <param name="topic">The messages in the request will be published on this topic.</param>
         /// <param name="messages">The messages to publish.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
+        /// </summary>
+        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="messages">The messages to publish.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<PublishResponse> PublishAsync(
+            string topic,
+            IEnumerable<PubsubMessage> messages,
+            CancellationToken cancellationToken) => PublishAsync(
+                topic,
+                messages,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
@@ -253,17 +283,26 @@ namespace Google.Pubsub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">The name of the topic to get.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Topic> GetTopicAsync(
             string topic,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<Topic> GetTopicAsync(
+            string topic,
+            CancellationToken cancellationToken) => GetTopicAsync(
+                topic,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
@@ -337,17 +376,30 @@ namespace Google.Pubsub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">Name of the topic to delete.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task DeleteTopicAsync(
             string topic,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task DeleteTopicAsync(
+            string topic,
+            CancellationToken cancellationToken) => DeleteTopicAsync(
+                topic,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
@@ -413,12 +465,10 @@ namespace Google.Pubsub.V1
         /// signs (`%`). It must be between 3 and 255 characters in length, and it
         /// must not start with `"goog"`.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> CreateTopicAsync(
             string name,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             Topic request = new Topic
@@ -427,7 +477,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateTopicAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -464,13 +514,11 @@ namespace Google.Pubsub.V1
         /// </summary>
         /// <param name="topic">The messages in the request will be published on this topic.</param>
         /// <param name="messages">The messages to publish.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             PublishRequest request = new PublishRequest
@@ -480,7 +528,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.PublishAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -512,12 +560,10 @@ namespace Google.Pubsub.V1
         /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">The name of the topic to get.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> GetTopicAsync(
             string topic,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             GetTopicRequest request = new GetTopicRequest
@@ -526,7 +572,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetTopicAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -647,12 +693,10 @@ namespace Google.Pubsub.V1
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">Name of the topic to delete.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteTopicAsync(
             string topic,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             DeleteTopicRequest request = new DeleteTopicRequest
@@ -661,7 +705,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.DeleteTopicAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 

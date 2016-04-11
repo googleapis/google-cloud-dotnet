@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -213,7 +213,6 @@ namespace Google.Pubsub.V1
         ///
         /// If this parameter is not set, the default value of 10 seconds is used.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Subscription> CreateSubscriptionAsync(
@@ -221,12 +220,66 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Creates a subscription to a given topic for a given subscriber.
+        /// If the subscription already exists, generates `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
+        ///
+        /// If the name is not provided in the request, the server will assign a random
+        /// name for this subscription on the same project as the topic.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the subscription. It must have the format
+        /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
+        /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
+        /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
+        /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
+        /// in length, and it must not start with `"goog"`.
+        /// </param>
+        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
+        /// <param name="push_config">
+        /// If push delivery is used with this subscription, this field is
+        /// used to configure it. An empty `pushConfig` signifies that the subscriber
+        /// will pull and ack messages using API methods.
+        /// </param>
+        /// <param name="ack_deadline_seconds">
+        /// This value is the maximum time after a subscriber receives a message
+        /// before the subscriber should acknowledge the message. After message
+        /// delivery but before the ack deadline expires and before the message is
+        /// acknowledged, it is an outstanding message and will not be delivered
+        /// again during that time (on a best-effort basis).
+        ///
+        /// For pull subscriptions, this value is used as the initial value for the ack
+        /// deadline. To override this value for a given message, call
+        /// `ModifyAckDeadline` with the corresponding `ack_id` if using
+        /// pull.
+        ///
+        /// For push delivery, this value is also used to set the request timeout for
+        /// the call to the push endpoint.
+        ///
+        /// If the subscriber never acknowledges the message, the Pub/Sub
+        /// system will eventually redeliver the message.
+        ///
+        /// If this parameter is not set, the default value of 10 seconds is used.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<Subscription> CreateSubscriptionAsync(
+            string name,
+            string topic,
+            PushConfig pushConfig,
+            int ackDeadlineSeconds,
+            CancellationToken cancellationToken) => CreateSubscriptionAsync(
+                name,
+                topic,
+                pushConfig,
+                ackDeadlineSeconds,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
         /// If the subscription already exists, generates `ALREADY_EXISTS`.
@@ -288,17 +341,29 @@ namespace Google.Pubsub.V1
         /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Subscription> GetSubscriptionAsync(
             string subscription,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Gets the configuration details of a subscription.
+        ///
+        /// If the topic of a subscription has been deleted, the subscription itself is
+        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="subscription">The name of the subscription to get.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<Subscription> GetSubscriptionAsync(
+            string subscription,
+            CancellationToken cancellationToken) => GetSubscriptionAsync(
+                subscription,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Gets the configuration details of a subscription.
         ///
@@ -355,17 +420,30 @@ namespace Google.Pubsub.V1
         /// subscription, or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">The subscription to delete.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task DeleteSubscriptionAsync(
             string subscription,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Deletes an existing subscription. All pending messages in the subscription
+        /// are immediately dropped. Calls to `Pull` after deletion will generate
+        /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
+        /// the same name, but the new one has no association with the old
+        /// subscription, or its topic unless the same topic is specified.
+        /// </summary>
+        /// <param name="subscription">The subscription to delete.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task DeleteSubscriptionAsync(
+            string subscription,
+            CancellationToken cancellationToken) => DeleteSubscriptionAsync(
+                subscription,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
         /// are immediately dropped. Calls to `Pull` after deletion will generate
@@ -398,19 +476,43 @@ namespace Google.Pubsub.V1
         /// was made. Specifying zero may immediately make the message available for
         /// another pull request.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task ModifyAckDeadlineAsync(
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Modifies the ack deadline for a specific message. This method is useful
+        /// to indicate that more time is needed to process a message by the
+        /// subscriber, or to make the message available for redelivery if the
+        /// processing was interrupted.
+        /// </summary>
+        /// <param name="subscription">The name of the subscription.</param>
+        /// <param name="ack_ids">List of acknowledgment IDs.</param>
+        /// <param name="ack_deadline_seconds">
+        /// The new ack deadline with respect to the time this request was sent to
+        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
+        /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
+        /// was made. Specifying zero may immediately make the message available for
+        /// another pull request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task ModifyAckDeadlineAsync(
+            string subscription,
+            IEnumerable<string> ackIds,
+            int ackDeadlineSeconds,
+            CancellationToken cancellationToken) => ModifyAckDeadlineAsync(
+                subscription,
+                ackIds,
+                ackDeadlineSeconds,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
         /// to indicate that more time is needed to process a message by the
@@ -451,18 +553,39 @@ namespace Google.Pubsub.V1
         /// The acknowledgment ID for the messages being acknowledged that was returned
         /// by the Pub/Sub system in the `Pull` response. Must not be empty.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Acknowledges the messages associated with the `ack_ids` in the
+        /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
+        /// from the subscription.
+        ///
+        /// Acknowledging a message whose ack deadline has expired may succeed,
+        /// but such a message may be redelivered later. Acknowledging a message more
+        /// than once will not result in an error.
+        /// </summary>
+        /// <param name="subscription">The subscription whose message is being acknowledged.</param>
+        /// <param name="ack_ids">
+        /// The acknowledgment ID for the messages being acknowledged that was returned
+        /// by the Pub/Sub system in the `Pull` response. Must not be empty.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task AcknowledgeAsync(
+            string subscription,
+            IEnumerable<string> ackIds,
+            CancellationToken cancellationToken) => AcknowledgeAsync(
+                subscription,
+                ackIds,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
         /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
@@ -504,19 +627,45 @@ namespace Google.Pubsub.V1
         /// The maximum number of messages returned for this request. The Pub/Sub
         /// system may return fewer than the number specified.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<PullResponse> PullAsync(
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Pulls messages from the server. Returns an empty list if there are no
+        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="subscription">The subscription from which messages should be pulled.</param>
+        /// <param name="return_immediately">
+        /// If this is specified as true the system will respond immediately even if
+        /// it is not able to return a message in the `Pull` response. Otherwise the
+        /// system is allowed to wait until at least one message is available rather
+        /// than returning no messages.
+        /// </param>
+        /// <param name="max_messages">
+        /// The maximum number of messages returned for this request. The Pub/Sub
+        /// system may return fewer than the number specified.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<PullResponse> PullAsync(
+            string subscription,
+            bool returnImmediately,
+            int maxMessages,
+            CancellationToken cancellationToken) => PullAsync(
+                subscription,
+                returnImmediately,
+                maxMessages,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
         /// messages available in the backlog. The server may generate `UNAVAILABLE` if
@@ -562,18 +711,42 @@ namespace Google.Pubsub.V1
         /// messages to be pulled and acknowledged - effectively pausing
         /// the subscription if `Pull` is not called.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Modifies the `PushConfig` for a specified subscription.
+        ///
+        /// This may be used to change a push subscription to a pull one (signified by
+        /// an empty `PushConfig`) or vice versa, or change the endpoint URL and other
+        /// attributes of a push subscription. Messages will accumulate for delivery
+        /// continuously through the call regardless of changes to the `PushConfig`.
+        /// </summary>
+        /// <param name="subscription">The name of the subscription.</param>
+        /// <param name="push_config">
+        /// The push configuration for future deliveries.
+        ///
+        /// An empty `pushConfig` indicates that the Pub/Sub system should
+        /// stop pushing messages from the given subscription and allow
+        /// messages to be pulled and acknowledged - effectively pausing
+        /// the subscription if `Pull` is not called.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task ModifyPushConfigAsync(
+            string subscription,
+            PushConfig pushConfig,
+            CancellationToken cancellationToken) => ModifyPushConfigAsync(
+                subscription,
+                pushConfig,
+                new CallSettings { CancellationToken = cancellationToken });
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
         ///
@@ -669,7 +842,6 @@ namespace Google.Pubsub.V1
         ///
         /// If this parameter is not set, the default value of 10 seconds is used.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Subscription> CreateSubscriptionAsync(
@@ -677,7 +849,6 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             Subscription request = new Subscription
@@ -689,7 +860,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.CreateSubscriptionAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -763,12 +934,10 @@ namespace Google.Pubsub.V1
         /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Subscription> GetSubscriptionAsync(
             string subscription,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             GetSubscriptionRequest request = new GetSubscriptionRequest
@@ -777,7 +946,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.GetSubscriptionAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -862,12 +1031,10 @@ namespace Google.Pubsub.V1
         /// subscription, or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">The subscription to delete.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteSubscriptionAsync(
             string subscription,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
@@ -876,7 +1043,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.DeleteSubscriptionAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -918,14 +1085,12 @@ namespace Google.Pubsub.V1
         /// was made. Specifying zero may immediately make the message available for
         /// another pull request.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task ModifyAckDeadlineAsync(
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
@@ -936,7 +1101,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.ModifyAckDeadlineAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -988,13 +1153,11 @@ namespace Google.Pubsub.V1
         /// The acknowledgment ID for the messages being acknowledged that was returned
         /// by the Pub/Sub system in the `Pull` response. Must not be empty.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             AcknowledgeRequest request = new AcknowledgeRequest
@@ -1004,7 +1167,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.AcknowledgeAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -1056,14 +1219,12 @@ namespace Google.Pubsub.V1
         /// The maximum number of messages returned for this request. The Pub/Sub
         /// system may return fewer than the number specified.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<PullResponse> PullAsync(
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             PullRequest request = new PullRequest
@@ -1074,7 +1235,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.PullAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -1131,13 +1292,11 @@ namespace Google.Pubsub.V1
         /// messages to be pulled and acknowledged - effectively pausing
         /// the subscription if `Pull` is not called.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
@@ -1147,7 +1306,7 @@ namespace Google.Pubsub.V1
             };
             return GrpcClient.ModifyPushConfigAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
