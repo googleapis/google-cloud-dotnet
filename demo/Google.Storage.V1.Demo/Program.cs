@@ -113,7 +113,7 @@ namespace Google.Storage.V1.Demo
                 }
                 try
                 {
-                    var client = await StorageClient.FromApplicationCredentials("Demo");
+                    var client = await StorageClient.CreateAsync();
                     await command(client);
                     return 0;
                 }
