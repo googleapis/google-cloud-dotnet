@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -89,7 +89,7 @@ namespace Google.Logging.V2
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> Scopes { get; } = new ReadOnlyCollection<string>(new[] {
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
             "https://www.googleapis.com/auth/logging.write",
             "https://www.googleapis.com/auth/logging.admin",
             "https://www.googleapis.com/auth/logging.read",
@@ -128,6 +128,13 @@ namespace Google.Logging.V2
         /// <param name="logId">The log ID.</param>
         /// <returns>The full log resource name.</returns>
         public static string GetLogName(string projectId, string logId) => LogTemplate.Expand(projectId, logId);
+
+        // Note: we could have parameterless overloads of Create and CreateAsync,
+        // documented to just use the default endpoint, settings and credentials.
+        // Pros:
+        // - Might be more reassuring on first use
+        // - Allows method group conversions
+        // Con: overloads!
 
         /// <summary>
         /// Asynchronously creates a <see cref="LoggingServiceV2Client"/>, applying defaults for all unspecified settings.
@@ -179,16 +186,30 @@ namespace Google.Logging.V2
         /// Required. The resource name of the log to delete.  Example:
         /// `"projects/my-project/logs/syslog"`.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task DeleteLogAsync(
             string logName,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Deletes a log and all its log entries.
+        /// The log will reappear if it receives new entries.
+        /// </summary>
+        /// <param name="log_name">
+        /// Required. The resource name of the log to delete.  Example:
+        /// `"projects/my-project/logs/syslog"`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task DeleteLogAsync(
+            string logName,
+            CancellationToken cancellationToken) => DeleteLogAsync(
+                logName,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Deletes a log and all its log entries.
@@ -231,7 +252,6 @@ namespace Google.Logging.V2
         /// Required. The log entries to write. The log entries must have values for
         /// all required fields.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
@@ -239,11 +259,48 @@ namespace Google.Logging.V2
             MonitoredResource resource,
             IDictionary<string, string> labels,
             IEnumerable<LogEntry> entries,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Writes log entries to Cloud Logging.
+        /// All log entries in Cloud Logging are written by this method.
+        /// </summary>
+        /// <param name="log_name">
+        /// Optional. A default log resource name for those log entries in `entries`
+        /// that do not specify their own `logName`.  Example:
+        /// `"projects/my-project/logs/syslog"`.  See
+        /// [LogEntry][google.logging.v2.LogEntry].
+        /// </param>
+        /// <param name="resource">
+        /// Optional. A default monitored resource for those log entries in `entries`
+        /// that do not specify their own `resource`.
+        /// </param>
+        /// <param name="labels">
+        /// Optional. User-defined `key:value` items that are added to
+        /// the `labels` field of each log entry in `entries`, except when a log
+        /// entry specifies its own `key:value` item with the same key.
+        /// Example: `{ "size": "large", "color":"red" }`
+        /// </param>
+        /// <param name="entries">
+        /// Required. The log entries to write. The log entries must have values for
+        /// all required fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
+            string logName,
+            MonitoredResource resource,
+            IDictionary<string, string> labels,
+            IEnumerable<LogEntry> entries,
+            CancellationToken cancellationToken) => WriteLogEntriesAsync(
+                logName,
+                resource,
+                labels,
+                entries,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Writes log entries to Cloud Logging.
@@ -394,12 +451,10 @@ namespace Google.Logging.V2
         /// Required. The resource name of the log to delete.  Example:
         /// `"projects/my-project/logs/syslog"`.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteLogAsync(
             string logName,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             DeleteLogRequest request = new DeleteLogRequest
@@ -408,7 +463,7 @@ namespace Google.Logging.V2
             };
             return GrpcClient.DeleteLogAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -459,7 +514,6 @@ namespace Google.Logging.V2
         /// Required. The log entries to write. The log entries must have values for
         /// all required fields.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<WriteLogEntriesResponse> WriteLogEntriesAsync(
@@ -467,7 +521,6 @@ namespace Google.Logging.V2
             MonitoredResource resource,
             IDictionary<string, string> labels,
             IEnumerable<LogEntry> entries,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             WriteLogEntriesRequest request = new WriteLogEntriesRequest
@@ -479,7 +532,7 @@ namespace Google.Logging.V2
             };
             return GrpcClient.WriteLogEntriesAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 

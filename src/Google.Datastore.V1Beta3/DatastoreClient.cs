@@ -1,10 +1,10 @@
-// Copyright 2016 Google Inc
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http: *www.apache.org/licenses/LICENSE-2.0
+//     http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -146,18 +146,34 @@ namespace Google.Datastore.V1Beta3
         /// <param name="project_id">Project ID against which to make the request.</param>
         /// <param name="read_options">Options for this lookup request.</param>
         /// <param name="keys">Keys of entities to look up.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<LookupResponse> LookupAsync(
             string projectId,
             ReadOptions readOptions,
             IEnumerable<Key> keys,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Look up entities by key.
+        /// </summary>
+        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="read_options">Options for this lookup request.</param>
+        /// <param name="keys">Keys of entities to look up.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<LookupResponse> LookupAsync(
+            string projectId,
+            ReadOptions readOptions,
+            IEnumerable<Key> keys,
+            CancellationToken cancellationToken) => LookupAsync(
+                projectId,
+                readOptions,
+                keys,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Look up entities by key.
@@ -188,7 +204,6 @@ namespace Google.Datastore.V1Beta3
         /// </param>
         /// <param name="read_options">The options for this query.</param>
         /// <param name="query">The query to run.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<RunQueryResponse> RunQueryAsync(
@@ -196,11 +211,36 @@ namespace Google.Datastore.V1Beta3
             PartitionId partitionId,
             ReadOptions readOptions,
             Query query,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Query for entities.
+        /// </summary>
+        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="partition_id">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="read_options">The options for this query.</param>
+        /// <param name="query">The query to run.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            Query query,
+            CancellationToken cancellationToken) => RunQueryAsync(
+                projectId,
+                partitionId,
+                readOptions,
+                query,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Query for entities.
@@ -238,7 +278,6 @@ namespace Google.Datastore.V1Beta3
         /// </param>
         /// <param name="read_options">The options for this query.</param>
         /// <param name="gql_query">The GQL query to run.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<RunQueryResponse> RunQueryAsync(
@@ -246,11 +285,36 @@ namespace Google.Datastore.V1Beta3
             PartitionId partitionId,
             ReadOptions readOptions,
             GqlQuery gqlQuery,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Query for entities.
+        /// </summary>
+        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="partition_id">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="read_options">The options for this query.</param>
+        /// <param name="gql_query">The GQL query to run.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            GqlQuery gqlQuery,
+            CancellationToken cancellationToken) => RunQueryAsync(
+                projectId,
+                partitionId,
+                readOptions,
+                gqlQuery,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Query for entities.
@@ -280,16 +344,26 @@ namespace Google.Datastore.V1Beta3
         /// Begin a new transaction.
         /// </summary>
         /// <param name="project_id">Project ID against which to make the request.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
             string projectId,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Begin a new transaction.
+        /// </summary>
+        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+            string projectId,
+            CancellationToken cancellationToken) => BeginTransactionAsync(
+                projectId,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Begin a new transaction.
@@ -325,7 +399,6 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
         /// entity.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<CommitResponse> CommitAsync(
@@ -333,11 +406,45 @@ namespace Google.Datastore.V1Beta3
             CommitRequest.Types.Mode mode,
             ByteString transaction,
             IEnumerable<Mutation> mutations,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
+        /// <param name="transaction">The transaction in which to write.</param>
+        /// <param name="mutations">
+        /// The mutations to perform.
+        ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<CommitResponse> CommitAsync(
+            string projectId,
+            CommitRequest.Types.Mode mode,
+            ByteString transaction,
+            IEnumerable<Mutation> mutations,
+            CancellationToken cancellationToken) => CommitAsync(
+                projectId,
+                mode,
+                transaction,
+                mutations,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Commit a transaction, optionally creating, deleting or modifying some
@@ -392,18 +499,48 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
         /// entity.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<CommitResponse> CommitAsync(
             string projectId,
             CommitRequest.Types.Mode mode,
             IEnumerable<Mutation> mutations,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
+        /// <param name="mutations">
+        /// The mutations to perform.
+        ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<CommitResponse> CommitAsync(
+            string projectId,
+            CommitRequest.Types.Mode mode,
+            IEnumerable<Mutation> mutations,
+            CancellationToken cancellationToken) => CommitAsync(
+                projectId,
+                mode,
+                mutations,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Commit a transaction, optionally creating, deleting or modifying some
@@ -444,17 +581,33 @@ namespace Google.Datastore.V1Beta3
         /// The transaction identifier, returned by a call to
         /// [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<RollbackResponse> RollbackAsync(
             string projectId,
             ByteString transaction,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Roll back a transaction.
+        /// </summary>
+        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="transaction">
+        /// The transaction identifier, returned by a call to
+        /// [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<RollbackResponse> RollbackAsync(
+            string projectId,
+            ByteString transaction,
+            CancellationToken cancellationToken) => RollbackAsync(
+                projectId,
+                transaction,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Roll back a transaction.
@@ -483,17 +636,34 @@ namespace Google.Datastore.V1Beta3
         /// A list of keys with incomplete key paths for which to allocate IDs.
         /// No key may be reserved/read-only.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
             string projectId,
             IEnumerable<Key> keys,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Allocate IDs for the given keys (useful for referencing an entity before
+        /// it is inserted).
+        /// </summary>
+        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="keys">
+        /// A list of keys with incomplete key paths for which to allocate IDs.
+        /// No key may be reserved/read-only.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
+            string projectId,
+            IEnumerable<Key> keys,
+            CancellationToken cancellationToken) => AllocateIdsAsync(
+                projectId,
+                keys,
+                new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Allocate IDs for the given keys (useful for referencing an entity before
@@ -535,14 +705,12 @@ namespace Google.Datastore.V1Beta3
         /// <param name="project_id">Project ID against which to make the request.</param>
         /// <param name="read_options">Options for this lookup request.</param>
         /// <param name="keys">Keys of entities to look up.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<LookupResponse> LookupAsync(
             string projectId,
             ReadOptions readOptions,
             IEnumerable<Key> keys,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             LookupRequest request = new LookupRequest
@@ -553,7 +721,7 @@ namespace Google.Datastore.V1Beta3
             };
             return GrpcClient.LookupAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -594,7 +762,6 @@ namespace Google.Datastore.V1Beta3
         /// </param>
         /// <param name="read_options">The options for this query.</param>
         /// <param name="query">The query to run.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<RunQueryResponse> RunQueryAsync(
@@ -602,7 +769,6 @@ namespace Google.Datastore.V1Beta3
             PartitionId partitionId,
             ReadOptions readOptions,
             Query query,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             RunQueryRequest request = new RunQueryRequest
@@ -614,7 +780,7 @@ namespace Google.Datastore.V1Beta3
             };
             return GrpcClient.RunQueryAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -663,7 +829,6 @@ namespace Google.Datastore.V1Beta3
         /// </param>
         /// <param name="read_options">The options for this query.</param>
         /// <param name="gql_query">The GQL query to run.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<RunQueryResponse> RunQueryAsync(
@@ -671,7 +836,6 @@ namespace Google.Datastore.V1Beta3
             PartitionId partitionId,
             ReadOptions readOptions,
             GqlQuery gqlQuery,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             RunQueryRequest request = new RunQueryRequest
@@ -683,7 +847,7 @@ namespace Google.Datastore.V1Beta3
             };
             return GrpcClient.RunQueryAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -724,12 +888,10 @@ namespace Google.Datastore.V1Beta3
         /// Begin a new transaction.
         /// </summary>
         /// <param name="project_id">Project ID against which to make the request.</param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<BeginTransactionResponse> BeginTransactionAsync(
             string projectId,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             BeginTransactionRequest request = new BeginTransactionRequest
@@ -738,7 +900,7 @@ namespace Google.Datastore.V1Beta3
             };
             return GrpcClient.BeginTransactionAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -782,7 +944,6 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
         /// entity.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<CommitResponse> CommitAsync(
@@ -790,7 +951,6 @@ namespace Google.Datastore.V1Beta3
             CommitRequest.Types.Mode mode,
             ByteString transaction,
             IEnumerable<Mutation> mutations,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             CommitRequest request = new CommitRequest
@@ -802,7 +962,7 @@ namespace Google.Datastore.V1Beta3
             };
             return GrpcClient.CommitAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -868,14 +1028,12 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
         /// entity.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<CommitResponse> CommitAsync(
             string projectId,
             CommitRequest.Types.Mode mode,
             IEnumerable<Mutation> mutations,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             CommitRequest request = new CommitRequest
@@ -886,7 +1044,7 @@ namespace Google.Datastore.V1Beta3
             };
             return GrpcClient.CommitAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -937,13 +1095,11 @@ namespace Google.Datastore.V1Beta3
         /// The transaction identifier, returned by a call to
         /// [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<RollbackResponse> RollbackAsync(
             string projectId,
             ByteString transaction,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             RollbackRequest request = new RollbackRequest
@@ -953,7 +1109,7 @@ namespace Google.Datastore.V1Beta3
             };
             return GrpcClient.RollbackAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
@@ -991,13 +1147,11 @@ namespace Google.Datastore.V1Beta3
         /// A list of keys with incomplete key paths for which to allocate IDs.
         /// No key may be reserved/read-only.
         /// </param>
-        /// <param name="cancellationToken">If not null, a <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<AllocateIdsResponse> AllocateIdsAsync(
             string projectId,
             IEnumerable<Key> keys,
-            CancellationToken? cancellationToken = null,
             CallSettings callSettings = null)
         {
             AllocateIdsRequest request = new AllocateIdsRequest
@@ -1007,7 +1161,7 @@ namespace Google.Datastore.V1Beta3
             };
             return GrpcClient.AllocateIdsAsync(
                 request,
-                _clientHelper.BuildCallOptions(cancellationToken, callSettings)
+                _clientHelper.BuildCallOptions(null, callSettings)
             ).ResponseAsync;
         }
 
