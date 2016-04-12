@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using System;
-using System.Threading.Tasks;
 
 namespace Google.Storage.V1.IntegrationTests
 {
@@ -36,7 +35,7 @@ namespace Google.Storage.V1.IntegrationTests
         private CloudConfiguration(string project)
         {
             Project = project;
-            Client = Task.Run(async () => await StorageClient.FromApplicationCredentials("Test")).Result;
+            Client = StorageClient.Create();
             TempBucketPrefix = Project + "_integrationtests-";
         }
 

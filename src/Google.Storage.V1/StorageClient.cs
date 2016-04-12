@@ -49,38 +49,42 @@ namespace Google.Storage.V1
         }
 
         /// <summary>
-        /// Constructs a new client by creating a <see cref="StorageService"/> which uses the
-        /// given <see cref="BaseClientService.Initializer"/> for request initialization.
-        /// </summary>
-        /// <param name="initializer">The initializer to use in the service. Must not be null.</param>
-        public StorageClient(BaseClientService.Initializer initializer)
-            : this(new StorageService(Preconditions.CheckNotNull(initializer, nameof(initializer))))
-        {
-        }
-
-        /// <summary>
-        /// Asynchronously creates a new <see cref="StorageClient"/> from the default application credentials.
+        /// Asynchronously creates a <see cref="StorageClient"/>, using application default credentials if
+        /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The application credentials are available to developers by running <c>gcloud auth</c> from the
-        /// command line, and are available automatically on Google Cloud Platform hosts.
+        /// The credentials are scoped as necessary.
         /// </remarks>
-        /// <param name="applicationName">The name of the application to create a client for. Must not be null.</param>
-        /// <returns>A client configured with the application-default credentials.</returns>
-        public static async Task<StorageClient> FromApplicationCredentials(string applicationName)
+        /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <returns>The task representing the created <see cref="StorageClient"/>.</returns>
+        public static async Task<StorageClient> CreateAsync(GoogleCredential credential = null)
+            // If no credentials have been specified, we fetch them "properly asynchronously"
+            // to avoid the Task.Run in the synchronous call
+            => Create(credential ?? await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false));
+
+        /// <summary>
+        /// Synchronously creates a <see cref="StorageClient"/>, using application default credentials if
+        /// no credentials are specified.
+        /// </summary>
+        /// <remarks>
+        /// The credentials are scoped as necessary.
+        /// </remarks>
+        /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <returns>The created <see cref="StorageClient"/>.</returns>
+        public static StorageClient Create(GoogleCredential credential = null)
         {
-            Preconditions.CheckNotNull(applicationName, nameof(applicationName));
-            var credentials = await GoogleCredential.GetApplicationDefaultAsync();
-            if (credentials.IsCreateScopedRequired)
+            credential = credential ?? Task.Run(() => GoogleCredential.GetApplicationDefaultAsync()).Result;
+            if (credential.IsCreateScopedRequired)
             {
-                credentials = credentials.CreateScoped(StorageService.Scope.DevstorageFullControl);
+                credential = credential.CreateScoped(StorageService.Scope.DevstorageFullControl);
             }
-            var initializer = new BaseClientService.Initializer
+            var service = new StorageService(new BaseClientService.Initializer
             {
-                HttpClientInitializer = credentials,
-                ApplicationName = applicationName,
-            };
-            return new StorageClient(initializer);
+                HttpClientInitializer = credential,
+                ApplicationName = "google-dotnet",
+            });
+
+            return new StorageClient(service);
         }
 
         /// <summary>
