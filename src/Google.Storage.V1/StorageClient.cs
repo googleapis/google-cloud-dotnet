@@ -49,16 +49,6 @@ namespace Google.Storage.V1
         }
 
         /// <summary>
-        /// Constructs a new client by creating a <see cref="StorageService"/> which uses the
-        /// given <see cref="BaseClientService.Initializer"/> for request initialization.
-        /// </summary>
-        /// <param name="initializer">The initializer to use in the service. Must not be null.</param>
-        public StorageClient(BaseClientService.Initializer initializer)
-            : this(new StorageService(Preconditions.CheckNotNull(initializer, nameof(initializer))))
-        {
-        }
-
-        /// <summary>
         /// Asynchronously creates a <see cref="StorageClient"/>, using application default credentials if
         /// no credentials are specified.
         /// </summary>
@@ -88,12 +78,13 @@ namespace Google.Storage.V1
             {
                 credential = credential.CreateScoped(StorageService.Scope.DevstorageFullControl);
             }
-            var initializer = new BaseClientService.Initializer
+            var service = new StorageService(new BaseClientService.Initializer
             {
                 HttpClientInitializer = credential,
                 ApplicationName = "google-dotnet",
-            };
-            return new StorageClient(initializer);
+            });
+
+            return new StorageClient(service);
         }
 
         /// <summary>
