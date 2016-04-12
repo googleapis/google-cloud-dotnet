@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -491,6 +492,30 @@ namespace Google.Pubsub.V1
 
     }
 
+    // Something like this will be in GAX
+    public class ApiCall<TRequest, TResponse>
+        where TRequest : class, IMessage<TRequest>
+        where TResponse : class, IMessage<TResponse>
+    {
+        // May or may not keep these delegates. Using Func<>s instead is a little ugly.
+        public delegate Task<TResponse> AsyncCall(TRequest request, CallSettings callSettings);
+        public delegate TResponse SyncCall(TRequest request, CallSettings callSettings);
+
+        public ApiCall(AsyncCall async, SyncCall sync)
+        //public ApiCall(
+        //    Func<TRequest, CallSettings, Task<TResponse>> async,
+        //    Func<TRequest, CallSettings, TResponse> sync)
+        {
+            Async = async;
+            Sync = sync;
+        }
+
+        public AsyncCall Async { get; }
+        public SyncCall Sync { get; }
+        //public Func<TRequest, CallSettings, Task<TResponse>> Async { get; private set; }
+        //public Func<TRequest, CallSettings, TResponse> Sync { get; private set; }
+    }
+
     public sealed partial class PublisherClientImpl : PublisherClient
     {
         private static readonly PageStreamer<Topic, ListTopicsRequest, ListTopicsResponse, string> s_listTopicsPageStreamer =
@@ -516,9 +541,7 @@ namespace Google.Pubsub.V1
             );
 
         private readonly ClientHelper _clientHelper;
-        private readonly AsyncApiCall<Topic, Topic> _createTopicAsync;
         private readonly ApiCall<Topic, Topic> _createTopic;
-        private readonly AsyncApiCall<ListTopicsRequest, ListTopicsResponse> _listTopicsAsync;
         private readonly ApiCall<ListTopicsRequest, ListTopicsResponse> _listTopics;
 
         public PublisherClientImpl(Publisher.IPublisherClient grpcClient, PublisherSettings settings)
@@ -526,10 +549,8 @@ namespace Google.Pubsub.V1
             this.GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
             _clientHelper = new ClientHelper(effectiveSettings);
-            _createTopicAsync = _clientHelper.BuildApiCallAsync(GrpcClient.CreateTopicAsync, effectiveSettings.CreateTopicRetry);
-            _createTopic = _clientHelper.BuildApiCall(GrpcClient.CreateTopic, effectiveSettings.CreateTopicRetry);
-            _listTopicsAsync = _clientHelper.BuildApiCallAsync(GrpcClient.ListTopicsAsync, effectiveSettings.ListTopicsRetry);
-            _listTopics = _clientHelper.BuildApiCall(GrpcClient.ListTopics, effectiveSettings.ListTopicsRetry);
+            _createTopic = _clientHelper.BuildApiCall(GrpcClient.CreateTopic, GrpcClient.CreateTopicAsync, effectiveSettings.CreateTopicRetry);
+            _listTopics = _clientHelper.BuildApiCall(GrpcClient.ListTopics, GrpcClient.ListTopicsAsync, effectiveSettings.ListTopicsRetry);
         }
 
         public override Publisher.IPublisherClient GrpcClient { get; }
@@ -549,11 +570,12 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> CreateTopicAsync(
             string name,
-            CallSettings callSettings = null) => _createTopicAsync(
+            CallSettings callSettings = null) => _createTopic.Async(
                 new Topic
                 {
                     Name = name,
-                }, callSettings);
+                },
+                callSettings);
 
         /// <summary>
         /// Creates the given topic with the given name.
@@ -570,11 +592,12 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override Topic CreateTopic(
             string name,
-            CallSettings callSettings = null) => _createTopicSync(
+            CallSettings callSettings = null) => _createTopic.Sync(
                 new Topic
                 {
                     Name = name,
-                }, callSettings);
+                },
+                callSettings);
 
         /// <summary>
         /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
@@ -678,7 +701,7 @@ namespace Google.Pubsub.V1
                 {
                     Project = project,
                 },
-                _listTopicsAsync);
+                _listTopics);
 
         /// <summary>
         /// Lists matching topics.
