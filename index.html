@@ -61,12 +61,73 @@
               
 <p>This is preliminary documentation for the Google Cloud APIs
 repository.</p>
+<h1 id="beta-apis">Beta APIs</h1>
+<p>These APIs are available from <a href="https://nuget.org">nuget.org</a> and can
+be installed by most users without reconfiguring their build
+environment at all. There is no guarantee that the API surface will
+stay stable between beta and full release, but we have high confidence
+that the libraries work and are usable.</p>
 <h2 id="google-storage-v1">Google.Storage.V1</h2>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
 for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a></p>
 <p>Common operations are exposed via the
 <a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
+<h1 id="alpha-apis">Alpha APIs</h1>
+<p>These APIs are available from Google&#39;s <a href="http://https://www.myget.org/gallery/google-dotnet-public">public myget
+feed</a>,
+which you will need to configure within your build system.</p>
+<p>These APIs are even more likely to have significant surface
+changes over time, and may fail or have usability issues. Still, if
+you would like to experiment with them, we would welcome your
+feedback.</p>
+<h2 id="google-pubsub-v1">Google.Pubsub.V1</h2>
+<p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/sub</a>.</p>
+<p>The API operates at three abstractions:</p>
+<ul>
+<li><code>SimplePubsub</code> (coming soon) is a simplified API making common
+scenarios extremely straightforward.</li>
+<li><a href="api/Google.Pubsub.V1.PublisherClient.html"><code>PublisherClient</code></a> and
+<a href="api/Google.Pubsub.V1.SubscriberClient.html"><code>SubscriberClient</code></a>
+provide a general-purpose abstraction over raw the RPC API, providing
+features such as page streaming to make client code cleaner and
+simpler.</li>
+<li><a href="api/Google.Pubsub.V1.Publisher.IPublisherClient.html"><code>IPublisherClient</code></a>
+and <a href="api/Google.Pubsub.V1.Subscriber.ISubscriberClient.html"><code>ISubscriberClient</code></a>
+expose the raw RPC API. Most clients will never need to use this
+abstraction, but it provides the most flexibility for via specific
+scenarios.</li>
+</ul>
+<p>Each abstraction is built over the lower-level one, and client code
+can mix and match abstractions very easily: you may be able to use
+<code>SimplePubsub</code> for most of your code, dropping down to
+<code>PublisherClient</code> and <code>SubscriberClient</code> occasionally, for example.</p>
+<h2 id="google-datastore-v1beta3">Google.Datastore.V1Beta3</h2>
+<p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
+<p>Sample code:</p>
+<pre><code class="lang-csharp">var client = DatastoreClient.Create();
+
+var projectId = ...;
+var partitionId = new PartitionId { ProjectId = projectId };
+var entity = new Entity
+{
+    Key = new Key { PartitionId = partitionId, Path = { new PathElement { Kind = &quot;message&quot; } } },
+    [&quot;created&quot;] = DateTime.UtcNow,
+    [&quot;text&quot;] = &quot;Text of the message&quot;
+};
+var transaction = client.BeginTransaction(projectId).Transaction;
+var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
+var insertedKey = commitResponse.MutationResults[0].Key;
+</code></pre>
+<p>See <a href="api/Google.Datastore.V1Beta3.DatastoreClient.html"><code>DatastoreClient</code></a>
+for details. Note that custom conversions are provided to make
+working with the <a href="api/Google.Datastore.V1Beta3.Value.html"><code>Value</code></a> type much
+simpler than it would otherwise be.</p>
+<h2 id="google-logging-v2">Google.Logging.V2</h2>
+<p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>
+<p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
+<p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html"><code>LoggingServiceV2Client</code></a>
+for details.</p>
 
             </article>
           </div>

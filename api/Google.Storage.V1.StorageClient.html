@@ -69,9 +69,12 @@
               
               <h1 id="Google_Storage_V1_StorageClient" data-uid="Google.Storage.V1.StorageClient">Class StorageClient
               </h1>
-              <div class="markdown level0 summary"><p>Wrapper around <see cref="!:StorageService"></see> to provide simpler operations.</p>
+              <div class="markdown level0 summary"><p>Abstract class providing operations for Google Cloud Storage.</p>
 </div>
-              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 conceptual"><blockquote><h1 id="note-beta-release">Note: beta release</h1>
+<p>This is a beta release of the Cloud Storage API.</p>
+</blockquote>
+</div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
@@ -81,63 +84,20 @@
               <h6><strong>Assembly</strong>:Google.Storage.V1.dll</h6>
               <h5 id="Google_Storage_V1_StorageClient_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class StorageClient</code></pre>
+                <pre><code class="lang-csharp hljs">public abstract class StorageClient</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <h4 id="Google_Storage_V1_StorageClient__ctor_BaseClientService_Initializer_" data-uid="Google.Storage.V1.StorageClient.#ctor(BaseClientService.Initializer)">StorageClient(BaseClientService.Initializer)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new client by creating a <see cref="!:StorageService"></see> which uses the
-given <see cref="!:BaseClientService.Initializer"></see> for request initialization.</p>
+              <h5 id="Google_Storage_V1_StorageClient_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><para>
+This abstract class is provided to enable testability while permitting
+additional operations to be added in the future. See <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(GoogleCredential)</a>
+and <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_">CreateAsync(GoogleCredential)</a> to construct instances; alternatively, you can
+construct a <a class="xref" href="Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl">StorageClientImpl</a> directly from a <span class="xref">Google.Apis.Storage.v1.StorageService</span>.
+</para>
+<para>
+All instance methods declared in this class are virtual, with an implementation which simply
+throws <span class="xref">System.NotImplementedException</span>. All these methods are overridden in <a class="xref" href="Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl">StorageClientImpl</a>.
+</para>
 </div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StorageClient(BaseClientService.Initializer initializer)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">BaseClientService.Initializer</span></td>
-                    <td><em>initializer</em></td>
-                    <td><p>The initializer to use in the service. Must not be null.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Storage_V1_StorageClient__ctor_StorageService_" data-uid="Google.Storage.V1.StorageClient.#ctor(StorageService)">StorageClient(StorageService)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <see cref="!:StorageService"></see>.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StorageClient(StorageService service)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">StorageService</span></td>
-                    <td><em>service</em></td>
-                    <td><p>The service to wrap. Must not be null.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Storage_V1_StorageClient_Service" data-uid="Google.Storage.V1.StorageClient.Service">Service</h4>
@@ -152,7 +112,7 @@ application naming etc).</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StorageService Service
+                <pre><code class="lang-csharp hljs">public virtual StorageService Service
 {
     get;
 }</code></pre>
@@ -167,14 +127,106 @@ application naming etc).</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">StorageService</span></td>
+                    <td><span class="xref">Google.Apis.Storage.v1.StorageService</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_" data-uid="Google.Storage.V1.StorageClient.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.DeleteObjectOptions)">DeleteObject(Apis.Storage.v1.Data.Object, DeleteObjectOptions)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_" data-uid="Google.Storage.V1.StorageClient.Create(Google.Apis.Auth.OAuth2.GoogleCredential)">Create(GoogleCredential)</h4>
+              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>, using application default credentials if
+no credentials are specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static StorageClient Create(GoogleCredential credential = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span></td>
+                    <td><em>credential</em></td>
+                    <td><p>Optional <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_" data-uid="Google.Storage.V1.StorageClient.CreateAsync(Google.Apis.Auth.OAuth2.GoogleCredential)">CreateAsync(GoogleCredential)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>, using application default credentials if
+no credentials are specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;StorageClient&gt; CreateAsync(GoogleCredential credential = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span></td>
+                    <td><em>credential</em></td>
+                    <td><p>Optional <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>&gt;</td>
+                    <td><p>The task representing the created <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_" data-uid="Google.Storage.V1.StorageClient.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.DeleteObjectOptions)">DeleteObject(Object, DeleteObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -200,7 +252,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DeleteObject(Apis.Storage.v1.Data.Object obj, DeleteObjectOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DeleteObject(Object obj, DeleteObjectOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -251,7 +303,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DeleteObject(string bucket, string objectName, DeleteObjectOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DeleteObject(string bucket, string objectName, DeleteObjectOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -284,7 +336,7 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_DeleteObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.DeleteObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.DeleteObjectOptions,System.Threading.CancellationToken)">DeleteObjectAsync(Apis.Storage.v1.Data.Object, DeleteObjectOptions, CancellationToken)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_DeleteObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.DeleteObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.DeleteObjectOptions,System.Threading.CancellationToken)">DeleteObjectAsync(Object, DeleteObjectOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -310,7 +362,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task DeleteObjectAsync(Apis.Storage.v1.Data.Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -383,7 +435,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task DeleteObjectAsync(string bucket, string objectName, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteObjectAsync(string bucket, string objectName, DeleteObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -438,17 +490,17 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.IProgress{IDownloadProgress})">DownloadObject(Apis.Storage.v1.Data.Object, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObject(Object, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage synchronously, into a specified stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_IDownloadProgress___remarks">Remarks</h5>
+              <h5 id="Google_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress___remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>The generation number within <em>source</em> is ignored by this method.
 To download a specific generation, use <a class="xref" href="Google.Storage.V1.DownloadObjectOptions.html#Google_Storage_V1_DownloadObjectOptions_Generation">Generation</a>.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DownloadObject(Apis.Storage.v1.Data.Object source, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DownloadObject(Object source, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -480,20 +532,20 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">IDownloadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the download. May be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObject(System.String,System.String,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.IProgress{IDownloadProgress})">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObject(System.String,System.String,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage synchronously, into a specified stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void DownloadObject(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DownloadObject(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -531,24 +583,24 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">IDownloadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the download. May be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObjectAsync(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.Threading.CancellationToken,System.IProgress{IDownloadProgress})">DownloadObjectAsync(Apis.Storage.v1.Data.Object, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObjectAsync(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObjectAsync(Object, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage asynchronously, into a specified stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Storage_V1_StorageClient_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_IDownloadProgress___remarks">Remarks</h5>
+              <h5 id="Google_Storage_V1_StorageClient_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress___remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>The generation number within <em>source</em> is ignored by this method.
 To download a specific generation, use <a class="xref" href="Google.Storage.V1.DownloadObjectOptions.html#Google_Storage_V1_DownloadObjectOptions_Generation">Generation</a>.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task DownloadObjectAsync(Apis.Storage.v1.Data.Object source, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(Object source, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -586,7 +638,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">IDownloadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the download. May be null.</p>
 </td>
@@ -609,13 +661,13 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObjectAsync(System.String,System.String,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.Threading.CancellationToken,System.IProgress{IDownloadProgress})">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObjectAsync(System.String,System.String,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage asynchronously, into a specified stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task DownloadObjectAsync(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DownloadObjectAsync(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -659,7 +711,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">IDownloadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the download. May be null.</p>
 </td>
@@ -678,52 +730,6 @@ defaults will be used.</p>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
                     <td><p>A task representing the asynchronous operation.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Storage_V1_StorageClient_FromApplicationCredentials_System_String_" data-uid="Google.Storage.V1.StorageClient.FromApplicationCredentials(System.String)">FromApplicationCredentials(String)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously creates a new <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a> from the default application credentials.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Storage_V1_StorageClient_FromApplicationCredentials_System_String__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The application credentials are available to developers by running <c>gcloud auth</c> from the
-command line, and are available automatically on Google Cloud Platform hosts.</p>
-</div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Task&lt;StorageClient&gt; FromApplicationCredentials(string applicationName)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>applicationName</em></td>
-                    <td><p>The name of the application to create a client for. Must not be null.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>&gt;</td>
-                    <td><p>A client configured with the application-default credentials.</p>
 </td>
                   </tr>
                 </tbody>
@@ -733,12 +739,12 @@ command line, and are available automatically on Google Cloud Platform hosts.</p
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 id="Google_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Storage_V1_GetObjectOptions__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <see cref="!:DownloadObject(string, string, System.IO.Stream, DownloadObjectOptions, System.IProgress<Apis.Download.IDownloadProgress>)"></see>
+              <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</a>
 to download the content.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Apis.Storage.v1.Data.Object GetObject(string bucket, string objectName, GetObjectOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Object GetObject(string bucket, string objectName, GetObjectOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -782,7 +788,7 @@ defaults will be used.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
-                    <td><p>The <see cref="!:Google.Apis.Storage.v1.Data.Object"></see> representation of the storage object.</p>
+                    <td><p>The <span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the storage object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -792,12 +798,12 @@ defaults will be used.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 id="Google_Storage_V1_StorageClient_GetObjectAsync_System_String_System_String_Google_Storage_V1_GetObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <see cref="!:DownloadObjectAsync(string, string, System.IO.Stream, DownloadObjectOptions, CancellationToken, System.IProgress<Apis.Download.IDownloadProgress>)"></see>
+              <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</a>
 to download the content.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Apis.Storage.v1.Data.Object&gt; GetObjectAsync(string bucket, string objectName, GetObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; GetObjectAsync(string bucket, string objectName, GetObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -848,7 +854,7 @@ defaults will be used.</p>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
                     <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><see cref="!:Google.Apis.Storage.v1.Data.Object"></see> representation of the storage object.</p>
+<p><span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the storage object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -863,7 +869,7 @@ This does not support reporting progress, or streaming the results.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IList&lt;Bucket&gt;&gt; ListAllBucketsAsync(string projectId, ListBucketsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Bucket&gt;&gt; ListAllBucketsAsync(string projectId, ListBucketsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -906,7 +912,7 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Bucket</span>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Bucket</span>&gt;&gt;</td>
                     <td><p>A list of buckets within the project.</p>
 </td>
                   </tr>
@@ -922,7 +928,7 @@ This does not support reporting progress, or streaming the results.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IList&lt;Apis.Storage.v1.Data.Object&gt;&gt; ListAllObjectsAsync(string bucket, string prefix, ListObjectsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Object&gt;&gt; ListAllObjectsAsync(string bucket, string prefix, ListObjectsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -989,7 +995,7 @@ simply call LINQ&#39;s <c>ToList()</c> method on the returned sequence.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;Bucket&gt; ListBuckets(string projectId, ListBucketsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;Bucket&gt; ListBuckets(string projectId, ListBucketsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1026,7 +1032,7 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Bucket</span>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Bucket</span>&gt;</td>
                     <td><p>A sequence of buckets within the project.</p>
 </td>
                   </tr>
@@ -1043,7 +1049,7 @@ simply call LINQ&#39;s <c>ToList()</c> method on the returned sequence.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;Apis.Storage.v1.Data.Object&gt; ListObjects(string bucket, string prefix, ListObjectsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;Object&gt; ListObjects(string bucket, string prefix, ListObjectsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1093,13 +1099,13 @@ defaults will be supplied.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_IProgress_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.IProgress{IUploadProgress})">UploadObject(Apis.Storage.v1.Data.Object, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObject(Object, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage synchronously, from a specified stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Apis.Storage.v1.Data.Object UploadObject(Apis.Storage.v1.Data.Object destination, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Object UploadObject(Object destination, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1132,7 +1138,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">IUploadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
 </td>
@@ -1150,18 +1156,18 @@ defaults will be used.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
-                    <td><p>The <see cref="!:Google.Apis.Storage.v1.Data.Object"></see> representation of the uploaded object.</p>
+                    <td><p>The <span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_IProgress_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObject(System.String,System.String,System.String,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.IProgress{IUploadProgress})">UploadObject(String, String, String, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObject(System.String,System.String,System.String,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObject(String, String, String, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage synchronously, from a specified stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Apis.Storage.v1.Data.Object UploadObject(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Object UploadObject(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1206,7 +1212,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">IUploadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
 </td>
@@ -1224,18 +1230,18 @@ defaults will be used.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
-                    <td><p>The <see cref="!:Google.Apis.Storage.v1.Data.Object"></see> representation of the uploaded object.</p>
+                    <td><p>The <span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_UploadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObjectAsync(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{IUploadProgress})">UploadObjectAsync(Apis.Storage.v1.Data.Object, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_UploadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObjectAsync(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObjectAsync(Object, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage asynchronously, from a specified stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Apis.Storage.v1.Data.Object&gt; UploadObjectAsync(Apis.Storage.v1.Data.Object destination, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(Object destination, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1274,7 +1280,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">IUploadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
 </td>
@@ -1293,7 +1299,7 @@ defaults will be used.</p>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
                     <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><see cref="!:Google.Apis.Storage.v1.Data.Object"></see> representation of the uploaded object.</p>
+<p><span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1304,7 +1310,7 @@ defaults will be used.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Apis.Storage.v1.Data.Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1355,18 +1361,18 @@ such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. Must not 
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
                     <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><see cref="!:Google.Apis.Storage.v1.Data.Object"></see> representation of the uploaded object.</p>
+<p><span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Storage_V1_StorageClient_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{IUploadProgress})">UploadObjectAsync(String, String, String, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</h4>
+              <h4 id="Google_Storage_V1_StorageClient_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObjectAsync(String, String, String, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage asynchronously, from a specified stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;Apis.Storage.v1.Data.Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, CancellationToken cancellationToken = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1417,7 +1423,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">IUploadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
 </td>
@@ -1436,7 +1442,7 @@ defaults will be used.</p>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
                     <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><see cref="!:Google.Apis.Storage.v1.Data.Object"></see> representation of the uploaded object.</p>
+<p><span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
