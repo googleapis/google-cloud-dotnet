@@ -63,11 +63,11 @@ namespace Google.Pubsub.V1
             RetrySettings.FilterForStatusCodes();
 
         public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-            {
-                Delay = TimeSpan.FromMilliseconds(100),
-                DelayMultiplier = 1.2,
-                MaxDelay = TimeSpan.FromMilliseconds(1000),
-            };
+        {
+            Delay = TimeSpan.FromMilliseconds(100),
+            DelayMultiplier = 1.2,
+            MaxDelay = TimeSpan.FromMilliseconds(1000),
+        };
 
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
         {
@@ -76,7 +76,8 @@ namespace Google.Pubsub.V1
             MaxDelay = TimeSpan.FromMilliseconds(30000),
         };
 
-        public RetrySettings CreateTopicRetry { get; set; } = new RetrySettings {
+        public RetrySettings CreateTopicRetry { get; set; } = new RetrySettings
+        {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
             RetryFilter = IdempotentRetryFilter
