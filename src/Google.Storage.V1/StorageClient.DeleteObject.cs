@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Storage.v1;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1
 {
-    public partial class StorageClient
+    public abstract partial class StorageClient
     {
         /// <summary>
         /// Deletes a version of the specified object synchronously.
@@ -46,9 +46,9 @@ namespace Google.Storage.V1
         /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
         /// <param name="options">Additional options for the operation. May be null, in which case appropriate
         /// defaults will be used.</param>
-        public void DeleteObject(string bucket, string objectName, DeleteObjectOptions options = null)
+        public virtual void DeleteObject(string bucket, string objectName, DeleteObjectOptions options = null)
         {
-            CreateDeleteObjectRequest(bucket, objectName, options).Execute();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -78,13 +78,13 @@ namespace Google.Storage.V1
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DeleteObjectAsync(
+        public virtual Task DeleteObjectAsync(
             string bucket,
             string objectName,
             DeleteObjectOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            return CreateDeleteObjectRequest(bucket, objectName, options).ExecuteAsync(cancellationToken);
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -113,9 +113,9 @@ namespace Google.Storage.V1
         /// <param name="obj">Object to delete. Must not be null, and must have the name and bucket populated.</param>
         /// <param name="options">Additional options for the operation. May be null, in which case appropriate
         /// defaults will be used.</param>
-        public void DeleteObject(Object obj, DeleteObjectOptions options = null)
+        public virtual void DeleteObject(Object obj, DeleteObjectOptions options = null)
         {
-            CreateDeleteObjectRequest(obj, options).Execute();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -146,26 +146,9 @@ namespace Google.Storage.V1
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task DeleteObjectAsync(Object obj, DeleteObjectOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return CreateDeleteObjectRequest(obj, options).ExecuteAsync(cancellationToken);
-        }
-
-        private ObjectsResource.DeleteRequest CreateDeleteObjectRequest(Object obj, DeleteObjectOptions options)
-        {
-            ValidateObject(obj, nameof(obj));
-            var request = Service.Objects.Delete(obj.Bucket, obj.Name);
-            options?.ModifyRequest(request);
-            return request;
-        }
-
-        private ObjectsResource.DeleteRequest CreateDeleteObjectRequest(string bucket, string name, DeleteObjectOptions options)
-        {
-            ValidateBucket(bucket);
-            Preconditions.CheckNotNull(name, nameof(name));
-            var request = Service.Objects.Delete(bucket, name);
-            options?.ModifyRequest(request);
-            return request;
+            throw new NotImplementedException();
         }
     }
 }
