@@ -76,41 +76,41 @@ namespace Google.Pubsub.V1
             MaxDelay = TimeSpan.FromMilliseconds(30000),
         };
 
-        public RetrySettings CreateTopic_Retry { get; set; } = new RetrySettings {
+        public RetrySettings CreateTopicRetry { get; set; } = new RetrySettings {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
             RetryFilter = IdempotentRetryFilter
         };
 
-        public RetrySettings Publish_Retry { get; set; } = new RetrySettings
+        public RetrySettings PublishRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
             RetryFilter = NonIdempotentRetryFilter
         };
 
-        public RetrySettings GetTopic_Retry { get; set; } = new RetrySettings
+        public RetrySettings GetTopicRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
             RetryFilter = IdempotentRetryFilter
         };
 
-        public RetrySettings ListTopics_Retry { get; set; } = new RetrySettings
+        public RetrySettings ListTopicsRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
             RetryFilter = IdempotentRetryFilter
         };
 
-        public RetrySettings ListTopicSubscriptions_Retry { get; set; } = new RetrySettings
+        public RetrySettings ListTopicSubscriptionsRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
             RetryFilter = IdempotentRetryFilter
         };
 
-        public RetrySettings DeleteTopic_Retry { get; set; } = new RetrySettings
+        public RetrySettings DeleteTopicRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
@@ -123,12 +123,12 @@ namespace Google.Pubsub.V1
         /// <returns>A deep clone of this set of Publisher settings.</returns>
         public PublisherSettings Clone() => CloneInto(new PublisherSettings
         {
-            CreateTopic_Retry = CreateTopic_Retry?.Clone(),
-            Publish_Retry = Publish_Retry?.Clone(),
-            GetTopic_Retry = GetTopic_Retry?.Clone(),
-            ListTopics_Retry = ListTopics_Retry?.Clone(),
-            ListTopicSubscriptions_Retry = ListTopicSubscriptions_Retry?.Clone(),
-            DeleteTopic_Retry = DeleteTopic_Retry?.Clone(),
+            CreateTopicRetry = CreateTopicRetry?.Clone(),
+            PublishRetry = PublishRetry?.Clone(),
+            GetTopicRetry = GetTopicRetry?.Clone(),
+            ListTopicsRetry = ListTopicsRetry?.Clone(),
+            ListTopicSubscriptionsRetry = ListTopicSubscriptionsRetry?.Clone(),
+            DeleteTopicRetry = DeleteTopicRetry?.Clone(),
         });
     }
 
@@ -515,20 +515,20 @@ namespace Google.Pubsub.V1
             );
 
         private readonly ClientHelper _clientHelper;
-        private readonly ApiCallableAsync<Topic, Topic> _createTopicAsync;
-        private readonly ApiCallableSync<Topic, Topic> _createTopicSync;
-        private readonly ApiCallableAsync<ListTopicsRequest, ListTopicsResponse> _listTopicsAsync;
-        private readonly ApiCallableSync<ListTopicsRequest, ListTopicsResponse> _listTopicsSync;
+        private readonly AsyncApiCall<Topic, Topic> _createTopicAsync;
+        private readonly ApiCall<Topic, Topic> _createTopic;
+        private readonly AsyncApiCall<ListTopicsRequest, ListTopicsResponse> _listTopicsAsync;
+        private readonly ApiCall<ListTopicsRequest, ListTopicsResponse> _listTopics;
 
         public PublisherClientImpl(Publisher.IPublisherClient grpcClient, PublisherSettings settings)
         {
             this.GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
             _clientHelper = new ClientHelper(effectiveSettings);
-            _createTopicAsync = _clientHelper.BuildApiCallableAsync(GrpcClient.CreateTopicAsync, effectiveSettings.CreateTopic_Retry);
-            _createTopicSync = _clientHelper.BuildApiCallableSync(GrpcClient.CreateTopic, effectiveSettings.CreateTopic_Retry);
-            _listTopicsAsync = _clientHelper.BuildApiCallableAsync(GrpcClient.ListTopicsAsync, effectiveSettings.ListTopics_Retry);
-            _listTopicsSync = _clientHelper.BuildApiCallableSync(GrpcClient.ListTopics, effectiveSettings.ListTopics_Retry);
+            _createTopicAsync = _clientHelper.BuildApiCallAsync(GrpcClient.CreateTopicAsync, effectiveSettings.CreateTopicRetry);
+            _createTopic = _clientHelper.BuildApiCall(GrpcClient.CreateTopic, effectiveSettings.CreateTopicRetry);
+            _listTopicsAsync = _clientHelper.BuildApiCallAsync(GrpcClient.ListTopicsAsync, effectiveSettings.ListTopicsRetry);
+            _listTopics = _clientHelper.BuildApiCall(GrpcClient.ListTopics, effectiveSettings.ListTopicsRetry);
         }
 
         public override Publisher.IPublisherClient GrpcClient { get; }
@@ -671,34 +671,13 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override IAsyncEnumerable<Topic> ListTopicsAsync(
             string project,
-            CallSettings callSettings = null)
-        {
-            ListTopicsRequest request = new ListTopicsRequest
-            {
-                Project = project,
-            };
-            return s_listTopicsPageStreamer.FetchAsync(
-                request,
-                (pageStreamRequest, cancellationToken) =>
+            CallSettings callSettings = null) => s_listTopicsPageStreamer.FetchAsync(
+                callSettings,
+                new ListTopicsRequest
                 {
-                    // if IAsyncEnumerator.MoveNext(CancellationToken) is passed a default cancellation-token
-                    // (also CancellationToken.None), then use the CancellationToken provided in callSettings.
-                    // Otherwise use the MoveNext() cancellation-token.
-                    // It's unfortunate (for us!) that MoveNext() takes a CancellationToken, rather than a
-                    // nullable CancellationToken?
-                    CallSettings useCallSettings;
-                    if (cancellationToken == default(CancellationToken))
-                    {
-                        useCallSettings = callSettings;
-                    }
-                    else
-                    {
-                        useCallSettings = callSettings?.Clone() ?? new CallSettings();
-                        useCallSettings.CancellationToken = cancellationToken;
-                    }
-                    return _listTopicsAsync(pageStreamRequest, useCallSettings);
-                });
-        }
+                    Project = project,
+                },
+                _listTopicsAsync);
 
         /// <summary>
         /// Lists matching topics.
@@ -708,16 +687,13 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override IEnumerable<Topic> ListTopics(
             string project,
-            CallSettings callSettings = null)
-        {
-            ListTopicsRequest request = new ListTopicsRequest
-            {
-                Project = project,
-            };
-            return s_listTopicsPageStreamer.Fetch(
-                request,
-                pageStreamRequest => _listTopicsSync(pageStreamRequest, callSettings));
-        }
+            CallSettings callSettings = null) => s_listTopicsPageStreamer.Fetch(
+                callSettings,
+                new ListSubscriptionsRequest
+                {
+                    Project = project,
+                },
+                _listTopics);
 
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
