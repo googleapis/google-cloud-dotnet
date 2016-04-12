@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Storage.v1;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1
 {
-    public partial class StorageClient
+    public abstract partial class StorageClient
     {
         /// <summary>
         /// Fetches the information about an object synchronously.
@@ -31,11 +31,9 @@ namespace Google.Storage.V1
         /// <param name="options">Additional options for the fetch operation. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <returns>The <see cref="Object"/> representation of the storage object.</returns>
-        public Object GetObject(string bucket, string objectName, GetObjectOptions options = null)
+        public virtual Object GetObject(string bucket, string objectName, GetObjectOptions options = null)
         {
-            ValidateBucket(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
-            return CreateRequest(bucket, objectName, options).Execute();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -50,22 +48,13 @@ namespace Google.Storage.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// <see cref="Object"/> representation of the storage object.</returns>
-        public Task<Object> GetObjectAsync(
+        public virtual Task<Object> GetObjectAsync(
             string bucket,
             string objectName,
             GetObjectOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            ValidateBucket(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
-            return CreateRequest(bucket, objectName, options).ExecuteAsync(cancellationToken);
-        }
-
-        private ObjectsResource.GetRequest CreateRequest(string bucket, string objectName, GetObjectOptions options)
-        {
-            var request = Service.Objects.Get(bucket, objectName);
-            options?.ModifyRequest(request);
-            return request;
-        }
+            throw new NotImplementedException();
+        }        
     }
 }

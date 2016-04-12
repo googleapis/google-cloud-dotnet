@@ -21,7 +21,7 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1
 {
-    public partial class StorageClient
+    public abstract partial class StorageClient
     {
         /// <summary>
         /// Uploads the data for an object in storage synchronously, from a specified stream.
@@ -35,7 +35,7 @@ namespace Google.Storage.V1
         /// defaults will be used.</param>
         /// <param name="progress">Progress reporter for the upload. May be null.</param>
         /// <returns>The <see cref="Object"/> representation of the uploaded object.</returns>
-        public Object UploadObject(
+        public virtual Object UploadObject(
             string bucket,
             string objectName,
             string contentType,
@@ -43,12 +43,7 @@ namespace Google.Storage.V1
             UploadObjectOptions options = null,
             IProgress<IUploadProgress> progress = null)
         {
-            ValidateBucket(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
-            Preconditions.CheckNotNull(contentType, nameof(contentType));
-            return UploadObject(
-                new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
-                source, options, progress);
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -61,10 +56,9 @@ namespace Google.Storage.V1
         /// <param name="source">The stream to read the data from. Must not be null.</param>
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// <see cref="Object"/> representation of the uploaded object.</returns>
-        public Task<Object> UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)
+        public virtual Task<Object> UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)
         {
-            return UploadObjectAsync(bucket, objectName, contentType, source,
-                options: null, cancellationToken: CancellationToken.None, progress: null);
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -81,7 +75,7 @@ namespace Google.Storage.V1
         /// <param name="progress">Progress reporter for the upload. May be null.</param>
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// <see cref="Object"/> representation of the uploaded object.</returns>
-        public Task<Object> UploadObjectAsync(
+        public virtual Task<Object> UploadObjectAsync(
             string bucket,
             string objectName,
             string contentType,
@@ -90,11 +84,7 @@ namespace Google.Storage.V1
             CancellationToken cancellationToken = default(CancellationToken),
             IProgress<IUploadProgress> progress = null)
         {
-            ValidateBucket(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
-            Preconditions.CheckNotNull(contentType, nameof(contentType));
-            return UploadObjectAsync(new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
-                source, options, cancellationToken, progress);
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -107,27 +97,13 @@ namespace Google.Storage.V1
         /// defaults will be used.</param>
         /// <param name="progress">Progress reporter for the upload. May be null.</param>
         /// <returns>The <see cref="Object"/> representation of the uploaded object.</returns>
-        public Object UploadObject(
+        public virtual Object UploadObject(
             Object destination,
             Stream source,
             UploadObjectOptions options = null,
             IProgress<IUploadProgress> progress = null)
         {
-            ValidateObject(destination, nameof(destination));
-            Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
-            Preconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
-            options?.ModifyMediaUpload(mediaUpload);
-            if (progress != null)
-            {
-                mediaUpload.ProgressChanged += progress.Report;
-            }
-            var finalProgress = mediaUpload.Upload();
-            if (finalProgress.Exception != null)
-            {
-                throw finalProgress.Exception;
-            }
-            return mediaUpload.ResponseBody;
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -142,28 +118,14 @@ namespace Google.Storage.V1
         /// <param name="progress">Progress reporter for the upload. May be null.</param>
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// <see cref="Object"/> representation of the uploaded object.</returns>
-        public async Task<Object> UploadObjectAsync(
+        public virtual Task<Object> UploadObjectAsync(
             Object destination,
             Stream source,
             UploadObjectOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken),
             IProgress<IUploadProgress> progress = null)
         {
-            ValidateObject(destination, nameof(destination));
-            Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
-            Preconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
-            options?.ModifyMediaUpload(mediaUpload);
-            if (progress != null)
-            {
-                mediaUpload.ProgressChanged += progress.Report;
-            }
-            var finalProgress = await mediaUpload.UploadAsync(cancellationToken).ConfigureAwait(false);
-            if (finalProgress.Exception != null)
-            {
-                throw finalProgress.Exception;
-            }
-            return mediaUpload.ResponseBody;
+            throw new NotImplementedException();
         }
     }
 }

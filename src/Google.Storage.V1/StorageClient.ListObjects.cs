@@ -12,11 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Requests;
-using Google.Apis.Storage.v1;
-using Google.Apis.Storage.v1.Data;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Object = Google.Apis.Storage.v1.Data.Object;
@@ -24,14 +21,8 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 namespace Google.Storage.V1
 {
     // ListObjects methods on StorageClient
-    public partial class StorageClient
+    public abstract partial class StorageClient
     {
-        private static readonly PageStreamer<Object, ObjectsResource.ListRequest, Objects, string> s_objectPageStreamer =
-            new PageStreamer<Object, ObjectsResource.ListRequest, Objects, string>(
-                (request, token) => request.PageToken = token,
-                objects => objects.NextPageToken,
-                objects => objects.Items);
-
         /// <summary>
         /// Asynchronously lists the objects in a given bucket, returning the results as a list.
         /// </summary>
@@ -46,16 +37,14 @@ namespace Google.Storage.V1
         /// defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of objects within the bucket.</returns>
-        public Task<IList<Object>> ListAllObjectsAsync(
+        public virtual Task<IList<Object>> ListAllObjectsAsync(
             string bucket,
             string prefix,
             ListObjectsOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            var initialRequest = CreateListObjectsRequest(bucket, prefix, options);
-            return s_objectPageStreamer.FetchAllAsync(initialRequest, cancellationToken);
+            throw new NotImplementedException();
         }
-
 
         /// <summary>
         /// Lists the objects in a given bucket, synchronously but lazily.
@@ -71,19 +60,9 @@ namespace Google.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>A sequence of objects within the bucket.</returns>
-        public IEnumerable<Object> ListObjects(string bucket, string prefix, ListObjectsOptions options = null)
+        public virtual IEnumerable<Object> ListObjects(string bucket, string prefix, ListObjectsOptions options = null)
         {
-            var initialRequest = CreateListObjectsRequest(bucket, prefix, options);
-            return s_objectPageStreamer.Fetch(initialRequest);
-        }
-
-        private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, string prefix, ListObjectsOptions options)
-        {
-            ValidateBucket(bucket);
-            var request = Service.Objects.List(bucket);
-            request.Prefix = prefix;
-            options?.ModifyRequest(request);
-            return request;
+            throw new NotImplementedException();
         }
     }
 }

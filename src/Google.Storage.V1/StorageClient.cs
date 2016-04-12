@@ -16,16 +16,26 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Storage.v1;
 using System;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1
 {
     /// <summary>
-    /// Wrapper around <see cref="StorageService"/> to provide simpler operations.
+    /// Abstract class providing operations for Google Cloud Storage.
     /// </summary>
-    public partial class StorageClient
+    /// <remarks>
+    /// <para>
+    /// This abstract class is provided to enable testability while permitting
+    /// additional operations to be added in the future. See <see cref="Create(GoogleCredential)"/>
+    /// and <see cref="CreateAsync(GoogleCredential)"/> to construct instances; alternatively, you can
+    /// construct a <see cref="StorageClientImpl"/> directly from a <see cref="StorageService"/>.
+    /// </para>
+    /// <para>
+    /// All instance methods declared in this class are virtual, with an implementation which simply
+    /// throws <see cref="NotImplementedException"/>. All these methods are overridden in <see cref="StorageClientImpl"/>.
+    /// </para>
+    /// </remarks>
+    public abstract partial class StorageClient
     {
         /// <summary>
         /// The underlying storage service object used by this client.
@@ -36,17 +46,7 @@ namespace Google.Storage.V1
         /// to use the same service object as the wrapper, in order to take advantage of its configuration (for authentication,
         /// application naming etc).
         /// </remarks>
-        public StorageService Service { get; }
-
-        /// <summary>
-        /// Constructs a new client wrapping the given <see cref="StorageService"/>.
-        /// </summary>
-        /// <param name="service">The service to wrap. Must not be null.</param>
-        public StorageClient(StorageService service)
-        {
-            Preconditions.CheckNotNull(service, nameof(service));
-            Service = service;
-        }
+        public virtual StorageService Service { get; }
 
         /// <summary>
         /// Asynchronously creates a <see cref="StorageClient"/>, using application default credentials if
@@ -84,46 +84,9 @@ namespace Google.Storage.V1
                 ApplicationName = "google-dotnet",
             });
 
-            return new StorageClient(service);
-        }
-
-        /// <summary>
-        /// Regular expression to be used for bucket validation when <see cref="ValidateBucket"/>
-        /// would throw the wrong exception.
-        /// </summary>
-        private static readonly Regex ValidBucketName = new Regex(@"^[0-9a-z.\-_]{1,222}$");
-
-        /// <summary>
-        /// Validates that a bucket only contains valid characters, and is not too long. This is far from
-        /// complete validation, but is all that's required to ensure that it's safe to include in a URL.
-        /// This method also checks for nullity, so callers don't need to do that first.
-        /// This method is internal rather than private for testing purposes.
-        /// </summary>
-        internal static void ValidateBucket(string bucket)
-        {
-            Preconditions.CheckNotNull(bucket, nameof(bucket));
-            if (!ValidBucketName.IsMatch(bucket))
-            {
-                throw new ArgumentException($"Invalid bucket name '{bucket}' - see https://cloud.google.com/storage/docs/bucket-naming", nameof(bucket));
-            }
+            return new StorageClientImpl(service);
         }
 
 
-        /// <summary>
-        /// Validates that the given Object has a "somewhat valid" (no URI encoding required) bucket name and an object name.
-        /// </summary>
-        /// <param name="obj">Object to validate</param>
-        /// <param name="paramName">The parameter name in the calling method</param>
-        private void ValidateObject(Object obj, string paramName)
-        {
-            Preconditions.CheckNotNull(obj, paramName);
-            Preconditions.CheckArgument(
-                obj.Name != null && obj.Bucket != null,
-                paramName,
-                "Object must have a name and bucket");
-            Preconditions.CheckArgument(ValidBucketName.IsMatch(obj.Bucket),
-                paramName,
-                "Object bucket '{0}' is invalid", obj.Bucket);
-        }
     }
 }
