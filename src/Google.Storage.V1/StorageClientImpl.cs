@@ -31,6 +31,36 @@ namespace Google.Storage.V1
     /// </remarks>
     public sealed partial class StorageClientImpl : StorageClient
     {
+        private static readonly object _applicationNameLock = new object();
+        private static string _applicationName = "gcloud-dotnet";
+
+        /// <summary>
+        /// The default application name used when creating a <see cref="StorageService"/>.
+        /// Defaults to "gcloud-dotnet"; must not be null.
+        /// </summary>
+        /// <remarks>
+        /// Most applications will never want to set this, which is why it's in this class rather than
+        /// <see cref="StorageClient"/>.
+        /// </remarks>
+        public static string ApplicationName
+        {
+            get
+            {
+                lock (_applicationNameLock)
+                {
+                    return _applicationName;
+                }
+            }
+            set
+            {
+                Preconditions.CheckNotNull(value, nameof(value));
+                lock (_applicationNameLock)
+                {
+                    _applicationName = value;
+                }
+            }
+        }
+
         /// <inheritdoc />
         public override StorageService Service { get; }
 
