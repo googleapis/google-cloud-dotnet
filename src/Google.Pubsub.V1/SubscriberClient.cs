@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -57,11 +58,143 @@ namespace Google.Pubsub.V1
         public static SubscriberSettings GetDefault() => new SubscriberSettings();
 
         /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are elegible for retry
+        /// for "Idempotent" <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable, StatusCode.DeadlineExceeded);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are elegible for retry
+        /// for "NonIdempotent" <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(100),
+            DelayMultiplier = 1.2,
+            MaxDelay = TimeSpan.FromMilliseconds(1000),
+        };
+
+        /// <summary>
+        /// "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(2000),
+            DelayMultiplier = 1.5,
+            MaxDelay = TimeSpan.FromMilliseconds(30000),
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="SubscriberClient.CreateSubscription"/> and <see cref="SubscriberClient.CreateSubscriptionAsync"/>.
+        /// </summary>
+        public RetrySettings CreateSubscriptionRetrySettings { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="SubscriberClient.GetSubscription"/> and <see cref="SubscriberClient.GetSubscriptionAsync"/>.
+        /// </summary>
+        public RetrySettings GetSubscriptionRetrySettings { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultTimeoutBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="SubscriberClient.ListSubscriptions"/> and <see cref="SubscriberClient.ListSubscriptionsAsync"/>.
+        /// </summary>
+        public RetrySettings ListSubscriptionsRetrySettings { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultTimeoutBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="SubscriberClient.DeleteSubscription"/> and <see cref="SubscriberClient.DeleteSubscriptionAsync"/>.
+        /// </summary>
+        public RetrySettings DeleteSubscriptionRetrySettings { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultTimeoutBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="SubscriberClient.ModifyAckDeadline"/> and <see cref="SubscriberClient.ModifyAckDeadlineAsync"/>.
+        /// </summary>
+        public RetrySettings ModifyAckDeadlineRetrySettings { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultTimeoutBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="SubscriberClient.Acknowledge"/> and <see cref="SubscriberClient.AcknowledgeAsync"/>.
+        /// </summary>
+        public RetrySettings AcknowledgeRetrySettings { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultTimeoutBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="SubscriberClient.Pull"/> and <see cref="SubscriberClient.PullAsync"/>.
+        /// </summary>
+        public RetrySettings PullRetrySettings { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultTimeoutBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="SubscriberClient.ModifyPushConfig"/> and <see cref="SubscriberClient.ModifyPushConfigAsync"/>.
+        /// </summary>
+        public RetrySettings ModifyPushConfigRetrySettings { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultTimeoutBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter
+        };
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of Subscriber settings.</returns>
         public SubscriberSettings Clone() => CloneInto(new SubscriberSettings
         {
+            CreateSubscriptionRetrySettings = CreateSubscriptionRetrySettings?.Clone(),
+            GetSubscriptionRetrySettings = GetSubscriptionRetrySettings?.Clone(),
+            ListSubscriptionsRetrySettings = ListSubscriptionsRetrySettings?.Clone(),
+            DeleteSubscriptionRetrySettings = DeleteSubscriptionRetrySettings?.Clone(),
+            ModifyAckDeadlineRetrySettings = ModifyAckDeadlineRetrySettings?.Clone(),
+            AcknowledgeRetrySettings = AcknowledgeRetrySettings?.Clone(),
+            PullRetrySettings = PullRetrySettings?.Clone(),
+            ModifyPushConfigRetrySettings = ModifyPushConfigRetrySettings?.Clone(),
         });
     }
 
@@ -797,12 +930,37 @@ namespace Google.Pubsub.V1
             );
 
         private readonly ClientHelper _clientHelper;
+        private readonly ApiCall<Subscription, Subscription> _createSubscription;
+        private readonly ApiCall<GetSubscriptionRequest, Subscription> _getSubscription;
+        private readonly ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> _listSubscriptions;
+        private readonly ApiCall<DeleteSubscriptionRequest, Empty> _deleteSubscription;
+        private readonly ApiCall<ModifyAckDeadlineRequest, Empty> _modifyAckDeadline;
+        private readonly ApiCall<AcknowledgeRequest, Empty> _acknowledge;
+        private readonly ApiCall<PullRequest, PullResponse> _pull;
+        private readonly ApiCall<ModifyPushConfigRequest, Empty> _modifyPushConfig;
 
         public SubscriberClientImpl(Subscriber.ISubscriberClient grpcClient, SubscriberSettings settings)
         {
             this.GrpcClient = grpcClient;
             SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
+            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
+            _createSubscription = _clientHelper.BuildApiCall<Subscription, Subscription>(GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription)
+                .WithRetry(effectiveSettings.CreateSubscriptionRetrySettings, effectiveClock, null);
+            _getSubscription = _clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(GrpcClient.GetSubscriptionAsync, GrpcClient.GetSubscription)
+                .WithRetry(effectiveSettings.GetSubscriptionRetrySettings, effectiveClock, null);
+            _listSubscriptions = _clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions)
+                .WithRetry(effectiveSettings.ListSubscriptionsRetrySettings, effectiveClock, null);
+            _deleteSubscription = _clientHelper.BuildApiCall<DeleteSubscriptionRequest, Empty>(GrpcClient.DeleteSubscriptionAsync, GrpcClient.DeleteSubscription)
+                .WithRetry(effectiveSettings.DeleteSubscriptionRetrySettings, effectiveClock, null);
+            _modifyAckDeadline = _clientHelper.BuildApiCall<ModifyAckDeadlineRequest, Empty>(GrpcClient.ModifyAckDeadlineAsync, GrpcClient.ModifyAckDeadline)
+                .WithRetry(effectiveSettings.ModifyAckDeadlineRetrySettings, effectiveClock, null);
+            _acknowledge = _clientHelper.BuildApiCall<AcknowledgeRequest, Empty>(GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge)
+                .WithRetry(effectiveSettings.AcknowledgeRetrySettings, effectiveClock, null);
+            _pull = _clientHelper.BuildApiCall<PullRequest, PullResponse>(GrpcClient.PullAsync, GrpcClient.Pull)
+                .WithRetry(effectiveSettings.PullRetrySettings, effectiveClock, null);
+            _modifyPushConfig = _clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig)
+                .WithRetry(effectiveSettings.ModifyPushConfigRetrySettings, effectiveClock, null);
         }
 
         public override Subscriber.ISubscriberClient GrpcClient { get; }
@@ -856,20 +1014,15 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null)
-        {
-            Subscription request = new Subscription
-            {
-                Name = name,
-                Topic = topic,
-                PushConfig = pushConfig,
-                AckDeadlineSeconds = ackDeadlineSeconds,
-            };
-            return GrpcClient.CreateSubscriptionAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _createSubscription.Async(
+                new Subscription
+                {
+                    Name = name,
+                    Topic = topic,
+                    PushConfig = pushConfig,
+                    AckDeadlineSeconds = ackDeadlineSeconds,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
@@ -920,19 +1073,15 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null)
-        {
-            Subscription request = new Subscription
-            {
-                Name = name,
-                Topic = topic,
-                PushConfig = pushConfig,
-                AckDeadlineSeconds = ackDeadlineSeconds,
-            };
-            return GrpcClient.CreateSubscription(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
+            CallSettings callSettings = null) => _createSubscription.Sync(
+                new Subscription
+                {
+                    Name = name,
+                    Topic = topic,
+                    PushConfig = pushConfig,
+                    AckDeadlineSeconds = ackDeadlineSeconds,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets the configuration details of a subscription.
@@ -945,17 +1094,12 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Subscription> GetSubscriptionAsync(
             string subscription,
-            CallSettings callSettings = null)
-        {
-            GetSubscriptionRequest request = new GetSubscriptionRequest
-            {
-                Subscription = subscription,
-            };
-            return GrpcClient.GetSubscriptionAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _getSubscription.Async(
+                new GetSubscriptionRequest
+                {
+                    Subscription = subscription,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets the configuration details of a subscription.
@@ -968,16 +1112,12 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override Subscription GetSubscription(
             string subscription,
-            CallSettings callSettings = null)
-        {
-            GetSubscriptionRequest request = new GetSubscriptionRequest
-            {
-                Subscription = subscription,
-            };
-            return GrpcClient.GetSubscription(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
+            CallSettings callSettings = null) => _getSubscription.Sync(
+                new GetSubscriptionRequest
+                {
+                    Subscription = subscription,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -990,20 +1130,13 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override IAsyncEnumerable<Subscription> ListSubscriptionsAsync(
             string project,
-            CallSettings callSettings = null)
-        {
-            ListSubscriptionsRequest request = new ListSubscriptionsRequest
-            {
-                Project = project,
-            };
-            return s_listSubscriptionsPageStreamer.FetchAsync(
-                request,
-                (pageStreamRequest, cancellationToken) => GrpcClient.ListSubscriptionsAsync(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, callSettings)
-                ).ResponseAsync
-            );
-        }
+            CallSettings callSettings = null) => s_listSubscriptionsPageStreamer.FetchAsync(
+                callSettings,
+                new ListSubscriptionsRequest
+                {
+                    Project = project,
+                },
+                _listSubscriptions);
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1016,19 +1149,13 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override IEnumerable<Subscription> ListSubscriptions(
             string project,
-            CallSettings callSettings = null)
-        {
-            ListSubscriptionsRequest request = new ListSubscriptionsRequest
-            {
-                Project = project,
-            };
-            return s_listSubscriptionsPageStreamer.Fetch(
-                request,
-                pageStreamRequest => GrpcClient.ListSubscriptions(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(null, callSettings))
-            );
-        }
+            CallSettings callSettings = null) => s_listSubscriptionsPageStreamer.Fetch(
+                callSettings,
+                new ListSubscriptionsRequest
+                {
+                    Project = project,
+                },
+                _listSubscriptions);
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
@@ -1042,17 +1169,12 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteSubscriptionAsync(
             string subscription,
-            CallSettings callSettings = null)
-        {
-            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
-            {
-                Subscription = subscription,
-            };
-            return GrpcClient.DeleteSubscriptionAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _deleteSubscription.Async(
+                new DeleteSubscriptionRequest
+                {
+                    Subscription = subscription,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
@@ -1066,16 +1188,12 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override void DeleteSubscription(
             string subscription,
-            CallSettings callSettings = null)
-        {
-            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
-            {
-                Subscription = subscription,
-            };
-            GrpcClient.DeleteSubscription(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
+            CallSettings callSettings = null) => _deleteSubscription.Sync(
+                new DeleteSubscriptionRequest
+                {
+                    Subscription = subscription,
+                },
+                callSettings);
 
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
@@ -1098,19 +1216,14 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null)
-        {
-            ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
-            {
-                Subscription = subscription,
-                AckIds = { ackIds },
-                AckDeadlineSeconds = ackDeadlineSeconds,
-            };
-            return GrpcClient.ModifyAckDeadlineAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _modifyAckDeadline.Async(
+                new ModifyAckDeadlineRequest
+                {
+                    Subscription = subscription,
+                    AckIds = { ackIds },
+                    AckDeadlineSeconds = ackDeadlineSeconds,
+                },
+                callSettings);
 
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
@@ -1133,18 +1246,14 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null)
-        {
-            ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
-            {
-                Subscription = subscription,
-                AckIds = { ackIds },
-                AckDeadlineSeconds = ackDeadlineSeconds,
-            };
-            GrpcClient.ModifyAckDeadline(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
+            CallSettings callSettings = null) => _modifyAckDeadline.Sync(
+                new ModifyAckDeadlineRequest
+                {
+                    Subscription = subscription,
+                    AckIds = { ackIds },
+                    AckDeadlineSeconds = ackDeadlineSeconds,
+                },
+                callSettings);
 
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
@@ -1165,18 +1274,13 @@ namespace Google.Pubsub.V1
         public override Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
-            CallSettings callSettings = null)
-        {
-            AcknowledgeRequest request = new AcknowledgeRequest
-            {
-                Subscription = subscription,
-                AckIds = { ackIds },
-            };
-            return GrpcClient.AcknowledgeAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _acknowledge.Async(
+                new AcknowledgeRequest
+                {
+                    Subscription = subscription,
+                    AckIds = { ackIds },
+                },
+                callSettings);
 
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
@@ -1197,17 +1301,13 @@ namespace Google.Pubsub.V1
         public override void Acknowledge(
             string subscription,
             IEnumerable<string> ackIds,
-            CallSettings callSettings = null)
-        {
-            AcknowledgeRequest request = new AcknowledgeRequest
-            {
-                Subscription = subscription,
-                AckIds = { ackIds },
-            };
-            GrpcClient.Acknowledge(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
+            CallSettings callSettings = null) => _acknowledge.Sync(
+                new AcknowledgeRequest
+                {
+                    Subscription = subscription,
+                    AckIds = { ackIds },
+                },
+                callSettings);
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
@@ -1232,19 +1332,14 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CallSettings callSettings = null)
-        {
-            PullRequest request = new PullRequest
-            {
-                Subscription = subscription,
-                ReturnImmediately = returnImmediately,
-                MaxMessages = maxMessages,
-            };
-            return GrpcClient.PullAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _pull.Async(
+                new PullRequest
+                {
+                    Subscription = subscription,
+                    ReturnImmediately = returnImmediately,
+                    MaxMessages = maxMessages,
+                },
+                callSettings);
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
@@ -1269,18 +1364,14 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CallSettings callSettings = null)
-        {
-            PullRequest request = new PullRequest
-            {
-                Subscription = subscription,
-                ReturnImmediately = returnImmediately,
-                MaxMessages = maxMessages,
-            };
-            return GrpcClient.Pull(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
+            CallSettings callSettings = null) => _pull.Sync(
+                new PullRequest
+                {
+                    Subscription = subscription,
+                    ReturnImmediately = returnImmediately,
+                    MaxMessages = maxMessages,
+                },
+                callSettings);
 
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
@@ -1304,18 +1395,13 @@ namespace Google.Pubsub.V1
         public override Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
-            CallSettings callSettings = null)
-        {
-            ModifyPushConfigRequest request = new ModifyPushConfigRequest
-            {
-                Subscription = subscription,
-                PushConfig = pushConfig,
-            };
-            return GrpcClient.ModifyPushConfigAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _modifyPushConfig.Async(
+                new ModifyPushConfigRequest
+                {
+                    Subscription = subscription,
+                    PushConfig = pushConfig,
+                },
+                callSettings);
 
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
@@ -1339,17 +1425,13 @@ namespace Google.Pubsub.V1
         public override void ModifyPushConfig(
             string subscription,
             PushConfig pushConfig,
-            CallSettings callSettings = null)
-        {
-            ModifyPushConfigRequest request = new ModifyPushConfigRequest
-            {
-                Subscription = subscription,
-                PushConfig = pushConfig,
-            };
-            GrpcClient.ModifyPushConfig(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
+            CallSettings callSettings = null) => _modifyPushConfig.Sync(
+                new ModifyPushConfigRequest
+                {
+                    Subscription = subscription,
+                    PushConfig = pushConfig,
+                },
+                callSettings);
 
     }
 }
