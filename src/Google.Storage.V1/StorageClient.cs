@@ -81,12 +81,10 @@ namespace Google.Storage.V1
             var service = new StorageService(new BaseClientService.Initializer
             {
                 HttpClientInitializer = credential,
-                ApplicationName = "google-dotnet",
+                ApplicationName = StorageClientImpl.ApplicationName,
             });
 
             return new StorageClientImpl(service);
         }
-
-
     }
 }
