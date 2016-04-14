@@ -90,3 +90,55 @@ A library for working with [Stackdriver Logging](https://cloud.google.com/loggin
 
 See [`LoggingServiceV2Client`](obj/api/Google.Logging.V2.LoggingServiceV2Client.yml)
 for details.
+
+## Google.Bigquery.V2
+
+A wrapper library over
+[Google.Apis.Bigquery.v1](https://www.nuget.org/packages/Google.Apis.Bigquery.v2/)
+for working with [Google BigQuery](https://cloud.google.com/bigquery/)
+
+Common operations are exposed via the
+[`BigqueryClient`](obj/api/Google.Bigquery.V1.BigqueryClient.yml)
+class, and additional wrapper classes are present to make operations
+with datasets, tables and query results simpler.
+
+Query example:
+
+```csharp
+var client = BigqueryClient.Create("YOUR PROJECT ID");
+var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
+
+var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
+var query = client.ExecuteQuery(sql);
+
+foreach (var row in rows)
+{
+    Console.WriteLine($"{row["title"]}: {row:["unique_words"]}");
+}
+```
+
+Data insertion example:
+
+```csharp
+var client = BigqueryClient.Create("YOUR PROJECT ID");
+
+// Create the dataset if it doesn't exist.
+var dataset = client.GetOrCreateDataset("mydata");
+
+// Create the table if it doesn't exist.
+var table = dataset.GetOrCreateTable("scores", new SchemaBuilder
+    {
+        { "player", SchemaFieldType.String },
+        { "gameStarted", SchemaFieldType.Timestamp },
+        { "score", SchemaFieldType.Integer }
+    }.Build());
+
+// Insert a single row. There are many other ways of inserting
+// data into a table.
+table.InsertRow(new Dictionary<string, object> {
+    { "player", "Bob" },
+    { "score", 85 },
+    { "gameStarted", new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
+});
+```
+

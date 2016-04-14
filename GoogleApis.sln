@@ -47,6 +47,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{95457640
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.GCloud.Tools.GenerateSnippetMarkdown", "tools\Google.GCloud.Tools.GenerateSnippetMarkdown\Google.GCloud.Tools.GenerateSnippetMarkdown.xproj", "{656E050F-D24B-4CBE-9771-B3EF472342C0}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Bigquery.V2", "src\Google.Bigquery.V2\Google.Bigquery.V2.xproj", "{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Bigquery.V2.IntegrationTests", "test\Google.Bigquery.V2.IntegrationTests\Google.Bigquery.V2.IntegrationTests.xproj", "{CBD350EE-3B27-4129-8999-1815DECF9E66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A49495F-B749-42F6-AE05-28B1B3E1EDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBD350EE-3B27-4129-8999-1815DECF9E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD350EE-3B27-4129-8999-1815DECF9E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD350EE-3B27-4129-8999-1815DECF9E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD350EE-3B27-4129-8999-1815DECF9E66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,5 +135,7 @@ Global
 		{FD2FAD82-6719-4E1B-9291-7F8CDF819A3B} = {F87E02E7-3142-4439-8938-42DD79337135}
 		{60E5F4C2-7A10-41F1-A247-14C346A8E33A} = {F638F51C-C1C3-449B-ADAE-8196073649A5}
 		{656E050F-D24B-4CBE-9771-B3EF472342C0} = {95457640-F06C-4390-9CCD-EDFECD772588}
+		{1A49495F-B749-42F6-AE05-28B1B3E1EDF3} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
+		{CBD350EE-3B27-4129-8999-1815DECF9E66} = {F87E02E7-3142-4439-8938-42DD79337135}
 	EndGlobalSection
 EndGlobal
