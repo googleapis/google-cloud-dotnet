@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -56,12 +57,80 @@ namespace Google.Pubsub.V1
         /// <returns>A new instance of the default PublisherSettings.</returns>
         public static PublisherSettings GetDefault() => new PublisherSettings();
 
+        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable, StatusCode.DeadlineExceeded);
+
+        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes();
+
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(100),
+            DelayMultiplier = 1.2,
+            MaxDelay = TimeSpan.FromMilliseconds(1000),
+        };
+
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(2000),
+            DelayMultiplier = 1.5,
+            MaxDelay = TimeSpan.FromMilliseconds(30000),
+        };
+
+        public RetrySettings CreateTopicRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter
+        };
+
+        public RetrySettings PublishRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter
+        };
+
+        public RetrySettings GetTopicRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter
+        };
+
+        public RetrySettings ListTopicsRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter
+        };
+
+        public RetrySettings ListTopicSubscriptionsRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter
+        };
+
+        public RetrySettings DeleteTopicRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter
+        };
+
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of Publisher settings.</returns>
         public PublisherSettings Clone() => CloneInto(new PublisherSettings
         {
+            CreateTopicRetry = CreateTopicRetry?.Clone(),
+            PublishRetry = PublishRetry?.Clone(),
+            GetTopicRetry = GetTopicRetry?.Clone(),
+            ListTopicsRetry = ListTopicsRetry?.Clone(),
+            ListTopicSubscriptionsRetry = ListTopicSubscriptionsRetry?.Clone(),
+            DeleteTopicRetry = DeleteTopicRetry?.Clone(),
         });
     }
 
@@ -423,6 +492,30 @@ namespace Google.Pubsub.V1
 
     }
 
+    // Something like this will be in GAX
+    public class ApiCall<TRequest, TResponse>
+        where TRequest : class, IMessage<TRequest>
+        where TResponse : class, IMessage<TResponse>
+    {
+        // May or may not keep these delegates. Using Func<>s instead is a little ugly.
+        public delegate Task<TResponse> AsyncCall(TRequest request, CallSettings callSettings);
+        public delegate TResponse SyncCall(TRequest request, CallSettings callSettings);
+
+        public ApiCall(AsyncCall async, SyncCall sync)
+        //public ApiCall(
+        //    Func<TRequest, CallSettings, Task<TResponse>> async,
+        //    Func<TRequest, CallSettings, TResponse> sync)
+        {
+            Async = async;
+            Sync = sync;
+        }
+
+        public AsyncCall Async { get; }
+        public SyncCall Sync { get; }
+        //public Func<TRequest, CallSettings, Task<TResponse>> Async { get; private set; }
+        //public Func<TRequest, CallSettings, TResponse> Sync { get; private set; }
+    }
+
     public sealed partial class PublisherClientImpl : PublisherClient
     {
         private static readonly PageStreamer<Topic, ListTopicsRequest, ListTopicsResponse, string> s_listTopicsPageStreamer =
@@ -448,12 +541,16 @@ namespace Google.Pubsub.V1
             );
 
         private readonly ClientHelper _clientHelper;
+        private readonly ApiCall<Topic, Topic> _createTopic;
+        private readonly ApiCall<ListTopicsRequest, ListTopicsResponse> _listTopics;
 
         public PublisherClientImpl(Publisher.IPublisherClient grpcClient, PublisherSettings settings)
         {
             this.GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
             _clientHelper = new ClientHelper(effectiveSettings);
+            _createTopic = _clientHelper.BuildApiCall(GrpcClient.CreateTopic, GrpcClient.CreateTopicAsync, effectiveSettings.CreateTopicRetry);
+            _listTopics = _clientHelper.BuildApiCall(GrpcClient.ListTopics, GrpcClient.ListTopicsAsync, effectiveSettings.ListTopicsRetry);
         }
 
         public override Publisher.IPublisherClient GrpcClient { get; }
@@ -473,17 +570,12 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> CreateTopicAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            Topic request = new Topic
-            {
-                Name = name,
-            };
-            return GrpcClient.CreateTopicAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _createTopic.Async(
+                new Topic
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates the given topic with the given name.
@@ -500,16 +592,12 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override Topic CreateTopic(
             string name,
-            CallSettings callSettings = null)
-        {
-            Topic request = new Topic
-            {
-                Name = name,
-            };
-            return GrpcClient.CreateTopic(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
+            CallSettings callSettings = null) => _createTopic.Sync(
+                new Topic
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
@@ -607,20 +695,13 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override IAsyncEnumerable<Topic> ListTopicsAsync(
             string project,
-            CallSettings callSettings = null)
-        {
-            ListTopicsRequest request = new ListTopicsRequest
-            {
-                Project = project,
-            };
-            return s_listTopicsPageStreamer.FetchAsync(
-                request,
-                (pageStreamRequest, cancellationToken) => GrpcClient.ListTopicsAsync(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, callSettings)
-                ).ResponseAsync
-            );
-        }
+            CallSettings callSettings = null) => s_listTopicsPageStreamer.FetchAsync(
+                callSettings,
+                new ListTopicsRequest
+                {
+                    Project = project,
+                },
+                _listTopics);
 
         /// <summary>
         /// Lists matching topics.
@@ -630,19 +711,13 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override IEnumerable<Topic> ListTopics(
             string project,
-            CallSettings callSettings = null)
-        {
-            ListTopicsRequest request = new ListTopicsRequest
-            {
-                Project = project,
-            };
-            return s_listTopicsPageStreamer.Fetch(
-                request,
-                pageStreamRequest => GrpcClient.ListTopics(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(null, callSettings))
-            );
-        }
+            CallSettings callSettings = null) => s_listTopicsPageStreamer.Fetch(
+                callSettings,
+                new ListSubscriptionsRequest
+                {
+                    Project = project,
+                },
+                _listTopics);
 
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
