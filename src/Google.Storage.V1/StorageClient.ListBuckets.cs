@@ -12,25 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Requests;
-using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Storage.V1
 {
     // ListBuckets methods on StorageClient
-    public partial class StorageClient
-    {
-        private static readonly PageStreamer<Bucket, BucketsResource.ListRequest, Buckets, string> s_bucketPageStreamer =
-            new PageStreamer<Bucket, BucketsResource.ListRequest, Buckets, string>(
-                (request, token) => request.PageToken = token,
-                buckets => buckets.NextPageToken,
-                buckets => buckets.Items);
-
+    public abstract partial class StorageClient
+    {        
         /// <summary>
         /// Asynchronously lists the buckets in a given project, returning the results as a list.
         /// </summary>
@@ -43,14 +35,12 @@ namespace Google.Storage.V1
         /// defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of buckets within the project.</returns>
-        public Task<IList<Bucket>> ListAllBucketsAsync(
+        public virtual Task<IList<Bucket>> ListAllBucketsAsync(
             string projectId,
             ListBucketsOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            Preconditions.CheckNotNull(projectId, nameof(projectId));
-            var initialRequest = CreateListBucketsRequest(projectId, options);
-            return s_bucketPageStreamer.FetchAllAsync(initialRequest, cancellationToken);
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -65,18 +55,9 @@ namespace Google.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>A sequence of buckets within the project.</returns>
-        public IEnumerable<Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
+        public virtual IEnumerable<Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
         {
-            Preconditions.CheckNotNull(projectId, nameof(projectId));
-            var initialRequest = CreateListBucketsRequest(projectId, options);
-            return s_bucketPageStreamer.Fetch(initialRequest);
-        }
-
-        private BucketsResource.ListRequest CreateListBucketsRequest(string projectId, ListBucketsOptions options)
-        {
-            var request = Service.Buckets.List(projectId);
-            options?.ModifyRequest(request);
-            return request;
+            throw new NotImplementedException();
         }
     }
 }

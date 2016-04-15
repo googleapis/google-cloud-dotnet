@@ -1,5 +1,5 @@
 ﻿{
-  "description": "Console app to demonstrate the Google.Pubsub.V1 package",
+  "description": "Console app to demonstrate the Google.Datastore.V1Beta3 package",
 
   "compilationOptions": {
     "emitEntryPoint": true
