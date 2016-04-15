@@ -1,12 +1,9 @@
 REM This is all ugly... we'll want to revisit this as soon as possible
 call dnvm use 1.0.0-rc1-update1 -r clr
 
-REM Temporary measure while we resolve oddities with the local feed
-REM cache and version numbers. Basically, we want to fetch these from
-REM nuget.org.
-rmdir /s /q %USERPROFILE%\.dnx\packages\Google.Apis
-rmdir /s /q %USERPROFILE%\.dnx\packages\Google.Apis.Core
-rmdir /s /q %USERPROFILE%\.dnx\packages\Google.Apis.Auth
+REM We've found some oddities when using our own feed.
+REM Basically, we want to fetch everything from nuget.org.
+rmdir /s /q %USERPROFILE%\.dnx\packages
 
 call dnu restore
 IF ERRORLEVEL 1 EXIT /B 1
