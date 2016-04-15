@@ -10,9 +10,14 @@ install:
 # TODO: See if there's a better way of finding all test projects.
 # Note that we want to exclude integration tests; currently this is
 # performed by the convention of a suffix of .Tests meaning unit tests.
+# The Google* part of each line below is to allow us to have other
+# files (e.g. README.md) without that intefering.
+
 script:
   - dnu restore
-  - dnu build src/*
-  - dnu build demo/*
-  - dnu build test/*
+  - dnu build src/Google*
+  - dnu build demo/Google*
+  - dnu build test/Google*
+  - dnu build tools/Google*
+  - dnu build snippets/Google*
   - for project in `find . -name '*.Tests'`; do dnx -p $project test; done
