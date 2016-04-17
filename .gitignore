@@ -5,3 +5,5 @@ bin
 project.lock.json
 _site
 *~
+demo/Google.Storage.V1.Demo/demo-download-test.txt
+demo/Google.Storage.V1.Demo/demo-test.txt

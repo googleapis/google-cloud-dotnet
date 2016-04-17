@@ -7,8 +7,7 @@
     "Microsoft.Framework.CommandLineUtils.Sources": {
       "version": "1.0.0-*",
       "type": "build"
-    },
-    "Newtonsoft.Json": "8.0.1-beta3"
+    }
   },
 
   "commands": {
