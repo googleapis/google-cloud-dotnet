@@ -13,12 +13,14 @@
 // limitations under the License.
 
 using Google.Apis.Download;
+using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
 using System;
 using System.Diagnostics;
 using System.IO;
 using StorageObject = Google.Apis.Storage.v1.Data.Object;
+using System.Net.Http;
 
 namespace Google.Storage.V1.Demo
 {
@@ -27,7 +29,7 @@ namespace Google.Storage.V1.Demo
     {
         public void Main(string[] args)
         {
-            var projectId = "firm-site-126023"; // TODO "YOUR-PROJECT-ID";
+            var projectId = "YOUR-PROJECT-ID";
 
             // create a file to test with
             if (!File.Exists("demo-test.txt")) { File.WriteAllText("demo-test.txt", "testing 123..."); }
@@ -41,12 +43,20 @@ namespace Google.Storage.V1.Demo
             Bucket bucketX = GetBucket(client, bucket.Name);
             Debug.Assert(bucket.Id == bucketX.Id);
 
-            StorageObject file1 = UploadFile(client, bucket.Name, "demo-test.txt", "stuff/test1.txt", "text/plain");
-            StorageObject file2 = UploadFile(client, bucket.Name, "demo-test.txt", "stuff/test2.txt", "");
+            StorageObject file1 = UploadFile(client, bucket.Name, "demo-test.txt", "stuff/test1.txt", "text/plain", makePublic: true);
+            StorageObject file2 = UploadFile(client, bucket.Name, "demo-test.txt", "stuff/test2.txt", "text/plain", makePublic: false);
             StorageObject fileX = GetObject(client, bucket.Name, "stuff/test1.txt");
             Debug.Assert(file1.Id == fileX.Id);
-            DownloadFile(client, bucket.Name, file1.Name, "demo-download-test.txt");
+            DownloadFile(client, bucket.Name, file2.Name, "demo-download-test.txt");
             Debug.Assert(File.ReadAllText("demo-test.txt") == File.ReadAllText("demo-download-test.txt"));
+
+            using( var http = new HttpClient() )
+            {
+                // should be able to download the file uploaded as public and not the one uploaded as private
+                Debug.Assert(http.GetStringAsync(file1.MediaLink).Result == File.ReadAllText("demo-test.txt"));
+                try { var x = http.GetStringAsync(file2.MediaLink).Result; Debug.Assert(false); }
+                catch (Exception ex) { Console.WriteLine(ex.GetType().Name); }
+            }
 
             ListObjects(client, bucket.Name);
             ListFilesAndFolders(client, bucket.Name);
@@ -132,7 +142,7 @@ namespace Google.Storage.V1.Demo
         // [END download_file]
 
         // [START upload_file]
-        static StorageObject UploadFile(StorageClient client, string bucket, string source, string destination, string contentType)
+        static StorageObject UploadFile(StorageClient client, string bucket, string source, string destination, string contentType, bool makePublic)
         {
             Console.WriteLine($"Uploading local file {source} of type {contentType} to GCS file {destination} in {bucket}:");
             using (var stream = File.OpenRead(source))
@@ -141,7 +151,13 @@ namespace Google.Storage.V1.Demo
                   p => Console.WriteLine($"  Uploaded {p.BytesSent} bytes; status: {p.Status}")
                 );
 
-                return client.UploadObject(bucket, destination, contentType, stream, null, progress);
+                var options = new UploadObjectOptions {
+                    PredefinedAcl = makePublic ?
+                        ObjectsResource.InsertMediaUpload.PredefinedAclEnum.PublicRead :
+                        ObjectsResource.InsertMediaUpload.PredefinedAclEnum.AuthenticatedRead
+                };
+
+                return client.UploadObject(bucket, destination, contentType, stream, options, progress);
             }
         }
         // [END upload_file]
@@ -156,6 +172,7 @@ namespace Google.Storage.V1.Demo
             Console.WriteLine($"  Name: {obj.Name}");
             Console.WriteLine($"  ContentType: {obj.ContentType}");
             Console.WriteLine($"  Size: {obj.Size}");
+            Console.WriteLine($"  MediaLink: {obj.MediaLink}");
             Console.WriteLine($"  SelfLink: {obj.SelfLink}");
             return obj;
         }
@@ -169,7 +186,6 @@ namespace Google.Storage.V1.Demo
             var bucket = client.Service.Buckets.Get(name).Execute();
             Console.WriteLine($"  Id: {bucket.Id}");
             Console.WriteLine($"  Name: {bucket.Name}");
-            Console.WriteLine($"  SelfLink: {bucket.SelfLink}");
             return bucket;
         }
         // [END get_object]

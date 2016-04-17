@@ -1,14 +1,14 @@
-﻿{
+{
   "description": "Console application to demonstrate (and test) the client wrapper library",
 
   "dependencies": {
-    "Google.Apis.Storage.v1": "1.12.0.448",
+    "Google.Apis.Storage.v1": "1.12.0.454",
     "Google.Storage.V1": "",
     "Microsoft.Framework.CommandLineUtils.Sources": {
       "version": "1.0.0-*",
       "type": "build"
-    }
-  },
+    },
+    "Microsoft.Net.Http": "2.2.29"  },
 
   "commands": {
     "storage-demo": "Google.Storage.V1.Demo"
