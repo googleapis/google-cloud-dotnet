@@ -27,7 +27,7 @@ namespace Google.Storage.V1.Demo
     {
         public void Main(string[] args)
         {
-            var projectId = "firm-site-126023"; // TODO "YOUR -PROJECT-ID";
+            var projectId = "firm-site-126023"; // TODO "YOUR-PROJECT-ID";
 
             // create a file to test with
             if (!File.Exists("demo-test.txt")) { File.WriteAllText("demo-test.txt", "testing 123..."); }
@@ -92,6 +92,10 @@ namespace Google.Storage.V1.Demo
         // [END list_objects]
 
         // [START list_files_and_folders]
+        // Folders can be objects of zero length of content type application/x-www-form-urlencoded;charset=UTF-8
+        // as used by the GCS Browser: https://console.cloud.google.com/storage/browser?project=YOUR-PROJECT-ID
+        // Folders can also be implicit in file names with prefixes containing the delimited "/", also used by
+        // the GCS Browser. The extension methods provided in BrowserHelper knows how to deal with both.
         static void ListFilesAndFolders(StorageClient client, string bucket, string parentFolder = "", string indent = "  ")
         {
             if (parentFolder == "") { Console.WriteLine($"Files and folders in bucket {bucket}:"); }
@@ -128,7 +132,7 @@ namespace Google.Storage.V1.Demo
         // [END download_file]
 
         // [START upload_file]
-        static Apis.Storage.v1.Data.Object UploadFile(StorageClient client, string bucket, string source, string destination, string contentType)
+        static StorageObject UploadFile(StorageClient client, string bucket, string source, string destination, string contentType)
         {
             Console.WriteLine($"Uploading local file {source} of type {contentType} to GCS file {destination} in {bucket}:");
             using (var stream = File.OpenRead(source))
