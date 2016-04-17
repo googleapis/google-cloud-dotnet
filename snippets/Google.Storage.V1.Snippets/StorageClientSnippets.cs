@@ -23,23 +23,24 @@ public class StorageClientSnippets
     public void Overview()
     {
         // <Overview>
-        var projectId = "firm-site-126023"; // TODO "YOUR-PROJECT-ID";
+        var projectId = "YOUR-PROJECT-ID";
 
         // GCS client connection
         var client = StorageClient.Create();
 
         // create a bucket (GCS bucket names must be globally unique)
-        var bucket = DateTime.Now.Ticks.ToString(); // TODO "YOUR-BUCKET-NAME";
+        var bucket = "YOUR-BUCKET-NAME";
         client.Service.Buckets.Insert(new Bucket { Name = bucket }, projectId).Execute();
 
         // upload a file
-        var source = @"C:\Users\Chris\Downloads\kitty.jpg"; // TODO "YOUR-LOCAL-FILENAME"
-        var contentType = "image/jpg"; // TODO "YOUR-CONTENT-TYPE"
-        var destination = "pets/kitty.jpg"; // TODO "YOUR-OBJECT-NAME"
+        var source = "YOUR-LOCAL-FILENAME";
+        var contentType = "YOUR-CONTENT-TYPE";
+        var destination = "YOUR-OBJECT-NAME";
         using (var stream = File.OpenRead(source))
         {
-            var obj = client.UploadObject(bucket, destination, contentType, stream, 
-                new UploadObjectOptions {
+            var obj = client.UploadObject(bucket, destination, contentType, stream,
+                new UploadObjectOptions
+                {
                     PredefinedAcl = ObjectsResource.InsertMediaUpload.PredefinedAclEnum.PublicRead
                 }
             );
@@ -48,7 +49,7 @@ public class StorageClientSnippets
         }
 
         // list objects in your bucket
-        foreach( var obj in client.ListObjects(bucket, ""))
+        foreach (var obj in client.ListObjects(bucket, ""))
         {
             Console.WriteLine($"{obj.Name} of type {obj.ContentType}");
         }
