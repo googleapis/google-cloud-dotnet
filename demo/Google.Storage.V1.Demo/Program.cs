@@ -104,12 +104,12 @@ namespace Google.Storage.V1.Demo
             Console.WriteLine($"{indent}{shortName}/");
             indent += "  ";
 
-            foreach (var file in client.Files(bucket, parentFolder))
+            foreach (var file in client.ListFiles(bucket, parentFolder))
             {
                 Console.WriteLine($"{indent}{file.ShortName()} [{file.ContentType}]");
             }
 
-            foreach (var folder in client.Folders(bucket, parentFolder))
+            foreach (var folder in client.ListFolders(bucket, parentFolder))
             {
                 ListFilesAndFolders(client, bucket, folder, indent);
             }
