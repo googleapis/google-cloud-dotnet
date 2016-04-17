@@ -47,6 +47,7 @@ namespace Google.Storage.V1.Demo
             StorageObject file2 = UploadFile(client, bucket.Name, "demo-test.txt", "stuff/test2.txt", "text/plain", makePublic: false);
             StorageObject fileX = GetObject(client, bucket.Name, "stuff/test1.txt");
             Debug.Assert(file1.Id == fileX.Id);
+
             DownloadFile(client, bucket.Name, file2.Name, "demo-download-test.txt");
             Debug.Assert(File.ReadAllText("demo-test.txt") == File.ReadAllText("demo-download-test.txt"));
 
