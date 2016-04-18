@@ -43,6 +43,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "snippets", "snippets", "{F6
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Pubsub.V1.Snippets", "snippets\Google.Pubsub.V1.Snippets\Google.Pubsub.V1.Snippets.xproj", "{60E5F4C2-7A10-41F1-A247-14C346A8E33A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{95457640-F06C-4390-9CCD-EDFECD772588}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.GCloud.Tools.GenerateSnippetMarkdown", "tools\Google.GCloud.Tools.GenerateSnippetMarkdown\Google.GCloud.Tools.GenerateSnippetMarkdown.xproj", "{656E050F-D24B-4CBE-9771-B3EF472342C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +101,10 @@ Global
 		{60E5F4C2-7A10-41F1-A247-14C346A8E33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60E5F4C2-7A10-41F1-A247-14C346A8E33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60E5F4C2-7A10-41F1-A247-14C346A8E33A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,5 +122,6 @@ Global
 		{1F86EC95-80F1-432F-BB1C-F894ADA08614} = {DB076941-24F5-4F6C-9060-1EA9E2AC9887}
 		{FD2FAD82-6719-4E1B-9291-7F8CDF819A3B} = {F87E02E7-3142-4439-8938-42DD79337135}
 		{60E5F4C2-7A10-41F1-A247-14C346A8E33A} = {F638F51C-C1C3-449B-ADAE-8196073649A5}
+		{656E050F-D24B-4CBE-9771-B3EF472342C0} = {95457640-F06C-4390-9CCD-EDFECD772588}
 	EndGlobalSection
 EndGlobal

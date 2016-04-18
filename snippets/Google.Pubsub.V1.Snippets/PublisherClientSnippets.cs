@@ -24,6 +24,7 @@ public class PublisherClientSnippets
     {
         // <ListTopics>
         PublisherClient client = PublisherClient.Create();
+
         // Alternative: use a known project resource name:
         // projects/{PROJECT_ID}
         string projectName = PublisherClient.GetProjectName("PROJECT_ID");
@@ -38,6 +39,7 @@ public class PublisherClientSnippets
     {
         // <ListTopicsAsync>
         PublisherClient client = PublisherClient.Create();
+
         // Alternative: use a known project resource name:
         // projects/{PROJECT_ID}
         string projectName = PublisherClient.GetProjectName("{PROJECT_ID}");
@@ -53,6 +55,7 @@ public class PublisherClientSnippets
     {
         // <CreateTopic>
         PublisherClient client = PublisherClient.Create();
+
         // Alternative: use a known topic resource name
         // projects/{PROJECT_ID}/topics/{TOPIC_ID}
         string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
@@ -65,6 +68,7 @@ public class PublisherClientSnippets
     {
         // <CreateTopicAsync>
         PublisherClient client = PublisherClient.Create();
+
         // Alternative: use a known topic resource name
         // projects/{PROJECT_ID}/topics/{TOPIC_ID}
         string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");

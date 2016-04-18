@@ -1,0 +1,15 @@
+﻿{
+  "description": "Console app to generate Markdown files for docfx with snippet references",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "commands": {
+    "run": "Google.GCloud.Tools.GenerateSnippetMarkdown"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

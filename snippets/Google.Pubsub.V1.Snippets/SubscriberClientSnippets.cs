@@ -24,6 +24,7 @@ public class SubscriberClientSnippets
     {
         // <ListSubscriptions>
         SubscriberClient client = SubscriberClient.Create();
+
         // Alternative: use a known project resource name:
         // projects/{PROJECT_ID}
         string projectName = SubscriberClient.GetProjectName("PROJECT_ID");
@@ -38,6 +39,7 @@ public class SubscriberClientSnippets
     {
         // <ListSubscriptionsAsync>
         SubscriberClient client = SubscriberClient.Create();
+
         // Alternative: use a known project resource name:
         // projects/{PROJECT_ID}
         string projectName = SubscriberClient.GetProjectName("{PROJECT_ID}");
@@ -53,6 +55,7 @@ public class SubscriberClientSnippets
     {
         // <CreateSubscription>
         SubscriberClient client = SubscriberClient.Create();
+
         // Alternative: use an existing subscription resource name:
         // projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
         // Similarly for the topic name:
@@ -69,6 +72,7 @@ public class SubscriberClientSnippets
     {
         // <CreateSubscriptionAsync>
         SubscriberClient client = SubscriberClient.Create();
+
         // Alternative: use an existing subscription resource name:
         // projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
         // Similarly for the topic name:
@@ -79,5 +83,57 @@ public class SubscriberClientSnippets
             subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
         Console.WriteLine($"Created {subscription.Name} subscribed to {subscription.Topic}");
         // </CreateSubscriptionAsync>
+    }
+
+    public void Pull()
+    {
+        // <Pull>
+        SubscriberClient client = SubscriberClient.Create();
+
+        // Alternative: use an existing subscription resource name:
+        // projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
+        string subscriptionName = SubscriberClient.GetSubscriptionName("{PROJECT_ID}", "{SUBSCRIPTION_ID}");
+        
+        PullResponse pullResponse = client.Pull(subscriptionName, returnImmediately: false, maxMessages: 100);
+        foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
+        {
+            // Messages can contain any data. We'll assume that we know this
+            // topic publishes UTF-8-encoded text.
+            Console.WriteLine($"Message text: {message.Message.Data.ToStringUtf8()}");
+        }
+
+        // Acknowledge the messages after pulling them, so we don't pull them
+        // a second time later. The ackDeadlineSeconds parameter specified when
+        // the subscription is created determines how quickly you need to acknowledge
+        // successfully-pulled messages before they will be redelivered.
+        var ackIds = pullResponse.ReceivedMessages.Select(rm => rm.AckId);
+        client.Acknowledge(subscriptionName, ackIds);
+        // </Pull>
+    }
+
+    public async Task PullAsync()
+    {
+        // <PullAsync>
+        SubscriberClient client = SubscriberClient.Create();
+
+        // Alternative: use an existing subscription resource name:
+        // projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
+        string subscriptionName = SubscriberClient.GetSubscriptionName("{PROJECT_ID}", "{SUBSCRIPTION_ID}");
+
+        PullResponse pullResponse = await client.PullAsync(subscriptionName, returnImmediately: false, maxMessages: 100);
+        foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
+        {
+            // Messages can contain any data. We'll assume that we know this
+            // topic publishes UTF-8-encoded text.
+            Console.WriteLine($"Message text: {message.Message.Data.ToStringUtf8()}");
+        }
+
+        // Acknowledge the messages after pulling them, so we don't pull them
+        // a second time later. The ackDeadlineSeconds parameter specified when
+        // the subscription is created determines how quickly you need to acknowledge
+        // successfully-pulled messages before they will be redelivered.
+        var ackIds = pullResponse.ReceivedMessages.Select(rm => rm.AckId);
+        await client.AcknowledgeAsync(subscriptionName, ackIds);
+        // </PullAsync>
     }
 }
