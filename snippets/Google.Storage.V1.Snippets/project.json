@@ -1,0 +1,11 @@
+﻿{
+  "description": "Snippets for the Google.Storage.V1 package",
+
+  "dependencies": {
+    "Google.Storage.V1": ""
+  },
+
+  "frameworks": {
+    "net45": { }
+  }
+}

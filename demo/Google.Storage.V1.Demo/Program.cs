@@ -13,175 +13,180 @@
 // limitations under the License.
 
 using Google.Apis.Download;
+using Google.Apis.Storage.v1;
+using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
-using Microsoft.Framework.Runtime.Common.CommandLine;
-using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
+using StorageObject = Google.Apis.Storage.v1.Data.Object;
+using System.Net.Http;
 
 namespace Google.Storage.V1.Demo
 {
-    /// <summary>
     /// Command line application to demonstrate features of the Google Cloud Storage client wrapper library.
-    /// </summary>
     public class Program
     {
-        /// <summary>
-        /// Entry point for the application.
-        /// </summary>
-        public int Main(string[] args)
+        public void Main(string[] args)
         {
-            var app = new CommandLineApplication
+            var projectId = "YOUR-PROJECT-ID";
+
+            // create a file to test with
+            if (!File.Exists("demo-test.txt")) { File.WriteAllText("demo-test.txt", "testing 123..."); }
+
+            // create a connection to the GCS service
+            var client = StorageClient.Create();
+
+            // exercise Google Cloud Storage
+            ListBuckets(client, projectId);
+            Bucket bucket = CreateBucket(client, projectId, $"gcs-demo-bucket");
+            Bucket bucketX = GetBucket(client, bucket.Name);
+            Debug.Assert(bucket.Id == bucketX.Id);
+
+            StorageObject file1 = UploadFile(client, bucket.Name, "demo-test.txt", "stuff/test1.txt", "text/plain", makePublic: true);
+            StorageObject file2 = UploadFile(client, bucket.Name, "demo-test.txt", "stuff/test2.txt", "text/plain", makePublic: false);
+            StorageObject fileX = GetObject(client, bucket.Name, "stuff/test1.txt");
+            Debug.Assert(file1.Id == fileX.Id);
+
+            DownloadFile(client, bucket.Name, file2.Name, "demo-download-test.txt");
+            Debug.Assert(File.ReadAllText("demo-test.txt") == File.ReadAllText("demo-download-test.txt"));
+
+            using (var http = new HttpClient())
             {
-                Name = "storage-demo",
-                Description = "Demonstrates the Google Cloud Storage client wrapper library",
-                FullName = "storage-demo - simple demonstration application for the Google Cloud Storage wrapper",                
-            };
+                // should be able to download the file uploaded as public and not the one uploaded as private
+                Debug.Assert(http.GetStringAsync(file1.MediaLink).Result == File.ReadAllText("demo-test.txt"));
+                try { var x = http.GetStringAsync(file2.MediaLink).Result; Debug.Assert(false); }
+                catch (Exception ex) { Console.WriteLine(ex.GetType().Name); }
+            }
 
-            app.OnExecute(() =>
-            {
-                app.ShowHelp();
-                return 2;
-            });
+            ListObjects(client, bucket.Name);
+            ListFilesAndFolders(client, bucket.Name);
 
-            app.Command("list-buckets", config => {
-                config.HelpOption("-?|-h|--help");
-                config.Description = "List buckets in a Google Cloud Project";
-                var project = config.Argument("project", "Google Cloud Project ID to list buckets from");
-                ConfigureForExecution(config, client => ListBuckets(client, project.Value));
-            });
-            app.Command("list-objects", config => {
-                config.Description = "List objects in a bucket";
-                config.HelpOption("-?|-h|--help");
-                var bucket = config.Argument("bucket", "Bucket to list objects from");
-                var prefix = config.Option("--prefix", "Prefix to match", CommandOptionType.SingleValue);
-                ConfigureForExecution(config, client => ListObjects(client, bucket.Value, prefix.Value()));
-            });
-            app.Command("download-object", config => {
-                config.HelpOption("-?|-h|--help");
-                config.Description = "Downloads an object, saving it to the local disk";
-                var bucket = config.Argument("bucket", "Bucket containing the object");
-                var source = config.Argument("source", "Name of object to download");
-                var destination = config.Argument("destination", "Destination filename");
-                ConfigureForExecution(config, client => DownloadObject(client, bucket.Value, source.Value, destination.Value));
-            });
-            app.Command("upload-object", config => {
-                config.HelpOption("-?|-h|--help");
-                config.Description = "Uploads an object from the local disk";
-                var source = config.Argument("source", "Name of file to upload");
-                var bucket = config.Argument("bucket", "Bucket to upload the object to");
-                var destination = config.Argument("destination", "Name of object to create/update in the bucket");
-                var contentType = config.Option("--contentType", "Content type", CommandOptionType.SingleValue);
-                ConfigureForExecution(config, client => UploadObject(client, source.Value, bucket.Value, destination.Value, contentType.Value()));
-            });
-            app.Command("get-object", config => {
-                config.HelpOption("-?|-h|--help");
-                config.Description = "Gets information about an object, displaying it as JSON";
-                var bucket = config.Argument("bucket", "Bucket containing the object");
-                var name = config.Argument("name", "Name of object to fetch information about");
-                ConfigureForExecution(config, client => GetObject(client, bucket.Value, name.Value));
-            });
-            app.Command("delete-object", config => {
-                config.HelpOption("-?|-h|--help");
-                config.Description = "Deletes the latest generation of an object from storage";
-                var bucket = config.Argument("bucket", "Bucket containing the object");
-                var name = config.Argument("name", "Name of object to delete");
-                var generation = config.Option("--generation", "Generation", CommandOptionType.SingleValue);
-                ConfigureForExecution(config, client => DeleteObject(client, bucket.Value, name.Value, generation.Value()));
-            });
-
-            return app.Execute(args);
+            DeleteObject(client, bucket.Name, file1.Name);
+            DeleteObject(client, bucket.Name, file2.Name);
+            DeleteBucket(client, bucket.Name);
+            ListBuckets(client, projectId);
         }
 
-        /// <summary>
-        /// Helper method to validate that all arguments have been provided, obtain a StorageClient,
-        /// and then call the given command. We might want to make this an extension method at some point.
-        /// </summary>
-        private static void ConfigureForExecution(CommandLineApplication config, Func<StorageClient, Task> command)
-        {
-            config.OnExecute(async () =>
-            {
-                foreach (var argument in config.Arguments)
-                {
-                    if (argument.Values.Count == 0)
-                    {
-                        Console.WriteLine($"Argument '{argument.Name}' not specified");
-                        return 1;
-                    }
-                }
-                try
-                {
-                    var client = await StorageClient.CreateAsync();
-                    await command(client);
-                    return 0;
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                    return 1;
-                }
-            });
-        }
-
-        private static async Task ListBuckets(StorageClient client, string projectId)
+        static void ListBuckets(StorageClient client, string projectId)
         {
             Console.WriteLine($"Buckets in {projectId}:");
-            var results = await client.ListAllBucketsAsync(projectId, new ListBucketsOptions { PageSize = 3 });
-            foreach (var bucket in results)
+            var buckets = client.ListBuckets(projectId);
+            foreach (var bucket in buckets)
             {
                 Console.WriteLine($"  {bucket.Name}");
             }
         }
 
-        private static async Task ListObjects(StorageClient client, string bucket, string prefix)
+        static Bucket CreateBucket(StorageClient client, string projectId, string name)
         {
-            Console.WriteLine($"Objects in {bucket}:");
-            var results = await client.ListAllObjectsAsync(bucket, prefix, new ListObjectsOptions { PageSize = 3 });
-            foreach (var obj in results)
+            // GCS bucket names must be globally unique
+            Console.WriteLine($"Creating bucket {name} in project {projectId}");
+            return client.Service.Buckets.Insert(new Bucket { Name = name }, projectId).Execute();
+        }
+
+        static void ListObjects(StorageClient client, string bucket, string prefix = "")
+        {
+            Console.WriteLine($"Objects in bucket {bucket}:");
+            var objects = client.ListObjects(bucket, prefix);
+            foreach (var obj in objects)
             {
-                Console.WriteLine($"  {obj.Name}");
+                Console.WriteLine($"  {obj.Name} [{obj.ContentType}]");
             }
         }
 
-        private static async Task DownloadObject(StorageClient client, string bucket, string source, string destination)
+        // Folders can be objects of zero length of content type
+        // application/x-www-form-urlencoded;charset=UTF-8 as used by the GCS Browser:
+        // https://console.cloud.google.com/storage/browser?project=YOUR-PROJECT-ID
+        // Folders can also be implicit in file names with prefixes containing the delimiter "/",
+        // also used by the GCS Browser. The extension methods provided in BrowserHelper know
+        // how to deal with both.
+        static void ListFilesAndFolders(StorageClient client, string bucket, string parentFolder = "", string indent = "  ")
         {
-            using (var output = File.Create(destination))
+            if (parentFolder == "") { Console.WriteLine($"Files and folders in bucket {bucket}:"); }
+
+            string shortName = parentFolder == "" ? bucket : BucketHelper.ShortName(parentFolder);
+            Console.WriteLine($"{indent}{shortName}/");
+            indent += "  ";
+
+            foreach (var file in client.ListFiles(bucket, parentFolder))
+            {
+                Console.WriteLine($"{indent}{file.ShortName()} [{file.ContentType}]");
+            }
+
+            foreach (var folder in client.ListFolders(bucket, parentFolder))
+            {
+                ListFilesAndFolders(client, bucket, folder, indent);
+            }
+        }
+
+        static void DownloadFile(StorageClient client, string bucket, string source, string destination)
+        {
+            Console.WriteLine($"Downloading GCS file {source} from bucket {bucket} to local file {destination}:");
+            using (var stream = File.Create(destination))
             {
                 var progress = new Progress<IDownloadProgress>(
-                    p => Console.WriteLine($"Downloaded {p.BytesDownloaded} bytes; status: {p.Status}"));
+                    p => Console.WriteLine($"  Downloaded {p.BytesDownloaded} bytes; status: {p.Status}")
+                );
 
-                await client.DownloadObjectAsync(bucket, source, output,
-                    new DownloadObjectOptions { ChunkSize = 256 * 1024 },
-                    CancellationToken.None, progress);
+                client.DownloadObject(bucket, source, stream, null, progress);
             }
         }
 
-        private static async Task UploadObject(StorageClient client, string source, string bucket, string destination, string contentType)
+        static StorageObject UploadFile(StorageClient client, string bucket, string source, string destination, string contentType, bool makePublic)
         {
-            using (var input = File.OpenRead(source))
+            Console.WriteLine($"Uploading local file {source} of type {contentType} to GCS file {destination} in {bucket}:");
+            using (var stream = File.OpenRead(source))
             {
                 var progress = new Progress<IUploadProgress>(
-                    p => Console.WriteLine($"Uploaded {p.BytesSent} bytes; status: {p.Status}"));
+                  p => Console.WriteLine($"  Uploaded {p.BytesSent} bytes; status: {p.Status}")
+                );
 
-                await client.UploadObjectAsync(bucket, destination, contentType ?? "", input,
-                    new UploadObjectOptions { ChunkSize = 256 * 1024 },
-                    CancellationToken.None, progress);
+                var options = new UploadObjectOptions
+                {
+                    PredefinedAcl = makePublic ?
+                        ObjectsResource.InsertMediaUpload.PredefinedAclEnum.PublicRead :
+                        ObjectsResource.InsertMediaUpload.PredefinedAclEnum.AuthenticatedRead
+                };
+
+                return client.UploadObject(bucket, destination, contentType, stream, options, progress);
             }
         }
 
-        private static async Task GetObject(StorageClient client, string bucket, string name)
+        static StorageObject GetObject(StorageClient client, string bucket, string name)
         {
-            var obj = await client.GetObjectAsync(bucket, name);
-            Console.WriteLine(JsonConvert.SerializeObject(obj, Formatting.Indented));
+            Console.WriteLine($"Getting object {name} from bucket {bucket}:");
+
+            var obj = client.GetObject(bucket, name);
+            Console.WriteLine($"  Id: {obj.Id}");
+            Console.WriteLine($"  Name: {obj.Name}");
+            Console.WriteLine($"  ContentType: {obj.ContentType}");
+            Console.WriteLine($"  Size: {obj.Size}");
+            Console.WriteLine($"  MediaLink: {obj.MediaLink}");
+            Console.WriteLine($"  SelfLink: {obj.SelfLink}");
+            return obj;
         }
 
-        private static async Task DeleteObject(StorageClient client, string bucket, string name, string generation)
+        static Bucket GetBucket(StorageClient client, string name)
         {
-            long? generationOption = generation == null ? default(long?) : long.Parse(generation);
-            await client.DeleteObjectAsync(bucket, name, new DeleteObjectOptions { Generation = generationOption }, CancellationToken.None);
-            Console.WriteLine($"Deleted object {bucket}/{name}");
+            Console.WriteLine($"Getting bucket {name}:");
+
+            var bucket = client.Service.Buckets.Get(name).Execute();
+            Console.WriteLine($"  Id: {bucket.Id}");
+            Console.WriteLine($"  Name: {bucket.Name}");
+            return bucket;
+        }
+
+        static void DeleteObject(StorageClient client, string bucket, string name)
+        {
+            Console.WriteLine($"Deleting file {name} from bucket {bucket}");
+            client.DeleteObject(bucket, name);
+        }
+
+        static void DeleteBucket(StorageClient client, string bucket)
+        {
+            Console.WriteLine($"Deleting bucket {bucket}");
+            client.Service.Buckets.Delete(bucket).Execute();
         }
     }
 }

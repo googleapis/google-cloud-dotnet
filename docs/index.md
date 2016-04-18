@@ -20,6 +20,44 @@ for working with [Google Cloud Storage](https://cloud.google.com/storage/)
 Common operations are exposed via the
 [`StorageClient`](obj/api/Google.Storage.V1.StorageClient.yml) class.
 
+Quick start:
+```bat
+PM> Install-Package Google.Storage.V1 -Pre
+```
+
+Sample code:
+```csharp
+var projectId = "YOUR-PROJECT-ID";
+
+// GCS client connection
+var client = StorageClient.Create();
+
+// create a bucket (GCS bucket names must be globally unique)
+var bucket = "YOUR-BUCKET-NAME";
+client.Service.Buckets.Insert(new Bucket { Name = bucket }, projectId).Execute();
+
+// upload a file
+var source = "YOUR-LOCAL-FILENAME";
+var contentType = "YOUR-CONTENT-TYPE";
+var destination = "YOUR-OBJECT-NAME";
+using (var stream = File.OpenRead(source))
+{
+    var obj = client.UploadObject(bucket, destination, contentType, stream, 
+        new UploadObjectOptions {
+            PredefinedAcl = ObjectsResource.InsertMediaUpload.PredefinedAclEnum.PublicRead
+        }
+    );
+
+    Console.WriteLine($"Surf to {obj.MediaLink}");
+}
+
+// list objects in your bucket
+foreach( var obj in client.ListObjects(bucket, ""))
+{
+    Console.WriteLine($"{obj.Name} of type {obj.ContentType}");
+}
+```
+
 # Alpha APIs
 
 These APIs are available from Google's [public myget
