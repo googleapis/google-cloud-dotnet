@@ -51,7 +51,7 @@ namespace Google.Storage.V1.Demo
             DownloadFile(client, bucket.Name, file2.Name, "demo-download-test.txt");
             Debug.Assert(File.ReadAllText("demo-test.txt") == File.ReadAllText("demo-download-test.txt"));
 
-            using( var http = new HttpClient() )
+            using (var http = new HttpClient())
             {
                 // should be able to download the file uploaded as public and not the one uploaded as private
                 Debug.Assert(http.GetStringAsync(file1.MediaLink).Result == File.ReadAllText("demo-test.txt"));
@@ -68,10 +68,8 @@ namespace Google.Storage.V1.Demo
             ListBuckets(client, projectId);
         }
 
-        // [START list_buckets]
         static void ListBuckets(StorageClient client, string projectId)
         {
-            // list buckets
             Console.WriteLine($"Buckets in {projectId}:");
             var buckets = client.ListBuckets(projectId);
             foreach (var bucket in buckets)
@@ -79,18 +77,14 @@ namespace Google.Storage.V1.Demo
                 Console.WriteLine($"  {bucket.Name}");
             }
         }
-        // [END list_buckets]
 
-        // [START create_bucket]
         static Bucket CreateBucket(StorageClient client, string projectId, string name)
         {
-            // create a bucket (GCS bucket names must be globally unique)
+            // GCS bucket names must be globally unique
             Console.WriteLine($"Creating bucket {name} in project {projectId}");
             return client.Service.Buckets.Insert(new Bucket { Name = name }, projectId).Execute();
         }
-        // [END create_bucket]
 
-        // [START list_objects]
         static void ListObjects(StorageClient client, string bucket, string prefix = "")
         {
             Console.WriteLine($"Objects in bucket {bucket}:");
@@ -100,13 +94,13 @@ namespace Google.Storage.V1.Demo
                 Console.WriteLine($"  {obj.Name} [{obj.ContentType}]");
             }
         }
-        // [END list_objects]
 
-        // [START list_files_and_folders]
-        // Folders can be objects of zero length of content type application/x-www-form-urlencoded;charset=UTF-8
-        // as used by the GCS Browser: https://console.cloud.google.com/storage/browser?project=YOUR-PROJECT-ID
-        // Folders can also be implicit in file names with prefixes containing the delimited "/", also used by
-        // the GCS Browser. The extension methods provided in BrowserHelper knows how to deal with both.
+        // Folders can be objects of zero length of content type
+        // application/x-www-form-urlencoded;charset=UTF-8 as used by the GCS Browser:
+        // https://console.cloud.google.com/storage/browser?project=YOUR-PROJECT-ID
+        // Folders can also be implicit in file names with prefixes containing the delimiter "/",
+        // also used by the GCS Browser. The extension methods provided in BrowserHelper know
+        // how to deal with both.
         static void ListFilesAndFolders(StorageClient client, string bucket, string parentFolder = "", string indent = "  ")
         {
             if (parentFolder == "") { Console.WriteLine($"Files and folders in bucket {bucket}:"); }
@@ -125,9 +119,7 @@ namespace Google.Storage.V1.Demo
                 ListFilesAndFolders(client, bucket, folder, indent);
             }
         }
-        // [END list_files_and_folders]
 
-        // [START download_file]
         static void DownloadFile(StorageClient client, string bucket, string source, string destination)
         {
             Console.WriteLine($"Downloading GCS file {source} from bucket {bucket} to local file {destination}:");
@@ -140,9 +132,7 @@ namespace Google.Storage.V1.Demo
                 client.DownloadObject(bucket, source, stream, null, progress);
             }
         }
-        // [END download_file]
 
-        // [START upload_file]
         static StorageObject UploadFile(StorageClient client, string bucket, string source, string destination, string contentType, bool makePublic)
         {
             Console.WriteLine($"Uploading local file {source} of type {contentType} to GCS file {destination} in {bucket}:");
@@ -152,7 +142,8 @@ namespace Google.Storage.V1.Demo
                   p => Console.WriteLine($"  Uploaded {p.BytesSent} bytes; status: {p.Status}")
                 );
 
-                var options = new UploadObjectOptions {
+                var options = new UploadObjectOptions
+                {
                     PredefinedAcl = makePublic ?
                         ObjectsResource.InsertMediaUpload.PredefinedAclEnum.PublicRead :
                         ObjectsResource.InsertMediaUpload.PredefinedAclEnum.AuthenticatedRead
@@ -161,9 +152,7 @@ namespace Google.Storage.V1.Demo
                 return client.UploadObject(bucket, destination, contentType, stream, options, progress);
             }
         }
-        // [END upload_file]
 
-        // [START get_object]
         static StorageObject GetObject(StorageClient client, string bucket, string name)
         {
             Console.WriteLine($"Getting object {name} from bucket {bucket}:");
@@ -177,9 +166,7 @@ namespace Google.Storage.V1.Demo
             Console.WriteLine($"  SelfLink: {obj.SelfLink}");
             return obj;
         }
-        // [END get_object]
 
-        // [START get_bucket]
         static Bucket GetBucket(StorageClient client, string name)
         {
             Console.WriteLine($"Getting bucket {name}:");
@@ -189,23 +176,17 @@ namespace Google.Storage.V1.Demo
             Console.WriteLine($"  Name: {bucket.Name}");
             return bucket;
         }
-        // [END get_object]
 
-        // [START delete_object]
         static void DeleteObject(StorageClient client, string bucket, string name)
         {
             Console.WriteLine($"Deleting file {name} from bucket {bucket}");
             client.DeleteObject(bucket, name);
         }
-        // [END delete_object]
 
-        // [START delete_bucket]
         static void DeleteBucket(StorageClient client, string bucket)
         {
             Console.WriteLine($"Deleting bucket {bucket}");
             client.Service.Buckets.Delete(bucket).Execute();
         }
-        // [END delete_bucket]
-
     }
 }
