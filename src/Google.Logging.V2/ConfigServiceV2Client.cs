@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -57,12 +58,226 @@ namespace Google.Logging.V2
         public static ConfigServiceV2Settings GetDefault() => new ConfigServiceV2Settings();
 
         /// <summary>
+        /// Constructs a new ConfigServiceV2Settings object with default settings.
+        /// </summary>
+        public ConfigServiceV2Settings() { }
+
+        private ConfigServiceV2Settings(ConfigServiceV2Settings existing) : base(existing)
+        {
+            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ListSinksRetry = existing.ListSinksRetry?.Clone();
+            GetSinkRetry = existing.GetSinkRetry?.Clone();
+            CreateSinkRetry = existing.CreateSinkRetry?.Clone();
+            UpdateSinkRetry = existing.UpdateSinkRetry?.Clone();
+            DeleteSinkRetry = existing.DeleteSinkRetry?.Clone();
+        }
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// for "Idempotent" <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// for "NonIdempotent" <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="StatusCode">s eligilbe for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
+        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// "Default" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Default" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" retry backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(100),
+            DelayMultiplier = 1.2,
+            MaxDelay = TimeSpan.FromMilliseconds(1000),
+        };
+
+        /// <summary>
+        /// "Default" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Default" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" timeout backoff for <see cref="ConfigServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(2000),
+            DelayMultiplier = 1.5,
+            MaxDelay = TimeSpan.FromMilliseconds(30000),
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="ConfigServiceV2Client.ListSinks"/> and <see cref="ConfigServiceV2Client.ListSinksAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="ConfigServiceV2Client.ListSinks"/> and
+        /// <see cref="ConfigServiceV2Client.ListSinksAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings ListSinksRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="ConfigServiceV2Client.GetSink"/> and <see cref="ConfigServiceV2Client.GetSinkAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="ConfigServiceV2Client.GetSink"/> and
+        /// <see cref="ConfigServiceV2Client.GetSinkAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings GetSinkRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="ConfigServiceV2Client.CreateSink"/> and <see cref="ConfigServiceV2Client.CreateSinkAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="ConfigServiceV2Client.CreateSink"/> and
+        /// <see cref="ConfigServiceV2Client.CreateSinkAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings CreateSinkRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="ConfigServiceV2Client.UpdateSink"/> and <see cref="ConfigServiceV2Client.UpdateSinkAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="ConfigServiceV2Client.UpdateSink"/> and
+        /// <see cref="ConfigServiceV2Client.UpdateSinkAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings UpdateSinkRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="ConfigServiceV2Client.DeleteSink"/> and <see cref="ConfigServiceV2Client.DeleteSinkAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="ConfigServiceV2Client.DeleteSink"/> and
+        /// <see cref="ConfigServiceV2Client.DeleteSinkAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings DeleteSinkRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of ConfigServiceV2 settings.</returns>
-        public ConfigServiceV2Settings Clone() => CloneInto(new ConfigServiceV2Settings
-        {
-        });
+        public ConfigServiceV2Settings Clone() => new ConfigServiceV2Settings(this);
     }
 
     /// <summary>
@@ -466,12 +681,28 @@ namespace Google.Logging.V2
             );
 
         private readonly ClientHelper _clientHelper;
+        private readonly ApiCall<ListSinksRequest, ListSinksResponse> _callListSinks;
+        private readonly ApiCall<GetSinkRequest, LogSink> _callGetSink;
+        private readonly ApiCall<CreateSinkRequest, LogSink> _callCreateSink;
+        private readonly ApiCall<UpdateSinkRequest, LogSink> _callUpdateSink;
+        private readonly ApiCall<DeleteSinkRequest, Empty> _callDeleteSink;
 
         public ConfigServiceV2ClientImpl(ConfigServiceV2.IConfigServiceV2Client grpcClient, ConfigServiceV2Settings settings)
         {
             this.GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
+            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
+            _callListSinks = _clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(GrpcClient.ListSinksAsync, GrpcClient.ListSinks)
+                .WithRetry(effectiveSettings.ListSinksRetry, effectiveClock, null);
+            _callGetSink = _clientHelper.BuildApiCall<GetSinkRequest, LogSink>(GrpcClient.GetSinkAsync, GrpcClient.GetSink)
+                .WithRetry(effectiveSettings.GetSinkRetry, effectiveClock, null);
+            _callCreateSink = _clientHelper.BuildApiCall<CreateSinkRequest, LogSink>(GrpcClient.CreateSinkAsync, GrpcClient.CreateSink)
+                .WithRetry(effectiveSettings.CreateSinkRetry, effectiveClock, null);
+            _callUpdateSink = _clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink)
+                .WithRetry(effectiveSettings.UpdateSinkRetry, effectiveClock, null);
+            _callDeleteSink = _clientHelper.BuildApiCall<DeleteSinkRequest, Empty>(GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink)
+                .WithRetry(effectiveSettings.DeleteSinkRetry, effectiveClock, null);
         }
 
         public override ConfigServiceV2.IConfigServiceV2Client GrpcClient { get; }
@@ -487,20 +718,13 @@ namespace Google.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override IAsyncEnumerable<LogSink> ListSinksAsync(
             string projectName,
-            CallSettings callSettings = null)
-        {
-            ListSinksRequest request = new ListSinksRequest
-            {
-                ProjectName = projectName,
-            };
-            return s_listSinksPageStreamer.FetchAsync(
-                request,
-                (pageStreamRequest, cancellationToken) => GrpcClient.ListSinksAsync(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, callSettings)
-                ).ResponseAsync
-            );
-        }
+            CallSettings callSettings = null) => s_listSinksPageStreamer.FetchAsync(
+                callSettings,
+                new ListSinksRequest
+                {
+                    ProjectName = projectName,
+                },
+                _callListSinks);
 
         /// <summary>
         /// Lists sinks.
@@ -513,20 +737,13 @@ namespace Google.Logging.V2
         /// <returns>The RPC response.</returns>
         public override IEnumerable<LogSink> ListSinks(
             string projectName,
-            CallSettings callSettings = null)
-        {
-            ListSinksRequest request = new ListSinksRequest
-            {
-                ProjectName = projectName,
-            };
-            return s_listSinksPageStreamer.Fetch(
-                request,
-                pageStreamRequest => GrpcClient.ListSinks(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(null, callSettings))
-            );
-        }
-
+            CallSettings callSettings = null) => s_listSinksPageStreamer.Fetch(
+                callSettings,
+                new ListSinksRequest
+                {
+                    ProjectName = projectName,
+                },
+                _callListSinks);
         /// <summary>
         /// Gets a sink.
         /// </summary>
@@ -538,17 +755,12 @@ namespace Google.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<LogSink> GetSinkAsync(
             string sinkName,
-            CallSettings callSettings = null)
-        {
-            GetSinkRequest request = new GetSinkRequest
-            {
-                SinkName = sinkName,
-            };
-            return GrpcClient.GetSinkAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callGetSink.Async(
+                new GetSinkRequest
+                {
+                    SinkName = sinkName,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a sink.
@@ -561,17 +773,12 @@ namespace Google.Logging.V2
         /// <returns>The RPC response.</returns>
         public override LogSink GetSink(
             string sinkName,
-            CallSettings callSettings = null)
-        {
-            GetSinkRequest request = new GetSinkRequest
-            {
-                SinkName = sinkName,
-            };
-            return GrpcClient.GetSink(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callGetSink.Sync(
+                new GetSinkRequest
+                {
+                    SinkName = sinkName,
+                },
+                callSettings);
         /// <summary>
         /// Creates a sink.
         /// </summary>
@@ -590,18 +797,13 @@ namespace Google.Logging.V2
         public override Task<LogSink> CreateSinkAsync(
             string projectName,
             LogSink sink,
-            CallSettings callSettings = null)
-        {
-            CreateSinkRequest request = new CreateSinkRequest
-            {
-                ProjectName = projectName,
-                Sink = sink,
-            };
-            return GrpcClient.CreateSinkAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callCreateSink.Async(
+                new CreateSinkRequest
+                {
+                    ProjectName = projectName,
+                    Sink = sink,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates a sink.
@@ -621,18 +823,13 @@ namespace Google.Logging.V2
         public override LogSink CreateSink(
             string projectName,
             LogSink sink,
-            CallSettings callSettings = null)
-        {
-            CreateSinkRequest request = new CreateSinkRequest
-            {
-                ProjectName = projectName,
-                Sink = sink,
-            };
-            return GrpcClient.CreateSink(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callCreateSink.Sync(
+                new CreateSinkRequest
+                {
+                    ProjectName = projectName,
+                    Sink = sink,
+                },
+                callSettings);
         /// <summary>
         /// Creates or updates a sink.
         /// </summary>
@@ -654,18 +851,13 @@ namespace Google.Logging.V2
         public override Task<LogSink> UpdateSinkAsync(
             string sinkName,
             LogSink sink,
-            CallSettings callSettings = null)
-        {
-            UpdateSinkRequest request = new UpdateSinkRequest
-            {
-                SinkName = sinkName,
-                Sink = sink,
-            };
-            return GrpcClient.UpdateSinkAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callUpdateSink.Async(
+                new UpdateSinkRequest
+                {
+                    SinkName = sinkName,
+                    Sink = sink,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates or updates a sink.
@@ -688,18 +880,13 @@ namespace Google.Logging.V2
         public override LogSink UpdateSink(
             string sinkName,
             LogSink sink,
-            CallSettings callSettings = null)
-        {
-            UpdateSinkRequest request = new UpdateSinkRequest
-            {
-                SinkName = sinkName,
-                Sink = sink,
-            };
-            return GrpcClient.UpdateSink(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callUpdateSink.Sync(
+                new UpdateSinkRequest
+                {
+                    SinkName = sinkName,
+                    Sink = sink,
+                },
+                callSettings);
         /// <summary>
         /// Deletes a sink.
         /// </summary>
@@ -711,17 +898,12 @@ namespace Google.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteSinkAsync(
             string sinkName,
-            CallSettings callSettings = null)
-        {
-            DeleteSinkRequest request = new DeleteSinkRequest
-            {
-                SinkName = sinkName,
-            };
-            return GrpcClient.DeleteSinkAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callDeleteSink.Async(
+                new DeleteSinkRequest
+                {
+                    SinkName = sinkName,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes a sink.
@@ -734,16 +916,11 @@ namespace Google.Logging.V2
         /// <returns>The RPC response.</returns>
         public override void DeleteSink(
             string sinkName,
-            CallSettings callSettings = null)
-        {
-            DeleteSinkRequest request = new DeleteSinkRequest
-            {
-                SinkName = sinkName,
-            };
-            GrpcClient.DeleteSink(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callDeleteSink.Sync(
+                new DeleteSinkRequest
+                {
+                    SinkName = sinkName,
+                },
+                callSettings);
     }
 }
