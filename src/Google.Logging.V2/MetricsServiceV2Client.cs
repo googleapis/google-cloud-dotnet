@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -57,12 +58,226 @@ namespace Google.Logging.V2
         public static MetricsServiceV2Settings GetDefault() => new MetricsServiceV2Settings();
 
         /// <summary>
+        /// Constructs a new MetricsServiceV2Settings object with default settings.
+        /// </summary>
+        public MetricsServiceV2Settings() { }
+
+        private MetricsServiceV2Settings(MetricsServiceV2Settings existing) : base(existing)
+        {
+            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ListLogMetricsRetry = existing.ListLogMetricsRetry?.Clone();
+            GetLogMetricRetry = existing.GetLogMetricRetry?.Clone();
+            CreateLogMetricRetry = existing.CreateLogMetricRetry?.Clone();
+            UpdateLogMetricRetry = existing.UpdateLogMetricRetry?.Clone();
+            DeleteLogMetricRetry = existing.DeleteLogMetricRetry?.Clone();
+        }
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// for "Idempotent" <see cref="MetricsServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// for "NonIdempotent" <see cref="MetricsServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="StatusCode">s eligilbe for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
+        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// "Default" retry backoff for <see cref="MetricsServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Default" retry backoff for <see cref="MetricsServiceV2Client"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" retry backoff for <see cref="MetricsServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(100),
+            DelayMultiplier = 1.2,
+            MaxDelay = TimeSpan.FromMilliseconds(1000),
+        };
+
+        /// <summary>
+        /// "Default" timeout backoff for <see cref="MetricsServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Default" timeout backoff for <see cref="MetricsServiceV2Client"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" timeout backoff for <see cref="MetricsServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(2000),
+            DelayMultiplier = 1.5,
+            MaxDelay = TimeSpan.FromMilliseconds(30000),
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="MetricsServiceV2Client.ListLogMetrics"/> and <see cref="MetricsServiceV2Client.ListLogMetricsAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="MetricsServiceV2Client.ListLogMetrics"/> and
+        /// <see cref="MetricsServiceV2Client.ListLogMetricsAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings ListLogMetricsRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="MetricsServiceV2Client.GetLogMetric"/> and <see cref="MetricsServiceV2Client.GetLogMetricAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="MetricsServiceV2Client.GetLogMetric"/> and
+        /// <see cref="MetricsServiceV2Client.GetLogMetricAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings GetLogMetricRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="MetricsServiceV2Client.CreateLogMetric"/> and <see cref="MetricsServiceV2Client.CreateLogMetricAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="MetricsServiceV2Client.CreateLogMetric"/> and
+        /// <see cref="MetricsServiceV2Client.CreateLogMetricAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings CreateLogMetricRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="MetricsServiceV2Client.UpdateLogMetric"/> and <see cref="MetricsServiceV2Client.UpdateLogMetricAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="MetricsServiceV2Client.UpdateLogMetric"/> and
+        /// <see cref="MetricsServiceV2Client.UpdateLogMetricAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings UpdateLogMetricRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="MetricsServiceV2Client.DeleteLogMetric"/> and <see cref="MetricsServiceV2Client.DeleteLogMetricAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="MetricsServiceV2Client.DeleteLogMetric"/> and
+        /// <see cref="MetricsServiceV2Client.DeleteLogMetricAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings DeleteLogMetricRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of MetricsServiceV2 settings.</returns>
-        public MetricsServiceV2Settings Clone() => CloneInto(new MetricsServiceV2Settings
-        {
-        });
+        public MetricsServiceV2Settings Clone() => new MetricsServiceV2Settings(this);
     }
 
     /// <summary>
@@ -466,12 +681,28 @@ namespace Google.Logging.V2
             );
 
         private readonly ClientHelper _clientHelper;
+        private readonly ApiCall<ListLogMetricsRequest, ListLogMetricsResponse> _callListLogMetrics;
+        private readonly ApiCall<GetLogMetricRequest, LogMetric> _callGetLogMetric;
+        private readonly ApiCall<CreateLogMetricRequest, LogMetric> _callCreateLogMetric;
+        private readonly ApiCall<UpdateLogMetricRequest, LogMetric> _callUpdateLogMetric;
+        private readonly ApiCall<DeleteLogMetricRequest, Empty> _callDeleteLogMetric;
 
         public MetricsServiceV2ClientImpl(MetricsServiceV2.IMetricsServiceV2Client grpcClient, MetricsServiceV2Settings settings)
         {
             this.GrpcClient = grpcClient;
             MetricsServiceV2Settings effectiveSettings = settings ?? MetricsServiceV2Settings.GetDefault();
+            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
+            _callListLogMetrics = _clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>(GrpcClient.ListLogMetricsAsync, GrpcClient.ListLogMetrics)
+                .WithRetry(effectiveSettings.ListLogMetricsRetry, effectiveClock, null);
+            _callGetLogMetric = _clientHelper.BuildApiCall<GetLogMetricRequest, LogMetric>(GrpcClient.GetLogMetricAsync, GrpcClient.GetLogMetric)
+                .WithRetry(effectiveSettings.GetLogMetricRetry, effectiveClock, null);
+            _callCreateLogMetric = _clientHelper.BuildApiCall<CreateLogMetricRequest, LogMetric>(GrpcClient.CreateLogMetricAsync, GrpcClient.CreateLogMetric)
+                .WithRetry(effectiveSettings.CreateLogMetricRetry, effectiveClock, null);
+            _callUpdateLogMetric = _clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>(GrpcClient.UpdateLogMetricAsync, GrpcClient.UpdateLogMetric)
+                .WithRetry(effectiveSettings.UpdateLogMetricRetry, effectiveClock, null);
+            _callDeleteLogMetric = _clientHelper.BuildApiCall<DeleteLogMetricRequest, Empty>(GrpcClient.DeleteLogMetricAsync, GrpcClient.DeleteLogMetric)
+                .WithRetry(effectiveSettings.DeleteLogMetricRetry, effectiveClock, null);
         }
 
         public override MetricsServiceV2.IMetricsServiceV2Client GrpcClient { get; }
@@ -487,20 +718,13 @@ namespace Google.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override IAsyncEnumerable<LogMetric> ListLogMetricsAsync(
             string projectName,
-            CallSettings callSettings = null)
-        {
-            ListLogMetricsRequest request = new ListLogMetricsRequest
-            {
-                ProjectName = projectName,
-            };
-            return s_listLogMetricsPageStreamer.FetchAsync(
-                request,
-                (pageStreamRequest, cancellationToken) => GrpcClient.ListLogMetricsAsync(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, callSettings)
-                ).ResponseAsync
-            );
-        }
+            CallSettings callSettings = null) => s_listLogMetricsPageStreamer.FetchAsync(
+                callSettings,
+                new ListLogMetricsRequest
+                {
+                    ProjectName = projectName,
+                },
+                _callListLogMetrics);
 
         /// <summary>
         /// Lists logs-based metrics.
@@ -513,20 +737,13 @@ namespace Google.Logging.V2
         /// <returns>The RPC response.</returns>
         public override IEnumerable<LogMetric> ListLogMetrics(
             string projectName,
-            CallSettings callSettings = null)
-        {
-            ListLogMetricsRequest request = new ListLogMetricsRequest
-            {
-                ProjectName = projectName,
-            };
-            return s_listLogMetricsPageStreamer.Fetch(
-                request,
-                pageStreamRequest => GrpcClient.ListLogMetrics(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(null, callSettings))
-            );
-        }
-
+            CallSettings callSettings = null) => s_listLogMetricsPageStreamer.Fetch(
+                callSettings,
+                new ListLogMetricsRequest
+                {
+                    ProjectName = projectName,
+                },
+                _callListLogMetrics);
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
@@ -538,17 +755,12 @@ namespace Google.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<LogMetric> GetLogMetricAsync(
             string metricName,
-            CallSettings callSettings = null)
-        {
-            GetLogMetricRequest request = new GetLogMetricRequest
-            {
-                MetricName = metricName,
-            };
-            return GrpcClient.GetLogMetricAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callGetLogMetric.Async(
+                new GetLogMetricRequest
+                {
+                    MetricName = metricName,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a logs-based metric.
@@ -561,17 +773,12 @@ namespace Google.Logging.V2
         /// <returns>The RPC response.</returns>
         public override LogMetric GetLogMetric(
             string metricName,
-            CallSettings callSettings = null)
-        {
-            GetLogMetricRequest request = new GetLogMetricRequest
-            {
-                MetricName = metricName,
-            };
-            return GrpcClient.GetLogMetric(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callGetLogMetric.Sync(
+                new GetLogMetricRequest
+                {
+                    MetricName = metricName,
+                },
+                callSettings);
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
@@ -590,18 +797,13 @@ namespace Google.Logging.V2
         public override Task<LogMetric> CreateLogMetricAsync(
             string projectName,
             LogMetric metric,
-            CallSettings callSettings = null)
-        {
-            CreateLogMetricRequest request = new CreateLogMetricRequest
-            {
-                ProjectName = projectName,
-                Metric = metric,
-            };
-            return GrpcClient.CreateLogMetricAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callCreateLogMetric.Async(
+                new CreateLogMetricRequest
+                {
+                    ProjectName = projectName,
+                    Metric = metric,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates a logs-based metric.
@@ -621,18 +823,13 @@ namespace Google.Logging.V2
         public override LogMetric CreateLogMetric(
             string projectName,
             LogMetric metric,
-            CallSettings callSettings = null)
-        {
-            CreateLogMetricRequest request = new CreateLogMetricRequest
-            {
-                ProjectName = projectName,
-                Metric = metric,
-            };
-            return GrpcClient.CreateLogMetric(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callCreateLogMetric.Sync(
+                new CreateLogMetricRequest
+                {
+                    ProjectName = projectName,
+                    Metric = metric,
+                },
+                callSettings);
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
@@ -654,18 +851,13 @@ namespace Google.Logging.V2
         public override Task<LogMetric> UpdateLogMetricAsync(
             string metricName,
             LogMetric metric,
-            CallSettings callSettings = null)
-        {
-            UpdateLogMetricRequest request = new UpdateLogMetricRequest
-            {
-                MetricName = metricName,
-                Metric = metric,
-            };
-            return GrpcClient.UpdateLogMetricAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callUpdateLogMetric.Async(
+                new UpdateLogMetricRequest
+                {
+                    MetricName = metricName,
+                    Metric = metric,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates or updates a logs-based metric.
@@ -688,18 +880,13 @@ namespace Google.Logging.V2
         public override LogMetric UpdateLogMetric(
             string metricName,
             LogMetric metric,
-            CallSettings callSettings = null)
-        {
-            UpdateLogMetricRequest request = new UpdateLogMetricRequest
-            {
-                MetricName = metricName,
-                Metric = metric,
-            };
-            return GrpcClient.UpdateLogMetric(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callUpdateLogMetric.Sync(
+                new UpdateLogMetricRequest
+                {
+                    MetricName = metricName,
+                    Metric = metric,
+                },
+                callSettings);
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
@@ -711,17 +898,12 @@ namespace Google.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteLogMetricAsync(
             string metricName,
-            CallSettings callSettings = null)
-        {
-            DeleteLogMetricRequest request = new DeleteLogMetricRequest
-            {
-                MetricName = metricName,
-            };
-            return GrpcClient.DeleteLogMetricAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callDeleteLogMetric.Async(
+                new DeleteLogMetricRequest
+                {
+                    MetricName = metricName,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes a logs-based metric.
@@ -734,16 +916,11 @@ namespace Google.Logging.V2
         /// <returns>The RPC response.</returns>
         public override void DeleteLogMetric(
             string metricName,
-            CallSettings callSettings = null)
-        {
-            DeleteLogMetricRequest request = new DeleteLogMetricRequest
-            {
-                MetricName = metricName,
-            };
-            GrpcClient.DeleteLogMetric(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callDeleteLogMetric.Sync(
+                new DeleteLogMetricRequest
+                {
+                    MetricName = metricName,
+                },
+                callSettings);
     }
 }

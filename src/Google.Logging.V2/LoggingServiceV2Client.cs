@@ -16,6 +16,7 @@
 
 using Google.Api;
 using Google.Api.Gax;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -58,12 +59,236 @@ namespace Google.Logging.V2
         public static LoggingServiceV2Settings GetDefault() => new LoggingServiceV2Settings();
 
         /// <summary>
+        /// Constructs a new LoggingServiceV2Settings object with default settings.
+        /// </summary>
+        public LoggingServiceV2Settings() { }
+
+        private LoggingServiceV2Settings(LoggingServiceV2Settings existing) : base(existing)
+        {
+            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            DeleteLogRetry = existing.DeleteLogRetry?.Clone();
+            WriteLogEntriesRetry = existing.WriteLogEntriesRetry?.Clone();
+            ListLogEntriesRetry = existing.ListLogEntriesRetry?.Clone();
+            ListMonitoredResourceDescriptorsRetry = existing.ListMonitoredResourceDescriptorsRetry?.Clone();
+        }
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// for "Idempotent" <see cref="LoggingServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// for "NonIdempotent" <see cref="LoggingServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="StatusCode">s eligilbe for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
+        public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// "Default" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Default" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(100),
+            DelayMultiplier = 1.2,
+            MaxDelay = TimeSpan.FromMilliseconds(1000),
+        };
+
+        /// <summary>
+        /// "Default" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Default" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(2000),
+            DelayMultiplier = 1.5,
+            MaxDelay = TimeSpan.FromMilliseconds(30000),
+        };
+
+        /// <summary>
+        /// "List" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>The "List" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "List" retry backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetListRetryBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(100),
+            DelayMultiplier = 1.2,
+            MaxDelay = TimeSpan.FromMilliseconds(1000),
+        };
+
+        /// <summary>
+        /// "List" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods.
+        /// </summary>
+        /// <returns>The "List" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "List" timeout backoff for <see cref="LoggingServiceV2Client"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 7000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetListTimeoutBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(7000),
+            DelayMultiplier = 1.5,
+            MaxDelay = TimeSpan.FromMilliseconds(30000),
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="LoggingServiceV2Client.DeleteLog"/> and <see cref="LoggingServiceV2Client.DeleteLogAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="LoggingServiceV2Client.DeleteLog"/> and
+        /// <see cref="LoggingServiceV2Client.DeleteLogAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings DeleteLogRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="LoggingServiceV2Client.WriteLogEntries"/> and <see cref="LoggingServiceV2Client.WriteLogEntriesAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="LoggingServiceV2Client.WriteLogEntries"/> and
+        /// <see cref="LoggingServiceV2Client.WriteLogEntriesAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings WriteLogEntriesRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = NonIdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="LoggingServiceV2Client.ListLogEntries"/> and <see cref="LoggingServiceV2Client.ListLogEntriesAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="LoggingServiceV2Client.ListLogEntries"/> and
+        /// <see cref="LoggingServiceV2Client.ListLogEntriesAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 7000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings ListLogEntriesRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetListRetryBackoff(),
+            TimeoutBackoff = GetListTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+        /// <summary>
+        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptors"/> and <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptors"/> and
+        /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings ListMonitoredResourceDescriptorsRetry { get; set; } = new RetrySettings
+        {
+            RetryBackoff = GetDefaultRetryBackoff(),
+            TimeoutBackoff = GetDefaultTimeoutBackoff(),
+            RetryFilter = IdempotentRetryFilter,
+        };
+
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of LoggingServiceV2 settings.</returns>
-        public LoggingServiceV2Settings Clone() => CloneInto(new LoggingServiceV2Settings
-        {
-        });
+        public LoggingServiceV2Settings Clone() => new LoggingServiceV2Settings(this);
     }
 
     /// <summary>
@@ -406,6 +631,7 @@ namespace Google.Logging.V2
             throw new NotImplementedException();
         }
 
+
     }
 
     public sealed partial class LoggingServiceV2ClientImpl : LoggingServiceV2Client
@@ -433,12 +659,25 @@ namespace Google.Logging.V2
             );
 
         private readonly ClientHelper _clientHelper;
+        private readonly ApiCall<DeleteLogRequest, Empty> _callDeleteLog;
+        private readonly ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> _callWriteLogEntries;
+        private readonly ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> _callListLogEntries;
+        private readonly ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
 
         public LoggingServiceV2ClientImpl(LoggingServiceV2.ILoggingServiceV2Client grpcClient, LoggingServiceV2Settings settings)
         {
             this.GrpcClient = grpcClient;
             LoggingServiceV2Settings effectiveSettings = settings ?? LoggingServiceV2Settings.GetDefault();
+            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
+            _callDeleteLog = _clientHelper.BuildApiCall<DeleteLogRequest, Empty>(GrpcClient.DeleteLogAsync, GrpcClient.DeleteLog)
+                .WithRetry(effectiveSettings.DeleteLogRetry, effectiveClock, null);
+            _callWriteLogEntries = _clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>(GrpcClient.WriteLogEntriesAsync, GrpcClient.WriteLogEntries)
+                .WithRetry(effectiveSettings.WriteLogEntriesRetry, effectiveClock, null);
+            _callListLogEntries = _clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>(GrpcClient.ListLogEntriesAsync, GrpcClient.ListLogEntries)
+                .WithRetry(effectiveSettings.ListLogEntriesRetry, effectiveClock, null);
+            _callListMonitoredResourceDescriptors = _clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors)
+                .WithRetry(effectiveSettings.ListMonitoredResourceDescriptorsRetry, effectiveClock, null);
         }
 
         public override LoggingServiceV2.ILoggingServiceV2Client GrpcClient { get; }
@@ -455,17 +694,12 @@ namespace Google.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteLogAsync(
             string logName,
-            CallSettings callSettings = null)
-        {
-            DeleteLogRequest request = new DeleteLogRequest
-            {
-                LogName = logName,
-            };
-            return GrpcClient.DeleteLogAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callDeleteLog.Async(
+                new DeleteLogRequest
+                {
+                    LogName = logName,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes a log and all its log entries.
@@ -479,17 +713,12 @@ namespace Google.Logging.V2
         /// <returns>The RPC response.</returns>
         public override void DeleteLog(
             string logName,
-            CallSettings callSettings = null)
-        {
-            DeleteLogRequest request = new DeleteLogRequest
-            {
-                LogName = logName,
-            };
-            GrpcClient.DeleteLog(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callDeleteLog.Sync(
+                new DeleteLogRequest
+                {
+                    LogName = logName,
+                },
+                callSettings);
         /// <summary>
         /// Writes log entries to Cloud Logging.
         /// All log entries in Cloud Logging are written by this method.
@@ -521,20 +750,15 @@ namespace Google.Logging.V2
             MonitoredResource resource,
             IDictionary<string, string> labels,
             IEnumerable<LogEntry> entries,
-            CallSettings callSettings = null)
-        {
-            WriteLogEntriesRequest request = new WriteLogEntriesRequest
-            {
-                LogName = logName,
-                Resource = resource,
-                Labels = { labels },
-                Entries = { entries },
-            };
-            return GrpcClient.WriteLogEntriesAsync(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings)
-            ).ResponseAsync;
-        }
+            CallSettings callSettings = null) => _callWriteLogEntries.Async(
+                new WriteLogEntriesRequest
+                {
+                    LogName = logName,
+                    Resource = resource,
+                    Labels = { labels },
+                    Entries = { entries },
+                },
+                callSettings);
 
         /// <summary>
         /// Writes log entries to Cloud Logging.
@@ -567,20 +791,15 @@ namespace Google.Logging.V2
             MonitoredResource resource,
             IDictionary<string, string> labels,
             IEnumerable<LogEntry> entries,
-            CallSettings callSettings = null)
-        {
-            WriteLogEntriesRequest request = new WriteLogEntriesRequest
-            {
-                LogName = logName,
-                Resource = resource,
-                Labels = { labels },
-                Entries = { entries },
-            };
-            return GrpcClient.WriteLogEntries(
-                request,
-                _clientHelper.BuildCallOptions(null, callSettings));
-        }
-
+            CallSettings callSettings = null) => _callWriteLogEntries.Sync(
+                new WriteLogEntriesRequest
+                {
+                    LogName = logName,
+                    Resource = resource,
+                    Labels = { labels },
+                    Entries = { entries },
+                },
+                callSettings);
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from Cloud
         /// Logging.  For ways to export log entries, see
@@ -610,22 +829,15 @@ namespace Google.Logging.V2
             IEnumerable<string> projectIds,
             string filter,
             string orderBy,
-            CallSettings callSettings = null)
-        {
-            ListLogEntriesRequest request = new ListLogEntriesRequest
-            {
-                ProjectIds = { projectIds },
-                Filter = filter,
-                OrderBy = orderBy,
-            };
-            return s_listLogEntriesPageStreamer.FetchAsync(
-                request,
-                (pageStreamRequest, cancellationToken) => GrpcClient.ListLogEntriesAsync(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(cancellationToken, callSettings)
-                ).ResponseAsync
-            );
-        }
+            CallSettings callSettings = null) => s_listLogEntriesPageStreamer.FetchAsync(
+                callSettings,
+                new ListLogEntriesRequest
+                {
+                    ProjectIds = { projectIds },
+                    Filter = filter,
+                    OrderBy = orderBy,
+                },
+                _callListLogEntries);
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from Cloud
@@ -656,21 +868,15 @@ namespace Google.Logging.V2
             IEnumerable<string> projectIds,
             string filter,
             string orderBy,
-            CallSettings callSettings = null)
-        {
-            ListLogEntriesRequest request = new ListLogEntriesRequest
-            {
-                ProjectIds = { projectIds },
-                Filter = filter,
-                OrderBy = orderBy,
-            };
-            return s_listLogEntriesPageStreamer.Fetch(
-                request,
-                pageStreamRequest => GrpcClient.ListLogEntries(
-                    pageStreamRequest,
-                    _clientHelper.BuildCallOptions(null, callSettings))
-            );
-        }
+            CallSettings callSettings = null) => s_listLogEntriesPageStreamer.Fetch(
+                callSettings,
+                new ListLogEntriesRequest
+                {
+                    ProjectIds = { projectIds },
+                    Filter = filter,
+                    OrderBy = orderBy,
+                },
+                _callListLogEntries);
 
     }
 }
