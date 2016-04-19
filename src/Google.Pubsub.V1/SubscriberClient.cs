@@ -58,16 +58,44 @@ namespace Google.Pubsub.V1
         public static SubscriberSettings GetDefault() => new SubscriberSettings();
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are elegible for retry
-        /// for "Idempotent" <see cref="SubscriberClient"/> RPC methods.
+        /// Constructs a new SubscriberSettings object with default settings.
         /// </summary>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable, StatusCode.DeadlineExceeded);
+        public SubscriberSettings() { }
+
+        private SubscriberSettings(SubscriberSettings existing) : base(existing)
+        {
+            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            CreateSubscriptionRetry = existing.CreateSubscriptionRetry?.Clone();
+            GetSubscriptionRetry = existing.GetSubscriptionRetry?.Clone();
+            ListSubscriptionsRetry = existing.ListSubscriptionsRetry?.Clone();
+            DeleteSubscriptionRetry = existing.DeleteSubscriptionRetry?.Clone();
+            ModifyAckDeadlineRetry = existing.ModifyAckDeadlineRetry?.Clone();
+            AcknowledgeRetry = existing.AcknowledgeRetry?.Clone();
+            PullRetry = existing.PullRetry?.Clone();
+            ModifyPushConfigRetry = existing.ModifyPushConfigRetry?.Clone();
+        }
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are elegible for retry
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// for "Idempotent" <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="StatusCode">s eligilbe for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
             RetrySettings.FilterForStatusCodes();
 
@@ -75,6 +103,14 @@ namespace Google.Pubsub.V1
         /// "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
         /// <returns>The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
         public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
         {
             Delay = TimeSpan.FromMilliseconds(100),
@@ -86,6 +122,14 @@ namespace Google.Pubsub.V1
         /// "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
         /// <returns>The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
         {
             Delay = TimeSpan.FromMilliseconds(2000),
@@ -97,105 +141,227 @@ namespace Google.Pubsub.V1
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.CreateSubscription"/> and <see cref="SubscriberClient.CreateSubscriptionAsync"/>.
         /// </summary>
-        public RetrySettings CreateSubscriptionRetrySettings { get; set; } = new RetrySettings
+        /// <remarks>
+        /// The default <see cref="SubscriberClient.CreateSubscription"/> and
+        /// <see cref="SubscriberClient.CreateSubscriptionAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings CreateSubscriptionRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter
+            RetryFilter = NonIdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.GetSubscription"/> and <see cref="SubscriberClient.GetSubscriptionAsync"/>.
         /// </summary>
-        public RetrySettings GetSubscriptionRetrySettings { get; set; } = new RetrySettings
+        /// <remarks>
+        /// The default <see cref="SubscriberClient.GetSubscription"/> and
+        /// <see cref="SubscriberClient.GetSubscriptionAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings GetSubscriptionRetry { get; set; } = new RetrySettings
         {
-            RetryBackoff = GetDefaultTimeoutBackoff(),
+            RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter
+            RetryFilter = IdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.ListSubscriptions"/> and <see cref="SubscriberClient.ListSubscriptionsAsync"/>.
         /// </summary>
-        public RetrySettings ListSubscriptionsRetrySettings { get; set; } = new RetrySettings
+        /// <remarks>
+        /// The default <see cref="SubscriberClient.ListSubscriptions"/> and
+        /// <see cref="SubscriberClient.ListSubscriptionsAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings ListSubscriptionsRetry { get; set; } = new RetrySettings
         {
-            RetryBackoff = GetDefaultTimeoutBackoff(),
+            RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter
+            RetryFilter = IdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.DeleteSubscription"/> and <see cref="SubscriberClient.DeleteSubscriptionAsync"/>.
         /// </summary>
-        public RetrySettings DeleteSubscriptionRetrySettings { get; set; } = new RetrySettings
+        /// <remarks>
+        /// The default <see cref="SubscriberClient.DeleteSubscription"/> and
+        /// <see cref="SubscriberClient.DeleteSubscriptionAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings DeleteSubscriptionRetry { get; set; } = new RetrySettings
         {
-            RetryBackoff = GetDefaultTimeoutBackoff(),
+            RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter
+            RetryFilter = IdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.ModifyAckDeadline"/> and <see cref="SubscriberClient.ModifyAckDeadlineAsync"/>.
         /// </summary>
-        public RetrySettings ModifyAckDeadlineRetrySettings { get; set; } = new RetrySettings
+        /// <remarks>
+        /// The default <see cref="SubscriberClient.ModifyAckDeadline"/> and
+        /// <see cref="SubscriberClient.ModifyAckDeadlineAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings ModifyAckDeadlineRetry { get; set; } = new RetrySettings
         {
-            RetryBackoff = GetDefaultTimeoutBackoff(),
+            RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter
+            RetryFilter = NonIdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.Acknowledge"/> and <see cref="SubscriberClient.AcknowledgeAsync"/>.
         /// </summary>
-        public RetrySettings AcknowledgeRetrySettings { get; set; } = new RetrySettings
+        /// <remarks>
+        /// The default <see cref="SubscriberClient.Acknowledge"/> and
+        /// <see cref="SubscriberClient.AcknowledgeAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings AcknowledgeRetry { get; set; } = new RetrySettings
         {
-            RetryBackoff = GetDefaultTimeoutBackoff(),
+            RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter
+            RetryFilter = NonIdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.Pull"/> and <see cref="SubscriberClient.PullAsync"/>.
         /// </summary>
-        public RetrySettings PullRetrySettings { get; set; } = new RetrySettings
+        /// <remarks>
+        /// The default <see cref="SubscriberClient.Pull"/> and
+        /// <see cref="SubscriberClient.PullAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings PullRetry { get; set; } = new RetrySettings
         {
-            RetryBackoff = GetDefaultTimeoutBackoff(),
+            RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter
+            RetryFilter = NonIdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.ModifyPushConfig"/> and <see cref="SubscriberClient.ModifyPushConfigAsync"/>.
         /// </summary>
-        public RetrySettings ModifyPushConfigRetrySettings { get; set; } = new RetrySettings
+        /// <remarks>
+        /// The default <see cref="SubscriberClient.ModifyPushConfig"/> and
+        /// <see cref="SubscriberClient.ModifyPushConfigAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
+        public RetrySettings ModifyPushConfigRetry { get; set; } = new RetrySettings
         {
-            RetryBackoff = GetDefaultTimeoutBackoff(),
+            RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter
+            RetryFilter = NonIdempotentRetryFilter,
         };
+
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of Subscriber settings.</returns>
-        public SubscriberSettings Clone() => CloneInto(new SubscriberSettings
-        {
-            CreateSubscriptionRetrySettings = CreateSubscriptionRetrySettings?.Clone(),
-            GetSubscriptionRetrySettings = GetSubscriptionRetrySettings?.Clone(),
-            ListSubscriptionsRetrySettings = ListSubscriptionsRetrySettings?.Clone(),
-            DeleteSubscriptionRetrySettings = DeleteSubscriptionRetrySettings?.Clone(),
-            ModifyAckDeadlineRetrySettings = ModifyAckDeadlineRetrySettings?.Clone(),
-            AcknowledgeRetrySettings = AcknowledgeRetrySettings?.Clone(),
-            PullRetrySettings = PullRetrySettings?.Clone(),
-            ModifyPushConfigRetrySettings = ModifyPushConfigRetrySettings?.Clone(),
-        });
+        public SubscriberSettings Clone() => new SubscriberSettings(this);
     }
 
     /// <summary>
@@ -930,14 +1096,14 @@ namespace Google.Pubsub.V1
             );
 
         private readonly ClientHelper _clientHelper;
-        private readonly ApiCall<Subscription, Subscription> _createSubscription;
-        private readonly ApiCall<GetSubscriptionRequest, Subscription> _getSubscription;
-        private readonly ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> _listSubscriptions;
-        private readonly ApiCall<DeleteSubscriptionRequest, Empty> _deleteSubscription;
-        private readonly ApiCall<ModifyAckDeadlineRequest, Empty> _modifyAckDeadline;
-        private readonly ApiCall<AcknowledgeRequest, Empty> _acknowledge;
-        private readonly ApiCall<PullRequest, PullResponse> _pull;
-        private readonly ApiCall<ModifyPushConfigRequest, Empty> _modifyPushConfig;
+        private readonly ApiCall<Subscription, Subscription> _callCreateSubscription;
+        private readonly ApiCall<GetSubscriptionRequest, Subscription> _callGetSubscription;
+        private readonly ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> _callListSubscriptions;
+        private readonly ApiCall<DeleteSubscriptionRequest, Empty> _callDeleteSubscription;
+        private readonly ApiCall<ModifyAckDeadlineRequest, Empty> _callModifyAckDeadline;
+        private readonly ApiCall<AcknowledgeRequest, Empty> _callAcknowledge;
+        private readonly ApiCall<PullRequest, PullResponse> _callPull;
+        private readonly ApiCall<ModifyPushConfigRequest, Empty> _callModifyPushConfig;
 
         public SubscriberClientImpl(Subscriber.ISubscriberClient grpcClient, SubscriberSettings settings)
         {
@@ -945,22 +1111,22 @@ namespace Google.Pubsub.V1
             SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
             IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
-            _createSubscription = _clientHelper.BuildApiCall<Subscription, Subscription>(GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription)
-                .WithRetry(effectiveSettings.CreateSubscriptionRetrySettings, effectiveClock, null);
-            _getSubscription = _clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(GrpcClient.GetSubscriptionAsync, GrpcClient.GetSubscription)
-                .WithRetry(effectiveSettings.GetSubscriptionRetrySettings, effectiveClock, null);
-            _listSubscriptions = _clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions)
-                .WithRetry(effectiveSettings.ListSubscriptionsRetrySettings, effectiveClock, null);
-            _deleteSubscription = _clientHelper.BuildApiCall<DeleteSubscriptionRequest, Empty>(GrpcClient.DeleteSubscriptionAsync, GrpcClient.DeleteSubscription)
-                .WithRetry(effectiveSettings.DeleteSubscriptionRetrySettings, effectiveClock, null);
-            _modifyAckDeadline = _clientHelper.BuildApiCall<ModifyAckDeadlineRequest, Empty>(GrpcClient.ModifyAckDeadlineAsync, GrpcClient.ModifyAckDeadline)
-                .WithRetry(effectiveSettings.ModifyAckDeadlineRetrySettings, effectiveClock, null);
-            _acknowledge = _clientHelper.BuildApiCall<AcknowledgeRequest, Empty>(GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge)
-                .WithRetry(effectiveSettings.AcknowledgeRetrySettings, effectiveClock, null);
-            _pull = _clientHelper.BuildApiCall<PullRequest, PullResponse>(GrpcClient.PullAsync, GrpcClient.Pull)
-                .WithRetry(effectiveSettings.PullRetrySettings, effectiveClock, null);
-            _modifyPushConfig = _clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig)
-                .WithRetry(effectiveSettings.ModifyPushConfigRetrySettings, effectiveClock, null);
+            _callCreateSubscription = _clientHelper.BuildApiCall<Subscription, Subscription>(GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription)
+                .WithRetry(effectiveSettings.CreateSubscriptionRetry, effectiveClock, null);
+            _callGetSubscription = _clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(GrpcClient.GetSubscriptionAsync, GrpcClient.GetSubscription)
+                .WithRetry(effectiveSettings.GetSubscriptionRetry, effectiveClock, null);
+            _callListSubscriptions = _clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions)
+                .WithRetry(effectiveSettings.ListSubscriptionsRetry, effectiveClock, null);
+            _callDeleteSubscription = _clientHelper.BuildApiCall<DeleteSubscriptionRequest, Empty>(GrpcClient.DeleteSubscriptionAsync, GrpcClient.DeleteSubscription)
+                .WithRetry(effectiveSettings.DeleteSubscriptionRetry, effectiveClock, null);
+            _callModifyAckDeadline = _clientHelper.BuildApiCall<ModifyAckDeadlineRequest, Empty>(GrpcClient.ModifyAckDeadlineAsync, GrpcClient.ModifyAckDeadline)
+                .WithRetry(effectiveSettings.ModifyAckDeadlineRetry, effectiveClock, null);
+            _callAcknowledge = _clientHelper.BuildApiCall<AcknowledgeRequest, Empty>(GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge)
+                .WithRetry(effectiveSettings.AcknowledgeRetry, effectiveClock, null);
+            _callPull = _clientHelper.BuildApiCall<PullRequest, PullResponse>(GrpcClient.PullAsync, GrpcClient.Pull)
+                .WithRetry(effectiveSettings.PullRetry, effectiveClock, null);
+            _callModifyPushConfig = _clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig)
+                .WithRetry(effectiveSettings.ModifyPushConfigRetry, effectiveClock, null);
         }
 
         public override Subscriber.ISubscriberClient GrpcClient { get; }
@@ -1014,7 +1180,7 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null) => _createSubscription.Async(
+            CallSettings callSettings = null) => _callCreateSubscription.Async(
                 new Subscription
                 {
                     Name = name,
@@ -1073,7 +1239,7 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null) => _createSubscription.Sync(
+            CallSettings callSettings = null) => _callCreateSubscription.Sync(
                 new Subscription
                 {
                     Name = name,
@@ -1082,7 +1248,6 @@ namespace Google.Pubsub.V1
                     AckDeadlineSeconds = ackDeadlineSeconds,
                 },
                 callSettings);
-
         /// <summary>
         /// Gets the configuration details of a subscription.
         ///
@@ -1094,7 +1259,7 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Subscription> GetSubscriptionAsync(
             string subscription,
-            CallSettings callSettings = null) => _getSubscription.Async(
+            CallSettings callSettings = null) => _callGetSubscription.Async(
                 new GetSubscriptionRequest
                 {
                     Subscription = subscription,
@@ -1112,13 +1277,12 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override Subscription GetSubscription(
             string subscription,
-            CallSettings callSettings = null) => _getSubscription.Sync(
+            CallSettings callSettings = null) => _callGetSubscription.Sync(
                 new GetSubscriptionRequest
                 {
                     Subscription = subscription,
                 },
                 callSettings);
-
         /// <summary>
         /// Lists matching subscriptions.
         ///
@@ -1136,7 +1300,7 @@ namespace Google.Pubsub.V1
                 {
                     Project = project,
                 },
-                _listSubscriptions);
+                _callListSubscriptions);
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1155,8 +1319,7 @@ namespace Google.Pubsub.V1
                 {
                     Project = project,
                 },
-                _listSubscriptions);
-
+                _callListSubscriptions);
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
         /// are immediately dropped. Calls to `Pull` after deletion will generate
@@ -1169,7 +1332,7 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteSubscriptionAsync(
             string subscription,
-            CallSettings callSettings = null) => _deleteSubscription.Async(
+            CallSettings callSettings = null) => _callDeleteSubscription.Async(
                 new DeleteSubscriptionRequest
                 {
                     Subscription = subscription,
@@ -1188,13 +1351,12 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override void DeleteSubscription(
             string subscription,
-            CallSettings callSettings = null) => _deleteSubscription.Sync(
+            CallSettings callSettings = null) => _callDeleteSubscription.Sync(
                 new DeleteSubscriptionRequest
                 {
                     Subscription = subscription,
                 },
                 callSettings);
-
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
         /// to indicate that more time is needed to process a message by the
@@ -1216,7 +1378,7 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null) => _modifyAckDeadline.Async(
+            CallSettings callSettings = null) => _callModifyAckDeadline.Async(
                 new ModifyAckDeadlineRequest
                 {
                     Subscription = subscription,
@@ -1246,7 +1408,7 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null) => _modifyAckDeadline.Sync(
+            CallSettings callSettings = null) => _callModifyAckDeadline.Sync(
                 new ModifyAckDeadlineRequest
                 {
                     Subscription = subscription,
@@ -1254,7 +1416,6 @@ namespace Google.Pubsub.V1
                     AckDeadlineSeconds = ackDeadlineSeconds,
                 },
                 callSettings);
-
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
         /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
@@ -1274,7 +1435,7 @@ namespace Google.Pubsub.V1
         public override Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
-            CallSettings callSettings = null) => _acknowledge.Async(
+            CallSettings callSettings = null) => _callAcknowledge.Async(
                 new AcknowledgeRequest
                 {
                     Subscription = subscription,
@@ -1301,14 +1462,13 @@ namespace Google.Pubsub.V1
         public override void Acknowledge(
             string subscription,
             IEnumerable<string> ackIds,
-            CallSettings callSettings = null) => _acknowledge.Sync(
+            CallSettings callSettings = null) => _callAcknowledge.Sync(
                 new AcknowledgeRequest
                 {
                     Subscription = subscription,
                     AckIds = { ackIds },
                 },
                 callSettings);
-
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
         /// messages available in the backlog. The server may generate `UNAVAILABLE` if
@@ -1332,7 +1492,7 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CallSettings callSettings = null) => _pull.Async(
+            CallSettings callSettings = null) => _callPull.Async(
                 new PullRequest
                 {
                     Subscription = subscription,
@@ -1364,7 +1524,7 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CallSettings callSettings = null) => _pull.Sync(
+            CallSettings callSettings = null) => _callPull.Sync(
                 new PullRequest
                 {
                     Subscription = subscription,
@@ -1372,7 +1532,6 @@ namespace Google.Pubsub.V1
                     MaxMessages = maxMessages,
                 },
                 callSettings);
-
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
         ///
@@ -1395,7 +1554,7 @@ namespace Google.Pubsub.V1
         public override Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
-            CallSettings callSettings = null) => _modifyPushConfig.Async(
+            CallSettings callSettings = null) => _callModifyPushConfig.Async(
                 new ModifyPushConfigRequest
                 {
                     Subscription = subscription,
@@ -1425,13 +1584,12 @@ namespace Google.Pubsub.V1
         public override void ModifyPushConfig(
             string subscription,
             PushConfig pushConfig,
-            CallSettings callSettings = null) => _modifyPushConfig.Sync(
+            CallSettings callSettings = null) => _callModifyPushConfig.Sync(
                 new ModifyPushConfigRequest
                 {
                     Subscription = subscription,
                     PushConfig = pushConfig,
                 },
                 callSettings);
-
     }
 }

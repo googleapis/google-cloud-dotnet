@@ -58,16 +58,42 @@ namespace Google.Pubsub.V1
         public static PublisherSettings GetDefault() => new PublisherSettings();
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are elegible for retry
-        /// for "Idempotent" <see cref="PublisherClient"/> RPC methods.
+        /// Constructs a new PublisherSettings object with default settings.
         /// </summary>
-        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable, StatusCode.DeadlineExceeded);
+        public PublisherSettings() { }
+
+        private PublisherSettings(PublisherSettings existing) : base(existing)
+        {
+            GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            CreateTopicRetry = existing.CreateTopicRetry?.Clone();
+            PublishRetry = existing.PublishRetry?.Clone();
+            GetTopicRetry = existing.GetTopicRetry?.Clone();
+            ListTopicsRetry = existing.ListTopicsRetry?.Clone();
+            ListTopicSubscriptionsRetry = existing.ListTopicSubscriptionsRetry?.Clone();
+            DeleteTopicRetry = existing.DeleteTopicRetry?.Clone();
+        }
 
         /// <summary>
-        /// The filter specifying which RPC <see cref="StatusCode"/>s are elegible for retry
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
+        /// for "Idempotent" <see cref="PublisherClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="StatusCode"/>s for retry for "Idempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static Predicate<RpcException> IdempotentRetryFilter { get; } =
+            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="PublisherClient"/> RPC methods.
         /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="StatusCode">s eligilbe for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
             RetrySettings.FilterForStatusCodes();
 
@@ -75,6 +101,14 @@ namespace Google.Pubsub.V1
         /// "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.
         /// </summary>
         /// <returns>The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.2</description></item>
+        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
         public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
         {
             Delay = TimeSpan.FromMilliseconds(100),
@@ -86,6 +120,14 @@ namespace Google.Pubsub.V1
         /// "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.
         /// </summary>
         /// <returns>The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
         {
             Delay = TimeSpan.FromMilliseconds(2000),
@@ -97,81 +139,175 @@ namespace Google.Pubsub.V1
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.CreateTopic"/> and <see cref="PublisherClient.CreateTopicAsync"/>.
         /// </summary>
+        /// <remarks>
+        /// The default <see cref="PublisherClient.CreateTopic"/> and
+        /// <see cref="PublisherClient.CreateTopicAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
         public RetrySettings CreateTopicRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter
+            RetryFilter = IdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.Publish"/> and <see cref="PublisherClient.PublishAsync"/>.
         /// </summary>
+        /// <remarks>
+        /// The default <see cref="PublisherClient.Publish"/> and
+        /// <see cref="PublisherClient.PublishAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// </remarks>
         public RetrySettings PublishRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter
+            RetryFilter = NonIdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.GetTopic"/> and <see cref="PublisherClient.GetTopicAsync"/>.
         /// </summary>
+        /// <remarks>
+        /// The default <see cref="PublisherClient.GetTopic"/> and
+        /// <see cref="PublisherClient.GetTopicAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
         public RetrySettings GetTopicRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter
+            RetryFilter = IdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.ListTopics"/> and <see cref="PublisherClient.ListTopicsAsync"/>.
         /// </summary>
+        /// <remarks>
+        /// The default <see cref="PublisherClient.ListTopics"/> and
+        /// <see cref="PublisherClient.ListTopicsAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
         public RetrySettings ListTopicsRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter
+            RetryFilter = IdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.ListTopicSubscriptions"/> and <see cref="PublisherClient.ListTopicSubscriptionsAsync"/>.
         /// </summary>
+        /// <remarks>
+        /// The default <see cref="PublisherClient.ListTopicSubscriptions"/> and
+        /// <see cref="PublisherClient.ListTopicSubscriptionsAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
         public RetrySettings ListTopicSubscriptionsRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter
+            RetryFilter = IdempotentRetryFilter,
         };
 
         /// <summary>
         /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.DeleteTopic"/> and <see cref="PublisherClient.DeleteTopicAsync"/>.
         /// </summary>
+        /// <remarks>
+        /// The default <see cref="PublisherClient.DeleteTopic"/> and
+        /// <see cref="PublisherClient.DeleteTopicAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
         public RetrySettings DeleteTopicRetry { get; set; } = new RetrySettings
         {
             RetryBackoff = GetDefaultRetryBackoff(),
             TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter
+            RetryFilter = IdempotentRetryFilter,
         };
+
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this set of Publisher settings.</returns>
-        public PublisherSettings Clone() => CloneInto(new PublisherSettings
-        {
-            CreateTopicRetry = CreateTopicRetry?.Clone(),
-            PublishRetry = PublishRetry?.Clone(),
-            GetTopicRetry = GetTopicRetry?.Clone(),
-            ListTopicsRetry = ListTopicsRetry?.Clone(),
-            ListTopicSubscriptionsRetry = ListTopicSubscriptionsRetry?.Clone(),
-            DeleteTopicRetry = DeleteTopicRetry?.Clone(),
-        });
+        public PublisherSettings Clone() => new PublisherSettings(this);
     }
 
     /// <summary>
@@ -557,30 +693,30 @@ namespace Google.Pubsub.V1
             );
 
         private readonly ClientHelper _clientHelper;
-        private readonly ApiCall<Topic, Topic> _createTopic;
-        private readonly ApiCall<PublishRequest, PublishResponse> _publish;
-        private readonly ApiCall<GetTopicRequest, Topic> _getTopic;
-        private readonly ApiCall<ListTopicsRequest, ListTopicsResponse> _listTopics;
-        private readonly ApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse> _listTopicSubscriptions;
-        private readonly ApiCall<DeleteTopicRequest, Empty> _deleteTopic;
+        private readonly ApiCall<Topic, Topic> _callCreateTopic;
+        private readonly ApiCall<PublishRequest, PublishResponse> _callPublish;
+        private readonly ApiCall<GetTopicRequest, Topic> _callGetTopic;
+        private readonly ApiCall<ListTopicsRequest, ListTopicsResponse> _callListTopics;
+        private readonly ApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse> _callListTopicSubscriptions;
+        private readonly ApiCall<DeleteTopicRequest, Empty> _callDeleteTopic;
 
         public PublisherClientImpl(Publisher.IPublisherClient grpcClient, PublisherSettings settings)
         {
-            GrpcClient = grpcClient;
+            this.GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
             IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
-            _createTopic = _clientHelper.BuildApiCall<Topic, Topic>(GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic)
+            _callCreateTopic = _clientHelper.BuildApiCall<Topic, Topic>(GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic)
                 .WithRetry(effectiveSettings.CreateTopicRetry, effectiveClock, null);
-            _publish = _clientHelper.BuildApiCall<PublishRequest, PublishResponse>(GrpcClient.PublishAsync, GrpcClient.Publish)
+            _callPublish = _clientHelper.BuildApiCall<PublishRequest, PublishResponse>(GrpcClient.PublishAsync, GrpcClient.Publish)
                 .WithRetry(effectiveSettings.PublishRetry, effectiveClock, null);
-            _getTopic = _clientHelper.BuildApiCall<GetTopicRequest, Topic>(GrpcClient.GetTopicAsync, GrpcClient.GetTopic)
+            _callGetTopic = _clientHelper.BuildApiCall<GetTopicRequest, Topic>(GrpcClient.GetTopicAsync, GrpcClient.GetTopic)
                 .WithRetry(effectiveSettings.GetTopicRetry, effectiveClock, null);
-            _listTopics = _clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(GrpcClient.ListTopicsAsync, GrpcClient.ListTopics)
+            _callListTopics = _clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(GrpcClient.ListTopicsAsync, GrpcClient.ListTopics)
                 .WithRetry(effectiveSettings.ListTopicsRetry, effectiveClock, null);
-            _listTopicSubscriptions = _clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(GrpcClient.ListTopicSubscriptionsAsync, GrpcClient.ListTopicSubscriptions)
+            _callListTopicSubscriptions = _clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(GrpcClient.ListTopicSubscriptionsAsync, GrpcClient.ListTopicSubscriptions)
                 .WithRetry(effectiveSettings.ListTopicSubscriptionsRetry, effectiveClock, null);
-            _deleteTopic = _clientHelper.BuildApiCall<DeleteTopicRequest, Empty>(GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic)
+            _callDeleteTopic = _clientHelper.BuildApiCall<DeleteTopicRequest, Empty>(GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic)
                 .WithRetry(effectiveSettings.DeleteTopicRetry, effectiveClock, null);
         }
 
@@ -601,7 +737,7 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> CreateTopicAsync(
             string name,
-            CallSettings callSettings = null) => _createTopic.Async(
+            CallSettings callSettings = null) => _callCreateTopic.Async(
                 new Topic
                 {
                     Name = name,
@@ -623,13 +759,12 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override Topic CreateTopic(
             string name,
-            CallSettings callSettings = null) => _createTopic.Sync(
+            CallSettings callSettings = null) => _callCreateTopic.Sync(
                 new Topic
                 {
                     Name = name,
                 },
                 callSettings);
-
         /// <summary>
         /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
@@ -642,7 +777,7 @@ namespace Google.Pubsub.V1
         public override Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            CallSettings callSettings = null) => _publish.Async(
+            CallSettings callSettings = null) => _callPublish.Async(
                 new PublishRequest
                 {
                     Topic = topic,
@@ -662,14 +797,13 @@ namespace Google.Pubsub.V1
         public override PublishResponse Publish(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            CallSettings callSettings = null) => _publish.Sync(
+            CallSettings callSettings = null) => _callPublish.Sync(
                 new PublishRequest
                 {
                     Topic = topic,
                     Messages = { messages },
                 },
                 callSettings);
-
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
@@ -678,7 +812,7 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> GetTopicAsync(
             string topic,
-            CallSettings callSettings = null) => _getTopic.Async(
+            CallSettings callSettings = null) => _callGetTopic.Async(
                 new GetTopicRequest
                 {
                     Topic = topic,
@@ -693,13 +827,12 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override Topic GetTopic(
             string topic,
-            CallSettings callSettings = null) => _getTopic.Sync(
+            CallSettings callSettings = null) => _callGetTopic.Sync(
                 new GetTopicRequest
                 {
                     Topic = topic,
                 },
                 callSettings);
-
         /// <summary>
         /// Lists matching topics.
         /// </summary>
@@ -714,7 +847,7 @@ namespace Google.Pubsub.V1
                 {
                     Project = project,
                 },
-                _listTopics);
+                _callListTopics);
 
         /// <summary>
         /// Lists matching topics.
@@ -730,8 +863,7 @@ namespace Google.Pubsub.V1
                 {
                     Project = project,
                 },
-                _listTopics);
-
+                _callListTopics);
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
         /// </summary>
@@ -746,7 +878,7 @@ namespace Google.Pubsub.V1
                 {
                     Topic = topic,
                 },
-                _listTopicSubscriptions);
+                _callListTopicSubscriptions);
 
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
@@ -762,8 +894,7 @@ namespace Google.Pubsub.V1
                 {
                     Topic = topic,
                 },
-                _listTopicSubscriptions);
-
+                _callListTopicSubscriptions);
         /// <summary>
         /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
@@ -776,7 +907,7 @@ namespace Google.Pubsub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteTopicAsync(
             string topic,
-            CallSettings callSettings = null) => _deleteTopic.Async(
+            CallSettings callSettings = null) => _callDeleteTopic.Async(
                 new DeleteTopicRequest
                 {
                     Topic = topic,
@@ -795,12 +926,11 @@ namespace Google.Pubsub.V1
         /// <returns>The RPC response.</returns>
         public override void DeleteTopic(
             string topic,
-            CallSettings callSettings = null) => _deleteTopic.Async(
+            CallSettings callSettings = null) => _callDeleteTopic.Sync(
                 new DeleteTopicRequest
                 {
                     Topic = topic,
                 },
                 callSettings);
-
     }
 }
