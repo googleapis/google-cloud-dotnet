@@ -11,11 +11,11 @@ environment at all. There is no guarantee that the API surface will
 stay stable between beta and full release, but we have high confidence
 that the libraries work and are usable.
 
-## Google.Storage.V1
+## Google.Storage.V1 ([NuGet](https://www.nuget.org/packages/Google.Storage.V1))
 
 A wrapper library over
 [Google.Apis.Storage.v1](https://www.nuget.org/packages/Google.Apis.Storage.v1/)
-for working with [Google Cloud Storage](https://cloud.google.com/storage/)
+for working with [Google Cloud Storage](https://cloud.google.com/storage/).
 
 Common operations are exposed via the
 [`StorageClient`](obj/api/Google.Storage.V1.StorageClient.yml) class.
@@ -23,7 +23,7 @@ Common operations are exposed via the
 # Alpha APIs
 
 These APIs are available from Google's [public myget
-feed](http://https://www.myget.org/gallery/google-dotnet-public),
+feed](https://www.myget.org/gallery/google-dotnet-public),
 which you will need to configure within your build system.
 
 These APIs are even more likely to have significant surface
