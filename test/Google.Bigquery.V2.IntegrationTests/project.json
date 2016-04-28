@@ -1,0 +1,22 @@
+﻿{
+  "description": "Integration tests for the Google Bigquery library.",
+
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk",
+    "debugType": "full"
+  },
+
+  "dependencies": {
+    "Google.Bigquery.V2": "",
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-rc1-build204"
+  },
+
+  "commands": {
+    "test": "xunit.runner.dnx"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}
