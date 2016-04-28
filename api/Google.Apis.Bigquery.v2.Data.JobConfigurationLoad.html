@@ -1,0 +1,641 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class JobConfigurationLoad
+   | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class JobConfigurationLoad
+   | Google Cloud APIs ">
+    <meta name="generator" content="docfx 1.8.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad">Class JobConfigurationLoad
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">JobConfigurationLoad</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2.Data</h6>
+              <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
+              <h5 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class JobConfigurationLoad : Requests.IDirectResponseSchema</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_AllowJaggedRows" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.AllowJaggedRows">AllowJaggedRows</h4>
+              <div class="markdown level1 summary"><p>[Optional] Accept rows that are missing trailing optional columns. The missing values are treated
+as nulls. If false, records with missing trailing columns are treated as bad records, and if there are too
+many bad records, an invalid error is returned in the job result. The default value is false. Only
+applicable to CSV, ignored for other formats.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; AllowJaggedRows
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_AllowQuotedNewlines" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.AllowQuotedNewlines">AllowQuotedNewlines</h4>
+              <div class="markdown level1 summary"><p>Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV
+file. The default value is false.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; AllowQuotedNewlines
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_CreateDisposition" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.CreateDisposition">CreateDisposition</h4>
+              <div class="markdown level1 summary"><p>[Optional] Specifies whether the job is allowed to create new tables. The following values are
+supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The
+table must already exist. If it does not, a &#39;notFound&#39; error is returned in the job result. The default
+value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job
+completion.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string CreateDisposition
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_DestinationTable" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.DestinationTable">DestinationTable</h4>
+              <div class="markdown level1 summary"><p>[Required] The destination table to load the data into.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual TableReference DestinationTable
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_Encoding" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.Encoding">Encoding</h4>
+              <div class="markdown level1 summary"><p>[Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The
+default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values
+of the quote and fieldDelimiter properties.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string Encoding
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_ETag" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.ETag">ETag</h4>
+              <div class="markdown level1 summary"><p>The ETag of the item.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string ETag
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_FieldDelimiter" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.FieldDelimiter">FieldDelimiter</h4>
+              <div class="markdown level1 summary"><p>[Optional] The separator for fields in a CSV file. The separator can be any ISO-8859-1 single-byte
+character. To use a character in the range 128-255, you must encode the character as UTF8. BigQuery converts
+the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in
+its raw, binary state. BigQuery also supports the escape sequence &quot;\t&quot; to specify a tab separator. The
+default value is a comma (&#39;,&#39;).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string FieldDelimiter
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_IgnoreUnknownValues" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.IgnoreUnknownValues">IgnoreUnknownValues</h4>
+              <div class="markdown level1 summary"><p>[Optional] Indicates if BigQuery should allow extra values that are not represented in the table
+schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad
+records, and if there are too many bad records, an invalid error is returned in the job result. The default
+value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing
+columns JSON: Named values that don&#39;t match any column names</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; IgnoreUnknownValues
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_MaxBadRecords" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.MaxBadRecords">MaxBadRecords</h4>
+              <div class="markdown level1 summary"><p>[Optional] The maximum number of bad records that BigQuery can ignore when running the job. If the
+number of bad records exceeds this value, an invalid error is returned in the job result. The default value
+is 0, which requires that all records are valid.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;int&gt; MaxBadRecords
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_ProjectionFields" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.ProjectionFields">ProjectionFields</h4>
+              <div class="markdown level1 summary"><p>[Experimental] If sourceFormat is set to &quot;DATASTORE_BACKUP&quot;, indicates which entity properties to
+load into BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level
+properties. If no properties are specified, BigQuery loads all properties. If any named property isn&#39;t found
+in the Cloud Datastore backup, an invalid error is returned in the job result.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;string&gt; ProjectionFields
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_Quote" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.Quote">Quote</h4>
+              <div class="markdown level1 summary"><p>[Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
+string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its
+raw, binary state. The default value is a double-quote (&#39;&quot;&#39;). If your data does not contain quoted sections,
+set the property value to an empty string. If your data contains quoted newline characters, you must also
+set the allowQuotedNewlines property to true.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string Quote
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_Schema" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.Schema">Schema</h4>
+              <div class="markdown level1 summary"><p>[Optional] The schema for the destination table. The schema can be omitted if the destination table
+already exists, or if you&#39;re loading data from Google Cloud Datastore.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual TableSchema Schema
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_SchemaInline" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.SchemaInline">SchemaInline</h4>
+              <div class="markdown level1 summary"><p>[Deprecated] The inline schema. For CSV schemas, specify as &quot;Field1:Type1[,Field2:Type2]*&quot;. For
+example, &quot;foo:STRING, bar:INTEGER, baz:FLOAT&quot;.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string SchemaInline
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_SchemaInlineFormat" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.SchemaInlineFormat">SchemaInlineFormat</h4>
+              <div class="markdown level1 summary"><p>[Deprecated] The format of the schemaInline property.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string SchemaInlineFormat
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_SkipLeadingRows" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.SkipLeadingRows">SkipLeadingRows</h4>
+              <div class="markdown level1 summary"><p>[Optional] The number of rows at the top of a CSV file that BigQuery will skip when loading the
+data. The default value is 0. This property is useful if you have header rows in the file that should be
+skipped.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;int&gt; SkipLeadingRows
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_SourceFormat" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.SourceFormat">SourceFormat</h4>
+              <div class="markdown level1 summary"><p>[Optional] The format of the data files. For CSV files, specify &quot;CSV&quot;. For datastore backups,
+specify &quot;DATASTORE_BACKUP&quot;. For newline-delimited JSON, specify &quot;NEWLINE_DELIMITED_JSON&quot;. For Avro, specify
+&quot;AVRO&quot;. The default value is CSV.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string SourceFormat
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_SourceUris" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.SourceUris">SourceUris</h4>
+              <div class="markdown level1 summary"><p>[Required] The fully-qualified URIs that point to your data in Google Cloud Storage. Each URI can
+contain one &#39;*&#39; wildcard character and it must come after the &#39;bucket&#39; name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual System.Collections.Generic.IList&lt;string&gt; SourceUris
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobConfigurationLoad_WriteDisposition" data-uid="Google.Apis.Bigquery.v2.Data.JobConfigurationLoad.WriteDisposition">WriteDisposition</h4>
+              <div class="markdown level1 summary"><p>[Optional] Specifies the action that occurs if the destination table already exists. The following
+values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data.
+WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table
+already exists and contains data, a &#39;duplicate&#39; error is returned in the job result. The default value is
+WRITE_APPEND. Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
+Creation, truncation and append actions occur as one atomic update upon job completion.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string WriteDisposition
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConfigServiceV2Settings
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.7.1.0">
+    <meta name="generator" content="docfx 1.8.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,7 +75,7 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">Google.Api.Gax.ServiceSettingsBase</span></div>
+                  <div class="level1"><a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase">ServiceSettingsBase</a></div>
                   <div class="level2"><span class="xref">ConfigServiceV2Settings</span></div>
               </div>
               <h6><strong>Namespace</strong>:Google.Logging.V2</h6>
@@ -84,6 +84,263 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class ConfigServiceV2Settings : ServiceSettingsBase</code></pre>
               </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings__ctor" data-uid="Google.Logging.V2.ConfigServiceV2Settings.#ctor">ConfigServiceV2Settings()</h4>
+              <div class="markdown level1 summary"><p>Constructs a new ConfigServiceV2Settings object with default settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ConfigServiceV2Settings()</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_CreateSinkRetry" data-uid="Google.Logging.V2.ConfigServiceV2Settings.CreateSinkRetry">CreateSinkRetry</h4>
+              <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> for asynchronous and synchronous calls to</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_">CreateSink(String, LogSink, CallSettings)</a> and <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_">CreateSinkAsync(String, LogSink, CallSettings)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_ConfigServiceV2Settings_CreateSinkRetry_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_">CreateSink(String, LogSink, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_">CreateSinkAsync(String, LogSink, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.2</li><li>Retry maximum delay: 1000 milliseconds</li><li>Initial timeout: 2000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Timeout maximum delay: 30000 milliseconds</li></ul>
+Retry will be attempted on the following response status codes:</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RetrySettings CreateSinkRetry
+{
+
+    get;
+
+    set;
+
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_DeleteSinkRetry" data-uid="Google.Logging.V2.ConfigServiceV2Settings.DeleteSinkRetry">DeleteSinkRetry</h4>
+              <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> for asynchronous and synchronous calls to</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_DeleteSink_System_String_Google_Api_Gax_CallSettings_">DeleteSink(String, CallSettings)</a> and <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_System_String_Google_Api_Gax_CallSettings_">DeleteSinkAsync(String, CallSettings)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_ConfigServiceV2Settings_DeleteSinkRetry_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_DeleteSink_System_String_Google_Api_Gax_CallSettings_">DeleteSink(String, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_System_String_Google_Api_Gax_CallSettings_">DeleteSinkAsync(String, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.2</li><li>Retry maximum delay: 1000 milliseconds</li><li>Initial timeout: 2000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Timeout maximum delay: 30000 milliseconds</li></ul>
+Retry will be attempted on the following response status codes:</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RetrySettings DeleteSinkRetry
+{
+
+    get;
+
+    set;
+
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_GetSinkRetry" data-uid="Google.Logging.V2.ConfigServiceV2Settings.GetSinkRetry">GetSinkRetry</h4>
+              <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> for asynchronous and synchronous calls to</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_GetSink_System_String_Google_Api_Gax_CallSettings_">GetSink(String, CallSettings)</a> and <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_GetSinkAsync_System_String_Google_Api_Gax_CallSettings_">GetSinkAsync(String, CallSettings)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_ConfigServiceV2Settings_GetSinkRetry_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_GetSink_System_String_Google_Api_Gax_CallSettings_">GetSink(String, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_GetSinkAsync_System_String_Google_Api_Gax_CallSettings_">GetSinkAsync(String, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.2</li><li>Retry maximum delay: 1000 milliseconds</li><li>Initial timeout: 2000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Timeout maximum delay: 30000 milliseconds</li></ul>
+Retry will be attempted on the following response status codes:</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RetrySettings GetSinkRetry
+{
+
+    get;
+
+    set;
+
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_IdempotentRetryFilter" data-uid="Google.Logging.V2.ConfigServiceV2Settings.IdempotentRetryFilter">IdempotentRetryFilter</h4>
+              <div class="markdown level1 summary"><p>The filter specifying which RPC <span class="xref">Grpc.Core.StatusCode</span>s are eligible for retry
+for &quot;Idempotent&quot; <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client">ConfigServiceV2Client</a> RPC methods.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_ConfigServiceV2Settings_IdempotentRetryFilter_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The eligible RPC <span class="xref">Grpc.Core.StatusCode</span>s for retry for &quot;Idempotent&quot; RPC methods are:</p>
+<ul><li><span class="xref">Grpc.Core.StatusCode.DeadlineExceeded</span></li><li><span class="xref">Grpc.Core.StatusCode.Unavailable</span></li></ul>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Predicate&lt;RpcException&gt; IdempotentRetryFilter
+{
+
+    get;
+
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">Grpc.Core.RpcException</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_ListSinksRetry" data-uid="Google.Logging.V2.ConfigServiceV2Settings.ListSinksRetry">ListSinksRetry</h4>
+              <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> for asynchronous and synchronous calls to</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_ListSinks_System_String_Google_Api_Gax_CallSettings_">ListSinks(String, CallSettings)</a> and <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_ListSinksAsync_System_String_Google_Api_Gax_CallSettings_">ListSinksAsync(String, CallSettings)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_ConfigServiceV2Settings_ListSinksRetry_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_ListSinks_System_String_Google_Api_Gax_CallSettings_">ListSinks(String, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_ListSinksAsync_System_String_Google_Api_Gax_CallSettings_">ListSinksAsync(String, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.2</li><li>Retry maximum delay: 1000 milliseconds</li><li>Initial timeout: 2000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Timeout maximum delay: 30000 milliseconds</li></ul>
+Retry will be attempted on the following response status codes:</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RetrySettings ListSinksRetry
+{
+
+    get;
+
+    set;
+
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_NonIdempotentRetryFilter" data-uid="Google.Logging.V2.ConfigServiceV2Settings.NonIdempotentRetryFilter">NonIdempotentRetryFilter</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Predicate&lt;RpcException&gt; NonIdempotentRetryFilter
+{
+
+    get;
+
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">Grpc.Core.RpcException</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_UpdateSinkRetry" data-uid="Google.Logging.V2.ConfigServiceV2Settings.UpdateSinkRetry">UpdateSinkRetry</h4>
+              <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> for asynchronous and synchronous calls to</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_UpdateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_">UpdateSink(String, LogSink, CallSettings)</a> and <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_">UpdateSinkAsync(String, LogSink, CallSettings)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_ConfigServiceV2Settings_UpdateSinkRetry_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_UpdateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_">UpdateSink(String, LogSink, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_">UpdateSinkAsync(String, LogSink, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.2</li><li>Retry maximum delay: 1000 milliseconds</li><li>Initial timeout: 2000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Timeout maximum delay: 30000 milliseconds</li></ul>
+Retry will be attempted on the following response status codes:</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RetrySettings UpdateSinkRetry
+{
+
+    get;
+
+    set;
+
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Logging_V2_ConfigServiceV2Settings_Clone" data-uid="Google.Logging.V2.ConfigServiceV2Settings.Clone">Clone()</h4>
@@ -130,6 +387,62 @@
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings">ConfigServiceV2Settings</a></td>
                     <td><p>A new instance of the default ConfigServiceV2Settings.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_GetDefaultRetryBackoff" data-uid="Google.Logging.V2.ConfigServiceV2Settings.GetDefaultRetryBackoff">GetDefaultRetryBackoff()</h4>
+              <div class="markdown level1 summary"><p>&quot;Default&quot; retry backoff for <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client">ConfigServiceV2Client</a> RPC methods.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_ConfigServiceV2Settings_GetDefaultRetryBackoff_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The &quot;Default&quot; retry backoff for <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client">ConfigServiceV2Client</a> RPC methods is defined as:</p>
+<ul><li>Initial delay: 100 milliseconds</li><li>Delay multiplier: 1.2</li><li>Maximum delay: 1000 milliseconds</li></ul>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static BackoffSettings GetDefaultRetryBackoff()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.BackoffSettings.html#Google_Api_Gax_BackoffSettings">BackoffSettings</a></td>
+                    <td><p>The &quot;Default&quot; retry backoff for <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client">ConfigServiceV2Client</a> RPC methods.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2Settings_GetDefaultTimeoutBackoff" data-uid="Google.Logging.V2.ConfigServiceV2Settings.GetDefaultTimeoutBackoff">GetDefaultTimeoutBackoff()</h4>
+              <div class="markdown level1 summary"><p>&quot;Default&quot; timeout backoff for <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client">ConfigServiceV2Client</a> RPC methods.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_ConfigServiceV2Settings_GetDefaultTimeoutBackoff_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The &quot;Default&quot; timeout backoff for <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client">ConfigServiceV2Client</a> RPC methods is defined as:</p>
+<ul><li>Initial timeout: 2000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Maximum timeout: 30000 milliseconds</li></ul>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static BackoffSettings GetDefaultTimeoutBackoff()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.BackoffSettings.html#Google_Api_Gax_BackoffSettings">BackoffSettings</a></td>
+                    <td><p>The &quot;Default&quot; timeout backoff for <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client">ConfigServiceV2Client</a> RPC methods.</p>
 </td>
                   </tr>
                 </tbody>

@@ -8,7 +8,7 @@
     <title>Introduction | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Introduction | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.7.1.0">
+    <meta name="generator" content="docfx 1.8.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -67,14 +67,14 @@ be installed by most users without reconfiguring their build
 environment at all. There is no guarantee that the API surface will
 stay stable between beta and full release, but we have high confidence
 that the libraries work and are usable.</p>
-<h2 id="google-storage-v1">Google.Storage.V1</h2>
+<h2 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>)</h2>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
-for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a></p>
+for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
 <p>Common operations are exposed via the
 <a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
 <h1 id="alpha-apis">Alpha APIs</h1>
-<p>These APIs are available from Google&#39;s <a href="http://https://www.myget.org/gallery/google-dotnet-public">public myget
+<p>These APIs are available from Google&#39;s <a href="https://www.myget.org/gallery/google-dotnet-public">public myget
 feed</a>,
 which you will need to configure within your build system.</p>
 <p>These APIs are even more likely to have significant surface
@@ -128,6 +128,48 @@ simpler than it would otherwise be.</p>
 <p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
 <p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html"><code>LoggingServiceV2Client</code></a>
 for details.</p>
+<h2 id="google-bigquery-v2">Google.Bigquery.V2</h2>
+<p>A wrapper library over
+<a href="https://www.nuget.org/packages/Google.Apis.Bigquery.v2/">Google.Apis.Bigquery.v1</a>
+for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a></p>
+<p>Common operations are exposed via the
+<a href="obj/api/Google.Bigquery.V1.BigqueryClient.yml"><code>BigqueryClient</code></a>
+class, and additional wrapper classes are present to make operations
+with datasets, tables and query results simpler.</p>
+<p>Query example:</p>
+<pre><code class="lang-csharp">var client = BigqueryClient.Create(&quot;YOUR PROJECT ID&quot;);
+var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
+
+var sql = $&quot;SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}&quot;;
+var query = client.ExecuteQuery(sql);
+
+foreach (var row in rows)
+{
+    Console.WriteLine($&quot;{row[&quot;title&quot;]}: {row:[&quot;unique_words&quot;]}&quot;);
+}
+</code></pre>
+<p>Data insertion example:</p>
+<pre><code class="lang-csharp">var client = BigqueryClient.Create(&quot;YOUR PROJECT ID&quot;);
+
+// Create the dataset if it doesn&#39;t exist.
+var dataset = client.GetOrCreateDataset(&quot;mydata&quot;);
+
+// Create the table if it doesn&#39;t exist.
+var table = dataset.GetOrCreateTable(&quot;scores&quot;, new SchemaBuilder
+    {
+        { &quot;player&quot;, SchemaFieldType.String },
+        { &quot;gameStarted&quot;, SchemaFieldType.Timestamp },
+        { &quot;score&quot;, SchemaFieldType.Integer }
+    }.Build());
+
+// Insert a single row. There are many other ways of inserting
+// data into a table.
+table.InsertRow(new Dictionary&lt;string, object&gt; {
+    { &quot;player&quot;, &quot;Bob&quot; },
+    { &quot;score&quot;, 85 },
+    { &quot;gameStarted&quot;, new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
+});
+</code></pre>
 
             </article>
           </div>

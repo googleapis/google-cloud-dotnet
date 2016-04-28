@@ -1,0 +1,3266 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BigqueryClient
+   | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BigqueryClient
+   | Google Cloud APIs ">
+    <meta name="generator" content="docfx 1.8.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Bigquery_V2_BigqueryClient" data-uid="Google.Bigquery.V2.BigqueryClient">Class BigqueryClient
+              </h1>
+              <div class="markdown level0 summary"><p>Abstract class providing operations for Google Cloud Bigquery.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">BigqueryClient</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Bigquery.V2</h6>
+              <h6><strong>Assembly</strong>:Google.Bigquery.V2.dll</h6>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class BigqueryClient</code></pre>
+              </div>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>
+This abstract class is provided to enable testability while permitting
+additional operations to be added in the future. See <see cref="!:Create(GoogleCredential)"></see>
+and <see cref="!:CreateAsync(GoogleCredential)"></see> to construct instances; alternatively, you can
+construct a <a class="xref" href="Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl">BigqueryClientImpl</a> directly from a <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a>.
+</p>
+<p>
+All instance methods declared in this class are virtual, with an implementation which simply
+throws <span class="xref">System.NotImplementedException</span>. All these methods are overridden in <a class="xref" href="Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl">BigqueryClientImpl</a>.
+</p>
+</div>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ProjectId" data-uid="Google.Bigquery.V2.BigqueryClient.ProjectId">ProjectId</h4>
+              <div class="markdown level1 summary"><p>The ID of the project this client operates on. All operations that require a
+project to be specified implicitly supply this ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string ProjectId
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_Service" data-uid="Google.Bigquery.V2.BigqueryClient.Service">Service</h4>
+              <div class="markdown level1 summary"><p>The underlying Bigquery service object used by this client.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_Service_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a> class only provides convenience operations built on top of
+an existing service object. Any more complex operations which are not supported by this wrapper may wish
+to use the same service object as the wrapper, in order to take advantage of its configuration (for authentication,
+application naming etc).</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryService Service
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_Job_" data-uid="Google.Bigquery.V2.BigqueryClient.CancelJob(Google.Apis.Bigquery.v2.Data.Job)">CancelJob(Job)</h4>
+              <div class="markdown level1 summary"><p>Cancels the specified job.
+This method just uses the job&#39;s <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_">CancelJob(JobReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void CancelJob(Job job)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><em>job</em></td>
+                    <td><p>The job to cancel. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_" data-uid="Google.Bigquery.V2.BigqueryClient.CancelJob(Google.Apis.Bigquery.v2.Data.JobReference)">CancelJob(JobReference)</h4>
+              <div class="markdown level1 summary"><p>Cancels a job.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void CancelJob(JobReference jobReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td><p>A fully-qualified identifier for the job. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.CancelJob(System.String)">CancelJob(String)</h4>
+              <div class="markdown level1 summary"><p>Cancels the job with the specified ID in this client&#39;s project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_">CancelJob(JobReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void CancelJob(string jobId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jobId</em></td>
+                    <td><p>The job ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_" data-uid="Google.Bigquery.V2.BigqueryClient.Create(System.String,Google.Apis.Auth.OAuth2.GoogleCredential)">Create(String, GoogleCredential)</h4>
+              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>, using application default credentials if
+no credentials are specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static BigqueryClient Create(string projectId, GoogleCredential credential = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span></td>
+                    <td><em>credential</em></td>
+                    <td><p>Optional <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateAsync(System.String,Google.Apis.Auth.OAuth2.GoogleCredential)">CreateAsync(String, GoogleCredential)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>, using application default credentials if
+no credentials are specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;BigqueryClient&gt; CreateAsync(string projectId, GoogleCredential credential = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span></td>
+                    <td><em>credential</em></td>
+                    <td><p>Optional <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>&gt;</td>
+                    <td><p>The task representing the created <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference)">CreateDataset(DatasetReference)</h4>
+              <div class="markdown level1 summary"><p>Creates the specified dataset.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset CreateDataset(DatasetReference datasetReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td><p>A fully-qualified identifier for the dataset. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The created dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CreateDataset_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String)">CreateDataset(String)</h4>
+              <div class="markdown level1 summary"><p>Creates a dataset with the specified ID in this client&#39;s project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_">CreateDataset(DatasetReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset CreateDataset(string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The new dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The created dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CreateDataset_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String,System.String)">CreateDataset(String, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a dataset with the specified ID in specified project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_">CreateDataset(DatasetReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset CreateDataset(string projectId, string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project in which to create the dataset. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The new dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The created dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CreateQueryJob_System_String_Google_Apis_Bigquery_v2_Data_TableReference_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateQueryJob(System.String,Google.Apis.Bigquery.v2.Data.TableReference)">CreateQueryJob(String, TableReference)</h4>
+              <div class="markdown level1 summary"><p>Creates a query job, optionally writing the results into a separate persitent table.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job CreateQueryJob(string sql, TableReference destinationTable = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sql</em></td>
+                    <td><p>The query in BigQuery&#39;s SQL dialect. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>destinationTable</em></td>
+                    <td><p>A destination table to write the results into. This may be
+null, in which case the results will be stored in a temporary table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>The query job created. Use <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResult_Google_Apis_Bigquery_v2_Data_JobReference_">GetQueryResult(JobReference)</a> to retrieve
+the results of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateTable(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema)">CreateTable(TableReference, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Creates a table with the given schema.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable CreateTable(TableReference tableReference, TableSchema schema)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td><p>A fully-qualified identifier for the table. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema for the new table. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The newly created table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CreateTable_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateTable(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema)">CreateTable(String, String, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Creates a table within this project, specified by a dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_">CreateTable(TableReference, TableSchema)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable CreateTable(string datasetId, string tableId, TableSchema schema)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema for the new table. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The newly created table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_CreateTable_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateTable(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema)">CreateTable(String, String, String, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Creates a table specified by a project ID, dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_">CreateTable(TableReference, TableSchema)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable CreateTable(string projectId, string datasetId, string tableId, TableSchema schema)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema for the new table. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The newly created table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteDataset(Google.Apis.Bigquery.v2.Data.DatasetReference)">DeleteDataset(DatasetReference)</h4>
+              <div class="markdown level1 summary"><p>Deletes the specified dataset.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void DeleteDataset(DatasetReference datasetReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td><p>A fully-qualified identifier for the dataset. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String)">DeleteDataset(String)</h4>
+              <div class="markdown level1 summary"><p>Deletes the specified dataset within this client&#39;s project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_">DeleteDataset(DatasetReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void DeleteDataset(string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String,System.String)">DeleteDataset(String, String)</h4>
+              <div class="markdown level1 summary"><p>Deletes the specified dataset within the given project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_">DeleteDataset(DatasetReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void DeleteDataset(string projectId, string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteTable(Google.Apis.Bigquery.v2.Data.TableReference)">DeleteTable(TableReference)</h4>
+              <div class="markdown level1 summary"><p>Deletes a table.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void DeleteTable(TableReference tableReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td><p>A fully-qualified identifier for the table. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String,System.String)">DeleteTable(String, String)</h4>
+              <div class="markdown level1 summary"><p>Deletes a table within this project specified by dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_">DeleteTable(TableReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void DeleteTable(string datasetId, string tableId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String,System.String,System.String)">DeleteTable(String, String, String)</h4>
+              <div class="markdown level1 summary"><p>Deletes a table specified by project ID, dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_">DeleteTable(TableReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void DeleteTable(string projectId, string datasetId, string tableId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ExecuteQuery_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.ExecuteQuery(System.String)">ExecuteQuery(String)</h4>
+              <div class="markdown level1 summary"><p>Executes a query synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryResult ExecuteQuery(string sql)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sql</em></td>
+                    <td><p>The query in BigQuery&#39;s SQL dialect. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td><p>The result of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDataset(Google.Apis.Bigquery.v2.Data.DatasetReference)">GetDataset(DatasetReference)</h4>
+              <div class="markdown level1 summary"><p>Retrieves a dataset.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset GetDataset(DatasetReference datasetReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td><p>A fully-qualified identifier for the dataset. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The requested dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetDataset_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDataset(System.String)">GetDataset(String)</h4>
+              <div class="markdown level1 summary"><p>Retrieves a dataset within this client&#39;s project given the dataset ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_">GetDataset(DatasetReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset GetDataset(string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The requested dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetDataset_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDataset(System.String,System.String)">GetDataset(String, String)</h4>
+              <div class="markdown level1 summary"><p>Retrieves a dataset given a project ID and dataset ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_">GetDataset(DatasetReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset GetDataset(string projectId, string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The requested dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetDatasetReference_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String)">GetDatasetReference(String)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> from the given dataset ID,
+using this client&#39;s project ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatasetReference GetDatasetReference(string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><p>A <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> representing the requested dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetDatasetReference_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String,System.String)">GetDatasetReference(String, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> from the given project ID and dataset ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatasetReference GetDatasetReference(string projectId, string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><p>A <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> representing the requested dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetJob_Google_Apis_Bigquery_v2_Data_JobReference_" data-uid="Google.Bigquery.V2.BigqueryClient.GetJob(Google.Apis.Bigquery.v2.Data.JobReference)">GetJob(JobReference)</h4>
+              <div class="markdown level1 summary"><p>Retrieves a job.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job GetJob(JobReference jobReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td><p>A fully-qualified identifier for the job. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>The retrieved job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetJob_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetJob(System.String)">GetJob(String)</h4>
+              <div class="markdown level1 summary"><p>Retrieves the job with the specified ID within this client&#39;s project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_Google_Apis_Bigquery_v2_Data_JobReference_">GetJob(JobReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job GetJob(string jobId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jobId</em></td>
+                    <td><p>The job ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>The retrieved job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String)">GetJobReference(String)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> from the given job ID,
+using this client&#39;s project ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public JobReference GetJobReference(string jobId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jobId</em></td>
+                    <td><p>The job ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><p>A <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> representing the requested job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference)">GetOrCreateDataset(DatasetReference)</h4>
+              <div class="markdown level1 summary"><p>Attempts to fetch the specified dataset, creating it if it doesn&#39;t exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset GetOrCreateDataset(DatasetReference datasetReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td><p>A fully-qualified identifier for the dataset. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The existing or new dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String)">GetOrCreateDataset(String)</h4>
+              <div class="markdown level1 summary"><p>Attempts to fetch the specified dataset within this client&#39;s project, creating it if it doesn&#39;t exist.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_">GetOrCreateDataset(DatasetReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset GetOrCreateDataset(string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The existing or new dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String,System.String)">GetOrCreateDataset(String, String)</h4>
+              <div class="markdown level1 summary"><p>Attempts to fetch the specified dataset within the given project, creating it if it doesn&#39;t exist.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_">GetOrCreateDataset(DatasetReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryDataset GetOrCreateDataset(string projectId, string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td><p>The existing or new dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema)">GetOrCreateTable(TableReference, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Attempts to fetch a table, creating it if it doesn&#39;t exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable GetOrCreateTable(TableReference tableReference, TableSchema schema)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td><p>A fully-qualified identifier for the table. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema to use to create the table if necessary. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The existing or new table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema)">GetOrCreateTable(String, String, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Attempts to fetch the specified table within this client&#39;s project, creating it if it doesn&#39;t exist.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_">GetOrCreateTable(TableReference, TableSchema)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable GetOrCreateTable(string datasetId, string tableId, TableSchema schema)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema to use to create the table if necessary. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The existing or new table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema)">GetOrCreateTable(String, String, String, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Attempts to fetch a table specified by project ID, dataset ID and table ID, creating it if it doesn&#39;t exist.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_">GetOrCreateTable(TableReference, TableSchema)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable GetOrCreateTable(string projectId, string datasetId, string tableId, TableSchema schema)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema to use to create the table if necessary. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The existing or new table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetProjectReference_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetProjectReference(System.String)">GetProjectReference(String)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> from the given project ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ProjectReference GetProjectReference(string projectId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a></td>
+                    <td><p>A <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> representing the requested project.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetQueryResult_Google_Apis_Bigquery_v2_Data_Job_" data-uid="Google.Bigquery.V2.BigqueryClient.GetQueryResult(Google.Apis.Bigquery.v2.Data.Job)">GetQueryResult(Job)</h4>
+              <div class="markdown level1 summary"><p>Retrieves the results of the given query job.
+This method just uses the job&#39;s <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResult_Google_Apis_Bigquery_v2_Data_JobReference_">GetQueryResult(JobReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryResult GetQueryResult(Job job)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><em>job</em></td>
+                    <td><p>The query job. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td><p>The results of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetQueryResult_Google_Apis_Bigquery_v2_Data_JobReference_" data-uid="Google.Bigquery.V2.BigqueryClient.GetQueryResult(Google.Apis.Bigquery.v2.Data.JobReference)">GetQueryResult(JobReference)</h4>
+              <div class="markdown level1 summary"><p>Retrieves the results of a query job.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryResult GetQueryResult(JobReference jobReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td><p>A fully-qualified identifier for the job. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td><p>The results of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetQueryResult_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetQueryResult(System.String)">GetQueryResult(String)</h4>
+              <div class="markdown level1 summary"><p>Retrieves the results of the query job with the specified ID in this clients project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResult_Google_Apis_Bigquery_v2_Data_JobReference_">GetQueryResult(JobReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryResult GetQueryResult(string jobId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jobId</em></td>
+                    <td><p>The job ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td><p>The results of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTable(Google.Apis.Bigquery.v2.Data.TableReference)">GetTable(TableReference)</h4>
+              <div class="markdown level1 summary"><p>Retrieves a table.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable GetTable(TableReference tableReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td><p>A fully-qualified identifier for the table. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The requested table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTable(System.String,System.String)">GetTable(String, String)</h4>
+              <div class="markdown level1 summary"><p>Retrieves a table within this client&#39;s project given the dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_">GetTable(TableReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable GetTable(string datasetId, string tableId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The requested dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTable(System.String,System.String,System.String)">GetTable(String, String, String)</h4>
+              <div class="markdown level1 summary"><p>Retrieves a table given a project ID, dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_">GetTable(TableReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryTable GetTable(string projectId, string datasetId, string tableId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td><p>The requested dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetTableReference_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String,System.String)">GetTableReference(String, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> from the given dataset ID and table ID,
+using this client&#39;s project ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TableReference GetTableReference(string datasetId, string tableId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><p>A <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> representing the requested table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_GetTableReference_System_String_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String,System.String,System.String)">GetTableReference(String, String, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> from the given project ID, dataset ID and table ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TableReference GetTableReference(string projectId, string datasetId, string tableId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><p>A <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> representing the requested table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_InsertRow_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.InsertRow(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">InsertRow(TableReference, IDictionary&lt;String, Object&gt;, String)</h4>
+              <div class="markdown level1 summary"><p>Inserts a single row of data into a table.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void InsertRow(TableReference tableReference, IDictionary&lt;string, object&gt; rowData, string insertId = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td><p>A fully-qualified identifier for the table. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+                    <td><em>rowData</em></td>
+                    <td><p>The data to insert. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>insertId</em></td>
+                    <td><p>The ID for the insertion, used to avoid data duplication. May be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_InsertRow_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.InsertRow(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">InsertRow(String, String, IDictionary&lt;String, Object&gt;, String)</h4>
+              <div class="markdown level1 summary"><p>Inserts a single row of data into a table in this client&#39;s project specified by dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertRow_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_">InsertRow(TableReference, IDictionary&lt;String, Object&gt;, String)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void InsertRow(string datasetId, string tableId, IDictionary&lt;string, object&gt; rowData, string insertId = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+                    <td><em>rowData</em></td>
+                    <td><p>The data to insert. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>insertId</em></td>
+                    <td><p>The ID for the insertion, used to avoid data duplication. May be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_InsertRow_System_String_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.InsertRow(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">InsertRow(String, String, String, IDictionary&lt;String, Object&gt;, String)</h4>
+              <div class="markdown level1 summary"><p>Inserts a single row of data into a table specified by project ID, dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertRow_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_">InsertRow(TableReference, IDictionary&lt;String, Object&gt;, String)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void InsertRow(string projectId, string datasetId, string tableId, IDictionary&lt;string, object&gt; rowData, string insertId = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+                    <td><em>rowData</em></td>
+                    <td><p>The data to insert. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>insertId</em></td>
+                    <td><p>The ID for the insertion, used to avoid data duplication. May be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Google.Bigquery.V2.BigqueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.Collections.Generic.IDictionary{System.String,System.Object}})">InsertRows(TableReference, IEnumerable&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
+              <div class="markdown level1 summary"><p>Inserts all the given rows of data into a table.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void InsertRows(TableReference tableReference, IEnumerable&lt;IDictionary&lt;string, object&gt;&gt; rowData)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td><p>A fully-qualified identifier for the table. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+                    <td><em>rowData</em></td>
+                    <td><p>The data to insert. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_InsertRows_System_String_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Google.Bigquery.V2.BigqueryClient.InsertRows(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.IDictionary{System.String,System.Object}})">InsertRows(String, String, IEnumerable&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
+              <div class="markdown level1 summary"><p>Inserts all the given rows of data into a table in this client&#39;s project specified by dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_Collections_Generic_IDictionary_System_String_System_Object___">InsertRows(TableReference, IEnumerable&lt;IDictionary&lt;String, Object&gt;&gt;)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void InsertRows(string datasetId, string tableId, IEnumerable&lt;IDictionary&lt;string, object&gt;&gt; rowData)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+                    <td><em>rowData</em></td>
+                    <td><p>The data to insert. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_InsertRows_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Google.Bigquery.V2.BigqueryClient.InsertRows(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.IDictionary{System.String,System.Object}})">InsertRows(String, String, String, IEnumerable&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
+              <div class="markdown level1 summary"><p>Inserts all the given rows of data into a table specified by project ID, dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_Collections_Generic_IDictionary_System_String_System_Object___">InsertRows(TableReference, IEnumerable&lt;IDictionary&lt;String, Object&gt;&gt;)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void InsertRows(string projectId, string datasetId, string tableId, IEnumerable&lt;IDictionary&lt;string, object&gt;&gt; rowData)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+                    <td><em>rowData</em></td>
+                    <td><p>The data to insert. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListDatasets(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)">ListDatasets(ProjectReference, ListDatasetsOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the datasets within the specified project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryDataset&gt; ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a></td>
+                    <td><em>projectReference</em></td>
+                    <td><p>A fully-qualified identifier for the project. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListDatasetsOptions.html#Google_Bigquery_V2_ListDatasetsOptions">ListDatasetsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td><p>The datasets within the specified project.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListDatasets(Google.Bigquery.V2.ListDatasetsOptions)">ListDatasets(ListDatasetsOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the datasets within this client&#39;s project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryDataset&gt; ListDatasets(ListDatasetsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListDatasetsOptions.html#Google_Bigquery_V2_ListDatasetsOptions">ListDatasetsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td><p>The datasets within this project.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListDatasets_System_String_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListDatasets(System.String,Google.Bigquery.V2.ListDatasetsOptions)">ListDatasets(String, ListDatasetsOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the datasets within the specified project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryDataset&gt; ListDatasets(string projectId, ListDatasetsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project to list the datasets from. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListDatasetsOptions.html#Google_Bigquery_V2_ListDatasetsOptions">ListDatasetsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td><p>The datasets within the specified project.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Bigquery.V2.ListJobsOptions)">ListJobs(ListJobsOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the jobs in this client&#39;s project.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;JobList.JobsData&gt; ListJobs(ListJobsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListJobsOptions.html#Google_Bigquery_V2_ListJobsOptions">ListJobsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobList.JobsData.html#Google_Apis_Bigquery_v2_Data_JobList_JobsData">JobList.JobsData</a>&gt;</td>
+                    <td><p>The jobs in this client&#39;s projects.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.ListRows(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema)">ListRows(TableReference, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Lists the rows within a table, similar to a <pre><code>SELECT * FROM ...</code></pre> query.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryResult ListRows(TableReference tableReference, TableSchema schema = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td><p>A fully-qualified identifier for the table. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema to use when interpreting results. This may be null, in which case it will be fetched from
+the table first.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td><p>The results of listing the rows within the table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema)">ListRows(String, String, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Lists the rows within a table within this client&#39;s project specified by dataset ID and table ID, similar to a <pre><code>SELECT * FROM ...</code></pre> query.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_">ListRows(TableReference, TableSchema)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryResult ListRows(string datasetId, string tableId, TableSchema schema = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema to use when interpreting results. This may be null, in which case it will be fetched from
+the table first.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td><p>The results of listing the rows within the table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema)">ListRows(String, String, String, TableSchema)</h4>
+              <div class="markdown level1 summary"><p>Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <pre><code>SELECT * FROM ...</code></pre> query.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_">ListRows(TableReference, TableSchema)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BigqueryResult ListRows(string projectId, string datasetId, string tableId, TableSchema schema = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema to use when interpreting results. This may be null, in which case it will be fetched from
+the table first.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td><p>The results of listing the rows within the table.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListTables(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.ListTablesOptions)">ListTables(DatasetReference, ListTablesOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the tables in a dataset.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryTable&gt; ListTables(DatasetReference datasetReference, ListTablesOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td><p>A fully-qualified identifier for the dataset. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListTablesOptions.html#Google_Bigquery_V2_ListTablesOptions">ListTablesOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td><p>The tables within the dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListTables_System_String_Google_Bigquery_V2_ListTablesOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListTables(System.String,Google.Bigquery.V2.ListTablesOptions)">ListTables(String, ListTablesOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by dataset ID, where the dataset is in this client&#39;s project.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">ListTables(DatasetReference, ListTablesOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryTable&gt; ListTables(string datasetId, ListTablesOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The ID of the dataset to list tables from. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListTablesOptions.html#Google_Bigquery_V2_ListTablesOptions">ListTablesOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td><p>The tables within the dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_ListTables_System_String_System_String_Google_Bigquery_V2_ListTablesOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListTables(System.String,System.String,Google.Bigquery.V2.ListTablesOptions)">ListTables(String, String, ListTablesOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by project ID and dataset ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">ListTables(DatasetReference, ListTablesOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryTable&gt; ListTables(string projectId, string datasetId, ListTablesOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project containing the dataset. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The ID of the dataset to list tables from. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListTablesOptions.html#Google_Bigquery_V2_ListTablesOptions">ListTablesOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td><p>The tables within the dataset.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_Job_" data-uid="Google.Bigquery.V2.BigqueryClient.PollJob(Google.Apis.Bigquery.v2.Data.Job)">PollJob(Job)</h4>
+              <div class="markdown level1 summary"><p>Polls the specified job for completion.
+This method just uses the job&#39;s <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_JobReference_">PollJob(JobReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job PollJob(Job job)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><em>job</em></td>
+                    <td><p>The job to poll. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>The completed job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_JobReference_" data-uid="Google.Bigquery.V2.BigqueryClient.PollJob(Google.Apis.Bigquery.v2.Data.JobReference)">PollJob(JobReference)</h4>
+              <div class="markdown level1 summary"><p>Polls the specified job for completion.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job PollJob(JobReference jobReference)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td><p>A fully-qualified identifier for the job. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>The completed job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_PollJob_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.PollJob(System.String)">PollJob(String)</h4>
+              <div class="markdown level1 summary"><p>Polls the job with the specified ID in this client&#39;s project for completion.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_JobReference_">PollJob(JobReference)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job PollJob(string jobId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>jobId</em></td>
+                    <td><p>The job ID. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>The completed job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadCsv(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream)">UploadCsv(TableReference, TableSchema, Stream)</h4>
+              <div class="markdown level1 summary"><p>Uploads a stream of CSV data to a table.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job UploadCsv(TableReference tableReference, TableSchema schema, Stream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>A data upload job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream)">UploadCsv(String, String, TableSchema, Stream)</h4>
+              <div class="markdown level1 summary"><p>Uploads a stream of CSV data to a table in this project specified by dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_">UploadCsv(TableReference, TableSchema, Stream)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job UploadCsv(string datasetId, string tableId, TableSchema schema, Stream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>A data upload job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream)">UploadCsv(String, String, String, TableSchema, Stream)</h4>
+              <div class="markdown level1 summary"><p>Uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_">UploadCsv(TableReference, TableSchema, Stream)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job UploadCsv(string projectId, string datasetId, string tableId, TableSchema schema, Stream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>A data upload job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadJson(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream)">UploadJson(TableReference, TableSchema, Stream)</h4>
+              <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job UploadJson(TableReference tableReference, TableSchema schema, Stream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td><p>A fully-qualified identifier for the table. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>A data upload job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadJson(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream)">UploadJson(String, String, TableSchema, Stream)</h4>
+              <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table in this client&#39;s project specified by dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_">UploadJson(TableReference, TableSchema, Stream)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job UploadJson(string datasetId, string tableId, TableSchema schema, Stream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>A data upload job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClient_UploadJson_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadJson(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream)">UploadJson(String, String, String, TableSchema, Stream)</h4>
+              <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_">UploadJson(TableReference, TableSchema, Stream)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Job UploadJson(string projectId, string datasetId, string tableId, TableSchema schema, Stream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td><p>The dataset ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tableId</em></td>
+                    <td><p>The table ID. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td><p>The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><p>A data upload job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

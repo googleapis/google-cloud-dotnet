@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StorageClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.7.1.0">
+    <meta name="generator" content="docfx 1.8.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,16 +86,16 @@
                 <pre><code class="lang-csharp hljs">public abstract class StorageClient</code></pre>
               </div>
               <h5 id="Google_Storage_V1_StorageClient_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><para>
+              <div class="markdown level0 remarks"><p>
 This abstract class is provided to enable testability while permitting
 additional operations to be added in the future. See <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(GoogleCredential)</a>
 and <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_">CreateAsync(GoogleCredential)</a> to construct instances; alternatively, you can
-construct a <a class="xref" href="Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl">StorageClientImpl</a> directly from a <span class="xref">Google.Apis.Storage.v1.StorageService</span>.
-</para>
-<para>
+construct a <a class="xref" href="Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl">StorageClientImpl</a> directly from a <a class="xref" href="Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService">StorageService</a>.
+</p>
+<p>
 All instance methods declared in this class are virtual, with an implementation which simply
 throws <span class="xref">System.NotImplementedException</span>. All these methods are overridden in <a class="xref" href="Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl">StorageClientImpl</a>.
-</para>
+</p>
 </div>
               <h3 id="properties">Properties
               </h3>
@@ -126,7 +126,7 @@ application naming etc).</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.StorageService</span></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService">StorageService</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -230,7 +230,7 @@ no credentials are specified.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 id="Google_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><para>
+              <div class="markdown level1 remarks"><p>
 By default this will delete the latest version of the object, but this can be
 controlled using <a class="xref" href="Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. Note that any generation information
 contained within <em>obj</em> is ignored; the generation to delete is only controlled
@@ -238,16 +238,16 @@ via <em>options</em>. For buckets that support
 multiple versions, implicitly deleting the latest version only archives
 it so the object is still available and can be listed by specifying <a class="xref" href="Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
 If the version is explicitly specified, the object is permanently deleted.
-</para>
-<para>
+</p>
+<p>
 If the bucket containing the object supports versioning, after this operation
 completes successfully there may still be another version of the same object. In buckets which
 do not support versioning, this operation will permanently delete the object.
-</para>
-<para>
+</p>
+<p>
 If the request attempts to delete an object that does not exist or a specific version that does
 not exist, this counts as a failure with an HTTP status code of 404.
-</para>
+</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -264,7 +264,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
                     <td><em>obj</em></td>
                     <td><p>Object to delete. Must not be null, and must have the name and bucket populated.</p>
 </td>
@@ -283,22 +283,22 @@ defaults will be used.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 id="Google_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Storage_V1_DeleteObjectOptions__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><para>
+              <div class="markdown level1 remarks"><p>
 By default this will delete the latest version of the object, but this can be
 controlled using <a class="xref" href="Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. For buckets that support
 multiple versions, implicitly deleting the latest version only archives
 it so the object is still available and can be listed by specifying <a class="xref" href="Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
 If the version is explicitly specified, the object is permanently deleted.
-</para>
-<para>
+</p>
+<p>
 If the bucket containing the object supports versioning, after this operation
 completes successfully there may still be another version of the same object. In buckets which
 do not support versioning, this operation will permanently delete the object.
-</para>
-<para>
+</p>
+<p>
 If the request attempts to delete an object that does not exist or a specific version that does
 not exist, this counts as a failure with an HTTP status code of 404.
-</para>
+</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -340,7 +340,7 @@ defaults will be used.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 id="Google_Storage_V1_StorageClient_DeleteObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><para>
+              <div class="markdown level1 remarks"><p>
 By default this will delete the latest version of the object, but this can be
 controlled using <a class="xref" href="Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. Note that any generation information
 contained within <em>obj</em> is ignored; the generation to delete is only controlled
@@ -348,16 +348,16 @@ via <em>options</em>. For buckets that support
 multiple versions, implicitly deleting the latest version only archives
 it so the object is still available and can be listed by specifying <a class="xref" href="Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
 If the version is explicitly specified, the object is permanently deleted.
-</para>
-<para>
+</p>
+<p>
 If the bucket containing the object supports versioning, after this operation
 completes successfully there may still be another version of the same object. In buckets which
 do not support versioning, this operation will permanently delete the object.
-</para>
-<para>
+</p>
+<p>
 If the request attempts to delete an object that does not exist or a specific version that does
 not exist, this counts as a failure with an HTTP status code of 404.
-</para>
+</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -374,7 +374,7 @@ not exist, this counts as a failure with an HTTP status code of 404.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
                     <td><em>obj</em></td>
                     <td><p>Object to delete. Must not be null, and must have the name and bucket populated.</p>
 </td>
@@ -415,22 +415,22 @@ defaults will be used.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 id="Google_Storage_V1_StorageClient_DeleteObjectAsync_System_String_System_String_Google_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><para>
+              <div class="markdown level1 remarks"><p>
 By default this will delete the latest version of the object, but this can be
 controlled using <a class="xref" href="Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. For buckets that support
 multiple versions, implicitly deleting the latest version only archives
 it so the object is still available and can be listed by specifying <a class="xref" href="Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
 If the version is explicitly specified, the object is permanently deleted.
-</para>
-<para>
+</p>
+<p>
 If the bucket containing the object supports versioning, after this operation
 completes successfully there may still be another version of the same object. In buckets which
 do not support versioning, this operation will permanently delete the object.
-</para>
-<para>
+</p>
+<p>
 If the request attempts to delete an object that does not exist or a specific version that does
 not exist, this counts as a failure with an HTTP status code of 404.
-</para>
+</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -512,7 +512,7 @@ To download a specific generation, use <a class="xref" href="Google.Storage.V1.D
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
                     <td><em>source</em></td>
                     <td><p>Source object to download the data from. Must not be null.</p>
 </td>
@@ -531,7 +531,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the download. May be null.</p>
 </td>
@@ -582,7 +582,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the download. May be null.</p>
 </td>
@@ -612,7 +612,7 @@ To download a specific generation, use <a class="xref" href="Google.Storage.V1.D
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
                     <td><em>source</em></td>
                     <td><p>Source object to download the data from. Must not be null.</p>
 </td>
@@ -637,7 +637,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the download. May be null.</p>
 </td>
@@ -710,7 +710,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the download. May be null.</p>
 </td>
@@ -786,8 +786,8 @@ defaults will be used.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
-                    <td><p>The <span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the storage object.</p>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the storage object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -851,9 +851,9 @@ defaults will be used.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the storage object.</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the storage object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -911,7 +911,7 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Bucket</span>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;&gt;</td>
                     <td><p>A list of buckets within the project.</p>
 </td>
                   </tr>
@@ -977,7 +977,7 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;&gt;</td>
                     <td><p>A list of objects within the bucket.</p>
 </td>
                   </tr>
@@ -990,7 +990,7 @@ defaults will be supplied.</p>
               <h5 id="Google_Storage_V1_StorageClient_ListBuckets_System_String_Google_Storage_V1_ListBucketsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
 for a page of results at a time, as required. To retrieve all the buckets in a single collection,
-simply call LINQ&#39;s <c>ToList()</c> method on the returned sequence.</p>
+simply call LINQ&#39;s <code>ToList()</code> method on the returned sequence.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1031,7 +1031,7 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Bucket</span>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
                     <td><p>A sequence of buckets within the project.</p>
 </td>
                   </tr>
@@ -1044,7 +1044,7 @@ defaults will be supplied.</p>
               <h5 id="Google_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Storage_V1_ListObjectsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
 for a page of results at a time, as required. To retrieve all the objects in a single collection,
-simply call LINQ&#39;s <c>ToList()</c> method on the returned sequence.</p>
+simply call LINQ&#39;s <code>ToList()</code> method on the returned sequence.</p>
 </div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1092,7 +1092,7 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
                     <td><p>A sequence of objects within the bucket.</p>
 </td>
                   </tr>
@@ -1117,7 +1117,7 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
                     <td><em>destination</em></td>
                     <td><p>Object to create or update. Must not be null, and must have the name,
 bucket and content type populated.</p>
@@ -1137,7 +1137,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress">IUploadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
 </td>
@@ -1154,8 +1154,8 @@ defaults will be used.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
-                    <td><p>The <span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1211,7 +1211,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress">IUploadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
 </td>
@@ -1228,8 +1228,8 @@ defaults will be used.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
-                    <td><p>The <span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1253,7 +1253,7 @@ defaults will be used.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Storage.v1.Data.Object</span></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
                     <td><em>destination</em></td>
                     <td><p>Object to create or update. Must not be null, and must have the name,
 bucket and content type populated.</p>
@@ -1279,7 +1279,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress">IUploadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
 </td>
@@ -1296,9 +1296,9 @@ defaults will be used.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1358,9 +1358,9 @@ such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. Must not 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1422,7 +1422,7 @@ defaults will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
+                    <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress">IUploadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
 </td>
@@ -1439,9 +1439,9 @@ defaults will be used.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><span class="xref">Google.Apis.Storage.v1.Data.Object</span> representation of the uploaded object.</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the uploaded object.</p>
 </td>
                   </tr>
                 </tbody>

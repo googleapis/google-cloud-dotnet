@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WriteLogEntriesRequest
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.7.1.0">
+    <meta name="generator" content="docfx 1.8.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -125,7 +125,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int EntriesFieldNumber</code></pre>
+                <pre><code class="lang-csharp hljs">public const int EntriesFieldNumber = 4</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +148,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int LabelsFieldNumber</code></pre>
+                <pre><code class="lang-csharp hljs">public const int LabelsFieldNumber = 3</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -171,7 +171,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int LogNameFieldNumber</code></pre>
+                <pre><code class="lang-csharp hljs">public const int LogNameFieldNumber = 1</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -194,7 +194,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int ResourceFieldNumber</code></pre>
+                <pre><code class="lang-csharp hljs">public const int ResourceFieldNumber = 2</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -220,7 +220,9 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -233,7 +235,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -247,7 +249,9 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public RepeatedField&lt;LogEntry&gt; Entries
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -260,7 +264,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField%601.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -272,7 +276,9 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -285,7 +291,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -301,7 +307,9 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -314,7 +322,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.MapField</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><a class="xref" href="Google.Protobuf.Collections.MapField%602.html#Google_Protobuf_Collections_MapField_2">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -330,8 +338,11 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string LogName
 {
+
     get;
+
     set;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -356,7 +367,9 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static MessageParser&lt;WriteLogEntriesRequest&gt; Parser
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -369,7 +382,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Logging.V2.WriteLogEntriesRequest.html#Google_Logging_V2_WriteLogEntriesRequest">WriteLogEntriesRequest</a>&gt;</td>
+                    <td><a class="xref" href="Google.Protobuf.MessageParser%601.html#Google_Protobuf_MessageParser_1">MessageParser</a>&lt;<a class="xref" href="Google.Logging.V2.WriteLogEntriesRequest.html#Google_Logging_V2_WriteLogEntriesRequest">WriteLogEntriesRequest</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -383,8 +396,11 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public MonitoredResource Resource
 {
+
     get;
+
     set;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -397,7 +413,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -590,7 +606,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
+                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
@@ -636,7 +652,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
+                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>

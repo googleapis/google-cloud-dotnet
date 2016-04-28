@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DatasetsResource.DeleteRequest
+   | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DatasetsResource.DeleteRequest
+   | Google Cloud APIs ">
+    <meta name="generator" content="docfx 1.8.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest">Class DatasetsResource.DeleteRequest
+              </h1>
+              <div class="markdown level0 summary"><p>Deletes the dataset specified by the datasetId value. Before you can delete a dataset, you must
+delete all its tables, either manually or by specifying deleteContents. Immediately after deletion, you can
+create another dataset with the same name.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Google.Apis.Bigquery.v2.BigqueryBaseServiceRequest%601.html#Google_Apis_Bigquery_v2_BigqueryBaseServiceRequest_1">BigqueryBaseServiceRequest</a>&lt;<span class="xref">System.String</span>&gt;</div>
+                  <div class="level2"><span class="xref">DatasetsResource.DeleteRequest</span></div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2</h6>
+              <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
+              <h5 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class DeleteRequest : BigqueryBaseServiceRequest&lt;string&gt;</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">DeleteRequest(Services.IClientService, String, String)</h4>
+              <div class="markdown level1 summary"><p>Constructs a new Delete request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DeleteRequest(Services.IClientService service, string projectId, string datasetId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService">Services.IClientService</a></td>
+                    <td><em>service</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>datasetId</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest_DatasetId" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.DatasetId">DatasetId</h4>
+              <div class="markdown level1 summary"><p>Dataset ID of dataset being deleted</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string DatasetId
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest_DeleteContents" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.DeleteContents">DeleteContents</h4>
+              <div class="markdown level1 summary"><p>If True, delete all the tables in the dataset. If False and the dataset contains tables, the
+request will fail. Default is False</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual System.Nullable&lt;bool&gt; DeleteContents
+{
+    get;
+    set;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest_HttpMethod" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.HttpMethod">HttpMethod</h4>
+              <div class="markdown level1 summary"><p>Gets the HTTP method.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string HttpMethod
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest_MethodName" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.MethodName">MethodName</h4>
+              <div class="markdown level1 summary"><p>Gets the method name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string MethodName
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest_ProjectId" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.ProjectId">ProjectId</h4>
+              <div class="markdown level1 summary"><p>Project ID of the dataset being deleted</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string ProjectId
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest_RestPath" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.RestPath">RestPath</h4>
+              <div class="markdown level1 summary"><p>Gets the REST path.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string RestPath
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Apis_Bigquery_v2_DatasetsResource_DeleteRequest_InitParameters" data-uid="Google.Apis.Bigquery.v2.DatasetsResource.DeleteRequest.InitParameters">InitParameters()</h4>
+              <div class="markdown level1 summary"><p>Initializes Delete parameter list.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void InitParameters()</code></pre>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PullRequest
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.7.1.0">
+    <meta name="generator" content="docfx 1.8.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -125,7 +125,7 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int MaxMessagesFieldNumber</code></pre>
+                <pre><code class="lang-csharp hljs">public const int MaxMessagesFieldNumber = 3</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +148,7 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int ReturnImmediatelyFieldNumber</code></pre>
+                <pre><code class="lang-csharp hljs">public const int ReturnImmediatelyFieldNumber = 2</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -171,7 +171,7 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int SubscriptionFieldNumber</code></pre>
+                <pre><code class="lang-csharp hljs">public const int SubscriptionFieldNumber = 1</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -197,7 +197,9 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -210,7 +212,7 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -222,7 +224,9 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -235,7 +239,7 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -249,8 +253,11 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public int MaxMessages
 {
+
     get;
+
     set;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -275,7 +282,9 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static MessageParser&lt;PullRequest&gt; Parser
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -288,7 +297,7 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Pubsub.V1.PullRequest.html#Google_Pubsub_V1_PullRequest">PullRequest</a>&gt;</td>
+                    <td><a class="xref" href="Google.Protobuf.MessageParser%601.html#Google_Protobuf_MessageParser_1">MessageParser</a>&lt;<a class="xref" href="Google.Pubsub.V1.PullRequest.html#Google_Pubsub_V1_PullRequest">PullRequest</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -305,8 +314,11 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public bool ReturnImmediately
 {
+
     get;
+
     set;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -332,8 +344,11 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Subscription
 {
+
     get;
+
     set;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -515,7 +530,7 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
+                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
@@ -585,7 +600,7 @@ public sealed class PullRequest : IMessage&lt;PullRequest&gt;, IMessage, IEquata
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
+                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
