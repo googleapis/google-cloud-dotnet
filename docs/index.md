@@ -98,7 +98,7 @@ A wrapper library over
 for working with [Google BigQuery](https://cloud.google.com/bigquery/)
 
 Common operations are exposed via the
-[`BigqueryClient`](obj/api/Google.Bigquery.V1.BigqueryClient.yml)
+[`BigqueryClient`](obj/api/Google.Bigquery.V2.BigqueryClient.yml)
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.
 
