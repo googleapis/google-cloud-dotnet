@@ -47,7 +47,7 @@ namespace Google.Storage.V1
         /// to use the same service object as the wrapper, in order to take advantage of its configuration (for authentication,
         /// application naming etc).
         /// </remarks>
-        public virtual StorageService Service { get; }
+        public virtual StorageService Service { get { throw new NotImplementedException(); } }
 
         /// <summary>
         /// Asynchronously creates a <see cref="StorageClient"/>, using application default credentials if
