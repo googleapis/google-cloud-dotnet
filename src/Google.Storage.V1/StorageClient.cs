@@ -16,6 +16,7 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Storage.v1;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Google.Storage.V1
@@ -73,7 +74,17 @@ namespace Google.Storage.V1
         /// <returns>The created <see cref="StorageClient"/>.</returns>
         public static StorageClient Create(GoogleCredential credential = null)
         {
-            credential = credential ?? Task.Run(() => GoogleCredential.GetApplicationDefaultAsync()).Result;
+            try
+            {
+                credential = credential ?? Task.Run(() => GoogleCredential.GetApplicationDefaultAsync()).Result;
+            }
+            catch (AggregateException e)
+            {
+                // Unwrap the first exception, a bit like await would.
+                // It's very unlikely that we'd ever see an AggregateException without an inner exceptions,
+                // but let's handle it relatively gracefully.
+                throw e.InnerExceptions.FirstOrDefault() ?? e;
+            }
             if (credential.IsCreateScopedRequired)
             {
                 credential = credential.CreateScoped(StorageService.Scope.DevstorageFullControl);
