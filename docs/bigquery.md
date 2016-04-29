@@ -19,7 +19,6 @@ work items:
 - Async operations. (API design is progressing with sync-only
   operations; asynchrony will be added when we're done with that
   first pass.)
-- Possibly `BigqueryJob` like `BigqueryTable` etc.
 
 ## `BigqueryClient`
 
@@ -35,8 +34,8 @@ and documented in `BigqueryClient`, as virtual methods which throw
 `BigqueryClientImpl`.
 
 The canonical way of identifying any of the entities is via a *reference*,
-e.g. `DatasetReference`, `JobReference`, `TableReference`. It is
-easy to construct a reference either manually or via
+e.g. `DatasetReference`, `JobReference`, `TableReference`,
+`ProjectReference`. It is easy to construct a reference either manually or via
 `BigqueryClient` or a parent entity (e.g.
 `BigqueryDataset.GetTableReference`).
 
@@ -56,8 +55,7 @@ require faking for test purposes.
 all Bigquery operations require a project ID, and almost all
 operations will use the same one. The project ID is typically used
 as an invisible default, but it is still possible to query a
-dataset/table in a different project. (Jobs are effectively private
-to the project owning them.)
+dataset/table/job in a different project.
 
 ## Datasets, tables and results
 

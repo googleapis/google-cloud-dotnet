@@ -17,6 +17,7 @@ using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace Google.Bigquery.V2
@@ -30,28 +31,30 @@ namespace Google.Bigquery.V2
                 response => response.Jobs);
 
         /// <inheritdoc />
-        public override IEnumerable<JobList.JobsData> ListJobs(ListJobsOptions options = null)
+        public override IEnumerable<BigqueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
         {
-            var initialRequest = CreateListJobsRequest(options);
-            return s_jobsPageStreamer.Fetch(initialRequest);
+            Preconditions.CheckNotNull(projectReference, nameof(projectReference));
+
+            var initialRequest = CreateListJobsRequest(projectReference, options);
+            return s_jobsPageStreamer.Fetch(initialRequest).Select(job => new BigqueryJob(this, job));
         }
 
-        private JobsResource.ListRequest CreateListJobsRequest(ListJobsOptions options)
+        private JobsResource.ListRequest CreateListJobsRequest(ProjectReference projectReference, ListJobsOptions options)
         {
-            var request = Service.Jobs.List(ProjectId);
+            var request = Service.Jobs.List(projectReference.ProjectId);
             options?.ModifyRequest(request);
             return request;
         }
 
         /// <inheritdoc />
-        public override Job PollJob(JobReference jobReference)
+        public override BigqueryJob PollJob(JobReference jobReference)
         {
             Preconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             while (true)
             {
                 var job = GetJob(jobReference);
-                switch (job.Status.State)
+                switch (job.State)
                 {
                     case "DONE":
                         return job;
@@ -67,11 +70,12 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override Job GetJob(JobReference jobReference)
+        public override BigqueryJob GetJob(JobReference jobReference)
         {
             Preconditions.CheckNotNull(jobReference, nameof(jobReference));
 
-            return Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId).Execute();
+            var job = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId).Execute();
+            return new BigqueryJob(this, job);
         }
 
         /// <inheritdoc />

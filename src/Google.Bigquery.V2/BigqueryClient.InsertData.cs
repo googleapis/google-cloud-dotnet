@@ -31,7 +31,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public virtual Job UploadCsv(string projectId, string datasetId, string tableId, TableSchema schema, Stream input) =>
+        public virtual BigqueryJob UploadCsv(string projectId, string datasetId, string tableId, TableSchema schema, Stream input) =>
             UploadCsv(GetTableReference(projectId, datasetId, tableId), schema, input);
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public virtual Job UploadCsv(string datasetId, string tableId, TableSchema schema, Stream input) =>
+        public virtual BigqueryJob UploadCsv(string datasetId, string tableId, TableSchema schema, Stream input) =>
             UploadCsv(GetTableReference(datasetId, tableId), schema, input);
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public virtual Job UploadCsv(TableReference tableReference, TableSchema schema, Stream input)
+        public virtual BigqueryJob UploadCsv(TableReference tableReference, TableSchema schema, Stream input)
         {
             throw new NotImplementedException();
         }
@@ -68,7 +68,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public virtual Job UploadJson(string projectId, string datasetId, string tableId, TableSchema schema, Stream input) =>
+        public virtual BigqueryJob UploadJson(string projectId, string datasetId, string tableId, TableSchema schema, Stream input) =>
             UploadCsv(GetTableReference(projectId, datasetId, tableId), schema, input);
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public virtual Job UploadJson(string datasetId, string tableId, TableSchema schema, Stream input) =>
+        public virtual BigqueryJob UploadJson(string datasetId, string tableId, TableSchema schema, Stream input) =>
             UploadCsv(GetTableReference(datasetId, tableId), schema, input);
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public virtual Job UploadJson(TableReference tableReference, TableSchema schema, Stream input)
+        public virtual BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input)
         {
             throw new NotImplementedException();
         }

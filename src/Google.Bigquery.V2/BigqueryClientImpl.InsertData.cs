@@ -25,7 +25,7 @@ namespace Google.Bigquery.V2
     public partial class BigqueryClientImpl
     {
         /// <inheritdoc />
-        public override Job UploadCsv(TableReference tableReference, TableSchema schema, Stream input)
+        public override BigqueryJob UploadCsv(TableReference tableReference, TableSchema schema, Stream input)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
             Preconditions.CheckNotNull(input, nameof(input));
@@ -44,7 +44,7 @@ namespace Google.Bigquery.V2
 
         // Load it from a TextReader? Tricky, but useful.
         /// <inheritdoc />
-        public override Job UploadJson(TableReference tableReference, TableSchema schema, Stream input)
+        public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
             Preconditions.CheckNotNull(input, nameof(input));
@@ -66,7 +66,7 @@ namespace Google.Bigquery.V2
             return table.Schema;
         }
 
-        private Job UploadData(JobConfigurationLoad loadConfiguration, Stream input, string contentType)
+        private BigqueryJob UploadData(JobConfigurationLoad loadConfiguration, Stream input, string contentType)
         {
             var job = new Job { Configuration = new JobConfiguration { Load = loadConfiguration } };
             var mediaUpload = Service.Jobs.Insert(job, ProjectId, input, contentType);
@@ -76,7 +76,7 @@ namespace Google.Bigquery.V2
             {
                 throw finalProgress.Exception;
             }
-            return mediaUpload.ResponseBody;
+            return new BigqueryJob(this, mediaUpload.ResponseBody);
         }
 
         /// <inheritdoc />

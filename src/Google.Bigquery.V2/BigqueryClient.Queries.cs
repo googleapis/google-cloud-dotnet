@@ -41,19 +41,10 @@ namespace Google.Bigquery.V2
         /// </param>
         /// <returns>The query job created. Use <see cref="GetQueryResult(JobReference)"/> to retrieve
         /// the results of the query.</returns>
-        public virtual Job CreateQueryJob(string sql, TableReference destinationTable = null)
+        public virtual BigqueryJob CreateQueryJob(string sql, TableReference destinationTable = null)
         {
             throw new NotImplementedException();
         }
-
-        /// <summary>
-        /// Retrieves the results of the given query job.
-        /// This method just uses the job's <see cref="JobReference"/> and delegates to <see cref="GetQueryResult(JobReference)"/>.
-        /// </summary>
-        /// <param name="job">The query job. Must not be null.</param>
-        /// <returns>The results of the query.</returns>
-        public virtual BigqueryResult GetQueryResult(Job job) =>
-            GetQueryResult(Preconditions.CheckNotNull(job, nameof(job)).JobReference);
 
         /// <summary>
         /// Retrieves the results of the query job with the specified ID in this clients project.

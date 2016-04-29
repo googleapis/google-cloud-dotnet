@@ -65,7 +65,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public Job UploadCsv(string tableId, TableSchema schema, Stream input) =>
+        public BigqueryJob UploadCsv(string tableId, TableSchema schema, Stream input) =>
             _client.UploadCsv(GetTableReference(tableId), schema, input);
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public Job UploadJson(string tableId, TableSchema schema, Stream input) =>
+        public BigqueryJob UploadJson(string tableId, TableSchema schema, Stream input) =>
             _client.UploadJson(GetTableReference(tableId), schema, input);
 
         /// <summary>
