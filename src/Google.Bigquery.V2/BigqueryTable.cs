@@ -21,6 +21,10 @@ namespace Google.Bigquery.V2
     /// <summary>
     /// A table within a Bigquery dataset.
     /// </summary>
+    /// <remarks>
+    /// This class wraps the underlying HTTP API resource and retains a reference to the original
+    /// client, allowing for simpler table-oriented operations.
+    /// </remarks>
     public sealed class BigqueryTable
     {
         private readonly BigqueryClient _client;
@@ -69,7 +73,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public Job UploadCsv(Stream input) => _client.UploadCsv(Reference, Schema, input);
+        public BigqueryJob UploadCsv(Stream input) => _client.UploadCsv(Reference, Schema, input);
 
         /// <summary>
         /// Uploads a stream of JSON data to this table.
@@ -77,7 +81,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
-        public Job UploadJson(Stream input) => _client.UploadJson(Reference, Schema, input);
+        public BigqueryJob UploadJson(Stream input) => _client.UploadJson(Reference, Schema, input);
 
         /// <summary>
         /// Lists the rows within this table, similar to a <code>SELECT * FROM ...</code> query.

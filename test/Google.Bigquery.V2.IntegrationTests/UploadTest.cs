@@ -49,7 +49,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var beforeRowCount = table.ListRows().Rows.Count();
 
             var job = table.UploadCsv(new MemoryStream(bytes));
-            var result = client.PollJob(job);
+            var result = job.Poll();
             Assert.Null(result.Status.ErrorResult);
 
             var afterRows = table.ListRows().Rows.ToList();
@@ -78,7 +78,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var beforeRowCount = table.ListRows().Rows.Count();
 
             var job = table.UploadJson(new MemoryStream(bytes));
-            var result = client.PollJob(job);
+            var result = job.Poll();
             Assert.Null(result.Status.ErrorResult);
 
             var afterRows = table.ListRows().Rows.ToList();

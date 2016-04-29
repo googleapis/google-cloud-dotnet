@@ -59,8 +59,6 @@ namespace Google.Bigquery.V2
         public virtual IEnumerable<BigqueryDataset> ListDatasets(ListDatasetsOptions options = null) =>
             ListDatasets(GetProjectReference(ProjectId), options);
 
-        // TODO: Take a ProjectReference instead? Seems a bit pointless.
-
         /// <summary>
         /// Lists the datasets within the specified project.
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListDatasetsOptions)"/>.

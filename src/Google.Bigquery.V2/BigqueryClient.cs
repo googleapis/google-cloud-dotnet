@@ -178,9 +178,18 @@ namespace Google.Bigquery.V2
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <returns>A <see cref="JobReference"/> representing the requested job.</returns>
         public JobReference GetJobReference(string jobId) =>
+            GetJobReference(ProjectId, jobId);
+
+        /// <summary>
+        /// Creates a <see cref="JobReference"/> from the given project ID and job ID.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <returns>A <see cref="JobReference"/> representing the requested job.</returns>
+        public JobReference GetJobReference(string projectId, string jobId) =>
             new JobReference
             {
-                ProjectId = ProjectId,
+                ProjectId = Preconditions.CheckNotNull(projectId, nameof(projectId)),
                 JobId = Preconditions.CheckNotNull(jobId, nameof(jobId))
             };
     }

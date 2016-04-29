@@ -36,11 +36,11 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override Job CreateQueryJob(string sql, TableReference destinationTable = null)
+        public override BigqueryJob CreateQueryJob(string sql, TableReference destinationTable = null)
         {
             Preconditions.CheckNotNull(sql, nameof(sql));
 
-            return Service.Jobs.Insert(new Job
+            var job = Service.Jobs.Insert(new Job
             {
                 Configuration = new JobConfiguration
                 {
@@ -51,6 +51,7 @@ namespace Google.Bigquery.V2
                     },
                 },
             }, ProjectId).Execute();
+            return new BigqueryJob(this, job);
         }
 
         /// <inheritdoc />
