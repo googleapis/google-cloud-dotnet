@@ -75,7 +75,6 @@ binding. (Note: we&#39;re not trying to become an ORM...)</li>
 <li>Async operations. (API design is progressing with sync-only
 operations; asynchrony will be added when we&#39;re done with that
 first pass.)</li>
-<li>Possibly <code>BigqueryJob</code> like <code>BigqueryTable</code> etc.</li>
 </ul>
 <h2 id="-bigqueryclient-"><code>BigqueryClient</code></h2>
 <p>Like other API wrappers, <code>BigqueryClient</code> is the entry point for
@@ -88,8 +87,8 @@ and documented in <code>BigqueryClient</code>, as virtual methods which throw
 <code>NotImplementedException</code>. They are then implemented in
 <code>BigqueryClientImpl</code>.</p>
 <p>The canonical way of identifying any of the entities is via a <em>reference</em>,
-e.g. <code>DatasetReference</code>, <code>JobReference</code>, <code>TableReference</code>. It is
-easy to construct a reference either manually or via
+e.g. <code>DatasetReference</code>, <code>JobReference</code>, <code>TableReference</code>,
+<code>ProjectReference</code>. It is easy to construct a reference either manually or via
 <code>BigqueryClient</code> or a parent entity (e.g.
 <code>BigqueryDataset.GetTableReference</code>).</p>
 <p>Any operation on <code>BigqueryClient</code> must <em>at least</em> have a
@@ -106,8 +105,7 @@ require faking for test purposes.</p>
 all Bigquery operations require a project ID, and almost all
 operations will use the same one. The project ID is typically used
 as an invisible default, but it is still possible to query a
-dataset/table in a different project. (Jobs are effectively private
-to the project owning them.)</p>
+dataset/table/job in a different project.</p>
 <h2 id="datasets-tables-and-results">Datasets, tables and results</h2>
 <p>All the relevant operations are available on <code>BigqueryClient</code>, but
 many are more conveniently placed on other classes representing

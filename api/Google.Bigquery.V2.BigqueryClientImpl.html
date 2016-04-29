@@ -311,7 +311,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Job CreateQueryJob(string sql, TableReference destinationTable = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override BigqueryJob CreateQueryJob(string sql, TableReference destinationTable = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -345,7 +345,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -525,7 +525,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Job GetJob(JobReference jobReference)</code></pre>
+                <pre><code class="lang-csharp hljs">public override BigqueryJob GetJob(JobReference jobReference)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -554,7 +554,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -827,12 +827,12 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListJobs_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListJobs(Google.Bigquery.V2.ListJobsOptions)">ListJobs(ListJobsOptions)</h4>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListJobs(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListJobsOptions)">ListJobs(ProjectReference, ListJobsOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IEnumerable&lt;JobList.JobsData&gt; ListJobs(ListJobsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IEnumerable&lt;BigqueryJob&gt; ListJobs(ProjectReference projectReference, ListJobsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -844,6 +844,11 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a></td>
+                    <td><em>projectReference</em></td>
+                    <td></td>
+                  </tr>
                   <tr>
                     <td><a class="xref" href="Google.Bigquery.V2.ListJobsOptions.html#Google_Bigquery_V2_ListJobsOptions">ListJobsOptions</a></td>
                     <td><em>options</em></td>
@@ -861,7 +866,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobList.JobsData.html#Google_Apis_Bigquery_v2_Data_JobList_JobsData">JobList.JobsData</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -959,7 +964,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Job PollJob(JobReference jobReference)</code></pre>
+                <pre><code class="lang-csharp hljs">public override BigqueryJob PollJob(JobReference jobReference)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -988,7 +993,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -998,7 +1003,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Job UploadCsv(TableReference tableReference, TableSchema schema, Stream input)</code></pre>
+                <pre><code class="lang-csharp hljs">public override BigqueryJob UploadCsv(TableReference tableReference, TableSchema schema, Stream input)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1037,7 +1042,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1047,7 +1052,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Job UploadJson(TableReference tableReference, TableSchema schema, Stream input)</code></pre>
+                <pre><code class="lang-csharp hljs">public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1086,7 +1091,7 @@ Defaults to &quot;gcloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.Job.html#Google_Apis_Bigquery_v2_Data_Job">Job</a></td>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
                     <td></td>
                   </tr>
                 </tbody>

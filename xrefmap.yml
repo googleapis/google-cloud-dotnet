@@ -8678,10 +8678,6 @@ references:
   name: BigqueryClient
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient
   fullName: Google.Bigquery.V2.BigqueryClient
-- uid: Google.Bigquery.V2.BigqueryClient.CancelJob(Google.Apis.Bigquery.v2.Data.Job)
-  name: CancelJob(Job)
-  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_Job_
-  fullName: Google.Bigquery.V2.BigqueryClient.CancelJob(Google.Apis.Bigquery.v2.Data.Job)
 - uid: Google.Bigquery.V2.BigqueryClient.CancelJob(Google.Apis.Bigquery.v2.Data.JobReference)
   name: CancelJob(JobReference)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_
@@ -8690,6 +8686,10 @@ references:
   name: CancelJob(String)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_
   fullName: Google.Bigquery.V2.BigqueryClient.CancelJob(System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.CancelJob(System.String,System.String)
+  name: CancelJob(String, String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_System_String_
+  fullName: Google.Bigquery.V2.BigqueryClient.CancelJob(System.String, System.String)
 - uid: Google.Bigquery.V2.BigqueryClient.Create(System.String,Google.Apis.Auth.OAuth2.GoogleCredential)
   name: Create(String, GoogleCredential)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_
@@ -8782,10 +8782,18 @@ references:
   name: GetJob(String)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_System_String_
   fullName: Google.Bigquery.V2.BigqueryClient.GetJob(System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.GetJob(System.String,System.String)
+  name: GetJob(String, String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_System_String_System_String_
+  fullName: Google.Bigquery.V2.BigqueryClient.GetJob(System.String, System.String)
 - uid: Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String)
   name: GetJobReference(String)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_
   fullName: Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String,System.String)
+  name: GetJobReference(String, String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_System_String_
+  fullName: Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String, System.String)
 - uid: Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference)
   name: GetOrCreateDataset(DatasetReference)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_
@@ -8814,10 +8822,6 @@ references:
   name: GetProjectReference(String)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetProjectReference_System_String_
   fullName: Google.Bigquery.V2.BigqueryClient.GetProjectReference(System.String)
-- uid: Google.Bigquery.V2.BigqueryClient.GetQueryResult(Google.Apis.Bigquery.v2.Data.Job)
-  name: GetQueryResult(Job)
-  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResult_Google_Apis_Bigquery_v2_Data_Job_
-  fullName: Google.Bigquery.V2.BigqueryClient.GetQueryResult(Google.Apis.Bigquery.v2.Data.Job)
 - uid: Google.Bigquery.V2.BigqueryClient.GetQueryResult(Google.Apis.Bigquery.v2.Data.JobReference)
   name: GetQueryResult(JobReference)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResult_Google_Apis_Bigquery_v2_Data_JobReference_
@@ -8894,10 +8898,18 @@ references:
   name: ListDatasets(String, ListDatasetsOptions)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_System_String_Google_Bigquery_V2_ListDatasetsOptions_
   fullName: Google.Bigquery.V2.BigqueryClient.ListDatasets(System.String, Google.Bigquery.V2.ListDatasetsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListJobsOptions)
+  name: ListJobs(ProjectReference, ListJobsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_
+  fullName: Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Apis.Bigquery.v2.Data.ProjectReference, Google.Bigquery.V2.ListJobsOptions)
 - uid: Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Bigquery.V2.ListJobsOptions)
   name: ListJobs(ListJobsOptions)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Bigquery_V2_ListJobsOptions_
   fullName: Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Bigquery.V2.ListJobsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListJobs(System.String,Google.Bigquery.V2.ListJobsOptions)
+  name: ListJobs(String, ListJobsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_System_String_Google_Bigquery_V2_ListJobsOptions_
+  fullName: Google.Bigquery.V2.BigqueryClient.ListJobs(System.String, Google.Bigquery.V2.ListJobsOptions)
 - uid: Google.Bigquery.V2.BigqueryClient.ListRows(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema)
   name: ListRows(TableReference, TableSchema)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_
@@ -8922,10 +8934,6 @@ references:
   name: ListTables(String, String, ListTablesOptions)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_System_String_System_String_Google_Bigquery_V2_ListTablesOptions_
   fullName: Google.Bigquery.V2.BigqueryClient.ListTables(System.String, System.String, Google.Bigquery.V2.ListTablesOptions)
-- uid: Google.Bigquery.V2.BigqueryClient.PollJob(Google.Apis.Bigquery.v2.Data.Job)
-  name: PollJob(Job)
-  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_Job_
-  fullName: Google.Bigquery.V2.BigqueryClient.PollJob(Google.Apis.Bigquery.v2.Data.Job)
 - uid: Google.Bigquery.V2.BigqueryClient.PollJob(Google.Apis.Bigquery.v2.Data.JobReference)
   name: PollJob(JobReference)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_JobReference_
@@ -8934,6 +8942,10 @@ references:
   name: PollJob(String)
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_System_String_
   fullName: Google.Bigquery.V2.BigqueryClient.PollJob(System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.PollJob(System.String,System.String)
+  name: PollJob(String, String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_System_String_System_String_
+  fullName: Google.Bigquery.V2.BigqueryClient.PollJob(System.String, System.String)
 - uid: Google.Bigquery.V2.BigqueryClient.ProjectId
   name: ProjectId
   href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ProjectId
@@ -9050,10 +9062,10 @@ references:
   name: ListDatasets(ProjectReference, ListDatasetsOptions)
   href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_
   fullName: Google.Bigquery.V2.BigqueryClientImpl.ListDatasets(Google.Apis.Bigquery.v2.Data.ProjectReference, Google.Bigquery.V2.ListDatasetsOptions)
-- uid: Google.Bigquery.V2.BigqueryClientImpl.ListJobs(Google.Bigquery.V2.ListJobsOptions)
-  name: ListJobs(ListJobsOptions)
-  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ListJobs_Google_Bigquery_V2_ListJobsOptions_
-  fullName: Google.Bigquery.V2.BigqueryClientImpl.ListJobs(Google.Bigquery.V2.ListJobsOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.ListJobs(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListJobsOptions)
+  name: ListJobs(ProjectReference, ListJobsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.ListJobs(Google.Apis.Bigquery.v2.Data.ProjectReference, Google.Bigquery.V2.ListJobsOptions)
 - uid: Google.Bigquery.V2.BigqueryClientImpl.ListRows(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema)
   name: ListRows(TableReference, TableSchema)
   href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_
@@ -9122,6 +9134,38 @@ references:
   name: UploadJson(String, TableSchema, Stream)
   href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_UploadJson_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_
   fullName: Google.Bigquery.V2.BigqueryDataset.UploadJson(System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream)
+- uid: Google.Bigquery.V2.BigqueryJob
+  name: BigqueryJob
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob
+  fullName: Google.Bigquery.V2.BigqueryJob
+- uid: Google.Bigquery.V2.BigqueryJob.Cancel
+  name: Cancel()
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Cancel
+  fullName: Google.Bigquery.V2.BigqueryJob.Cancel()
+- uid: Google.Bigquery.V2.BigqueryJob.GetQueryResult
+  name: GetQueryResult()
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_GetQueryResult
+  fullName: Google.Bigquery.V2.BigqueryJob.GetQueryResult()
+- uid: Google.Bigquery.V2.BigqueryJob.Poll
+  name: Poll()
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Poll
+  fullName: Google.Bigquery.V2.BigqueryJob.Poll()
+- uid: Google.Bigquery.V2.BigqueryJob.Reference
+  name: Reference
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Reference
+  fullName: Google.Bigquery.V2.BigqueryJob.Reference
+- uid: Google.Bigquery.V2.BigqueryJob.State
+  name: State
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_State
+  fullName: Google.Bigquery.V2.BigqueryJob.State
+- uid: Google.Bigquery.V2.BigqueryJob.Statistics
+  name: Statistics
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Statistics
+  fullName: Google.Bigquery.V2.BigqueryJob.Statistics
+- uid: Google.Bigquery.V2.BigqueryJob.Status
+  name: Status
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Status
+  fullName: Google.Bigquery.V2.BigqueryJob.Status
 - uid: Google.Bigquery.V2.BigqueryResult
   name: BigqueryResult
   href: api/Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult
