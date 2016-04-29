@@ -8,6 +8,25 @@ using System;
 
 namespace Google.Datastore.V1Beta3
 {
+    /// <summary>
+    /// Extension methods on <see cref="Value"/>.
+    /// </summary>
+    public static class ValueExtensions
+    {
+        /// <summary>
+        /// Returns <paramref name="value"/> if it has a kind other than <c>NullValue</c>,
+        /// or <c>null</c> otherwise. If <paramref name="value"/> is null, this method returns <c>null</c>.
+        /// </summary>
+        /// <remarks>
+        /// The reverse of this operation would simply be <c>value ?? Value.ForNull()</c> using the
+        /// null-coalescing operator.
+        /// </remarks>
+        /// <param name="value">A <see cref="Value"/> reference, which may be null.</param>
+        /// <returns><paramref name="value"/> if it is a non-null reference to a value with a kind
+        /// other than <c>NullValue</c>; <c>null</c> otherwise</returns>
+        public static Value OrNull(this Value value) => value?.ValueTypeCase != Value.ValueTypeOneofCase.NullValue ? value : null;
+    }
+
     // Additional helper members.
     public partial class Value
     {
@@ -16,51 +35,332 @@ namespace Google.Datastore.V1Beta3
         // - Cloning?
         // - Array handling? (either in ArrayValuePartial or here, or both...)
 
-        public static explicit operator string(Value value) => value?.CheckKind(ValueTypeOneofCase.StringValue).StringValue;
-        public static explicit operator long(Value value) => value.CheckKind(ValueTypeOneofCase.IntegerValue).IntegerValue;
-        public static explicit operator long?(Value value) => value?.CheckKind(ValueTypeOneofCase.IntegerValue).IntegerValue;
-        public static explicit operator Key(Value value) => value?.CheckKind(ValueTypeOneofCase.KeyValue).KeyValue;
-        public static explicit operator double(Value value) => value.CheckKind(ValueTypeOneofCase.DoubleValue).DoubleValue;
-        public static explicit operator double?(Value value) => value?.CheckKind(ValueTypeOneofCase.DoubleValue).DoubleValue;
-        public static explicit operator bool(Value value) => value.CheckKind(ValueTypeOneofCase.BooleanValue).BooleanValue;
-        public static explicit operator bool?(Value value) => value?.CheckKind(ValueTypeOneofCase.BooleanValue).BooleanValue;
-        public static explicit operator ArrayValue(Value value) => value?.CheckKind(ValueTypeOneofCase.ArrayValue).ArrayValue;
-        public static explicit operator ByteString(Value value) => value?.CheckKind(ValueTypeOneofCase.BlobValue).BlobValue;
-        public static explicit operator byte[](Value value) => value?.CheckKind(ValueTypeOneofCase.BlobValue).BlobValue.ToByteArray();
-        public static explicit operator Entity(Value value) => value?.CheckKind(ValueTypeOneofCase.EntityValue).EntityValue;
-        public static explicit operator LatLng(Value value) => value?.CheckKind(ValueTypeOneofCase.GeoPointValue).GeoPointValue;
-        public static explicit operator Timestamp(Value value) => value?.CheckKind(ValueTypeOneofCase.TimestampValue).TimestampValue;
+        /// <summary>
+        /// Extracts the string value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="StringValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator string(Value value) => value?.CheckKind(ValueTypeOneofCase.StringValue)?.StringValue;
+
+        /// <summary>
+        /// Extracts the integer value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="IntegerValue"/>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
+        public static explicit operator long(Value value) => CheckKindForNonNullable(value, ValueTypeOneofCase.IntegerValue).IntegerValue;
+
+        /// <summary>
+        /// Extracts the integer value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="IntegerValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator long?(Value value) => value?.CheckKind(ValueTypeOneofCase.IntegerValue)?.IntegerValue;
+
+        /// <summary>
+        /// Extracts the key value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="KeyValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator Key(Value value) => value?.CheckKind(ValueTypeOneofCase.KeyValue)?.KeyValue;
+
+        /// <summary>
+        /// Extracts the floating point value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="DoubleValue"/>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
+        public static explicit operator double(Value value) => CheckKindForNonNullable(value, ValueTypeOneofCase.DoubleValue).DoubleValue;
+
+        /// <summary>
+        /// Extracts the floating point value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="DoubleValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator double?(Value value) => value?.CheckKind(ValueTypeOneofCase.DoubleValue)?.DoubleValue;
+
+        /// <summary>
+        /// Extracts the Boolean value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="BooleanValue"/>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
+        public static explicit operator bool(Value value) => CheckKindForNonNullable(value, ValueTypeOneofCase.BooleanValue).BooleanValue;
+
+        /// <summary>
+        /// Extracts the Boolean value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="BooleanValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator bool?(Value value) => value?.CheckKind(ValueTypeOneofCase.BooleanValue)?.BooleanValue;
+
+        /// <summary>
+        /// Extracts the array value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="ArrayValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator ArrayValue(Value value) => value?.CheckKind(ValueTypeOneofCase.ArrayValue)?.ArrayValue;
+
+        /// <summary>
+        /// Extracts the blob value from a <see cref="Value"/> as a <see cref="ByteString"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="BlobValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator ByteString(Value value) => value?.CheckKind(ValueTypeOneofCase.BlobValue)?.BlobValue;
+
+        /// <summary>
+        /// Extracts the blob value from a <see cref="Value"/> as a byte array
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="BlobValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator byte[](Value value) => value?.CheckKind(ValueTypeOneofCase.BlobValue)?.BlobValue.ToByteArray();
+
+        /// <summary>
+        /// Extracts the array value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="EntityValue"/>, or null if <paramref name="value"/> is null.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator Entity(Value value) => value?.CheckKind(ValueTypeOneofCase.EntityValue)?.EntityValue;
+
+        /// <summary>
+        /// Extracts the geolocation value from a <see cref="Value"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="GeoPointValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator LatLng(Value value) => value?.CheckKind(ValueTypeOneofCase.GeoPointValue)?.GeoPointValue;
+
+        /// <summary>
+        /// Extracts the timestamp value from a <see cref="Value"/> as a <see cref="Timestamp"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="TimestampValue"/>, or null if <paramref name="value"/> is null
+        /// or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        public static explicit operator Timestamp(Value value) => value?.CheckKind(ValueTypeOneofCase.TimestampValue)?.TimestampValue;
+
+        /// <summary>
+        /// Extracts the timestamp value from a <see cref="Value"/> as a <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTime"/> with a <see cref="DateTimeKind"/> of <c>Utc</c>.
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
         public static explicit operator DateTime(Value value) => ((Timestamp) value).ToDateTime();
+
+        /// <summary>
+        /// Extracts the timestamp value from a <see cref="Value"/> as a nullable <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTime"/> with a <see cref="DateTimeKind"/> of <c>Utc</c>,
+        /// or null if <paramref name="value"/> is null or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
         public static explicit operator DateTime?(Value value) => ((Timestamp) value)?.ToDateTime();
+
+        /// <summary>
+        /// Extracts the timestamp value from a <see cref="Value"/> as a <see cref="DateTimeOffset"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTimeOffset"/> with an offset of zero.
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
         public static explicit operator DateTimeOffset(Value value) => ((Timestamp)value).ToDateTimeOffset();
+
+        /// <summary>
+        /// Extracts the timestamp value from a <see cref="Value"/> as a nullable <see cref="DateTimeOffset"/>.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTimeOffset"/> with an offset of zero,
+        /// or null if <paramref name="value"/> is null or has a kind of <c>NullValue</c>.</returns>
+        /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
         public static explicit operator DateTimeOffset? (Value value) => ((Timestamp)value)?.ToDateTimeOffset();
 
         private Value CheckKind(ValueTypeOneofCase expectedCase)
         {
-            if (ValueTypeCase != expectedCase)
+            var typeCase = ValueTypeCase;
+            // Treat a value of type Null as if it were a null reference.
+            if (typeCase == ValueTypeOneofCase.NullValue)
+            {
+                return null;
+            }
+            if (typeCase != expectedCase)
             {
                 throw new InvalidOperationException($"Cannot convert value; expected kind {expectedCase}; was {ValueTypeCase}");
             }
             return this;
         }
 
+        private static Value CheckKindForNonNullable(Value value, ValueTypeOneofCase expectedCase)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException(nameof(value));
+            }
+            if (value.ValueTypeCase != expectedCase)
+            {
+                throw new InvalidOperationException($"Cannot convert value; expected kind {expectedCase}; was {value.ValueTypeCase}");
+            }
+            return value;
+        }
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>StringValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(string value) => value == null ? null : new Value { StringValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>IntegerValue</c> and the given data.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(long value) => new Value { IntegerValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>IntegerValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(long? value) => value == null ? null : new Value { IntegerValue = value.Value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>KeyValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(Key value) => value == null ? null : new Value { KeyValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>DoubleValue</c> and the given data.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(double value) => new Value { DoubleValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>DoubleValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(double? value) => value == null ? null : new Value { DoubleValue = value.Value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>BooleanValue</c> and the given data.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(bool value) => new Value { BooleanValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>BooleanValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(bool? value) => value == null ? null : new Value { BooleanValue = value.Value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>ArrayValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(ArrayValue value) => value == null ? null : new Value { ArrayValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>BlobValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(ByteString value) => value == null ? null : new Value { BlobValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>BlobValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(byte[] value) => value == null ? null : new Value { BlobValue = ByteString.CopyFrom(value) };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>EntityValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(Entity value) => value == null ? null : new Value { EntityValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>GeoPointValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(LatLng value) => value == null ? null : new Value { GeoPointValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>TimestampValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(Timestamp value) => value == null ? null : new Value { TimestampValue = value };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>TimestampValue</c> and the given data.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(DateTime value) => new Value { TimestampValue = Timestamp.FromDateTime(value) };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>TimestampValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(DateTime? value) => value == null ? null : new Value { TimestampValue = Timestamp.FromDateTime(value.Value) };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>TimestampValue</c> and the given data.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(DateTimeOffset value) => new Value { TimestampValue = Timestamp.FromDateTimeOffset(value) };
+
+        /// <summary>
+        /// Returns a <see cref="Value"/> with a kind of <c>TimestampValue</c> and the given data, or a null
+        /// reference of <paramref name="value"/> is null.
+        /// </summary>
+        /// <returns>A <see cref="Value"/> corresponding to <paramref name="value"/>.</returns>
+        /// <param name="value">The value to convert.</param>
         public static implicit operator Value(DateTimeOffset? value) => value == null ? null : new Value { TimestampValue = Timestamp.FromDateTimeOffset(value.Value) };
 
         /// <summary>

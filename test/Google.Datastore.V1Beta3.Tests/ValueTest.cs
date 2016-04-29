@@ -69,9 +69,28 @@ namespace Google.Datastore.V1Beta3.Tests
         }
 
         [Fact]
-        public void ConversionsFromValue_Null()
+        public void ConversionsFromValue_NullReference()
         {
             Value value = null;
+            Assert.Null((string)value);
+            Assert.Null((long?)value);
+            Assert.Null((Key)value);
+            Assert.Null((double?)value);
+            Assert.Null((bool?)value);
+            Assert.Null((ArrayValue)value);
+            Assert.Null((ByteString)value);
+            Assert.Null((byte[])value);
+            Assert.Null((Entity)value);
+            Assert.Null((LatLng)value);
+            Assert.Null((Timestamp)value);
+            Assert.Null((DateTime?)value);
+            Assert.Null((DateTimeOffset?)value);
+        }
+
+        [Fact]
+        public void ConversionsFromValue_NullValue()
+        {
+            Value value = new Value { NullValue = NullValue.NULL_VALUE };
             Assert.Null((string)value);
             Assert.Null((long?)value);
             Assert.Null((Key)value);
@@ -109,6 +128,15 @@ namespace Google.Datastore.V1Beta3.Tests
         public void ForNull()
         {
             Assert.Equal(new Value { NullValue = 0 }, Value.ForNull());
+        }
+
+        [Fact]
+        public void OrNull()
+        {
+            Assert.Null(new Value { NullValue = 0 }.OrNull());
+            Assert.Null(((Value) null).OrNull());
+            Value nonNull = new Value { StringValue = "" };
+            Assert.Same(nonNull, nonNull.OrNull());
         }
     }
 }
