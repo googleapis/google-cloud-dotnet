@@ -23,6 +23,127 @@ we'll be able to accept your pull requests.
 [individual-cla]: https://developers.google.com/open-source/cla/individual
 [corporate-cla]: https://developers.google.com/open-source/cla/corporate
 
+Code Layout
+===
+
+The source code is divided into subdirectories based on its purpose:
+
+- `src`: the main API code, shipped as NuGet packages
+- `test`: tests of the code in `src`, both unit tests and
+  integration tests
+- `snippets`: small pieces of code used to add examples to the API
+  reference and demonstrate the functionality available. These are
+  written in the form of integration tests, but are not expected
+  to fully test the functionality of the API. Instead, the assertions
+  are really present to ensure that the snippets themselves are
+  correct.
+- `tools`: tools used within this project. These are not shipped
+  externally, and not expected to be used by developers who only
+  need to access the Google APIs covered in this repository.
+
+Running the tests
+---
+
+As noted above, both the `snippets` directory and the `test`
+directory contain tests, of different flavours. All tests use
+[xUnit.Net](http://xunit.github.io/). Unit tests do not require
+any access to Google Cloud Platform, but the integration tests
+and snippet tests require a Google Cloud Platform project with
+billing enabled.
+
+**Please note that running the tests exercises the real API
+against real Google Cloud Platform projects.** The tests are
+designed not to require too much in the way of resources, but you
+should be aware that there *is* a cost to exercising APIs. In future
+we may run tests against emulators where available. We **strongly**
+advise you to use a dedicated testing project (rather than a
+project relied on by production systems) to avoid any possible data loss.
+
+To run integration tests with your project, you need to perform some
+set-up steps:
+
+- Ensure that your project has the corresponding API enabled in
+  the [API Manager](https://console.developers.google.com/apis/library)
+- Download and install the [https://cloud.google.com/sdk/](Cloud SDK)
+- Run `gcloud auth login` to set up default application credentials
+- Set the `TEST_PROJECT` environment variable to the name of your project.
+  To run the tests from a command line, you can just set them directly
+  and run the tests. To run the tests from Visual Studio, you should set
+  the environment variable permanently, and restart Visual Studio if
+  it's already running.
+- Build all the code, either from Visual Studio, or from the command line
+  with `dnu`/`dnx`.
+
+<!---
+TODO: Can we just set the environment variable in the
+project properties in VS? It looks like it should work, but I
+haven't tried...
+--->
+
+The tests can be run from Visual Studio's built-in test runner
+(under the "Test" menu, select "Run" then "All Tests"), or
+third-party test tools such as ReSharper and CodeRush, or from the
+command line. To run from the command line, change to the project
+directory and simply run
+
+    dnx test
+
+Snippet extraction
+---
+
+Code in the `snippets` directory can be marked up to be used in the
+API reference documentation. The
+`Google.GCloud.Tools.GenerateSnippetMarkdown` tool (in the `tools`
+directory) extract snippets from projects underneath `snippets`. To
+add a snippet, simply include a comment on a line on its own at the
+start of the snippet, of the form:
+
+    // <method-name>
+    
+where *method-name* is the name of the method the snippet should be
+attached to as an example. At the end of the snippet, use a closing
+comment:
+
+    // </method-name>
+
+The extraction tool assumes certain
+conventions:
+
+- The project name is the API name with a suffix of `.Snippets`
+- The namespace of the type being documented matches the project name
+- The name of the file containing the snippet matches the name of the
+  type being documented, with a suffix of `Snippets`.
+
+A full example is shown below, which will attach a snippet to the
+`StorageClient.ListObjects` documentation. Only the three lines
+(including a comment) between the start and end tag comment lines
+are present in the documentation. Currently we assume that the user
+will know the meaning of `bucketId` (and likewise other resource IDs
+or names which are likely to crop up).
+
+```csharp
+[Fact]
+public void ListObjects()
+{
+    var bucketId = _fixture.BucketId;
+
+    // <ListObjects>
+    var client = StorageClient.Create();
+    // List only objects with a name starting with "Hello"
+    var objects = client.ListObjects(bucketId, "Hello");
+    // </ListObjects>
+    var names = objects.Select(obj => obj.Name).ToList();
+    Assert.Contains(_fixture.HelloWorldName, names);
+}
+```
+
+TBD: Distinguishing between overloads of methods where necessary.
+
+Generating documentation
+---
+
+TBD.
+
 Code Style
 ==========
 
