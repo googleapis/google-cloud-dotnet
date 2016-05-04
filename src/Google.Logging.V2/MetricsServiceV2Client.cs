@@ -65,11 +65,11 @@ namespace Google.Logging.V2
         private MetricsServiceV2Settings(MetricsServiceV2Settings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            ListLogMetricsRetry = existing.ListLogMetricsRetry?.Clone();
-            GetLogMetricRetry = existing.GetLogMetricRetry?.Clone();
-            CreateLogMetricRetry = existing.CreateLogMetricRetry?.Clone();
-            UpdateLogMetricRetry = existing.UpdateLogMetricRetry?.Clone();
-            DeleteLogMetricRetry = existing.DeleteLogMetricRetry?.Clone();
+            ListLogMetricsSettings = existing.ListLogMetricsSettings?.Clone();
+            GetLogMetricSettings = existing.GetLogMetricSettings?.Clone();
+            CreateLogMetricSettings = existing.CreateLogMetricSettings?.Clone();
+            UpdateLogMetricSettings = existing.UpdateLogMetricSettings?.Clone();
+            DeleteLogMetricSettings = existing.DeleteLogMetricSettings?.Clone();
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="MetricsServiceV2Client.ListLogMetrics"/> and <see cref="MetricsServiceV2Client.ListLogMetricsAsync"/>.
         /// </summary>
         /// <remarks>
@@ -154,16 +154,21 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ListLogMetricsRetry { get; set; } = new RetrySettings
+        public CallSettings ListLogMetricsSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="MetricsServiceV2Client.GetLogMetric"/> and <see cref="MetricsServiceV2Client.GetLogMetricAsync"/>.
         /// </summary>
         /// <remarks>
@@ -182,16 +187,21 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings GetLogMetricRetry { get; set; } = new RetrySettings
+        public CallSettings GetLogMetricSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="MetricsServiceV2Client.CreateLogMetric"/> and <see cref="MetricsServiceV2Client.CreateLogMetricAsync"/>.
         /// </summary>
         /// <remarks>
@@ -209,16 +219,21 @@ namespace Google.Logging.V2
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings CreateLogMetricRetry { get; set; } = new RetrySettings
+        public CallSettings CreateLogMetricSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="MetricsServiceV2Client.UpdateLogMetric"/> and <see cref="MetricsServiceV2Client.UpdateLogMetricAsync"/>.
         /// </summary>
         /// <remarks>
@@ -236,16 +251,21 @@ namespace Google.Logging.V2
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings UpdateLogMetricRetry { get; set; } = new RetrySettings
+        public CallSettings UpdateLogMetricSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="MetricsServiceV2Client.DeleteLogMetric"/> and <see cref="MetricsServiceV2Client.DeleteLogMetricAsync"/>.
         /// </summary>
         /// <remarks>
@@ -264,12 +284,17 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings DeleteLogMetricRetry { get; set; } = new RetrySettings
+        public CallSettings DeleteLogMetricSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
 
@@ -285,6 +310,8 @@ namespace Google.Logging.V2
     /// </summary>
     public abstract partial class MetricsServiceV2Client
     {
+        private static readonly ChannelPool s_channelPool = new ChannelPool();
+
         /// <summary>
         /// The default endpoint for the MetricsServiceV2 service, which is a host of "logging.googleapis.com" and a port of 443.
         /// </summary>
@@ -351,38 +378,56 @@ namespace Google.Logging.V2
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="MetricsServiceV2Client"/>, applying defaults for all unspecified settings.
+        /// Asynchronously creates a <see cref="MetricsServiceV2Client"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="MetricsServiceV2Settings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
         /// <returns>The task representing the created <see cref="MetricsServiceV2Client"/>.</returns>
-        public static async Task<MetricsServiceV2Client> CreateAsync(
-            ServiceEndpoint endpoint = null,
-            MetricsServiceV2Settings settings = null,
-            ChannelCredentials credentials = null)
+        public static async Task<MetricsServiceV2Client> CreateAsync(ServiceEndpoint endpoint = null, MetricsServiceV2Settings settings = null)
         {
-            Channel channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="MetricsServiceV2Client"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="MetricsServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="MetricsServiceV2Client"/>.</returns>
+        public static MetricsServiceV2Client Create(ServiceEndpoint endpoint = null, MetricsServiceV2Settings settings = null)
+        {
+            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="MetricsServiceV2Client"/> which uses the specified channel for remote operations.
+        /// </summary>
+        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="MetricsServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="MetricsServiceV2Client"/>.</returns>
+        public static MetricsServiceV2Client Create(Channel channel, MetricsServiceV2Settings settings = null)
+        {
+            GaxPreconditions.CheckNotNull(channel, nameof(channel));
             MetricsServiceV2.MetricsServiceV2Client grpcClient = new MetricsServiceV2.MetricsServiceV2Client(channel);
             return new MetricsServiceV2ClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="MetricsServiceV2Client"/>, applying defaults for all unspecified settings.
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, MetricsServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, MetricsServiceV2Settings)"/>. Channels which weren't automatically
+        /// created are not affected.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="MetricsServiceV2Settings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns>The created <see cref="MetricsServiceV2Client"/>.</returns>
-        public static MetricsServiceV2Client Create(
-            ServiceEndpoint endpoint = null,
-            MetricsServiceV2Settings settings = null,
-            ChannelCredentials credentials = null)
-        {
-            Channel channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
-            MetricsServiceV2.MetricsServiceV2Client grpcClient = new MetricsServiceV2.MetricsServiceV2Client(channel);
-            return new MetricsServiceV2ClientImpl(grpcClient, settings);
-        }
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, MetricsServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, MetricsServiceV2Settings)"/> will create new channels, which could
+        /// in turn be shut down by another call to this method.</remarks>
+        /// <returns>A task representing the asynchronous shutdown operation.</returns>
+        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying GRPC MetricsServiceV2 client.
@@ -691,18 +736,17 @@ namespace Google.Logging.V2
         {
             this.GrpcClient = grpcClient;
             MetricsServiceV2Settings effectiveSettings = settings ?? MetricsServiceV2Settings.GetDefault();
-            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
-            _callListLogMetrics = _clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>(GrpcClient.ListLogMetricsAsync, GrpcClient.ListLogMetrics)
-                .WithRetry(effectiveSettings.ListLogMetricsRetry, effectiveClock, null);
-            _callGetLogMetric = _clientHelper.BuildApiCall<GetLogMetricRequest, LogMetric>(GrpcClient.GetLogMetricAsync, GrpcClient.GetLogMetric)
-                .WithRetry(effectiveSettings.GetLogMetricRetry, effectiveClock, null);
-            _callCreateLogMetric = _clientHelper.BuildApiCall<CreateLogMetricRequest, LogMetric>(GrpcClient.CreateLogMetricAsync, GrpcClient.CreateLogMetric)
-                .WithRetry(effectiveSettings.CreateLogMetricRetry, effectiveClock, null);
-            _callUpdateLogMetric = _clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>(GrpcClient.UpdateLogMetricAsync, GrpcClient.UpdateLogMetric)
-                .WithRetry(effectiveSettings.UpdateLogMetricRetry, effectiveClock, null);
-            _callDeleteLogMetric = _clientHelper.BuildApiCall<DeleteLogMetricRequest, Empty>(GrpcClient.DeleteLogMetricAsync, GrpcClient.DeleteLogMetric)
-                .WithRetry(effectiveSettings.DeleteLogMetricRetry, effectiveClock, null);
+            _callListLogMetrics = _clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>(
+                GrpcClient.ListLogMetricsAsync, GrpcClient.ListLogMetrics, effectiveSettings.ListLogMetricsSettings);
+            _callGetLogMetric = _clientHelper.BuildApiCall<GetLogMetricRequest, LogMetric>(
+                GrpcClient.GetLogMetricAsync, GrpcClient.GetLogMetric, effectiveSettings.GetLogMetricSettings);
+            _callCreateLogMetric = _clientHelper.BuildApiCall<CreateLogMetricRequest, LogMetric>(
+                GrpcClient.CreateLogMetricAsync, GrpcClient.CreateLogMetric, effectiveSettings.CreateLogMetricSettings);
+            _callUpdateLogMetric = _clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>(
+                GrpcClient.UpdateLogMetricAsync, GrpcClient.UpdateLogMetric, effectiveSettings.UpdateLogMetricSettings);
+            _callDeleteLogMetric = _clientHelper.BuildApiCall<DeleteLogMetricRequest, Empty>(
+                GrpcClient.DeleteLogMetricAsync, GrpcClient.DeleteLogMetric, effectiveSettings.DeleteLogMetricSettings);
         }
 
         public override MetricsServiceV2.IMetricsServiceV2Client GrpcClient { get; }
@@ -744,6 +788,7 @@ namespace Google.Logging.V2
                     ProjectName = projectName,
                 },
                 _callListLogMetrics);
+
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
@@ -779,6 +824,7 @@ namespace Google.Logging.V2
                     MetricName = metricName,
                 },
                 callSettings);
+
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
@@ -830,6 +876,7 @@ namespace Google.Logging.V2
                     Metric = metric,
                 },
                 callSettings);
+
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
@@ -887,6 +934,7 @@ namespace Google.Logging.V2
                     Metric = metric,
                 },
                 callSettings);
+
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
@@ -922,5 +970,6 @@ namespace Google.Logging.V2
                     MetricName = metricName,
                 },
                 callSettings);
+
     }
 }

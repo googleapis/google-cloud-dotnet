@@ -65,11 +65,11 @@ namespace Google.Logging.V2
         private ConfigServiceV2Settings(ConfigServiceV2Settings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            ListSinksRetry = existing.ListSinksRetry?.Clone();
-            GetSinkRetry = existing.GetSinkRetry?.Clone();
-            CreateSinkRetry = existing.CreateSinkRetry?.Clone();
-            UpdateSinkRetry = existing.UpdateSinkRetry?.Clone();
-            DeleteSinkRetry = existing.DeleteSinkRetry?.Clone();
+            ListSinksSettings = existing.ListSinksSettings?.Clone();
+            GetSinkSettings = existing.GetSinkSettings?.Clone();
+            CreateSinkSettings = existing.CreateSinkSettings?.Clone();
+            UpdateSinkSettings = existing.UpdateSinkSettings?.Clone();
+            DeleteSinkSettings = existing.DeleteSinkSettings?.Clone();
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="ConfigServiceV2Client.ListSinks"/> and <see cref="ConfigServiceV2Client.ListSinksAsync"/>.
         /// </summary>
         /// <remarks>
@@ -154,16 +154,21 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ListSinksRetry { get; set; } = new RetrySettings
+        public CallSettings ListSinksSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="ConfigServiceV2Client.GetSink"/> and <see cref="ConfigServiceV2Client.GetSinkAsync"/>.
         /// </summary>
         /// <remarks>
@@ -182,16 +187,21 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings GetSinkRetry { get; set; } = new RetrySettings
+        public CallSettings GetSinkSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="ConfigServiceV2Client.CreateSink"/> and <see cref="ConfigServiceV2Client.CreateSinkAsync"/>.
         /// </summary>
         /// <remarks>
@@ -209,16 +219,21 @@ namespace Google.Logging.V2
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings CreateSinkRetry { get; set; } = new RetrySettings
+        public CallSettings CreateSinkSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="ConfigServiceV2Client.UpdateSink"/> and <see cref="ConfigServiceV2Client.UpdateSinkAsync"/>.
         /// </summary>
         /// <remarks>
@@ -236,16 +251,21 @@ namespace Google.Logging.V2
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings UpdateSinkRetry { get; set; } = new RetrySettings
+        public CallSettings UpdateSinkSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="ConfigServiceV2Client.DeleteSink"/> and <see cref="ConfigServiceV2Client.DeleteSinkAsync"/>.
         /// </summary>
         /// <remarks>
@@ -264,12 +284,17 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings DeleteSinkRetry { get; set; } = new RetrySettings
+        public CallSettings DeleteSinkSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
 
@@ -285,6 +310,8 @@ namespace Google.Logging.V2
     /// </summary>
     public abstract partial class ConfigServiceV2Client
     {
+        private static readonly ChannelPool s_channelPool = new ChannelPool();
+
         /// <summary>
         /// The default endpoint for the ConfigServiceV2 service, which is a host of "logging.googleapis.com" and a port of 443.
         /// </summary>
@@ -351,38 +378,56 @@ namespace Google.Logging.V2
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="ConfigServiceV2Client"/>, applying defaults for all unspecified settings.
+        /// Asynchronously creates a <see cref="ConfigServiceV2Client"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
         /// <returns>The task representing the created <see cref="ConfigServiceV2Client"/>.</returns>
-        public static async Task<ConfigServiceV2Client> CreateAsync(
-            ServiceEndpoint endpoint = null,
-            ConfigServiceV2Settings settings = null,
-            ChannelCredentials credentials = null)
+        public static async Task<ConfigServiceV2Client> CreateAsync(ServiceEndpoint endpoint = null, ConfigServiceV2Settings settings = null)
         {
-            Channel channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="ConfigServiceV2Client"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="ConfigServiceV2Client"/>.</returns>
+        public static ConfigServiceV2Client Create(ServiceEndpoint endpoint = null, ConfigServiceV2Settings settings = null)
+        {
+            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="ConfigServiceV2Client"/> which uses the specified channel for remote operations.
+        /// </summary>
+        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="ConfigServiceV2Client"/>.</returns>
+        public static ConfigServiceV2Client Create(Channel channel, ConfigServiceV2Settings settings = null)
+        {
+            GaxPreconditions.CheckNotNull(channel, nameof(channel));
             ConfigServiceV2.ConfigServiceV2Client grpcClient = new ConfigServiceV2.ConfigServiceV2Client(channel);
             return new ConfigServiceV2ClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="ConfigServiceV2Client"/>, applying defaults for all unspecified settings.
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, ConfigServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, ConfigServiceV2Settings)"/>. Channels which weren't automatically
+        /// created are not affected.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="ConfigServiceV2Settings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns>The created <see cref="ConfigServiceV2Client"/>.</returns>
-        public static ConfigServiceV2Client Create(
-            ServiceEndpoint endpoint = null,
-            ConfigServiceV2Settings settings = null,
-            ChannelCredentials credentials = null)
-        {
-            Channel channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
-            ConfigServiceV2.ConfigServiceV2Client grpcClient = new ConfigServiceV2.ConfigServiceV2Client(channel);
-            return new ConfigServiceV2ClientImpl(grpcClient, settings);
-        }
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, ConfigServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, ConfigServiceV2Settings)"/> will create new channels, which could
+        /// in turn be shut down by another call to this method.</remarks>
+        /// <returns>A task representing the asynchronous shutdown operation.</returns>
+        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying GRPC ConfigServiceV2 client.
@@ -691,18 +736,17 @@ namespace Google.Logging.V2
         {
             this.GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
-            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
-            _callListSinks = _clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(GrpcClient.ListSinksAsync, GrpcClient.ListSinks)
-                .WithRetry(effectiveSettings.ListSinksRetry, effectiveClock, null);
-            _callGetSink = _clientHelper.BuildApiCall<GetSinkRequest, LogSink>(GrpcClient.GetSinkAsync, GrpcClient.GetSink)
-                .WithRetry(effectiveSettings.GetSinkRetry, effectiveClock, null);
-            _callCreateSink = _clientHelper.BuildApiCall<CreateSinkRequest, LogSink>(GrpcClient.CreateSinkAsync, GrpcClient.CreateSink)
-                .WithRetry(effectiveSettings.CreateSinkRetry, effectiveClock, null);
-            _callUpdateSink = _clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink)
-                .WithRetry(effectiveSettings.UpdateSinkRetry, effectiveClock, null);
-            _callDeleteSink = _clientHelper.BuildApiCall<DeleteSinkRequest, Empty>(GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink)
-                .WithRetry(effectiveSettings.DeleteSinkRetry, effectiveClock, null);
+            _callListSinks = _clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(
+                GrpcClient.ListSinksAsync, GrpcClient.ListSinks, effectiveSettings.ListSinksSettings);
+            _callGetSink = _clientHelper.BuildApiCall<GetSinkRequest, LogSink>(
+                GrpcClient.GetSinkAsync, GrpcClient.GetSink, effectiveSettings.GetSinkSettings);
+            _callCreateSink = _clientHelper.BuildApiCall<CreateSinkRequest, LogSink>(
+                GrpcClient.CreateSinkAsync, GrpcClient.CreateSink, effectiveSettings.CreateSinkSettings);
+            _callUpdateSink = _clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(
+                GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings);
+            _callDeleteSink = _clientHelper.BuildApiCall<DeleteSinkRequest, Empty>(
+                GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings);
         }
 
         public override ConfigServiceV2.IConfigServiceV2Client GrpcClient { get; }
@@ -744,6 +788,7 @@ namespace Google.Logging.V2
                     ProjectName = projectName,
                 },
                 _callListSinks);
+
         /// <summary>
         /// Gets a sink.
         /// </summary>
@@ -779,6 +824,7 @@ namespace Google.Logging.V2
                     SinkName = sinkName,
                 },
                 callSettings);
+
         /// <summary>
         /// Creates a sink.
         /// </summary>
@@ -830,6 +876,7 @@ namespace Google.Logging.V2
                     Sink = sink,
                 },
                 callSettings);
+
         /// <summary>
         /// Creates or updates a sink.
         /// </summary>
@@ -887,6 +934,7 @@ namespace Google.Logging.V2
                     Sink = sink,
                 },
                 callSettings);
+
         /// <summary>
         /// Deletes a sink.
         /// </summary>
@@ -922,5 +970,6 @@ namespace Google.Logging.V2
                     SinkName = sinkName,
                 },
                 callSettings);
+
     }
 }
