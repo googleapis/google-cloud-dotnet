@@ -326,6 +326,8 @@ namespace Google.Datastore.V1Beta3
     /// </summary>
     public abstract partial class DatastoreClient
     {
+        private static readonly ChannelPool s_channelPool = new ChannelPool();
+
         /// <summary>
         /// The default endpoint for the Datastore service, which is a host of "datastore.googleapis.com" and a port of 443.
         /// </summary>
@@ -354,38 +356,60 @@ namespace Google.Datastore.V1Beta3
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="DatastoreClient"/>, applying defaults for all unspecified settings.
+        /// Asynchronously creates a <see cref="DatastoreClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
         /// <returns>The task representing the created <see cref="DatastoreClient"/>.</returns>
         public static async Task<DatastoreClient> CreateAsync(
             ServiceEndpoint endpoint = null,
-            DatastoreSettings settings = null,
-            ChannelCredentials credentials = null)
+            DatastoreSettings settings = null)
         {
-            Channel channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="DatastoreClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
+        /// <returns>The created <see cref="DatastoreClient"/>.</returns>
+        public static DatastoreClient Create(
+            ServiceEndpoint endpoint = null,
+            DatastoreSettings settings = null)
+        {
+            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="DatastoreClient"/> which uses the specified channel for remote operations.
+        /// </summary>
+        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
+        /// <returns>The created <see cref="DatastoreClient"/>.</returns>
+        public static DatastoreClient Create(Channel channel, DatastoreSettings settings = null)
+        {
+            Preconditions.CheckNotNull(channel, nameof(channel));
             Datastore.DatastoreClient grpcClient = new Datastore.DatastoreClient(channel);
             return new DatastoreClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="DatastoreClient"/>, applying defaults for all unspecified settings.
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, DatastoreSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, DatastoreSettings)"/>. Channels which weren't automatically
+        /// created are not affected.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns>The created <see cref="DatastoreClient"/>.</returns>
-        public static DatastoreClient Create(
-            ServiceEndpoint endpoint = null,
-            DatastoreSettings settings = null,
-            ChannelCredentials credentials = null)
-        {
-            Channel channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
-            Datastore.DatastoreClient grpcClient = new Datastore.DatastoreClient(channel);
-            return new DatastoreClientImpl(grpcClient, settings);
-        }
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, DatastoreSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, DatastoreSettings)"/> will create new channels, which could
+        /// in turn be shut down by another call to this method.</remarks>
+        /// <returns>A task representing the asynchronous shutdown operation.</returns>
+        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying GRPC Datastore client.
