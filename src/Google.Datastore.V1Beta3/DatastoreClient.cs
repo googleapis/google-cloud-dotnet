@@ -65,12 +65,12 @@ namespace Google.Datastore.V1Beta3
         private DatastoreSettings(DatastoreSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            LookupRetry = existing.LookupRetry?.Clone();
-            RunQueryRetry = existing.RunQueryRetry?.Clone();
-            BeginTransactionRetry = existing.BeginTransactionRetry?.Clone();
-            CommitRetry = existing.CommitRetry?.Clone();
-            RollbackRetry = existing.RollbackRetry?.Clone();
-            AllocateIdsRetry = existing.AllocateIdsRetry?.Clone();
+            LookupSettings = existing.LookupSettings?.Clone();
+            RunQuerySettings = existing.RunQuerySettings?.Clone();
+            BeginTransactionSettings = existing.BeginTransactionSettings?.Clone();
+            CommitSettings = existing.CommitSettings?.Clone();
+            RollbackSettings = existing.RollbackSettings?.Clone();
+            AllocateIdsSettings = existing.AllocateIdsSettings?.Clone();
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Google.Datastore.V1Beta3
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="DatastoreClient.Lookup"/> and <see cref="DatastoreClient.LookupAsync"/>.
         /// </summary>
         /// <remarks>
@@ -140,16 +140,21 @@ namespace Google.Datastore.V1Beta3
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 30000 milliseconds.
         /// </remarks>
-        public RetrySettings LookupRetry { get; set; } = new RetrySettings
+        public CallSettings LookupSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NoneRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NoneRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="DatastoreClient.RunQuery"/> and <see cref="DatastoreClient.RunQueryAsync"/>.
         /// </summary>
         /// <remarks>
@@ -167,16 +172,21 @@ namespace Google.Datastore.V1Beta3
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 30000 milliseconds.
         /// </remarks>
-        public RetrySettings RunQueryRetry { get; set; } = new RetrySettings
+        public CallSettings RunQuerySettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NoneRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NoneRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="DatastoreClient.BeginTransaction"/> and <see cref="DatastoreClient.BeginTransactionAsync"/>.
         /// </summary>
         /// <remarks>
@@ -194,16 +204,21 @@ namespace Google.Datastore.V1Beta3
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 30000 milliseconds.
         /// </remarks>
-        public RetrySettings BeginTransactionRetry { get; set; } = new RetrySettings
+        public CallSettings BeginTransactionSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NoneRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NoneRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="DatastoreClient.Commit"/> and <see cref="DatastoreClient.CommitAsync"/>.
         /// </summary>
         /// <remarks>
@@ -221,16 +236,21 @@ namespace Google.Datastore.V1Beta3
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 30000 milliseconds.
         /// </remarks>
-        public RetrySettings CommitRetry { get; set; } = new RetrySettings
+        public CallSettings CommitSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NoneRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NoneRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="DatastoreClient.Rollback"/> and <see cref="DatastoreClient.RollbackAsync"/>.
         /// </summary>
         /// <remarks>
@@ -248,16 +268,21 @@ namespace Google.Datastore.V1Beta3
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 30000 milliseconds.
         /// </remarks>
-        public RetrySettings RollbackRetry { get; set; } = new RetrySettings
+        public CallSettings RollbackSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NoneRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NoneRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="DatastoreClient.AllocateIds"/> and <see cref="DatastoreClient.AllocateIdsAsync"/>.
         /// </summary>
         /// <remarks>
@@ -275,12 +300,17 @@ namespace Google.Datastore.V1Beta3
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 30000 milliseconds.
         /// </remarks>
-        public RetrySettings AllocateIdsRetry { get; set; } = new RetrySettings
+        public CallSettings AllocateIdsSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NoneRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NoneRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
         };
 
 
@@ -925,20 +955,19 @@ namespace Google.Datastore.V1Beta3
         {
             this.GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
-            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
-            _callLookup = _clientHelper.BuildApiCall<LookupRequest, LookupResponse>(GrpcClient.LookupAsync, GrpcClient.Lookup)
-                .WithRetry(effectiveSettings.LookupRetry, effectiveClock, null);
-            _callRunQuery = _clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(GrpcClient.RunQueryAsync, GrpcClient.RunQuery)
-                .WithRetry(effectiveSettings.RunQueryRetry, effectiveClock, null);
-            _callBeginTransaction = _clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction)
-                .WithRetry(effectiveSettings.BeginTransactionRetry, effectiveClock, null);
-            _callCommit = _clientHelper.BuildApiCall<CommitRequest, CommitResponse>(GrpcClient.CommitAsync, GrpcClient.Commit)
-                .WithRetry(effectiveSettings.CommitRetry, effectiveClock, null);
-            _callRollback = _clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>(GrpcClient.RollbackAsync, GrpcClient.Rollback)
-                .WithRetry(effectiveSettings.RollbackRetry, effectiveClock, null);
-            _callAllocateIds = _clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>(GrpcClient.AllocateIdsAsync, GrpcClient.AllocateIds)
-                .WithRetry(effectiveSettings.AllocateIdsRetry, effectiveClock, null);
+            _callLookup = _clientHelper.BuildApiCall<LookupRequest, LookupResponse>(
+                GrpcClient.LookupAsync, GrpcClient.Lookup, effectiveSettings.LookupSettings);
+            _callRunQuery = _clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(
+                GrpcClient.RunQueryAsync, GrpcClient.RunQuery, effectiveSettings.RunQuerySettings);
+            _callBeginTransaction = _clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(
+                GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings);
+            _callCommit = _clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
+                GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings);
+            _callRollback = _clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>(
+                GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
+            _callAllocateIds = _clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>(
+                GrpcClient.AllocateIdsAsync, GrpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings);
         }
 
         public override Datastore.IDatastoreClient GrpcClient { get; }
