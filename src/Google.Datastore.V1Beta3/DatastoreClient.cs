@@ -391,7 +391,7 @@ namespace Google.Datastore.V1Beta3
         /// <returns>The created <see cref="DatastoreClient"/>.</returns>
         public static DatastoreClient Create(Channel channel, DatastoreSettings settings = null)
         {
-            Preconditions.CheckNotNull(channel, nameof(channel));
+            GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Datastore.DatastoreClient grpcClient = new Datastore.DatastoreClient(channel);
             return new DatastoreClientImpl(grpcClient, settings);
         }
@@ -1051,6 +1051,7 @@ namespace Google.Datastore.V1Beta3
                     Keys = { keys },
                 },
                 callSettings);
+
         /// <summary>
         /// Queries for entities.
         /// </summary>
@@ -1108,6 +1109,7 @@ namespace Google.Datastore.V1Beta3
                     Query = query,
                 },
                 callSettings);
+
         /// <summary>
         /// Queries for entities.
         /// </summary>
@@ -1165,6 +1167,7 @@ namespace Google.Datastore.V1Beta3
                     GqlQuery = gqlQuery,
                 },
                 callSettings);
+
         /// <summary>
         /// Begins a new transaction.
         /// </summary>
@@ -1194,6 +1197,7 @@ namespace Google.Datastore.V1Beta3
                     ProjectId = projectId,
                 },
                 callSettings);
+
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
@@ -1279,6 +1283,7 @@ namespace Google.Datastore.V1Beta3
                     Mutations = { mutations },
                 },
                 callSettings);
+
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
@@ -1350,6 +1355,7 @@ namespace Google.Datastore.V1Beta3
                     Mutations = { mutations },
                 },
                 callSettings);
+
         /// <summary>
         /// Rolls back a transaction.
         /// </summary>
@@ -1391,6 +1397,7 @@ namespace Google.Datastore.V1Beta3
                     Transaction = transaction,
                 },
                 callSettings);
+
         /// <summary>
         /// Allocates IDs for the given keys, which is useful for referencing an entity
         /// before it is inserted.
@@ -1434,5 +1441,6 @@ namespace Google.Datastore.V1Beta3
                     Keys = { keys },
                 },
                 callSettings);
+
     }
 }

@@ -66,10 +66,10 @@ namespace Google.Logging.V2
         private LoggingServiceV2Settings(LoggingServiceV2Settings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            DeleteLogRetry = existing.DeleteLogRetry?.Clone();
-            WriteLogEntriesRetry = existing.WriteLogEntriesRetry?.Clone();
-            ListLogEntriesRetry = existing.ListLogEntriesRetry?.Clone();
-            ListMonitoredResourceDescriptorsRetry = existing.ListMonitoredResourceDescriptorsRetry?.Clone();
+            DeleteLogSettings = existing.DeleteLogSettings?.Clone();
+            WriteLogEntriesSettings = existing.WriteLogEntriesSettings?.Clone();
+            ListLogEntriesSettings = existing.ListLogEntriesSettings?.Clone();
+            ListMonitoredResourceDescriptorsSettings = existing.ListMonitoredResourceDescriptorsSettings?.Clone();
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="LoggingServiceV2Client.DeleteLog"/> and <see cref="LoggingServiceV2Client.DeleteLogAsync"/>.
         /// </summary>
         /// <remarks>
@@ -192,16 +192,21 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings DeleteLogRetry { get; set; } = new RetrySettings
+        public CallSettings DeleteLogSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="LoggingServiceV2Client.WriteLogEntries"/> and <see cref="LoggingServiceV2Client.WriteLogEntriesAsync"/>.
         /// </summary>
         /// <remarks>
@@ -219,16 +224,21 @@ namespace Google.Logging.V2
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings WriteLogEntriesRetry { get; set; } = new RetrySettings
+        public CallSettings WriteLogEntriesSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="LoggingServiceV2Client.ListLogEntries"/> and <see cref="LoggingServiceV2Client.ListLogEntriesAsync"/>.
         /// </summary>
         /// <remarks>
@@ -247,16 +257,21 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ListLogEntriesRetry { get; set; } = new RetrySettings
+        public CallSettings ListLogEntriesSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetListRetryBackoff(),
-            TimeoutBackoff = GetListTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetListRetryBackoff(),
+                TimeoutBackoff = GetListTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptors"/> and <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync"/>.
         /// </summary>
         /// <remarks>
@@ -275,12 +290,17 @@ namespace Google.Logging.V2
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ListMonitoredResourceDescriptorsRetry { get; set; } = new RetrySettings
+        public CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
 
@@ -296,6 +316,8 @@ namespace Google.Logging.V2
     /// </summary>
     public abstract partial class LoggingServiceV2Client
     {
+        private static readonly ChannelPool s_channelPool = new ChannelPool();
+
         /// <summary>
         /// The default endpoint for the LoggingServiceV2 service, which is a host of "logging.googleapis.com" and a port of 443.
         /// </summary>
@@ -362,38 +384,56 @@ namespace Google.Logging.V2
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="LoggingServiceV2Client"/>, applying defaults for all unspecified settings.
+        /// Asynchronously creates a <see cref="LoggingServiceV2Client"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
         /// <returns>The task representing the created <see cref="LoggingServiceV2Client"/>.</returns>
-        public static async Task<LoggingServiceV2Client> CreateAsync(
-            ServiceEndpoint endpoint = null,
-            LoggingServiceV2Settings settings = null,
-            ChannelCredentials credentials = null)
+        public static async Task<LoggingServiceV2Client> CreateAsync(ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null)
         {
-            Channel channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="LoggingServiceV2Client"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="LoggingServiceV2Client"/>.</returns>
+        public static LoggingServiceV2Client Create(ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null)
+        {
+            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="LoggingServiceV2Client"/> which uses the specified channel for remote operations.
+        /// </summary>
+        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
+        /// <returns>The created <see cref="LoggingServiceV2Client"/>.</returns>
+        public static LoggingServiceV2Client Create(Channel channel, LoggingServiceV2Settings settings = null)
+        {
+            GaxPreconditions.CheckNotNull(channel, nameof(channel));
             LoggingServiceV2.LoggingServiceV2Client grpcClient = new LoggingServiceV2.LoggingServiceV2Client(channel);
             return new LoggingServiceV2ClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="LoggingServiceV2Client"/>, applying defaults for all unspecified settings.
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, LoggingServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, LoggingServiceV2Settings)"/>. Channels which weren't automatically
+        /// created are not affected.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="LoggingServiceV2Settings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns>The created <see cref="LoggingServiceV2Client"/>.</returns>
-        public static LoggingServiceV2Client Create(
-            ServiceEndpoint endpoint = null,
-            LoggingServiceV2Settings settings = null,
-            ChannelCredentials credentials = null)
-        {
-            Channel channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
-            LoggingServiceV2.LoggingServiceV2Client grpcClient = new LoggingServiceV2.LoggingServiceV2Client(channel);
-            return new LoggingServiceV2ClientImpl(grpcClient, settings);
-        }
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, LoggingServiceV2Settings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, LoggingServiceV2Settings)"/> will create new channels, which could
+        /// in turn be shut down by another call to this method.</remarks>
+        /// <returns>A task representing the asynchronous shutdown operation.</returns>
+        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying GRPC LoggingServiceV2 client.
@@ -668,16 +708,15 @@ namespace Google.Logging.V2
         {
             this.GrpcClient = grpcClient;
             LoggingServiceV2Settings effectiveSettings = settings ?? LoggingServiceV2Settings.GetDefault();
-            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
-            _callDeleteLog = _clientHelper.BuildApiCall<DeleteLogRequest, Empty>(GrpcClient.DeleteLogAsync, GrpcClient.DeleteLog)
-                .WithRetry(effectiveSettings.DeleteLogRetry, effectiveClock, null);
-            _callWriteLogEntries = _clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>(GrpcClient.WriteLogEntriesAsync, GrpcClient.WriteLogEntries)
-                .WithRetry(effectiveSettings.WriteLogEntriesRetry, effectiveClock, null);
-            _callListLogEntries = _clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>(GrpcClient.ListLogEntriesAsync, GrpcClient.ListLogEntries)
-                .WithRetry(effectiveSettings.ListLogEntriesRetry, effectiveClock, null);
-            _callListMonitoredResourceDescriptors = _clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors)
-                .WithRetry(effectiveSettings.ListMonitoredResourceDescriptorsRetry, effectiveClock, null);
+            _callDeleteLog = _clientHelper.BuildApiCall<DeleteLogRequest, Empty>(
+                GrpcClient.DeleteLogAsync, GrpcClient.DeleteLog, effectiveSettings.DeleteLogSettings);
+            _callWriteLogEntries = _clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>(
+                GrpcClient.WriteLogEntriesAsync, GrpcClient.WriteLogEntries, effectiveSettings.WriteLogEntriesSettings);
+            _callListLogEntries = _clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>(
+                GrpcClient.ListLogEntriesAsync, GrpcClient.ListLogEntries, effectiveSettings.ListLogEntriesSettings);
+            _callListMonitoredResourceDescriptors = _clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
+                GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
         }
 
         public override LoggingServiceV2.ILoggingServiceV2Client GrpcClient { get; }
@@ -719,6 +758,7 @@ namespace Google.Logging.V2
                     LogName = logName,
                 },
                 callSettings);
+
         /// <summary>
         /// Writes log entries to Cloud Logging.
         /// All log entries in Cloud Logging are written by this method.
@@ -800,6 +840,7 @@ namespace Google.Logging.V2
                     Entries = { entries },
                 },
                 callSettings);
+
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from Cloud
         /// Logging.  For ways to export log entries, see
@@ -877,6 +918,7 @@ namespace Google.Logging.V2
                     OrderBy = orderBy,
                 },
                 _callListLogEntries);
+
 
     }
 }

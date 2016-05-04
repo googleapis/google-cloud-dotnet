@@ -65,12 +65,12 @@ namespace Google.Pubsub.V1
         private PublisherSettings(PublisherSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            CreateTopicRetry = existing.CreateTopicRetry?.Clone();
-            PublishRetry = existing.PublishRetry?.Clone();
-            GetTopicRetry = existing.GetTopicRetry?.Clone();
-            ListTopicsRetry = existing.ListTopicsRetry?.Clone();
-            ListTopicSubscriptionsRetry = existing.ListTopicSubscriptionsRetry?.Clone();
-            DeleteTopicRetry = existing.DeleteTopicRetry?.Clone();
+            CreateTopicSettings = existing.CreateTopicSettings?.Clone();
+            PublishSettings = existing.PublishSettings?.Clone();
+            GetTopicSettings = existing.GetTopicSettings?.Clone();
+            ListTopicsSettings = existing.ListTopicsSettings?.Clone();
+            ListTopicSubscriptionsSettings = existing.ListTopicSubscriptionsSettings?.Clone();
+            DeleteTopicSettings = existing.DeleteTopicSettings?.Clone();
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.CreateTopic"/> and <see cref="PublisherClient.CreateTopicAsync"/>.
         /// </summary>
         /// <remarks>
@@ -155,16 +155,21 @@ namespace Google.Pubsub.V1
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings CreateTopicRetry { get; set; } = new RetrySettings
+        public CallSettings CreateTopicSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.Publish"/> and <see cref="PublisherClient.PublishAsync"/>.
         /// </summary>
         /// <remarks>
@@ -182,16 +187,21 @@ namespace Google.Pubsub.V1
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings PublishRetry { get; set; } = new RetrySettings
+        public CallSettings PublishSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.GetTopic"/> and <see cref="PublisherClient.GetTopicAsync"/>.
         /// </summary>
         /// <remarks>
@@ -210,16 +220,21 @@ namespace Google.Pubsub.V1
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings GetTopicRetry { get; set; } = new RetrySettings
+        public CallSettings GetTopicSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.ListTopics"/> and <see cref="PublisherClient.ListTopicsAsync"/>.
         /// </summary>
         /// <remarks>
@@ -238,16 +253,21 @@ namespace Google.Pubsub.V1
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ListTopicsRetry { get; set; } = new RetrySettings
+        public CallSettings ListTopicsSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.ListTopicSubscriptions"/> and <see cref="PublisherClient.ListTopicSubscriptionsAsync"/>.
         /// </summary>
         /// <remarks>
@@ -266,16 +286,21 @@ namespace Google.Pubsub.V1
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ListTopicSubscriptionsRetry { get; set; } = new RetrySettings
+        public CallSettings ListTopicSubscriptionsSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="PublisherClient.DeleteTopic"/> and <see cref="PublisherClient.DeleteTopicAsync"/>.
         /// </summary>
         /// <remarks>
@@ -294,12 +319,17 @@ namespace Google.Pubsub.V1
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings DeleteTopicRetry { get; set; } = new RetrySettings
+        public CallSettings DeleteTopicSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
 
@@ -315,6 +345,8 @@ namespace Google.Pubsub.V1
     /// </summary>
     public abstract partial class PublisherClient
     {
+        private static readonly ChannelPool s_channelPool = new ChannelPool();
+
         /// <summary>
         /// The default endpoint for the Publisher service, which is a host of "pubsub-experimental.googleapis.com" and a port of 443.
         /// </summary>
@@ -375,38 +407,56 @@ namespace Google.Pubsub.V1
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings.
+        /// Asynchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
         /// <returns>The task representing the created <see cref="PublisherClient"/>.</returns>
-        public static async Task<PublisherClient> CreateAsync(
-            ServiceEndpoint endpoint = null,
-            PublisherSettings settings = null,
-            ChannelCredentials credentials = null)
+        public static async Task<PublisherClient> CreateAsync(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
         {
-            Channel channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
+        /// <returns>The created <see cref="PublisherClient"/>.</returns>
+        public static PublisherClient Create(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
+        {
+            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="PublisherClient"/> which uses the specified channel for remote operations.
+        /// </summary>
+        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
+        /// <returns>The created <see cref="PublisherClient"/>.</returns>
+        public static PublisherClient Create(Channel channel, PublisherSettings settings = null)
+        {
+            GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(channel);
             return new PublisherClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="PublisherClient"/>, applying defaults for all unspecified settings.
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, PublisherSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, PublisherSettings)"/>. Channels which weren't automatically
+        /// created are not affected.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="PublisherSettings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns>The created <see cref="PublisherClient"/>.</returns>
-        public static PublisherClient Create(
-            ServiceEndpoint endpoint = null,
-            PublisherSettings settings = null,
-            ChannelCredentials credentials = null)
-        {
-            Channel channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
-            Publisher.PublisherClient grpcClient = new Publisher.PublisherClient(channel);
-            return new PublisherClientImpl(grpcClient, settings);
-        }
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, PublisherSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, PublisherSettings)"/> will create new channels, which could
+        /// in turn be shut down by another call to this method.</remarks>
+        /// <returns>A task representing the asynchronous shutdown operation.</returns>
+        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying GRPC Publisher client.
@@ -476,7 +526,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -493,7 +543,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -510,7 +560,7 @@ namespace Google.Pubsub.V1
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -617,7 +667,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
@@ -634,7 +684,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
@@ -650,7 +700,7 @@ namespace Google.Pubsub.V1
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
@@ -704,20 +754,19 @@ namespace Google.Pubsub.V1
         {
             this.GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
-            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
-            _callCreateTopic = _clientHelper.BuildApiCall<Topic, Topic>(GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic)
-                .WithRetry(effectiveSettings.CreateTopicRetry, effectiveClock, null);
-            _callPublish = _clientHelper.BuildApiCall<PublishRequest, PublishResponse>(GrpcClient.PublishAsync, GrpcClient.Publish)
-                .WithRetry(effectiveSettings.PublishRetry, effectiveClock, null);
-            _callGetTopic = _clientHelper.BuildApiCall<GetTopicRequest, Topic>(GrpcClient.GetTopicAsync, GrpcClient.GetTopic)
-                .WithRetry(effectiveSettings.GetTopicRetry, effectiveClock, null);
-            _callListTopics = _clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(GrpcClient.ListTopicsAsync, GrpcClient.ListTopics)
-                .WithRetry(effectiveSettings.ListTopicsRetry, effectiveClock, null);
-            _callListTopicSubscriptions = _clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(GrpcClient.ListTopicSubscriptionsAsync, GrpcClient.ListTopicSubscriptions)
-                .WithRetry(effectiveSettings.ListTopicSubscriptionsRetry, effectiveClock, null);
-            _callDeleteTopic = _clientHelper.BuildApiCall<DeleteTopicRequest, Empty>(GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic)
-                .WithRetry(effectiveSettings.DeleteTopicRetry, effectiveClock, null);
+            _callCreateTopic = _clientHelper.BuildApiCall<Topic, Topic>(
+                GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic, effectiveSettings.CreateTopicSettings);
+            _callPublish = _clientHelper.BuildApiCall<PublishRequest, PublishResponse>(
+                GrpcClient.PublishAsync, GrpcClient.Publish, effectiveSettings.PublishSettings);
+            _callGetTopic = _clientHelper.BuildApiCall<GetTopicRequest, Topic>(
+                GrpcClient.GetTopicAsync, GrpcClient.GetTopic, effectiveSettings.GetTopicSettings);
+            _callListTopics = _clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(
+                GrpcClient.ListTopicsAsync, GrpcClient.ListTopics, effectiveSettings.ListTopicsSettings);
+            _callListTopicSubscriptions = _clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(
+                GrpcClient.ListTopicSubscriptionsAsync, GrpcClient.ListTopicSubscriptions, effectiveSettings.ListTopicSubscriptionsSettings);
+            _callDeleteTopic = _clientHelper.BuildApiCall<DeleteTopicRequest, Empty>(
+                GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings);
         }
 
         public override Publisher.IPublisherClient GrpcClient { get; }
@@ -765,8 +814,9 @@ namespace Google.Pubsub.V1
                     Name = name,
                 },
                 callSettings);
+
         /// <summary>
-        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -786,7 +836,7 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Adds one or more messages to the topic. Generates `NOT_FOUND` if the topic
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
@@ -804,6 +854,7 @@ namespace Google.Pubsub.V1
                     Messages = { messages },
                 },
                 callSettings);
+
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
@@ -833,6 +884,7 @@ namespace Google.Pubsub.V1
                     Topic = topic,
                 },
                 callSettings);
+
         /// <summary>
         /// Lists matching topics.
         /// </summary>
@@ -864,6 +916,7 @@ namespace Google.Pubsub.V1
                     Project = project,
                 },
                 _callListTopics);
+
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
         /// </summary>
@@ -895,8 +948,9 @@ namespace Google.Pubsub.V1
                     Topic = topic,
                 },
                 _callListTopicSubscriptions);
+
         /// <summary>
-        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
@@ -915,7 +969,7 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes the topic with the given name. Generates `NOT_FOUND` if the topic
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
         /// does not exist. After a topic is deleted, a new topic may be created with
         /// the same name; this is an entirely new topic with none of the old
         /// configuration or subscriptions. Existing subscriptions to this topic are
@@ -932,5 +986,6 @@ namespace Google.Pubsub.V1
                     Topic = topic,
                 },
                 callSettings);
+
     }
 }

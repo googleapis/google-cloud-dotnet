@@ -65,14 +65,14 @@ namespace Google.Pubsub.V1
         private SubscriberSettings(SubscriberSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            CreateSubscriptionRetry = existing.CreateSubscriptionRetry?.Clone();
-            GetSubscriptionRetry = existing.GetSubscriptionRetry?.Clone();
-            ListSubscriptionsRetry = existing.ListSubscriptionsRetry?.Clone();
-            DeleteSubscriptionRetry = existing.DeleteSubscriptionRetry?.Clone();
-            ModifyAckDeadlineRetry = existing.ModifyAckDeadlineRetry?.Clone();
-            AcknowledgeRetry = existing.AcknowledgeRetry?.Clone();
-            PullRetry = existing.PullRetry?.Clone();
-            ModifyPushConfigRetry = existing.ModifyPushConfigRetry?.Clone();
+            CreateSubscriptionSettings = existing.CreateSubscriptionSettings?.Clone();
+            GetSubscriptionSettings = existing.GetSubscriptionSettings?.Clone();
+            ListSubscriptionsSettings = existing.ListSubscriptionsSettings?.Clone();
+            DeleteSubscriptionSettings = existing.DeleteSubscriptionSettings?.Clone();
+            ModifyAckDeadlineSettings = existing.ModifyAckDeadlineSettings?.Clone();
+            AcknowledgeSettings = existing.AcknowledgeSettings?.Clone();
+            PullSettings = existing.PullSettings?.Clone();
+            ModifyPushConfigSettings = existing.ModifyPushConfigSettings?.Clone();
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.CreateSubscription"/> and <see cref="SubscriberClient.CreateSubscriptionAsync"/>.
         /// </summary>
         /// <remarks>
@@ -156,16 +156,21 @@ namespace Google.Pubsub.V1
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings CreateSubscriptionRetry { get; set; } = new RetrySettings
+        public CallSettings CreateSubscriptionSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.GetSubscription"/> and <see cref="SubscriberClient.GetSubscriptionAsync"/>.
         /// </summary>
         /// <remarks>
@@ -184,16 +189,21 @@ namespace Google.Pubsub.V1
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings GetSubscriptionRetry { get; set; } = new RetrySettings
+        public CallSettings GetSubscriptionSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.ListSubscriptions"/> and <see cref="SubscriberClient.ListSubscriptionsAsync"/>.
         /// </summary>
         /// <remarks>
@@ -212,16 +222,21 @@ namespace Google.Pubsub.V1
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ListSubscriptionsRetry { get; set; } = new RetrySettings
+        public CallSettings ListSubscriptionsSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.DeleteSubscription"/> and <see cref="SubscriberClient.DeleteSubscriptionAsync"/>.
         /// </summary>
         /// <remarks>
@@ -240,16 +255,21 @@ namespace Google.Pubsub.V1
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings DeleteSubscriptionRetry { get; set; } = new RetrySettings
+        public CallSettings DeleteSubscriptionSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = IdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.ModifyAckDeadline"/> and <see cref="SubscriberClient.ModifyAckDeadlineAsync"/>.
         /// </summary>
         /// <remarks>
@@ -267,16 +287,21 @@ namespace Google.Pubsub.V1
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ModifyAckDeadlineRetry { get; set; } = new RetrySettings
+        public CallSettings ModifyAckDeadlineSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.Acknowledge"/> and <see cref="SubscriberClient.AcknowledgeAsync"/>.
         /// </summary>
         /// <remarks>
@@ -294,16 +319,21 @@ namespace Google.Pubsub.V1
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings AcknowledgeRetry { get; set; } = new RetrySettings
+        public CallSettings AcknowledgeSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.Pull"/> and <see cref="SubscriberClient.PullAsync"/>.
         /// </summary>
         /// <remarks>
@@ -321,16 +351,21 @@ namespace Google.Pubsub.V1
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings PullRetry { get; set; } = new RetrySettings
+        public CallSettings PullSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
         /// <summary>
-        /// <see cref="RetrySettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
         /// <see cref="SubscriberClient.ModifyPushConfig"/> and <see cref="SubscriberClient.ModifyPushConfigAsync"/>.
         /// </summary>
         /// <remarks>
@@ -348,12 +383,17 @@ namespace Google.Pubsub.V1
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public RetrySettings ModifyPushConfigRetry { get; set; } = new RetrySettings
+        public CallSettings ModifyPushConfigSettings { get; set; } = new CallSettings
         {
-            RetryBackoff = GetDefaultRetryBackoff(),
-            TimeoutBackoff = GetDefaultTimeoutBackoff(),
-            RetryFilter = NonIdempotentRetryFilter,
+            RetrySettings = new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+            },
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
         };
 
 
@@ -369,6 +409,8 @@ namespace Google.Pubsub.V1
     /// </summary>
     public abstract partial class SubscriberClient
     {
+        private static readonly ChannelPool s_channelPool = new ChannelPool();
+
         /// <summary>
         /// The default endpoint for the Subscriber service, which is a host of "pubsub-experimental.googleapis.com" and a port of 443.
         /// </summary>
@@ -421,6 +463,23 @@ namespace Google.Pubsub.V1
         /// <returns>The full subscription resource name.</returns>
         public static string GetSubscriptionName(string projectId, string subscriptionId) => SubscriptionTemplate.Expand(projectId, subscriptionId);
 
+        /// <summary>
+        /// Path template for a topic resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>topic</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate TopicTemplate { get; } = new PathTemplate("projects/{project}/topics/{topic}");
+
+        /// <summary>
+        /// Creates a topic resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="topicId">The topic ID.</param>
+        /// <returns>The full topic resource name.</returns>
+        public static string GetTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
+
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
@@ -429,38 +488,56 @@ namespace Google.Pubsub.V1
         // Con: overloads!
 
         /// <summary>
-        /// Asynchronously creates a <see cref="SubscriberClient"/>, applying defaults for all unspecified settings.
+        /// Asynchronously creates a <see cref="SubscriberClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
         /// <returns>The task representing the created <see cref="SubscriberClient"/>.</returns>
-        public static async Task<SubscriberClient> CreateAsync(
-            ServiceEndpoint endpoint = null,
-            SubscriberSettings settings = null,
-            ChannelCredentials credentials = null)
+        public static async Task<SubscriberClient> CreateAsync(ServiceEndpoint endpoint = null, SubscriberSettings settings = null)
         {
-            Channel channel = await ClientHelper.CreateChannelAsync(endpoint ?? DefaultEndpoint, credentials).ConfigureAwait(false);
+            Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Synchronously creates a <see cref="SubscriberClient"/>, applying defaults for all unspecified settings,
+        /// and creating a channel connecting to the given endpoint with application default credentials where
+        /// necessary.
+        /// </summary>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
+        /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
+        /// <returns>The created <see cref="SubscriberClient"/>.</returns>
+        public static SubscriberClient Create(ServiceEndpoint endpoint = null, SubscriberSettings settings = null)
+        {
+            Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
+            return Create(channel, settings);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="SubscriberClient"/> which uses the specified channel for remote operations.
+        /// </summary>
+        /// <param name="channel">The <see cref="Channel"/> for remote operations. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
+        /// <returns>The created <see cref="SubscriberClient"/>.</returns>
+        public static SubscriberClient Create(Channel channel, SubscriberSettings settings = null)
+        {
+            GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
             return new SubscriberClientImpl(grpcClient, settings);
         }
 
         /// <summary>
-        /// Synchronously creates a <see cref="SubscriberClient"/>, applying defaults for all unspecified settings.
+        /// Shuts down any channels automatically created by <see cref="Create(ServiceEndpoint, SubscriberSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, SubscriberSettings)"/>. Channels which weren't automatically
+        /// created are not affected.
         /// </summary>
-        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
-        /// <param name="settings">Optional <see cref="SubscriberSettings"/>.</param>
-        /// <param name="credentials">Optional <see cref="ChannelCredentials"/>.</param>
-        /// <returns>The created <see cref="SubscriberClient"/>.</returns>
-        public static SubscriberClient Create(
-            ServiceEndpoint endpoint = null,
-            SubscriberSettings settings = null,
-            ChannelCredentials credentials = null)
-        {
-            Channel channel = ClientHelper.CreateChannel(endpoint ?? DefaultEndpoint, credentials);
-            Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
-            return new SubscriberClientImpl(grpcClient, settings);
-        }
+        /// <remarks>After calling this method, further calls to <see cref="Create(ServiceEndpoint, SubscriberSettings)"/>
+        /// and <see cref="CreateAsync(ServiceEndpoint, SubscriberSettings)"/> will create new channels, which could
+        /// in turn be shut down by another call to this method.</remarks>
+        /// <returns>A task representing the asynchronous shutdown operation.</returns>
+        public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying GRPC Subscriber client.
@@ -472,8 +549,8 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, generates `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
+        /// If the subscription already exists, returns `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -486,7 +563,11 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
+        /// <param name="topic">
+        /// The name of the topic from which this subscription is receiving messages.
+        /// The value of this field will be `_deleted-topic_` if the topic has been
+        /// deleted.
+        /// </param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -526,8 +607,8 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, generates `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
+        /// If the subscription already exists, returns `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -540,7 +621,11 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
+        /// <param name="topic">
+        /// The name of the topic from which this subscription is receiving messages.
+        /// The value of this field will be `_deleted-topic_` if the topic has been
+        /// deleted.
+        /// </param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -582,8 +667,8 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, generates `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
+        /// If the subscription already exists, returns `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -596,7 +681,11 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
+        /// <param name="topic">
+        /// The name of the topic from which this subscription is receiving messages.
+        /// The value of this field will be `_deleted-topic_` if the topic has been
+        /// deleted.
+        /// </param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -636,9 +725,6 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Gets the configuration details of a subscription.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -652,9 +738,6 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Gets the configuration details of a subscription.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
@@ -667,9 +750,6 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Gets the configuration details of a subscription.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -683,9 +763,6 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Lists matching subscriptions.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -699,9 +776,6 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Lists matching subscriptions.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -715,7 +789,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will generate
+        /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -732,7 +806,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will generate
+        /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -748,7 +822,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will generate
+        /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -916,7 +990,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
+        /// messages available in the backlog. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -925,7 +999,8 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages.
+        /// than returning no messages. The client may cancel the request if it does
+        /// not wish to wait any longer for the response.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -944,7 +1019,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
+        /// messages available in the backlog. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -953,7 +1028,8 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages.
+        /// than returning no messages. The client may cancel the request if it does
+        /// not wish to wait any longer for the response.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -973,7 +1049,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
+        /// messages available in the backlog. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -982,7 +1058,8 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages.
+        /// than returning no messages. The client may cancel the request if it does
+        /// not wish to wait any longer for the response.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -1109,32 +1186,31 @@ namespace Google.Pubsub.V1
         {
             this.GrpcClient = grpcClient;
             SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
-            IClock effectiveClock = effectiveSettings.Clock ?? SystemClock.Instance;
             _clientHelper = new ClientHelper(effectiveSettings);
-            _callCreateSubscription = _clientHelper.BuildApiCall<Subscription, Subscription>(GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription)
-                .WithRetry(effectiveSettings.CreateSubscriptionRetry, effectiveClock, null);
-            _callGetSubscription = _clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(GrpcClient.GetSubscriptionAsync, GrpcClient.GetSubscription)
-                .WithRetry(effectiveSettings.GetSubscriptionRetry, effectiveClock, null);
-            _callListSubscriptions = _clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions)
-                .WithRetry(effectiveSettings.ListSubscriptionsRetry, effectiveClock, null);
-            _callDeleteSubscription = _clientHelper.BuildApiCall<DeleteSubscriptionRequest, Empty>(GrpcClient.DeleteSubscriptionAsync, GrpcClient.DeleteSubscription)
-                .WithRetry(effectiveSettings.DeleteSubscriptionRetry, effectiveClock, null);
-            _callModifyAckDeadline = _clientHelper.BuildApiCall<ModifyAckDeadlineRequest, Empty>(GrpcClient.ModifyAckDeadlineAsync, GrpcClient.ModifyAckDeadline)
-                .WithRetry(effectiveSettings.ModifyAckDeadlineRetry, effectiveClock, null);
-            _callAcknowledge = _clientHelper.BuildApiCall<AcknowledgeRequest, Empty>(GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge)
-                .WithRetry(effectiveSettings.AcknowledgeRetry, effectiveClock, null);
-            _callPull = _clientHelper.BuildApiCall<PullRequest, PullResponse>(GrpcClient.PullAsync, GrpcClient.Pull)
-                .WithRetry(effectiveSettings.PullRetry, effectiveClock, null);
-            _callModifyPushConfig = _clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig)
-                .WithRetry(effectiveSettings.ModifyPushConfigRetry, effectiveClock, null);
+            _callCreateSubscription = _clientHelper.BuildApiCall<Subscription, Subscription>(
+                GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings);
+            _callGetSubscription = _clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(
+                GrpcClient.GetSubscriptionAsync, GrpcClient.GetSubscription, effectiveSettings.GetSubscriptionSettings);
+            _callListSubscriptions = _clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(
+                GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings);
+            _callDeleteSubscription = _clientHelper.BuildApiCall<DeleteSubscriptionRequest, Empty>(
+                GrpcClient.DeleteSubscriptionAsync, GrpcClient.DeleteSubscription, effectiveSettings.DeleteSubscriptionSettings);
+            _callModifyAckDeadline = _clientHelper.BuildApiCall<ModifyAckDeadlineRequest, Empty>(
+                GrpcClient.ModifyAckDeadlineAsync, GrpcClient.ModifyAckDeadline, effectiveSettings.ModifyAckDeadlineSettings);
+            _callAcknowledge = _clientHelper.BuildApiCall<AcknowledgeRequest, Empty>(
+                GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge, effectiveSettings.AcknowledgeSettings);
+            _callPull = _clientHelper.BuildApiCall<PullRequest, PullResponse>(
+                GrpcClient.PullAsync, GrpcClient.Pull, effectiveSettings.PullSettings);
+            _callModifyPushConfig = _clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(
+                GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings);
         }
 
         public override Subscriber.ISubscriberClient GrpcClient { get; }
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, generates `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
+        /// If the subscription already exists, returns `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -1147,7 +1223,11 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
+        /// <param name="topic">
+        /// The name of the topic from which this subscription is receiving messages.
+        /// The value of this field will be `_deleted-topic_` if the topic has been
+        /// deleted.
+        /// </param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -1192,8 +1272,8 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, generates `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, generates `NOT_FOUND`.
+        /// If the subscription already exists, returns `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic.
@@ -1206,7 +1286,11 @@ namespace Google.Pubsub.V1
         /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
         /// in length, and it must not start with `"goog"`.
         /// </param>
-        /// <param name="topic">The name of the topic from which this subscription is receiving messages.</param>
+        /// <param name="topic">
+        /// The name of the topic from which this subscription is receiving messages.
+        /// The value of this field will be `_deleted-topic_` if the topic has been
+        /// deleted.
+        /// </param>
         /// <param name="push_config">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
@@ -1248,11 +1332,9 @@ namespace Google.Pubsub.V1
                     AckDeadlineSeconds = ackDeadlineSeconds,
                 },
                 callSettings);
+
         /// <summary>
         /// Gets the configuration details of a subscription.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1268,9 +1350,6 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Gets the configuration details of a subscription.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="subscription">The name of the subscription to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1283,11 +1362,9 @@ namespace Google.Pubsub.V1
                     Subscription = subscription,
                 },
                 callSettings);
+
         /// <summary>
         /// Lists matching subscriptions.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1304,9 +1381,6 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Lists matching subscriptions.
-        ///
-        /// If the topic of a subscription has been deleted, the subscription itself is
-        /// not deleted, but the value of the `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1320,9 +1394,10 @@ namespace Google.Pubsub.V1
                     Project = project,
                 },
                 _callListSubscriptions);
+
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will generate
+        /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -1341,7 +1416,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will generate
+        /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
         /// subscription, or its topic unless the same topic is specified.
@@ -1357,6 +1432,7 @@ namespace Google.Pubsub.V1
                     Subscription = subscription,
                 },
                 callSettings);
+
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
         /// to indicate that more time is needed to process a message by the
@@ -1416,6 +1492,7 @@ namespace Google.Pubsub.V1
                     AckDeadlineSeconds = ackDeadlineSeconds,
                 },
                 callSettings);
+
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
         /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
@@ -1469,9 +1546,10 @@ namespace Google.Pubsub.V1
                     AckIds = { ackIds },
                 },
                 callSettings);
+
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
+        /// messages available in the backlog. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -1480,7 +1558,8 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages.
+        /// than returning no messages. The client may cancel the request if it does
+        /// not wish to wait any longer for the response.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -1503,7 +1582,7 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may generate `UNAVAILABLE` if
+        /// messages available in the backlog. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -1512,7 +1591,8 @@ namespace Google.Pubsub.V1
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages.
+        /// than returning no messages. The client may cancel the request if it does
+        /// not wish to wait any longer for the response.
         /// </param>
         /// <param name="max_messages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -1532,6 +1612,7 @@ namespace Google.Pubsub.V1
                     MaxMessages = maxMessages,
                 },
                 callSettings);
+
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
         ///
@@ -1591,5 +1672,6 @@ namespace Google.Pubsub.V1
                     PushConfig = pushConfig,
                 },
                 callSettings);
+
     }
 }
