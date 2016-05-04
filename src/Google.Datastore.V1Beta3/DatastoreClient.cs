@@ -363,9 +363,7 @@ namespace Google.Datastore.V1Beta3
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
         /// <returns>The task representing the created <see cref="DatastoreClient"/>.</returns>
-        public static async Task<DatastoreClient> CreateAsync(
-            ServiceEndpoint endpoint = null,
-            DatastoreSettings settings = null)
+        public static async Task<DatastoreClient> CreateAsync(ServiceEndpoint endpoint = null, DatastoreSettings settings = null)
         {
             Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
             return Create(channel, settings);
@@ -379,9 +377,7 @@ namespace Google.Datastore.V1Beta3
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/>.</param>
         /// <param name="settings">Optional <see cref="DatastoreSettings"/>.</param>
         /// <returns>The created <see cref="DatastoreClient"/>.</returns>
-        public static DatastoreClient Create(
-            ServiceEndpoint endpoint = null,
-            DatastoreSettings settings = null)
+        public static DatastoreClient Create(ServiceEndpoint endpoint = null, DatastoreSettings settings = null)
         {
             Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
             return Create(channel, settings);
@@ -420,10 +416,10 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Look up entities by key.
+        /// Looks up entities by key.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
-        /// <param name="read_options">Options for this lookup request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
+        /// <param name="read_options">The options for this lookup request.</param>
         /// <param name="keys">Keys of entities to look up.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -437,10 +433,10 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Look up entities by key.
+        /// Looks up entities by key.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
-        /// <param name="read_options">Options for this lookup request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
+        /// <param name="read_options">The options for this lookup request.</param>
         /// <param name="keys">Keys of entities to look up.</param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -455,10 +451,10 @@ namespace Google.Datastore.V1Beta3
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Look up entities by key.
+        /// Looks up entities by key.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
-        /// <param name="read_options">Options for this lookup request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
+        /// <param name="read_options">The options for this lookup request.</param>
         /// <param name="keys">Keys of entities to look up.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -472,9 +468,9 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -496,9 +492,9 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -522,9 +518,9 @@ namespace Google.Datastore.V1Beta3
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -546,9 +542,9 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -570,9 +566,9 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -596,9 +592,9 @@ namespace Google.Datastore.V1Beta3
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -620,9 +616,9 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Begin a new transaction.
+        /// Begins a new transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
@@ -633,9 +629,9 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Begin a new transaction.
+        /// Begins a new transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
@@ -645,9 +641,9 @@ namespace Google.Datastore.V1Beta3
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Begin a new transaction.
+        /// Begins a new transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual BeginTransactionResponse BeginTransaction(
@@ -658,18 +654,23 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
-        /// <param name="transaction">The transaction in which to write.</param>
+        /// <param name="transaction">
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+        /// </param>
         /// <param name="mutations">
         /// The mutations to perform.
         ///
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -691,18 +692,23 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
-        /// <param name="transaction">The transaction in which to write.</param>
+        /// <param name="transaction">
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+        /// </param>
         /// <param name="mutations">
         /// The mutations to perform.
         ///
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -726,18 +732,23 @@ namespace Google.Datastore.V1Beta3
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
-        /// <param name="transaction">The transaction in which to write.</param>
+        /// <param name="transaction">
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+        /// </param>
         /// <param name="mutations">
         /// The mutations to perform.
         ///
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -759,10 +770,10 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
         /// <param name="mutations">
         /// The mutations to perform.
@@ -770,6 +781,7 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -790,10 +802,10 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
         /// <param name="mutations">
         /// The mutations to perform.
@@ -801,6 +813,7 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -822,10 +835,10 @@ namespace Google.Datastore.V1Beta3
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
         /// <param name="mutations">
         /// The mutations to perform.
@@ -833,6 +846,7 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -853,9 +867,9 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Roll back a transaction.
+        /// Rolls back a transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="transaction">
         /// The transaction identifier, returned by a call to
         /// [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
@@ -871,9 +885,9 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Roll back a transaction.
+        /// Rolls back a transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="transaction">
         /// The transaction identifier, returned by a call to
         /// [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
@@ -889,9 +903,9 @@ namespace Google.Datastore.V1Beta3
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Roll back a transaction.
+        /// Rolls back a transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="transaction">
         /// The transaction identifier, returned by a call to
         /// [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
@@ -907,10 +921,10 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Allocate IDs for the given keys (useful for referencing an entity before
-        /// it is inserted).
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="keys">
         /// A list of keys with incomplete key paths for which to allocate IDs.
         /// No key may be reserved/read-only.
@@ -926,10 +940,10 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Allocate IDs for the given keys (useful for referencing an entity before
-        /// it is inserted).
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="keys">
         /// A list of keys with incomplete key paths for which to allocate IDs.
         /// No key may be reserved/read-only.
@@ -945,10 +959,10 @@ namespace Google.Datastore.V1Beta3
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Allocate IDs for the given keys (useful for referencing an entity before
-        /// it is inserted).
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="keys">
         /// A list of keys with incomplete key paths for which to allocate IDs.
         /// No key may be reserved/read-only.
@@ -997,10 +1011,10 @@ namespace Google.Datastore.V1Beta3
         public override Datastore.IDatastoreClient GrpcClient { get; }
 
         /// <summary>
-        /// Look up entities by key.
+        /// Looks up entities by key.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
-        /// <param name="read_options">Options for this lookup request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
+        /// <param name="read_options">The options for this lookup request.</param>
         /// <param name="keys">Keys of entities to look up.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1018,10 +1032,10 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
         /// <summary>
-        /// Look up entities by key.
+        /// Looks up entities by key.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
-        /// <param name="read_options">Options for this lookup request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
+        /// <param name="read_options">The options for this lookup request.</param>
         /// <param name="keys">Keys of entities to look up.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1038,9 +1052,9 @@ namespace Google.Datastore.V1Beta3
                 },
                 callSettings);
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -1067,9 +1081,9 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -1095,9 +1109,9 @@ namespace Google.Datastore.V1Beta3
                 },
                 callSettings);
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -1124,9 +1138,9 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
         /// <summary>
-        /// Query for entities.
+        /// Queries for entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="partition_id">
         /// Entities are partitioned into subsets, identified by a partition ID.
         /// Queries are scoped to a single partition.
@@ -1152,9 +1166,9 @@ namespace Google.Datastore.V1Beta3
                 },
                 callSettings);
         /// <summary>
-        /// Begin a new transaction.
+        /// Begins a new transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<BeginTransactionResponse> BeginTransactionAsync(
@@ -1167,9 +1181,9 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
         /// <summary>
-        /// Begin a new transaction.
+        /// Begins a new transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public override BeginTransactionResponse BeginTransaction(
@@ -1181,18 +1195,23 @@ namespace Google.Datastore.V1Beta3
                 },
                 callSettings);
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
-        /// <param name="transaction">The transaction in which to write.</param>
+        /// <param name="transaction">
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+        /// </param>
         /// <param name="mutations">
         /// The mutations to perform.
         ///
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -1219,18 +1238,23 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
-        /// <param name="transaction">The transaction in which to write.</param>
+        /// <param name="transaction">
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+        /// </param>
         /// <param name="mutations">
         /// The mutations to perform.
         ///
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -1256,10 +1280,10 @@ namespace Google.Datastore.V1Beta3
                 },
                 callSettings);
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
         /// <param name="mutations">
         /// The mutations to perform.
@@ -1267,6 +1291,7 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -1291,10 +1316,10 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
         /// <summary>
-        /// Commit a transaction, optionally creating, deleting or modifying some
+        /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
         /// <param name="mutations">
         /// The mutations to perform.
@@ -1302,6 +1327,7 @@ namespace Google.Datastore.V1Beta3
         /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
         /// applied in order. The following sequences of mutations affecting a single
         /// entity are not permitted in a single `Commit` request:
+        ///
         /// - `insert` followed by `insert`
         /// - `update` followed by `insert`
         /// - `upsert` followed by `insert`
@@ -1325,9 +1351,9 @@ namespace Google.Datastore.V1Beta3
                 },
                 callSettings);
         /// <summary>
-        /// Roll back a transaction.
+        /// Rolls back a transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="transaction">
         /// The transaction identifier, returned by a call to
         /// [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
@@ -1346,9 +1372,9 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
         /// <summary>
-        /// Roll back a transaction.
+        /// Rolls back a transaction.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="transaction">
         /// The transaction identifier, returned by a call to
         /// [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
@@ -1366,10 +1392,10 @@ namespace Google.Datastore.V1Beta3
                 },
                 callSettings);
         /// <summary>
-        /// Allocate IDs for the given keys (useful for referencing an entity before
-        /// it is inserted).
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="keys">
         /// A list of keys with incomplete key paths for which to allocate IDs.
         /// No key may be reserved/read-only.
@@ -1388,10 +1414,10 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
         /// <summary>
-        /// Allocate IDs for the given keys (useful for referencing an entity before
-        /// it is inserted).
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
-        /// <param name="project_id">Project ID against which to make the request.</param>
+        /// <param name="project_id">The ID of the project against which to make the request.</param>
         /// <param name="keys">
         /// A list of keys with incomplete key paths for which to allocate IDs.
         /// No key may be reserved/read-only.
