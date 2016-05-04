@@ -34,7 +34,6 @@ namespace Google.Storage.V1
         {
             ValidateBucket(bucket);
             Preconditions.CheckNotNull(objectName, nameof(objectName));
-            Preconditions.CheckNotNull(contentType, nameof(contentType));
             return UploadObject(
                 new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
                 source, options, progress);
@@ -59,7 +58,6 @@ namespace Google.Storage.V1
         {
             ValidateBucket(bucket);
             Preconditions.CheckNotNull(objectName, nameof(objectName));
-            Preconditions.CheckNotNull(contentType, nameof(contentType));
             return UploadObjectAsync(new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
                 source, options, cancellationToken, progress);
         }
