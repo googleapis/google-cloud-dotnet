@@ -16,7 +16,6 @@ install:
 script:
   - dnu restore
   - dnu build src/Google*
-  - dnu build demo/Google*
   - dnu build test/Google*
   - dnu build tools/Google*
   - dnu build snippets/Google*
