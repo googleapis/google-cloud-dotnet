@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,162 +16,208 @@ using Google.Apis.Download;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
-using Google.Storage.V1;
 using System;
 using System.IO;
+using System.Linq;
+using System.Text;
+using Xunit;
 
-public class StorageClientSnippets
+namespace Google.Storage.V1.Snippets
 {
-    public void Overview()
+    [Collection(nameof(StorageSnippetFixture))]
+    public class StorageClientSnippets
     {
-        // <Overview>
-        var projectId = "YOUR-PROJECT-ID";
+        private readonly StorageSnippetFixture fixture;
 
-        // GCS client connection
-        var client = StorageClient.Create();
-
-        // create a bucket (GCS bucket names must be globally unique)
-        var bucket = "YOUR-BUCKET-NAME";
-        client.Service.Buckets.Insert(new Bucket { Name = bucket }, projectId).Execute();
-
-        // upload a file
-        var source = "YOUR-LOCAL-FILENAME";
-        var contentType = "YOUR-CONTENT-TYPE";
-        var destination = "YOUR-OBJECT-NAME";
-        using (var stream = File.OpenRead(source))
+        public StorageClientSnippets(StorageSnippetFixture fixture)
         {
-            var obj = client.UploadObject(bucket, destination, contentType, stream,
-                new UploadObjectOptions
-                {
-                    PredefinedAcl = ObjectsResource.InsertMediaUpload.PredefinedAclEnum.PublicRead
-                }
-            );
-
-            Console.WriteLine($"Surf to {obj.MediaLink}");
+            this.fixture = fixture;
         }
 
-        // list objects in your bucket
-        foreach (var obj in client.ListObjects(bucket, ""))
+        [Fact]
+        void ListBuckets()
         {
-            Console.WriteLine($"{obj.Name} of type {obj.ContentType}");
+            var projectId = fixture.ProjectId;
+
+            // <ListBuckets>
+            var client = StorageClient.Create();
+
+            // List all buckets associated with a project
+            var buckets = client.ListBuckets(projectId);
+            // </ListBuckets>
         }
-        // </Overview>
 
-        client.DeleteObject(bucket, destination);
-        client.Service.Buckets.Delete(bucket).Execute();
-    }
-
-    static void ListBuckets(StorageClient client, string projectId)
-    {
-        // <ListBuckets>
-        Console.WriteLine($"Buckets in {projectId}:");
-        var buckets = client.ListBuckets(projectId);
-        foreach (var bucket in buckets)
+        [Fact]
+        void CreateBucket()
         {
-            Console.WriteLine($"  {bucket.Name}");
+            var projectId = fixture.ProjectId;
+
+            // <Buckets.Insert>
+            var client = StorageClient.Create();
+
+            // GCS bucket names must be globally unique
+            var bucketName = Guid.NewGuid().ToString();
+
+            // Bucket defined in Google.Apis.Storage.v1.Data namespace
+            var bucket = client.Service.Buckets.Insert(new Bucket { Name = bucketName }, projectId).Execute();
+            // </Buckets.Insert>
+
+            Assert.Equal(bucketName, bucket.Name);
+            Assert.True(!string.IsNullOrWhiteSpace(bucket.Id));
+            client.Service.Buckets.Delete(bucketName).Execute();
         }
-        // </ListBuckets>
-    }
 
-    static Bucket CreateBucket(StorageClient client, string projectId, string name)
-    {
-        // <CreateBucket>
-        // GCS bucket names must be globally unique
-        Console.WriteLine($"Creating bucket {name} in project {projectId}");
-        return client.Service.Buckets.Insert(new Bucket { Name = name }, projectId).Execute();
-        // </CreateBucket>
-    }
-
-    static void ListObjects(StorageClient client, string bucket, string prefix = "")
-    {
-        // <ListObjects>
-        Console.WriteLine($"Objects in bucket {bucket}:");
-        var objects = client.ListObjects(bucket, prefix);
-        foreach (var obj in objects)
+        [Fact]
+        void ListObjects()
         {
-            Console.WriteLine($"  {obj.Name} [{obj.ContentType}]");
+            var bucketName = fixture.BucketName;
+
+            // <ListObjects>
+            var client = StorageClient.Create();
+
+            // List only objects with a name starting with "greet"
+            var objects = client.ListObjects(bucketName, "greet");
+            // </ListObjects>
+
+            var names = objects.Select(obj => obj.Name).ToList();
+            Assert.Contains(fixture.HelloWorldName, names);
         }
-        // </ListObjects>
-    }
 
-    static void DownloadFile(StorageClient client, string bucket, string source, string destination)
-    {
-        // <DownloadFile>
-        Console.WriteLine($"Downloading GCS file {source} from bucket {bucket} to local file {destination}:");
-        using (var stream = File.Create(destination))
+        [Fact]
+        void DownloadFile()
         {
-            var progress = new Progress<IDownloadProgress>(
-                p => Console.WriteLine($"  Downloaded {p.BytesDownloaded} bytes; status: {p.Status}")
-            );
+            var bucketName = fixture.BucketName;
+            var projectId = fixture.ProjectId;
 
-            client.DownloadObject(bucket, source, stream, null, progress);
-        }
-        // </DownloadFile>
-    }
+            // <DownloadObject>
+            var client = StorageClient.Create();
+            var source = "greetings/hello.txt";
+            var destination = @".\hello.txt";
 
-    static Google.Apis.Storage.v1.Data.Object UploadFile(StorageClient client, string bucket, string source, string destination, string contentType, bool makePublic)
-    {
-        // <UploadFile>
-        Console.WriteLine($"Uploading local file {source} of type {contentType} to GCS file {destination} in {bucket}:");
-        using (var stream = File.OpenRead(source))
-        {
-            var progress = new Progress<IUploadProgress>(
-              p => Console.WriteLine($"  Uploaded {p.BytesSent} bytes; status: {p.Status}")
-            );
-
-            var options = new UploadObjectOptions
+            using (var stream = File.Create(destination))
             {
-                PredefinedAcl = makePublic ?
-                    ObjectsResource.InsertMediaUpload.PredefinedAclEnum.PublicRead :
-                    ObjectsResource.InsertMediaUpload.PredefinedAclEnum.AuthenticatedRead
-            };
+                // IDownloadProgress defined in Google.Apis.Download namespace
+                var progress = new Progress<IDownloadProgress>(
+                    p => Console.WriteLine($"bytes: {p.BytesDownloaded}, status: {p.Status}")
+                );
 
-            return client.UploadObject(bucket, destination, contentType, stream, options, progress);
+                // Download source object from bucket to local file system
+                client.DownloadObject(bucketName, source, stream, null, progress);
+            }
+            // </DownloadObject>
+
+            // want to show the source path in the snippet to give an idea
+            // of nested paths, but want to make sure that the pre-uploaded file
+            // is at the same path as the source since it is duplicated data
+            Assert.Equal(fixture.HelloWorldName, source);
+
+            Assert.Equal(fixture.HelloWorldContent, File.ReadAllText(destination));
+            File.Delete(destination);
         }
-        // </UploadFile>
-    }
 
-    static Google.Apis.Storage.v1.Data.Object GetObject(StorageClient client, string bucket, string name)
-    {
-        // <GetObject>
-        Console.WriteLine($"Getting object {name} from bucket {bucket}:");
+        [Fact]
+        void UploadFile()
+        {
+            // need to write this at test run instead of fixture creation
+            // as the DownloadFile test creates and deletes the same file
+            var local = @".\hello.txt";
+            File.WriteAllText(local, fixture.HelloWorldContent);
+            var bucketName = fixture.BucketName;
 
-        var obj = client.GetObject(bucket, name);
-        Console.WriteLine($"  Id: {obj.Id}");
-        Console.WriteLine($"  Name: {obj.Name}");
-        Console.WriteLine($"  ContentType: {obj.ContentType}");
-        Console.WriteLine($"  Size: {obj.Size}");
-        Console.WriteLine($"  MediaLink: {obj.MediaLink}");
-        Console.WriteLine($"  SelfLink: {obj.SelfLink}");
-        return obj;
-        // </GetObject>
-    }
+            // <UploadObject>
+            var client = StorageClient.Create();
+            var source = @".\hello.txt";
+            var destination = "greetings/hello.txt";
+            var contentType = "text/plain";
 
-    static Bucket GetBucket(StorageClient client, string name)
-    {
-        // <GetBucket>
-        Console.WriteLine($"Getting bucket {name}:");
+            using (var stream = File.OpenRead(source))
+            {
+                // IUploadProgress defined in Google.Apis.Upload namespace
+                var progress = new Progress<IUploadProgress>(
+                  p => Console.WriteLine($"bytes: {p.BytesSent}, status: {p.Status}")
+                );
 
-        var bucket = client.Service.Buckets.Get(name).Execute();
-        Console.WriteLine($"  Id: {bucket.Id}");
-        Console.WriteLine($"  Name: {bucket.Name}");
-        return bucket;
-        // </GetBucket>
-    }
+                // ObjectsResource defined in Google.Apis.Storage.v1 namespace
+                // var acl = ObjectsResource.InsertMediaUpload.PredefinedAclEnum.PublicRead // public
+                var acl = ObjectsResource.InsertMediaUpload.PredefinedAclEnum.AuthenticatedRead; // private
+                var options = new UploadObjectOptions { PredefinedAcl = acl };
+                var obj = client.UploadObject(bucketName, destination, contentType, stream, options, progress);
+            }
+            // </UploadObject>
 
-    static void DeleteObject(StorageClient client, string bucket, string name)
-    {
-        // <DeleteObject>
-        Console.WriteLine($"Deleting file {name} from bucket {bucket}");
-        client.DeleteObject(bucket, name);
-        // </DeleteObject>
-    }
+            // want to show the source and destinations in the snippet, but also
+            // want to make sure it matches the one in the fixture
+            Assert.Equal(local, source);
+            Assert.Equal(destination, fixture.HelloWorldName);
 
-    static void DeleteBucket(StorageClient client, string bucket)
-    {
-        // <DeleteBucket>
-        Console.WriteLine($"Deleting bucket {bucket}");
-        client.Service.Buckets.Delete(bucket).Execute();
-        // </DeleteBucket>
+            // No need to delete the storage object, as it'll be taken down by the fixture cleanup
+            File.Delete(local);
+        }
+
+        [Fact]
+        void GetObject()
+        {
+            var bucketName = fixture.BucketName;
+
+            // <GetObject>
+            var client = StorageClient.Create();
+            var name = "greetings/hello.txt";
+
+            var obj = client.GetObject(bucketName, name);
+            Console.WriteLine($"Name: {obj.Name}");
+            Console.WriteLine($"Size: {obj.Size}");
+            Console.WriteLine($"ContentType: {obj.ContentType}");
+            Console.WriteLine($"TimeCreated: {obj.TimeCreated}");
+            // </GetObject>
+        }
+
+        [Fact]
+        void GetBucket()
+        {
+            var bucketName = fixture.BucketName;
+
+            // <Buckets.Get>
+            var client = StorageClient.Create();
+
+            var bucket = client.Service.Buckets.Get(bucketName).Execute();
+            Console.WriteLine($"Name: {bucket.Name}");
+            Console.WriteLine($"TimeCreated: {bucket.TimeCreated}");
+            // </Bucket.Get>
+        }
+
+        [Fact]
+        void DeleteObject()
+        {
+            var bucketName = fixture.BucketName;
+
+            // <DeleteObject>
+            var client = StorageClient.Create();
+            var objectName = "greetings/hello.txt";
+
+            client.DeleteObject(bucketName, objectName);
+            // </DeleteObject>
+
+            // want to show the name in the snippet, but also
+            // want to make sure it matches the ones in the fixture
+            Assert.Equal(fixture.HelloWorldName, objectName);
+
+            // need to put the object back as it's used elsewhere
+            byte[] content = Encoding.UTF8.GetBytes(fixture.HelloWorldContent);
+            client.UploadObject(fixture.BucketName, fixture.HelloWorldName, "text/plain", new MemoryStream(content));
+        }
+
+        [Fact]
+        void DeleteBucket()
+        {
+            var bucketName = Guid.NewGuid().ToString();
+            StorageClient.Create().Service.Buckets.Insert(new Bucket { Name = bucketName }, fixture.ProjectId).Execute();
+
+            // <DeleteBucket>
+            var client = StorageClient.Create();
+
+            client.Service.Buckets.Delete(bucketName).Execute();
+            // </DeleteBucket>
+        }
+
     }
 }

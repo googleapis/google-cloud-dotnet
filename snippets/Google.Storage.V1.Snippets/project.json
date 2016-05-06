@@ -1,11 +1,22 @@
 ﻿{
-  "description": "Snippets for the Google.Storage.V1 package",
+  "description": "Snippets for the Google.Storage.V1 package (written as tests).",
+
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk",
+    "debugType": "full"
+  },
 
   "dependencies": {
-    "Google.Storage.V1": ""
+    "Google.Storage.V1": "",
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-rc1-build204"
+  },
+
+  "commands": {
+    "test": "xunit.runner.dnx"
   },
 
   "frameworks": {
-    "net45": { }
+    "dnx451": { }
   }
 }
