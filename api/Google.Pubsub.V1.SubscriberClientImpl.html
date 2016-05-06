@@ -123,9 +123,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override Subscriber.ISubscriberClient GrpcClient
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -247,8 +245,8 @@ than once will not result in an error.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.CreateSubscription(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,Google.Api.Gax.CallSettings)">CreateSubscription(String, String, PushConfig, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
-If the subscription already exists, generates <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, generates <code>NOT_FOUND</code>.</p>
+If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic.</p>
 </div>
@@ -281,7 +279,9 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td><p>The name of the topic from which this subscription is receiving messages.</p>
+                    <td><p>The name of the topic from which this subscription is receiving messages.
+The value of this field will be <code>_deleted-topic_</code> if the topic has been
+deleted.</p>
 </td>
                   </tr>
                   <tr>
@@ -320,8 +320,8 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.CreateSubscriptionAsync(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,Google.Api.Gax.CallSettings)">CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
-If the subscription already exists, generates <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, generates <code>NOT_FOUND</code>.</p>
+If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic.</p>
 </div>
@@ -354,7 +354,9 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td><p>The name of the topic from which this subscription is receiving messages.</p>
+                    <td><p>The name of the topic from which this subscription is receiving messages.
+The value of this field will be <code>_deleted-topic_</code> if the topic has been
+deleted.</p>
 </td>
                   </tr>
                   <tr>
@@ -393,7 +395,7 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_DeleteSubscription_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.DeleteSubscription(System.String,Google.Api.Gax.CallSettings)">DeleteSubscription(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
-are immediately dropped. Calls to <code>Pull</code> after deletion will generate
+are immediately dropped. Calls to <code>Pull</code> after deletion will return
 <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
 the same name, but the new one has no association with the old
 subscription, or its topic unless the same topic is specified.</p>
@@ -429,7 +431,7 @@ subscription, or its topic unless the same topic is specified.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_DeleteSubscriptionAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.DeleteSubscriptionAsync(System.String,Google.Api.Gax.CallSettings)">DeleteSubscriptionAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
-are immediately dropped. Calls to <code>Pull</code> after deletion will generate
+are immediately dropped. Calls to <code>Pull</code> after deletion will return
 <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
 the same name, but the new one has no association with the old
 subscription, or its topic unless the same topic is specified.</p>
@@ -481,8 +483,6 @@ subscription, or its topic unless the same topic is specified.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GetSubscription_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GetSubscription(System.String,Google.Api.Gax.CallSettings)">GetSubscription(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -531,8 +531,6 @@ not deleted, but the value of the <code>topic</code> field is set to <code>_dele
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GetSubscriptionAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GetSubscriptionAsync(System.String,Google.Api.Gax.CallSettings)">GetSubscriptionAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -581,8 +579,6 @@ not deleted, but the value of the <code>topic</code> field is set to <code>_dele
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ListSubscriptions_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ListSubscriptions(System.String,Google.Api.Gax.CallSettings)">ListSubscriptions(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -631,8 +627,6 @@ not deleted, but the value of the <code>topic</code> field is set to <code>_dele
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ListSubscriptionsAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ListSubscriptionsAsync(System.String,Google.Api.Gax.CallSettings)">ListSubscriptionsAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -885,7 +879,7 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_Pull_System_String_System_Boolean_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.Pull(System.String,System.Boolean,System.Int32,Google.Api.Gax.CallSettings)">Pull(String, Boolean, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
-messages available in the backlog. The server may generate <code>UNAVAILABLE</code> if
+messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
 subscription.</p>
 </div>
@@ -946,7 +940,7 @@ subscription.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClientImpl_PullAsync_System_String_System_Boolean_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.PullAsync(System.String,System.Boolean,System.Int32,Google.Api.Gax.CallSettings)">PullAsync(String, Boolean, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
-messages available in the backlog. The server may generate <code>UNAVAILABLE</code> if
+messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
 subscription.</p>
 </div>

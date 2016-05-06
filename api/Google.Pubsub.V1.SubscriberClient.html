@@ -95,9 +95,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -127,9 +125,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -155,9 +151,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Subscriber.ISubscriberClient GrpcClient
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -184,9 +178,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static PathTemplate ProjectTemplate
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -213,9 +205,34 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static PathTemplate SubscriptionTemplate
 {
-
     get;
-
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate">PathTemplate</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Pubsub_V1_SubscriberClient_TopicTemplate" data-uid="Google.Pubsub.V1.SubscriberClient.TopicTemplate">TopicTemplate</h4>
+              <div class="markdown level1 summary"><p>Path template for a topic resource. Parameters:</p>
+<ul><li>project</li><li>topic</li></ul>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static PathTemplate TopicTemplate
+{
+    get;
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -393,13 +410,15 @@ than once will not result in an error.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_Grpc_Core_ChannelCredentials_" data-uid="Google.Pubsub.V1.SubscriberClient.Create(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.SubscriberSettings,Grpc.Core.ChannelCredentials)">Create(ServiceEndpoint, SubscriberSettings, ChannelCredentials)</h4>
-              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a>, applying defaults for all unspecified settings.</p>
+              <h4 id="Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.Create(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.SubscriberSettings)">Create(ServiceEndpoint, SubscriberSettings)</h4>
+              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static SubscriberClient Create(ServiceEndpoint endpoint = null, SubscriberSettings settings = null, ChannelCredentials credentials = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static SubscriberClient Create(ServiceEndpoint endpoint = null, SubscriberSettings settings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -421,12 +440,6 @@ than once will not result in an error.</p>
                     <td><a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a></td>
                     <td><em>settings</em></td>
                     <td><p>Optional <a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a>.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Grpc.Core.ChannelCredentials</span></td>
-                    <td><em>credentials</em></td>
-                    <td><p>Optional <span class="xref">Grpc.Core.ChannelCredentials</span>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -447,13 +460,63 @@ than once will not result in an error.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_Grpc_Core_ChannelCredentials_" data-uid="Google.Pubsub.V1.SubscriberClient.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.SubscriberSettings,Grpc.Core.ChannelCredentials)">CreateAsync(ServiceEndpoint, SubscriberSettings, ChannelCredentials)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a>, applying defaults for all unspecified settings.</p>
+              <h4 id="Google_Pubsub_V1_SubscriberClient_Create_Grpc_Core_Channel_Google_Pubsub_V1_SubscriberSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.Create(Grpc.Core.Channel,Google.Pubsub.V1.SubscriberSettings)">Create(Channel, SubscriberSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> which uses the specified channel for remote operations.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Task&lt;SubscriberClient&gt; CreateAsync(ServiceEndpoint endpoint = null, SubscriberSettings settings = null, ChannelCredentials credentials = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static SubscriberClient Create(Channel channel, SubscriberSettings settings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Channel</span></td>
+                    <td><em>channel</em></td>
+                    <td><p>The <span class="xref">Grpc.Core.Channel</span> for remote operations. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>Optional <a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.SubscriberSettings)">CreateAsync(ServiceEndpoint, SubscriberSettings)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;SubscriberClient&gt; CreateAsync(ServiceEndpoint endpoint = null, SubscriberSettings settings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -475,12 +538,6 @@ than once will not result in an error.</p>
                     <td><a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a></td>
                     <td><em>settings</em></td>
                     <td><p>Optional <a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a>.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Grpc.Core.ChannelCredentials</span></td>
-                    <td><em>credentials</em></td>
-                    <td><p>Optional <span class="xref">Grpc.Core.ChannelCredentials</span>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -503,8 +560,8 @@ than once will not result in an error.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.CreateSubscription(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,Google.Api.Gax.CallSettings)">CreateSubscription(String, String, PushConfig, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
-If the subscription already exists, generates <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, generates <code>NOT_FOUND</code>.</p>
+If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic.</p>
 </div>
@@ -549,7 +606,9 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td><p>The name of the topic from which this subscription is receiving messages.</p>
+                    <td><p>The name of the topic from which this subscription is receiving messages.
+The value of this field will be <code>_deleted-topic_</code> if the topic has been
+deleted.</p>
 </td>
                   </tr>
                   <tr>
@@ -588,8 +647,8 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.CreateSubscriptionAsync(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,Google.Api.Gax.CallSettings)">CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
-If the subscription already exists, generates <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, generates <code>NOT_FOUND</code>.</p>
+If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic.</p>
 </div>
@@ -634,7 +693,9 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td><p>The name of the topic from which this subscription is receiving messages.</p>
+                    <td><p>The name of the topic from which this subscription is receiving messages.
+The value of this field will be <code>_deleted-topic_</code> if the topic has been
+deleted.</p>
 </td>
                   </tr>
                   <tr>
@@ -673,8 +734,8 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.SubscriberClient.CreateSubscriptionAsync(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,System.Threading.CancellationToken)">CreateSubscriptionAsync(String, String, PushConfig, Int32, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
-If the subscription already exists, generates <code>ALREADY_EXISTS</code>.
-If the corresponding topic doesn&#39;t exist, generates <code>NOT_FOUND</code>.</p>
+If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic.</p>
 </div>
@@ -719,7 +780,9 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td><p>The name of the topic from which this subscription is receiving messages.</p>
+                    <td><p>The name of the topic from which this subscription is receiving messages.
+The value of this field will be <code>_deleted-topic_</code> if the topic has been
+deleted.</p>
 </td>
                   </tr>
                   <tr>
@@ -758,7 +821,7 @@ in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_DeleteSubscription_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.DeleteSubscription(System.String,Google.Api.Gax.CallSettings)">DeleteSubscription(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
-are immediately dropped. Calls to <code>Pull</code> after deletion will generate
+are immediately dropped. Calls to <code>Pull</code> after deletion will return
 <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
 the same name, but the new one has no association with the old
 subscription, or its topic unless the same topic is specified.</p>
@@ -794,7 +857,7 @@ subscription, or its topic unless the same topic is specified.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_DeleteSubscriptionAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.DeleteSubscriptionAsync(System.String,Google.Api.Gax.CallSettings)">DeleteSubscriptionAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
-are immediately dropped. Calls to <code>Pull</code> after deletion will generate
+are immediately dropped. Calls to <code>Pull</code> after deletion will return
 <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
 the same name, but the new one has no association with the old
 subscription, or its topic unless the same topic is specified.</p>
@@ -846,7 +909,7 @@ subscription, or its topic unless the same topic is specified.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_DeleteSubscriptionAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.SubscriberClient.DeleteSubscriptionAsync(System.String,System.Threading.CancellationToken)">DeleteSubscriptionAsync(String, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
-are immediately dropped. Calls to <code>Pull</code> after deletion will generate
+are immediately dropped. Calls to <code>Pull</code> after deletion will return
 <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
 the same name, but the new one has no association with the old
 subscription, or its topic unless the same topic is specified.</p>
@@ -940,8 +1003,6 @@ subscription, or its topic unless the same topic is specified.</p>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_GetSubscription_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.GetSubscription(System.String,Google.Api.Gax.CallSettings)">GetSubscription(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -990,8 +1051,6 @@ not deleted, but the value of the <code>topic</code> field is set to <code>_dele
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_GetSubscriptionAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.GetSubscriptionAsync(System.String,Google.Api.Gax.CallSettings)">GetSubscriptionAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1040,8 +1099,6 @@ not deleted, but the value of the <code>topic</code> field is set to <code>_dele
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_GetSubscriptionAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.SubscriberClient.GetSubscriptionAsync(System.String,System.Threading.CancellationToken)">GetSubscriptionAsync(String, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1136,10 +1193,56 @@ not deleted, but the value of the <code>topic</code> field is set to <code>_dele
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Pubsub_V1_SubscriberClient_GetTopicName_System_String_System_String_" data-uid="Google.Pubsub.V1.SubscriberClient.GetTopicName(System.String,System.String)">GetTopicName(String, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a topic resource name from its component IDs.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string GetTopicName(string projectId, string topicId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>topicId</em></td>
+                    <td><p>The topic ID.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><p>The full topic resource name.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.ListSubscriptions(System.String,Google.Api.Gax.CallSettings)">ListSubscriptions(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
@@ -1198,8 +1301,6 @@ foreach (Subscription subscription in client.ListSubscriptions(projectName))
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.ListSubscriptionsAsync(System.String,Google.Api.Gax.CallSettings)">ListSubscriptionsAsync(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
-<p>If the topic of a subscription has been deleted, the subscription itself is
-not deleted, but the value of the <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
@@ -1581,7 +1682,7 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_Pull_System_String_System_Boolean_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.Pull(System.String,System.Boolean,System.Int32,Google.Api.Gax.CallSettings)">Pull(String, Boolean, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
-messages available in the backlog. The server may generate <code>UNAVAILABLE</code> if
+messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
 subscription.</p>
 </div>
@@ -1663,7 +1764,7 @@ client.Acknowledge(subscriptionName, ackIds);
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.PullAsync(System.String,System.Boolean,System.Int32,Google.Api.Gax.CallSettings)">PullAsync(String, Boolean, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
-messages available in the backlog. The server may generate <code>UNAVAILABLE</code> if
+messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
 subscription.</p>
 </div>
@@ -1745,7 +1846,7 @@ await client.AcknowledgeAsync(subscriptionName, ackIds);
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.SubscriberClient.PullAsync(System.String,System.Boolean,System.Int32,System.Threading.CancellationToken)">PullAsync(String, Boolean, Int32, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
-messages available in the backlog. The server may generate <code>UNAVAILABLE</code> if
+messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
 subscription.</p>
 </div>
@@ -1821,6 +1922,37 @@ await client.AcknowledgeAsync(subscriptionName, ackIds);
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Pubsub.V1.PullResponse.html#Google_Pubsub_V1_PullResponse">PullResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Pubsub_V1_SubscriberClient_ShutdownDefaultChannelsAsync" data-uid="Google.Pubsub.V1.SubscriberClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
+              <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">Create(ServiceEndpoint, SubscriberSettings)</a>
+and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">CreateAsync(ServiceEndpoint, SubscriberSettings)</a>. Channels which weren&#39;t automatically
+created are not affected.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Pubsub_V1_SubscriberClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">Create(ServiceEndpoint, SubscriberSettings)</a>
+and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">CreateAsync(ServiceEndpoint, SubscriberSettings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous shutdown operation.</p>
 </td>
                   </tr>
                 </tbody>

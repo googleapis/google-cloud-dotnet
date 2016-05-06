@@ -10373,14 +10373,18 @@ references:
   name.vb: CommitAsync(String, CommitRequest.Types.Mode, IEnumerable(Of Mutation), CancellationToken)
   fullName: Google.Datastore.V1Beta3.DatastoreClient.CommitAsync(System.String, Google.Datastore.V1Beta3.CommitRequest.Types.Mode, System.Collections.Generic.IEnumerable<Google.Datastore.V1Beta3.Mutation>, System.Threading.CancellationToken)
   fullName.vb: Google.Datastore.V1Beta3.DatastoreClient.CommitAsync(System.String, Google.Datastore.V1Beta3.CommitRequest.Types.Mode, System.Collections.Generic.IEnumerable(Of Google.Datastore.V1Beta3.Mutation), System.Threading.CancellationToken)
-- uid: Google.Datastore.V1Beta3.DatastoreClient.Create(Google.Api.Gax.ServiceEndpoint,Google.Datastore.V1Beta3.DatastoreSettings,Grpc.Core.ChannelCredentials)
-  name: Create(ServiceEndpoint, DatastoreSettings, ChannelCredentials)
-  href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Datastore_V1Beta3_DatastoreSettings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Datastore.V1Beta3.DatastoreClient.Create(Google.Api.Gax.ServiceEndpoint, Google.Datastore.V1Beta3.DatastoreSettings, Grpc.Core.ChannelCredentials)
-- uid: Google.Datastore.V1Beta3.DatastoreClient.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Datastore.V1Beta3.DatastoreSettings,Grpc.Core.ChannelCredentials)
-  name: CreateAsync(ServiceEndpoint, DatastoreSettings, ChannelCredentials)
-  href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Datastore_V1Beta3_DatastoreSettings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Datastore.V1Beta3.DatastoreClient.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Datastore.V1Beta3.DatastoreSettings, Grpc.Core.ChannelCredentials)
+- uid: Google.Datastore.V1Beta3.DatastoreClient.Create(Google.Api.Gax.ServiceEndpoint,Google.Datastore.V1Beta3.DatastoreSettings)
+  name: Create(ServiceEndpoint, DatastoreSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Datastore_V1Beta3_DatastoreSettings_
+  fullName: Google.Datastore.V1Beta3.DatastoreClient.Create(Google.Api.Gax.ServiceEndpoint, Google.Datastore.V1Beta3.DatastoreSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreClient.Create(Grpc.Core.Channel,Google.Datastore.V1Beta3.DatastoreSettings)
+  name: Create(Channel, DatastoreSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Create_Grpc_Core_Channel_Google_Datastore_V1Beta3_DatastoreSettings_
+  fullName: Google.Datastore.V1Beta3.DatastoreClient.Create(Grpc.Core.Channel, Google.Datastore.V1Beta3.DatastoreSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreClient.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Datastore.V1Beta3.DatastoreSettings)
+  name: CreateAsync(ServiceEndpoint, DatastoreSettings)
+  href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Datastore_V1Beta3_DatastoreSettings_
+  fullName: Google.Datastore.V1Beta3.DatastoreClient.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Datastore.V1Beta3.DatastoreSettings)
 - uid: Google.Datastore.V1Beta3.DatastoreClient.DefaultEndpoint
   name: DefaultEndpoint
   href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_DefaultEndpoint
@@ -10447,6 +10451,10 @@ references:
   name: RunQueryAsync(String, PartitionId, ReadOptions, Query, CancellationToken)
   href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_Query_System_Threading_CancellationToken_
   fullName: Google.Datastore.V1Beta3.DatastoreClient.RunQueryAsync(System.String, Google.Datastore.V1Beta3.PartitionId, Google.Datastore.V1Beta3.ReadOptions, Google.Datastore.V1Beta3.Query, System.Threading.CancellationToken)
+- uid: Google.Datastore.V1Beta3.DatastoreClient.ShutdownDefaultChannelsAsync
+  name: ShutdownDefaultChannelsAsync()
+  href: api/Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_ShutdownDefaultChannelsAsync
+  fullName: Google.Datastore.V1Beta3.DatastoreClient.ShutdownDefaultChannelsAsync()
 - uid: Google.Datastore.V1Beta3.DatastoreClientImpl
   name: DatastoreClientImpl
   href: api/Google.Datastore.V1Beta3.DatastoreClientImpl.html#Google_Datastore_V1Beta3_DatastoreClientImpl
@@ -10563,22 +10571,22 @@ references:
   name: DatastoreSettings()
   href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings__ctor
   fullName: Google.Datastore.V1Beta3.DatastoreSettings.DatastoreSettings()
-- uid: Google.Datastore.V1Beta3.DatastoreSettings.AllocateIdsRetry
-  name: AllocateIdsRetry
-  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_AllocateIdsRetry
-  fullName: Google.Datastore.V1Beta3.DatastoreSettings.AllocateIdsRetry
-- uid: Google.Datastore.V1Beta3.DatastoreSettings.BeginTransactionRetry
-  name: BeginTransactionRetry
-  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_BeginTransactionRetry
-  fullName: Google.Datastore.V1Beta3.DatastoreSettings.BeginTransactionRetry
+- uid: Google.Datastore.V1Beta3.DatastoreSettings.AllocateIdsSettings
+  name: AllocateIdsSettings
+  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_AllocateIdsSettings
+  fullName: Google.Datastore.V1Beta3.DatastoreSettings.AllocateIdsSettings
+- uid: Google.Datastore.V1Beta3.DatastoreSettings.BeginTransactionSettings
+  name: BeginTransactionSettings
+  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_BeginTransactionSettings
+  fullName: Google.Datastore.V1Beta3.DatastoreSettings.BeginTransactionSettings
 - uid: Google.Datastore.V1Beta3.DatastoreSettings.Clone
   name: Clone()
   href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_Clone
   fullName: Google.Datastore.V1Beta3.DatastoreSettings.Clone()
-- uid: Google.Datastore.V1Beta3.DatastoreSettings.CommitRetry
-  name: CommitRetry
-  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_CommitRetry
-  fullName: Google.Datastore.V1Beta3.DatastoreSettings.CommitRetry
+- uid: Google.Datastore.V1Beta3.DatastoreSettings.CommitSettings
+  name: CommitSettings
+  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_CommitSettings
+  fullName: Google.Datastore.V1Beta3.DatastoreSettings.CommitSettings
 - uid: Google.Datastore.V1Beta3.DatastoreSettings.GetDefault
   name: GetDefault()
   href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_GetDefault
@@ -10591,22 +10599,22 @@ references:
   name: GetDefaultTimeoutBackoff()
   href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_GetDefaultTimeoutBackoff
   fullName: Google.Datastore.V1Beta3.DatastoreSettings.GetDefaultTimeoutBackoff()
-- uid: Google.Datastore.V1Beta3.DatastoreSettings.LookupRetry
-  name: LookupRetry
-  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_LookupRetry
-  fullName: Google.Datastore.V1Beta3.DatastoreSettings.LookupRetry
+- uid: Google.Datastore.V1Beta3.DatastoreSettings.LookupSettings
+  name: LookupSettings
+  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_LookupSettings
+  fullName: Google.Datastore.V1Beta3.DatastoreSettings.LookupSettings
 - uid: Google.Datastore.V1Beta3.DatastoreSettings.NoneRetryFilter
   name: NoneRetryFilter
   href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_NoneRetryFilter
   fullName: Google.Datastore.V1Beta3.DatastoreSettings.NoneRetryFilter
-- uid: Google.Datastore.V1Beta3.DatastoreSettings.RollbackRetry
-  name: RollbackRetry
-  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_RollbackRetry
-  fullName: Google.Datastore.V1Beta3.DatastoreSettings.RollbackRetry
-- uid: Google.Datastore.V1Beta3.DatastoreSettings.RunQueryRetry
-  name: RunQueryRetry
-  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_RunQueryRetry
-  fullName: Google.Datastore.V1Beta3.DatastoreSettings.RunQueryRetry
+- uid: Google.Datastore.V1Beta3.DatastoreSettings.RollbackSettings
+  name: RollbackSettings
+  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_RollbackSettings
+  fullName: Google.Datastore.V1Beta3.DatastoreSettings.RollbackSettings
+- uid: Google.Datastore.V1Beta3.DatastoreSettings.RunQuerySettings
+  name: RunQuerySettings
+  href: api/Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings_RunQuerySettings
+  fullName: Google.Datastore.V1Beta3.DatastoreSettings.RunQuerySettings
 - uid: Google.Datastore.V1Beta3.Entity
   name: Entity
   href: api/Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity
@@ -13379,6 +13387,14 @@ references:
   name: WriteTo(CodedOutputStream)
   href: api/Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_WriteTo_Google_Protobuf_CodedOutputStream_
   fullName: Google.Datastore.V1Beta3.Value.WriteTo(Google.Protobuf.CodedOutputStream)
+- uid: Google.Datastore.V1Beta3.ValueExtensions
+  name: ValueExtensions
+  href: api/Google.Datastore.V1Beta3.ValueExtensions.html#Google_Datastore_V1Beta3_ValueExtensions
+  fullName: Google.Datastore.V1Beta3.ValueExtensions
+- uid: Google.Datastore.V1Beta3.ValueExtensions.OrNull(Google.Datastore.V1Beta3.Value)
+  name: OrNull(Value)
+  href: api/Google.Datastore.V1Beta3.ValueExtensions.html#Google_Datastore_V1Beta3_ValueExtensions_OrNull_Google_Datastore_V1Beta3_Value_
+  fullName: Google.Datastore.V1Beta3.ValueExtensions.OrNull(Google.Datastore.V1Beta3.Value)
 - uid: Google.Logging.Type
   name: Google.Logging.Type
   href: api/Google.Logging.Type.html#Google_Logging_Type
@@ -13841,14 +13857,18 @@ references:
   name: ConfigServiceV2Client
   href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client
   fullName: Google.Logging.V2.ConfigServiceV2Client
-- uid: Google.Logging.V2.ConfigServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.ConfigServiceV2Settings,Grpc.Core.ChannelCredentials)
-  name: Create(ServiceEndpoint, ConfigServiceV2Settings, ChannelCredentials)
-  href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_ConfigServiceV2Settings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Logging.V2.ConfigServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.ConfigServiceV2Settings, Grpc.Core.ChannelCredentials)
-- uid: Google.Logging.V2.ConfigServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.ConfigServiceV2Settings,Grpc.Core.ChannelCredentials)
-  name: CreateAsync(ServiceEndpoint, ConfigServiceV2Settings, ChannelCredentials)
-  href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_ConfigServiceV2Settings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Logging.V2.ConfigServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.ConfigServiceV2Settings, Grpc.Core.ChannelCredentials)
+- uid: Google.Logging.V2.ConfigServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.ConfigServiceV2Settings)
+  name: Create(ServiceEndpoint, ConfigServiceV2Settings)
+  href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_ConfigServiceV2Settings_
+  fullName: Google.Logging.V2.ConfigServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.ConfigServiceV2Settings)
+- uid: Google.Logging.V2.ConfigServiceV2Client.Create(Grpc.Core.Channel,Google.Logging.V2.ConfigServiceV2Settings)
+  name: Create(Channel, ConfigServiceV2Settings)
+  href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_Create_Grpc_Core_Channel_Google_Logging_V2_ConfigServiceV2Settings_
+  fullName: Google.Logging.V2.ConfigServiceV2Client.Create(Grpc.Core.Channel, Google.Logging.V2.ConfigServiceV2Settings)
+- uid: Google.Logging.V2.ConfigServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.ConfigServiceV2Settings)
+  name: CreateAsync(ServiceEndpoint, ConfigServiceV2Settings)
+  href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_ConfigServiceV2Settings_
+  fullName: Google.Logging.V2.ConfigServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.ConfigServiceV2Settings)
 - uid: Google.Logging.V2.ConfigServiceV2Client.CreateSink(System.String,Google.Logging.V2.LogSink,Google.Api.Gax.CallSettings)
   name: CreateSink(String, LogSink, CallSettings)
   href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_CallSettings_
@@ -13917,6 +13937,10 @@ references:
   name: ProjectTemplate
   href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_ProjectTemplate
   fullName: Google.Logging.V2.ConfigServiceV2Client.ProjectTemplate
+- uid: Google.Logging.V2.ConfigServiceV2Client.ShutdownDefaultChannelsAsync
+  name: ShutdownDefaultChannelsAsync()
+  href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_ShutdownDefaultChannelsAsync
+  fullName: Google.Logging.V2.ConfigServiceV2Client.ShutdownDefaultChannelsAsync()
 - uid: Google.Logging.V2.ConfigServiceV2Client.SinkTemplate
   name: SinkTemplate
   href: api/Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_SinkTemplate
@@ -14005,14 +14029,14 @@ references:
   name: Clone()
   href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_Clone
   fullName: Google.Logging.V2.ConfigServiceV2Settings.Clone()
-- uid: Google.Logging.V2.ConfigServiceV2Settings.CreateSinkRetry
-  name: CreateSinkRetry
-  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_CreateSinkRetry
-  fullName: Google.Logging.V2.ConfigServiceV2Settings.CreateSinkRetry
-- uid: Google.Logging.V2.ConfigServiceV2Settings.DeleteSinkRetry
-  name: DeleteSinkRetry
-  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_DeleteSinkRetry
-  fullName: Google.Logging.V2.ConfigServiceV2Settings.DeleteSinkRetry
+- uid: Google.Logging.V2.ConfigServiceV2Settings.CreateSinkSettings
+  name: CreateSinkSettings
+  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_CreateSinkSettings
+  fullName: Google.Logging.V2.ConfigServiceV2Settings.CreateSinkSettings
+- uid: Google.Logging.V2.ConfigServiceV2Settings.DeleteSinkSettings
+  name: DeleteSinkSettings
+  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_DeleteSinkSettings
+  fullName: Google.Logging.V2.ConfigServiceV2Settings.DeleteSinkSettings
 - uid: Google.Logging.V2.ConfigServiceV2Settings.GetDefault
   name: GetDefault()
   href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_GetDefault
@@ -14025,26 +14049,26 @@ references:
   name: GetDefaultTimeoutBackoff()
   href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_GetDefaultTimeoutBackoff
   fullName: Google.Logging.V2.ConfigServiceV2Settings.GetDefaultTimeoutBackoff()
-- uid: Google.Logging.V2.ConfigServiceV2Settings.GetSinkRetry
-  name: GetSinkRetry
-  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_GetSinkRetry
-  fullName: Google.Logging.V2.ConfigServiceV2Settings.GetSinkRetry
+- uid: Google.Logging.V2.ConfigServiceV2Settings.GetSinkSettings
+  name: GetSinkSettings
+  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_GetSinkSettings
+  fullName: Google.Logging.V2.ConfigServiceV2Settings.GetSinkSettings
 - uid: Google.Logging.V2.ConfigServiceV2Settings.IdempotentRetryFilter
   name: IdempotentRetryFilter
   href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_IdempotentRetryFilter
   fullName: Google.Logging.V2.ConfigServiceV2Settings.IdempotentRetryFilter
-- uid: Google.Logging.V2.ConfigServiceV2Settings.ListSinksRetry
-  name: ListSinksRetry
-  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_ListSinksRetry
-  fullName: Google.Logging.V2.ConfigServiceV2Settings.ListSinksRetry
+- uid: Google.Logging.V2.ConfigServiceV2Settings.ListSinksSettings
+  name: ListSinksSettings
+  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_ListSinksSettings
+  fullName: Google.Logging.V2.ConfigServiceV2Settings.ListSinksSettings
 - uid: Google.Logging.V2.ConfigServiceV2Settings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_NonIdempotentRetryFilter
   fullName: Google.Logging.V2.ConfigServiceV2Settings.NonIdempotentRetryFilter
-- uid: Google.Logging.V2.ConfigServiceV2Settings.UpdateSinkRetry
-  name: UpdateSinkRetry
-  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_UpdateSinkRetry
-  fullName: Google.Logging.V2.ConfigServiceV2Settings.UpdateSinkRetry
+- uid: Google.Logging.V2.ConfigServiceV2Settings.UpdateSinkSettings
+  name: UpdateSinkSettings
+  href: api/Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings_UpdateSinkSettings
+  fullName: Google.Logging.V2.ConfigServiceV2Settings.UpdateSinkSettings
 - uid: Google.Logging.V2.CreateLogMetricRequest
   name: CreateLogMetricRequest
   href: api/Google.Logging.V2.CreateLogMetricRequest.html#Google_Logging_V2_CreateLogMetricRequest
@@ -15731,14 +15755,18 @@ references:
   name: LoggingServiceV2Client
   href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client
   fullName: Google.Logging.V2.LoggingServiceV2Client
-- uid: Google.Logging.V2.LoggingServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.LoggingServiceV2Settings,Grpc.Core.ChannelCredentials)
-  name: Create(ServiceEndpoint, LoggingServiceV2Settings, ChannelCredentials)
-  href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Logging.V2.LoggingServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.LoggingServiceV2Settings, Grpc.Core.ChannelCredentials)
-- uid: Google.Logging.V2.LoggingServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.LoggingServiceV2Settings,Grpc.Core.ChannelCredentials)
-  name: CreateAsync(ServiceEndpoint, LoggingServiceV2Settings, ChannelCredentials)
-  href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Logging.V2.LoggingServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.LoggingServiceV2Settings, Grpc.Core.ChannelCredentials)
+- uid: Google.Logging.V2.LoggingServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.LoggingServiceV2Settings)
+  name: Create(ServiceEndpoint, LoggingServiceV2Settings)
+  href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_
+  fullName: Google.Logging.V2.LoggingServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.LoggingServiceV2Settings)
+- uid: Google.Logging.V2.LoggingServiceV2Client.Create(Grpc.Core.Channel,Google.Logging.V2.LoggingServiceV2Settings)
+  name: Create(Channel, LoggingServiceV2Settings)
+  href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_Create_Grpc_Core_Channel_Google_Logging_V2_LoggingServiceV2Settings_
+  fullName: Google.Logging.V2.LoggingServiceV2Client.Create(Grpc.Core.Channel, Google.Logging.V2.LoggingServiceV2Settings)
+- uid: Google.Logging.V2.LoggingServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.LoggingServiceV2Settings)
+  name: CreateAsync(ServiceEndpoint, LoggingServiceV2Settings)
+  href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_
+  fullName: Google.Logging.V2.LoggingServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.LoggingServiceV2Settings)
 - uid: Google.Logging.V2.LoggingServiceV2Client.DefaultEndpoint
   name: DefaultEndpoint
   href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_DefaultEndpoint
@@ -15791,6 +15819,10 @@ references:
   name: ProjectTemplate
   href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_ProjectTemplate
   fullName: Google.Logging.V2.LoggingServiceV2Client.ProjectTemplate
+- uid: Google.Logging.V2.LoggingServiceV2Client.ShutdownDefaultChannelsAsync
+  name: ShutdownDefaultChannelsAsync()
+  href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_ShutdownDefaultChannelsAsync
+  fullName: Google.Logging.V2.LoggingServiceV2Client.ShutdownDefaultChannelsAsync()
 - uid: Google.Logging.V2.LoggingServiceV2Client.WriteLogEntries(System.String,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Logging.V2.LogEntry},Google.Api.Gax.CallSettings)
   name: WriteLogEntries(String, MonitoredResource, IDictionary<String, String>, IEnumerable<LogEntry>, CallSettings)
   href: api/Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_WriteLogEntries_System_String_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Logging_V2_LogEntry__Google_Api_Gax_CallSettings_
@@ -15873,10 +15905,10 @@ references:
   name: Clone()
   href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_Clone
   fullName: Google.Logging.V2.LoggingServiceV2Settings.Clone()
-- uid: Google.Logging.V2.LoggingServiceV2Settings.DeleteLogRetry
-  name: DeleteLogRetry
-  href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_DeleteLogRetry
-  fullName: Google.Logging.V2.LoggingServiceV2Settings.DeleteLogRetry
+- uid: Google.Logging.V2.LoggingServiceV2Settings.DeleteLogSettings
+  name: DeleteLogSettings
+  href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_DeleteLogSettings
+  fullName: Google.Logging.V2.LoggingServiceV2Settings.DeleteLogSettings
 - uid: Google.Logging.V2.LoggingServiceV2Settings.GetDefault
   name: GetDefault()
   href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_GetDefault
@@ -15901,22 +15933,22 @@ references:
   name: IdempotentRetryFilter
   href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_IdempotentRetryFilter
   fullName: Google.Logging.V2.LoggingServiceV2Settings.IdempotentRetryFilter
-- uid: Google.Logging.V2.LoggingServiceV2Settings.ListLogEntriesRetry
-  name: ListLogEntriesRetry
-  href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_ListLogEntriesRetry
-  fullName: Google.Logging.V2.LoggingServiceV2Settings.ListLogEntriesRetry
-- uid: Google.Logging.V2.LoggingServiceV2Settings.ListMonitoredResourceDescriptorsRetry
-  name: ListMonitoredResourceDescriptorsRetry
-  href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_ListMonitoredResourceDescriptorsRetry
-  fullName: Google.Logging.V2.LoggingServiceV2Settings.ListMonitoredResourceDescriptorsRetry
+- uid: Google.Logging.V2.LoggingServiceV2Settings.ListLogEntriesSettings
+  name: ListLogEntriesSettings
+  href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_ListLogEntriesSettings
+  fullName: Google.Logging.V2.LoggingServiceV2Settings.ListLogEntriesSettings
+- uid: Google.Logging.V2.LoggingServiceV2Settings.ListMonitoredResourceDescriptorsSettings
+  name: ListMonitoredResourceDescriptorsSettings
+  href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_ListMonitoredResourceDescriptorsSettings
+  fullName: Google.Logging.V2.LoggingServiceV2Settings.ListMonitoredResourceDescriptorsSettings
 - uid: Google.Logging.V2.LoggingServiceV2Settings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_NonIdempotentRetryFilter
   fullName: Google.Logging.V2.LoggingServiceV2Settings.NonIdempotentRetryFilter
-- uid: Google.Logging.V2.LoggingServiceV2Settings.WriteLogEntriesRetry
-  name: WriteLogEntriesRetry
-  href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_WriteLogEntriesRetry
-  fullName: Google.Logging.V2.LoggingServiceV2Settings.WriteLogEntriesRetry
+- uid: Google.Logging.V2.LoggingServiceV2Settings.WriteLogEntriesSettings
+  name: WriteLogEntriesSettings
+  href: api/Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings_WriteLogEntriesSettings
+  fullName: Google.Logging.V2.LoggingServiceV2Settings.WriteLogEntriesSettings
 - uid: Google.Logging.V2.LogMetric
   name: LogMetric
   href: api/Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric
@@ -16373,14 +16405,18 @@ references:
   name: MetricsServiceV2Client
   href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client
   fullName: Google.Logging.V2.MetricsServiceV2Client
-- uid: Google.Logging.V2.MetricsServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.MetricsServiceV2Settings,Grpc.Core.ChannelCredentials)
-  name: Create(ServiceEndpoint, MetricsServiceV2Settings, ChannelCredentials)
-  href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_MetricsServiceV2Settings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Logging.V2.MetricsServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.MetricsServiceV2Settings, Grpc.Core.ChannelCredentials)
-- uid: Google.Logging.V2.MetricsServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.MetricsServiceV2Settings,Grpc.Core.ChannelCredentials)
-  name: CreateAsync(ServiceEndpoint, MetricsServiceV2Settings, ChannelCredentials)
-  href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_MetricsServiceV2Settings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Logging.V2.MetricsServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.MetricsServiceV2Settings, Grpc.Core.ChannelCredentials)
+- uid: Google.Logging.V2.MetricsServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.MetricsServiceV2Settings)
+  name: Create(ServiceEndpoint, MetricsServiceV2Settings)
+  href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_MetricsServiceV2Settings_
+  fullName: Google.Logging.V2.MetricsServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.MetricsServiceV2Settings)
+- uid: Google.Logging.V2.MetricsServiceV2Client.Create(Grpc.Core.Channel,Google.Logging.V2.MetricsServiceV2Settings)
+  name: Create(Channel, MetricsServiceV2Settings)
+  href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_Create_Grpc_Core_Channel_Google_Logging_V2_MetricsServiceV2Settings_
+  fullName: Google.Logging.V2.MetricsServiceV2Client.Create(Grpc.Core.Channel, Google.Logging.V2.MetricsServiceV2Settings)
+- uid: Google.Logging.V2.MetricsServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.MetricsServiceV2Settings)
+  name: CreateAsync(ServiceEndpoint, MetricsServiceV2Settings)
+  href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_MetricsServiceV2Settings_
+  fullName: Google.Logging.V2.MetricsServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Logging.V2.MetricsServiceV2Settings)
 - uid: Google.Logging.V2.MetricsServiceV2Client.CreateLogMetric(System.String,Google.Logging.V2.LogMetric,Google.Api.Gax.CallSettings)
   name: CreateLogMetric(String, LogMetric, CallSettings)
   href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_CreateLogMetric_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_CallSettings_
@@ -16453,6 +16489,10 @@ references:
   name: ProjectTemplate
   href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ProjectTemplate
   fullName: Google.Logging.V2.MetricsServiceV2Client.ProjectTemplate
+- uid: Google.Logging.V2.MetricsServiceV2Client.ShutdownDefaultChannelsAsync
+  name: ShutdownDefaultChannelsAsync()
+  href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ShutdownDefaultChannelsAsync
+  fullName: Google.Logging.V2.MetricsServiceV2Client.ShutdownDefaultChannelsAsync()
 - uid: Google.Logging.V2.MetricsServiceV2Client.UpdateLogMetric(System.String,Google.Logging.V2.LogMetric,Google.Api.Gax.CallSettings)
   name: UpdateLogMetric(String, LogMetric, CallSettings)
   href: api/Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_UpdateLogMetric_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_CallSettings_
@@ -16537,14 +16577,14 @@ references:
   name: Clone()
   href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_Clone
   fullName: Google.Logging.V2.MetricsServiceV2Settings.Clone()
-- uid: Google.Logging.V2.MetricsServiceV2Settings.CreateLogMetricRetry
-  name: CreateLogMetricRetry
-  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_CreateLogMetricRetry
-  fullName: Google.Logging.V2.MetricsServiceV2Settings.CreateLogMetricRetry
-- uid: Google.Logging.V2.MetricsServiceV2Settings.DeleteLogMetricRetry
-  name: DeleteLogMetricRetry
-  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_DeleteLogMetricRetry
-  fullName: Google.Logging.V2.MetricsServiceV2Settings.DeleteLogMetricRetry
+- uid: Google.Logging.V2.MetricsServiceV2Settings.CreateLogMetricSettings
+  name: CreateLogMetricSettings
+  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_CreateLogMetricSettings
+  fullName: Google.Logging.V2.MetricsServiceV2Settings.CreateLogMetricSettings
+- uid: Google.Logging.V2.MetricsServiceV2Settings.DeleteLogMetricSettings
+  name: DeleteLogMetricSettings
+  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_DeleteLogMetricSettings
+  fullName: Google.Logging.V2.MetricsServiceV2Settings.DeleteLogMetricSettings
 - uid: Google.Logging.V2.MetricsServiceV2Settings.GetDefault
   name: GetDefault()
   href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_GetDefault
@@ -16557,26 +16597,26 @@ references:
   name: GetDefaultTimeoutBackoff()
   href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_GetDefaultTimeoutBackoff
   fullName: Google.Logging.V2.MetricsServiceV2Settings.GetDefaultTimeoutBackoff()
-- uid: Google.Logging.V2.MetricsServiceV2Settings.GetLogMetricRetry
-  name: GetLogMetricRetry
-  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_GetLogMetricRetry
-  fullName: Google.Logging.V2.MetricsServiceV2Settings.GetLogMetricRetry
+- uid: Google.Logging.V2.MetricsServiceV2Settings.GetLogMetricSettings
+  name: GetLogMetricSettings
+  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_GetLogMetricSettings
+  fullName: Google.Logging.V2.MetricsServiceV2Settings.GetLogMetricSettings
 - uid: Google.Logging.V2.MetricsServiceV2Settings.IdempotentRetryFilter
   name: IdempotentRetryFilter
   href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_IdempotentRetryFilter
   fullName: Google.Logging.V2.MetricsServiceV2Settings.IdempotentRetryFilter
-- uid: Google.Logging.V2.MetricsServiceV2Settings.ListLogMetricsRetry
-  name: ListLogMetricsRetry
-  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_ListLogMetricsRetry
-  fullName: Google.Logging.V2.MetricsServiceV2Settings.ListLogMetricsRetry
+- uid: Google.Logging.V2.MetricsServiceV2Settings.ListLogMetricsSettings
+  name: ListLogMetricsSettings
+  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_ListLogMetricsSettings
+  fullName: Google.Logging.V2.MetricsServiceV2Settings.ListLogMetricsSettings
 - uid: Google.Logging.V2.MetricsServiceV2Settings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_NonIdempotentRetryFilter
   fullName: Google.Logging.V2.MetricsServiceV2Settings.NonIdempotentRetryFilter
-- uid: Google.Logging.V2.MetricsServiceV2Settings.UpdateLogMetricRetry
-  name: UpdateLogMetricRetry
-  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_UpdateLogMetricRetry
-  fullName: Google.Logging.V2.MetricsServiceV2Settings.UpdateLogMetricRetry
+- uid: Google.Logging.V2.MetricsServiceV2Settings.UpdateLogMetricSettings
+  name: UpdateLogMetricSettings
+  href: api/Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings_UpdateLogMetricSettings
+  fullName: Google.Logging.V2.MetricsServiceV2Settings.UpdateLogMetricSettings
 - uid: Google.Logging.V2.UpdateLogMetricRequest
   name: UpdateLogMetricRequest
   href: api/Google.Logging.V2.UpdateLogMetricRequest.html#Google_Logging_V2_UpdateLogMetricRequest
@@ -22942,14 +22982,18 @@ references:
   name: PublisherClient
   href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient
   fullName: Google.Pubsub.V1.PublisherClient
-- uid: Google.Pubsub.V1.PublisherClient.Create(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.PublisherSettings,Grpc.Core.ChannelCredentials)
-  name: Create(ServiceEndpoint, PublisherSettings, ChannelCredentials)
-  href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Pubsub.V1.PublisherClient.Create(Google.Api.Gax.ServiceEndpoint, Google.Pubsub.V1.PublisherSettings, Grpc.Core.ChannelCredentials)
-- uid: Google.Pubsub.V1.PublisherClient.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.PublisherSettings,Grpc.Core.ChannelCredentials)
-  name: CreateAsync(ServiceEndpoint, PublisherSettings, ChannelCredentials)
-  href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Pubsub.V1.PublisherClient.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Pubsub.V1.PublisherSettings, Grpc.Core.ChannelCredentials)
+- uid: Google.Pubsub.V1.PublisherClient.Create(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.PublisherSettings)
+  name: Create(ServiceEndpoint, PublisherSettings)
+  href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_
+  fullName: Google.Pubsub.V1.PublisherClient.Create(Google.Api.Gax.ServiceEndpoint, Google.Pubsub.V1.PublisherSettings)
+- uid: Google.Pubsub.V1.PublisherClient.Create(Grpc.Core.Channel,Google.Pubsub.V1.PublisherSettings)
+  name: Create(Channel, PublisherSettings)
+  href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Create_Grpc_Core_Channel_Google_Pubsub_V1_PublisherSettings_
+  fullName: Google.Pubsub.V1.PublisherClient.Create(Grpc.Core.Channel, Google.Pubsub.V1.PublisherSettings)
+- uid: Google.Pubsub.V1.PublisherClient.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.PublisherSettings)
+  name: CreateAsync(ServiceEndpoint, PublisherSettings)
+  href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_
+  fullName: Google.Pubsub.V1.PublisherClient.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Pubsub.V1.PublisherSettings)
 - uid: Google.Pubsub.V1.PublisherClient.CreateTopic(System.String,Google.Api.Gax.CallSettings)
   name: CreateTopic(String, CallSettings)
   href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_CreateTopic_System_String_Google_Api_Gax_CallSettings_
@@ -23044,6 +23088,10 @@ references:
   name.vb: PublishAsync(String, IEnumerable(Of PubsubMessage), CancellationToken)
   fullName: Google.Pubsub.V1.PublisherClient.PublishAsync(System.String, System.Collections.Generic.IEnumerable<Google.Pubsub.V1.PubsubMessage>, System.Threading.CancellationToken)
   fullName.vb: Google.Pubsub.V1.PublisherClient.PublishAsync(System.String, System.Collections.Generic.IEnumerable(Of Google.Pubsub.V1.PubsubMessage), System.Threading.CancellationToken)
+- uid: Google.Pubsub.V1.PublisherClient.ShutdownDefaultChannelsAsync
+  name: ShutdownDefaultChannelsAsync()
+  href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ShutdownDefaultChannelsAsync
+  fullName: Google.Pubsub.V1.PublisherClient.ShutdownDefaultChannelsAsync()
 - uid: Google.Pubsub.V1.PublisherClient.TopicTemplate
   name: TopicTemplate
   href: api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TopicTemplate
@@ -23132,14 +23180,14 @@ references:
   name: Clone()
   href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_Clone
   fullName: Google.Pubsub.V1.PublisherSettings.Clone()
-- uid: Google.Pubsub.V1.PublisherSettings.CreateTopicRetry
-  name: CreateTopicRetry
-  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_CreateTopicRetry
-  fullName: Google.Pubsub.V1.PublisherSettings.CreateTopicRetry
-- uid: Google.Pubsub.V1.PublisherSettings.DeleteTopicRetry
-  name: DeleteTopicRetry
-  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_DeleteTopicRetry
-  fullName: Google.Pubsub.V1.PublisherSettings.DeleteTopicRetry
+- uid: Google.Pubsub.V1.PublisherSettings.CreateTopicSettings
+  name: CreateTopicSettings
+  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_CreateTopicSettings
+  fullName: Google.Pubsub.V1.PublisherSettings.CreateTopicSettings
+- uid: Google.Pubsub.V1.PublisherSettings.DeleteTopicSettings
+  name: DeleteTopicSettings
+  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_DeleteTopicSettings
+  fullName: Google.Pubsub.V1.PublisherSettings.DeleteTopicSettings
 - uid: Google.Pubsub.V1.PublisherSettings.GetDefault
   name: GetDefault()
   href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_GetDefault
@@ -23152,30 +23200,30 @@ references:
   name: GetDefaultTimeoutBackoff()
   href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_GetDefaultTimeoutBackoff
   fullName: Google.Pubsub.V1.PublisherSettings.GetDefaultTimeoutBackoff()
-- uid: Google.Pubsub.V1.PublisherSettings.GetTopicRetry
-  name: GetTopicRetry
-  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_GetTopicRetry
-  fullName: Google.Pubsub.V1.PublisherSettings.GetTopicRetry
+- uid: Google.Pubsub.V1.PublisherSettings.GetTopicSettings
+  name: GetTopicSettings
+  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_GetTopicSettings
+  fullName: Google.Pubsub.V1.PublisherSettings.GetTopicSettings
 - uid: Google.Pubsub.V1.PublisherSettings.IdempotentRetryFilter
   name: IdempotentRetryFilter
   href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_IdempotentRetryFilter
   fullName: Google.Pubsub.V1.PublisherSettings.IdempotentRetryFilter
-- uid: Google.Pubsub.V1.PublisherSettings.ListTopicsRetry
-  name: ListTopicsRetry
-  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_ListTopicsRetry
-  fullName: Google.Pubsub.V1.PublisherSettings.ListTopicsRetry
-- uid: Google.Pubsub.V1.PublisherSettings.ListTopicSubscriptionsRetry
-  name: ListTopicSubscriptionsRetry
-  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_ListTopicSubscriptionsRetry
-  fullName: Google.Pubsub.V1.PublisherSettings.ListTopicSubscriptionsRetry
+- uid: Google.Pubsub.V1.PublisherSettings.ListTopicsSettings
+  name: ListTopicsSettings
+  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_ListTopicsSettings
+  fullName: Google.Pubsub.V1.PublisherSettings.ListTopicsSettings
+- uid: Google.Pubsub.V1.PublisherSettings.ListTopicSubscriptionsSettings
+  name: ListTopicSubscriptionsSettings
+  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_ListTopicSubscriptionsSettings
+  fullName: Google.Pubsub.V1.PublisherSettings.ListTopicSubscriptionsSettings
 - uid: Google.Pubsub.V1.PublisherSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_NonIdempotentRetryFilter
   fullName: Google.Pubsub.V1.PublisherSettings.NonIdempotentRetryFilter
-- uid: Google.Pubsub.V1.PublisherSettings.PublishRetry
-  name: PublishRetry
-  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_PublishRetry
-  fullName: Google.Pubsub.V1.PublisherSettings.PublishRetry
+- uid: Google.Pubsub.V1.PublisherSettings.PublishSettings
+  name: PublishSettings
+  href: api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_PublishSettings
+  fullName: Google.Pubsub.V1.PublisherSettings.PublishSettings
 - uid: Google.Pubsub.V1.PublishRequest
   name: PublishRequest
   href: api/Google.Pubsub.V1.PublishRequest.html#Google_Pubsub_V1_PublishRequest
@@ -24144,14 +24192,18 @@ references:
   name.vb: AcknowledgeAsync(String, IEnumerable(Of String), CancellationToken)
   fullName: Google.Pubsub.V1.SubscriberClient.AcknowledgeAsync(System.String, System.Collections.Generic.IEnumerable<System.String>, System.Threading.CancellationToken)
   fullName.vb: Google.Pubsub.V1.SubscriberClient.AcknowledgeAsync(System.String, System.Collections.Generic.IEnumerable(Of System.String), System.Threading.CancellationToken)
-- uid: Google.Pubsub.V1.SubscriberClient.Create(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.SubscriberSettings,Grpc.Core.ChannelCredentials)
-  name: Create(ServiceEndpoint, SubscriberSettings, ChannelCredentials)
-  href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Pubsub.V1.SubscriberClient.Create(Google.Api.Gax.ServiceEndpoint, Google.Pubsub.V1.SubscriberSettings, Grpc.Core.ChannelCredentials)
-- uid: Google.Pubsub.V1.SubscriberClient.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.SubscriberSettings,Grpc.Core.ChannelCredentials)
-  name: CreateAsync(ServiceEndpoint, SubscriberSettings, ChannelCredentials)
-  href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_Grpc_Core_ChannelCredentials_
-  fullName: Google.Pubsub.V1.SubscriberClient.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Pubsub.V1.SubscriberSettings, Grpc.Core.ChannelCredentials)
+- uid: Google.Pubsub.V1.SubscriberClient.Create(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.SubscriberSettings)
+  name: Create(ServiceEndpoint, SubscriberSettings)
+  href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_
+  fullName: Google.Pubsub.V1.SubscriberClient.Create(Google.Api.Gax.ServiceEndpoint, Google.Pubsub.V1.SubscriberSettings)
+- uid: Google.Pubsub.V1.SubscriberClient.Create(Grpc.Core.Channel,Google.Pubsub.V1.SubscriberSettings)
+  name: Create(Channel, SubscriberSettings)
+  href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Grpc_Core_Channel_Google_Pubsub_V1_SubscriberSettings_
+  fullName: Google.Pubsub.V1.SubscriberClient.Create(Grpc.Core.Channel, Google.Pubsub.V1.SubscriberSettings)
+- uid: Google.Pubsub.V1.SubscriberClient.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Pubsub.V1.SubscriberSettings)
+  name: CreateAsync(ServiceEndpoint, SubscriberSettings)
+  href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_
+  fullName: Google.Pubsub.V1.SubscriberClient.CreateAsync(Google.Api.Gax.ServiceEndpoint, Google.Pubsub.V1.SubscriberSettings)
 - uid: Google.Pubsub.V1.SubscriberClient.CreateSubscription(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,Google.Api.Gax.CallSettings)
   name: CreateSubscription(String, String, PushConfig, Int32, CallSettings)
   href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_Google_Api_Gax_CallSettings_
@@ -24204,6 +24256,10 @@ references:
   name: GetSubscriptionName(String, String)
   href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscriptionName_System_String_System_String_
   fullName: Google.Pubsub.V1.SubscriberClient.GetSubscriptionName(System.String, System.String)
+- uid: Google.Pubsub.V1.SubscriberClient.GetTopicName(System.String,System.String)
+  name: GetTopicName(String, String)
+  href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetTopicName_System_String_System_String_
+  fullName: Google.Pubsub.V1.SubscriberClient.GetTopicName(System.String, System.String)
 - uid: Google.Pubsub.V1.SubscriberClient.GrpcClient
   name: GrpcClient
   href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GrpcClient
@@ -24262,10 +24318,18 @@ references:
   name: PullAsync(String, Boolean, Int32, CancellationToken)
   href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_System_Threading_CancellationToken_
   fullName: Google.Pubsub.V1.SubscriberClient.PullAsync(System.String, System.Boolean, System.Int32, System.Threading.CancellationToken)
+- uid: Google.Pubsub.V1.SubscriberClient.ShutdownDefaultChannelsAsync
+  name: ShutdownDefaultChannelsAsync()
+  href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ShutdownDefaultChannelsAsync
+  fullName: Google.Pubsub.V1.SubscriberClient.ShutdownDefaultChannelsAsync()
 - uid: Google.Pubsub.V1.SubscriberClient.SubscriptionTemplate
   name: SubscriptionTemplate
   href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_SubscriptionTemplate
   fullName: Google.Pubsub.V1.SubscriberClient.SubscriptionTemplate
+- uid: Google.Pubsub.V1.SubscriberClient.TopicTemplate
+  name: TopicTemplate
+  href: api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_TopicTemplate
+  fullName: Google.Pubsub.V1.SubscriberClient.TopicTemplate
 - uid: Google.Pubsub.V1.SubscriberClientImpl
   name: SubscriberClientImpl
   href: api/Google.Pubsub.V1.SubscriberClientImpl.html#Google_Pubsub_V1_SubscriberClientImpl
@@ -24366,22 +24430,22 @@ references:
   name: SubscriberSettings()
   href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings__ctor
   fullName: Google.Pubsub.V1.SubscriberSettings.SubscriberSettings()
-- uid: Google.Pubsub.V1.SubscriberSettings.AcknowledgeRetry
-  name: AcknowledgeRetry
-  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_AcknowledgeRetry
-  fullName: Google.Pubsub.V1.SubscriberSettings.AcknowledgeRetry
+- uid: Google.Pubsub.V1.SubscriberSettings.AcknowledgeSettings
+  name: AcknowledgeSettings
+  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_AcknowledgeSettings
+  fullName: Google.Pubsub.V1.SubscriberSettings.AcknowledgeSettings
 - uid: Google.Pubsub.V1.SubscriberSettings.Clone
   name: Clone()
   href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_Clone
   fullName: Google.Pubsub.V1.SubscriberSettings.Clone()
-- uid: Google.Pubsub.V1.SubscriberSettings.CreateSubscriptionRetry
-  name: CreateSubscriptionRetry
-  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_CreateSubscriptionRetry
-  fullName: Google.Pubsub.V1.SubscriberSettings.CreateSubscriptionRetry
-- uid: Google.Pubsub.V1.SubscriberSettings.DeleteSubscriptionRetry
-  name: DeleteSubscriptionRetry
-  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_DeleteSubscriptionRetry
-  fullName: Google.Pubsub.V1.SubscriberSettings.DeleteSubscriptionRetry
+- uid: Google.Pubsub.V1.SubscriberSettings.CreateSubscriptionSettings
+  name: CreateSubscriptionSettings
+  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_CreateSubscriptionSettings
+  fullName: Google.Pubsub.V1.SubscriberSettings.CreateSubscriptionSettings
+- uid: Google.Pubsub.V1.SubscriberSettings.DeleteSubscriptionSettings
+  name: DeleteSubscriptionSettings
+  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_DeleteSubscriptionSettings
+  fullName: Google.Pubsub.V1.SubscriberSettings.DeleteSubscriptionSettings
 - uid: Google.Pubsub.V1.SubscriberSettings.GetDefault
   name: GetDefault()
   href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_GetDefault
@@ -24394,34 +24458,34 @@ references:
   name: GetDefaultTimeoutBackoff()
   href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_GetDefaultTimeoutBackoff
   fullName: Google.Pubsub.V1.SubscriberSettings.GetDefaultTimeoutBackoff()
-- uid: Google.Pubsub.V1.SubscriberSettings.GetSubscriptionRetry
-  name: GetSubscriptionRetry
-  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_GetSubscriptionRetry
-  fullName: Google.Pubsub.V1.SubscriberSettings.GetSubscriptionRetry
+- uid: Google.Pubsub.V1.SubscriberSettings.GetSubscriptionSettings
+  name: GetSubscriptionSettings
+  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_GetSubscriptionSettings
+  fullName: Google.Pubsub.V1.SubscriberSettings.GetSubscriptionSettings
 - uid: Google.Pubsub.V1.SubscriberSettings.IdempotentRetryFilter
   name: IdempotentRetryFilter
   href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_IdempotentRetryFilter
   fullName: Google.Pubsub.V1.SubscriberSettings.IdempotentRetryFilter
-- uid: Google.Pubsub.V1.SubscriberSettings.ListSubscriptionsRetry
-  name: ListSubscriptionsRetry
-  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_ListSubscriptionsRetry
-  fullName: Google.Pubsub.V1.SubscriberSettings.ListSubscriptionsRetry
-- uid: Google.Pubsub.V1.SubscriberSettings.ModifyAckDeadlineRetry
-  name: ModifyAckDeadlineRetry
-  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_ModifyAckDeadlineRetry
-  fullName: Google.Pubsub.V1.SubscriberSettings.ModifyAckDeadlineRetry
-- uid: Google.Pubsub.V1.SubscriberSettings.ModifyPushConfigRetry
-  name: ModifyPushConfigRetry
-  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_ModifyPushConfigRetry
-  fullName: Google.Pubsub.V1.SubscriberSettings.ModifyPushConfigRetry
+- uid: Google.Pubsub.V1.SubscriberSettings.ListSubscriptionsSettings
+  name: ListSubscriptionsSettings
+  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_ListSubscriptionsSettings
+  fullName: Google.Pubsub.V1.SubscriberSettings.ListSubscriptionsSettings
+- uid: Google.Pubsub.V1.SubscriberSettings.ModifyAckDeadlineSettings
+  name: ModifyAckDeadlineSettings
+  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_ModifyAckDeadlineSettings
+  fullName: Google.Pubsub.V1.SubscriberSettings.ModifyAckDeadlineSettings
+- uid: Google.Pubsub.V1.SubscriberSettings.ModifyPushConfigSettings
+  name: ModifyPushConfigSettings
+  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_ModifyPushConfigSettings
+  fullName: Google.Pubsub.V1.SubscriberSettings.ModifyPushConfigSettings
 - uid: Google.Pubsub.V1.SubscriberSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_NonIdempotentRetryFilter
   fullName: Google.Pubsub.V1.SubscriberSettings.NonIdempotentRetryFilter
-- uid: Google.Pubsub.V1.SubscriberSettings.PullRetry
-  name: PullRetry
-  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_PullRetry
-  fullName: Google.Pubsub.V1.SubscriberSettings.PullRetry
+- uid: Google.Pubsub.V1.SubscriberSettings.PullSettings
+  name: PullSettings
+  href: api/Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings_PullSettings
+  fullName: Google.Pubsub.V1.SubscriberSettings.PullSettings
 - uid: Google.Pubsub.V1.Subscription
   name: Subscription
   href: api/Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription

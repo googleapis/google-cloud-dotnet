@@ -123,9 +123,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override Publisher.IPublisherClient GrpcClient
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -252,7 +250,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_DeleteTopic_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.DeleteTopic(System.String,Google.Api.Gax.CallSettings)">DeleteTopic(String, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Deletes the topic with the given name. Generates <code>NOT_FOUND</code> if the topic
+              <div class="markdown level1 summary"><p>Deletes the topic with the given name. Returns <code>NOT_FOUND</code> if the topic
 does not exist. After a topic is deleted, a new topic may be created with
 the same name; this is an entirely new topic with none of the old
 configuration or subscriptions. Existing subscriptions to this topic are
@@ -288,7 +286,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_DeleteTopicAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.DeleteTopicAsync(System.String,Google.Api.Gax.CallSettings)">DeleteTopicAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Deletes the topic with the given name. Generates <code>NOT_FOUND</code> if the topic
+              <div class="markdown level1 summary"><p>Deletes the topic with the given name. Returns <code>NOT_FOUND</code> if the topic
 does not exist. After a topic is deleted, a new topic may be created with
 the same name; this is an entirely new topic with none of the old
 configuration or subscriptions. Existing subscriptions to this topic are
@@ -628,7 +626,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_Publish_System_String_System_Collections_Generic_IEnumerable_Google_Pubsub_V1_PubsubMessage__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.Publish(System.String,System.Collections.Generic.IEnumerable{Google.Pubsub.V1.PubsubMessage},Google.Api.Gax.CallSettings)">Publish(String, IEnumerable&lt;PubsubMessage&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Adds one or more messages to the topic. Generates <code>NOT_FOUND</code> if the topic
+              <div class="markdown level1 summary"><p>Adds one or more messages to the topic. Returns <code>NOT_FOUND</code> if the topic
 does not exist. The message payload must not be empty; it must contain
  either a non-empty data field, or at least one attribute.</p>
 </div>
@@ -684,7 +682,7 @@ does not exist. The message payload must not be empty; it must contain
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_PublishAsync_System_String_System_Collections_Generic_IEnumerable_Google_Pubsub_V1_PubsubMessage__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.PublishAsync(System.String,System.Collections.Generic.IEnumerable{Google.Pubsub.V1.PubsubMessage},Google.Api.Gax.CallSettings)">PublishAsync(String, IEnumerable&lt;PubsubMessage&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Adds one or more messages to the topic. Generates <code>NOT_FOUND</code> if the topic
+              <div class="markdown level1 summary"><p>Adds one or more messages to the topic. Returns <code>NOT_FOUND</code> if the topic
 does not exist. The message payload must not be empty; it must contain
  either a non-empty data field, or at least one attribute.</p>
 </div>

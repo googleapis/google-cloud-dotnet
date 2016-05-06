@@ -1040,7 +1040,11 @@ defaults will be supplied.</p>
               <h4 id="Google_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Storage_V1_ListObjectsOptions_" data-uid="Google.Storage.V1.StorageClient.ListObjects(System.String,System.String,Google.Storage.V1.ListObjectsOptions)">ListObjects(String, String, ListObjectsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the objects in a given bucket, synchronously but lazily.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+// List only objects with a name starting with &quot;Hello&quot;
+var objects = client.ListObjects(bucketId, &quot;Hello&quot;);
+</code></pre></div>
               <h5 id="Google_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Storage_V1_ListObjectsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
 for a page of results at a time, as required. To retrieve all the objects in a single collection,
@@ -1194,7 +1198,7 @@ defaults will be used.</p>
                     <td><span class="xref">System.String</span></td>
                     <td><em>contentType</em></td>
                     <td><p>The content type of the object. This should be a MIME type
-such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. Must not be null, but may be empty.</p>
+such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. May be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -1337,7 +1341,7 @@ defaults will be used.</p>
                     <td><span class="xref">System.String</span></td>
                     <td><em>contentType</em></td>
                     <td><p>The content type of the object. This should be a MIME type
-such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. Must not be null, but may be empty.</p>
+such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. May be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -1399,7 +1403,7 @@ such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. Must not 
                     <td><span class="xref">System.String</span></td>
                     <td><em>contentType</em></td>
                     <td><p>The content type of the object. This should be a MIME type
-such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. Must not be null, but may be empty.</p>
+such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. May be null.</p>
 </td>
                   </tr>
                   <tr>

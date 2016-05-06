@@ -96,9 +96,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -128,9 +126,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -156,9 +152,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LoggingServiceV2.ILoggingServiceV2Client GrpcClient
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -185,9 +179,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static PathTemplate LogTemplate
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -214,9 +206,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static PathTemplate ProjectTemplate
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -236,13 +226,15 @@
               </table>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Logging_V2_LoggingServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_Grpc_Core_ChannelCredentials_" data-uid="Google.Logging.V2.LoggingServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.LoggingServiceV2Settings,Grpc.Core.ChannelCredentials)">Create(ServiceEndpoint, LoggingServiceV2Settings, ChannelCredentials)</h4>
-              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a>, applying defaults for all unspecified settings.</p>
+              <h4 id="Google_Logging_V2_LoggingServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.Create(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.LoggingServiceV2Settings)">Create(ServiceEndpoint, LoggingServiceV2Settings)</h4>
+              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static LoggingServiceV2Client Create(ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null, ChannelCredentials credentials = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static LoggingServiceV2Client Create(ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -264,12 +256,6 @@
                     <td><a class="xref" href="Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings">LoggingServiceV2Settings</a></td>
                     <td><em>settings</em></td>
                     <td><p>Optional <a class="xref" href="Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings">LoggingServiceV2Settings</a>.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Grpc.Core.ChannelCredentials</span></td>
-                    <td><em>credentials</em></td>
-                    <td><p>Optional <span class="xref">Grpc.Core.ChannelCredentials</span>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -290,13 +276,63 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_LoggingServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_Grpc_Core_ChannelCredentials_" data-uid="Google.Logging.V2.LoggingServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.LoggingServiceV2Settings,Grpc.Core.ChannelCredentials)">CreateAsync(ServiceEndpoint, LoggingServiceV2Settings, ChannelCredentials)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a>, applying defaults for all unspecified settings.</p>
+              <h4 id="Google_Logging_V2_LoggingServiceV2Client_Create_Grpc_Core_Channel_Google_Logging_V2_LoggingServiceV2Settings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.Create(Grpc.Core.Channel,Google.Logging.V2.LoggingServiceV2Settings)">Create(Channel, LoggingServiceV2Settings)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a> which uses the specified channel for remote operations.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Task&lt;LoggingServiceV2Client&gt; CreateAsync(ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null, ChannelCredentials credentials = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static LoggingServiceV2Client Create(Channel channel, LoggingServiceV2Settings settings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Channel</span></td>
+                    <td><em>channel</em></td>
+                    <td><p>The <span class="xref">Grpc.Core.Channel</span> for remote operations. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings">LoggingServiceV2Settings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>Optional <a class="xref" href="Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings">LoggingServiceV2Settings</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a></td>
+                    <td><p>The created <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_LoggingServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.CreateAsync(Google.Api.Gax.ServiceEndpoint,Google.Logging.V2.LoggingServiceV2Settings)">CreateAsync(ServiceEndpoint, LoggingServiceV2Settings)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;LoggingServiceV2Client&gt; CreateAsync(ServiceEndpoint endpoint = null, LoggingServiceV2Settings settings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -318,12 +354,6 @@
                     <td><a class="xref" href="Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings">LoggingServiceV2Settings</a></td>
                     <td><em>settings</em></td>
                     <td><p>Optional <a class="xref" href="Google.Logging.V2.LoggingServiceV2Settings.html#Google_Logging_V2_LoggingServiceV2Settings">LoggingServiceV2Settings</a>.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">Grpc.Core.ChannelCredentials</span></td>
-                    <td><em>credentials</em></td>
-                    <td><p>Optional <span class="xref">Grpc.Core.ChannelCredentials</span>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -684,6 +714,37 @@ filter matches all log entries.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_LoggingServiceV2Client_ShutdownDefaultChannelsAsync" data-uid="Google.Logging.V2.LoggingServiceV2Client.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
+              <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_">Create(ServiceEndpoint, LoggingServiceV2Settings)</a>
+and <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_">CreateAsync(ServiceEndpoint, LoggingServiceV2Settings)</a>. Channels which weren&#39;t automatically
+created are not affected.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Logging_V2_LoggingServiceV2Client_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_Create_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_">Create(ServiceEndpoint, LoggingServiceV2Settings)</a>
+and <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_Logging_V2_LoggingServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_LoggingServiceV2Settings_">CreateAsync(ServiceEndpoint, LoggingServiceV2Settings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous shutdown operation.</p>
 </td>
                   </tr>
                 </tbody>

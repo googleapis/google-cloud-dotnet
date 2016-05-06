@@ -144,8 +144,8 @@
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.AllocateIds(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">AllocateIds(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Allocate IDs for the given keys (useful for referencing an entity before
-it is inserted).</p>
+              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
+before it is inserted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -199,8 +199,8 @@ No key may be reserved/read-only.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.AllocateIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Allocate IDs for the given keys (useful for referencing an entity before
-it is inserted).</p>
+              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
+before it is inserted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -254,7 +254,7 @@ No key may be reserved/read-only.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_BeginTransaction_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.BeginTransaction(System.String,Google.Api.Gax.CallSettings)">BeginTransaction(String, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Begin a new transaction.</p>
+              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -301,7 +301,7 @@ No key may be reserved/read-only.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_BeginTransactionAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.BeginTransactionAsync(System.String,Google.Api.Gax.CallSettings)">BeginTransactionAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Begin a new transaction.</p>
+              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -348,7 +348,7 @@ No key may be reserved/read-only.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_Commit_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.Commit(System.String,Google.Datastore.V1Beta3.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Mutation},Google.Api.Gax.CallSettings)">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commit a transaction, optionally creating, deleting or modifying some
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -380,7 +380,9 @@ entities.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>transaction</em></td>
-                    <td><p>The transaction in which to write.</p>
+                    <td><p>The identifier of the transaction associated with the commit. A
+transaction identifier is returned by a call to
+[BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
@@ -425,7 +427,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_Commit_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.Commit(System.String,Google.Datastore.V1Beta3.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Mutation},Google.Api.Gax.CallSettings)">Commit(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commit a transaction, optionally creating, deleting or modifying some
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -496,7 +498,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_CommitAsync_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.CommitAsync(System.String,Google.Datastore.V1Beta3.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Mutation},Google.Api.Gax.CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commit a transaction, optionally creating, deleting or modifying some
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -528,7 +530,9 @@ entities.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>transaction</em></td>
-                    <td><p>The transaction in which to write.</p>
+                    <td><p>The identifier of the transaction associated with the commit. A
+transaction identifier is returned by a call to
+[BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
@@ -573,7 +577,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_CommitAsync_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.CommitAsync(System.String,Google.Datastore.V1Beta3.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Mutation},Google.Api.Gax.CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commit a transaction, optionally creating, deleting or modifying some
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -644,7 +648,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_Lookup_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.Lookup(System.String,Google.Datastore.V1Beta3.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Look up entities by key.</p>
+              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -702,7 +706,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_LookupAsync_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.LookupAsync(System.String,Google.Datastore.V1Beta3.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Look up entities by key.</p>
+              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -760,7 +764,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_Rollback_System_String_Google_Protobuf_ByteString_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.Rollback(System.String,Google.Protobuf.ByteString,Google.Api.Gax.CallSettings)">Rollback(String, ByteString, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Roll back a transaction.</p>
+              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -814,7 +818,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_RollbackAsync_System_String_Google_Protobuf_ByteString_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.RollbackAsync(System.String,Google.Protobuf.ByteString,Google.Api.Gax.CallSettings)">RollbackAsync(String, ByteString, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Roll back a transaction.</p>
+              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -868,7 +872,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_RunQuery_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.RunQuery(System.String,Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.ReadOptions,Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQuery(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Query for entities.</p>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -930,7 +934,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_RunQuery_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.RunQuery(System.String,Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.ReadOptions,Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)">RunQuery(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Query for entities.</p>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -993,7 +997,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_RunQueryAsync_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.RunQueryAsync(System.String,Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.ReadOptions,Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQueryAsync(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Query for entities.</p>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1055,7 +1059,7 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClientImpl_RunQueryAsync_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClientImpl.RunQueryAsync(System.String,Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.ReadOptions,Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)">RunQueryAsync(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Query for entities.</p>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

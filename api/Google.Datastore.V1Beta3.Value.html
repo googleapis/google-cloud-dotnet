@@ -1162,7 +1162,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <h3 id="operators">Operators
               </h3>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Datastore_V1Beta3_ArrayValue" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Datastore.V1Beta3.ArrayValue">Explicit(Value to ArrayValue)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the array value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1181,7 +1182,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1196,12 +1198,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.ArrayValue.html#Google_Datastore_V1Beta3_ArrayValue">ArrayValue</a></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_ArrayValue">ArrayValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Datastore_V1Beta3_Entity" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Datastore.V1Beta3.Entity">Explicit(Value to Entity)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the array value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1220,7 +1241,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1235,12 +1257,30 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_EntityValue">EntityValue</a>, or null if <em>value</em> is null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Datastore_V1Beta3_Key" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Datastore.V1Beta3.Key">Explicit(Value to Key)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the key value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1259,7 +1299,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1274,12 +1315,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_KeyValue">KeyValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Protobuf_ByteString" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Protobuf.ByteString">Explicit(Value to ByteString)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the blob value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1298,7 +1358,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1313,12 +1374,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_BlobValue">BlobValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Protobuf_WellKnownTypes_Timestamp" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Protobuf.WellKnownTypes.Timestamp">Explicit(Value to Timestamp)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1337,7 +1417,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1352,12 +1433,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Type_LatLng" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Type.LatLng">Explicit(Value to LatLng)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the geolocation value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1376,7 +1476,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1391,12 +1492,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Type.LatLng.html#Google_Type_LatLng">LatLng</a></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_GeoPointValue">GeoPointValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Boolean" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Boolean">Explicit(Value to Boolean)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the Boolean value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1415,7 +1535,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1430,12 +1551,35 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_BooleanValue">BooleanValue</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.ArgumentNullException</span></td>
+                    <td><p><em>value</em> is null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Byte__" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Byte[]">Explicit(Value to Byte[])</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the blob value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a byte array</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1454,7 +1598,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1469,7 +1614,25 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Byte</span>[]</td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_BlobValue">BlobValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1552,7 +1715,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Double" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Double">Explicit(Value to Double)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the floating point value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1571,7 +1735,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1586,12 +1751,35 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Double</span></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_DoubleValue">DoubleValue</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.ArgumentNullException</span></td>
+                    <td><p><em>value</em> is null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Int64" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Int64">Explicit(Value to Int64)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the integer value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1610,7 +1798,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1625,12 +1814,35 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int64</span></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_IntegerValue">IntegerValue</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.ArgumentNullException</span></td>
+                    <td><p><em>value</em> is null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Nullable_System_Boolean_" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Nullable{System.Boolean}">Explicit(Value to Nullable&lt;Boolean&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the Boolean value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1649,7 +1861,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1664,12 +1877,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_BooleanValue">BooleanValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Nullable_System_DateTime_" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Nullable{System.DateTime}">Explicit(Value to Nullable&lt;DateTime&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a nullable <span class="xref">System.DateTime</span>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1688,7 +1920,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1703,12 +1936,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">System.DateTime</span> with a <span class="xref">System.DateTimeKind</span> of <code>Utc</code>,
+or null if <em>value</em> is null or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Nullable_System_DateTimeOffset_" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Nullable{System.DateTimeOffset}">Explicit(Value to Nullable&lt;DateTimeOffset&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a nullable <span class="xref">System.DateTimeOffset</span>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1727,7 +1979,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1742,12 +1995,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">System.DateTimeOffset</span> with an offset of zero,
+or null if <em>value</em> is null or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Nullable_System_Double_" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Nullable{System.Double}">Explicit(Value to Nullable&lt;Double&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the floating point value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1766,7 +2038,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1781,12 +2054,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Double</span>&gt;</td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_DoubleValue">DoubleValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Nullable_System_Int64_" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Nullable{System.Int64}">Explicit(Value to Nullable&lt;Int64&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the integer value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1805,7 +2097,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1820,12 +2113,31 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_IntegerValue">IntegerValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_String" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.String">Explicit(Value to String)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the string value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1844,7 +2156,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1859,12 +2172,32 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_StringValue">StringValue</a>, or null if <em>value</em> is null
+or has a kind of <code>NullValue</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_Google_Datastore_V1Beta3_ArrayValue__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(Google.Datastore.V1Beta3.ArrayValue)~Google.Datastore.V1Beta3.Value">Implicit(ArrayValue to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>ArrayValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1883,7 +2216,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.ArrayValue.html#Google_Datastore_V1Beta3_ArrayValue">ArrayValue</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1898,12 +2232,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_Google_Datastore_V1Beta3_Entity__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(Google.Datastore.V1Beta3.Entity)~Google.Datastore.V1Beta3.Value">Implicit(Entity to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>EntityValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1922,7 +2259,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1937,12 +2275,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_Google_Datastore_V1Beta3_Key__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(Google.Datastore.V1Beta3.Key)~Google.Datastore.V1Beta3.Value">Implicit(Key to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>KeyValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1961,7 +2302,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1976,12 +2318,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_Google_Protobuf_ByteString__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(Google.Protobuf.ByteString)~Google.Datastore.V1Beta3.Value">Implicit(ByteString to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>BlobValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2000,7 +2345,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2015,12 +2361,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_Google_Protobuf_WellKnownTypes_Timestamp__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(Google.Protobuf.WellKnownTypes.Timestamp)~Google.Datastore.V1Beta3.Value">Implicit(Timestamp to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>TimestampValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2039,7 +2388,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2054,12 +2404,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_Google_Type_LatLng__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(Google.Type.LatLng)~Google.Datastore.V1Beta3.Value">Implicit(LatLng to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>GeoPointValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2078,7 +2431,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><a class="xref" href="Google.Type.LatLng.html#Google_Type_LatLng">LatLng</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2093,12 +2447,14 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Boolean__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Boolean)~Google.Datastore.V1Beta3.Value">Implicit(Boolean to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>BooleanValue</code> and the given data.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2117,7 +2473,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2132,12 +2489,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Byte____Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Byte[])~Google.Datastore.V1Beta3.Value">Implicit(Byte[] to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>BlobValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2156,7 +2516,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Byte</span>[]</td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2171,12 +2532,14 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_DateTime__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.DateTime)~Google.Datastore.V1Beta3.Value">Implicit(DateTime to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>TimestampValue</code> and the given data.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2195,7 +2558,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.DateTime</span></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2210,12 +2574,14 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_DateTimeOffset__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.DateTimeOffset)~Google.Datastore.V1Beta3.Value">Implicit(DateTimeOffset to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>TimestampValue</code> and the given data.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2234,7 +2600,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.DateTimeOffset</span></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2249,12 +2616,14 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Double__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Double)~Google.Datastore.V1Beta3.Value">Implicit(Double to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>DoubleValue</code> and the given data.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2273,7 +2642,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Double</span></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2288,12 +2658,14 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Int64__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Int64)~Google.Datastore.V1Beta3.Value">Implicit(Int64 to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>IntegerValue</code> and the given data.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2312,7 +2684,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Int64</span></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2327,12 +2700,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Nullable_System_Boolean___Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Nullable{System.Boolean})~Google.Datastore.V1Beta3.Value">Implicit(Nullable&lt;Boolean&gt; to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>BooleanValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2351,7 +2727,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2366,12 +2743,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Nullable_System_DateTime___Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Nullable{System.DateTime})~Google.Datastore.V1Beta3.Value">Implicit(Nullable&lt;DateTime&gt; to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>TimestampValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2390,7 +2770,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2405,12 +2786,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Nullable_System_DateTimeOffset___Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Nullable{System.DateTimeOffset})~Google.Datastore.V1Beta3.Value">Implicit(Nullable&lt;DateTimeOffset&gt; to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>TimestampValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2429,7 +2813,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2444,12 +2829,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Nullable_System_Double___Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Nullable{System.Double})~Google.Datastore.V1Beta3.Value">Implicit(Nullable&lt;Double&gt; to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>DoubleValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2468,7 +2856,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Double</span>&gt;</td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2483,12 +2872,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_Nullable_System_Int64___Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.Nullable{System.Int64})~Google.Datastore.V1Beta3.Value">Implicit(Nullable&lt;Int64&gt; to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>IntegerValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2507,7 +2899,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2522,12 +2915,15 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Implicit_System_String__Google_Datastore_V1Beta3_Value" data-uid="Google.Datastore.V1Beta3.Value.op_Implicit(System.String)~Google.Datastore.V1Beta3.Value">Implicit(String to Value)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a kind of <code>StringValue</code> and the given data, or a null
+reference of <em>value</em> is null.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2546,7 +2942,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2561,7 +2958,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> corresponding to <em>value</em>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
