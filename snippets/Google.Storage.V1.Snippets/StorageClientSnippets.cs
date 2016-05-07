@@ -27,17 +27,58 @@ namespace Google.Storage.V1.Snippets
     [Collection(nameof(StorageSnippetFixture))]
     public class StorageClientSnippets
     {
-        private readonly StorageSnippetFixture fixture;
+        private readonly StorageSnippetFixture _fixture;
 
         public StorageClientSnippets(StorageSnippetFixture fixture)
         {
-            this.fixture = fixture;
+            this._fixture = fixture;
         }
 
         [Fact]
-        void ListBuckets()
+        public void Overview()
         {
-            var projectId = fixture.ProjectId;
+            var projectId = _fixture.ProjectId;
+
+            // <*>
+            var client = StorageClient.Create();
+
+            // Create a bucket
+            var bucketName = Guid.NewGuid().ToString(); // must be globally unique
+            var bucket = client.Service.Buckets.Insert(new Bucket { Name = bucketName }, projectId).Execute();
+
+            // Upload some files
+            var content = Encoding.UTF8.GetBytes("hello, world");
+            var obj1 = client.UploadObject(bucketName, "file1.txt", "text/plain", new MemoryStream(content));
+            var obj2 = client.UploadObject(bucketName, "folder1/file2.txt", "text/plain", new MemoryStream(content));
+
+            // List objects
+            foreach (var obj in client.ListObjects(bucketName, ""))
+            {
+                Console.WriteLine(obj.Name);
+            }
+
+            // Download file
+            using (var stream = File.OpenWrite(@".\file1.txt"))
+            {
+                client.DownloadObject(bucketName, "file1.txt", stream);
+            }
+            // </*>
+
+            Assert.Equal(content, File.ReadAllBytes(@".\file1.txt"));
+            Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "file1.txt");
+            Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "folder1/file2.txt");
+            Assert.Contains(client.ListBuckets(projectId), b => b.Name == bucketName);
+
+            File.Delete(@".\file1.txt");
+            client.DeleteObject(bucketName, "file1.txt");
+            client.DeleteObject(bucketName, "folder1/file2.txt");
+            client.Service.Buckets.Delete(bucketName).Execute();
+        }
+
+        [Fact]
+        public void ListBuckets()
+        {
+            var projectId = _fixture.ProjectId;
 
             // <ListBuckets>
             var client = StorageClient.Create();
@@ -45,12 +86,14 @@ namespace Google.Storage.V1.Snippets
             // List all buckets associated with a project
             var buckets = client.ListBuckets(projectId);
             // </ListBuckets>
+
+            Assert.Contains(buckets, b => _fixture.BucketName == b.Name);
         }
 
         [Fact]
-        void CreateBucket()
+        public void CreateBucket()
         {
-            var projectId = fixture.ProjectId;
+            var projectId = _fixture.ProjectId;
 
             // <Buckets.Insert>
             var client = StorageClient.Create();
@@ -68,9 +111,9 @@ namespace Google.Storage.V1.Snippets
         }
 
         [Fact]
-        void ListObjects()
+        public void ListObjects()
         {
-            var bucketName = fixture.BucketName;
+            var bucketName = _fixture.BucketName;
 
             // <ListObjects>
             var client = StorageClient.Create();
@@ -79,15 +122,14 @@ namespace Google.Storage.V1.Snippets
             var objects = client.ListObjects(bucketName, "greet");
             // </ListObjects>
 
-            var names = objects.Select(obj => obj.Name).ToList();
-            Assert.Contains(fixture.HelloWorldName, names);
+            Assert.Contains(objects, o => _fixture.HelloStorageObjectName == o.Name);
         }
 
         [Fact]
-        void DownloadFile()
+        public void DownloadFile()
         {
-            var bucketName = fixture.BucketName;
-            var projectId = fixture.ProjectId;
+            var bucketName = _fixture.BucketName;
+            var projectId = _fixture.ProjectId;
 
             // <DownloadObject>
             var client = StorageClient.Create();
@@ -106,28 +148,23 @@ namespace Google.Storage.V1.Snippets
             }
             // </DownloadObject>
 
-            // want to show the source path in the snippet to give an idea
-            // of nested paths, but want to make sure that the pre-uploaded file
-            // is at the same path as the source since it is duplicated data
-            Assert.Equal(fixture.HelloWorldName, source);
+            // want to show the source in the snippet, but also
+            // want to make sure it matches the one in the fixture
+            Assert.Equal(source, _fixture.HelloStorageObjectName);
 
-            Assert.Equal(fixture.HelloWorldContent, File.ReadAllText(destination));
+            Assert.Equal(_fixture.HelloWorldContent, File.ReadAllText(destination));
             File.Delete(destination);
         }
 
         [Fact]
-        void UploadFile()
+        public void UploadFile()
         {
-            // need to write this at test run instead of fixture creation
-            // as the DownloadFile test creates and deletes the same file
-            var local = @".\hello.txt";
-            File.WriteAllText(local, fixture.HelloWorldContent);
-            var bucketName = fixture.BucketName;
+            var bucketName = _fixture.BucketName;
 
             // <UploadObject>
             var client = StorageClient.Create();
-            var source = @".\hello.txt";
-            var destination = "greetings/hello.txt";
+            var source = @".\world.txt";
+            var destination = "places/world.txt";
             var contentType = "text/plain";
 
             using (var stream = File.OpenRead(source))
@@ -145,19 +182,17 @@ namespace Google.Storage.V1.Snippets
             }
             // </UploadObject>
 
-            // want to show the source and destinations in the snippet, but also
+            // want to show the source in the snippet, but also
             // want to make sure it matches the one in the fixture
-            Assert.Equal(local, source);
-            Assert.Equal(destination, fixture.HelloWorldName);
+            Assert.Equal(source, _fixture.WorldLocalFileName);
 
-            // No need to delete the storage object, as it'll be taken down by the fixture cleanup
-            File.Delete(local);
+            client.DeleteObject(bucketName, destination);
         }
 
         [Fact]
-        void GetObject()
+        public void GetObject()
         {
-            var bucketName = fixture.BucketName;
+            var bucketName = _fixture.BucketName;
 
             // <GetObject>
             var client = StorageClient.Create();
@@ -172,51 +207,54 @@ namespace Google.Storage.V1.Snippets
         }
 
         [Fact]
-        void GetBucket()
+        public void GetBucket()
         {
-            var bucketName = fixture.BucketName;
+            var bucketName = _fixture.BucketName;
 
-            // <Buckets.Get>
+            // <Service.Buckets.Get>
             var client = StorageClient.Create();
 
             var bucket = client.Service.Buckets.Get(bucketName).Execute();
             Console.WriteLine($"Name: {bucket.Name}");
             Console.WriteLine($"TimeCreated: {bucket.TimeCreated}");
-            // </Bucket.Get>
+            // </Service.Bucket.Get>
         }
 
         [Fact]
-        void DeleteObject()
+        public void DeleteObject()
         {
-            var bucketName = fixture.BucketName;
+            // create a temp object to delete in the test
+            var bucketName = _fixture.BucketName;
+            var tempObjectName = "places/world.txt";
+            StorageClient.Create().UploadObject(bucketName, tempObjectName, "", Stream.Null);
 
             // <DeleteObject>
             var client = StorageClient.Create();
-            var objectName = "greetings/hello.txt";
+            var objectName = "places/world.txt";
 
             client.DeleteObject(bucketName, objectName);
             // </DeleteObject>
 
             // want to show the name in the snippet, but also
-            // want to make sure it matches the ones in the fixture
-            Assert.Equal(fixture.HelloWorldName, objectName);
+            // want to make sure it matches the one in the test
+            Assert.Equal(objectName, tempObjectName);
 
-            // need to put the object back as it's used elsewhere
-            byte[] content = Encoding.UTF8.GetBytes(fixture.HelloWorldContent);
-            client.UploadObject(fixture.BucketName, fixture.HelloWorldName, "text/plain", new MemoryStream(content));
+            Assert.DoesNotContain(client.ListObjects(bucketName, ""), o => o.Name == objectName);
         }
 
         [Fact]
-        void DeleteBucket()
+        public void DeleteBucket()
         {
             var bucketName = Guid.NewGuid().ToString();
-            StorageClient.Create().Service.Buckets.Insert(new Bucket { Name = bucketName }, fixture.ProjectId).Execute();
+            StorageClient.Create().Service.Buckets.Insert(new Bucket { Name = bucketName }, _fixture.ProjectId).Execute();
 
-            // <DeleteBucket>
+            // <Service.Buckets.Delete>
             var client = StorageClient.Create();
 
             client.Service.Buckets.Delete(bucketName).Execute();
-            // </DeleteBucket>
+            // </Service.Buckets.Delete>
+
+            Assert.DoesNotContain(client.ListBuckets(_fixture.ProjectId), b => b.Name == bucketName);
         }
 
     }

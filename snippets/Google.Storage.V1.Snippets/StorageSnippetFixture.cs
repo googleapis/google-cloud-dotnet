@@ -29,7 +29,8 @@ namespace Google.Storage.V1.Snippets
     {
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
 
-        public string HelloWorldName { get; } = "greetings/hello.txt";
+        public string HelloStorageObjectName { get; } = "greetings/hello.txt";
+        public string WorldLocalFileName { get; } = @".\world.txt";
         public string HelloWorldContent { get; } = "hello, world";
         public string ProjectId { get; }
         public string BucketName { get; }
@@ -47,7 +48,7 @@ namespace Google.Storage.V1.Snippets
         }
 
         /// <summary>
-        /// Creates a new bucket with the ID <see cref="BucketName"/>, and populates it with files needed in
+        /// Creates a new bucket with the name <see cref="BucketName"/>, and populates it with files needed in
         /// the tests.
         /// </summary>
         private void CreateAndPopulateBucket()
@@ -55,7 +56,8 @@ namespace Google.Storage.V1.Snippets
             var client = StorageClient.Create();
             client.Service.Buckets.Insert(new Apis.Storage.v1.Data.Bucket { Name = BucketName }, ProjectId).Execute();
             byte[] content = Encoding.UTF8.GetBytes(HelloWorldContent);
-            client.UploadObject(BucketName, HelloWorldName, "text/plain", new MemoryStream(content));
+            client.UploadObject(BucketName, HelloStorageObjectName, "text/plain", new MemoryStream(content));
+            File.WriteAllText(WorldLocalFileName, HelloWorldContent);
         }
 
         public void Dispose()
@@ -66,6 +68,7 @@ namespace Google.Storage.V1.Snippets
                 client.DeleteObject(obj);
             }
             client.Service.Buckets.Delete(BucketName).Execute();
+            File.Delete(WorldLocalFileName);
         }
     }
 }
