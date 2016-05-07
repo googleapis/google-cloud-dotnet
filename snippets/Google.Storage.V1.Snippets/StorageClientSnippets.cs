@@ -95,7 +95,7 @@ namespace Google.Storage.V1.Snippets
         {
             var projectId = _fixture.ProjectId;
 
-            // <Buckets.Insert>
+            // <Service.Buckets.Insert>
             var client = StorageClient.Create();
 
             // GCS bucket names must be globally unique
@@ -103,7 +103,7 @@ namespace Google.Storage.V1.Snippets
 
             // Bucket defined in Google.Apis.Storage.v1.Data namespace
             var bucket = client.Service.Buckets.Insert(new Bucket { Name = bucketName }, projectId).Execute();
-            // </Buckets.Insert>
+            // </Service.Buckets.Insert>
 
             Assert.Equal(bucketName, bucket.Name);
             Assert.True(!string.IsNullOrWhiteSpace(bucket.Id));
