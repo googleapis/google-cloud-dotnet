@@ -32,7 +32,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Lists the jobs within the specified project.
-        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListJobsOptions)"/>.
+        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListDatasets)"/>.
         /// </summary>
         /// <param name="projectId">The project to list the jobs from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case
@@ -43,7 +43,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Lists the jobs within the specified project.
-        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListJobsOptions)"/>.
+        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case

@@ -28,8 +28,8 @@ namespace Google.Bigquery.V2
     /// <remarks>
     /// <para>
     /// This abstract class is provided to enable testability while permitting
-    /// additional operations to be added in the future. See <see cref="Create(GoogleCredential)"/>
-    /// and <see cref="CreateAsync(GoogleCredential)"/> to construct instances; alternatively, you can
+    /// additional operations to be added in the future. See <see cref="Create(string, GoogleCredential)"/>
+    /// and <see cref="CreateAsync(string, GoogleCredential)"/> to construct instances; alternatively, you can
     /// construct a <see cref="BigqueryClientImpl"/> directly from a <see cref="BigqueryService"/>.
     /// </para>
     /// <para>

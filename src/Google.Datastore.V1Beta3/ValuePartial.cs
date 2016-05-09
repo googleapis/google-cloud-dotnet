@@ -164,7 +164,7 @@ namespace Google.Datastore.V1Beta3
         /// Extracts the timestamp value from a <see cref="Value"/> as a <see cref="DateTime"/>.
         /// </summary>
         /// <param name="value">The value to convert.</param>
-        /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTime"/> with a <see cref="DateTimeKind"/> of <c>Utc</c>.
+        /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTime"/> with a <see cref="DateTimeKind"/> of <c>Utc</c>.</returns>
         /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
         public static explicit operator DateTime(Value value) => ((Timestamp) value).ToDateTime();
@@ -182,7 +182,7 @@ namespace Google.Datastore.V1Beta3
         /// Extracts the timestamp value from a <see cref="Value"/> as a <see cref="DateTimeOffset"/>.
         /// </summary>
         /// <param name="value">The value to convert.</param>
-        /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTimeOffset"/> with an offset of zero.
+        /// <returns>The embedded <see cref="TimestampValue"/> as a <see cref="DateTimeOffset"/> with an offset of zero.</returns>
         /// <exception cref="InvalidOperationException">The value does not have the expected kind.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="value"/> is null.</exception>        
         public static explicit operator DateTimeOffset(Value value) => ((Timestamp)value).ToDateTimeOffset();
