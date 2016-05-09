@@ -64,15 +64,13 @@ namespace Google.Storage.V1.Snippets
             }
             // </*>
 
+            _fixture.RegisterLocalFileToDelete("file1.txt");
+            _fixture.RegisterBucketToDelete(bucketName);
+
             Assert.Equal(content, File.ReadAllBytes(@".\file1.txt"));
             Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "file1.txt");
             Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "folder1/file2.txt");
             Assert.Contains(client.ListBuckets(projectId), b => b.Name == bucketName);
-
-            File.Delete(@".\file1.txt");
-            client.DeleteObject(bucketName, "file1.txt");
-            client.DeleteObject(bucketName, "folder1/file2.txt");
-            client.Service.Buckets.Delete(bucketName).Execute();
         }
 
         [Fact]
@@ -105,9 +103,10 @@ namespace Google.Storage.V1.Snippets
             var bucket = client.Service.Buckets.Insert(new Bucket { Name = bucketName }, projectId).Execute();
             // </Service.Buckets.Insert>
 
+            _fixture.RegisterBucketToDelete(bucketName);
+
             Assert.Equal(bucketName, bucket.Name);
             Assert.True(!string.IsNullOrWhiteSpace(bucket.Id));
-            client.Service.Buckets.Delete(bucketName).Execute();
         }
 
         [Fact]
@@ -148,12 +147,13 @@ namespace Google.Storage.V1.Snippets
             }
             // </DownloadObject>
 
+            _fixture.RegisterLocalFileToDelete(destination);
+
             // want to show the source in the snippet, but also
             // want to make sure it matches the one in the fixture
             Assert.Equal(source, _fixture.HelloStorageObjectName);
 
             Assert.Equal(_fixture.HelloWorldContent, File.ReadAllText(destination));
-            File.Delete(destination);
         }
 
         [Fact]
@@ -185,8 +185,6 @@ namespace Google.Storage.V1.Snippets
             // want to show the source in the snippet, but also
             // want to make sure it matches the one in the fixture
             Assert.Equal(source, _fixture.WorldLocalFileName);
-
-            client.DeleteObject(bucketName, destination);
         }
 
         [Fact]
@@ -225,12 +223,12 @@ namespace Google.Storage.V1.Snippets
         {
             // create a temp object to delete in the test
             var bucketName = _fixture.BucketName;
-            var tempObjectName = "places/world.txt";
+            var tempObjectName = "places/deleteme.txt";
             StorageClient.Create().UploadObject(bucketName, tempObjectName, "", Stream.Null);
 
             // <DeleteObject>
             var client = StorageClient.Create();
-            var objectName = "places/world.txt";
+            var objectName = "places/deleteme.txt";
 
             client.DeleteObject(bucketName, objectName);
             // </DeleteObject>
@@ -256,6 +254,5 @@ namespace Google.Storage.V1.Snippets
 
             Assert.DoesNotContain(client.ListBuckets(_fixture.ProjectId), b => b.Name == bucketName);
         }
-
     }
 }
