@@ -69,7 +69,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Uploads a stream of CSV data to this table.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadCsv(TableReference, TableSchema, Stream)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadCsv(TableReference, TableSchema, Stream)"/>.
         /// </summary>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
@@ -77,7 +77,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Uploads a stream of JSON data to this table.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadJson(TableReference, TableSchema, Stream)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJson(TableReference, TableSchema, Stream)"/>.
         /// </summary>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <returns>A data upload job.</returns>
