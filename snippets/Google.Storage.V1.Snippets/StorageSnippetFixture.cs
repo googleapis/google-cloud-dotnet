@@ -32,7 +32,7 @@ namespace Google.Storage.V1.Snippets
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
 
         public string HelloStorageObjectName { get; } = "greetings/hello.txt";
-        public string WorldLocalFileName { get; } = @".\world.txt";
+        public string WorldLocalFileName { get; } = "world.txt";
         public string HelloWorldContent { get; } = "hello, world";
         public string ProjectId { get; }
         public string BucketName { get; }
