@@ -58,7 +58,7 @@ namespace Google.Storage.V1.Snippets
             }
 
             // Download file
-            using (var stream = File.OpenWrite(@".\file1.txt"))
+            using (var stream = File.OpenWrite("file1.txt"))
             {
                 client.DownloadObject(bucketName, "file1.txt", stream);
             }
@@ -67,7 +67,7 @@ namespace Google.Storage.V1.Snippets
             _fixture.RegisterLocalFileToDelete("file1.txt");
             _fixture.RegisterBucketToDelete(bucketName);
 
-            Assert.Equal(content, File.ReadAllBytes(@".\file1.txt"));
+            Assert.Equal(content, File.ReadAllBytes("file1.txt"));
             Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "file1.txt");
             Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "folder1/file2.txt");
             Assert.Contains(client.ListBuckets(projectId), b => b.Name == bucketName);
