@@ -12,25 +12,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Storage.V1;
 using Google.Apis.Upload;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Storage.V1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
-using System.Net;
 
 namespace Google.Storage.V1.IntegrationTests
 {
+    using static TestHelpers;
+
+    [Collection(nameof(StorageFixture))]
     public class UploadObjectTest
     {
-        private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
+        private readonly StorageFixture _fixture;
 
-        private static readonly string s_bucket = s_config.TempBucketPrefix + "2";
+        public UploadObjectTest(StorageFixture fixture)
+        {
+            _fixture = fixture;
+        }
 
         [Fact]
         public void SimpleUpload()
@@ -38,8 +42,8 @@ namespace Google.Storage.V1.IntegrationTests
             var name = GenerateName();
             var contentType = "application/octet-stream";
             var source = GenerateData(100);
-            var result = s_config.Client.UploadObject(s_bucket, name, contentType, source);
-            Assert.Equal(s_bucket, result.Bucket);
+            var result = _fixture.Client.UploadObject(_fixture.MultiVersionBucket, name, contentType, source);
+            Assert.Equal(_fixture.MultiVersionBucket, result.Bucket);
             Assert.Equal(name, result.Name);
             Assert.Equal(contentType, result.ContentType);
             ValidateData(source, name);            
@@ -50,14 +54,14 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var destination = new Object
             {
-                Bucket = s_bucket,
+                Bucket = _fixture.MultiVersionBucket,
                 Name = GenerateName(),
                 ContentType = "test/type",
                 ContentDisposition = "attachment",
                 Metadata = new Dictionary<string, string> { { "x", "y" } }
             };
             var source = GenerateData(100);
-            var result = s_config.Client.UploadObject(destination, source);
+            var result = _fixture.Client.UploadObject(destination, source);
             Assert.NotSame(destination, result);
             Assert.Equal(destination.Name, result.Name);
             Assert.Equal(destination.Bucket, result.Bucket);
@@ -76,7 +80,7 @@ namespace Google.Storage.V1.IntegrationTests
             var source = GenerateData(UploadObjectOptions.MinimumChunkSize * chunks);
             int progressCount = 0;
             var progress = new Progress<IUploadProgress>(p => progressCount++);
-            var result = await s_config.Client.UploadObjectAsync(s_bucket, name, contentType, source,
+            var result = await _fixture.Client.UploadObjectAsync(_fixture.MultiVersionBucket, name, contentType, source,
                 new UploadObjectOptions { ChunkSize = UploadObjectOptions.MinimumChunkSize },
                 CancellationToken.None, progress);
             Assert.Equal(chunks + 1, progressCount); // Should start with a 0 progress
@@ -87,11 +91,12 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void ReplaceObject()
         {
-            // This test relies on versioning being enabled for bucket {project_name}_integrationtests-2
+            var client = _fixture.Client;
+            var bucket = _fixture.MultiVersionBucket;
             var name = GenerateName();
             var contentType = "application/octet-stream";
             var source1 = GenerateData(100);
-            var firstVersion = s_config.Client.UploadObject(s_bucket, name, contentType, source1);
+            var firstVersion = client.UploadObject(bucket, name, contentType, source1);
             ValidateData(source1, name);
             var source2 = GenerateData(50);
             firstVersion.ContentType = "application/x-replaced";
@@ -100,14 +105,14 @@ namespace Google.Storage.V1.IntegrationTests
             firstVersion.Crc32c = null;
             firstVersion.ETag = null;
             firstVersion.Md5Hash = null;
-            var secondVersion = s_config.Client.UploadObject(firstVersion, source2);
+            var secondVersion = client.UploadObject(firstVersion, source2);
             ValidateData(source2, name);
             Assert.NotEqual(firstVersion.Generation, secondVersion.Generation);
             Assert.Equal(firstVersion.ContentType, secondVersion.ContentType); // The modified content type should stick
 
             // When we ask for the first generation, we get the original data back.
             var firstGenerationData = new MemoryStream();
-            s_config.Client.DownloadObject(firstVersion, firstGenerationData, new DownloadObjectOptions { Generation = firstVersion.Generation }, null);
+            client.DownloadObject(firstVersion, firstGenerationData, new DownloadObjectOptions { Generation = firstVersion.Generation }, null);
             Assert.Equal(source1.ToArray(), firstGenerationData.ToArray());
         }
 
@@ -116,7 +121,8 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var stream = GenerateData(50);
             var name = GenerateName();
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(s_bucket, name, "", stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.UploadObject(
+                _fixture.MultiVersionBucket, name, "", stream,
                 new UploadObjectOptions { IfGenerationMatch = 100 }, null));
         }
 
@@ -125,7 +131,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var existing = GetExistingObject();
             var stream = GenerateData(50);
-            s_config.Client.UploadObject(existing, stream,
+            _fixture.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfGenerationMatch = existing.Generation }, null);
         }
 
@@ -134,7 +140,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var existing = GetExistingObject();
             var stream = GenerateData(50);
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfGenerationMatch = existing.Generation + 1 }, null));
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
@@ -144,7 +150,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var existing = GetExistingObject();
             var stream = GenerateData(50);
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfGenerationNotMatch = existing.Generation }, null));
             Assert.Equal(HttpStatusCode.NotModified, exception.HttpStatusCode);
         }
@@ -154,14 +160,14 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var existing = GetExistingObject();
             var stream = GenerateData(50);
-            s_config.Client.UploadObject(existing, stream,
+            _fixture.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfGenerationNotMatch = existing.Generation + 1 }, null);
         }
 
         [Fact]
         public void UploadObject_IfGenerationMatchAndNotMatch()
         {
-            Assert.Throws<ArgumentException>(() => s_config.Client.UploadObject(s_bucket, GenerateName(), "", new MemoryStream(),
+            Assert.Throws<ArgumentException>(() => _fixture.Client.UploadObject(_fixture.MultiVersionBucket, GenerateName(), "", new MemoryStream(),
                 new UploadObjectOptions { IfGenerationMatch = 1, IfGenerationNotMatch = 2 },
                 null));
         }
@@ -171,7 +177,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var existing = GetExistingObject();
             var stream = GenerateData(50);
-            s_config.Client.UploadObject(existing, stream,
+            _fixture.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfMetagenerationMatch = existing.Metageneration }, null);
         }
 
@@ -180,7 +186,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var existing = GetExistingObject();
             var stream = GenerateData(50);
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfMetagenerationMatch = existing.Metageneration + 1 }, null));
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
@@ -190,7 +196,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var existing = GetExistingObject();
             var stream = GenerateData(50);
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.UploadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration }, null));
             Assert.Equal(HttpStatusCode.NotModified, exception.HttpStatusCode);
         }
@@ -200,14 +206,14 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var existing = GetExistingObject();
             var stream = GenerateData(50);
-            s_config.Client.UploadObject(existing, stream,
+            _fixture.Client.UploadObject(existing, stream,
                 new UploadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration + 1 }, null);
         }
 
         [Fact]
         public void UploadObject_IfMetagenerationMatchAndNotMatch()
         {
-            Assert.Throws<ArgumentException>(() => s_config.Client.UploadObject(s_bucket, GenerateName(), "", new MemoryStream(),
+            Assert.Throws<ArgumentException>(() => _fixture.Client.UploadObject(_fixture.MultiVersionBucket, GenerateName(), "", new MemoryStream(),
                 new UploadObjectOptions { IfMetagenerationMatch = 1, IfMetagenerationNotMatch = 2 },
                 null));
         }
@@ -215,12 +221,12 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void UploadObject_NullContentType()
         {
-            s_config.Client.UploadObject(s_bucket, GenerateName(), null, new MemoryStream());
+            _fixture.Client.UploadObject(_fixture.MultiVersionBucket, GenerateName(), null, new MemoryStream());
         }
 
         private Object GetExistingObject()
         {
-            var obj = s_config.Client.UploadObject(s_bucket, GenerateName(), "application/octet-stream", GenerateData(100));
+            var obj = _fixture.Client.UploadObject(_fixture.MultiVersionBucket, GenerateName(), "application/octet-stream", GenerateData(100));
             // Clear hash and cache information, ready for a new version.
             obj.Crc32c = null;
             obj.ETag = null;
@@ -228,10 +234,10 @@ namespace Google.Storage.V1.IntegrationTests
             return obj;
         }
 
-        private static void ValidateData(MemoryStream original, string objectName)
+        private void ValidateData(MemoryStream original, string objectName)
         {
             var downloaded = new MemoryStream();
-            s_config.Client.DownloadObject(s_bucket, objectName, downloaded);
+            _fixture.Client.DownloadObject(_fixture.MultiVersionBucket, objectName, downloaded);
             Assert.Equal(original.ToArray(), downloaded.ToArray());
         }
     }

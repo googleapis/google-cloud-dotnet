@@ -78,7 +78,7 @@ namespace Google.Storage.V1
         /// </summary>
         private static string GetBaseUri(string bucket, string objectName)
         {
-            ValidateBucket(bucket);
+            ValidateBucketName(bucket);
             Preconditions.CheckNotNull(objectName, nameof(objectName));
             return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(objectName)}?alt=media";
         }

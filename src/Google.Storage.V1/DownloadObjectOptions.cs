@@ -41,17 +41,17 @@ namespace Google.Storage.V1
         public long? IfGenerationMatch;
 
         /// <summary>
-        /// Precondition for download: the object is only uploaded if its generation does not match the given value.
+        /// Precondition for download: the object is only downloaded if its generation does not match the given value.
         /// </summary>
         public long? IfGenerationNotMatch;
 
         /// <summary>
-        /// Precondition for download: the object is only uploaded if its meta-generation matches the given value.
+        /// Precondition for download: the object is only downloaded if its meta-generation matches the given value.
         /// </summary>
         public long? IfMetagenerationMatch;
 
         /// <summary>
-        /// Precondition for download: the object is only uploaded if its meta-generation does not match the given value.
+        /// Precondition for download: the object is only downloaded if its meta-generation does not match the given value.
         /// </summary>
         public long? IfMetagenerationNotMatch;
 
@@ -88,11 +88,9 @@ namespace Google.Storage.V1
             uri = MaybeAppendParameter(uri, "ifMetagenerationMatch", IfMetagenerationMatch);
             uri = MaybeAppendParameter(uri, "ifMetagenerationNotMatch", IfMetagenerationNotMatch);
             return uri;
-        }        
-
-        private static string MaybeAppendParameter(string uri, string name, long? value)
-        {
-            return value == null ? uri : $"{uri}&{name}={value.Value.ToString(CultureInfo.InvariantCulture)}";
         }
+
+        private static string MaybeAppendParameter(string uri, string name, long? value) =>
+            value == null ? uri : $"{uri}&{name}={value.Value.ToString(CultureInfo.InvariantCulture)}";
     }
 }

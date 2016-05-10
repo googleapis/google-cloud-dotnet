@@ -22,39 +22,39 @@ using Xunit;
 
 namespace Google.Storage.V1.IntegrationTests
 {
+    [Collection(nameof(StorageFixture))]
     public class ListBucketsTest
     {
-        private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
+        private readonly StorageFixture _fixture;
 
-        private static readonly string s_extraBucket = s_config.TempBucketPrefix + "extra";
-        private static readonly string[] s_allKnownBuckets = Enumerable
-                .Range(0, 10)
-                .Select(x => s_config.TempBucketPrefix + x)
-                .Concat(new[] { s_extraBucket })
-                .ToArray();
+        public ListBucketsTest(StorageFixture fixture)
+        {
+            _fixture = fixture;
+        }
 
         [Theory]
-        [InlineData(null, null)]
-        [InlineData(null, "_integ")]
-        [InlineData(4, null)]
-        public async Task AllBuckets(int? pageSize, string prefix)
+        [InlineData(null, false)]
+        [InlineData(null, true)]
+        [InlineData(4, false)]
+        [InlineData(4, true)]
+        public async Task AllBuckets(int? pageSize, bool specifyPrefix)
         {
-            var options = new ListBucketsOptions { PageSize = pageSize, Prefix = s_config.Project + prefix };
-            await AssertBuckets(options, s_allKnownBuckets);
+            var options = new ListBucketsOptions { PageSize = pageSize, Prefix = specifyPrefix ? null : _fixture.BucketPrefix };
+            await AssertBuckets(options, _fixture.AllBuckets.ToArray());
         }
 
         [Fact]
         public async Task Prefix()
         {
-            var options = new ListBucketsOptions { Prefix = s_config.TempBucketPrefix + "e" };
-            await AssertBuckets(options, s_extraBucket);
+            var options = new ListBucketsOptions { Prefix = _fixture.BucketPrefix + "z" };
+            await AssertBuckets(options, _fixture.BucketBeginningWithZ);
         }
 
         [Fact]
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
-            var task = s_config.Client.ListAllBucketsAsync(s_config.Project, cancellationToken: cts.Token);
+            var task = _fixture.Client.ListAllBucketsAsync(_fixture.ProjectId, cancellationToken: cts.Token);
             cts.Cancel();
             await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);
         }
@@ -62,16 +62,16 @@ namespace Google.Storage.V1.IntegrationTests
         // Fetches buckets using the given options in each possible way, validating that the expected bucket names are returned.
         private async Task AssertBuckets(ListBucketsOptions options, params string[] expectedBucketNames)
         {
-            IEnumerable<Bucket> actual = s_config.Client.ListBuckets(s_config.Project, options);
+            IEnumerable<Bucket> actual = _fixture.Client.ListBuckets(_fixture.ProjectId, options);
             AssertBucketNames(actual, expectedBucketNames);
-            actual = await s_config.Client.ListAllBucketsAsync(s_config.Project, options, CancellationToken.None);
+            actual = await _fixture.Client.ListAllBucketsAsync(_fixture.ProjectId, options, CancellationToken.None);
             AssertBucketNames(actual, expectedBucketNames);
         }
 
         private void AssertBucketNames(IEnumerable<Bucket> actualBuckets, string[] expectedNames)
         {
             // Intersection with known buckets to avoid non-test buckets causing issues.
-            var actualNames = actualBuckets.Select(b => b.Name).Intersect(s_allKnownBuckets).OrderBy(x => x).ToList();
+            var actualNames = actualBuckets.Select(b => b.Name).Where(name => name.StartsWith(_fixture.BucketPrefix)).OrderBy(x => x).ToList();
             Assert.Equal(expectedNames.OrderBy(x => x), actualNames);
         }
     }

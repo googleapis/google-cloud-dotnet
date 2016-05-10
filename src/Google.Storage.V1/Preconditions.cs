@@ -164,5 +164,12 @@ namespace Google.Storage.V1
                 throw new ArgumentException(string.Format(format, arg0, arg1), paramName);
             }
         }
+
+        internal static T CheckEnumValue<T>(T value, string paramName) where T : struct
+        {
+            CheckArgument(Enum.IsDefined(typeof(T), value), paramName,
+                "Value {0} not defined in enum {1}", value, typeof(T).Name);
+            return value;
+        }
     }
 }

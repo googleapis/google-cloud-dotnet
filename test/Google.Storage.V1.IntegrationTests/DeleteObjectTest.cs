@@ -16,35 +16,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using Xunit;
-using static Google.Storage.V1.IntegrationTests.TestHelpers;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1.IntegrationTests
 {
+    using static TestHelpers;
+
+    [Collection(nameof(StorageFixture))]
     public class DeleteObjectTest
     {
-        private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
+        private readonly StorageFixture _fixture;
 
-        private static readonly string s_multiVersionBucket = s_config.TempBucketPrefix + "2";
-        private static readonly string s_singleVersionBucket = s_config.TempBucketPrefix + "3";
-
-        public static IEnumerable<object[]> BothBuckets => CreateTestData(s_multiVersionBucket, s_singleVersionBucket);
-
+        public DeleteObjectTest(StorageFixture fixture)
+        {
+            _fixture = fixture;
+        }
+        
         [Fact]
         public void ImplicitLatestVersion_SingleVersionBucket()
         {
-            var bucket = s_singleVersionBucket;
+            var bucket = _fixture.SingleVersionBucket;
             var name = CreateObjects(bucket, 1)[0].Name;
-            s_config.Client.DeleteObject(bucket, name);
+            _fixture.Client.DeleteObject(bucket, name);
             Assert.Empty(ListObjects(bucket, name, true));
         }
 
         [Fact]
         public void ImplicitLatestVersion_MultiVersionBucket()
         {
-            var bucket = s_multiVersionBucket;
+            var bucket = _fixture.MultiVersionBucket;
             var name = CreateObjects(bucket, 1)[0].Name;
-            s_config.Client.DeleteObject(bucket, name);
+            _fixture.Client.DeleteObject(bucket, name);
             // Without asking for versions, we don't get anything
             Assert.Empty(ListObjects(bucket, name, false));
             // If we ask for versions, we get the deleted object
@@ -54,97 +56,101 @@ namespace Google.Storage.V1.IntegrationTests
         }
 
         [Theory]
-        [MemberData(nameof(BothBuckets))]
-        public void SingleVersionObject_DeleteExplicitVersion(string bucket)
+        [InlineData(false)]
+        [InlineData(true)]
+        public void SingleVersionObject_DeleteExplicitVersion(bool multiVersionBucket)
         {
+            string bucket = multiVersionBucket ? _fixture.MultiVersionBucket : _fixture.SingleVersionBucket;
             var obj = CreateObjects(bucket, 1)[0];
-            s_config.Client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
+            _fixture.Client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
             Assert.Empty(ListObjects(obj, true));
         }
 
         [Theory]
-        [MemberData(nameof(BothBuckets))]
-        public void NonExistentObject(string bucket)
+        [InlineData(false)]
+        [InlineData(true)]
+        public void NonExistentObject(bool multiVersionBucket)
         {
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DeleteObject(bucket, GenerateName()));
+            string bucket = multiVersionBucket ? _fixture.MultiVersionBucket : _fixture.SingleVersionBucket;
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DeleteObject(bucket, GenerateName()));
             Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
         }
 
         [Theory]
-        [MemberData(nameof(BothBuckets))]
-        public void WrongGeneration(string bucket)
+        [InlineData(false)]
+        [InlineData(true)]
+        public void WrongGeneration(bool multiVersionBucket)
         {
+            string bucket = multiVersionBucket ? _fixture.MultiVersionBucket : _fixture.SingleVersionBucket;
             var obj = CreateObjects(bucket, 1)[0];
             var options = new DeleteObjectOptions { Generation = obj.Generation.Value + 1 };
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DeleteObject(obj, options));
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DeleteObject(obj, options));
             Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
         }
 
         [Theory]
-        [MemberData(nameof(BothBuckets))]
-        public void DeleteSameGenerationTwice(string bucket)
+        [InlineData(false)]
+        [InlineData(true)]
+        public void DeleteSameGenerationTwice(bool multiVersionBucket)
         {
+            string bucket = multiVersionBucket ? _fixture.MultiVersionBucket : _fixture.SingleVersionBucket;
             var obj = CreateObjects(bucket, 1)[0];
             var options = new DeleteObjectOptions { Generation = obj.Generation.Value };
             // First time is fine
-            s_config.Client.DeleteObject(obj, options);
+            _fixture.Client.DeleteObject(obj, options);
             // Second time throws an exception
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DeleteObject(obj, options));
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DeleteObject(obj, options));
             Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
         }
 
         [Fact]
         public void DeleteImplicitlyThenExplicitly()
         {
-            var bucket = s_multiVersionBucket;
+            var bucket = _fixture.MultiVersionBucket;
             var obj = CreateObjects(bucket, 1)[0];
-            s_config.Client.DeleteObject(obj);
-            s_config.Client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation.Value });
+            _fixture.Client.DeleteObject(obj);
+            _fixture.Client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation.Value });
             Assert.Empty(ListObjects(obj, true));
         }
 
         [Fact]
         public void MultipleVersionsCreated_SingleVersionBucket()
         {
-            var bucket = s_singleVersionBucket;
+            var bucket = _fixture.SingleVersionBucket;
             var obj = CreateObjects(bucket, 3)[0];
-            s_config.Client.DeleteObject(obj);
+            _fixture.Client.DeleteObject(obj);
             Assert.Empty(ListObjects(obj, true));
         }
 
         [Fact]
         public void MultipleVersionsCreated_MultiVersionBucket()
         {
-            var bucket = s_multiVersionBucket;
+            var bucket = _fixture.MultiVersionBucket;
             var objects = CreateObjects(bucket, 3);
             for (int i = 0; i < 3; i++)
             {
                 var options = new DeleteObjectOptions { Generation = objects[i].Generation };
-                s_config.Client.DeleteObject(objects[0], options);
+                _fixture.Client.DeleteObject(objects[0], options);
                 Assert.Equal(2 - i, ListObjects(objects[0], true).Count);
             }
         }
 
-        private static List<Object> ListObjects(Object obj, bool versions)
-        {
-            return ListObjects(obj.Bucket, obj.Name, versions);
-        }
+        private List<Object> ListObjects(Object obj, bool versions) =>
+            ListObjects(obj.Bucket, obj.Name, versions);
 
-        private static List<Object> ListObjects(string bucket, string name, bool versions)
-        {
+        private List<Object> ListObjects(string bucket, string name, bool versions) =>
             // Use the same prefix as the name - filtering to be certain later.
-            return s_config.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = versions })
+            _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = versions })
                 .Where(o => o.Name == name)
                 .ToList();
-        }
 
-        private static List<Object> CreateObjects(string bucket, int versionCount)
+        private List<Object> CreateObjects(string bucket, int versionCount)
         {
             string name = GenerateName();
             var objects = new List<Object>();
             for (int i = 0; i < versionCount; i++)
             {
-                objects.Add(s_config.Client.UploadObject(bucket, name, "", GenerateData(i * 10)));
+                objects.Add(_fixture.Client.UploadObject(bucket, name, "", GenerateData(i * 10)));
             }
             return objects;
         }

@@ -30,12 +30,14 @@ namespace Google.Storage.V1.Snippets
     public sealed class StorageSnippetFixture : IDisposable, ICollectionFixture<StorageSnippetFixture>
     {
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
+        private const string NotificationUrlEnvironmentVariable = "TEST_PROJECT_NOTIFICATION_URL";
 
         public string HelloStorageObjectName { get; } = "greetings/hello.txt";
         public string WorldLocalFileName { get; } = "world.txt";
         public string HelloWorldContent { get; } = "hello, world";
         public string ProjectId { get; }
         public string BucketName { get; }
+        public string NotificationUrl { get; }
 
         private readonly List<string> bucketsToDelete = new List<string>();
         private readonly List<string> localFilesToDelete = new List<string>();
@@ -48,6 +50,7 @@ namespace Google.Storage.V1.Snippets
                 throw new InvalidOperationException(
                     $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
             }
+            NotificationUrl = Environment.GetEnvironmentVariable(NotificationUrlEnvironmentVariable);
             BucketName = "snippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
             CreateAndPopulateBucket();
         }
@@ -59,7 +62,7 @@ namespace Google.Storage.V1.Snippets
         private void CreateAndPopulateBucket()
         {
             var client = StorageClient.Create();
-            client.Service.Buckets.Insert(new Apis.Storage.v1.Data.Bucket { Name = BucketName }, ProjectId).Execute();
+            client.CreateBucket(ProjectId, BucketName);
             byte[] content = Encoding.UTF8.GetBytes(HelloWorldContent);
             client.UploadObject(BucketName, HelloStorageObjectName, "text/plain", new MemoryStream(content));
             File.WriteAllText(WorldLocalFileName, HelloWorldContent);
@@ -82,11 +85,11 @@ namespace Google.Storage.V1.Snippets
             var client = StorageClient.Create();
             foreach (var bucket in bucketsToDelete)
             {
-                foreach (var obj in client.ListObjects(bucket, null))
+                foreach (var obj in client.ListObjects(bucket, null, new ListObjectsOptions { Versions = true }).ToList())
                 {
-                    client.DeleteObject(obj);
+                    client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
                 }
-                client.Service.Buckets.Delete(bucket).Execute();
+                client.DeleteBucket(bucket);
             }
             foreach (var file in localFilesToDelete)
             {

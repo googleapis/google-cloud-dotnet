@@ -12,7 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Storage.v1;
+using static Google.Apis.Storage.v1.ObjectsResource;
+using static Google.Apis.Storage.v1.ObjectsResource.ListRequest;
 
 namespace Google.Storage.V1
 {
@@ -45,14 +46,19 @@ namespace Google.Storage.V1
         public bool? Versions { get; set; }
 
         /// <summary>
+        /// The projection to retrieve.
+        /// </summary>
+        public Projection? Projection { get; set; }
+
+        /// <summary>
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>
-        internal void ModifyRequest(ObjectsResource.ListRequest request)
+        internal void ModifyRequest(ListRequest request)
         {
             if (PageSize != null)
             {
-                request.MaxResults = PageSize.Value;
+                request.MaxResults = PageSize;
             }
             if (Delimiter != null)
             {
@@ -60,7 +66,11 @@ namespace Google.Storage.V1
             }
             if (Versions != null)
             {
-                request.Versions = Versions.Value;
+                request.Versions = Versions;
+            }
+            if (Projection != null)
+            {
+                request.Projection = Preconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
             }
         }
     }

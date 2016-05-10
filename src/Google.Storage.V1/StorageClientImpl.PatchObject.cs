@@ -1,4 +1,4 @@
-﻿// Copyright 2015 Google Inc. All Rights Reserved.
+﻿// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,28 +22,24 @@ namespace Google.Storage.V1
     public sealed partial class StorageClientImpl : StorageClient
     {
         /// <inheritdoc />
-        public override Object GetObject(string bucket, string objectName, GetObjectOptions options = null)
-        {
-            ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
-            return CreateGetObjectRequest(bucket, objectName, options).Execute();
-        }
+        public override Object PatchObject(
+            Object obj,
+            PatchObjectOptions options = null)
+            => CreatePatchObjectRequest(obj, options).Execute();
 
         /// <inheritdoc />
-        public override Task<Object> GetObjectAsync(
-            string bucket,
-            string objectName,
-            GetObjectOptions options = null,
+        public override Task<Object> PatchObjectAsync(
+            Object obj,
+            PatchObjectOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
-        {
-            ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
-            return CreateGetObjectRequest(bucket, objectName, options).ExecuteAsync(cancellationToken);
-        }
+            => CreatePatchObjectRequest(obj, options).ExecuteAsync(cancellationToken);
 
-        private ObjectsResource.GetRequest CreateGetObjectRequest(string bucket, string objectName, GetObjectOptions options)
+        private ObjectsResource.PatchRequest CreatePatchObjectRequest(Object obj, PatchObjectOptions options)
         {
-            var request = Service.Objects.Get(bucket, objectName);
+            Preconditions.CheckNotNull(obj, nameof(obj));
+            Preconditions.CheckArgument(obj.Bucket != null, nameof(obj), "The Bucket property of the object to update is null");
+            Preconditions.CheckArgument(obj.Name != null, nameof(obj), "The Name property of the object to update is null");
+            var request = Service.Objects.Patch(obj, obj.Bucket, obj.Name);
             options?.ModifyRequest(request);
             return request;
         }

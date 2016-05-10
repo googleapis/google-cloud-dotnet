@@ -32,7 +32,7 @@ namespace Google.Storage.V1
             UploadObjectOptions options = null,
             IProgress<IUploadProgress> progress = null)
         {
-            ValidateBucket(bucket);
+            ValidateBucketName(bucket);
             Preconditions.CheckNotNull(objectName, nameof(objectName));
             return UploadObject(
                 new Object { Bucket = bucket, Name = objectName, ContentType = contentType ?? "" },
@@ -49,7 +49,7 @@ namespace Google.Storage.V1
             CancellationToken cancellationToken = default(CancellationToken),
             IProgress<IUploadProgress> progress = null)
         {
-            ValidateBucket(bucket);
+            ValidateBucketName(bucket);
             Preconditions.CheckNotNull(objectName, nameof(objectName));
             return UploadObjectAsync(new Object { Bucket = bucket, Name = objectName, ContentType = contentType ?? "" },
                 source, options, cancellationToken, progress);

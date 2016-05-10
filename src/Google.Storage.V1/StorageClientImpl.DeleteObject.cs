@@ -59,7 +59,7 @@ namespace Google.Storage.V1
 
         private ObjectsResource.DeleteRequest CreateDeleteObjectRequest(string bucket, string name, DeleteObjectOptions options)
         {
-            ValidateBucket(bucket);
+            ValidateBucketName(bucket);
             Preconditions.CheckNotNull(name, nameof(name));
             var request = Service.Objects.Delete(bucket, name);
             options?.ModifyRequest(request);
