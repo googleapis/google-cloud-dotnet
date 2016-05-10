@@ -26,7 +26,7 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
     /// </summary>
     public sealed class Program
     {
-        private static readonly Regex StartSnippetTag = new Regex(@"^\s*// \<(?<name>[\w\.]+)>\s*$", RegexOptions.Compiled);
+        private static readonly Regex StartSnippetTag = new Regex(@"^\s*// \<(?<name>[^>]+)>\s*$", RegexOptions.Compiled);
 
         private static int Main(string[] args)
         {
@@ -62,14 +62,12 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
         }
 
         /// <summary>
-        /// Generates a markdown file 
+        /// Generates a markdown file containing snippets 
         /// </summary>
-        /// <param name="snippetsDir"></param>
-        /// <param name="metadataDir"></param>
-        /// <param name="outputFile"></param>
         private static void GenerateSnippetUids(string snippetsDir, string metadataDir, string outputFile)
         {
             // TODO: Use a YAML parser
+            // TODO: Create a lookup by project name and client name.
             var uids = new HashSet<string>(
                 from yaml in Directory.GetFiles(metadataDir, "Google*.yml")
                 from line in File.ReadLines(yaml)
@@ -93,7 +91,8 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                             where match.Success
                             let snippetName = match.Groups["name"].Value
                             from uid in uids
-                            where uid.StartsWith($"{projectName}.{clientName}.{snippetName}(")
+                            where uid.StartsWith(projectName)
+                            where UidMatches(uid, projectName, clientName, snippetName)
                             select new { uid, sourceRelativeToOutput, snippetName };
 
                 foreach (var result in query)
@@ -107,6 +106,16 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                     outputMarkdown.WriteLine();
                 }
             }
+        }
+
+        static bool UidMatches(string uid, string projectName, string clientName, string snippetName)
+        {
+            // We want to use prefix matching for overload resolution, as well as avoiding false-positives
+            // due to short names. So two situations:
+            // <Foo> - match project.client.Foo(
+            // <Foo_Bar> - match project.client.Foo(Bar
+            string methodStart = snippetName.Contains("_") ? snippetName.Replace("_", "(") : snippetName + "(";
+            return uid.StartsWith($"{projectName}.{clientName}.{methodStart}");
         }
 
         /// <summary>

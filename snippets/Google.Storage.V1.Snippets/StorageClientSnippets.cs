@@ -39,7 +39,7 @@ namespace Google.Storage.V1.Snippets
         {
             var projectId = _fixture.ProjectId;
 
-            // <*>
+            // <Overview>
             var client = StorageClient.Create();
 
             // Create a bucket
@@ -62,7 +62,7 @@ namespace Google.Storage.V1.Snippets
             {
                 client.DownloadObject(bucketName, "file1.txt", stream);
             }
-            // </*>
+            // </Overview>
 
             _fixture.RegisterLocalFileToDelete("file1.txt");
             _fixture.RegisterBucketToDelete(bucketName);
@@ -125,12 +125,12 @@ namespace Google.Storage.V1.Snippets
         }
 
         [Fact]
-        public void DownloadFile()
+        public void DownloadObject()
         {
             var bucketName = _fixture.BucketName;
             var projectId = _fixture.ProjectId;
 
-            // <DownloadObject>
+            // <DownloadObject_System.String>
             var client = StorageClient.Create();
             var source = "greetings/hello.txt";
             var destination = @".\hello.txt";
@@ -145,7 +145,7 @@ namespace Google.Storage.V1.Snippets
                 // Download source object from bucket to local file system
                 client.DownloadObject(bucketName, source, stream, null, progress);
             }
-            // </DownloadObject>
+            // </DownloadObject_System.String>
 
             _fixture.RegisterLocalFileToDelete(destination);
 
@@ -157,11 +157,11 @@ namespace Google.Storage.V1.Snippets
         }
 
         [Fact]
-        public void UploadFile()
+        public void UploadObject()
         {
             var bucketName = _fixture.BucketName;
 
-            // <UploadObject>
+            // <UploadObject_System.String>
             var client = StorageClient.Create();
             var source = @".\world.txt";
             var destination = "places/world.txt";
@@ -180,7 +180,7 @@ namespace Google.Storage.V1.Snippets
                 var options = new UploadObjectOptions { PredefinedAcl = acl };
                 var obj = client.UploadObject(bucketName, destination, contentType, stream, options, progress);
             }
-            // </UploadObject>
+            // </UploadObject_System.String>
 
             // want to show the source in the snippet, but also
             // want to make sure it matches the one in the fixture
@@ -226,12 +226,12 @@ namespace Google.Storage.V1.Snippets
             var tempObjectName = "places/deleteme.txt";
             StorageClient.Create().UploadObject(bucketName, tempObjectName, "", Stream.Null);
 
-            // <DeleteObject>
+            // <DeleteObject_System.String>
             var client = StorageClient.Create();
             var objectName = "places/deleteme.txt";
 
             client.DeleteObject(bucketName, objectName);
-            // </DeleteObject>
+            // </DeleteObject_System.String>
 
             // want to show the name in the snippet, but also
             // want to make sure it matches the one in the test

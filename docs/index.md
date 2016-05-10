@@ -20,6 +20,9 @@ for working with [Google Cloud Storage](https://cloud.google.com/storage/).
 Common operations are exposed via the
 [`StorageClient`](obj/api/Google.Storage.V1.StorageClient.yml) class.
 
+Example:
+[!code-cs[](../snippets/Google.Storage.V1.Snippets/StorageClientSnippets.cs#Overview)]
+
 # Alpha APIs
 
 These APIs are available from Google's [public myget
