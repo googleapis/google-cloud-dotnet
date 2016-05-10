@@ -11,15 +11,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Protobuf;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using static Google.Datastore.V1Beta3.CommitRequest.Types;
-using static Google.Datastore.V1Beta3.Key.Types;
 using static Google.Datastore.V1Beta3.PropertyFilter.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
-using Google.Protobuf;
-using System.Collections.Generic;
 
 namespace Google.Datastore.V1Beta3.Snippets
 {
@@ -37,15 +36,13 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void Lookup()
         {
             string projectId = _fixture.ProjectId;
-            Key key1 = _fixture.PrideAndPrejudiceKey;
-            Key key2 = new Key
-            {
-                PartitionId = _fixture.PartitionId,
-                // Likely not to be found...
-                Path = { new PathElement { Id = key1.Path[0].Id - 1, Kind = _fixture.BookKind } }
-            };
+            string namespaceId = _fixture.NamespaceId;
 
             // <Lookup>
+            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
+            Key key1 = keyFactory.CreateKey("pride_and_prejudice");
+            Key key2 = keyFactory.CreateKey("not_present");
+
             DatastoreClient client = DatastoreClient.Create();
             LookupResponse response = client.Lookup(
                 projectId,
@@ -77,11 +74,12 @@ namespace Google.Datastore.V1Beta3.Snippets
                 {
                     PropertyFilter = new PropertyFilter
                     {
-                        Property = new PropertyReference { Name = "author" },
+                        Property = new PropertyReference("author"),
                         Op = Operator.EQUAL,
                         Value = "Jane Austen"
                     }
-                }
+                },
+                Projection = { "author", "title" }
             };
             RunQueryResponse response = client.RunQuery(
                 projectId,
@@ -137,23 +135,23 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void AddEntity()
         {
             string projectId = _fixture.ProjectId;
-            PartitionId partitionId = _fixture.PartitionId;
-            PathElement bookRoot = new PathElement { Kind = _fixture.BookKind };
+            string namespaceId = _fixture.NamespaceId;
 
             // TODO: Fix transaction handling. (Should roll back automatically.)
 
             // <Commit>
             DatastoreClient client = DatastoreClient.Create();
+            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
             Entity book1 = new Entity
             {
-                Key = new Key { PartitionId = partitionId, Path = { bookRoot } },
+                Key = keyFactory.CreateInsertionKey(),
                 ["author"] = "Harper Lee",
                 ["title"] = "To Kill a Mockingbird",
                 ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
             };
             Entity book2 = new Entity
             {
-                Key = new Key { PartitionId = partitionId, Path = { bookRoot } },
+                Key = keyFactory.CreateInsertionKey(),
                 ["author"] = "Charlotte Brontë",
                 ["title"] = "Jane Eyre",
                 ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
