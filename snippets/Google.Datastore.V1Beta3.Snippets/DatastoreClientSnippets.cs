@@ -1,0 +1,173 @@
+﻿// Copyright 2016 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+using System;
+using System.Linq;
+using Xunit;
+using static Google.Datastore.V1Beta3.CommitRequest.Types;
+using static Google.Datastore.V1Beta3.Key.Types;
+using static Google.Datastore.V1Beta3.PropertyFilter.Types;
+using static Google.Datastore.V1Beta3.ReadOptions.Types;
+using Google.Protobuf;
+using System.Collections.Generic;
+
+namespace Google.Datastore.V1Beta3.Snippets
+{
+    [Collection(nameof(DatastoreSnippetFixture))]
+    public class DatastoreClientSnippets
+    {
+        private readonly DatastoreSnippetFixture _fixture;
+
+        public DatastoreClientSnippets(DatastoreSnippetFixture fixture)
+        {
+            _fixture = fixture;
+        }
+
+        [Fact]
+        public void Lookup()
+        {
+            string projectId = _fixture.ProjectId;
+            Key key1 = _fixture.PrideAndPrejudiceKey;
+            Key key2 = new Key
+            {
+                PartitionId = _fixture.PartitionId,
+                // Likely not to be found...
+                Path = { new PathElement { Id = key1.Path[0].Id - 1, Kind = _fixture.BookKind } }
+            };
+
+            // <Lookup>
+            DatastoreClient client = DatastoreClient.Create();
+            LookupResponse response = client.Lookup(
+                projectId,
+                new ReadOptions { ReadConsistency = ReadConsistency.STRONG },
+                new[] { key1, key2 });
+            Console.WriteLine($"Found: {response.Found.Count}");
+            Console.WriteLine($"Deferred: {response.Deferred.Count}");
+            Console.WriteLine($"Missing: {response.Missing.Count}");
+            // </Lookup>
+
+            Entity entity = response.Found[0].Entity;
+            Assert.Equal("Jane Austen", (string)entity["author"]);
+            Assert.Equal("Pride and Prejudice", (string)entity["title"]);
+        }
+
+        [Fact]
+        public void StructuredQuery()
+        {
+            string projectId = _fixture.ProjectId;
+            PartitionId partitionId = _fixture.PartitionId;
+            string kind = _fixture.BookKind;
+
+            // <RunQuery>
+            DatastoreClient client = DatastoreClient.Create();
+            Query query = new Query
+            {
+                Kind = { new KindExpression { Name = kind } },
+                Filter = new Filter
+                {
+                    PropertyFilter = new PropertyFilter
+                    {
+                        Property = new PropertyReference { Name = "author" },
+                        Op = Operator.EQUAL,
+                        Value = "Jane Austen"
+                    }
+                }
+            };
+            RunQueryResponse response = client.RunQuery(
+                projectId,
+                partitionId,
+                new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+                query);
+
+            foreach (EntityResult result in response.Batch.EntityResults)
+            {
+                Console.WriteLine(result.Entity);
+            }
+            // </RunQuery>
+
+            Assert.Equal(1, response.Batch.EntityResults.Count);
+            Entity entity = response.Batch.EntityResults[0].Entity;
+            Assert.Equal("Jane Austen", (string)entity["author"]);
+            Assert.Equal("Pride and Prejudice", (string)entity["title"]);
+        }
+
+        [Fact]
+        public void GqlQuery()
+        {
+            string projectId = _fixture.ProjectId;
+            PartitionId partitionId = _fixture.PartitionId;
+            string kind = _fixture.BookKind;
+
+            // <RunQuery>
+            DatastoreClient client = DatastoreClient.Create();
+            GqlQuery gqlQuery = new GqlQuery
+            {
+                QueryString = "SELECT * FROM book WHERE author = @author",
+                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+            };
+            RunQueryResponse response = client.RunQuery(
+                projectId,
+                partitionId,
+                new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+                gqlQuery);
+
+            foreach (EntityResult result in response.Batch.EntityResults)
+            {
+                Console.WriteLine(result.Entity);
+            }
+            // </RunQuery>
+
+            Assert.Equal(1, response.Batch.EntityResults.Count);
+            Entity entity = response.Batch.EntityResults[0].Entity;
+            Assert.Equal("Jane Austen", (string)entity["author"]);
+            Assert.Equal("Pride and Prejudice", (string)entity["title"]);
+        }
+
+        [Fact]
+        public void AddEntity()
+        {
+            string projectId = _fixture.ProjectId;
+            PartitionId partitionId = _fixture.PartitionId;
+            PathElement bookRoot = new PathElement { Kind = _fixture.BookKind };
+
+            // TODO: Fix transaction handling. (Should roll back automatically.)
+
+            // <Commit>
+            DatastoreClient client = DatastoreClient.Create();
+            Entity book1 = new Entity
+            {
+                Key = new Key { PartitionId = partitionId, Path = { bookRoot } },
+                ["author"] = "Harper Lee",
+                ["title"] = "To Kill a Mockingbird",
+                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
+            };
+            Entity book2 = new Entity
+            {
+                Key = new Key { PartitionId = partitionId, Path = { bookRoot } },
+                ["author"] = "Charlotte Brontë",
+                ["title"] = "Jane Eyre",
+                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
+            };
+            ByteString transaction = client.BeginTransaction(projectId).Transaction;
+            CommitResponse response = client.Commit(
+                projectId,
+                Mode.TRANSACTIONAL,
+                transaction,
+                new[] { book1.ToInsert(), book2.ToInsert() });
+
+            IEnumerable<Key> insertedKeys = response.MutationResults.Select(r => r.Key);
+            Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
+            // </Commit>
+        }
+    }
+}
