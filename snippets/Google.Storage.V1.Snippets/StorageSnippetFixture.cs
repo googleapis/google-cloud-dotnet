@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Xunit;
 
@@ -34,6 +36,9 @@ namespace Google.Storage.V1.Snippets
         public string HelloWorldContent { get; } = "hello, world";
         public string ProjectId { get; }
         public string BucketName { get; }
+
+        private readonly List<string> bucketsToDelete = new List<string>();
+        private readonly List<string> localFilesToDelete = new List<string>();
 
         public StorageSnippetFixture()
         {
@@ -58,17 +63,35 @@ namespace Google.Storage.V1.Snippets
             byte[] content = Encoding.UTF8.GetBytes(HelloWorldContent);
             client.UploadObject(BucketName, HelloStorageObjectName, "text/plain", new MemoryStream(content));
             File.WriteAllText(WorldLocalFileName, HelloWorldContent);
+            RegisterBucketToDelete(BucketName);
+            RegisterLocalFileToDelete(WorldLocalFileName);
+        }
+
+        internal void RegisterBucketToDelete(string bucket)
+        {
+            bucketsToDelete.Add(bucket);
+        }
+
+        internal void RegisterLocalFileToDelete(string path)
+        {
+            localFilesToDelete.Add(path);
         }
 
         public void Dispose()
         {
             var client = StorageClient.Create();
-            foreach (var obj in client.ListObjects(BucketName, null))
+            foreach (var bucket in bucketsToDelete)
             {
-                client.DeleteObject(obj);
+                foreach (var obj in client.ListObjects(bucket, null))
+                {
+                    client.DeleteObject(obj);
+                }
+                client.Service.Buckets.Delete(bucket).Execute();
             }
-            client.Service.Buckets.Delete(BucketName).Execute();
-            File.Delete(WorldLocalFileName);
+            foreach (var file in localFilesToDelete)
+            {
+                File.Delete(file);
+            }
         }
     }
 }
