@@ -133,7 +133,7 @@ namespace Google.Storage.V1.Snippets
             // <DownloadObject_System.String>
             var client = StorageClient.Create();
             var source = "greetings/hello.txt";
-            var destination = @".\hello.txt";
+            var destination = "hello.txt";
 
             using (var stream = File.Create(destination))
             {
@@ -163,7 +163,7 @@ namespace Google.Storage.V1.Snippets
 
             // <UploadObject_System.String>
             var client = StorageClient.Create();
-            var source = @".\world.txt";
+            var source = "world.txt";
             var destination = "places/world.txt";
             var contentType = "text/plain";
 
