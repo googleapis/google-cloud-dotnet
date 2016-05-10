@@ -15,13 +15,14 @@
 using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace Google.Pubsub.V1
 {
     public partial class PublisherClient
     {
         // Note: I haven't looked at the async options yet.
-        public virtual IPagedEnumerable<ListTopicsResponse, Topic, string> ListTopicsStreamed(string project, string pageToken = "", CallSettings callSettings = null)
+        public virtual IPagedEnumerable<ListTopicsResponse, Topic> ListTopicsStreamed(string project, string pageToken = "", CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -29,11 +30,8 @@ namespace Google.Pubsub.V1
 
     public partial class PublisherClientImpl
     {
-        private static readonly PageStreamer2<Topic, ListTopicsRequest, ListTopicsResponse, string> s_listTopicsPageStreamer2 =
-            new PageStreamer2<Topic, ListTopicsRequest, ListTopicsResponse, string>("");
-
-        public override IPagedEnumerable<ListTopicsResponse, Topic, string> ListTopicsStreamed(string project, string pageToken = "", CallSettings callSettings = null)
-            => s_listTopicsPageStreamer2.Fetch(
+        public override IPagedEnumerable<ListTopicsResponse, Topic> ListTopicsStreamed(string project, string pageToken = "", CallSettings callSettings = null)
+            => new PagedEnumerable<Topic, ListTopicsRequest, ListTopicsResponse>(
                 callSettings,
                 new ListTopicsRequest
                 {
@@ -41,17 +39,18 @@ namespace Google.Pubsub.V1
                     PageToken = pageToken
                 },
                 _callListTopics);
-    }   
-
-    public partial class ListTopicsResponse : IPageResponse<Topic, string>
-    {
-        IEnumerable<Topic> IPageResponse<Topic>.Items => Topics;
-        string IPageResponse<Topic, string>.NextPageToken => NextPageToken;
     }
 
-    public partial class ListTopicsRequest : IPageRequest<string>
+    public partial class ListTopicsResponse : IPageResponse<Topic>
     {
-        string IPageRequest<string>.PageToken { set { PageToken = value; } }
-        int IPageRequest<string>.PageSize { set { PageSize = value; } }
+        string IPageResponse<Topic>.NextPageToken => NextPageToken;
+        IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable<Topic>)this).GetEnumerator();
+        IEnumerator<Topic> IEnumerable<Topic>.GetEnumerator() => Topics.GetEnumerator();
+    }
+
+    public partial class ListTopicsRequest : IPageRequest
+    {
+        string IPageRequest.PageToken { set { PageToken = value; } }
+        int IPageRequest.PageSize { set { PageSize = value; } }
     }
 }

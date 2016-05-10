@@ -24,8 +24,8 @@ namespace Google.Pubsub.V1
         {
             var client = PublisherClient.Create();
             // This will never throw - there's always one page, even if it's empty.
-            var response = client.ListTopicsStreamed("project").First();
-            foreach (var topic in response.Topics)
+            ListTopicsResponse response = client.ListTopicsStreamed("project", "page_token").First();
+            foreach (var topic in response)
             {
                 Console.WriteLine($"My topic is {topic.Name}");
             }
@@ -39,7 +39,7 @@ namespace Google.Pubsub.V1
                 Console.WriteLine($"My topic is {topic.Name}");
             }
         }
-
+        // How do we capture the query parameters?
         static void UseTheSimplePages()
         {
             var client = PublisherClient.Create();
@@ -47,7 +47,7 @@ namespace Google.Pubsub.V1
             {
                 Console.WriteLine($"Currently looking at page with next token {page.NextPageToken}");
                 // Note: can look at other properties of the page here.
-                foreach (var topic in page.Topics)
+                foreach (var topic in page)
                 {
                     Console.WriteLine($"My topic is {topic.Name}");
                 }
@@ -63,7 +63,7 @@ namespace Google.Pubsub.V1
                 // We don't have a "natural" page here, so we can't look at extra properties.
                 // However, we can check for a genuine NextPageToken (which can be used with any later call)
                 // and we know we will never have a short page until the last one.
-                foreach (var topic in page.Items)
+                foreach (var topic in page)
                 {
                     Console.WriteLine($"My topic is {topic.Name}");
                 }

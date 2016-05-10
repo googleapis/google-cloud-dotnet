@@ -24,13 +24,13 @@ namespace Google.Pubsub.V1
     public static class PageStreamingExtensions
     {
         public static IEnumerable<TResource> Flatten<TPageResponse, TResource>(this IPagedEnumerable<TPageResponse, TResource> source)
-            where TPageResponse : IPageResponse<TResource> =>
-            source.SelectMany(page => page.Items);
+            where TPageResponse : IEnumerable<TResource> =>
+            source.SelectMany(page => page);
 
-        public static IEnumerable<FixedSizePage<TResource, TPageToken>> WithFixedSize<TPageResponse, TResource, TPageToken>(this IPagedEnumerable<TPageResponse, TResource, TPageToken> source, int size)
-            where TPageResponse : IPageResponse<TResource, TPageToken>
+        public static IEnumerable<FixedSizePage<TResource>> WithFixedSize<TPageResponse, TResource>(this IPagedEnumerable<TPageResponse, TResource> source, int size)
+            where TPageResponse : IPageResponse<TResource>
         {
-            TPageToken token = default(TPageToken);
+            string token = "";
             using (var enumerator = source.GetEnumerator())
             {
                 while (true)
@@ -43,7 +43,7 @@ namespace Google.Pubsub.V1
                             if (items.Count != 0)
                             {
                                 // We must have a useful token by now.
-                                yield return new FixedSizePage<TResource, TPageToken>(items, token);
+                                yield return new FixedSizePage<TResource>(items, token);
                             }
                             yield break;
                         }
@@ -52,7 +52,7 @@ namespace Google.Pubsub.V1
                         {
                             token = page.NextPageToken;
                         }
-                        items.AddRange(page.Items);
+                        items.AddRange(page);
                         if (items.Count > size)
                         {
                             // TODO: Better exception type...
@@ -76,99 +76,72 @@ namespace Google.Pubsub.V1
     {
     }
 
-    // Interface which is *just* present to help with type inference in the WithFixedSize method.
-    // This is really annoying, as the caller really isn't going to care about the page token type.
-    // I'd dearly love to work out an alternative to this.
-    public interface IPagedEnumerable<TResponse, TResource, TPageToken> : IPagedEnumerable<TResponse, TResource>
-    {
-    }
-
     public interface IPagedEnumerator<T> : IEnumerator<T>
     {
         bool MoveNext(int pageSize);
     }
 
-    public interface IPageResponse<TResource>
+    public interface IPageResponse<TResource> : IEnumerable<TResource>
     {
-        IEnumerable<TResource> Items { get; }
+        string NextPageToken { get; }
     }
 
-    public interface IPageResponse<TResource, TPageToken> : IPageResponse<TResource>
+    public interface IPageRequest
     {
-        TPageToken NextPageToken { get; }
-    }
-
-    public interface IPageRequest<TPageToken>
-    {
-        TPageToken PageToken { set; }
+        string PageToken { set; }
         int PageSize { set; }
     }
 
-    public sealed class FixedSizePage<TResource, TPageToken> : IPageResponse<TResource, TPageToken>
+    public sealed class FixedSizePage<TResource> : IPageResponse<TResource>
     {
-        public IEnumerable<TResource> Items { get; }
-        public TPageToken NextPageToken { get; }
+        private readonly IEnumerable<TResource> _resources;
+        public string NextPageToken { get; }
 
-        public FixedSizePage(IEnumerable<TResource> items, TPageToken nextPageToken)
+        public FixedSizePage(IEnumerable<TResource> resources, string nextPageToken)
         {
-            Items = items;
+            _resources = resources;
             NextPageToken = nextPageToken;
         }
+
+        public IEnumerator<TResource> GetEnumerator() => _resources.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    // Obviously called PageStreamer really...
-    public sealed class PageStreamer2<TResource, TRequest, TResponse, TPageToken>
-        where TResponse : class, IMessage<TResponse>, IPageResponse<TResource, TPageToken>
-        where TRequest : class, IMessage<TRequest>, IPageRequest<TPageToken>
-        where TPageToken : IEquatable<TPageToken>
+    public sealed class PagedEnumerable<TResource, TRequest, TResponse> : IPagedEnumerable<TResponse, TResource>
+        where TRequest : class, IPageRequest, IMessage<TRequest>
+        where TResponse : class, IPageResponse<TResource>, IMessage<TResponse>
     {
-        private readonly TPageToken _emptyPageToken;
+        private readonly CallSettings _callSettings;
+        private readonly TRequest _request;
+        private readonly ApiCall<TRequest, TResponse> _apiCall;
 
-        public PageStreamer2(TPageToken emptyPageToken)
+        public PagedEnumerable(CallSettings callSettings, TRequest request, ApiCall<TRequest, TResponse> apiCall)
         {
-            _emptyPageToken = emptyPageToken;
+            _callSettings = callSettings;
+            _request = request;
+            _apiCall = apiCall;
         }
 
-        internal IPagedEnumerable<TResponse, TResource, TPageToken> Fetch(CallSettings callSettings, TRequest request, ApiCall<TRequest, TResponse> apiCall)
-            => new PagedEnumerable(callSettings, request, _emptyPageToken, apiCall);
+        public IPagedEnumerator<TResponse> GetEnumerator()
+            => new PagedEnumerator(_callSettings, _request.Clone(), _apiCall);
 
-        private class PagedEnumerable : IPagedEnumerable<TResponse, TResource, TPageToken>
-        {
-            private readonly CallSettings _callSettings;
-            private readonly TRequest _request;
-            private readonly TPageToken _emptyPageToken;
-            private readonly ApiCall<TRequest, TResponse> _apiCall;
-
-            internal PagedEnumerable(CallSettings callSettings, TRequest request, TPageToken emptyPageToken, ApiCall<TRequest, TResponse> apiCall)
-            {
-                _callSettings = callSettings;
-                _request = request;
-                _emptyPageToken = emptyPageToken;
-                _apiCall = apiCall;
-            }
-
-            public IPagedEnumerator<TResponse> GetEnumerator()
-                => new PagedEnumerator(_callSettings, _request.Clone(), _emptyPageToken, _apiCall);
-
-            IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-            IEnumerator<TResponse> IEnumerable<TResponse>.GetEnumerator() => GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        IEnumerator<TResponse> IEnumerable<TResponse>.GetEnumerator() => GetEnumerator();
 
         private class PagedEnumerator : IPagedEnumerator<TResponse>
         {
             private readonly CallSettings _callSettings;
-            private readonly TPageToken _emptyPageToken;
             private readonly ApiCall<TRequest, TResponse> _apiCall;
             // Note that although this is readonly, we mutate it...
             private readonly TRequest _request;
             private TResponse _current;
             private bool _finished;
 
-            public PagedEnumerator(CallSettings callSettings, TRequest request, TPageToken emptyPageToken, ApiCall<TRequest, TResponse> apiCall)
+            public PagedEnumerator(CallSettings callSettings, TRequest request, ApiCall<TRequest, TResponse> apiCall)
             {
                 _callSettings = callSettings;
                 _request = request;
-                _emptyPageToken = emptyPageToken;
                 _apiCall = apiCall;
             }
 
@@ -190,7 +163,7 @@ namespace Google.Pubsub.V1
 
                 _current = _apiCall.Sync(_request, _callSettings);
                 var nextPageToken = _current.NextPageToken;
-                if (EqualityComparer<TPageToken>.Default.Equals(nextPageToken, _emptyPageToken))
+                if (nextPageToken == "")
                 {
                     // We know this is the last page.
                     _finished = true;
