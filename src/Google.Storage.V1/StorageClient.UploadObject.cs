@@ -54,21 +54,6 @@ namespace Google.Storage.V1
         /// <param name="contentType">The content type of the object. This should be a MIME type
         /// such as "text/html" or "application/octet-stream". May be null.</param>
         /// <param name="source">The stream to read the data from. Must not be null.</param>
-        /// <returns>A task representing the asynchronous operation, with a result returning the
-        /// <see cref="Object"/> representation of the uploaded object.</returns>
-        public virtual Task<Object> UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Uploads the data for an object in storage asynchronously, from a specified stream.
-        /// </summary>
-        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
-        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
-        /// <param name="contentType">The content type of the object. This should be a MIME type
-        /// such as "text/html" or "application/octet-stream". May be null.</param>
-        /// <param name="source">The stream to read the data from. Must not be null.</param>
         /// <param name="options">Additional options for the upload. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>

@@ -35,17 +35,10 @@ namespace Google.Storage.V1
             ValidateBucket(bucket);
             Preconditions.CheckNotNull(objectName, nameof(objectName));
             return UploadObject(
-                new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
+                new Object { Bucket = bucket, Name = objectName, ContentType = contentType ?? "" },
                 source, options, progress);
-        }
-
-        /// <inheritdoc />
-        public override Task<Object> UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)
-        {
-            return UploadObjectAsync(bucket, objectName, contentType, source,
-                options: null, cancellationToken: CancellationToken.None, progress: null);
-        }
-
+        }        
+        
         /// <inheritdoc />
         public override Task<Object> UploadObjectAsync(
             string bucket,
@@ -58,7 +51,7 @@ namespace Google.Storage.V1
         {
             ValidateBucket(bucket);
             Preconditions.CheckNotNull(objectName, nameof(objectName));
-            return UploadObjectAsync(new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
+            return UploadObjectAsync(new Object { Bucket = bucket, Name = objectName, ContentType = contentType ?? "" },
                 source, options, cancellationToken, progress);
         }
 
@@ -70,7 +63,6 @@ namespace Google.Storage.V1
             IProgress<IUploadProgress> progress = null)
         {
             ValidateObject(destination, nameof(destination));
-            Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
             Preconditions.CheckNotNull(source, nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
@@ -95,7 +87,6 @@ namespace Google.Storage.V1
             IProgress<IUploadProgress> progress = null)
         {
             ValidateObject(destination, nameof(destination));
-            Preconditions.CheckArgument(destination.ContentType != null, nameof(destination), "Object must have a ContentType");
             Preconditions.CheckNotNull(source, nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);

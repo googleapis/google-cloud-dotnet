@@ -212,6 +212,12 @@ namespace Google.Storage.V1.IntegrationTests
                 null));
         }
 
+        [Fact]
+        public void UploadObject_NullContentType()
+        {
+            s_config.Client.UploadObject(s_bucket, GenerateName(), null, new MemoryStream());
+        }
+
         private Object GetExistingObject()
         {
             var obj = s_config.Client.UploadObject(s_bucket, GenerateName(), "application/octet-stream", GenerateData(100));
