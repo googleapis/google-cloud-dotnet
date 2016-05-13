@@ -47,6 +47,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Storage.V1.Snippets"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Datastore.V1Beta3.Snippets", "snippets\Google.Datastore.V1Beta3.Snippets\Google.Datastore.V1Beta3.Snippets.xproj", "{19377C99-47B6-4A5C-BC1C-01518D8BBD2F}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Bigquery.V2.Snippets", "snippets\Google.Bigquery.V2.Snippets\Google.Bigquery.V2.Snippets.xproj", "{A55F5009-37C2-4EB6-A100-AB86885A3AE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +111,10 @@ Global
 		{19377C99-47B6-4A5C-BC1C-01518D8BBD2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19377C99-47B6-4A5C-BC1C-01518D8BBD2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19377C99-47B6-4A5C-BC1C-01518D8BBD2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A55F5009-37C2-4EB6-A100-AB86885A3AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A55F5009-37C2-4EB6-A100-AB86885A3AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A55F5009-37C2-4EB6-A100-AB86885A3AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A55F5009-37C2-4EB6-A100-AB86885A3AE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,5 +134,6 @@ Global
 		{CBD350EE-3B27-4129-8999-1815DECF9E66} = {F87E02E7-3142-4439-8938-42DD79337135}
 		{4A4D750B-97E7-49D6-AFBE-D07CBCF89A1F} = {F638F51C-C1C3-449B-ADAE-8196073649A5}
 		{19377C99-47B6-4A5C-BC1C-01518D8BBD2F} = {F638F51C-C1C3-449B-ADAE-8196073649A5}
+		{A55F5009-37C2-4EB6-A100-AB86885A3AE9} = {F638F51C-C1C3-449B-ADAE-8196073649A5}
 	EndGlobalSection
 EndGlobal
