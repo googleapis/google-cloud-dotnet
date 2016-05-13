@@ -24,7 +24,7 @@ namespace Google.Storage.V1
         /// <summary>
         /// Patches the metadata for a storage bucket synchronously.
         /// </summary>
-        /// <param name="bucket">Bucket to update. Must not be null, and must have a populated <code>Name</code> property.</param>
+        /// <param name="bucket">Bucket to update. Must not be null, and must have a populated <c>Name</c> property.</param>
         /// <param name="options">Additional options for the update. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <returns>The <see cref="Object"/> representation of the updated storage bucket.</returns>
@@ -38,7 +38,7 @@ namespace Google.Storage.V1
         /// <summary>
         /// Patches the metadata for a storage bucket asynchronously.
         /// </summary>
-        /// <param name="bucket">Bucket to update. Must not be null, and must have a populated <code>Name</code> property.</param>
+        /// <param name="bucket">Bucket to update. Must not be null, and must have a populated <c>Name</c> property.</param>
         /// <param name="options">Additional options for the update. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>

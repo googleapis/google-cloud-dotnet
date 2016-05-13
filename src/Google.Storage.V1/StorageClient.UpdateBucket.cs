@@ -29,8 +29,8 @@ namespace Google.Storage.V1
         /// obtained by performing another operation (such as <see cref="GetBucket(string, GetBucketOptions)"/>
         /// with a "full" projection, and then modifying the returned object.
         /// </remarks>
-        /// <param name="bucket">Bucket to update. Must not be null, and must have populated <code>Name</code>,
-        /// <code>Bucket</code> and <code>Acl</code> properties.</param>
+        /// <param name="bucket">Bucket to update. Must not be null, and must have populated <c>Name</c>,
+        /// <c>Bucket</c> and <c>Acl</c> properties.</param>
         /// <param name="options">Additional options for the update. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <returns>The <see cref="Bucket"/> representation of the updated storage bucket.</returns>
@@ -49,8 +49,8 @@ namespace Google.Storage.V1
         /// obtained by performing another operation (such as <see cref="GetBucketAsync(string, string, GetObjectOptions)"/>
         /// with a "full" projection, and then modifying the returned object.
         /// </remarks>
-        /// <param name="bucket">Bucket to update. Must not be null, and must have populated <code>Name</code>
-        /// and <code>Acl</code> properties.</param>
+        /// <param name="bucket">Bucket to update. Must not be null, and must have populated <c>Name</c>
+        /// and <c>Acl</c> properties.</param>
         /// <param name="options">Additional options for the update. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>

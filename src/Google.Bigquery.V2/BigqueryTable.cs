@@ -84,7 +84,7 @@ namespace Google.Bigquery.V2
         public BigqueryJob UploadJson(Stream input) => _client.UploadJson(Reference, Schema, input);
 
         /// <summary>
-        /// Lists the rows within this table, similar to a <code>SELECT * FROM ...</code> query.
+        /// Lists the rows within this table, similar to a <c>SELECT * FROM ...</c> query.
         /// </summary>
         /// <returns>The results of listing the rows within the table.</returns>
         public BigqueryResult ListRows() => _client.ListRows(Reference, Schema);
