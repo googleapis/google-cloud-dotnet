@@ -65,7 +65,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             PartitionId partitionId = _fixture.PartitionId;
             string kind = _fixture.BookKind;
 
-            // <RunQuery>
+            // <RunQuery_System.String__Google.Datastore.V1Beta3.PartitionId__Google.Datastore.V1Beta3.ReadOptions__Google.Datastore.V1Beta3.Query>
             DatastoreClient client = DatastoreClient.Create();
             Query query = new Query
             {
@@ -91,7 +91,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(result.Entity);
             }
-            // </RunQuery>
+            // </RunQuery_System.String__Google.Datastore.V1Beta3.PartitionId__Google.Datastore.V1Beta3.ReadOptions__Google.Datastore.V1Beta3.Query>
 
             Assert.Equal(1, response.Batch.EntityResults.Count);
             Entity entity = response.Batch.EntityResults[0].Entity;
@@ -106,7 +106,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             PartitionId partitionId = _fixture.PartitionId;
             string kind = _fixture.BookKind;
 
-            // <RunQuery>
+            // <RunQuery_System.String__Google.Datastore.V1Beta3.PartitionId__Google.Datastore.V1Beta3.ReadOptions__Google.Datastore.V1Beta3.GqlQuery>
             DatastoreClient client = DatastoreClient.Create();
             GqlQuery gqlQuery = new GqlQuery
             {
@@ -123,7 +123,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(result.Entity);
             }
-            // </RunQuery>
+            // </RunQuery_System.String__Google.Datastore.V1Beta3.PartitionId__Google.Datastore.V1Beta3.ReadOptions__Google.Datastore.V1Beta3.GqlQuery>
 
             Assert.Equal(1, response.Batch.EntityResults.Count);
             Entity entity = response.Batch.EntityResults[0].Entity;
