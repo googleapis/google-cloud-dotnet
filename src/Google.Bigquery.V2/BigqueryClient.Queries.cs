@@ -66,7 +66,7 @@ namespace Google.Bigquery.V2
         }
 
         /// <summary>
-        /// Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
+        /// Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="ListRows(TableReference, TableSchema)"/>.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be null.</param>
@@ -79,7 +79,7 @@ namespace Google.Bigquery.V2
             ListRows(GetTableReference(projectId, datasetId, tableId), schema);
 
         /// <summary>
-        /// Lists the rows within a table within this client's project specified by dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
+        /// Lists the rows within a table within this client's project specified by dataset ID and table ID, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="ListRows(TableReference, TableSchema)"/>.
         /// </summary>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
@@ -91,7 +91,7 @@ namespace Google.Bigquery.V2
             ListRows(GetTableReference(datasetId, tableId), schema);
 
         /// <summary>
-        /// Lists the rows within a table, similar to a <code>SELECT * FROM ...</code> query.
+        /// Lists the rows within a table, similar to a <c>SELECT * FROM ...</c> query.
         /// </summary>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
