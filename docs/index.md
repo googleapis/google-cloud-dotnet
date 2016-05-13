@@ -64,21 +64,7 @@ A library for working with [Cloud Datastore](https://cloud.google.com/datastore/
 
 Sample code:
 
-```csharp
-var client = DatastoreClient.Create();
-
-var projectId = ...;
-var partitionId = new PartitionId { ProjectId = projectId };
-var entity = new Entity
-{
-    Key = new Key { PartitionId = partitionId, Path = { new PathElement { Kind = "message" } } },
-    ["created"] = DateTime.UtcNow,
-    ["text"] = "Text of the message"
-};
-var transaction = client.BeginTransaction(projectId).Transaction;
-var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
-var insertedKey = commitResponse.MutationResults[0].Key;
-```
+[!code-cs[](../snippets/Google.Datastore.V1Beta3.Snippets/DatastoreClientSnippets.cs#Overview)]
 
 See [`DatastoreClient`](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml)
 for details. Note that custom conversions are provided to make
@@ -106,42 +92,7 @@ class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.
 
 Query example:
-
-```csharp
-var client = BigqueryClient.Create("YOUR PROJECT ID");
-var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
-
-var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
-var query = client.ExecuteQuery(sql);
-
-foreach (var row in rows)
-{
-    Console.WriteLine($"{row["title"]}: {row:["unique_words"]}");
-}
-```
+[!code-cs[](../snippets/Google.Bigquery.V2.Snippets/BigqueryClientSnippets.cs#QueryOverview)]
 
 Data insertion example:
-
-```csharp
-var client = BigqueryClient.Create("YOUR PROJECT ID");
-
-// Create the dataset if it doesn't exist.
-var dataset = client.GetOrCreateDataset("mydata");
-
-// Create the table if it doesn't exist.
-var table = dataset.GetOrCreateTable("scores", new SchemaBuilder
-    {
-        { "player", SchemaFieldType.String },
-        { "gameStarted", SchemaFieldType.Timestamp },
-        { "score", SchemaFieldType.Integer }
-    }.Build());
-
-// Insert a single row. There are many other ways of inserting
-// data into a table.
-table.InsertRow(new Dictionary<string, object> {
-    { "player", "Bob" },
-    { "score", 85 },
-    { "gameStarted", new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
-});
-```
-
+[!code-cs[](../snippets/Google.Bigquery.V2.Snippets/BigqueryClientSnippets.cs#InsertOverview)]

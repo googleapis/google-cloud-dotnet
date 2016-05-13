@@ -78,8 +78,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                         Op = Operator.EQUAL,
                         Value = "Jane Austen"
                     }
-                },
-                Projection = { "author", "title" }
+                }
             };
             RunQueryResponse response = client.RunQuery(
                 projectId,
@@ -166,6 +165,27 @@ namespace Google.Datastore.V1Beta3.Snippets
             IEnumerable<Key> insertedKeys = response.MutationResults.Select(r => r.Key);
             Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
             // </Commit>
+        }
+
+        [Fact]
+        public void Overview()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+            // <Overview>
+            var client = DatastoreClient.Create();
+
+            var keyFactory = new KeyFactory(projectId, namespaceId, "message");
+            var entity = new Entity
+            {
+                Key = keyFactory.CreateInsertionKey(),
+                ["created"] = DateTime.UtcNow,
+                ["text"] = "Text of the message"
+            };
+            var transaction = client.BeginTransaction(projectId).Transaction;
+            var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
+            var insertedKey = commitResponse.MutationResults[0].Key;
+            // </Overview>
         }
     }
 }
