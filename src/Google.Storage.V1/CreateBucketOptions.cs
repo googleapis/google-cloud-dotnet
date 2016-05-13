@@ -1,4 +1,4 @@
-﻿// Copyright 2015 Google Inc. All Rights Reserved.
+﻿// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,45 +12,42 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using static Google.Apis.Storage.v1.BucketsResource;
-using static Google.Apis.Storage.v1.BucketsResource.ListRequest;
+using Google.Apis.Storage.v1;
+using static Google.Apis.Storage.v1.BucketsResource.InsertRequest;
 
 namespace Google.Storage.V1
 {
     /// <summary>
-    /// Options for <c>ListBuckets</c> operations.
+    /// Options for <c>CreateBucket</c> operations.
     /// </summary>
-    public class ListBucketsOptions
+    public sealed class CreateBucketOptions
     {
         /// <summary>
-        /// The prefix to match. Only buckets with names that start with this string will be returned.
+        /// A pre-defined ACL of the bucket for simple access control scenarios.
         /// </summary>
-        public string Prefix { get; set; }
+        public PredefinedBucketAcl? PredefinedAcl { get; set;  }
 
         /// <summary>
-        /// The number of results to return per page. (This modifies the per-request page size;
-        /// it does not affect the total number of results returned.)
+        /// A pre-defined default ACL for objects created in the bucket, for simple access control scenarios.
         /// </summary>
-        public int? PageSize { get; set; }
+        public PredefinedObjectAcl? PredefinedDefaultObjectAcl { get; set; }
 
         /// <summary>
         /// The projection to retrieve.
         /// </summary>
         public Projection? Projection { get; set; }
 
-        /// <summary>
-        /// Modifies the specified request for all non-null properties of this options object.
-        /// </summary>
-        /// <param name="request">The request to modify</param>
-        internal void ModifyRequest(ListRequest request)
+        internal void ModifyRequest(BucketsResource.InsertRequest request)
         {
-            if (Prefix != null)
+            if (PredefinedAcl != null)
             {
-                request.Prefix = Prefix;
+                request.PredefinedAcl =
+                    Preconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
             }
-            if (PageSize != null)
+            if (PredefinedDefaultObjectAcl != null)
             {
-                request.MaxResults = PageSize;
+                request.PredefinedDefaultObjectAcl =
+                    Preconditions.CheckEnumValue((PredefinedDefaultObjectAclEnum) PredefinedDefaultObjectAcl, nameof(PredefinedDefaultObjectAcl));
             }
             if (Projection != null)
             {

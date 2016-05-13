@@ -26,22 +26,23 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1.IntegrationTests
 {
+    [Collection(nameof(StorageFixture))]
     public class DownloadObjectTest
     {
-        private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
+        private readonly StorageFixture _fixture;
 
-        private static readonly string s_bucket = s_config.TempBucketPrefix + "1";
-        private const string s_name = "folder/sampledata.txt";
+        public DownloadObjectTest(StorageFixture fixture)
+        {
+            _fixture = fixture;
+        }
 
         [Fact]
         public async Task SimpleDownload()
         {
             using (var stream = new MemoryStream())
             {
-                await s_config.Client.DownloadObjectAsync(s_bucket, s_name, stream);
-                var text = Encoding.UTF8.GetString(stream.ToArray());
-                Assert.StartsWith("START", text);
-                Assert.EndsWith("END", text);
+                await _fixture.Client.DownloadObjectAsync(_fixture.ReadBucket, _fixture.SmallObject, stream);
+                Assert.Equal(_fixture.SmallContent, stream.ToArray());
             }
         }
 
@@ -50,7 +51,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             using (var stream = new MemoryStream())
             {
-                await Assert.ThrowsAnyAsync<Exception>(() => s_config.Client.DownloadObjectAsync(s_bucket, s_name + "doesntexist", stream));
+                await Assert.ThrowsAnyAsync<Exception>(() => _fixture.Client.DownloadObjectAsync(_fixture.BucketPrefix, "doesntexist", stream));
             }
         }
 
@@ -61,13 +62,12 @@ namespace Google.Storage.V1.IntegrationTests
             var progress = new Progress<IDownloadProgress> (p => chunks++);
             using (var stream = new MemoryStream())
             {
-                await s_config.Client.DownloadObjectAsync(s_bucket, s_name, stream,
+                await _fixture.Client.DownloadObjectAsync(
+                    _fixture.ReadBucket, _fixture.LargeObject, stream,
                     new DownloadObjectOptions { ChunkSize = 2 * 1024 },
                     CancellationToken.None,
                     progress);
-                var text = Encoding.UTF8.GetString(stream.ToArray());
-                Assert.StartsWith("START", text);
-                Assert.EndsWith("END", text);
+                Assert.Equal(_fixture.LargeContent, stream.ToArray());
                 Assert.True(chunks >= 5);
             }
         }
@@ -85,7 +85,8 @@ namespace Google.Storage.V1.IntegrationTests
             });
             using (var stream = new MemoryStream())
             {
-                await Assert.ThrowsAnyAsync<OperationCanceledException>(() => s_config.Client.DownloadObjectAsync(s_bucket, s_name, stream,
+                await Assert.ThrowsAnyAsync<OperationCanceledException>(() => _fixture.Client.DownloadObjectAsync(
+                    _fixture.ReadBucket, _fixture.LargeObject, stream,
                     new DownloadObjectOptions { ChunkSize = 2 * 1024 },
                     cts.Token,
                     progress));
@@ -95,15 +96,15 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObjectFromInvalidBucket()
         {
-            Assert.Throws<ArgumentException>(() => s_config.Client.DownloadObject("!!!", s_name, new MemoryStream()));
+            Assert.Throws<ArgumentException>(() => _fixture.Client.DownloadObject("!!!", _fixture.LargeObject, new MemoryStream()));
         }
 
         [Fact]
         public void DownloadObjectWrongGeneration()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { Generation = existing.Generation + 1 }, null));
             Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
@@ -112,16 +113,16 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadDifferentGenerations()
         {
-            var bucket = s_config.TempBucketPrefix + "0";
-            var name = "multiversion.txt";
-            var objects = s_config.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true }).ToList();
+            var bucket = _fixture.ReadBucket;
+            var name = _fixture.SmallThenLargeObject;
+            var objects = _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true }).ToList();
             Assert.Equal(2, objects.Count);
 
             // Fetch them by generation and check size matches
             foreach (var obj in objects)
             {
                 var stream = new MemoryStream();
-                s_config.Client.DownloadObject(bucket, name, stream, new DownloadObjectOptions { Generation = obj.Generation }, null);
+                _fixture.Client.DownloadObject(bucket, name, stream, new DownloadObjectOptions { Generation = obj.Generation }, null);
                 Assert.Equal((long) obj.Size, stream.Length);
             }
         }
@@ -129,33 +130,23 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void SpecifyingObjectSourceIgnoredGeneration()
         {
-            var bucket = s_config.TempBucketPrefix + "0";
-            var name = "multiversion.txt";
-            var objects = s_config.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true }).OrderBy(x => x.Generation).ToList();
+            var bucket = _fixture.ReadBucket;
+            var name = _fixture.SmallThenLargeObject;
+            var objects = _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true }).OrderBy(x => x.Generation).ToList();
             Assert.Equal(2, objects.Count);
             Assert.NotEqual(objects[0].Size, objects[1].Size);
 
             var stream = new MemoryStream();
-            s_config.Client.DownloadObject(objects[0], stream);
+            _fixture.Client.DownloadObject(objects[0], stream);
             Assert.Equal((long) objects[1].Size, stream.Length);
         }
-
-        [Fact]
-        public void DownloadObjectRightGeneration()
-        {
-            var existing = GetExistingObject();
-            var stream = new MemoryStream();
-            s_config.Client.DownloadObject(existing, stream,
-                new DownloadObjectOptions { Generation = existing.Generation }, null);
-            Assert.NotEqual(0, stream.Length);
-        }
-
+        
         [Fact]
         public void DownloadObjectIfGenerationMatch_Matching()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            s_config.Client.DownloadObject(existing, stream,
+            _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfGenerationMatch = existing.Generation}, null);
             Assert.NotEqual(0, stream.Length);
         }
@@ -163,9 +154,9 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObjectIfGenerationMatch_NotMatching()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfGenerationMatch = existing.Generation + 1 }, null));
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
@@ -174,9 +165,9 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObjectIfGenerationNotMatch_Matching()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfGenerationNotMatch = existing.Generation }, null));
             Assert.Equal(HttpStatusCode.NotModified, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
@@ -185,9 +176,9 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObjectIfGenerationNotMatch_NotMatching()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            s_config.Client.DownloadObject(existing, stream,
+            _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfGenerationNotMatch = existing.Generation + 1 }, null);
             Assert.NotEqual(0, stream.Length);
         }
@@ -195,7 +186,8 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObject_IfGenerationMatchAndNotMatch()
         {
-            Assert.Throws<ArgumentException>(() => s_config.Client.DownloadObject(s_bucket, s_name, new MemoryStream(),
+            Assert.Throws<ArgumentException>(() => _fixture.Client.DownloadObject(
+                _fixture.ReadBucket, _fixture.SmallThenLargeObject, new MemoryStream(),
                 new DownloadObjectOptions { IfGenerationMatch = 1, IfGenerationNotMatch = 2 },
                 null));
         }
@@ -203,9 +195,9 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObjectIfMetagenerationMatch_Matching()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            s_config.Client.DownloadObject(existing, stream,
+            _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfMetagenerationMatch = existing.Metageneration}, null);
             Assert.NotEqual(0, stream.Length);
         }
@@ -213,9 +205,9 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObjectIfMetagenerationMatch_NotMatching()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfMetagenerationMatch = existing.Metageneration + 1 }, null));
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
@@ -224,9 +216,9 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObjectIfMetagenerationNotMatch_Matching()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            var exception = Assert.Throws<GoogleApiException>(() => s_config.Client.DownloadObject(existing, stream,
+            var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration }, null));
             Assert.Equal(HttpStatusCode.NotModified, exception.HttpStatusCode);
             Assert.Equal(0, stream.Length);
@@ -235,9 +227,9 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObjectIfMetagenerationNotMatch_NotMatching()
         {
-            var existing = GetExistingObject();
+            var existing = GetLatestVersionOfMultiversionObject();
             var stream = new MemoryStream();
-            s_config.Client.DownloadObject(existing, stream,
+            _fixture.Client.DownloadObject(existing, stream,
                 new DownloadObjectOptions { IfMetagenerationNotMatch = existing.Metageneration + 1 }, null);
             Assert.NotEqual(0, stream.Length);
         }
@@ -245,15 +237,16 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void DownloadObject_IfMetagenerationMatchAndNotMatch()
         {
-            Assert.Throws<ArgumentException>(() => s_config.Client.DownloadObject(s_bucket, s_name, new MemoryStream(),
+            Assert.Throws<ArgumentException>(() => _fixture.Client.DownloadObject(
+                _fixture.ReadBucket, _fixture.SmallThenLargeObject, new MemoryStream(),
                 new DownloadObjectOptions { IfMetagenerationMatch = 1, IfMetagenerationNotMatch = 2 },
                 null));
         }
 
-        private Object GetExistingObject()
+        private Object GetLatestVersionOfMultiversionObject()
         {
-            var service = s_config.Client.Service;
-            return service.Objects.Get(s_bucket, s_name).Execute();
+            var service = _fixture.Client.Service;
+            return service.Objects.Get(_fixture.ReadBucket, _fixture.SmallThenLargeObject).Execute();
         }
     }
 }

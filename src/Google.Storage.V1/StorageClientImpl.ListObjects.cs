@@ -51,7 +51,7 @@ namespace Google.Storage.V1
 
         private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, string prefix, ListObjectsOptions options)
         {
-            ValidateBucket(bucket);
+            ValidateBucketName(bucket);
             var request = Service.Objects.List(bucket);
             request.Prefix = prefix;
             options?.ModifyRequest(request);

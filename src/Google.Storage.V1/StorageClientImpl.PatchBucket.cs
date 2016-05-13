@@ -1,4 +1,4 @@
-﻿// Copyright 2015 Google Inc. All Rights Reserved.
+﻿// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Storage.v1;
+using Google.Apis.Storage.v1.Data;
 using System.Threading;
 using System.Threading.Tasks;
 using Object = Google.Apis.Storage.v1.Data.Object;
@@ -22,28 +23,22 @@ namespace Google.Storage.V1
     public sealed partial class StorageClientImpl : StorageClient
     {
         /// <inheritdoc />
-        public override Object GetObject(string bucket, string objectName, GetObjectOptions options = null)
-        {
-            ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
-            return CreateGetObjectRequest(bucket, objectName, options).Execute();
-        }
+        public override Bucket PatchBucket(
+            Bucket bucket,
+            PatchBucketOptions options = null)
+            => CreatePatchBucketRequest(bucket, options).Execute();
 
         /// <inheritdoc />
-        public override Task<Object> GetObjectAsync(
-            string bucket,
-            string objectName,
-            GetObjectOptions options = null,
+        public override Task<Bucket> PatchBucketAsync(
+            Bucket bucket,
+            PatchBucketOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
-        {
-            ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
-            return CreateGetObjectRequest(bucket, objectName, options).ExecuteAsync(cancellationToken);
-        }
+            => CreatePatchBucketRequest(bucket, options).ExecuteAsync(cancellationToken);
 
-        private ObjectsResource.GetRequest CreateGetObjectRequest(string bucket, string objectName, GetObjectOptions options)
+        private BucketsResource.PatchRequest CreatePatchBucketRequest(Bucket bucket, PatchBucketOptions options)
         {
-            var request = Service.Objects.Get(bucket, objectName);
+            ValidateBucket(bucket, nameof(bucket));
+            var request = Service.Buckets.Patch(bucket, bucket.Name);
             options?.ModifyRequest(request);
             return request;
         }

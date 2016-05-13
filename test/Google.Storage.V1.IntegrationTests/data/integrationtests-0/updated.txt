@@ -1,2 +1,0 @@
-This is the updated text which will be copied into
-multiversion.txt.

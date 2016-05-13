@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Storage.v1;
+using Google.Apis.Storage.v1.Data;
 using System;
 using System.Text.RegularExpressions;
 using Object = Google.Apis.Storage.v1.Data.Object;
@@ -85,13 +86,27 @@ namespace Google.Storage.V1
         /// This method also checks for nullity, so callers don't need to do that first.
         /// This method is internal rather than private for testing purposes.
         /// </summary>
-        internal static void ValidateBucket(string bucket)
+        internal static void ValidateBucketName(string bucket)
         {
             Preconditions.CheckNotNull(bucket, nameof(bucket));
             if (!ValidBucketName.IsMatch(bucket))
             {
                 throw new ArgumentException($"Invalid bucket name '{bucket}' - see https://cloud.google.com/storage/docs/bucket-naming", nameof(bucket));
             }
+        }
+
+        /// <summary>
+        /// Validates that the given Bucket has a "somewhat valid" (no URI encoding required) bucket name.
+        /// </summary>
+        /// <param name="bucket">Bucket to validate</param>
+        /// <param name="paramName">The parameter name in the calling method</param>
+        private void ValidateBucket(Bucket bucket, string paramName)
+        {
+            Preconditions.CheckNotNull(bucket, paramName);
+            Preconditions.CheckArgument(bucket.Name != null, paramName, "Bucket must have a name");
+            Preconditions.CheckArgument(ValidBucketName.IsMatch(bucket.Name),
+                paramName,
+                "Invalid bucket name '{0}' - see https://cloud.google.com/storage/docs/bucket-naming", bucket.Name);
         }
 
         /// <summary>

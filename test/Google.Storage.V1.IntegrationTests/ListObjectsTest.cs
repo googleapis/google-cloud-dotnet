@@ -22,13 +22,15 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1.IntegrationTests
 {
+    [Collection(nameof(StorageFixture))]
     public class ListObjectsTest
     {
-        private static readonly string[] s_allObjectNames =
-            { "foo.txt", "bar.txt", "a/o1.txt", "a/o2.txt", "a/x/o3.txt", "a/x/o4.txt", "b/o5.txt", "multiversion.txt", "updated.txt" };
+        private readonly StorageFixture _fixture;
 
-        private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
-        private static readonly string s_bucket = s_config.TempBucketPrefix + "0";
+        public ListObjectsTest(StorageFixture fixture)
+        {
+            _fixture = fixture;
+        }
 
         [Theory]
         [InlineData(null)]
@@ -36,12 +38,14 @@ namespace Google.Storage.V1.IntegrationTests
         public async Task AllObjects(int? pageSize)
         {
             var options = new ListObjectsOptions { PageSize = pageSize };
-            await AssertObjects(null, options, s_allObjectNames);
+            await AssertObjects(null, options, _fixture.ReadBucketObjects.ToArray());
         }
 
+        // Note: this test unfortunately relies on the test data, but in a way which is hard to make "safe"
+        // using the fixture.
         [Theory]
-        [InlineData(null, "foo.txt,bar.txt,multiversion.txt,updated.txt")]
-        [InlineData("fo", "foo.txt")]
+        [InlineData(null, "small.txt,large.txt,small_then_large.txt")]
+        [InlineData("la", "large.txt")]
         [InlineData("a/", "a/o1.txt,a/o2.txt")]
         [InlineData("a/x/", "a/x/o3.txt,a/x/o4.txt")]
         [InlineData("missing/", "")]
@@ -55,7 +59,7 @@ namespace Google.Storage.V1.IntegrationTests
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
-            var task = s_config.Client.ListAllObjectsAsync(s_bucket, null, cancellationToken: cts.Token);
+            var task = _fixture.Client.ListAllObjectsAsync(_fixture.ReadBucket, null, cancellationToken: cts.Token);
             cts.Cancel();
             await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);            
         }
@@ -63,7 +67,7 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public async Task MultipleVersions()
         {
-            var name = "multiversion.txt";
+            var name = _fixture.SmallThenLargeObject;
 
             // List the versions separately
             await AssertObjects(name, new ListObjectsOptions { Versions = true }, name, name);
@@ -75,9 +79,9 @@ namespace Google.Storage.V1.IntegrationTests
 
         private async Task AssertObjects(string prefix, ListObjectsOptions options, params string[] expectedNames)
         {
-            var actual = s_config.Client.ListObjects(s_bucket, prefix, options);
+            var actual = _fixture.Client.ListObjects(_fixture.ReadBucket, prefix, options);
             AssertObjectNames(actual, expectedNames);
-            actual = await s_config.Client.ListAllObjectsAsync(s_bucket, prefix, options, CancellationToken.None);
+            actual = await _fixture.Client.ListAllObjectsAsync(_fixture.ReadBucket, prefix, options, CancellationToken.None);
             AssertObjectNames(actual, expectedNames);
         }
 

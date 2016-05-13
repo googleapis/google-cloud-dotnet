@@ -25,7 +25,7 @@ namespace Google.Storage.V1.Tests
         [InlineData("numbers012346789")]
         public void ValidBucketNames(string bucket)
         {
-            StorageClientImpl.ValidateBucket(bucket);
+            StorageClientImpl.ValidateBucketName(bucket);
         }
 
         [Theory]
@@ -40,7 +40,7 @@ namespace Google.Storage.V1.Tests
         [InlineData("invalid-punctuation6%")]
         public void InvalidBucketNames(string bucket)
         {
-            var exception = Assert.ThrowsAny<ArgumentException>(() => StorageClientImpl.ValidateBucket(bucket));
+            var exception = Assert.ThrowsAny<ArgumentException>(() => StorageClientImpl.ValidateBucketName(bucket));
             Assert.Equal("bucket", exception.ParamName);
             Assert.Contains(bucket, exception.Message);
         }

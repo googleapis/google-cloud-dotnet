@@ -1,4 +1,4 @@
-﻿// Copyright 2015 Google Inc. All Rights Reserved.
+﻿// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,79 +12,57 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Upload;
 using System;
 using static Google.Apis.Storage.v1.ObjectsResource;
-using static Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload;
-
-using Object = Google.Apis.Storage.v1.Data.Object;
+using static Google.Apis.Storage.v1.ObjectsResource.UpdateRequest;
 
 namespace Google.Storage.V1
 {
     /// <summary>
-    /// Options for <c>UploadObject</c> operations.
+    /// Options for <c>UpdateObject</c> operations.
     /// </summary>
-    public class UploadObjectOptions
+    public class UpdateObjectOptions
     {
         /// <summary>
-        /// The minimum chunk size for uploading.
+        /// If present, selects a specific revision of this object (as opposed to the latest version, the default).
         /// </summary>
-        public const int MinimumChunkSize = ResumableUpload<Object>.MinimumChunkSize;
+        public long? Generation { get; set; }
 
         /// <summary>
-        /// Precondition for upload: the object is only uploaded if the existing object's
+        /// Precondition for update: the object is only updated if the existing object's
         /// generation matches the given value.
         /// </summary>
         public long? IfGenerationMatch { get; set; }
 
         /// <summary>
-        /// Precondition for upload: the object is only uploaded if the existing object's
+        /// Precondition for update: the object is only updated if the existing object's
         /// generation does not match the given value.
         /// </summary>
         public long? IfGenerationNotMatch { get; set; }
 
         /// <summary>
-        /// Precondition for upload: the object is only uploaded if the existing object's
+        /// Precondition for update: the object is only updated if the existing object's
         /// meta-generation matches the given value.
         /// </summary>
         public long? IfMetagenerationMatch { get; set; }
 
         /// <summary>
-        /// Precondition for upload: the object is only uploaded if the existing object's
+        /// Precondition for update: the object is only updated if the existing object's
         /// meta-generation does not match the given value.
         /// </summary>
         public long? IfMetagenerationNotMatch { get; set; }
 
-        private int? _chunkSize;
         /// <summary>
-        /// The chunk size to use for each request. When setting to a non-null value, this
-        /// must be a positive multiple of <see cref="MinimumChunkSize"/>.
+        /// The projection of the updated object to return.
         /// </summary>
-        public int? ChunkSize
-        {
-            get { return _chunkSize; }
-            set
-            {
-                Preconditions.CheckArgument(
-                    value == null || (value.Value % MinimumChunkSize == 0 && value.Value >= 1),
-                    nameof(value),
-                    "Requested chunk size {0} is not a positive multiple of {1}",
-                    value.Value, MinimumChunkSize);
-                _chunkSize = value;
-            }
-        }
+        public Projection? Projection { get; set; }
 
         /// <summary>
         /// A pre-defined ACL for simple access control scenarios.
         /// </summary>
         public PredefinedObjectAcl? PredefinedAcl { get; set; }
 
-        /// <summary>
-        /// The projection of the uploaded object to retrieve.
-        /// </summary>
-        public Projection? Projection { get; set; }
-
-        internal void ModifyMediaUpload(InsertMediaUpload upload)
+        internal void ModifyRequest(UpdateRequest request)
         {
             // Note the use of ArgumentException here, as this will basically be the result of invalid
             // options being passed to a public method.
@@ -97,34 +75,34 @@ namespace Google.Storage.V1
                 throw new ArgumentException($"Cannot specify {nameof(IfMetagenerationMatch)} and {nameof(IfMetagenerationNotMatch)} in the same options", "options");
             }
 
-            if (ChunkSize != null)
+            if (Generation != null)
             {
-                upload.ChunkSize = ChunkSize.Value;
-            }
-            if (PredefinedAcl != null)
-            {
-                upload.PredefinedAcl =
-                    Preconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
+                request.Generation = Generation;
             }
             if (IfGenerationMatch != null)
             {
-                upload.IfGenerationMatch = IfGenerationMatch;
+                request.IfGenerationMatch = IfGenerationMatch;
             }
             if (IfGenerationNotMatch != null)
             {
-                upload.IfGenerationNotMatch = IfGenerationNotMatch;
+                request.IfGenerationNotMatch = IfGenerationNotMatch;
             }
             if (IfMetagenerationMatch != null)
             {
-                upload.IfMetagenerationMatch = IfMetagenerationMatch;
+                request.IfMetagenerationMatch = IfMetagenerationMatch;
             }
             if (IfMetagenerationNotMatch != null)
             {
-                upload.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
+                request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
             }
             if (Projection != null)
             {
-                upload.Projection = Preconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+                request.Projection = Preconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+            }
+            if (PredefinedAcl != null)
+            {
+                request.PredefinedAcl =
+                    Preconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
             }
         }
     }

@@ -1,2 +1,0 @@
-This is the original version.
-It will be updated by setup to the contents of updated.txt.

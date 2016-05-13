@@ -12,26 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Storage.v1;
 using System.Linq;
 using Xunit;
 
 namespace Google.Storage.V1.IntegrationTests
 {
+    [Collection(nameof(StorageFixture))]
     public class GetObjectTest
     {
-        private static readonly CloudConfiguration s_config = CloudConfiguration.Instance;
-        private static readonly string s_bucket = s_config.TempBucketPrefix + "0";
-        private const string s_name = "multiversion.txt";
+        private readonly StorageFixture _fixture;
+
+        public GetObjectTest(StorageFixture fixture)
+        {
+            _fixture = fixture;
+        }
 
         [Fact]
         public void Simple()
         {
-            var obj = s_config.Client.GetObject(s_bucket, s_name);
-            Assert.Equal(s_bucket, obj.Bucket);
-            Assert.Equal(s_name, obj.Name);
-            // Let's not be too sensitive as to exactly how big it is...
-            Assert.True(obj.Size > 10);
+            var obj = _fixture.Client.GetObject(_fixture.ReadBucket, _fixture.SmallObject);
+            Assert.Equal(_fixture.ReadBucket, obj.Bucket);
+            Assert.Equal(_fixture.SmallObject, obj.Name);
+            Assert.Equal((ulong) _fixture.SmallContent.Length, obj.Size);
             // Default doesn't get ACLs
             Assert.Null(obj.Acl);
         }
@@ -39,29 +41,32 @@ namespace Google.Storage.V1.IntegrationTests
         [Fact]
         public void FullProjection()
         {
-            var obj = s_config.Client.GetObject(s_bucket, s_name,
-                new GetObjectOptions { Projection = ObjectsResource.GetRequest.ProjectionEnum.Full });
-            Assert.Equal(s_bucket, obj.Bucket);
-            Assert.Equal(s_name, obj.Name);
-            // Let's not be too sensitive as to exactly how big it is...
-            Assert.True(obj.Size > 10);
-            Assert.NotEmpty(obj.Acl);
+            var obj = _fixture.Client.GetObject(_fixture.ReadBucket, _fixture.SmallObject,
+                new GetObjectOptions { Projection = Projection.Full });
+            Assert.Equal(_fixture.ReadBucket, obj.Bucket);
+            Assert.Equal(_fixture.SmallObject, obj.Name);
+            Assert.Equal((ulong)_fixture.SmallContent.Length, obj.Size);
+            Assert.NotNull(obj.Acl);
         }
 
         [Fact]
         public void SpecifyGeneration()
         {
+            var bucket = _fixture.ReadBucket;
+            var name = _fixture.SmallThenLargeObject;
             // Fetch them via the list operation to start with
-            var objects = s_config.Client.ListObjects(s_bucket, s_name, new ListObjectsOptions { Versions = true }).ToList();
+            var objects = _fixture.Client
+                .ListObjects(bucket, name, new ListObjectsOptions { Versions = true })
+                .OrderBy(x => x.Generation)
+                .ToList();
 
             Assert.Equal(2, objects.Count);
             // Fetch them by generation, and check that sizes match (but change by generation)
-            var o1 = s_config.Client.GetObject(s_bucket, s_name, new GetObjectOptions { Generation = objects[0].Generation });
-            var o2 = s_config.Client.GetObject(s_bucket, s_name, new GetObjectOptions { Generation = objects[1].Generation });
+            var o1 = _fixture.Client.GetObject(bucket, name, new GetObjectOptions { Generation = objects[0].Generation });
+            var o2 = _fixture.Client.GetObject(bucket, name, new GetObjectOptions { Generation = objects[1].Generation });
 
-            Assert.Equal(objects[0].Size, o1.Size);
-            Assert.Equal(objects[1].Size, o2.Size);
-            Assert.NotEqual(o1.Size, o2.Size);
+            Assert.Equal((ulong) _fixture.SmallContent.Length, o1.Size);
+            Assert.Equal((ulong) _fixture.LargeContent.Length, o2.Size);
         }
     }
 }

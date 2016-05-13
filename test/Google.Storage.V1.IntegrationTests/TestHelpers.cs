@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using Xunit;
 
 namespace Google.Storage.V1.IntegrationTests
 {
@@ -25,10 +26,7 @@ namespace Google.Storage.V1.IntegrationTests
         /// <summary>
         /// Generates an object name which can reasonably be expected to be unique.
         /// </summary>
-        internal static string GenerateName()
-        {
-            return Guid.NewGuid().ToString();
-        }
+        internal static string GenerateName() => Guid.NewGuid().ToString();
 
         /// <summary>
         /// Generates a read-only stream of random data of the given size. The
@@ -42,13 +40,12 @@ namespace Google.Storage.V1.IntegrationTests
             return new MemoryStream(data);
         }
 
-        /// <summary>
-        /// Helper method for MemberDataAttribute, which required that the member is compatible
-        /// with IEnumerable{object[]}, unhelpfully :(
-        /// </summary>
-        internal static IEnumerable<object[]> CreateTestData<T>(params T[] values)
+        internal static void ValidateData(string bucketName, string objectName, byte[] expectedData)
         {
-            return values.Select(x => new object[] { x });
+            var client = StorageClient.Create();
+            var downloaded = new MemoryStream();
+            client.DownloadObject(bucketName, objectName, downloaded);
+            Assert.Equal(expectedData, downloaded.ToArray());
         }
     }
 }
