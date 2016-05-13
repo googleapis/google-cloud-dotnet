@@ -113,7 +113,9 @@ application naming etc).</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual StorageService Service
 {
+
     get;
+
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -1131,7 +1133,22 @@ defaults will be used.</p>
               <h4 id="Google_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Storage.V1.StorageClient.DownloadObject(System.String,System.String,System.IO.Stream,Google.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Downloads the data for an object from storage synchronously, into a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var source = &quot;greetings/hello.txt&quot;;
+var destination = &quot;hello.txt&quot;;
+
+using (var stream = File.Create(destination))
+{
+    // IDownloadProgress defined in Google.Apis.Download namespace
+    var progress = new Progress&lt;IDownloadProgress&gt;(
+        p =&gt; Console.WriteLine($&quot;bytes: {p.BytesDownloaded}, status: {p.Status}&quot;)
+    );
+
+    // Download source object from bucket to local file system
+    client.DownloadObject(bucketName, source, stream, null, progress);
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DownloadObject(string bucket, string objectName, Stream destination, DownloadObjectOptions options = null, IProgress&lt;IDownloadProgress&gt; progress = null)</code></pre>
@@ -2407,7 +2424,25 @@ defaults will be used.</p>
               <h4 id="Google_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Storage.V1.StorageClient.UploadObject(System.String,System.String,System.String,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObject(String, String, String, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
               <div class="markdown level1 summary"><p>Uploads the data for an object in storage synchronously, from a specified stream.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var source = &quot;world.txt&quot;;
+var destination = &quot;places/world.txt&quot;;
+var contentType = &quot;text/plain&quot;;
+
+using (var stream = File.OpenRead(source))
+{
+    // IUploadProgress defined in Google.Apis.Upload namespace
+    var progress = new Progress&lt;IUploadProgress&gt;(
+      p =&gt; Console.WriteLine($&quot;bytes: {p.BytesSent}, status: {p.Status}&quot;)
+    );
+
+    // var acl = PredefinedAcl.PublicRead // public
+    var acl = PredefinedObjectAcl.AuthenticatedRead; // private
+    var options = new UploadObjectOptions { PredefinedAcl = acl };
+    var obj = client.UploadObject(bucketName, destination, contentType, stream, options, progress);
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Object UploadObject(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null, IProgress&lt;IUploadProgress&gt; progress = null)</code></pre>

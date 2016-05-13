@@ -128,21 +128,19 @@ can mix and match abstractions very easily: you may be able to use
 <h2 id="google-datastore-v1beta3">Google.Datastore.V1Beta3</h2>
 <p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
 <p>Sample code:</p>
-<pre><code class="lang-csharp">var client = DatastoreClient.Create();
+<pre><code class="lang-cs">var client = DatastoreClient.Create();
 
-var projectId = ...;
-var partitionId = new PartitionId { ProjectId = projectId };
+var keyFactory = new KeyFactory(projectId, namespaceId, &quot;message&quot;);
 var entity = new Entity
 {
-    Key = new Key { PartitionId = partitionId, Path = { new PathElement { Kind = &quot;message&quot; } } },
+    Key = keyFactory.CreateInsertionKey(),
     [&quot;created&quot;] = DateTime.UtcNow,
     [&quot;text&quot;] = &quot;Text of the message&quot;
 };
 var transaction = client.BeginTransaction(projectId).Transaction;
 var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
 var insertedKey = commitResponse.MutationResults[0].Key;
-</code></pre>
-<p>See <a href="api/Google.Datastore.V1Beta3.DatastoreClient.html"><code>DatastoreClient</code></a>
+</code></pre><p>See <a href="api/Google.Datastore.V1Beta3.DatastoreClient.html"><code>DatastoreClient</code></a>
 for details. Note that custom conversions are provided to make
 working with the <a href="api/Google.Datastore.V1Beta3.Value.html"><code>Value</code></a> type much
 simpler than it would otherwise be.</p>
@@ -160,40 +158,39 @@ for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.</p>
 <p>Query example:</p>
-<pre><code class="lang-csharp">var client = BigqueryClient.Create(&quot;YOUR PROJECT ID&quot;);
+<pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
 var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
 
-var sql = $&quot;SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}&quot;;
-var query = client.ExecuteQuery(sql);
+string sql = $&quot;SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}&quot;;
+BigqueryResult query = client.ExecuteQuery(sql);
 
-foreach (var row in rows)
+foreach (BigqueryResult.Row row in query.Rows)
 {
-    Console.WriteLine($&quot;{row[&quot;title&quot;]}: {row:[&quot;unique_words&quot;]}&quot;);
+    Console.WriteLine($&quot;{row[&quot;title&quot;]}: {row[&quot;unique_words&quot;]}&quot;);
 }
-</code></pre>
-<p>Data insertion example:</p>
-<pre><code class="lang-csharp">var client = BigqueryClient.Create(&quot;YOUR PROJECT ID&quot;);
+</code></pre><p>Data insertion example:</p>
+<pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
 
 // Create the dataset if it doesn&#39;t exist.
 var dataset = client.GetOrCreateDataset(&quot;mydata&quot;);
 
 // Create the table if it doesn&#39;t exist.
 var table = dataset.GetOrCreateTable(&quot;scores&quot;, new SchemaBuilder
-    {
-        { &quot;player&quot;, SchemaFieldType.String },
-        { &quot;gameStarted&quot;, SchemaFieldType.Timestamp },
-        { &quot;score&quot;, SchemaFieldType.Integer }
-    }.Build());
+{
+    { &quot;player&quot;, SchemaFieldType.String },
+    { &quot;gameStarted&quot;, SchemaFieldType.Timestamp },
+    { &quot;score&quot;, SchemaFieldType.Integer }
+}.Build());
 
 // Insert a single row. There are many other ways of inserting
 // data into a table.
-table.InsertRow(new Dictionary&lt;string, object&gt; {
+table.InsertRow(new Dictionary&lt;string, object&gt;
+{
     { &quot;player&quot;, &quot;Bob&quot; },
     { &quot;score&quot;, 85 },
     { &quot;gameStarted&quot;, new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
 });
 </code></pre>
-
             </article>
           </div>
           

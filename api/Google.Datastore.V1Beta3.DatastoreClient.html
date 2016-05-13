@@ -1571,8 +1571,7 @@ Query query = new Query
             Op = Operator.EQUAL,
             Value = &quot;Jane Austen&quot;
         }
-    },
-    Projection = { &quot;author&quot;, &quot;title&quot; }
+    }
 };
 RunQueryResponse response = client.RunQuery(
     projectId,
