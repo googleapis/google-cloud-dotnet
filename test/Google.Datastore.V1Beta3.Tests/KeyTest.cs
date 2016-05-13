@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Xunit;
+using static Google.Datastore.V1Beta3.Key.Types;
 
 namespace Google.Datastore.V1Beta3.Tests
 {
@@ -25,6 +26,29 @@ namespace Google.Datastore.V1Beta3.Tests
             // validation.
             var key = new Key { PartitionId = new PartitionId { ProjectId = "project" } };
             Assert.Equal(new Mutation { Delete = key }, key.ToDelete());
+        }
+
+        [Fact]
+        public void WithElement()
+        {
+            var key = new Key
+            {
+                PartitionId = new PartitionId { ProjectId = "project" },
+                Path = { new PathElement { Id = 20L, Kind = "parent" } }
+            };
+            var keyClone = key.Clone();
+            var actual = key.WithElement(new PathElement { Name = "x", Kind = "child" });
+            Assert.Equal(keyClone, key); // Original key is unchanged
+            var expected = new Key
+            {
+                PartitionId = new PartitionId { ProjectId = "project" },
+                Path =
+                {
+                    new PathElement { Id = 20L, Kind = "parent" },
+                    new PathElement { Name = "x", Kind = "child" }
+                }
+            };
+            Assert.Equal(expected, actual);
         }
     }
 }

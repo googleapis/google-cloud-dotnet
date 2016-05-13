@@ -49,9 +49,10 @@ namespace Google.Datastore.V1Beta3.Snippets
         private void AddSampleBooks()
         {
             var client = DatastoreClient.Create();
+            var keyFactory = new KeyFactory(ProjectId, NamespaceId, BookKind);
             var entity = new Entity
             {
-                Key = new Key { PartitionId = PartitionId, Path = { new PathElement { Kind = BookKind } } },
+                Key = keyFactory.CreateKey("pride_and_prejudice"),
                 ["title"] = "Pride and Prejudice",
                 ["publication_date"] = new DateTime(1813, 1, 28, 0, 0, 0, DateTimeKind.Utc),
                 ["author"] = "Jane Austen"
