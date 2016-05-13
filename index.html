@@ -8,7 +8,7 @@
     <title>Introduction | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Introduction | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.0.0">
+    <meta name="generator" content="docfx 1.8.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -73,7 +73,30 @@ that the libraries work and are usable.</p>
 for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
 <p>Common operations are exposed via the
 <a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
-<h1 id="alpha-apis">Alpha APIs</h1>
+<p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+// Create a bucket
+var bucketName = Guid.NewGuid().ToString(); // must be globally unique
+var bucket = client.CreateBucket(projectId, bucketName);
+
+// Upload some files
+var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
+var obj1 = client.UploadObject(bucketName, &quot;file1.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));
+var obj2 = client.UploadObject(bucketName, &quot;folder1/file2.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));
+
+// List objects
+foreach (var obj in client.ListObjects(bucketName, &quot;&quot;))
+{
+    Console.WriteLine(obj.Name);
+}
+
+// Download file
+using (var stream = File.OpenWrite(&quot;file1.txt&quot;))
+{
+    client.DownloadObject(bucketName, &quot;file1.txt&quot;, stream);
+}
+</code></pre><h1 id="alpha-apis">Alpha APIs</h1>
 <p>These APIs are available from Google&#39;s <a href="https://www.myget.org/gallery/google-dotnet-public">public myget
 feed</a>,
 which you will need to configure within your build system.</p>

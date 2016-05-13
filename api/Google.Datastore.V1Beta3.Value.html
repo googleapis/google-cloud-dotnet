@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Value
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.0.0">
+    <meta name="generator" content="docfx 1.8.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -1637,7 +1637,8 @@ or has a kind of <code>NullValue</code>.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_DateTime" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.DateTime">Explicit(Value to DateTime)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">System.DateTime</span>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1656,7 +1657,8 @@ or has a kind of <code>NullValue</code>.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1671,12 +1673,35 @@ or has a kind of <code>NullValue</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.DateTime</span></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">System.DateTime</span> with a <span class="xref">System.DateTimeKind</span> of <code>Utc</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.ArgumentNullException</span></td>
+                    <td><p><em>value</em> is null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_DateTimeOffset" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.DateTimeOffset">Explicit(Value to DateTimeOffset)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">System.DateTimeOffset</span>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1695,7 +1720,8 @@ or has a kind of <code>NullValue</code>.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a></td>
                     <td><em>value</em></td>
-                    <td></td>
+                    <td><p>The value to convert.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1710,7 +1736,29 @@ or has a kind of <code>NullValue</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.DateTimeOffset</span></td>
-                    <td></td>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">System.DateTimeOffset</span> with an offset of zero.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The value does not have the expected kind.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.ArgumentNullException</span></td>
+                    <td><p><em>value</em> is null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>

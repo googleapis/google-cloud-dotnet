@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.0.0">
+    <meta name="generator" content="docfx 1.8.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -481,7 +481,33 @@ No key may be reserved/read-only.</p>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;book&quot;);
+Entity book1 = new Entity
+{
+    Key = keyFactory.CreateInsertionKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
+};
+Entity book2 = new Entity
+{
+    Key = keyFactory.CreateInsertionKey(),
+    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
+    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
+};
+ByteString transaction = client.BeginTransaction(projectId).Transaction;
+CommitResponse response = client.Commit(
+    projectId,
+    Mode.TRANSACTIONAL,
+    transaction,
+    new[] { book1.ToInsert(), book2.ToInsert() });
+
+IEnumerable&lt;Key&gt; insertedKeys = response.MutationResults.Select(r =&gt; r.Key);
+Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -560,7 +586,33 @@ entity.</p>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;book&quot;);
+Entity book1 = new Entity
+{
+    Key = keyFactory.CreateInsertionKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
+};
+Entity book2 = new Entity
+{
+    Key = keyFactory.CreateInsertionKey(),
+    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
+    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
+};
+ByteString transaction = client.BeginTransaction(projectId).Transaction;
+CommitResponse response = client.Commit(
+    projectId,
+    Mode.TRANSACTIONAL,
+    transaction,
+    new[] { book1.ToInsert(), book2.ToInsert() });
+
+IEnumerable&lt;Key&gt; insertedKeys = response.MutationResults.Select(r =&gt; r.Key);
+Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -1078,7 +1130,20 @@ necessary.</p>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClient_Lookup_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClient.Lookup(System.String,Google.Datastore.V1Beta3.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;book&quot;);
+Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
+Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
+
+DatastoreClient client = DatastoreClient.Create();
+LookupResponse response = client.Lookup(
+    projectId,
+    new ReadOptions { ReadConsistency = ReadConsistency.STRONG },
+    new[] { key1, key2 });
+Console.WriteLine($&quot;Found: {response.Found.Count}&quot;);
+Console.WriteLine($&quot;Deferred: {response.Deferred.Count}&quot;);
+Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual LookupResponse Lookup(string projectId, ReadOptions readOptions, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -1414,7 +1479,24 @@ necessary.</p>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClient_RunQuery_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClient.RunQuery(System.String,Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.ReadOptions,Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQuery(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+};
+RunQueryResponse response = client.RunQuery(
+    projectId,
+    partitionId,
+    new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+    gqlQuery);
+
+foreach (EntityResult result in response.Batch.EntityResults)
+{
+    Console.WriteLine(result.Entity);
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RunQueryResponse RunQuery(string projectId, PartitionId partitionId, ReadOptions readOptions, GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
@@ -1476,7 +1558,33 @@ necessary.</p>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClient_RunQuery_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClient.RunQuery(System.String,Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.ReadOptions,Google.Datastore.V1Beta3.Query,Google.Api.Gax.CallSettings)">RunQuery(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+Query query = new Query
+{
+    Kind = { new KindExpression { Name = kind } },
+    Filter = new Filter
+    {
+        PropertyFilter = new PropertyFilter
+        {
+            Property = new PropertyReference(&quot;author&quot;),
+            Op = Operator.EQUAL,
+            Value = &quot;Jane Austen&quot;
+        }
+    },
+    Projection = { &quot;author&quot;, &quot;title&quot; }
+};
+RunQueryResponse response = client.RunQuery(
+    projectId,
+    partitionId,
+    new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+    query);
+
+foreach (EntityResult result in response.Batch.EntityResults)
+{
+    Console.WriteLine(result.Entity);
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RunQueryResponse RunQuery(string projectId, PartitionId partitionId, ReadOptions readOptions, Query query, CallSettings callSettings = null)</code></pre>

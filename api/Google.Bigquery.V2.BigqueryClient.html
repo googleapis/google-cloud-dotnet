@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigqueryClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.0.0">
+    <meta name="generator" content="docfx 1.8.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,8 +86,8 @@
               <h5 id="Google_Bigquery_V2_BigqueryClient_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>
 This abstract class is provided to enable testability while permitting
-additional operations to be added in the future. See <see cref="!:Create(GoogleCredential)"></see>
-and <see cref="!:CreateAsync(GoogleCredential)"></see> to construct instances; alternatively, you can
+additional operations to be added in the future. See <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(String, GoogleCredential)</a>
+and <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">CreateAsync(String, GoogleCredential)</a> to construct instances; alternatively, you can
 construct a <a class="xref" href="Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl">BigqueryClientImpl</a> directly from a <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a>.
 </p>
 <p>
@@ -2440,7 +2440,7 @@ defaults will be supplied.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListJobsOptions)">ListJobs(ProjectReference, ListJobsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the jobs within the specified project.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> and delegates to <see cref="!:ListDatasets(ProjectReference, ListJobsOptions)"></see>.</p>
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2534,7 +2534,7 @@ defaults will be supplied.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListJobs_System_String_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListJobs(System.String,Google.Bigquery.V2.ListJobsOptions)">ListJobs(String, ListJobsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the jobs within the specified project.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> and delegates to <see cref="!:ListDatasets(ProjectReference, ListJobsOptions)"></see>.</p>
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a> and delegates to <see cref="!:ListDatasets(ProjectReference, ListDatasets)"></see>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2583,7 +2583,7 @@ defaults will be supplied.</p>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.ListRows(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema)">ListRows(TableReference, TableSchema)</h4>
-              <div class="markdown level1 summary"><p>Lists the rows within a table, similar to a <pre><code>SELECT * FROM ...</code></pre> query.</p>
+              <div class="markdown level1 summary"><p>Lists the rows within a table, similar to a <code>SELECT * FROM ...</code> query.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2632,7 +2632,7 @@ the table first.</p>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema)">ListRows(String, String, TableSchema)</h4>
-              <div class="markdown level1 summary"><p>Lists the rows within a table within this client&#39;s project specified by dataset ID and table ID, similar to a <pre><code>SELECT * FROM ...</code></pre> query.
+              <div class="markdown level1 summary"><p>Lists the rows within a table within this client&#39;s project specified by dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_">ListRows(TableReference, TableSchema)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -2688,7 +2688,7 @@ the table first.</p>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_" data-uid="Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema)">ListRows(String, String, String, TableSchema)</h4>
-              <div class="markdown level1 summary"><p>Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <pre><code>SELECT * FROM ...</code></pre> query.
+              <div class="markdown level1 summary"><p>Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
 This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_">ListRows(TableReference, TableSchema)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>

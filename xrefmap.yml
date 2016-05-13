@@ -10547,6 +10547,14 @@ references:
   name: RunQueryAsync(String, PartitionId, ReadOptions, Query, CallSettings)
   href: api/Google.Datastore.V1Beta3.DatastoreClientImpl.html#Google_Datastore_V1Beta3_DatastoreClientImpl_RunQueryAsync_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_
   fullName: Google.Datastore.V1Beta3.DatastoreClientImpl.RunQueryAsync(System.String, Google.Datastore.V1Beta3.PartitionId, Google.Datastore.V1Beta3.ReadOptions, Google.Datastore.V1Beta3.Query, Google.Api.Gax.CallSettings)
+- uid: Google.Datastore.V1Beta3.DatastoreConstants
+  name: DatastoreConstants
+  href: api/Google.Datastore.V1Beta3.DatastoreConstants.html#Google_Datastore_V1Beta3_DatastoreConstants
+  fullName: Google.Datastore.V1Beta3.DatastoreConstants
+- uid: Google.Datastore.V1Beta3.DatastoreConstants.KeyProperty
+  name: KeyProperty
+  href: api/Google.Datastore.V1Beta3.DatastoreConstants.html#Google_Datastore_V1Beta3_DatastoreConstants_KeyProperty
+  fullName: Google.Datastore.V1Beta3.DatastoreConstants.KeyProperty
 - uid: Google.Datastore.V1Beta3.DatastoreExtensions
   name: DatastoreExtensions
   href: api/Google.Datastore.V1Beta3.DatastoreExtensions.html#Google_Datastore_V1Beta3_DatastoreExtensions
@@ -11315,10 +11323,46 @@ references:
   name: WriteTo(CodedOutputStream)
   href: api/Google.Datastore.V1Beta3.Key.Types.PathElement.html#Google_Datastore_V1Beta3_Key_Types_PathElement_WriteTo_Google_Protobuf_CodedOutputStream_
   fullName: Google.Datastore.V1Beta3.Key.Types.PathElement.WriteTo(Google.Protobuf.CodedOutputStream)
+- uid: Google.Datastore.V1Beta3.Key.WithElement(Google.Datastore.V1Beta3.Key.Types.PathElement)
+  name: WithElement(Key.Types.PathElement)
+  href: api/Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key_WithElement_Google_Datastore_V1Beta3_Key_Types_PathElement_
+  fullName: Google.Datastore.V1Beta3.Key.WithElement(Google.Datastore.V1Beta3.Key.Types.PathElement)
 - uid: Google.Datastore.V1Beta3.Key.WriteTo(Google.Protobuf.CodedOutputStream)
   name: WriteTo(CodedOutputStream)
   href: api/Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key_WriteTo_Google_Protobuf_CodedOutputStream_
   fullName: Google.Datastore.V1Beta3.Key.WriteTo(Google.Protobuf.CodedOutputStream)
+- uid: Google.Datastore.V1Beta3.KeyFactory
+  name: KeyFactory
+  href: api/Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory
+  fullName: Google.Datastore.V1Beta3.KeyFactory
+- uid: Google.Datastore.V1Beta3.KeyFactory.#ctor(Google.Datastore.V1Beta3.Entity,System.String)
+  name: KeyFactory(Entity, String)
+  href: api/Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory__ctor_Google_Datastore_V1Beta3_Entity_System_String_
+  fullName: Google.Datastore.V1Beta3.KeyFactory.KeyFactory(Google.Datastore.V1Beta3.Entity, System.String)
+- uid: Google.Datastore.V1Beta3.KeyFactory.#ctor(Google.Datastore.V1Beta3.Key,System.String)
+  name: KeyFactory(Key, String)
+  href: api/Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory__ctor_Google_Datastore_V1Beta3_Key_System_String_
+  fullName: Google.Datastore.V1Beta3.KeyFactory.KeyFactory(Google.Datastore.V1Beta3.Key, System.String)
+- uid: Google.Datastore.V1Beta3.KeyFactory.#ctor(Google.Datastore.V1Beta3.PartitionId,System.String)
+  name: KeyFactory(PartitionId, String)
+  href: api/Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory__ctor_Google_Datastore_V1Beta3_PartitionId_System_String_
+  fullName: Google.Datastore.V1Beta3.KeyFactory.KeyFactory(Google.Datastore.V1Beta3.PartitionId, System.String)
+- uid: Google.Datastore.V1Beta3.KeyFactory.#ctor(System.String,System.String,System.String)
+  name: KeyFactory(String, String, String)
+  href: api/Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory__ctor_System_String_System_String_System_String_
+  fullName: Google.Datastore.V1Beta3.KeyFactory.KeyFactory(System.String, System.String, System.String)
+- uid: Google.Datastore.V1Beta3.KeyFactory.CreateInsertionKey
+  name: CreateInsertionKey()
+  href: api/Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory_CreateInsertionKey
+  fullName: Google.Datastore.V1Beta3.KeyFactory.CreateInsertionKey()
+- uid: Google.Datastore.V1Beta3.KeyFactory.CreateKey(System.Int64)
+  name: CreateKey(Int64)
+  href: api/Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory_CreateKey_System_Int64_
+  fullName: Google.Datastore.V1Beta3.KeyFactory.CreateKey(System.Int64)
+- uid: Google.Datastore.V1Beta3.KeyFactory.CreateKey(System.String)
+  name: CreateKey(String)
+  href: api/Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory_CreateKey_System_String_
+  fullName: Google.Datastore.V1Beta3.KeyFactory.CreateKey(System.String)
 - uid: Google.Datastore.V1Beta3.KindExpression
   name: KindExpression
   href: api/Google.Datastore.V1Beta3.KindExpression.html#Google_Datastore_V1Beta3_KindExpression
@@ -11769,6 +11813,10 @@ references:
   name: PartitionId(PartitionId)
   href: api/Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId__ctor_Google_Datastore_V1Beta3_PartitionId_
   fullName: Google.Datastore.V1Beta3.PartitionId.PartitionId(Google.Datastore.V1Beta3.PartitionId)
+- uid: Google.Datastore.V1Beta3.PartitionId.#ctor(System.String,System.String)
+  name: PartitionId(String, String)
+  href: api/Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId__ctor_System_String_System_String_
+  fullName: Google.Datastore.V1Beta3.PartitionId.PartitionId(System.String, System.String)
 - uid: Google.Datastore.V1Beta3.PartitionId.CalculateSize
   name: CalculateSize()
   href: api/Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId_CalculateSize
@@ -11847,6 +11895,10 @@ references:
   name: Projection(Projection)
   href: api/Google.Datastore.V1Beta3.Projection.html#Google_Datastore_V1Beta3_Projection__ctor_Google_Datastore_V1Beta3_Projection_
   fullName: Google.Datastore.V1Beta3.Projection.Projection(Google.Datastore.V1Beta3.Projection)
+- uid: Google.Datastore.V1Beta3.Projection.#ctor(System.String)
+  name: Projection(String)
+  href: api/Google.Datastore.V1Beta3.Projection.html#Google_Datastore_V1Beta3_Projection__ctor_System_String_
+  fullName: Google.Datastore.V1Beta3.Projection.Projection(System.String)
 - uid: Google.Datastore.V1Beta3.Projection.CalculateSize
   name: CalculateSize()
   href: api/Google.Datastore.V1Beta3.Projection.html#Google_Datastore_V1Beta3_Projection_CalculateSize
@@ -12137,6 +12189,10 @@ references:
   name: PropertyReference(PropertyReference)
   href: api/Google.Datastore.V1Beta3.PropertyReference.html#Google_Datastore_V1Beta3_PropertyReference__ctor_Google_Datastore_V1Beta3_PropertyReference_
   fullName: Google.Datastore.V1Beta3.PropertyReference.PropertyReference(Google.Datastore.V1Beta3.PropertyReference)
+- uid: Google.Datastore.V1Beta3.PropertyReference.#ctor(System.String)
+  name: PropertyReference(String)
+  href: api/Google.Datastore.V1Beta3.PropertyReference.html#Google_Datastore_V1Beta3_PropertyReference__ctor_System_String_
+  fullName: Google.Datastore.V1Beta3.PropertyReference.PropertyReference(System.String)
 - uid: Google.Datastore.V1Beta3.PropertyReference.CalculateSize
   name: CalculateSize()
   href: api/Google.Datastore.V1Beta3.PropertyReference.html#Google_Datastore_V1Beta3_PropertyReference_CalculateSize
@@ -12329,6 +12385,16 @@ references:
   name: WriteTo(CodedOutputStream)
   href: api/Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query_WriteTo_Google_Protobuf_CodedOutputStream_
   fullName: Google.Datastore.V1Beta3.Query.WriteTo(Google.Protobuf.CodedOutputStream)
+- uid: Google.Datastore.V1Beta3.QueryExtensions
+  name: QueryExtensions
+  href: api/Google.Datastore.V1Beta3.QueryExtensions.html#Google_Datastore_V1Beta3_QueryExtensions
+  fullName: Google.Datastore.V1Beta3.QueryExtensions
+- uid: Google.Datastore.V1Beta3.QueryExtensions.Add(Google.Protobuf.Collections.RepeatedField{Google.Datastore.V1Beta3.Projection},System.String)
+  name: Add(RepeatedField<Projection>, String)
+  href: api/Google.Datastore.V1Beta3.QueryExtensions.html#Google_Datastore_V1Beta3_QueryExtensions_Add_Google_Protobuf_Collections_RepeatedField_Google_Datastore_V1Beta3_Projection__System_String_
+  name.vb: Add(RepeatedField(Of Projection), String)
+  fullName: Google.Datastore.V1Beta3.QueryExtensions.Add(Google.Protobuf.Collections.RepeatedField<Google.Datastore.V1Beta3.Projection>, System.String)
+  fullName.vb: Google.Datastore.V1Beta3.QueryExtensions.Add(Google.Protobuf.Collections.RepeatedField(Of Google.Datastore.V1Beta3.Projection), System.String)
 - uid: Google.Datastore.V1Beta3.QueryReflection
   name: QueryReflection
   href: api/Google.Datastore.V1Beta3.QueryReflection.html#Google_Datastore_V1Beta3_QueryReflection
@@ -25550,6 +25616,82 @@ references:
   name: Google.Storage.V1
   href: api/Google.Storage.V1.html#Google_Storage_V1
   fullName: Google.Storage.V1
+- uid: Google.Storage.V1.CopyObjectOptions
+  name: CopyObjectOptions
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions
+  fullName: Google.Storage.V1.CopyObjectOptions
+- uid: Google.Storage.V1.CopyObjectOptions.DestinationPredefinedAcl
+  name: DestinationPredefinedAcl
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_DestinationPredefinedAcl
+  fullName: Google.Storage.V1.CopyObjectOptions.DestinationPredefinedAcl
+- uid: Google.Storage.V1.CopyObjectOptions.IfGenerationMatch
+  name: IfGenerationMatch
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_IfGenerationMatch
+  fullName: Google.Storage.V1.CopyObjectOptions.IfGenerationMatch
+- uid: Google.Storage.V1.CopyObjectOptions.IfGenerationNotMatch
+  name: IfGenerationNotMatch
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_IfGenerationNotMatch
+  fullName: Google.Storage.V1.CopyObjectOptions.IfGenerationNotMatch
+- uid: Google.Storage.V1.CopyObjectOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.CopyObjectOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.CopyObjectOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.CopyObjectOptions.IfMetagenerationNotMatch
+- uid: Google.Storage.V1.CopyObjectOptions.IfSourceGenerationMatch
+  name: IfSourceGenerationMatch
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_IfSourceGenerationMatch
+  fullName: Google.Storage.V1.CopyObjectOptions.IfSourceGenerationMatch
+- uid: Google.Storage.V1.CopyObjectOptions.IfSourceGenerationNotMatch
+  name: IfSourceGenerationNotMatch
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_IfSourceGenerationNotMatch
+  fullName: Google.Storage.V1.CopyObjectOptions.IfSourceGenerationNotMatch
+- uid: Google.Storage.V1.CopyObjectOptions.IfSourceMetagenerationMatch
+  name: IfSourceMetagenerationMatch
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_IfSourceMetagenerationMatch
+  fullName: Google.Storage.V1.CopyObjectOptions.IfSourceMetagenerationMatch
+- uid: Google.Storage.V1.CopyObjectOptions.IfSourceMetagenerationNotMatch
+  name: IfSourceMetagenerationNotMatch
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_IfSourceMetagenerationNotMatch
+  fullName: Google.Storage.V1.CopyObjectOptions.IfSourceMetagenerationNotMatch
+- uid: Google.Storage.V1.CopyObjectOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_Projection
+  fullName: Google.Storage.V1.CopyObjectOptions.Projection
+- uid: Google.Storage.V1.CopyObjectOptions.SourceGeneration
+  name: SourceGeneration
+  href: api/Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions_SourceGeneration
+  fullName: Google.Storage.V1.CopyObjectOptions.SourceGeneration
+- uid: Google.Storage.V1.CreateBucketOptions
+  name: CreateBucketOptions
+  href: api/Google.Storage.V1.CreateBucketOptions.html#Google_Storage_V1_CreateBucketOptions
+  fullName: Google.Storage.V1.CreateBucketOptions
+- uid: Google.Storage.V1.CreateBucketOptions.PredefinedAcl
+  name: PredefinedAcl
+  href: api/Google.Storage.V1.CreateBucketOptions.html#Google_Storage_V1_CreateBucketOptions_PredefinedAcl
+  fullName: Google.Storage.V1.CreateBucketOptions.PredefinedAcl
+- uid: Google.Storage.V1.CreateBucketOptions.PredefinedDefaultObjectAcl
+  name: PredefinedDefaultObjectAcl
+  href: api/Google.Storage.V1.CreateBucketOptions.html#Google_Storage_V1_CreateBucketOptions_PredefinedDefaultObjectAcl
+  fullName: Google.Storage.V1.CreateBucketOptions.PredefinedDefaultObjectAcl
+- uid: Google.Storage.V1.CreateBucketOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.CreateBucketOptions.html#Google_Storage_V1_CreateBucketOptions_Projection
+  fullName: Google.Storage.V1.CreateBucketOptions.Projection
+- uid: Google.Storage.V1.DeleteBucketOptions
+  name: DeleteBucketOptions
+  href: api/Google.Storage.V1.DeleteBucketOptions.html#Google_Storage_V1_DeleteBucketOptions
+  fullName: Google.Storage.V1.DeleteBucketOptions
+- uid: Google.Storage.V1.DeleteBucketOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.DeleteBucketOptions.html#Google_Storage_V1_DeleteBucketOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.DeleteBucketOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.DeleteBucketOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.DeleteBucketOptions.html#Google_Storage_V1_DeleteBucketOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.DeleteBucketOptions.IfMetagenerationNotMatch
 - uid: Google.Storage.V1.DeleteObjectOptions
   name: DeleteObjectOptions
   href: api/Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions
@@ -25558,6 +25700,22 @@ references:
   name: Generation
   href: api/Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_Generation
   fullName: Google.Storage.V1.DeleteObjectOptions.Generation
+- uid: Google.Storage.V1.DeleteObjectOptions.IfGenerationMatch
+  name: IfGenerationMatch
+  href: api/Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_IfGenerationMatch
+  fullName: Google.Storage.V1.DeleteObjectOptions.IfGenerationMatch
+- uid: Google.Storage.V1.DeleteObjectOptions.IfGenerationNotMatch
+  name: IfGenerationNotMatch
+  href: api/Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_IfGenerationNotMatch
+  fullName: Google.Storage.V1.DeleteObjectOptions.IfGenerationNotMatch
+- uid: Google.Storage.V1.DeleteObjectOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.DeleteObjectOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.DeleteObjectOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.DeleteObjectOptions.html#Google_Storage_V1_DeleteObjectOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.DeleteObjectOptions.IfMetagenerationNotMatch
 - uid: Google.Storage.V1.DownloadObjectOptions
   name: DownloadObjectOptions
   href: api/Google.Storage.V1.DownloadObjectOptions.html#Google_Storage_V1_DownloadObjectOptions
@@ -25586,6 +25744,22 @@ references:
   name: IfMetagenerationNotMatch
   href: api/Google.Storage.V1.DownloadObjectOptions.html#Google_Storage_V1_DownloadObjectOptions_IfMetagenerationNotMatch
   fullName: Google.Storage.V1.DownloadObjectOptions.IfMetagenerationNotMatch
+- uid: Google.Storage.V1.GetBucketOptions
+  name: GetBucketOptions
+  href: api/Google.Storage.V1.GetBucketOptions.html#Google_Storage_V1_GetBucketOptions
+  fullName: Google.Storage.V1.GetBucketOptions
+- uid: Google.Storage.V1.GetBucketOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.GetBucketOptions.html#Google_Storage_V1_GetBucketOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.GetBucketOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.GetBucketOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.GetBucketOptions.html#Google_Storage_V1_GetBucketOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.GetBucketOptions.IfMetagenerationNotMatch
+- uid: Google.Storage.V1.GetBucketOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.GetBucketOptions.html#Google_Storage_V1_GetBucketOptions_Projection
+  fullName: Google.Storage.V1.GetBucketOptions.Projection
 - uid: Google.Storage.V1.GetObjectOptions
   name: GetObjectOptions
   href: api/Google.Storage.V1.GetObjectOptions.html#Google_Storage_V1_GetObjectOptions
@@ -25594,6 +25768,22 @@ references:
   name: Generation
   href: api/Google.Storage.V1.GetObjectOptions.html#Google_Storage_V1_GetObjectOptions_Generation
   fullName: Google.Storage.V1.GetObjectOptions.Generation
+- uid: Google.Storage.V1.GetObjectOptions.IfGenerationMatch
+  name: IfGenerationMatch
+  href: api/Google.Storage.V1.GetObjectOptions.html#Google_Storage_V1_GetObjectOptions_IfGenerationMatch
+  fullName: Google.Storage.V1.GetObjectOptions.IfGenerationMatch
+- uid: Google.Storage.V1.GetObjectOptions.IfGenerationNotMatch
+  name: IfGenerationNotMatch
+  href: api/Google.Storage.V1.GetObjectOptions.html#Google_Storage_V1_GetObjectOptions_IfGenerationNotMatch
+  fullName: Google.Storage.V1.GetObjectOptions.IfGenerationNotMatch
+- uid: Google.Storage.V1.GetObjectOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.GetObjectOptions.html#Google_Storage_V1_GetObjectOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.GetObjectOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.GetObjectOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.GetObjectOptions.html#Google_Storage_V1_GetObjectOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.GetObjectOptions.IfMetagenerationNotMatch
 - uid: Google.Storage.V1.GetObjectOptions.Projection
   name: Projection
   href: api/Google.Storage.V1.GetObjectOptions.html#Google_Storage_V1_GetObjectOptions_Projection
@@ -25610,6 +25800,10 @@ references:
   name: Prefix
   href: api/Google.Storage.V1.ListBucketsOptions.html#Google_Storage_V1_ListBucketsOptions_Prefix
   fullName: Google.Storage.V1.ListBucketsOptions.Prefix
+- uid: Google.Storage.V1.ListBucketsOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.ListBucketsOptions.html#Google_Storage_V1_ListBucketsOptions_Projection
+  fullName: Google.Storage.V1.ListBucketsOptions.Projection
 - uid: Google.Storage.V1.ListObjectsOptions
   name: ListObjectsOptions
   href: api/Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions
@@ -25622,14 +25816,146 @@ references:
   name: PageSize
   href: api/Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions_PageSize
   fullName: Google.Storage.V1.ListObjectsOptions.PageSize
+- uid: Google.Storage.V1.ListObjectsOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions_Projection
+  fullName: Google.Storage.V1.ListObjectsOptions.Projection
 - uid: Google.Storage.V1.ListObjectsOptions.Versions
   name: Versions
   href: api/Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions_Versions
   fullName: Google.Storage.V1.ListObjectsOptions.Versions
+- uid: Google.Storage.V1.PatchBucketOptions
+  name: PatchBucketOptions
+  href: api/Google.Storage.V1.PatchBucketOptions.html#Google_Storage_V1_PatchBucketOptions
+  fullName: Google.Storage.V1.PatchBucketOptions
+- uid: Google.Storage.V1.PatchBucketOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.PatchBucketOptions.html#Google_Storage_V1_PatchBucketOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.PatchBucketOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.PatchBucketOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.PatchBucketOptions.html#Google_Storage_V1_PatchBucketOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.PatchBucketOptions.IfMetagenerationNotMatch
+- uid: Google.Storage.V1.PatchBucketOptions.PredefinedAcl
+  name: PredefinedAcl
+  href: api/Google.Storage.V1.PatchBucketOptions.html#Google_Storage_V1_PatchBucketOptions_PredefinedAcl
+  fullName: Google.Storage.V1.PatchBucketOptions.PredefinedAcl
+- uid: Google.Storage.V1.PatchBucketOptions.PredefinedDefaultObjectAcl
+  name: PredefinedDefaultObjectAcl
+  href: api/Google.Storage.V1.PatchBucketOptions.html#Google_Storage_V1_PatchBucketOptions_PredefinedDefaultObjectAcl
+  fullName: Google.Storage.V1.PatchBucketOptions.PredefinedDefaultObjectAcl
+- uid: Google.Storage.V1.PatchBucketOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.PatchBucketOptions.html#Google_Storage_V1_PatchBucketOptions_Projection
+  fullName: Google.Storage.V1.PatchBucketOptions.Projection
+- uid: Google.Storage.V1.PatchObjectOptions
+  name: PatchObjectOptions
+  href: api/Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions
+  fullName: Google.Storage.V1.PatchObjectOptions
+- uid: Google.Storage.V1.PatchObjectOptions.Generation
+  name: Generation
+  href: api/Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions_Generation
+  fullName: Google.Storage.V1.PatchObjectOptions.Generation
+- uid: Google.Storage.V1.PatchObjectOptions.IfGenerationMatch
+  name: IfGenerationMatch
+  href: api/Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions_IfGenerationMatch
+  fullName: Google.Storage.V1.PatchObjectOptions.IfGenerationMatch
+- uid: Google.Storage.V1.PatchObjectOptions.IfGenerationNotMatch
+  name: IfGenerationNotMatch
+  href: api/Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions_IfGenerationNotMatch
+  fullName: Google.Storage.V1.PatchObjectOptions.IfGenerationNotMatch
+- uid: Google.Storage.V1.PatchObjectOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.PatchObjectOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.PatchObjectOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.PatchObjectOptions.IfMetagenerationNotMatch
+- uid: Google.Storage.V1.PatchObjectOptions.PredefinedAcl
+  name: PredefinedAcl
+  href: api/Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions_PredefinedAcl
+  fullName: Google.Storage.V1.PatchObjectOptions.PredefinedAcl
+- uid: Google.Storage.V1.PatchObjectOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions_Projection
+  fullName: Google.Storage.V1.PatchObjectOptions.Projection
+- uid: Google.Storage.V1.PredefinedBucketAcl
+  name: PredefinedBucketAcl
+  href: api/Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl
+  fullName: Google.Storage.V1.PredefinedBucketAcl
+- uid: Google.Storage.V1.PredefinedBucketAcl.AuthenticatedRead
+  name: AuthenticatedRead
+  href: api/Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl_AuthenticatedRead
+  fullName: Google.Storage.V1.PredefinedBucketAcl.AuthenticatedRead
+- uid: Google.Storage.V1.PredefinedBucketAcl.Private
+  name: Private
+  href: api/Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl_Private
+  fullName: Google.Storage.V1.PredefinedBucketAcl.Private
+- uid: Google.Storage.V1.PredefinedBucketAcl.ProjectPrivate
+  name: ProjectPrivate
+  href: api/Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl_ProjectPrivate
+  fullName: Google.Storage.V1.PredefinedBucketAcl.ProjectPrivate
+- uid: Google.Storage.V1.PredefinedBucketAcl.PublicRead
+  name: PublicRead
+  href: api/Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl_PublicRead
+  fullName: Google.Storage.V1.PredefinedBucketAcl.PublicRead
+- uid: Google.Storage.V1.PredefinedBucketAcl.PublicReadWrite
+  name: PublicReadWrite
+  href: api/Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl_PublicReadWrite
+  fullName: Google.Storage.V1.PredefinedBucketAcl.PublicReadWrite
+- uid: Google.Storage.V1.PredefinedObjectAcl
+  name: PredefinedObjectAcl
+  href: api/Google.Storage.V1.PredefinedObjectAcl.html#Google_Storage_V1_PredefinedObjectAcl
+  fullName: Google.Storage.V1.PredefinedObjectAcl
+- uid: Google.Storage.V1.PredefinedObjectAcl.AuthenticatedRead
+  name: AuthenticatedRead
+  href: api/Google.Storage.V1.PredefinedObjectAcl.html#Google_Storage_V1_PredefinedObjectAcl_AuthenticatedRead
+  fullName: Google.Storage.V1.PredefinedObjectAcl.AuthenticatedRead
+- uid: Google.Storage.V1.PredefinedObjectAcl.BucketOwnerFullControl
+  name: BucketOwnerFullControl
+  href: api/Google.Storage.V1.PredefinedObjectAcl.html#Google_Storage_V1_PredefinedObjectAcl_BucketOwnerFullControl
+  fullName: Google.Storage.V1.PredefinedObjectAcl.BucketOwnerFullControl
+- uid: Google.Storage.V1.PredefinedObjectAcl.BucketOwnerRead
+  name: BucketOwnerRead
+  href: api/Google.Storage.V1.PredefinedObjectAcl.html#Google_Storage_V1_PredefinedObjectAcl_BucketOwnerRead
+  fullName: Google.Storage.V1.PredefinedObjectAcl.BucketOwnerRead
+- uid: Google.Storage.V1.PredefinedObjectAcl.Private
+  name: Private
+  href: api/Google.Storage.V1.PredefinedObjectAcl.html#Google_Storage_V1_PredefinedObjectAcl_Private
+  fullName: Google.Storage.V1.PredefinedObjectAcl.Private
+- uid: Google.Storage.V1.PredefinedObjectAcl.ProjectPrivate
+  name: ProjectPrivate
+  href: api/Google.Storage.V1.PredefinedObjectAcl.html#Google_Storage_V1_PredefinedObjectAcl_ProjectPrivate
+  fullName: Google.Storage.V1.PredefinedObjectAcl.ProjectPrivate
+- uid: Google.Storage.V1.PredefinedObjectAcl.PublicRead
+  name: PublicRead
+  href: api/Google.Storage.V1.PredefinedObjectAcl.html#Google_Storage_V1_PredefinedObjectAcl_PublicRead
+  fullName: Google.Storage.V1.PredefinedObjectAcl.PublicRead
+- uid: Google.Storage.V1.Projection
+  name: Projection
+  href: api/Google.Storage.V1.Projection.html#Google_Storage_V1_Projection
+  fullName: Google.Storage.V1.Projection
+- uid: Google.Storage.V1.Projection.Full
+  name: Full
+  href: api/Google.Storage.V1.Projection.html#Google_Storage_V1_Projection_Full
+  fullName: Google.Storage.V1.Projection.Full
+- uid: Google.Storage.V1.Projection.NoAcl
+  name: NoAcl
+  href: api/Google.Storage.V1.Projection.html#Google_Storage_V1_Projection_NoAcl
+  fullName: Google.Storage.V1.Projection.NoAcl
 - uid: Google.Storage.V1.StorageClient
   name: StorageClient
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient
   fullName: Google.Storage.V1.StorageClient
+- uid: Google.Storage.V1.StorageClient.CopyObject(System.String,System.String,System.String,System.String,Google.Storage.V1.CopyObjectOptions)
+  name: CopyObject(String, String, String, String, CopyObjectOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CopyObject_System_String_System_String_System_String_System_String_Google_Storage_V1_CopyObjectOptions_
+  fullName: Google.Storage.V1.StorageClient.CopyObject(System.String, System.String, System.String, System.String, Google.Storage.V1.CopyObjectOptions)
+- uid: Google.Storage.V1.StorageClient.CopyObjectAsync(System.String,System.String,System.String,System.String,Google.Storage.V1.CopyObjectOptions,System.Threading.CancellationToken)
+  name: CopyObjectAsync(String, String, String, String, CopyObjectOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CopyObjectAsync_System_String_System_String_System_String_System_String_Google_Storage_V1_CopyObjectOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.CopyObjectAsync(System.String, System.String, System.String, System.String, Google.Storage.V1.CopyObjectOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClient.Create(Google.Apis.Auth.OAuth2.GoogleCredential)
   name: Create(GoogleCredential)
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_
@@ -25638,6 +25964,38 @@ references:
   name: CreateAsync(GoogleCredential)
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_
   fullName: Google.Storage.V1.StorageClient.CreateAsync(Google.Apis.Auth.OAuth2.GoogleCredential)
+- uid: Google.Storage.V1.StorageClient.CreateBucket(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.CreateBucketOptions)
+  name: CreateBucket(String, Bucket, CreateBucketOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CreateBucket_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_CreateBucketOptions_
+  fullName: Google.Storage.V1.StorageClient.CreateBucket(System.String, Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.CreateBucketOptions)
+- uid: Google.Storage.V1.StorageClient.CreateBucket(System.String,System.String,Google.Storage.V1.CreateBucketOptions)
+  name: CreateBucket(String, String, CreateBucketOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Storage_V1_CreateBucketOptions_
+  fullName: Google.Storage.V1.StorageClient.CreateBucket(System.String, System.String, Google.Storage.V1.CreateBucketOptions)
+- uid: Google.Storage.V1.StorageClient.CreateBucketAsync(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)
+  name: CreateBucketAsync(String, Bucket, CreateBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CreateBucketAsync_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.CreateBucketAsync(System.String, Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.CreateBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClient.CreateBucketAsync(System.String,System.String,Google.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)
+  name: CreateBucketAsync(String, String, CreateBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_CreateBucketAsync_System_String_System_String_Google_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.CreateBucketAsync(System.String, System.String, Google.Storage.V1.CreateBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClient.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.DeleteBucketOptions)
+  name: DeleteBucket(Bucket, DeleteBucketOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_DeleteBucketOptions_
+  fullName: Google.Storage.V1.StorageClient.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.DeleteBucketOptions)
+- uid: Google.Storage.V1.StorageClient.DeleteBucket(System.String,Google.Storage.V1.DeleteBucketOptions)
+  name: DeleteBucket(String, DeleteBucketOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Storage_V1_DeleteBucketOptions_
+  fullName: Google.Storage.V1.StorageClient.DeleteBucket(System.String, Google.Storage.V1.DeleteBucketOptions)
+- uid: Google.Storage.V1.StorageClient.DeleteBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)
+  name: DeleteBucketAsync(Bucket, DeleteBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DeleteBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.DeleteBucketAsync(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.DeleteBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClient.DeleteBucketAsync(System.String,Google.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)
+  name: DeleteBucketAsync(String, DeleteBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DeleteBucketAsync_System_String_Google_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.DeleteBucketAsync(System.String, Google.Storage.V1.DeleteBucketOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClient.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.DeleteObjectOptions)
   name: DeleteObject(Object, DeleteObjectOptions)
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_
@@ -25678,6 +26036,14 @@ references:
   name.vb: DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress(Of IDownloadProgress))
   fullName: Google.Storage.V1.StorageClient.DownloadObjectAsync(System.String, System.String, System.IO.Stream, Google.Storage.V1.DownloadObjectOptions, System.Threading.CancellationToken, System.IProgress<Google.Apis.Download.IDownloadProgress>)
   fullName.vb: Google.Storage.V1.StorageClient.DownloadObjectAsync(System.String, System.String, System.IO.Stream, Google.Storage.V1.DownloadObjectOptions, System.Threading.CancellationToken, System.IProgress(Of Google.Apis.Download.IDownloadProgress))
+- uid: Google.Storage.V1.StorageClient.GetBucket(System.String,Google.Storage.V1.GetBucketOptions)
+  name: GetBucket(String, GetBucketOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_GetBucket_System_String_Google_Storage_V1_GetBucketOptions_
+  fullName: Google.Storage.V1.StorageClient.GetBucket(System.String, Google.Storage.V1.GetBucketOptions)
+- uid: Google.Storage.V1.StorageClient.GetBucketAsync(System.String,Google.Storage.V1.GetBucketOptions,System.Threading.CancellationToken)
+  name: GetBucketAsync(String, GetBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_GetBucketAsync_System_String_Google_Storage_V1_GetBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.GetBucketAsync(System.String, Google.Storage.V1.GetBucketOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClient.GetObject(System.String,System.String,Google.Storage.V1.GetObjectOptions)
   name: GetObject(String, String, GetObjectOptions)
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Storage_V1_GetObjectOptions_
@@ -25702,10 +26068,42 @@ references:
   name: ListObjects(String, String, ListObjectsOptions)
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Storage_V1_ListObjectsOptions_
   fullName: Google.Storage.V1.StorageClient.ListObjects(System.String, System.String, Google.Storage.V1.ListObjectsOptions)
+- uid: Google.Storage.V1.StorageClient.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.PatchBucketOptions)
+  name: PatchBucket(Bucket, PatchBucketOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_PatchBucketOptions_
+  fullName: Google.Storage.V1.StorageClient.PatchBucket(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.PatchBucketOptions)
+- uid: Google.Storage.V1.StorageClient.PatchBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.PatchBucketOptions,System.Threading.CancellationToken)
+  name: PatchBucketAsync(Bucket, PatchBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_PatchBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_PatchBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.PatchBucketAsync(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.PatchBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClient.PatchObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.PatchObjectOptions)
+  name: PatchObject(Object, PatchObjectOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_PatchObjectOptions_
+  fullName: Google.Storage.V1.StorageClient.PatchObject(Google.Apis.Storage.v1.Data.Object, Google.Storage.V1.PatchObjectOptions)
+- uid: Google.Storage.V1.StorageClient.PatchObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.PatchObjectOptions,System.Threading.CancellationToken)
+  name: PatchObjectAsync(Object, PatchObjectOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_PatchObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_PatchObjectOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.PatchObjectAsync(Google.Apis.Storage.v1.Data.Object, Google.Storage.V1.PatchObjectOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClient.Service
   name: Service
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_Service
   fullName: Google.Storage.V1.StorageClient.Service
+- uid: Google.Storage.V1.StorageClient.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.UpdateBucketOptions)
+  name: UpdateBucket(Bucket, UpdateBucketOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_UpdateBucketOptions_
+  fullName: Google.Storage.V1.StorageClient.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.UpdateBucketOptions)
+- uid: Google.Storage.V1.StorageClient.UpdateBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.UpdateBucketOptions,System.Threading.CancellationToken)
+  name: UpdateBucketAsync(Bucket, UpdateBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.UpdateBucketAsync(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.UpdateBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClient.UpdateObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.UpdateObjectOptions)
+  name: UpdateObject(Object, UpdateObjectOptions)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_UpdateObjectOptions_
+  fullName: Google.Storage.V1.StorageClient.UpdateObject(Google.Apis.Storage.v1.Data.Object, Google.Storage.V1.UpdateObjectOptions)
+- uid: Google.Storage.V1.StorageClient.UpdateObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.UpdateObjectOptions,System.Threading.CancellationToken)
+  name: UpdateObjectAsync(Object, UpdateObjectOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClient.UpdateObjectAsync(Google.Apis.Storage.v1.Data.Object, Google.Storage.V1.UpdateObjectOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClient.UploadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})
   name: UploadObject(Object, Stream, UploadObjectOptions, IProgress<IUploadProgress>)
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__
@@ -25724,10 +26122,6 @@ references:
   name.vb: UploadObjectAsync(Object, Stream, UploadObjectOptions, CancellationToken, IProgress(Of IUploadProgress))
   fullName: Google.Storage.V1.StorageClient.UploadObjectAsync(Google.Apis.Storage.v1.Data.Object, System.IO.Stream, Google.Storage.V1.UploadObjectOptions, System.Threading.CancellationToken, System.IProgress<Google.Apis.Upload.IUploadProgress>)
   fullName.vb: Google.Storage.V1.StorageClient.UploadObjectAsync(Google.Apis.Storage.v1.Data.Object, System.IO.Stream, Google.Storage.V1.UploadObjectOptions, System.Threading.CancellationToken, System.IProgress(Of Google.Apis.Upload.IUploadProgress))
-- uid: Google.Storage.V1.StorageClient.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream)
-  name: UploadObjectAsync(String, String, String, Stream)
-  href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_
-  fullName: Google.Storage.V1.StorageClient.UploadObjectAsync(System.String, System.String, System.String, System.IO.Stream)
 - uid: Google.Storage.V1.StorageClient.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Upload.IUploadProgress})
   name: UploadObjectAsync(String, String, String, Stream, UploadObjectOptions, CancellationToken, IProgress<IUploadProgress>)
   href: api/Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__
@@ -25746,6 +26140,46 @@ references:
   name: ApplicationName
   href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_ApplicationName
   fullName: Google.Storage.V1.StorageClientImpl.ApplicationName
+- uid: Google.Storage.V1.StorageClientImpl.CopyObject(System.String,System.String,System.String,System.String,Google.Storage.V1.CopyObjectOptions)
+  name: CopyObject(String, String, String, String, CopyObjectOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_CopyObject_System_String_System_String_System_String_System_String_Google_Storage_V1_CopyObjectOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.CopyObject(System.String, System.String, System.String, System.String, Google.Storage.V1.CopyObjectOptions)
+- uid: Google.Storage.V1.StorageClientImpl.CopyObjectAsync(System.String,System.String,System.String,System.String,Google.Storage.V1.CopyObjectOptions,System.Threading.CancellationToken)
+  name: CopyObjectAsync(String, String, String, String, CopyObjectOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_CopyObjectAsync_System_String_System_String_System_String_System_String_Google_Storage_V1_CopyObjectOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.CopyObjectAsync(System.String, System.String, System.String, System.String, Google.Storage.V1.CopyObjectOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClientImpl.CreateBucket(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.CreateBucketOptions)
+  name: CreateBucket(String, Bucket, CreateBucketOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_CreateBucket_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_CreateBucketOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.CreateBucket(System.String, Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.CreateBucketOptions)
+- uid: Google.Storage.V1.StorageClientImpl.CreateBucket(System.String,System.String,Google.Storage.V1.CreateBucketOptions)
+  name: CreateBucket(String, String, CreateBucketOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_CreateBucket_System_String_System_String_Google_Storage_V1_CreateBucketOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.CreateBucket(System.String, System.String, Google.Storage.V1.CreateBucketOptions)
+- uid: Google.Storage.V1.StorageClientImpl.CreateBucketAsync(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)
+  name: CreateBucketAsync(String, Bucket, CreateBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_CreateBucketAsync_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.CreateBucketAsync(System.String, Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.CreateBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClientImpl.CreateBucketAsync(System.String,System.String,Google.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)
+  name: CreateBucketAsync(String, String, CreateBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_CreateBucketAsync_System_String_System_String_Google_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.CreateBucketAsync(System.String, System.String, Google.Storage.V1.CreateBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClientImpl.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.DeleteBucketOptions)
+  name: DeleteBucket(Bucket, DeleteBucketOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_DeleteBucketOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.DeleteBucketOptions)
+- uid: Google.Storage.V1.StorageClientImpl.DeleteBucket(System.String,Google.Storage.V1.DeleteBucketOptions)
+  name: DeleteBucket(String, DeleteBucketOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_DeleteBucket_System_String_Google_Storage_V1_DeleteBucketOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.DeleteBucket(System.String, Google.Storage.V1.DeleteBucketOptions)
+- uid: Google.Storage.V1.StorageClientImpl.DeleteBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)
+  name: DeleteBucketAsync(Bucket, DeleteBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_DeleteBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.DeleteBucketAsync(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.DeleteBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClientImpl.DeleteBucketAsync(System.String,Google.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)
+  name: DeleteBucketAsync(String, DeleteBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_DeleteBucketAsync_System_String_Google_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.DeleteBucketAsync(System.String, Google.Storage.V1.DeleteBucketOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClientImpl.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.DeleteObjectOptions)
   name: DeleteObject(Object, DeleteObjectOptions)
   href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_
@@ -25786,6 +26220,14 @@ references:
   name.vb: DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress(Of IDownloadProgress))
   fullName: Google.Storage.V1.StorageClientImpl.DownloadObjectAsync(System.String, System.String, System.IO.Stream, Google.Storage.V1.DownloadObjectOptions, System.Threading.CancellationToken, System.IProgress<Google.Apis.Download.IDownloadProgress>)
   fullName.vb: Google.Storage.V1.StorageClientImpl.DownloadObjectAsync(System.String, System.String, System.IO.Stream, Google.Storage.V1.DownloadObjectOptions, System.Threading.CancellationToken, System.IProgress(Of Google.Apis.Download.IDownloadProgress))
+- uid: Google.Storage.V1.StorageClientImpl.GetBucket(System.String,Google.Storage.V1.GetBucketOptions)
+  name: GetBucket(String, GetBucketOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_GetBucket_System_String_Google_Storage_V1_GetBucketOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.GetBucket(System.String, Google.Storage.V1.GetBucketOptions)
+- uid: Google.Storage.V1.StorageClientImpl.GetBucketAsync(System.String,Google.Storage.V1.GetBucketOptions,System.Threading.CancellationToken)
+  name: GetBucketAsync(String, GetBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_GetBucketAsync_System_String_Google_Storage_V1_GetBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.GetBucketAsync(System.String, Google.Storage.V1.GetBucketOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClientImpl.GetObject(System.String,System.String,Google.Storage.V1.GetObjectOptions)
   name: GetObject(String, String, GetObjectOptions)
   href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_GetObject_System_String_System_String_Google_Storage_V1_GetObjectOptions_
@@ -25810,10 +26252,42 @@ references:
   name: ListObjects(String, String, ListObjectsOptions)
   href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_ListObjects_System_String_System_String_Google_Storage_V1_ListObjectsOptions_
   fullName: Google.Storage.V1.StorageClientImpl.ListObjects(System.String, System.String, Google.Storage.V1.ListObjectsOptions)
+- uid: Google.Storage.V1.StorageClientImpl.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.PatchBucketOptions)
+  name: PatchBucket(Bucket, PatchBucketOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_PatchBucketOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.PatchBucket(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.PatchBucketOptions)
+- uid: Google.Storage.V1.StorageClientImpl.PatchBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.PatchBucketOptions,System.Threading.CancellationToken)
+  name: PatchBucketAsync(Bucket, PatchBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_PatchBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_PatchBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.PatchBucketAsync(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.PatchBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClientImpl.PatchObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.PatchObjectOptions)
+  name: PatchObject(Object, PatchObjectOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_PatchObjectOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.PatchObject(Google.Apis.Storage.v1.Data.Object, Google.Storage.V1.PatchObjectOptions)
+- uid: Google.Storage.V1.StorageClientImpl.PatchObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.PatchObjectOptions,System.Threading.CancellationToken)
+  name: PatchObjectAsync(Object, PatchObjectOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_PatchObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_PatchObjectOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.PatchObjectAsync(Google.Apis.Storage.v1.Data.Object, Google.Storage.V1.PatchObjectOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClientImpl.Service
   name: Service
   href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_Service
   fullName: Google.Storage.V1.StorageClientImpl.Service
+- uid: Google.Storage.V1.StorageClientImpl.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.UpdateBucketOptions)
+  name: UpdateBucket(Bucket, UpdateBucketOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_UpdateBucketOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.UpdateBucketOptions)
+- uid: Google.Storage.V1.StorageClientImpl.UpdateBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.UpdateBucketOptions,System.Threading.CancellationToken)
+  name: UpdateBucketAsync(Bucket, UpdateBucketOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.UpdateBucketAsync(Google.Apis.Storage.v1.Data.Bucket, Google.Storage.V1.UpdateBucketOptions, System.Threading.CancellationToken)
+- uid: Google.Storage.V1.StorageClientImpl.UpdateObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.UpdateObjectOptions)
+  name: UpdateObject(Object, UpdateObjectOptions)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_UpdateObjectOptions_
+  fullName: Google.Storage.V1.StorageClientImpl.UpdateObject(Google.Apis.Storage.v1.Data.Object, Google.Storage.V1.UpdateObjectOptions)
+- uid: Google.Storage.V1.StorageClientImpl.UpdateObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.UpdateObjectOptions,System.Threading.CancellationToken)
+  name: UpdateObjectAsync(Object, UpdateObjectOptions, CancellationToken)
+  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken_
+  fullName: Google.Storage.V1.StorageClientImpl.UpdateObjectAsync(Google.Apis.Storage.v1.Data.Object, Google.Storage.V1.UpdateObjectOptions, System.Threading.CancellationToken)
 - uid: Google.Storage.V1.StorageClientImpl.UploadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})
   name: UploadObject(Object, Stream, UploadObjectOptions, IProgress<IUploadProgress>)
   href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__
@@ -25832,16 +26306,68 @@ references:
   name.vb: UploadObjectAsync(Object, Stream, UploadObjectOptions, CancellationToken, IProgress(Of IUploadProgress))
   fullName: Google.Storage.V1.StorageClientImpl.UploadObjectAsync(Google.Apis.Storage.v1.Data.Object, System.IO.Stream, Google.Storage.V1.UploadObjectOptions, System.Threading.CancellationToken, System.IProgress<Google.Apis.Upload.IUploadProgress>)
   fullName.vb: Google.Storage.V1.StorageClientImpl.UploadObjectAsync(Google.Apis.Storage.v1.Data.Object, System.IO.Stream, Google.Storage.V1.UploadObjectOptions, System.Threading.CancellationToken, System.IProgress(Of Google.Apis.Upload.IUploadProgress))
-- uid: Google.Storage.V1.StorageClientImpl.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream)
-  name: UploadObjectAsync(String, String, String, Stream)
-  href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_
-  fullName: Google.Storage.V1.StorageClientImpl.UploadObjectAsync(System.String, System.String, System.String, System.IO.Stream)
 - uid: Google.Storage.V1.StorageClientImpl.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream,Google.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Upload.IUploadProgress})
   name: UploadObjectAsync(String, String, String, Stream, UploadObjectOptions, CancellationToken, IProgress<IUploadProgress>)
   href: api/Google.Storage.V1.StorageClientImpl.html#Google_Storage_V1_StorageClientImpl_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_Google_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__
   name.vb: UploadObjectAsync(String, String, String, Stream, UploadObjectOptions, CancellationToken, IProgress(Of IUploadProgress))
   fullName: Google.Storage.V1.StorageClientImpl.UploadObjectAsync(System.String, System.String, System.String, System.IO.Stream, Google.Storage.V1.UploadObjectOptions, System.Threading.CancellationToken, System.IProgress<Google.Apis.Upload.IUploadProgress>)
   fullName.vb: Google.Storage.V1.StorageClientImpl.UploadObjectAsync(System.String, System.String, System.String, System.IO.Stream, Google.Storage.V1.UploadObjectOptions, System.Threading.CancellationToken, System.IProgress(Of Google.Apis.Upload.IUploadProgress))
+- uid: Google.Storage.V1.UpdateBucketOptions
+  name: UpdateBucketOptions
+  href: api/Google.Storage.V1.UpdateBucketOptions.html#Google_Storage_V1_UpdateBucketOptions
+  fullName: Google.Storage.V1.UpdateBucketOptions
+- uid: Google.Storage.V1.UpdateBucketOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.UpdateBucketOptions.html#Google_Storage_V1_UpdateBucketOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.UpdateBucketOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.UpdateBucketOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.UpdateBucketOptions.html#Google_Storage_V1_UpdateBucketOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.UpdateBucketOptions.IfMetagenerationNotMatch
+- uid: Google.Storage.V1.UpdateBucketOptions.PredefinedAcl
+  name: PredefinedAcl
+  href: api/Google.Storage.V1.UpdateBucketOptions.html#Google_Storage_V1_UpdateBucketOptions_PredefinedAcl
+  fullName: Google.Storage.V1.UpdateBucketOptions.PredefinedAcl
+- uid: Google.Storage.V1.UpdateBucketOptions.PredefinedDefaultObjectAcl
+  name: PredefinedDefaultObjectAcl
+  href: api/Google.Storage.V1.UpdateBucketOptions.html#Google_Storage_V1_UpdateBucketOptions_PredefinedDefaultObjectAcl
+  fullName: Google.Storage.V1.UpdateBucketOptions.PredefinedDefaultObjectAcl
+- uid: Google.Storage.V1.UpdateBucketOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.UpdateBucketOptions.html#Google_Storage_V1_UpdateBucketOptions_Projection
+  fullName: Google.Storage.V1.UpdateBucketOptions.Projection
+- uid: Google.Storage.V1.UpdateObjectOptions
+  name: UpdateObjectOptions
+  href: api/Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions
+  fullName: Google.Storage.V1.UpdateObjectOptions
+- uid: Google.Storage.V1.UpdateObjectOptions.Generation
+  name: Generation
+  href: api/Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions_Generation
+  fullName: Google.Storage.V1.UpdateObjectOptions.Generation
+- uid: Google.Storage.V1.UpdateObjectOptions.IfGenerationMatch
+  name: IfGenerationMatch
+  href: api/Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions_IfGenerationMatch
+  fullName: Google.Storage.V1.UpdateObjectOptions.IfGenerationMatch
+- uid: Google.Storage.V1.UpdateObjectOptions.IfGenerationNotMatch
+  name: IfGenerationNotMatch
+  href: api/Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions_IfGenerationNotMatch
+  fullName: Google.Storage.V1.UpdateObjectOptions.IfGenerationNotMatch
+- uid: Google.Storage.V1.UpdateObjectOptions.IfMetagenerationMatch
+  name: IfMetagenerationMatch
+  href: api/Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions_IfMetagenerationMatch
+  fullName: Google.Storage.V1.UpdateObjectOptions.IfMetagenerationMatch
+- uid: Google.Storage.V1.UpdateObjectOptions.IfMetagenerationNotMatch
+  name: IfMetagenerationNotMatch
+  href: api/Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions_IfMetagenerationNotMatch
+  fullName: Google.Storage.V1.UpdateObjectOptions.IfMetagenerationNotMatch
+- uid: Google.Storage.V1.UpdateObjectOptions.PredefinedAcl
+  name: PredefinedAcl
+  href: api/Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions_PredefinedAcl
+  fullName: Google.Storage.V1.UpdateObjectOptions.PredefinedAcl
+- uid: Google.Storage.V1.UpdateObjectOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions_Projection
+  fullName: Google.Storage.V1.UpdateObjectOptions.Projection
 - uid: Google.Storage.V1.UploadObjectOptions
   name: UploadObjectOptions
   href: api/Google.Storage.V1.UploadObjectOptions.html#Google_Storage_V1_UploadObjectOptions
@@ -25874,6 +26400,10 @@ references:
   name: PredefinedAcl
   href: api/Google.Storage.V1.UploadObjectOptions.html#Google_Storage_V1_UploadObjectOptions_PredefinedAcl
   fullName: Google.Storage.V1.UploadObjectOptions.PredefinedAcl
+- uid: Google.Storage.V1.UploadObjectOptions.Projection
+  name: Projection
+  href: api/Google.Storage.V1.UploadObjectOptions.html#Google_Storage_V1_UploadObjectOptions_Projection
+  fullName: Google.Storage.V1.UploadObjectOptions.Projection
 - uid: Google.Type
   name: Google.Type
   href: api/Google.Type.html#Google_Type

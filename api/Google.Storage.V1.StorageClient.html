@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StorageClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.0.0">
+    <meta name="generator" content="docfx 1.8.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -133,6 +133,187 @@ application naming etc).</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <h4 id="Google_Storage_V1_StorageClient_CopyObject_System_String_System_String_System_String_System_String_Google_Storage_V1_CopyObjectOptions_" data-uid="Google.Storage.V1.StorageClient.CopyObject(System.String,System.String,System.String,System.String,Google.Storage.V1.CopyObjectOptions)">CopyObject(String, String, String, String, CopyObjectOptions)</h4>
+              <div class="markdown level1 summary"><p>Creates a copy of an object synchronously, potentially to a different bucket.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var sourceName = &quot;greetings/hello.txt&quot;;
+var destinationName = &quot;copy.txt&quot;;
+
+// This method actually uses the &quot;rewrite&quot; API operation, for added reliability
+// when copying large objects across locations, storage classes or encryption keys.
+client.CopyObject(sourceBucket, sourceName, destinationBucket, destinationName);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Object CopyObject(string sourceBucket, string sourceObjectName, string destinationBucket, string destinationObjectName, CopyObjectOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sourceBucket</em></td>
+                    <td><p>The name of the bucket containing the object to copy. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sourceObjectName</em></td>
+                    <td><p>The name of the object to copy within the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>destinationBucket</em></td>
+                    <td><p>The name of the bucket to copy the object to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>destinationObjectName</em></td>
+                    <td><p>The name of the object within the destination bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions">CopyObjectOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the new storage object resulting from the copy.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.ArgumentException</span></td>
+                    <td><p>The arguments attempt to copy an object to itself.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_CopyObjectAsync_System_String_System_String_System_String_System_String_Google_Storage_V1_CopyObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.CopyObjectAsync(System.String,System.String,System.String,System.String,Google.Storage.V1.CopyObjectOptions,System.Threading.CancellationToken)">CopyObjectAsync(String, String, String, String, CopyObjectOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Creates a copy of an object synchronously, potentially to a different bucket.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; CopyObjectAsync(string sourceBucket, string sourceObjectName, string destinationBucket = null, string destinationObjectName = null, CopyObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sourceBucket</em></td>
+                    <td><p>The name of the bucket containing the object to copy. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sourceObjectName</em></td>
+                    <td><p>The name of the object to copy within the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>destinationBucket</em></td>
+                    <td><p>The name of the bucket to copy the object to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>destinationObjectName</em></td>
+                    <td><p>The name of the object within the destination bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.CopyObjectOptions.html#Google_Storage_V1_CopyObjectOptions">CopyObjectOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the new storage object resulting from the copy.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.ArgumentException</span></td>
+                    <td><p>The arguments attempt to copy an object to itself.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_" data-uid="Google.Storage.V1.StorageClient.Create(Google.Apis.Auth.OAuth2.GoogleCredential)">Create(GoogleCredential)</h4>
               <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient">StorageClient</a>, using application default credentials if
 no credentials are specified.</p>
@@ -225,6 +406,410 @@ no credentials are specified.</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Storage_V1_StorageClient_CreateBucket_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_CreateBucketOptions_" data-uid="Google.Storage.V1.StorageClient.CreateBucket(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.CreateBucketOptions)">CreateBucket(String, Bucket, CreateBucketOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+// GCS bucket names must be globally unique
+var bucketName = Guid.NewGuid().ToString();
+
+// Bucket defined in Google.Apis.Storage.v1.Data namespace
+var bucket = client.CreateBucket(projectId, bucketName);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Bucket CreateBucket(string projectId, Bucket bucket, CreateBucketOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><em>bucket</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.CreateBucketOptions.html#Google_Storage_V1_CreateBucketOptions">CreateBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Storage_V1_CreateBucketOptions_" data-uid="Google.Storage.V1.StorageClient.CreateBucket(System.String,System.String,Google.Storage.V1.CreateBucketOptions)">CreateBucket(String, String, CreateBucketOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+// GCS bucket names must be globally unique
+var bucketName = Guid.NewGuid().ToString();
+
+// Bucket defined in Google.Apis.Storage.v1.Data namespace
+var bucket = client.CreateBucket(projectId, bucketName);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Bucket CreateBucket(string projectId, string bucket, CreateBucketOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>bucket</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.CreateBucketOptions.html#Google_Storage_V1_CreateBucketOptions">CreateBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_CreateBucketAsync_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.CreateBucketAsync(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)">CreateBucketAsync(String, Bucket, CreateBucketOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; CreateBucketAsync(string projectId, Bucket bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><em>bucket</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.CreateBucketOptions.html#Google_Storage_V1_CreateBucketOptions">CreateBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_CreateBucketAsync_System_String_System_String_Google_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.CreateBucketAsync(System.String,System.String,Google.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)">CreateBucketAsync(String, String, CreateBucketOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; CreateBucketAsync(string projectId, string bucket, CreateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>bucket</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.CreateBucketOptions.html#Google_Storage_V1_CreateBucketOptions">CreateBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_DeleteBucketOptions_" data-uid="Google.Storage.V1.StorageClient.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.DeleteBucketOptions)">DeleteBucket(Bucket, DeleteBucketOptions)</h4>
+              <div class="markdown level1 summary"><p>Deletes a bucket synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+client.DeleteBucket(bucketName);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void DeleteBucket(Bucket bucket, DeleteBucketOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><em>bucket</em></td>
+                    <td><p>Bucket to delete. Must not be null, and must have the name populated.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.DeleteBucketOptions.html#Google_Storage_V1_DeleteBucketOptions">DeleteBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Storage_V1_DeleteBucketOptions_" data-uid="Google.Storage.V1.StorageClient.DeleteBucket(System.String,Google.Storage.V1.DeleteBucketOptions)">DeleteBucket(String, DeleteBucketOptions)</h4>
+              <div class="markdown level1 summary"><p>Deletes a bucket synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+client.DeleteBucket(bucketName);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void DeleteBucket(string bucket, DeleteBucketOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>bucket</em></td>
+                    <td><p>The name of the bucket to delete. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.DeleteBucketOptions.html#Google_Storage_V1_DeleteBucketOptions">DeleteBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_DeleteBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.DeleteBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)">DeleteBucketAsync(Bucket, DeleteBucketOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Deletes bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteBucketAsync(Bucket bucket, DeleteBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><em>bucket</em></td>
+                    <td><p>Bucket to delete. Must not be null, and must have the name populated.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.DeleteBucketOptions.html#Google_Storage_V1_DeleteBucketOptions">DeleteBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_DeleteBucketAsync_System_String_Google_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.DeleteBucketAsync(System.String,Google.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)">DeleteBucketAsync(String, DeleteBucketOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Deletes a bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteBucketAsync(string bucket, DeleteBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>bucket</em></td>
+                    <td><p>The name of the bucket to delete. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.DeleteBucketOptions.html#Google_Storage_V1_DeleteBucketOptions">DeleteBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_DeleteObjectOptions_" data-uid="Google.Storage.V1.StorageClient.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.DeleteObjectOptions)">DeleteObject(Object, DeleteObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
 </div>
@@ -281,7 +866,12 @@ defaults will be used.</p>
               <h4 id="Google_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Storage_V1_DeleteObjectOptions_" data-uid="Google.Storage.V1.StorageClient.DeleteObject(System.String,System.String,Google.Storage.V1.DeleteObjectOptions)">DeleteObject(String, String, DeleteObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var objectName = &quot;places/deleteme.txt&quot;;
+
+client.DeleteObject(bucketName, objectName);
+</code></pre></div>
               <h5 id="Google_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Storage_V1_DeleteObjectOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>
 By default this will delete the latest version of the object, but this can be
@@ -733,10 +1323,130 @@ defaults will be used.</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Storage_V1_StorageClient_GetBucket_System_String_Google_Storage_V1_GetBucketOptions_" data-uid="Google.Storage.V1.StorageClient.GetBucket(System.String,Google.Storage.V1.GetBucketOptions)">GetBucket(String, GetBucketOptions)</h4>
+              <div class="markdown level1 summary"><p>Fetches the information about a bucket synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+var bucket = client.GetBucket(bucketName);
+Console.WriteLine($&quot;Name: {bucket.Name}&quot;);
+Console.WriteLine($&quot;TimeCreated: {bucket.TimeCreated}&quot;);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Bucket GetBucket(string bucket, GetBucketOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>bucket</em></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.GetBucketOptions.html#Google_Storage_V1_GetBucketOptions">GetBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a> representation of the storage bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_GetBucketAsync_System_String_Google_Storage_V1_GetBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.GetBucketAsync(System.String,Google.Storage.V1.GetBucketOptions,System.Threading.CancellationToken)">GetBucketAsync(String, GetBucketOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Fetches the information about a bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; GetBucketAsync(string bucket, GetBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>bucket</em></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.GetBucketOptions.html#Google_Storage_V1_GetBucketOptions">GetBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a> representation of the storage bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Storage_V1_GetObjectOptions_" data-uid="Google.Storage.V1.StorageClient.GetObject(System.String,System.String,Google.Storage.V1.GetObjectOptions)">GetObject(String, String, GetObjectOptions)</h4>
               <div class="markdown level1 summary"><p>Fetches the information about an object synchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var name = &quot;greetings/hello.txt&quot;;
+
+var obj = client.GetObject(bucketName, name);
+Console.WriteLine($&quot;Name: {obj.Name}&quot;);
+Console.WriteLine($&quot;Size: {obj.Size}&quot;);
+Console.WriteLine($&quot;ContentType: {obj.ContentType}&quot;);
+Console.WriteLine($&quot;TimeCreated: {obj.TimeCreated}&quot;);
+</code></pre></div>
               <h5 id="Google_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Storage_V1_GetObjectOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</a>
 to download the content.</p>
@@ -986,7 +1696,12 @@ defaults will be supplied.</p>
               <h4 id="Google_Storage_V1_StorageClient_ListBuckets_System_String_Google_Storage_V1_ListBucketsOptions_" data-uid="Google.Storage.V1.StorageClient.ListBuckets(System.String,Google.Storage.V1.ListBucketsOptions)">ListBuckets(String, ListBucketsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the buckets for a given project, synchronously but lazily.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+// List all buckets associated with a project
+var buckets = client.ListBuckets(projectId);
+</code></pre></div>
               <h5 id="Google_Storage_V1_StorageClient_ListBuckets_System_String_Google_Storage_V1_ListBucketsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
 for a page of results at a time, as required. To retrieve all the buckets in a single collection,
@@ -1042,8 +1757,9 @@ defaults will be supplied.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">var client = StorageClient.Create();
-// List only objects with a name starting with &quot;Hello&quot;
-var objects = client.ListObjects(bucketId, &quot;Hello&quot;);
+
+// List only objects with a name starting with &quot;greet&quot;
+var objects = client.ListObjects(bucketName, &quot;greet&quot;);
 </code></pre></div>
               <h5 id="Google_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Storage_V1_ListObjectsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
@@ -1098,6 +1814,530 @@ defaults will be supplied.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
                     <td><p>A sequence of objects within the bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_PatchBucketOptions_" data-uid="Google.Storage.V1.StorageClient.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.PatchBucketOptions)">PatchBucket(Bucket, PatchBucketOptions)</h4>
+              <div class="markdown level1 summary"><p>Patches the metadata for a storage bucket synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+// Note: no fetching of the bucket beforehand. We only specify the values we want
+// to change.
+var bucket = new Bucket
+{
+    Name = bucketName,
+    Website = new Bucket.WebsiteData
+    {
+        MainPageSuffix = &quot;http://example.com&quot;,
+        NotFoundPage = &quot;http://example.com/404.html&quot;
+    }
+};
+client.PatchBucket(bucket);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Bucket PatchBucket(Bucket bucket, PatchBucketOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><em>bucket</em></td>
+                    <td><p>Bucket to update. Must not be null, and must have a populated <code>Name</code> property.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.PatchBucketOptions.html#Google_Storage_V1_PatchBucketOptions">PatchBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the updated storage bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_PatchBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_PatchBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.PatchBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.PatchBucketOptions,System.Threading.CancellationToken)">PatchBucketAsync(Bucket, PatchBucketOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Patches the metadata for a storage bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; PatchBucketAsync(Bucket bucket, PatchBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><em>bucket</em></td>
+                    <td><p>Bucket to update. Must not be null, and must have a populated <code>Name</code> property.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.PatchBucketOptions.html#Google_Storage_V1_PatchBucketOptions">PatchBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a> representation of the bucket storage bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_PatchObjectOptions_" data-uid="Google.Storage.V1.StorageClient.PatchObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.PatchObjectOptions)">PatchObject(Object, PatchObjectOptions)</h4>
+              <div class="markdown level1 summary"><p>Patches the metadata for an object in storage synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var name = &quot;patch-example.txt&quot;;
+var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
+var obj = new Apis.Storage.v1.Data.Object
+{
+    Bucket = bucketName,
+    Name = name,
+    ContentType = &quot;text/json&quot;, // Deliberately incorrect
+    Metadata = new Dictionary&lt;string, string&gt;
+    {
+        { &quot;key1&quot;, &quot;value1&quot; },
+        { &quot;key2&quot;, &quot;value2&quot; }
+    }
+};
+client.UploadObject(obj, new MemoryStream(content));
+
+var patchObject = new Apis.Storage.v1.Data.Object
+{
+    // The bucket and name are required; everything else is optional.
+    // Only specified properties will be updated.
+    Bucket = bucketName,
+    Name = name,
+    ContentType = &quot;text/plain&quot;,
+    Metadata = new Dictionary&lt;string, string&gt;
+    {
+        { &quot;key2&quot;, &quot;updated-value2&quot; },
+        { &quot;key3&quot;, &quot;value3&quot; }
+    }
+};
+client.PatchObject(patchObject);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Object PatchObject(Object obj, PatchObjectOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><em>obj</em></td>
+                    <td><p>Object to update. Must not be null, and must have populated <code>Name</code> and
+<code>Bucket</code> properties.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions">PatchObjectOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the updated storage object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_PatchObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_PatchObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.PatchObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.PatchObjectOptions,System.Threading.CancellationToken)">PatchObjectAsync(Object, PatchObjectOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Patches the metadata for an object in storage asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; PatchObjectAsync(Object obj, PatchObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><em>obj</em></td>
+                    <td><p>Object to update. Must not be null, and must have populated <code>Name</code> and
+<code>Bucket</code> properties.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.PatchObjectOptions.html#Google_Storage_V1_PatchObjectOptions">PatchObjectOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the updated storage object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_UpdateBucketOptions_" data-uid="Google.Storage.V1.StorageClient.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.UpdateBucketOptions)">UpdateBucket(Bucket, UpdateBucketOptions)</h4>
+              <div class="markdown level1 summary"><p>Updates the metadata for a storage bucket synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var bucket = client.GetBucket(bucketName, new GetBucketOptions { Projection = Projection.Full });
+bucket.Website = new Bucket.WebsiteData
+{
+    MainPageSuffix = &quot;http://example.com&quot;,
+    NotFoundPage = &quot;http://example.com/404.html&quot;
+};
+client.UpdateBucket(bucket);
+</code></pre></div>
+              <h5 id="Google_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_UpdateBucketOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>As this is a full update, <em>bucket</em> must be fully populated. This is typically
+obtained by performing another operation (such as <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_GetBucket_System_String_Google_Storage_V1_GetBucketOptions_">GetBucket(String, GetBucketOptions)</a>
+with a &quot;full&quot; projection, and then modifying the returned object.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Bucket UpdateBucket(Bucket bucket, UpdateBucketOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><em>bucket</em></td>
+                    <td><p>Bucket to update. Must not be null, and must have populated <code>Name</code>,
+<code>Bucket</code> and <code>Acl</code> properties.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.UpdateBucketOptions.html#Google_Storage_V1_UpdateBucketOptions">UpdateBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a> representation of the updated storage bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.UpdateBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.UpdateBucketOptions,System.Threading.CancellationToken)">UpdateBucketAsync(Bucket, UpdateBucketOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Updates the metadata for storage bucket asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Storage_V1_StorageClient_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>As this is a full update, <em>bucket</em> must be fully populated. This is typically
+obtained by performing another operation (such as <see cref="!:GetBucketAsync(string, string, GetObjectOptions)"></see>
+with a &quot;full&quot; projection, and then modifying the returned object.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Bucket&gt; UpdateBucketAsync(Bucket bucket, UpdateBucketOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><em>bucket</em></td>
+                    <td><p>Bucket to update. Must not be null, and must have populated <code>Name</code>
+and <code>Acl</code> properties.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.UpdateBucketOptions.html#Google_Storage_V1_UpdateBucketOptions">UpdateBucketOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a> representation of the storage bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_UpdateObjectOptions_" data-uid="Google.Storage.V1.StorageClient.UpdateObject(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.UpdateObjectOptions)">UpdateObject(Object, UpdateObjectOptions)</h4>
+              <div class="markdown level1 summary"><p>Updates the metadata for an object in storage synchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var name = &quot;update-example.txt&quot;;
+var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
+var obj = new Apis.Storage.v1.Data.Object
+{
+    Bucket = bucketName,
+    Name = name,
+    ContentType = &quot;text/json&quot;,
+    Metadata = new Dictionary&lt;string, string&gt;
+    {
+        { &quot;key1&quot;, &quot;value1&quot; },
+        { &quot;key2&quot;, &quot;value2&quot; }
+    }
+};
+// The update call requires full object information, so we set the projection to &quot;full&quot; here.
+// An alternative would be to upload the object and then separately fetch it, again with
+// a full projection.
+obj = client.UploadObject(obj, new MemoryStream(content), new UploadObjectOptions { Projection = Projection.Full });
+obj.Metadata.Remove(&quot;key1&quot;);
+obj.Metadata[&quot;key2&quot;] = &quot;updated-value2&quot;;
+obj.Metadata[&quot;key3&quot;] = &quot;value3&quot;;
+obj.ContentType = &quot;text/plain&quot;;
+client.UpdateObject(obj);
+</code></pre></div>
+              <h5 id="Google_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_UpdateObjectOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>As this is a full update, <em>obj</em> must be fully populated. This is typically
+obtained by performing another operation (such as <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Storage_V1_GetObjectOptions_">GetObject(String, String, GetObjectOptions)</a>
+with a &quot;full&quot; projection, and then modifying the returned object.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Object UpdateObject(Object obj, UpdateObjectOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><em>obj</em></td>
+                    <td><p>Object to update. Must not be null, and must have populated <code>Name</code>,
+<code>Bucket</code> and <code>Acl</code> properties.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions">UpdateObjectOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the updated storage object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Storage_V1_StorageClient_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.UpdateObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Storage.V1.UpdateObjectOptions,System.Threading.CancellationToken)">UpdateObjectAsync(Object, UpdateObjectOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Updates the metadata for an object in storage asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Storage_V1_StorageClient_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>As this is a full update, <em>obj</em> must be fully populated. This is typically
+obtained by performing another operation (such as <see cref="!:GetObjectAsync(string, string, GetObjectOptions)"></see>
+with a &quot;full&quot; projection, and then modifying the returned object.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UpdateObjectAsync(Object obj, UpdateObjectOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><em>obj</em></td>
+                    <td><p>Object to update. Must not be null, and must have populated <code>Name</code>,
+<code>Bucket</code> and <code>Acl</code> properties.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.UpdateObjectOptions.html#Google_Storage_V1_UpdateObjectOptions">UpdateObjectOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the</p>
+<p><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the storage object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1286,68 +2526,6 @@ defaults will be used.</p>
                     <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress">IUploadProgress</a>&gt;</td>
                     <td><em>progress</em></td>
                     <td><p>Progress reporter for the upload. May be null.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
-                    <td><p>A task representing the asynchronous operation, with a result returning the</p>
-<p><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a> representation of the uploaded object.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Storage_V1_StorageClient_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_" data-uid="Google.Storage.V1.StorageClient.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream)">UploadObjectAsync(String, String, String, Stream)</h4>
-              <div class="markdown level1 summary"><p>Uploads the data for an object in storage asynchronously, from a specified stream.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Object&gt; UploadObjectAsync(string bucket, string objectName, string contentType, Stream source)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
-                    <td><p>The name of the bucket containing the object. Must not be null.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
-                    <td><p>The name of the object within the bucket. Must not be null.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>contentType</em></td>
-                    <td><p>The content type of the object. This should be a MIME type
-such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. May be null.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>source</em></td>
-                    <td><p>The stream to read the data from. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
