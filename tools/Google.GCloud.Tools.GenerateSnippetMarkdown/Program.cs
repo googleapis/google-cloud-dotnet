@@ -113,8 +113,8 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
             // We want to use prefix matching for overload resolution, as well as avoiding false-positives
             // due to short names. So two situations:
             // <Foo> - match project.client.Foo(
-            // <Foo_Bar> - match project.client.Foo(Bar
-            string methodStart = snippetName.Contains("_") ? snippetName.Replace("_", "(") : snippetName + "(";
+            // <Foo_Bar__Baz> - match project.client.Foo(Bar,Baz
+            string methodStart = snippetName.Contains("_") ? snippetName.Replace("__", ",").Replace("_", "(") : snippetName + "(";
             return uid.StartsWith($"{projectName}.{clientName}.{methodStart}");
         }
 
