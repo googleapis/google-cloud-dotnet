@@ -18,6 +18,7 @@ using Google.Api.Gax;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
@@ -94,7 +95,7 @@ namespace Google.Pubsub.V1
         /// for "NonIdempotent" <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode">s eligilbe for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
             RetrySettings.FilterForStatusCodes();
@@ -765,10 +766,16 @@ namespace Google.Pubsub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
+        /// <param name="pageToken">The token returned from the previous request.
+        /// <c>Null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request, the response will not be larger
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual IAsyncEnumerable<Subscription> ListSubscriptionsAsync(
+        /// <returns>An asynchronous sequence of pages of Subscription items.</returns>
+        public virtual IPagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsPageStreamAsync(
             string project,
+            string pageToken = null,
+            int? pageSize = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -778,10 +785,16 @@ namespace Google.Pubsub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
+        /// <param name="pageToken">The token returned from the previous request.
+        /// <c>Null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request, the response will not be larger
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IEnumerable<Subscription> ListSubscriptions(
+        /// <returns>A sequence of pages of Subscription items.</returns>
+        public virtual IPagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsPageStream(
             string project,
+            string pageToken = null,
+            int? pageSize = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1161,17 +1174,6 @@ namespace Google.Pubsub.V1
 
     public sealed partial class SubscriberClientImpl : SubscriberClient
     {
-        private static readonly PageStreamer<Subscription, ListSubscriptionsRequest, ListSubscriptionsResponse, string> s_listSubscriptionsPageStreamer =
-            new PageStreamer<Subscription, ListSubscriptionsRequest, ListSubscriptionsResponse, string>(
-                (request, token) => {
-                    request.PageToken = token;
-                    return request;
-                },
-                response => response.NextPageToken,
-                response => response.Subscriptions,
-                "" // An empty page-token
-            );
-
         private readonly ClientHelper _clientHelper;
         private readonly ApiCall<Subscription, Subscription> _callCreateSubscription;
         private readonly ApiCall<GetSubscriptionRequest, Subscription> _callGetSubscription;
@@ -1367,33 +1369,49 @@ namespace Google.Pubsub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
+        /// <param name="pageToken">The token returned from the previous request.
+        /// <c>Null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request, the response will not be larger
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override IAsyncEnumerable<Subscription> ListSubscriptionsAsync(
+        /// <returns>An asynchronous sequence of pages of Subscription items.</returns>
+        public override IPagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsPageStreamAsync(
             string project,
-            CallSettings callSettings = null) => s_listSubscriptionsPageStreamer.FetchAsync(
-                callSettings,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(
+                _callListSubscriptions,
                 new ListSubscriptionsRequest
                 {
                     Project = project,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
                 },
-                _callListSubscriptions);
+                callSettings);
 
         /// <summary>
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
+        /// <param name="pageToken">The token returned from the previous request.
+        /// <c>Null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request, the response will not be larger
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override IEnumerable<Subscription> ListSubscriptions(
+        /// <returns>A sequence of pages of Subscription items.</returns>
+        public override IPagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsPageStream(
             string project,
-            CallSettings callSettings = null) => s_listSubscriptionsPageStreamer.Fetch(
-                callSettings,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => new PagedEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(
+                _callListSubscriptions,
                 new ListSubscriptionsRequest
                 {
                     Project = project,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
                 },
-                _callListSubscriptions);
+                callSettings);
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
@@ -1674,4 +1692,14 @@ namespace Google.Pubsub.V1
                 callSettings);
 
     }
+
+    // Partial classes to enable page-streaming
+
+    public partial class ListSubscriptionsRequest : IPageRequest { }
+    public partial class ListSubscriptionsResponse : IPageResponse<Subscription>
+    {
+        public IEnumerator<Subscription> GetEnumerator() => Subscriptions.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
 }

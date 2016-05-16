@@ -78,7 +78,7 @@ namespace Google.Datastore.V1Beta3
         /// for "None" <see cref="DatastoreClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode">s eligilbe for retry for "None" RPC methods.
+        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "None" RPC methods.
         /// </remarks>
         public static Predicate<RpcException> NoneRetryFilter { get; } =
             RetrySettings.FilterForStatusCodes();
@@ -90,16 +90,16 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>
         /// The "Default" retry backoff for <see cref="DatastoreClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Initial delay: 300 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.2</description></item>
-        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 3000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
         {
-            Delay = TimeSpan.FromMilliseconds(100),
+            Delay = TimeSpan.FromMilliseconds(300),
             DelayMultiplier = 1.2,
-            MaxDelay = TimeSpan.FromMilliseconds(1000),
+            MaxDelay = TimeSpan.FromMilliseconds(3000),
         };
 
         /// <summary>
@@ -109,16 +109,16 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="DatastoreClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 300 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.3</description></item>
-        /// <item><description>Maximum timeout: 3000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 3000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
         {
-            Delay = TimeSpan.FromMilliseconds(300),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(3000),
+            Delay = TimeSpan.FromMilliseconds(3000),
+            DelayMultiplier = 1.5,
+            MaxDelay = TimeSpan.FromMilliseconds(20000),
         };
 
         /// <summary>
@@ -129,12 +129,12 @@ namespace Google.Datastore.V1Beta3
         /// The default <see cref="DatastoreClient.Lookup"/> and
         /// <see cref="DatastoreClient.LookupAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 300 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 300 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.3</description></item>
-        /// <item><description>Timeout maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 3000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -161,12 +161,12 @@ namespace Google.Datastore.V1Beta3
         /// The default <see cref="DatastoreClient.RunQuery"/> and
         /// <see cref="DatastoreClient.RunQueryAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 300 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 300 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.3</description></item>
-        /// <item><description>Timeout maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 3000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -193,12 +193,12 @@ namespace Google.Datastore.V1Beta3
         /// The default <see cref="DatastoreClient.BeginTransaction"/> and
         /// <see cref="DatastoreClient.BeginTransactionAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 300 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 300 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.3</description></item>
-        /// <item><description>Timeout maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 3000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -225,12 +225,12 @@ namespace Google.Datastore.V1Beta3
         /// The default <see cref="DatastoreClient.Commit"/> and
         /// <see cref="DatastoreClient.CommitAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 300 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 300 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.3</description></item>
-        /// <item><description>Timeout maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 3000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -257,12 +257,12 @@ namespace Google.Datastore.V1Beta3
         /// The default <see cref="DatastoreClient.Rollback"/> and
         /// <see cref="DatastoreClient.RollbackAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 300 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 300 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.3</description></item>
-        /// <item><description>Timeout maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 3000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -289,12 +289,12 @@ namespace Google.Datastore.V1Beta3
         /// The default <see cref="DatastoreClient.AllocateIds"/> and
         /// <see cref="DatastoreClient.AllocateIdsAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 300 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 300 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.3</description></item>
-        /// <item><description>Timeout maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Retry maximum delay: 3000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 3000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -1443,4 +1443,7 @@ namespace Google.Datastore.V1Beta3
                 callSettings);
 
     }
+
+    // Partial classes to enable page-streaming
+
 }

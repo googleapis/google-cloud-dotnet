@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Pubsub.V1;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ public class SubscriberClientSnippets
         // Alternative: use a known project resource name:
         // projects/{PROJECT_ID}
         string projectName = SubscriberClient.GetProjectName("PROJECT_ID");
-        foreach (Subscription subscription in client.ListSubscriptions(projectName))
+        foreach (Subscription subscription in client.ListSubscriptionsPageStream(projectName).Flatten())
         {
             Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");
         }
@@ -43,7 +44,7 @@ public class SubscriberClientSnippets
         // Alternative: use a known project resource name:
         // projects/{PROJECT_ID}
         string projectName = SubscriberClient.GetProjectName("{PROJECT_ID}");
-        IAsyncEnumerable<Subscription> subscriptions = client.ListSubscriptionsAsync(projectName);
+        IAsyncEnumerable<Subscription> subscriptions = client.ListSubscriptionsPageStreamAsync(projectName).Flatten();
         await subscriptions.ForEachAsync(subscription =>
         {
             Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");
@@ -93,7 +94,7 @@ public class SubscriberClientSnippets
         // Alternative: use an existing subscription resource name:
         // projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
         string subscriptionName = SubscriberClient.GetSubscriptionName("{PROJECT_ID}", "{SUBSCRIPTION_ID}");
-        
+
         PullResponse pullResponse = client.Pull(subscriptionName, returnImmediately: false, maxMessages: 100);
         foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
         {
