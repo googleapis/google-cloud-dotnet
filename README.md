@@ -25,7 +25,6 @@ If you need support for other Google APIs, check out the [Google .NET API Client
 
 * [getting-started-dotnet] - A [quickstart and tutorial][language-landing-dotnet] that demonstrates how to build a complete web application using Cloud Datastore, Cloud Storage, and Cloud Pub/Sub and deploy it to Google App Engine or Google Compute Engine.
 
-
 ## Requirements
 
 In order to build the code in this repository, you will need
@@ -37,24 +36,22 @@ component written in native code. Using that component from DNX
 currently [requires a workaround][grpc-workaround]; on Windows please run `fix_dnx_grpc.bat`
 before running any gRPC code.
 
+## Authentication
 
-Contributing
-------------
+## Contributing
 
 Contributions to this library are always welcome and highly encouraged.
 
 See [CONTRIBUTING] for more information on how to get started.
 
-Versioning
-----------
+## Versioning
 
 These libraries follow [Semantic Versioning](http://semver.org/).
 
 Anything with a major version of zero (``0.y.z``) should not be
 considered stable - anything may change at any time.
 
-License
--------
+## License
 
 Apache 2.0 - See [LICENSE] for more information.
 
