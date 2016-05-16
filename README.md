@@ -76,6 +76,15 @@ Next, choose a method for authenticating API requests from within your project:
 - [API Reference][cloud-bigquery-ref]
 - [API Overview][cloud-bigquery-docs]
 
+The BigQuery client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+
+### Installation
+The package is available from Google's [public MyGet feed][google-myget-feed] and can be installed in the following manner:
+
+```sh
+PM> Install-Package Google.Bigquery.V2
+```
+
 #### Example
 
 ```dotnet
@@ -87,6 +96,15 @@ using Google.Bigquery.V2;
 
 - [API Reference][cloud-datastore-ref]
 - [API Overview][cloud-datastore-docs]
+
+The Cloud Datastore client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+
+### Installation
+The package is available from Google's [public MyGet feed][google-myget-feed] and can be installed in the following manner:
+
+```sh
+PM> Install-Package Google.Datastore.V1Beta3
+```
 
 #### Example
 
@@ -100,6 +118,15 @@ using Google.Datastore.V1Beta3;
 - [API Reference][cloud-logging-ref]
 - [API Overview][cloud-logging-docs]
 
+The Cloud Logging client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+
+### Installation
+The package is available from Google's [public MyGet feed][google-myget-feed] and can be installed in the following manner:
+
+```sh
+PM> Install-Package Google.Logging.V2
+```
+
 #### Example
 
 ```dotnet
@@ -112,6 +139,15 @@ using Google.Logging.V2;
 - [API Reference][cloud-pubsub-ref]
 - [API Overview][cloud-pubsub-docs]
 
+The Cloud Pub/Sub client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+
+### Installation
+The package is available from Google's [public MyGet feed][google-myget-feed] and can be installed in the following manner:
+
+```sh
+PM> Install-Package Google.Pubsub.V1
+```
+
 #### Example
 
 ```dotnet
@@ -123,6 +159,15 @@ using Google.Pubsub.V1;
 
 - [API Reference][cloud-storage-ref]
 - [API Overview][cloud-storage-docs]
+
+The Cloud Storage client libary is in a more advanced state. However, there is no guarantee that the API surface will stay stable until we reach 1.0 - but we have high confidence that the libraries work and are usable.
+
+### Installation
+The package is available from [NuGet](https://www.nuget.org/packages/Google.Storage.V1) and can be installed in the following manner:
+
+```sh
+PM> Install-Package Google.Storage.V1 -Pre
+```
 
 #### Example
 
@@ -159,6 +204,7 @@ Apache 2.0 - See [LICENSE] for more information.
 [cloud-common-authentication]: https://github.com/GoogleCloudPlatform/gcloud-common/blob/master/authentication/readme.md#authentication
 [google-cloud-sdk]: https://cloud.google.com/sdk/
 [google-download-sdk]: https://cloud.google.com/sdk/docs/
+[google-myget-feed]: https://www.myget.org/gallery/google-dotnet-public/
 [cloud-bigquery-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Bigquery.V2.html
 [cloud-datastore-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Datastore.V1Beta3.html
 [cloud-logging-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Logging.V2.html
