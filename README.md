@@ -43,10 +43,12 @@ Most `gcloud-dotnet` libraries require a project ID.  There are multiple ways to
 1. When using `gcloud-dotnet` libraries from within Compute/App Engine, there's no need to specify a project ID.  It is automatically inferred from the production environment.
 2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
     * Define the environment variable GCLOUD_PROJECT to be your desired project ID. For example:
+
       ```bash
       set GCLOUD_PROJECT=PROJECT_ID
       ```
     * If running locally for development/testing, set the project ID using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, and set the project ID from the command line. For example:
+    
       ```bash
       gcloud config set project PROJECT_ID
       ```
@@ -59,10 +61,12 @@ Next, choose a method for authenticating API requests from within your project:
 1. When using `gcloud-dotnet` libraries from within Compute/App Engine, no additional authentication steps are necessary.
 2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
     * Define the environment variable GOOGLE_APPLICATION_CREDENTIALS to be the location of the key.  For example:
+
       ```bash
       set GOOGLE_APPLICATION_CREDENTIALS=/path/to/my/key.json
       ``` 
     * If running locally for development/testing, you can authenticate using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, then login by running the following in the command line:
+
       ```bash
       gcloud auth login
       ```
