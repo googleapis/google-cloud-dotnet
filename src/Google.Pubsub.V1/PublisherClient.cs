@@ -622,7 +622,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronously pageable enumerable of Topic items.</returns>
         public virtual IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsPageStreamAsync(
@@ -641,7 +641,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An pageable enumerable of Topic items.</returns>
         public virtual IPagedEnumerable<ListTopicsResponse, Topic> ListTopicsPageStream(
@@ -660,7 +660,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronously pageable enumerable of string items.</returns>
         public virtual IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsPageStreamAsync(
@@ -679,7 +679,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An pageable enumerable of string items.</returns>
         public virtual IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsPageStream(
@@ -895,7 +895,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronously pageable enumerable of Topic items.</returns>
         public override IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsPageStreamAsync(
@@ -919,7 +919,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An pageable enumerable of Topic items.</returns>
         public override IPagedEnumerable<ListTopicsResponse, Topic> ListTopicsPageStream(
@@ -943,7 +943,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronously pageable enumerable of string items.</returns>
         public override IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsPageStreamAsync(
@@ -967,7 +967,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An pageable enumerable of string items.</returns>
         public override IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsPageStream(
@@ -1024,7 +1024,7 @@ namespace Google.Pubsub.V1
 
     }
 
-    // Partial classes to enable page-streaming.
+    // Partial classes to enable page-streaming
 
     public partial class ListTopicsRequest : IPageRequest { }
     public partial class ListTopicsResponse : IPageResponse<Topic>

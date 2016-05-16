@@ -18,6 +18,7 @@ using Google.Api.Gax;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
@@ -91,7 +92,7 @@ namespace Google.Logging.V2
         /// for "NonIdempotent" <see cref="MetricsServiceV2Client"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode">s eligilbe for retry for "NonIdempotent" RPC methods.
+        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
             RetrySettings.FilterForStatusCodes();
@@ -444,10 +445,16 @@ namespace Google.Logging.V2
         /// Required. The resource name of the project containing the metrics.
         /// Example: `"projects/my-project-id"`.
         /// </param>
+        /// <param name="pageToken">The token returned from the previous request.
+        /// <c>Null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request, the response will not be larger
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual IAsyncEnumerable<LogMetric> ListLogMetricsAsync(
+        /// <returns>An asynchronously pageable enumerable of LogMetric items.</returns>
+        public virtual IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStreamAsync(
             string projectName,
+            string pageToken = null,
+            int? pageSize = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -460,10 +467,16 @@ namespace Google.Logging.V2
         /// Required. The resource name of the project containing the metrics.
         /// Example: `"projects/my-project-id"`.
         /// </param>
+        /// <param name="pageToken">The token returned from the previous request.
+        /// <c>Null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request, the response will not be larger
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual IEnumerable<LogMetric> ListLogMetrics(
+        /// <returns>An pageable enumerable of LogMetric items.</returns>
+        public virtual IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStream(
             string projectName,
+            string pageToken = null,
+            int? pageSize = null,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -714,17 +727,6 @@ namespace Google.Logging.V2
 
     public sealed partial class MetricsServiceV2ClientImpl : MetricsServiceV2Client
     {
-        private static readonly PageStreamer<LogMetric, ListLogMetricsRequest, ListLogMetricsResponse, string> s_listLogMetricsPageStreamer =
-            new PageStreamer<LogMetric, ListLogMetricsRequest, ListLogMetricsResponse, string>(
-                (request, token) => {
-                    request.PageToken = token;
-                    return request;
-                },
-                response => response.NextPageToken,
-                response => response.Metrics,
-                "" // An empty page-token
-            );
-
         private readonly ClientHelper _clientHelper;
         private readonly ApiCall<ListLogMetricsRequest, ListLogMetricsResponse> _callListLogMetrics;
         private readonly ApiCall<GetLogMetricRequest, LogMetric> _callGetLogMetric;
@@ -758,17 +760,25 @@ namespace Google.Logging.V2
         /// Required. The resource name of the project containing the metrics.
         /// Example: `"projects/my-project-id"`.
         /// </param>
+        /// <param name="pageToken">The token returned from the previous request.
+        /// <c>Null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request, the response will not be larger
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override IAsyncEnumerable<LogMetric> ListLogMetricsAsync(
+        /// <returns>An asynchronously pageable enumerable of LogMetric items.</returns>
+        public override IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStreamAsync(
             string projectName,
-            CallSettings callSettings = null) => s_listLogMetricsPageStreamer.FetchAsync(
-                callSettings,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(
+                _callListLogMetrics,
                 new ListLogMetricsRequest
                 {
                     ProjectName = projectName,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
                 },
-                _callListLogMetrics);
+                callSettings);
 
         /// <summary>
         /// Lists logs-based metrics.
@@ -777,17 +787,25 @@ namespace Google.Logging.V2
         /// Required. The resource name of the project containing the metrics.
         /// Example: `"projects/my-project-id"`.
         /// </param>
+        /// <param name="pageToken">The token returned from the previous request.
+        /// <c>Null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request, the response will not be larger
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override IEnumerable<LogMetric> ListLogMetrics(
+        /// <returns>An pageable enumerable of LogMetric items.</returns>
+        public override IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStream(
             string projectName,
-            CallSettings callSettings = null) => s_listLogMetricsPageStreamer.Fetch(
-                callSettings,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => new PagedEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(
+                _callListLogMetrics,
                 new ListLogMetricsRequest
                 {
                     ProjectName = projectName,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
                 },
-                _callListLogMetrics);
+                callSettings);
 
         /// <summary>
         /// Gets a logs-based metric.
@@ -972,4 +990,14 @@ namespace Google.Logging.V2
                 callSettings);
 
     }
+
+    // Partial classes to enable page-streaming
+
+    public partial class ListLogMetricsRequest : IPageRequest { }
+    public partial class ListLogMetricsResponse : IPageResponse<LogMetric>
+    {
+        public IEnumerator<LogMetric> GetEnumerator() => Metrics.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
 }

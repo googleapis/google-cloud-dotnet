@@ -769,7 +769,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronously pageable enumerable of Subscription items.</returns>
         public virtual IPagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsPageStreamAsync(
@@ -788,7 +788,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An pageable enumerable of Subscription items.</returns>
         public virtual IPagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsPageStream(
@@ -1372,7 +1372,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronously pageable enumerable of Subscription items.</returns>
         public override IPagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsPageStreamAsync(
@@ -1396,7 +1396,7 @@ namespace Google.Pubsub.V1
         /// <param name="pageToken">The token returned from the previous request.
         /// <c>Null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>null</c> or 0 uses a server-defined page size.</param>
+        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An pageable enumerable of Subscription items.</returns>
         public override IPagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsPageStream(
@@ -1693,7 +1693,7 @@ namespace Google.Pubsub.V1
 
     }
 
-    // Partial classes to enable page-streaming.
+    // Partial classes to enable page-streaming
 
     public partial class ListSubscriptionsRequest : IPageRequest { }
     public partial class ListSubscriptionsResponse : IPageResponse<Subscription>
