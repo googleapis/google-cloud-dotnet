@@ -38,7 +38,7 @@ before running any gRPC code.
 
 ## Specifying a Project ID
 
-Most `gcloud-dotnet` libraries require a project ID.  There are multiple ways to specify this project ID.
+Most `gcloud-dotnet` libraries require a project ID. If you don't remember yours (or haven't created a project yet), navigate to the [Google Developers Console][google-developers-console] to view your project ID (or create a new project and get the ID then). Once done, there are multiple ways to specify the project ID for the client libraries to retrieve the value:
 
 1. When using `gcloud-dotnet` libraries from within Compute/App Engine, there's no need to specify a project ID.  It is automatically inferred from the production environment.
 2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
@@ -202,6 +202,7 @@ Apache 2.0 - See [LICENSE] for more information.
 [google-api-dotnet-client]: https://github.com/google/google-api-dotnet-client
 [getting-started-dotnet]: https://github.com/GoogleCloudPlatform/getting-started-dotnet/
 [cloud-common-authentication]: https://github.com/GoogleCloudPlatform/gcloud-common/blob/master/authentication/readme.md#authentication
+[google-developers-console]: https://console.developers.google.com/project
 [google-cloud-sdk]: https://cloud.google.com/sdk/
 [google-download-sdk]: https://cloud.google.com/sdk/docs/
 [google-myget-feed]: https://www.myget.org/gallery/google-dotnet-public/
