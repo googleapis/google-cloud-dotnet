@@ -91,7 +91,19 @@ using Google.Bigquery.V2;
 #### Example
 
 ```dotnet
-using Google.Datastore.V1Beta3
+using Google.Datastore.V1Beta3;
+...
+```
+
+## Google Cloud Logging
+
+- [API Reference][cloud-logging-ref]
+- [API Overview][cloud-logging-docs]
+
+#### Example
+
+```dotnet
+using Google.Logging.V2;
 ...
 ```
 
