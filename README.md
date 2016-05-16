@@ -10,9 +10,9 @@ This client supports the following Google Cloud Platform services:
 
 * [Google BigQuery](#google-bigquery)
 * [Google Cloud Datastore](#google-cloud-datastore)
-* [Google Cloud Storage](#google-cloud-storage)
+* [Google Cloud Logging](#google-cloud-logging)
 * [Google Cloud Pub/Sub](#google-cloud-pubsub)
-* [Google Cloud Logging](#google-cloud-logging-beta)
+* [Google Cloud Storage](#google-cloud-storage)
 
 > Note: This client is a work-in-progress, and may occasionally
 > make backwards-incompatible changes. The layout of the repository
@@ -48,7 +48,7 @@ Most `gcloud-dotnet` libraries require a project ID.  There are multiple ways to
       set GCLOUD_PROJECT=PROJECT_ID
       ```
     * If running locally for development/testing, set the project ID using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, and set the project ID from the command line. For example:
-    
+
       ```bash
       gcloud config set project PROJECT_ID
       ```
@@ -70,6 +70,54 @@ Next, choose a method for authenticating API requests from within your project:
       ```bash
       gcloud auth login
       ```
+
+## Google BigQuery
+
+- [API Reference][cloud-bigquery-ref]
+- [API Overview][cloud-bigquery-docs]
+
+#### Example
+
+```dotnet
+using Google.Bigquery.V2;
+...
+```
+
+## Google Cloud Datastore
+
+- [API Reference][cloud-datastore-ref]
+- [API Overview][cloud-datastore-docs]
+
+#### Example
+
+```dotnet
+using Google.Datastore.V1Beta3
+...
+```
+
+## Google Cloud Pub/Sub
+
+- [API Reference][cloud-pubsub-ref]
+- [API Overview][cloud-pubsub-docs]
+
+#### Example
+
+```dotnet
+using Google.Pubsub.V1;
+...
+```
+
+## Google Cloud Storage
+
+- [API Reference][cloud-storage-ref]
+- [API Overview][cloud-storage-docs]
+
+#### Example
+
+```dotnet
+using Google.Storage.V1;
+...
+```
 
 ## Contributing
 
@@ -96,9 +144,19 @@ Apache 2.0 - See [LICENSE] for more information.
 [api-reference-dotnet]: http://googlecloudplatform.github.io/gcloud-dotnet/
 [google-api-dotnet-client]: https://github.com/google/google-api-dotnet-client
 [getting-started-dotnet]: https://github.com/GoogleCloudPlatform/getting-started-dotnet/
-[gcloud-common-authentication]: https://github.com/GoogleCloudPlatform/gcloud-common/blob/master/authentication/readme.md#authentication
+[cloud-common-authentication]: https://github.com/GoogleCloudPlatform/gcloud-common/blob/master/authentication/readme.md#authentication
 [google-cloud-sdk]: https://cloud.google.com/sdk/
 [google-download-sdk]: https://cloud.google.com/sdk/docs/
+[cloud-bigquery-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Bigquery.V2.html
+[cloud-datastore-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Datastore.V1Beta3.html
+[cloud-logging-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Logging.V2.html
+[cloud-pubsub-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Pubsub.V1.html
+[cloud-storage-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Storage.V1.html
+[cloud-bigquery-docs]: https://cloud.google.com/bigquery/
+[cloud-datastore-docs]: https://cloud.google.com/datastore/
+[cloud-logging-docs]: https://cloud.google.com/logging/
+[cloud-pubsub-docs]: https://cloud.google.com/pubsub/
+[cloud-storage-docs]: https://cloud.google.com/storage/
 [dnvm]: http://docs.asp.net/en/latest/getting-started/index.html
 [gRPC]: http://grpc.io
 [grpc-workaround]: https://github.com/grpc/grpc/issues/4872
