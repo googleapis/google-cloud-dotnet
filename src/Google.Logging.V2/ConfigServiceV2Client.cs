@@ -450,7 +450,7 @@ namespace Google.Logging.V2
         /// <param name="pageSize">The size of page to request, the response will not be larger
         /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>An asynchronously pageable enumerable of LogSink items.</returns>
+        /// <returns>An asynchronous sequence of pages of LogSink items.</returns>
         public virtual IPagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksPageStreamAsync(
             string projectName,
             string pageToken = null,
@@ -472,7 +472,7 @@ namespace Google.Logging.V2
         /// <param name="pageSize">The size of page to request, the response will not be larger
         /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>An pageable enumerable of LogSink items.</returns>
+        /// <returns>A sequence of pages of LogSink items.</returns>
         public virtual IPagedEnumerable<ListSinksResponse, LogSink> ListSinksPageStream(
             string projectName,
             string pageToken = null,
@@ -765,7 +765,7 @@ namespace Google.Logging.V2
         /// <param name="pageSize">The size of page to request, the response will not be larger
         /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>An asynchronously pageable enumerable of LogSink items.</returns>
+        /// <returns>An asynchronous sequence of pages of LogSink items.</returns>
         public override IPagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksPageStreamAsync(
             string projectName,
             string pageToken = null,
@@ -792,7 +792,7 @@ namespace Google.Logging.V2
         /// <param name="pageSize">The size of page to request, the response will not be larger
         /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>An pageable enumerable of LogSink items.</returns>
+        /// <returns>A sequence of pages of LogSink items.</returns>
         public override IPagedEnumerable<ListSinksResponse, LogSink> ListSinksPageStream(
             string projectName,
             string pageToken = null,
