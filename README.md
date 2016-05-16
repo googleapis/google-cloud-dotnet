@@ -47,7 +47,7 @@ Most `gcloud-dotnet` libraries require a project ID. If you don't remember yours
       ```bash
       set GCLOUD_PROJECT=PROJECT_ID
       ```
-    * If running locally for development/testing, set the project ID using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, and set the project ID from the command line. For example:
+    * If running locally for development/testing, set the project ID using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, and set the project ID by running the following in the command line:
 
       ```bash
       gcloud config set project PROJECT_ID
