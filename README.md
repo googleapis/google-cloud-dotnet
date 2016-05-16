@@ -36,27 +36,38 @@ component written in native code. Using that component from DNX
 currently [requires a workaround][grpc-workaround]; on Windows please run `fix_dnx_grpc.bat`
 before running any gRPC code.
 
-## Authentication
+## Specifying a Project ID
 
-First, ensure that the necessary Google Cloud APIs are enabled for your project and that you've downladed the right set of keys (if it applies to you) as explained in the [authentication document][gcloud-common-authentication] shared by all the gcloud language libraries.
+Most `gcloud-dotnet` libraries require a project ID.  There are multiple ways to specify this project ID.
+
+1. When using `gcloud-dotnet` libraries from within Compute/App Engine, there's no need to specify a project ID.  It is automatically inferred from the production environment.
+2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
+    * Define the environment variable GCLOUD_PROJECT to be your desired project ID. For example:
+    ```bash
+    set GCLOUD_PROJECT=PROJECT_ID
+    ```
+    * If running locally for development/testing, set the project ID using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, and set the project ID from the command line. For example:
+
+    ```bash
+    gcloud config set project PROJECT_ID
+    ```
+
+## Authentication
+Every API call needs to be authenticated. In other to successfully make call, first ensure that the necessary Google Cloud APIs are enabled for your project and that you've downladed the right set of keys (if it applies to you) as explained in the [authentication document][gcloud-common-authentication].
 
 Next, choose a method for authenticating API requests from within your project:
 
 1. When using `gcloud-dotnet` libraries from within Compute/App Engine, no additional authentication steps are necessary.
-2. When using `gcloud-dotnet` libraries elsewhere, there are two options:
+2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
     * Define the environment variable GOOGLE_APPLICATION_CREDENTIALS to be the location of the key.  For example:
     ```bash
     set GOOGLE_APPLICATION_CREDENTIALS=/path/to/my/key.json
     ``` 
-    * If running locally for development/testing, you can use use Google Cloud SDK.  Download the SDK if you haven't already, then login using the SDK (`gcloud auth login` in command line).
-
-`gcloud-dotnet` looks for credentials in the following order, stopping once it finds credentials:
-
-1. Credentials supplied when building the service options
-2. App Engine credentials
-3. Key file pointed to by the GOOGLE_APPLICATION_CREDENTIALS environment variable
-4. Google Cloud SDK credentials
-5. Compute Engine credentials
+    * If running locally for development/testing, you can authenticate using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, then login by running the following in the command line:
+    
+    ```bash
+    gcloud auth login
+    ```
 
 ## Contributing
 
@@ -84,6 +95,8 @@ Apache 2.0 - See [LICENSE] for more information.
 [google-api-dotnet-client]: https://github.com/google/google-api-dotnet-client
 [getting-started-dotnet]: https://github.com/GoogleCloudPlatform/getting-started-dotnet/
 [gcloud-common-authentication]: https://github.com/GoogleCloudPlatform/gcloud-common/blob/master/authentication/readme.md#authentication
+[google-cloud-sdk]: https://cloud.google.com/sdk/
+[google-download-sdk]: https://cloud.google.com/sdk/docs/
 [dnvm]: http://docs.asp.net/en/latest/getting-started/index.html
 [gRPC]: http://grpc.io
 [grpc-workaround]: https://github.com/grpc/grpc/issues/4872
