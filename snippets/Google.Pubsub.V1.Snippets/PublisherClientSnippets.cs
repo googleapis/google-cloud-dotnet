@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Pubsub.V1;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ public class PublisherClientSnippets
         // Alternative: use a known project resource name:
         // projects/{PROJECT_ID}
         string projectName = PublisherClient.GetProjectName("PROJECT_ID");
-        foreach (Topic topic in client.ListTopics(projectName))
+        foreach (Topic topic in client.ListTopicsPageStream(projectName).Flatten())
         {
             Console.WriteLine(topic.Name);
         }
@@ -43,7 +44,7 @@ public class PublisherClientSnippets
         // Alternative: use a known project resource name:
         // projects/{PROJECT_ID}
         string projectName = PublisherClient.GetProjectName("{PROJECT_ID}");
-        IAsyncEnumerable<Topic> topics = client.ListTopicsAsync(projectName);
+        IAsyncEnumerable<Topic> topics = client.ListTopicsPageStreamAsync(projectName).Flatten();
         await topics.ForEachAsync(topic =>
         {
             Console.WriteLine(topic.Name);
