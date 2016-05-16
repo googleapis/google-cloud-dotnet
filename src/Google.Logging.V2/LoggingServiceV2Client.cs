@@ -628,9 +628,10 @@ namespace Google.Logging.V2
         /// timestamps are returned in order of `LogEntry.insertId`.
         /// </param>
         /// <param name="pageToken">The token returned from the previous request.
-        /// <c>Null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
+        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request.
+        /// The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogEntry items.</returns>
         public virtual IPagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesPageStreamAsync(
@@ -668,9 +669,10 @@ namespace Google.Logging.V2
         /// timestamps are returned in order of `LogEntry.insertId`.
         /// </param>
         /// <param name="pageToken">The token returned from the previous request.
-        /// <c>Null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
+        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request.
+        /// The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogEntry items.</returns>
         public virtual IPagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesPageStream(
@@ -856,9 +858,10 @@ namespace Google.Logging.V2
         /// timestamps are returned in order of `LogEntry.insertId`.
         /// </param>
         /// <param name="pageToken">The token returned from the previous request.
-        /// <c>Null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
+        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request.
+        /// The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogEntry items.</returns>
         public override IPagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesPageStreamAsync(
@@ -903,9 +906,10 @@ namespace Google.Logging.V2
         /// timestamps are returned in order of `LogEntry.insertId`.
         /// </param>
         /// <param name="pageToken">The token returned from the previous request.
-        /// <c>Null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request, the response will not be larger
-        /// than this, but may be smaller. <c>Null</c> or 0 uses a server-defined page size.</param>
+        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
+        /// <param name="pageSize">The size of page to request.
+        /// The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogEntry items.</returns>
         public override IPagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesPageStream(
