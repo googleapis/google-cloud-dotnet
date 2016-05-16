@@ -54,7 +54,7 @@ Most `gcloud-dotnet` libraries require a project ID.  There are multiple ways to
       ```
 
 ## Authentication
-Every API call needs to be authenticated. In other to successfully make call, first ensure that the necessary Google Cloud APIs are enabled for your project and that you've downladed the right set of keys (if it applies to you) as explained in the [authentication document][gcloud-common-authentication].
+Every API call needs to be authenticated. In other to successfully make a call, first ensure that the necessary Google Cloud APIs are enabled for your project and that you've downladed the right set of keys (if it applies to you) as explained in the [authentication document][cloud-common-authentication].
 
 Next, choose a method for authenticating API requests from within your project:
 
