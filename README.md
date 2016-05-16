@@ -79,10 +79,10 @@ Next, choose a method for authenticating API requests from within your project:
 The BigQuery client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
 
 #### Installation
-The package is available from Google's [public MyGet feed][google-myget-feed] and can be installed in the following manner:
+The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
 
 ```sh
-PM> Install-Package Google.Bigquery.V2
+PM> Install-Package Google.Bigquery.V2 -Prerelease
 ```
 
 #### Example
@@ -100,10 +100,10 @@ using Google.Bigquery.V2;
 The Cloud Datastore client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
 
 #### Installation
-The package is available from Google's [public MyGet feed][google-myget-feed] and can be installed in the following manner:
+The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
 
 ```sh
-PM> Install-Package Google.Datastore.V1Beta3
+PM> Install-Package Google.Datastore.V1Beta3 -Prerelease
 ```
 
 #### Example
@@ -121,10 +121,10 @@ using Google.Datastore.V1Beta3;
 The Cloud Logging client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
 
 #### Installation
-The package is available from Google's [public MyGet feed][google-myget-feed] and can be installed in the following manner:
+The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
 
 ```sh
-PM> Install-Package Google.Logging.V2
+PM> Install-Package Google.Logging.V2 -Prerelease
 ```
 
 #### Example
@@ -142,10 +142,10 @@ using Google.Logging.V2;
 The Cloud Pub/Sub client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
 
 #### Installation
-The package is available from Google's [public MyGet feed][google-myget-feed] and can be installed in the following manner:
+The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
 
 ```sh
-PM> Install-Package Google.Pubsub.V1
+PM> Install-Package Google.Pubsub.V1 -Prerelease
 ```
 
 #### Example
@@ -163,10 +163,10 @@ using Google.Pubsub.V1;
 The Cloud Storage client libary is in a more advanced state. However, there is no guarantee that the API surface will stay stable until we reach 1.0 - but we have high confidence that the libraries work and are usable.
 
 #### Installation
-The package is available from [NuGet](https://www.nuget.org/packages/Google.Storage.V1) and can be installed in the following manner:
+The package is available on [NuGet](https://www.nuget.org/packages/Google.Storage.V1) and can be installed in the following manner:
 
 ```sh
-PM> Install-Package Google.Storage.V1 -Pre
+PM> Install-Package Google.Storage.V1 -Prerelease
 ```
 
 #### Example
