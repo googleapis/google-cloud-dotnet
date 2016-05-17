@@ -5,7 +5,6 @@ mono:
 
 install:
   - curl -L --create-dirs https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/install.sh -o ./scripts/obtain/install.sh
-  - dnvm upgrade
 
 # TODO: See if there's a better way of finding all test projects.
 # Note that we want to exclude integration tests; currently this is
