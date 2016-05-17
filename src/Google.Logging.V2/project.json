@@ -1,22 +1,25 @@
 {
   "version": "0.1.0-*",
-  "summary": "Google Logging v2 client library",
-  "description": "Google Logging v2 client library",
-  "authors": [ "Google Inc." ],
-  "owners": [ "google-apis-packages" ],
-  "tags": [ "Google" ],
-  "projectUrl": "https://github.com/GoogleCloudPlatform/gcloud-dotnet",
-  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
-  "requireLicenseAcceptance": false,
 
-  "compilationOptions": {
+  "packOptions": {
+    "summary": "Google Logging v2 client library",
+    "description": "Google Logging v2 client library",
+    "authors": [ "Google Inc." ],
+    "owners": [ "google-apis-packages" ],
+    "tags": [ "Google" ],
+    "projectUrl": "https://github.com/GoogleCloudPlatform/gcloud-dotnet",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+    "requireLicenseAcceptance": false,
+  },
+
+  "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },
 
   "dependencies": {
     "Google.Api.Gax": "0.1.0-CI00048",
     "Google.Apis.Auth": "1.11.1",
-    "Google.Logging.Type":  "",
+    "Google.Logging.Type": "*",
     "Google.Protobuf": "3.0.0-beta2",
     "Grpc.Auth": "0.13.1",
     "Grpc.Core": "0.13.1",

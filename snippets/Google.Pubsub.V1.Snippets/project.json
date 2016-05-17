@@ -1,11 +1,21 @@
 ﻿{
-  "description": "Snippets for the Google.Pubsub.V1 package",
+  "description": "Snippets for the Google.Pubsub.V1 package, written as integration tests",
 
-  "dependencies": {
-    "Google.Pubsub.V1": ""
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk",
+    "debugType": "full"
   },
 
+  "dependencies": {
+    "Google.Pubsub.V1": "*",
+    "System.Linq": "4.0.1-beta-23516",
+    "xunit": "2.1.0",
+    "dotnet-test-xunit": "1.0.0-rc2-build10015"
+  },
+
+  "testRunner": "xunit",
+
   "frameworks": {
-    "net45": { }
+    "net451": { }
   }
 }

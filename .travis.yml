@@ -4,7 +4,7 @@ mono:
   - latest
 
 install:
-  - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
+  - curl -L --create-dirs https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/install.sh -o ./scripts/obtain/install.sh
   - dnvm upgrade
 
 # TODO: See if there's a better way of finding all test projects.
@@ -14,9 +14,9 @@ install:
 # files (e.g. README.md) without that intefering.
 
 script:
-  - dnu restore
-  - dnu build src/Google*
-  - dnu build test/Google*
-  - dnu build tools/Google*
-  - dnu build snippets/Google*
-  - for project in `find . -name '*.Tests'`; do dnx -p $project test; done
+  - dotnet restore
+  - dotnet build src/Google*
+  - dotnet build test/Google*
+  - dotnet build tools/Google*
+  - dotnet build snippets/Google*
+  - for project in `find . -name '*.Tests'`; do dotnet test $project; done
