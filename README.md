@@ -90,6 +90,28 @@ PM> Install-Package Google.Bigquery.V2 -Prerelease
 ```dotnet
 using Google.Bigquery.V2;
 ...
+
+var client = BigqueryClient.Create(projectId);
+
+// Create the dataset if it doesn't exist.
+var dataset = client.GetOrCreateDataset("mydata");
+
+// Create the table if it doesn't exist.
+var table = dataset.GetOrCreateTable("scores", new SchemaBuilder
+{
+    { "player", SchemaFieldType.String },
+    { "gameStarted", SchemaFieldType.Timestamp },
+    { "score", SchemaFieldType.Integer }
+}.Build());
+
+// Insert a single row. There are many other ways of inserting
+// data into a table.
+table.InsertRow(new Dictionary<string, object>
+{
+    { "player", "Bob" },
+    { "score", 85 },
+    { "gameStarted", new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
+});
 ```
 
 ## Google Cloud Datastore
@@ -111,6 +133,19 @@ PM> Install-Package Google.Datastore.V1Beta3 -Prerelease
 ```dotnet
 using Google.Datastore.V1Beta3;
 ...
+
+var client = DatastoreClient.Create();
+
+var keyFactory = new KeyFactory(projectId, namespaceId, "message");
+var entity = new Entity
+{
+    Key = keyFactory.CreateInsertionKey(),
+    ["created"] = DateTime.UtcNow,
+    ["text"] = "Text of the message"
+};
+var transaction = client.BeginTransaction(projectId).Transaction;
+var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
+var insertedKey = commitResponse.MutationResults[0].Key;
 ```
 
 ## Google Cloud Logging
@@ -132,6 +167,8 @@ PM> Install-Package Google.Logging.V2 -Prerelease
 ```dotnet
 using Google.Logging.V2;
 ...
+
+Code coming soon
 ```
 
 ## Google Cloud Pub/Sub
@@ -153,6 +190,8 @@ PM> Install-Package Google.Pubsub.V1 -Prerelease
 ```dotnet
 using Google.Pubsub.V1;
 ...
+
+Code coming soon...
 ```
 
 ## Google Cloud Storage
@@ -174,6 +213,29 @@ PM> Install-Package Google.Storage.V1 -Prerelease
 ```dotnet
 using Google.Storage.V1;
 ...
+
+var client = StorageClient.Create();
+
+// Create a bucket
+var bucketName = Guid.NewGuid().ToString(); // must be globally unique
+var bucket = client.CreateBucket(projectId, bucketName);
+
+// Upload some files
+var content = Encoding.UTF8.GetBytes("hello, world");
+var obj1 = client.UploadObject(bucketName, "file1.txt", "text/plain", new MemoryStream(content));
+var obj2 = client.UploadObject(bucketName, "folder1/file2.txt", "text/plain", new MemoryStream(content));
+
+// List objects
+foreach (var obj in client.ListObjects(bucketName, ""))
+{
+    Console.WriteLine(obj.Name);
+}
+
+// Download file
+using (var stream = File.OpenWrite("file1.txt"))
+{
+    client.DownloadObject(bucketName, "file1.txt", stream);
+}
 ```
 
 ## Contributing
