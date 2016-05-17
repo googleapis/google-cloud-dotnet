@@ -44,12 +44,12 @@ Most `gcloud-dotnet` libraries require a project ID. If you don't remember yours
 2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
     * Define the environment variable GCLOUD_PROJECT to be your desired project ID. For example:
 
-      ```bash
+      ```sh
       set GCLOUD_PROJECT=PROJECT_ID
       ```
     * If running locally for development/testing, set the project ID using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, and set the project ID by running the following in the command line:
 
-      ```bash
+      ```sh
       gcloud config set project PROJECT_ID
       ```
 
@@ -62,12 +62,12 @@ Next, choose a method for authenticating API requests from within your project:
 2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
     * Define the environment variable GOOGLE_APPLICATION_CREDENTIALS to be the location of the key.  For example:
 
-      ```bash
+      ```sh
       set GOOGLE_APPLICATION_CREDENTIALS=/path/to/my/key.json
       ``` 
     * If running locally for development/testing, you can authenticate using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, then login by running the following in the command line:
 
-      ```bash
+      ```sh
       gcloud auth login
       ```
 
@@ -76,7 +76,7 @@ Next, choose a method for authenticating API requests from within your project:
 - [API Reference][cloud-bigquery-ref]
 - [API Overview][cloud-bigquery-docs]
 
-The BigQuery client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+The BigQuery client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
 
 #### Installation
 The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
@@ -119,7 +119,7 @@ table.InsertRow(new Dictionary<string, object>
 - [API Reference][cloud-datastore-ref]
 - [API Overview][cloud-datastore-docs]
 
-The Cloud Datastore client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+The Cloud Datastore client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
 
 #### Installation
 The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
@@ -153,7 +153,7 @@ var insertedKey = commitResponse.MutationResults[0].Key;
 - [API Reference][cloud-logging-ref]
 - [API Overview][cloud-logging-docs]
 
-The Cloud Logging client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+The Cloud Logging client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
 
 #### Installation
 The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
@@ -176,7 +176,7 @@ Code coming soon
 - [API Reference][cloud-pubsub-ref]
 - [API Overview][cloud-pubsub-docs]
 
-The Cloud Pub/Sub client libary is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+The Cloud Pub/Sub client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
 
 #### Installation
 The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
@@ -199,7 +199,7 @@ Code coming soon...
 - [API Reference][cloud-storage-ref]
 - [API Overview][cloud-storage-docs]
 
-The Cloud Storage client libary is in a more advanced state. However, there is no guarantee that the API surface will stay stable until we reach 1.0 - but we have high confidence that the libraries work and are usable.
+The Cloud Storage client library is in a more advanced state. However, there is no guarantee that the API surface will stay stable until we reach 1.0 - but we have high confidence that the libraries work and are usable.
 
 #### Installation
 The package is available on [NuGet](https://www.nuget.org/packages/Google.Storage.V1) and can be installed in the following manner:
