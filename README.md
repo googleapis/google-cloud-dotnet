@@ -76,7 +76,7 @@ Next, choose a method for authenticating API requests from within your project:
 - [API Reference][cloud-bigquery-ref]
 - [API Overview][cloud-bigquery-docs]
 
-The BigQuery client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+The BigQuery client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with it, we would welcome your feedback.
 
 #### Installation
 The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
@@ -119,7 +119,7 @@ table.InsertRow(new Dictionary<string, object>
 - [API Reference][cloud-datastore-ref]
 - [API Overview][cloud-datastore-docs]
 
-The Cloud Datastore client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+The Cloud Datastore client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with it, we would welcome your feedback.
 
 #### Installation
 The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
@@ -153,7 +153,7 @@ var insertedKey = commitResponse.MutationResults[0].Key;
 - [API Reference][cloud-logging-ref]
 - [API Overview][cloud-logging-docs]
 
-The Cloud Logging client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+The Cloud Logging client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with it, we would welcome your feedback.
 
 #### Installation
 The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
@@ -176,7 +176,7 @@ Code coming soon
 - [API Reference][cloud-pubsub-ref]
 - [API Overview][cloud-pubsub-docs]
 
-The Cloud Pub/Sub client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with them, we would welcome your feedback.
+The Cloud Pub/Sub client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with it, we would welcome your feedback.
 
 #### Installation
 The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
