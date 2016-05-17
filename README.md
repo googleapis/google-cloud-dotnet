@@ -87,7 +87,7 @@ PM> Install-Package Google.Bigquery.V2 -Prerelease
 
 #### Example
 
-```dotnet
+```c#
 using Google.Bigquery.V2;
 ...
 
@@ -130,7 +130,7 @@ PM> Install-Package Google.Datastore.V1Beta3 -Prerelease
 
 #### Example
 
-```dotnet
+```c#
 using Google.Datastore.V1Beta3;
 ...
 
@@ -164,7 +164,7 @@ PM> Install-Package Google.Logging.V2 -Prerelease
 
 #### Example
 
-```dotnet
+```c#
 using Google.Logging.V2;
 ...
 
@@ -187,7 +187,7 @@ PM> Install-Package Google.Pubsub.V1 -Prerelease
 
 #### Example
 
-```dotnet
+```c#
 using Google.Pubsub.V1;
 ...
 
@@ -210,7 +210,7 @@ PM> Install-Package Google.Storage.V1 -Prerelease
 
 #### Example
 
-```dotnet
+```c#
 using Google.Storage.V1;
 ...
 
