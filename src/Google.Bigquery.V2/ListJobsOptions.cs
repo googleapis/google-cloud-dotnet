@@ -12,18 +12,40 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Bigquery.v2;
+using static Google.Apis.Bigquery.v2.JobsResource;
+using static Google.Apis.Bigquery.v2.JobsResource.ListRequest;
 
 namespace Google.Bigquery.V2
 {
     /// <summary>
-    /// Options used when listing jobs. Details TBD.
+    /// Options for <c>ListJobs</c> operations.
     /// </summary>
     public class ListJobsOptions
     {
-        internal void ModifyRequest(JobsResource.ListRequest request)
+        /// <summary>
+        /// If set, only return jobs in the specified state.
+        /// </summary>
+        public JobState? StateFilter { get; set; }
+
+        /// <summary>
+        /// The number of results to return per page. (This modifies the per-request page size;
+        /// it does not affect the total number of results returned.)
+        /// </summary>
+        public int? PageSize { get; set; }
+
+        internal void ModifyRequest(ListRequest request)
         {
-            
+            if (StateFilter != null)
+            {
+                request.StateFilter = (StateFilterEnum) StateFilter;
+            }
+
+            if (PageSize != null)
+            {
+                request.MaxResults = PageSize;
+            }
+
+            // TODO: Projection?
         }
     }
 }

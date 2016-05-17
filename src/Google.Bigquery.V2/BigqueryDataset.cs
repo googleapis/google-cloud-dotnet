@@ -22,97 +22,115 @@ namespace Google.Bigquery.V2
     /// A dataset within Bigquery.
     /// </summary>
     /// <remarks>
-    /// This class wraps the underlying HTTP API resource and retains a reference to the original
+    /// This class wraps the underlying REST API resource and retains a reference to the original
     /// client, allowing for simpler dataset-oriented operations.
     /// </remarks>
     public sealed class BigqueryDataset
     {
         private readonly BigqueryClient _client;
 
-        // TODO: We may want to expose this publicly.
-        private readonly Dataset _apiResource;
+        /// <summary>
+        /// The underlying REST-ful resource for the dataset.
+        /// </summary>
+        /// <remarks>
+        /// The data within the resource may be incomplete, depending on how it was obtained.
+        /// </remarks>
+        public Dataset Resource { get; }
 
         /// <summary>
-        /// The fully-qualified identifier for the dataset.
+        /// The fully-qualified identifier for the dataset as a <see cref="DatasetReference"/>.
         /// </summary>
         /// <remarks>
         /// The properties within the reference can be used to determine the project ID
         /// and dataset ID components.
         /// </remarks>
-        public DatasetReference Reference => _apiResource.DatasetReference;
+        public DatasetReference Reference => Resource.DatasetReference;
 
-        internal BigqueryDataset(BigqueryClient client, DatasetList.DatasetsData apiResource)
+        /// <summary>
+        /// The fully-qualified identifier for the dataset in a string form of <c>project:dataset</c>.
+        /// </summary>
+        public string FullyQualifiedId => $"{Reference.ProjectId}:{Reference.DatasetId}";
+
+        internal BigqueryDataset(BigqueryClient client, DatasetList.DatasetsData resource)
             : this(client, new Dataset {
-                      Id = apiResource.Id,
-                      DatasetReference = apiResource.DatasetReference,
-                      Kind = apiResource.Kind,
-                      FriendlyName = apiResource.FriendlyName
+                      Id = resource.Id,
+                      DatasetReference = resource.DatasetReference,
+                      Kind = resource.Kind,
+                      FriendlyName = resource.FriendlyName
                    })
         {
         }
 
-        internal BigqueryDataset(BigqueryClient client, Dataset apiResource)
+        internal BigqueryDataset(BigqueryClient client, Dataset resource)
         {
             _client = client;
-            _apiResource = apiResource;
+            Resource = resource;
         }
 
         /// <summary>
         /// Uploads a stream of CSV data to a table.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadCsv(TableReference, TableSchema, Stream)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
-        public BigqueryJob UploadCsv(string tableId, TableSchema schema, Stream input) =>
-            _client.UploadCsv(GetTableReference(tableId), schema, input);
+        public BigqueryJob UploadCsv(string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null) =>
+            _client.UploadCsv(GetTableReference(tableId), schema, input, options);
 
         /// <summary>
         /// Uploads a stream of JSON data to a table.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJson(TableReference, TableSchema, Stream)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
-        public BigqueryJob UploadJson(string tableId, TableSchema schema, Stream input) =>
-            _client.UploadJson(GetTableReference(tableId), schema, input);
+        public BigqueryJob UploadJson(string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null) =>
+            _client.UploadJson(GetTableReference(tableId), schema, input, options);
 
         /// <summary>
         /// Lists the tables within this dataset.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigqueryClient.ListTables(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The tables within this dataset.</returns>
-        public IEnumerable<BigqueryTable> ListTables() => _client.ListTables(Reference);
+        public IEnumerable<BigqueryTable> ListTables(ListTablesOptions options = null) => _client.ListTables(Reference, options);
 
         /// <summary>
         /// Creates a table within this dataset.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.CreateTable(TableReference, TableSchema)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.CreateTable(TableReference, TableSchema, CreateTableOptions)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="schema">The schema of the data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The newly created table.</returns>
-        public BigqueryTable CreateTable(string tableId, TableSchema schema) =>
-            _client.CreateTable(GetTableReference(tableId), schema);
+        public BigqueryTable CreateTable(string tableId, TableSchema schema, CreateTableOptions options = null) =>
+            _client.CreateTable(GetTableReference(tableId), schema, options);
 
         /// <summary>
         /// Retrieves a table within this dataset.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.CreateTable(TableReference, TableSchema)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.GetTable(TableReference, GetTableOptions)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The requested table.</returns>
-        public BigqueryTable GetTable(string tableId) =>
-            _client.GetTable(GetTableReference(tableId));
+        public BigqueryTable GetTable(string tableId, GetTableOptions options = null) =>
+            _client.GetTable(GetTableReference(tableId), options);
 
         /// <summary>
         /// Attempts to fetch the specified table within this dataset, creating it if it doesn't exist.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.GetOrCreateTable(TableReference, TableSchema)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)"/>.
         /// </summary>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The existing or new table.</returns>
-        public BigqueryTable GetOrCreateTable(string tableId, TableSchema schema) =>
-            _client.GetOrCreateTable(GetTableReference(tableId), schema);
+        public BigqueryTable GetOrCreateTable(string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null) =>
+            _client.GetOrCreateTable(GetTableReference(tableId), schema, getOptions, createOptions);
 
         /// <summary>
         /// Creates a <see cref="TableReference"/> for a table within this dataset.
@@ -123,7 +141,9 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Deletes this dataset.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.DeleteTable(TableReference, DeleteTableOptions)"/>.
         /// </summary>
-        public void Delete() => _client.DeleteDataset(Reference);
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public void Delete(DeleteDatasetOptions options = null) => _client.DeleteDataset(Reference, options);
     }
 }

@@ -51,7 +51,7 @@ namespace Google.Bigquery.V2.IntegrationTests
 
             var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
             var job = client.CreateQueryJob(sql);
-            var rows = job.GetQueryResult().Rows.ToList();
+            var rows = job.GetQueryResults().Rows.ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0]["title"]);
             Assert.Equal(5318, (long)rows[0]["unique_words"]);
@@ -69,8 +69,8 @@ namespace Google.Bigquery.V2.IntegrationTests
 
             var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
             var destinationTable = userDataset.GetTableReference("test_" + Guid.NewGuid().ToString().Replace("-", "_"));
-            var job = client.CreateQueryJob(sql, destinationTable);
-            var rows = job.GetQueryResult().Rows.ToList();
+            var job = client.CreateQueryJob(sql, new CreateQueryJobOptions { DestinationTable = destinationTable });
+            var rows = job.GetQueryResults().Rows.ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0][0]);
             Assert.Equal(5318, (long)rows[0][1]);

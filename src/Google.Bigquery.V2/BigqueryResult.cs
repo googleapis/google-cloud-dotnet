@@ -28,6 +28,8 @@ namespace Google.Bigquery.V2
     /// </summary>
     public sealed class BigqueryResult
     {
+        // TODO: Expose a REST resource? Slightly tricky as we have different paths to create a result (ListRows, ExecuteSql, GetQueryJobResults).
+
         private static readonly PageStreamer<TableRow, GetQueryResultsRequest, GetQueryResultsResponse, string> s_queryResultPageStreamer =
             new PageStreamer<TableRow, GetQueryResultsRequest, GetQueryResultsResponse, string>(
                 (request, token) => request.PageToken = token,
@@ -153,24 +155,25 @@ namespace Google.Bigquery.V2
                 {
                     object rawValue = RawRow.F[index].V;
                     var field = _parent.Schema.Fields[index];
-                    switch (field.Type)
+                    var type = field.GetFieldType();
+                    switch (type)
                     {
-                        case "STRING":
+                        case BigqueryDbType.String:
                             return (string)rawValue;
-                        case "INTEGER":
+                        case BigqueryDbType.Integer:
                             return long.Parse((string)rawValue, CultureInfo.InvariantCulture);
-                        case "FLOAT":
+                        case BigqueryDbType.Float:
                             return double.Parse((string)rawValue, CultureInfo.InvariantCulture);
-                        case "BYTES":
+                        case BigqueryDbType.Bytes:
                             return Convert.FromBase64String((string)rawValue);
-                        case "BOOL":
+                        case BigqueryDbType.Boolean:
                             return (string)rawValue == "true";
-                        case "TIMESTAMP":
+                        case BigqueryDbType.Timestamp:
                             double epochSeconds = double.Parse((string)rawValue, CultureInfo.InvariantCulture);
                             return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(epochSeconds);
                         // TODO: Handle record types and repeated fields.
                         default:
-                            throw new InvalidOperationException($"Unknown field type {field.Type}");
+                            throw new InvalidOperationException($"Unhandled field type {type}");
                     }
                 }
             }

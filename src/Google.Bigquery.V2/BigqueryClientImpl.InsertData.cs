@@ -25,7 +25,7 @@ namespace Google.Bigquery.V2
     public partial class BigqueryClientImpl
     {
         /// <inheritdoc />
-        public override BigqueryJob UploadCsv(TableReference tableReference, TableSchema schema, Stream input)
+        public override BigqueryJob UploadCsv(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
             Preconditions.CheckNotNull(input, nameof(input));
@@ -36,15 +36,15 @@ namespace Google.Bigquery.V2
                 DestinationTable = tableReference,
                 SourceFormat = "CSV",
                 Schema = schema,
-                SkipLeadingRows = 1 // TODO: Parameterize this!   
             };
+            options?.ModifyConfiguration(configuration);
 
             return UploadData(configuration, input, "text/csv");
         }
 
         // Load it from a TextReader? Tricky, but useful.
         /// <inheritdoc />
-        public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input)
+        public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
             Preconditions.CheckNotNull(input, nameof(input));
@@ -56,6 +56,8 @@ namespace Google.Bigquery.V2
                 SourceFormat = "NEWLINE_DELIMITED_JSON",
                 Schema = schema
             };
+            options?.ModifyConfiguration(configuration);
+
             return UploadData(configuration, input, "text/json");
         }
 
@@ -80,31 +82,22 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override void InsertRow(TableReference tableReference, IDictionary<string, object> rowData, string insertId = null)
+        public override void Insert(TableReference tableReference, IEnumerable<InsertRow> rows, InsertOptions options = null)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
-            Preconditions.CheckNotNull(rowData, nameof(rowData));
+            Preconditions.CheckNotNull(rows, nameof(rows));
 
             var body = new TableDataInsertAllRequest
             {
-                Rows = new[] { new TableDataInsertAllRequest.RowsData { InsertId = insertId, Json = rowData } }
+                Rows = rows.Select(row =>
+                {
+                    Preconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
+                    return row.ToRowsData();
+                }).ToList()
             };
-            var response = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId).Execute();
-            HandleInsertAllResponse(response);
-        }
-
-        // TODO: Insert IDs?
-        /// <inheritdoc />
-        public override void InsertRows(TableReference tableReference, IEnumerable<IDictionary<string, object>> rowData)
-        {
-            Preconditions.CheckNotNull(tableReference, nameof(tableReference));
-            Preconditions.CheckNotNull(rowData, nameof(rowData));
-
-            var body = new TableDataInsertAllRequest
-            {
-                Rows = rowData.Select(row => new TableDataInsertAllRequest.RowsData { Json = ConvertRowData(row) }).ToList()
-            };
-            var response = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId).Execute();
+            options?.ModifyRequest(body);
+            var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            var response = request.Execute();
             HandleInsertAllResponse(response);
         }
 
@@ -128,35 +121,6 @@ namespace Google.Bigquery.V2
                 };
                 throw exception;
             }
-        }
-
-        // TOOD: Maybe create a view over the original dictionary?
-        private static IDictionary<string, object> ConvertRowData(IDictionary<string, object> original) =>
-            original.ToDictionary(pair => pair.Key, pair => ConvertRowValue(pair.Value));
-
-        private static object ConvertRowValue(object value)
-        {
-            if (value == null)
-            {
-                return value;
-            }
-            if (value is int || value is long || value is string || value is byte[] || value is float || value is double || value is decimal)
-            {
-                return value;
-            }
-            if (value is DateTime)
-            {
-                DateTime dt = (DateTime)value;
-                // TODO: Maybe enforce universal only?
-                return dt.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
-            }
-            if (value is DateTimeOffset)
-            {
-                DateTimeOffset dto = (DateTimeOffset)value;
-                return dto.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
-            }
-            // TODO: Transform IList<T> and T[] to handle repeated values?
-            throw new ArgumentException($"Unable to represent value of type {value.GetType()} in insert request");
         }
     }
 }

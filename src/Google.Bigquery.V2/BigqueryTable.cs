@@ -22,14 +22,20 @@ namespace Google.Bigquery.V2
     /// A table within a Bigquery dataset.
     /// </summary>
     /// <remarks>
-    /// This class wraps the underlying HTTP API resource and retains a reference to the original
+    /// This class wraps the underlying REST API resource and retains a reference to the original
     /// client, allowing for simpler table-oriented operations.
     /// </remarks>
     public sealed class BigqueryTable
     {
         private readonly BigqueryClient _client;
-        // TODO: We may want to expose this publicly.
-        private readonly Table _apiResource;
+
+        /// <summary>
+        /// The underlying REST-ful resource for the table.
+        /// </summary>
+        /// <remarks>
+        /// The data within the resource may be incomplete, depending on how it was obtained.
+        /// </remarks>
+        public Table Resource { get; }
 
         /// <summary>
         /// The fully-qualified identifier for the table in a string form of <c>project:dataset.table</c>.
@@ -40,7 +46,7 @@ namespace Google.Bigquery.V2
         /// The schema of this table, if known. Schemas are not retrieved when listing the tables within a dataset,
         /// so the value of this property can be <c>null</c>.
         /// </summary>
-        public TableSchema Schema => _apiResource.Schema;
+        public TableSchema Schema => Resource.Schema;
 
         /// <summary>
         /// The fully-qualified identifier for the table, as an object which can be used for other operations
@@ -50,64 +56,76 @@ namespace Google.Bigquery.V2
         /// The properties within the reference can be used to determine the project ID,
         /// dataset ID and table ID components.
         /// </remarks>
-        public TableReference Reference => _apiResource.TableReference;
+        public TableReference Reference => Resource.TableReference;
 
-        internal BigqueryTable(BigqueryClient client, TableList.TablesData apiResource)
+        internal BigqueryTable(BigqueryClient client, TableList.TablesData resource)
             : this(client, new Table {
-                TableReference = apiResource.TableReference,
-                FriendlyName = apiResource.FriendlyName,
-                Id = apiResource.Id, Kind = apiResource.Kind
+                TableReference = resource.TableReference,
+                FriendlyName = resource.FriendlyName,
+                Id = resource.Id, Kind = resource.Kind
             })
         {
         }
 
-        internal BigqueryTable(BigqueryClient client, Table apiResource)
+        internal BigqueryTable(BigqueryClient client, Table resource)
         {
             _client = client;
-            _apiResource = apiResource;
+            Resource = resource;
         }
 
         /// <summary>
         /// Uploads a stream of CSV data to this table.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadCsv(TableReference, TableSchema, Stream)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)"/>.
         /// </summary>
         /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
-        public BigqueryJob UploadCsv(Stream input) => _client.UploadCsv(Reference, Schema, input);
+        public BigqueryJob UploadCsv(Stream input, UploadCsvOptions options = null) => _client.UploadCsv(Reference, Schema, input, options);
 
         /// <summary>
         /// Uploads a stream of JSON data to this table.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJson(TableReference, TableSchema, Stream)"/>.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)"/>.
         /// </summary>
         /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A data upload job.</returns>
-        public BigqueryJob UploadJson(Stream input) => _client.UploadJson(Reference, Schema, input);
+        public BigqueryJob UploadJson(Stream input, UploadJsonOptions options = null) => _client.UploadJson(Reference, Schema, input, options);
 
         /// <summary>
         /// Lists the rows within this table, similar to a <c>SELECT * FROM ...</c> query.
         /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public BigqueryResult ListRows() => _client.ListRows(Reference, Schema);
+        public BigqueryResult ListRows(ListRowsOptions options = null) => _client.ListRows(Reference, Schema, options);
 
         /// <summary>
         /// Inserts a single row of data into this table.
         /// </summary>
-        /// <param name="rowData">The data to insert. Must not be null.</param>
-        /// <param name="insertId">The ID for the insertion, used to avoid data duplication. May be null.</param>
-        public void InsertRow(IDictionary<string, object> data, string insertId = null) =>
-            _client.InsertRow(Reference, data, insertId);
+        /// <param name="row">The data to insert. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public void Insert(InsertRow row, InsertOptions options = null) =>
+            _client.Insert(Reference, row, options);
 
         /// <summary>
         /// Inserts all the given rows of data into this table.
         /// </summary>
-        /// <param name="rowData">The data to insert. Must not be null.</param>
-        public void InsertRows(IEnumerable<IDictionary<string, object>> rowData) =>
-            _client.InsertRows(Reference, rowData);
+        /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public void Insert(IEnumerable<InsertRow> rows, InsertOptions options = null) =>
+            _client.Insert(Reference, rows, options);
+
+        /// <summary>
+        /// Inserts all the given rows of data into this table.
+        /// </summary>
+        /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
+        public void Insert(params InsertRow[] rows) =>
+            _client.Insert(Reference, rows);
 
         /// <summary>
         /// Deletes this table.
         /// </summary>
-        public void Delete() => _client.DeleteTable(Reference);
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public void Delete(DeleteTableOptions options = null) => _client.DeleteTable(Reference, options);
 
         /// <summary>
         /// Returns the fully qualified ID of the table in square brackets.

@@ -39,7 +39,7 @@ namespace Google.Bigquery.V2
             return s_jobsPageStreamer.Fetch(initialRequest).Select(job => new BigqueryJob(this, job));
         }
 
-        private JobsResource.ListRequest CreateListJobsRequest(ProjectReference projectReference, ListJobsOptions options)
+        private JobsResource.ListRequest CreateListJobsRequest(ProjectReference projectReference, ListJobsOptions options = null)
         {
             var request = Service.Jobs.List(projectReference.ProjectId);
             options?.ModifyRequest(request);
@@ -47,43 +47,46 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryJob PollJob(JobReference jobReference)
+        public override BigqueryJob PollJob(JobReference jobReference, PollJobOptions options = null)
         {
             Preconditions.CheckNotNull(jobReference, nameof(jobReference));
+            options?.Validate();
 
-            while (true)
+            DateTimeOffset? deadline = options?.GetEffectiveDeadline() ?? DateTimeOffset.MaxValue;
+            long maxRequests = options?.MaxRequests ?? long.MaxValue;
+            TimeSpan interval = options?.Interval ?? TimeSpan.FromSeconds(1);
+
+            for (long i = 0; i < maxRequests && DateTimeOffset.UtcNow < deadline; i++)
             {
                 var job = GetJob(jobReference);
-                switch (job.State)
+                if (job.State == JobState.Done)
                 {
-                    case "DONE":
-                        return job;
-                    case "PENDING":
-                    case "RUNNING":
-                        break;
-                    default:
-                        throw new InvalidOperationException($"Unexpected status: {job.Status.State}");
+                    return job;
                 }
-                // TODO: Parameterize this
-                Thread.Sleep(1000);
+                Thread.Sleep(interval);
             }
+            throw new TimeoutException($"Job {jobReference.JobId} did not complete in time.");
         }
 
         /// <inheritdoc />
-        public override BigqueryJob GetJob(JobReference jobReference)
+        public override BigqueryJob GetJob(JobReference jobReference, GetJobOptions options = null)
         {
             Preconditions.CheckNotNull(jobReference, nameof(jobReference));
 
-            var job = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId).Execute();
+            var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
+            options?.ModifyRequest(request);
+            var job = request.Execute();
             return new BigqueryJob(this, job);
         }
 
         /// <inheritdoc />
-        public override void CancelJob(JobReference jobReference)
+        public override BigqueryJob CancelJob(JobReference jobReference, CancelJobOptions options = null)
         {
             Preconditions.CheckNotNull(jobReference, nameof(jobReference));
-
-            Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId).Execute();
+            var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
+            options?.ModifyRequest(request);
+            var job = request.Execute().Job;
+            return new BigqueryJob(this, job);
         }
     }
 }

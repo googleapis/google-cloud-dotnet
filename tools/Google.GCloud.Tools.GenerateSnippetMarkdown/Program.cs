@@ -111,10 +111,16 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
         static bool UidMatches(string uid, string projectName, string clientName, string snippetName)
         {
             // We want to use prefix matching for overload resolution, as well as avoiding false-positives
-            // due to short names. So two situations:
+            // due to short names. So three situations:
             // <Foo> - match project.client.Foo(
             // <Foo_Bar__Baz> - match project.client.Foo(Bar,Baz
-            string methodStart = snippetName.Contains("_") ? snippetName.Replace("__", ",").Replace("_", "(") : snippetName + "(";
+            // <Foo_Bar___> - match project.client.Foo(Bar)
+            // <Foo____> - match project.client.Foo()
+            // The last cases are for situations where there are multiple overloads *starting* with the same
+            // parameter types, and you want to indicate an overload end-of-parameter-list.
+            string methodStart = snippetName.Contains("_")
+                ? snippetName.Replace("____", "()").Replace("___", ")").Replace("__", ",").Replace("_", "(")
+                : snippetName + "(";
             return uid.StartsWith($"{projectName}.{clientName}.{methodStart}");
         }
 

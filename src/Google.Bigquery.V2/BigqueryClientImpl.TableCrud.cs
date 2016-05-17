@@ -31,11 +31,13 @@ namespace Google.Bigquery.V2
 
 
         /// <inheritdoc />
-        public override BigqueryTable GetTable(TableReference tableReference)
+        public override BigqueryTable GetTable(TableReference tableReference, GetTableOptions options = null)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
 
-            var resource = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId).Execute();
+            var request = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            options?.ModifyRequest(request);
+            var resource = request.Execute();
             return new BigqueryTable(this, resource);
         }
 
@@ -57,38 +59,40 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryTable CreateTable(TableReference tableReference, TableSchema schema)
+        public override BigqueryTable CreateTable(TableReference tableReference, TableSchema schema, CreateTableOptions options = null)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
 
-            var table = Service.Tables
-                .Insert(new Table { TableReference = tableReference, Schema = schema }, tableReference.ProjectId, tableReference.DatasetId)
-                .Execute();
-            return new BigqueryTable(this, table);
+            var table = new Table { TableReference = tableReference, Schema = schema };
+            var request = Service.Tables.Insert(table, tableReference.ProjectId, tableReference.DatasetId);
+            options?.ModifyRequest(table, request);
+            var result = request.Execute();
+            return new BigqueryTable(this, result);
         }
 
         /// <inheritdoc />
-        public override BigqueryTable GetOrCreateTable(TableReference tableReference, TableSchema schema)
+        public override BigqueryTable GetOrCreateTable(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             try
             {
                 // TODO: Validate the schema matches?
-                return GetTable(tableReference);
+                return GetTable(tableReference, getOptions);
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return CreateTable(tableReference, schema);
+                return CreateTable(tableReference, schema, createOptions);
             }
         }
 
         /// <inheritdoc />
-        public override void DeleteTable(TableReference tableReference)
+        public override void DeleteTable(TableReference tableReference, DeleteTableOptions options = null)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
-
-            Service.Tables.Delete(tableReference.ProjectId, tableReference.TableId, tableReference.TableId).Execute();
+            var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.TableId, tableReference.TableId);
+            options?.ModifyRequest(request);
+            request.Execute();
         }
     }
 }

@@ -55,13 +55,13 @@ namespace Google.Bigquery.V2.IntegrationTests
 
         private void CreateHighScoreTable(BigqueryDataset dataset)
         {
-            var table = dataset.CreateTable(HighScoreTableId, new SchemaBuilder
+            var table = dataset.CreateTable(HighScoreTableId, new TableSchemaBuilder
                 {
-                    { "player", SchemaFieldType.String },
-                    { "gameStarted", SchemaFieldType.Timestamp },
-                    { "score", SchemaFieldType.Integer }
+                    { "player", BigqueryDbType.String },
+                    { "gameStarted", BigqueryDbType.Timestamp },
+                    { "score", BigqueryDbType.Integer }
                 }.Build());
-            table.InsertRow(new Dictionary<string, object> {
+            table.Insert(new InsertRow {
                 { "player", "Bob" },
                 { "score", 85 },
                 { "gameStarted", new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
@@ -72,22 +72,22 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             // Note: the address format here is purely for testing nested schemas.
             // Address data is fiendishly complicated in reality. Ditto naming...
-            var table = dataset.CreateTable(AddressbookTableId, new SchemaBuilder
+            var table = dataset.CreateTable(AddressbookTableId, new TableSchemaBuilder
                 {
-                    { "name", new SchemaBuilder
+                    { "name", new TableSchemaBuilder
                         {
-                            { "first", SchemaFieldType.String },
-                            { "last", SchemaFieldType.String }
+                            { "first", BigqueryDbType.String },
+                            { "last", BigqueryDbType.String }
                         }
                     },
-                    { "address", new SchemaBuilder
+                    { "address", new TableSchemaBuilder
                         {
-                            { "number", SchemaFieldType.Integer },
-                            { "street", SchemaFieldType.String },
-                            { "city", SchemaFieldType.String },
+                            { "number", BigqueryDbType.Integer },
+                            { "street", BigqueryDbType.String },
+                            { "city", BigqueryDbType.String },
                         }
                     },
-                    { "lastModified", SchemaFieldType.Timestamp }
+                    { "lastModified", BigqueryDbType.Timestamp }
                 }.Build());
             // TODO: Add data. InsertRow doesn't currently handle nested objects.
         }

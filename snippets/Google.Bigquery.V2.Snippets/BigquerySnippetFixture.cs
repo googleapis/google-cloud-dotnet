@@ -14,8 +14,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Globalization;
+using System.Threading;
 using Xunit;
 
 namespace Google.Bigquery.V2.Snippets
@@ -28,8 +28,15 @@ namespace Google.Bigquery.V2.Snippets
     public sealed class BigquerySnippetFixture : IDisposable, ICollectionFixture<BigquerySnippetFixture>
     {
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
+        private const string DatasetPrefix = "snippets_";
 
         public string ProjectId { get; }
+        public string GameDatasetId { get; }
+        public BigqueryClient Client { get; }
+        public string HistoryTableId => "game_history";
+        public string LevelsTableId => "levels";        
+
+        private readonly List<string> _datasetsToDelete = new List<string>();
 
         public BigquerySnippetFixture()
         {
@@ -39,12 +46,66 @@ namespace Google.Bigquery.V2.Snippets
                 throw new InvalidOperationException(
                     $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
             }
+            Client = BigqueryClient.Create(ProjectId);
+            GameDatasetId = CreateGameDataset();
         }
 
-        // TODO: Set up data we want to use.
+        private string CreateGameDataset()
+        {
+            string id = CreateDataset();
+            BigqueryDataset game = Client.GetDataset(id);
+            var historySchema = new TableSchemaBuilder
+            {
+                { "player", BigqueryDbType.String },
+                { "score", BigqueryDbType.Integer },
+                { "level", BigqueryDbType.Integer },
+                { "game_started", BigqueryDbType.Timestamp }
+            }.Build();
+            var historyTable = game.CreateTable(HistoryTableId, historySchema);
+            historyTable.Insert(
+                CreateHistoryRow("Tim", 503, 1, "2015-05-03T23:01:05"),
+                CreateHistoryRow("Nadia", 450, 1, "2013-05-06T10:05:07"),
+                CreateHistoryRow("Nadia", 1320, 2, "2013-06-01T15:02:07"),
+                CreateHistoryRow("Ben", 300, 1, "2014-01-30T12:53:35"),
+                CreateHistoryRow("Tim", 5310, 3, "2014-06-28T10:32:15"),
+                CreateHistoryRow("Tim", 2000, 2, "2014-07-01T08:12:25"),
+                CreateHistoryRow("Nadia", 8310, 5, "2015-03-20T14:55:10")
+            );
+            return id;
+        }
+
+        private InsertRow CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
+            new InsertRow
+            {
+                ["player"] = player,
+                ["score"] = score,
+                ["level"] = level,
+                ["game_started"] = DateTime.ParseExact(gameStartedIso, "yyyy-MM-dd'T'HH:mm:ss",
+                    CultureInfo.InvariantCulture,
+                    DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal)
+            };
+
+        internal string GenerateDatasetId() => DatasetPrefix + Guid.NewGuid().ToString().Replace('-', '_');
+
+        internal void RegisterDatasetToDelete(string id)
+        {
+            _datasetsToDelete.Add(id);
+        }
+
+        public string CreateDataset()
+        {
+            string id = GenerateDatasetId();
+            Client.CreateDataset(id);
+            RegisterDatasetToDelete(id);
+            return id;
+        }
 
         public void Dispose()
         {
+            // TODO: Work out a way of actually deleting the datasets. If we try to delete them here,
+            // we get an error due to them still being in use.
+            // For the moment, run the tools/Google.Bigquery.V2.CleanTestData program
+            // periodically.
         }
     }
 }
