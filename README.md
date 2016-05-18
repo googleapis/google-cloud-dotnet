@@ -41,7 +41,7 @@ before running any gRPC code.
 Most `gcloud-dotnet` libraries require a project ID. If you don't remember yours (or haven't created a project yet), navigate to the [Google Developers Console][google-developers-console] to view your project ID (or create a new project and get the ID then). Once done, record the value and make sure to pass it as a parameter to the methods that require it.
 
 ## Authentication
-Every API call needs to be authenticated. In order to successfully make a call, first ensure that the necessary Google Cloud APIs are enabled for your project and that you've downladed the right set of keys (if it applies to you) as explained in the [authentication document][cloud-common-authentication].
+Every API call needs to be authenticated. In order to successfully make a call, first ensure that the necessary [Google Cloud APIs][cloud-api-enablement] are enabled for your project and that you've downloaded the right set of keys (if it applies to you) as explained in the [authentication document][cloud-common-authentication].
 
 Next, choose a method for authenticating API requests from within your project:
 
@@ -243,13 +243,14 @@ considered stable - anything may change at any time.
 Apache 2.0 - See [LICENSE] for more information.
 
 
-[CONTRIBUTING]:https://github.com/GoogleCloudPlatform/gcloud-dotnet/blob/master/CONTRIBUTING.md
-[LICENSE]: https://github.com/GoogleCloudPlatform/gcloud-dotnet/blob/master/LICENSE
+[CONTRIBUTING]: ./CONTRIBUTING.md
+[LICENSE]: ./LICENSE
 [cloud-platform]: https://cloud.google.com/
 [language-landing-dotnet]: https://cloud.google.com/dotnet/
 [api-reference-dotnet]: http://googlecloudplatform.github.io/gcloud-dotnet/
 [google-api-dotnet-client]: https://github.com/google/google-api-dotnet-client
 [getting-started-dotnet]: https://github.com/GoogleCloudPlatform/getting-started-dotnet/
+[cloud-api-enablement]:  https://console.developers.google.com/apis/library/
 [cloud-common-authentication]: https://github.com/GoogleCloudPlatform/gcloud-common/blob/master/authentication/readme.md#authentication
 [google-developers-console]: https://console.developers.google.com/project
 [google-cloud-sdk]: https://cloud.google.com/sdk/
