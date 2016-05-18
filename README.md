@@ -38,20 +38,7 @@ before running any gRPC code.
 
 ## Specifying a Project ID
 
-Most `gcloud-dotnet` libraries require a project ID. If you don't remember yours (or haven't created a project yet), navigate to the [Google Developers Console][google-developers-console] to view your project ID (or create a new project and get the ID then). Once done, there are multiple ways to specify the project ID for the client libraries to retrieve the value:
-
-1. When using `gcloud-dotnet` libraries from within Compute/App Engine, there's no need to specify a project ID.  It is automatically inferred from the production environment.
-2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
-    * Define the environment variable GCLOUD_PROJECT to be your desired project ID. For example:
-
-      ```
-      set GCLOUD_PROJECT=PROJECT_ID
-      ```
-    * If running locally for development/testing, set the project ID using the [Google Cloud SDK][google-cloud-sdk].  Download the SDK if you haven't already, and set the project ID by running the following in the command line:
-
-      ```
-      gcloud config set project PROJECT_ID
-      ```
+Most `gcloud-dotnet` libraries require a project ID. If you don't remember yours (or haven't created a project yet), navigate to the [Google Developers Console][google-developers-console] to view your project ID (or create a new project and get the ID then). Once done, record the value and make sure to pass it as a parameter to the methods that require it.
 
 ## Authentication
 Every API call needs to be authenticated. In order to successfully make a call, first ensure that the necessary Google Cloud APIs are enabled for your project and that you've downladed the right set of keys (if it applies to you) as explained in the [authentication document][cloud-common-authentication].
