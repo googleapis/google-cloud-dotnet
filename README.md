@@ -23,7 +23,7 @@ If you need support for other Google APIs, check out the [Google .NET API Client
 
 ## Example Applications
 
-* [getting-started-dotnet] - A [quickstart and tutorial][language-landing-dotnet] that demonstrates how to build a complete web application using Cloud Datastore, Cloud Storage, and Cloud Pub/Sub and deploy it to Google App Engine or Google Compute Engine.
+* [getting-started-dotnet] - A [quickstart and tutorial][language-landing-dotnet] that demonstrates how to build a complete web application using Cloud Datastore, Cloud Storage, and Cloud Pub/Sub and deploy it to Google Compute Engine.
 
 ## Requirements
 
@@ -54,7 +54,7 @@ Most `gcloud-dotnet` libraries require a project ID. If you don't remember yours
       ```
 
 ## Authentication
-Every API call needs to be authenticated. In other to successfully make a call, first ensure that the necessary Google Cloud APIs are enabled for your project and that you've downladed the right set of keys (if it applies to you) as explained in the [authentication document][cloud-common-authentication].
+Every API call needs to be authenticated. In order to successfully make a call, first ensure that the necessary Google Cloud APIs are enabled for your project and that you've downladed the right set of keys (if it applies to you) as explained in the [authentication document][cloud-common-authentication].
 
 Next, choose a method for authenticating API requests from within your project:
 
