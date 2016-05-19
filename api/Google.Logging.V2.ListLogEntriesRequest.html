@@ -82,7 +82,7 @@
               <h5 id="Google_Logging_V2_ListLogEntriesRequest_syntax">Syntax</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">[DebuggerNonUserCode]
-public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt;, IMessage, IEquatable&lt;ListLogEntriesRequest&gt;, IDeepCloneable&lt;ListLogEntriesRequest&gt;</code></pre>
+public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt;, IMessage, IEquatable&lt;ListLogEntriesRequest&gt;, IDeepCloneable&lt;ListLogEntriesRequest&gt;, IPageRequest</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -243,9 +243,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -258,7 +256,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -274,11 +272,8 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Filter
 {
-
     get;
-
     set;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -303,9 +298,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -318,7 +311,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -336,11 +329,8 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string OrderBy
 {
-
     get;
-
     set;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -370,11 +360,8 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public int PageSize
 {
-
     get;
-
     set;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -404,11 +391,8 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string PageToken
 {
-
     get;
-
     set;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -433,9 +417,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static MessageParser&lt;ListLogEntriesRequest&gt; Parser
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -448,7 +430,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.MessageParser%601.html#Google_Protobuf_MessageParser_1">MessageParser</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogEntriesRequest.html#Google_Logging_V2_ListLogEntriesRequest">ListLogEntriesRequest</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Logging.V2.ListLogEntriesRequest.html#Google_Logging_V2_ListLogEntriesRequest">ListLogEntriesRequest</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -462,9 +444,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public RepeatedField&lt;string&gt; ProjectIds
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -477,7 +457,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField%601.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -670,7 +650,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
@@ -716,7 +696,7 @@ public sealed class ListLogEntriesRequest : IMessage&lt;ListLogEntriesRequest&gt
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>

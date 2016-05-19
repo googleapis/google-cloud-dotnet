@@ -84,7 +84,7 @@
                 <pre><code class="lang-csharp hljs">public sealed class BigqueryTable</code></pre>
               </div>
               <h5 id="Google_Bigquery_V2_BigqueryTable_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>This class wraps the underlying HTTP API resource and retains a reference to the original
+              <div class="markdown level0 remarks"><p>This class wraps the underlying REST API resource and retains a reference to the original
 client, allowing for simpler table-oriented operations.</p>
 </div>
               <h3 id="properties">Properties
@@ -97,9 +97,7 @@ client, allowing for simpler table-oriented operations.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string FullyQualifiedId
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -130,9 +128,7 @@ dataset ID and table ID components.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public TableReference Reference
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -145,7 +141,36 @@ dataset ID and table ID components.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryTable_Resource" data-uid="Google.Bigquery.V2.BigqueryTable.Resource">Resource</h4>
+              <div class="markdown level1 summary"><p>The underlying REST-ful resource for the table.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Bigquery_V2_BigqueryTable_Resource_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The data within the resource may be incomplete, depending on how it was obtained.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Table Resource
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Bigquery.v2.Data.Table</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -159,9 +184,7 @@ so the value of this property can be <code>null</code>.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public TableSchema Schema
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -174,28 +197,46 @@ so the value of this property can be <code>null</code>.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><span class="xref">Google.Apis.Bigquery.v2.Data.TableSchema</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Bigquery_V2_BigqueryTable_Delete" data-uid="Google.Bigquery.V2.BigqueryTable.Delete">Delete()</h4>
+              <h4 id="Google_Bigquery_V2_BigqueryTable_Delete_Google_Bigquery_V2_DeleteTableOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.Delete(Google.Bigquery.V2.DeleteTableOptions)">Delete(DeleteTableOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes this table.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Delete()</code></pre>
+                <pre><code class="lang-csharp hljs">public void Delete(DeleteTableOptions options = null)</code></pre>
               </div>
-              <h4 id="Google_Bigquery_V2_BigqueryTable_InsertRow_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_" data-uid="Google.Bigquery.V2.BigqueryTable.InsertRow(System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">InsertRow(IDictionary&lt;String, Object&gt;, String)</h4>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.DeleteTableOptions.html#Google_Bigquery_V2_DeleteTableOptions">DeleteTableOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryTable_Insert_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)">Insert(InsertRow, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts a single row of data into this table.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void InsertRow(IDictionary&lt;string, object&gt; data, string insertId = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public void Insert(InsertRow row, InsertOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -208,25 +249,26 @@ so the value of this property can be <code>null</code>.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
-                    <td><em>data</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow">InsertRow</a></td>
+                    <td><em>row</em></td>
+                    <td><p>The data to insert. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>insertId</em></td>
-                    <td><p>The ID for the insertion, used to avoid data duplication. May be null.</p>
+                    <td><a class="xref" href="Google.Bigquery.V2.InsertOptions.html#Google_Bigquery_V2_InsertOptions">InsertOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Bigquery_V2_BigqueryTable_InsertRows_System_Collections_Generic_IEnumerable_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Google.Bigquery.V2.BigqueryTable.InsertRows(System.Collections.Generic.IEnumerable{System.Collections.Generic.IDictionary{System.String,System.Object}})">InsertRows(IEnumerable&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
+              <h4 id="Google_Bigquery_V2_BigqueryTable_Insert_Google_Bigquery_V2_InsertRow___" data-uid="Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow[])">Insert(InsertRow[])</h4>
               <div class="markdown level1 summary"><p>Inserts all the given rows of data into this table.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void InsertRows(IEnumerable&lt;IDictionary&lt;string, object&gt;&gt; rowData)</code></pre>
+                <pre><code class="lang-csharp hljs">public void Insert(params InsertRow[] rows)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -239,21 +281,83 @@ so the value of this property can be <code>null</code>.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
-                    <td><em>rowData</em></td>
-                    <td><p>The data to insert. Must not be null.</p>
+                    <td><a class="xref" href="Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow">InsertRow</a>[]</td>
+                    <td><em>rows</em></td>
+                    <td><p>The rows to insert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Bigquery_V2_BigqueryTable_ListRows" data-uid="Google.Bigquery.V2.BigqueryTable.ListRows">ListRows()</h4>
-              <div class="markdown level1 summary"><p>Lists the rows within this table, similar to a <code>SELECT * FROM ...</code> query.</p>
+              <h4 id="Google_Bigquery_V2_BigqueryTable_Insert_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.Insert(System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)">Insert(IEnumerable&lt;InsertRow&gt;, InsertOptions)</h4>
+              <div class="markdown level1 summary"><p>Inserts all the given rows of data into this table.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BigqueryResult ListRows()</code></pre>
+                <pre><code class="lang-csharp hljs">public void Insert(IEnumerable&lt;InsertRow&gt; rows, InsertOptions options = null)</code></pre>
               </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow">InsertRow</a>&gt;</td>
+                    <td><em>rows</em></td>
+                    <td><p>The rows to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.InsertOptions.html#Google_Bigquery_V2_InsertOptions">InsertOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryTable_ListRows_Google_Bigquery_V2_ListRowsOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.ListRows(Google.Bigquery.V2.ListRowsOptions)">ListRows(ListRowsOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the rows within this table, similar to a <code>SELECT * FROM ...</code> query.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
+BigqueryTable table = client.GetTable(datasetId, tableId);
+BigqueryResult result = table.ListRows();
+foreach (BigqueryResult.Row row in result.Rows)
+{
+    DateTime timestamp = (DateTime)row[&quot;game_started&quot;];
+    long level = (long)row[&quot;level&quot;];
+    long score = (long)row[&quot;score&quot;];
+    string player = (string)row[&quot;player&quot;];
+    Console.WriteLine($&quot;{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})&quot;);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigqueryResult ListRows(ListRowsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListRowsOptions.html#Google_Bigquery_V2_ListRowsOptions">ListRowsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -305,14 +409,14 @@ var query = $"SELECT name, age from {table}";
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Bigquery_V2_BigqueryTable_UploadCsv_System_IO_Stream_" data-uid="Google.Bigquery.V2.BigqueryTable.UploadCsv(System.IO.Stream)">UploadCsv(Stream)</h4>
+              <h4 id="Google_Bigquery_V2_BigqueryTable_UploadCsv_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.UploadCsv(System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)">UploadCsv(Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of CSV data to this table.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_">UploadCsv(TableReference, TableSchema, Stream)</a>.</p>
+This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BigqueryJob UploadCsv(Stream input)</code></pre>
+                <pre><code class="lang-csharp hljs">public BigqueryJob UploadCsv(Stream input, UploadCsvOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -328,6 +432,12 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><em>input</em></td>
                     <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions">UploadCsvOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
 </td>
                   </tr>
                 </tbody>
@@ -348,14 +458,14 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Bigquery_V2_BigqueryTable_UploadJson_System_IO_Stream_" data-uid="Google.Bigquery.V2.BigqueryTable.UploadJson(System.IO.Stream)">UploadJson(Stream)</h4>
+              <h4 id="Google_Bigquery_V2_BigqueryTable_UploadJson_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.UploadJson(System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)">UploadJson(Stream, UploadJsonOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of JSON data to this table.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_">UploadJson(TableReference, TableSchema, Stream)</a>.</p>
+This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BigqueryJob UploadJson(Stream input)</code></pre>
+                <pre><code class="lang-csharp hljs">public BigqueryJob UploadJson(Stream input, UploadJsonOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -371,6 +481,12 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><em>input</em></td>
                     <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.UploadJsonOptions.html#Google_Bigquery_V2_UploadJsonOptions">UploadJsonOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
 </td>
                   </tr>
                 </tbody>

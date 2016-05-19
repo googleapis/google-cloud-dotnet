@@ -123,9 +123,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override ConfigServiceV2.IConfigServiceV2Client GrpcClient
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -176,7 +174,7 @@ exists.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -230,7 +228,7 @@ exists.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -277,7 +275,7 @@ exists.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -308,7 +306,7 @@ exists.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -355,7 +353,7 @@ exists.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -402,7 +400,7 @@ exists.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -425,13 +423,13 @@ exists.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_ListSinks_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.ListSinks(System.String,Google.Api.Gax.CallSettings)">ListSinks(String, CallSettings)</h4>
+              <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_ListSinksPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.ListSinksPageStream(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListSinksPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists sinks.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IEnumerable&lt;LogSink&gt; ListSinks(string projectName, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListSinksResponse, LogSink&gt; ListSinksPageStream(string projectName, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -449,7 +447,22 @@ exists.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -466,19 +479,19 @@ exists.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
-                    <td><p>The RPC response.</p>
+                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.ListSinksResponse.html#Google_Logging_V2_ListSinksResponse">ListSinksResponse</a>, <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
+                    <td><p>A sequence of pages of LogSink items.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_ListSinksAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.ListSinksAsync(System.String,Google.Api.Gax.CallSettings)">ListSinksAsync(String, CallSettings)</h4>
+              <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_ListSinksPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.ListSinksPageStreamAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListSinksPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists sinks.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;LogSink&gt; ListSinksAsync(string projectName, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListSinksResponse, LogSink&gt; ListSinksPageStreamAsync(string projectName, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -496,7 +509,22 @@ exists.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -513,8 +541,8 @@ exists.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.ListSinksResponse.html#Google_Logging_V2_ListSinksResponse">ListSinksResponse</a>, <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
+                    <td><p>An asynchronous sequence of pages of LogSink items.</p>
 </td>
                   </tr>
                 </tbody>
@@ -551,7 +579,7 @@ this method creates a new sink.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -606,7 +634,7 @@ this method creates a new sink.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>

@@ -108,7 +108,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
+                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -203,7 +203,7 @@ No key may be reserved/read-only.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -258,7 +258,7 @@ No key may be reserved/read-only.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -360,7 +360,7 @@ No key may be reserved/read-only.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -407,7 +407,7 @@ No key may be reserved/read-only.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -534,7 +534,7 @@ Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td><em>transaction</em></td>
                     <td><p>The identifier of the transaction associated with the commit. A
 transaction identifier is returned by a call to
@@ -559,7 +559,7 @@ entity.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -586,33 +586,7 @@ entity.</p>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
-KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;book&quot;);
-Entity book1 = new Entity
-{
-    Key = keyFactory.CreateInsertionKey(),
-    [&quot;author&quot;] = &quot;Harper Lee&quot;,
-    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
-};
-Entity book2 = new Entity
-{
-    Key = keyFactory.CreateInsertionKey(),
-    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
-    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
-};
-ByteString transaction = client.BeginTransaction(projectId).Transaction;
-CommitResponse response = client.Commit(
-    projectId,
-    Mode.TRANSACTIONAL,
-    transaction,
-    new[] { book1.ToInsert(), book2.ToInsert() });
-
-IEnumerable&lt;Key&gt; insertedKeys = response.MutationResults.Select(r =&gt; r.Key);
-Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -656,7 +630,7 @@ entity.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -710,7 +684,7 @@ entities.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td><em>transaction</em></td>
                     <td><p>The identifier of the transaction associated with the commit. A
 transaction identifier is returned by a call to
@@ -735,7 +709,7 @@ entity.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -789,7 +763,7 @@ entities.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td><em>transaction</em></td>
                     <td><p>The identifier of the transaction associated with the commit. A
 transaction identifier is returned by a call to
@@ -885,7 +859,7 @@ entity.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1000,9 +974,9 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
+                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a>.</p>
+                    <td><p>Optional <span class="xref">Google.Api.Gax.ServiceEndpoint</span>.</p>
 </td>
                   </tr>
                   <tr>
@@ -1098,9 +1072,9 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
+                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a>.</p>
+                    <td><p>Optional <span class="xref">Google.Api.Gax.ServiceEndpoint</span>.</p>
 </td>
                   </tr>
                   <tr>
@@ -1175,7 +1149,7 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1233,7 +1207,7 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1338,14 +1312,14 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td><em>transaction</em></td>
                     <td><p>The transaction identifier, returned by a call to
 [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1392,14 +1366,14 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td><em>transaction</em></td>
                     <td><p>The transaction identifier, returned by a call to
 [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1446,7 +1420,7 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td><em>transaction</em></td>
                     <td><p>The transaction identifier, returned by a call to
 [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].</p>
@@ -1479,24 +1453,7 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
               <h4 id="Google_Datastore_V1Beta3_DatastoreClient_RunQuery_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClient.RunQuery(System.String,Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.ReadOptions,Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQuery(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
-GqlQuery gqlQuery = new GqlQuery
-{
-    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
-};
-RunQueryResponse response = client.RunQuery(
-    projectId,
-    partitionId,
-    new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
-    gqlQuery);
-
-foreach (EntityResult result in response.Batch.EntityResults)
-{
-    Console.WriteLine(result.Entity);
-}
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RunQueryResponse RunQuery(string projectId, PartitionId partitionId, ReadOptions readOptions, GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
@@ -1532,7 +1489,7 @@ foreach (EntityResult result in response.Batch.EntityResults)
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1559,30 +1516,62 @@ foreach (EntityResult result in response.Batch.EntityResults)
               <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
-Query query = new Query
-{
-    Kind = { new KindExpression { Name = kind } },
-    Filter = new Filter
+<pre><code class="lang-cs">    DatastoreClient client = DatastoreClient.Create();
+    Query query = new Query
     {
-        PropertyFilter = new PropertyFilter
+        Kind = { new KindExpression { Name = kind } },
+        Filter = new Filter
         {
-            Property = new PropertyReference(&quot;author&quot;),
-            Op = Operator.EQUAL,
-            Value = &quot;Jane Austen&quot;
+            PropertyFilter = new PropertyFilter
+            {
+                Property = new PropertyReference(&quot;author&quot;),
+                Op = Operator.EQUAL,
+                Value = &quot;Jane Austen&quot;
+            }
         }
-    }
-};
-RunQueryResponse response = client.RunQuery(
-    projectId,
-    partitionId,
-    new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
-    query);
+    };
+    RunQueryResponse response = client.RunQuery(
+        projectId,
+        partitionId,
+        new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+        query);
 
-foreach (EntityResult result in response.Batch.EntityResults)
-{
-    Console.WriteLine(result.Entity);
+    foreach (EntityResult result in response.Batch.EntityResults)
+    {
+        Console.WriteLine(result.Entity);
+    }
+    // EndSnippet
+
+    Assert.Equal(1, response.Batch.EntityResults.Count);
+    Entity entity = response.Batch.EntityResults[0].Entity;
+    Assert.Equal(&quot;Jane Austen&quot;, (string)entity[&quot;author&quot;]);
+    Assert.Equal(&quot;Pride and Prejudice&quot;, (string)entity[&quot;title&quot;]);
 }
+
+[Fact]
+public void GqlQuery()
+{
+    string projectId = _fixture.ProjectId;
+    PartitionId partitionId = _fixture.PartitionId;
+    string kind = _fixture.BookKind;
+
+    // Snippet: RunQuery(string,PartitionId,ReadOptions,GqlQuery,CallSettings)
+    DatastoreClient client = DatastoreClient.Create();
+    GqlQuery gqlQuery = new GqlQuery
+    {
+        QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+        NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+    };
+    RunQueryResponse response = client.RunQuery(
+        projectId,
+        partitionId,
+        new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+        gqlQuery);
+
+    foreach (EntityResult result in response.Batch.EntityResults)
+    {
+        Console.WriteLine(result.Entity);
+    }
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1620,7 +1609,7 @@ foreach (EntityResult result in response.Batch.EntityResults)
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1682,7 +1671,7 @@ foreach (EntityResult result in response.Batch.EntityResults)
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1807,7 +1796,7 @@ foreach (EntityResult result in response.Batch.EntityResults)
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>

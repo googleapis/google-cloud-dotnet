@@ -123,9 +123,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override Publisher.IPublisherClient GrpcClient
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -175,7 +173,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -228,7 +226,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -280,7 +278,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -316,7 +314,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -364,7 +362,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -412,7 +410,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -435,13 +433,13 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopics_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopics(System.String,Google.Api.Gax.CallSettings)">ListTopics(String, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicsPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicsPageStream(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicsPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching topics.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IEnumerable&lt;Topic&gt; ListTopics(string project, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopicsPageStream(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +458,22 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -477,19 +490,19 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
-                    <td><p>The RPC response.</p>
+                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A sequence of pages of Topic items.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicsAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicsAsync(System.String,Google.Api.Gax.CallSettings)">ListTopicsAsync(String, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicsPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicsPageStreamAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicsPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching topics.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;Topic&gt; ListTopicsAsync(string project, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopicsPageStreamAsync(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -508,7 +521,22 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -525,19 +553,19 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>An asynchronous sequence of pages of Topic items.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicSubscriptions_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicSubscriptions(System.String,Google.Api.Gax.CallSettings)">ListTopicSubscriptions(String, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicSubscriptionsPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicSubscriptionsPageStream(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicSubscriptionsPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the name of the subscriptions for this topic.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IEnumerable&lt;string&gt; ListTopicSubscriptions(string topic, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListTopicSubscriptionsResponse, string&gt; ListTopicSubscriptionsPageStream(string topic, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -556,7 +584,22 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -573,19 +616,19 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td><p>The RPC response.</p>
+                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A sequence of pages of string items.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicSubscriptionsAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicSubscriptionsAsync(System.String,Google.Api.Gax.CallSettings)">ListTopicSubscriptionsAsync(String, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicSubscriptionsPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicSubscriptionsPageStreamAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicSubscriptionsPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the name of the subscriptions for this topic.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;string&gt; ListTopicSubscriptionsAsync(string topic, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListTopicSubscriptionsResponse, string&gt; ListTopicSubscriptionsPageStreamAsync(string topic, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -604,7 +647,22 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -621,8 +679,8 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>An asynchronous sequence of pages of string items.</p>
 </td>
                   </tr>
                 </tbody>
@@ -660,7 +718,7 @@ does not exist. The message payload must not be empty; it must contain
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -716,7 +774,7 @@ does not exist. The message payload must not be empty; it must contain
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>

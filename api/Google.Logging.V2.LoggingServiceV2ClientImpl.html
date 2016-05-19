@@ -123,9 +123,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override LoggingServiceV2.ILoggingServiceV2Client GrpcClient
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -170,7 +168,7 @@ The log will reappear if it receives new entries.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -202,7 +200,7 @@ The log will reappear if it receives new entries.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -225,7 +223,7 @@ The log will reappear if it receives new entries.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_LoggingServiceV2ClientImpl_ListLogEntries_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntries(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,Google.Api.Gax.CallSettings)">ListLogEntries(IEnumerable&lt;String&gt;, String, String, CallSettings)</h4>
+              <h4 id="Google_Logging_V2_LoggingServiceV2ClientImpl_ListLogEntriesPageStream_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntriesPageStream(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogEntriesPageStream(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
 Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
@@ -233,7 +231,7 @@ Logging.  For ways to export log entries, see
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IEnumerable&lt;LogEntry&gt; ListLogEntries(IEnumerable&lt;string&gt; projectIds, string filter, string orderBy, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesPageStream(IEnumerable&lt;string&gt; projectIds, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -265,7 +263,22 @@ filter matches all log entries.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -282,13 +295,13 @@ filter matches all log entries.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
-                    <td><p>The RPC response.</p>
+                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.ListLogEntriesResponse.html#Google_Logging_V2_ListLogEntriesResponse">ListLogEntriesResponse</a>, <a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
+                    <td><p>A sequence of pages of LogEntry items.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_LoggingServiceV2ClientImpl_ListLogEntriesAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntriesAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,Google.Api.Gax.CallSettings)">ListLogEntriesAsync(IEnumerable&lt;String&gt;, String, String, CallSettings)</h4>
+              <h4 id="Google_Logging_V2_LoggingServiceV2ClientImpl_ListLogEntriesPageStreamAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntriesPageStreamAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogEntriesPageStreamAsync(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
 Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
@@ -296,7 +309,7 @@ Logging.  For ways to export log entries, see
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IAsyncEnumerable&lt;LogEntry&gt; ListLogEntriesAsync(IEnumerable&lt;string&gt; projectIds, string filter, string orderBy, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesPageStreamAsync(IEnumerable&lt;string&gt; projectIds, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -328,7 +341,22 @@ filter matches all log entries.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -345,8 +373,8 @@ filter matches all log entries.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.ListLogEntriesResponse.html#Google_Logging_V2_ListLogEntriesResponse">ListLogEntriesResponse</a>, <a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
+                    <td><p>An asynchronous sequence of pages of LogEntry items.</p>
 </td>
                   </tr>
                 </tbody>
@@ -376,7 +404,7 @@ All log entries in Cloud Logging are written by this method.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
+                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
                     <td><em>resource</em></td>
                     <td><p>Optional. A default monitored resource for those log entries in <code>entries</code>
 that do not specify their own <code>resource</code>.</p>
@@ -399,7 +427,7 @@ all required fields.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -447,7 +475,7 @@ All log entries in Cloud Logging are written by this method.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
+                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
                     <td><em>resource</em></td>
                     <td><p>Optional. A default monitored resource for those log entries in <code>entries</code>
 that do not specify their own <code>resource</code>.</p>
@@ -470,7 +498,7 @@ all required fields.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>

@@ -84,13 +84,13 @@
                 <pre><code class="lang-csharp hljs">public sealed class BigqueryJob</code></pre>
               </div>
               <h5 id="Google_Bigquery_V2_BigqueryJob_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>This class wraps the underlying HTTP API resource and retains a reference to the original
+              <div class="markdown level0 remarks"><p>This class wraps the underlying REST API resource and retains a reference to the original
 client, allowing for simpler job-oriented operations.</p>
 </div>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Bigquery_V2_BigqueryJob_Reference" data-uid="Google.Bigquery.V2.BigqueryJob.Reference">Reference</h4>
-              <div class="markdown level1 summary"><p>The fully-qualified identifier for the job.</p>
+              <div class="markdown level1 summary"><p>The fully-qualified identifier for the job. This is short-hand for <code>Resource.JobReference</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 id="Google_Bigquery_V2_BigqueryJob_Reference_remarks">Remarks</h5>
@@ -101,9 +101,7 @@ and job ID components.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public JobReference Reference
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -116,22 +114,49 @@ and job ID components.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryJob_Resource" data-uid="Google.Bigquery.V2.BigqueryJob.Resource">Resource</h4>
+              <div class="markdown level1 summary"><p>The underlying REST-ful resource for the job.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 id="Google_Bigquery_V2_BigqueryJob_Resource_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The data within the resource may be incomplete, depending on how it was obtained.</p>
+</div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Job Resource
+{
+    get;
+}</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Bigquery.v2.Data.Job</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryJob_State" data-uid="Google.Bigquery.V2.BigqueryJob.State">State</h4>
-              <div class="markdown level1 summary"><p>The state of the job: &quot;RUNNING&quot;, &quot;PENDING&quot; or &quot;DONE&quot;.</p>
+              <div class="markdown level1 summary"><p>The state of the job.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string State
+                <pre><code class="lang-csharp hljs">public JobState State
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -144,22 +169,20 @@ and job ID components.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Bigquery.V2.JobState.html#Google_Bigquery_V2_JobState">JobState</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryJob_Statistics" data-uid="Google.Bigquery.V2.BigqueryJob.Statistics">Statistics</h4>
-              <div class="markdown level1 summary"><p>The statistics of the job.</p>
+              <div class="markdown level1 summary"><p>The statistics of the job. This is short-hand for <code>Resource.Statistcs</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public JobStatistics Statistics
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -172,22 +195,20 @@ and job ID components.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobStatistics.html#Google_Apis_Bigquery_v2_Data_JobStatistics">JobStatistics</a></td>
+                    <td><span class="xref">Google.Apis.Bigquery.v2.Data.JobStatistics</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryJob_Status" data-uid="Google.Bigquery.V2.BigqueryJob.Status">Status</h4>
-              <div class="markdown level1 summary"><p>The full status of the job, including any errors.</p>
+              <div class="markdown level1 summary"><p>The full status of the job, including any errors. This is short-hand for <code>Resource.Status</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public JobStatus Status
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -200,29 +221,65 @@ and job ID components.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobStatus.html#Google_Apis_Bigquery_v2_Data_JobStatus">JobStatus</a></td>
+                    <td><span class="xref">Google.Apis.Bigquery.v2.Data.JobStatus</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Bigquery_V2_BigqueryJob_Cancel" data-uid="Google.Bigquery.V2.BigqueryJob.Cancel">Cancel()</h4>
+              <h4 id="Google_Bigquery_V2_BigqueryJob_Cancel_Google_Bigquery_V2_CancelJobOptions_" data-uid="Google.Bigquery.V2.BigqueryJob.Cancel(Google.Bigquery.V2.CancelJobOptions)">Cancel(CancelJobOptions)</h4>
               <div class="markdown level1 summary"><p>Cancels this job.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Cancel()</code></pre>
+                <pre><code class="lang-csharp hljs">public void Cancel(CancelJobOptions options = null)</code></pre>
               </div>
-              <h4 id="Google_Bigquery_V2_BigqueryJob_GetQueryResult" data-uid="Google.Bigquery.V2.BigqueryJob.GetQueryResult">GetQueryResult()</h4>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CancelJobOptions.html#Google_Bigquery_V2_CancelJobOptions">CancelJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryJob_GetQueryResults_Google_Bigquery_V2_GetQueryResultsOptions_" data-uid="Google.Bigquery.V2.BigqueryJob.GetQueryResults(Google.Bigquery.V2.GetQueryResultsOptions)">GetQueryResults(GetQueryResultsOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves the result of this job, which must be a query job.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BigqueryResult GetQueryResult()</code></pre>
+                <pre><code class="lang-csharp hljs">public BigqueryResult GetQueryResults(GetQueryResultsOptions options = null)</code></pre>
               </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions">GetQueryResultsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -239,14 +296,32 @@ and job ID components.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Bigquery_V2_BigqueryJob_Poll" data-uid="Google.Bigquery.V2.BigqueryJob.Poll">Poll()</h4>
+              <h4 id="Google_Bigquery_V2_BigqueryJob_Poll_Google_Bigquery_V2_PollJobOptions_" data-uid="Google.Bigquery.V2.BigqueryJob.Poll(Google.Bigquery.V2.PollJobOptions)">Poll(PollJobOptions)</h4>
               <div class="markdown level1 summary"><p>Polls this job for completion.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BigqueryJob Poll()</code></pre>
+                <pre><code class="lang-csharp hljs">public BigqueryJob Poll(PollJobOptions options = null)</code></pre>
               </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions">PollJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>

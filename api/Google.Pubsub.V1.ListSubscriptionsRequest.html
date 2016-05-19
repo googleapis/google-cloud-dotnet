@@ -82,7 +82,7 @@
               <h5 id="Google_Pubsub_V1_ListSubscriptionsRequest_syntax">Syntax</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">[DebuggerNonUserCode]
-public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequest&gt;, IMessage, IEquatable&lt;ListSubscriptionsRequest&gt;, IDeepCloneable&lt;ListSubscriptionsRequest&gt;</code></pre>
+public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequest&gt;, IMessage, IEquatable&lt;ListSubscriptionsRequest&gt;, IDeepCloneable&lt;ListSubscriptionsRequest&gt;, IPageRequest</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -197,9 +197,7 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -212,7 +210,7 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -224,9 +222,7 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -239,7 +235,7 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -252,11 +248,8 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public int PageSize
 {
-
     get;
-
     set;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -284,11 +277,8 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string PageToken
 {
-
     get;
-
     set;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -313,9 +303,7 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static MessageParser&lt;ListSubscriptionsRequest&gt; Parser
 {
-
     get;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -328,7 +316,7 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.MessageParser%601.html#Google_Protobuf_MessageParser_1">MessageParser</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListSubscriptionsRequest.html#Google_Pubsub_V1_ListSubscriptionsRequest">ListSubscriptionsRequest</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListSubscriptionsRequest.html#Google_Pubsub_V1_ListSubscriptionsRequest">ListSubscriptionsRequest</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -341,11 +329,8 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Project
 {
-
     get;
-
     set;
-
 }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
@@ -527,7 +512,7 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
@@ -597,7 +582,7 @@ public sealed class ListSubscriptionsRequest : IMessage&lt;ListSubscriptionsRequ
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>

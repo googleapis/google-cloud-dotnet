@@ -175,16 +175,16 @@ foreach (BigqueryResult.Row row in query.Rows)
 var dataset = client.GetOrCreateDataset(&quot;mydata&quot;);
 
 // Create the table if it doesn&#39;t exist.
-var table = dataset.GetOrCreateTable(&quot;scores&quot;, new SchemaBuilder
+var table = dataset.GetOrCreateTable(&quot;scores&quot;, new TableSchemaBuilder
 {
-    { &quot;player&quot;, SchemaFieldType.String },
-    { &quot;gameStarted&quot;, SchemaFieldType.Timestamp },
-    { &quot;score&quot;, SchemaFieldType.Integer }
+    { &quot;player&quot;, BigqueryDbType.String },
+    { &quot;gameStarted&quot;, BigqueryDbType.Timestamp },
+    { &quot;score&quot;, BigqueryDbType.Integer }
 }.Build());
 
 // Insert a single row. There are many other ways of inserting
 // data into a table.
-table.InsertRow(new Dictionary&lt;string, object&gt;
+table.Insert(new InsertRow
 {
     { &quot;player&quot;, &quot;Bob&quot; },
     { &quot;score&quot;, 85 },
