@@ -26,7 +26,7 @@
       "_appTitle": "Google Cloud APIs",
       "_disableContribution": true
     },
-    "overwrite": "extra/*.md",
+    "overwrite": [ "extra/*.md", "obj/snippets/*.md" ],
     "dest": "_site"
   }
 }

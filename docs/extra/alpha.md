@@ -13,6 +13,20 @@ uid: Google.Datastore.V1Beta3
 > This is alpha release of the Cloud Datastore API.
 
 ---
+uid: Google.Bigquery.V2.BigqueryClient
+---
+
+> **Note: alpha release**  
+> This is alpha release of the BigQuery API.
+
+---
+uid: Google.Bigquery.V2
+---
+
+> **Note: alpha release**  
+> This is alpha release of the BigQuery API.
+
+---
 uid: Google.Pubsub.V1
 ---
 

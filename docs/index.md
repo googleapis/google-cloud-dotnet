@@ -21,7 +21,7 @@ Common operations are exposed via the
 [`StorageClient`](obj/api/Google.Storage.V1.StorageClient.yml) class.
 
 Example:
-[!code-cs[](../snippets/Google.Storage.V1.Snippets/StorageClientSnippets.cs#Overview)]
+[!code-cs[](obj/snippets/Google.Storage.V1.StorageClient.txt#Overview)]
 
 # Alpha APIs
 
@@ -64,7 +64,7 @@ A library for working with [Cloud Datastore](https://cloud.google.com/datastore/
 
 Sample code:
 
-[!code-cs[](../snippets/Google.Datastore.V1Beta3.Snippets/DatastoreClientSnippets.cs#Overview)]
+[!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreClient.txt#Overview)]
 
 See [`DatastoreClient`](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml)
 for details. Note that custom conversions are provided to make
@@ -92,7 +92,7 @@ class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.
 
 Query example:
-[!code-cs[](../snippets/Google.Bigquery.V2.Snippets/BigqueryClientSnippets.cs#QueryOverview)]
+[!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#QueryOverview)]
 
 Data insertion example:
-[!code-cs[](../snippets/Google.Bigquery.V2.Snippets/BigqueryClientSnippets.cs#InsertOverview)]
+[!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#InsertOverview)]
