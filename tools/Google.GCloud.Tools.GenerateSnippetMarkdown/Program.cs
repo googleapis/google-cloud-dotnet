@@ -17,112 +17,292 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace Google.GCloud.Tools.GenerateSnippetMarkdown
 {
+    // Snippet format:
+
+    // Snippet: (name of snippet)
+    // Lines of text
+    // End snippet
+
+    // The name of the snippet can be:
+    // - A name which isn't a member at all, in order to link from documentation. In this case it has to be a valid docfx snippet name.
+    // - A member name within the type specified implicitly by the project/source file containing the snippet
+    //   - If there's only one such member, it can be specified without any qualification, e.g. Create
+    //   - Otherwise, if it can be specified by arity, use just wildcards, e.g. Create(*,*) for a two parameter overload
+    //   - Otherwise, fill in enough parameters to distinguish it from other overloads, e.g. Create(string,)
+    //     Precise nature of parameter matching is TBD... we'll do our best.
+    //
+    // A name which isn't a valid docfx snippet name (A-Z, a-z, 0-9, _, .) *must* match exactly one member,
+    // or an error is displayed.
+
+
     /// <summary>
     /// Simple program to generate a snippets.md file for docfx to consume when generating documentation.
     /// The file basically links the snippets projects with the client libraries.
     /// </summary>
     public sealed class Program
     {
-        private static readonly Regex StartSnippetTag = new Regex(@"^\s*// \<(?<name>[^>]+)>\s*$", RegexOptions.Compiled);
+        private const string StartSnippet = "// Snippet: ";
+        private const string EndSnippet = "// End snippet";
+        private static readonly Regex DocfxSnippetPattern = new Regex(@"^[\w\.]+$", RegexOptions.Compiled);
 
         private static int Main(string[] args)
+        {
+            try
+            {
+                return MainImpl(args);
+            }
+            catch (UserErrorException e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+                return 1;
+            }
+        }
+
+        private static int MainImpl(string[] args)
         {
             string root = DetermineRootDirectory();
             if (root == null)
             {
-                Console.WriteLine("Unable to determine root directory. Please run within gcloud-dotnet repository.");
-                return 1;
+                throw new UserErrorException("Unable to determine root directory. Please run within gcloud-dotnet repository.");
             }
 
-            string snippets = Path.Combine(root, "snippets");
-            if (!Directory.Exists(snippets))
+            string snippetsSource = Path.Combine(root, "snippets");
+            if (!Directory.Exists(snippetsSource))
             {
-                Console.WriteLine($"Snippets directory {snippets} doesn't exist. Aborting.");
-                return 1;
+                throw new UserErrorException($"Snippets directory {snippetsSource} doesn't exist. Aborting.");
             }
 
             string metadata = Path.Combine(root, "docs", "obj", "api");
             if (!Directory.Exists(metadata))
             {
-                Console.WriteLine($"Metadata directory {metadata} doesn't exist. Aborting.");
-                return 1;
+                throw new UserErrorException($"Metadata directory {metadata} doesn't exist. Aborting.");
             }
 
-            string output = Path.Combine(root, "docs", "extra");
+            string output = Path.Combine(root, "docs", "obj", "snippets");
             if (!Directory.Exists(output))
             {
-                Console.WriteLine($"Output directory {output} doesn't exist. Aborting.");
-                return 1;
+                Directory.CreateDirectory(output);
             }
-            GenerateSnippetUids(snippets, metadata, Path.Combine(output, "snippets.md"));
+            else
+            {
+                foreach (var file in Directory.GetFiles(output))
+                {
+                    File.Delete(file);
+                }
+            }
+
+            var memberLookup = LoadMembersByType(metadata);
+            Console.WriteLine($"Loaded {memberLookup.Count} types with {memberLookup.Sum(x => x.Count())} members");
+            var snippets = LoadAllSnippets(snippetsSource);
+            Console.WriteLine($"Loaded {snippets.Sum(x => x.Count())} snippets");
+            foreach (var entry in snippets)
+            {
+                string snippetFile = entry.Key + ".txt";
+                GenerateSnippetText(Path.Combine(output, snippetFile), entry);
+                MapMetadataUids(entry, memberLookup[entry.Key]);
+                GenerateSnippetMarkdown(Path.Combine(output, entry.Key + ".md"), snippetFile, entry);
+            }
+
             return 0;
         }
 
-        /// <summary>
-        /// Generates a markdown file containing snippets 
-        /// </summary>
-        private static void GenerateSnippetUids(string snippetsDir, string metadataDir, string outputFile)
+        private static ILookup<string, Snippet> LoadAllSnippets(string snippetSourceDir)
         {
-            // TODO: Use a YAML parser
-            // TODO: Create a lookup by project name and client name.
-            var uids = new HashSet<string>(
-                from yaml in Directory.GetFiles(metadataDir, "Google*.yml")
-                from line in File.ReadLines(yaml)
-                let trimmed = line.Trim()
-                where line.StartsWith("- uid: ")
-                select line.Substring("- uid: ".Length)).ToList();
-
-            using (var outputMarkdown = File.CreateText(outputFile))
-            {
-                // Search every line, in every source file, in every project.
-                // If we find a snippet, e.g. // <snippetName>, then find all the UIDs from YAML
-                // files that are for that method name, scoped by the project/source names.
-                var query = from project in Directory.GetDirectories(snippetsDir)
+            var query = from project in Directory.GetDirectories(snippetSourceDir)
                             // Path.GetFileName just takes the last part of the name; it doesn't know that it's a directory.
-                            let projectName = TrimSuffix(Path.GetFileName(project), ".Snippets")
-                            from sourceFile in Directory.GetFiles(project, "*.cs")
-                            let sourceRelativeToOutput = $"../../snippets/{Path.GetFileName(project)}/{Path.GetFileName(sourceFile)}"
-                            let clientName = TrimSuffix(Path.GetFileName(sourceFile), "Snippets.cs")
-                            from line in File.ReadLines(sourceFile)
-                            let match = StartSnippetTag.Match(line)
-                            where match.Success
-                            let snippetName = match.Groups["name"].Value
-                            from uid in uids
-                            where uid.StartsWith(projectName)
-                            where UidMatches(uid, projectName, clientName, snippetName)
-                            select new { uid, sourceRelativeToOutput, snippetName };
+                        let projectName = TrimSuffix(Path.GetFileName(project), ".Snippets")
+                        from sourceFile in Directory.GetFiles(project, "*.cs")
+                        let type = projectName + "." + TrimSuffix(Path.GetFileName(sourceFile), "Snippets.cs")
+                        from snippet in LoadFileSnippets(sourceFile)
+                        select new { Type = type, Snippet = snippet };
+            return query.ToLookup(item => item.Type, item => item.Snippet);
+        }
 
-                foreach (var result in query)
+        private static IEnumerable<Snippet> LoadFileSnippets(string file)
+        {
+            Snippet currentSnippet = null;
+            foreach (var line in File.ReadLines(file))
+            {
+                if (currentSnippet != null)
                 {
-                    outputMarkdown.WriteLine("---");
-                    outputMarkdown.WriteLine($"uid: {result.uid}");
-                    outputMarkdown.WriteLine("---");
-                    outputMarkdown.WriteLine();
-                    outputMarkdown.WriteLine("Example:");
-                    outputMarkdown.WriteLine($"[!code-cs[]({result.sourceRelativeToOutput}#{result.snippetName})]");
-                    outputMarkdown.WriteLine();
+                    if (line.Contains(EndSnippet))
+                    {
+                        currentSnippet.TrimLeadingSpaces();
+                        yield return currentSnippet;
+                        currentSnippet = null;
+                    }
+                    else
+                    {
+                        currentSnippet.Lines.Add(line);
+                    }
+                }
+                else
+                {
+                    int startIndex = line.IndexOf(StartSnippet);
+                    if (startIndex != -1)
+                    {
+                        string name = line.Substring(startIndex + StartSnippet.Length).Trim();
+                        currentSnippet = new Snippet { SnippetId = name };
+                    }
+                }
+            }
+            if (currentSnippet != null)
+            {
+                throw new UserErrorException($"Snippet {currentSnippet.SnippetId} didn't end");
+            }
+        }
+
+        /// <summary>
+        /// Generate a file containing all the given snippets. In the future, we may add
+        /// some extra processing to include more text within the snippet flie, such as using directives...
+        /// or we could munge any occurrence of template values (e.g. projectId) to string literals ("YOUR PROJECT ID").
+        /// Any snippet with an ID which is a valid docfx snippet ID is wrapped in the snippet tags, for the sake
+        /// of referring to it from documentation.
+        /// </summary>
+        private static void GenerateSnippetText(string outputFile, IEnumerable<Snippet> snippets)
+        {
+            using (var writer = File.CreateText(outputFile))
+            {
+                int lineIndex = 1;
+                foreach (var snippet in snippets)
+                {
+                    bool validDocfxId = DocfxSnippetPattern.IsMatch(snippet.SnippetId);
+                    writer.WriteLine($"----- Snippet {snippet.SnippetId} -----");
+                    lineIndex++;
+                    if (validDocfxId)
+                    {
+                        writer.WriteLine($"// <{snippet.SnippetId}>");
+                        lineIndex++;
+                    }
+                    snippet.StartLine = lineIndex;
+                    snippet.Lines.ForEach(writer.WriteLine);
+                    lineIndex += snippet.Lines.Count;
+                    snippet.EndLine = lineIndex - 1;
+                    if (validDocfxId)
+                    {
+                        writer.WriteLine($"// </{snippet.SnippetId}>");
+                        lineIndex++;
+                    }
+                    writer.WriteLine();
+                    lineIndex++;
                 }
             }
         }
 
-        static bool UidMatches(string uid, string projectName, string clientName, string snippetName)
+        /// <summary>
+        /// For each snippet, try to find a single matching member and save it in the MetadataUid property.
+        /// </summary>
+        private static void MapMetadataUids(IEnumerable<Snippet> snippets, IEnumerable<Member> members)
         {
-            // We want to use prefix matching for overload resolution, as well as avoiding false-positives
-            // due to short names. So three situations:
-            // <Foo> - match project.client.Foo(
-            // <Foo_Bar__Baz> - match project.client.Foo(Bar,Baz
-            // <Foo_Bar___> - match project.client.Foo(Bar)
-            // <Foo____> - match project.client.Foo()
-            // The last cases are for situations where there are multiple overloads *starting* with the same
-            // parameter types, and you want to indicate an overload end-of-parameter-list.
-            string methodStart = snippetName.Contains("_")
-                ? snippetName.Replace("____", "()").Replace("___", ")").Replace("__", ",").Replace("_", "(")
-                : snippetName + "(";
-            return uid.StartsWith($"{projectName}.{clientName}.{methodStart}");
+            foreach (var snippet in snippets)
+            {
+                var matches = members.Where(member => IsMemberMatch(member.Id, snippet.SnippetId)).ToList();
+                if (matches.Count > 1)
+                {
+                    throw new UserErrorException($"Snippet ID '{snippet.SnippetId}' matches multiple members ({string.Join(", ", matches.Select(m => m.Id))})");
+                }
+                if (matches.Count == 0 && !DocfxSnippetPattern.IsMatch(snippet.SnippetId))
+                {
+                    throw new UserErrorException($"Snippet ID '{snippet.SnippetId}' matches matched no members and isn't a valid docfx snippet name");
+                }
+                snippet.MetadataUid = matches.FirstOrDefault()?.Uid;
+            }
         }
+
+        private static void GenerateSnippetMarkdown(string outputFile, string relativeSnippetFile, IEnumerable<Snippet> snippets)
+        {
+            using (var writer = File.CreateText(outputFile))
+            {
+                foreach (var snippet in snippets.Where(s => s.MetadataUid != null))
+                {
+                    writer.WriteLine("---");
+                    writer.WriteLine($"uid: {snippet.MetadataUid}");
+                    writer.WriteLine("---");
+                    writer.WriteLine();
+                    writer.WriteLine("Example:");
+                    writer.WriteLine($"[!code-cs[]({relativeSnippetFile}#L{snippet.StartLine}-L{snippet.EndLine})]");
+                    writer.WriteLine();
+                }
+            }
+        }
+
+        private static bool IsMemberMatch(string memberId, string snippetId)
+        {
+            int openParen = snippetId.IndexOf("(");
+            if (openParen != -1)
+            {
+                if (!snippetId.EndsWith(")"))
+                {
+                    throw new UserErrorException($"Invalid snippet ID: {snippetId}");
+                }
+
+                // Check member name first
+                if (!memberId.StartsWith(snippetId.Substring(0, openParen + 1)))
+                {
+                    return false;
+                }
+                // Note: this will fail for generic types with an arity more than 1.
+                // Let's cross that bridge when we come to it.
+                string snippetParameters = snippetId.Substring(openParen + 1, snippetId.Length - 2 - openParen);
+                string memberParameters = memberId.Substring(openParen + 1, memberId.Length - 2 - openParen);
+
+                // Avoid issue of Foo() looking like it has a single parameter.
+                if (memberParameters == "")
+                {
+                    return snippetParameters == "";
+                }
+
+                string[] splitSnippetParameters = snippetParameters.Split(',');
+                string[] splitMemberParameters = memberParameters.Split(',');
+                if (splitMemberParameters.Length != splitSnippetParameters.Length)
+                {
+                    return false;
+                }
+                return splitMemberParameters.Zip(splitSnippetParameters, IsParameterMatch).All(x => x);
+            }
+            else
+            {
+                return memberId.StartsWith(snippetId + "(");
+            }
+        }
+
+        // This needs to be a *lot* smarter...
+        private static bool IsParameterMatch(string memberParameter, string snippetParameter) =>
+            snippetParameter == "*"
+                || (snippetParameter == "string" && memberParameter == "System.String")
+                || (memberParameter.Split('.').Last() == snippetParameter.Split('.').Last());
+
+        /// <summary>
+        /// Loads all the members from YAML metadata files, and group them by parent type.
+        /// </summary>
+        private static ILookup<string, Member> LoadMembersByType(string metadataDir)
+        {
+            var dictionary = new Dictionary<string, List<Member>>();
+            // Urgh - there must be a nicer way of doing this.
+            foreach (var file in Directory.GetFiles(metadataDir, "Google*.yml"))
+            {
+                using (var input = File.OpenText(file))
+                {
+                    var model = new Deserializer(namingConvention: new CamelCaseNamingConvention(), ignoreUnmatched: true).Deserialize<CodeModel>(input);
+                    // Assume we only want classes and structs at the moment...
+                    var type = model.Items.FirstOrDefault(x => x.Type == "Class" || x.Type == "Struct");
+                    if (type == null)
+                    {
+                        continue;
+                    }
+                    var members = model.Items.Where(x => x.Parent == type.Uid).ToList();
+                    dictionary[type.Uid] = members;
+                }
+            }
+            return dictionary
+                .SelectMany(pair => pair.Value.Select(m => new { pair.Key, Value = m }))
+                .ToLookup(pair => pair.Key, pair => pair.Value);
+        }        
 
         /// <summary>
         /// Find the root directory of the project. We expect this to contain "GoogleApis.sln" and "LICENSE".

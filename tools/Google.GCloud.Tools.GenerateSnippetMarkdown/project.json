@@ -5,6 +5,11 @@
     "emitEntryPoint": true
   },
 
+  "dependencies": {
+    "YamlDotNet": "3.8.0",
+    "docfx": "1.9.4"
+  },
+
   "commands": {
     "run": "Google.GCloud.Tools.GenerateSnippetMarkdown"
   },
