@@ -23,7 +23,7 @@ public class PublisherClientSnippets
 {
     public void ListTopics()
     {
-        // <ListTopics>
+        // Snippet: ListTopics
         PublisherClient client = PublisherClient.Create();
 
         // Alternative: use a known project resource name:
@@ -33,12 +33,12 @@ public class PublisherClientSnippets
         {
             Console.WriteLine(topic.Name);
         }
-        // </ListTopics>
+        // End snippet
     }
 
     public async Task ListTopicsAsync()
     {
-        // <ListTopicsAsync>
+        // Snippet: ListTopicsAsync
         PublisherClient client = PublisherClient.Create();
 
         // Alternative: use a known project resource name:
@@ -49,12 +49,12 @@ public class PublisherClientSnippets
         {
             Console.WriteLine(topic.Name);
         });
-        // </ListTopicsAsync>
+        // End snippet
     }
 
     public void CreateTopic()
     {
-        // <CreateTopic>
+        // Snippet: CreateTopic
         PublisherClient client = PublisherClient.Create();
 
         // Alternative: use a known topic resource name
@@ -62,12 +62,12 @@ public class PublisherClientSnippets
         string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
         Topic topic = client.CreateTopic(topicName);
         Console.WriteLine($"Created {topic.Name}");
-        // </CreateTopic>
+        // End snippet
     }
 
     public async Task CreateTopicAsync()
     {
-        // <CreateTopicAsync>
+        // Snippet: CreateTopicAsync(string,CallSettings)
         PublisherClient client = PublisherClient.Create();
 
         // Alternative: use a known topic resource name
@@ -75,6 +75,6 @@ public class PublisherClientSnippets
         string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
         Topic topic = await client.CreateTopicAsync(topicName);
         Console.WriteLine($"Created {topic.Name}");
-        // </CreateTopicAsync>
+        // End snippet
     }
 }

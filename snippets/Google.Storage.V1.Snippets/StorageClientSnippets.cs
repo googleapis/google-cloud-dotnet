@@ -38,7 +38,7 @@ namespace Google.Storage.V1.Snippets
         {
             var projectId = _fixture.ProjectId;
 
-            // <Overview>
+            // Snippet: Overview
             var client = StorageClient.Create();
 
             // Create a bucket
@@ -61,7 +61,7 @@ namespace Google.Storage.V1.Snippets
             {
                 client.DownloadObject(bucketName, "file1.txt", stream);
             }
-            // </Overview>
+            // End snippet
 
             _fixture.RegisterLocalFileToDelete("file1.txt");
             _fixture.RegisterBucketToDelete(bucketName);
@@ -77,12 +77,12 @@ namespace Google.Storage.V1.Snippets
         {
             var projectId = _fixture.ProjectId;
 
-            // <ListBuckets>
+            // Snippet: ListBuckets
             var client = StorageClient.Create();
 
             // List all buckets associated with a project
             var buckets = client.ListBuckets(projectId);
-            // </ListBuckets>
+            // End snippet
 
             Assert.Contains(buckets, b => _fixture.BucketName == b.Name);
         }
@@ -92,7 +92,7 @@ namespace Google.Storage.V1.Snippets
         {
             var projectId = _fixture.ProjectId;
 
-            // <CreateBucket>
+            // Snippet: CreateBucket(string,string,*)
             var client = StorageClient.Create();
 
             // GCS bucket names must be globally unique
@@ -100,7 +100,7 @@ namespace Google.Storage.V1.Snippets
 
             // Bucket defined in Google.Apis.Storage.v1.Data namespace
             var bucket = client.CreateBucket(projectId, bucketName);
-            // </CreateBucket>
+            // End snippet
 
             _fixture.RegisterBucketToDelete(bucketName);
 
@@ -119,7 +119,7 @@ namespace Google.Storage.V1.Snippets
             setupClient.CreateBucket(projectId, bucketName);
             _fixture.RegisterBucketToDelete(bucketName);
 
-            // <UpdateBucket>
+            // Snippet: UpdateBucket
             var client = StorageClient.Create();
             var bucket = client.GetBucket(bucketName, new GetBucketOptions { Projection = Projection.Full });
             bucket.Website = new Bucket.WebsiteData
@@ -128,7 +128,7 @@ namespace Google.Storage.V1.Snippets
                 NotFoundPage = "404.html"
             };
             client.UpdateBucket(bucket);
-            // </UpdateBucket>
+            // End snippet
 
             // Fetch the bucket again to check that the change "stuck"
             var fetchedBucket = client.GetBucket(bucketName);
@@ -147,7 +147,7 @@ namespace Google.Storage.V1.Snippets
             setupClient.CreateBucket(projectId, bucketName);
             _fixture.RegisterBucketToDelete(bucketName);
 
-            // <PatchBucket>
+            // Snippet: PatchBucket
             var client = StorageClient.Create();
             // Note: no fetching of the bucket beforehand. We only specify the values we want
             // to change.
@@ -161,7 +161,7 @@ namespace Google.Storage.V1.Snippets
                 }
             };
             client.PatchBucket(bucket);
-            // </PatchBucket>
+            // End snippet
 
             // Fetch the bucket to check that the change "stuck"
             var fetchedBucket = client.GetBucket(bucketName);
@@ -174,12 +174,12 @@ namespace Google.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
 
-            // <ListObjects>
+            // Snippet: ListObjects
             var client = StorageClient.Create();
 
             // List only objects with a name starting with "greet"
             var objects = client.ListObjects(bucketName, "greet");
-            // </ListObjects>
+            // End snippet
 
             Assert.Contains(objects, o => _fixture.HelloStorageObjectName == o.Name);
         }
@@ -190,7 +190,7 @@ namespace Google.Storage.V1.Snippets
             var bucketName = _fixture.BucketName;
             var projectId = _fixture.ProjectId;
 
-            // <DownloadObject_System.String>
+            // Snippet: DownloadObject(string,*,*,*,*)
             var client = StorageClient.Create();
             var source = "greetings/hello.txt";
             var destination = "hello.txt";
@@ -205,7 +205,7 @@ namespace Google.Storage.V1.Snippets
                 // Download source object from bucket to local file system
                 client.DownloadObject(bucketName, source, stream, null, progress);
             }
-            // </DownloadObject_System.String>
+            // End snippet
 
             _fixture.RegisterLocalFileToDelete(destination);
 
@@ -221,7 +221,7 @@ namespace Google.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
 
-            // <UploadObject_System.String>
+            // Snippet: UploadObject(string,*,*,*,*,*)
             var client = StorageClient.Create();
             var source = "world.txt";
             var destination = "places/world.txt";
@@ -239,7 +239,7 @@ namespace Google.Storage.V1.Snippets
                 var options = new UploadObjectOptions { PredefinedAcl = acl };
                 var obj = client.UploadObject(bucketName, destination, contentType, stream, options, progress);
             }
-            // </UploadObject_System.String>
+            // End snippet
 
             // want to show the source in the snippet, but also
             // want to make sure it matches the one in the fixture
@@ -251,7 +251,7 @@ namespace Google.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
 
-            // <GetObject>
+            // Snippet: GetObject
             var client = StorageClient.Create();
             var name = "greetings/hello.txt";
 
@@ -260,7 +260,7 @@ namespace Google.Storage.V1.Snippets
             Console.WriteLine($"Size: {obj.Size}");
             Console.WriteLine($"ContentType: {obj.ContentType}");
             Console.WriteLine($"TimeCreated: {obj.TimeCreated}");
-            // </GetObject>
+            // End snippet
         }
 
         [Fact]
@@ -268,7 +268,7 @@ namespace Google.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
 
-            // <UpdateObject>
+            // Snippet: UpdateObject
             var client = StorageClient.Create();
             var name = "update-example.txt";
             var content = Encoding.UTF8.GetBytes("hello, world");
@@ -292,7 +292,7 @@ namespace Google.Storage.V1.Snippets
             obj.Metadata["key3"] = "value3";
             obj.ContentType = "text/plain";
             client.UpdateObject(obj);
-            // </UpdateObject>
+            // End snippet
 
             var fetchedObject = client.GetObject(bucketName, name);
             Assert.Equal(name, fetchedObject.Name);
@@ -307,7 +307,7 @@ namespace Google.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
 
-            // <PatchObject>
+            // Snippet: PatchObject
             var client = StorageClient.Create();
             var name = "patch-example.txt";
             var content = Encoding.UTF8.GetBytes("hello, world");
@@ -338,7 +338,7 @@ namespace Google.Storage.V1.Snippets
                 }
             };
             client.PatchObject(patchObject);
-            // </PatchObject>
+            // End snippet
 
             var fetchedObject = client.GetObject(bucketName, name);
             Assert.Equal(name, fetchedObject.Name);
@@ -358,7 +358,7 @@ namespace Google.Storage.V1.Snippets
             StorageClient.Create().CreateBucket(projectId, destinationBucket);
             _fixture.RegisterBucketToDelete(destinationBucket);
 
-            // <CopyObject>
+            // Snippet: CopyObject
             var client = StorageClient.Create();
             var sourceName = "greetings/hello.txt";
             var destinationName = "copy.txt";
@@ -366,7 +366,7 @@ namespace Google.Storage.V1.Snippets
             // This method actually uses the "rewrite" API operation, for added reliability
             // when copying large objects across locations, storage classes or encryption keys.
             client.CopyObject(sourceBucket, sourceName, destinationBucket, destinationName);
-            // </CopyObject>
+            // End snippet
 
             var obj = client.GetObject(destinationBucket, destinationName);
             Assert.Equal((ulong)Encoding.UTF8.GetByteCount(_fixture.HelloWorldContent), obj.Size.Value);
@@ -384,13 +384,13 @@ namespace Google.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
 
-            // <GetBucket>
+            // Snippet: GetBucket
             var client = StorageClient.Create();
 
             var bucket = client.GetBucket(bucketName);
             Console.WriteLine($"Name: {bucket.Name}");
             Console.WriteLine($"TimeCreated: {bucket.TimeCreated}");
-            // </GetBucket>
+            // End snippet
         }
 
         // TODO: Flag to delete all versions of an object?
@@ -403,12 +403,12 @@ namespace Google.Storage.V1.Snippets
             var tempObjectName = "places/deleteme.txt";
             StorageClient.Create().UploadObject(bucketName, tempObjectName, "", Stream.Null);
 
-            // <DeleteObject_System.String>
+            // Snippet: DeleteObject(string,string,*)
             var client = StorageClient.Create();
             var objectName = "places/deleteme.txt";
 
             client.DeleteObject(bucketName, objectName);
-            // </DeleteObject_System.String>
+            // End snippet
 
             // want to show the name in the snippet, but also
             // want to make sure it matches the one in the test
@@ -423,11 +423,11 @@ namespace Google.Storage.V1.Snippets
             var bucketName = Guid.NewGuid().ToString();
             StorageClient.Create().CreateBucket(_fixture.ProjectId, bucketName);
 
-            // <DeleteBucket>
+            // Snippet: DeleteBucket(string,*)
             var client = StorageClient.Create();
 
             client.DeleteBucket(bucketName);
-            // </DeleteBucket>
+            // End snippet
 
             Assert.DoesNotContain(client.ListBuckets(_fixture.ProjectId), b => b.Name == bucketName);
         }

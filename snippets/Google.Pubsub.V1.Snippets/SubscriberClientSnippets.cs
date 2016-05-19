@@ -23,7 +23,7 @@ public class SubscriberClientSnippets
 {
     public void ListSubscriptions()
     {
-        // <ListSubscriptions>
+        // Snippet: ListSubscriptions
         SubscriberClient client = SubscriberClient.Create();
 
         // Alternative: use a known project resource name:
@@ -33,12 +33,12 @@ public class SubscriberClientSnippets
         {
             Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");
         }
-        // </ListSubscriptions>
+        // End snippet
     }
 
     public async Task ListSubscriptionsAsync()
     {
-        // <ListSubscriptionsAsync>
+        // Snippet: ListSubscriptionsAsync
         SubscriberClient client = SubscriberClient.Create();
 
         // Alternative: use a known project resource name:
@@ -49,12 +49,12 @@ public class SubscriberClientSnippets
         {
             Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");
         });
-        // </ListSubscriptionsAsync>
+        // End snippet
     }
 
     public void CreateSubscription()
     {
-        // <CreateSubscription>
+        // Snippet: CreateSubscription
         SubscriberClient client = SubscriberClient.Create();
 
         // Alternative: use an existing subscription resource name:
@@ -66,12 +66,12 @@ public class SubscriberClientSnippets
         Subscription subscription = client.CreateSubscription(
             subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
         Console.WriteLine($"Created {subscription.Name} subscribed to {subscription.Topic}");
-        // </CreateSubscription>
+        // End snippet
     }
 
     public async Task CreateSubscriptionAsync()
     {
-        // <CreateSubscriptionAsync>
+        // Snippet: CreateSubscriptionAsync(string,string,*,*,CallSettings)
         SubscriberClient client = SubscriberClient.Create();
 
         // Alternative: use an existing subscription resource name:
@@ -83,12 +83,12 @@ public class SubscriberClientSnippets
         Subscription subscription = await client.CreateSubscriptionAsync(
             subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
         Console.WriteLine($"Created {subscription.Name} subscribed to {subscription.Topic}");
-        // </CreateSubscriptionAsync>
+        // End snippet
     }
 
     public void Pull()
     {
-        // <Pull>
+        // Snippet: Pull
         SubscriberClient client = SubscriberClient.Create();
 
         // Alternative: use an existing subscription resource name:
@@ -109,12 +109,12 @@ public class SubscriberClientSnippets
         // successfully-pulled messages before they will be redelivered.
         var ackIds = pullResponse.ReceivedMessages.Select(rm => rm.AckId);
         client.Acknowledge(subscriptionName, ackIds);
-        // </Pull>
+        // End snippet
     }
 
     public async Task PullAsync()
     {
-        // <PullAsync>
+        // Snippet: PullAsync(string,*,*,CallSettings)
         SubscriberClient client = SubscriberClient.Create();
 
         // Alternative: use an existing subscription resource name:
@@ -135,6 +135,6 @@ public class SubscriberClientSnippets
         // successfully-pulled messages before they will be redelivered.
         var ackIds = pullResponse.ReceivedMessages.Select(rm => rm.AckId);
         await client.AcknowledgeAsync(subscriptionName, ackIds);
-        // </PullAsync>
+        // End snippet
     }
 }

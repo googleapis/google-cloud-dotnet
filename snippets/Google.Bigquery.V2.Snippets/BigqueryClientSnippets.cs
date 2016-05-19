@@ -39,7 +39,7 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // <QueryOverview>
+            // Snippet: QueryOverview
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
@@ -50,7 +50,7 @@ namespace Google.Bigquery.V2.Snippets
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
-            // </QueryOverview>
+            // End snippet
         }
 
         [Fact]
@@ -58,7 +58,7 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // <InsertOverview>
+            // Snippet: InsertOverview
             var client = BigqueryClient.Create(projectId);
 
             // Create the dataset if it doesn't exist.
@@ -80,7 +80,7 @@ namespace Google.Bigquery.V2.Snippets
                 { "score", 85 },
                 { "gameStarted", new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
             });
-            // </InsertOverview>
+            // End snippet
         }
 
         [Fact]
@@ -90,7 +90,7 @@ namespace Google.Bigquery.V2.Snippets
             var datasetId = _fixture.GameDatasetId;
             var historyTableId = _fixture.HistoryTableId;
 
-            // <ExecuteQuery>
+            // Snippet: ExecuteQuery
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, historyTableId);
             BigqueryResult result = client.ExecuteQuery(
@@ -102,7 +102,7 @@ namespace Google.Bigquery.V2.Snippets
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
             }
-            // </ExecuteQuery>
+            // End snippet
 
             var players = result.Rows.Select(r => (string)r["player"]).ToList();
             Assert.Contains("Ben", players);
@@ -116,11 +116,11 @@ namespace Google.Bigquery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
 
-            // <CreateDataset_System.String>
+            // Snippet: CreateDataset(string,CreateDatasetOptions)
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryDataset dataset = client.CreateDataset(datasetId);
             // Now populate tables in the dataset...
-            // </CreateDataset_System.String>
+            // End snippet
 
             _fixture.RegisterDatasetToDelete(datasetId);
         }
@@ -130,14 +130,14 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // <ListDatasets____>
+            // Snippet: ListDatasets(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             var datasets = client.ListDatasets().ToList();
             foreach (var dataset in datasets)
             {
                 Console.WriteLine(dataset.FullyQualifiedId);
             }
-            // </ListDatasets____>
+            // End snippet
 
             var ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
             Assert.Contains(_fixture.GameDatasetId, ids);
@@ -149,14 +149,14 @@ namespace Google.Bigquery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
 
-            // <ListTables_System.String___>
+            // Snippet: ListTables(string,ListTablesOptions)
             BigqueryClient client = BigqueryClient.Create(projectId);
             var tables = client.ListTables(datasetId).ToList();
             foreach (var table in tables)
             {
                 Console.WriteLine(table.FullyQualifiedId);
             }
-            // </ListTables_System.String___>
+            // End snippet
 
             var ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.Contains(_fixture.HistoryTableId, ids);
@@ -169,7 +169,7 @@ namespace Google.Bigquery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = Guid.NewGuid().ToString().Replace("-", "_");
 
-            // <CreateTable>
+            // Snippet: CreateTable(string,string,*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             TableSchema schema = new TableSchemaBuilder
             {
@@ -179,7 +179,7 @@ namespace Google.Bigquery.V2.Snippets
             }.Build();
             BigqueryTable table = client.CreateTable(datasetId, tableId, schema);
             // Now populate the table with data...
-            // </CreateTable>
+            // End snippet
 
             var tables = client.ListTables(datasetId);
             var ids = tables.Select(ds => ds.Reference.TableId).ToList();
@@ -193,7 +193,7 @@ namespace Google.Bigquery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = _fixture.HistoryTableId;
 
-            // <ListRows_System.String__System.String___>
+            // Snippet: ListRows(*,*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryResult result = client.ListRows(datasetId, tableId);
             foreach (BigqueryResult.Row row in result.Rows)
@@ -204,7 +204,7 @@ namespace Google.Bigquery.V2.Snippets
                 string player = (string) row["player"];
                 Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
             }
-            // </ListRows_System.String__System.String___>
+            // End snippet
 
             // We set up 7 results in the fixture. Other tests may add more.
             Assert.True(result.Rows.Count() >= 7);
@@ -220,8 +220,7 @@ namespace Google.Bigquery.V2.Snippets
             BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Rows.Count();
 
-            // TODO: Make this a proper snippet. We can't find the overload properly right now.
-            // (The signature contains [] which aren't valid characters in snippet IDs for docfx.)
+            // Snippet: Insert(string,string,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             // The insert ID is optional, but can avoid duplicate data
             // when retrying inserts.
@@ -240,7 +239,7 @@ namespace Google.Bigquery.V2.Snippets
                 { "game_started", DateTime.UtcNow }
             };
             client.Insert(datasetId, tableId, row1, row2);
-            // TODO: End the snippet here.
+            // End snippet
 
             int rowsAfter = table.ListRows().Rows.Count();
             Assert.Equal(rowsBefore + 2, rowsAfter);
@@ -256,7 +255,7 @@ namespace Google.Bigquery.V2.Snippets
             BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Rows.Count();
 
-            // <UploadCsv>
+            // Snippet: UploadCsv(*,*,*,*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             string[] csvRows =
             {
@@ -278,7 +277,7 @@ namespace Google.Bigquery.V2.Snippets
                 new UploadCsvOptions { SkipLeadingRows = 1 });
             // Use the job to find out when the data has finished being inserted into the table,
             // report errors etc.
-            // </UploadCsv>
+            // End snippet
 
             var result = job.Poll();
             // If there are any errors, display them *then* fail.
@@ -305,7 +304,7 @@ namespace Google.Bigquery.V2.Snippets
             BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Rows.Count();
 
-            // <UploadJson>
+            // Snippet: UploadJson(*,*,*,*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             // Note that there's a single line per JSON object. This is not a JSON array.
             IEnumerable<string> jsonRows = new string[]
@@ -324,7 +323,7 @@ namespace Google.Bigquery.V2.Snippets
             BigqueryJob job = client.UploadJson(datasetId, tableId, schema, stream);
             // Use the job to find out when the data has finished being inserted into the table,
             // report errors etc.
-            // </UploadJson>
+            // End snippet
 
             var result = job.Poll();
             // If there are any errors, display them *then* fail.
@@ -349,7 +348,7 @@ namespace Google.Bigquery.V2.Snippets
             var historyTableId = _fixture.HistoryTableId;
             var queryTableId = Guid.NewGuid().ToString().Replace('-', '_');
 
-            // <CreateQueryJob>
+            // Snippet: CreateQueryJob(*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, historyTableId);
             TableReference destination = client.GetTableReference(datasetId, queryTableId);
@@ -372,7 +371,7 @@ namespace Google.Bigquery.V2.Snippets
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
             }
-            // </CreateQueryJob>
+            // End snippet
 
             var players = result.Rows.Select(r => (string)r["player"]).ToList();
             Assert.Contains("Ben", players);
@@ -385,14 +384,14 @@ namespace Google.Bigquery.V2.Snippets
         {
             var projectId = _fixture.ProjectId;
 
-            // <ListJobs>
+            // Snippet: ListJobs(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             var jobs = client.ListJobs().ToList();
             foreach (var job in jobs)
             {
                 Console.WriteLine(job.Reference.JobId);
             }
-            // </ListJobs>
+            // End snippet
 
             Assert.NotEmpty(jobs);
         }
@@ -413,7 +412,7 @@ namespace Google.Bigquery.V2.Snippets
                 return;
             }
 
-            // <ExportCsv>
+            // Snippet: ExportCsv
             BigqueryClient client = BigqueryClient.Create(projectId);
 
             // Create a storage bucket; in normal use it's likely that one would exist already.
@@ -449,7 +448,7 @@ namespace Google.Bigquery.V2.Snippets
             MemoryStream stream = new MemoryStream();
             storageClient.DownloadObject(bucket, objectName, stream);
             Console.WriteLine(Encoding.UTF8.GetString(stream.ToArray()));
-            // </ExportCsv>
+            // End snippet
 
             storageClient.DeleteObject(bucket, objectName);
             storageClient.DeleteBucket(bucket);
@@ -474,7 +473,7 @@ namespace Google.Bigquery.V2.Snippets
                 return;
             }
 
-            // <CopyTable>
+            // Snippet: CopyTable
             BigqueryClient client = BigqueryClient.Create(projectId);
 
             Job job = client.Service.Jobs.Insert(new Job
@@ -502,7 +501,7 @@ namespace Google.Bigquery.V2.Snippets
                 string player = (string)row["player"];
                 Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
             }
-            // </CopyTable>
+            // End snippet
 
             var originalRows = client.ListRows(datasetId, historyTableId).Rows.Count();
             var copiedRows = result.Rows.Count();
