@@ -1,6 +1,4 @@
-# Bigquery API design
-
-(This document is likely to move. Please don't link to it just yet.)
+# BigQuery API design
 
 The `Google.Bigquery.V2` package wraps a lot of the functionality of
 the underlying REST API. This document lays out the patterns
