@@ -48,7 +48,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             var beforeRowCount = table.ListRows().Rows.Count();
 
-            var job = table.UploadCsv(new MemoryStream(bytes));
+            var job = table.UploadCsv(new MemoryStream(bytes), new UploadCsvOptions { SkipLeadingRows = 1 });
             var result = job.Poll();
             Assert.Null(result.Status.ErrorResult);
 

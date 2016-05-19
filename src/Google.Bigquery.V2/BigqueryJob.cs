@@ -13,10 +13,6 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -24,80 +20,87 @@ namespace Google.Bigquery.V2
     /// A dataset within Bigquery.
     /// </summary>
     /// <remarks>
-    /// This class wraps the underlying HTTP API resource and retains a reference to the original
+    /// This class wraps the underlying REST API resource and retains a reference to the original
     /// client, allowing for simpler job-oriented operations.
     /// </remarks>
     public sealed class BigqueryJob
     {
         private readonly BigqueryClient _client;
-        // TODO: We may want to expose this publicly.
-        private readonly Job _apiResource;
+        
+        /// <summary>
+        /// The underlying REST-ful resource for the job.
+        /// </summary>
+        /// <remarks>
+        /// The data within the resource may be incomplete, depending on how it was obtained.
+        /// </remarks>
+        public Job Resource { get; }
 
         /// <summary>
-        /// The fully-qualified identifier for the job.
+        /// The fully-qualified identifier for the job. This is short-hand for <c>Resource.JobReference</c>.
         /// </summary>
         /// <remarks>
         /// The properties within the reference can be used to determine the project ID
         /// and job ID components.
         /// </remarks>
-        public JobReference Reference => _apiResource.JobReference;
+        public JobReference Reference => Resource.JobReference;
 
         // TODO: Use an enum instead? Definitely nicer than magic strings.
 
         /// <summary>
-        /// The state of the job: "RUNNING", "PENDING" or "DONE".
+        /// The state of the job.
         /// </summary>
-        public string State => _apiResource.Status.State;
+        public JobState State => EnumMap<JobState>.ToValue(Resource.Status.State);
 
         /// <summary>
-        /// The statistics of the job.
+        /// The statistics of the job. This is short-hand for <c>Resource.Statistcs</c>.
         /// </summary>
-        public JobStatistics Statistics => _apiResource.Statistics;
+        public JobStatistics Statistics => Resource.Statistics;
 
         /// <summary>
-        /// The full status of the job, including any errors.
+        /// The full status of the job, including any errors. This is short-hand for <c>Resource.Status</c>.
         /// </summary>
-        public JobStatus Status => _apiResource.Status;
+        public JobStatus Status => Resource.Status;
 
-        internal BigqueryJob(BigqueryClient client, Job apiResource)
+        internal BigqueryJob(BigqueryClient client, Job resource)
         {
             _client = client;
-            _apiResource = apiResource;
+            Resource = resource;
         }
 
-        internal BigqueryJob(BigqueryClient client, JobList.JobsData job)
+        internal BigqueryJob(BigqueryClient client, JobList.JobsData resource)
         {
             _client = client;
-            _apiResource = new Job
+            Resource = new Job
             {
-                JobReference = job.JobReference,
-                Status = job.Status,
-                Id = job.Id,
-                Statistics = job.Statistics,
-                Configuration = job.Configuration,
-                UserEmail = job.UserEmail,
-                Kind = job.Kind
+                JobReference = resource.JobReference,
+                Status = resource.Status,
+                Id = resource.Id,
+                Statistics = resource.Statistics,
+                Configuration = resource.Configuration,
+                UserEmail = resource.UserEmail,
+                Kind = resource.Kind
             };
         }
-
-        // TODO: Poll frequency and time-outs.
 
         /// <summary>
         /// Polls this job for completion.
         /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
-        public BigqueryJob Poll() => _client.PollJob(Reference);
+        public BigqueryJob Poll(PollJobOptions options = null) => _client.PollJob(Reference, options);
 
         /// <summary>
         /// Retrieves the result of this job, which must be a query job.
         /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public BigqueryResult GetQueryResult() => _client.GetQueryResult(Reference);
+        public BigqueryResult GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryResults(Reference, options);
 
         /// <summary>
         /// Cancels this job.
         /// </summary>
-        public void Cancel() => _client.CancelJob(Reference);
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        public void Cancel(CancelJobOptions options = null) => _client.CancelJob(Reference, options);
 
         // TODO: Refresh? Could easily call GetJob, but can't easily modify *this* job...
     }

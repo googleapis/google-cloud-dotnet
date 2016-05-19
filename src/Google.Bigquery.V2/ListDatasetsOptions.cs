@@ -21,9 +21,18 @@ namespace Google.Bigquery.V2
     /// </summary>
     public class ListDatasetsOptions
     {
+        /// <summary>
+        /// The number of results to return per page. (This modifies the per-request page size;
+        /// it does not affect the total number of results returned.)
+        /// </summary>
+        public int? PageSize { get; set; }
+
         internal void ModifyRequest(DatasetsResource.ListRequest request)
         {
-            
+            if (PageSize != null)
+            {
+                request.MaxResults = PageSize;
+            }
         }
     }
 }

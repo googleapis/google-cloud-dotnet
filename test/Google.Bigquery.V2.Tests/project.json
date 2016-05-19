@@ -1,0 +1,22 @@
+﻿{
+  "description": "Unit tests for the Bigquery client wrapper library.",
+
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Bigquery.V2": "",
+    "System.Linq": "4.1.0-rc2-24027",
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-rc1-build204"
+  },
+
+  "commands": {
+    "test": "xunit.runner.dnx"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

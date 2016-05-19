@@ -30,11 +30,12 @@ namespace Google.Bigquery.V2
             response => response.Datasets);
 
         /// <inheritdoc />
-        public override BigqueryDataset GetDataset(DatasetReference datasetReference)
+        public override BigqueryDataset GetDataset(DatasetReference datasetReference, GetDatasetOptions options = null)
         {
             Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var resource = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId).Execute();
-            return new BigqueryDataset(this, resource);
+            var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
+            options?.ModifyRequest(request);
+            return new BigqueryDataset(this, request.Execute());
         }
 
         /// <inheritdoc />
@@ -54,32 +55,35 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryDataset CreateDataset(DatasetReference datasetReference)
+        public override BigqueryDataset CreateDataset(DatasetReference datasetReference, CreateDatasetOptions options = null)
         {
             Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
-            var request = Service.Datasets.Insert(new Dataset { DatasetReference = datasetReference }, datasetReference.ProjectId);
+            var dataset = new Dataset { DatasetReference = datasetReference };
+            var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
+            options?.ModifyRequest(dataset, request);
             return new BigqueryDataset(this, request.Execute());
         }
 
         /// <inheritdoc />
-        public override BigqueryDataset GetOrCreateDataset(DatasetReference datasetReference)
+        public override BigqueryDataset GetOrCreateDataset(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null)
         {
             Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             try
             {
-                return GetDataset(datasetReference);
+                return GetDataset(datasetReference, getOptions);
             }
             catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
             {
-                return CreateDataset(datasetReference);
+                return CreateDataset(datasetReference, createOptions);
             }
         }
 
         /// <inheritdoc />
-        public override void DeleteDataset(DatasetReference datasetReference)
+        public override void DeleteDataset(DatasetReference datasetReference, DeleteDatasetOptions options = null)
         {
             Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Delete(datasetReference.ProjectId, datasetReference.DatasetId);
+            options?.ModifyRequest(request);
             request.Execute();
         }
     }

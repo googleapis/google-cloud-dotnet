@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -39,7 +38,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var countBefore = table.ListRows().Rows.Count();
 
             var row = BuildRow("Joe", 100, new DateTime(2016, 4, 26, 11, 43, 1, DateTimeKind.Utc));
-            table.InsertRow(row);
+            table.Insert(row);
 
             var rowsAfter = table.ListRows();
             var fetched = rowsAfter.Rows.Single(r => (string)r["player"] == "Joe");
@@ -63,7 +62,7 @@ namespace Google.Bigquery.V2.IntegrationTests
                 BuildRow("Jenny", 125, new DateTime(2012, 5, 22, 1, 20, 30, DateTimeKind.Utc)),
                 BuildRow("Lisa", 90, new DateTime(2011, 10, 12, 0, 0, 0, DateTimeKind.Utc))
             };
-            table.InsertRows(rows);
+            table.Insert(rows);
 
             var rowsAfter = table.ListRows();
             Assert.True(rowsAfter.Rows.Any(r => (string)r["player"] == "Jenny"));
@@ -73,17 +72,27 @@ namespace Google.Bigquery.V2.IntegrationTests
         }
 
         [Fact]
-        public void InsertRow_BadData()
+        public void Insert_BadData()
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.HighScoreTableId);
-            var row = new Dictionary<string, object> { { "noSuchField", 10 } };
-            Assert.Throws<GoogleApiException>(() => table.InsertRow(row));
+            var row = new InsertRow { { "noSuchField", 10 } };
+            Assert.Throws<GoogleApiException>(() => table.Insert(row));
         }
 
-        private IDictionary<string, object> BuildRow(string player, long score, DateTime gameStarted) =>
-            new Dictionary<string, object>
+        [Fact]
+        public void Insert_BadData_IgnoreBadData()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            var table = dataset.GetTable(_fixture.HighScoreTableId);
+            var row = new InsertRow { { "noSuchField", 10 } };
+            table.Insert(row, new InsertOptions { AllowUnknownFields = true });
+        }
+        
+        private InsertRow BuildRow(string player, long score, DateTime gameStarted) =>
+            new InsertRow
             {
                 { "player", player },
                 { "score", score },

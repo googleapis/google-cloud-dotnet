@@ -124,8 +124,8 @@ namespace Google.Storage.V1.Snippets
             var bucket = client.GetBucket(bucketName, new GetBucketOptions { Projection = Projection.Full });
             bucket.Website = new Bucket.WebsiteData
             {
-                MainPageSuffix = "http://example.com",
-                NotFoundPage = "http://example.com/404.html"
+                MainPageSuffix = "index.html",
+                NotFoundPage = "404.html"
             };
             client.UpdateBucket(bucket);
             // </UpdateBucket>
@@ -156,8 +156,8 @@ namespace Google.Storage.V1.Snippets
                 Name = bucketName,
                 Website = new Bucket.WebsiteData
                 {
-                    MainPageSuffix = "http://example.com",
-                    NotFoundPage = "http://example.com/404.html"
+                    MainPageSuffix = "index.html",
+                    NotFoundPage = "404.html"
                 }
             };
             client.PatchBucket(bucket);

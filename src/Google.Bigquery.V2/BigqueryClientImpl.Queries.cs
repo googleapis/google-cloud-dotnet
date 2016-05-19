@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
+using System;
 using static Google.Apis.Bigquery.v2.JobsResource;
 
 namespace Google.Bigquery.V2
@@ -27,49 +29,62 @@ namespace Google.Bigquery.V2
                 response => response.Rows);
 
         /// <inheritdoc />
-        public override BigqueryResult ExecuteQuery(string sql)
+        public override BigqueryResult ExecuteQuery(string sql, ExecuteQueryOptions options = null)
         {
             Preconditions.CheckNotNull(sql, nameof(sql));
 
-            var queryResponse = Service.Jobs.Query(new Apis.Bigquery.v2.Data.QueryRequest { Query = sql }, ProjectId).Execute();
+            var queryRequest = new Apis.Bigquery.v2.Data.QueryRequest { Query = sql };
+            options?.ModifyRequest(queryRequest);
+            var request = Service.Jobs.Query(queryRequest, ProjectId);
+            var queryResponse = request.Execute();
             return new BigqueryResult(this, queryResponse);
         }
 
         /// <inheritdoc />
-        public override BigqueryJob CreateQueryJob(string sql, TableReference destinationTable = null)
+        public override BigqueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)
         {
             Preconditions.CheckNotNull(sql, nameof(sql));
-
+            var query = new JobConfigurationQuery { Query = sql };
+            options?.ModifyRequest(query);
             var job = Service.Jobs.Insert(new Job
             {
                 Configuration = new JobConfiguration
                 {
-                    Query = new JobConfigurationQuery
-                    {
-                        Query = sql,
-                        DestinationTable = destinationTable
-                    },
+                    Query = query
                 },
             }, ProjectId).Execute();
             return new BigqueryJob(this, job);
         }
 
         /// <inheritdoc />
-        public override BigqueryResult GetQueryResult(JobReference jobReference)
+        public override BigqueryResult GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)
         {
             Preconditions.CheckNotNull(jobReference, nameof(jobReference));
 
-            var firstResponse = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId).Execute();
-            return new BigqueryResult(this, firstResponse, () => Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId));
+            Func<GetQueryResultsRequest> requestProvider = () =>
+            {
+                var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
+                options?.ModifyRequest(request);
+                return request;
+            };
+            var firstResponse = requestProvider().Execute();
+            return new BigqueryResult(this, firstResponse, requestProvider);
         }
 
         /// <inheritdoc />
-        public override BigqueryResult ListRows(TableReference tableReference, TableSchema schema = null)
+        public override BigqueryResult ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             Preconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
-            var firstResponse = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId).Execute();
-            return new BigqueryResult(this, firstResponse, schema, () => Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId));
+            
+            Func<TabledataResource.ListRequest> requestProvider = () =>
+            {
+                var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+                options?.ModifyRequest(request);
+                return request;
+            };
+            var firstResponse = requestProvider().Execute();
+            return new BigqueryResult(this, firstResponse, schema, requestProvider);
         }
     }
 }

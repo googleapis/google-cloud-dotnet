@@ -17,13 +17,22 @@ using Google.Apis.Bigquery.v2;
 namespace Google.Bigquery.V2
 {
     /// <summary>
-    /// Options used when listing tables. Details TBD.
+    /// Options for <c>ListTables</c> operations.
     /// </summary>
-    public class ListTablesOptions
+    public sealed class ListTablesOptions
     {
+        /// <summary>
+        /// The number of results to return per page. (This modifies the per-request page size;
+        /// it does not affect the total number of results returned.)
+        /// </summary>
+        public int? PageSize { get; set; }
+
         internal void ModifyRequest(TablesResource.ListRequest request)
         {
-            
+            if (PageSize != null)
+            {
+                request.MaxResults = PageSize;
+            }
         }
     }
 }
