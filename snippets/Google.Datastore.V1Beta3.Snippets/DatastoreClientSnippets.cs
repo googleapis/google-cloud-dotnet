@@ -46,7 +46,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             DatastoreClient client = DatastoreClient.Create();
             LookupResponse response = client.Lookup(
                 projectId,
-                new ReadOptions { ReadConsistency = ReadConsistency.STRONG },
+                new ReadOptions { ReadConsistency = ReadConsistency.Strong },
                 new[] { key1, key2 });
             Console.WriteLine($"Found: {response.Found.Count}");
             Console.WriteLine($"Deferred: {response.Deferred.Count}");
@@ -75,7 +75,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                     PropertyFilter = new PropertyFilter
                     {
                         Property = new PropertyReference("author"),
-                        Op = Operator.EQUAL,
+                        Op = Operator.Equal,
                         Value = "Jane Austen"
                     }
                 }
@@ -83,7 +83,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             RunQueryResponse response = client.RunQuery(
                 projectId,
                 partitionId,
-                new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+                new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
                 query);
 
             foreach (EntityResult result in response.Batch.EntityResults)
@@ -115,7 +115,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             RunQueryResponse response = client.RunQuery(
                 projectId,
                 partitionId,
-                new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+                new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
                 gqlQuery);
 
             foreach (EntityResult result in response.Batch.EntityResults)
@@ -158,7 +158,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             ByteString transaction = client.BeginTransaction(projectId).Transaction;
             CommitResponse response = client.Commit(
                 projectId,
-                Mode.TRANSACTIONAL,
+                Mode.Transactional,
                 transaction,
                 new[] { book1.ToInsert(), book2.ToInsert() });
 
@@ -183,7 +183,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["text"] = "Text of the message"
             };
             var transaction = client.BeginTransaction(projectId).Transaction;
-            var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
+            var commitResponse = client.Commit(projectId, Mode.Transactional, transaction, new[] { entity.ToInsert() });
             var insertedKey = commitResponse.MutationResults[0].Key;
             // </Overview>
         }

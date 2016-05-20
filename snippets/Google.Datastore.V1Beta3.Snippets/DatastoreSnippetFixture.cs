@@ -57,7 +57,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["publication_date"] = new DateTime(1813, 1, 28, 0, 0, 0, DateTimeKind.Utc),
                 ["author"] = "Jane Austen"
             };
-            var response = client.Commit(ProjectId, CommitRequest.Types.Mode.NON_TRANSACTIONAL, new[] { entity.ToInsert() });
+            var response = client.Commit(ProjectId, CommitRequest.Types.Mode.NonTransactional, new[] { entity.ToInsert() });
             _prideAndPrejudiceKey = response.MutationResults.First().Key;
         }
 
@@ -69,7 +69,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             var query = new Query { Projection = { new Projection { Property = new PropertyReference { Name = "__key__" } } } };
             var response = client.RunQuery(ProjectId, PartitionId, null, query);
             var deletions = response.Batch.EntityResults.Select(entityResult => entityResult.Entity.ToDelete());
-            client.Commit(ProjectId, CommitRequest.Types.Mode.NON_TRANSACTIONAL, deletions);
+            client.Commit(ProjectId, CommitRequest.Types.Mode.NonTransactional, deletions);
         }
     }
 }
