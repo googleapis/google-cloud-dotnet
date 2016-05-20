@@ -42,7 +42,7 @@ namespace Google.Logging.V2
         /// </param>
         /// <returns>A <see cref="ConfigServiceV2Client"/> that wraps the specified GRPC client.</returns>
         public static ConfigServiceV2Client ToClient(
-            this ConfigServiceV2.IConfigServiceV2Client grpcClient,
+            this ConfigServiceV2.ConfigServiceV2Client grpcClient,
             ConfigServiceV2Settings settings = null
         ) => new ConfigServiceV2ClientImpl(grpcClient, settings);
     }
@@ -433,7 +433,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// The underlying GRPC ConfigServiceV2 client.
         /// </summary>
-        public virtual ConfigServiceV2.IConfigServiceV2Client GrpcClient
+        public virtual ConfigServiceV2.ConfigServiceV2Client GrpcClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -736,7 +736,7 @@ namespace Google.Logging.V2
         private readonly ApiCall<UpdateSinkRequest, LogSink> _callUpdateSink;
         private readonly ApiCall<DeleteSinkRequest, Empty> _callDeleteSink;
 
-        public ConfigServiceV2ClientImpl(ConfigServiceV2.IConfigServiceV2Client grpcClient, ConfigServiceV2Settings settings)
+        public ConfigServiceV2ClientImpl(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings settings)
         {
             this.GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
@@ -753,7 +753,7 @@ namespace Google.Logging.V2
                 GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings);
         }
 
-        public override ConfigServiceV2.IConfigServiceV2Client GrpcClient { get; }
+        public override ConfigServiceV2.ConfigServiceV2Client GrpcClient { get; }
 
         /// <summary>
         /// Lists sinks.

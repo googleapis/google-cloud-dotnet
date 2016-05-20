@@ -41,7 +41,7 @@ namespace Google.Datastore.V1Beta3
         /// </param>
         /// <returns>A <see cref="DatastoreClient"/> that wraps the specified GRPC client.</returns>
         public static DatastoreClient ToClient(
-            this Datastore.IDatastoreClient grpcClient,
+            this Datastore.DatastoreClient grpcClient,
             DatastoreSettings settings = null
         ) => new DatastoreClientImpl(grpcClient, settings);
     }
@@ -410,7 +410,7 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// The underlying GRPC Datastore client.
         /// </summary>
-        public virtual Datastore.IDatastoreClient GrpcClient
+        public virtual Datastore.DatastoreClient GrpcClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -989,7 +989,7 @@ namespace Google.Datastore.V1Beta3
         private readonly ApiCall<RollbackRequest, RollbackResponse> _callRollback;
         private readonly ApiCall<AllocateIdsRequest, AllocateIdsResponse> _callAllocateIds;
 
-        public DatastoreClientImpl(Datastore.IDatastoreClient grpcClient, DatastoreSettings settings)
+        public DatastoreClientImpl(Datastore.DatastoreClient grpcClient, DatastoreSettings settings)
         {
             this.GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
@@ -1008,7 +1008,7 @@ namespace Google.Datastore.V1Beta3
                 GrpcClient.AllocateIdsAsync, GrpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings);
         }
 
-        public override Datastore.IDatastoreClient GrpcClient { get; }
+        public override Datastore.DatastoreClient GrpcClient { get; }
 
         /// <summary>
         /// Looks up entities by key.

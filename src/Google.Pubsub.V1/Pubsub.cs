@@ -116,29 +116,29 @@ namespace Google.Pubsub.V1 {
             "UAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.Topic), global::Google.Pubsub.V1.Topic.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PubsubMessage), global::Google.Pubsub.V1.PubsubMessage.Parser, new[]{ "Data", "Attributes", "MessageId", "PublishTime" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.GetTopicRequest), global::Google.Pubsub.V1.GetTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PublishRequest), global::Google.Pubsub.V1.PublishRequest.Parser, new[]{ "Topic", "Messages" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PublishResponse), global::Google.Pubsub.V1.PublishResponse.Parser, new[]{ "MessageIds" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicsRequest), global::Google.Pubsub.V1.ListTopicsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicsResponse), global::Google.Pubsub.V1.ListTopicsResponse.Parser, new[]{ "Topics", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest), global::Google.Pubsub.V1.ListTopicSubscriptionsRequest.Parser, new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsResponse), global::Google.Pubsub.V1.ListTopicSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.DeleteTopicRequest), global::Google.Pubsub.V1.DeleteTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.Subscription), global::Google.Pubsub.V1.Subscription.Parser, new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PushConfig), global::Google.Pubsub.V1.PushConfig.Parser, new[]{ "PushEndpoint", "Attributes" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ReceivedMessage), global::Google.Pubsub.V1.ReceivedMessage.Parser, new[]{ "AckId", "Message" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.GetSubscriptionRequest), global::Google.Pubsub.V1.GetSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsRequest), global::Google.Pubsub.V1.ListSubscriptionsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsResponse), global::Google.Pubsub.V1.ListSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.DeleteSubscriptionRequest), global::Google.Pubsub.V1.DeleteSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ModifyPushConfigRequest), global::Google.Pubsub.V1.ModifyPushConfigRequest.Parser, new[]{ "Subscription", "PushConfig" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PullRequest), global::Google.Pubsub.V1.PullRequest.Parser, new[]{ "Subscription", "ReturnImmediately", "MaxMessages" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PullResponse), global::Google.Pubsub.V1.PullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ModifyAckDeadlineRequest), global::Google.Pubsub.V1.ModifyAckDeadlineRequest.Parser, new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.AcknowledgeRequest), global::Google.Pubsub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.Topic), global::Google.Pubsub.V1.Topic.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PubsubMessage), global::Google.Pubsub.V1.PubsubMessage.Parser, new[]{ "Data", "Attributes", "MessageId", "PublishTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.GetTopicRequest), global::Google.Pubsub.V1.GetTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PublishRequest), global::Google.Pubsub.V1.PublishRequest.Parser, new[]{ "Topic", "Messages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PublishResponse), global::Google.Pubsub.V1.PublishResponse.Parser, new[]{ "MessageIds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListTopicsRequest), global::Google.Pubsub.V1.ListTopicsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListTopicsResponse), global::Google.Pubsub.V1.ListTopicsResponse.Parser, new[]{ "Topics", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest), global::Google.Pubsub.V1.ListTopicSubscriptionsRequest.Parser, new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsResponse), global::Google.Pubsub.V1.ListTopicSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.DeleteTopicRequest), global::Google.Pubsub.V1.DeleteTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.Subscription), global::Google.Pubsub.V1.Subscription.Parser, new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PushConfig), global::Google.Pubsub.V1.PushConfig.Parser, new[]{ "PushEndpoint", "Attributes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ReceivedMessage), global::Google.Pubsub.V1.ReceivedMessage.Parser, new[]{ "AckId", "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.GetSubscriptionRequest), global::Google.Pubsub.V1.GetSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsRequest), global::Google.Pubsub.V1.ListSubscriptionsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsResponse), global::Google.Pubsub.V1.ListSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.DeleteSubscriptionRequest), global::Google.Pubsub.V1.DeleteSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ModifyPushConfigRequest), global::Google.Pubsub.V1.ModifyPushConfigRequest.Parser, new[]{ "Subscription", "PushConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PullRequest), global::Google.Pubsub.V1.PullRequest.Parser, new[]{ "Subscription", "ReturnImmediately", "MaxMessages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PullResponse), global::Google.Pubsub.V1.PullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ModifyAckDeadlineRequest), global::Google.Pubsub.V1.ModifyAckDeadlineRequest.Parser, new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.AcknowledgeRequest), global::Google.Pubsub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null)
           }));
     }
     #endregion
@@ -189,7 +189,7 @@ namespace Google.Pubsub.V1 {
     public string Name {
       get { return name_; }
       set {
-        name_ = pb::Preconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -303,7 +303,7 @@ namespace Google.Pubsub.V1 {
     public pb::ByteString Data {
       get { return data_; }
       set {
-        data_ = pb::Preconditions.CheckNotNull(value, "value");
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -331,7 +331,7 @@ namespace Google.Pubsub.V1 {
     public string MessageId {
       get { return messageId_; }
       set {
-        messageId_ = pb::Preconditions.CheckNotNull(value, "value");
+        messageId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -502,7 +502,7 @@ namespace Google.Pubsub.V1 {
     public string Topic {
       get { return topic_; }
       set {
-        topic_ = pb::Preconditions.CheckNotNull(value, "value");
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -612,7 +612,7 @@ namespace Google.Pubsub.V1 {
     public string Topic {
       get { return topic_; }
       set {
-        topic_ = pb::Preconditions.CheckNotNull(value, "value");
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -847,7 +847,7 @@ namespace Google.Pubsub.V1 {
     public string Project {
       get { return project_; }
       set {
-        project_ = pb::Preconditions.CheckNotNull(value, "value");
+        project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -875,7 +875,7 @@ namespace Google.Pubsub.V1 {
     public string PageToken {
       get { return pageToken_; }
       set {
-        pageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1030,7 +1030,7 @@ namespace Google.Pubsub.V1 {
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
-        nextPageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1150,7 +1150,7 @@ namespace Google.Pubsub.V1 {
     public string Topic {
       get { return topic_; }
       set {
-        topic_ = pb::Preconditions.CheckNotNull(value, "value");
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1178,7 +1178,7 @@ namespace Google.Pubsub.V1 {
     public string PageToken {
       get { return pageToken_; }
       set {
-        pageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1334,7 +1334,7 @@ namespace Google.Pubsub.V1 {
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
-        nextPageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1452,7 +1452,7 @@ namespace Google.Pubsub.V1 {
     public string Topic {
       get { return topic_; }
       set {
-        topic_ = pb::Preconditions.CheckNotNull(value, "value");
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1569,7 +1569,7 @@ namespace Google.Pubsub.V1 {
     public string Name {
       get { return name_; }
       set {
-        name_ = pb::Preconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1584,7 +1584,7 @@ namespace Google.Pubsub.V1 {
     public string Topic {
       get { return topic_; }
       set {
-        topic_ = pb::Preconditions.CheckNotNull(value, "value");
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1794,7 +1794,7 @@ namespace Google.Pubsub.V1 {
     public string PushEndpoint {
       get { return pushEndpoint_; }
       set {
-        pushEndpoint_ = pb::Preconditions.CheckNotNull(value, "value");
+        pushEndpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1946,7 +1946,7 @@ namespace Google.Pubsub.V1 {
     public string AckId {
       get { return ackId_; }
       set {
-        ackId_ = pb::Preconditions.CheckNotNull(value, "value");
+        ackId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2090,7 +2090,7 @@ namespace Google.Pubsub.V1 {
     public string Subscription {
       get { return subscription_; }
       set {
-        subscription_ = pb::Preconditions.CheckNotNull(value, "value");
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2201,7 +2201,7 @@ namespace Google.Pubsub.V1 {
     public string Project {
       get { return project_; }
       set {
-        project_ = pb::Preconditions.CheckNotNull(value, "value");
+        project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2229,7 +2229,7 @@ namespace Google.Pubsub.V1 {
     public string PageToken {
       get { return pageToken_; }
       set {
-        pageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2385,7 +2385,7 @@ namespace Google.Pubsub.V1 {
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
-        nextPageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2503,7 +2503,7 @@ namespace Google.Pubsub.V1 {
     public string Subscription {
       get { return subscription_; }
       set {
-        subscription_ = pb::Preconditions.CheckNotNull(value, "value");
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2613,7 +2613,7 @@ namespace Google.Pubsub.V1 {
     public string Subscription {
       get { return subscription_; }
       set {
-        subscription_ = pb::Preconditions.CheckNotNull(value, "value");
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2764,7 +2764,7 @@ namespace Google.Pubsub.V1 {
     public string Subscription {
       get { return subscription_; }
       set {
-        subscription_ = pb::Preconditions.CheckNotNull(value, "value");
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3042,7 +3042,7 @@ namespace Google.Pubsub.V1 {
     public string Subscription {
       get { return subscription_; }
       set {
-        subscription_ = pb::Preconditions.CheckNotNull(value, "value");
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3206,7 +3206,7 @@ namespace Google.Pubsub.V1 {
     public string Subscription {
       get { return subscription_; }
       set {
-        subscription_ = pb::Preconditions.CheckNotNull(value, "value");
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 

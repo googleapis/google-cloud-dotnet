@@ -42,7 +42,7 @@ namespace Google.Pubsub.V1
         /// </param>
         /// <returns>A <see cref="SubscriberClient"/> that wraps the specified GRPC client.</returns>
         public static SubscriberClient ToClient(
-            this Subscriber.ISubscriberClient grpcClient,
+            this Subscriber.SubscriberClient grpcClient,
             SubscriberSettings settings = null
         ) => new SubscriberClientImpl(grpcClient, settings);
     }
@@ -543,7 +543,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// The underlying GRPC Subscriber client.
         /// </summary>
-        public virtual Subscriber.ISubscriberClient GrpcClient
+        public virtual Subscriber.SubscriberClient GrpcClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -1186,7 +1186,7 @@ namespace Google.Pubsub.V1
         private readonly ApiCall<PullRequest, PullResponse> _callPull;
         private readonly ApiCall<ModifyPushConfigRequest, Empty> _callModifyPushConfig;
 
-        public SubscriberClientImpl(Subscriber.ISubscriberClient grpcClient, SubscriberSettings settings)
+        public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberSettings settings)
         {
             this.GrpcClient = grpcClient;
             SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
@@ -1209,7 +1209,7 @@ namespace Google.Pubsub.V1
                 GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings);
         }
 
-        public override Subscriber.ISubscriberClient GrpcClient { get; }
+        public override Subscriber.SubscriberClient GrpcClient { get; }
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.

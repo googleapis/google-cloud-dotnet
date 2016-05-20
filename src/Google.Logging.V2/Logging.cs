@@ -62,14 +62,14 @@ namespace Google.Logging.V2 {
             "djJCDExvZ2dpbmdQcm90b1AB+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.V2.LogEntryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.DeleteLogRequest), global::Google.Logging.V2.DeleteLogRequest.Parser, new[]{ "LogName" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesRequest), global::Google.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesResponse), global::Google.Logging.V2.WriteLogEntriesResponse.Parser, null, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.ListLogEntriesRequest), global::Google.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.ListLogEntriesResponse), global::Google.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.DeleteLogRequest), global::Google.Logging.V2.DeleteLogRequest.Parser, new[]{ "LogName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesRequest), global::Google.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesResponse), global::Google.Logging.V2.WriteLogEntriesResponse.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogEntriesRequest), global::Google.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogEntriesResponse), global::Google.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null)
           }));
     }
     #endregion
@@ -116,7 +116,7 @@ namespace Google.Logging.V2 {
     public string LogName {
       get { return logName_; }
       set {
-        logName_ = pb::Preconditions.CheckNotNull(value, "value");
+        logName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -231,7 +231,7 @@ namespace Google.Logging.V2 {
     public string LogName {
       get { return logName_; }
       set {
-        logName_ = pb::Preconditions.CheckNotNull(value, "value");
+        logName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -521,7 +521,7 @@ namespace Google.Logging.V2 {
     public string Filter {
       get { return filter_; }
       set {
-        filter_ = pb::Preconditions.CheckNotNull(value, "value");
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -539,7 +539,7 @@ namespace Google.Logging.V2 {
     public string OrderBy {
       get { return orderBy_; }
       set {
-        orderBy_ = pb::Preconditions.CheckNotNull(value, "value");
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -573,7 +573,7 @@ namespace Google.Logging.V2 {
     public string PageToken {
       get { return pageToken_; }
       set {
-        pageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -754,7 +754,7 @@ namespace Google.Logging.V2 {
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
-        nextPageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -893,7 +893,7 @@ namespace Google.Logging.V2 {
     public string PageToken {
       get { return pageToken_; }
       set {
-        pageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1033,7 +1033,7 @@ namespace Google.Logging.V2 {
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
-        nextPageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 

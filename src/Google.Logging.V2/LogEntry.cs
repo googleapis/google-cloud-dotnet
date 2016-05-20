@@ -47,9 +47,9 @@ namespace Google.Logging.V2 {
             "b2dFbnRyeVByb3RvUAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.LogEntry), global::Google.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation" }, new[]{ "Payload" }, null, new pbr::GeneratedCodeInfo[] { null, }),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.LogEntryOperation), global::Google.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogEntry), global::Google.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogEntryOperation), global::Google.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null)
           }));
     }
     #endregion
@@ -124,7 +124,7 @@ namespace Google.Logging.V2 {
     public string LogName {
       get { return logName_; }
       set {
-        logName_ = pb::Preconditions.CheckNotNull(value, "value");
+        logName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -167,7 +167,7 @@ namespace Google.Logging.V2 {
     public string TextPayload {
       get { return payloadCase_ == PayloadOneofCase.TextPayload ? (string) payload_ : ""; }
       set {
-        payload_ = pb::Preconditions.CheckNotNull(value, "value");
+        payload_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadCase_ = PayloadOneofCase.TextPayload;
       }
     }
@@ -202,7 +202,7 @@ namespace Google.Logging.V2 {
 
     /// <summary>Field number for the "severity" field.</summary>
     public const int SeverityFieldNumber = 10;
-    private global::Google.Logging.Type.LogSeverity severity_ = global::Google.Logging.Type.LogSeverity.DEFAULT;
+    private global::Google.Logging.Type.LogSeverity severity_ = 0;
     /// <summary>
     ///  Optional. The severity of the log entry. The default value is
     ///  `LogSeverity.DEFAULT`.
@@ -226,7 +226,7 @@ namespace Google.Logging.V2 {
     public string InsertId {
       get { return insertId_; }
       set {
-        insertId_ = pb::Preconditions.CheckNotNull(value, "value");
+        insertId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -323,7 +323,7 @@ namespace Google.Logging.V2 {
       if (payloadCase_ == PayloadOneofCase.TextPayload) hash ^= TextPayload.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.JsonPayload) hash ^= JsonPayload.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
-      if (Severity != global::Google.Logging.Type.LogSeverity.DEFAULT) hash ^= Severity.GetHashCode();
+      if (Severity != 0) hash ^= Severity.GetHashCode();
       if (InsertId.Length != 0) hash ^= InsertId.GetHashCode();
       if (httpRequest_ != null) hash ^= HttpRequest.GetHashCode();
       hash ^= Labels.GetHashCode();
@@ -365,7 +365,7 @@ namespace Google.Logging.V2 {
         output.WriteRawTag(74);
         output.WriteMessage(Timestamp);
       }
-      if (Severity != global::Google.Logging.Type.LogSeverity.DEFAULT) {
+      if (Severity != 0) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Severity);
       }
@@ -400,7 +400,7 @@ namespace Google.Logging.V2 {
       if (timestamp_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
       }
-      if (Severity != global::Google.Logging.Type.LogSeverity.DEFAULT) {
+      if (Severity != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
       }
       if (InsertId.Length != 0) {
@@ -435,7 +435,7 @@ namespace Google.Logging.V2 {
         }
         Timestamp.MergeFrom(other.Timestamp);
       }
-      if (other.Severity != global::Google.Logging.Type.LogSeverity.DEFAULT) {
+      if (other.Severity != 0) {
         Severity = other.Severity;
       }
       if (other.InsertId.Length != 0) {
@@ -591,7 +591,7 @@ namespace Google.Logging.V2 {
     public string Id {
       get { return id_; }
       set {
-        id_ = pb::Preconditions.CheckNotNull(value, "value");
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -606,7 +606,7 @@ namespace Google.Logging.V2 {
     public string Producer {
       get { return producer_; }
       set {
-        producer_ = pb::Preconditions.CheckNotNull(value, "value");
+        producer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 

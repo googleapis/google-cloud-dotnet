@@ -95,22 +95,22 @@ namespace Google.Datastore.V1Beta3 {
             "YXRhc3RvcmUudjFiZXRhM0IORGF0YXN0b3JlUHJvdG9QAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Datastore.V1Beta3.EntityReflection.Descriptor, global::Google.Datastore.V1Beta3.QueryReflection.Descriptor, },
-          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.LookupRequest), global::Google.Datastore.V1Beta3.LookupRequest.Parser, new[]{ "ProjectId", "ReadOptions", "Keys" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.LookupResponse), global::Google.Datastore.V1Beta3.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RunQueryRequest), global::Google.Datastore.V1Beta3.RunQueryRequest.Parser, new[]{ "ProjectId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RunQueryResponse), global::Google.Datastore.V1Beta3.RunQueryResponse.Parser, new[]{ "Batch", "Query" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.BeginTransactionRequest), global::Google.Datastore.V1Beta3.BeginTransactionRequest.Parser, new[]{ "ProjectId" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.BeginTransactionResponse), global::Google.Datastore.V1Beta3.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RollbackRequest), global::Google.Datastore.V1Beta3.RollbackRequest.Parser, new[]{ "ProjectId", "Transaction" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RollbackResponse), global::Google.Datastore.V1Beta3.RollbackResponse.Parser, null, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.CommitRequest), global::Google.Datastore.V1Beta3.CommitRequest.Parser, new[]{ "ProjectId", "Mode", "Transaction", "Mutations" }, new[]{ "TransactionSelector" }, new[]{ typeof(global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode) }, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.CommitResponse), global::Google.Datastore.V1Beta3.CommitResponse.Parser, new[]{ "MutationResults", "IndexUpdates" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.AllocateIdsRequest), global::Google.Datastore.V1Beta3.AllocateIdsRequest.Parser, new[]{ "ProjectId", "Keys" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.AllocateIdsResponse), global::Google.Datastore.V1Beta3.AllocateIdsResponse.Parser, new[]{ "Keys" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Mutation), global::Google.Datastore.V1Beta3.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete" }, new[]{ "Operation" }, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.MutationResult), global::Google.Datastore.V1Beta3.MutationResult.Parser, new[]{ "Key" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.ReadOptions), global::Google.Datastore.V1Beta3.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency) }, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.LookupRequest), global::Google.Datastore.V1Beta3.LookupRequest.Parser, new[]{ "ProjectId", "ReadOptions", "Keys" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.LookupResponse), global::Google.Datastore.V1Beta3.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.RunQueryRequest), global::Google.Datastore.V1Beta3.RunQueryRequest.Parser, new[]{ "ProjectId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.RunQueryResponse), global::Google.Datastore.V1Beta3.RunQueryResponse.Parser, new[]{ "Batch", "Query" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.BeginTransactionRequest), global::Google.Datastore.V1Beta3.BeginTransactionRequest.Parser, new[]{ "ProjectId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.BeginTransactionResponse), global::Google.Datastore.V1Beta3.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.RollbackRequest), global::Google.Datastore.V1Beta3.RollbackRequest.Parser, new[]{ "ProjectId", "Transaction" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.RollbackResponse), global::Google.Datastore.V1Beta3.RollbackResponse.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.CommitRequest), global::Google.Datastore.V1Beta3.CommitRequest.Parser, new[]{ "ProjectId", "Mode", "Transaction", "Mutations" }, new[]{ "TransactionSelector" }, new[]{ typeof(global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.CommitResponse), global::Google.Datastore.V1Beta3.CommitResponse.Parser, new[]{ "MutationResults", "IndexUpdates" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.AllocateIdsRequest), global::Google.Datastore.V1Beta3.AllocateIdsRequest.Parser, new[]{ "ProjectId", "Keys" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.AllocateIdsResponse), global::Google.Datastore.V1Beta3.AllocateIdsResponse.Parser, new[]{ "Keys" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.Mutation), global::Google.Datastore.V1Beta3.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete" }, new[]{ "Operation" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.MutationResult), global::Google.Datastore.V1Beta3.MutationResult.Parser, new[]{ "Key" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.ReadOptions), global::Google.Datastore.V1Beta3.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency) }, null)
           }));
     }
     #endregion
@@ -153,12 +153,12 @@ namespace Google.Datastore.V1Beta3 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  Project ID against which to make the request.
+    ///  The ID of the project against which to make the request.
     /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
-        projectId_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -166,7 +166,7 @@ namespace Google.Datastore.V1Beta3 {
     public const int ReadOptionsFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.ReadOptions readOptions_;
     /// <summary>
-    ///  Options for this lookup request.
+    ///  The options for this lookup request.
     /// </summary>
     public global::Google.Datastore.V1Beta3.ReadOptions ReadOptions {
       get { return readOptions_; }
@@ -480,12 +480,12 @@ namespace Google.Datastore.V1Beta3 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  Project ID against which to make the request.
+    ///  The ID of the project against which to make the request.
     /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
-        projectId_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -903,12 +903,12 @@ namespace Google.Datastore.V1Beta3 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  Project ID against which to make the request.
+    ///  The ID of the project against which to make the request.
     /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
-        projectId_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1017,7 +1017,7 @@ namespace Google.Datastore.V1Beta3 {
     public pb::ByteString Transaction {
       get { return transaction_; }
       set {
-        transaction_ = pb::Preconditions.CheckNotNull(value, "value");
+        transaction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1122,12 +1122,12 @@ namespace Google.Datastore.V1Beta3 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  Project ID against which to make the request.
+    ///  The ID of the project against which to make the request.
     /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
-        projectId_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1141,7 +1141,7 @@ namespace Google.Datastore.V1Beta3 {
     public pb::ByteString Transaction {
       get { return transaction_; }
       set {
-        transaction_ = pb::Preconditions.CheckNotNull(value, "value");
+        transaction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1349,18 +1349,18 @@ namespace Google.Datastore.V1Beta3 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  Project ID against which to make the request.
+    ///  The ID of the project against which to make the request.
     /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
-        projectId_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "mode" field.</summary>
     public const int ModeFieldNumber = 5;
-    private global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode mode_ = global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode.MODE_UNSPECIFIED;
+    private global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode mode_ = 0;
     /// <summary>
     ///  The type of commit to perform. Defaults to `TRANSACTIONAL`.
     /// </summary>
@@ -1374,12 +1374,14 @@ namespace Google.Datastore.V1Beta3 {
     /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 1;
     /// <summary>
-    ///  The transaction in which to write.
+    ///  The identifier of the transaction associated with the commit. A
+    ///  transaction identifier is returned by a call to
+    ///  [BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
     /// </summary>
     public pb::ByteString Transaction {
       get { return transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction ? (pb::ByteString) transactionSelector_ : pb::ByteString.Empty; }
       set {
-        transactionSelector_ = pb::Preconditions.CheckNotNull(value, "value");
+        transactionSelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transactionSelectorCase_ = TransactionSelectorOneofCase.Transaction;
       }
     }
@@ -1395,6 +1397,7 @@ namespace Google.Datastore.V1Beta3 {
     ///  When mode is `TRANSACTIONAL`, mutations affecting a single entity are
     ///  applied in order. The following sequences of mutations affecting a single
     ///  entity are not permitted in a single `Commit` request:
+    ///
     ///  - `insert` followed by `insert`
     ///  - `update` followed by `insert`
     ///  - `upsert` followed by `insert`
@@ -1445,7 +1448,7 @@ namespace Google.Datastore.V1Beta3 {
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
-      if (Mode != global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode.MODE_UNSPECIFIED) hash ^= Mode.GetHashCode();
+      if (Mode != 0) hash ^= Mode.GetHashCode();
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
       hash ^= mutations_.GetHashCode();
       hash ^= (int) transactionSelectorCase_;
@@ -1461,7 +1464,7 @@ namespace Google.Datastore.V1Beta3 {
         output.WriteRawTag(10);
         output.WriteBytes(Transaction);
       }
-      if (Mode != global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode.MODE_UNSPECIFIED) {
+      if (Mode != 0) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Mode);
       }
@@ -1477,7 +1480,7 @@ namespace Google.Datastore.V1Beta3 {
       if (ProjectId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
       }
-      if (Mode != global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode.MODE_UNSPECIFIED) {
+      if (Mode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
       }
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
@@ -1494,7 +1497,7 @@ namespace Google.Datastore.V1Beta3 {
       if (other.ProjectId.Length != 0) {
         ProjectId = other.ProjectId;
       }
-      if (other.Mode != global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode.MODE_UNSPECIFIED) {
+      if (other.Mode != 0) {
         Mode = other.Mode;
       }
       mutations_.Add(other.mutations_);
@@ -1538,21 +1541,22 @@ namespace Google.Datastore.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
       /// <summary>
-      ///  Commit modes.
+      ///  The modes available for commits.
       /// </summary>
       public enum Mode {
         /// <summary>
-        ///  Unspecified.
+        ///  Unspecified. This value must not be used.
         /// </summary>
-        MODE_UNSPECIFIED = 0,
+        [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Transactional.
+        ///  Transactional: The mutations are either all applied, or none are applied.
+        ///  Learn about transactions [here](https://cloud.google.com/datastore/docs/concepts/transactions).
         /// </summary>
-        TRANSACTIONAL = 1,
+        [pbr::OriginalName("TRANSACTIONAL")] Transactional = 1,
         /// <summary>
-        ///  Non-transactional.
+        ///  Non-transactional: The mutations may not apply as all or none.
         /// </summary>
-        NON_TRANSACTIONAL = 2,
+        [pbr::OriginalName("NON_TRANSACTIONAL")] NonTransactional = 2,
       }
 
     }
@@ -1608,7 +1612,8 @@ namespace Google.Datastore.V1Beta3 {
     public const int IndexUpdatesFieldNumber = 4;
     private int indexUpdates_;
     /// <summary>
-    ///  The number of index entries updated during the commit.
+    ///  The number of index entries updated during the commit, or zero if none were
+    ///  updated.
     /// </summary>
     public int IndexUpdates {
       get { return indexUpdates_; }
@@ -1727,12 +1732,12 @@ namespace Google.Datastore.V1Beta3 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  Project ID against which to make the request.
+    ///  The ID of the project against which to make the request.
     /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
-        projectId_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1974,7 +1979,7 @@ namespace Google.Datastore.V1Beta3 {
     public const int InsertFieldNumber = 4;
     /// <summary>
     ///  The entity to insert. The entity must not already exist.
-    ///  The entity's key's final path element may be incomplete.
+    ///  The entity key's final path element may be incomplete.
     /// </summary>
     public global::Google.Datastore.V1Beta3.Entity Insert {
       get { return operationCase_ == OperationOneofCase.Insert ? (global::Google.Datastore.V1Beta3.Entity) operation_ : null; }
@@ -2002,7 +2007,7 @@ namespace Google.Datastore.V1Beta3 {
     public const int UpsertFieldNumber = 6;
     /// <summary>
     ///  The entity to upsert. The entity may or may not already exist.
-    ///  The entity's key's final path element may be incomplete.
+    ///  The entity key's final path element may be incomplete.
     /// </summary>
     public global::Google.Datastore.V1Beta3.Entity Upsert {
       get { return operationCase_ == OperationOneofCase.Upsert ? (global::Google.Datastore.V1Beta3.Entity) operation_ : null; }
@@ -2301,7 +2306,7 @@ namespace Google.Datastore.V1Beta3 {
   }
 
   /// <summary>
-  ///  Options shared by read requests.
+  ///  The options shared by read requests.
   /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ReadOptions : pb::IMessage<ReadOptions> {
@@ -2345,7 +2350,7 @@ namespace Google.Datastore.V1Beta3 {
     ///  Cannot be set to `STRONG` for global queries.
     /// </summary>
     public global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency ReadConsistency {
-      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency ? (global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency) consistencyType_ : global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.READ_CONSISTENCY_UNSPECIFIED; }
+      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency ? (global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency) consistencyType_ : 0; }
       set {
         consistencyType_ = value;
         consistencyTypeCase_ = ConsistencyTypeOneofCase.ReadConsistency;
@@ -2360,7 +2365,7 @@ namespace Google.Datastore.V1Beta3 {
     public pb::ByteString Transaction {
       get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction ? (pb::ByteString) consistencyType_ : pb::ByteString.Empty; }
       set {
-        consistencyType_ = pb::Preconditions.CheckNotNull(value, "value");
+        consistencyType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         consistencyTypeCase_ = ConsistencyTypeOneofCase.Transaction;
       }
     }
@@ -2473,21 +2478,21 @@ namespace Google.Datastore.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
       /// <summary>
-      ///  Read consistencies.
+      ///  The possible values for read consistencies.
       /// </summary>
       public enum ReadConsistency {
         /// <summary>
-        ///  Unspecified.
+        ///  Unspecified. This value must not be used.
         /// </summary>
-        READ_CONSISTENCY_UNSPECIFIED = 0,
+        [pbr::OriginalName("READ_CONSISTENCY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         ///  Strong consistency.
         /// </summary>
-        STRONG = 1,
+        [pbr::OriginalName("STRONG")] Strong = 1,
         /// <summary>
         ///  Eventual consistency.
         /// </summary>
-        EVENTUAL = 2,
+        [pbr::OriginalName("EVENTUAL")] Eventual = 2,
       }
 
     }
