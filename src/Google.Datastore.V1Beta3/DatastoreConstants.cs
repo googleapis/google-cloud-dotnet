@@ -23,5 +23,20 @@ namespace Google.Datastore.V1Beta3
         /// The property to use in a query to obtain just the entity key.
         /// </summary>
         public const string KeyProperty = "__key__";
+
+        /// <summary>
+        /// The kind used to find all the namespaces used in your application entities.
+        /// </summary>
+        public const string NamespaceKind = "__namespace__";
+
+        /// <summary>
+        /// The kind used to query a specific kind.
+        /// </summary>
+        public const string KindKind = "__kind__";
+
+        /// <summary>
+        /// The kind used to query the properties used in entities.
+        /// </summary>
+        public const string PropertyKind = "__property__";
     }
 }
