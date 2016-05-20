@@ -43,7 +43,7 @@ namespace Google.Logging.V2
         /// </param>
         /// <returns>A <see cref="LoggingServiceV2Client"/> that wraps the specified GRPC client.</returns>
         public static LoggingServiceV2Client ToClient(
-            this LoggingServiceV2.ILoggingServiceV2Client grpcClient,
+            this LoggingServiceV2.LoggingServiceV2Client grpcClient,
             LoggingServiceV2Settings settings = null
         ) => new LoggingServiceV2ClientImpl(grpcClient, settings);
     }
@@ -439,7 +439,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// The underlying GRPC LoggingServiceV2 client.
         /// </summary>
-        public virtual LoggingServiceV2.ILoggingServiceV2Client GrpcClient
+        public virtual LoggingServiceV2.LoggingServiceV2Client GrpcClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -697,7 +697,7 @@ namespace Google.Logging.V2
         private readonly ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> _callListLogEntries;
         private readonly ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
 
-        public LoggingServiceV2ClientImpl(LoggingServiceV2.ILoggingServiceV2Client grpcClient, LoggingServiceV2Settings settings)
+        public LoggingServiceV2ClientImpl(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings settings)
         {
             this.GrpcClient = grpcClient;
             LoggingServiceV2Settings effectiveSettings = settings ?? LoggingServiceV2Settings.GetDefault();
@@ -712,7 +712,7 @@ namespace Google.Logging.V2
                 GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
         }
 
-        public override LoggingServiceV2.ILoggingServiceV2Client GrpcClient { get; }
+        public override LoggingServiceV2.LoggingServiceV2Client GrpcClient { get; }
 
         /// <summary>
         /// Deletes a log and all its log entries.

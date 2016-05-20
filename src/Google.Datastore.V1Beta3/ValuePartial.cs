@@ -378,6 +378,6 @@ namespace Google.Datastore.V1Beta3
         /// Creates a new <see cref="Value"/> with a type of <c>NullValue</c>.
         /// </summary>
         /// <returns>A value with a type of <c>NullValue</c>.</returns>
-        public static Value ForNull() => new Value { NullValue = NullValue.NULL_VALUE };
+        public static Value ForNull() => new Value { NullValue = NullValue.NullValue };
     }
 }

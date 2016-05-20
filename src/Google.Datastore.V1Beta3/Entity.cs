@@ -54,12 +54,12 @@ namespace Google.Datastore.V1Beta3 {
             "dGl0eVByb3RvUAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
-          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PartitionId), global::Google.Datastore.V1Beta3.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Key), global::Google.Datastore.V1Beta3.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedCodeInfo[] { new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Key.Types.PathElement), global::Google.Datastore.V1Beta3.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.ArrayValue), global::Google.Datastore.V1Beta3.ArrayValue.Parser, new[]{ "Values" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Value), global::Google.Datastore.V1Beta3.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "KeyValue", "StringValue", "BlobValue", "GeoPointValue", "EntityValue", "ArrayValue", "Meaning", "ExcludeFromIndexes" }, new[]{ "ValueType" }, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Entity), global::Google.Datastore.V1Beta3.Entity.Parser, new[]{ "Key", "Properties" }, null, null, new pbr::GeneratedCodeInfo[] { null, })
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.PartitionId), global::Google.Datastore.V1Beta3.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.Key), global::Google.Datastore.V1Beta3.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.Key.Types.PathElement), global::Google.Datastore.V1Beta3.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.ArrayValue), global::Google.Datastore.V1Beta3.ArrayValue.Parser, new[]{ "Values" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.Value), global::Google.Datastore.V1Beta3.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "KeyValue", "StringValue", "BlobValue", "GeoPointValue", "EntityValue", "ArrayValue", "Meaning", "ExcludeFromIndexes" }, new[]{ "ValueType" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Datastore.V1Beta3.Entity), global::Google.Datastore.V1Beta3.Entity.Parser, new[]{ "Key", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -72,10 +72,12 @@ namespace Google.Datastore.V1Beta3 {
   ///
   ///  A partition ID contains several dimensions:
   ///  project ID and namespace ID.
+  ///
   ///  Partition dimensions:
-  ///  - A dimension may be `""`.
-  ///  - A dimension must be valid UTF-8 bytes.
-  ///  - A dimension's value must match regex `[A-Za-z\d\.\-_]{1,100}`
+  ///
+  ///  - May be `""`.
+  ///  - Must be valid UTF-8 bytes.
+  ///  - Must have values that match regex `[A-Za-z\d\.\-_]{1,100}`
   ///  If the value of any dimension matches regex `__.*__`, the partition is
   ///  reserved/read-only.
   ///  A reserved/read-only partition ID is forbidden in certain documented
@@ -117,12 +119,12 @@ namespace Google.Datastore.V1Beta3 {
     public const int ProjectIdFieldNumber = 2;
     private string projectId_ = "";
     /// <summary>
-    ///  Project ID.
+    ///  The ID of the project to which the entities belong.
     /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
-        projectId_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -130,12 +132,12 @@ namespace Google.Datastore.V1Beta3 {
     public const int NamespaceIdFieldNumber = 4;
     private string namespaceId_ = "";
     /// <summary>
-    ///  Namespace ID.
+    ///  If not empty, the ID of the namespace to which the entities belong.
     /// </summary>
     public string NamespaceId {
       get { return namespaceId_; }
       set {
-        namespaceId_ = pb::Preconditions.CheckNotNull(value, "value");
+        namespaceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -223,7 +225,7 @@ namespace Google.Datastore.V1Beta3 {
 
   /// <summary>
   ///  A unique identifier for an entity.
-  ///  If a key's partition id or any of its path kinds or names are
+  ///  If a key's partition ID or any of its path kinds or names are
   ///  reserved/read-only, the key is reserved/read-only.
   ///  A reserved/read-only key is forbidden in certain documented contexts.
   /// </summary>
@@ -259,8 +261,8 @@ namespace Google.Datastore.V1Beta3 {
     public const int PartitionIdFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.PartitionId partitionId_;
     /// <summary>
-    ///  Entities are partitioned into subsets, currently identified by a dataset
-    ///  (usually implicitly specified by the project) and namespace ID.
+    ///  Entities are partitioned into subsets, currently identified by a project
+    ///  ID and namespace ID.
     ///  Queries are scoped to a single partition.
     /// </summary>
     public global::Google.Datastore.V1Beta3.PartitionId PartitionId {
@@ -280,14 +282,18 @@ namespace Google.Datastore.V1Beta3 {
     ///  An entity path consists of one or more elements composed of a kind and a
     ///  string or numerical identifier, which identify entities. The first
     ///  element identifies a _root entity_, the second element identifies
-    ///  a _child_ of the root entity, the third element a child of the
+    ///  a _child_ of the root entity, the third element identifies a child of the
     ///  second entity, and so forth. The entities identified by all prefixes of
     ///  the path are called the element's _ancestors_.
+    ///
     ///  An entity path is always fully complete: *all* of the entity's ancestors
     ///  are required to be in the path along with the entity identifier itself.
     ///  The only exception is that in some documented cases, the identifier in the
-    ///  last path element (for the entity) itself may be omitted. A path can never
-    ///  be empty. The path can have at most 100 elements.
+    ///  last path element (for the entity) itself may be omitted. For example,
+    ///  the last path element of the key of `Mutation.insert` may have no
+    ///  identifier.
+    ///
+    ///  A path can never be empty, and a path can have at most 100 elements.
     /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key.Types.PathElement> Path {
       get { return path_; }
@@ -379,7 +385,7 @@ namespace Google.Datastore.V1Beta3 {
       /// <summary>
       ///  A (kind, ID/name) pair used to construct a key path.
       ///
-      ///  If either name nor ID is set, the element is complete.
+      ///  If either name or ID is set, the element is complete.
       ///  If neither is set, the element is incomplete.
       /// </summary>
       [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -430,14 +436,14 @@ namespace Google.Datastore.V1Beta3 {
         public string Kind {
           get { return kind_; }
           set {
-            kind_ = pb::Preconditions.CheckNotNull(value, "value");
+            kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
         /// <summary>Field number for the "id" field.</summary>
         public const int IdFieldNumber = 2;
         /// <summary>
-        ///  The auto allocated ID of the entity.
+        ///  The auto-allocated ID of the entity.
         ///  Never equal to zero. Values less than zero are discouraged and may not
         ///  be supported in the future.
         /// </summary>
@@ -460,7 +466,7 @@ namespace Google.Datastore.V1Beta3 {
         public string Name {
           get { return idTypeCase_ == IdTypeOneofCase.Name ? (string) idType_ : ""; }
           set {
-            idType_ = pb::Preconditions.CheckNotNull(value, "value");
+            idType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             idTypeCase_ = IdTypeOneofCase.Name;
           }
         }
@@ -767,7 +773,7 @@ namespace Google.Datastore.V1Beta3 {
     ///  A null value.
     /// </summary>
     public global::Google.Protobuf.WellKnownTypes.NullValue NullValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : global::Google.Protobuf.WellKnownTypes.NullValue.NULL_VALUE; }
+      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : 0; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.NullValue;
@@ -845,15 +851,13 @@ namespace Google.Datastore.V1Beta3 {
     public const int StringValueFieldNumber = 17;
     /// <summary>
     ///  A UTF-8 encoded string value.
-    ///  When `exclude_from_indexes` is false (it is indexed) and meaning is not
-    ///  2, may have at most 1500 bytes.
-    ///  When meaning is 2, may have at most 2083 bytes.
-    ///  Otherwise, may be set to at least 1,000,000 bytes
+    ///  When `exclude_from_indexes` is false (it is indexed) , may have at most 1500 bytes.
+    ///  Otherwise, may be set to at least 1,000,000 bytes.
     /// </summary>
     public string StringValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.StringValue ? (string) valueType_ : ""; }
       set {
-        valueType_ = pb::Preconditions.CheckNotNull(value, "value");
+        valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueTypeCase_ = ValueTypeOneofCase.StringValue;
       }
     }
@@ -869,7 +873,7 @@ namespace Google.Datastore.V1Beta3 {
     public pb::ByteString BlobValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.BlobValue ? (pb::ByteString) valueType_ : pb::ByteString.Empty; }
       set {
-        valueType_ = pb::Preconditions.CheckNotNull(value, "value");
+        valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueTypeCase_ = ValueTypeOneofCase.BlobValue;
       }
     }
@@ -891,9 +895,10 @@ namespace Google.Datastore.V1Beta3 {
     public const int EntityValueFieldNumber = 6;
     /// <summary>
     ///  An entity value.
-    ///  May have no key.
-    ///  May have a key with an incomplete key path.
-    ///  May have a reserved/read-only key.
+    ///
+    ///  - May have no key.
+    ///  - May have a key with an incomplete key path.
+    ///  - May have a reserved/read-only key.
     /// </summary>
     public global::Google.Datastore.V1Beta3.Entity EntityValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.EntityValue ? (global::Google.Datastore.V1Beta3.Entity) valueType_ : null; }
@@ -1262,7 +1267,7 @@ namespace Google.Datastore.V1Beta3 {
   }
 
   /// <summary>
-  ///  An entity.
+  ///  A Datastore data object.
   ///
   ///  An entity is limited to 1 megabyte when stored. That _roughly_
   ///  corresponds to a limit of 1 megabyte for the serialized form of this
@@ -1304,7 +1309,7 @@ namespace Google.Datastore.V1Beta3 {
     ///
     ///  An entity must have a key, unless otherwise documented (for example,
     ///  an entity in `Value.entity_value` may have no key).
-    ///  An entity's kind is its key's path's last element's kind,
+    ///  An entity's kind is its key path's last element's kind,
     ///  or null if it has no key.
     /// </summary>
     public global::Google.Datastore.V1Beta3.Key Key {

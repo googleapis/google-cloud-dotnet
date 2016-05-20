@@ -59,14 +59,14 @@ namespace Google.Logging.V2 {
             "Z1ABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.LogSink), global::Google.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat" }, null, new[]{ typeof(global::Google.Logging.V2.LogSink.Types.VersionFormat) }, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.ListSinksRequest), global::Google.Logging.V2.ListSinksRequest.Parser, new[]{ "ProjectName", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.ListSinksResponse), global::Google.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.GetSinkRequest), global::Google.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.CreateSinkRequest), global::Google.Logging.V2.CreateSinkRequest.Parser, new[]{ "ProjectName", "Sink" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.UpdateSinkRequest), global::Google.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.DeleteSinkRequest), global::Google.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogSink), global::Google.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat" }, null, new[]{ typeof(global::Google.Logging.V2.LogSink.Types.VersionFormat) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksRequest), global::Google.Logging.V2.ListSinksRequest.Parser, new[]{ "ProjectName", "PageToken", "PageSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksResponse), global::Google.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.GetSinkRequest), global::Google.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.CreateSinkRequest), global::Google.Logging.V2.CreateSinkRequest.Parser, new[]{ "ProjectName", "Sink" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.UpdateSinkRequest), global::Google.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.DeleteSinkRequest), global::Google.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null)
           }));
     }
     #endregion
@@ -119,7 +119,7 @@ namespace Google.Logging.V2 {
     public string Name {
       get { return name_; }
       set {
-        name_ = pb::Preconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -135,7 +135,7 @@ namespace Google.Logging.V2 {
     public string Destination {
       get { return destination_; }
       set {
-        destination_ = pb::Preconditions.CheckNotNull(value, "value");
+        destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -153,13 +153,13 @@ namespace Google.Logging.V2 {
     public string Filter {
       get { return filter_; }
       set {
-        filter_ = pb::Preconditions.CheckNotNull(value, "value");
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "output_version_format" field.</summary>
     public const int OutputVersionFormatFieldNumber = 6;
-    private global::Google.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = global::Google.Logging.V2.LogSink.Types.VersionFormat.VERSION_FORMAT_UNSPECIFIED;
+    private global::Google.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = 0;
     /// <summary>
     ///  The log entry version used when exporting log entries from this
     ///  sink.  This version does not have to correspond to the version of
@@ -195,7 +195,7 @@ namespace Google.Logging.V2 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Destination.Length != 0) hash ^= Destination.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
-      if (OutputVersionFormat != global::Google.Logging.V2.LogSink.Types.VersionFormat.VERSION_FORMAT_UNSPECIFIED) hash ^= OutputVersionFormat.GetHashCode();
+      if (OutputVersionFormat != 0) hash ^= OutputVersionFormat.GetHashCode();
       return hash;
     }
 
@@ -216,7 +216,7 @@ namespace Google.Logging.V2 {
         output.WriteRawTag(42);
         output.WriteString(Filter);
       }
-      if (OutputVersionFormat != global::Google.Logging.V2.LogSink.Types.VersionFormat.VERSION_FORMAT_UNSPECIFIED) {
+      if (OutputVersionFormat != 0) {
         output.WriteRawTag(48);
         output.WriteEnum((int) OutputVersionFormat);
       }
@@ -233,7 +233,7 @@ namespace Google.Logging.V2 {
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
       }
-      if (OutputVersionFormat != global::Google.Logging.V2.LogSink.Types.VersionFormat.VERSION_FORMAT_UNSPECIFIED) {
+      if (OutputVersionFormat != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OutputVersionFormat);
       }
       return size;
@@ -252,7 +252,7 @@ namespace Google.Logging.V2 {
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
       }
-      if (other.OutputVersionFormat != global::Google.Logging.V2.LogSink.Types.VersionFormat.VERSION_FORMAT_UNSPECIFIED) {
+      if (other.OutputVersionFormat != 0) {
         OutputVersionFormat = other.OutputVersionFormat;
       }
     }
@@ -297,15 +297,15 @@ namespace Google.Logging.V2 {
         /// <summary>
         ///  An unspecified version format will default to V2.
         /// </summary>
-        VERSION_FORMAT_UNSPECIFIED = 0,
+        [pbr::OriginalName("VERSION_FORMAT_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         ///  `LogEntry` version 2 format.
         /// </summary>
-        V2 = 1,
+        [pbr::OriginalName("V2")] V2 = 1,
         /// <summary>
         ///  `LogEntry` version 1 format.
         /// </summary>
-        V1 = 2,
+        [pbr::OriginalName("V1")] V1 = 2,
       }
 
     }
@@ -355,7 +355,7 @@ namespace Google.Logging.V2 {
     public string ProjectName {
       get { return projectName_; }
       set {
-        projectName_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -372,7 +372,7 @@ namespace Google.Logging.V2 {
     public string PageToken {
       get { return pageToken_; }
       set {
-        pageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -545,7 +545,7 @@ namespace Google.Logging.V2 {
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
-        nextPageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -664,7 +664,7 @@ namespace Google.Logging.V2 {
     public string SinkName {
       get { return sinkName_; }
       set {
-        sinkName_ = pb::Preconditions.CheckNotNull(value, "value");
+        sinkName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -777,7 +777,7 @@ namespace Google.Logging.V2 {
     public string ProjectName {
       get { return projectName_; }
       set {
-        projectName_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -928,7 +928,7 @@ namespace Google.Logging.V2 {
     public string SinkName {
       get { return sinkName_; }
       set {
-        sinkName_ = pb::Preconditions.CheckNotNull(value, "value");
+        sinkName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1075,7 +1075,7 @@ namespace Google.Logging.V2 {
     public string SinkName {
       get { return sinkName_; }
       set {
-        sinkName_ = pb::Preconditions.CheckNotNull(value, "value");
+        sinkName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 

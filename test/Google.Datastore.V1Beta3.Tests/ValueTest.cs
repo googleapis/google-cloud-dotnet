@@ -90,7 +90,7 @@ namespace Google.Datastore.V1Beta3.Tests
         [Fact]
         public void ConversionsFromValue_NullValue()
         {
-            Value value = new Value { NullValue = NullValue.NULL_VALUE };
+            Value value = new Value { NullValue = NullValue.NullValue };
             Assert.Null((string)value);
             Assert.Null((long?)value);
             Assert.Null((Key)value);

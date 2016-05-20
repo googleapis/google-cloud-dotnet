@@ -42,7 +42,7 @@ namespace Google.Logging.V2
         /// </param>
         /// <returns>A <see cref="MetricsServiceV2Client"/> that wraps the specified GRPC client.</returns>
         public static MetricsServiceV2Client ToClient(
-            this MetricsServiceV2.IMetricsServiceV2Client grpcClient,
+            this MetricsServiceV2.MetricsServiceV2Client grpcClient,
             MetricsServiceV2Settings settings = null
         ) => new MetricsServiceV2ClientImpl(grpcClient, settings);
     }
@@ -433,7 +433,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// The underlying GRPC MetricsServiceV2 client.
         /// </summary>
-        public virtual MetricsServiceV2.IMetricsServiceV2Client GrpcClient
+        public virtual MetricsServiceV2.MetricsServiceV2Client GrpcClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -736,7 +736,7 @@ namespace Google.Logging.V2
         private readonly ApiCall<UpdateLogMetricRequest, LogMetric> _callUpdateLogMetric;
         private readonly ApiCall<DeleteLogMetricRequest, Empty> _callDeleteLogMetric;
 
-        public MetricsServiceV2ClientImpl(MetricsServiceV2.IMetricsServiceV2Client grpcClient, MetricsServiceV2Settings settings)
+        public MetricsServiceV2ClientImpl(MetricsServiceV2.MetricsServiceV2Client grpcClient, MetricsServiceV2Settings settings)
         {
             this.GrpcClient = grpcClient;
             MetricsServiceV2Settings effectiveSettings = settings ?? MetricsServiceV2Settings.GetDefault();
@@ -753,7 +753,7 @@ namespace Google.Logging.V2
                 GrpcClient.DeleteLogMetricAsync, GrpcClient.DeleteLogMetric, effectiveSettings.DeleteLogMetricSettings);
         }
 
-        public override MetricsServiceV2.IMetricsServiceV2Client GrpcClient { get; }
+        public override MetricsServiceV2.MetricsServiceV2Client GrpcClient { get; }
 
         /// <summary>
         /// Lists logs-based metrics.

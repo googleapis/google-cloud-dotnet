@@ -42,7 +42,7 @@ namespace Google.Pubsub.V1
         /// </param>
         /// <returns>A <see cref="PublisherClient"/> that wraps the specified GRPC client.</returns>
         public static PublisherClient ToClient(
-            this Publisher.IPublisherClient grpcClient,
+            this Publisher.PublisherClient grpcClient,
             PublisherSettings settings = null
         ) => new PublisherClientImpl(grpcClient, settings);
     }
@@ -462,7 +462,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// The underlying GRPC Publisher client.
         /// </summary>
-        public virtual Publisher.IPublisherClient GrpcClient
+        public virtual Publisher.PublisherClient GrpcClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -757,7 +757,7 @@ namespace Google.Pubsub.V1
         private readonly ApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse> _callListTopicSubscriptions;
         private readonly ApiCall<DeleteTopicRequest, Empty> _callDeleteTopic;
 
-        public PublisherClientImpl(Publisher.IPublisherClient grpcClient, PublisherSettings settings)
+        public PublisherClientImpl(Publisher.PublisherClient grpcClient, PublisherSettings settings)
         {
             this.GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
@@ -776,7 +776,7 @@ namespace Google.Pubsub.V1
                 GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings);
         }
 
-        public override Publisher.IPublisherClient GrpcClient { get; }
+        public override Publisher.PublisherClient GrpcClient { get; }
 
         /// <summary>
         /// Creates the given topic with the given name.

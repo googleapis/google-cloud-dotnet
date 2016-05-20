@@ -58,14 +58,14 @@ namespace Google.Logging.V2 {
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
-          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.LogMetric), global::Google.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.ListLogMetricsRequest), global::Google.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "ProjectName", "PageToken", "PageSize" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.ListLogMetricsResponse), global::Google.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.GetLogMetricRequest), global::Google.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.CreateLogMetricRequest), global::Google.Logging.V2.CreateLogMetricRequest.Parser, new[]{ "ProjectName", "Metric" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.UpdateLogMetricRequest), global::Google.Logging.V2.UpdateLogMetricRequest.Parser, new[]{ "MetricName", "Metric" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Logging.V2.DeleteLogMetricRequest), global::Google.Logging.V2.DeleteLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogMetric), global::Google.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogMetricsRequest), global::Google.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "ProjectName", "PageToken", "PageSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogMetricsResponse), global::Google.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.GetLogMetricRequest), global::Google.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.CreateLogMetricRequest), global::Google.Logging.V2.CreateLogMetricRequest.Parser, new[]{ "ProjectName", "Metric" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.UpdateLogMetricRequest), global::Google.Logging.V2.UpdateLogMetricRequest.Parser, new[]{ "MetricName", "Metric" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.DeleteLogMetricRequest), global::Google.Logging.V2.DeleteLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null)
           }));
     }
     #endregion
@@ -119,7 +119,7 @@ namespace Google.Logging.V2 {
     public string Name {
       get { return name_; }
       set {
-        name_ = pb::Preconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -132,7 +132,7 @@ namespace Google.Logging.V2 {
     public string Description {
       get { return description_; }
       set {
-        description_ = pb::Preconditions.CheckNotNull(value, "value");
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -146,7 +146,7 @@ namespace Google.Logging.V2 {
     public string Filter {
       get { return filter_; }
       set {
-        filter_ = pb::Preconditions.CheckNotNull(value, "value");
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -290,7 +290,7 @@ namespace Google.Logging.V2 {
     public string ProjectName {
       get { return projectName_; }
       set {
-        projectName_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -307,7 +307,7 @@ namespace Google.Logging.V2 {
     public string PageToken {
       get { return pageToken_; }
       set {
-        pageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -480,7 +480,7 @@ namespace Google.Logging.V2 {
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
-        nextPageToken_ = pb::Preconditions.CheckNotNull(value, "value");
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -599,7 +599,7 @@ namespace Google.Logging.V2 {
     public string MetricName {
       get { return metricName_; }
       set {
-        metricName_ = pb::Preconditions.CheckNotNull(value, "value");
+        metricName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -712,7 +712,7 @@ namespace Google.Logging.V2 {
     public string ProjectName {
       get { return projectName_; }
       set {
-        projectName_ = pb::Preconditions.CheckNotNull(value, "value");
+        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -863,7 +863,7 @@ namespace Google.Logging.V2 {
     public string MetricName {
       get { return metricName_; }
       set {
-        metricName_ = pb::Preconditions.CheckNotNull(value, "value");
+        metricName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1010,7 +1010,7 @@ namespace Google.Logging.V2 {
     public string MetricName {
       get { return metricName_; }
       set {
-        metricName_ = pb::Preconditions.CheckNotNull(value, "value");
+        metricName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
