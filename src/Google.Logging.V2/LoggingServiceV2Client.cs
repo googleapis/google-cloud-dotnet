@@ -240,11 +240,11 @@ namespace Google.Logging.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
-        /// <see cref="LoggingServiceV2Client.ListLogEntries"/> and <see cref="LoggingServiceV2Client.ListLogEntriesAsync"/>.
+        /// <see cref="LoggingServiceV2Client.ListLogEntriesPageStream"/> and <see cref="LoggingServiceV2Client.ListLogEntriesPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="LoggingServiceV2Client.ListLogEntries"/> and
-        /// <see cref="LoggingServiceV2Client.ListLogEntriesAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="LoggingServiceV2Client.ListLogEntriesPageStream"/> and
+        /// <see cref="LoggingServiceV2Client.ListLogEntriesPageStreamAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -273,11 +273,11 @@ namespace Google.Logging.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
-        /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptors"/> and <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync"/>.
+        /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsPageStream"/> and <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptors"/> and
-        /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsPageStream"/> and
+        /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsPageStreamAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>

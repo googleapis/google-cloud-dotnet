@@ -108,15 +108,15 @@ namespace Google.Pubsub.V1
         /// The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.2</description></item>
-        /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
         {
             Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.2,
-            MaxDelay = TimeSpan.FromMilliseconds(1000),
+            DelayMultiplier = 1.3,
+            MaxDelay = TimeSpan.FromMilliseconds(60000),
         };
 
         /// <summary>
@@ -126,16 +126,54 @@ namespace Google.Pubsub.V1
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
         {
-            Delay = TimeSpan.FromMilliseconds(2000),
-            DelayMultiplier = 1.5,
-            MaxDelay = TimeSpan.FromMilliseconds(30000),
+            Delay = TimeSpan.FromMilliseconds(60000),
+            DelayMultiplier = 1.0,
+            MaxDelay = TimeSpan.FromMilliseconds(60000),
+        };
+
+        /// <summary>
+        /// "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 100 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
+        /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetMessagingRetryBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(100),
+            DelayMultiplier = 1.3,
+            MaxDelay = TimeSpan.FromMilliseconds(60000),
+        };
+
+        /// <summary>
+        /// "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </summary>
+        /// <returns>The "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        /// <remarks>
+        /// The "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 12000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 12000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static BackoffSettings GetMessagingTimeoutBackoff() => new BackoffSettings
+        {
+            Delay = TimeSpan.FromMilliseconds(12000),
+            DelayMultiplier = 1.0,
+            MaxDelay = TimeSpan.FromMilliseconds(12000),
         };
 
         /// <summary>
@@ -147,17 +185,18 @@ namespace Google.Pubsub.V1
         /// <see cref="SubscriberClient.CreateSubscriptionAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings CreateSubscriptionSettings { get; set; } = new CallSettings
         {
@@ -165,9 +204,9 @@ namespace Google.Pubsub.V1
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
+                RetryFilter = IdempotentRetryFilter,
             },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
         };
 
         /// <summary>
@@ -179,18 +218,18 @@ namespace Google.Pubsub.V1
         /// <see cref="SubscriberClient.GetSubscriptionAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings GetSubscriptionSettings { get; set; } = new CallSettings
         {
@@ -200,30 +239,30 @@ namespace Google.Pubsub.V1
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
             },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
         };
 
         /// <summary>
         /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
-        /// <see cref="SubscriberClient.ListSubscriptions"/> and <see cref="SubscriberClient.ListSubscriptionsAsync"/>.
+        /// <see cref="SubscriberClient.ListSubscriptionsPageStream"/> and <see cref="SubscriberClient.ListSubscriptionsPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.ListSubscriptions"/> and
-        /// <see cref="SubscriberClient.ListSubscriptionsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="SubscriberClient.ListSubscriptionsPageStream"/> and
+        /// <see cref="SubscriberClient.ListSubscriptionsPageStreamAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings ListSubscriptionsSettings { get; set; } = new CallSettings
         {
@@ -233,7 +272,7 @@ namespace Google.Pubsub.V1
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
             },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
         };
 
         /// <summary>
@@ -245,18 +284,18 @@ namespace Google.Pubsub.V1
         /// <see cref="SubscriberClient.DeleteSubscriptionAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings DeleteSubscriptionSettings { get; set; } = new CallSettings
         {
@@ -266,7 +305,7 @@ namespace Google.Pubsub.V1
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
             },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
         };
 
         /// <summary>
@@ -278,17 +317,17 @@ namespace Google.Pubsub.V1
         /// <see cref="SubscriberClient.ModifyAckDeadlineAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings ModifyAckDeadlineSettings { get; set; } = new CallSettings
         {
@@ -298,7 +337,7 @@ namespace Google.Pubsub.V1
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
             },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
         };
 
         /// <summary>
@@ -310,27 +349,27 @@ namespace Google.Pubsub.V1
         /// <see cref="SubscriberClient.AcknowledgeAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 12000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 12000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings AcknowledgeSettings { get; set; } = new CallSettings
         {
             RetrySettings = new RetrySettings
             {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryBackoff = GetMessagingRetryBackoff(),
+                TimeoutBackoff = GetMessagingTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
             },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
         };
 
         /// <summary>
@@ -342,27 +381,27 @@ namespace Google.Pubsub.V1
         /// <see cref="SubscriberClient.PullAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 12000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 12000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings PullSettings { get; set; } = new CallSettings
         {
             RetrySettings = new RetrySettings
             {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryBackoff = GetMessagingRetryBackoff(),
+                TimeoutBackoff = GetMessagingTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
             },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
         };
 
         /// <summary>
@@ -374,17 +413,17 @@ namespace Google.Pubsub.V1
         /// <see cref="SubscriberClient.ModifyPushConfigAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description>No status codes</description></item>
         /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
+        /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings ModifyPushConfigSettings { get; set; } = new CallSettings
         {
@@ -394,7 +433,7 @@ namespace Google.Pubsub.V1
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
             },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
         };
 
 
@@ -413,9 +452,9 @@ namespace Google.Pubsub.V1
         private static readonly ChannelPool s_channelPool = new ChannelPool();
 
         /// <summary>
-        /// The default endpoint for the Subscriber service, which is a host of "pubsub-experimental.googleapis.com" and a port of 443.
+        /// The default endpoint for the Subscriber service, which is a host of "pubsub.googleapis.com" and a port of 443.
         /// </summary>
-        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("pubsub-experimental.googleapis.com", 443);
+        public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("pubsub.googleapis.com", 443);
 
         /// <summary>
         /// The default Subscriber scopes

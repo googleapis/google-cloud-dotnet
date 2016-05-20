@@ -137,11 +137,11 @@ namespace Google.Logging.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
-        /// <see cref="ConfigServiceV2Client.ListSinks"/> and <see cref="ConfigServiceV2Client.ListSinksAsync"/>.
+        /// <see cref="ConfigServiceV2Client.ListSinksPageStream"/> and <see cref="ConfigServiceV2Client.ListSinksPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ConfigServiceV2Client.ListSinks"/> and
-        /// <see cref="ConfigServiceV2Client.ListSinksAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="ConfigServiceV2Client.ListSinksPageStream"/> and
+        /// <see cref="ConfigServiceV2Client.ListSinksPageStreamAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
