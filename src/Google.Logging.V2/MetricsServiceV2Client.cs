@@ -137,11 +137,11 @@ namespace Google.Logging.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
-        /// <see cref="MetricsServiceV2Client.ListLogMetrics"/> and <see cref="MetricsServiceV2Client.ListLogMetricsAsync"/>.
+        /// <see cref="MetricsServiceV2Client.ListLogMetricsPageStream"/> and <see cref="MetricsServiceV2Client.ListLogMetricsPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricsServiceV2Client.ListLogMetrics"/> and
-        /// <see cref="MetricsServiceV2Client.ListLogMetricsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="MetricsServiceV2Client.ListLogMetricsPageStream"/> and
+        /// <see cref="MetricsServiceV2Client.ListLogMetricsPageStreamAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
