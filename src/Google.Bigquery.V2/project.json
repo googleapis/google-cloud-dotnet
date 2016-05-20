@@ -15,10 +15,10 @@
   },
 
   "dependencies": {
-    "Google.Apis": "1.11.1",
-    "Google.Apis.Auth": "1.11.1",
-    "Google.Apis.Bigquery.v2": "1.12.0.463",
-    "Google.Apis.Core": "1.11.1"
+    "Google.Apis": "1.13.0",
+    "Google.Apis.Auth": "1.13.0",
+    "Google.Apis.Bigquery.v2": "1.13.0.487",
+    "Google.Apis.Core": "1.13.0"
   },
   "frameworks": {
     "net45": {
