@@ -48,7 +48,7 @@ namespace Google.Storage.V1
         /// </summary>
         /// <remarks>
         /// As this is a full update, <paramref name="obj"/> must be fully populated. This is typically
-        /// obtained by performing another operation (such as <see cref="GetObjectAsync(string, string, GetObjectOptions)"/>
+        /// obtained by performing another operation (such as <see cref="GetObjectAsync(string, string, GetObjectOptions, CancellationToken)"/>
         /// with a "full" projection, and then modifying the returned object.
         /// </remarks>
         /// <param name="obj">Object to update. Must not be null, and must have populated <c>Name</c>,
