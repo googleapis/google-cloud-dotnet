@@ -38,7 +38,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // <Lookup>
+            // Snippet: Lookup
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
             Key key1 = keyFactory.CreateKey("pride_and_prejudice");
             Key key2 = keyFactory.CreateKey("not_present");
@@ -51,7 +51,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Console.WriteLine($"Found: {response.Found.Count}");
             Console.WriteLine($"Deferred: {response.Deferred.Count}");
             Console.WriteLine($"Missing: {response.Missing.Count}");
-            // </Lookup>
+            // End snippet
 
             Entity entity = response.Found[0].Entity;
             Assert.Equal("Jane Austen", (string)entity["author"]);
@@ -65,7 +65,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             PartitionId partitionId = _fixture.PartitionId;
             string kind = _fixture.BookKind;
 
-            // <RunQuery_System.String__Google.Datastore.V1Beta3.PartitionId__Google.Datastore.V1Beta3.ReadOptions__Google.Datastore.V1Beta3.Query>
+            // Snippet: RunQuery(string,PartitionId,ReadOptions,Query,CallSettings)
             DatastoreClient client = DatastoreClient.Create();
             Query query = new Query
             {
@@ -90,7 +90,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(result.Entity);
             }
-            // </RunQuery_System.String__Google.Datastore.V1Beta3.PartitionId__Google.Datastore.V1Beta3.ReadOptions__Google.Datastore.V1Beta3.Query>
+            // EndSnippet
 
             Assert.Equal(1, response.Batch.EntityResults.Count);
             Entity entity = response.Batch.EntityResults[0].Entity;
@@ -105,7 +105,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             PartitionId partitionId = _fixture.PartitionId;
             string kind = _fixture.BookKind;
 
-            // <RunQuery_System.String__Google.Datastore.V1Beta3.PartitionId__Google.Datastore.V1Beta3.ReadOptions__Google.Datastore.V1Beta3.GqlQuery>
+            // Snippet: RunQuery(string,PartitionId,ReadOptions,GqlQuery,CallSettings)
             DatastoreClient client = DatastoreClient.Create();
             GqlQuery gqlQuery = new GqlQuery
             {
@@ -122,7 +122,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(result.Entity);
             }
-            // </RunQuery_System.String__Google.Datastore.V1Beta3.PartitionId__Google.Datastore.V1Beta3.ReadOptions__Google.Datastore.V1Beta3.GqlQuery>
+            // End snippet
 
             Assert.Equal(1, response.Batch.EntityResults.Count);
             Entity entity = response.Batch.EntityResults[0].Entity;
@@ -138,7 +138,7 @@ namespace Google.Datastore.V1Beta3.Snippets
 
             // TODO: Fix transaction handling. (Should roll back automatically.)
 
-            // <Commit>
+            // Snippet: Commit(string,Mode,ByteString,*,CallSettings)
             DatastoreClient client = DatastoreClient.Create();
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
             Entity book1 = new Entity
@@ -164,7 +164,7 @@ namespace Google.Datastore.V1Beta3.Snippets
 
             IEnumerable<Key> insertedKeys = response.MutationResults.Select(r => r.Key);
             Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
-            // </Commit>
+            // End snippet
         }
 
         [Fact]
@@ -172,7 +172,7 @@ namespace Google.Datastore.V1Beta3.Snippets
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
-            // <Overview>
+            // Snippet: Overview
             var client = DatastoreClient.Create();
 
             var keyFactory = new KeyFactory(projectId, namespaceId, "message");
@@ -185,7 +185,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             var transaction = client.BeginTransaction(projectId).Transaction;
             var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
             var insertedKey = commitResponse.MutationResults[0].Key;
-            // </Overview>
+            // End snippet
         }
     }
 }

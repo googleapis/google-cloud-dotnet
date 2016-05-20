@@ -31,17 +31,17 @@ namespace Google.Bigquery.V2
     /// Supported value types:
     /// </para>
     /// <list type="bullet">
-    ///   <item><c>System.Boolean</c></item>
-    ///   <item><c>System.Int16</c></item>
-    ///   <item><c>System.UInt16</c></item>
-    ///   <item><c>System.Int32</c></item>
-    ///   <item><c>System.UInt32</c></item>
-    ///   <item><c>System.Int64</c></c></item>
-    ///   <item><c>System.Float</c></item>
-    ///   <item><c>System.Double</c></item>
-    ///   <item><c>System.String</c></item>
-    ///   <item><c>System.DateTime</c></item>
-    ///   <item><c>System.DateTimeOffset</c></item>
+    ///   <item><description><c>System.Boolean</c></description></item>
+    ///   <item><description><c>System.Int16</c></description></item>
+    ///   <item><description><c>System.UInt16</c></description></item>
+    ///   <item><description><c>System.Int32</c></description></item>
+    ///   <item><description><c>System.UInt32</c></description></item>
+    ///   <item><description><c>System.Int64</c></description></item>
+    ///   <item><description><c>System.Float</c></description></item>
+    ///   <item><description><c>System.Double</c></description></item>
+    ///   <item><description><c>System.String</c></description></item>
+    ///   <item><description><c>System.DateTime</c></description></item>
+    ///   <item><description><c>System.DateTimeOffset</c></description></item>
     /// </list>
     /// <para>
     /// Note that all integer types are stored as <c>System.Int64</c>, and all floating point

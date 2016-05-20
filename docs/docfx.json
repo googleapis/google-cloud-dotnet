@@ -19,14 +19,14 @@
         "dest": "api"
       },
       {
-        "files": [ "*.md", "toc.yml" ],
+        "files": [ "index.md", "toc.yml", "articles/*.md" ],
       }
     ],
     "globalMetadata": {
       "_appTitle": "Google Cloud APIs",
       "_disableContribution": true
     },
-    "overwrite": "extra/*.md",
+    "overwrite": [ "extra/*.md", "obj/snippets/*.md" ],
     "dest": "_site"
   }
 }

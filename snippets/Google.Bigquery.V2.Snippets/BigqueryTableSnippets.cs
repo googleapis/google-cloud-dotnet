@@ -37,7 +37,7 @@ namespace Google.Bigquery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = _fixture.HistoryTableId;
 
-            // <ListRows>
+            // Snippet: ListRows
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, tableId);
             BigqueryResult result = table.ListRows();
@@ -49,7 +49,7 @@ namespace Google.Bigquery.V2.Snippets
                 string player = (string)row["player"];
                 Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
             }
-            // <ListRows>
+            // End snippet
 
             // We set up 7 results in the fixture. Other tests may add more.
             Assert.True(result.Rows.Count() >= 7);
