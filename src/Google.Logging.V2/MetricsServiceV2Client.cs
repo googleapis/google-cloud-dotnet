@@ -136,7 +136,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="MetricsServiceV2Client.ListLogMetricsPageStream"/> and <see cref="MetricsServiceV2Client.ListLogMetricsPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
@@ -169,7 +169,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="MetricsServiceV2Client.GetLogMetric"/> and <see cref="MetricsServiceV2Client.GetLogMetricAsync"/>.
         /// </summary>
         /// <remarks>
@@ -202,7 +202,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="MetricsServiceV2Client.CreateLogMetric"/> and <see cref="MetricsServiceV2Client.CreateLogMetricAsync"/>.
         /// </summary>
         /// <remarks>
@@ -234,7 +234,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="MetricsServiceV2Client.UpdateLogMetric"/> and <see cref="MetricsServiceV2Client.UpdateLogMetricAsync"/>.
         /// </summary>
         /// <remarks>
@@ -266,7 +266,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="MetricsServiceV2Client.DeleteLogMetric"/> and <see cref="MetricsServiceV2Client.DeleteLogMetricAsync"/>.
         /// </summary>
         /// <remarks>

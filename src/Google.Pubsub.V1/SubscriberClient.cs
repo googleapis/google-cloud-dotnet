@@ -177,7 +177,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="SubscriberClient.CreateSubscription"/> and <see cref="SubscriberClient.CreateSubscriptionAsync"/>.
         /// </summary>
         /// <remarks>
@@ -210,7 +210,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="SubscriberClient.GetSubscription"/> and <see cref="SubscriberClient.GetSubscriptionAsync"/>.
         /// </summary>
         /// <remarks>
@@ -243,7 +243,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="SubscriberClient.ListSubscriptionsPageStream"/> and <see cref="SubscriberClient.ListSubscriptionsPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
@@ -276,7 +276,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="SubscriberClient.DeleteSubscription"/> and <see cref="SubscriberClient.DeleteSubscriptionAsync"/>.
         /// </summary>
         /// <remarks>
@@ -309,7 +309,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="SubscriberClient.ModifyAckDeadline"/> and <see cref="SubscriberClient.ModifyAckDeadlineAsync"/>.
         /// </summary>
         /// <remarks>
@@ -341,7 +341,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="SubscriberClient.Acknowledge"/> and <see cref="SubscriberClient.AcknowledgeAsync"/>.
         /// </summary>
         /// <remarks>
@@ -373,7 +373,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="SubscriberClient.Pull"/> and <see cref="SubscriberClient.PullAsync"/>.
         /// </summary>
         /// <remarks>
@@ -405,7 +405,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="SubscriberClient.ModifyPushConfig"/> and <see cref="SubscriberClient.ModifyPushConfigAsync"/>.
         /// </summary>
         /// <remarks>

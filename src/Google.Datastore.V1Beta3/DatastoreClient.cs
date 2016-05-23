@@ -122,7 +122,7 @@ namespace Google.Datastore.V1Beta3
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="DatastoreClient.Lookup"/> and <see cref="DatastoreClient.LookupAsync"/>.
         /// </summary>
         /// <remarks>
@@ -154,7 +154,7 @@ namespace Google.Datastore.V1Beta3
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="DatastoreClient.RunQuery"/> and <see cref="DatastoreClient.RunQueryAsync"/>.
         /// </summary>
         /// <remarks>
@@ -186,7 +186,7 @@ namespace Google.Datastore.V1Beta3
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="DatastoreClient.BeginTransaction"/> and <see cref="DatastoreClient.BeginTransactionAsync"/>.
         /// </summary>
         /// <remarks>
@@ -218,7 +218,7 @@ namespace Google.Datastore.V1Beta3
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="DatastoreClient.Commit"/> and <see cref="DatastoreClient.CommitAsync"/>.
         /// </summary>
         /// <remarks>
@@ -250,7 +250,7 @@ namespace Google.Datastore.V1Beta3
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="DatastoreClient.Rollback"/> and <see cref="DatastoreClient.RollbackAsync"/>.
         /// </summary>
         /// <remarks>
@@ -282,7 +282,7 @@ namespace Google.Datastore.V1Beta3
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="DatastoreClient.AllocateIds"/> and <see cref="DatastoreClient.AllocateIdsAsync"/>.
         /// </summary>
         /// <remarks>
