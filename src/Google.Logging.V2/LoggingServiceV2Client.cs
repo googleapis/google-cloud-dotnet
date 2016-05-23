@@ -70,7 +70,6 @@ namespace Google.Logging.V2
             DeleteLogSettings = existing.DeleteLogSettings?.Clone();
             WriteLogEntriesSettings = existing.WriteLogEntriesSettings?.Clone();
             ListLogEntriesSettings = existing.ListLogEntriesSettings?.Clone();
-            ListMonitoredResourceDescriptorsSettings = existing.ListMonitoredResourceDescriptorsSettings?.Clone();
         }
 
         /// <summary>
@@ -174,7 +173,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="LoggingServiceV2Client.DeleteLog"/> and <see cref="LoggingServiceV2Client.DeleteLogAsync"/>.
         /// </summary>
         /// <remarks>
@@ -207,7 +206,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="LoggingServiceV2Client.WriteLogEntries"/> and <see cref="LoggingServiceV2Client.WriteLogEntriesAsync"/>.
         /// </summary>
         /// <remarks>
@@ -239,7 +238,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="LoggingServiceV2Client.ListLogEntriesPageStream"/> and <see cref="LoggingServiceV2Client.ListLogEntriesPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
@@ -266,39 +265,6 @@ namespace Google.Logging.V2
             {
                 RetryBackoff = GetListRetryBackoff(),
                 TimeoutBackoff = GetListTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
-        };
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
-        /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsPageStream"/> and <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsPageStreamAsync"/>.
-        /// </summary>
-        /// <remarks>
-        /// The default <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsPageStream"/> and
-        /// <see cref="LoggingServiceV2Client.ListMonitoredResourceDescriptorsPageStreamAsync"/> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
-        /// </remarks>
-        public CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = new CallSettings
-        {
-            RetrySettings = new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
             },
             Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
@@ -686,7 +652,6 @@ namespace Google.Logging.V2
             throw new NotImplementedException();
         }
 
-
     }
 
     public sealed partial class LoggingServiceV2ClientImpl : LoggingServiceV2Client
@@ -695,7 +660,6 @@ namespace Google.Logging.V2
         private readonly ApiCall<DeleteLogRequest, Empty> _callDeleteLog;
         private readonly ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> _callWriteLogEntries;
         private readonly ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> _callListLogEntries;
-        private readonly ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
 
         public LoggingServiceV2ClientImpl(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings settings)
         {
@@ -708,8 +672,6 @@ namespace Google.Logging.V2
                 GrpcClient.WriteLogEntriesAsync, GrpcClient.WriteLogEntries, effectiveSettings.WriteLogEntriesSettings);
             _callListLogEntries = _clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>(
                 GrpcClient.ListLogEntriesAsync, GrpcClient.ListLogEntries, effectiveSettings.ListLogEntriesSettings);
-            _callListMonitoredResourceDescriptors = _clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
-                GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
         }
 
         public override LoggingServiceV2.LoggingServiceV2Client GrpcClient { get; }
@@ -929,7 +891,6 @@ namespace Google.Logging.V2
                     PageSize = pageSize ?? 0,
                 },
                 callSettings);
-
 
     }
 

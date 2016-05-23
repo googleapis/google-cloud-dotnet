@@ -189,7 +189,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="PublisherClient.CreateTopic"/> and <see cref="PublisherClient.CreateTopicAsync"/>.
         /// </summary>
         /// <remarks>
@@ -222,7 +222,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="PublisherClient.Publish"/> and <see cref="PublisherClient.PublishAsync"/>.
         /// </summary>
         /// <remarks>
@@ -255,7 +255,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="PublisherClient.GetTopic"/> and <see cref="PublisherClient.GetTopicAsync"/>.
         /// </summary>
         /// <remarks>
@@ -288,7 +288,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="PublisherClient.ListTopicsPageStream"/> and <see cref="PublisherClient.ListTopicsPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
@@ -321,7 +321,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="PublisherClient.ListTopicSubscriptionsPageStream"/> and <see cref="PublisherClient.ListTopicSubscriptionsPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
@@ -354,7 +354,7 @@ namespace Google.Pubsub.V1
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="PublisherClient.DeleteTopic"/> and <see cref="PublisherClient.DeleteTopicAsync"/>.
         /// </summary>
         /// <remarks>

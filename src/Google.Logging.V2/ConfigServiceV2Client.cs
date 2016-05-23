@@ -136,7 +136,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="ConfigServiceV2Client.ListSinksPageStream"/> and <see cref="ConfigServiceV2Client.ListSinksPageStreamAsync"/>.
         /// </summary>
         /// <remarks>
@@ -169,7 +169,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="ConfigServiceV2Client.GetSink"/> and <see cref="ConfigServiceV2Client.GetSinkAsync"/>.
         /// </summary>
         /// <remarks>
@@ -202,7 +202,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="ConfigServiceV2Client.CreateSink"/> and <see cref="ConfigServiceV2Client.CreateSinkAsync"/>.
         /// </summary>
         /// <remarks>
@@ -234,7 +234,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="ConfigServiceV2Client.UpdateSink"/> and <see cref="ConfigServiceV2Client.UpdateSinkAsync"/>.
         /// </summary>
         /// <remarks>
@@ -266,7 +266,7 @@ namespace Google.Logging.V2
         };
 
         /// <summary>
-        /// <see cref="CallSettings"/> for asynchronous and synchronous calls to
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
         /// <see cref="ConfigServiceV2Client.DeleteSink"/> and <see cref="ConfigServiceV2Client.DeleteSinkAsync"/>.
         /// </summary>
         /// <remarks>
