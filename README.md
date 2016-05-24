@@ -130,9 +130,12 @@ var entity = new Entity
     ["created"] = DateTime.UtcNow,
     ["text"] = "Text of the message"
 };
-var transaction = client.BeginTransaction(projectId).Transaction;
-var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
-var insertedKey = commitResponse.MutationResults[0].Key;
+using (var transaction = client.CreateDatastoreTransaction(projectId))
+{
+    transaction.Insert(entity);
+    var commitResponse = transaction.Commit();
+    var insertedKey = commitResponse.MutationResults[0].Key;
+}
 ```
 
 ## Google Cloud Logging
