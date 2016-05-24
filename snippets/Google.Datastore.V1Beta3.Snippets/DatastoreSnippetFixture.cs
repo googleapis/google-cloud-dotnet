@@ -31,8 +31,11 @@ namespace Google.Datastore.V1Beta3.Snippets
         public string NamespaceId { get; }
         public PartitionId PartitionId => new PartitionId { ProjectId = ProjectId, NamespaceId = NamespaceId };
         public string BookKind = "book";
+        public string TaskKind = "Task";
         private Key _prideAndPrejudiceKey;
         public Key PrideAndPrejudiceKey => _prideAndPrejudiceKey.Clone();
+        private Key _learnDatastoreKey;
+        public Key LearnDatastoreKey => _learnDatastoreKey.Clone();
 
         public DatastoreSnippetFixture()
         {
@@ -44,6 +47,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             }
             NamespaceId = "test-" + Guid.NewGuid();
             AddSampleBooks();
+            AddSampleTasks();
         }
 
         private void AddSampleBooks()
@@ -58,7 +62,24 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["author"] = "Jane Austen"
             };
             var response = client.Commit(ProjectId, CommitRequest.Types.Mode.NonTransactional, new[] { entity.ToInsert() });
-            _prideAndPrejudiceKey = response.MutationResults.First().Key;
+            _prideAndPrejudiceKey = response.MutationResults[0].Key;
+        }
+
+        private void AddSampleTasks()
+        {
+            var client = DatastoreClient.Create();
+            var keyFactory = new KeyFactory(ProjectId, NamespaceId, TaskKind);
+            var entity = new Entity
+            {
+                Key = keyFactory.CreateInsertionKey(),
+                ["type"] = "Personal",
+                ["done"] = false,
+                ["priority"] = 4,
+                ["description"] = "Learn Cloud Datastore",
+                ["percent_complete"] = 75.0
+            };
+            var response = client.Commit(ProjectId, CommitRequest.Types.Mode.NonTransactional, new[] { entity.ToInsert() });
+            _learnDatastoreKey = response.MutationResults[0].Key;
         }
 
         public void Dispose()
