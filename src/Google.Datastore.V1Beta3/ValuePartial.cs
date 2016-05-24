@@ -42,7 +42,6 @@ namespace Google.Datastore.V1Beta3
     public partial class Value
     {
         // TODO:
-        // - Documentation!
         // - Cloning?
         // - Array handling? (either in ArrayValuePartial or here, or both...)
 

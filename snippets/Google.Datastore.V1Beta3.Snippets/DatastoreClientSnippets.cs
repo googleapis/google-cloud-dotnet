@@ -135,9 +135,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // TODO: Fix transaction handling. (Should roll back automatically.)
-
-            // Snippet: Commit(string,Mode,ByteString,*,CallSettings)
+            // Snippet: AddEntity
             DatastoreClient client = DatastoreClient.Create();
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
             Entity book1 = new Entity
@@ -154,15 +152,14 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["title"] = "Jane Eyre",
                 ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
             };
-            ByteString transaction = client.BeginTransaction(projectId).Transaction;
-            CommitResponse response = client.Commit(
-                projectId,
-                Mode.Transactional,
-                transaction,
-                new[] { book1.ToInsert(), book2.ToInsert() });
 
-            IEnumerable<Key> insertedKeys = response.MutationResults.Select(r => r.Key);
-            Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
+            using (DatastoreTransaction transaction = client.CreateDatastoreTransaction(projectId))
+            {
+                transaction.Insert(book1, book2);
+                CommitResponse response = transaction.Commit();
+                IEnumerable<Key> insertedKeys = response.MutationResults.Select(r => r.Key);
+                Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
+            }
             // End snippet
         }
 
@@ -260,9 +257,13 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["created"] = DateTime.UtcNow,
                 ["text"] = "Text of the message"
             };
-            var transaction = client.BeginTransaction(projectId).Transaction;
-            var commitResponse = client.Commit(projectId, Mode.Transactional, transaction, new[] { entity.ToInsert() });
-            var insertedKey = commitResponse.MutationResults[0].Key;
+            using (DatastoreTransaction transaction = client.CreateDatastoreTransaction(projectId))
+            {
+                transaction.Insert(entity);
+                var commitResponse = transaction.Commit();
+                var insertedKey = commitResponse.MutationResults[0].Key;
+                Console.WriteLine($"Inserted key: {insertedKey}");
+            }
             // End snippet
         }
 
@@ -334,19 +335,15 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             Key key = _fixture.LearnDatastoreKey;
 
-            // TODO: Fix transaction handling
             // Snippet: UpdateEntity
             DatastoreClient client = DatastoreClient.Create();
-            ByteString transaction = client.BeginTransaction(projectId).Transaction;
-
-            LookupResponse response = client.Lookup(
-                projectId,
-                new ReadOptions { ReadConsistency = ReadConsistency.Strong, Transaction = transaction },
-                new[] { key });
-
-            Entity entity = response.Found[0].Entity;
-            entity["priority"] = 5;
-            client.Commit(projectId, Mode.Transactional, transaction, new[] { entity.ToUpdate() });
+            using (DatastoreTransaction transaction = client.CreateDatastoreTransaction(projectId))
+            {
+                Entity entity = transaction.Lookup(key);
+                entity["priority"] = 5;
+                transaction.Update(entity);
+                transaction.Commit();
+            }
             // End snippet
         }
 
@@ -671,27 +668,18 @@ namespace Google.Datastore.V1Beta3.Snippets
 
             // Snippet TransactionReadAndWrite
             DatastoreClient client = DatastoreClient.Create();
-            ByteString transaction = client.BeginTransaction(projectId).Transaction;
-            try
+            using (DatastoreTransaction transaction = client.CreateDatastoreTransaction(projectId))
             {
-                LookupResponse lookupResponse = client.Lookup(
-                    projectId,
-                    new ReadOptions { ReadConsistency = ReadConsistency.Strong, Transaction = transaction },
-                    new[] { fromKey, toKey }
-                );
-                Entity from = lookupResponse.Found[0].Entity;
-                Entity to = lookupResponse.Found[1].Entity;
+                // The return value from DatastoreTransaction.Get contains the fetched entities
+                // in the same order as they are in the call.
+                IReadOnlyList<Entity> entities = transaction.Lookup(fromKey, toKey);
+                Entity from = entities[0];
+                Entity to = entities[1];
                 from["balance"] = (long)from["balance"] - amount;
                 to["balance"] = (long)to["balance"] - amount;
-                client.Commit(projectId, Mode.Transactional, transaction, new[] { from.ToUpdate(), to.ToUpdate() });
-                transaction = null; // No need to roll back
-            }
-            finally
-            {
-                if (transaction != null)
-                {
-                    client.Rollback(projectId, transaction);
-                }
+                transaction.Update(from);
+                transaction.Update(to);
+                transaction.Commit();
             }
             // End snippet
         }

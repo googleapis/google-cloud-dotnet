@@ -14,7 +14,6 @@
 using System;
 using System.Linq;
 using Xunit;
-using static Google.Datastore.V1Beta3.Key.Types;
 
 namespace Google.Datastore.V1Beta3.Snippets
 {
