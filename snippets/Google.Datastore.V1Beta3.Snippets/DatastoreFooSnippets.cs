@@ -11,12 +11,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Api.Gax;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using static Google.Datastore.V1Beta3.CommitRequest.Types;
 using static Google.Datastore.V1Beta3.PropertyFilter.Types;
 using static Google.Datastore.V1Beta3.PropertyOrder.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
@@ -24,11 +24,11 @@ using static Google.Datastore.V1Beta3.ReadOptions.Types;
 namespace Google.Datastore.V1Beta3.Snippets
 {
     [Collection(nameof(DatastoreSnippetFixture))]
-    public class DatastoreClientSnippets
+    public class DatastoreFooSnippets
     {
         private readonly DatastoreSnippetFixture _fixture;
 
-        public DatastoreClientSnippets(DatastoreSnippetFixture fixture)
+        public DatastoreFooSnippets(DatastoreSnippetFixture fixture)
         {
             _fixture = fixture;
         }
@@ -39,34 +39,31 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: Lookup
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
+            // Snippet: Lookup(*)
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("book");
             Key key1 = keyFactory.CreateKey("pride_and_prejudice");
             Key key2 = keyFactory.CreateKey("not_present");
 
-            DatastoreClient client = DatastoreClient.Create();
-            LookupResponse response = client.Lookup(
-                projectId,
-                new ReadOptions { ReadConsistency = ReadConsistency.Strong },
-                new[] { key1, key2 });
-            Console.WriteLine($"Found: {response.Found.Count}");
-            Console.WriteLine($"Deferred: {response.Deferred.Count}");
-            Console.WriteLine($"Missing: {response.Missing.Count}");
+            IReadOnlyList<Entity> entities = client.Lookup(key1, key2);
+            Console.WriteLine(entities[0]); // Pride and Prejudice entity
+            Console.WriteLine(entities[1]); // Nothing (value is null reference)
             // End snippet
 
-            Entity entity = response.Found[0].Entity;
+            Entity entity = entities[0];
             Assert.Equal("Jane Austen", (string)entity["author"]);
             Assert.Equal("Pride and Prejudice", (string)entity["title"]);
+            Assert.Null(entities[1]);
         }
 
         [Fact]
         public void StructuredQuery()
         {
             string projectId = _fixture.ProjectId;
-            PartitionId partitionId = _fixture.PartitionId;
-            
-            // Snippet: RunQuery(string,PartitionId,ReadOptions,Query,CallSettings)
-            DatastoreClient client = DatastoreClient.Create();
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: RunQueryPageStream(Query,string,ReadConsistency)
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
             Query query = new Query
             {
                 Kind = { "book" },
@@ -80,64 +77,58 @@ namespace Google.Datastore.V1Beta3.Snippets
                     }
                 }
             };
-            RunQueryResponse response = client.RunQuery(
-                projectId,
-                partitionId,
-                new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
-                query);
-
-            foreach (EntityResult result in response.Batch.EntityResults)
+            IPagedEnumerable<RunQueryResponse, Entity> results = client.RunQueryPageStream(query);
+            foreach (Entity entity in results.Flatten())
             {
-                Console.WriteLine(result.Entity);
+                Console.WriteLine(entity);
             }
             // EndSnippet
 
-            Assert.Equal(1, response.Batch.EntityResults.Count);
-            Entity entity = response.Batch.EntityResults[0].Entity;
-            Assert.Equal("Jane Austen", (string)entity["author"]);
-            Assert.Equal("Pride and Prejudice", (string)entity["title"]);
+            // This will run the query again, admittedly...
+            List<Entity> entities = results.Flatten().ToList();
+            Assert.Equal(1, entities.Count);
+            Entity book = entities[0];
+            Assert.Equal("Jane Austen", (string)book["author"]);
+            Assert.Equal("Pride and Prejudice", (string)book["title"]);
         }
 
         [Fact]
         public void GqlQuery()
         {
             string projectId = _fixture.ProjectId;
-            PartitionId partitionId = _fixture.PartitionId;
+            string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuery(string,PartitionId,ReadOptions,GqlQuery,CallSettings)
-            DatastoreClient client = DatastoreClient.Create();
+            // Snippet: RunQuery(GqlQuery,string,ReadConsistency)
+            DatastoreFoo client = DatastoreFoo.Create(projectId);
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
-            RunQueryResponse response = client.RunQuery(
-                projectId,
-                partitionId,
-                new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
-                gqlQuery);
-
+            // Note: no page streaming for GQL yet.
+            RunQueryResponse response = client.RunQuery(gqlQuery);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity);
             }
             // End snippet
 
+            // This will run the query again, admittedly...
             Assert.Equal(1, response.Batch.EntityResults.Count);
-            Entity entity = response.Batch.EntityResults[0].Entity;
-            Assert.Equal("Jane Austen", (string)entity["author"]);
-            Assert.Equal("Pride and Prejudice", (string)entity["title"]);
+            Entity book = response.Batch.EntityResults[0].Entity;
+            Assert.Equal("Jane Austen", (string)book["author"]);
+            Assert.Equal("Pride and Prejudice", (string)book["title"]);
         }
 
         [Fact]
-        public void AddEntity()
+        public void AddEntity_Transactional()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
             // Snippet: AddEntity
-            DatastoreClient client = DatastoreClient.Create();
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("book");
             Entity book1 = new Entity
             {
                 Key = keyFactory.CreateInsertionKey(),
@@ -153,8 +144,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
             };
 
-            ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
+            using (DatastoreTransaction transaction = client.BeginTransaction())
             {
                 transaction.Insert(book1, book2);
                 CommitResponse response = transaction.Commit();
@@ -165,22 +155,60 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
+        public void AddEntity_NonTransactional()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: AddEntity
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("book");
+            Entity book1 = new Entity
+            {
+                Key = keyFactory.CreateInsertionKey(),
+                ["author"] = "Harper Lee",
+                ["title"] = "To Kill a Mockingbird",
+                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
+            };
+            Entity book2 = new Entity
+            {
+                Key = keyFactory.CreateInsertionKey(),
+                ["author"] = "Charlotte Brontë",
+                ["title"] = "Jane Eyre",
+                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
+            };
+            IReadOnlyList<Key> insertedKeys = client.Insert(book1, book2);
+            Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
+            // End snippet
+        }
+
+        [Fact]
+        public void AllocateId()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: AllocateId
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("message");
+            Key key = client.AllocateId(keyFactory.CreateInsertionKey());
+            // End snippet
+        }
+
+        [Fact]
         public void AllocateIds()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: AllocateIds
-            DatastoreClient client = DatastoreClient.Create();
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "message");
-            AllocateIdsResponse response = client.AllocateIds(projectId,
-                new[] { keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey() }
-            );
-            Entity entity1 = new Entity { Key = response.Keys[0], ["text"] = "Text 1" };
-            Entity entity2 = new Entity { Key = response.Keys[1], ["text"] = "Text 2" };
+            // Snippet: AllocateId
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("message");
+            IReadOnlyList<Key> keys = client.AllocateIds(keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey());
             // End snippet
 
-            Assert.NotEqual(entity1, entity2);
+            Assert.Equal(2, keys.Count);
+            Assert.NotEqual(keys[0], keys[1]);
         }
 
         [Fact]
@@ -189,13 +217,11 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
 
             // Snippet: NamespaceQuery
-            DatastoreClient client = DatastoreClient.Create();
-            PartitionId partitionId = new PartitionId(projectId);
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query { Kind = { DatastoreConstants.NamespaceKind } });
-            foreach (EntityResult result in response.Batch.EntityResults)
+            DatastoreFoo client = DatastoreFoo.Create(projectId, "");
+            Query query = new Query { Kind = { DatastoreConstants.NamespaceKind } };
+            foreach (Entity entity in client.RunQueryPageStream(query).Flatten())
             {
-                Console.WriteLine(result.Entity.Key.Path.Last().Name);
+                Console.WriteLine(entity.Key.Path.Last().Name);
             }
             // End snippet
         }
@@ -205,15 +231,13 @@ namespace Google.Datastore.V1Beta3.Snippets
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
-            PartitionId partitionId = new PartitionId(projectId, namespaceId);
 
             // Snippet: KindQuery
-            DatastoreClient client = DatastoreClient.Create();
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query { Kind = { DatastoreConstants.KindKind } });
-            foreach (EntityResult result in response.Batch.EntityResults)
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            Query query = new Query { Kind = { DatastoreConstants.KindKind } };
+            foreach (Entity entity in client.RunQueryPageStream(query).Flatten())
             {
-                Console.WriteLine(result.Entity.Key.Path.Last().Name);
+                Console.WriteLine(entity.Key.Path.Last().Name);
             }
             // End snippet
         }
@@ -223,22 +247,13 @@ namespace Google.Datastore.V1Beta3.Snippets
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
-            PartitionId partitionId = new PartitionId(projectId, namespaceId);
 
             // Snippet: PropertyQuery
-            DatastoreClient client = DatastoreClient.Create();
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query
-                {
-                    Kind = { DatastoreConstants.PropertyKind },
-                    Projection = { DatastoreConstants.KeyProperty }
-                });
-            foreach (EntityResult result in response.Batch.EntityResults)
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            Query query = new Query { Kind = { DatastoreConstants.PropertyKind } };
+            foreach (Entity entity in client.RunQueryPageStream(query).Flatten())
             {
-                Key key = result.Entity.Key;
-                string propertyName = key.Path.Last().Name;
-                string kind = key.GetParent().Path.Last().Name;
-                Console.WriteLine($"Kind: {kind}; Property: {propertyName}");
+                Console.WriteLine(entity.Key.Path.Last().Name);
             }
             // End snippet
         }
@@ -249,17 +264,16 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
             // Snippet: Overview
-            var client = DatastoreClient.Create();
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
 
-            var keyFactory = new KeyFactory(projectId, namespaceId, "message");
+            var keyFactory = client.CreateKeyFactory("message");
             var entity = new Entity
             {
                 Key = keyFactory.CreateInsertionKey(),
                 ["created"] = DateTime.UtcNow,
                 ["text"] = "Text of the message"
             };
-            ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
+            using (DatastoreTransaction transaction = client.BeginTransaction())
             {
                 transaction.Insert(entity);
                 var commitResponse = transaction.Commit();
@@ -278,7 +292,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
 
             // Snippet: CreateEntity
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("Task");
             Entity entity = new Entity
             {
                 Key = keyFactory.CreateInsertionKey(),
@@ -298,7 +313,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
 
             // Snippet: InsertEntity
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("Task");
             Entity entity = new Entity
             {
                 Key = keyFactory.CreateInsertionKey(),
@@ -308,9 +324,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["description"] = "Learn Cloud Datastore",
                 ["percent_complete"] = 75.0
             };
-            DatastoreClient client = DatastoreClient.Create();
-            CommitResponse response = client.Commit(projectId, Mode.NonTransactional, new[] { entity.ToInsert() });
-            Key insertedKey = response.MutationResults[0].Key;
+            Key insertedKey = client.Insert(entity);
             // End snippet
         }
 
@@ -318,16 +332,12 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void LookupEntity()
         {
             string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
             Key key = _fixture.LearnDatastoreKey;
 
             // Snippet: LookupEntity
-            DatastoreClient client = DatastoreClient.Create();
-            LookupResponse response = client.Lookup(
-                projectId,
-                new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
-                new[] { key });
-
-            Entity entity = response.Found[0].Entity;
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            Entity entity = client.Lookup(key);
             // End snippet
         }
 
@@ -335,12 +345,12 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void UpdateEntity()
         {
             string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
             Key key = _fixture.LearnDatastoreKey;
 
             // Snippet: UpdateEntity
-            DatastoreClient client = DatastoreClient.Create();
-            ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            using (DatastoreTransaction transaction = client.BeginTransaction())
             {
                 Entity entity = transaction.Lookup(key);
                 entity["priority"] = 5;
@@ -357,7 +367,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
 
             // Copied from InsertEntity; we want to create a new one to delete.
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
+            DatastoreFoo insertClient = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = insertClient.CreateKeyFactory("Task");
             Entity entity = new Entity
             {
                 Key = keyFactory.CreateInsertionKey(),
@@ -367,14 +378,12 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["description"] = "Learn Cloud Datastore",
                 ["percent_complete"] = 75.0
             };
-            DatastoreClient insertClient = DatastoreClient.Create();
-            CommitResponse response = insertClient.Commit(projectId, Mode.NonTransactional, new[] { entity.ToInsert() });
-            Key key = response.MutationResults[0].Key;
+            Key insertedKey = insertClient.Insert(entity);
 
             // Snippet: DeleteEntity
-            DatastoreClient client = DatastoreClient.Create();
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
             // If you have an entity instead of just a key, then entity.ToDelete() would work too.
-            CommitResponse commit = insertClient.Commit(projectId, Mode.NonTransactional, new[] { key.ToDelete() });
+            client.Delete(insertedKey);
             // End snippet
         }
 
@@ -388,7 +397,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
 
             // Snippet: AncestorPaths
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "User");
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("User");
             Key taskKey = keyFactory.CreateKey("alice").WithElement("Task", "sampleTask");
 
             Key multiLevelKey = keyFactory
@@ -416,7 +426,7 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void CompositeFilterQuery()
         {
             string projectId = _fixture.ProjectId;
-            PartitionId partitionId = _fixture.PartitionId;
+            string namespaceId = _fixture.NamespaceId;
 
             // Snippet: CompositeFilter
             Query query = new Query
@@ -437,11 +447,9 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Order = { new PropertyOrder { Direction = Direction.Descending, Property = new PropertyReference("priority") } }
             };
 
-            DatastoreClient client = DatastoreClient.Create();
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, new ReadOptions { ReadConsistency = ReadConsistency.Eventual }, query);
-            foreach (EntityResult result in response.Batch.EntityResults)
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);            
+            foreach (Entity entity in client.RunQueryPageStream(query).Flatten())
             {
-                Entity entity = result.Entity;
                 Console.WriteLine((string)entity["description"]);
             }
             // TODO: Results beyond this batch?
@@ -455,7 +463,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
 
             // Snippet: KeyQuery
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("Task");
             Query query = new Query
             {
                 Kind = { "Task" },
@@ -479,7 +488,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
 
             // Snippet: AncestorQuery
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("Task");
             Query query = new Query
             {
                 Kind = { "Task" },
@@ -503,7 +513,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
 
             // Snippet: KindlessQuery
-            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory keyFactory = client.CreateKeyFactory("Task");
             Key lastSeenKey = keyFactory.CreateKey(100L);
             Query query = new Query
             {
@@ -536,7 +547,7 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void ProjectionQuery()
         {
             string projectId = _fixture.ProjectId;
-            PartitionId partitionId = _fixture.PartitionId;
+            string namespaceId = _fixture.NamespaceId;
 
             // Snippet: ProjectionQuery
             Query query = new Query
@@ -544,13 +555,11 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Kind = { "Task" },
                 Projection = { "priority", "percentage_complete" }
             };
-            DatastoreClient client = DatastoreClient.Create();
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, new ReadOptions { ReadConsistency = ReadConsistency.Eventual }, query);
-            foreach (EntityResult result in response.Batch.EntityResults)
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            foreach (Entity entity in client.RunQueryPageStream(query).Flatten())
             {
-                Entity entity = result.Entity;
                 Console.WriteLine($"{(int)entity["priority"]}: {(double?)entity["percentage_complete"]}");
-            }
+            }            
             // End snippet
         }
 
@@ -622,16 +631,15 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void PaginateWithCursor()
         {
             string projectId = _fixture.ProjectId;
-            PartitionId partitionId = _fixture.PartitionId;
+            string namespaceId = _fixture.NamespaceId;
 
             ByteString pageCursor = null;
             int pageSize = 5;
             // Snippet: PaginateWithCursor
             Query query = new Query { Kind = { "Task" }, Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
-            DatastoreClient client = DatastoreClient.Create();
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
 
-            RunQueryResponse response = client.RunQuery(
-                projectId, partitionId, new ReadOptions { ReadConsistency = ReadConsistency.Eventual }, query);
+            RunQueryResponse response = client.RunQuery(query, ReadConsistency.Eventual);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Entity entity = result.Entity;
@@ -665,14 +673,14 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void TransactionReadAndWrite()
         {
             string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
             long amount = 1000L;
             Key fromKey = CreateAccount("Jill", 20000L);
             Key toKey = CreateAccount("Beth", 15500L);
 
             // Snippet TransactionReadAndWrite
-            DatastoreClient client = DatastoreClient.Create();
-            ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            using (DatastoreTransaction transaction = client.BeginTransaction())
             {
                 // The return value from DatastoreTransaction.Get contains the fetched entities
                 // in the same order as they are in the call.
@@ -693,16 +701,15 @@ namespace Google.Datastore.V1Beta3.Snippets
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
-            DatastoreClient client = DatastoreClient.Create();
-            KeyFactory factory = new KeyFactory(projectId, namespaceId, "Account");
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
+            KeyFactory factory = client.CreateKeyFactory("Account");
             Entity entity = new Entity
             {
                 Key = factory.CreateInsertionKey(),
                 ["name"] = name,
                 ["balance"] = balance
             };
-            CommitResponse response = client.Commit(projectId, Mode.NonTransactional, new[] { entity.ToInsert() });
-            return response.MutationResults[0].Key;
+            return client.Insert(entity);
         }
     }
 }
