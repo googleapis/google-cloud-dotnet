@@ -98,7 +98,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
 
             // Snippet: RunQuery(GqlQuery,string,ReadConsistency)
-            DatastoreFoo client = DatastoreFoo.Create(projectId);
+            DatastoreFoo client = DatastoreFoo.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
