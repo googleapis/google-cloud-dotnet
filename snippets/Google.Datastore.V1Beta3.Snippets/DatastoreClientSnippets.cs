@@ -67,9 +67,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             
             // Snippet: RunQuery(string,PartitionId,ReadOptions,Query,CallSettings)
             DatastoreClient client = DatastoreClient.Create();
-            Query query = new Query
+            Query query = new Query("book")
             {
-                Kind = { "book" },
                 Filter = new Filter
                 {
                     PropertyFilter = new PropertyFilter
@@ -192,7 +191,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             DatastoreClient client = DatastoreClient.Create();
             PartitionId partitionId = new PartitionId(projectId);
             RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query { Kind = { DatastoreConstants.NamespaceKind } });
+                new Query(DatastoreConstants.NamespaceKind));
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity.Key.Path.Last().Name);
@@ -210,7 +209,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: KindQuery
             DatastoreClient client = DatastoreClient.Create();
             RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query { Kind = { DatastoreConstants.KindKind } });
+                new Query(DatastoreConstants.KindKind));
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity.Key.Path.Last().Name);
@@ -228,9 +227,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: PropertyQuery
             DatastoreClient client = DatastoreClient.Create();
             RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query
+                new Query(DatastoreConstants.PropertyKind)
                 {
-                    Kind = { DatastoreConstants.PropertyKind },
                     Projection = { DatastoreConstants.KeyProperty }
                 });
             foreach (EntityResult result in response.Batch.EntityResults)
@@ -419,9 +417,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             PartitionId partitionId = _fixture.PartitionId;
 
             // Snippet: CompositeFilter
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Filter = new Filter
                 {
                     CompositeFilter = new CompositeFilter
@@ -456,9 +453,8 @@ namespace Google.Datastore.V1Beta3.Snippets
 
             // Snippet: KeyQuery
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Filter = new Filter
                 {
                     PropertyFilter = new PropertyFilter
@@ -480,9 +476,8 @@ namespace Google.Datastore.V1Beta3.Snippets
 
             // Snippet: AncestorQuery
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Filter = new Filter
                 {
                     PropertyFilter = new PropertyFilter
@@ -524,9 +519,8 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void KeysOnlyQuery()
         {
             // Snippet: KeysOnlyQuery
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Projection = { DatastoreConstants.KeyProperty }
             };
             // End snippet
@@ -539,9 +533,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             PartitionId partitionId = _fixture.PartitionId;
 
             // Snippet: ProjectionQuery
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Projection = { "priority", "percentage_complete" }
             };
             DatastoreClient client = DatastoreClient.Create();
@@ -558,9 +551,8 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void GroupingQuery()
         {
             // Snippet: GroupingQuery
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Projection = { "type", "priority" },
                 DistinctOn = { new PropertyReference("type") },
                 Order =
@@ -576,9 +568,8 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void ArrayQueryComparison()
         {
             // Snippet: ArrayQuery
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Filter = new Filter
                 {
                     CompositeFilter = new CompositeFilter
@@ -599,9 +590,8 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void ArrayQueryEquality()
         {
             // Snippet: ArrayQuery
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Filter = new Filter
                 {
                     CompositeFilter = new CompositeFilter
@@ -627,7 +617,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             ByteString pageCursor = null;
             int pageSize = 5;
             // Snippet: PaginateWithCursor
-            Query query = new Query { Kind = { "Task" }, Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
+            Query query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
             DatastoreClient client = DatastoreClient.Create();
 
             RunQueryResponse response = client.RunQuery(
@@ -645,9 +635,8 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void OrderingWithInequalityFilter()
         {
             // Snippet: OrderingWithInequalityFilter
-            Query query = new Query
+            Query query = new Query("Task")
             {
-                Kind = { "Task" },
                 Filter = new Filter { PropertyFilter = new PropertyFilter { Property = new PropertyReference("priority"), Op = Operator.GreaterThan, Value = 3 } },
                 Order =
                 {

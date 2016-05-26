@@ -35,18 +35,5 @@ namespace Google.Datastore.V1Beta3
             GaxPreconditions.CheckNotNull(projections, nameof(projections));
             projections.Add(new Projection(propertyName));
         }
-
-        /// <summary>
-        /// Adds a projection with the given property name to the repeated field.
-        /// This enables projections to be specified in a query with a collection initializer
-        /// in C# 6 and later.
-        /// </summary>
-        /// <param name="kindExpressions">The collection of kind expressions to add to. Must not be null.</param>
-        /// <param name="name">The name of the kind to add. Must not be null.</param>
-        public static void Add(this RepeatedField<KindExpression> kindExpressions, string name)
-        {
-            GaxPreconditions.CheckNotNull(kindExpressions, nameof(kindExpressions));
-            kindExpressions.Add(new KindExpression(name));
-        }
     }
 }
