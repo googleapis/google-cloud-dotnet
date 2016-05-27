@@ -56,9 +56,9 @@ namespace Google.Datastore.V1Beta3
             _active = true; 
         }
 
-        public Entity Lookup(Key key) => DatastoreFoo.LookupImpl(_client, _projectId, _readOptions, new[] { key })[0]; 
+        public Entity Lookup(Key key) => DatastoreDb.LookupImpl(_client, _projectId, _readOptions, new[] { key })[0]; 
         public IReadOnlyList<Entity> Lookup(params Key[] keys) => Lookup((IEnumerable<Key>)keys);
-        public IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys) => DatastoreFoo.LookupImpl(_client, _projectId, _readOptions, keys);
+        public IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys) => DatastoreDb.LookupImpl(_client, _projectId, _readOptions, keys);
 
         /// <summary>
         /// Runs the specified query in this transaction.

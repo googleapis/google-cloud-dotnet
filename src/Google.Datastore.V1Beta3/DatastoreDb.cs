@@ -77,12 +77,6 @@ namespace Google.Datastore.V1Beta3
         internal override ApiCall<RunQueryRequest, RunQueryResponse> RunQueryApiCall => _callRunQuery;
     }
 
-    // TODO: Rename! Rejected options:
-    // - DatastoreClient: Already exists (twice)
-    // - Datastore: It's a namespace element, and also used by the generated code
-    // - DatastoreContext: Sounds transient
-    // - DatastoreProject: Hmm. Well it does know about a project ID...
-
     // TODO: Apply our abstract/concrete class approach again? (It gets very wearing...)
     // Only do after rest of design is complete.
     // TODO: Add call settings on everything?
@@ -103,7 +97,7 @@ namespace Google.Datastore.V1Beta3
     /// partition associated with this object.
     /// </para>
     /// </remarks>
-    public class DatastoreFoo
+    public class DatastoreDb
     {
         /// <summary>
         /// The <see cref="DatastoreClient"/> used for all remote operations.
@@ -116,18 +110,18 @@ namespace Google.Datastore.V1Beta3
         // TODO: Expose the above fields as properties?
 
         /// <summary>
-        /// Creates a <see cref="DatastoreFoo"/> to operate on the partition identified by <paramref name="projectId"/>
+        /// Creates a <see cref="DatastoreDb"/> to operate on the partition identified by <paramref name="projectId"/>
         /// and <paramref name="namespaceId"/>, using the <paramref name="client"/> to perform remote operations.
         /// </summary>
         /// <param name="projectId">The project ID to use in all operations.</param>
         /// <param name="namespaceId">The namespace ID to use in operations requiring a partition.</param>
         /// <param name="client">The client to use for remote operations. If this is null, an instance will be created
         /// using default settings.</param>
-        /// <returns>A <see cref="DatastoreFoo"/> operating on the specified partition.</returns>
-        public static DatastoreFoo Create(string projectId, string namespaceId = "", DatastoreClient client = null) =>
-            new DatastoreFoo(projectId, namespaceId, client ?? DatastoreClient.Create());
+        /// <returns>A <see cref="DatastoreDb"/> operating on the specified partition.</returns>
+        public static DatastoreDb Create(string projectId, string namespaceId = "", DatastoreClient client = null) =>
+            new DatastoreDb(projectId, namespaceId, client ?? DatastoreClient.Create());
 
-        private DatastoreFoo(string projectId, string namespaceId, DatastoreClient client)
+        private DatastoreDb(string projectId, string namespaceId, DatastoreClient client)
         {
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             _partitionId = new PartitionId(projectId, GaxPreconditions.CheckNotNull(namespaceId, nameof(namespaceId)));
