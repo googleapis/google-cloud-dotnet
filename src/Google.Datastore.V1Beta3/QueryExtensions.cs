@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Protobuf.Collections;
+using static Google.Datastore.V1Beta3.PropertyOrder.Types;
 
 namespace Google.Datastore.V1Beta3
 {
@@ -34,6 +35,21 @@ namespace Google.Datastore.V1Beta3
         {
             GaxPreconditions.CheckNotNull(projections, nameof(projections));
             projections.Add(new Projection(propertyName));
+        }
+
+        /// <summary>
+        /// Adds an ordering by property name.
+        /// </summary>
+        /// <param name="orderings">The ordering field to add the ordering to. Must not be null.</param>
+        /// <param name="propertyName">The name of the property to order by. Must not be null.</param>
+        /// <param name="direction">The direction to order by. Must be <c>Ascending</c> or <c>Descending</c>.</param>
+        public static void Add(this RepeatedField<PropertyOrder> orderings, string propertyName, Direction direction)
+        {
+            GaxPreconditions.CheckNotNull(orderings, nameof(orderings));
+            GaxPreconditions.CheckNotNull(propertyName, nameof(propertyName));
+            GaxPreconditions.CheckArgument(direction == Direction.Ascending || direction == Direction.Descending,
+                nameof(direction), "Direction must be Ascending or Descending");
+            orderings.Add(new PropertyOrder { Direction = direction, Property = new PropertyReference(propertyName) });
         }
     }
 }

@@ -425,7 +425,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                     Filter.Equal("done", false),
                     Filter.GreaterThanOrEqual("priority", 4)
                 ),
-                Order = { new PropertyOrder { Direction = Direction.Descending, Property = new PropertyReference("priority") } }
+                Order = { { "priority", Direction.Descending } },
             };
 
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);            
@@ -526,8 +526,8 @@ namespace Google.Datastore.V1Beta3.Snippets
                 DistinctOn = { new PropertyReference("type") },
                 Order =
                 {
-                    new PropertyOrder { Property = new PropertyReference("type"), Direction = Direction.Ascending },
-                    new PropertyOrder { Property = new PropertyReference("priority"), Direction = Direction.Ascending }
+                    { "type", Direction.Ascending },
+                    { "priority", Direction.Ascending }
                 }
             };
             // End snippet
@@ -593,8 +593,8 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Order =
                 {
                     // This property must be sorted first, as it is in the inequality filter
-                    new PropertyOrder { Property = new PropertyReference("priority"), Direction = Direction.Ascending },
-                    new PropertyOrder { Property = new PropertyReference("created"), Direction = Direction.Ascending }
+                    { "priority", Direction.Ascending },
+                    { "created", Direction.Ascending }
                 }
             };
             // End snippet
