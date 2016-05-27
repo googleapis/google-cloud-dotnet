@@ -24,7 +24,6 @@ namespace Google.Datastore.V1Beta3
         /// <param name="propertyName">The name of the property in the projection.</param>
         public Projection(string propertyName) : this()
         {
-            GaxPreconditions.CheckNotNull(propertyName, nameof(propertyName));
             Property = new PropertyReference(propertyName);
         }
     }

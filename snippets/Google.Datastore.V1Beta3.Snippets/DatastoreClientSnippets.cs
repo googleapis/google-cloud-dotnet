@@ -513,7 +513,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Query query = new Query("Task")
             {
                 Projection = { "type", "priority" },
-                DistinctOn = { new PropertyReference("type") },
+                DistinctOn = { "type" },
                 Order =
                 {
                     { "type", Direction.Ascending },

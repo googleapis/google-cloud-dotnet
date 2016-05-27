@@ -21,10 +21,10 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Creates a property reference for the given name.
         /// </summary>
-        /// <param name="name">The name of the property.</param>
-        public PropertyReference(string name) : this()
+        /// <param name="propertyName">The name of the property.</param>
+        public PropertyReference(string propertyName) : this()
         {
-            Name = GaxPreconditions.CheckNotNull(name, nameof(name));
+            Name = GaxPreconditions.CheckNotNull(propertyName, nameof(propertyName));
         }
     }
 }

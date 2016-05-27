@@ -132,7 +132,7 @@ namespace Google.Datastore.V1Beta3
                 PropertyFilter = new PropertyFilter
                 {
                     Op = op,
-                    Property = new PropertyReference(GaxPreconditions.CheckNotNull(propertyName, nameof(propertyName))),
+                    Property = new PropertyReference(propertyName),
                     Value = propertyValue ?? Value.ForNull(),
                 }
             };
