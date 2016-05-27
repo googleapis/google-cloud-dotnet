@@ -17,7 +17,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using static Google.Datastore.V1Beta3.PropertyFilter.Types;
 using static Google.Datastore.V1Beta3.PropertyOrder.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
 
@@ -66,15 +65,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query("book")
             {
-                Filter = new Filter
-                {
-                    PropertyFilter = new PropertyFilter
-                    {
-                        Property = new PropertyReference("author"),
-                        Op = Operator.Equal,
-                        Value = "Jane Austen"
-                    }
-                }
+                Filter = Filter.Equal("author", "Jane Austen")
             };
             IPagedEnumerable<RunQueryResponse, Entity> results = db.RunQueryPageStream(query);
             foreach (Entity entity in results.Flatten())
@@ -430,18 +421,10 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: CompositeFilter
             Query query = new Query("Task")
             {
-                Filter = new Filter
-                {
-                    CompositeFilter = new CompositeFilter
-                    {
-                        Filters =
-                        {
-                            new Filter { PropertyFilter = new PropertyFilter { Op = Operator.Equal, Property = new PropertyReference("done"), Value = false } },
-                            new Filter { PropertyFilter = new PropertyFilter { Op = Operator.GreaterThanOrEqual, Property = new PropertyReference("priority"), Value = 4 } },
-                        },
-                        Op = CompositeFilter.Types.Operator.And
-                    }
-                },
+                Filter = Filter.And(
+                    Filter.Equal("done", false),
+                    Filter.GreaterThanOrEqual("priority", 4)
+                ),
                 Order = { new PropertyOrder { Direction = Direction.Descending, Property = new PropertyReference("priority") } }
             };
 
@@ -465,15 +448,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = db.CreateKeyFactory("Task");
             Query query = new Query("Task")
             {
-                Filter = new Filter
-                {
-                    PropertyFilter = new PropertyFilter
-                    {
-                        Property = new PropertyReference(DatastoreConstants.KeyProperty),
-                        Op = Operator.GreaterThan,
-                        Value = keyFactory.CreateKey("someTask")
-                    }
-                }
+                Filter = Filter.GreaterThan(DatastoreConstants.KeyProperty, keyFactory.CreateKey("someTask"))
             };
             // End snippet
         }
@@ -489,15 +464,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = db.CreateKeyFactory("Task");
             Query query = new Query("Task")
             {
-                Filter = new Filter
-                {
-                    PropertyFilter = new PropertyFilter
-                    {
-                        Property = new PropertyReference(DatastoreConstants.KeyProperty),
-                        Op = Operator.HasAncestor,
-                        Value = keyFactory.CreateKey("someTask")
-                    }
-                }
+                Filter = Filter.HasAncestor(keyFactory.CreateKey("someTask"))
             };
             // End snippet
         }
@@ -514,15 +481,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Key lastSeenKey = keyFactory.CreateKey(100L);
             Query query = new Query
             {
-                Filter = new Filter
-                {
-                    PropertyFilter = new PropertyFilter
-                    {
-                        Property = new PropertyReference(DatastoreConstants.KeyProperty),
-                        Op = Operator.GreaterThan,
-                        Value = lastSeenKey,
-                    }
-                }
+                Filter = Filter.GreaterThan(DatastoreConstants.KeyProperty, lastSeenKey)
             };
             // End snippet
         }
@@ -580,18 +539,10 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: ArrayQuery
             Query query = new Query("Task")
             {
-                Filter = new Filter
-                {
-                    CompositeFilter = new CompositeFilter
-                    {
-                        Filters =
-                        {
-                            new Filter { PropertyFilter = new PropertyFilter { Op = Operator.GreaterThan, Property = new PropertyReference("tag"), Value = "learn" } },
-                            new Filter { PropertyFilter = new PropertyFilter { Op = Operator.LessThan, Property = new PropertyReference("tag"), Value = "math" } },
-                        },
-                        Op = CompositeFilter.Types.Operator.And
-                    }
-                },
+                Filter = Filter.And(
+                    Filter.GreaterThan("tag", "learn"),
+                    Filter.LessThan("tag", "math")
+                )
             };
             // End snippet
         }
@@ -602,18 +553,10 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: ArrayQuery
             Query query = new Query("Task")
             {
-                Filter = new Filter
-                {
-                    CompositeFilter = new CompositeFilter
-                    {
-                        Filters =
-                        {
-                            new Filter { PropertyFilter = new PropertyFilter { Op = Operator.Equal, Property = new PropertyReference("tag"), Value = "fun" } },
-                            new Filter { PropertyFilter = new PropertyFilter { Op = Operator.Equal, Property = new PropertyReference("tag"), Value = "programming" } },
-                        },
-                        Op = CompositeFilter.Types.Operator.And
-                    }
-                },
+                Filter = Filter.And(
+                    Filter.GreaterThan("equal", "fun"),
+                    Filter.LessThan("equal", "programming")
+                )
             };
             // End snippet
         }
@@ -646,7 +589,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: OrderingWithInequalityFilter
             Query query = new Query("Task")
             {
-                Filter = new Filter { PropertyFilter = new PropertyFilter { Property = new PropertyReference("priority"), Op = Operator.GreaterThan, Value = 3 } },
+                Filter = Filter.GreaterThan("priority", 3),
                 Order =
                 {
                     // This property must be sorted first, as it is in the inequality filter
