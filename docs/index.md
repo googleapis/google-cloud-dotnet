@@ -62,14 +62,20 @@ can mix and match abstractions very easily: you may be able to use
 
 A library for working with [Cloud Datastore](https://cloud.google.com/datastore/).
 
+The [`DatastoreDb`](obj/api/Google.Datastore.V1Beta3.DatastoreDb.yml)
+class is provided as a wrapper for
+[`DatastoreClient`](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml),
+simplifying operations considerably by assuming all operations act
+on the same partition, and providing page streaming operations on
+structured query results.
+
+Several custom conversions, additional constructors,
+factory methods (particularly on [`Filter`](obj/api/Google.Datastore.V1Beta3.Filter.yml)
+are provided to simplify working with the protobuf messages.
+
 Sample code:
 
-[!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreClient.txt#Overview)]
-
-See [`DatastoreClient`](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml)
-for details. Note that custom conversions are provided to make
-working with the [`Value`](obj/api/Google.Datastore.V1Beta3.Value.yml) type much
-simpler than it would otherwise be.
+[!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreDb.txt#Overview)]
 
 ## Google.Logging.V2
 

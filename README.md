@@ -121,16 +121,16 @@ PM> Install-Package Google.Datastore.V1Beta3 -Prerelease
 using Google.Datastore.V1Beta3;
 ...
 
-var client = DatastoreClient.Create();
+var db = DatastoreDb.Create(projectId, namespaceId);
 
-var keyFactory = new KeyFactory(projectId, namespaceId, "message");
+var keyFactory = db.CreateKeyFactory("message");
 var entity = new Entity
 {
     Key = keyFactory.CreateInsertionKey(),
     ["created"] = DateTime.UtcNow,
     ["text"] = "Text of the message"
 };
-using (var transaction = client.CreateDatastoreTransaction(projectId))
+using (var transaction = db.BeginTransaction())
 {
     transaction.Insert(entity);
     var commitResponse = transaction.Commit();
