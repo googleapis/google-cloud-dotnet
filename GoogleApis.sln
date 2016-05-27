@@ -53,6 +53,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Bigquery.V2.CleanTes
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Bigquery.V2.Tests", "test\Google.Bigquery.V2.Tests\Google.Bigquery.V2.Tests.xproj", "{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Apis.PageStreaming", "src\Google.Apis.PageStreaming\Google.Apis.PageStreaming.xproj", "{5E91D6AC-6BC4-4AA2-8FAC-C6F94FBC4F5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -127,6 +129,10 @@ Global
 		{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E91D6AC-6BC4-4AA2-8FAC-C6F94FBC4F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E91D6AC-6BC4-4AA2-8FAC-C6F94FBC4F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E91D6AC-6BC4-4AA2-8FAC-C6F94FBC4F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E91D6AC-6BC4-4AA2-8FAC-C6F94FBC4F5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,5 +155,6 @@ Global
 		{A55F5009-37C2-4EB6-A100-AB86885A3AE9} = {F638F51C-C1C3-449B-ADAE-8196073649A5}
 		{B5F7491C-ED9E-4032-88C0-22EE959D19E8} = {95457640-F06C-4390-9CCD-EDFECD772588}
 		{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B} = {F87E02E7-3142-4439-8938-42DD79337135}
+		{5E91D6AC-6BC4-4AA2-8FAC-C6F94FBC4F5F} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
 	EndGlobalSection
 EndGlobal

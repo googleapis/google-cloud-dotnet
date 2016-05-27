@@ -51,7 +51,7 @@ namespace Google.Storage.V1.Snippets
             var obj2 = client.UploadObject(bucketName, "folder1/file2.txt", "text/plain", new MemoryStream(content));
 
             // List objects
-            foreach (var obj in client.ListObjects(bucketName, ""))
+            foreach (var obj in client.ListObjectsPageStream(bucketName, "").Flatten())
             {
                 Console.WriteLine(obj.Name);
             }
@@ -67,9 +67,9 @@ namespace Google.Storage.V1.Snippets
             _fixture.RegisterBucketToDelete(bucketName);
 
             Assert.Equal(content, File.ReadAllBytes("file1.txt"));
-            Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "file1.txt");
-            Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "folder1/file2.txt");
-            Assert.Contains(client.ListBuckets(projectId), b => b.Name == bucketName);
+            Assert.Contains(client.ListObjectsPageStream(bucketName, "").Flatten(), o => o.Name == "file1.txt");
+            Assert.Contains(client.ListObjectsPageStream(bucketName, "").Flatten(), o => o.Name == "folder1/file2.txt");
+            Assert.Contains(client.ListBucketsPageStream(projectId).Flatten(), b => b.Name == bucketName);
         }
 
         [Fact]
@@ -81,7 +81,7 @@ namespace Google.Storage.V1.Snippets
             var client = StorageClient.Create();
 
             // List all buckets associated with a project
-            var buckets = client.ListBuckets(projectId);
+            var buckets = client.ListBucketsPageStream(projectId).Flatten();
             // End snippet
 
             Assert.Contains(buckets, b => _fixture.BucketName == b.Name);
@@ -178,7 +178,7 @@ namespace Google.Storage.V1.Snippets
             var client = StorageClient.Create();
 
             // List only objects with a name starting with "greet"
-            var objects = client.ListObjects(bucketName, "greet");
+            var objects = client.ListObjectsPageStream(bucketName, "greet").Flatten();
             // End snippet
 
             Assert.Contains(objects, o => _fixture.HelloStorageObjectName == o.Name);
@@ -414,7 +414,7 @@ namespace Google.Storage.V1.Snippets
             // want to make sure it matches the one in the test
             Assert.Equal(objectName, tempObjectName);
 
-            Assert.DoesNotContain(client.ListObjects(bucketName, ""), o => o.Name == objectName);
+            Assert.DoesNotContain(client.ListObjectsPageStream(bucketName, "").Flatten(), o => o.Name == objectName);
         }
 
         [Fact]
@@ -429,7 +429,7 @@ namespace Google.Storage.V1.Snippets
             client.DeleteBucket(bucketName);
             // End snippet
 
-            Assert.DoesNotContain(client.ListBuckets(_fixture.ProjectId), b => b.Name == bucketName);
+            Assert.DoesNotContain(client.ListBucketsPageStream(_fixture.ProjectId).Flatten(), b => b.Name == bucketName);
         }
     }
 }
