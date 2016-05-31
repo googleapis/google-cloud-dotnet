@@ -22,7 +22,8 @@ namespace Google.Storage.V1
     public abstract partial class StorageClient
     {
         /// <summary>
-        /// Creates a copy of an object synchronously, potentially to a different bucket.
+        /// Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
+        /// <c>rewriteObject</c> underlying API operation for more flexibility and reliability.
         /// </summary>
         /// <param name="sourceBucket">The name of the bucket containing the object to copy. Must not be null.</param>
         /// <param name="sourceObjectName">The name of the object to copy within the bucket. Must not be null.</param>
@@ -43,7 +44,8 @@ namespace Google.Storage.V1
         }
 
         /// <summary>
-        /// Creates a copy of an object synchronously, potentially to a different bucket.
+        /// Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
+        /// <c>rewriteObject</c> underlying API operation for more flexibility and reliability.
         /// </summary>
         /// <param name="sourceBucket">The name of the bucket containing the object to copy. Must not be null.</param>
         /// <param name="sourceObjectName">The name of the object to copy within the bucket. Must not be null.</param>
