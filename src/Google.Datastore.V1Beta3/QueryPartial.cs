@@ -16,15 +16,17 @@ using Google.Api.Gax;
 
 namespace Google.Datastore.V1Beta3
 {
-    public partial class PropertyReference
+
+    public partial class Query
     {
         /// <summary>
-        /// Creates a property reference for the given name.
+        /// Creates a query over the given kind.
         /// </summary>
-        /// <param name="propertyName">The name of the property.</param>
-        public PropertyReference(string propertyName) : this()
+        /// <param name="kind">The kind of the query. Must not be null.</param>
+        public Query(string kind) : this()
         {
-            Name = GaxPreconditions.CheckNotNull(propertyName, nameof(propertyName));
+            var kindExpression = new KindExpression(GaxPreconditions.CheckNotNull(kind, nameof(kind)));
+            Kind.Add(kindExpression);
         }
     }
 }

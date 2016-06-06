@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Protobuf.Collections;
+using static Google.Datastore.V1Beta3.PropertyOrder.Types;
 
 namespace Google.Datastore.V1Beta3
 {
@@ -37,16 +38,31 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Adds a projection with the given property name to the repeated field.
-        /// This enables projections to be specified in a query with a collection initializer
+        /// Adds an entry to the list of property references.
+        /// This enables repeated property reference fields (such as <see cref="Query.DistinctOn"/> 
+        /// to be specified in a query with a collection initializer
         /// in C# 6 and later.
         /// </summary>
-        /// <param name="kindExpressions">The collection of kind expressions to add to. Must not be null.</param>
-        /// <param name="name">The name of the kind to add. Must not be null.</param>
-        public static void Add(this RepeatedField<KindExpression> kindExpressions, string name)
+        /// <param name="propertyReferences">The collection of property references to add to. Must not be null.</param>
+        /// <param name="propertyName">The property to project. Must not be null.</param>
+        public static void Add(this RepeatedField<PropertyReference> propertyReferences, string propertyName)
         {
-            GaxPreconditions.CheckNotNull(kindExpressions, nameof(kindExpressions));
-            kindExpressions.Add(new KindExpression(name));
+            GaxPreconditions.CheckNotNull(propertyReferences, nameof(propertyReferences));
+            propertyReferences.Add(new PropertyReference(propertyName));
+        }
+
+        /// <summary>
+        /// Adds an ordering by property name.
+        /// </summary>
+        /// <param name="orderings">The ordering field to add the ordering to. Must not be null.</param>
+        /// <param name="propertyName">The name of the property to order by. Must not be null.</param>
+        /// <param name="direction">The direction to order by. Must be <c>Ascending</c> or <c>Descending</c>.</param>
+        public static void Add(this RepeatedField<PropertyOrder> orderings, string propertyName, Direction direction)
+        {
+            GaxPreconditions.CheckNotNull(orderings, nameof(orderings));
+            GaxPreconditions.CheckArgument(direction == Direction.Ascending || direction == Direction.Descending,
+                nameof(direction), "Direction must be Ascending or Descending");
+            orderings.Add(new PropertyOrder { Direction = direction, Property = new PropertyReference(propertyName) });
         }
     }
 }

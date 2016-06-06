@@ -20,57 +20,6 @@ using static Google.Datastore.V1Beta3.CommitRequest.Types;
 
 namespace Google.Datastore.V1Beta3
 {
-    public partial class DatastoreClient
-    {
-        // TODO: This is expected to become part of a thin wrapper over the top of DatastoreClient instead.
-
-        /// <summary>
-        /// Creates a <see cref="DatastoreTransaction"/> using this client, beginning a new transaction.
-        /// </summary>
-        /// <param name="projectId">The project ID to create the transaction in. Must not be null.</param>
-        /// <returns>The datastore transaction.</returns>
-        public DatastoreTransaction CreateDatastoreTransaction(string projectId)
-        {
-            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            var transactionId = BeginTransaction(projectId).Transaction;
-            return new DatastoreTransaction(this, projectId, transactionId);
-        }
-
-        // TODO: Expose this? Or make it part of a higher level API?
-
-        /// <summary>
-        /// Fetch the entities associated with the given keys. This may require multiple requests.
-        /// The entities are returned in the same order as the key set. Any missing entities are returned
-        /// as null references.
-        /// </summary>
-        /// <remarks>
-        /// The keys should not be mutated while the operation is ongoing.
-        /// </remarks>
-        internal IReadOnlyList<Entity> LookupAll(string projectId, ReadOptions readOptions, IEnumerable<Key> keys)
-        {
-            // Just so we can iterate multiple times safely.
-            keys = keys.ToList();
-            GaxPreconditions.CheckArgument(keys.All(x => x != null), nameof(keys), "Key collection must not contain null elements");
-            var keyToIndex = keys.Select((value, index) => new { value, index }).ToLookup(pair => pair.value, pair => pair.index);
-            IEnumerable<Key> keysToFetch = new HashSet<Key>(keys);
-            Entity[] result = new Entity[keys.Count()];
-            // TODO: Limit how many times we go round? Ensure that we make progress on each iteration?
-            while (keysToFetch.Count() > 0)
-            {
-                var response = Lookup(projectId, readOptions, keysToFetch);
-                foreach (var found in response.Found)
-                {
-                    foreach (var index in keyToIndex[found.Entity.Key])
-                    {
-                        result[index] = found.Entity;
-                    }
-                }
-                keysToFetch = response.Deferred;
-            }
-            return result;
-        }
-    }
-
     // TODO: Async
     // TODO: Take CallSettings on each call?
     // TODO: Determine handling of multiple calls (e.g. Insert + Update + Delete) for same entity
@@ -107,9 +56,9 @@ namespace Google.Datastore.V1Beta3
             _active = true; 
         }
 
-        public Entity Lookup(Key key) => _client.LookupAll(_projectId, _readOptions, new[] { key })[0];        
+        public Entity Lookup(Key key) => DatastoreDb.LookupImpl(_client, _projectId, _readOptions, new[] { key })[0]; 
         public IReadOnlyList<Entity> Lookup(params Key[] keys) => Lookup((IEnumerable<Key>)keys);
-        public IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys) => _client.LookupAll(_projectId, _readOptions, keys);
+        public IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys) => DatastoreDb.LookupImpl(_client, _projectId, _readOptions, keys);
 
         /// <summary>
         /// Runs the specified query in this transaction.

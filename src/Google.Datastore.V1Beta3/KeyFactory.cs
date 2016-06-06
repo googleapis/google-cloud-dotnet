@@ -41,12 +41,12 @@ namespace Google.Datastore.V1Beta3
         /// Creates a key factory for the root of a partition.
         /// </summary>
         /// <param name="projectId">The project ID for the factory. Must not be null.</param>
-        /// <param name="namespaceId">The namespace ID for the factory. May be null.</param>
+        /// <param name="namespaceId">The namespace ID for the factory. May be null in which case an empty string is used.</param>
         /// <param name="kind">The kind of root entity keys to create. Must not be null.</param>
         public KeyFactory(string projectId, string namespaceId, string kind)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _parent = new Key { PartitionId = new PartitionId(projectId, namespaceId) };
+            _parent = new Key { PartitionId = new PartitionId(projectId, namespaceId ?? "") };
             _kind = GaxPreconditions.CheckNotNull(kind, nameof(kind));
         }
 
