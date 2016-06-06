@@ -77,11 +77,6 @@ namespace Google.Datastore.V1Beta3
         internal override ApiCall<RunQueryRequest, RunQueryResponse> RunQueryApiCall => _callRunQuery;
     }
 
-    // TODO: Apply our abstract/concrete class approach again? (It gets very wearing...)
-    // Only do after rest of design is complete.
-    // TODO: Add call settings on everything?
-    // TODO: Async
-
     /// <summary>
     /// An abstraction over <see cref="DatastoreClient"/> to simplify operations. Use the <see cref="Create(string, string, DatastoreClient)"/>
     /// method to obtain an instance of this class.
@@ -96,18 +91,29 @@ namespace Google.Datastore.V1Beta3
     /// factory or running a query. Operations that take keys or entities do not validate that the keys are within the
     /// partition associated with this object.
     /// </para>
+    /// <para>
+    /// This abstract class is provided to enable testability while permitting
+    /// additional operations to be added in the future. See <see cref="Create(string, string, DatastoreClient)"/>
+    /// to construct instances; alternatively, you can construct a <see cref="DatastoreClient"/> directly.
+    /// </para>
     /// </remarks>
-    public class DatastoreDb
+    public abstract class DatastoreDb
     {
         /// <summary>
         /// The <see cref="DatastoreClient"/> used for all remote operations.
         /// </summary>
-        public DatastoreClient Client { get; }
+        public virtual DatastoreClient Client { get { throw new NotImplementedException(); } }
 
-        private readonly string _projectId;
-        private readonly PartitionId _partitionId;
+        /// <summary>
+        /// The ID of the project this instance operates on.
+        /// </summary>
+        public virtual string ProjectId { get { throw new NotImplementedException(); } }
 
-        // TODO: Expose the above fields as properties?
+        /// <summary>
+        /// The ID of the namespace this instance operates on.
+        /// </summary>
+        public virtual string NamespaceId { get { throw new NotImplementedException(); } }
+
 
         /// <summary>
         /// Creates a <see cref="DatastoreDb"/> to operate on the partition identified by <paramref name="projectId"/>
@@ -119,13 +125,10 @@ namespace Google.Datastore.V1Beta3
         /// using default settings.</param>
         /// <returns>A <see cref="DatastoreDb"/> operating on the specified partition.</returns>
         public static DatastoreDb Create(string projectId, string namespaceId = "", DatastoreClient client = null) =>
-            new DatastoreDb(projectId, namespaceId, client ?? DatastoreClient.Create());
+            new DatastoreDbImpl(projectId, namespaceId, client ?? DatastoreClient.Create());
 
-        private DatastoreDb(string projectId, string namespaceId, DatastoreClient client)
+        public DatastoreDb()
         {
-            _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _partitionId = new PartitionId(projectId, GaxPreconditions.CheckNotNull(namespaceId, nameof(namespaceId)));
-            Client = GaxPreconditions.CheckNotNull(client, nameof(client));
         }
 
         /// <summary>
@@ -133,7 +136,10 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <param name="kind">The kind of entity key to create. Must not be null.</param>
         /// <returns>A key factory with the specified kind and this object's partition.</returns>
-        public KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
+        public virtual KeyFactory CreateKeyFactory(string kind)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Perform a single <see cref="DatastoreClient.RunQuery(string, PartitionId, ReadOptions, Query, CallSettings)"/> operation
@@ -145,8 +151,10 @@ namespace Google.Datastore.V1Beta3
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
         /// <returns>The response for the given query operation.</returns>
-        public RunQueryResponse RunQuery(Query query, ReadConsistency? readConsistency = null) =>
-            Client.RunQuery(_projectId, _partitionId, GetReadOptions(readConsistency), query);
+        public virtual RunQueryResponse RunQuery(Query query, ReadConsistency? readConsistency = null)
+        {
+            throw new NotImplementedException();
+        }
 
         // Note: no pagestreaming yet for GQL as it's tough to modify the limit/offset automatically.
 
@@ -157,8 +165,10 @@ namespace Google.Datastore.V1Beta3
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
         /// <returns>The response for the given query operation.</returns>
-        public RunQueryResponse RunQuery(GqlQuery query, ReadConsistency? readConsistency = null) =>
-            Client.RunQuery(_projectId, _partitionId, GetReadOptions(readConsistency), query);
+        public virtual RunQueryResponse RunQuery(GqlQuery query, ReadConsistency? readConsistency = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Executes the given query, automatically streaming the pages of results.
@@ -172,30 +182,24 @@ namespace Google.Datastore.V1Beta3
         /// <param name="readConsistency">The desired read consistency of the query, or null to use
         /// the default.</param>
         /// <returns>A sequence of pages of entities.</returns>
-        public IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(Query query, ReadConsistency? readConsistency = null)
+        public virtual IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(Query query, ReadConsistency? readConsistency = null)
         {
-            var request = new RunQueryRequest
-            {
-                ProjectId = _projectId,
-                PartitionId = _partitionId,
-                Query = query,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            return new PagedEnumerable<RunQueryRequest, RunQueryResponse, Entity>(Client.RunQueryApiCall, request, null);
+            throw new NotImplementedException();
         }
-
-        // TODO: Mocking support for the transaction?
 
         /// <summary>
         /// Begins a transaction, returning a <see cref="DatastoreTransaction"/> which can be used to operate on the transaction.
         /// </summary>
         /// <returns>A new <see cref="DatastoreTransaction"/> for this object's project.</returns>
-        public DatastoreTransaction BeginTransaction() =>
-            new DatastoreTransaction(Client, _projectId, Client.BeginTransaction(_projectId).Transaction);
+        public virtual DatastoreTransaction BeginTransaction()
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Allocates an ID for a single incomplete key.
         /// </summary>
+        /// <remarks>This method simply delegates to <see cref="AllocateIds(Key[])"/>.</remarks>
         /// <param name="key">The incomplete key to allocate an ID for.</param>
         /// <returns>The complete key.</returns>
         public Key AllocateId(Key key) => AllocateIds(new[] { key })[0];
@@ -203,6 +207,7 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Allocates IDs for a collection of incomplete keys.
         /// </summary>
+        /// <remarks>This method simply delegates to <see cref="AllocateIds(IEnumerable{Key})"/>.</remarks>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
         public IReadOnlyList<Key> AllocateIds(params Key[] keys) => AllocateIds((IEnumerable<Key>)keys);
@@ -212,18 +217,15 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
-        public IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys)
+        public virtual IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys)
         {
-            // TODO: Validation. All keys should be non-null, and have a filled in path element
-            // until the final one, which should just have a kind. Or we could just let the server validate...
-            keys = GaxPreconditions.CheckNotNull(keys, nameof(keys)).ToList();
-            var response = Client.AllocateIds(_projectId, keys);
-            return response.Keys.ToList();
+            throw new NotImplementedException();
         }
 
         /// <summary>
         /// Looks up a single entity by key.
         /// </summary>
+        /// <remarks>This method simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?)"/>.</remarks>
         /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
         /// <returns>The entity with the specified key, or <c>null</c> if no such entity exists.</returns>
@@ -235,6 +237,8 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>
         /// This overload does not support the <see cref="ReadConsistency"/> to be specified due to restrictions with
         /// methods containing a parameter array and optional parameters.
+        /// It simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?)"/>, passing in a <c>null</c>
+        /// value for the read consistency.
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
@@ -248,8 +252,10 @@ namespace Google.Datastore.V1Beta3
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null)
-            => LookupImpl(Client, _projectId, GetReadOptions(readConsistency), keys);
+        public virtual IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null)
+        {
+            throw new NotImplementedException();
+        }
 
         // Static to allow reuse within DatastoreTransaction.
         internal static IReadOnlyList<Entity> LookupImpl(DatastoreClient client, string projectId, ReadOptions readOptions, IEnumerable<Key> keys)
@@ -297,7 +303,10 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Insert(IEnumerable<Entity> entities) => Commit(entities, e => e.ToInsert(), nameof(entities));
+        public virtual IReadOnlyList<Key> Insert(IEnumerable<Entity> entities)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Upserts a single entity, non-transactionally.
@@ -318,7 +327,10 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities) => Commit(entities, e => e.ToUpsert(), nameof(entities));
+        public virtual IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Updates a single entity, non-transactionally.
@@ -339,7 +351,10 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Update(IEnumerable<Entity> entities) => Commit(entities, e => e.ToUpdate(), nameof(entities));
+        public virtual IReadOnlyList<Key> Update(IEnumerable<Entity> entities)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Deletes a single entity, non-transactionally.
@@ -357,7 +372,10 @@ namespace Google.Datastore.V1Beta3
         /// Deletes a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
-        public void Delete(IEnumerable<Entity> entities) => Commit(entities, e => e.ToDelete(), nameof(entities));
+        public virtual void Delete(IEnumerable<Entity> entities)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Deletes a single key, non-transactionally.
@@ -375,16 +393,9 @@ namespace Google.Datastore.V1Beta3
         /// Deletes a collection of keys, non-transactionally.
         /// </summary>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
-        public void Delete(IEnumerable<Key> keys) => Commit(keys, e => e.ToDelete(), nameof(keys));
-
-        private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, string parameterName)
+        public virtual void Delete(IEnumerable<Key> keys)
         {
-            // TODO: Validation
-            var response = Client.Commit(_projectId, Mode.NonTransactional, values.Select(conversion));
-            return response.MutationResults.Select(mr => mr.Key).ToList();
+            throw new NotImplementedException();
         }
-
-        private static ReadOptions GetReadOptions(ReadConsistency? readConsistency) =>
-            readConsistency == null ? null : new ReadOptions { ReadConsistency = readConsistency.Value };
     }
 }
