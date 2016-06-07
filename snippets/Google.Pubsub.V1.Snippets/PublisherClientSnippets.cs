@@ -137,7 +137,7 @@ namespace Google.Pubsub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            // Snippet: PublishAsync
+            // Snippet: PublishAsync(*,*,CallSettings)
             PublisherClient client = PublisherClient.Create();
             // Make sure we have a topic to publish to
             string topicName = PublisherClient.GetTopicName(projectId, topicId);
@@ -184,7 +184,7 @@ namespace Google.Pubsub.V1.Snippets
 
             await PublisherClient.Create().CreateTopicAsync(PublisherClient.GetTopicName(projectId, topicId));
 
-            // Snippet: DeleteTopicAsync
+            // Snippet: DeleteTopicAsync(string,CallSettings)
             PublisherClient client = PublisherClient.Create();
 
             // Alternative: use a known topic resource name
