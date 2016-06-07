@@ -88,7 +88,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuery(GqlQuery,string,ReadConsistency)
+            // Snippet: RunQuery(GqlQuery,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
