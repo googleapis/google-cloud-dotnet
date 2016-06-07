@@ -578,8 +578,8 @@ name for this subscription on the same project as the topic.</p>
 // &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
 // Similarly for the topic name:
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string subscriptionName = SubscriberClient.GetSubscriptionName(&quot;{PROJECT_ID}&quot;, &quot;{SUBSCRIPTION_ID}&quot;);
-string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
+string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
 Subscription subscription = client.CreateSubscription(
     subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
 Console.WriteLine($&quot;Created {subscription.Name} subscribed to {subscription.Topic}&quot;);
@@ -665,8 +665,8 @@ name for this subscription on the same project as the topic.</p>
 // &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
 // Similarly for the topic name:
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string subscriptionName = SubscriberClient.GetSubscriptionName(&quot;{PROJECT_ID}&quot;, &quot;{SUBSCRIPTION_ID}&quot;);
-string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
+string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
 Subscription subscription = await client.CreateSubscriptionAsync(
     subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
 Console.WriteLine($&quot;Created {subscription.Name} subscribed to {subscription.Topic}&quot;);
@@ -1694,7 +1694,7 @@ subscription.</p>
 
 // Alternative: use an existing subscription resource name:
 // &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
-string subscriptionName = SubscriberClient.GetSubscriptionName(&quot;{PROJECT_ID}&quot;, &quot;{SUBSCRIPTION_ID}&quot;);
+string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
 
 PullResponse pullResponse = client.Pull(subscriptionName, returnImmediately: false, maxMessages: 100);
 foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
@@ -1776,7 +1776,7 @@ subscription.</p>
 
 // Alternative: use an existing subscription resource name:
 // &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
-string subscriptionName = SubscriberClient.GetSubscriptionName(&quot;{PROJECT_ID}&quot;, &quot;{SUBSCRIPTION_ID}&quot;);
+string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
 
 PullResponse pullResponse = await client.PullAsync(subscriptionName, returnImmediately: false, maxMessages: 100);
 foreach (ReceivedMessage message in pullResponse.ReceivedMessages)

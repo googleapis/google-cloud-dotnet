@@ -390,7 +390,7 @@ necessary.</p>
 
 // Alternative: use a known topic resource name
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
 Topic topic = client.CreateTopic(topicName);
 Console.WriteLine($&quot;Created {topic.Name}&quot;);
 </code></pre></div>
@@ -451,7 +451,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
 
 // Alternative: use a known topic resource name
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
 Topic topic = await client.CreateTopicAsync(topicName);
 Console.WriteLine($&quot;Created {topic.Name}&quot;);
 </code></pre></div>
@@ -564,7 +564,15 @@ the same name; this is an entirely new topic with none of the old
 configuration or subscriptions. Existing subscriptions to this topic are
 not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+
+// Alternative: use a known topic resource name
+// &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+client.DeleteTopic(topicName);
+Console.WriteLine($&quot;Deleted {topicName}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void DeleteTopic(string topic, CallSettings callSettings = null)</code></pre>
@@ -600,7 +608,15 @@ the same name; this is an entirely new topic with none of the old
 configuration or subscriptions. Existing subscriptions to this topic are
 not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+
+// Alternative: use a known topic resource name
+// &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+await client.DeleteTopicAsync(topicName);
+Console.WriteLine($&quot;Deleted {topicName}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteTopicAsync(string topic, CallSettings callSettings = null)</code></pre>
@@ -1188,7 +1204,24 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 does not exist. The message payload must not be empty; it must contain
  either a non-empty data field, or at least one attribute.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+// Make sure we have a topic to publish to
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+client.CreateTopic(topicName);
+
+PubsubMessage message = new PubsubMessage
+{
+    // The data is any arbitrary ByteString. Here, we&#39;re using text.
+    Data = ByteString.CopyFromUtf8(&quot;Hello, Pubsub&quot;),
+    // The attributes provide metadata in a string-to-string dictionary.
+    Attributes =
+    {
+        { &quot;description&quot;, &quot;Simple text message&quot; }
+    }
+};
+client.Publish(topicName, new[] { message });
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual PublishResponse Publish(string topic, IEnumerable&lt;PubsubMessage&gt; messages, CallSettings callSettings = null)</code></pre>
@@ -1244,7 +1277,24 @@ does not exist. The message payload must not be empty; it must contain
 does not exist. The message payload must not be empty; it must contain
  either a non-empty data field, or at least one attribute.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+// Make sure we have a topic to publish to
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+await client.CreateTopicAsync(topicName);
+
+PubsubMessage message = new PubsubMessage
+{
+    // The data is any arbitrary ByteString. Here, we&#39;re using text.
+    Data = ByteString.CopyFromUtf8(&quot;Hello, Pubsub&quot;),
+    // The attributes provide metadata in a string-to-string dictionary.
+    Attributes =
+    {
+        { &quot;description&quot;, &quot;Simple text message&quot; }
+    }
+};
+await client.PublishAsync(topicName, new[] { message });
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;PublishResponse&gt; PublishAsync(string topic, IEnumerable&lt;PubsubMessage&gt; messages, CallSettings callSettings = null)</code></pre>

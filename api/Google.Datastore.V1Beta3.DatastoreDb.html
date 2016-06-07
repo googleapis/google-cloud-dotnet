@@ -149,7 +149,11 @@ partition associated with this object.
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateId_Google_Datastore_V1Beta3_Key_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.AllocateId(Google.Datastore.V1Beta3.Key)">AllocateId(Key)</h4>
               <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey());
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public Key AllocateId(Key key)</code></pre>
@@ -951,7 +955,47 @@ using this object&#39;s partition ID and the specified read consistency, not in 
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryPageStream_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQueryPageStream(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency})">RunQueryPageStream(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;)</h4>
               <div class="markdown level1 summary"><p>Executes the given query, automatically streaming the pages of results.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">    DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+    Query query = new Query(&quot;book&quot;)
+    {
+        Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+    };
+    IPagedEnumerable&lt;RunQueryResponse, Entity&gt; results = db.RunQueryPageStream(query);
+    foreach (Entity entity in results.Flatten())
+    {
+        Console.WriteLine(entity);
+    }
+    // EndSnippet
+
+    // This will run the query again, admittedly...
+    List&lt;Entity&gt; entities = results.Flatten().ToList();
+    Assert.Equal(1, entities.Count);
+    Entity book = entities[0];
+    Assert.Equal(&quot;Jane Austen&quot;, (string)book[&quot;author&quot;]);
+    Assert.Equal(&quot;Pride and Prejudice&quot;, (string)book[&quot;title&quot;]);
+}
+
+[Fact]
+public void GqlQuery()
+{
+    string projectId = _fixture.ProjectId;
+    string namespaceId = _fixture.NamespaceId;
+
+    // Snippet: RunQuery(GqlQuery,*,*)
+    DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+    GqlQuery gqlQuery = new GqlQuery
+    {
+        QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+        NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+    };
+    // Note: no page streaming for GQL yet.
+    RunQueryResponse response = db.RunQuery(gqlQuery);
+    foreach (EntityResult result in response.Batch.EntityResults)
+    {
+        Console.WriteLine(result.Entity);
+    }
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public IPagedEnumerable&lt;RunQueryResponse, Entity&gt; RunQueryPageStream(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null)</code></pre>
