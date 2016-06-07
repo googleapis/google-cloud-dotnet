@@ -86,38 +86,8 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
 </code></pre>
 <p>At this point, you are now authenticated to make calls to Pub/Sub
 and other Google Cloud services.</p>
-<h2 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h2>
-<p>A wrapper library over
-<a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
-for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
-<p>Common operations are exposed via the
-<a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
-<p>Example:</p>
-<pre><code class="lang-cs">var client = StorageClient.Create();
-
-// Create a bucket
-var bucketName = Guid.NewGuid().ToString(); // must be globally unique
-var bucket = client.CreateBucket(projectId, bucketName);
-
-// Upload some files
-var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
-var obj1 = client.UploadObject(bucketName, &quot;file1.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));
-var obj2 = client.UploadObject(bucketName, &quot;folder1/file2.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));
-
-// List objects
-foreach (var obj in client.ListObjects(bucketName, &quot;&quot;))
-{
-    Console.WriteLine(obj.Name);
-}
-
-// Download file
-using (var stream = File.OpenWrite(&quot;file1.txt&quot;))
-{
-    client.DownloadObject(bucketName, &quot;file1.txt&quot;, stream);
-}
-</code></pre><h1 id="alpha-apis">Alpha APIs</h1>
 <h2 id="google-pubsub-v1-nuget-https-www-nuget-org-packages-google-pubsub-v1-beta-">Google.Pubsub.V1 (<a href="https://www.nuget.org/packages/Google.Pubsub.V1">NuGet</a>) (beta)</h2>
-<p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/sub</a>.</p>
+<p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/Sub</a>.</p>
 <p><a href="api/Google.Pubsub.V1.PublisherClient.html"><code>PublisherClient</code></a> and
 <a href="api/Google.Pubsub.V1.SubscriberClient.html"><code>SubscriberClient</code></a>
 provide a general-purpose abstraction over raw the RPC API, providing
@@ -164,6 +134,35 @@ subscriber.Acknowledge(subscriptionName, response.ReceivedMessages.Select(m =&gt
 // Tidy up by deleting the subscription and the topic.
 subscriber.DeleteSubscription(subscriptionName);
 publisher.DeleteTopic(topicName);
+</code></pre><h2 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h2>
+<p>A wrapper library over
+<a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
+for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
+<p>Common operations are exposed via the
+<a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
+<p>Example:</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+// Create a bucket
+var bucketName = Guid.NewGuid().ToString(); // must be globally unique
+var bucket = client.CreateBucket(projectId, bucketName);
+
+// Upload some files
+var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
+var obj1 = client.UploadObject(bucketName, &quot;file1.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));
+var obj2 = client.UploadObject(bucketName, &quot;folder1/file2.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));
+
+// List objects
+foreach (var obj in client.ListObjects(bucketName, &quot;&quot;))
+{
+    Console.WriteLine(obj.Name);
+}
+
+// Download file
+using (var stream = File.OpenWrite(&quot;file1.txt&quot;))
+{
+    client.DownloadObject(bucketName, &quot;file1.txt&quot;, stream);
+}
 </code></pre><h2 id="google-datastore-v1beta3-alpha-">Google.Datastore.V1Beta3 (alpha)</h2>
 <p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
 <p>The <a href="api/Google.Datastore.V1Beta3.DatastoreDb.html"><code>DatastoreDb</code></a>
