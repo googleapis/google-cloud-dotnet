@@ -16,6 +16,7 @@ using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 using static Google.Datastore.V1Beta3.PropertyOrder.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
@@ -56,12 +57,35 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
+        public async Task LookupAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: Lookup(*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            KeyFactory keyFactory = db.CreateKeyFactory("book");
+            Key key1 = keyFactory.CreateKey("pride_and_prejudice");
+            Key key2 = keyFactory.CreateKey("not_present");
+
+            IReadOnlyList<Entity> entities = await db.LookupAsync(key1, key2);
+            Console.WriteLine(entities[0]); // Pride and Prejudice entity
+            Console.WriteLine(entities[1]); // Nothing (value is null reference)
+            // End snippet
+
+            Entity entity = entities[0];
+            Assert.Equal("Jane Austen", (string)entity["author"]);
+            Assert.Equal("Pride and Prejudice", (string)entity["title"]);
+            Assert.Null(entities[1]);
+        }
+
+        [Fact]
         public void StructuredQuery()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQueryPageStream(Query,*)
+            // Snippet: RunQueryPageStream(Query,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query("book")
             {
@@ -83,12 +107,39 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
+        public async Task StructuredQueryAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: RunQueryPageStreamAsync(Query,*,*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            Query query = new Query("book")
+            {
+                Filter = Filter.Equal("author", "Jane Austen")
+            };
+            IPagedAsyncEnumerable<RunQueryResponse, Entity> results = db.RunQueryPageStreamAsync(query);
+            await results.Flatten().ForEachAsync(entity =>
+            {
+                Console.WriteLine(entity);
+            });
+            // EndSnippet
+
+            // This will run the query again, admittedly...
+            List<Entity> entities = await results.Flatten().ToList();
+            Assert.Equal(1, entities.Count);
+            Entity book = entities[0];
+            Assert.Equal("Jane Austen", (string)book["author"]);
+            Assert.Equal("Pride and Prejudice", (string)book["title"]);
+        }
+
+        [Fact]
         public void GqlQuery()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuery(GqlQuery,*)
+            // Snippet: RunQuery(GqlQuery,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
@@ -103,7 +154,33 @@ namespace Google.Datastore.V1Beta3.Snippets
             }
             // End snippet
 
-            // This will run the query again, admittedly...
+            Assert.Equal(1, response.Batch.EntityResults.Count);
+            Entity book = response.Batch.EntityResults[0].Entity;
+            Assert.Equal("Jane Austen", (string)book["author"]);
+            Assert.Equal("Pride and Prejudice", (string)book["title"]);
+        }
+
+        [Fact]
+        public async Task GqlQueryAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: RunQueryAsync(GqlQuery,*,*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            GqlQuery gqlQuery = new GqlQuery
+            {
+                QueryString = "SELECT * FROM book WHERE author = @author",
+                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+            };
+            // Note: no page streaming for GQL yet.
+            RunQueryResponse response = await db.RunQueryAsync(gqlQuery);
+            foreach (EntityResult result in response.Batch.EntityResults)
+            {
+                Console.WriteLine(result.Entity);
+            }
+            // End snippet
+
             Assert.Equal(1, response.Batch.EntityResults.Count);
             Entity book = response.Batch.EntityResults[0].Entity;
             Assert.Equal("Jane Austen", (string)book["author"]);
@@ -173,6 +250,34 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
+        public async Task AddEntity_NonTransactional_Async()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: InsertAsync(*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            KeyFactory keyFactory = db.CreateKeyFactory("book");
+            Entity book1 = new Entity
+            {
+                Key = keyFactory.CreateInsertionKey(),
+                ["author"] = "Harper Lee",
+                ["title"] = "To Kill a Mockingbird",
+                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
+            };
+            Entity book2 = new Entity
+            {
+                Key = keyFactory.CreateInsertionKey(),
+                ["author"] = "Charlotte Brontë",
+                ["title"] = "Jane Eyre",
+                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
+            };
+            IReadOnlyList<Key> insertedKeys = await db.InsertAsync(book1, book2);
+            Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
+            // End snippet
+        }
+
+        [Fact]
         public void AllocateId()
         {
             string projectId = _fixture.ProjectId;
@@ -186,15 +291,44 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
+        public async Task AllocateIdAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: AllocateIdAsync
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            KeyFactory keyFactory = db.CreateKeyFactory("message");
+            Key key = await db.AllocateIdAsync(keyFactory.CreateInsertionKey());
+            // End snippet
+        }
+
+        [Fact]
         public void AllocateIds()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: AllocateId
+            // Snippet: AllocateIds(*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             KeyFactory keyFactory = db.CreateKeyFactory("message");
             IReadOnlyList<Key> keys = db.AllocateIds(keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey());
+            // End snippet
+
+            Assert.Equal(2, keys.Count);
+            Assert.NotEqual(keys[0], keys[1]);
+        }
+
+        [Fact]
+        public async Task AllocateIdsAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: AllocateIdsAsync(*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            KeyFactory keyFactory = db.CreateKeyFactory("message");
+            IReadOnlyList<Key> keys = await db.AllocateIdsAsync(keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey());
             // End snippet
 
             Assert.Equal(2, keys.Count);

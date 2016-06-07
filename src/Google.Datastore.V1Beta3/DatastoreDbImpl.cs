@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using static Google.Datastore.V1Beta3.CommitRequest.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
 
@@ -71,9 +72,21 @@ namespace Google.Datastore.V1Beta3
             Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
 
         /// <inheritdoc/>
+        public override Task<RunQueryResponse> RunQueryAsync(
+            Query query,
+            ReadConsistency? readConsistency = null,
+            CallSettings callSettings = null) =>
+            Client.RunQueryAsync(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
+
+        /// <inheritdoc/>
         public override RunQueryResponse RunQuery(
             GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
             Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
+
+        /// <inheritdoc/>
+        public override Task<RunQueryResponse> RunQueryAsync(
+            GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
+            Client.RunQueryAsync(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
 
         /// <inheritdoc/>
         public override IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(
@@ -92,8 +105,31 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <inheritdoc/>
+        public override IPagedAsyncEnumerable<RunQueryResponse, Entity> RunQueryPageStreamAsync(
+            Query query,
+            ReadConsistency? readConsistency = null,
+            CallSettings callSettings = null)
+        {
+            var request = new RunQueryRequest
+            {
+                ProjectId = ProjectId,
+                PartitionId = _partitionId,
+                Query = query,
+                ReadOptions = GetReadOptions(readConsistency)
+            };
+            return new PagedAsyncEnumerable<RunQueryRequest, RunQueryResponse, Entity>(Client.RunQueryApiCall, request, callSettings);
+        }
+
+        /// <inheritdoc/>
         public override DatastoreTransaction BeginTransaction(CallSettings callSettings = null) =>
             new DatastoreTransaction(Client, ProjectId, Client.BeginTransaction(ProjectId, callSettings).Transaction);
+
+        /// <inheritdoc/>
+        public async override Task<DatastoreTransaction> BeginTransactionAsync(CallSettings callSettings = null)
+        {
+            var response = await Client.BeginTransactionAsync(ProjectId, callSettings).ConfigureAwait(false);
+            return new DatastoreTransaction(Client, ProjectId, response.Transaction);
+        }                
 
         /// <inheritdoc/>
         public override IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys, CallSettings callSettings = null)
@@ -106,8 +142,22 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <inheritdoc/>
+        public async override Task<IReadOnlyList<Key>> AllocateIdsAsync(IEnumerable<Key> keys, CallSettings callSettings = null)
+        {
+            // TODO: Validation. All keys should be non-null, and have a filled in path element
+            // until the final one, which should just have a kind. Or we could just let the server validate...
+            keys = GaxPreconditions.CheckNotNull(keys, nameof(keys)).ToList();
+            var response = await Client.AllocateIdsAsync(ProjectId, keys, callSettings).ConfigureAwait(false);
+            return response.Keys.ToList();
+        }
+
+        /// <inheritdoc/>
         public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
             => LookupImpl(Client, ProjectId, GetReadOptions(readConsistency), keys, callSettings);
+
+        /// <inheritdoc/>
+        public override Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+            => LookupImplAsync(Client, ProjectId, GetReadOptions(readConsistency), keys, callSettings);
 
         // Non-transactional mutations
 
@@ -116,25 +166,52 @@ namespace Google.Datastore.V1Beta3
             Commit(entities, e => e.ToInsert(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
+        public override Task<IReadOnlyList<Key>> InsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+            CommitAsync(entities, e => e.ToInsert(), nameof(entities), callSettings);
+
+        /// <inheritdoc/>
         public override IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
             Commit(entities, e => e.ToUpsert(), nameof(entities), callSettings);
+
+        /// <inheritdoc/>
+        public override Task<IReadOnlyList<Key>> UpsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+            CommitAsync(entities, e => e.ToUpsert(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
         public override IReadOnlyList<Key> Update(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
             Commit(entities, e => e.ToUpdate(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
+        public override Task<IReadOnlyList<Key>> UpdateAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+            CommitAsync(entities, e => e.ToUpdate(), nameof(entities), callSettings);
+
+        /// <inheritdoc/>
         public override void Delete(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
             Commit(entities, e => e.ToDelete(), nameof(entities), callSettings);
+
+        /// <inheritdoc/>
+        public override Task DeleteAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+            CommitAsync(entities, e => e.ToDelete(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
         public override void Delete(IEnumerable<Key> keys, CallSettings callSettings = null) =>
             Commit(keys, e => e.ToDelete(), nameof(keys), callSettings);
 
+        /// <inheritdoc/>
+        public override Task DeleteAsync(IEnumerable<Key> keys, CallSettings callSettings = null) =>
+            CommitAsync(keys, e => e.ToDelete(), nameof(keys), callSettings);
+
         private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, string parameterName, CallSettings callSettings)
         {
             // TODO: Validation
             var response = Client.Commit(ProjectId, Mode.NonTransactional, values.Select(conversion), callSettings);
+            return response.MutationResults.Select(mr => mr.Key).ToList();
+        }
+
+        private async Task<IReadOnlyList<Key>> CommitAsync<T>(IEnumerable<T> values, Func<T, Mutation> conversion, string parameterName, CallSettings callSettings)
+        {
+            // TODO: Validation
+            var response = await Client.CommitAsync(ProjectId, Mode.NonTransactional, values.Select(conversion), callSettings).ConfigureAwait(false);
             return response.MutationResults.Select(mr => mr.Key).ToList();
         }
 
