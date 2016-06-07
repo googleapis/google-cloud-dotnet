@@ -61,13 +61,32 @@
               
 <p>This is preliminary documentation for the Google Cloud APIs
 repository.</p>
-<h1 id="beta-apis">Beta APIs</h1>
-<p>These APIs are available from <a href="https://nuget.org">nuget.org</a> and can
-be installed by most users without reconfiguring their build
-environment at all. There is no guarantee that the API surface will
-stay stable between beta and full release, but we have high confidence
-that the libraries work and are usable.</p>
-<h2 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>)</h2>
+<h1 id="installation">Installation</h1>
+<p>All APIs are available as NuGet packages. Add the relevant package
+to your project in the normal way (for example by right-clicking on
+the project in Visual Studio and choosing &quot;Manage NuGet
+Packages...&quot;).</p>
+<p>Beta APIs are available
+from <a href="https://nuget.org">nuget.org</a> and can be installed by most
+users without reconfiguring their build environment at all. There is
+no guarantee that the API surface will stay stable between beta and
+full release, but we have high confidence that the libraries work
+and are usable.</p>
+<p>Alpha APIs are available from Google&#39;s <a href="https://www.myget.org/gallery/google-dotnet-public">public myget
+feed</a>, which you
+will need to configure within your build system. These APIs are even
+more likely to have significant surface changes over time, and may
+fail or have usability issues. Still, if you would like to
+experiment with them, we would welcome your feedback.</p>
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+installed, run the following command in a Google Cloud SDK Shell:</p>
+<pre><code class="lang-sh">$ gcloud auth login
+</code></pre>
+<p>At this point, you are now authenticated to make calls to Pub/Sub
+and other Google Cloud services.</p>
+<h2 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h2>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
 for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
@@ -97,24 +116,13 @@ using (var stream = File.OpenWrite(&quot;file1.txt&quot;))
     client.DownloadObject(bucketName, &quot;file1.txt&quot;, stream);
 }
 </code></pre><h1 id="alpha-apis">Alpha APIs</h1>
-<p>These APIs are available from Google&#39;s <a href="https://www.myget.org/gallery/google-dotnet-public">public myget
-feed</a>,
-which you will need to configure within your build system.</p>
-<p>These APIs are even more likely to have significant surface
-changes over time, and may fail or have usability issues. Still, if
-you would like to experiment with them, we would welcome your
-feedback.</p>
-<h2 id="google-pubsub-v1">Google.Pubsub.V1</h2>
+<h2 id="google-pubsub-v1-nuget-https-www-nuget-org-packages-google-pubsub-v1-beta-">Google.Pubsub.V1 (<a href="https://www.nuget.org/packages/Google.Pubsub.V1">NuGet</a>) (beta)</h2>
 <p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/sub</a>.</p>
 <p><a href="api/Google.Pubsub.V1.PublisherClient.html"><code>PublisherClient</code></a> and
 <a href="api/Google.Pubsub.V1.SubscriberClient.html"><code>SubscriberClient</code></a>
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.</p>
-<h3 id="installation">Installation</h3>
-<p>Add the <code>Google.Pubsub.V1</code> NuGet package to your project in the
-normal way (for example by right-clicking on the project in Visual
-Studio and choosing &quot;Manage NuGet Packages...&quot;).</p>
 <h3 id="sample-code">Sample code</h3>
 <pre><code class="lang-cs">// First create a topic.
 PublisherClient publisher = PublisherClient.Create();
@@ -156,7 +164,7 @@ subscriber.Acknowledge(subscriptionName, response.ReceivedMessages.Select(m =&gt
 // Tidy up by deleting the subscription and the topic.
 subscriber.DeleteSubscription(subscriptionName);
 publisher.DeleteTopic(topicName);
-</code></pre><h2 id="google-datastore-v1beta3">Google.Datastore.V1Beta3</h2>
+</code></pre><h2 id="google-datastore-v1beta3-alpha-">Google.Datastore.V1Beta3 (alpha)</h2>
 <p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
 <p>The <a href="api/Google.Datastore.V1Beta3.DatastoreDb.html"><code>DatastoreDb</code></a>
 class is provided as a wrapper for
@@ -184,12 +192,12 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
     var insertedKey = commitResponse.MutationResults[0].Key;
     Console.WriteLine($&quot;Inserted key: {insertedKey}&quot;);
 }
-</code></pre><h2 id="google-logging-v2">Google.Logging.V2</h2>
+</code></pre><h2 id="google-logging-v2-alpha-">Google.Logging.V2 (alpha)</h2>
 <p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>
 <p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
 <p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html"><code>LoggingServiceV2Client</code></a>
 for details.</p>
-<h2 id="google-bigquery-v2">Google.Bigquery.V2</h2>
+<h2 id="google-bigquery-v2-alpha-">Google.Bigquery.V2 (alpha)</h2>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Bigquery.v2/">Google.Apis.Bigquery.v1</a>
 for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a></p>
