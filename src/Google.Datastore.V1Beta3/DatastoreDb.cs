@@ -18,7 +18,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using static Google.Datastore.V1Beta3.CommitRequest.Types;
 using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
 
@@ -127,10 +126,6 @@ namespace Google.Datastore.V1Beta3
         public static DatastoreDb Create(string projectId, string namespaceId = "", DatastoreClient client = null) =>
             new DatastoreDbImpl(projectId, namespaceId, client ?? DatastoreClient.Create());
 
-        public DatastoreDb()
-        {
-        }
-
         /// <summary>
         /// Creates a key factory for root entities in this objects's partition.
         /// </summary>
@@ -146,12 +141,13 @@ namespace Google.Datastore.V1Beta3
         /// using this object's partition ID and the specified read consistency, not in a transaction.
         /// </summary>
         /// <remarks>
-        /// To automatically stream pages of results, use <see cref="RunQueryPageStream(Query, ReadConsistency?)"/>.
+        /// To automatically stream pages of results, use <see cref="RunQueryPageStream(Query, ReadConsistency?, CallSettings)"/>.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The response for the given query operation.</returns>
-        public virtual RunQueryResponse RunQuery(Query query, ReadConsistency? readConsistency = null)
+        public virtual RunQueryResponse RunQuery(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -164,8 +160,9 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The response for the given query operation.</returns>
-        public virtual RunQueryResponse RunQuery(GqlQuery query, ReadConsistency? readConsistency = null)
+        public virtual RunQueryResponse RunQuery(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -181,8 +178,10 @@ namespace Google.Datastore.V1Beta3
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use
         /// the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A sequence of pages of entities.</returns>
-        public virtual IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(Query query, ReadConsistency? readConsistency = null)
+        public virtual IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(
+            Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -190,8 +189,9 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Begins a transaction, returning a <see cref="DatastoreTransaction"/> which can be used to operate on the transaction.
         /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A new <see cref="DatastoreTransaction"/> for this object's project.</returns>
-        public virtual DatastoreTransaction BeginTransaction()
+        public virtual DatastoreTransaction BeginTransaction(CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -199,25 +199,33 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Allocates an ID for a single incomplete key.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="AllocateIds(Key[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="AllocateIds(IEnumerable{Key},CallSettings)"/>.</remarks>
         /// <param name="key">The incomplete key to allocate an ID for.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The complete key.</returns>
-        public Key AllocateId(Key key) => AllocateIds(new[] { key })[0];
+        public Key AllocateId(Key key, CallSettings callSettings = null) => AllocateIds(new[] { key }, callSettings)[0];
 
         /// <summary>
         /// Allocates IDs for a collection of incomplete keys.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="AllocateIds(IEnumerable{Key})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="AllocateIds(IEnumerable{Key},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="AllocateIds(IEnumerable{Key},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
-        public IReadOnlyList<Key> AllocateIds(params Key[] keys) => AllocateIds((IEnumerable<Key>)keys);
+        public IReadOnlyList<Key> AllocateIds(params Key[] keys) => AllocateIds(keys, null);
 
         /// <summary>
         /// Allocates IDs for a collection of incomplete keys.
         /// </summary>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
-        public virtual IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys)
+        public virtual IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -225,40 +233,55 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Looks up a single entity by key.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?)"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>.</remarks>
         /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The entity with the specified key, or <c>null</c> if no such entity exists.</returns>
-        public Entity Lookup(Key key, ReadConsistency? readConsistency = null) => Lookup(new[] { key }, readConsistency)[0];
+        public Entity Lookup(Key key, ReadConsistency? readConsistency = null, CallSettings callSettings = null) => Lookup(new[] { key }, readConsistency, callSettings)[0];
 
         /// <summary>
         /// Looks up a collection of entities by key.
         /// </summary>
         /// <remarks>
-        /// This overload does not support the <see cref="ReadConsistency"/> to be specified due to restrictions with
+        /// <para>
+        /// This call may perform multiple RPC operations in order to look up all keys.
+        /// </para>
+        /// <para>
+        /// This overload does not support the <see cref="ReadConsistency"/> or <see cref="CallSettings "/>to be specified due to restrictions with
         /// methods containing a parameter array and optional parameters.
-        /// It simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?)"/>, passing in a <c>null</c>
-        /// value for the read consistency.
+        /// It simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>, passing in a <c>null</c>
+        /// value for the read consistency and all settings.
+        /// </para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public IReadOnlyList<Entity> Lookup(params Key[] keys) => Lookup(keys, null);
+        public IReadOnlyList<Entity> Lookup(params Key[] keys) => Lookup(keys, null, null);
 
         /// <summary>
         /// Looks up a collection of entities by key.
         /// </summary>
+        /// <remarks>
+        /// This call may perform multiple RPC operations in order to look up all keys.
+        /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public virtual IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null)
+        public virtual IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         // Static to allow reuse within DatastoreTransaction.
-        internal static IReadOnlyList<Entity> LookupImpl(DatastoreClient client, string projectId, ReadOptions readOptions, IEnumerable<Key> keys)
+        internal static IReadOnlyList<Entity> LookupImpl(
+            DatastoreClient client,
+            string projectId,
+            ReadOptions readOptions,
+            IEnumerable<Key> keys,
+            CallSettings callSettings)
         {
             // Just so we can iterate multiple times safely.
             keys = keys.ToList();
@@ -269,7 +292,7 @@ namespace Google.Datastore.V1Beta3
             // TODO: Limit how many times we go round? Ensure that we make progress on each iteration?
             while (keysToFetch.Count() > 0)
             {
-                var response = client.Lookup(projectId, readOptions, keysToFetch);
+                var response = client.Lookup(projectId, readOptions, keysToFetch, callSettings);
                 foreach (var found in response.Found)
                 {
                     foreach (var index in keyToIndex[found.Entity.Key])
@@ -287,23 +310,32 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Inserts a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Insert(Entity[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Insert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to insert. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The key of the inserted entity.</returns>
-        public Key Insert(Entity entity) => Insert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) })[0];
+        public Key Insert(Entity entity, CallSettings callSettings = null) =>
+            Insert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
         /// <summary>
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Insert(IEnumerable{Entity})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Insert(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Insert(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Insert(params Entity[] entities) => Insert((IEnumerable<Entity>) entities);
+        public IReadOnlyList<Key> Insert(params Entity[] entities) => Insert(entities, null);
         /// <summary>
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public virtual IReadOnlyList<Key> Insert(IEnumerable<Entity> entities)
+        public virtual IReadOnlyList<Key> Insert(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -311,23 +343,32 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Upserts a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Upsert(Entity[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Upsert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to upsert. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The key of the upserted entity.</returns>
-        public Key Upsert(Entity entity) => Upsert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) })[0];
+        public Key Upsert(Entity entity, CallSettings callSettings = null) =>
+            Upsert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
         /// <summary>
         /// Upserts a collection of entities, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Upsert(IEnumerable{Entity})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Upsert(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Upsert(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Upsert(params Entity[] entities) => Upsert((IEnumerable<Entity>) entities);
+        public IReadOnlyList<Key> Upsert(params Entity[] entities) => Upsert(entities, null);
         /// <summary>
         /// Upserts a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public virtual IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities)
+        public virtual IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -335,23 +376,32 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Updates a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Update(Entity[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Update(IEnumerable{Entity},CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to update. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The key of the updated entity.</returns>
-        public Key Update(Entity entity) => Update(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) })[0];
+        public Key Update(Entity entity, CallSettings callSettings = null) =>
+            Update(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
         /// <summary>
         /// Updates a collection of entities, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Update(IEnumerable{Entity})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Update(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Update(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Update(params Entity[] entities) => Update((IEnumerable<Entity>) entities);
+        public IReadOnlyList<Key> Update(params Entity[] entities) => Update(entities, null);
         /// <summary>
         /// Updates a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public virtual IReadOnlyList<Key> Update(IEnumerable<Entity> entities)
+        public virtual IReadOnlyList<Key> Update(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -359,20 +409,29 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Deletes a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Delete(Entity[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Delete(IEnumerable{Entity},CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to delete. Must not be null.</param>
-        public void Delete(Entity entity) => Delete(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) });
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        public void Delete(Entity entity, CallSettings callSettings = null) =>
+            Delete(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings);
         /// <summary>
         /// Deletes a collection of entities, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Delete(IEnumerable{Entity})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Delete(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Delete(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
-        public void Delete(params Entity[] entities) => Delete((IEnumerable<Entity>) entities);
+        public void Delete(params Entity[] entities) => Delete(entities, null);
         /// <summary>
         /// Deletes a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
-        public virtual void Delete(IEnumerable<Entity> entities)
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public virtual void Delete(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -380,20 +439,29 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Deletes a single key, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Delete(Key[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Delete(IEnumerable{Key},CallSettings)"/>.</remarks>
         /// <param name="key">The key to delete. Must not be null.</param>
-        public void Delete(Key key) => Delete(new[] { GaxPreconditions.CheckNotNull(key, nameof(key)) });
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public void Delete(Key key, CallSettings callSettings = null) =>
+            Delete(new[] { GaxPreconditions.CheckNotNull(key, nameof(key)) }, callSettings);
         /// <summary>
         /// Deletes a collection of keys, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Delete(IEnumerable{Key})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Delete(IEnumerable{Key},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Delete(IEnumerable{Key},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
-        public void Delete(params Key[] keys) => Delete((IEnumerable<Key>) keys);
+        public void Delete(params Key[] keys) => Delete(keys, null);
         /// <summary>
         /// Deletes a collection of keys, non-transactionally.
         /// </summary>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
-        public virtual void Delete(IEnumerable<Key> keys)
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public virtual void Delete(IEnumerable<Key> keys, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }

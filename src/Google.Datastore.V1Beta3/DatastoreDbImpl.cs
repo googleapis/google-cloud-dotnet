@@ -27,7 +27,7 @@ namespace Google.Datastore.V1Beta3
     /// <remarks>
     /// This is the "default" implementation of <see cref="DatastoreDb"/>. Most client code
     /// should refer to <see cref="DatastoreDb"/>, creating instances with
-    /// <see cref="BigqueryClient.Create(string, string, DatastoreClient)"/>. The constructor
+    /// <see cref="DatastoreDb.Create(string, string, DatastoreClient)"/>. The constructor
     /// of this class is public for the sake of constructor-based dependency injection.
     /// </remarks>
     public sealed class DatastoreDbImpl : DatastoreDb
@@ -64,15 +64,22 @@ namespace Google.Datastore.V1Beta3
         public override KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
 
         /// <inheritdoc/>
-        public override RunQueryResponse RunQuery(Query query, ReadConsistency? readConsistency = null) =>
-            Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query);
+        public override RunQueryResponse RunQuery(
+            Query query, 
+            ReadConsistency? readConsistency = null,
+            CallSettings callSettings = null) =>
+            Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
 
         /// <inheritdoc/>
-        public override RunQueryResponse RunQuery(GqlQuery query, ReadConsistency? readConsistency = null) =>
-            Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query);
+        public override RunQueryResponse RunQuery(
+            GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
+            Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
 
         /// <inheritdoc/>
-        public override IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(Query query, ReadConsistency? readConsistency = null)
+        public override IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(
+            Query query,
+            ReadConsistency? readConsistency = null,
+            CallSettings callSettings = null)
         {
             var request = new RunQueryRequest
             {
@@ -81,48 +88,53 @@ namespace Google.Datastore.V1Beta3
                 Query = query,
                 ReadOptions = GetReadOptions(readConsistency)
             };
-            return new PagedEnumerable<RunQueryRequest, RunQueryResponse, Entity>(Client.RunQueryApiCall, request, null);
+            return new PagedEnumerable<RunQueryRequest, RunQueryResponse, Entity>(Client.RunQueryApiCall, request, callSettings);
         }
 
         /// <inheritdoc/>
-        public override DatastoreTransaction BeginTransaction() =>
-            new DatastoreTransaction(Client, ProjectId, Client.BeginTransaction(ProjectId).Transaction);
+        public override DatastoreTransaction BeginTransaction(CallSettings callSettings = null) =>
+            new DatastoreTransaction(Client, ProjectId, Client.BeginTransaction(ProjectId, callSettings).Transaction);
 
         /// <inheritdoc/>
-        public override IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys)
+        public override IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys, CallSettings callSettings = null)
         {
             // TODO: Validation. All keys should be non-null, and have a filled in path element
             // until the final one, which should just have a kind. Or we could just let the server validate...
             keys = GaxPreconditions.CheckNotNull(keys, nameof(keys)).ToList();
-            var response = Client.AllocateIds(ProjectId, keys);
+            var response = Client.AllocateIds(ProjectId, keys, callSettings);
             return response.Keys.ToList();
         }
 
         /// <inheritdoc/>
-        public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null)
-            => LookupImpl(Client, ProjectId, GetReadOptions(readConsistency), keys);
+        public override IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+            => LookupImpl(Client, ProjectId, GetReadOptions(readConsistency), keys, callSettings);
 
         // Non-transactional mutations
 
         /// <inheritdoc/>
-        public override IReadOnlyList<Key> Insert(IEnumerable<Entity> entities) => Commit(entities, e => e.ToInsert(), nameof(entities));
+        public override IReadOnlyList<Key> Insert(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+            Commit(entities, e => e.ToInsert(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
-        public override IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities) => Commit(entities, e => e.ToUpsert(), nameof(entities));
+        public override IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+            Commit(entities, e => e.ToUpsert(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
-        public override IReadOnlyList<Key> Update(IEnumerable<Entity> entities) => Commit(entities, e => e.ToUpdate(), nameof(entities));
+        public override IReadOnlyList<Key> Update(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+            Commit(entities, e => e.ToUpdate(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
-        public override void Delete(IEnumerable<Entity> entities) => Commit(entities, e => e.ToDelete(), nameof(entities));
+        public override void Delete(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+            Commit(entities, e => e.ToDelete(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
-        public override void Delete(IEnumerable<Key> keys) => Commit(keys, e => e.ToDelete(), nameof(keys));
+        public override void Delete(IEnumerable<Key> keys, CallSettings callSettings = null) =>
+            Commit(keys, e => e.ToDelete(), nameof(keys), callSettings);
 
-        private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, string parameterName)
+        private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, string parameterName, CallSettings callSettings)
         {
             // TODO: Validation
-            var response = Client.Commit(ProjectId, Mode.NonTransactional, values.Select(conversion));
+            var response = Client.Commit(ProjectId, Mode.NonTransactional, values.Select(conversion), callSettings);
             return response.MutationResults.Select(mr => mr.Key).ToList();
         }
 
