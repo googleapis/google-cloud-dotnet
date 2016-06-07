@@ -87,16 +87,17 @@ namespace Google.Pubsub.V1.Snippets
             Assert.Equal("Simple text message", response.ReceivedMessages[0].Message.Attributes["description"]);
         }
 
-        // TODO: Convert these snippets into tests.
-
+        [Fact]
         public void ListSubscriptions()
         {
+            string projectId = _fixture.ProjectId;
+
             // Snippet: ListSubscriptions
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
-            string projectName = SubscriberClient.GetProjectName("PROJECT_ID");
+            string projectName = SubscriberClient.GetProjectName(projectId);
             foreach (Subscription subscription in client.ListSubscriptionsPageStream(projectName).Flatten())
             {
                 Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");
@@ -104,14 +105,17 @@ namespace Google.Pubsub.V1.Snippets
             // End snippet
         }
 
+        [Fact]
         public async Task ListSubscriptionsAsync()
         {
+            string projectId = _fixture.ProjectId;
+
             // Snippet: ListSubscriptionsAsync
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
-            string projectName = SubscriberClient.GetProjectName("{PROJECT_ID}");
+            string projectName = SubscriberClient.GetProjectName(projectId);
             IAsyncEnumerable<Subscription> subscriptions = client.ListSubscriptionsPageStreamAsync(projectName).Flatten();
             await subscriptions.ForEachAsync(subscription =>
             {
@@ -120,8 +124,15 @@ namespace Google.Pubsub.V1.Snippets
             // End snippet
         }
 
+        [Fact]
         public void CreateSubscription()
         {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            string subscriptionId = _fixture.CreateSubscriptionId();
+
+            PublisherClient.Create().CreateTopic(PublisherClient.GetTopicName(projectId, topicId));
+
             // Snippet: CreateSubscription
             SubscriberClient client = SubscriberClient.Create();
 
@@ -129,16 +140,23 @@ namespace Google.Pubsub.V1.Snippets
             // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
             // Similarly for the topic name:
             // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string subscriptionName = SubscriberClient.GetSubscriptionName("{PROJECT_ID}", "{SUBSCRIPTION_ID}");
-            string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
+            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+            string topicName = PublisherClient.GetTopicName(projectId, topicId);
             Subscription subscription = client.CreateSubscription(
                 subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
             Console.WriteLine($"Created {subscription.Name} subscribed to {subscription.Topic}");
             // End snippet
         }
 
+        [Fact]
         public async Task CreateSubscriptionAsync()
         {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            string subscriptionId = _fixture.CreateSubscriptionId();
+
+            PublisherClient.Create().CreateTopic(PublisherClient.GetTopicName(projectId, topicId));
+
             // Snippet: CreateSubscriptionAsync(string,string,*,*,CallSettings)
             SubscriberClient client = SubscriberClient.Create();
 
@@ -146,22 +164,34 @@ namespace Google.Pubsub.V1.Snippets
             // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
             // Similarly for the topic name:
             // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string subscriptionName = SubscriberClient.GetSubscriptionName("{PROJECT_ID}", "{SUBSCRIPTION_ID}");
-            string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
+            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+            string topicName = PublisherClient.GetTopicName(projectId, topicId);
             Subscription subscription = await client.CreateSubscriptionAsync(
                 subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
             Console.WriteLine($"Created {subscription.Name} subscribed to {subscription.Topic}");
             // End snippet
         }
 
+        [Fact]
         public void Pull()
         {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            string subscriptionId = _fixture.CreateSubscriptionId();
+
+            PublisherClient publisher = PublisherClient.Create();
+            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            publisher.CreateTopic(topicName);
+            PubsubMessage newMessage = new PubsubMessage { Data = ByteString.CopyFromUtf8("Simple text") };
+            SubscriberClient.Create().CreateSubscription(SubscriberClient.GetSubscriptionName(projectId, subscriptionId), topicName, null, 60);
+            publisher.Publish(topicName, new[] { newMessage });
+
             // Snippet: Pull
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use an existing subscription resource name:
             // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
-            string subscriptionName = SubscriberClient.GetSubscriptionName("{PROJECT_ID}", "{SUBSCRIPTION_ID}");
+            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
 
             PullResponse pullResponse = client.Pull(subscriptionName, returnImmediately: false, maxMessages: 100);
             foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
@@ -180,14 +210,26 @@ namespace Google.Pubsub.V1.Snippets
             // End snippet
         }
 
+        [Fact]
         public async Task PullAsync()
         {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            string subscriptionId = _fixture.CreateSubscriptionId();
+
+            PublisherClient publisher = PublisherClient.Create();
+            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            publisher.CreateTopic(topicName);
+            PubsubMessage newMessage = new PubsubMessage { Data = ByteString.CopyFromUtf8("Simple text") };
+            SubscriberClient.Create().CreateSubscription(SubscriberClient.GetSubscriptionName(projectId, subscriptionId), topicName, null, 60);
+            publisher.Publish(topicName, new[] { newMessage });
+
             // Snippet: PullAsync(string,*,*,CallSettings)
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use an existing subscription resource name:
             // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
-            string subscriptionName = SubscriberClient.GetSubscriptionName("{PROJECT_ID}", "{SUBSCRIPTION_ID}");
+            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
 
             PullResponse pullResponse = await client.PullAsync(subscriptionName, returnImmediately: false, maxMessages: 100);
             foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
