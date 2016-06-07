@@ -6,6 +6,7 @@ mono:
 install:
   - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
   - dnvm upgrade
+  - dnu commands install docfx
 
 # TODO: See if there's a better way of finding all test projects.
 # Note that we want to exclude integration tests; currently this is
@@ -13,10 +14,15 @@ install:
 # The Google* part of each line below is to allow us to have other
 # files (e.g. README.md) without that intefering.
 
+# Running the snippet builder just helps in terms of spotting broken
+# references; we don't actually use the output.
+
 script:
   - dnu restore
   - dnu build src/Google*
   - dnu build test/Google*
   - dnu build tools/Google*
   - dnu build snippets/Google*
+  - docfx docs/docfx.json metadata -f
+  - dnx -p tools/Google.GCloud.Tools.GenerateSnippetMarkdown run
   - for project in `find . -name '*.Tests'`; do dnx -p $project test; done
