@@ -38,25 +38,21 @@ feedback.
 
 A library for working with [Cloud Pub/sub](https://cloud.google.com/pubsub/).
 
-The API operates at three abstractions:
-
-- `SimplePubsub` (coming soon) is a simplified API making common
-scenarios extremely straightforward.
-- [`PublisherClient`](obj/api/Google.Pubsub.V1.PublisherClient.yml) and
+[`PublisherClient`](obj/api/Google.Pubsub.V1.PublisherClient.yml) and
 [`SubscriberClient`](obj/api/Google.Pubsub.V1.SubscriberClient.yml)
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.
-- [`IPublisherClient`](obj/api/Google.Pubsub.V1.Publisher.IPublisherClient.yml)
-and [`ISubscriberClient`](obj/api/Google.Pubsub.V1.Subscriber.ISubscriberClient.yml)
-expose the raw RPC API. Most clients will never need to use this
-abstraction, but it provides the most flexibility for via specific
-scenarios.
 
-Each abstraction is built over the lower-level one, and client code
-can mix and match abstractions very easily: you may be able to use
-`SimplePubsub` for most of your code, dropping down to
-`PublisherClient` and `SubscriberClient` occasionally, for example.
+### Installation
+
+Add the `Google.Pubsub.V1` NuGet package to your project in the
+normal way (for example by right-clicking on the project in Visual
+Studio and choosing "Manage NuGet Packages...").
+
+### Sample code
+
+[!code-cs[](obj/snippets/Google.Pubsub.V1.SubscriberClient.txt#Overview)]
 
 ## Google.Datastore.V1Beta3
 
@@ -73,7 +69,7 @@ Several custom conversions, additional constructors,
 factory methods (particularly on [`Filter`](obj/api/Google.Datastore.V1Beta3.Filter.yml)
 are provided to simplify working with the protobuf messages.
 
-Sample code:
+###Sample code
 
 [!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreDb.txt#Overview)]
 
@@ -97,8 +93,12 @@ Common operations are exposed via the
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.
 
-Query example:
+###Sample code
+
+Querying:
+
 [!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#QueryOverview)]
 
-Data insertion example:
+Data insertion:
+
 [!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#InsertOverview)]
