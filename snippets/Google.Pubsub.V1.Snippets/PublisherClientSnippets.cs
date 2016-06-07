@@ -19,62 +19,65 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-public class PublisherClientSnippets
+namespace Google.Pubsub.V1.Snippets
 {
-    public void ListTopics()
+    public class PublisherClientSnippets
     {
-        // Snippet: ListTopics
-        PublisherClient client = PublisherClient.Create();
-
-        // Alternative: use a known project resource name:
-        // projects/{PROJECT_ID}
-        string projectName = PublisherClient.GetProjectName("PROJECT_ID");
-        foreach (Topic topic in client.ListTopicsPageStream(projectName).Flatten())
+        public void ListTopics()
         {
-            Console.WriteLine(topic.Name);
+            // Snippet: ListTopics
+            PublisherClient client = PublisherClient.Create();
+
+            // Alternative: use a known project resource name:
+            // "projects/{PROJECT_ID}"
+            string projectName = PublisherClient.GetProjectName("PROJECT_ID");
+            foreach (Topic topic in client.ListTopicsPageStream(projectName).Flatten())
+            {
+                Console.WriteLine(topic.Name);
+            }
+            // End snippet
         }
-        // End snippet
-    }
 
-    public async Task ListTopicsAsync()
-    {
-        // Snippet: ListTopicsAsync
-        PublisherClient client = PublisherClient.Create();
-
-        // Alternative: use a known project resource name:
-        // projects/{PROJECT_ID}
-        string projectName = PublisherClient.GetProjectName("{PROJECT_ID}");
-        IAsyncEnumerable<Topic> topics = client.ListTopicsPageStreamAsync(projectName).Flatten();
-        await topics.ForEachAsync(topic =>
+        public async Task ListTopicsAsync()
         {
-            Console.WriteLine(topic.Name);
-        });
-        // End snippet
-    }
+            // Snippet: ListTopicsAsync
+            PublisherClient client = PublisherClient.Create();
 
-    public void CreateTopic()
-    {
-        // Snippet: CreateTopic
-        PublisherClient client = PublisherClient.Create();
+            // Alternative: use a known project resource name:
+            // "projects/{PROJECT_ID}"
+            string projectName = PublisherClient.GetProjectName("{PROJECT_ID}");
+            IAsyncEnumerable<Topic> topics = client.ListTopicsPageStreamAsync(projectName).Flatten();
+            await topics.ForEachAsync(topic =>
+            {
+                Console.WriteLine(topic.Name);
+            });
+            // End snippet
+        }
 
-        // Alternative: use a known topic resource name
-        // projects/{PROJECT_ID}/topics/{TOPIC_ID}
-        string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
-        Topic topic = client.CreateTopic(topicName);
-        Console.WriteLine($"Created {topic.Name}");
-        // End snippet
-    }
+        public void CreateTopic()
+        {
+            // Snippet: CreateTopic
+            PublisherClient client = PublisherClient.Create();
 
-    public async Task CreateTopicAsync()
-    {
-        // Snippet: CreateTopicAsync(string,CallSettings)
-        PublisherClient client = PublisherClient.Create();
+            // Alternative: use a known topic resource name
+            // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
+            string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
+            Topic topic = client.CreateTopic(topicName);
+            Console.WriteLine($"Created {topic.Name}");
+            // End snippet
+        }
 
-        // Alternative: use a known topic resource name
-        // projects/{PROJECT_ID}/topics/{TOPIC_ID}
-        string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
-        Topic topic = await client.CreateTopicAsync(topicName);
-        Console.WriteLine($"Created {topic.Name}");
-        // End snippet
+        public async Task CreateTopicAsync()
+        {
+            // Snippet: CreateTopicAsync(string,CallSettings)
+            PublisherClient client = PublisherClient.Create();
+
+            // Alternative: use a known topic resource name
+            // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
+            string topicName = PublisherClient.GetTopicName("{PROJECT_ID}", "{TOPIC_ID}");
+            Topic topic = await client.CreateTopicAsync(topicName);
+            Console.WriteLine($"Created {topic.Name}");
+            // End snippet
+        }
     }
 }
