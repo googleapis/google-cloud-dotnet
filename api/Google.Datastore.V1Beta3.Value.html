@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Value
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -77,6 +77,21 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Value</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
@@ -430,11 +445,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ArrayValue ArrayValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public ArrayValue ArrayValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -460,11 +471,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ByteString BlobValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public ByteString BlobValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -487,11 +494,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool BooleanValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public bool BooleanValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -513,10 +516,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -539,11 +539,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public double DoubleValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public double DoubleValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -561,19 +557,17 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_EntityValue" data-uid="Google.Datastore.V1Beta3.Value.EntityValue">EntityValue</h4>
-              <div class="markdown level1 summary"><p> An entity value.
- May have no key.
- May have a key with an incomplete key path.
- May have a reserved/read-only key.</p>
+              <div class="markdown level1 summary"><p> An entity value.</p>
+<ul>
+<li>May have no key.</li>
+<li>May have a key with an incomplete key path.</li>
+<li>May have a reserved/read-only key.</li>
+</ul>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Entity EntityValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Entity EntityValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -597,11 +591,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool ExcludeFromIndexes
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public bool ExcludeFromIndexes { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -624,11 +614,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LatLng GeoPointValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public LatLng GeoPointValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -645,42 +631,13 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_Value_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.Value.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
-{
-    get;
-}</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h4 id="Google_Datastore_V1Beta3_Value_IntegerValue" data-uid="Google.Datastore.V1Beta3.Value.IntegerValue">IntegerValue</h4>
               <div class="markdown level1 summary"><p> An integer value.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public long IntegerValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public long IntegerValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -703,11 +660,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Key KeyValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Key KeyValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -730,11 +683,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int Meaning
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public int Meaning { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -757,11 +706,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public NullValue NullValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public NullValue NullValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -783,10 +728,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageParser&lt;Value&gt; Parser
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;Value&gt; Parser { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -805,19 +747,13 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_StringValue" data-uid="Google.Datastore.V1Beta3.Value.StringValue">StringValue</h4>
               <div class="markdown level1 summary"><p> A UTF-8 encoded string value.
- When <code>exclude_from_indexes</code> is false (it is indexed) and meaning is not
- 2, may have at most 1500 bytes.
- When meaning is 2, may have at most 2083 bytes.
- Otherwise, may be set to at least 1,000,000 bytes</p>
+ When <code>exclude_from_indexes</code> is false (it is indexed) , may have at most 1500 bytes.
+ Otherwise, may be set to at least 1,000,000 bytes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string StringValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string StringValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -842,11 +778,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Timestamp TimestampValue
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Timestamp TimestampValue { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -868,10 +800,7 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Value.ValueTypeOneofCase ValueTypeCase
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Value.ValueTypeOneofCase ValueTypeCase { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -912,6 +841,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
               <h4 id="Google_Datastore_V1Beta3_Value_ClearValueType" data-uid="Google.Datastore.V1Beta3.Value.ClearValueType">ClearValueType()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -941,6 +872,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Datastore.V1Beta3.Value&gt;.Clone()</span></div>
               <h4 id="Google_Datastore_V1Beta3_Value_Equals_Google_Datastore_V1Beta3_Value_" data-uid="Google.Datastore.V1Beta3.Value.Equals(Google.Datastore.V1Beta3.Value)">Equals(Value)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -980,6 +913,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Datastore.V1Beta3.Value&gt;.Equals(Google.Datastore.V1Beta3.Value)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Value_Equals_System_Object_" data-uid="Google.Datastore.V1Beta3.Value.Equals(System.Object)">Equals(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1019,6 +954,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Value_ForNull" data-uid="Google.Datastore.V1Beta3.Value.ForNull">ForNull()</h4>
               <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> with a type of <code>NullValue</code>.</p>
 </div>
@@ -1065,6 +1002,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
               <h4 id="Google_Datastore_V1Beta3_Value_MergeFrom_Google_Datastore_V1Beta3_Value_" data-uid="Google.Datastore.V1Beta3.Value.MergeFrom(Google.Datastore.V1Beta3.Value)">MergeFrom(Value)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1089,6 +1028,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Datastore.V1Beta3.Value&gt;.MergeFrom(Google.Datastore.V1Beta3.Value)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Value_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Datastore.V1Beta3.Value.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1113,6 +1054,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Value_ToString" data-uid="Google.Datastore.V1Beta3.Value.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1135,6 +1078,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
               <h4 id="Google_Datastore_V1Beta3_Value_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Datastore.V1Beta3.Value.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1159,6 +1104,8 @@ public sealed class Value : IMessage&lt;Value&gt;, IMessage, IEquatable&lt;Value
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
               <h3 id="operators">Operators
               </h3>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Datastore_V1Beta3_ArrayValue" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Datastore.V1Beta3.ArrayValue">Explicit(Value to ArrayValue)</h4>
@@ -1338,7 +1285,7 @@ or has a kind of <code>NullValue</code>.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Protobuf_ByteString" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Protobuf.ByteString">Explicit(Value to ByteString)</h4>
-              <div class="markdown level1 summary"><p>Extracts the blob value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">Google.Protobuf.ByteString</span>.</p>
+              <div class="markdown level1 summary"><p>Extracts the blob value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">ByteString</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1397,7 +1344,7 @@ or has a kind of <code>NullValue</code>.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__Google_Protobuf_WellKnownTypes_Timestamp" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~Google.Protobuf.WellKnownTypes.Timestamp">Explicit(Value to Timestamp)</h4>
-              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span>.</p>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">Timestamp</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1637,7 +1584,7 @@ or has a kind of <code>NullValue</code>.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_DateTime" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.DateTime">Explicit(Value to DateTime)</h4>
-              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">System.DateTime</span>.</p>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">DateTime</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1673,7 +1620,7 @@ or has a kind of <code>NullValue</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.DateTime</span></td>
-                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">System.DateTime</span> with a <span class="xref">System.DateTimeKind</span> of <code>Utc</code>.</p>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">DateTime</span> with a <span class="xref">System.DateTimeKind</span> of <code>Utc</code>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1700,7 +1647,7 @@ or has a kind of <code>NullValue</code>.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_DateTimeOffset" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.DateTimeOffset">Explicit(Value to DateTimeOffset)</h4>
-              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">System.DateTimeOffset</span>.</p>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a <span class="xref">DateTimeOffset</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1736,7 +1683,7 @@ or has a kind of <code>NullValue</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.DateTimeOffset</span></td>
-                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">System.DateTimeOffset</span> with an offset of zero.</p>
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">DateTimeOffset</span> with an offset of zero.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1948,7 +1895,7 @@ or has a kind of <code>NullValue</code>.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Nullable_System_DateTime_" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Nullable{System.DateTime}">Explicit(Value to Nullable&lt;DateTime&gt;)</h4>
-              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a nullable <span class="xref">System.DateTime</span>.</p>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a nullable <span class="xref">DateTime</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1984,7 +1931,7 @@ or has a kind of <code>NullValue</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">System.DateTime</span> with a <span class="xref">System.DateTimeKind</span> of <code>Utc</code>,
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">DateTime</span> with a <span class="xref">System.DateTimeKind</span> of <code>Utc</code>,
 or null if <em>value</em> is null or has a kind of <code>NullValue</code>.</p>
 </td>
                   </tr>
@@ -2007,7 +1954,7 @@ or null if <em>value</em> is null or has a kind of <code>NullValue</code>.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Value_op_Explicit_Google_Datastore_V1Beta3_Value__System_Nullable_System_DateTimeOffset_" data-uid="Google.Datastore.V1Beta3.Value.op_Explicit(Google.Datastore.V1Beta3.Value)~System.Nullable{System.DateTimeOffset}">Explicit(Value to Nullable&lt;DateTimeOffset&gt;)</h4>
-              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a nullable <span class="xref">System.DateTimeOffset</span>.</p>
+              <div class="markdown level1 summary"><p>Extracts the timestamp value from a <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value">Value</a> as a nullable <span class="xref">DateTimeOffset</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2043,7 +1990,7 @@ or null if <em>value</em> is null or has a kind of <code>NullValue</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
-                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">System.DateTimeOffset</span> with an offset of zero,
+                    <td><p>The embedded <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_TimestampValue">TimestampValue</a> as a <span class="xref">DateTimeOffset</span> with an offset of zero,
 or null if <em>value</em> is null or has a kind of <code>NullValue</code>.</p>
 </td>
                   </tr>
@@ -3011,6 +2958,32 @@ reference of <em>value</em> is null.</p>
                   </tr>
                 </tbody>
               </table>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_Value_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.Value.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
             </article>
           </div>
           
@@ -3029,6 +3002,7 @@ reference of <em>value</em> is null.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

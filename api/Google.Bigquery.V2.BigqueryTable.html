@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigqueryTable
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -77,6 +77,27 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">BigqueryTable</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Bigquery.V2</h6>
               <h6><strong>Assembly</strong>:Google.Bigquery.V2.dll</h6>
               <h5 id="Google_Bigquery_V2_BigqueryTable_syntax">Syntax</h5>
@@ -95,10 +116,7 @@ client, allowing for simpler table-oriented operations.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string FullyQualifiedId
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string FullyQualifiedId { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -120,16 +138,9 @@ client, allowing for simpler table-oriented operations.</p>
 within this API.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_BigqueryTable_Reference_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The properties within the reference can be used to determine the project ID,
-dataset ID and table ID components.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public TableReference Reference
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public TableReference Reference { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -146,19 +157,17 @@ dataset ID and table ID components.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_BigqueryTable_Reference_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The properties within the reference can be used to determine the project ID,
+dataset ID and table ID components.</p>
+</div>
               <h4 id="Google_Bigquery_V2_BigqueryTable_Resource" data-uid="Google.Bigquery.V2.BigqueryTable.Resource">Resource</h4>
               <div class="markdown level1 summary"><p>The underlying REST-ful resource for the table.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_BigqueryTable_Resource_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The data within the resource may be incomplete, depending on how it was obtained.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Table Resource
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Table Resource { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -175,6 +184,9 @@ dataset ID and table ID components.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_BigqueryTable_Resource_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The data within the resource may be incomplete, depending on how it was obtained.</p>
+</div>
               <h4 id="Google_Bigquery_V2_BigqueryTable_Schema" data-uid="Google.Bigquery.V2.BigqueryTable.Schema">Schema</h4>
               <div class="markdown level1 summary"><p>The schema of this table, if known. Schemas are not retrieved when listing the tables within a dataset,
 so the value of this property can be <code>null</code>.</p>
@@ -182,10 +194,7 @@ so the value of this property can be <code>null</code>.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public TableSchema Schema
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public TableSchema Schema { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -378,18 +387,6 @@ foreach (BigqueryResult.Row row in result.Rows)
               <div class="markdown level1 summary"><p>Returns the fully qualified ID of the table in square brackets.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_BigqueryTable_ToString_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p><p>
-This is designed to facilitate constructing queries by simply
-including the table in the string.
-</p></p>
-<example>
-<pre><code>
-var table = client.GetTable(datasetId, tableId);
-var query = $"SELECT name, age from {table}";
-</code></pre>
-</example>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
@@ -409,9 +406,21 @@ var query = $"SELECT name, age from {table}";
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              <h5 id="Google_Bigquery_V2_BigqueryTable_ToString_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p><p>
+This is designed to facilitate constructing queries by simply
+including the table in the string.
+</p></p>
+<example>
+<pre><code>var table = client.GetTable(datasetId, tableId);
+var query = $"SELECT name, age from {table}";</code></pre>
+</example>
+</div>
               <h4 id="Google_Bigquery_V2_BigqueryTable_UploadCsv_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.UploadCsv(System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)">UploadCsv(Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of CSV data to this table.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -460,7 +469,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryTable_UploadJson_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_" data-uid="Google.Bigquery.V2.BigqueryTable.UploadJson(System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)">UploadJson(Stream, UploadJsonOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of JSON data to this table.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -525,6 +534,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface LoggingServiceV2.ILoggingServiceV2
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -69,18 +69,22 @@
               
               <h1 id="Google_Logging_V2_LoggingServiceV2_ILoggingServiceV2" data-uid="Google.Logging.V2.LoggingServiceV2.ILoggingServiceV2">Interface LoggingServiceV2.ILoggingServiceV2
               </h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p>Interface of server-side implementations of LoggingServiceV2</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Google.Logging.V2</h6>
               <h6><strong>Assembly</strong>:Google.Logging.V2.dll</h6>
               <h5 id="Google_Logging_V2_LoggingServiceV2_ILoggingServiceV2_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface ILoggingServiceV2</code></pre>
+                <pre><code class="lang-csharp hljs">[Obsolete(&quot;Service implementations should inherit from the generated abstract base class instead.&quot;)]
+public interface ILoggingServiceV2</code></pre>
               </div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Logging_V2_LoggingServiceV2_ILoggingServiceV2_DeleteLog_Google_Logging_V2_DeleteLogRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Logging.V2.LoggingServiceV2.ILoggingServiceV2.DeleteLog(Google.Logging.V2.DeleteLogRequest,Grpc.Core.ServerCallContext)">DeleteLog(DeleteLogRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes a log and all its log entries.
+ The log will reappear if it receives new entries.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -124,7 +128,10 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LoggingServiceV2_ILoggingServiceV2_ListLogEntries_Google_Logging_V2_ListLogEntriesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Logging.V2.LoggingServiceV2.ILoggingServiceV2.ListLogEntries(Google.Logging.V2.ListLogEntriesRequest,Grpc.Core.ServerCallContext)">ListLogEntries(ListLogEntriesRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists log entries.  Use this method to retrieve log entries from Cloud
+ Logging.  For ways to export log entries, see
+ <a href="/logging/docs/export">Exporting Logs</a>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -168,7 +175,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LoggingServiceV2_ILoggingServiceV2_ListMonitoredResourceDescriptors_Google_Logging_V2_ListMonitoredResourceDescriptorsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Logging.V2.LoggingServiceV2.ILoggingServiceV2.ListMonitoredResourceDescriptors(Google.Logging.V2.ListMonitoredResourceDescriptorsRequest,Grpc.Core.ServerCallContext)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists monitored resource descriptors that are used by Cloud Logging.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -212,7 +220,9 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LoggingServiceV2_ILoggingServiceV2_WriteLogEntries_Google_Logging_V2_WriteLogEntriesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Logging.V2.LoggingServiceV2.ILoggingServiceV2.WriteLogEntries(Google.Logging.V2.WriteLogEntriesRequest,Grpc.Core.ServerCallContext)">WriteLogEntries(WriteLogEntriesRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Writes log entries to Cloud Logging.
+ All log entries in Cloud Logging are written by this method.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -273,6 +283,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

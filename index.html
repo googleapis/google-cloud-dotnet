@@ -8,7 +8,7 @@
     <title>Introduction | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Introduction | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="">
+              <a class="navbar-brand" href="index.html">
                 <img id="logo" class="svg" src="logo.svg" alt="">
               </a>
             </div>
@@ -106,45 +106,85 @@ you would like to experiment with them, we would welcome your
 feedback.</p>
 <h2 id="google-pubsub-v1">Google.Pubsub.V1</h2>
 <p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/sub</a>.</p>
-<p>The API operates at three abstractions:</p>
-<ul>
-<li><code>SimplePubsub</code> (coming soon) is a simplified API making common
-scenarios extremely straightforward.</li>
-<li><a href="api/Google.Pubsub.V1.PublisherClient.html"><code>PublisherClient</code></a> and
+<p><a href="api/Google.Pubsub.V1.PublisherClient.html"><code>PublisherClient</code></a> and
 <a href="api/Google.Pubsub.V1.SubscriberClient.html"><code>SubscriberClient</code></a>
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
-simpler.</li>
-<li><a href="api/Google.Pubsub.V1.Publisher.IPublisherClient.html"><code>IPublisherClient</code></a>
-and <a href="api/Google.Pubsub.V1.Subscriber.ISubscriberClient.html"><code>ISubscriberClient</code></a>
-expose the raw RPC API. Most clients will never need to use this
-abstraction, but it provides the most flexibility for via specific
-scenarios.</li>
-</ul>
-<p>Each abstraction is built over the lower-level one, and client code
-can mix and match abstractions very easily: you may be able to use
-<code>SimplePubsub</code> for most of your code, dropping down to
-<code>PublisherClient</code> and <code>SubscriberClient</code> occasionally, for example.</p>
-<h2 id="google-datastore-v1beta3">Google.Datastore.V1Beta3</h2>
-<p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
-<p>Sample code:</p>
-<pre><code class="lang-cs">var client = DatastoreClient.Create();
+simpler.</p>
+<h3 id="installation">Installation</h3>
+<p>Add the <code>Google.Pubsub.V1</code> NuGet package to your project in the
+normal way (for example by right-clicking on the project in Visual
+Studio and choosing &quot;Manage NuGet Packages...&quot;).</p>
+<h3 id="sample-code">Sample code</h3>
+<pre><code class="lang-cs">// First create a topic.
+PublisherClient publisher = PublisherClient.Create();
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+publisher.CreateTopic(topicName);
 
-var keyFactory = new KeyFactory(projectId, namespaceId, &quot;message&quot;);
+// Subscribe to the topic.
+SubscriberClient subscriber = SubscriberClient.Create();
+string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
+
+// Publish a message to the topic.
+PubsubMessage message = new PubsubMessage
+{
+    // The data is any arbitrary ByteString. Here, we&#39;re using text.
+    Data = ByteString.CopyFromUtf8(&quot;Hello, Pubsub&quot;),
+    // The attributes provide metadata in a string-to-string dictionary.
+    Attributes =
+    {
+        { &quot;description&quot;, &quot;Simple text message&quot; }
+    }                
+};
+publisher.Publish(topicName, new[] { message });
+
+// Pull messages from the subscription. We&#39;re returning immediately, whether or not there
+// are messages; in other cases you&#39;ll want to allow the call to wait until a message arrives.
+PullResponse response = subscriber.Pull(subscriptionName, returnImmediately: true, maxMessages: 10);
+foreach (ReceivedMessage received in response.ReceivedMessages)
+{
+    PubsubMessage msg = received.Message;
+    Console.WriteLine($&quot;Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}&quot;);
+    Console.WriteLine($&quot;Text: &#39;{msg.Data.ToStringUtf8()}&#39;&quot;);
+}
+
+// Acknowledge that we&#39;ve received the messages. If we don&#39;t do this within 60 seconds (as specified
+// when we created the subscription) we&#39;ll receive the messages again when we next pull.
+subscriber.Acknowledge(subscriptionName, response.ReceivedMessages.Select(m =&gt; m.AckId));
+
+// Tidy up by deleting the subscription and the topic.
+subscriber.DeleteSubscription(subscriptionName);
+publisher.DeleteTopic(topicName);
+</code></pre><h2 id="google-datastore-v1beta3">Google.Datastore.V1Beta3</h2>
+<p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
+<p>The <a href="api/Google.Datastore.V1Beta3.DatastoreDb.html"><code>DatastoreDb</code></a>
+class is provided as a wrapper for
+<a href="api/Google.Datastore.V1Beta3.DatastoreClient.html"><code>DatastoreClient</code></a>,
+simplifying operations considerably by assuming all operations act
+on the same partition, and providing page streaming operations on
+structured query results.</p>
+<p>Several custom conversions, additional constructors,
+factory methods (particularly on <a href="api/Google.Datastore.V1Beta3.Filter.html"><code>Filter</code></a>
+are provided to simplify working with the protobuf messages.</p>
+<h3 id="sample-code-0">Sample code</h3>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+
+var keyFactory = db.CreateKeyFactory(&quot;message&quot;);
 var entity = new Entity
 {
     Key = keyFactory.CreateInsertionKey(),
     [&quot;created&quot;] = DateTime.UtcNow,
     [&quot;text&quot;] = &quot;Text of the message&quot;
 };
-var transaction = client.BeginTransaction(projectId).Transaction;
-var commitResponse = client.Commit(projectId, Mode.TRANSACTIONAL, transaction, new[] { entity.ToInsert() });
-var insertedKey = commitResponse.MutationResults[0].Key;
-</code></pre><p>See <a href="api/Google.Datastore.V1Beta3.DatastoreClient.html"><code>DatastoreClient</code></a>
-for details. Note that custom conversions are provided to make
-working with the <a href="api/Google.Datastore.V1Beta3.Value.html"><code>Value</code></a> type much
-simpler than it would otherwise be.</p>
-<h2 id="google-logging-v2">Google.Logging.V2</h2>
+using (DatastoreTransaction transaction = db.BeginTransaction())
+{
+    transaction.Insert(entity);
+    var commitResponse = transaction.Commit();
+    var insertedKey = commitResponse.MutationResults[0].Key;
+    Console.WriteLine($&quot;Inserted key: {insertedKey}&quot;);
+}
+</code></pre><h2 id="google-logging-v2">Google.Logging.V2</h2>
 <p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>
 <p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
 <p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html"><code>LoggingServiceV2Client</code></a>
@@ -157,7 +197,8 @@ for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a
 <a href="api/Google.Bigquery.V2.BigqueryClient.html"><code>BigqueryClient</code></a>
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.</p>
-<p>Query example:</p>
+<h3 id="sample-code-1">Sample code</h3>
+<p>Querying:</p>
 <pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
 var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
 
@@ -168,7 +209,7 @@ foreach (BigqueryResult.Row row in query.Rows)
 {
     Console.WriteLine($&quot;{row[&quot;title&quot;]}: {row[&quot;unique_words&quot;]}&quot;);
 }
-</code></pre><p>Data insertion example:</p>
+</code></pre><p>Data insertion:</p>
 <pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
 
 // Create the dataset if it doesn&#39;t exist.
@@ -209,6 +250,7 @@ table.Insert(new InsertRow
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

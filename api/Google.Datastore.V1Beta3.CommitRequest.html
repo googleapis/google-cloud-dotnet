@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CommitRequest
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -76,6 +76,21 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">CommitRequest</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
@@ -218,35 +233,7 @@ public sealed class CommitRequest : IMessage&lt;CommitRequest&gt;, IMessage, IEq
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
-{
-    get;
-}</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1Beta3_CommitRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.CommitRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -269,11 +256,7 @@ public sealed class CommitRequest : IMessage&lt;CommitRequest&gt;, IMessage, IEq
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public CommitRequest.Types.Mode Mode
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public CommitRequest.Types.Mode Mode { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -308,10 +291,7 @@ entity.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Mutation&gt; Mutations
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Mutation&gt; Mutations { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -333,10 +313,7 @@ entity.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageParser&lt;CommitRequest&gt; Parser
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;CommitRequest&gt; Parser { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -354,16 +331,12 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_ProjectId" data-uid="Google.Datastore.V1Beta3.CommitRequest.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p> Project ID against which to make the request.</p>
+              <div class="markdown level1 summary"><p> The ID of the project against which to make the request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ProjectId
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string ProjectId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -381,16 +354,14 @@ entity.</p>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_Transaction" data-uid="Google.Datastore.V1Beta3.CommitRequest.Transaction">Transaction</h4>
-              <div class="markdown level1 summary"><p> The transaction in which to write.</p>
+              <div class="markdown level1 summary"><p> The identifier of the transaction associated with the commit. A
+ transaction identifier is returned by a call to
+ [BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ByteString Transaction
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public ByteString Transaction { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -412,10 +383,7 @@ entity.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public CommitRequest.TransactionSelectorOneofCase TransactionSelectorCase
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public CommitRequest.TransactionSelectorOneofCase TransactionSelectorCase { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -456,6 +424,8 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_ClearTransactionSelector" data-uid="Google.Datastore.V1Beta3.CommitRequest.ClearTransactionSelector">ClearTransactionSelector()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -485,6 +455,8 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Datastore.V1Beta3.CommitRequest&gt;.Clone()</span></div>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_Equals_Google_Datastore_V1Beta3_CommitRequest_" data-uid="Google.Datastore.V1Beta3.CommitRequest.Equals(Google.Datastore.V1Beta3.CommitRequest)">Equals(CommitRequest)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -524,6 +496,8 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Datastore.V1Beta3.CommitRequest&gt;.Equals(Google.Datastore.V1Beta3.CommitRequest)</span></div>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_Equals_System_Object_" data-uid="Google.Datastore.V1Beta3.CommitRequest.Equals(System.Object)">Equals(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -563,6 +537,8 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_GetHashCode" data-uid="Google.Datastore.V1Beta3.CommitRequest.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -585,6 +561,8 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_MergeFrom_Google_Datastore_V1Beta3_CommitRequest_" data-uid="Google.Datastore.V1Beta3.CommitRequest.MergeFrom(Google.Datastore.V1Beta3.CommitRequest)">MergeFrom(CommitRequest)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -609,6 +587,8 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Datastore.V1Beta3.CommitRequest&gt;.MergeFrom(Google.Datastore.V1Beta3.CommitRequest)</span></div>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Datastore.V1Beta3.CommitRequest.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -633,6 +613,8 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_ToString" data-uid="Google.Datastore.V1Beta3.CommitRequest.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -655,6 +637,8 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
               <h4 id="Google_Datastore_V1Beta3_CommitRequest_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Datastore.V1Beta3.CommitRequest.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -679,6 +663,34 @@ entity.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_CommitRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.CommitRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
             </article>
           </div>
           
@@ -697,6 +709,7 @@ entity.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

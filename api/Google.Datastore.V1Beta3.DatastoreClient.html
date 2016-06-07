@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -79,6 +79,30 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">DatastoreClient</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
               <h5 id="Google_Datastore_V1Beta3_DatastoreClient_syntax">Syntax</h5>
@@ -93,10 +117,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -117,16 +138,9 @@
               <div class="markdown level1 summary"><p>The default Datastore scopes</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreClient_DefaultScopes_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default Datastore scopes are:</p>
-<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform">https://www.googleapis.com/auth/cloud-platform</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/datastore">https://www.googleapis.com/auth/datastore</a>&quot;</li></ul>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -143,16 +157,17 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreClient_DefaultScopes_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default Datastore scopes are:</p>
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform">https://www.googleapis.com/auth/cloud-platform</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/datastore">https://www.googleapis.com/auth/datastore</a>&quot;</li></ul>
+</div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreClient_GrpcClient" data-uid="Google.Datastore.V1Beta3.DatastoreClient.GrpcClient">GrpcClient</h4>
               <div class="markdown level1 summary"><p>The underlying GRPC Datastore client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Datastore.IDatastoreClient GrpcClient
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Datastore.DatastoreClient GrpcClient { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +179,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient">Datastore.IDatastoreClient</a></td>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Datastore.DatastoreClient.html#Google_Datastore_V1Beta3_Datastore_DatastoreClient">Datastore.DatastoreClient</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -175,7 +190,15 @@
               <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
 before it is inserted.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;message&quot;);
+AllocateIdsResponse response = client.AllocateIds(projectId,
+    new[] { keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey() }
+);
+Entity entity1 = new Entity { Key = response.Keys[0], [&quot;text&quot;] = &quot;Text 1&quot; };
+Entity entity2 = new Entity { Key = response.Keys[1], [&quot;text&quot;] = &quot;Text 2&quot; };
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual AllocateIdsResponse AllocateIds(string projectId, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -315,7 +338,7 @@ No key may be reserved/read-only.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -456,7 +479,7 @@ No key may be reserved/read-only.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -481,33 +504,7 @@ No key may be reserved/read-only.</p>
               <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
 entities.</p>
 </div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
-KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;book&quot;);
-Entity book1 = new Entity
-{
-    Key = keyFactory.CreateInsertionKey(),
-    [&quot;author&quot;] = &quot;Harper Lee&quot;,
-    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
-};
-Entity book2 = new Entity
-{
-    Key = keyFactory.CreateInsertionKey(),
-    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
-    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
-    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
-};
-ByteString transaction = client.BeginTransaction(projectId).Transaction;
-CommitResponse response = client.Commit(
-    projectId,
-    Mode.TRANSACTIONAL,
-    transaction,
-    new[] { book1.ToInsert(), book2.ToInsert() });
-
-IEnumerable&lt;Key&gt; insertedKeys = response.MutationResults.Select(r =&gt; r.Key);
-Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
-</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -790,7 +787,7 @@ entity.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -932,7 +929,7 @@ entity.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -976,7 +973,7 @@ necessary.</p>
                   <tr>
                     <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <span class="xref">Google.Api.Gax.ServiceEndpoint</span>.</p>
+                    <td><p>Optional <span class="xref">ServiceEndpoint</span>.</p>
 </td>
                   </tr>
                   <tr>
@@ -1024,7 +1021,7 @@ necessary.</p>
                   <tr>
                     <td><span class="xref">Grpc.Core.Channel</span></td>
                     <td><em>channel</em></td>
-                    <td><p>The <span class="xref">Grpc.Core.Channel</span> for remote operations. Must not be null.</p>
+                    <td><p>The <span class="xref">Channel</span> for remote operations. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -1074,7 +1071,7 @@ necessary.</p>
                   <tr>
                     <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <span class="xref">Google.Api.Gax.ServiceEndpoint</span>.</p>
+                    <td><p>Optional <span class="xref">ServiceEndpoint</span>.</p>
 </td>
                   </tr>
                   <tr>
@@ -1112,7 +1109,7 @@ Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
 DatastoreClient client = DatastoreClient.Create();
 LookupResponse response = client.Lookup(
     projectId,
-    new ReadOptions { ReadConsistency = ReadConsistency.STRONG },
+    new ReadOptions { ReadConsistency = ReadConsistency.Strong },
     new[] { key1, key2 });
 Console.WriteLine($&quot;Found: {response.Found.Count}&quot;);
 Console.WriteLine($&quot;Deferred: {response.Deferred.Count}&quot;);
@@ -1267,7 +1264,7 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1429,7 +1426,7 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1517,23 +1514,14 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">    DatastoreClient client = DatastoreClient.Create();
-    Query query = new Query
+    Query query = new Query(&quot;book&quot;)
     {
-        Kind = { new KindExpression { Name = kind } },
-        Filter = new Filter
-        {
-            PropertyFilter = new PropertyFilter
-            {
-                Property = new PropertyReference(&quot;author&quot;),
-                Op = Operator.EQUAL,
-                Value = &quot;Jane Austen&quot;
-            }
-        }
+        Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
     };
     RunQueryResponse response = client.RunQuery(
-        projectId,
+        projectId, 
         partitionId,
-        new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+        new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
         query);
 
     foreach (EntityResult result in response.Batch.EntityResults)
@@ -1553,7 +1541,6 @@ public void GqlQuery()
 {
     string projectId = _fixture.ProjectId;
     PartitionId partitionId = _fixture.PartitionId;
-    string kind = _fixture.BookKind;
 
     // Snippet: RunQuery(string,PartitionId,ReadOptions,GqlQuery,CallSettings)
     DatastoreClient client = DatastoreClient.Create();
@@ -1565,7 +1552,7 @@ public void GqlQuery()
     RunQueryResponse response = client.RunQuery(
         projectId,
         partitionId,
-        new ReadOptions { ReadConsistency = ReadConsistency.EVENTUAL },
+        new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
         gqlQuery);
 
     foreach (EntityResult result in response.Batch.EntityResults)
@@ -1735,7 +1722,7 @@ public void GqlQuery()
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1861,7 +1848,7 @@ public void GqlQuery()
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1888,11 +1875,6 @@ and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_D
 created are not affected.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Datastore_V1Beta3_DatastoreSettings_">Create(ServiceEndpoint, DatastoreSettings)</a>
-and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Datastore_V1Beta3_DatastoreSettings_">CreateAsync(ServiceEndpoint, DatastoreSettings)</a> will create new channels, which could
-in turn be shut down by another call to this method.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
@@ -1913,6 +1895,11 @@ in turn be shut down by another call to this method.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Datastore_V1Beta3_DatastoreSettings_">Create(ServiceEndpoint, DatastoreSettings)</a>
+and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Datastore_V1Beta3_DatastoreSettings_">CreateAsync(ServiceEndpoint, DatastoreSettings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
             </article>
           </div>
           
@@ -1931,6 +1918,7 @@ in turn be shut down by another call to this method.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

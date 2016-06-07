@@ -70,10 +70,12 @@ $(function () {
   (function () {
     var query;
     var relHref = $("meta[property='docfx\\:rel']").attr("content");
-    var search = searchFactory();
-    search();
-    highlightKeywords();
-    addSearchEvent();
+    if (relHref) {
+      var search = searchFactory();
+      search();
+      highlightKeywords();
+      addSearchEvent();
+    }
 
     // Search factory
     function searchFactory() {
@@ -373,6 +375,9 @@ $(function () {
 
     function registerTocEvents() {
       $('.toc .nav > li > .expand-stub').click(function (e) {
+        $(e.target).parent().toggleClass(expanded);
+      });
+      $('.toc .nav > li > .expand-stub + a:not([href])').click(function (e) {
         $(e.target).parent().toggleClass(expanded);
       });
       $('#toc_filter_input').on('input', function (e) {

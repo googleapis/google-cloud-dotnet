@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum CommitRequest.Types.Mode
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -69,7 +69,7 @@
               
               <h1 id="Google_Datastore_V1Beta3_CommitRequest_Types_Mode" data-uid="Google.Datastore.V1Beta3.CommitRequest.Types.Mode">Enum CommitRequest.Types.Mode
               </h1>
-              <div class="markdown level0 summary"><p> Commit modes.</p>
+              <div class="markdown level0 summary"><p> The modes available for commits.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
@@ -80,13 +80,14 @@
               </div>
               <h3 id="fields">Fields
               </h3>
-              <h4 id="Google_Datastore_V1Beta3_CommitRequest_Types_Mode_MODE_UNSPECIFIED" data-uid="Google.Datastore.V1Beta3.CommitRequest.Types.Mode.MODE_UNSPECIFIED">MODE_UNSPECIFIED</h4>
-              <div class="markdown level1 summary"><p> Unspecified.</p>
+              <h4 id="Google_Datastore_V1Beta3_CommitRequest_Types_Mode_NonTransactional" data-uid="Google.Datastore.V1Beta3.CommitRequest.Types.Mode.NonTransactional">NonTransactional</h4>
+              <div class="markdown level1 summary"><p> Non-transactional: The mutations may not apply as all or none.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MODE_UNSPECIFIED = 0</code></pre>
+                <pre><code class="lang-csharp hljs">[OriginalName(&quot;NON_TRANSACTIONAL&quot;)]
+NonTransactional = 2</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -103,13 +104,15 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_CommitRequest_Types_Mode_NON_TRANSACTIONAL" data-uid="Google.Datastore.V1Beta3.CommitRequest.Types.Mode.NON_TRANSACTIONAL">NON_TRANSACTIONAL</h4>
-              <div class="markdown level1 summary"><p> Non-transactional.</p>
+              <h4 id="Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Transactional" data-uid="Google.Datastore.V1Beta3.CommitRequest.Types.Mode.Transactional">Transactional</h4>
+              <div class="markdown level1 summary"><p> Transactional: The mutations are either all applied, or none are applied.
+ Learn about transactions <a href="https://cloud.google.com/datastore/docs/concepts/transactions">here</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">NON_TRANSACTIONAL = 2</code></pre>
+                <pre><code class="lang-csharp hljs">[OriginalName(&quot;TRANSACTIONAL&quot;)]
+Transactional = 1</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -126,13 +129,14 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_CommitRequest_Types_Mode_TRANSACTIONAL" data-uid="Google.Datastore.V1Beta3.CommitRequest.Types.Mode.TRANSACTIONAL">TRANSACTIONAL</h4>
-              <div class="markdown level1 summary"><p> Transactional.</p>
+              <h4 id="Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Unspecified" data-uid="Google.Datastore.V1Beta3.CommitRequest.Types.Mode.Unspecified">Unspecified</h4>
+              <div class="markdown level1 summary"><p> Unspecified. This value must not be used.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">TRANSACTIONAL = 1</code></pre>
+                <pre><code class="lang-csharp hljs">[OriginalName(&quot;MODE_UNSPECIFIED&quot;)]
+Unspecified = 0</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -167,6 +171,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

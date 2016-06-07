@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigqueryClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -79,6 +79,30 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">BigqueryClient</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Bigquery.V2</h6>
               <h6><strong>Assembly</strong>:Google.Bigquery.V2.dll</h6>
               <h5 id="Google_Bigquery_V2_BigqueryClient_syntax">Syntax</h5>
@@ -90,7 +114,7 @@
 This abstract class is provided to enable testability while permitting
 additional operations to be added in the future. See <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(String, GoogleCredential)</a>
 and <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">CreateAsync(String, GoogleCredential)</a> to construct instances; alternatively, you can
-construct a <a class="xref" href="Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl">BigqueryClientImpl</a> directly from a <span class="xref">Google.Apis.Bigquery.v2.BigqueryService</span>.
+construct a <a class="xref" href="Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl">BigqueryClientImpl</a> directly from a <span class="xref">BigqueryService</span>.
 </p>
 <p>
 All instance methods declared in this class are virtual, with an implementation which simply
@@ -106,10 +130,7 @@ project to be specified implicitly supply this ID.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string ProjectId
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual string ProjectId { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -130,18 +151,9 @@ project to be specified implicitly supply this ID.</p>
               <div class="markdown level1 summary"><p>The underlying Bigquery service object used by this client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_BigqueryClient_Service_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a> class only provides convenience operations built on top of
-an existing service object. Any more complex operations which are not supported by this wrapper may wish
-to use the same service object as the wrapper, in order to take advantage of its configuration (for authentication,
-application naming etc).</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual BigqueryService Service
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual BigqueryService Service { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -158,6 +170,12 @@ application naming etc).</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_Service_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a> class only provides convenience operations built on top of
+an existing service object. Any more complex operations which are not supported by this wrapper may wish
+to use the same service object as the wrapper, in order to take advantage of its configuration (for authentication,
+application naming etc).</p>
+</div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.CancelJob(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.CancelJobOptions)">CancelJob(JobReference, CancelJobOptions)</h4>
@@ -210,7 +228,7 @@ application naming etc).</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_Google_Bigquery_V2_CancelJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.CancelJob(System.String,Google.Bigquery.V2.CancelJobOptions)">CancelJob(String, CancelJobOptions)</h4>
               <div class="markdown level1 summary"><p>Cancels the job with the specified ID in this client&#39;s project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_">CancelJob(JobReference, CancelJobOptions)</a>.</p>
+This method just creates a <span class="xref">JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_">CancelJob(JobReference, CancelJobOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -259,7 +277,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobRe
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_System_String_Google_Bigquery_V2_CancelJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.CancelJob(System.String,System.String,Google.Bigquery.V2.CancelJobOptions)">CancelJob(String, String, CancelJobOptions)</h4>
               <div class="markdown level1 summary"><p>Cancels the job with the specified project ID and job ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_">CancelJob(JobReference, CancelJobOptions)</a>.</p>
+This method just creates a <span class="xref">JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_">CancelJob(JobReference, CancelJobOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -317,9 +335,6 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobRe
 no credentials are specified.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static BigqueryClient Create(string projectId, GoogleCredential credential = null)</code></pre>
@@ -342,7 +357,7 @@ no credentials are specified.</p>
                   <tr>
                     <td><span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span></td>
                     <td><em>credential</em></td>
-                    <td><p>Optional <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span>.</p>
+                    <td><p>Optional <span class="xref">GoogleCredential</span>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -363,14 +378,14 @@ no credentials are specified.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
+</div>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateAsync(System.String,Google.Apis.Auth.OAuth2.GoogleCredential)">CreateAsync(String, GoogleCredential)</h4>
               <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>, using application default credentials if
 no credentials are specified.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static Task&lt;BigqueryClient&gt; CreateAsync(string projectId, GoogleCredential credential = null)</code></pre>
@@ -393,7 +408,7 @@ no credentials are specified.</p>
                   <tr>
                     <td><span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span></td>
                     <td><em>credential</em></td>
-                    <td><p>Optional <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential</span>.</p>
+                    <td><p>Optional <span class="xref">GoogleCredential</span>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -414,6 +429,9 @@ no credentials are specified.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The credentials are scoped as necessary.</p>
+</div>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.CreateDatasetOptions)">CreateDataset(DatasetReference, CreateDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Creates the specified dataset.</p>
 </div>
@@ -464,7 +482,7 @@ no credentials are specified.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CreateDataset_System_String_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String,Google.Bigquery.V2.CreateDatasetOptions)">CreateDataset(String, CreateDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a dataset with the specified ID in this client&#39;s project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_">CreateDataset(DatasetReference, CreateDatasetOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_">CreateDataset(DatasetReference, CreateDatasetOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
@@ -517,7 +535,7 @@ BigqueryDataset dataset = client.CreateDataset(datasetId);
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CreateDataset_System_String_System_String_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String,System.String,Google.Bigquery.V2.CreateDatasetOptions)">CreateDataset(String, String, CreateDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a dataset with the specified ID in specified project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_">CreateDataset(DatasetReference, CreateDatasetOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_">CreateDataset(DatasetReference, CreateDatasetOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -699,7 +717,7 @@ the results of the query.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CreateTable_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateTable(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.CreateTableOptions)">CreateTable(String, String, TableSchema, CreateTableOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a table within this project, specified by a dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_">CreateTable(TableReference, TableSchema, CreateTableOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_">CreateTable(TableReference, TableSchema, CreateTableOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
@@ -770,7 +788,7 @@ BigqueryTable table = client.CreateTable(datasetId, tableId, schema);
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_CreateTable_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.CreateTable(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.CreateTableOptions)">CreateTable(String, String, String, TableSchema, CreateTableOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a table specified by a project ID, dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_">CreateTable(TableReference, TableSchema, CreateTableOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_">CreateTable(TableReference, TableSchema, CreateTableOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -869,7 +887,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_Google_Bigquery_V2_DeleteDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String,Google.Bigquery.V2.DeleteDatasetOptions)">DeleteDataset(String, DeleteDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes the specified dataset within this client&#39;s project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_">DeleteDataset(DatasetReference, DeleteDatasetOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_">DeleteDataset(DatasetReference, DeleteDatasetOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -902,7 +920,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Datas
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_System_String_Google_Bigquery_V2_DeleteDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String,System.String,Google.Bigquery.V2.DeleteDatasetOptions)">DeleteDataset(String, String, DeleteDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes the specified dataset within the given project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_">DeleteDataset(DatasetReference, DeleteDatasetOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_">DeleteDataset(DatasetReference, DeleteDatasetOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -973,7 +991,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Datas
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String,System.String,Google.Bigquery.V2.DeleteTableOptions)">DeleteTable(String, String, DeleteTableOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a table within this project specified by dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_DeleteTableOptions_">DeleteTable(TableReference, DeleteTableOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_DeleteTableOptions_">DeleteTable(TableReference, DeleteTableOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1012,7 +1030,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String,System.String,System.String,Google.Bigquery.V2.DeleteTableOptions)">DeleteTable(String, String, String, DeleteTableOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes a table specified by project ID, dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_DeleteTableOptions_">DeleteTable(TableReference, DeleteTableOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_DeleteTableOptions_">DeleteTable(TableReference, DeleteTableOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1165,7 +1183,7 @@ foreach (var row in result.Rows)
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetDataset_System_String_Google_Bigquery_V2_GetDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDataset(System.String,Google.Bigquery.V2.GetDatasetOptions)">GetDataset(String, GetDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves a dataset within this client&#39;s project given the dataset ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_">GetDataset(DatasetReference, GetDatasetOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_">GetDataset(DatasetReference, GetDatasetOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1214,7 +1232,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Datas
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetDataset_System_String_System_String_Google_Bigquery_V2_GetDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDataset(System.String,System.String,Google.Bigquery.V2.GetDatasetOptions)">GetDataset(String, String, GetDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves a dataset given a project ID and dataset ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_">GetDataset(DatasetReference, GetDatasetOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_">GetDataset(DatasetReference, GetDatasetOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1268,7 +1286,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Datas
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetDatasetReference_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String)">GetDatasetReference(String)</h4>
-              <div class="markdown level1 summary"><p>Creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> from the given dataset ID,
+              <div class="markdown level1 summary"><p>Creates a <span class="xref">DatasetReference</span> from the given dataset ID,
 using this client&#39;s project ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -1305,13 +1323,13 @@ using this client&#39;s project ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span></td>
-                    <td><p>A <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> representing the requested dataset.</p>
+                    <td><p>A <span class="xref">DatasetReference</span> representing the requested dataset.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetDatasetReference_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String,System.String)">GetDatasetReference(String, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> from the given project ID and dataset ID.</p>
+              <div class="markdown level1 summary"><p>Creates a <span class="xref">DatasetReference</span> from the given project ID and dataset ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1353,7 +1371,7 @@ using this client&#39;s project ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span></td>
-                    <td><p>A <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> representing the requested dataset.</p>
+                    <td><p>A <span class="xref">DatasetReference</span> representing the requested dataset.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1408,7 +1426,7 @@ using this client&#39;s project ID.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetJob_System_String_Google_Bigquery_V2_GetJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetJob(System.String,Google.Bigquery.V2.GetJobOptions)">GetJob(String, GetJobOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves the job with the specified ID within this client&#39;s project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_">GetJob(JobReference, GetJobOptions)</a>.</p>
+This method just creates a <span class="xref">JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_">GetJob(JobReference, GetJobOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1457,7 +1475,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobRe
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetJob_System_String_System_String_Google_Bigquery_V2_GetJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetJob(System.String,System.String,Google.Bigquery.V2.GetJobOptions)">GetJob(String, String, GetJobOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves a job given a project ID and job ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_">GetJob(JobReference, GetJobOptions)</a>.</p>
+This method just creates a <span class="xref">JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_">GetJob(JobReference, GetJobOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1511,7 +1529,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobRe
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String)">GetJobReference(String)</h4>
-              <div class="markdown level1 summary"><p>Creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> from the given job ID,
+              <div class="markdown level1 summary"><p>Creates a <span class="xref">JobReference</span> from the given job ID,
 using this client&#39;s project ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -1548,13 +1566,13 @@ using this client&#39;s project ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span></td>
-                    <td><p>A <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> representing the requested job.</p>
+                    <td><p>A <span class="xref">JobReference</span> representing the requested job.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String,System.String)">GetJobReference(String, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> from the given project ID and job ID.</p>
+              <div class="markdown level1 summary"><p>Creates a <span class="xref">JobReference</span> from the given project ID and job ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1596,7 +1614,7 @@ using this client&#39;s project ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span></td>
-                    <td><p>A <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> representing the requested job.</p>
+                    <td><p>A <span class="xref">JobReference</span> representing the requested job.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1657,7 +1675,7 @@ using this client&#39;s project ID.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_System_String_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)">GetOrCreateDataset(String, GetDatasetOptions, CreateDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Attempts to fetch the specified dataset within this client&#39;s project, creating it if it doesn&#39;t exist.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_">GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_">GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1712,7 +1730,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Datas
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_System_String_System_String_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String,System.String,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)">GetOrCreateDataset(String, String, GetDatasetOptions, CreateDatasetOptions)</h4>
               <div class="markdown level1 summary"><p>Attempts to fetch the specified dataset within the given project, creating it if it doesn&#39;t exist.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_">GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_">GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1833,7 +1851,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Datas
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)">GetOrCreateTable(String, String, TableSchema, GetTableOptions, CreateTableOptions)</h4>
               <div class="markdown level1 summary"><p>Attempts to fetch the specified table within this client&#39;s project, creating it if it doesn&#39;t exist.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_">GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_">GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1900,7 +1918,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)">GetOrCreateTable(String, String, String, TableSchema, GetTableOptions, CreateTableOptions)</h4>
               <div class="markdown level1 summary"><p>Attempts to fetch a table specified by project ID, dataset ID and table ID, creating it if it doesn&#39;t exist.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_">GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_">GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1972,7 +1990,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetProjectReference_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetProjectReference(System.String)">GetProjectReference(String)</h4>
-              <div class="markdown level1 summary"><p>Creates a <span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span> from the given project ID.</p>
+              <div class="markdown level1 summary"><p>Creates a <span class="xref">ProjectReference</span> from the given project ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2008,7 +2026,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span></td>
-                    <td><p>A <span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span> representing the requested project.</p>
+                    <td><p>A <span class="xref">ProjectReference</span> representing the requested project.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2063,7 +2081,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetQueryResults_System_String_Google_Bigquery_V2_GetQueryResultsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetQueryResults(System.String,Google.Bigquery.V2.GetQueryResultsOptions)">GetQueryResults(String, GetQueryResultsOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves the results of the query job with specified by project ID and job ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_">GetQueryResults(JobReference, GetQueryResultsOptions)</a>.</p>
+This method just creates a <span class="xref">JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_">GetQueryResults(JobReference, GetQueryResultsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2112,7 +2130,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobRe
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetQueryResults_System_String_System_String_Google_Bigquery_V2_GetQueryResultsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetQueryResults(System.String,System.String,Google.Bigquery.V2.GetQueryResultsOptions)">GetQueryResults(String, String, GetQueryResultsOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves the results of the query job with the specified ID in this clients project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_">GetQueryResults(JobReference, GetQueryResultsOptions)</a>.</p>
+This method just creates a <span class="xref">JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_">GetQueryResults(JobReference, GetQueryResultsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2215,7 +2233,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobRe
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_Google_Bigquery_V2_GetTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTable(System.String,System.String,Google.Bigquery.V2.GetTableOptions)">GetTable(String, String, GetTableOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves a table within this client&#39;s project given the dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_GetTableOptions_">GetTable(TableReference, GetTableOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_GetTableOptions_">GetTable(TableReference, GetTableOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2270,7 +2288,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_System_String_Google_Bigquery_V2_GetTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTable(System.String,System.String,System.String,Google.Bigquery.V2.GetTableOptions)">GetTable(String, String, String, GetTableOptions)</h4>
               <div class="markdown level1 summary"><p>Retrieves a table given a project ID, dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_GetTableOptions_">GetTable(TableReference, GetTableOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_GetTableOptions_">GetTable(TableReference, GetTableOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2330,7 +2348,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetTableReference_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String,System.String)">GetTableReference(String, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> from the given dataset ID and table ID,
+              <div class="markdown level1 summary"><p>Creates a <span class="xref">TableReference</span> from the given dataset ID and table ID,
 using this client&#39;s project ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -2373,13 +2391,13 @@ using this client&#39;s project ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span></td>
-                    <td><p>A <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> representing the requested table.</p>
+                    <td><p>A <span class="xref">TableReference</span> representing the requested table.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_GetTableReference_System_String_System_String_System_String_" data-uid="Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String,System.String,System.String)">GetTableReference(String, String, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> from the given project ID, dataset ID and table ID.</p>
+              <div class="markdown level1 summary"><p>Creates a <span class="xref">TableReference</span> from the given project ID, dataset ID and table ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2427,14 +2445,14 @@ using this client&#39;s project ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span></td>
-                    <td><p>A <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> representing the requested table.</p>
+                    <td><p>A <span class="xref">TableReference</span> representing the requested table.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)">Insert(TableReference, InsertRow, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts a single row of data into a table.
-This method just creates an array with the single element and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>.</p>
+This method just creates an array with the single element and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable<insertrow>, InsertOptions)</insertrow></a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2473,13 +2491,9 @@ This method just creates an array with the single element and delegates to <a cl
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow___" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,Google.Bigquery.V2.InsertRow[])">Insert(TableReference, InsertRow[])</h4>
               <div class="markdown level1 summary"><p>Inserts all the specified rows into a table.
-This method just delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>.</p>
+This method just delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable<insertrow>, InsertOptions)</insertrow></a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Insert(TableReference tableReference, params InsertRow[] rows)</code></pre>
@@ -2508,6 +2522,10 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable<insertrow>, InsertOptions)</insertrow></a>.</p>
+</div>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)">Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts all the given rows of data into a table.</p>
 </div>
@@ -2548,7 +2566,7 @@ To specify options, create a collection or array explicitly, and call <a class="
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)">Insert(String, String, InsertRow, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts a single row of data into a table in this client&#39;s project specified by dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_">Insert(TableReference, InsertRow, InsertOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_">Insert(TableReference, InsertRow, InsertOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2593,7 +2611,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_Google_Bigquery_V2_InsertRow___" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,Google.Bigquery.V2.InsertRow[])">Insert(String, String, InsertRow[])</h4>
               <div class="markdown level1 summary"><p>Inserts all the specified rows into a table in this client&#39;s project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow___">Insert(TableReference, InsertRow[])</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow___">Insert(TableReference, InsertRow[])</a>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
@@ -2615,10 +2633,6 @@ InsertRow row2 = new InsertRow(&quot;row2&quot;)
 };
 client.Insert(datasetId, tableId, row1, row2);
 </code></pre></div>
-              <h5 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_Google_Bigquery_V2_InsertRow____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Insert(string datasetId, string tableId, params InsertRow[] rows)</code></pre>
@@ -2653,9 +2667,13 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_Google_Bigquery_V2_InsertRow____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(String, String, IEnumerable<insertrow>, InsertOptions)</insertrow></a>.</p>
+</div>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)">Insert(String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts all the given rows of data into a table in this client&#39;s project specified by dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable<insertrow>, InsertOptions)</insertrow></a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2700,7 +2718,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)">Insert(String, String, String, InsertRow, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts a single row of data into a table specified by project ID, dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_">Insert(TableReference, InsertRow, InsertOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_">Insert(TableReference, InsertRow, InsertOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2751,13 +2769,9 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow___" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,Google.Bigquery.V2.InsertRow[])">Insert(String, String, String, InsertRow[])</h4>
               <div class="markdown level1 summary"><p>Inserts all the specified rows into a table.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow___">Insert(TableReference, InsertRow[])</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow___">Insert(TableReference, InsertRow[])</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(String, String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Insert(string projectId, string datasetId, string tableId, params InsertRow[] rows)</code></pre>
@@ -2798,9 +2812,13 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Options are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(String, String, String, IEnumerable<insertrow>, InsertOptions)</insertrow></a>.</p>
+</div>
               <h4 id="Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)">Insert(String, String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts all the given rows of data into a table specified by project ID, dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">Insert(TableReference, IEnumerable<insertrow>, InsertOptions)</insertrow></a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2851,7 +2869,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListDatasets(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)">ListDatasets(ProjectReference, ListDatasetsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the datasets within the specified project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
+This method just creates a <span class="xref">ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2900,7 +2918,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Proje
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListDatasets(Google.Bigquery.V2.ListDatasetsOptions)">ListDatasets(ListDatasetsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the datasets within this client&#39;s project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
+This method just creates a <span class="xref">ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
@@ -2950,7 +2968,7 @@ foreach (var dataset in datasets)
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListDatasets_System_String_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListDatasets(System.String,Google.Bigquery.V2.ListDatasetsOptions)">ListDatasets(String, ListDatasetsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the datasets within the specified project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
+This method just creates a <span class="xref">ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2999,7 +3017,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Proje
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListJobsOptions)">ListJobs(ProjectReference, ListJobsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the jobs within the specified project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
+This method just creates a <span class="xref">ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">ListDatasets(ProjectReference, ListDatasetsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -3048,7 +3066,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Proje
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Bigquery.V2.ListJobsOptions)">ListJobs(ListJobsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the jobs within this client&#39;s project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_">ListJobs(ProjectReference, ListJobsOptions)</a>.</p>
+This method just creates a <span class="xref">ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_">ListJobs(ProjectReference, ListJobsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
@@ -3098,7 +3116,7 @@ foreach (var job in jobs)
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListJobs_System_String_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListJobs(System.String,Google.Bigquery.V2.ListJobsOptions)">ListJobs(String, ListJobsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the jobs within the specified project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_">ListJobs(ProjectReference, ListJobsOptions)</a>.</p>
+This method just creates a <span class="xref">ProjectReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_">ListJobs(ProjectReference, ListJobsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -3212,7 +3230,7 @@ the table first.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.ListRowsOptions)">ListRows(String, String, TableSchema, ListRowsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the rows within a table within this client&#39;s project specified by dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">ListRows(TableReference, TableSchema, ListRowsOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">ListRows(TableReference, TableSchema, ListRowsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -3273,7 +3291,7 @@ the table first.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.ListRowsOptions)">ListRows(String, String, String, TableSchema, ListRowsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <code>SELECT * FROM ...</code> query.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">ListRows(TableReference, TableSchema, ListRowsOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">ListRows(TableReference, TableSchema, ListRowsOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -3389,7 +3407,7 @@ the table first.</p>
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListTables_System_String_Google_Bigquery_V2_ListTablesOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListTables(System.String,Google.Bigquery.V2.ListTablesOptions)">ListTables(String, ListTablesOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by dataset ID, where the dataset is in this client&#39;s project.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">ListTables(DatasetReference, ListTablesOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">ListTables(DatasetReference, ListTablesOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
@@ -3445,7 +3463,7 @@ foreach (var table in tables)
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_ListTables_System_String_System_String_Google_Bigquery_V2_ListTablesOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.ListTables(System.String,System.String,Google.Bigquery.V2.ListTablesOptions)">ListTables(String, String, ListTablesOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the tables in a dataset specified by project ID and dataset ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">ListTables(DatasetReference, ListTablesOptions)</a>.</p>
+This method just creates a <span class="xref">DatasetReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">ListTables(DatasetReference, ListTablesOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -3548,7 +3566,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Datas
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_PollJob_System_String_Google_Bigquery_V2_PollJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.PollJob(System.String,Google.Bigquery.V2.PollJobOptions)">PollJob(String, PollJobOptions)</h4>
               <div class="markdown level1 summary"><p>Polls the job with the specified ID in this client&#39;s project for completion.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_PollJobOptions_">PollJob(JobReference, PollJobOptions)</a>.</p>
+This method just creates a <span class="xref">JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_PollJobOptions_">PollJob(JobReference, PollJobOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -3597,7 +3615,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobRe
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_PollJob_System_String_System_String_Google_Bigquery_V2_PollJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.PollJob(System.String,System.String,Google.Bigquery.V2.PollJobOptions)">PollJob(String, String, PollJobOptions)</h4>
               <div class="markdown level1 summary"><p>Polls the job with the specified project ID and job ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_PollJobOptions_">PollJob(JobReference, PollJobOptions)</a>.</p>
+This method just creates a <span class="xref">JobReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_PollJobOptions_">PollJob(JobReference, PollJobOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -3711,7 +3729,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.JobRe
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)">UploadCsv(String, String, TableSchema, Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of CSV data to a table in this project specified by dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
@@ -3800,7 +3818,7 @@ BigqueryJob job = client.UploadCsv(datasetId, tableId, schema, stream,
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)">UploadCsv(String, String, String, TableSchema, Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of CSV data to a table specified by project ID, dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -3933,7 +3951,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadJson(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)">UploadJson(String, String, TableSchema, Stream, UploadJsonOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table in this client&#39;s project specified by dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
@@ -4019,7 +4037,7 @@ BigqueryJob job = client.UploadJson(datasetId, tableId, schema, stream);
               </table>
               <h4 id="Google_Bigquery_V2_BigqueryClient_UploadJson_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_" data-uid="Google.Bigquery.V2.BigqueryClient.UploadJson(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)">UploadJson(String, String, String, TableSchema, Stream, UploadJsonOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of JSON data to a table specified by project ID, dataset ID and table ID.
-This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
+This method just creates a <span class="xref">TableReference</span> and delegates to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -4108,6 +4126,7 @@ This method just creates a <span class="xref">Google.Apis.Bigquery.v2.Data.Table
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

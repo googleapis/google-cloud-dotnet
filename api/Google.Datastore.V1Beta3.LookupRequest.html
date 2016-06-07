@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LookupRequest
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -76,6 +76,21 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">LookupRequest</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
@@ -195,35 +210,7 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
-{
-    get;
-}</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1Beta3_LookupRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.LookupRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -246,10 +233,7 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Key&gt; Keys
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;Key&gt; Keys { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -271,10 +255,7 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageParser&lt;LookupRequest&gt; Parser
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;LookupRequest&gt; Parser { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -292,16 +273,12 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_ProjectId" data-uid="Google.Datastore.V1Beta3.LookupRequest.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p> Project ID against which to make the request.</p>
+              <div class="markdown level1 summary"><p> The ID of the project against which to make the request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ProjectId
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string ProjectId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -319,16 +296,12 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_ReadOptions" data-uid="Google.Datastore.V1Beta3.LookupRequest.ReadOptions">ReadOptions</h4>
-              <div class="markdown level1 summary"><p> Options for this lookup request.</p>
+              <div class="markdown level1 summary"><p> The options for this lookup request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ReadOptions ReadOptions
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public ReadOptions ReadOptions { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -369,6 +342,8 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_Clone" data-uid="Google.Datastore.V1Beta3.LookupRequest.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -391,6 +366,8 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Datastore.V1Beta3.LookupRequest&gt;.Clone()</span></div>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_Equals_Google_Datastore_V1Beta3_LookupRequest_" data-uid="Google.Datastore.V1Beta3.LookupRequest.Equals(Google.Datastore.V1Beta3.LookupRequest)">Equals(LookupRequest)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -430,6 +407,8 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Datastore.V1Beta3.LookupRequest&gt;.Equals(Google.Datastore.V1Beta3.LookupRequest)</span></div>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_Equals_System_Object_" data-uid="Google.Datastore.V1Beta3.LookupRequest.Equals(System.Object)">Equals(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -469,6 +448,8 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_GetHashCode" data-uid="Google.Datastore.V1Beta3.LookupRequest.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -491,6 +472,8 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_MergeFrom_Google_Datastore_V1Beta3_LookupRequest_" data-uid="Google.Datastore.V1Beta3.LookupRequest.MergeFrom(Google.Datastore.V1Beta3.LookupRequest)">MergeFrom(LookupRequest)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -515,6 +498,8 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Datastore.V1Beta3.LookupRequest&gt;.MergeFrom(Google.Datastore.V1Beta3.LookupRequest)</span></div>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Datastore.V1Beta3.LookupRequest.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -539,6 +524,8 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_ToString" data-uid="Google.Datastore.V1Beta3.LookupRequest.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -561,6 +548,8 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
               <h4 id="Google_Datastore_V1Beta3_LookupRequest_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Datastore.V1Beta3.LookupRequest.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -585,6 +574,34 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_LookupRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.LookupRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
             </article>
           </div>
           
@@ -603,6 +620,7 @@ public sealed class LookupRequest : IMessage&lt;LookupRequest&gt;, IMessage, IEq
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubscriberClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -79,6 +79,30 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">SubscriberClient</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Pubsub.V1</h6>
               <h6><strong>Assembly</strong>:Google.Pubsub.V1.dll</h6>
               <h5 id="Google_Pubsub_V1_SubscriberClient_syntax">Syntax</h5>
@@ -88,15 +112,12 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Pubsub_V1_SubscriberClient_DefaultEndpoint" data-uid="Google.Pubsub.V1.SubscriberClient.DefaultEndpoint">DefaultEndpoint</h4>
-              <div class="markdown level1 summary"><p>The default endpoint for the Subscriber service, which is a host of &quot;pubsub-experimental.googleapis.com&quot; and a port of 443.</p>
+              <div class="markdown level1 summary"><p>The default endpoint for the Subscriber service, which is a host of &quot;pubsub.googleapis.com&quot; and a port of 443.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -117,16 +138,9 @@
               <div class="markdown level1 summary"><p>The default Subscriber scopes</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Pubsub_V1_SubscriberClient_DefaultScopes_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default Subscriber scopes are:</p>
-<ul><li>&quot;<a href="https://www.googleapis.com/auth/pubsub">https://www.googleapis.com/auth/pubsub</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform">https://www.googleapis.com/auth/cloud-platform</a>&quot;</li></ul>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -143,16 +157,17 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Pubsub_V1_SubscriberClient_DefaultScopes_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default Subscriber scopes are:</p>
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/pubsub">https://www.googleapis.com/auth/pubsub</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform">https://www.googleapis.com/auth/cloud-platform</a>&quot;</li></ul>
+</div>
               <h4 id="Google_Pubsub_V1_SubscriberClient_GrpcClient" data-uid="Google.Pubsub.V1.SubscriberClient.GrpcClient">GrpcClient</h4>
               <div class="markdown level1 summary"><p>The underlying GRPC Subscriber client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Subscriber.ISubscriberClient GrpcClient
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Subscriber.SubscriberClient GrpcClient { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +179,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient">Subscriber.ISubscriberClient</a></td>
+                    <td><a class="xref" href="Google.Pubsub.V1.Subscriber.SubscriberClient.html#Google_Pubsub_V1_Subscriber_SubscriberClient">Subscriber.SubscriberClient</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -176,10 +191,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static PathTemplate ProjectTemplate
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static PathTemplate ProjectTemplate { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -203,10 +215,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static PathTemplate SubscriptionTemplate
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static PathTemplate SubscriptionTemplate { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -230,10 +239,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static PathTemplate TopicTemplate
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static PathTemplate TopicTemplate { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -389,7 +395,7 @@ than once will not result in an error.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -433,7 +439,7 @@ necessary.</p>
                   <tr>
                     <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <span class="xref">Google.Api.Gax.ServiceEndpoint</span>.</p>
+                    <td><p>Optional <span class="xref">ServiceEndpoint</span>.</p>
 </td>
                   </tr>
                   <tr>
@@ -481,7 +487,7 @@ necessary.</p>
                   <tr>
                     <td><span class="xref">Grpc.Core.Channel</span></td>
                     <td><em>channel</em></td>
-                    <td><p>The <span class="xref">Grpc.Core.Channel</span> for remote operations. Must not be null.</p>
+                    <td><p>The <span class="xref">Channel</span> for remote operations. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -531,7 +537,7 @@ necessary.</p>
                   <tr>
                     <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <span class="xref">Google.Api.Gax.ServiceEndpoint</span>.</p>
+                    <td><p>Optional <span class="xref">ServiceEndpoint</span>.</p>
 </td>
                   </tr>
                   <tr>
@@ -569,9 +575,9 @@ name for this subscription on the same project as the topic.</p>
 <pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
 
 // Alternative: use an existing subscription resource name:
-// projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
+// &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
 // Similarly for the topic name:
-// projects/{PROJECT_ID}/topics/{TOPIC_ID}
+// &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
 string subscriptionName = SubscriberClient.GetSubscriptionName(&quot;{PROJECT_ID}&quot;, &quot;{SUBSCRIPTION_ID}&quot;);
 string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
 Subscription subscription = client.CreateSubscription(
@@ -656,9 +662,9 @@ name for this subscription on the same project as the topic.</p>
 <pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
 
 // Alternative: use an existing subscription resource name:
-// projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
+// &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
 // Similarly for the topic name:
-// projects/{PROJECT_ID}/topics/{TOPIC_ID}
+// &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
 string subscriptionName = SubscriberClient.GetSubscriptionName(&quot;{PROJECT_ID}&quot;, &quot;{SUBSCRIPTION_ID}&quot;);
 string topicName = PublisherClient.GetTopicName(&quot;{PROJECT_ID}&quot;, &quot;{TOPIC_ID}&quot;);
 Subscription subscription = await client.CreateSubscriptionAsync(
@@ -786,7 +792,7 @@ deleted.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -926,7 +932,7 @@ subscription, or its topic unless the same topic is specified.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1112,7 +1118,7 @@ subscription, or its topic unless the same topic is specified.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1501,7 +1507,7 @@ processing was interrupted.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1656,7 +1662,7 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1687,7 +1693,7 @@ subscription.</p>
 <pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
 
 // Alternative: use an existing subscription resource name:
-// projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
+// &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
 string subscriptionName = SubscriberClient.GetSubscriptionName(&quot;{PROJECT_ID}&quot;, &quot;{SUBSCRIPTION_ID}&quot;);
 
 PullResponse pullResponse = client.Pull(subscriptionName, returnImmediately: false, maxMessages: 100);
@@ -1769,7 +1775,7 @@ subscription.</p>
 <pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
 
 // Alternative: use an existing subscription resource name:
-// projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}
+// &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
 string subscriptionName = SubscriberClient.GetSubscriptionName(&quot;{PROJECT_ID}&quot;, &quot;{SUBSCRIPTION_ID}&quot;);
 
 PullResponse pullResponse = await client.PullAsync(subscriptionName, returnImmediately: false, maxMessages: 100);
@@ -1881,7 +1887,7 @@ subscription.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1908,11 +1914,6 @@ and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V
 created are not affected.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Pubsub_V1_SubscriberClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">Create(ServiceEndpoint, SubscriberSettings)</a>
-and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">CreateAsync(ServiceEndpoint, SubscriberSettings)</a> will create new channels, which could
-in turn be shut down by another call to this method.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
@@ -1933,6 +1934,11 @@ in turn be shut down by another call to this method.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Pubsub_V1_SubscriberClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">Create(ServiceEndpoint, SubscriberSettings)</a>
+and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">CreateAsync(ServiceEndpoint, SubscriberSettings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
             </article>
           </div>
           
@@ -1951,6 +1957,7 @@ in turn be shut down by another call to this method.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

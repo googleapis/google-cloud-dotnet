@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Datastore.DatastoreClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -69,22 +69,86 @@
               
               <h1 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient">Class Datastore.DatastoreClient
               </h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p>Client for Datastore</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Grpc.Core.ClientBase</span></div>
-                  <div class="level2"><span class="xref">Datastore.DatastoreClient</span></div>
+                  <div class="level2"><span class="xref">Grpc.Core.ClientBase</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Datastore.DatastoreClient.html#Google_Datastore_V1Beta3_Datastore_DatastoreClient">Datastore.DatastoreClient</a>&gt;</div>
+                  <div class="level3"><span class="xref">Datastore.DatastoreClient</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">Grpc.Core.ClientBase&lt;Google.Datastore.V1Beta3.Datastore.DatastoreClient&gt;.WithHost(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Grpc.Core.ClientBase.CallInvoker</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
               <h5 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class DatastoreClient : ClientBase, Datastore.IDatastoreClient</code></pre>
+                <pre><code class="lang-csharp hljs">public class DatastoreClient : ClientBase&lt;Datastore.DatastoreClient&gt;, Datastore.IDatastoreClient</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient__ctor" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.#ctor">DatastoreClient()</h4>
+              <div class="markdown level1 summary"><p>Protected parameterless constructor to allow creation of test doubles.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected DatastoreClient()</code></pre>
+              </div>
+              <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.#ctor(Grpc.Core.CallInvoker)">DatastoreClient(CallInvoker)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatastoreClient(CallInvoker callInvoker)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallInvoker</span></td>
+                    <td><em>callInvoker</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient__ctor_Grpc_Core_Channel_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.#ctor(Grpc.Core.Channel)">DatastoreClient(Channel)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -109,14 +173,41 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient__ctor_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">DatastoreClient(ClientBase.ClientBaseConfiguration)</h4>
+              <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected DatastoreClient(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+                    <td><em>configuration</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_AllocateIds_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.AllocateIds(Google.Datastore.V1Beta3.AllocateIdsRequest,Grpc.Core.CallOptions)">AllocateIds(AllocateIdsRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Allocates IDs for the given keys, which is useful for referencing an entity
+ before it is inserted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AllocateIdsResponse AllocateIds(AllocateIdsRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AllocateIdsResponse AllocateIds(AllocateIdsRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -155,12 +246,16 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_AllocateIds_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_CallOptions_">AllocateIds(AllocateIdsRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_AllocateIds_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.AllocateIds(Google.Datastore.V1Beta3.AllocateIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">AllocateIds(AllocateIdsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Allocates IDs for the given keys, which is useful for referencing an entity
+ before it is inserted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AllocateIdsResponse AllocateIds(AllocateIdsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AllocateIdsResponse AllocateIds(AllocateIdsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -209,12 +304,16 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_AllocateIds_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">AllocateIds(AllocateIdsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_AllocateIdsAsync_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.AllocateIdsAsync(Google.Datastore.V1Beta3.AllocateIdsRequest,Grpc.Core.CallOptions)">AllocateIdsAsync(AllocateIdsRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Allocates IDs for the given keys, which is useful for referencing an entity
+ before it is inserted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;AllocateIdsResponse&gt; AllocateIdsAsync(AllocateIdsRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;AllocateIdsResponse&gt; AllocateIdsAsync(AllocateIdsRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -253,12 +352,16 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_AllocateIdsAsync_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_CallOptions_">AllocateIdsAsync(AllocateIdsRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_AllocateIdsAsync_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.AllocateIdsAsync(Google.Datastore.V1Beta3.AllocateIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">AllocateIdsAsync(AllocateIdsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Allocates IDs for the given keys, which is useful for referencing an entity
+ before it is inserted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;AllocateIdsResponse&gt; AllocateIdsAsync(AllocateIdsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;AllocateIdsResponse&gt; AllocateIdsAsync(AllocateIdsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -307,12 +410,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_AllocateIdsAsync_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">AllocateIdsAsync(AllocateIdsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_BeginTransaction_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.BeginTransaction(Google.Datastore.V1Beta3.BeginTransactionRequest,Grpc.Core.CallOptions)">BeginTransaction(BeginTransactionRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Begins a new transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -351,12 +457,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_BeginTransaction_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_CallOptions_">BeginTransaction(BeginTransactionRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_BeginTransaction_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.BeginTransaction(Google.Datastore.V1Beta3.BeginTransactionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BeginTransaction(BeginTransactionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Begins a new transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -405,12 +514,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_BeginTransaction_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">BeginTransaction(BeginTransactionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_BeginTransactionAsync_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.BeginTransactionAsync(Google.Datastore.V1Beta3.BeginTransactionRequest,Grpc.Core.CallOptions)">BeginTransactionAsync(BeginTransactionRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Begins a new transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;BeginTransactionResponse&gt; BeginTransactionAsync(BeginTransactionRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;BeginTransactionResponse&gt; BeginTransactionAsync(BeginTransactionRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -449,12 +561,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_BeginTransactionAsync_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_CallOptions_">BeginTransactionAsync(BeginTransactionRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_BeginTransactionAsync_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.BeginTransactionAsync(Google.Datastore.V1Beta3.BeginTransactionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">BeginTransactionAsync(BeginTransactionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Begins a new transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;BeginTransactionResponse&gt; BeginTransactionAsync(BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;BeginTransactionResponse&gt; BeginTransactionAsync(BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -503,12 +618,16 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_BeginTransactionAsync_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">BeginTransactionAsync(BeginTransactionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_Commit_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.Commit(Google.Datastore.V1Beta3.CommitRequest,Grpc.Core.CallOptions)">Commit(CommitRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Commits a transaction, optionally creating, deleting or modifying some
+ entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public CommitResponse Commit(CommitRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -547,12 +666,16 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_Commit_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_CallOptions_">Commit(CommitRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_Commit_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.Commit(Google.Datastore.V1Beta3.CommitRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Commit(CommitRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Commits a transaction, optionally creating, deleting or modifying some
+ entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public CommitResponse Commit(CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -601,12 +724,16 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_Commit_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">Commit(CommitRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_CommitAsync_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.CommitAsync(Google.Datastore.V1Beta3.CommitRequest,Grpc.Core.CallOptions)">CommitAsync(CommitRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Commits a transaction, optionally creating, deleting or modifying some
+ entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -645,12 +772,16 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_CommitAsync_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_CallOptions_">CommitAsync(CommitRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_CommitAsync_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.CommitAsync(Google.Datastore.V1Beta3.CommitRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CommitAsync(CommitRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Commits a transaction, optionally creating, deleting or modifying some
+ entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;CommitResponse&gt; CommitAsync(CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -699,12 +830,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_CommitAsync_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">CommitAsync(CommitRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_Lookup_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.Lookup(Google.Datastore.V1Beta3.LookupRequest,Grpc.Core.CallOptions)">Lookup(LookupRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Looks up entities by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LookupResponse Lookup(LookupRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual LookupResponse Lookup(LookupRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -743,12 +877,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_Lookup_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_CallOptions_">Lookup(LookupRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_Lookup_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.Lookup(Google.Datastore.V1Beta3.LookupRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Lookup(LookupRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Looks up entities by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LookupResponse Lookup(LookupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual LookupResponse Lookup(LookupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -797,12 +934,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_Lookup_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">Lookup(LookupRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_LookupAsync_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.LookupAsync(Google.Datastore.V1Beta3.LookupRequest,Grpc.Core.CallOptions)">LookupAsync(LookupRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Looks up entities by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;LookupResponse&gt; LookupAsync(LookupRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LookupResponse&gt; LookupAsync(LookupRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -841,12 +981,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_LookupAsync_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_CallOptions_">LookupAsync(LookupRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_LookupAsync_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.LookupAsync(Google.Datastore.V1Beta3.LookupRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">LookupAsync(LookupRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Looks up entities by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;LookupResponse&gt; LookupAsync(LookupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LookupResponse&gt; LookupAsync(LookupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -895,12 +1038,56 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_LookupAsync_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">LookupAsync(LookupRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
+              <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override Datastore.DatastoreClient NewInstance(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+                    <td><em>configuration</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Datastore.DatastoreClient.html#Google_Datastore_V1Beta3_Datastore_DatastoreClient">Datastore.DatastoreClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Datastore.V1Beta3.Datastore.DatastoreClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_Rollback_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.Rollback(Google.Datastore.V1Beta3.RollbackRequest,Grpc.Core.CallOptions)">Rollback(RollbackRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Rolls back a transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RollbackResponse Rollback(RollbackRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual RollbackResponse Rollback(RollbackRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -939,12 +1126,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_Rollback_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_CallOptions_">Rollback(RollbackRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_Rollback_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.Rollback(Google.Datastore.V1Beta3.RollbackRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Rollback(RollbackRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Rolls back a transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RollbackResponse Rollback(RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual RollbackResponse Rollback(RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -993,12 +1183,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_Rollback_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">Rollback(RollbackRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_RollbackAsync_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.RollbackAsync(Google.Datastore.V1Beta3.RollbackRequest,Grpc.Core.CallOptions)">RollbackAsync(RollbackRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Rolls back a transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;RollbackResponse&gt; RollbackAsync(RollbackRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;RollbackResponse&gt; RollbackAsync(RollbackRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1037,12 +1230,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_RollbackAsync_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_CallOptions_">RollbackAsync(RollbackRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_RollbackAsync_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.RollbackAsync(Google.Datastore.V1Beta3.RollbackRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">RollbackAsync(RollbackRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Rolls back a transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;RollbackResponse&gt; RollbackAsync(RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;RollbackResponse&gt; RollbackAsync(RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1091,12 +1287,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_RollbackAsync_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">RollbackAsync(RollbackRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_RunQuery_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.RunQuery(Google.Datastore.V1Beta3.RunQueryRequest,Grpc.Core.CallOptions)">RunQuery(RunQueryRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Queries for entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RunQueryResponse RunQuery(RunQueryRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual RunQueryResponse RunQuery(RunQueryRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1135,12 +1334,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_RunQuery_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_CallOptions_">RunQuery(RunQueryRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_RunQuery_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.RunQuery(Google.Datastore.V1Beta3.RunQueryRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">RunQuery(RunQueryRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Queries for entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RunQueryResponse RunQuery(RunQueryRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual RunQueryResponse RunQuery(RunQueryRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1189,12 +1391,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_RunQuery_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">RunQuery(RunQueryRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_RunQueryAsync_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_CallOptions_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.RunQueryAsync(Google.Datastore.V1Beta3.RunQueryRequest,Grpc.Core.CallOptions)">RunQueryAsync(RunQueryRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Queries for entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;RunQueryResponse&gt; RunQueryAsync(RunQueryRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;RunQueryResponse&gt; RunQueryAsync(RunQueryRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1233,12 +1438,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_RunQueryAsync_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_CallOptions_">RunQueryAsync(RunQueryRequest, CallOptions)</a></div>
               <h4 id="Google_Datastore_V1Beta3_Datastore_DatastoreClient_RunQueryAsync_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1Beta3.Datastore.DatastoreClient.RunQueryAsync(Google.Datastore.V1Beta3.RunQueryRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">RunQueryAsync(RunQueryRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Queries for entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;RunQueryResponse&gt; RunQueryAsync(RunQueryRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;RunQueryResponse&gt; RunQueryAsync(RunQueryRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1287,6 +1495,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient_RunQueryAsync_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">RunQueryAsync(RunQueryRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
             </article>
           </div>
           
@@ -1305,6 +1515,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

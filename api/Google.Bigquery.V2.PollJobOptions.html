@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PollJobOptions
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -78,6 +78,30 @@ default behavior is to poll forever, at one second intervals.</p>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">PollJobOptions</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Bigquery.V2</h6>
               <h6><strong>Assembly</strong>:Google.Bigquery.V2.dll</h6>
               <h5 id="Google_Bigquery_V2_PollJobOptions_syntax">Syntax</h5>
@@ -91,17 +115,9 @@ default behavior is to poll forever, at one second intervals.</p>
 in time.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_PollJobOptions_Deadline_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Currently, requests are not cancelled at this deadline; it only
-affects when the last request is started.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DateTimeOffset? Deadline
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public DateTimeOffset? Deadline { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -118,6 +134,10 @@ affects when the last request is started.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_PollJobOptions_Deadline_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Currently, requests are not cancelled at this deadline; it only
+affects when the last request is started.</p>
+</div>
               <h4 id="Google_Bigquery_V2_PollJobOptions_Interval" data-uid="Google.Bigquery.V2.PollJobOptions.Interval">Interval</h4>
               <div class="markdown level1 summary"><p>The interval to delay between poll 
 requests.</p>
@@ -125,11 +145,7 @@ requests.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public TimeSpan? Interval
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public TimeSpan? Interval { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -166,18 +182,9 @@ requests.</p>
               <div class="markdown level1 summary"><p>The maximum number of poll requests to make.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_PollJobOptions_MaxRequests_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If the job has not completed after this number of requests has been made,
-the poll operation will fail with a <span class="xref">System.TimeoutException</span> as if
-a timeout had been set.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int ? MaxRequests
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public int ? MaxRequests { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -194,24 +201,20 @@ a timeout had been set.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_PollJobOptions_MaxRequests_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If the job has not completed after this number of requests has been made,
+the poll operation will fail with a <span class="xref">System.TimeoutException</span> as if
+a timeout had been set.</p>
+</div>
               <h4 id="Google_Bigquery_V2_PollJobOptions_Timeout" data-uid="Google.Bigquery.V2.PollJobOptions.Timeout">Timeout</h4>
               <div class="markdown level1 summary"><p>The maximum overall time to poll for. Populating this property
 is equivalent to setting the <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Deadline">Deadline</a> property
 to &quot;the time of calling <code>PollJob</code>, plus the timeout&quot;.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_PollJobOptions_Timeout_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>A <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions">PollJobOptions</a> with both <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Timeout">Timeout</a>
-and <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Deadline">Deadline</a> set to non-null values is invalid,
-and will cause an exception to be thrown.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public TimeSpan? Timeout
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public TimeSpan? Timeout { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -228,6 +231,11 @@ and will cause an exception to be thrown.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_PollJobOptions_Timeout_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>A <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions">PollJobOptions</a> with both <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Timeout">Timeout</a>
+and <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Deadline">Deadline</a> set to non-null values is invalid,
+and will cause an exception to be thrown.</p>
+</div>
             </article>
           </div>
           
@@ -246,6 +254,7 @@ and will cause an exception to be thrown.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

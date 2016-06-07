@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InsertRow
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -76,6 +76,30 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">InsertRow</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Bigquery.V2</h6>
               <h6><strong>Assembly</strong>:Google.Bigquery.V2.dll</h6>
@@ -143,11 +167,7 @@ your data on a best effort basis.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string InsertId
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string InsertId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -170,11 +190,7 @@ your data on a best effort basis.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public object this[string name]
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public object this[string name] { get; set; }</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -232,11 +248,6 @@ your data on a best effort basis.</p>
               <div class="markdown level1 summary"><p>Adds all the values in the specified dictionary to the row.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Bigquery_V2_InsertRow_Add_System_Collections_Generic_IDictionary_System_String_System_Object___remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This being named <code>Add</code> rather than <code>AddRange</code> allows
-it to be specified in a collection initializer, which can be useful
-to provide a set of common fields and then some extra values.</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public void Add(IDictionary&lt;string, object&gt; fields)</code></pre>
@@ -259,6 +270,11 @@ to provide a set of common fields and then some extra values.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Bigquery_V2_InsertRow_Add_System_Collections_Generic_IDictionary_System_String_System_Object___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This being named <code>Add</code> rather than <code>AddRange</code> allows
+it to be specified in a collection initializer, which can be useful
+to provide a set of common fields and then some extra values.</p>
+</div>
               <h4 id="Google_Bigquery_V2_InsertRow_Add_System_String_System_Object_" data-uid="Google.Bigquery.V2.InsertRow.Add(System.String,System.Object)">Add(String, Object)</h4>
               <div class="markdown level1 summary"><p>Adds a single field value to the row.</p>
 </div>
@@ -291,9 +307,11 @@ to provide a set of common fields and then some extra values.</p>
                   </tr>
                 </tbody>
               </table>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
               <h4 id="Google_Bigquery_V2_InsertRow_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Bigquery.V2.InsertRow.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
               <div class="markdown level1 summary"><p>Returns an enumerator over the fields in this insert row. This
-method is only provided in order to implement <span class="xref">System.Collections.IEnumerable</span>,
+method is only provided in order to implement <span class="xref">IEnumerable</span>,
 to permit collection initializers.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -317,6 +335,8 @@ to permit collection initializers.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
             </article>
           </div>
           
@@ -335,6 +355,7 @@ to permit collection initializers.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

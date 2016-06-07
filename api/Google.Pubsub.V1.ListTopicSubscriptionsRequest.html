@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListTopicSubscriptionsRequest
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -76,6 +76,21 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ListTopicSubscriptionsRequest</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Pubsub.V1</h6>
               <h6><strong>Assembly</strong>:Google.Pubsub.V1.dll</h6>
@@ -195,35 +210,7 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
-{
-    get;
-}</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -246,11 +233,7 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int PageSize
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public int PageSize { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -267,6 +250,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.IPageRequest.PageSize</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_PageToken" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.PageToken">PageToken</h4>
               <div class="markdown level1 summary"><p> The value returned by the last <code>ListTopicSubscriptionsResponse</code>; indicates
  that this is a continuation of a prior <code>ListTopicSubscriptions</code> call, and
@@ -275,11 +260,7 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string PageToken
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string PageToken { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -296,15 +277,14 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.IPageRequest.PageToken</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_Parser" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.Parser">Parser</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageParser&lt;ListTopicSubscriptionsRequest&gt; Parser
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;ListTopicSubscriptionsRequest&gt; Parser { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -327,11 +307,7 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Topic
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string Topic { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -372,6 +348,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_Clone" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -394,6 +372,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Pubsub.V1.ListTopicSubscriptionsRequest&gt;.Clone()</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_Equals_Google_Pubsub_V1_ListTopicSubscriptionsRequest_" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.Equals(Google.Pubsub.V1.ListTopicSubscriptionsRequest)">Equals(ListTopicSubscriptionsRequest)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -433,6 +413,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Pubsub.V1.ListTopicSubscriptionsRequest&gt;.Equals(Google.Pubsub.V1.ListTopicSubscriptionsRequest)</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_Equals_System_Object_" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.Equals(System.Object)">Equals(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -472,6 +454,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_GetHashCode" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -494,6 +478,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -518,6 +504,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_MergeFrom_Google_Pubsub_V1_ListTopicSubscriptionsRequest_" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.MergeFrom(Google.Pubsub.V1.ListTopicSubscriptionsRequest)">MergeFrom(ListTopicSubscriptionsRequest)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -542,6 +530,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Pubsub.V1.ListTopicSubscriptionsRequest&gt;.MergeFrom(Google.Pubsub.V1.ListTopicSubscriptionsRequest)</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_ToString" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -564,6 +554,8 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -588,6 +580,34 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
             </article>
           </div>
           
@@ -606,6 +626,7 @@ public sealed class ListTopicSubscriptionsRequest : IPageRequest, IMessage&lt;Li
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

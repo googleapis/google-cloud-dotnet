@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Entity
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -69,7 +69,7 @@
               
               <h1 id="Google_Datastore_V1Beta3_Entity" data-uid="Google.Datastore.V1Beta3.Entity">Class Entity
               </h1>
-              <div class="markdown level0 summary"><p> An entity.</p>
+              <div class="markdown level0 summary"><p> A Datastore data object.</p>
 <p> An entity is limited to 1 megabyte when stored. That <em>roughly</em>
  corresponds to a limit of 1 megabyte for the serialized form of this
  message.</p>
@@ -79,6 +79,21 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Entity</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
@@ -175,35 +190,7 @@ public sealed class Entity : IMessage&lt;Entity&gt;, IMessage, IEquatable&lt;Ent
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
-{
-    get;
-}</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1Beta3_Entity_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.Entity.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -224,23 +211,9 @@ public sealed class Entity : IMessage&lt;Entity&gt;, IMessage, IEquatable&lt;Ent
               <div class="markdown level1 summary"><p>Indexer presenting a null-friendly view of the entity properties.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
-              <h5 id="Google_Datastore_V1Beta3_Entity_Item_System_String__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>
-When using the getter of this indexer, if the key is not present in
-this entity&#39;s set of properties, <code>null</code> is returned.
-</p>
-<p>
-When using the setter of the indexer, setting a null value removes the
-property if it is present. To explicitly set a null value, use <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_ForNull">ForNull()</a>.
-</p>
-</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Value this[string name]
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Value this[string name] { get; set; }</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -276,21 +249,27 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Datastore_V1Beta3_Entity_Item_System_String__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+When using the getter of this indexer, if the key is not present in
+this entity&#39;s set of properties, <code>null</code> is returned.
+</p>
+<p>
+When using the setter of the indexer, setting a null value removes the
+property if it is present. To explicitly set a null value, use <a class="xref" href="Google.Datastore.V1Beta3.Value.html#Google_Datastore_V1Beta3_Value_ForNull">ForNull()</a>.
+</p>
+</div>
               <h4 id="Google_Datastore_V1Beta3_Entity_Key" data-uid="Google.Datastore.V1Beta3.Entity.Key">Key</h4>
               <div class="markdown level1 summary"><p> The entity&#39;s key.</p>
 <p> An entity must have a key, unless otherwise documented (for example,
  an entity in <code>Value.entity_value</code> may have no key).
- An entity&#39;s kind is its key&#39;s path&#39;s last element&#39;s kind,
+ An entity&#39;s kind is its key path&#39;s last element&#39;s kind,
  or null if it has no key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Key Key
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Key Key { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -312,10 +291,7 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageParser&lt;Entity&gt; Parser
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;Entity&gt; Parser { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -343,10 +319,7 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public MapField&lt;string, Value&gt; Properties
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public MapField&lt;string, Value&gt; Properties { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -387,6 +360,8 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
               <h4 id="Google_Datastore_V1Beta3_Entity_Clone" data-uid="Google.Datastore.V1Beta3.Entity.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -409,6 +384,8 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Datastore.V1Beta3.Entity&gt;.Clone()</span></div>
               <h4 id="Google_Datastore_V1Beta3_Entity_Equals_Google_Datastore_V1Beta3_Entity_" data-uid="Google.Datastore.V1Beta3.Entity.Equals(Google.Datastore.V1Beta3.Entity)">Equals(Entity)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -448,6 +425,8 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Datastore.V1Beta3.Entity&gt;.Equals(Google.Datastore.V1Beta3.Entity)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Entity_Equals_System_Object_" data-uid="Google.Datastore.V1Beta3.Entity.Equals(System.Object)">Equals(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -487,6 +466,8 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Entity_GetHashCode" data-uid="Google.Datastore.V1Beta3.Entity.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -509,6 +490,8 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
               <h4 id="Google_Datastore_V1Beta3_Entity_MergeFrom_Google_Datastore_V1Beta3_Entity_" data-uid="Google.Datastore.V1Beta3.Entity.MergeFrom(Google.Datastore.V1Beta3.Entity)">MergeFrom(Entity)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -533,6 +516,8 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Datastore.V1Beta3.Entity&gt;.MergeFrom(Google.Datastore.V1Beta3.Entity)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Entity_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Datastore.V1Beta3.Entity.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -557,6 +542,8 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
               <h4 id="Google_Datastore_V1Beta3_Entity_ToDelete" data-uid="Google.Datastore.V1Beta3.Entity.ToDelete">ToDelete()</h4>
               <div class="markdown level1 summary"><p>Creates a mutation representating a delete of this entity, via its <a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity_Key">Key</a> property.</p>
 </div>
@@ -625,6 +612,8 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
               <h4 id="Google_Datastore_V1Beta3_Entity_ToUpdate" data-uid="Google.Datastore.V1Beta3.Entity.ToUpdate">ToUpdate()</h4>
               <div class="markdown level1 summary"><p>Creates a mutation representating an update of this entity.</p>
 </div>
@@ -695,6 +684,34 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_Entity_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.Entity.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
             </article>
           </div>
           
@@ -713,6 +730,7 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

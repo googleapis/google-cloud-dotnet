@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RunQueryRequest
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -77,12 +77,27 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">RunQueryRequest</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
               <h5 id="Google_Datastore_V1Beta3_RunQueryRequest_syntax">Syntax</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">[DebuggerNonUserCode]
-public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage, IEquatable&lt;RunQueryRequest&gt;, IDeepCloneable&lt;RunQueryRequest&gt;</code></pre>
+public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage, IEquatable&lt;RunQueryRequest&gt;, IDeepCloneable&lt;RunQueryRequest&gt;, IPageRequest</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -241,35 +256,7 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor
-{
-    get;
-}</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -292,11 +279,7 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public GqlQuery GqlQuery
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public GqlQuery GqlQuery { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -318,10 +301,7 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageParser&lt;RunQueryRequest&gt; Parser
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;RunQueryRequest&gt; Parser { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -347,11 +327,7 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public PartitionId PartitionId
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public PartitionId PartitionId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -369,16 +345,12 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_ProjectId" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p> Project ID against which to make the request.</p>
+              <div class="markdown level1 summary"><p> The ID of the project against which to make the request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ProjectId
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public string ProjectId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -401,11 +373,7 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Query Query
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public Query Query { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -427,10 +395,7 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RunQueryRequest.QueryTypeOneofCase QueryTypeCase
-{
-    get;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public RunQueryRequest.QueryTypeOneofCase QueryTypeCase { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -453,11 +418,7 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ReadOptions ReadOptions
-{
-    get;
-    set;
-}</code></pre>
+                <pre><code class="lang-csharp hljs">public ReadOptions ReadOptions { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -498,6 +459,8 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_ClearQueryType" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.ClearQueryType">ClearQueryType()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -527,6 +490,8 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Datastore.V1Beta3.RunQueryRequest&gt;.Clone()</span></div>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_Equals_Google_Datastore_V1Beta3_RunQueryRequest_" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.Equals(Google.Datastore.V1Beta3.RunQueryRequest)">Equals(RunQueryRequest)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -566,6 +531,8 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Datastore.V1Beta3.RunQueryRequest&gt;.Equals(Google.Datastore.V1Beta3.RunQueryRequest)</span></div>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_Equals_System_Object_" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.Equals(System.Object)">Equals(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -605,6 +572,8 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_GetHashCode" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -627,6 +596,8 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_MergeFrom_Google_Datastore_V1Beta3_RunQueryRequest_" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.MergeFrom(Google.Datastore.V1Beta3.RunQueryRequest)">MergeFrom(RunQueryRequest)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -651,6 +622,8 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Datastore.V1Beta3.RunQueryRequest&gt;.MergeFrom(Google.Datastore.V1Beta3.RunQueryRequest)</span></div>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -675,6 +648,8 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_ToString" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -697,6 +672,8 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
               <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -721,6 +698,82 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_Google_Api_Gax_IPageRequest_PageSize" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.Google#Api#Gax#IPageRequest#PageSize">IPageRequest.PageSize</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">int IPageRequest.PageSize { set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.IPageRequest.PageSize</span></div>
+              <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_Google_Api_Gax_IPageRequest_PageToken" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.Google#Api#Gax#IPageRequest#PageToken">IPageRequest.PageToken</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">string IPageRequest.PageToken { set; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.IPageRequest.PageToken</span></div>
+              <h4 id="Google_Datastore_V1Beta3_RunQueryRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1Beta3.RunQueryRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
             </article>
           </div>
           
@@ -739,6 +792,7 @@ public sealed class RunQueryRequest : IMessage&lt;RunQueryRequest&gt;, IMessage,
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

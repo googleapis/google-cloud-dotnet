@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueryExtensions
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -77,6 +77,30 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">QueryExtensions</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
               <h5 id="Google_Datastore_V1Beta3_QueryExtensions_syntax">Syntax</h5>
@@ -93,7 +117,7 @@ in C# 6 and later.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void Add(RepeatedField&lt;Projection&gt; projections, string propertyName)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void Add(this RepeatedField&lt;Projection&gt; projections, string propertyName)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -109,6 +133,79 @@ in C# 6 and later.</p>
                     <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Projection.html#Google_Datastore_V1Beta3_Projection">Projection</a>&gt;</td>
                     <td><em>projections</em></td>
                     <td><p>The collection of projections to add to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>propertyName</em></td>
+                    <td><p>The property to project. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_QueryExtensions_Add_Google_Protobuf_Collections_RepeatedField_Google_Datastore_V1Beta3_PropertyOrder__System_String_Google_Datastore_V1Beta3_PropertyOrder_Types_Direction_" data-uid="Google.Datastore.V1Beta3.QueryExtensions.Add(Google.Protobuf.Collections.RepeatedField{Google.Datastore.V1Beta3.PropertyOrder},System.String,Google.Datastore.V1Beta3.PropertyOrder.Types.Direction)">Add(RepeatedField&lt;PropertyOrder&gt;, String, PropertyOrder.Types.Direction)</h4>
+              <div class="markdown level1 summary"><p>Adds an ordering by property name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void Add(this RepeatedField&lt;PropertyOrder&gt; orderings, string propertyName, PropertyOrder.Types.Direction direction)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.PropertyOrder.html#Google_Datastore_V1Beta3_PropertyOrder">PropertyOrder</a>&gt;</td>
+                    <td><em>orderings</em></td>
+                    <td><p>The ordering field to add the ordering to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>propertyName</em></td>
+                    <td><p>The name of the property to order by. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.PropertyOrder.Types.Direction.html#Google_Datastore_V1Beta3_PropertyOrder_Types_Direction">PropertyOrder.Types.Direction</a></td>
+                    <td><em>direction</em></td>
+                    <td><p>The direction to order by. Must be <code>Ascending</code> or <code>Descending</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_QueryExtensions_Add_Google_Protobuf_Collections_RepeatedField_Google_Datastore_V1Beta3_PropertyReference__System_String_" data-uid="Google.Datastore.V1Beta3.QueryExtensions.Add(Google.Protobuf.Collections.RepeatedField{Google.Datastore.V1Beta3.PropertyReference},System.String)">Add(RepeatedField&lt;PropertyReference&gt;, String)</h4>
+              <div class="markdown level1 summary"><p>Adds an entry to the list of property references.
+This enables repeated property reference fields (such as <a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query_DistinctOn">DistinctOn</a> 
+to be specified in a query with a collection initializer
+in C# 6 and later.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void Add(this RepeatedField&lt;PropertyReference&gt; propertyReferences, string propertyName)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.PropertyReference.html#Google_Datastore_V1Beta3_PropertyReference">PropertyReference</a>&gt;</td>
+                    <td><em>propertyReferences</em></td>
+                    <td><p>The collection of property references to add to. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -137,6 +234,7 @@ in C# 6 and later.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface Subscriber.ISubscriber
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -69,18 +69,26 @@
               
               <h1 id="Google_Pubsub_V1_Subscriber_ISubscriber" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber">Interface Subscriber.ISubscriber
               </h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p>Interface of server-side implementations of Subscriber</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Google.Pubsub.V1</h6>
               <h6><strong>Assembly</strong>:Google.Pubsub.V1.dll</h6>
               <h5 id="Google_Pubsub_V1_Subscriber_ISubscriber_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface ISubscriber</code></pre>
+                <pre><code class="lang-csharp hljs">[Obsolete(&quot;Service implementations should inherit from the generated abstract base class instead.&quot;)]
+public interface ISubscriber</code></pre>
               </div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Pubsub_V1_Subscriber_ISubscriber_Acknowledge_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber.Acknowledge(Google.Pubsub.V1.AcknowledgeRequest,Grpc.Core.ServerCallContext)">Acknowledge(AcknowledgeRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Acknowledges the messages associated with the <code>ack_ids</code> in the
+ <code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
+ from the subscription.</p>
+<p> Acknowledging a message whose ack deadline has expired may succeed,
+ but such a message may be redelivered later. Acknowledging a message more
+ than once will not result in an error.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -124,7 +132,12 @@
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_Subscriber_ISubscriber_CreateSubscription_Google_Pubsub_V1_Subscription_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber.CreateSubscription(Google.Pubsub.V1.Subscription,Grpc.Core.ServerCallContext)">CreateSubscription(Subscription, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a subscription to a given topic for a given subscriber.
+ If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+ If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p> If the name is not provided in the request, the server will assign a random
+ name for this subscription on the same project as the topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -168,7 +181,12 @@
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_Subscriber_ISubscriber_DeleteSubscription_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber.DeleteSubscription(Google.Pubsub.V1.DeleteSubscriptionRequest,Grpc.Core.ServerCallContext)">DeleteSubscription(DeleteSubscriptionRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes an existing subscription. All pending messages in the subscription
+ are immediately dropped. Calls to <code>Pull</code> after deletion will return
+ <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
+ the same name, but the new one has no association with the old
+ subscription, or its topic unless the same topic is specified.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -212,7 +230,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_Subscriber_ISubscriber_GetSubscription_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber.GetSubscription(Google.Pubsub.V1.GetSubscriptionRequest,Grpc.Core.ServerCallContext)">GetSubscription(GetSubscriptionRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets the configuration details of a subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -256,7 +275,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_Subscriber_ISubscriber_ListSubscriptions_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber.ListSubscriptions(Google.Pubsub.V1.ListSubscriptionsRequest,Grpc.Core.ServerCallContext)">ListSubscriptions(ListSubscriptionsRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists matching subscriptions.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -300,7 +320,11 @@
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_Subscriber_ISubscriber_ModifyAckDeadline_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber.ModifyAckDeadline(Google.Pubsub.V1.ModifyAckDeadlineRequest,Grpc.Core.ServerCallContext)">ModifyAckDeadline(ModifyAckDeadlineRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the ack deadline for a specific message. This method is useful
+ to indicate that more time is needed to process a message by the
+ subscriber, or to make the message available for redelivery if the
+ processing was interrupted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -344,7 +368,12 @@
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_Subscriber_ISubscriber_ModifyPushConfig_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber.ModifyPushConfig(Google.Pubsub.V1.ModifyPushConfigRequest,Grpc.Core.ServerCallContext)">ModifyPushConfig(ModifyPushConfigRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the <code>PushConfig</code> for a specified subscription.</p>
+<p> This may be used to change a push subscription to a pull one (signified by
+ an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
+ attributes of a push subscription. Messages will accumulate for delivery
+ continuously through the call regardless of changes to the <code>PushConfig</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -388,7 +417,11 @@
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_Subscriber_ISubscriber_Pull_Google_Pubsub_V1_PullRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.ISubscriber.Pull(Google.Pubsub.V1.PullRequest,Grpc.Core.ServerCallContext)">Pull(PullRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Pulls messages from the server. Returns an empty list if there are no
+ messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
+ there are too many concurrent pull requests pending for the given
+ subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -449,6 +482,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

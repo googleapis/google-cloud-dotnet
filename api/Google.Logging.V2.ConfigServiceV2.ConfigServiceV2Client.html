@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConfigServiceV2.ConfigServiceV2Client
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -69,22 +69,86 @@
               
               <h1 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client">Class ConfigServiceV2.ConfigServiceV2Client
               </h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p>Client for ConfigServiceV2</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Grpc.Core.ClientBase</span></div>
-                  <div class="level2"><span class="xref">ConfigServiceV2.ConfigServiceV2Client</span></div>
+                  <div class="level2"><span class="xref">Grpc.Core.ClientBase</span>&lt;<a class="xref" href="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client">ConfigServiceV2.ConfigServiceV2Client</a>&gt;</div>
+                  <div class="level3"><span class="xref">ConfigServiceV2.ConfigServiceV2Client</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">Grpc.Core.ClientBase&lt;Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client&gt;.WithHost(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Grpc.Core.ClientBase.CallInvoker</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Logging.V2</h6>
               <h6><strong>Assembly</strong>:Google.Logging.V2.dll</h6>
               <h5 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ConfigServiceV2Client : ClientBase, ConfigServiceV2.IConfigServiceV2Client</code></pre>
+                <pre><code class="lang-csharp hljs">public class ConfigServiceV2Client : ClientBase&lt;ConfigServiceV2.ConfigServiceV2Client&gt;, ConfigServiceV2.IConfigServiceV2Client</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client__ctor" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.#ctor">ConfigServiceV2Client()</h4>
+              <div class="markdown level1 summary"><p>Protected parameterless constructor to allow creation of test doubles.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected ConfigServiceV2Client()</code></pre>
+              </div>
+              <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.#ctor(Grpc.Core.CallInvoker)">ConfigServiceV2Client(CallInvoker)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ConfigServiceV2Client(CallInvoker callInvoker)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallInvoker</span></td>
+                    <td><em>callInvoker</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client__ctor_Grpc_Core_Channel_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.#ctor(Grpc.Core.Channel)">ConfigServiceV2Client(Channel)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -109,14 +173,40 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client__ctor_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">ConfigServiceV2Client(ClientBase.ClientBaseConfiguration)</h4>
+              <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected ConfigServiceV2Client(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+                    <td><em>configuration</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_Google_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink(Google.Logging.V2.CreateSinkRequest,Grpc.Core.CallOptions)">CreateSink(CreateSinkRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LogSink CreateSink(CreateSinkRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual LogSink CreateSink(CreateSinkRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -155,12 +245,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_CreateSink_Google_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_">CreateSink(CreateSinkRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSink_Google_Logging_V2_CreateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSink(Google.Logging.V2.CreateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSink(CreateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LogSink CreateSink(CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual LogSink CreateSink(CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -209,12 +302,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_CreateSink_Google_Logging_V2_CreateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">CreateSink(CreateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSinkAsync_Google_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync(Google.Logging.V2.CreateSinkRequest,Grpc.Core.CallOptions)">CreateSinkAsync(CreateSinkRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;LogSink&gt; CreateSinkAsync(CreateSinkRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogSink&gt; CreateSinkAsync(CreateSinkRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -253,12 +349,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_CreateSinkAsync_Google_Logging_V2_CreateSinkRequest_Grpc_Core_CallOptions_">CreateSinkAsync(CreateSinkRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_CreateSinkAsync_Google_Logging_V2_CreateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.CreateSinkAsync(Google.Logging.V2.CreateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSinkAsync(CreateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;LogSink&gt; CreateSinkAsync(CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogSink&gt; CreateSinkAsync(CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -307,12 +406,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_CreateSinkAsync_Google_Logging_V2_CreateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">CreateSinkAsync(CreateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteSink_Google_Logging_V2_DeleteSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteSink(Google.Logging.V2.DeleteSinkRequest,Grpc.Core.CallOptions)">DeleteSink(DeleteSinkRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty DeleteSink(DeleteSinkRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty DeleteSink(DeleteSinkRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -351,12 +453,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_DeleteSink_Google_Logging_V2_DeleteSinkRequest_Grpc_Core_CallOptions_">DeleteSink(DeleteSinkRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteSink_Google_Logging_V2_DeleteSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteSink(Google.Logging.V2.DeleteSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSink(DeleteSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty DeleteSink(DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty DeleteSink(DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -405,12 +510,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_DeleteSink_Google_Logging_V2_DeleteSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">DeleteSink(DeleteSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteSinkAsync_Google_Logging_V2_DeleteSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteSinkAsync(Google.Logging.V2.DeleteSinkRequest,Grpc.Core.CallOptions)">DeleteSinkAsync(DeleteSinkRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; DeleteSinkAsync(DeleteSinkRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSinkAsync(DeleteSinkRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -449,12 +557,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_DeleteSinkAsync_Google_Logging_V2_DeleteSinkRequest_Grpc_Core_CallOptions_">DeleteSinkAsync(DeleteSinkRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_DeleteSinkAsync_Google_Logging_V2_DeleteSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.DeleteSinkAsync(Google.Logging.V2.DeleteSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSinkAsync(DeleteSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; DeleteSinkAsync(DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSinkAsync(DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -503,12 +614,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_DeleteSinkAsync_Google_Logging_V2_DeleteSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">DeleteSinkAsync(DeleteSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetSink_Google_Logging_V2_GetSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSink(Google.Logging.V2.GetSinkRequest,Grpc.Core.CallOptions)">GetSink(GetSinkRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LogSink GetSink(GetSinkRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual LogSink GetSink(GetSinkRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -547,12 +661,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_GetSink_Google_Logging_V2_GetSinkRequest_Grpc_Core_CallOptions_">GetSink(GetSinkRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetSink_Google_Logging_V2_GetSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSink(Google.Logging.V2.GetSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSink(GetSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LogSink GetSink(GetSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual LogSink GetSink(GetSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -601,12 +718,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_GetSink_Google_Logging_V2_GetSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">GetSink(GetSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetSinkAsync_Google_Logging_V2_GetSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSinkAsync(Google.Logging.V2.GetSinkRequest,Grpc.Core.CallOptions)">GetSinkAsync(GetSinkRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;LogSink&gt; GetSinkAsync(GetSinkRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogSink&gt; GetSinkAsync(GetSinkRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -645,12 +765,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_GetSinkAsync_Google_Logging_V2_GetSinkRequest_Grpc_Core_CallOptions_">GetSinkAsync(GetSinkRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_GetSinkAsync_Google_Logging_V2_GetSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.GetSinkAsync(Google.Logging.V2.GetSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSinkAsync(GetSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;LogSink&gt; GetSinkAsync(GetSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogSink&gt; GetSinkAsync(GetSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -699,12 +822,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_GetSinkAsync_Google_Logging_V2_GetSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">GetSinkAsync(GetSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListSinks_Google_Logging_V2_ListSinksRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListSinks(Google.Logging.V2.ListSinksRequest,Grpc.Core.CallOptions)">ListSinks(ListSinksRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists sinks.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ListSinksResponse ListSinks(ListSinksRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual ListSinksResponse ListSinks(ListSinksRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -743,12 +869,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_ListSinks_Google_Logging_V2_ListSinksRequest_Grpc_Core_CallOptions_">ListSinks(ListSinksRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListSinks_Google_Logging_V2_ListSinksRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListSinks(Google.Logging.V2.ListSinksRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSinks(ListSinksRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists sinks.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ListSinksResponse ListSinks(ListSinksRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual ListSinksResponse ListSinks(ListSinksRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -797,12 +926,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_ListSinks_Google_Logging_V2_ListSinksRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">ListSinks(ListSinksRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListSinksAsync_Google_Logging_V2_ListSinksRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListSinksAsync(Google.Logging.V2.ListSinksRequest,Grpc.Core.CallOptions)">ListSinksAsync(ListSinksRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists sinks.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;ListSinksResponse&gt; ListSinksAsync(ListSinksRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSinksResponse&gt; ListSinksAsync(ListSinksRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -841,12 +973,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_ListSinksAsync_Google_Logging_V2_ListSinksRequest_Grpc_Core_CallOptions_">ListSinksAsync(ListSinksRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_ListSinksAsync_Google_Logging_V2_ListSinksRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.ListSinksAsync(Google.Logging.V2.ListSinksRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSinksAsync(ListSinksRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists sinks.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;ListSinksResponse&gt; ListSinksAsync(ListSinksRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSinksResponse&gt; ListSinksAsync(ListSinksRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -895,12 +1030,56 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_ListSinksAsync_Google_Logging_V2_ListSinksRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">ListSinksAsync(ListSinksRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
+              <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override ConfigServiceV2.ConfigServiceV2Client NewInstance(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+                    <td><em>configuration</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client">ConfigServiceV2.ConfigServiceV2Client</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_Google_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink(Google.Logging.V2.UpdateSinkRequest,Grpc.Core.CallOptions)">UpdateSink(UpdateSinkRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates or updates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LogSink UpdateSink(UpdateSinkRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual LogSink UpdateSink(UpdateSinkRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -939,12 +1118,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_UpdateSink_Google_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_">UpdateSink(UpdateSinkRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSink_Google_Logging_V2_UpdateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSink(Google.Logging.V2.UpdateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSink(UpdateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates or updates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LogSink UpdateSink(UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual LogSink UpdateSink(UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -993,12 +1175,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_UpdateSink_Google_Logging_V2_UpdateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">UpdateSink(UpdateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_Google_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync(Google.Logging.V2.UpdateSinkRequest,Grpc.Core.CallOptions)">UpdateSinkAsync(UpdateSinkRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates or updates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;LogSink&gt; UpdateSinkAsync(UpdateSinkRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogSink&gt; UpdateSinkAsync(UpdateSinkRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1037,12 +1222,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_UpdateSinkAsync_Google_Logging_V2_UpdateSinkRequest_Grpc_Core_CallOptions_">UpdateSinkAsync(UpdateSinkRequest, CallOptions)</a></div>
               <h4 id="Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_UpdateSinkAsync_Google_Logging_V2_UpdateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.UpdateSinkAsync(Google.Logging.V2.UpdateSinkRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSinkAsync(UpdateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates or updates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;LogSink&gt; UpdateSinkAsync(UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;LogSink&gt; UpdateSinkAsync(UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1091,6 +1279,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2.IConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_IConfigServiceV2Client_UpdateSinkAsync_Google_Logging_V2_UpdateSinkRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">UpdateSinkAsync(UpdateSinkRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
             </article>
           </div>
           
@@ -1109,6 +1299,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

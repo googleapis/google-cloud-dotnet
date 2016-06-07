@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum EntityResult.Types.ResultType
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -70,9 +70,9 @@
               <h1 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType">Enum EntityResult.Types.ResultType
               </h1>
               <div class="markdown level0 summary"><p> Specifies what data the &#39;entity&#39; field contains.
- A <code>ResultType</code> is either implied (for example, in <code>LookupResponse.found</code>
- from <code>datastore.proto</code>, it is always <code>FULL</code>) or specified by context (for
- example, in message <code>QueryResultBatch</code>, field <code>entity_result_type</code>
+ A <code>ResultType</code> is either implied (for example, in <code>LookupResponse.missing</code>
+ from <code>datastore.proto</code>, it is always <code>KEY_ONLY</code>) or specified by context
+ (for example, in message <code>QueryResultBatch</code>, field <code>entity_result_type</code>
  specifies a <code>ResultType</code> for all the values in field <code>entity_results</code>).</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -84,13 +84,14 @@
               </div>
               <h3 id="fields">Fields
               </h3>
-              <h4 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType_FULL" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.FULL">FULL</h4>
-              <div class="markdown level1 summary"><p> The entire entity.</p>
+              <h4 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType_Full" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.Full">Full</h4>
+              <div class="markdown level1 summary"><p> The key and properties.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">FULL = 1</code></pre>
+                <pre><code class="lang-csharp hljs">[OriginalName(&quot;FULL&quot;)]
+Full = 1</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -107,13 +108,14 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType_KEY_ONLY" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.KEY_ONLY">KEY_ONLY</h4>
+              <h4 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType_KeyOnly" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.KeyOnly">KeyOnly</h4>
               <div class="markdown level1 summary"><p> Only the key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">KEY_ONLY = 3</code></pre>
+                <pre><code class="lang-csharp hljs">[OriginalName(&quot;KEY_ONLY&quot;)]
+KeyOnly = 3</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -130,14 +132,14 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType_PROJECTION" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.PROJECTION">PROJECTION</h4>
-              <div class="markdown level1 summary"><p> A projected subset of properties. The entity may have no key. A property
- value may have meaning 18.</p>
+              <h4 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType_Projection" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.Projection">Projection</h4>
+              <div class="markdown level1 summary"><p> A projected subset of properties. The entity may have no key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">PROJECTION = 2</code></pre>
+                <pre><code class="lang-csharp hljs">[OriginalName(&quot;PROJECTION&quot;)]
+Projection = 2</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -154,13 +156,14 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType_RESULT_TYPE_UNSPECIFIED" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.RESULT_TYPE_UNSPECIFIED">RESULT_TYPE_UNSPECIFIED</h4>
-              <div class="markdown level1 summary"><p> Unspecified.</p>
+              <h4 id="Google_Datastore_V1Beta3_EntityResult_Types_ResultType_Unspecified" data-uid="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.Unspecified">Unspecified</h4>
+              <div class="markdown level1 summary"><p> Unspecified. This value is never used.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">RESULT_TYPE_UNSPECIFIED = 0</code></pre>
+                <pre><code class="lang-csharp hljs">[OriginalName(&quot;RESULT_TYPE_UNSPECIFIED&quot;)]
+Unspecified = 0</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -195,6 +198,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

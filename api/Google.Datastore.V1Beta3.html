@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Datastore.V1Beta3
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -101,15 +101,25 @@
                   <section><p> The response for [google.datastore.v1beta3.Datastore.Commit][google.datastore.v1beta3.Datastore.Commit].</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.CompositeFilter.html#Google_Datastore_V1Beta3_CompositeFilter">CompositeFilter</a></h4>
-                  <section><p> A filter that merges the multiple other filters using the given operator.</p>
+                  <section><p> A filter that merges multiple other filters using the given operator.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.CompositeFilter.Types.html#Google_Datastore_V1Beta3_CompositeFilter_Types">CompositeFilter.Types</a></h4>
                   <section><p>Container for nested types declared in the CompositeFilter message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Datastore.html#Google_Datastore_V1Beta3_Datastore">Datastore</a></h4>
-                  <section></section>
+                  <section><p> Each RPC normalizes the partition IDs of the keys in its input entities,
+ and always returns entities with keys with normalized partition IDs.
+ This applies to all keys and entities, including those in values, except keys
+ with both an empty path and an empty or unset partition ID. Normalization of
+ input keys sets the project ID (if not already set) to the project ID from
+ the request.</p>
+</section>
+                  <h4><a class="xref" href="Google.Datastore.V1Beta3.Datastore.DatastoreBase.html#Google_Datastore_V1Beta3_Datastore_DatastoreBase">Datastore.DatastoreBase</a></h4>
+                  <section><p>Base class for server-side implementations of Datastore</p>
+</section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Datastore.DatastoreClient.html#Google_Datastore_V1Beta3_Datastore_DatastoreClient">Datastore.DatastoreClient</a></h4>
-                  <section></section>
+                  <section><p>Client for Datastore</p>
+</section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a></h4>
                   <section><p>Datastore client wrapper, for convenient use.</p>
 </section>
@@ -117,6 +127,10 @@
                   <section></section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreConstants.html#Google_Datastore_V1Beta3_DatastoreConstants">DatastoreConstants</a></h4>
                   <section><p>Constants for use in Datastore.</p>
+</section>
+                  <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb">DatastoreDb</a></h4>
+                  <section><p>An abstraction over <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a> to simplify operations. Use the <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1Beta3_DatastoreClient_">Create(String, String, DatastoreClient)</a>
+method to obtain an instance of this class.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreExtensions.html#Google_Datastore_V1Beta3_DatastoreExtensions">DatastoreExtensions</a></h4>
                   <section><p>Extension methods to assist with using <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a>.</p>
@@ -127,8 +141,11 @@
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreSettings.html#Google_Datastore_V1Beta3_DatastoreSettings">DatastoreSettings</a></h4>
                   <section><p>Settings for a Datastore wrapper.</p>
 </section>
+                  <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction">DatastoreTransaction</a></h4>
+                  <section><p>Convenience wrapper around a Datastore transaction.</p>
+</section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></h4>
-                  <section><p> An entity.</p>
+                  <section><p> A Datastore data object.</p>
 <p> An entity is limited to 1 megabyte when stored. That <em>roughly</em>
  corresponds to a limit of 1 megabyte for the serialized form of this
  message.</p>
@@ -137,7 +154,7 @@
                   <section><p>Holder for reflection information generated from google/datastore/v1beta3/entity.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult">EntityResult</a></h4>
-                  <section><p> The result of fetching an entity from the datastore.</p>
+                  <section><p> The result of fetching an entity from Datastore.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.EntityResult.Types.html#Google_Datastore_V1Beta3_EntityResult_Types">EntityResult.Types</a></h4>
                   <section><p>Container for nested types declared in the EntityResult message type.</p>
@@ -146,14 +163,14 @@
                   <section><p> A holder for any type of filter.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></h4>
-                  <section><p> A GQL query.</p>
+                  <section><p> A <a href="https://cloud.google.com/datastore/docs/apis/gql/gql_reference">GQL query</a>.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.GqlQueryParameter.html#Google_Datastore_V1Beta3_GqlQueryParameter">GqlQueryParameter</a></h4>
                   <section><p> A binding parameter for a GQL query.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></h4>
                   <section><p> A unique identifier for an entity.
- If a key&#39;s partition id or any of its path kinds or names are
+ If a key&#39;s partition ID or any of its path kinds or names are
  reserved/read-only, the key is reserved/read-only.
  A reserved/read-only key is forbidden in certain documented contexts.</p>
 </section>
@@ -162,7 +179,7 @@
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Key.Types.PathElement.html#Google_Datastore_V1Beta3_Key_Types_PathElement">Key.Types.PathElement</a></h4>
                   <section><p> A (kind, ID/name) pair used to construct a key path.</p>
-<p> If either name nor ID is set, the element is complete.
+<p> If either name or ID is set, the element is complete.
  If neither is set, the element is incomplete.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory">KeyFactory</a></h4>
@@ -188,12 +205,12 @@ or for root entities based on a partition ID.</p>
                   <section><p> A partition ID identifies a grouping of entities. The grouping is always
  by project and namespace, however the namespace ID may be empty.</p>
 <p> A partition ID contains several dimensions:
- project ID and namespace ID.
- Partition dimensions:</p>
+ project ID and namespace ID.</p>
+<p> Partition dimensions:</p>
 <ul>
-<li>A dimension may be <code>&quot;&quot;</code>.</li>
-<li>A dimension must be valid UTF-8 bytes.</li>
-<li><p>A dimension&#39;s value must match regex <code>[A-Za-z\d\.\-_]{1,100}</code>
+<li>May be <code>&quot;&quot;</code>.</li>
+<li>Must be valid UTF-8 bytes.</li>
+<li><p>Must have values that match regex <code>[A-Za-z\d\.\-_]{1,100}</code>
 If the value of any dimension matches regex <code>__.*__</code>, the partition is
 reserved/read-only.
 A reserved/read-only partition ID is forbidden in certain documented
@@ -223,7 +240,7 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                   <section><p> A reference to a property relative to the kind expressions.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></h4>
-                  <section><p> A query.</p>
+                  <section><p> A query for entities.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.QueryExtensions.html#Google_Datastore_V1Beta3_QueryExtensions">QueryExtensions</a></h4>
                   <section><p>Extension methods around queries.</p>
@@ -238,7 +255,7 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                   <section><p>Container for nested types declared in the QueryResultBatch message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.html#Google_Datastore_V1Beta3_ReadOptions">ReadOptions</a></h4>
-                  <section><p> Options shared by read requests.</p>
+                  <section><p> The options shared by read requests.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.html#Google_Datastore_V1Beta3_ReadOptions_Types">ReadOptions.Types</a></h4>
                   <section><p>Container for nested types declared in the ReadOptions message type.</p>
@@ -265,25 +282,27 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                 <h3 id="interfaces">Interfaces
               </h3>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastore.html#Google_Datastore_V1Beta3_Datastore_IDatastore">Datastore.IDatastore</a></h4>
-                  <section></section>
+                  <section><p>Interface of server-side implementations of Datastore</p>
+</section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Datastore.IDatastoreClient.html#Google_Datastore_V1Beta3_Datastore_IDatastoreClient">Datastore.IDatastoreClient</a></h4>
-                  <section></section>
+                  <section><p>Client for Datastore</p>
+</section>
                 <h3 id="enums">Enums
               </h3>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.CommitRequest.TransactionSelectorOneofCase.html#Google_Datastore_V1Beta3_CommitRequest_TransactionSelectorOneofCase">CommitRequest.TransactionSelectorOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;transaction_selector&quot; oneof.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.CommitRequest.Types.Mode.html#Google_Datastore_V1Beta3_CommitRequest_Types_Mode">CommitRequest.Types.Mode</a></h4>
-                  <section><p> Commit modes.</p>
+                  <section><p> The modes available for commits.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.CompositeFilter.Types.Operator.html#Google_Datastore_V1Beta3_CompositeFilter_Types_Operator">CompositeFilter.Types.Operator</a></h4>
-                  <section><p> Composite filter operator.</p>
+                  <section><p> A composite filter operator.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.EntityResult.Types.ResultType.html#Google_Datastore_V1Beta3_EntityResult_Types_ResultType">EntityResult.Types.ResultType</a></h4>
                   <section><p> Specifies what data the &#39;entity&#39; field contains.
- A <code>ResultType</code> is either implied (for example, in <code>LookupResponse.found</code>
- from <code>datastore.proto</code>, it is always <code>FULL</code>) or specified by context (for
- example, in message <code>QueryResultBatch</code>, field <code>entity_result_type</code>
+ A <code>ResultType</code> is either implied (for example, in <code>LookupResponse.missing</code>
+ from <code>datastore.proto</code>, it is always <code>KEY_ONLY</code>) or specified by context
+ (for example, in message <code>QueryResultBatch</code>, field <code>entity_result_type</code>
  specifies a <code>ResultType</code> for all the values in field <code>entity_results</code>).</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Filter.FilterTypeOneofCase.html#Google_Datastore_V1Beta3_Filter_FilterTypeOneofCase">Filter.FilterTypeOneofCase</a></h4>
@@ -299,10 +318,10 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                   <section><p>Enum of possible cases for the &quot;operation&quot; oneof.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.PropertyFilter.Types.Operator.html#Google_Datastore_V1Beta3_PropertyFilter_Types_Operator">PropertyFilter.Types.Operator</a></h4>
-                  <section><p> Property filter operator.</p>
+                  <section><p> A property filter operator.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.PropertyOrder.Types.Direction.html#Google_Datastore_V1Beta3_PropertyOrder_Types_Direction">PropertyOrder.Types.Direction</a></h4>
-                  <section><p> Direction.</p>
+                  <section><p> The sort direction.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.QueryResultBatch.Types.MoreResultsType.html#Google_Datastore_V1Beta3_QueryResultBatch_Types_MoreResultsType">QueryResultBatch.Types.MoreResultsType</a></h4>
                   <section><p> The possible values for the <code>more_results</code> field.</p>
@@ -311,7 +330,7 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                   <section><p>Enum of possible cases for the &quot;consistency_type&quot; oneof.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a></h4>
-                  <section><p> Read consistencies.</p>
+                  <section><p> The possible values for read consistencies.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.RunQueryRequest.QueryTypeOneofCase.html#Google_Datastore_V1Beta3_RunQueryRequest_QueryTypeOneofCase">RunQueryRequest.QueryTypeOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;query_type&quot; oneof.</p>
@@ -337,6 +356,7 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface Datastore.IDatastore
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -69,18 +69,22 @@
               
               <h1 id="Google_Datastore_V1Beta3_Datastore_IDatastore" data-uid="Google.Datastore.V1Beta3.Datastore.IDatastore">Interface Datastore.IDatastore
               </h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p>Interface of server-side implementations of Datastore</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
               <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
               <h5 id="Google_Datastore_V1Beta3_Datastore_IDatastore_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IDatastore</code></pre>
+                <pre><code class="lang-csharp hljs">[Obsolete(&quot;Service implementations should inherit from the generated abstract base class instead.&quot;)]
+public interface IDatastore</code></pre>
               </div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Datastore_V1Beta3_Datastore_IDatastore_AllocateIds_Google_Datastore_V1Beta3_AllocateIdsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1Beta3.Datastore.IDatastore.AllocateIds(Google.Datastore.V1Beta3.AllocateIdsRequest,Grpc.Core.ServerCallContext)">AllocateIds(AllocateIdsRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Allocates IDs for the given keys, which is useful for referencing an entity
+ before it is inserted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -124,7 +128,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Datastore_IDatastore_BeginTransaction_Google_Datastore_V1Beta3_BeginTransactionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1Beta3.Datastore.IDatastore.BeginTransaction(Google.Datastore.V1Beta3.BeginTransactionRequest,Grpc.Core.ServerCallContext)">BeginTransaction(BeginTransactionRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Begins a new transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -168,7 +173,9 @@
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Datastore_IDatastore_Commit_Google_Datastore_V1Beta3_CommitRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1Beta3.Datastore.IDatastore.Commit(Google.Datastore.V1Beta3.CommitRequest,Grpc.Core.ServerCallContext)">Commit(CommitRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Commits a transaction, optionally creating, deleting or modifying some
+ entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -212,7 +219,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Datastore_IDatastore_Lookup_Google_Datastore_V1Beta3_LookupRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1Beta3.Datastore.IDatastore.Lookup(Google.Datastore.V1Beta3.LookupRequest,Grpc.Core.ServerCallContext)">Lookup(LookupRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Looks up entities by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -256,7 +264,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Datastore_IDatastore_Rollback_Google_Datastore_V1Beta3_RollbackRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1Beta3.Datastore.IDatastore.Rollback(Google.Datastore.V1Beta3.RollbackRequest,Grpc.Core.ServerCallContext)">Rollback(RollbackRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Rolls back a transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -300,7 +309,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1Beta3_Datastore_IDatastore_RunQuery_Google_Datastore_V1Beta3_RunQueryRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1Beta3.Datastore.IDatastore.RunQuery(Google.Datastore.V1Beta3.RunQueryRequest,Grpc.Core.ServerCallContext)">RunQuery(RunQueryRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Queries for entities.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -361,6 +371,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>

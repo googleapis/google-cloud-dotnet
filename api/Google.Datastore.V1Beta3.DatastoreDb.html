@@ -1,0 +1,1299 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DatastoreDb
+   | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DatastoreDb
+   | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.0.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Datastore_V1Beta3_DatastoreDb" data-uid="Google.Datastore.V1Beta3.DatastoreDb">Class DatastoreDb
+              </h1>
+              <div class="markdown level0 summary"><p>An abstraction over <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a> to simplify operations. Use the <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1Beta3_DatastoreClient_">Create(String, String, DatastoreClient)</a>
+method to obtain an instance of this class.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">DatastoreDb</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
+              <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class DatastoreDb</code></pre>
+              </div>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>
+The project ID specified on creation is used for all operations, effectively supplying the first parameter of every
+operation specified on <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a>.
+</p>
+<p>
+The project ID and namespace ID are combined to form a partition ID. This partition ID is used when creating a key
+factory or running a query. Operations that take keys or entities do not validate that the keys are within the
+partition associated with this object.
+</p>
+</div>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Client" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Client">Client</h4>
+              <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a> used for all remote operations.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatastoreClient Client { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateId_Google_Datastore_V1Beta3_Key_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.AllocateId(Google.Datastore.V1Beta3.Key)">AllocateId(Key)</h4>
+              <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Key AllocateId(Key key)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The incomplete key to allocate an ID for.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
+                    <td><p>The complete key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.AllocateIds(Google.Datastore.V1Beta3.Key[])">AllocateIds(Key[])</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Key&gt; AllocateIds(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.AllocateIds(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key})">AllocateIds(IEnumerable&lt;Key&gt;)</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Key&gt; AllocateIds(IEnumerable&lt;Key&gt; keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_BeginTransaction" data-uid="Google.Datastore.V1Beta3.DatastoreDb.BeginTransaction">BeginTransaction()</h4>
+              <div class="markdown level1 summary"><p>Begins a transaction, returning a <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatastoreTransaction BeginTransaction()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction">DatastoreTransaction</a></td>
+                    <td><p>A new <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction">DatastoreTransaction</a> for this object&#39;s project.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1Beta3_DatastoreClient_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Create(System.String,System.String,Google.Datastore.V1Beta3.DatastoreClient)">Create(String, String, DatastoreClient)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb">DatastoreDb</a> to operate on the partition identified by <em>projectId</em>
+and <em>namespaceId</em>, using the <em>client</em> to perform remote operations.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static DatastoreDb Create(string projectId, string namespaceId = &quot;&quot;, DatastoreClient client = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID to use in all operations.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>namespaceId</em></td>
+                    <td><p>The namespace ID to use in operations requiring a partition.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a></td>
+                    <td><em>client</em></td>
+                    <td><p>The client to use for remote operations. If this is null, an instance will be created
+using default settings.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb">DatastoreDb</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb">DatastoreDb</a> operating on the specified partition.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_CreateKeyFactory_System_String_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.CreateKeyFactory(System.String)">CreateKeyFactory(String)</h4>
+              <div class="markdown level1 summary"><p>Creates a key factory for root entities in this objects&#39;s partition.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public KeyFactory CreateKeyFactory(string kind)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>kind</em></td>
+                    <td><p>The kind of entity key to create. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.KeyFactory.html#Google_Datastore_V1Beta3_KeyFactory">KeyFactory</a></td>
+                    <td><p>A key factory with the specified kind and this object&#39;s partition.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Entity_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(Google.Datastore.V1Beta3.Entity)">Delete(Entity)</h4>
+              <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Delete(Entity entity)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to delete. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Entity__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Entity___">Delete(Entity[])</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(Google.Datastore.V1Beta3.Entity[])">Delete(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Delete(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Delete(IEnumerable<entity>)</entity></a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(Google.Datastore.V1Beta3.Key)">Delete(Key)</h4>
+              <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Delete(Key key)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The key to delete. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key___">Delete(Key[])</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(Google.Datastore.V1Beta3.Key[])">Delete(Key[])</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Delete(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__">Delete(IEnumerable<key>)</key></a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity})">Delete(IEnumerable&lt;Entity&gt;)</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Delete(IEnumerable&lt;Entity&gt; entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key})">Delete(IEnumerable&lt;Key&gt;)</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Delete(IEnumerable&lt;Key&gt; keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_Google_Datastore_V1Beta3_Entity_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Insert(Google.Datastore.V1Beta3.Entity)">Insert(Entity)</h4>
+              <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Key Insert(Entity entity)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to insert. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
+                    <td><p>The key of the inserted entity.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_Google_Datastore_V1Beta3_Entity__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Insert_Google_Datastore_V1Beta3_Entity___">Insert(Entity[])</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Insert(Google.Datastore.V1Beta3.Entity[])">Insert(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Key&gt; Insert(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of inserted entities, in the same order as <em>entities</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Insert(IEnumerable<entity>)</entity></a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Insert(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity})">Insert(IEnumerable&lt;Entity&gt;)</h4>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Key&gt; Insert(IEnumerable&lt;Entity&gt; entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of inserted entities, in the same order as <em>entities</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Lookup_Google_Datastore_V1Beta3_Key_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Lookup(Google.Datastore.V1Beta3.Key,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency})">Lookup(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;)</h4>
+              <div class="markdown level1 summary"><p>Looks up a single entity by key.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Entity Lookup(Key key, ReadOptions.Types.ReadConsistency? readConsistency = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The key to look up. Must not be null, and must be complete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></td>
+                    <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Lookup_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Lookup(Google.Datastore.V1Beta3.Key[])">Lookup(Key[])</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
+Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
+
+IReadOnlyList&lt;Entity&gt; entities = db.Lookup(key1, key2);
+Console.WriteLine(entities[0]); // Pride and Prejudice entity
+Console.WriteLine(entities[1]); // Nothing (value is null reference)
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Entity&gt; Lookup(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Lookup_Google_Datastore_V1Beta3_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This overload does not support the <a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a> to be specified due to restrictions with
+methods containing a parameter array and optional parameters.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Lookup(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency})">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;)</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_GqlQuery_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQuery(Google.Datastore.V1Beta3.GqlQuery,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency})">RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;)</h4>
+              <div class="markdown level1 summary"><p>Perform a single <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_RunQuery_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_">RunQuery(String, PartitionId, ReadOptions, Query, CallSettings)</a> operation
+using this object&#39;s partition ID and the specified read consistency, not in a transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RunQueryResponse RunQuery(GqlQuery query, ReadOptions.Types.ReadConsistency? readConsistency = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the query, or null to use the default.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a></td>
+                    <td><p>The response for the given query operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQuery(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency})">RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;)</h4>
+              <div class="markdown level1 summary"><p>Perform a single <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_RunQuery_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_Query_Google_Api_Gax_CallSettings_">RunQuery(String, PartitionId, ReadOptions, Query, CallSettings)</a> operation
+using this object&#39;s partition ID and the specified read consistency, not in a transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RunQueryResponse RunQuery(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the query, or null to use the default.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a></td>
+                    <td><p>The response for the given query operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>To automatically stream pages of results, use <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQueryPageStream_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__">RunQueryPageStream(Query, Nullable<readoptions.types.readconsistency>)</readoptions.types.readconsistency></a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryPageStream_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.RunQueryPageStream(Google.Datastore.V1Beta3.Query,System.Nullable{Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency})">RunQueryPageStream(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;)</h4>
+              <div class="markdown level1 summary"><p>Executes the given query, automatically streaming the pages of results.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IPagedEnumerable&lt;RunQueryResponse, Entity&gt; RunQueryPageStream(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the query, or null to use
+the default.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a>, <a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><p>A sequence of pages of entities.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_RunQueryPageStream_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>To start where a previous operation left off, specify <a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query_StartCursor">StartCursor</a>.
+If you have been using <span class="xref">Google.Api.Gax.FixedSizePage`1</span>, convert the <span class="xref">Google.Api.Gax.FixedSizePage`1.NextPageToken</span>
+string into a <span class="xref">ByteString</span> using <span class="xref">Google.Protobuf.ByteString.FromBase64(System.String)</span>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Update(Google.Datastore.V1Beta3.Entity)">Update(Entity)</h4>
+              <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Key Update(Entity entity)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to update. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
+                    <td><p>The key of the updated entity.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity___">Update(Entity[])</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Update(Google.Datastore.V1Beta3.Entity[])">Update(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Key&gt; Update(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of updated entities, in the same order as <em>entities</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Update(IEnumerable<entity>)</entity></a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Update(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity})">Update(IEnumerable&lt;Entity&gt;)</h4>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Key&gt; Update(IEnumerable&lt;Entity&gt; entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of updated entities, in the same order as <em>entities</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_Google_Datastore_V1Beta3_Entity_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Upsert(Google.Datastore.V1Beta3.Entity)">Upsert(Entity)</h4>
+              <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Key Upsert(Entity entity)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to upsert. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
+                    <td><p>The key of the upserted entity.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_Google_Datastore_V1Beta3_Entity__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Upsert_Google_Datastore_V1Beta3_Entity___">Upsert(Entity[])</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Upsert(Google.Datastore.V1Beta3.Entity[])">Upsert(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Key&gt; Upsert(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of upserted entities, in the same order as <em>entities</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Upsert(IEnumerable<entity>)</entity></a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Upsert(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity})">Upsert(IEnumerable&lt;Entity&gt;)</h4>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Key&gt; Upsert(IEnumerable&lt;Entity&gt; entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of upserted entities, in the same order as <em>entities</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

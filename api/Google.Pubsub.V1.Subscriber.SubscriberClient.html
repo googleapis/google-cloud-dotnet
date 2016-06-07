@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Subscriber.SubscriberClient
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 1.8.1.0">
+    <meta name="generator" content="docfx 2.0.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../">
+              <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
             </div>
@@ -69,22 +69,86 @@
               
               <h1 id="Google_Pubsub_V1_Subscriber_SubscriberClient" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient">Class Subscriber.SubscriberClient
               </h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p>Client for Subscriber</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Grpc.Core.ClientBase</span></div>
-                  <div class="level2"><span class="xref">Subscriber.SubscriberClient</span></div>
+                  <div class="level2"><span class="xref">Grpc.Core.ClientBase</span>&lt;<a class="xref" href="Google.Pubsub.V1.Subscriber.SubscriberClient.html#Google_Pubsub_V1_Subscriber_SubscriberClient">Subscriber.SubscriberClient</a>&gt;</div>
+                  <div class="level3"><span class="xref">Subscriber.SubscriberClient</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">Grpc.Core.ClientBase&lt;Google.Pubsub.V1.Subscriber.SubscriberClient&gt;.WithHost(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Grpc.Core.ClientBase.CallInvoker</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Pubsub.V1</h6>
               <h6><strong>Assembly</strong>:Google.Pubsub.V1.dll</h6>
               <h5 id="Google_Pubsub_V1_Subscriber_SubscriberClient_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class SubscriberClient : ClientBase, Subscriber.ISubscriberClient</code></pre>
+                <pre><code class="lang-csharp hljs">public class SubscriberClient : ClientBase&lt;Subscriber.SubscriberClient&gt;, Subscriber.ISubscriberClient</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient__ctor" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.#ctor">SubscriberClient()</h4>
+              <div class="markdown level1 summary"><p>Protected parameterless constructor to allow creation of test doubles.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected SubscriberClient()</code></pre>
+              </div>
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.#ctor(Grpc.Core.CallInvoker)">SubscriberClient(CallInvoker)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SubscriberClient(CallInvoker callInvoker)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallInvoker</span></td>
+                    <td><em>callInvoker</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient__ctor_Grpc_Core_Channel_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.#ctor(Grpc.Core.Channel)">SubscriberClient(Channel)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -109,14 +173,45 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient__ctor_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">SubscriberClient(ClientBase.ClientBaseConfiguration)</h4>
+              <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected SubscriberClient(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+                    <td><em>configuration</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_Acknowledge_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.Acknowledge(Google.Pubsub.V1.AcknowledgeRequest,Grpc.Core.CallOptions)">Acknowledge(AcknowledgeRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Acknowledges the messages associated with the <code>ack_ids</code> in the
+ <code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
+ from the subscription.</p>
+<p> Acknowledging a message whose ack deadline has expired may succeed,
+ but such a message may be redelivered later. Acknowledging a message more
+ than once will not result in an error.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty Acknowledge(AcknowledgeRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty Acknowledge(AcknowledgeRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -155,12 +250,20 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_Acknowledge_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_CallOptions_">Acknowledge(AcknowledgeRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_Acknowledge_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.Acknowledge(Google.Pubsub.V1.AcknowledgeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Acknowledge(AcknowledgeRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Acknowledges the messages associated with the <code>ack_ids</code> in the
+ <code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
+ from the subscription.</p>
+<p> Acknowledging a message whose ack deadline has expired may succeed,
+ but such a message may be redelivered later. Acknowledging a message more
+ than once will not result in an error.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty Acknowledge(AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty Acknowledge(AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -209,12 +312,20 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_Acknowledge_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">Acknowledge(AcknowledgeRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_AcknowledgeAsync_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.AcknowledgeAsync(Google.Pubsub.V1.AcknowledgeRequest,Grpc.Core.CallOptions)">AcknowledgeAsync(AcknowledgeRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Acknowledges the messages associated with the <code>ack_ids</code> in the
+ <code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
+ from the subscription.</p>
+<p> Acknowledging a message whose ack deadline has expired may succeed,
+ but such a message may be redelivered later. Acknowledging a message more
+ than once will not result in an error.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; AcknowledgeAsync(AcknowledgeRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; AcknowledgeAsync(AcknowledgeRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -253,12 +364,20 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_AcknowledgeAsync_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_CallOptions_">AcknowledgeAsync(AcknowledgeRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_AcknowledgeAsync_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.AcknowledgeAsync(Google.Pubsub.V1.AcknowledgeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">AcknowledgeAsync(AcknowledgeRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Acknowledges the messages associated with the <code>ack_ids</code> in the
+ <code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
+ from the subscription.</p>
+<p> Acknowledging a message whose ack deadline has expired may succeed,
+ but such a message may be redelivered later. Acknowledging a message more
+ than once will not result in an error.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; AcknowledgeAsync(AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; AcknowledgeAsync(AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -307,12 +426,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_AcknowledgeAsync_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">AcknowledgeAsync(AcknowledgeRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_CreateSubscription_Google_Pubsub_V1_Subscription_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.CreateSubscription(Google.Pubsub.V1.Subscription,Grpc.Core.CallOptions)">CreateSubscription(Subscription, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a subscription to a given topic for a given subscriber.
+ If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+ If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p> If the name is not provided in the request, the server will assign a random
+ name for this subscription on the same project as the topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Subscription CreateSubscription(Subscription request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Subscription CreateSubscription(Subscription request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -351,12 +477,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_CreateSubscription_Google_Pubsub_V1_Subscription_Grpc_Core_CallOptions_">CreateSubscription(Subscription, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_CreateSubscription_Google_Pubsub_V1_Subscription_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.CreateSubscription(Google.Pubsub.V1.Subscription,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSubscription(Subscription, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a subscription to a given topic for a given subscriber.
+ If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+ If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p> If the name is not provided in the request, the server will assign a random
+ name for this subscription on the same project as the topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Subscription CreateSubscription(Subscription request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Subscription CreateSubscription(Subscription request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -405,12 +538,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_CreateSubscription_Google_Pubsub_V1_Subscription_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">CreateSubscription(Subscription, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_CreateSubscriptionAsync_Google_Pubsub_V1_Subscription_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.CreateSubscriptionAsync(Google.Pubsub.V1.Subscription,Grpc.Core.CallOptions)">CreateSubscriptionAsync(Subscription, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a subscription to a given topic for a given subscriber.
+ If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+ If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p> If the name is not provided in the request, the server will assign a random
+ name for this subscription on the same project as the topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Subscription&gt; CreateSubscriptionAsync(Subscription request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Subscription&gt; CreateSubscriptionAsync(Subscription request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -449,12 +589,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_CreateSubscriptionAsync_Google_Pubsub_V1_Subscription_Grpc_Core_CallOptions_">CreateSubscriptionAsync(Subscription, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_CreateSubscriptionAsync_Google_Pubsub_V1_Subscription_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.CreateSubscriptionAsync(Google.Pubsub.V1.Subscription,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSubscriptionAsync(Subscription, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Creates a subscription to a given topic for a given subscriber.
+ If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+ If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p> If the name is not provided in the request, the server will assign a random
+ name for this subscription on the same project as the topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Subscription&gt; CreateSubscriptionAsync(Subscription request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Subscription&gt; CreateSubscriptionAsync(Subscription request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -503,12 +650,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_CreateSubscriptionAsync_Google_Pubsub_V1_Subscription_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">CreateSubscriptionAsync(Subscription, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_DeleteSubscription_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.DeleteSubscription(Google.Pubsub.V1.DeleteSubscriptionRequest,Grpc.Core.CallOptions)">DeleteSubscription(DeleteSubscriptionRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes an existing subscription. All pending messages in the subscription
+ are immediately dropped. Calls to <code>Pull</code> after deletion will return
+ <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
+ the same name, but the new one has no association with the old
+ subscription, or its topic unless the same topic is specified.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty DeleteSubscription(DeleteSubscriptionRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty DeleteSubscription(DeleteSubscriptionRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -547,12 +701,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_DeleteSubscription_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_CallOptions_">DeleteSubscription(DeleteSubscriptionRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_DeleteSubscription_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.DeleteSubscription(Google.Pubsub.V1.DeleteSubscriptionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSubscription(DeleteSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes an existing subscription. All pending messages in the subscription
+ are immediately dropped. Calls to <code>Pull</code> after deletion will return
+ <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
+ the same name, but the new one has no association with the old
+ subscription, or its topic unless the same topic is specified.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty DeleteSubscription(DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty DeleteSubscription(DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -601,12 +762,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_DeleteSubscription_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">DeleteSubscription(DeleteSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_DeleteSubscriptionAsync_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.DeleteSubscriptionAsync(Google.Pubsub.V1.DeleteSubscriptionRequest,Grpc.Core.CallOptions)">DeleteSubscriptionAsync(DeleteSubscriptionRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes an existing subscription. All pending messages in the subscription
+ are immediately dropped. Calls to <code>Pull</code> after deletion will return
+ <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
+ the same name, but the new one has no association with the old
+ subscription, or its topic unless the same topic is specified.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; DeleteSubscriptionAsync(DeleteSubscriptionRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSubscriptionAsync(DeleteSubscriptionRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -645,12 +813,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_DeleteSubscriptionAsync_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_CallOptions_">DeleteSubscriptionAsync(DeleteSubscriptionRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_DeleteSubscriptionAsync_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.DeleteSubscriptionAsync(Google.Pubsub.V1.DeleteSubscriptionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSubscriptionAsync(DeleteSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Deletes an existing subscription. All pending messages in the subscription
+ are immediately dropped. Calls to <code>Pull</code> after deletion will return
+ <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
+ the same name, but the new one has no association with the old
+ subscription, or its topic unless the same topic is specified.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; DeleteSubscriptionAsync(DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSubscriptionAsync(DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -699,12 +874,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_DeleteSubscriptionAsync_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">DeleteSubscriptionAsync(DeleteSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_GetSubscription_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.GetSubscription(Google.Pubsub.V1.GetSubscriptionRequest,Grpc.Core.CallOptions)">GetSubscription(GetSubscriptionRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets the configuration details of a subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Subscription GetSubscription(GetSubscriptionRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Subscription GetSubscription(GetSubscriptionRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -743,12 +921,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_GetSubscription_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_CallOptions_">GetSubscription(GetSubscriptionRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_GetSubscription_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.GetSubscription(Google.Pubsub.V1.GetSubscriptionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSubscription(GetSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets the configuration details of a subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Subscription GetSubscription(GetSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Subscription GetSubscription(GetSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -797,12 +978,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_GetSubscription_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">GetSubscription(GetSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_GetSubscriptionAsync_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.GetSubscriptionAsync(Google.Pubsub.V1.GetSubscriptionRequest,Grpc.Core.CallOptions)">GetSubscriptionAsync(GetSubscriptionRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets the configuration details of a subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Subscription&gt; GetSubscriptionAsync(GetSubscriptionRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Subscription&gt; GetSubscriptionAsync(GetSubscriptionRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -841,12 +1025,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_GetSubscriptionAsync_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_CallOptions_">GetSubscriptionAsync(GetSubscriptionRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_GetSubscriptionAsync_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.GetSubscriptionAsync(Google.Pubsub.V1.GetSubscriptionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">GetSubscriptionAsync(GetSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Gets the configuration details of a subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Subscription&gt; GetSubscriptionAsync(GetSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Subscription&gt; GetSubscriptionAsync(GetSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -895,12 +1082,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_GetSubscriptionAsync_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">GetSubscriptionAsync(GetSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ListSubscriptions_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ListSubscriptions(Google.Pubsub.V1.ListSubscriptionsRequest,Grpc.Core.CallOptions)">ListSubscriptions(ListSubscriptionsRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists matching subscriptions.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ListSubscriptionsResponse ListSubscriptions(ListSubscriptionsRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual ListSubscriptionsResponse ListSubscriptions(ListSubscriptionsRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -939,12 +1129,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ListSubscriptions_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_CallOptions_">ListSubscriptions(ListSubscriptionsRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ListSubscriptions_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ListSubscriptions(Google.Pubsub.V1.ListSubscriptionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSubscriptions(ListSubscriptionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists matching subscriptions.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ListSubscriptionsResponse ListSubscriptions(ListSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual ListSubscriptionsResponse ListSubscriptions(ListSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -993,12 +1186,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ListSubscriptions_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">ListSubscriptions(ListSubscriptionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ListSubscriptionsAsync_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ListSubscriptionsAsync(Google.Pubsub.V1.ListSubscriptionsRequest,Grpc.Core.CallOptions)">ListSubscriptionsAsync(ListSubscriptionsRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists matching subscriptions.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;ListSubscriptionsResponse&gt; ListSubscriptionsAsync(ListSubscriptionsRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSubscriptionsResponse&gt; ListSubscriptionsAsync(ListSubscriptionsRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1037,12 +1233,15 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ListSubscriptionsAsync_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_CallOptions_">ListSubscriptionsAsync(ListSubscriptionsRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ListSubscriptionsAsync_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ListSubscriptionsAsync(Google.Pubsub.V1.ListSubscriptionsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSubscriptionsAsync(ListSubscriptionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Lists matching subscriptions.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;ListSubscriptionsResponse&gt; ListSubscriptionsAsync(ListSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSubscriptionsResponse&gt; ListSubscriptionsAsync(ListSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1091,12 +1290,18 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ListSubscriptionsAsync_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">ListSubscriptionsAsync(ListSubscriptionsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ModifyAckDeadline_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ModifyAckDeadline(Google.Pubsub.V1.ModifyAckDeadlineRequest,Grpc.Core.CallOptions)">ModifyAckDeadline(ModifyAckDeadlineRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the ack deadline for a specific message. This method is useful
+ to indicate that more time is needed to process a message by the
+ subscriber, or to make the message available for redelivery if the
+ processing was interrupted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty ModifyAckDeadline(ModifyAckDeadlineRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty ModifyAckDeadline(ModifyAckDeadlineRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1135,12 +1340,18 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ModifyAckDeadline_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_CallOptions_">ModifyAckDeadline(ModifyAckDeadlineRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ModifyAckDeadline_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ModifyAckDeadline(Google.Pubsub.V1.ModifyAckDeadlineRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ModifyAckDeadline(ModifyAckDeadlineRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the ack deadline for a specific message. This method is useful
+ to indicate that more time is needed to process a message by the
+ subscriber, or to make the message available for redelivery if the
+ processing was interrupted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty ModifyAckDeadline(ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty ModifyAckDeadline(ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1189,12 +1400,18 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ModifyAckDeadline_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">ModifyAckDeadline(ModifyAckDeadlineRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ModifyAckDeadlineAsync_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ModifyAckDeadlineAsync(Google.Pubsub.V1.ModifyAckDeadlineRequest,Grpc.Core.CallOptions)">ModifyAckDeadlineAsync(ModifyAckDeadlineRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the ack deadline for a specific message. This method is useful
+ to indicate that more time is needed to process a message by the
+ subscriber, or to make the message available for redelivery if the
+ processing was interrupted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; ModifyAckDeadlineAsync(ModifyAckDeadlineRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; ModifyAckDeadlineAsync(ModifyAckDeadlineRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1233,12 +1450,18 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ModifyAckDeadlineAsync_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_CallOptions_">ModifyAckDeadlineAsync(ModifyAckDeadlineRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ModifyAckDeadlineAsync_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ModifyAckDeadlineAsync(Google.Pubsub.V1.ModifyAckDeadlineRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ModifyAckDeadlineAsync(ModifyAckDeadlineRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the ack deadline for a specific message. This method is useful
+ to indicate that more time is needed to process a message by the
+ subscriber, or to make the message available for redelivery if the
+ processing was interrupted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; ModifyAckDeadlineAsync(ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; ModifyAckDeadlineAsync(ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1287,12 +1510,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ModifyAckDeadlineAsync_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">ModifyAckDeadlineAsync(ModifyAckDeadlineRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ModifyPushConfig_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ModifyPushConfig(Google.Pubsub.V1.ModifyPushConfigRequest,Grpc.Core.CallOptions)">ModifyPushConfig(ModifyPushConfigRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the <code>PushConfig</code> for a specified subscription.</p>
+<p> This may be used to change a push subscription to a pull one (signified by
+ an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
+ attributes of a push subscription. Messages will accumulate for delivery
+ continuously through the call regardless of changes to the <code>PushConfig</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty ModifyPushConfig(ModifyPushConfigRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty ModifyPushConfig(ModifyPushConfigRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1331,12 +1561,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ModifyPushConfig_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_CallOptions_">ModifyPushConfig(ModifyPushConfigRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ModifyPushConfig_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ModifyPushConfig(Google.Pubsub.V1.ModifyPushConfigRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ModifyPushConfig(ModifyPushConfigRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the <code>PushConfig</code> for a specified subscription.</p>
+<p> This may be used to change a push subscription to a pull one (signified by
+ an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
+ attributes of a push subscription. Messages will accumulate for delivery
+ continuously through the call regardless of changes to the <code>PushConfig</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Empty ModifyPushConfig(ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Empty ModifyPushConfig(ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1385,12 +1622,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ModifyPushConfig_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">ModifyPushConfig(ModifyPushConfigRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ModifyPushConfigAsync_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ModifyPushConfigAsync(Google.Pubsub.V1.ModifyPushConfigRequest,Grpc.Core.CallOptions)">ModifyPushConfigAsync(ModifyPushConfigRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the <code>PushConfig</code> for a specified subscription.</p>
+<p> This may be used to change a push subscription to a pull one (signified by
+ an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
+ attributes of a push subscription. Messages will accumulate for delivery
+ continuously through the call regardless of changes to the <code>PushConfig</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; ModifyPushConfigAsync(ModifyPushConfigRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; ModifyPushConfigAsync(ModifyPushConfigRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1429,12 +1673,19 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ModifyPushConfigAsync_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_CallOptions_">ModifyPushConfigAsync(ModifyPushConfigRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_ModifyPushConfigAsync_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.ModifyPushConfigAsync(Google.Pubsub.V1.ModifyPushConfigRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ModifyPushConfigAsync(ModifyPushConfigRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Modifies the <code>PushConfig</code> for a specified subscription.</p>
+<p> This may be used to change a push subscription to a pull one (signified by
+ an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
+ attributes of a push subscription. Messages will accumulate for delivery
+ continuously through the call regardless of changes to the <code>PushConfig</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;Empty&gt; ModifyPushConfigAsync(ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; ModifyPushConfigAsync(ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1483,12 +1734,59 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_ModifyPushConfigAsync_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">ModifyPushConfigAsync(ModifyPushConfigRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override Subscriber.SubscriberClient NewInstance(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+                    <td><em>configuration</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.Subscriber.SubscriberClient.html#Google_Pubsub_V1_Subscriber_SubscriberClient">Subscriber.SubscriberClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Pubsub.V1.Subscriber.SubscriberClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_Pull_Google_Pubsub_V1_PullRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.Pull(Google.Pubsub.V1.PullRequest,Grpc.Core.CallOptions)">Pull(PullRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Pulls messages from the server. Returns an empty list if there are no
+ messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
+ there are too many concurrent pull requests pending for the given
+ subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public PullResponse Pull(PullRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PullResponse Pull(PullRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1527,12 +1825,18 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_Pull_Google_Pubsub_V1_PullRequest_Grpc_Core_CallOptions_">Pull(PullRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_Pull_Google_Pubsub_V1_PullRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.Pull(Google.Pubsub.V1.PullRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Pull(PullRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Pulls messages from the server. Returns an empty list if there are no
+ messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
+ there are too many concurrent pull requests pending for the given
+ subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public PullResponse Pull(PullRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PullResponse Pull(PullRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1581,12 +1885,18 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_Pull_Google_Pubsub_V1_PullRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">Pull(PullRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_PullAsync_Google_Pubsub_V1_PullRequest_Grpc_Core_CallOptions_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.PullAsync(Google.Pubsub.V1.PullRequest,Grpc.Core.CallOptions)">PullAsync(PullRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Pulls messages from the server. Returns an empty list if there are no
+ messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
+ there are too many concurrent pull requests pending for the given
+ subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;PullResponse&gt; PullAsync(PullRequest request, CallOptions options)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;PullResponse&gt; PullAsync(PullRequest request, CallOptions options)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1625,12 +1935,18 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_PullAsync_Google_Pubsub_V1_PullRequest_Grpc_Core_CallOptions_">PullAsync(PullRequest, CallOptions)</a></div>
               <h4 id="Google_Pubsub_V1_Subscriber_SubscriberClient_PullAsync_Google_Pubsub_V1_PullRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberClient.PullAsync(Google.Pubsub.V1.PullRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">PullAsync(PullRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p> Pulls messages from the server. Returns an empty list if there are no
+ messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
+ there are too many concurrent pull requests pending for the given
+ subscription.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AsyncUnaryCall&lt;PullResponse&gt; PullAsync(PullRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;PullResponse&gt; PullAsync(PullRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1679,6 +1995,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Pubsub.V1.Subscriber.ISubscriberClient.html#Google_Pubsub_V1_Subscriber_ISubscriberClient_PullAsync_Google_Pubsub_V1_PullRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_">PullAsync(PullRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</a></div>
             </article>
           </div>
           
@@ -1697,6 +2015,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            
             <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
