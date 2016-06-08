@@ -158,6 +158,7 @@ namespace Google.Pubsub.V1.Snippets
             PublisherClient.Create().CreateTopic(PublisherClient.GetTopicName(projectId, topicId));
 
             // Snippet: CreateSubscriptionAsync(string,string,*,*,CallSettings)
+            // Additional: CreateSubscriptionAsync(string,string,*,*,CancellationToken)
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use an existing subscription resource name:
@@ -225,6 +226,7 @@ namespace Google.Pubsub.V1.Snippets
             publisher.Publish(topicName, new[] { newMessage });
 
             // Snippet: PullAsync(string,*,*,CallSettings)
+            // Additional: PullAsync(string,*,*,CancellationToken)
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use an existing subscription resource name:

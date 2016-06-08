@@ -94,6 +94,7 @@ namespace Google.Pubsub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
 
             // Snippet: CreateTopicAsync(string,CallSettings)
+            // Additional: CreateTopicAsync(string,CancellationToken)
             PublisherClient client = PublisherClient.Create();
 
             // Alternative: use a known topic resource name
@@ -138,6 +139,7 @@ namespace Google.Pubsub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
 
             // Snippet: PublishAsync(*,*,CallSettings)
+            // Additional: PublishAsync(*,*,CancellationToken)
             PublisherClient client = PublisherClient.Create();
             // Make sure we have a topic to publish to
             string topicName = PublisherClient.GetTopicName(projectId, topicId);
@@ -185,6 +187,7 @@ namespace Google.Pubsub.V1.Snippets
             await PublisherClient.Create().CreateTopicAsync(PublisherClient.GetTopicName(projectId, topicId));
 
             // Snippet: DeleteTopicAsync(string,CallSettings)
+            // Additional: DeleteTopicAsync(string,CancellationToken)
             PublisherClient client = PublisherClient.Create();
 
             // Alternative: use a known topic resource name

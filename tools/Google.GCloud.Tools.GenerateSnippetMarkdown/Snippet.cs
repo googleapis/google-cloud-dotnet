@@ -28,9 +28,14 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
         public string SnippetId { get; set; }
 
         /// <summary>
-        /// The UID of the docfx metadata item, if any.
+        /// Additional members which should receive the same snippet.
         /// </summary>
-        public string MetadataUid { get; set; }
+        public List<string> AdditionalMembers { get; } = new List<string>();
+
+        /// <summary>
+        /// The UIDs of the docfx metadata items, if any.
+        /// </summary>
+        public List<string> MetadataUids { get; } = new List<string>();
 
         /// <summary>
         /// Where in the snippet text this snippet starts (inclusive).

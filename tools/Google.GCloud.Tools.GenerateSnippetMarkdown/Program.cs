@@ -47,6 +47,7 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
     public sealed class Program
     {
         private const string StartSnippet = "// Snippet: ";
+        private const string AdditionalMember = "// Additional: ";
         private const string EndSnippet = "// End snippet";
         private static readonly Regex DocfxSnippetPattern = new Regex(@"^[\w\.]+$", RegexOptions.Compiled);
 
@@ -144,6 +145,10 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                 int startSnippetIdIndex = line.IndexOf(StartSnippet);
                 bool startSnippet = startSnippetIdIndex != -1;
                 bool endSnippet = line.Contains(EndSnippet);
+
+                int startAdditionalIndex = line.IndexOf(AdditionalMember);
+                bool additional = startAdditionalIndex != -1;
+
                 if (currentSnippet != null)
                 {
                     if (startSnippet)
@@ -156,6 +161,22 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                         yield return currentSnippet;
                         currentSnippet = null;
                     }
+                    else if (additional)
+                    {
+                        string additionalId = line.Substring(startAdditionalIndex + AdditionalMember.Length).Trim();
+                        if (additionalId.Contains("(") && !additionalId.EndsWith(")"))
+                        {
+                            errors.Add($"Invalid additional ID: {additionalId} at {sourceFile}:{lineNumber}");
+                        }
+                        else if (currentSnippet.Lines.Any())
+                        {
+                            errors.Add($"Additional ID: {additionalId} at {sourceFile}:{lineNumber} after body of snippet start");
+                        }
+                        else
+                        {
+                            currentSnippet.AdditionalMembers.Add(additionalId);
+                        }
+                    }
                     else
                     {
                         currentSnippet.Lines.Add(line);
@@ -166,6 +187,10 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                     if (endSnippet)
                     {
                         errors.Add($"Snippet end without start at {sourceFile}:{lineNumber}");
+                    }
+                    else if (additional)
+                    {
+                        errors.Add($"Additional member when not in snippet at {sourceFile}:{lineNumber}");
                     }
                     else if (startSnippet)
                     {
@@ -235,18 +260,22 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
         {
             foreach (var snippet in snippets)
             {
-                var matches = members.Where(member => IsMemberMatch(member.Id, snippet.SnippetId)).ToList();
-                if (matches.Count > 1)
+                // TODO: Should AdditionalMembers always match a member?
+                foreach (var snippetMemberId in new[] { snippet.SnippetId }.Concat(snippet.AdditionalMembers))
                 {
-                    errors.Add($"Snippet ID '{snippet.SnippetId}' at {snippet.SourceLocation} matches multiple members ({string.Join(", ", matches.Select(m => m.Id))}).");
-                }
-                else if (matches.Count == 0 && !DocfxSnippetPattern.IsMatch(snippet.SnippetId))
-                {
-                    errors.Add($"Snippet ID '{snippet.SnippetId}' at {snippet.SourceLocation} matches matched no members and isn't a valid docfx snippet name.");
-                }
-                else
-                {
-                    snippet.MetadataUid = matches.FirstOrDefault()?.Uid;
+                    var matches = members.Where(member => IsMemberMatch(member.Id, snippetMemberId)).ToList();
+                    if (matches.Count > 1)
+                    {
+                        errors.Add($"Member ID '{snippetMemberId}' at {snippet.SourceLocation} matches multiple members ({string.Join(", ", matches.Select(m => m.Id))}).");
+                    }
+                    else if (matches.Count == 0 && !DocfxSnippetPattern.IsMatch(snippetMemberId))
+                    {
+                        errors.Add($"Snippet ID '{snippetMemberId}' at {snippet.SourceLocation} matches matched no members and isn't a valid docfx snippet name.");
+                    }
+                    else
+                    {
+                        snippet.MetadataUids.AddRange(matches.Select(m => m.Uid));
+                    }
                 }
             }
         }
@@ -255,15 +284,18 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
         {
             using (var writer = File.CreateText(outputFile))
             {
-                foreach (var snippet in snippets.Where(s => s.MetadataUid != null))
+                foreach (var snippet in snippets)
                 {
-                    writer.WriteLine("---");
-                    writer.WriteLine($"uid: {snippet.MetadataUid}");
-                    writer.WriteLine("---");
-                    writer.WriteLine();
-                    writer.WriteLine("Example:");
-                    writer.WriteLine($"[!code-cs[]({relativeSnippetFile}#L{snippet.StartLine}-L{snippet.EndLine})]");
-                    writer.WriteLine();
+                    foreach (var metadataUid in snippet.MetadataUids)
+                    {
+                        writer.WriteLine("---");
+                        writer.WriteLine($"uid: {metadataUid}");
+                        writer.WriteLine("---");
+                        writer.WriteLine();
+                        writer.WriteLine("Example:");
+                        writer.WriteLine($"[!code-cs[]({relativeSnippetFile}#L{snippet.StartLine}-L{snippet.EndLine})]");
+                        writer.WriteLine();
+                    }
                 }
             }
         }
