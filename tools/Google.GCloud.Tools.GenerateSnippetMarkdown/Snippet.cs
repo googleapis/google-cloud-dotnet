@@ -23,19 +23,26 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
     public class Snippet
     {
         /// <summary>
-        /// The snippet ID that appears in source code.
+        /// The snippet ID that appears in source code. This is specified in a "Snippet:" or
+        /// "Sample:" line.
         /// </summary>
         public string SnippetId { get; set; }
 
         /// <summary>
+        /// Is this a sample for general documentation rather than API docs? If so, the snippet ID isn't
+        /// used for member matching.
+        /// </summary>
+        public bool Sample { get; set; }
+
+        /// <summary>
         /// Additional members which should receive the same snippet.
         /// </summary>
-        public List<string> AdditionalMembers { get; } = new List<string>();
+        public IList<string> AdditionalMembers { get; } = new List<string>();
 
         /// <summary>
         /// The UIDs of the docfx metadata items, if any.
         /// </summary>
-        public List<string> MetadataUids { get; } = new List<string>();
+        public IList<string> MetadataUids { get; } = new List<string>();
 
         /// <summary>
         /// Where in the snippet text this snippet starts (inclusive).

@@ -39,7 +39,7 @@ namespace Google.Pubsub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
             string subscriptionId = _fixture.CreateSubscriptionId();
 
-            // Snippet: Overview
+            // Sample: Overview
             // First create a topic.
             PublisherClient publisher = PublisherClient.Create();
             string topicName = PublisherClient.GetTopicName(projectId, topicId);
@@ -80,7 +80,7 @@ namespace Google.Pubsub.V1.Snippets
             // Tidy up by deleting the subscription and the topic.
             subscriber.DeleteSubscription(subscriptionName);
             publisher.DeleteTopic(topicName);
-            // End snippet
+            // End sample
 
             Assert.Equal(1, response.ReceivedMessages.Count);
             Assert.Equal("Hello, Pubsub", response.ReceivedMessages[0].Message.Data.ToStringUtf8());

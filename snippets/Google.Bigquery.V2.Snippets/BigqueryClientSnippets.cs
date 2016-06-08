@@ -39,7 +39,7 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: QueryOverview
+            // Sample: QueryOverview
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
@@ -50,7 +50,7 @@ namespace Google.Bigquery.V2.Snippets
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -58,7 +58,7 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: InsertOverview
+            // Sample: InsertOverview
             var client = BigqueryClient.Create(projectId);
 
             // Create the dataset if it doesn't exist.
@@ -80,7 +80,7 @@ namespace Google.Bigquery.V2.Snippets
                 { "score", 85 },
                 { "gameStarted", new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
             });
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -412,7 +412,7 @@ namespace Google.Bigquery.V2.Snippets
                 return;
             }
 
-            // Snippet: ExportCsv
+            // Sample: ExportCsv
             BigqueryClient client = BigqueryClient.Create(projectId);
 
             // Create a storage bucket; in normal use it's likely that one would exist already.
@@ -448,7 +448,7 @@ namespace Google.Bigquery.V2.Snippets
             MemoryStream stream = new MemoryStream();
             storageClient.DownloadObject(bucket, objectName, stream);
             Console.WriteLine(Encoding.UTF8.GetString(stream.ToArray()));
-            // End snippet
+            // End sample
 
             storageClient.DeleteObject(bucket, objectName);
             storageClient.DeleteBucket(bucket);
@@ -473,7 +473,7 @@ namespace Google.Bigquery.V2.Snippets
                 return;
             }
 
-            // Snippet: CopyTable
+            // Sample: CopyTable
             BigqueryClient client = BigqueryClient.Create(projectId);
 
             Job job = client.Service.Jobs.Insert(new Job
@@ -501,7 +501,7 @@ namespace Google.Bigquery.V2.Snippets
                 string player = (string)row["player"];
                 Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
             }
-            // End snippet
+            // End sample
 
             var originalRows = client.ListRows(datasetId, historyTableId).Rows.Count();
             var copiedRows = result.Rows.Count();

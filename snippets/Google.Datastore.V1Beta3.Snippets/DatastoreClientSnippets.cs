@@ -125,7 +125,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: AddEntity
+            // Sample: AddEntity
             DatastoreClient client = DatastoreClient.Create();
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
             Entity book1 = new Entity
@@ -151,7 +151,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 IEnumerable<Key> insertedKeys = response.MutationResults.Select(r => r.Key);
                 Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
             }
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -178,7 +178,7 @@ namespace Google.Datastore.V1Beta3.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: NamespaceQuery
+            // Sample: NamespaceQuery
             DatastoreClient client = DatastoreClient.Create();
             PartitionId partitionId = new PartitionId(projectId);
             RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
@@ -187,7 +187,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(result.Entity.Key.Path.Last().Name);
             }
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -197,7 +197,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
             PartitionId partitionId = new PartitionId(projectId, namespaceId);
 
-            // Snippet: KindQuery
+            // Sample: KindQuery
             DatastoreClient client = DatastoreClient.Create();
             RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
                 new Query(DatastoreConstants.KindKind));
@@ -205,7 +205,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(result.Entity.Key.Path.Last().Name);
             }
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -215,7 +215,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string namespaceId = _fixture.NamespaceId;
             PartitionId partitionId = new PartitionId(projectId, namespaceId);
 
-            // Snippet: PropertyQuery
+            // Sample: PropertyQuery
             DatastoreClient client = DatastoreClient.Create();
             RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
                 new Query(DatastoreConstants.PropertyKind)
@@ -229,7 +229,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 string kind = key.GetParent().Path.Last().Name;
                 Console.WriteLine($"Kind: {kind}; Property: {propertyName}");
             }
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -237,7 +237,7 @@ namespace Google.Datastore.V1Beta3.Snippets
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
-            // Snippet: Overview
+            // Sample: Overview
             var client = DatastoreClient.Create();
 
             var keyFactory = new KeyFactory(projectId, namespaceId, "message");
@@ -255,7 +255,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 var insertedKey = commitResponse.MutationResults[0].Key;
                 Console.WriteLine($"Inserted key: {insertedKey}");
             }
-            // End snippet
+            // End sample
         }
 
         // Snippets ported from https://cloud.google.com/datastore/docs/concepts/entities
@@ -266,7 +266,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: CreateEntity
+            // Sample: CreateEntity
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
             Entity entity = new Entity
             {
@@ -277,7 +277,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["description"] = "Learn Cloud Datastore",
                 ["percent_complete"] = 75.0
             };
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -286,7 +286,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: InsertEntity
+            // Sample: InsertEntity
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
             Entity entity = new Entity
             {
@@ -300,7 +300,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             DatastoreClient client = DatastoreClient.Create();
             CommitResponse response = client.Commit(projectId, Mode.NonTransactional, new[] { entity.ToInsert() });
             Key insertedKey = response.MutationResults[0].Key;
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -309,7 +309,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             Key key = _fixture.LearnDatastoreKey;
 
-            // Snippet: LookupEntity
+            // Sample: LookupEntity
             DatastoreClient client = DatastoreClient.Create();
             LookupResponse response = client.Lookup(
                 projectId,
@@ -317,7 +317,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 new[] { key });
 
             Entity entity = response.Found[0].Entity;
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -326,7 +326,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             Key key = _fixture.LearnDatastoreKey;
 
-            // Snippet: UpdateEntity
+            // Sample: UpdateEntity
             DatastoreClient client = DatastoreClient.Create();
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
             using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
@@ -336,7 +336,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 transaction.Update(entity);
                 transaction.Commit();
             }
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -360,11 +360,11 @@ namespace Google.Datastore.V1Beta3.Snippets
             CommitResponse response = insertClient.Commit(projectId, Mode.NonTransactional, new[] { entity.ToInsert() });
             Key key = response.MutationResults[0].Key;
 
-            // Snippet: DeleteEntity
+            // Sample: DeleteEntity
             DatastoreClient client = DatastoreClient.Create();
             // If you have an entity instead of just a key, then entity.ToDelete() would work too.
             CommitResponse commit = insertClient.Commit(projectId, Mode.NonTransactional, new[] { key.ToDelete() });
-            // End snippet
+            // End sample
         }
 
         // Batch lookup etc are currently obvious given the array creation.
@@ -376,7 +376,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: AncestorPaths
+            // Sample: AncestorPaths
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "User");
             Key taskKey = keyFactory.CreateKey("alice").WithElement("Task", "sampleTask");
 
@@ -384,19 +384,19 @@ namespace Google.Datastore.V1Beta3.Snippets
                 .CreateKey("alice")
                 .WithElement("TaskList", "default")
                 .WithElement("Task", "sampleTask");
-            // End snippet
+            // End sample
         }
 
         [Fact]
         public void ArrayProperties()
         {
-            // Snippet: ArrayProperties
+            // Sample: ArrayProperties
             Entity entity = new Entity
             {
                 ["tags"] = new ArrayValue { Values = { "fun", "programming" } },
                 ["collaborators"] = new ArrayValue { Values = { "alice", "bob" } }
             };
-            // End snippet
+            // End sample
         }
 
         // Snippets ported from https://cloud.google.com/datastore/docs/concepts/queries
@@ -407,7 +407,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             PartitionId partitionId = _fixture.PartitionId;
 
-            // Snippet: CompositeFilter
+            // Sample: CompositeFilter
             Query query = new Query("Task")
             {
                 Filter = Filter.And(
@@ -425,7 +425,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Console.WriteLine((string)entity["description"]);
             }
             // TODO: Results beyond this batch?
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -434,28 +434,28 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: KeyQuery
+            // Sample: KeyQuery
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
             Query query = new Query("Task")
             {
                 Filter = Filter.GreaterThan(DatastoreConstants.KeyProperty, keyFactory.CreateKey("someTask"))
             };
-            // End snippet
+            // End sample
         }
-        
+
         [Fact]
         public void AncestorQuery()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: AncestorQuery
+            // Sample: AncestorQuery
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
             Query query = new Query("Task")
             {
                 Filter = Filter.HasAncestor(keyFactory.CreateKey("someTask"))
             };
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -464,25 +464,25 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: KindlessQuery
+            // Sample: KindlessQuery
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
             Key lastSeenKey = keyFactory.CreateKey(100L);
             Query query = new Query
             {
                 Filter = Filter.GreaterThan(DatastoreConstants.KeyProperty, lastSeenKey)
             };
-            // End snippet
+            // End sample
         }
 
         [Fact]
         public void KeysOnlyQuery()
         {
-            // Snippet: KeysOnlyQuery
+            // Sample: KeysOnlyQuery
             Query query = new Query("Task")
             {
                 Projection = { DatastoreConstants.KeyProperty }
             };
-            // End snippet
+            // End sample
         }
 
         [Fact(Skip = "Requires composite index configuration")]
@@ -491,7 +491,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             PartitionId partitionId = _fixture.PartitionId;
 
-            // Snippet: ProjectionQuery
+            // Sample: ProjectionQuery
             Query query = new Query("Task")
             {
                 Projection = { "priority", "percentage_complete" }
@@ -503,13 +503,13 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Entity entity = result.Entity;
                 Console.WriteLine($"{(int)entity["priority"]}: {(double?)entity["percentage_complete"]}");
             }
-            // End snippet
+            // End sample
         }
 
         [Fact]
         public void GroupingQuery()
         {
-            // Snippet: GroupingQuery
+            // Sample: GroupingQuery
             Query query = new Query("Task")
             {
                 Projection = { "type", "priority" },
@@ -520,13 +520,13 @@ namespace Google.Datastore.V1Beta3.Snippets
                     { "priority", Direction.Ascending }
                 }
             };
-            // End snippet
+            // End sample
         }
 
         [Fact]
         public void ArrayQueryComparison()
         {
-            // Snippet: ArrayQuery
+            // Sample: ArrayQuery
             Query query = new Query("Task")
             {
                 Filter = Filter.And(
@@ -534,13 +534,13 @@ namespace Google.Datastore.V1Beta3.Snippets
                     Filter.LessThan("tag", "math")
                 )
             };
-            // End snippet
+            // End sample
         }
 
         [Fact]
         public void ArrayQueryEquality()
         {
-            // Snippet: ArrayQuery
+            // Sample: ArrayQuery
             Query query = new Query("Task")
             {
                 Filter = Filter.And(
@@ -548,7 +548,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                     Filter.LessThan("equal", "programming")
                 )
             };
-            // End snippet
+            // End sample
         }
 
         [Fact]
@@ -559,7 +559,7 @@ namespace Google.Datastore.V1Beta3.Snippets
 
             ByteString pageCursor = null;
             int pageSize = 5;
-            // Snippet: PaginateWithCursor
+            // Sample: PaginateWithCursor
             Query query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
             DatastoreClient client = DatastoreClient.Create();
 
@@ -571,13 +571,13 @@ namespace Google.Datastore.V1Beta3.Snippets
                 // Do something with the task entity
             }
             ByteString nextPageCursor = response.Batch.EndCursor;
-            // End snippet
+            // End sample
         }
 
         [Fact]
         public void OrderingWithInequalityFilter()
         {
-            // Snippet: OrderingWithInequalityFilter
+            // Sample: OrderingWithInequalityFilter
             Query query = new Query("Task")
             {
                 Filter = Filter.GreaterThan("priority", 3),
@@ -589,7 +589,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                     { "created", Direction.Ascending }
                 }
             };
-            // End snippet
+            // End sample
         }
 
         // Snippets ported from https://cloud.google.com/datastore/docs/concepts/transactions
@@ -602,7 +602,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Key fromKey = CreateAccount("Jill", 20000L);
             Key toKey = CreateAccount("Beth", 15500L);
 
-            // Snippet: TransactionReadAndWrite
+            // Sample: TransactionReadAndWrite
             DatastoreClient client = DatastoreClient.Create();
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
             using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
@@ -618,7 +618,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 transaction.Update(to);
                 transaction.Commit();
             }
-            // End snippet
+            // End sample
         }
 
         // Used by TransactionReadAndWrite. Could promote to the fixture.
