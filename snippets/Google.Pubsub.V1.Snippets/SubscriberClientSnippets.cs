@@ -92,7 +92,7 @@ namespace Google.Pubsub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListSubscriptions
+            // Snippet: ListSubscriptionsPageStream
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use a known project resource name:
@@ -110,7 +110,7 @@ namespace Google.Pubsub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListSubscriptionsAsync
+            // Snippet: ListSubscriptionsPageStreamAsync
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use a known project resource name:
