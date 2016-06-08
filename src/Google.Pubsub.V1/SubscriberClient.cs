@@ -200,13 +200,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings CreateSubscriptionSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -233,13 +233,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings GetSubscriptionSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -266,13 +266,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings ListSubscriptionsSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -299,13 +299,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings DeleteSubscriptionSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -331,13 +331,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings ModifyAckDeadlineSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -363,13 +363,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings AcknowledgeSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetMessagingRetryBackoff(),
                 TimeoutBackoff = GetMessagingTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -395,13 +395,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings PullSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetMessagingRetryBackoff(),
                 TimeoutBackoff = GetMessagingTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -427,13 +427,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings ModifyPushConfigSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
 

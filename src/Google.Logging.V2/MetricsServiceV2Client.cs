@@ -159,13 +159,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings ListLogMetricsSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -192,13 +192,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings GetLogMetricSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -224,13 +224,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings CreateLogMetricSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -256,13 +256,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings UpdateLogMetricSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -289,13 +289,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings DeleteLogMetricSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
 

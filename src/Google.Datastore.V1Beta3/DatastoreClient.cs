@@ -144,13 +144,13 @@ namespace Google.Datastore.V1Beta3
         /// </remarks>
         public CallSettings LookupSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NoneRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+            }),
         };
 
         /// <summary>
@@ -176,13 +176,13 @@ namespace Google.Datastore.V1Beta3
         /// </remarks>
         public CallSettings RunQuerySettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NoneRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+            }),
         };
 
         /// <summary>
@@ -208,13 +208,13 @@ namespace Google.Datastore.V1Beta3
         /// </remarks>
         public CallSettings BeginTransactionSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NoneRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+            }),
         };
 
         /// <summary>
@@ -240,13 +240,13 @@ namespace Google.Datastore.V1Beta3
         /// </remarks>
         public CallSettings CommitSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NoneRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+            }),
         };
 
         /// <summary>
@@ -272,13 +272,13 @@ namespace Google.Datastore.V1Beta3
         /// </remarks>
         public CallSettings RollbackSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NoneRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+            }),
         };
 
         /// <summary>
@@ -304,13 +304,13 @@ namespace Google.Datastore.V1Beta3
         /// </remarks>
         public CallSettings AllocateIdsSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NoneRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(30000)),
+            }),
         };
 
 

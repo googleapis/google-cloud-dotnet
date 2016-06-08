@@ -159,13 +159,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings ListSinksSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -192,13 +192,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings GetSinkSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -224,13 +224,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings CreateSinkSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -256,13 +256,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings UpdateSinkSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -289,13 +289,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings DeleteSinkSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
 

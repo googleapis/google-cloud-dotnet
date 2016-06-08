@@ -196,13 +196,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings DeleteLogSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -228,13 +228,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings WriteLogEntriesSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = NonIdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
         /// <summary>
@@ -261,13 +261,13 @@ namespace Google.Logging.V2
         /// </remarks>
         public CallSettings ListLogEntriesSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetListRetryBackoff(),
                 TimeoutBackoff = GetListTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+            }),
         };
 
 
