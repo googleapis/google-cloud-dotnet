@@ -212,13 +212,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings CreateTopicSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -245,13 +245,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings PublishSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetMessagingRetryBackoff(),
                 TimeoutBackoff = GetMessagingTimeoutBackoff(),
                 RetryFilter = OnePlusDeliveryRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -278,13 +278,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings GetTopicSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -311,13 +311,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings ListTopicsSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -344,13 +344,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings ListTopicSubscriptionsSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
         /// <summary>
@@ -377,13 +377,13 @@ namespace Google.Pubsub.V1
         /// </remarks>
         public CallSettings DeleteTopicSettings { get; set; } = new CallSettings
         {
-            RetrySettings = new RetrySettings
+            Timing = CallTiming.FromRetry(new RetrySettings
             {
                 RetryBackoff = GetDefaultRetryBackoff(),
                 TimeoutBackoff = GetDefaultTimeoutBackoff(),
                 RetryFilter = IdempotentRetryFilter,
-            },
-            Expiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
         };
 
 
