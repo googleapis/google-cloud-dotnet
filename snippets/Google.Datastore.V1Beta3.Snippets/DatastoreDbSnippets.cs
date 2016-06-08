@@ -611,7 +611,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Key fromKey = CreateAccount("Jill", 20000L);
             Key toKey = CreateAccount("Beth", 15500L);
 
-            // Snippet TransactionReadAndWrite
+            // Snippet: TransactionReadAndWrite
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             using (DatastoreTransaction transaction = db.BeginTransaction())
             {

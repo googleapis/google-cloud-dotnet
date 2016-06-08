@@ -80,7 +80,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(result.Entity);
             }
-            // EndSnippet
+            // End snippet
 
             Assert.Equal(1, response.Batch.EntityResults.Count);
             Entity entity = response.Batch.EntityResults[0].Entity;
@@ -602,7 +602,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Key fromKey = CreateAccount("Jill", 20000L);
             Key toKey = CreateAccount("Beth", 15500L);
 
-            // Snippet TransactionReadAndWrite
+            // Snippet: TransactionReadAndWrite
             DatastoreClient client = DatastoreClient.Create();
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
             using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))

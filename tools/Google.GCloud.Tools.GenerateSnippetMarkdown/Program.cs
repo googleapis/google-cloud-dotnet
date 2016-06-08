@@ -98,39 +98,59 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
 
             var memberLookup = LoadMembersByType(metadata);
             Console.WriteLine($"Loaded {memberLookup.Count} types with {memberLookup.Sum(x => x.Count())} members");
-            var snippets = LoadAllSnippets(snippetsSource);
+            List<string> errors = new List<string>();
+            var snippets = LoadAllSnippets(snippetsSource, errors);
             Console.WriteLine($"Loaded {snippets.Sum(x => x.Count())} snippets");
             foreach (var entry in snippets)
             {
                 string snippetFile = entry.Key + ".txt";
                 GenerateSnippetText(Path.Combine(output, snippetFile), entry);
-                MapMetadataUids(entry, memberLookup[entry.Key]);
+                MapMetadataUids(entry, memberLookup[entry.Key], errors);
                 GenerateSnippetMarkdown(Path.Combine(output, entry.Key + ".md"), snippetFile, entry);
+            }
+            if (errors.Any())
+            {
+                foreach (var error in errors)
+                {
+                    Console.Error.WriteLine(error);
+                }
+                return 1;
             }
 
             return 0;
         }
 
-        private static ILookup<string, Snippet> LoadAllSnippets(string snippetSourceDir)
+        private static ILookup<string, Snippet> LoadAllSnippets(string snippetSourceDir, List<string> errors)
         {
             var query = from project in Directory.GetDirectories(snippetSourceDir)
                             // Path.GetFileName just takes the last part of the name; it doesn't know that it's a directory.
                         let projectName = TrimSuffix(Path.GetFileName(project), ".Snippets")
                         from sourceFile in Directory.GetFiles(project, "*.cs")
                         let type = projectName + "." + TrimSuffix(Path.GetFileName(sourceFile), "Snippets.cs")
-                        from snippet in LoadFileSnippets(sourceFile)
+                        from snippet in LoadFileSnippets(sourceFile, errors)
                         select new { Type = type, Snippet = snippet };
             return query.ToLookup(item => item.Type, item => item.Snippet);
         }
 
-        private static IEnumerable<Snippet> LoadFileSnippets(string file)
+        private static IEnumerable<Snippet> LoadFileSnippets(string file, List<string> errors)
         {
             Snippet currentSnippet = null;
+            int lineNumber = 0;
+            // Only keep the filename part for diagnostics; that's usually going to be obvious enough.
+            string sourceFile = Path.GetFileName(file);
             foreach (var line in File.ReadLines(file))
             {
+                lineNumber++;
+                int startSnippetIdIndex = line.IndexOf(StartSnippet);
+                bool startSnippet = startSnippetIdIndex != -1;
+                bool endSnippet = line.Contains(EndSnippet);
                 if (currentSnippet != null)
                 {
-                    if (line.Contains(EndSnippet))
+                    if (startSnippet)
+                    {
+                        errors.Add($"Extra snippet start at {sourceFile}:{lineNumber} within snippet starting at line {currentSnippet.SourceStartLine}.");
+                    }
+                    else if (endSnippet)
                     {
                         currentSnippet.TrimLeadingSpaces();
                         yield return currentSnippet;
@@ -143,17 +163,29 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                 }
                 else
                 {
-                    int startIndex = line.IndexOf(StartSnippet);
-                    if (startIndex != -1)
+                    if (endSnippet)
                     {
-                        string name = line.Substring(startIndex + StartSnippet.Length).Trim();
-                        currentSnippet = new Snippet { SnippetId = name };
+                        errors.Add($"Snippet end without start at {sourceFile}:{lineNumber}");
+                    }
+                    else if (startSnippet)
+                    {
+                        string snippetId = line.Substring(startSnippetIdIndex + StartSnippet.Length).Trim();
+                        if (snippetId.Contains("(") && !snippetId.EndsWith(")"))
+                        {
+                            errors.Add($"Invalid snippet ID: {snippetId} at {sourceFile}:{lineNumber}");
+                            // We'll also get an "end snippet with no start" error later, but that's
+                            // not too bad.
+                        }
+                        else
+                        {
+                            currentSnippet = new Snippet { SnippetId = snippetId, SourceFile = sourceFile, SourceStartLine = lineNumber };
+                        }
                     }
                 }
             }
             if (currentSnippet != null)
             {
-                throw new UserErrorException($"Snippet {currentSnippet.SnippetId} didn't end");
+                errors.Add($"Snippet {currentSnippet.SnippetId} didn't end");
             }
         }
 
@@ -196,21 +228,26 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
 
         /// <summary>
         /// For each snippet, try to find a single matching member and save it in the MetadataUid property.
+        /// Errors are collected rather than an exception being immediately thrown, so that many errors can be
+        /// detected and fixed in a single run.
         /// </summary>
-        private static void MapMetadataUids(IEnumerable<Snippet> snippets, IEnumerable<Member> members)
+        private static void MapMetadataUids(IEnumerable<Snippet> snippets, IEnumerable<Member> members, List<string> errors)
         {
             foreach (var snippet in snippets)
             {
                 var matches = members.Where(member => IsMemberMatch(member.Id, snippet.SnippetId)).ToList();
                 if (matches.Count > 1)
                 {
-                    throw new UserErrorException($"Snippet ID '{snippet.SnippetId}' matches multiple members ({string.Join(", ", matches.Select(m => m.Id))})");
+                    errors.Add($"Snippet ID '{snippet.SnippetId}' at {snippet.SourceLocation} matches multiple members ({string.Join(", ", matches.Select(m => m.Id))}).");
                 }
-                if (matches.Count == 0 && !DocfxSnippetPattern.IsMatch(snippet.SnippetId))
+                else if (matches.Count == 0 && !DocfxSnippetPattern.IsMatch(snippet.SnippetId))
                 {
-                    throw new UserErrorException($"Snippet ID '{snippet.SnippetId}' matches matched no members and isn't a valid docfx snippet name");
+                    errors.Add($"Snippet ID '{snippet.SnippetId}' at {snippet.SourceLocation} matches matched no members and isn't a valid docfx snippet name.");
                 }
-                snippet.MetadataUid = matches.FirstOrDefault()?.Uid;
+                else
+                {
+                    snippet.MetadataUid = matches.FirstOrDefault()?.Uid;
+                }
             }
         }
 
@@ -236,11 +273,6 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
             int openParen = snippetId.IndexOf("(");
             if (openParen != -1)
             {
-                if (!snippetId.EndsWith(")"))
-                {
-                    throw new UserErrorException($"Invalid snippet ID: {snippetId}");
-                }
-
                 // Check member name first
                 if (!memberId.StartsWith(snippetId.Substring(0, openParen + 1)))
                 {

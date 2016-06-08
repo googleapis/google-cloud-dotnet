@@ -48,6 +48,21 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
         public List<string> Lines { get; } = new List<string>();
 
         /// <summary>
+        /// File containing the snippet
+        /// </summary>
+        public string SourceFile { get; set; }
+
+        /// <summary>
+        /// First line of the snippet within the source file.
+        /// </summary>
+        public int SourceStartLine { get; set; }
+
+        /// <summary>
+        /// Formatted SourceFile:SourceStartLine.
+        /// </summary>
+        public string SourceLocation => $"{SourceFile}:{SourceStartLine}";
+
+        /// <summary>
         /// Trim all leading spaces by a uniform amount (the smallest number of spaces in any line).
         /// </summary>
         internal void TrimLeadingSpaces()
