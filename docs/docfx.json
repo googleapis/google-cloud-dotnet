@@ -24,7 +24,8 @@
     ],
     "globalMetadata": {
       "_appTitle": "Google Cloud APIs",
-      "_disableContribution": true
+      "_disableContribution": true,
+      "_appFooter": " "
     },
     "overwrite": [ "extra/*.md", "obj/snippets/*.md" ],
     "dest": "_site"
