@@ -1238,7 +1238,17 @@ subscription, or its topic unless the same topic is specified.</p>
               <h4 id="Google_Pubsub_V1_SubscriberClient_ListSubscriptionsPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.ListSubscriptionsPageStream(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListSubscriptionsPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
+
+// Alternative: use a known project resource name:
+// &quot;projects/{PROJECT_ID}&quot;
+string projectName = SubscriberClient.GetProjectName(projectId);
+foreach (Subscription subscription in client.ListSubscriptionsPageStream(projectName).Flatten())
+{
+    Console.WriteLine($&quot;{subscription.Name} subscribed to {subscription.Topic}&quot;);
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;ListSubscriptionsResponse, Subscription&gt; ListSubscriptionsPageStream(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1301,7 +1311,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <h4 id="Google_Pubsub_V1_SubscriberClient_ListSubscriptionsPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClient.ListSubscriptionsPageStreamAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListSubscriptionsPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
+
+// Alternative: use a known project resource name:
+// &quot;projects/{PROJECT_ID}&quot;
+string projectName = SubscriberClient.GetProjectName(projectId);
+IAsyncEnumerable&lt;Subscription&gt; subscriptions = client.ListSubscriptionsPageStreamAsync(projectName).Flatten();
+await subscriptions.ForEachAsync(subscription =&gt;
+{
+    Console.WriteLine($&quot;{subscription.Name} subscribed to {subscription.Topic}&quot;);
+});
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;ListSubscriptionsResponse, Subscription&gt; ListSubscriptionsPageStreamAsync(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>

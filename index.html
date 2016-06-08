@@ -65,7 +65,9 @@ repository.</p>
 <p>All APIs are available as NuGet packages. Add the relevant package
 to your project in the normal way (for example by right-clicking on
 the project in Visual Studio and choosing &quot;Manage NuGet
-Packages...&quot;).</p>
+Packages...&quot;). Please ensure you enable pre-release packages (for
+example, in the Visual Studio NuGet user interface, check the &quot;Include
+prerelease&quot; box).</p>
 <p>Beta APIs are available
 from <a href="https://nuget.org">nuget.org</a> and can be installed by most
 users without reconfiguring their build environment at all. There is
@@ -86,14 +88,14 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
 </code></pre>
 <p>At this point, you are now authenticated to make calls to Pub/Sub
 and other Google Cloud services.</p>
-<h2 id="google-pubsub-v1-nuget-https-www-nuget-org-packages-google-pubsub-v1-beta-">Google.Pubsub.V1 (<a href="https://www.nuget.org/packages/Google.Pubsub.V1">NuGet</a>) (beta)</h2>
+<h1 id="google-pubsub-v1-nuget-https-www-nuget-org-packages-google-pubsub-v1-beta-">Google.Pubsub.V1 (<a href="https://www.nuget.org/packages/Google.Pubsub.V1">NuGet</a>) (beta)</h1>
 <p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/Sub</a>.</p>
 <p><a href="api/Google.Pubsub.V1.PublisherClient.html"><code>PublisherClient</code></a> and
 <a href="api/Google.Pubsub.V1.SubscriberClient.html"><code>SubscriberClient</code></a>
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.</p>
-<h3 id="sample-code">Sample code</h3>
+<h2 id="sample-code">Sample code</h2>
 <pre><code class="lang-cs">// First create a topic.
 PublisherClient publisher = PublisherClient.Create();
 string topicName = PublisherClient.GetTopicName(projectId, topicId);
@@ -103,37 +105,6 @@ publisher.CreateTopic(topicName);
 SubscriberClient subscriber = SubscriberClient.Create();
 string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
 subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
-
-// Publish a message to the topic.
-PubsubMessage message = new PubsubMessage
-{
-    // The data is any arbitrary ByteString. Here, we&#39;re using text.
-    Data = ByteString.CopyFromUtf8(&quot;Hello, Pubsub&quot;),
-    // The attributes provide metadata in a string-to-string dictionary.
-    Attributes =
-    {
-        { &quot;description&quot;, &quot;Simple text message&quot; }
-    }                
-};
-publisher.Publish(topicName, new[] { message });
-
-// Pull messages from the subscription. We&#39;re returning immediately, whether or not there
-// are messages; in other cases you&#39;ll want to allow the call to wait until a message arrives.
-PullResponse response = subscriber.Pull(subscriptionName, returnImmediately: true, maxMessages: 10);
-foreach (ReceivedMessage received in response.ReceivedMessages)
-{
-    PubsubMessage msg = received.Message;
-    Console.WriteLine($&quot;Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}&quot;);
-    Console.WriteLine($&quot;Text: &#39;{msg.Data.ToStringUtf8()}&#39;&quot;);
-}
-
-// Acknowledge that we&#39;ve received the messages. If we don&#39;t do this within 60 seconds (as specified
-// when we created the subscription) we&#39;ll receive the messages again when we next pull.
-subscriber.Acknowledge(subscriptionName, response.ReceivedMessages.Select(m =&gt; m.AckId));
-
-// Tidy up by deleting the subscription and the topic.
-subscriber.DeleteSubscription(subscriptionName);
-publisher.DeleteTopic(topicName);
 </code></pre><h2 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h2>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
@@ -163,7 +134,7 @@ using (var stream = File.OpenWrite(&quot;file1.txt&quot;))
 {
     client.DownloadObject(bucketName, &quot;file1.txt&quot;, stream);
 }
-</code></pre><h2 id="google-datastore-v1beta3-alpha-">Google.Datastore.V1Beta3 (alpha)</h2>
+</code></pre><h1 id="google-datastore-v1beta3-alpha-">Google.Datastore.V1Beta3 (alpha)</h1>
 <p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
 <p>The <a href="api/Google.Datastore.V1Beta3.DatastoreDb.html"><code>DatastoreDb</code></a>
 class is provided as a wrapper for
@@ -174,7 +145,7 @@ structured query results.</p>
 <p>Several custom conversions, additional constructors,
 factory methods (particularly on <a href="api/Google.Datastore.V1Beta3.Filter.html"><code>Filter</code></a>
 are provided to simplify working with the protobuf messages.</p>
-<h3 id="sample-code-0">Sample code</h3>
+<h2 id="sample-code-0">Sample code</h2>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
 var keyFactory = db.CreateKeyFactory(&quot;message&quot;);
@@ -191,12 +162,12 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
     var insertedKey = commitResponse.MutationResults[0].Key;
     Console.WriteLine($&quot;Inserted key: {insertedKey}&quot;);
 }
-</code></pre><h2 id="google-logging-v2-alpha-">Google.Logging.V2 (alpha)</h2>
+</code></pre><h1 id="google-logging-v2-alpha-">Google.Logging.V2 (alpha)</h1>
 <p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>
 <p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
 <p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html"><code>LoggingServiceV2Client</code></a>
 for details.</p>
-<h2 id="google-bigquery-v2-alpha-">Google.Bigquery.V2 (alpha)</h2>
+<h1 id="google-bigquery-v2-alpha-">Google.Bigquery.V2 (alpha)</h1>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Bigquery.v2/">Google.Apis.Bigquery.v1</a>
 for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a></p>
@@ -204,7 +175,7 @@ for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a
 <a href="api/Google.Bigquery.V2.BigqueryClient.html"><code>BigqueryClient</code></a>
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.</p>
-<h3 id="sample-code-1">Sample code</h3>
+<h2 id="sample-code-1">Sample code</h2>
 <p>Querying:</p>
 <pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
 var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);

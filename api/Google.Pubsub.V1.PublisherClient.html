@@ -950,7 +950,17 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
               <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicsPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicsPageStream(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicsPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching topics.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+
+// Alternative: use a known project resource name:
+// &quot;projects/{PROJECT_ID}&quot;
+string projectName = PublisherClient.GetProjectName(projectId);
+foreach (Topic topic in client.ListTopicsPageStream(projectName).Flatten())
+{
+    Console.WriteLine(topic.Name);
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopicsPageStream(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
@@ -1013,7 +1023,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
               <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicsPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicsPageStreamAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicsPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching topics.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+
+// Alternative: use a known project resource name:
+// &quot;projects/{PROJECT_ID}&quot;
+string projectName = PublisherClient.GetProjectName(projectId);
+IAsyncEnumerable&lt;Topic&gt; topics = client.ListTopicsPageStreamAsync(projectName).Flatten();
+await topics.ForEachAsync(topic =&gt;
+{
+    Console.WriteLine(topic.Name);
+});
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopicsPageStreamAsync(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
