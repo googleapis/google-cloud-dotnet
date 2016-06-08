@@ -34,11 +34,11 @@ namespace Google.Pubsub.V1.Snippets
         }
 
         [Fact]
-        public void ListTopics()
+        public void ListTopicsPageStream()
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListTopics
+            // Snippet: ListTopicsPageStream
             PublisherClient client = PublisherClient.Create();
 
             // Alternative: use a known project resource name:
@@ -52,11 +52,11 @@ namespace Google.Pubsub.V1.Snippets
         }
 
         [Fact]
-        public async Task ListTopicsAsync()
+        public async Task ListTopicsPageStreamAsync()
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListTopicsAsync
+            // Snippet: ListTopicsPageStreamAsync
             PublisherClient client = PublisherClient.Create();
 
             // Alternative: use a known project resource name:
