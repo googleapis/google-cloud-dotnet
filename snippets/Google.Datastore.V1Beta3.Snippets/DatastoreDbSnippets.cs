@@ -61,7 +61,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQueryPageStream(Query,string,ReadConsistency)
+            // Snippet: RunQueryPageStream(Query,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query("book")
             {
@@ -72,7 +72,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(entity);
             }
-            // EndSnippet
+            // End snippet
 
             // This will run the query again, admittedly...
             List<Entity> entities = results.Flatten().ToList();
@@ -88,7 +88,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuery(GqlQuery,string,ReadConsistency)
+            // Snippet: RunQuery(GqlQuery,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
