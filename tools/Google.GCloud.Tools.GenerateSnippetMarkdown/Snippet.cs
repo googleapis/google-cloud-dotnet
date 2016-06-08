@@ -23,14 +23,26 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
     public class Snippet
     {
         /// <summary>
-        /// The snippet ID that appears in source code.
+        /// The snippet ID that appears in source code. This is specified in a "Snippet:" or
+        /// "Sample:" line.
         /// </summary>
         public string SnippetId { get; set; }
 
         /// <summary>
-        /// The UID of the docfx metadata item, if any.
+        /// Is this a sample for general documentation rather than API docs? If so, the snippet ID isn't
+        /// used for member matching.
         /// </summary>
-        public string MetadataUid { get; set; }
+        public bool Sample { get; set; }
+
+        /// <summary>
+        /// Additional members which should receive the same snippet.
+        /// </summary>
+        public IList<string> AdditionalMembers { get; } = new List<string>();
+
+        /// <summary>
+        /// The UIDs of the docfx metadata items, if any.
+        /// </summary>
+        public IList<string> MetadataUids { get; } = new List<string>();
 
         /// <summary>
         /// Where in the snippet text this snippet starts (inclusive).
@@ -46,6 +58,21 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
         /// Lines of the snippet.
         /// </summary>
         public List<string> Lines { get; } = new List<string>();
+
+        /// <summary>
+        /// File containing the snippet
+        /// </summary>
+        public string SourceFile { get; set; }
+
+        /// <summary>
+        /// First line of the snippet within the source file.
+        /// </summary>
+        public int SourceStartLine { get; set; }
+
+        /// <summary>
+        /// Formatted SourceFile:SourceStartLine.
+        /// </summary>
+        public string SourceLocation => $"{SourceFile}:{SourceStartLine}";
 
         /// <summary>
         /// Trim all leading spaces by a uniform amount (the smallest number of spaces in any line).

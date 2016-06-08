@@ -38,7 +38,7 @@ namespace Google.Storage.V1.Snippets
         {
             var projectId = _fixture.ProjectId;
 
-            // Snippet: Overview
+            // Sample: Overview
             var client = StorageClient.Create();
 
             // Create a bucket
@@ -61,7 +61,7 @@ namespace Google.Storage.V1.Snippets
             {
                 client.DownloadObject(bucketName, "file1.txt", stream);
             }
-            // End snippet
+            // End sample
 
             _fixture.RegisterLocalFileToDelete("file1.txt");
             _fixture.RegisterBucketToDelete(bucketName);
