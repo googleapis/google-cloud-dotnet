@@ -18,7 +18,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using static Google.Datastore.V1Beta3.CommitRequest.Types;
+using System.Threading.Tasks;
 using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
 
@@ -77,11 +77,6 @@ namespace Google.Datastore.V1Beta3
         internal override ApiCall<RunQueryRequest, RunQueryResponse> RunQueryApiCall => _callRunQuery;
     }
 
-    // TODO: Apply our abstract/concrete class approach again? (It gets very wearing...)
-    // Only do after rest of design is complete.
-    // TODO: Add call settings on everything?
-    // TODO: Async
-
     /// <summary>
     /// An abstraction over <see cref="DatastoreClient"/> to simplify operations. Use the <see cref="Create(string, string, DatastoreClient)"/>
     /// method to obtain an instance of this class.
@@ -96,18 +91,29 @@ namespace Google.Datastore.V1Beta3
     /// factory or running a query. Operations that take keys or entities do not validate that the keys are within the
     /// partition associated with this object.
     /// </para>
+    /// <para>
+    /// This abstract class is provided to enable testability while permitting
+    /// additional operations to be added in the future. See <see cref="Create(string, string, DatastoreClient)"/>
+    /// to construct instances; alternatively, you can construct a <see cref="DatastoreClient"/> directly.
+    /// </para>
     /// </remarks>
-    public class DatastoreDb
+    public abstract class DatastoreDb
     {
         /// <summary>
         /// The <see cref="DatastoreClient"/> used for all remote operations.
         /// </summary>
-        public DatastoreClient Client { get; }
+        public virtual DatastoreClient Client { get { throw new NotImplementedException(); } }
 
-        private readonly string _projectId;
-        private readonly PartitionId _partitionId;
+        /// <summary>
+        /// The ID of the project this instance operates on.
+        /// </summary>
+        public virtual string ProjectId { get { throw new NotImplementedException(); } }
 
-        // TODO: Expose the above fields as properties?
+        /// <summary>
+        /// The ID of the namespace this instance operates on.
+        /// </summary>
+        public virtual string NamespaceId { get { throw new NotImplementedException(); } }
+
 
         /// <summary>
         /// Creates a <see cref="DatastoreDb"/> to operate on the partition identified by <paramref name="projectId"/>
@@ -119,34 +125,49 @@ namespace Google.Datastore.V1Beta3
         /// using default settings.</param>
         /// <returns>A <see cref="DatastoreDb"/> operating on the specified partition.</returns>
         public static DatastoreDb Create(string projectId, string namespaceId = "", DatastoreClient client = null) =>
-            new DatastoreDb(projectId, namespaceId, client ?? DatastoreClient.Create());
-
-        private DatastoreDb(string projectId, string namespaceId, DatastoreClient client)
-        {
-            _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _partitionId = new PartitionId(projectId, GaxPreconditions.CheckNotNull(namespaceId, nameof(namespaceId)));
-            Client = GaxPreconditions.CheckNotNull(client, nameof(client));
-        }
+            new DatastoreDbImpl(projectId, namespaceId, client ?? DatastoreClient.Create());
 
         /// <summary>
         /// Creates a key factory for root entities in this objects's partition.
         /// </summary>
         /// <param name="kind">The kind of entity key to create. Must not be null.</param>
         /// <returns>A key factory with the specified kind and this object's partition.</returns>
-        public KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
+        public virtual KeyFactory CreateKeyFactory(string kind)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Perform a single <see cref="DatastoreClient.RunQuery(string, PartitionId, ReadOptions, Query, CallSettings)"/> operation
         /// using this object's partition ID and the specified read consistency, not in a transaction.
         /// </summary>
         /// <remarks>
-        /// To automatically stream pages of results, use <see cref="RunQueryPageStream(Query, ReadConsistency?)"/>.
+        /// To automatically stream pages of results, use <see cref="RunQueryPageStream(Query, ReadConsistency?, CallSettings)"/>.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The response for the given query operation.</returns>
-        public RunQueryResponse RunQuery(Query query, ReadConsistency? readConsistency = null) =>
-            Client.RunQuery(_projectId, _partitionId, GetReadOptions(readConsistency), query);
+        public virtual RunQueryResponse RunQuery(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Perform a single asynchronous <see cref="DatastoreClient.RunQueryAsync(string, PartitionId, ReadOptions, Query, CallSettings)"/> operation
+        /// using this object's partition ID and the specified read consistency, not in a transaction.
+        /// </summary>
+        /// <remarks>
+        /// To automatically stream pages of results, use <see cref="RunQueryPageStreamAsync(Query, ReadConsistency?, CallSettings)"/>.
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The response for the given query operation.</returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         // Note: no pagestreaming yet for GQL as it's tough to modify the limit/offset automatically.
 
@@ -156,9 +177,25 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The response for the given query operation.</returns>
-        public RunQueryResponse RunQuery(GqlQuery query, ReadConsistency? readConsistency = null) =>
-            Client.RunQuery(_projectId, _partitionId, GetReadOptions(readConsistency), query);
+        public virtual RunQueryResponse RunQuery(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Perform a single asynchronous <see cref="DatastoreClient.RunQueryAsync(string, PartitionId, ReadOptions, Query, CallSettings)"/> operation
+        /// using this object's partition ID and the specified read consistency, not in a transaction.
+        /// </summary>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The response for the given query operation.</returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Executes the given query, automatically streaming the pages of results.
@@ -171,88 +208,227 @@ namespace Google.Datastore.V1Beta3
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use
         /// the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A sequence of pages of entities.</returns>
-        public IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(Query query, ReadConsistency? readConsistency = null)
+        public virtual IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(
+            Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
-            var request = new RunQueryRequest
-            {
-                ProjectId = _projectId,
-                PartitionId = _partitionId,
-                Query = query,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            return new PagedEnumerable<RunQueryRequest, RunQueryResponse, Entity>(Client.RunQueryApiCall, request, null);
+            throw new NotImplementedException();
         }
 
-        // TODO: Mocking support for the transaction?
+        /// <summary>
+        /// Executes the given query, automatically streaming the pages of results asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// To start where a previous operation left off, specify <see cref="Query.StartCursor"/>.
+        /// If you have been using <see cref="FixedSizePage{Entity}"/>, convert the <see cref="FixedSizePage{TResource}.NextPageToken"/>
+        /// string into a <see cref="ByteString"/> using <see cref="ByteString.FromBase64(string)"/>.
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">The desired read consistency of the query, or null to use
+        /// the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A sequence of pages of entities.</returns>
+        public virtual IPagedAsyncEnumerable<RunQueryResponse, Entity> RunQueryPageStreamAsync(
+            Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
 
         /// <summary>
         /// Begins a transaction, returning a <see cref="DatastoreTransaction"/> which can be used to operate on the transaction.
         /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A new <see cref="DatastoreTransaction"/> for this object's project.</returns>
-        public DatastoreTransaction BeginTransaction() =>
-            new DatastoreTransaction(Client, _projectId, Client.BeginTransaction(_projectId).Transaction);
+        public virtual DatastoreTransaction BeginTransaction(CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Begins a transaction asynchronously, returning a <see cref="DatastoreTransaction"/> which can be used to operate on the transaction.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A new <see cref="DatastoreTransaction"/> for this object's project.</returns>
+        public virtual Task<DatastoreTransaction> BeginTransactionAsync(CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Allocates an ID for a single incomplete key.
         /// </summary>
+        /// <remarks>This method simply delegates to <see cref="AllocateIds(IEnumerable{Key},CallSettings)"/>.</remarks>
         /// <param name="key">The incomplete key to allocate an ID for.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The complete key.</returns>
-        public Key AllocateId(Key key) => AllocateIds(new[] { key })[0];
+        public virtual Key AllocateId(Key key, CallSettings callSettings = null) => AllocateIds(new[] { key }, callSettings)[0];
+
+        /// <summary>
+        /// Allocates IDs for a collection of incomplete keys.
+        /// </summary>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="AllocateIds(IEnumerable{Key},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="AllocateIds(IEnumerable{Key},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
+        /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
+        public virtual IReadOnlyList<Key> AllocateIds(params Key[] keys) => AllocateIds(keys, null);
 
         /// <summary>
         /// Allocates IDs for a collection of incomplete keys.
         /// </summary>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
-        public IReadOnlyList<Key> AllocateIds(params Key[] keys) => AllocateIds((IEnumerable<Key>)keys);
-
-        /// <summary>
-        /// Allocates IDs for a collection of incomplete keys.
-        /// </summary>
-        /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
-        /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
-        public IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys)
+        public virtual IReadOnlyList<Key> AllocateIds(IEnumerable<Key> keys, CallSettings callSettings = null)
         {
-            // TODO: Validation. All keys should be non-null, and have a filled in path element
-            // until the final one, which should just have a kind. Or we could just let the server validate...
-            keys = GaxPreconditions.CheckNotNull(keys, nameof(keys)).ToList();
-            var response = Client.AllocateIds(_projectId, keys);
-            return response.Keys.ToList();
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Allocates an ID for a single incomplete key asynchronously.
+        /// </summary>
+        /// <remarks>This method simply delegates to <see cref="AllocateIdsAsync(IEnumerable{Key},CallSettings)"/>.</remarks>
+        /// <param name="key">The incomplete key to allocate an ID for.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The complete key.</returns>
+        public virtual async Task<Key> AllocateIdAsync(Key key, CallSettings callSettings = null)
+        {
+            var results = await AllocateIdsAsync(new[] { key }, callSettings).ConfigureAwait(false);
+            return results[0];
+        }
+
+        /// <summary>
+        /// Allocates IDs for a collection of incomplete keys asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="AllocateIdsAsync(IEnumerable{Key},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="AllocateIdsAsync(IEnumerable{Key},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
+        /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
+        public virtual Task<IReadOnlyList<Key>> AllocateIdsAsync(params Key[] keys) => AllocateIdsAsync(keys, null);
+
+        /// <summary>
+        /// Allocates IDs for a collection of incomplete keys asynchronously.
+        /// </summary>
+        /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
+        public virtual Task<IReadOnlyList<Key>> AllocateIdsAsync(IEnumerable<Key> keys, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
         /// Looks up a single entity by key.
         /// </summary>
+        /// <remarks>This method simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>.</remarks>
         /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The entity with the specified key, or <c>null</c> if no such entity exists.</returns>
-        public Entity Lookup(Key key, ReadConsistency? readConsistency = null) => Lookup(new[] { key }, readConsistency)[0];
+        public virtual Entity Lookup(Key key, ReadConsistency? readConsistency = null, CallSettings callSettings = null) => Lookup(new[] { key }, readConsistency, callSettings)[0];
 
         /// <summary>
         /// Looks up a collection of entities by key.
         /// </summary>
         /// <remarks>
-        /// This overload does not support the <see cref="ReadConsistency"/> to be specified due to restrictions with
+        /// <para>
+        /// This call may perform multiple RPC operations in order to look up all keys.
+        /// </para>
+        /// <para>
+        /// This overload does not support the <see cref="ReadConsistency"/> or <see cref="CallSettings "/>to be specified due to restrictions with
         /// methods containing a parameter array and optional parameters.
+        /// It simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>, passing in a <c>null</c>
+        /// value for the read consistency and all settings.
+        /// </para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public IReadOnlyList<Entity> Lookup(params Key[] keys) => Lookup(keys, null);
+        public virtual IReadOnlyList<Entity> Lookup(params Key[] keys) => Lookup(keys, null, null);
 
         /// <summary>
         /// Looks up a collection of entities by key.
         /// </summary>
+        /// <remarks>
+        /// This call may perform multiple RPC operations in order to look up all keys.
+        /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null)
-            => LookupImpl(Client, _projectId, GetReadOptions(readConsistency), keys);
+        public virtual IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Looks up a single entity by key asynchronously.
+        /// </summary>
+        /// <remarks>This method simply delegates to <see cref="LookupAsync(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>.</remarks>
+        /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
+        /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The entity with the specified key, or <c>null</c> if no such entity exists.</returns>
+        public virtual async Task<Entity> LookupAsync(Key key, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            var results = await LookupAsync(new[] { key }, readConsistency, callSettings).ConfigureAwait(false);
+            return results[0];
+        }
+
+        /// <summary>
+        /// Looks up a collection of entities by key asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This call may perform multiple RPC operations in order to look up all keys.
+        /// </para>
+        /// <para>
+        /// This overload does not support the <see cref="ReadConsistency"/> or <see cref="CallSettings "/>to be specified due to restrictions with
+        /// methods containing a parameter array and optional parameters.
+        /// It simply delegates to <see cref="LookupAsync(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>, passing in a <c>null</c>
+        /// value for the read consistency and all settings.
+        /// </para>
+        /// </remarks>
+        /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
+        /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
+        /// references, or <c>null</c> where the key was not found.</returns>
+        public virtual Task<IReadOnlyList<Entity>> LookupAsync(params Key[] keys) => LookupAsync(keys, null, null);
+
+        /// <summary>
+        /// Looks up a collection of entities by key asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// This call may perform multiple RPC operations in order to look up all keys.
+        /// </remarks>
+        /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
+        /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
+        /// references, or <c>null</c> where the key was not found.</returns>
+        public virtual Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         // Static to allow reuse within DatastoreTransaction.
-        internal static IReadOnlyList<Entity> LookupImpl(DatastoreClient client, string projectId, ReadOptions readOptions, IEnumerable<Key> keys)
+        internal static IReadOnlyList<Entity> LookupImpl(
+            DatastoreClient client,
+            string projectId,
+            ReadOptions readOptions,
+            IEnumerable<Key> keys,
+            CallSettings callSettings)
         {
             // Just so we can iterate multiple times safely.
             keys = keys.ToList();
@@ -263,7 +439,37 @@ namespace Google.Datastore.V1Beta3
             // TODO: Limit how many times we go round? Ensure that we make progress on each iteration?
             while (keysToFetch.Count() > 0)
             {
-                var response = client.Lookup(projectId, readOptions, keysToFetch);
+                var response = client.Lookup(projectId, readOptions, keysToFetch, callSettings);
+                foreach (var found in response.Found)
+                {
+                    foreach (var index in keyToIndex[found.Entity.Key])
+                    {
+                        result[index] = found.Entity;
+                    }
+                }
+                keysToFetch = response.Deferred;
+            }
+            return result;
+        }
+
+        // Static to allow reuse within DatastoreTransaction.
+        internal static async Task<IReadOnlyList<Entity>> LookupImplAsync(
+            DatastoreClient client,
+            string projectId,
+            ReadOptions readOptions,
+            IEnumerable<Key> keys,
+            CallSettings callSettings)
+        {
+            // Just so we can iterate multiple times safely.
+            keys = keys.ToList();
+            GaxPreconditions.CheckArgument(keys.All(x => x != null), nameof(keys), "Key collection must not contain null elements");
+            var keyToIndex = keys.Select((value, index) => new { value, index }).ToLookup(pair => pair.value, pair => pair.index);
+            IEnumerable<Key> keysToFetch = new HashSet<Key>(keys);
+            Entity[] result = new Entity[keys.Count()];
+            // TODO: Limit how many times we go round? Ensure that we make progress on each iteration?
+            while (keysToFetch.Count() > 0)
+            {
+                var response = await client.LookupAsync(projectId, readOptions, keysToFetch, callSettings).ConfigureAwait(false);
                 foreach (var found in response.Found)
                 {
                     foreach (var index in keyToIndex[found.Entity.Key])
@@ -281,110 +487,330 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Inserts a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Insert(Entity[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Insert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to insert. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The key of the inserted entity.</returns>
-        public Key Insert(Entity entity) => Insert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) })[0];
+        public virtual Key Insert(Entity entity, CallSettings callSettings = null) =>
+            Insert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
         /// <summary>
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Insert(IEnumerable{Entity})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Insert(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Insert(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Insert(params Entity[] entities) => Insert((IEnumerable<Entity>) entities);
+        public virtual IReadOnlyList<Key> Insert(params Entity[] entities) => Insert(entities, null);
         /// <summary>
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Insert(IEnumerable<Entity> entities) => Commit(entities, e => e.ToInsert(), nameof(entities));
+        public virtual IReadOnlyList<Key> Insert(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Inserts a single entity, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity}, CallSettings)"/>.</remarks>
+        /// <param name="entity">The entity to insert. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The key of the inserted entity.</returns>
+        public virtual async Task<Key> InsertAsync(Entity entity, CallSettings callSettings = null)
+        {
+            var results = await InsertAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings).ConfigureAwait(false);
+            return results[0];
+        }
+
+        /// <summary>
+        /// Inserts a collection of entities, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="InsertAsync(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
+        /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
+        public virtual Task<IReadOnlyList<Key>> InsertAsync(params Entity[] entities) => InsertAsync(entities, null);
+        /// <summary>
+        /// Inserts a collection of entities, non-transactionally and asynchronously.
+        /// </summary>
+        /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
+        public virtual Task<IReadOnlyList<Key>> InsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Upserts a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Upsert(Entity[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Upsert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to upsert. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The key of the upserted entity.</returns>
-        public Key Upsert(Entity entity) => Upsert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) })[0];
+        public virtual Key Upsert(Entity entity, CallSettings callSettings = null) =>
+            Upsert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
         /// <summary>
         /// Upserts a collection of entities, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Upsert(IEnumerable{Entity})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Upsert(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Upsert(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Upsert(params Entity[] entities) => Upsert((IEnumerable<Entity>) entities);
+        public virtual IReadOnlyList<Key> Upsert(params Entity[] entities) => Upsert(entities, null);
         /// <summary>
         /// Upserts a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities) => Commit(entities, e => e.ToUpsert(), nameof(entities));
+        public virtual IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Upserts a single entity, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>This method simply delegates to <see cref="UpsertAsync(IEnumerable{Entity}, CallSettings)"/>.</remarks>
+        /// <param name="entity">The entity to upsert. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The key of the upserted entity.</returns>
+        public virtual async Task<Key> UpsertAsync(Entity entity, CallSettings callSettings = null)
+        {
+            var results = await UpsertAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings).ConfigureAwait(false);
+            return results[0];
+        }
+
+        /// <summary>
+        /// Upserts a collection of entities, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="UpsertAsync(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="UpsertAsync(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
+        /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
+        public virtual Task<IReadOnlyList<Key>> UpsertAsync(params Entity[] entities) => UpsertAsync(entities, null);
+        /// <summary>
+        /// Upserts a collection of entities, non-transactionally and asynchronously.
+        /// </summary>
+        /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
+        public virtual Task<IReadOnlyList<Key>> UpsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Updates a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Update(Entity[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Update(IEnumerable{Entity},CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to update. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The key of the updated entity.</returns>
-        public Key Update(Entity entity) => Update(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) })[0];
+        public virtual Key Update(Entity entity, CallSettings callSettings = null) =>
+            Update(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
         /// <summary>
         /// Updates a collection of entities, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Update(IEnumerable{Entity})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Update(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Update(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Update(params Entity[] entities) => Update((IEnumerable<Entity>) entities);
+        public virtual IReadOnlyList<Key> Update(params Entity[] entities) => Update(entities, null);
         /// <summary>
         /// Updates a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public IReadOnlyList<Key> Update(IEnumerable<Entity> entities) => Commit(entities, e => e.ToUpdate(), nameof(entities));
+        public virtual IReadOnlyList<Key> Update(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates a single entity, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>This method simply delegates to <see cref="UpdateAsync(IEnumerable{Entity},CallSettings)"/>.</remarks>
+        /// <param name="entity">The entity to update. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The key of the updated entity.</returns>
+        public virtual async Task<Key> UpdateAsync(Entity entity, CallSettings callSettings = null)
+        {
+            var results = await UpdateAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings).ConfigureAwait(false);
+            return results[0];
+        }
+        /// <summary>
+        /// Updates a collection of entities, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="UpdateAsync(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="UpdateAsync(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
+        /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
+        public virtual Task<IReadOnlyList<Key>> UpdateAsync(params Entity[] entities) => UpdateAsync(entities, null);
+        /// <summary>
+        /// Updates a collection of entities, non-transactionally and asynchronously.
+        /// </summary>
+        /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
+        public virtual Task<IReadOnlyList<Key>> UpdateAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Deletes a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Delete(Entity[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Delete(IEnumerable{Entity},CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to delete. Must not be null.</param>
-        public void Delete(Entity entity) => Delete(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) });
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        public virtual void Delete(Entity entity, CallSettings callSettings = null) =>
+            Delete(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings);
         /// <summary>
         /// Deletes a collection of entities, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Delete(IEnumerable{Entity})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Delete(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Delete(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
-        public void Delete(params Entity[] entities) => Delete((IEnumerable<Entity>) entities);
+        public virtual void Delete(params Entity[] entities) => Delete(entities, null);
         /// <summary>
         /// Deletes a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
-        public void Delete(IEnumerable<Entity> entities) => Commit(entities, e => e.ToDelete(), nameof(entities));
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public virtual void Delete(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a single entity, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>This method simply delegates to <see cref="DeleteAsync(IEnumerable{Entity},CallSettings)"/>.</remarks>
+        /// <param name="entity">The entity to delete. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        public virtual Task DeleteAsync(Entity entity, CallSettings callSettings = null) =>
+            DeleteAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings);
+        /// <summary>
+        /// Deletes a collection of entities, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="DeleteAsync(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="DeleteAsync(IEnumerable{Entity},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
+        public virtual Task DeleteAsync(params Entity[] entities) => DeleteAsync(entities, null);
+        /// <summary>
+        /// Deletes a collection of entities, non-transactionally and asynchronously.
+        /// </summary>
+        /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public virtual Task DeleteAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Deletes a single key, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Delete(Key[])"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Delete(IEnumerable{Key},CallSettings)"/>.</remarks>
         /// <param name="key">The key to delete. Must not be null.</param>
-        public void Delete(Key key) => Delete(new[] { GaxPreconditions.CheckNotNull(key, nameof(key)) });
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public virtual void Delete(Key key, CallSettings callSettings = null) =>
+            Delete(new[] { GaxPreconditions.CheckNotNull(key, nameof(key)) }, callSettings);
         /// <summary>
         /// Deletes a collection of keys, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Delete(IEnumerable{Key})"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="Delete(IEnumerable{Key},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="Delete(IEnumerable{Key},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
-        public void Delete(params Key[] keys) => Delete((IEnumerable<Key>) keys);
+        public virtual void Delete(params Key[] keys) => Delete(keys, null);
         /// <summary>
         /// Deletes a collection of keys, non-transactionally.
         /// </summary>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
-        public void Delete(IEnumerable<Key> keys) => Commit(keys, e => e.ToDelete(), nameof(keys));
-
-        private IReadOnlyList<Key> Commit<T>(IEnumerable<T> values, Func<T, Mutation> conversion, string parameterName)
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public virtual void Delete(IEnumerable<Key> keys, CallSettings callSettings = null)
         {
-            // TODO: Validation
-            var response = Client.Commit(_projectId, Mode.NonTransactional, values.Select(conversion));
-            return response.MutationResults.Select(mr => mr.Key).ToList();
+            throw new NotImplementedException();
         }
 
-        private static ReadOptions GetReadOptions(ReadConsistency? readConsistency) =>
-            readConsistency == null ? null : new ReadOptions { ReadConsistency = readConsistency.Value };
+        /// <summary>
+        /// Deletes a single key, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>This method simply delegates to <see cref="DeleteAsync(IEnumerable{Key},CallSettings)"/>.</remarks>
+        /// <param name="key">The key to delete. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public virtual Task DeleteAsync(Key key, CallSettings callSettings = null) =>
+            DeleteAsync(new[] { GaxPreconditions.CheckNotNull(key, nameof(key)) }, callSettings);
+        /// <summary>
+        /// Deletes a collection of keys, non-transactionally and asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="DeleteAsync(IEnumerable{Key},CallSettings)"/>.</para>
+        /// <para>
+        /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+        /// To specify options, create a collection or array explicitly, and call <see cref="DeleteAsync(IEnumerable{Key},CallSettings)"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
+        public virtual Task DeleteAsync(params Key[] keys) => DeleteAsync(keys, null);
+        /// <summary>
+        /// Deletes a collection of keys, non-transactionally and asynchronously.
+        /// </summary>
+        /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        public virtual Task DeleteAsync(IEnumerable<Key> keys, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
