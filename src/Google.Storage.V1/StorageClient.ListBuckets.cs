@@ -12,33 +12,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.PageStreaming;
 using Google.Apis.Storage.v1.Data;
 using System;
-using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Google.Storage.V1
 {
     // ListBuckets methods on StorageClient
     public abstract partial class StorageClient
-    {        
+    {
         /// <summary>
-        /// Asynchronously lists the buckets in a given project, returning the results as a list.
+        /// Asynchronously lists the buckets in a given project.
         /// </summary>
-        /// <remarks>
-        /// This lists all the buckets within a project before the returned task completes.
-        /// This does not support reporting progress, or streaming the results.
-        /// </remarks>
         /// <param name="projectId">The ID of the project to list the buckets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A list of buckets within the project.</returns>
-        public virtual Task<IList<Bucket>> ListAllBucketsAsync(
+        /// <returns>An asynchronous sequence of pages of buckets.</returns>
+        public virtual IPagedAsyncEnumerable<Buckets, Bucket> ListBucketsPageStreamAsync(
             string projectId,
-            ListBucketsOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+            ListBucketsOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -55,7 +48,7 @@ namespace Google.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>A sequence of buckets within the project.</returns>
-        public virtual IEnumerable<Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
+        public virtual IPagedEnumerable<Buckets, Bucket> ListBucketsPageStream(string projectId, ListBucketsOptions options = null)
         {
             throw new NotImplementedException();
         }

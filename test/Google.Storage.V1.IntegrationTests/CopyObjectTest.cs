@@ -47,7 +47,8 @@ namespace Google.Storage.V1.IntegrationTests
             var destBucket = _fixture.SingleVersionBucket;
             var firstGenName = GenerateName();
             var secondGenName = GenerateName();
-            var generations = client.ListObjects(sourceBucket, sourceName, new ListObjectsOptions { Versions = true })
+            var generations = client.ListObjectsPageStream(sourceBucket, sourceName, new ListObjectsOptions { Versions = true })
+                .Flatten()
                 .Select(o => (long)o.Generation)
                 .OrderBy(o => o)
                 .ToList();

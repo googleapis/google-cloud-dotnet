@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.PageStreaming;
 using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
@@ -25,33 +26,34 @@ namespace Google.Storage.V1
     // ListObjects methods on StorageClient
     public sealed partial class StorageClientImpl : StorageClient
     {
-        private static readonly PageStreamer<Object, ObjectsResource.ListRequest, Objects, string> s_objectPageStreamer =
-            new PageStreamer<Object, ObjectsResource.ListRequest, Objects, string>(
-                (request, token) => request.PageToken = token,
-                objects => objects.NextPageToken,
-                objects => objects.Items);
-
-        /// <inheritdoc />
-        public override Task<IList<Object>> ListAllObjectsAsync(
-            string bucket,
-            string prefix,
-            ListObjectsOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+        private class ObjectPageManager : IPageManager<ObjectsResource.ListRequest, Objects, Object>
         {
-            var initialRequest = CreateListObjectsRequest(bucket, prefix, options);
-            return s_objectPageStreamer.FetchAllAsync(initialRequest, cancellationToken);
+            internal static readonly ObjectPageManager Instance = new ObjectPageManager();
+            public string GetNextPageToken(Objects response) => response.NextPageToken;
+            public IEnumerable<Object> GetResources(Objects response) => response.Items;
+            public void SetPageSize(ObjectsResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
+            public void SetPageToken(ObjectsResource.ListRequest request, string pageToken) => request.PageToken = pageToken;
         }
 
         /// <inheritdoc />
-        public override IEnumerable<Object> ListObjects(string bucket, string prefix, ListObjectsOptions options = null)
+        public override IPagedAsyncEnumerable<Objects, Object> ListObjectsPageStreamAsync(
+            string bucket, string prefix, ListObjectsOptions options = null)
         {
-            var initialRequest = CreateListObjectsRequest(bucket, prefix, options);
-            return s_objectPageStreamer.Fetch(initialRequest);
+            ValidateBucketName(bucket);
+            return new PagedAsyncEnumerable<ObjectsResource.ListRequest, Objects, Object>(
+                () => CreateListObjectsRequest(bucket, prefix, options), ObjectPageManager.Instance);
+        }
+
+        /// <inheritdoc />
+        public override IPagedEnumerable<Objects, Object> ListObjectsPageStream(string bucket, string prefix, ListObjectsOptions options = null)
+        {
+            ValidateBucketName(bucket);
+            return new PagedEnumerable<ObjectsResource.ListRequest, Objects, Object>(
+                () => CreateListObjectsRequest(bucket, prefix, options), ObjectPageManager.Instance);
         }
 
         private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, string prefix, ListObjectsOptions options)
         {
-            ValidateBucketName(bucket);
             var request = Service.Objects.List(bucket);
             request.Prefix = prefix;
             options?.ModifyRequest(request);
