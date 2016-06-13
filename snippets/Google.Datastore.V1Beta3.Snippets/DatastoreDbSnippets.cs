@@ -123,7 +123,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Console.WriteLine(entity);
             });
-            // EndSnippet
+            // End snippet
 
             // This will run the query again, admittedly...
             List<Entity> entities = await results.Flatten().ToList();
