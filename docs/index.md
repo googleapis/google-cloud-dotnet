@@ -53,7 +53,7 @@ simpler.
 
 [!code-cs[](obj/snippets/Google.Pubsub.V1.SubscriberClient.txt#Overview)]
 
-## Google.Storage.V1 ([NuGet](https://www.nuget.org/packages/Google.Storage.V1)) (beta)
+# Google.Storage.V1 ([NuGet](https://www.nuget.org/packages/Google.Storage.V1)) (beta)
 
 A wrapper library over
 [Google.Apis.Storage.v1](https://www.nuget.org/packages/Google.Apis.Storage.v1/)
@@ -62,7 +62,8 @@ for working with [Google Cloud Storage](https://cloud.google.com/storage/).
 Common operations are exposed via the
 [`StorageClient`](obj/api/Google.Storage.V1.StorageClient.yml) class.
 
-Example:
+## Sample code
+
 [!code-cs[](obj/snippets/Google.Storage.V1.StorageClient.txt#Overview)]
 
 # Google.Datastore.V1Beta3 (alpha)
@@ -80,7 +81,7 @@ Several custom conversions, additional constructors,
 factory methods (particularly on [`Filter`](obj/api/Google.Datastore.V1Beta3.Filter.yml)
 are provided to simplify working with the protobuf messages.
 
-##Sample code
+## Sample code
 
 [!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreDb.txt#Overview)]
 
@@ -104,7 +105,7 @@ Common operations are exposed via the
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.
 
-##Sample code
+## Sample code
 
 Querying:
 
