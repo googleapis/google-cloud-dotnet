@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Storage.v1;
 using System.Threading;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace Google.Storage.V1
         public override Object GetObject(string bucket, string objectName, GetObjectOptions options = null)
         {
             ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
+            GaxRestPreconditions.CheckNotNull(objectName, nameof(objectName));
             return CreateGetObjectRequest(bucket, objectName, options).Execute();
         }
 
@@ -37,7 +38,7 @@ namespace Google.Storage.V1
             CancellationToken cancellationToken = default(CancellationToken))
         {
             ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
+            GaxRestPreconditions.CheckNotNull(objectName, nameof(objectName));
             return CreateGetObjectRequest(bucket, objectName, options).ExecuteAsync(cancellationToken);
         }
 

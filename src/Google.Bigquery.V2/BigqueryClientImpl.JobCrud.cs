@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
@@ -33,7 +34,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override IEnumerable<BigqueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
         {
-            Preconditions.CheckNotNull(projectReference, nameof(projectReference));
+            GaxRestPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
             var initialRequest = CreateListJobsRequest(projectReference, options);
             return s_jobsPageStreamer.Fetch(initialRequest).Select(job => new BigqueryJob(this, job));
@@ -49,7 +50,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob PollJob(JobReference jobReference, PollJobOptions options = null)
         {
-            Preconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             options?.Validate();
 
             DateTimeOffset? deadline = options?.GetEffectiveDeadline() ?? DateTimeOffset.MaxValue;
@@ -71,7 +72,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob GetJob(JobReference jobReference, GetJobOptions options = null)
         {
-            Preconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
             options?.ModifyRequest(request);
@@ -82,7 +83,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob CancelJob(JobReference jobReference, CancelJobOptions options = null)
         {
-            Preconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
             options?.ModifyRequest(request);
             var job = request.Execute().Job;

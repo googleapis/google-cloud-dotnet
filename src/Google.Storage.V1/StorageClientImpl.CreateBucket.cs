@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System.Threading;
@@ -40,7 +41,7 @@ namespace Google.Storage.V1
 
         private BucketsResource.InsertRequest CreateCreateBucketRequest(string projectId, string bucket, CreateBucketOptions options)
         {
-            Preconditions.CheckNotNull(projectId, nameof(projectId));
+            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
             ValidateBucketName(bucket);
             var bucketEntity = new Bucket { Name = bucket };
             var request = Service.Buckets.Insert(bucketEntity, projectId);
@@ -50,7 +51,7 @@ namespace Google.Storage.V1
 
         private BucketsResource.InsertRequest CreateCreateBucketRequest(string projectId, Bucket bucket, CreateBucketOptions options)
         {
-            Preconditions.CheckNotNull(projectId, nameof(projectId));
+            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
             ValidateBucket(bucket, nameof(bucket));
             var request = Service.Buckets.Insert(bucket, projectId);
             options?.ModifyRequest(request);
