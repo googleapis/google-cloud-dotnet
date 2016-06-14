@@ -26,14 +26,16 @@ namespace Google.Logging.V2 {
             "Ch9nb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nLnByb3RvEhFnb29nbGUubG9n",
             "Z2luZy52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxojZ29vZ2xl",
             "L2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8aIWdvb2dsZS9sb2dnaW5n",
-            "L3YyL2xvZ19lbnRyeS5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnBy",
-            "b3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byIkChBEZWxldGVMb2dSZXF1",
-            "ZXN0EhAKCGxvZ19uYW1lGAEgASgJIv8BChZXcml0ZUxvZ0VudHJpZXNSZXF1",
-            "ZXN0EhAKCGxvZ19uYW1lGAEgASgJEi8KCHJlc291cmNlGAIgASgLMh0uZ29v",
-            "Z2xlLmFwaS5Nb25pdG9yZWRSZXNvdXJjZRJFCgZsYWJlbHMYAyADKAsyNS5n",
-            "b29nbGUubG9nZ2luZy52Mi5Xcml0ZUxvZ0VudHJpZXNSZXF1ZXN0LkxhYmVs",
-            "c0VudHJ5EiwKB2VudHJpZXMYBCADKAsyGy5nb29nbGUubG9nZ2luZy52Mi5M",
-            "b2dFbnRyeRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "L3YyL2xvZ19lbnRyeS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9u",
+            "LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnBy",
+            "b3RvIiQKEERlbGV0ZUxvZ1JlcXVlc3QSEAoIbG9nX25hbWUYASABKAkimAIK",
+            "FldyaXRlTG9nRW50cmllc1JlcXVlc3QSEAoIbG9nX25hbWUYASABKAkSLwoI",
+            "cmVzb3VyY2UYAiABKAsyHS5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNl",
+            "EkUKBmxhYmVscxgDIAMoCzI1Lmdvb2dsZS5sb2dnaW5nLnYyLldyaXRlTG9n",
+            "RW50cmllc1JlcXVlc3QuTGFiZWxzRW50cnkSLAoHZW50cmllcxgEIAMoCzIb",
+            "Lmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5EhcKD3BhcnRpYWxfc3VjY2Vz",
+            "cxgFIAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
             "AiABKAk6AjgBIhkKF1dyaXRlTG9nRW50cmllc1Jlc3BvbnNlInUKFUxpc3RM",
             "b2dFbnRyaWVzUmVxdWVzdBITCgtwcm9qZWN0X2lkcxgBIAMoCRIOCgZmaWx0",
             "ZXIYAiABKAkSEAoIb3JkZXJfYnkYAyABKAkSEQoJcGFnZV9zaXplGAQgASgF",
@@ -61,10 +63,10 @@ namespace Google.Logging.V2 {
             "cmVkUmVzb3VyY2VEZXNjcmlwdG9yc0IqChVjb20uZ29vZ2xlLmxvZ2dpbmcu",
             "djJCDExvZ2dpbmdQcm90b1AB+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.V2.LogEntryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.V2.LogEntryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.DeleteLogRequest), global::Google.Logging.V2.DeleteLogRequest.Parser, new[]{ "LogName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesRequest), global::Google.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesRequest), global::Google.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries", "PartialSuccess" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesResponse), global::Google.Logging.V2.WriteLogEntriesResponse.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogEntriesRequest), global::Google.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogEntriesResponse), global::Google.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null),
@@ -213,6 +215,7 @@ namespace Google.Logging.V2 {
       Resource = other.resource_ != null ? other.Resource.Clone() : null;
       labels_ = other.labels_.Clone();
       entries_ = other.entries_.Clone();
+      partialSuccess_ = other.partialSuccess_;
     }
 
     public WriteLogEntriesRequest Clone() {
@@ -272,9 +275,30 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  Required. The log entries to write. The log entries must have values for
     ///  all required fields.
+    ///
+    ///  To improve throughput and to avoid exceeding the quota limit for calls
+    ///  to `entries.write`, use this field to write multiple log entries at once
+    ///  rather than  // calling this method for each log entry.
     /// </summary>
     public pbc::RepeatedField<global::Google.Logging.V2.LogEntry> Entries {
       get { return entries_; }
+    }
+
+    /// <summary>Field number for the "partial_success" field.</summary>
+    public const int PartialSuccessFieldNumber = 5;
+    private bool partialSuccess_;
+    /// <summary>
+    ///  Optional. Whether valid entries should be written even if some other
+    ///  entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
+    ///  entry is not written, the response status will be the error associated
+    ///  with one of the failed entries and include error details in the form of
+    ///  WriteLogEntriesPartialErrors.
+    /// </summary>
+    public bool PartialSuccess {
+      get { return partialSuccess_; }
+      set {
+        partialSuccess_ = value;
+      }
     }
 
     public override bool Equals(object other) {
@@ -292,6 +316,7 @@ namespace Google.Logging.V2 {
       if (!object.Equals(Resource, other.Resource)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if(!entries_.Equals(other.entries_)) return false;
+      if (PartialSuccess != other.PartialSuccess) return false;
       return true;
     }
 
@@ -301,6 +326,7 @@ namespace Google.Logging.V2 {
       if (resource_ != null) hash ^= Resource.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= entries_.GetHashCode();
+      if (PartialSuccess != false) hash ^= PartialSuccess.GetHashCode();
       return hash;
     }
 
@@ -319,6 +345,10 @@ namespace Google.Logging.V2 {
       }
       labels_.WriteTo(output, _map_labels_codec);
       entries_.WriteTo(output, _repeated_entries_codec);
+      if (PartialSuccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(PartialSuccess);
+      }
     }
 
     public int CalculateSize() {
@@ -331,6 +361,9 @@ namespace Google.Logging.V2 {
       }
       size += labels_.CalculateSize(_map_labels_codec);
       size += entries_.CalculateSize(_repeated_entries_codec);
+      if (PartialSuccess != false) {
+        size += 1 + 1;
+      }
       return size;
     }
 
@@ -349,6 +382,9 @@ namespace Google.Logging.V2 {
       }
       labels_.Add(other.labels_);
       entries_.Add(other.entries_);
+      if (other.PartialSuccess != false) {
+        PartialSuccess = other.PartialSuccess;
+      }
     }
 
     public void MergeFrom(pb::CodedInputStream input) {
@@ -377,6 +413,10 @@ namespace Google.Logging.V2 {
             entries_.AddEntriesFrom(input, _repeated_entries_codec);
             break;
           }
+          case 40: {
+            PartialSuccess = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -385,6 +425,7 @@ namespace Google.Logging.V2 {
 
   /// <summary>
   ///  Result returned from WriteLogEntries.
+  ///  empty
   /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class WriteLogEntriesResponse : pb::IMessage<WriteLogEntriesResponse> {
@@ -530,7 +571,7 @@ namespace Google.Logging.V2 {
     private string orderBy_ = "";
     /// <summary>
     ///  Optional. How the results should be sorted.  Presently, the only permitted
-    ///  values are `"timestamp"` (default) and `"timestamp desc"`.  The first
+    ///  values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
     ///  option returns entries in order of increasing values of
     ///  `LogEntry.timestamp` (oldest first), and the second option returns entries
     ///  in order of decreasing timestamps (newest first).  Entries with equal
@@ -547,11 +588,10 @@ namespace Google.Logging.V2 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    ///  Optional. The maximum number of results to return from this request.  Fewer
-    ///  results might be returned. You must check for the `nextPageToken` result to
-    ///  determine if additional results are available, which you can retrieve by
-    ///  passing the `nextPageToken` value in the `pageToken` parameter to the next
-    ///  request.
+    ///  Optional. The maximum number of results to return from this request.
+    ///  You must check for presence of `nextPageToken` to determine if additional
+    ///  results are available, which you can retrieve by passing the
+    ///  `nextPageToken` value as the `pageToken` parameter in the next request.
     /// </summary>
     public int PageSize {
       get { return pageSize_; }
@@ -564,11 +604,11 @@ namespace Google.Logging.V2 {
     public const int PageTokenFieldNumber = 5;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If the `pageToken` request parameter is supplied, then the next
-    ///  page of results in the set are retrieved.  The `pageToken` parameter must
-    ///  be set with the value of the `nextPageToken` result parameter from the
-    ///  previous request.  The values of `projectIds`, `filter`, and `orderBy` must
-    ///  be the same as in the previous request.
+    ///  Optional. If the `pageToken` parameter is supplied, then the next page of
+    ///  results is retrieved.  The `pageToken` parameter must be set to the value
+    ///  of the `nextPageToken` from the previous response.
+    ///  The values of `projectIds`, `filter`, and `orderBy` must be the same
+    ///  as in the previous request.
     /// </summary>
     public string PageToken {
       get { return pageToken_; }
@@ -748,8 +788,8 @@ namespace Google.Logging.V2 {
     private string nextPageToken_ = "";
     /// <summary>
     ///  If there are more results than were returned, then `nextPageToken` is
-    ///  given a value in the response.  To get the next batch of results, call
-    ///  this method again using the value of `nextPageToken` as `pageToken`.
+    ///  included in the response.  To get the next set of results, call this
+    ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     public string NextPageToken {
       get { return nextPageToken_; }
@@ -868,11 +908,10 @@ namespace Google.Logging.V2 {
     public const int PageSizeFieldNumber = 1;
     private int pageSize_;
     /// <summary>
-    ///  Optional. The maximum number of results to return from this request.  Fewer
-    ///  results might be returned. You must check for the `nextPageToken` result to
-    ///  determine if additional results are available, which you can retrieve by
-    ///  passing the `nextPageToken` value in the `pageToken` parameter to the next
-    ///  request.
+    ///  Optional. The maximum number of results to return from this request.
+    ///  You must check for presence of `nextPageToken` to determine if additional
+    ///  results are available, which you can retrieve by passing the
+    ///  `nextPageToken` value as the `pageToken` parameter in the next request.
     /// </summary>
     public int PageSize {
       get { return pageSize_; }
@@ -885,10 +924,9 @@ namespace Google.Logging.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If the `pageToken` request parameter is supplied, then the next
-    ///  page of results in the set are retrieved.  The `pageToken` parameter must
-    ///  be set with the value of the `nextPageToken` result parameter from the
-    ///  previous request.
+    ///  Optional. If the `pageToken` parameter is supplied, then the next page of
+    ///  results is retrieved.  The `pageToken` parameter must be set to the value
+    ///  of the `nextPageToken` from the previous response.
     /// </summary>
     public string PageToken {
       get { return pageToken_; }
@@ -1027,7 +1065,7 @@ namespace Google.Logging.V2 {
     private string nextPageToken_ = "";
     /// <summary>
     ///  If there are more results than were returned, then `nextPageToken` is
-    ///  returned in the response.  To get the next batch of results, call this
+    ///  included in the response.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     public string NextPageToken {

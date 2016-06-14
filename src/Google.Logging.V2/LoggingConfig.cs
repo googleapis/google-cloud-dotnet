@@ -30,41 +30,40 @@ namespace Google.Logging.V2 {
             "C2Rlc3RpbmF0aW9uGAMgASgJEg4KBmZpbHRlchgFIAEoCRJHChVvdXRwdXRf",
             "dmVyc2lvbl9mb3JtYXQYBiABKA4yKC5nb29nbGUubG9nZ2luZy52Mi5Mb2dT",
             "aW5rLlZlcnNpb25Gb3JtYXQiPwoNVmVyc2lvbkZvcm1hdBIeChpWRVJTSU9O",
-            "X0ZPUk1BVF9VTlNQRUNJRklFRBAAEgYKAlYyEAESBgoCVjEQAiJPChBMaXN0",
-            "U2lua3NSZXF1ZXN0EhQKDHByb2plY3RfbmFtZRgBIAEoCRISCgpwYWdlX3Rv",
-            "a2VuGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBSJXChFMaXN0U2lua3NSZXNw",
-            "b25zZRIpCgVzaW5rcxgBIAMoCzIaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1Np",
-            "bmsSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiMKDkdldFNpbmtSZXF1ZXN0",
-            "EhEKCXNpbmtfbmFtZRgBIAEoCSJTChFDcmVhdGVTaW5rUmVxdWVzdBIUCgxw",
-            "cm9qZWN0X25hbWUYASABKAkSKAoEc2luaxgCIAEoCzIaLmdvb2dsZS5sb2dn",
-            "aW5nLnYyLkxvZ1NpbmsiUAoRVXBkYXRlU2lua1JlcXVlc3QSEQoJc2lua19u",
-            "YW1lGAEgASgJEigKBHNpbmsYAiABKAsyGi5nb29nbGUubG9nZ2luZy52Mi5M",
-            "b2dTaW5rIiYKEURlbGV0ZVNpbmtSZXF1ZXN0EhEKCXNpbmtfbmFtZRgBIAEo",
-            "CTKlBQoPQ29uZmlnU2VydmljZVYyEogBCglMaXN0U2lua3MSIy5nb29nbGUu",
-            "bG9nZ2luZy52Mi5MaXN0U2lua3NSZXF1ZXN0GiQuZ29vZ2xlLmxvZ2dpbmcu",
-            "djIuTGlzdFNpbmtzUmVzcG9uc2UiMILT5JMCKhIoL3YyYmV0YTEve3Byb2pl",
-            "Y3RfbmFtZT1wcm9qZWN0cy8qfS9zaW5rcxJ5CgdHZXRTaW5rEiEuZ29vZ2xl",
-            "LmxvZ2dpbmcudjIuR2V0U2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52",
-            "Mi5Mb2dTaW5rIi+C0+STAikSJy92MmJldGExL3tzaW5rX25hbWU9cHJvamVj",
-            "dHMvKi9zaW5rcy8qfRKGAQoKQ3JlYXRlU2luaxIkLmdvb2dsZS5sb2dnaW5n",
-            "LnYyLkNyZWF0ZVNpbmtSZXF1ZXN0GhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
-            "U2luayI2gtPkkwIwIigvdjJiZXRhMS97cHJvamVjdF9uYW1lPXByb2plY3Rz",
-            "Lyp9L3NpbmtzOgRzaW5rEoUBCgpVcGRhdGVTaW5rEiQuZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuVXBkYXRlU2lua1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5M",
-            "b2dTaW5rIjWC0+STAi8aJy92MmJldGExL3tzaW5rX25hbWU9cHJvamVjdHMv",
-            "Ki9zaW5rcy8qfToEc2luaxJ7CgpEZWxldGVTaW5rEiQuZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuRGVsZXRlU2lua1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiL4LT5JMCKSonL3YyYmV0YTEve3NpbmtfbmFtZT1wcm9qZWN0cy8qL3Np",
-            "bmtzLyp9QigKFWNvbS5nb29nbGUubG9nZ2luZy52MkINTG9nZ2luZ0NvbmZp",
-            "Z1ABYgZwcm90bzM="));
+            "X0ZPUk1BVF9VTlNQRUNJRklFRBAAEgYKAlYyEAESBgoCVjEQAiJJChBMaXN0",
+            "U2lua3NSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRISCgpwYWdlX3Rva2VuGAIg",
+            "ASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBSJXChFMaXN0U2lua3NSZXNwb25zZRIp",
+            "CgVzaW5rcxgBIAMoCzIaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1NpbmsSFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIiMKDkdldFNpbmtSZXF1ZXN0EhEKCXNp",
+            "bmtfbmFtZRgBIAEoCSJNChFDcmVhdGVTaW5rUmVxdWVzdBIOCgZwYXJlbnQY",
+            "ASABKAkSKAoEc2luaxgCIAEoCzIaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1Np",
+            "bmsiUAoRVXBkYXRlU2lua1JlcXVlc3QSEQoJc2lua19uYW1lGAEgASgJEigK",
+            "BHNpbmsYAiABKAsyGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIiYKEURl",
+            "bGV0ZVNpbmtSZXF1ZXN0EhEKCXNpbmtfbmFtZRgBIAEoCTKZBQoPQ29uZmln",
+            "U2VydmljZVYyEoIBCglMaXN0U2lua3MSIy5nb29nbGUubG9nZ2luZy52Mi5M",
+            "aXN0U2lua3NSZXF1ZXN0GiQuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdFNpbmtz",
+            "UmVzcG9uc2UiKoLT5JMCJBIiL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8q",
+            "fS9zaW5rcxJ5CgdHZXRTaW5rEiEuZ29vZ2xlLmxvZ2dpbmcudjIuR2V0U2lu",
+            "a1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIi+C0+STAikS",
+            "Jy92MmJldGExL3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfRKAAQoK",
+            "Q3JlYXRlU2luaxIkLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0ZVNpbmtSZXF1",
+            "ZXN0GhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luayIwgtPkkwIqIiIvdjJi",
+            "ZXRhMS97cGFyZW50PXByb2plY3RzLyp9L3NpbmtzOgRzaW5rEoUBCgpVcGRh",
+            "dGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRlU2lua1JlcXVlc3Qa",
+            "Gi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIjWC0+STAi8aJy92MmJldGEx",
+            "L3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfToEc2luaxJ7CgpEZWxl",
+            "dGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlU2lua1JlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiL4LT5JMCKSonL3YyYmV0YTEve3Np",
+            "bmtfbmFtZT1wcm9qZWN0cy8qL3NpbmtzLyp9QigKFWNvbS5nb29nbGUubG9n",
+            "Z2luZy52MkINTG9nZ2luZ0NvbmZpZ1ABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogSink), global::Google.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat" }, null, new[]{ typeof(global::Google.Logging.V2.LogSink.Types.VersionFormat) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksRequest), global::Google.Logging.V2.ListSinksRequest.Parser, new[]{ "ProjectName", "PageToken", "PageSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksRequest), global::Google.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksResponse), global::Google.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.GetSinkRequest), global::Google.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.CreateSinkRequest), global::Google.Logging.V2.CreateSinkRequest.Parser, new[]{ "ProjectName", "Sink" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.CreateSinkRequest), global::Google.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.UpdateSinkRequest), global::Google.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.DeleteSinkRequest), global::Google.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null)
           }));
@@ -74,7 +73,7 @@ namespace Google.Logging.V2 {
   }
   #region Messages
   /// <summary>
-  ///  Describes a sink used to export log entries outside Cloud Logging.
+  ///  Describes a sink used to export log entries outside Stackdriver Logging.
   /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LogSink : pb::IMessage<LogSink> {
@@ -143,12 +142,13 @@ namespace Google.Logging.V2 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    ///  An [advanced logs filter](/logging/docs/view/advanced_filters)
-    ///  that defines the log entries to be exported.  The filter must be
-    ///  consistent with the log entry format designed by the
+    ///  An [advanced logs filter](/logging/docs/view/advanced_filters). Only
+    ///  log entries matching that filter are exported. The filter must be
+    ///  consistent with the log entry format specified by the
     ///  `outputVersionFormat` parameter, regardless of the format of the
-    ///  log entry that was originally written to Cloud Logging.
-    ///  Example: `"logName:syslog AND severity>=ERROR"`.
+    ///  log entry that was originally written to Stackdriver Logging.
+    ///  Example (V2 format):
+    ///  `"logName=projects/my-projectid/logs/syslog AND severity>=ERROR"`.
     /// </summary>
     public string Filter {
       get { return filter_; }
@@ -161,9 +161,9 @@ namespace Google.Logging.V2 {
     public const int OutputVersionFormatFieldNumber = 6;
     private global::Google.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = 0;
     /// <summary>
-    ///  The log entry version used when exporting log entries from this
-    ///  sink.  This version does not have to correspond to the version of
-    ///  the log entry when it was written to Cloud Logging.
+    ///  The log entry version to use for this sink's exported log entries.
+    ///  This version does not have to correspond to the version of the log entry
+    ///  when it was written to Stackdriver Logging.
     /// </summary>
     public global::Google.Logging.V2.LogSink.Types.VersionFormat OutputVersionFormat {
       get { return outputVersionFormat_; }
@@ -336,7 +336,7 @@ namespace Google.Logging.V2 {
     partial void OnConstruction();
 
     public ListSinksRequest(ListSinksRequest other) : this() {
-      projectName_ = other.projectName_;
+      parent_ = other.parent_;
       pageToken_ = other.pageToken_;
       pageSize_ = other.pageSize_;
     }
@@ -345,17 +345,17 @@ namespace Google.Logging.V2 {
       return new ListSinksRequest(this);
     }
 
-    /// <summary>Field number for the "project_name" field.</summary>
-    public const int ProjectNameFieldNumber = 1;
-    private string projectName_ = "";
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
     /// <summary>
-    ///  Required. The resource name of the project containing the sinks.
-    ///  Example: `"projects/my-logging-project"`, `"projects/01234567890"`.
+    ///  Required. The resource name containing the sinks.
+    ///  Example: `"projects/my-logging-project"`.
     /// </summary>
-    public string ProjectName {
-      get { return projectName_; }
+    public string Parent {
+      get { return parent_; }
       set {
-        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -363,11 +363,10 @@ namespace Google.Logging.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If the `pageToken` request parameter is supplied, then the next
-    ///  page of results in the set are retrieved.  The `pageToken` parameter must
-    ///  be set with the value of the `nextPageToken` result parameter from the
-    ///  previous request. The value of `projectName` must be the same as in the
-    ///  previous request.
+    ///  Optional. If the `pageToken` parameter is supplied, then the next page of
+    ///  results is retrieved.  The `pageToken` parameter must be set to the value
+    ///  of the `nextPageToken` from the previous response.
+    ///  The value of `parent` must be the same as in the previous request.
     /// </summary>
     public string PageToken {
       get { return pageToken_; }
@@ -380,11 +379,10 @@ namespace Google.Logging.V2 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    ///  Optional. The maximum number of results to return from this request.  Fewer
-    ///  results might be returned. You must check for the `nextPageToken` result to
-    ///  determine if additional results are available, which you can retrieve by
-    ///  passing the `nextPageToken` value in the `pageToken` parameter to the next
-    ///  request.
+    ///  Optional. The maximum number of results to return from this request.
+    ///  You must check for presence of `nextPageToken` to determine if additional
+    ///  results are available, which you can retrieve by passing the
+    ///  `nextPageToken` value as the `pageToken` parameter in the next request.
     /// </summary>
     public int PageSize {
       get { return pageSize_; }
@@ -404,7 +402,7 @@ namespace Google.Logging.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ProjectName != other.ProjectName) return false;
+      if (Parent != other.Parent) return false;
       if (PageToken != other.PageToken) return false;
       if (PageSize != other.PageSize) return false;
       return true;
@@ -412,7 +410,7 @@ namespace Google.Logging.V2 {
 
     public override int GetHashCode() {
       int hash = 1;
-      if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       return hash;
@@ -423,9 +421,9 @@ namespace Google.Logging.V2 {
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ProjectName.Length != 0) {
+      if (Parent.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ProjectName);
+        output.WriteString(Parent);
       }
       if (PageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -439,8 +437,8 @@ namespace Google.Logging.V2 {
 
     public int CalculateSize() {
       int size = 0;
-      if (ProjectName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
@@ -455,8 +453,8 @@ namespace Google.Logging.V2 {
       if (other == null) {
         return;
       }
-      if (other.ProjectName.Length != 0) {
-        ProjectName = other.ProjectName;
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
@@ -474,7 +472,7 @@ namespace Google.Logging.V2 {
             input.SkipLastField();
             break;
           case 10: {
-            ProjectName = input.ReadString();
+            Parent = input.ReadString();
             break;
           }
           case 18: {
@@ -539,7 +537,7 @@ namespace Google.Logging.V2 {
     private string nextPageToken_ = "";
     /// <summary>
     ///  If there are more results than were returned, then `nextPageToken` is
-    ///  given a value in the response.  To get the next batch of results, call this
+    ///  included in the response.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     public string NextPageToken {
@@ -757,7 +755,7 @@ namespace Google.Logging.V2 {
     partial void OnConstruction();
 
     public CreateSinkRequest(CreateSinkRequest other) : this() {
-      projectName_ = other.projectName_;
+      parent_ = other.parent_;
       Sink = other.sink_ != null ? other.Sink.Clone() : null;
     }
 
@@ -765,19 +763,19 @@ namespace Google.Logging.V2 {
       return new CreateSinkRequest(this);
     }
 
-    /// <summary>Field number for the "project_name" field.</summary>
-    public const int ProjectNameFieldNumber = 1;
-    private string projectName_ = "";
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
     /// <summary>
-    ///  The resource name of the project in which to create the sink.
+    ///  The resource in which to create the sink.
     ///  Example: `"projects/my-project-id"`.
     ///
     ///  The new sink must be provided in the request.
     /// </summary>
-    public string ProjectName {
-      get { return projectName_; }
+    public string Parent {
+      get { return parent_; }
       set {
-        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -806,14 +804,14 @@ namespace Google.Logging.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ProjectName != other.ProjectName) return false;
+      if (Parent != other.Parent) return false;
       if (!object.Equals(Sink, other.Sink)) return false;
       return true;
     }
 
     public override int GetHashCode() {
       int hash = 1;
-      if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (sink_ != null) hash ^= Sink.GetHashCode();
       return hash;
     }
@@ -823,9 +821,9 @@ namespace Google.Logging.V2 {
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ProjectName.Length != 0) {
+      if (Parent.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ProjectName);
+        output.WriteString(Parent);
       }
       if (sink_ != null) {
         output.WriteRawTag(18);
@@ -835,8 +833,8 @@ namespace Google.Logging.V2 {
 
     public int CalculateSize() {
       int size = 0;
-      if (ProjectName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (sink_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sink);
@@ -848,8 +846,8 @@ namespace Google.Logging.V2 {
       if (other == null) {
         return;
       }
-      if (other.ProjectName.Length != 0) {
-        ProjectName = other.ProjectName;
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       if (other.sink_ != null) {
         if (sink_ == null) {
@@ -867,7 +865,7 @@ namespace Google.Logging.V2 {
             input.SkipLastField();
             break;
           case 10: {
-            ProjectName = input.ReadString();
+            Parent = input.ReadString();
             break;
           }
           case 18: {

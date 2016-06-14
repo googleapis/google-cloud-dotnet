@@ -441,8 +441,8 @@ namespace Google.Logging.V2
         /// <summary>
         /// Lists logs-based metrics.
         /// </summary>
-        /// <param name="project_name">
-        /// Required. The resource name of the project containing the metrics.
+        /// <param name="parent">
+        /// Required. The resource name containing the metrics.
         /// Example: `"projects/my-project-id"`.
         /// </param>
         /// <param name="pageToken">The token returned from the previous request.
@@ -453,7 +453,7 @@ namespace Google.Logging.V2
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogMetric items.</returns>
         public virtual IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStreamAsync(
-            string projectName,
+            string parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -464,8 +464,8 @@ namespace Google.Logging.V2
         /// <summary>
         /// Lists logs-based metrics.
         /// </summary>
-        /// <param name="project_name">
-        /// Required. The resource name of the project containing the metrics.
+        /// <param name="parent">
+        /// Required. The resource name containing the metrics.
         /// Example: `"projects/my-project-id"`.
         /// </param>
         /// <param name="pageToken">The token returned from the previous request.
@@ -476,7 +476,7 @@ namespace Google.Logging.V2
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogMetric items.</returns>
         public virtual IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStream(
-            string projectName,
+            string parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -487,7 +487,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the desired metric.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -503,7 +503,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the desired metric.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -518,7 +518,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the desired metric.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -534,7 +534,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
-        /// <param name="project_name">
+        /// <param name="parent">
         /// The resource name of the project in which to create the metric.
         /// Example: `"projects/my-project-id"`.
         ///
@@ -547,7 +547,7 @@ namespace Google.Logging.V2
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<LogMetric> CreateLogMetricAsync(
-            string projectName,
+            string parent,
             LogMetric metric,
             CallSettings callSettings = null)
         {
@@ -557,7 +557,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
-        /// <param name="project_name">
+        /// <param name="parent">
         /// The resource name of the project in which to create the metric.
         /// Example: `"projects/my-project-id"`.
         ///
@@ -570,17 +570,17 @@ namespace Google.Logging.V2
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<LogMetric> CreateLogMetricAsync(
-            string projectName,
+            string parent,
             LogMetric metric,
             CancellationToken cancellationToken) => CreateLogMetricAsync(
-                projectName,
+                parent,
                 metric,
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
-        /// <param name="project_name">
+        /// <param name="parent">
         /// The resource name of the project in which to create the metric.
         /// Example: `"projects/my-project-id"`.
         ///
@@ -593,7 +593,7 @@ namespace Google.Logging.V2
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual LogMetric CreateLogMetric(
-            string projectName,
+            string parent,
             LogMetric metric,
             CallSettings callSettings = null)
         {
@@ -603,7 +603,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to update.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
@@ -629,7 +629,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to update.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
@@ -655,7 +655,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to update.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
@@ -681,7 +681,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to delete.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -697,7 +697,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to delete.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -712,7 +712,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to delete.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -758,8 +758,8 @@ namespace Google.Logging.V2
         /// <summary>
         /// Lists logs-based metrics.
         /// </summary>
-        /// <param name="project_name">
-        /// Required. The resource name of the project containing the metrics.
+        /// <param name="parent">
+        /// Required. The resource name containing the metrics.
         /// Example: `"projects/my-project-id"`.
         /// </param>
         /// <param name="pageToken">The token returned from the previous request.
@@ -770,14 +770,14 @@ namespace Google.Logging.V2
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogMetric items.</returns>
         public override IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStreamAsync(
-            string projectName,
+            string parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => new PagedAsyncEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(
                 _callListLogMetrics,
                 new ListLogMetricsRequest
                 {
-                    ProjectName = projectName,
+                    Parent = parent,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -786,8 +786,8 @@ namespace Google.Logging.V2
         /// <summary>
         /// Lists logs-based metrics.
         /// </summary>
-        /// <param name="project_name">
-        /// Required. The resource name of the project containing the metrics.
+        /// <param name="parent">
+        /// Required. The resource name containing the metrics.
         /// Example: `"projects/my-project-id"`.
         /// </param>
         /// <param name="pageToken">The token returned from the previous request.
@@ -798,14 +798,14 @@ namespace Google.Logging.V2
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogMetric items.</returns>
         public override IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStream(
-            string projectName,
+            string parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => new PagedEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(
                 _callListLogMetrics,
                 new ListLogMetricsRequest
                 {
-                    ProjectName = projectName,
+                    Parent = parent,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -814,7 +814,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the desired metric.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -832,7 +832,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the desired metric.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -850,7 +850,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
-        /// <param name="project_name">
+        /// <param name="parent">
         /// The resource name of the project in which to create the metric.
         /// Example: `"projects/my-project-id"`.
         ///
@@ -863,12 +863,12 @@ namespace Google.Logging.V2
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<LogMetric> CreateLogMetricAsync(
-            string projectName,
+            string parent,
             LogMetric metric,
             CallSettings callSettings = null) => _callCreateLogMetric.Async(
                 new CreateLogMetricRequest
                 {
-                    ProjectName = projectName,
+                    Parent = parent,
                     Metric = metric,
                 },
                 callSettings);
@@ -876,7 +876,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
-        /// <param name="project_name">
+        /// <param name="parent">
         /// The resource name of the project in which to create the metric.
         /// Example: `"projects/my-project-id"`.
         ///
@@ -889,12 +889,12 @@ namespace Google.Logging.V2
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public override LogMetric CreateLogMetric(
-            string projectName,
+            string parent,
             LogMetric metric,
             CallSettings callSettings = null) => _callCreateLogMetric.Sync(
                 new CreateLogMetricRequest
                 {
-                    ProjectName = projectName,
+                    Parent = parent,
                     Metric = metric,
                 },
                 callSettings);
@@ -902,7 +902,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to update.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
@@ -931,7 +931,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to update.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
@@ -960,7 +960,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to delete.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
@@ -978,7 +978,7 @@ namespace Google.Logging.V2
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
-        /// <param name="metric_name">
+        /// <param name="metricName">
         /// The resource name of the metric to delete.
         /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>

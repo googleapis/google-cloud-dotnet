@@ -608,12 +608,12 @@ namespace Google.Pubsub.V1
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
         /// will pull and ack messages using API methods.
         /// </param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackDeadlineSeconds">
         /// This value is the maximum time after a subscriber receives a message
         /// before the subscriber should acknowledge the message. After message
         /// delivery but before the ack deadline expires and before the message is
@@ -666,12 +666,12 @@ namespace Google.Pubsub.V1
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
         /// will pull and ack messages using API methods.
         /// </param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackDeadlineSeconds">
         /// This value is the maximum time after a subscriber receives a message
         /// before the subscriber should acknowledge the message. After message
         /// delivery but before the ack deadline expires and before the message is
@@ -726,12 +726,12 @@ namespace Google.Pubsub.V1
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
         /// will pull and ack messages using API methods.
         /// </param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackDeadlineSeconds">
         /// This value is the maximum time after a subscriber receives a message
         /// before the subscriber should acknowledge the message. After message
         /// delivery but before the ack deadline expires and before the message is
@@ -898,8 +898,8 @@ namespace Google.Pubsub.V1
         /// processing was interrupted.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ack_ids">List of acknowledgment IDs.</param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackIds">List of acknowledgment IDs.</param>
+        /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
         /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
@@ -924,8 +924,8 @@ namespace Google.Pubsub.V1
         /// processing was interrupted.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ack_ids">List of acknowledgment IDs.</param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackIds">List of acknowledgment IDs.</param>
+        /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
         /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
@@ -951,8 +951,8 @@ namespace Google.Pubsub.V1
         /// processing was interrupted.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ack_ids">List of acknowledgment IDs.</param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackIds">List of acknowledgment IDs.</param>
+        /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
         /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
@@ -980,7 +980,7 @@ namespace Google.Pubsub.V1
         /// than once will not result in an error.
         /// </summary>
         /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ack_ids">
+        /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
         /// by the Pub/Sub system in the `Pull` response. Must not be empty.
         /// </param>
@@ -1004,7 +1004,7 @@ namespace Google.Pubsub.V1
         /// than once will not result in an error.
         /// </summary>
         /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ack_ids">
+        /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
         /// by the Pub/Sub system in the `Pull` response. Must not be empty.
         /// </param>
@@ -1028,7 +1028,7 @@ namespace Google.Pubsub.V1
         /// than once will not result in an error.
         /// </summary>
         /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ack_ids">
+        /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
         /// by the Pub/Sub system in the `Pull` response. Must not be empty.
         /// </param>
@@ -1049,14 +1049,14 @@ namespace Google.Pubsub.V1
         /// subscription.
         /// </summary>
         /// <param name="subscription">The subscription from which messages should be pulled.</param>
-        /// <param name="return_immediately">
+        /// <param name="returnImmediately">
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
         /// than returning no messages. The client may cancel the request if it does
         /// not wish to wait any longer for the response.
         /// </param>
-        /// <param name="max_messages">
+        /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
         /// system may return fewer than the number specified.
         /// </param>
@@ -1078,14 +1078,14 @@ namespace Google.Pubsub.V1
         /// subscription.
         /// </summary>
         /// <param name="subscription">The subscription from which messages should be pulled.</param>
-        /// <param name="return_immediately">
+        /// <param name="returnImmediately">
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
         /// than returning no messages. The client may cancel the request if it does
         /// not wish to wait any longer for the response.
         /// </param>
-        /// <param name="max_messages">
+        /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
         /// system may return fewer than the number specified.
         /// </param>
@@ -1108,14 +1108,14 @@ namespace Google.Pubsub.V1
         /// subscription.
         /// </summary>
         /// <param name="subscription">The subscription from which messages should be pulled.</param>
-        /// <param name="return_immediately">
+        /// <param name="returnImmediately">
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
         /// than returning no messages. The client may cancel the request if it does
         /// not wish to wait any longer for the response.
         /// </param>
-        /// <param name="max_messages">
+        /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
         /// system may return fewer than the number specified.
         /// </param>
@@ -1139,7 +1139,7 @@ namespace Google.Pubsub.V1
         /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// The push configuration for future deliveries.
         ///
         /// An empty `pushConfig` indicates that the Pub/Sub system should
@@ -1166,7 +1166,7 @@ namespace Google.Pubsub.V1
         /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// The push configuration for future deliveries.
         ///
         /// An empty `pushConfig` indicates that the Pub/Sub system should
@@ -1193,7 +1193,7 @@ namespace Google.Pubsub.V1
         /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// The push configuration for future deliveries.
         ///
         /// An empty `pushConfig` indicates that the Pub/Sub system should
@@ -1271,12 +1271,12 @@ namespace Google.Pubsub.V1
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
         /// will pull and ack messages using API methods.
         /// </param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackDeadlineSeconds">
         /// This value is the maximum time after a subscriber receives a message
         /// before the subscriber should acknowledge the message. After message
         /// delivery but before the ack deadline expires and before the message is
@@ -1334,12 +1334,12 @@ namespace Google.Pubsub.V1
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// If push delivery is used with this subscription, this field is
         /// used to configure it. An empty `pushConfig` signifies that the subscriber
         /// will pull and ack messages using API methods.
         /// </param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackDeadlineSeconds">
         /// This value is the maximum time after a subscriber receives a message
         /// before the subscriber should acknowledge the message. After message
         /// delivery but before the ack deadline expires and before the message is
@@ -1501,8 +1501,8 @@ namespace Google.Pubsub.V1
         /// processing was interrupted.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ack_ids">List of acknowledgment IDs.</param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackIds">List of acknowledgment IDs.</param>
+        /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
         /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
@@ -1531,8 +1531,8 @@ namespace Google.Pubsub.V1
         /// processing was interrupted.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ack_ids">List of acknowledgment IDs.</param>
-        /// <param name="ack_deadline_seconds">
+        /// <param name="ackIds">List of acknowledgment IDs.</param>
+        /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
         /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
@@ -1564,7 +1564,7 @@ namespace Google.Pubsub.V1
         /// than once will not result in an error.
         /// </summary>
         /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ack_ids">
+        /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
         /// by the Pub/Sub system in the `Pull` response. Must not be empty.
         /// </param>
@@ -1591,7 +1591,7 @@ namespace Google.Pubsub.V1
         /// than once will not result in an error.
         /// </summary>
         /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ack_ids">
+        /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
         /// by the Pub/Sub system in the `Pull` response. Must not be empty.
         /// </param>
@@ -1615,14 +1615,14 @@ namespace Google.Pubsub.V1
         /// subscription.
         /// </summary>
         /// <param name="subscription">The subscription from which messages should be pulled.</param>
-        /// <param name="return_immediately">
+        /// <param name="returnImmediately">
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
         /// than returning no messages. The client may cancel the request if it does
         /// not wish to wait any longer for the response.
         /// </param>
-        /// <param name="max_messages">
+        /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
         /// system may return fewer than the number specified.
         /// </param>
@@ -1648,14 +1648,14 @@ namespace Google.Pubsub.V1
         /// subscription.
         /// </summary>
         /// <param name="subscription">The subscription from which messages should be pulled.</param>
-        /// <param name="return_immediately">
+        /// <param name="returnImmediately">
         /// If this is specified as true the system will respond immediately even if
         /// it is not able to return a message in the `Pull` response. Otherwise the
         /// system is allowed to wait until at least one message is available rather
         /// than returning no messages. The client may cancel the request if it does
         /// not wish to wait any longer for the response.
         /// </param>
-        /// <param name="max_messages">
+        /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
         /// system may return fewer than the number specified.
         /// </param>
@@ -1683,7 +1683,7 @@ namespace Google.Pubsub.V1
         /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// The push configuration for future deliveries.
         ///
         /// An empty `pushConfig` indicates that the Pub/Sub system should
@@ -1713,7 +1713,7 @@ namespace Google.Pubsub.V1
         /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
         /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="push_config">
+        /// <param name="pushConfig">
         /// The push configuration for future deliveries.
         ///
         /// An empty `pushConfig` indicates that the Pub/Sub system should

@@ -414,7 +414,7 @@ namespace Google.Logging.V2
         /// Deletes a log and all its log entries.
         /// The log will reappear if it receives new entries.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Required. The resource name of the log to delete.  Example:
         /// `"projects/my-project/logs/syslog"`.
         /// </param>
@@ -431,7 +431,7 @@ namespace Google.Logging.V2
         /// Deletes a log and all its log entries.
         /// The log will reappear if it receives new entries.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Required. The resource name of the log to delete.  Example:
         /// `"projects/my-project/logs/syslog"`.
         /// </param>
@@ -447,7 +447,7 @@ namespace Google.Logging.V2
         /// Deletes a log and all its log entries.
         /// The log will reappear if it receives new entries.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Required. The resource name of the log to delete.  Example:
         /// `"projects/my-project/logs/syslog"`.
         /// </param>
@@ -461,10 +461,10 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Cloud Logging.
-        /// All log entries in Cloud Logging are written by this method.
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Optional. A default log resource name for those log entries in `entries`
         /// that do not specify their own `logName`.  Example:
         /// `"projects/my-project/logs/syslog"`.  See
@@ -483,6 +483,10 @@ namespace Google.Logging.V2
         /// <param name="entries">
         /// Required. The log entries to write. The log entries must have values for
         /// all required fields.
+        ///
+        /// To improve throughput and to avoid exceeding the quota limit for calls
+        /// to `entries.write`, use this field to write multiple log entries at once
+        /// rather than  // calling this method for each log entry.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -497,10 +501,10 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Cloud Logging.
-        /// All log entries in Cloud Logging are written by this method.
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Optional. A default log resource name for those log entries in `entries`
         /// that do not specify their own `logName`.  Example:
         /// `"projects/my-project/logs/syslog"`.  See
@@ -519,6 +523,10 @@ namespace Google.Logging.V2
         /// <param name="entries">
         /// Required. The log entries to write. The log entries must have values for
         /// all required fields.
+        ///
+        /// To improve throughput and to avoid exceeding the quota limit for calls
+        /// to `entries.write`, use this field to write multiple log entries at once
+        /// rather than  // calling this method for each log entry.
         /// </param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -535,10 +543,10 @@ namespace Google.Logging.V2
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
-        /// Writes log entries to Cloud Logging.
-        /// All log entries in Cloud Logging are written by this method.
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Optional. A default log resource name for those log entries in `entries`
         /// that do not specify their own `logName`.  Example:
         /// `"projects/my-project/logs/syslog"`.  See
@@ -557,6 +565,10 @@ namespace Google.Logging.V2
         /// <param name="entries">
         /// Required. The log entries to write. The log entries must have values for
         /// all required fields.
+        ///
+        /// To improve throughput and to avoid exceeding the quota limit for calls
+        /// to `entries.write`, use this field to write multiple log entries at once
+        /// rather than  // calling this method for each log entry.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -575,7 +587,7 @@ namespace Google.Logging.V2
         /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
-        /// <param name="project_ids">
+        /// <param name="projectIds">
         /// Required. One or more project IDs or project numbers from which to retrieve
         /// log entries.  Examples of a project ID: `"my-project-1A"`, `"1234567890"`.
         /// </param>
@@ -585,9 +597,9 @@ namespace Google.Logging.V2
         /// `projectIds`.  Only entries that match the filter are retrieved.  An empty
         /// filter matches all log entries.
         /// </param>
-        /// <param name="order_by">
+        /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
-        /// values are `"timestamp"` (default) and `"timestamp desc"`.  The first
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
         /// option returns entries in order of increasing values of
         /// `LogEntry.timestamp` (oldest first), and the second option returns entries
         /// in order of decreasing timestamps (newest first).  Entries with equal
@@ -616,7 +628,7 @@ namespace Google.Logging.V2
         /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
-        /// <param name="project_ids">
+        /// <param name="projectIds">
         /// Required. One or more project IDs or project numbers from which to retrieve
         /// log entries.  Examples of a project ID: `"my-project-1A"`, `"1234567890"`.
         /// </param>
@@ -626,9 +638,9 @@ namespace Google.Logging.V2
         /// `projectIds`.  Only entries that match the filter are retrieved.  An empty
         /// filter matches all log entries.
         /// </param>
-        /// <param name="order_by">
+        /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
-        /// values are `"timestamp"` (default) and `"timestamp desc"`.  The first
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
         /// option returns entries in order of increasing values of
         /// `LogEntry.timestamp` (oldest first), and the second option returns entries
         /// in order of decreasing timestamps (newest first).  Entries with equal
@@ -680,7 +692,7 @@ namespace Google.Logging.V2
         /// Deletes a log and all its log entries.
         /// The log will reappear if it receives new entries.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Required. The resource name of the log to delete.  Example:
         /// `"projects/my-project/logs/syslog"`.
         /// </param>
@@ -699,7 +711,7 @@ namespace Google.Logging.V2
         /// Deletes a log and all its log entries.
         /// The log will reappear if it receives new entries.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Required. The resource name of the log to delete.  Example:
         /// `"projects/my-project/logs/syslog"`.
         /// </param>
@@ -715,10 +727,10 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Writes log entries to Cloud Logging.
-        /// All log entries in Cloud Logging are written by this method.
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Optional. A default log resource name for those log entries in `entries`
         /// that do not specify their own `logName`.  Example:
         /// `"projects/my-project/logs/syslog"`.  See
@@ -737,6 +749,10 @@ namespace Google.Logging.V2
         /// <param name="entries">
         /// Required. The log entries to write. The log entries must have values for
         /// all required fields.
+        ///
+        /// To improve throughput and to avoid exceeding the quota limit for calls
+        /// to `entries.write`, use this field to write multiple log entries at once
+        /// rather than  // calling this method for each log entry.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -756,10 +772,10 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Writes log entries to Cloud Logging.
-        /// All log entries in Cloud Logging are written by this method.
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
-        /// <param name="log_name">
+        /// <param name="logName">
         /// Optional. A default log resource name for those log entries in `entries`
         /// that do not specify their own `logName`.  Example:
         /// `"projects/my-project/logs/syslog"`.  See
@@ -778,6 +794,10 @@ namespace Google.Logging.V2
         /// <param name="entries">
         /// Required. The log entries to write. The log entries must have values for
         /// all required fields.
+        ///
+        /// To improve throughput and to avoid exceeding the quota limit for calls
+        /// to `entries.write`, use this field to write multiple log entries at once
+        /// rather than  // calling this method for each log entry.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -801,7 +821,7 @@ namespace Google.Logging.V2
         /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
-        /// <param name="project_ids">
+        /// <param name="projectIds">
         /// Required. One or more project IDs or project numbers from which to retrieve
         /// log entries.  Examples of a project ID: `"my-project-1A"`, `"1234567890"`.
         /// </param>
@@ -811,9 +831,9 @@ namespace Google.Logging.V2
         /// `projectIds`.  Only entries that match the filter are retrieved.  An empty
         /// filter matches all log entries.
         /// </param>
-        /// <param name="order_by">
+        /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
-        /// values are `"timestamp"` (default) and `"timestamp desc"`.  The first
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
         /// option returns entries in order of increasing values of
         /// `LogEntry.timestamp` (oldest first), and the second option returns entries
         /// in order of decreasing timestamps (newest first).  Entries with equal
@@ -849,7 +869,7 @@ namespace Google.Logging.V2
         /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
-        /// <param name="project_ids">
+        /// <param name="projectIds">
         /// Required. One or more project IDs or project numbers from which to retrieve
         /// log entries.  Examples of a project ID: `"my-project-1A"`, `"1234567890"`.
         /// </param>
@@ -859,9 +879,9 @@ namespace Google.Logging.V2
         /// `projectIds`.  Only entries that match the filter are retrieved.  An empty
         /// filter matches all log entries.
         /// </param>
-        /// <param name="order_by">
+        /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
-        /// values are `"timestamp"` (default) and `"timestamp desc"`.  The first
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
         /// option returns entries in order of increasing values of
         /// `LogEntry.timestamp` (oldest first), and the second option returns entries
         /// in order of decreasing timestamps (newest first).  Entries with equal
