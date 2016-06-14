@@ -1450,7 +1450,24 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
               <h4 id="Google_Datastore_V1Beta3_DatastoreClient_RunQuery_System_String_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_ReadOptions_Google_Datastore_V1Beta3_GqlQuery_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreClient.RunQuery(System.String,Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.ReadOptions,Google.Datastore.V1Beta3.GqlQuery,Google.Api.Gax.CallSettings)">RunQuery(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+};
+RunQueryResponse response = client.RunQuery(
+    projectId,
+    partitionId,
+    new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
+    gqlQuery);
+
+foreach (EntityResult result in response.Batch.EntityResults)
+{
+    Console.WriteLine(result.Entity);
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RunQueryResponse RunQuery(string projectId, PartitionId partitionId, ReadOptions readOptions, GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
@@ -1513,52 +1530,21 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
               <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">    DatastoreClient client = DatastoreClient.Create();
-    Query query = new Query(&quot;book&quot;)
-    {
-        Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
-    };
-    RunQueryResponse response = client.RunQuery(
-        projectId, 
-        partitionId,
-        new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
-        query);
-
-    foreach (EntityResult result in response.Batch.EntityResults)
-    {
-        Console.WriteLine(result.Entity);
-    }
-    // EndSnippet
-
-    Assert.Equal(1, response.Batch.EntityResults.Count);
-    Entity entity = response.Batch.EntityResults[0].Entity;
-    Assert.Equal(&quot;Jane Austen&quot;, (string)entity[&quot;author&quot;]);
-    Assert.Equal(&quot;Pride and Prejudice&quot;, (string)entity[&quot;title&quot;]);
-}
-
-[Fact]
-public void GqlQuery()
+<pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
+Query query = new Query(&quot;book&quot;)
 {
-    string projectId = _fixture.ProjectId;
-    PartitionId partitionId = _fixture.PartitionId;
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+RunQueryResponse response = client.RunQuery(
+    projectId, 
+    partitionId,
+    new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
+    query);
 
-    // Snippet: RunQuery(string,PartitionId,ReadOptions,GqlQuery,CallSettings)
-    DatastoreClient client = DatastoreClient.Create();
-    GqlQuery gqlQuery = new GqlQuery
-    {
-        QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-        NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
-    };
-    RunQueryResponse response = client.RunQuery(
-        projectId,
-        partitionId,
-        new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
-        gqlQuery);
-
-    foreach (EntityResult result in response.Batch.EntityResults)
-    {
-        Console.WriteLine(result.Entity);
-    }
+foreach (EntityResult result in response.Batch.EntityResults)
+{
+    Console.WriteLine(result.Entity);
+}
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">

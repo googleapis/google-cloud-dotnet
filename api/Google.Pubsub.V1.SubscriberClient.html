@@ -745,7 +745,19 @@ If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p
 <p>If the name is not provided in the request, the server will assign a random
 name for this subscription on the same project as the topic.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
+
+// Alternative: use an existing subscription resource name:
+// &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
+// Similarly for the topic name:
+// &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
+string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+Subscription subscription = await client.CreateSubscriptionAsync(
+    subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
+Console.WriteLine($&quot;Created {subscription.Name} subscribed to {subscription.Topic}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Subscription&gt; CreateSubscriptionAsync(string name, string topic, PushConfig pushConfig, int ackDeadlineSeconds, CancellationToken cancellationToken)</code></pre>
@@ -1874,7 +1886,28 @@ messages available in the backlog. The server may return <code>UNAVAILABLE</code
 there are too many concurrent pull requests pending for the given
 subscription.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">SubscriberClient client = SubscriberClient.Create();
+
+// Alternative: use an existing subscription resource name:
+// &quot;projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}&quot;
+string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+
+PullResponse pullResponse = await client.PullAsync(subscriptionName, returnImmediately: false, maxMessages: 100);
+foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
+{
+    // Messages can contain any data. We&#39;ll assume that we know this
+    // topic publishes UTF-8-encoded text.
+    Console.WriteLine($&quot;Message text: {message.Message.Data.ToStringUtf8()}&quot;);
+}
+
+// Acknowledge the messages after pulling them, so we don&#39;t pull them
+// a second time later. The ackDeadlineSeconds parameter specified when
+// the subscription is created determines how quickly you need to acknowledge
+// successfully-pulled messages before they will be redelivered.
+var ackIds = pullResponse.ReceivedMessages.Select(rm =&gt; rm.AckId);
+await client.AcknowledgeAsync(subscriptionName, ackIds);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;PullResponse&gt; PullAsync(string subscription, bool returnImmediately, int maxMessages, CancellationToken cancellationToken)</code></pre>

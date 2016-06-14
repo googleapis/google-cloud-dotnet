@@ -90,8 +90,8 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
 and other Google Cloud services.</p>
 <h1 id="google-pubsub-v1-nuget-https-www-nuget-org-packages-google-pubsub-v1-beta-">Google.Pubsub.V1 (<a href="https://www.nuget.org/packages/Google.Pubsub.V1">NuGet</a>) (beta)</h1>
 <p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/Sub</a>.</p>
-<p><a href="api/Google.Pubsub.V1.PublisherClient.html"><code>PublisherClient</code></a> and
-<a href="api/Google.Pubsub.V1.SubscriberClient.html"><code>SubscriberClient</code></a>
+<p><a href="api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> and
+<a href="api/Google.Pubsub.V1.SubscriberClient.html">SubscriberClient</a>
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.</p>
@@ -105,13 +105,13 @@ publisher.CreateTopic(topicName);
 SubscriberClient subscriber = SubscriberClient.Create();
 string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
 subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
-</code></pre><h2 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h2>
+</code></pre><h1 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h1>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
 for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
 <p>Common operations are exposed via the
-<a href="api/Google.Storage.V1.StorageClient.html"><code>StorageClient</code></a> class.</p>
-<p>Example:</p>
+<a href="api/Google.Storage.V1.StorageClient.html">StorageClient</a> class.</p>
+<h2 id="sample-code-0">Sample code</h2>
 <pre><code class="lang-cs">var client = StorageClient.Create();
 
 // Create a bucket
@@ -136,16 +136,16 @@ using (var stream = File.OpenWrite(&quot;file1.txt&quot;))
 }
 </code></pre><h1 id="google-datastore-v1beta3-alpha-">Google.Datastore.V1Beta3 (alpha)</h1>
 <p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
-<p>The <a href="api/Google.Datastore.V1Beta3.DatastoreDb.html"><code>DatastoreDb</code></a>
+<p>The <a href="api/Google.Datastore.V1Beta3.DatastoreDb.html">DatastoreDb</a>
 class is provided as a wrapper for
-<a href="api/Google.Datastore.V1Beta3.DatastoreClient.html"><code>DatastoreClient</code></a>,
+<a href="api/Google.Datastore.V1Beta3.DatastoreClient.html">DatastoreClient</a>,
 simplifying operations considerably by assuming all operations act
 on the same partition, and providing page streaming operations on
 structured query results.</p>
 <p>Several custom conversions, additional constructors,
-factory methods (particularly on <a href="api/Google.Datastore.V1Beta3.Filter.html"><code>Filter</code></a>
+factory methods (particularly on <a href="api/Google.Datastore.V1Beta3.Filter.html">Filter</a>
 are provided to simplify working with the protobuf messages.</p>
-<h2 id="sample-code-0">Sample code</h2>
+<h2 id="sample-code-1">Sample code</h2>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
 var keyFactory = db.CreateKeyFactory(&quot;message&quot;);
@@ -165,17 +165,17 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
 </code></pre><h1 id="google-logging-v2-alpha-">Google.Logging.V2 (alpha)</h1>
 <p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>
 <p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
-<p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html"><code>LoggingServiceV2Client</code></a>
+<p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a>
 for details.</p>
 <h1 id="google-bigquery-v2-alpha-">Google.Bigquery.V2 (alpha)</h1>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Bigquery.v2/">Google.Apis.Bigquery.v1</a>
 for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a></p>
 <p>Common operations are exposed via the
-<a href="api/Google.Bigquery.V2.BigqueryClient.html"><code>BigqueryClient</code></a>
+<a href="api/Google.Bigquery.V2.BigqueryClient.html">BigqueryClient</a>
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.</p>
-<h2 id="sample-code-1">Sample code</h2>
+<h2 id="sample-code-2">Sample code</h2>
 <p>Querying:</p>
 <pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
 var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);

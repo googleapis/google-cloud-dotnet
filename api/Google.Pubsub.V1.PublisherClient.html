@@ -507,7 +507,15 @@ must not start with <code>&quot;goog&quot;</code>.</p>
               <h4 id="Google_Pubsub_V1_PublisherClient_CreateTopicAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Pubsub.V1.PublisherClient.CreateTopicAsync(System.String,System.Threading.CancellationToken)">CreateTopicAsync(String, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates the given topic with the given name.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+
+// Alternative: use a known topic resource name
+// &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+Topic topic = await client.CreateTopicAsync(topicName);
+Console.WriteLine($&quot;Created {topic.Name}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Topic&gt; CreateTopicAsync(string name, CancellationToken cancellationToken)</code></pre>
@@ -668,7 +676,15 @@ the same name; this is an entirely new topic with none of the old
 configuration or subscriptions. Existing subscriptions to this topic are
 not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+
+// Alternative: use a known topic resource name
+// &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+await client.DeleteTopicAsync(topicName);
+Console.WriteLine($&quot;Deleted {topicName}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteTopicAsync(string topic, CancellationToken cancellationToken)</code></pre>
@@ -1371,7 +1387,24 @@ await client.PublishAsync(topicName, new[] { message });
 does not exist. The message payload must not be empty; it must contain
  either a non-empty data field, or at least one attribute.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
+// Make sure we have a topic to publish to
+string topicName = PublisherClient.GetTopicName(projectId, topicId);
+await client.CreateTopicAsync(topicName);
+
+PubsubMessage message = new PubsubMessage
+{
+    // The data is any arbitrary ByteString. Here, we&#39;re using text.
+    Data = ByteString.CopyFromUtf8(&quot;Hello, Pubsub&quot;),
+    // The attributes provide metadata in a string-to-string dictionary.
+    Attributes =
+    {
+        { &quot;description&quot;, &quot;Simple text message&quot; }
+    }
+};
+await client.PublishAsync(topicName, new[] { message });
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;PublishResponse&gt; PublishAsync(string topic, IEnumerable&lt;PubsubMessage&gt; messages, CancellationToken cancellationToken)</code></pre>
