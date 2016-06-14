@@ -1,6 +1,16 @@
 - name: Home
   href: index.md
-- name: API Documentation
+- name: API Reference
   href: obj/api/
+- Page streaming
+  href: articles/page-streaming.md
+- Resource names and IDs
+  href: articles/resource-names.md
+- API layers
+  href: articles/api-layers.md
+- Call settings
+  href: articles/call-settings.md
+- Resource cleanup
+  href: articles/cleanup.md
 - name: BigQuery
   href: articles/bigquery.md
