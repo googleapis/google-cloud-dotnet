@@ -13,23 +13,30 @@
 // limitations under the License.
 
 using Google.Api.Gax.Rest;
-using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
-using Google.Apis.Requests;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using static Google.Apis.Bigquery.v2.TablesResource;
 
 namespace Google.Bigquery.V2
 {
     public partial class BigqueryClientImpl
     {
-        private static readonly PageStreamer<TableList.TablesData, TablesResource.ListRequest, TableList, string> s_tablesPageStreamer =
-            new PageStreamer<TableList.TablesData, TablesResource.ListRequest, TableList, string>(
-                (request, token) => request.PageToken = token,
-                response => response.NextPageToken,
-                response => response.Tables);
+        private sealed class TablePageManager : IPageManager<ListRequest, TableList, BigqueryTable>
+        {
+            private readonly BigqueryClient _client;
 
+            internal TablePageManager(BigqueryClient client)
+            {
+                _client = client;
+            }
+
+            public string GetNextPageToken(TableList response) => response.NextPageToken;
+            public IEnumerable<BigqueryTable> GetResources(TableList response) => response.Tables?.Select(resource => new BigqueryTable(_client, resource));
+            public void SetPageSize(ListRequest request, int pageSize) => request.MaxResults = pageSize;
+            public void SetPageToken(ListRequest request, string pageToken) => request.PageToken = pageToken;
+        }
 
         /// <inheritdoc />
         public override BigqueryTable GetTable(TableReference tableReference, GetTableOptions options = null)
@@ -43,16 +50,18 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override IEnumerable<BigqueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
+        public override IPagedEnumerable<TableList, BigqueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
 
-            var initialRequest = CreateListTablesRequest(datasetReference, options);
-            return s_tablesPageStreamer.Fetch(initialRequest).Select(apiResource => new BigqueryTable(this, apiResource));
+            var pageManager = new TablePageManager(this);
+            return new PagedEnumerable<ListRequest, TableList, BigqueryTable>(
+                () => CreateListTablesRequest(datasetReference, options),
+                pageManager);
         }
 
         /// <inheritdoc />
-        private TablesResource.ListRequest CreateListTablesRequest(DatasetReference datasetReference, ListTablesOptions options)
+        private ListRequest CreateListTablesRequest(DatasetReference datasetReference, ListTablesOptions options)
         {
             var request = Service.Tables.List(datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
@@ -61,8 +62,8 @@ namespace Google.Bigquery.V2
         /// <param name="projectId">The ID of the project containing the dataset. Must not be null.</param>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The tables within the dataset.</returns>
-        public virtual IEnumerable<BigqueryTable> ListTables(string projectId, string datasetId, ListTablesOptions options = null) =>
+        /// <returns>A sequence of pages of tables within the dataset.</returns>
+        public virtual IPagedEnumerable<TableList, BigqueryTable> ListTables(string projectId, string datasetId, ListTablesOptions options = null) =>
             ListTables(GetDatasetReference(projectId, datasetId), options);
 
         /// <summary>
@@ -71,8 +72,8 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The tables within the dataset.</returns>
-        public virtual IEnumerable<BigqueryTable> ListTables(string datasetId, ListTablesOptions options = null) =>
+        /// <returns>A sequence of pages of tables within the dataset.</returns>
+        public virtual IPagedEnumerable<TableList, BigqueryTable> ListTables(string datasetId, ListTablesOptions options = null) =>
             ListTables(GetDatasetReference(datasetId), options);
 
         /// <summary>
@@ -80,8 +81,8 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The tables within the dataset.</returns>
-        public virtual IEnumerable<BigqueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
+        /// <returns>A sequence of pages of tables within the dataset.</returns>
+        public virtual IPagedEnumerable<TableList, BigqueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
         {
             throw new NotImplementedException();
         }

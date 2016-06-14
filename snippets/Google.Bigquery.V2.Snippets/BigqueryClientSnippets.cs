@@ -151,7 +151,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListTables(string,ListTablesOptions)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var tables = client.ListTables(datasetId).ToList();
+            var tables = client.ListTables(datasetId).Flatten().ToList();
             foreach (var table in tables)
             {
                 Console.WriteLine(table.FullyQualifiedId);
@@ -181,7 +181,7 @@ namespace Google.Bigquery.V2.Snippets
             // Now populate the table with data...
             // End snippet
 
-            var tables = client.ListTables(datasetId);
+            var tables = client.ListTables(datasetId).Flatten();
             var ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.Contains(tableId, ids);
         }

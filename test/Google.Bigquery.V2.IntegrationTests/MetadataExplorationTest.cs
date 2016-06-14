@@ -46,7 +46,7 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(PublicDatasetsProject);
             var dataset = client.GetDataset(PublicDatasetsDataset);
-            var tables = dataset.ListTables();
+            var tables = dataset.ListTables().Flatten();
 
             var tableIds = tables.Select(table => table.Reference.TableId).ToList();
 
