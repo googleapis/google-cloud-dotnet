@@ -386,7 +386,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListJobs(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var jobs = client.ListJobs().ToList();
+            var jobs = client.ListJobs().Flatten().ToList();
             foreach (var job in jobs)
             {
                 Console.WriteLine(job.Reference.JobId);

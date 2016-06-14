@@ -13,34 +13,44 @@
 // limitations under the License.
 
 using Google.Api.Gax.Rest;
-using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
-using Google.Apis.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using static Google.Apis.Bigquery.v2.JobsResource;
 
 namespace Google.Bigquery.V2
 {
     public partial class BigqueryClientImpl
     {
-        private static readonly PageStreamer<JobList.JobsData, JobsResource.ListRequest, JobList, string> s_jobsPageStreamer =
-            new PageStreamer<JobList.JobsData, JobsResource.ListRequest, JobList, string>(
-                (request, token) => request.PageToken = token,
-                response => response.NextPageToken,
-                response => response.Jobs);
+        private sealed class JobPageManager : IPageManager<ListRequest, JobList, BigqueryJob>
+        {
+            private readonly BigqueryClient _client;
+
+            internal JobPageManager(BigqueryClient client)
+            {
+                _client = client;
+            }
+
+            public string GetNextPageToken(JobList response) => response.NextPageToken;
+            public IEnumerable<BigqueryJob> GetResources(JobList response) => response.Jobs?.Select(resource => new BigqueryJob(_client, resource));
+            public void SetPageSize(ListRequest request, int pageSize) => request.MaxResults = pageSize;
+            public void SetPageToken(ListRequest request, string pageToken) => request.PageToken = pageToken;
+        }
 
         /// <inheritdoc />
-        public override IEnumerable<BigqueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
+        public override IPagedEnumerable<JobList, BigqueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
-            var initialRequest = CreateListJobsRequest(projectReference, options);
-            return s_jobsPageStreamer.Fetch(initialRequest).Select(job => new BigqueryJob(this, job));
+            var pageManager = new JobPageManager(this);
+            return new PagedEnumerable<ListRequest, JobList, BigqueryJob>(
+                () => CreateListJobsRequest(projectReference, options),
+                pageManager);
         }
 
-        private JobsResource.ListRequest CreateListJobsRequest(ProjectReference projectReference, ListJobsOptions options = null)
+        private ListRequest CreateListJobsRequest(ProjectReference projectReference, ListJobsOptions options = null)
         {
             var request = Service.Jobs.List(projectReference.ProjectId);
             options?.ModifyRequest(request);
