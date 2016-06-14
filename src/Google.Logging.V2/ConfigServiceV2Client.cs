@@ -352,7 +352,7 @@ namespace Google.Logging.V2
         /// </summary>
         /// <param name="projectId">The project ID.</param>
         /// <returns>The full project resource name.</returns>
-        public static string GetProjectName(string projectId) => ProjectTemplate.Expand(projectId);
+        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         /// <summary>
         /// Path template for a sink resource. Parameters:
@@ -369,7 +369,7 @@ namespace Google.Logging.V2
         /// <param name="projectId">The project ID.</param>
         /// <param name="sinkId">The sink ID.</param>
         /// <returns>The full sink resource name.</returns>
-        public static string GetSinkName(string projectId, string sinkId) => SinkTemplate.Expand(projectId, sinkId);
+        public static string FormatSinkName(string projectId, string sinkId) => SinkTemplate.Expand(projectId, sinkId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.

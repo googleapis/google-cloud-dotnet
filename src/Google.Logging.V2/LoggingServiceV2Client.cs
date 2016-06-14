@@ -324,7 +324,7 @@ namespace Google.Logging.V2
         /// </summary>
         /// <param name="projectId">The project ID.</param>
         /// <returns>The full project resource name.</returns>
-        public static string GetProjectName(string projectId) => ProjectTemplate.Expand(projectId);
+        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         /// <summary>
         /// Path template for a log resource. Parameters:
@@ -341,7 +341,7 @@ namespace Google.Logging.V2
         /// <param name="projectId">The project ID.</param>
         /// <param name="logId">The log ID.</param>
         /// <returns>The full log resource name.</returns>
-        public static string GetLogName(string projectId, string logId) => LogTemplate.Expand(projectId, logId);
+        public static string FormatLogName(string projectId, string logId) => LogTemplate.Expand(projectId, logId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
