@@ -43,7 +43,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
-            string projectName = PublisherClient.GetProjectName(projectId);
+            string projectName = PublisherClient.FormatProjectName(projectId);
             foreach (Topic topic in client.ListTopicsPageStream(projectName).Flatten())
             {
                 Console.WriteLine(topic.Name);
@@ -61,7 +61,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
-            string projectName = PublisherClient.GetProjectName(projectId);
+            string projectName = PublisherClient.FormatProjectName(projectId);
             IAsyncEnumerable<Topic> topics = client.ListTopicsPageStreamAsync(projectName).Flatten();
             await topics.ForEachAsync(topic =>
             {
@@ -81,7 +81,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use a known topic resource name
             // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             Topic topic = client.CreateTopic(topicName);
             Console.WriteLine($"Created {topic.Name}");
             // End snippet
@@ -99,7 +99,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use a known topic resource name
             // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             Topic topic = await client.CreateTopicAsync(topicName);
             Console.WriteLine($"Created {topic.Name}");
             // End snippet
@@ -114,7 +114,7 @@ namespace Google.Pubsub.V1.Snippets
             // Snippet: Publish
             PublisherClient client = PublisherClient.Create();
             // Make sure we have a topic to publish to
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             client.CreateTopic(topicName);
 
             PubsubMessage message = new PubsubMessage
@@ -142,7 +142,7 @@ namespace Google.Pubsub.V1.Snippets
             // Additional: PublishAsync(*,*,CancellationToken)
             PublisherClient client = PublisherClient.Create();
             // Make sure we have a topic to publish to
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             await client.CreateTopicAsync(topicName);
 
             PubsubMessage message = new PubsubMessage
@@ -165,14 +165,14 @@ namespace Google.Pubsub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            PublisherClient.Create().CreateTopic(PublisherClient.GetTopicName(projectId, topicId));
+            PublisherClient.Create().CreateTopic(PublisherClient.FormatTopicName(projectId, topicId));
 
             // Snippet: DeleteTopic
             PublisherClient client = PublisherClient.Create();
 
             // Alternative: use a known topic resource name
             // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             client.DeleteTopic(topicName);
             Console.WriteLine($"Deleted {topicName}");
             // End snippet
@@ -184,7 +184,7 @@ namespace Google.Pubsub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            await PublisherClient.Create().CreateTopicAsync(PublisherClient.GetTopicName(projectId, topicId));
+            await PublisherClient.Create().CreateTopicAsync(PublisherClient.FormatTopicName(projectId, topicId));
 
             // Snippet: DeleteTopicAsync(string,CallSettings)
             // Additional: DeleteTopicAsync(string,CancellationToken)
@@ -192,7 +192,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use a known topic resource name
             // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             await client.DeleteTopicAsync(topicName);
             Console.WriteLine($"Deleted {topicName}");
             // End snippet

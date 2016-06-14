@@ -42,12 +42,12 @@ namespace Google.Pubsub.V1.Snippets
             // Sample: Overview
             // First create a topic.
             PublisherClient publisher = PublisherClient.Create();
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             publisher.CreateTopic(topicName);
 
             // Subscribe to the topic.
             SubscriberClient subscriber = SubscriberClient.Create();
-            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+            string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
             subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
 
             // Publish a message to the topic.
@@ -97,7 +97,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
-            string projectName = SubscriberClient.GetProjectName(projectId);
+            string projectName = SubscriberClient.FormatProjectName(projectId);
             foreach (Subscription subscription in client.ListSubscriptionsPageStream(projectName).Flatten())
             {
                 Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");
@@ -115,7 +115,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
-            string projectName = SubscriberClient.GetProjectName(projectId);
+            string projectName = SubscriberClient.FormatProjectName(projectId);
             IAsyncEnumerable<Subscription> subscriptions = client.ListSubscriptionsPageStreamAsync(projectName).Flatten();
             await subscriptions.ForEachAsync(subscription =>
             {
@@ -131,7 +131,7 @@ namespace Google.Pubsub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
             string subscriptionId = _fixture.CreateSubscriptionId();
 
-            PublisherClient.Create().CreateTopic(PublisherClient.GetTopicName(projectId, topicId));
+            PublisherClient.Create().CreateTopic(PublisherClient.FormatTopicName(projectId, topicId));
 
             // Snippet: CreateSubscription
             SubscriberClient client = SubscriberClient.Create();
@@ -140,8 +140,8 @@ namespace Google.Pubsub.V1.Snippets
             // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
             // Similarly for the topic name:
             // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             Subscription subscription = client.CreateSubscription(
                 subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
             Console.WriteLine($"Created {subscription.Name} subscribed to {subscription.Topic}");
@@ -155,7 +155,7 @@ namespace Google.Pubsub.V1.Snippets
             string topicId = _fixture.CreateTopicId();
             string subscriptionId = _fixture.CreateSubscriptionId();
 
-            PublisherClient.Create().CreateTopic(PublisherClient.GetTopicName(projectId, topicId));
+            PublisherClient.Create().CreateTopic(PublisherClient.FormatTopicName(projectId, topicId));
 
             // Snippet: CreateSubscriptionAsync(string,string,*,*,CallSettings)
             // Additional: CreateSubscriptionAsync(string,string,*,*,CancellationToken)
@@ -165,8 +165,8 @@ namespace Google.Pubsub.V1.Snippets
             // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
             // Similarly for the topic name:
             // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             Subscription subscription = await client.CreateSubscriptionAsync(
                 subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 30);
             Console.WriteLine($"Created {subscription.Name} subscribed to {subscription.Topic}");
@@ -181,10 +181,10 @@ namespace Google.Pubsub.V1.Snippets
             string subscriptionId = _fixture.CreateSubscriptionId();
 
             PublisherClient publisher = PublisherClient.Create();
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             publisher.CreateTopic(topicName);
             PubsubMessage newMessage = new PubsubMessage { Data = ByteString.CopyFromUtf8("Simple text") };
-            SubscriberClient.Create().CreateSubscription(SubscriberClient.GetSubscriptionName(projectId, subscriptionId), topicName, null, 60);
+            SubscriberClient.Create().CreateSubscription(SubscriberClient.FormatSubscriptionName(projectId, subscriptionId), topicName, null, 60);
             publisher.Publish(topicName, new[] { newMessage });
 
             // Snippet: Pull
@@ -192,7 +192,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use an existing subscription resource name:
             // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
-            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+            string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
 
             PullResponse pullResponse = client.Pull(subscriptionName, returnImmediately: false, maxMessages: 100);
             foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
@@ -219,10 +219,10 @@ namespace Google.Pubsub.V1.Snippets
             string subscriptionId = _fixture.CreateSubscriptionId();
 
             PublisherClient publisher = PublisherClient.Create();
-            string topicName = PublisherClient.GetTopicName(projectId, topicId);
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             publisher.CreateTopic(topicName);
             PubsubMessage newMessage = new PubsubMessage { Data = ByteString.CopyFromUtf8("Simple text") };
-            SubscriberClient.Create().CreateSubscription(SubscriberClient.GetSubscriptionName(projectId, subscriptionId), topicName, null, 60);
+            SubscriberClient.Create().CreateSubscription(SubscriberClient.FormatSubscriptionName(projectId, subscriptionId), topicName, null, 60);
             publisher.Publish(topicName, new[] { newMessage });
 
             // Snippet: PullAsync(string,*,*,CallSettings)
@@ -231,7 +231,7 @@ namespace Google.Pubsub.V1.Snippets
 
             // Alternative: use an existing subscription resource name:
             // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
-            string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+            string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
 
             PullResponse pullResponse = await client.PullAsync(subscriptionName, returnImmediately: false, maxMessages: 100);
             foreach (ReceivedMessage message in pullResponse.ReceivedMessages)
