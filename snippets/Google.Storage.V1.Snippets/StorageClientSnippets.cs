@@ -69,7 +69,7 @@ namespace Google.Storage.V1.Snippets
             Assert.Equal(content, File.ReadAllBytes("file1.txt"));
             Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "file1.txt");
             Assert.Contains(client.ListObjects(bucketName, ""), o => o.Name == "folder1/file2.txt");
-            Assert.Contains(client.ListBuckets(projectId), b => b.Name == bucketName);
+            Assert.Contains(client.ListBuckets(projectId).Flatten(), b => b.Name == bucketName);
         }
 
         [Fact]
@@ -81,7 +81,7 @@ namespace Google.Storage.V1.Snippets
             var client = StorageClient.Create();
 
             // List all buckets associated with a project
-            var buckets = client.ListBuckets(projectId);
+            var buckets = client.ListBuckets(projectId).Flatten();
             // End snippet
 
             Assert.Contains(buckets, b => _fixture.BucketName == b.Name);
@@ -429,7 +429,7 @@ namespace Google.Storage.V1.Snippets
             client.DeleteBucket(bucketName);
             // End snippet
 
-            Assert.DoesNotContain(client.ListBuckets(_fixture.ProjectId), b => b.Name == bucketName);
+            Assert.DoesNotContain(client.ListBuckets(_fixture.ProjectId).Flatten(), b => b.Name == bucketName);
         }
     }
 }

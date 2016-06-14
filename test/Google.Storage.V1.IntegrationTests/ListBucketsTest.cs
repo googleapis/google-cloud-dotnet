@@ -54,7 +54,7 @@ namespace Google.Storage.V1.IntegrationTests
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
-            var task = _fixture.Client.ListAllBucketsAsync(_fixture.ProjectId, cancellationToken: cts.Token);
+            var task = _fixture.Client.ListBucketsAsync(_fixture.ProjectId).ToList(cts.Token);
             cts.Cancel();
             await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);
         }
@@ -62,9 +62,9 @@ namespace Google.Storage.V1.IntegrationTests
         // Fetches buckets using the given options in each possible way, validating that the expected bucket names are returned.
         private async Task AssertBuckets(ListBucketsOptions options, params string[] expectedBucketNames)
         {
-            IEnumerable<Bucket> actual = _fixture.Client.ListBuckets(_fixture.ProjectId, options);
+            IEnumerable<Bucket> actual = _fixture.Client.ListBuckets(_fixture.ProjectId, options).Flatten();
             AssertBucketNames(actual, expectedBucketNames);
-            actual = await _fixture.Client.ListAllBucketsAsync(_fixture.ProjectId, options, CancellationToken.None);
+            actual = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, options).Flatten().ToList();
             AssertBucketNames(actual, expectedBucketNames);
         }
 

@@ -25,29 +25,30 @@ namespace Google.Storage.V1
     // ListBuckets methods on StorageClient
     public sealed partial class StorageClientImpl : StorageClient
     {
-        private static readonly PageStreamer<Bucket, BucketsResource.ListRequest, Buckets, string> s_bucketPageStreamer =
-            new PageStreamer<Bucket, BucketsResource.ListRequest, Buckets, string>(
-                (request, token) => request.PageToken = token,
-                buckets => buckets.NextPageToken,
-                buckets => buckets.Items);
-
-        /// <inheritdoc />
-        public override Task<IList<Bucket>> ListAllBucketsAsync(
-            string projectId,
-            ListBucketsOptions options = null,
-            CancellationToken cancellationToken = default(CancellationToken))
+        private sealed class BucketPageManager : IPageManager<BucketsResource.ListRequest, Buckets, Bucket>
         {
-            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
-            var initialRequest = CreateListBucketsRequest(projectId, options);
-            return s_bucketPageStreamer.FetchAllAsync(initialRequest, cancellationToken);
+            internal static readonly BucketPageManager Instance = new BucketPageManager();
+            public string GetNextPageToken(Buckets response) => response.NextPageToken;
+            public IEnumerable<Bucket> GetResources(Buckets response) => response.Items;
+            public void SetPageSize(BucketsResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
+            public void SetPageToken(BucketsResource.ListRequest request, string pageToken) => request.PageToken = pageToken;
         }
 
         /// <inheritdoc />
-        public override IEnumerable<Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
+        public override IPagedAsyncEnumerable<Buckets, Bucket> ListBucketsAsync(
+            string projectId, ListBucketsOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
-            var initialRequest = CreateListBucketsRequest(projectId, options);
-            return s_bucketPageStreamer.Fetch(initialRequest);
+            return new PagedAsyncEnumerable<BucketsResource.ListRequest, Buckets, Bucket>(
+                () => CreateListBucketsRequest(projectId, options), BucketPageManager.Instance);
+        }
+
+        /// <inheritdoc />
+        public override IPagedEnumerable<Buckets, Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
+        {
+            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
+            return new PagedEnumerable<BucketsResource.ListRequest, Buckets, Bucket>(
+                () => CreateListBucketsRequest(projectId, options), BucketPageManager.Instance);
         }
 
         private BucketsResource.ListRequest CreateListBucketsRequest(string projectId, ListBucketsOptions options)
