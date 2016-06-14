@@ -132,7 +132,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListDatasets(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var datasets = client.ListDatasets().ToList();
+            var datasets = client.ListDatasets().Flatten().ToList();
             foreach (var dataset in datasets)
             {
                 Console.WriteLine(dataset.FullyQualifiedId);

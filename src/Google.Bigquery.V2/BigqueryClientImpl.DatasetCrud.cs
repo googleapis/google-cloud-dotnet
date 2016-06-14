@@ -13,22 +13,30 @@
 // limitations under the License.
 
 using Google.Api.Gax.Rest;
-using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
-using Google.Apis.Requests;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using static Google.Apis.Bigquery.v2.DatasetsResource;
 
 namespace Google.Bigquery.V2
 {
     public partial class BigqueryClientImpl
     {
-        private static readonly PageStreamer<DatasetList.DatasetsData, DatasetsResource.ListRequest, DatasetList, string> s_datasetsPageStreamer =
-            new PageStreamer<DatasetList.DatasetsData, DatasetsResource.ListRequest, DatasetList, string>(
-            (request, token) => request.PageToken = token,
-            response => response.NextPageToken,
-            response => response.Datasets);
+        private sealed class DatasetPageManager : IPageManager<ListRequest, DatasetList, BigqueryDataset>
+        {
+            private readonly BigqueryClient _client;
+
+            internal DatasetPageManager(BigqueryClient client)
+            {
+                _client = client;
+            }
+
+            public string GetNextPageToken(DatasetList response) => response.NextPageToken;
+            public IEnumerable<BigqueryDataset> GetResources(DatasetList response) => response.Datasets?.Select(resource => new BigqueryDataset(_client, resource));
+            public void SetPageSize(ListRequest request, int pageSize) => request.MaxResults = pageSize;
+            public void SetPageToken(ListRequest request, string pageToken) => request.PageToken = pageToken;
+        }
 
         /// <inheritdoc />
         public override BigqueryDataset GetDataset(DatasetReference datasetReference, GetDatasetOptions options = null)
@@ -40,15 +48,17 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override IEnumerable<BigqueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
+        public override IPagedEnumerable<DatasetList, BigqueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
-            var initialRequest = CreateListDatasetsRequest(projectReference, options);
-            return s_datasetsPageStreamer.Fetch(initialRequest).Select(resource => new BigqueryDataset(this, resource));
+            var pageManager = new DatasetPageManager(this);
+            return new PagedEnumerable<ListRequest, DatasetList, BigqueryDataset>(
+                () => CreateListDatasetsRequest(projectReference, options),
+                pageManager);
         }
 
-        private DatasetsResource.ListRequest CreateListDatasetsRequest(ProjectReference projectReference, ListDatasetsOptions options)
+        private ListRequest CreateListDatasetsRequest(ProjectReference projectReference, ListDatasetsOptions options)
         {
             var request = Service.Datasets.List(projectReference.ProjectId);
             options?.ModifyRequest(request);
