@@ -105,7 +105,7 @@ namespace Google.Storage.V1
             if (PredefinedAcl != null)
             {
                 upload.PredefinedAcl =
-                    Preconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
+                    GaxRestPreconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
             }
             if (IfGenerationMatch != null)
             {
@@ -125,7 +125,7 @@ namespace Google.Storage.V1
             }
             if (Projection != null)
             {
-                upload.Projection = Preconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+                upload.Projection = GaxRestPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
             }
         }
     }

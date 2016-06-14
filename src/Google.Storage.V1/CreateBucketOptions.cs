@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Storage.v1;
 using static Google.Apis.Storage.v1.BucketsResource.InsertRequest;
 
@@ -42,16 +43,16 @@ namespace Google.Storage.V1
             if (PredefinedAcl != null)
             {
                 request.PredefinedAcl =
-                    Preconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
+                    GaxRestPreconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
             }
             if (PredefinedDefaultObjectAcl != null)
             {
                 request.PredefinedDefaultObjectAcl =
-                    Preconditions.CheckEnumValue((PredefinedDefaultObjectAclEnum) PredefinedDefaultObjectAcl, nameof(PredefinedDefaultObjectAcl));
+                    GaxRestPreconditions.CheckEnumValue((PredefinedDefaultObjectAclEnum) PredefinedDefaultObjectAcl, nameof(PredefinedDefaultObjectAcl));
             }
             if (Projection != null)
             {
-                request.Projection = Preconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+                request.Projection = GaxRestPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
             }
         }
     }

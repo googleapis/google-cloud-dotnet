@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using static Google.Apis.Storage.v1.ObjectsResource;
 using static Google.Apis.Storage.v1.ObjectsResource.ListRequest;
 
@@ -70,7 +71,7 @@ namespace Google.Storage.V1
             }
             if (Projection != null)
             {
-                request.Projection = Preconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+                request.Projection = GaxRestPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
             }
         }
     }
