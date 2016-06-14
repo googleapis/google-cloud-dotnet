@@ -27,43 +27,42 @@ namespace Google.Logging.V2 {
             "b2dsZS5sb2dnaW5nLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
             "Ghtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8iPgoJTG9nTWV0cmljEgwK",
             "BG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSDgoGZmlsdGVyGAMg",
-            "ASgJIlQKFUxpc3RMb2dNZXRyaWNzUmVxdWVzdBIUCgxwcm9qZWN0X25hbWUY",
-            "ASABKAkSEgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUi",
-            "YAoWTGlzdExvZ01ldHJpY3NSZXNwb25zZRItCgdtZXRyaWNzGAEgAygLMhwu",
-            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljEhcKD25leHRfcGFnZV90b2tl",
-            "bhgCIAEoCSIqChNHZXRMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1l",
-            "GAEgASgJIlwKFkNyZWF0ZUxvZ01ldHJpY1JlcXVlc3QSFAoMcHJvamVjdF9u",
-            "YW1lGAEgASgJEiwKBm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYy",
-            "LkxvZ01ldHJpYyJbChZVcGRhdGVMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJp",
-            "Y19uYW1lGAEgASgJEiwKBm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5n",
-            "LnYyLkxvZ01ldHJpYyItChZEZWxldGVMb2dNZXRyaWNSZXF1ZXN0EhMKC21l",
-            "dHJpY19uYW1lGAEgASgJMvkFChBNZXRyaWNzU2VydmljZVYyEpkBCg5MaXN0",
-            "TG9nTWV0cmljcxIoLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNz",
-            "UmVxdWVzdBopLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVz",
-            "cG9uc2UiMoLT5JMCLBIqL3YyYmV0YTEve3Byb2plY3RfbmFtZT1wcm9qZWN0",
-            "cy8qfS9tZXRyaWNzEokBCgxHZXRMb2dNZXRyaWMSJi5nb29nbGUubG9nZ2lu",
-            "Zy52Mi5HZXRMb2dNZXRyaWNSZXF1ZXN0GhwuZ29vZ2xlLmxvZ2dpbmcudjIu",
-            "TG9nTWV0cmljIjOC0+STAi0SKy92MmJldGExL3ttZXRyaWNfbmFtZT1wcm9q",
-            "ZWN0cy8qL21ldHJpY3MvKn0SlgEKD0NyZWF0ZUxvZ01ldHJpYxIpLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyLkNyZWF0ZUxvZ01ldHJpY1JlcXVlc3QaHC5nb29nbGUu",
-            "bG9nZ2luZy52Mi5Mb2dNZXRyaWMiOoLT5JMCNCIqL3YyYmV0YTEve3Byb2pl",
-            "Y3RfbmFtZT1wcm9qZWN0cy8qfS9tZXRyaWNzOgZtZXRyaWMSlwEKD1VwZGF0",
-            "ZUxvZ01ldHJpYxIpLmdvb2dsZS5sb2dnaW5nLnYyLlVwZGF0ZUxvZ01ldHJp",
-            "Y1JlcXVlc3QaHC5nb29nbGUubG9nZ2luZy52Mi5Mb2dNZXRyaWMiO4LT5JMC",
-            "NRorL3YyYmV0YTEve21ldHJpY19uYW1lPXByb2plY3RzLyovbWV0cmljcy8q",
-            "fToGbWV0cmljEokBCg9EZWxldGVMb2dNZXRyaWMSKS5nb29nbGUubG9nZ2lu",
-            "Zy52Mi5EZWxldGVMb2dNZXRyaWNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IjOC0+STAi0qKy92MmJldGExL3ttZXRyaWNfbmFtZT1wcm9qZWN0",
-            "cy8qL21ldHJpY3MvKn1CGQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyUAFiBnBy",
-            "b3RvMw=="));
+            "ASgJIk4KFUxpc3RMb2dNZXRyaWNzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
+            "EgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiYAoWTGlz",
+            "dExvZ01ldHJpY3NSZXNwb25zZRItCgdtZXRyaWNzGAEgAygLMhwuZ29vZ2xl",
+            "LmxvZ2dpbmcudjIuTG9nTWV0cmljEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CSIqChNHZXRMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJ",
+            "IlYKFkNyZWF0ZUxvZ01ldHJpY1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEiwK",
+            "Bm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyJb",
+            "ChZVcGRhdGVMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJ",
+            "EiwKBm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJp",
+            "YyItChZEZWxldGVMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEg",
+            "ASgJMu0FChBNZXRyaWNzU2VydmljZVYyEpMBCg5MaXN0TG9nTWV0cmljcxIo",
+            "Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVxdWVzdBopLmdv",
+            "b2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVzcG9uc2UiLILT5JMC",
+            "JhIkL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9tZXRyaWNzEokBCgxH",
+            "ZXRMb2dNZXRyaWMSJi5nb29nbGUubG9nZ2luZy52Mi5HZXRMb2dNZXRyaWNS",
+            "ZXF1ZXN0GhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljIjOC0+STAi0S",
+            "Ky92MmJldGExL3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21ldHJpY3MvKn0S",
+            "kAEKD0NyZWF0ZUxvZ01ldHJpYxIpLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0",
+            "ZUxvZ01ldHJpY1JlcXVlc3QaHC5nb29nbGUubG9nZ2luZy52Mi5Mb2dNZXRy",
+            "aWMiNILT5JMCLiIkL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9tZXRy",
+            "aWNzOgZtZXRyaWMSlwEKD1VwZGF0ZUxvZ01ldHJpYxIpLmdvb2dsZS5sb2dn",
+            "aW5nLnYyLlVwZGF0ZUxvZ01ldHJpY1JlcXVlc3QaHC5nb29nbGUubG9nZ2lu",
+            "Zy52Mi5Mb2dNZXRyaWMiO4LT5JMCNRorL3YyYmV0YTEve21ldHJpY19uYW1l",
+            "PXByb2plY3RzLyovbWV0cmljcy8qfToGbWV0cmljEokBCg9EZWxldGVMb2dN",
+            "ZXRyaWMSKS5nb29nbGUubG9nZ2luZy52Mi5EZWxldGVMb2dNZXRyaWNSZXF1",
+            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjOC0+STAi0qKy92MmJldGEx",
+            "L3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21ldHJpY3MvKn1CGQoVY29tLmdv",
+            "b2dsZS5sb2dnaW5nLnYyUAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogMetric), global::Google.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogMetricsRequest), global::Google.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "ProjectName", "PageToken", "PageSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogMetricsRequest), global::Google.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogMetricsResponse), global::Google.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.GetLogMetricRequest), global::Google.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.CreateLogMetricRequest), global::Google.Logging.V2.CreateLogMetricRequest.Parser, new[]{ "ProjectName", "Metric" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.CreateLogMetricRequest), global::Google.Logging.V2.CreateLogMetricRequest.Parser, new[]{ "Parent", "Metric" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.UpdateLogMetricRequest), global::Google.Logging.V2.UpdateLogMetricRequest.Parser, new[]{ "MetricName", "Metric" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.DeleteLogMetricRequest), global::Google.Logging.V2.DeleteLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null)
           }));
@@ -271,7 +270,7 @@ namespace Google.Logging.V2 {
     partial void OnConstruction();
 
     public ListLogMetricsRequest(ListLogMetricsRequest other) : this() {
-      projectName_ = other.projectName_;
+      parent_ = other.parent_;
       pageToken_ = other.pageToken_;
       pageSize_ = other.pageSize_;
     }
@@ -280,17 +279,17 @@ namespace Google.Logging.V2 {
       return new ListLogMetricsRequest(this);
     }
 
-    /// <summary>Field number for the "project_name" field.</summary>
-    public const int ProjectNameFieldNumber = 1;
-    private string projectName_ = "";
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
     /// <summary>
-    ///  Required. The resource name of the project containing the metrics.
+    ///  Required. The resource name containing the metrics.
     ///  Example: `"projects/my-project-id"`.
     /// </summary>
-    public string ProjectName {
-      get { return projectName_; }
+    public string Parent {
+      get { return parent_; }
       set {
-        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -298,11 +297,10 @@ namespace Google.Logging.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If the `pageToken` request parameter is supplied, then the next
-    ///  page of results in the set are retrieved.  The `pageToken` parameter must
-    ///  be set with the value of the `nextPageToken` result parameter from the
-    ///  previous request.  The value of `projectName` must
-    ///  be the same as in the previous request.
+    ///  Optional. If the `pageToken` parameter is supplied, then the next page of
+    ///  results is retrieved.  The `pageToken` parameter must be set to the value
+    ///  of the `nextPageToken` from the previous response.
+    ///  The value of `parent` must be the same as in the previous request.
     /// </summary>
     public string PageToken {
       get { return pageToken_; }
@@ -315,11 +313,10 @@ namespace Google.Logging.V2 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    ///  Optional. The maximum number of results to return from this request.  Fewer
-    ///  results might be returned. You must check for the `nextPageToken` result to
-    ///  determine if additional results are available, which you can retrieve by
-    ///  passing the `nextPageToken` value in the `pageToken` parameter to the next
-    ///  request.
+    ///  Optional. The maximum number of results to return from this request.
+    ///  You must check for presence of `nextPageToken` to determine if additional
+    ///  results are available, which you can retrieve by passing the
+    ///  `nextPageToken` value as the `pageToken` parameter in the next request.
     /// </summary>
     public int PageSize {
       get { return pageSize_; }
@@ -339,7 +336,7 @@ namespace Google.Logging.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ProjectName != other.ProjectName) return false;
+      if (Parent != other.Parent) return false;
       if (PageToken != other.PageToken) return false;
       if (PageSize != other.PageSize) return false;
       return true;
@@ -347,7 +344,7 @@ namespace Google.Logging.V2 {
 
     public override int GetHashCode() {
       int hash = 1;
-      if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       return hash;
@@ -358,9 +355,9 @@ namespace Google.Logging.V2 {
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ProjectName.Length != 0) {
+      if (Parent.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ProjectName);
+        output.WriteString(Parent);
       }
       if (PageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -374,8 +371,8 @@ namespace Google.Logging.V2 {
 
     public int CalculateSize() {
       int size = 0;
-      if (ProjectName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
@@ -390,8 +387,8 @@ namespace Google.Logging.V2 {
       if (other == null) {
         return;
       }
-      if (other.ProjectName.Length != 0) {
-        ProjectName = other.ProjectName;
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
@@ -409,7 +406,7 @@ namespace Google.Logging.V2 {
             input.SkipLastField();
             break;
           case 10: {
-            ProjectName = input.ReadString();
+            Parent = input.ReadString();
             break;
           }
           case 18: {
@@ -473,8 +470,8 @@ namespace Google.Logging.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there are more results than were returned, then `nextPageToken` is given
-    ///  a value in the response.  To get the next batch of results, call this
+    ///  If there are more results than were returned, then `nextPageToken` is
+    ///  included in the response.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     public string NextPageToken {
@@ -692,7 +689,7 @@ namespace Google.Logging.V2 {
     partial void OnConstruction();
 
     public CreateLogMetricRequest(CreateLogMetricRequest other) : this() {
-      projectName_ = other.projectName_;
+      parent_ = other.parent_;
       Metric = other.metric_ != null ? other.Metric.Clone() : null;
     }
 
@@ -700,19 +697,19 @@ namespace Google.Logging.V2 {
       return new CreateLogMetricRequest(this);
     }
 
-    /// <summary>Field number for the "project_name" field.</summary>
-    public const int ProjectNameFieldNumber = 1;
-    private string projectName_ = "";
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
     /// <summary>
     ///  The resource name of the project in which to create the metric.
     ///  Example: `"projects/my-project-id"`.
     ///
     ///  The new metric must be provided in the request.
     /// </summary>
-    public string ProjectName {
-      get { return projectName_; }
+    public string Parent {
+      get { return parent_; }
       set {
-        projectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -741,14 +738,14 @@ namespace Google.Logging.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ProjectName != other.ProjectName) return false;
+      if (Parent != other.Parent) return false;
       if (!object.Equals(Metric, other.Metric)) return false;
       return true;
     }
 
     public override int GetHashCode() {
       int hash = 1;
-      if (ProjectName.Length != 0) hash ^= ProjectName.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (metric_ != null) hash ^= Metric.GetHashCode();
       return hash;
     }
@@ -758,9 +755,9 @@ namespace Google.Logging.V2 {
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ProjectName.Length != 0) {
+      if (Parent.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ProjectName);
+        output.WriteString(Parent);
       }
       if (metric_ != null) {
         output.WriteRawTag(18);
@@ -770,8 +767,8 @@ namespace Google.Logging.V2 {
 
     public int CalculateSize() {
       int size = 0;
-      if (ProjectName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectName);
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (metric_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metric);
@@ -783,8 +780,8 @@ namespace Google.Logging.V2 {
       if (other == null) {
         return;
       }
-      if (other.ProjectName.Length != 0) {
-        ProjectName = other.ProjectName;
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       if (other.metric_ != null) {
         if (metric_ == null) {
@@ -802,7 +799,7 @@ namespace Google.Logging.V2 {
             input.SkipLastField();
             break;
           case 10: {
-            ProjectName = input.ReadString();
+            Parent = input.ReadString();
             break;
           }
           case 18: {

@@ -43,8 +43,8 @@ namespace Google.Logging.V2 {
             "RW50cnlPcGVyYXRpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
             "BXZhbHVlGAIgASgJOgI4AUIJCgdwYXlsb2FkIk4KEUxvZ0VudHJ5T3BlcmF0",
             "aW9uEgoKAmlkGAEgASgJEhAKCHByb2R1Y2VyGAIgASgJEg0KBWZpcnN0GAMg",
-            "ASgIEgwKBGxhc3QYBCABKAhCKAoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1M",
-            "b2dFbnRyeVByb3RvUAFiBnByb3RvMw=="));
+            "ASgIEgwKBGxhc3QYBCABKAhCKwoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1M",
+            "b2dFbnRyeVByb3RvUAH4AQFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -111,9 +111,9 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  Required. The resource name of the log to which this log entry
     ///  belongs. The format of the name is
-    ///  `projects/&amp;lt;project-id&amp;gt;/logs/&amp;lt;log-id%gt;`.  Examples:
+    ///  `"projects/&lt;project-id>/logs/&lt;log-id>"`.  Examples:
     ///  `"projects/my-projectid/logs/syslog"`,
-    ///  `"projects/1234567890/logs/library.googleapis.com%2Fbook_log"`.
+    ///  `"projects/my-projectid/logs/library.googleapis.com%2Fbook_log"`.
     ///
     ///  The log ID part of resource name must be less than 512 characters
     ///  long and can only include the following characters: upper and
@@ -191,7 +191,7 @@ namespace Google.Logging.V2 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
     /// <summary>
     ///  Optional. The time the event described by the log entry occurred.  If
-    ///  omitted, Cloud Logging will use the time the log entry is written.
+    ///  omitted, Stackdriver Logging will use the time the log entry is received.
     /// </summary>
     public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
       get { return timestamp_; }
@@ -218,10 +218,11 @@ namespace Google.Logging.V2 {
     public const int InsertIdFieldNumber = 4;
     private string insertId_ = "";
     /// <summary>
-    ///  Optional. A unique ID for the log entry. If you provide this field, the
-    ///  logging service considers other log entries in the same log with the same
-    ///  ID as duplicates which can be removed.
-    ///  If omitted, Cloud Logging will generate a unique ID for this log entry.
+    ///  Optional. A unique ID for the log entry. If you provide this
+    ///  field, the logging service considers other log entries in the
+    ///  same log with the same ID as duplicates which can be removed.  If
+    ///  omitted, Stackdriver Logging will generate a unique ID for this
+    ///  log entry.
     /// </summary>
     public string InsertId {
       get { return insertId_; }
