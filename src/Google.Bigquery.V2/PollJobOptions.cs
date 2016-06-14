@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using System;
 
 namespace Google.Bigquery.V2
@@ -76,7 +77,7 @@ namespace Google.Bigquery.V2
 
         internal void Validate()
         {
-            Preconditions.CheckArgument(Timeout == null || Deadline == null, "options",
+            GaxRestPreconditions.CheckArgument(Timeout == null || Deadline == null, "options",
                 $"Cannot set both {nameof(Timeout)} and {nameof(Deadline)} to non-null values");
         }
 

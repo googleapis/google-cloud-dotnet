@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections;
@@ -98,7 +99,7 @@ namespace Google.Bigquery.V2
         /// <param name="fields">The fields to add to the row. Must not be null.</param>
         public void Add(IDictionary<string, object> fields)
         {
-            Preconditions.CheckNotNull(fields, nameof(fields));
+            GaxRestPreconditions.CheckNotNull(fields, nameof(fields));
             foreach (var entry in fields)
             {
                 Add(entry.Key, entry.Value);

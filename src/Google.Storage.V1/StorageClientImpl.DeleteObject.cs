@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Storage.v1;
 using System.Threading;
 using System.Threading.Tasks;
@@ -60,7 +61,7 @@ namespace Google.Storage.V1
         private ObjectsResource.DeleteRequest CreateDeleteObjectRequest(string bucket, string name, DeleteObjectOptions options)
         {
             ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(name, nameof(name));
+            GaxRestPreconditions.CheckNotNull(name, nameof(name));
             var request = Service.Objects.Delete(bucket, name);
             options?.ModifyRequest(request);
             return request;

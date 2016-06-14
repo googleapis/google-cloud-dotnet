@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Upload;
 using System;
 using System.IO;
@@ -33,7 +34,7 @@ namespace Google.Storage.V1
             IProgress<IUploadProgress> progress = null)
         {
             ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
+            GaxRestPreconditions.CheckNotNull(objectName, nameof(objectName));
             return UploadObject(
                 new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
                 source, options, progress);
@@ -50,7 +51,7 @@ namespace Google.Storage.V1
             IProgress<IUploadProgress> progress = null)
         {
             ValidateBucketName(bucket);
-            Preconditions.CheckNotNull(objectName, nameof(objectName));
+            GaxRestPreconditions.CheckNotNull(objectName, nameof(objectName));
             return UploadObjectAsync(new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
                 source, options, cancellationToken, progress);
         }
@@ -63,7 +64,7 @@ namespace Google.Storage.V1
             IProgress<IUploadProgress> progress = null)
         {
             ValidateObject(destination, nameof(destination));
-            Preconditions.CheckNotNull(source, nameof(source));
+            GaxRestPreconditions.CheckNotNull(source, nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
             if (progress != null)
@@ -87,7 +88,7 @@ namespace Google.Storage.V1
             IProgress<IUploadProgress> progress = null)
         {
             ValidateObject(destination, nameof(destination));
-            Preconditions.CheckNotNull(source, nameof(source));
+            GaxRestPreconditions.CheckNotNull(source, nameof(source));
             var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
             if (progress != null)

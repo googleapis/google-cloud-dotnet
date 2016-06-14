@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
@@ -31,7 +32,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryResult ExecuteQuery(string sql, ExecuteQueryOptions options = null)
         {
-            Preconditions.CheckNotNull(sql, nameof(sql));
+            GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
 
             var queryRequest = new Apis.Bigquery.v2.Data.QueryRequest { Query = sql };
             options?.ModifyRequest(queryRequest);
@@ -43,7 +44,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)
         {
-            Preconditions.CheckNotNull(sql, nameof(sql));
+            GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
             var query = new JobConfigurationQuery { Query = sql };
             options?.ModifyRequest(query);
             var job = Service.Jobs.Insert(new Job
@@ -59,7 +60,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryResult GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)
         {
-            Preconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             Func<GetQueryResultsRequest> requestProvider = () =>
             {
@@ -74,7 +75,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryResult ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
-            Preconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
             
             Func<TabledataResource.ListRequest> requestProvider = () =>

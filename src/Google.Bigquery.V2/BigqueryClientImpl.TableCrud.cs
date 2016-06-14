@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
@@ -33,7 +34,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryTable GetTable(TableReference tableReference, GetTableOptions options = null)
         {
-            Preconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             var request = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             options?.ModifyRequest(request);
@@ -44,7 +45,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override IEnumerable<BigqueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
         {
-            Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxRestPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
 
             var initialRequest = CreateListTablesRequest(datasetReference, options);
             return s_tablesPageStreamer.Fetch(initialRequest).Select(apiResource => new BigqueryTable(this, apiResource));
@@ -61,7 +62,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryTable CreateTable(TableReference tableReference, TableSchema schema, CreateTableOptions options = null)
         {
-            Preconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             var table = new Table { TableReference = tableReference, Schema = schema };
             var request = Service.Tables.Insert(table, tableReference.ProjectId, tableReference.DatasetId);
@@ -73,7 +74,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryTable GetOrCreateTable(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null)
         {
-            Preconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             try
             {
@@ -89,7 +90,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override void DeleteTable(TableReference tableReference, DeleteTableOptions options = null)
         {
-            Preconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.TableId, tableReference.TableId);
             options?.ModifyRequest(request);
             request.Execute();

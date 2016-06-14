@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Upload;
 using System;
 using static Google.Apis.Storage.v1.ObjectsResource;
@@ -65,7 +66,7 @@ namespace Google.Storage.V1
             get { return _chunkSize; }
             set
             {
-                Preconditions.CheckArgument(
+                GaxRestPreconditions.CheckArgument(
                     value == null || (value.Value % MinimumChunkSize == 0 && value.Value >= 1),
                     nameof(value),
                     "Requested chunk size {0} is not a positive multiple of {1}",

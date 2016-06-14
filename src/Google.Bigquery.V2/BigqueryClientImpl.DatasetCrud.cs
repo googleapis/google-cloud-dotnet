@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
@@ -32,7 +33,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryDataset GetDataset(DatasetReference datasetReference, GetDatasetOptions options = null)
         {
-            Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxRestPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
             return new BigqueryDataset(this, request.Execute());
@@ -41,7 +42,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override IEnumerable<BigqueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
-            Preconditions.CheckNotNull(projectReference, nameof(projectReference));
+            GaxRestPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
             var initialRequest = CreateListDatasetsRequest(projectReference, options);
             return s_datasetsPageStreamer.Fetch(initialRequest).Select(resource => new BigqueryDataset(this, resource));
@@ -57,7 +58,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryDataset CreateDataset(DatasetReference datasetReference, CreateDatasetOptions options = null)
         {
-            Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxRestPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var dataset = new Dataset { DatasetReference = datasetReference };
             var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
             options?.ModifyRequest(dataset, request);
@@ -67,7 +68,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryDataset GetOrCreateDataset(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null)
         {
-            Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxRestPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             try
             {
                 return GetDataset(datasetReference, getOptions);
@@ -81,7 +82,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override void DeleteDataset(DatasetReference datasetReference, DeleteDatasetOptions options = null)
         {
-            Preconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+            GaxRestPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Delete(datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
             request.Execute();

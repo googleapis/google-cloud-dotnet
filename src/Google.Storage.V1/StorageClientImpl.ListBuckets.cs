@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
@@ -36,7 +37,7 @@ namespace Google.Storage.V1
             ListBucketsOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
         {
-            Preconditions.CheckNotNull(projectId, nameof(projectId));
+            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
             var initialRequest = CreateListBucketsRequest(projectId, options);
             return s_bucketPageStreamer.FetchAllAsync(initialRequest, cancellationToken);
         }
@@ -44,7 +45,7 @@ namespace Google.Storage.V1
         /// <inheritdoc />
         public override IEnumerable<Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
         {
-            Preconditions.CheckNotNull(projectId, nameof(projectId));
+            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
             var initialRequest = CreateListBucketsRequest(projectId, options);
             return s_bucketPageStreamer.Fetch(initialRequest);
         }
