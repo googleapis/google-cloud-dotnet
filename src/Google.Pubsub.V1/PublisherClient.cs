@@ -434,7 +434,7 @@ namespace Google.Pubsub.V1
         /// </summary>
         /// <param name="projectId">The project ID.</param>
         /// <returns>The full project resource name.</returns>
-        public static string GetProjectName(string projectId) => ProjectTemplate.Expand(projectId);
+        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         /// <summary>
         /// Path template for a topic resource. Parameters:
@@ -451,7 +451,7 @@ namespace Google.Pubsub.V1
         /// <param name="projectId">The project ID.</param>
         /// <param name="topicId">The topic ID.</param>
         /// <returns>The full topic resource name.</returns>
-        public static string GetTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
+        public static string FormatTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.

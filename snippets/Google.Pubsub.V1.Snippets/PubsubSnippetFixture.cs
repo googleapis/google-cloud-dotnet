@@ -60,7 +60,7 @@ namespace Google.Pubsub.V1.Snippets
         public void Dispose()
         {
             var subscriber = SubscriberClient.Create();
-            var subscriptions = subscriber.ListSubscriptionsPageStream(SubscriberClient.GetProjectName(ProjectId))
+            var subscriptions = subscriber.ListSubscriptionsPageStream(SubscriberClient.FormatProjectName(ProjectId))
                 .Flatten()
                 .Where(sub => SubscriberClient.SubscriptionTemplate.ParseName(sub.Name)[1].StartsWith(TopicPrefix))
                 .ToList();
@@ -70,7 +70,7 @@ namespace Google.Pubsub.V1.Snippets
             }
 
             var publisher = PublisherClient.Create();
-            var topics = publisher.ListTopicsPageStream(PublisherClient.GetProjectName(ProjectId))
+            var topics = publisher.ListTopicsPageStream(PublisherClient.FormatProjectName(ProjectId))
                 .Flatten()
                 .Where(topic => PublisherClient.TopicTemplate.ParseName(topic.Name)[1].StartsWith(TopicPrefix))
                 .ToList();
