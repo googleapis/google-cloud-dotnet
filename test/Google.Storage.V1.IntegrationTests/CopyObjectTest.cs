@@ -48,6 +48,7 @@ namespace Google.Storage.V1.IntegrationTests
             var firstGenName = GenerateName();
             var secondGenName = GenerateName();
             var generations = client.ListObjects(sourceBucket, sourceName, new ListObjectsOptions { Versions = true })
+                .Flatten()
                 .Select(o => (long)o.Generation)
                 .OrderBy(o => o)
                 .ToList();
