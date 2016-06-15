@@ -430,8 +430,8 @@ namespace Google.Datastore.V1Beta3
             IEnumerable<Key> keys,
             CallSettings callSettings)
         {
-            // Just so we can iterate multiple times safely.
-            keys = keys.ToList();
+            // Normalize the keys, and materialize to a list so we can iterate multiple times safely.
+            keys = keys.Select(key => key.NormalizeToProjectId(projectId)).ToList();
             GaxPreconditions.CheckArgument(keys.All(x => x != null), nameof(keys), "Key collection must not contain null elements");
             var keyToIndex = keys.Select((value, index) => new { value, index }).ToLookup(pair => pair.value, pair => pair.index);
             IEnumerable<Key> keysToFetch = new HashSet<Key>(keys);
