@@ -93,5 +93,22 @@ namespace Google.Datastore.V1Beta3
                 }
             }
         }
+
+        /// <summary>
+        /// Helper method to make sure we can use fully-populated keys.
+        /// The Datastore implementation is willing to accept keys without a partition ID,
+        /// or with a partition ID including only a namespace - it fills in the project ID itself.
+        /// However, keys returned from the service *always* have partition IDs, so any time we need
+        /// to match a user-supplied key with a service-supplied key, we should get a normalized version first.
+        /// This method never modifies an existing key - it creates a clone if necessary.
+        /// </summary>
+        /// <returns>Either <c>this</c> if it already contains a project ID, or a clone with the given project ID
+        /// otherwise.</returns>
+        internal Key NormalizeToProjectId(string projectId)
+        {
+            return string.IsNullOrEmpty(PartitionId?.ProjectId)
+                ? new Key(this) { PartitionId = new PartitionId(projectId, PartitionId?.NamespaceId ?? "") }
+                : this;
+        }
     }
 }
