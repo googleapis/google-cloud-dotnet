@@ -451,7 +451,7 @@ namespace Google.Logging.V2
         /// The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>An asynchronous sequence of pages of LogMetric items.</returns>
+        /// <returns>A pageable asynchronous sequence of LogMetric resources.</returns>
         public virtual IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsAsync(
             string parent,
             string pageToken = null,
@@ -474,7 +474,7 @@ namespace Google.Logging.V2
         /// The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A sequence of pages of LogMetric items.</returns>
+        /// <returns>A pageable sequence of LogMetric resources.</returns>
         public virtual IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetrics(
             string parent,
             string pageToken = null,
@@ -768,7 +768,7 @@ namespace Google.Logging.V2
         /// The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>An asynchronous sequence of pages of LogMetric items.</returns>
+        /// <returns>A pageable asynchronous sequence of LogMetric resources.</returns>
         public override IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsAsync(
             string parent,
             string pageToken = null,
@@ -796,7 +796,7 @@ namespace Google.Logging.V2
         /// The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A sequence of pages of LogMetric items.</returns>
+        /// <returns>A pageable sequence of LogMetric resources.</returns>
         public override IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetrics(
             string parent,
             string pageToken = null,
