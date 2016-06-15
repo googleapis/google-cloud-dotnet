@@ -56,8 +56,7 @@ namespace Google.Storage.V1.IntegrationTests
             var name = _fixture.SmallThenLargeObject;
             // Fetch them via the list operation to start with
             var objects = _fixture.Client
-                .ListObjects(bucket, name, new ListObjectsOptions { Versions = true })
-                .Flatten()
+                .ListObjects(bucket, name, new ListObjectsOptions { Versions = true })                
                 .OrderBy(x => x.Generation)
                 .ToList();
 

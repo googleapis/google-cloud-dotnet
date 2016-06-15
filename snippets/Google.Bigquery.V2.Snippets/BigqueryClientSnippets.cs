@@ -132,7 +132,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListDatasets(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var datasets = client.ListDatasets().Flatten().ToList();
+            var datasets = client.ListDatasets().ToList();
             foreach (var dataset in datasets)
             {
                 Console.WriteLine(dataset.FullyQualifiedId);
@@ -151,7 +151,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListTables(string,ListTablesOptions)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var tables = client.ListTables(datasetId).Flatten().ToList();
+            var tables = client.ListTables(datasetId).ToList();
             foreach (var table in tables)
             {
                 Console.WriteLine(table.FullyQualifiedId);
@@ -181,7 +181,7 @@ namespace Google.Bigquery.V2.Snippets
             // Now populate the table with data...
             // End snippet
 
-            var tables = client.ListTables(datasetId).Flatten();
+            var tables = client.ListTables(datasetId);
             var ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.Contains(tableId, ids);
         }
@@ -386,7 +386,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListJobs(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var jobs = client.ListJobs().Flatten().ToList();
+            var jobs = client.ListJobs().ToList();
             foreach (var job in jobs)
             {
                 Console.WriteLine(job.Reference.JobId);
