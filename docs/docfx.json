@@ -6,7 +6,12 @@
           "files": [ "*/project.json" ],
           "exclude": [ "**/bin/**", "**/obj/**" ],
           "cwd": "../src"
-        }
+        },
+        {
+          "files": [ "*/project.json" ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "cwd": "external/gax-dotnet/src"
+        },
       ],
       "dest": "obj/api"
     }

@@ -14,9 +14,10 @@ install:
 # files (e.g. README.md) without that intefering.
 
 script:
-  - dnu restore
+  - dnu restore src test tools snippets
   - dnu build src/Google*
   - dnu build test/Google*
   - dnu build tools/Google*
   - dnu build snippets/Google*
-  - for project in `find . -name '*.Tests'`; do dnx -p $project test; done
+  - for project in `find test -name '*.Tests'`; do dnx -p $project test; done
+  - for project in `find snippets -name '*.Tests'`; do dnx -p $project test; done

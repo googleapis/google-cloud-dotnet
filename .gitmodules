@@ -1,0 +1,3 @@
+[submodule "docs/external/gax-dotnet"]
+	path = docs/external/gax-dotnet
+	url = https://github.com/googleapis/gax-dotnet.git
