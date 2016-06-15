@@ -289,11 +289,11 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="PublisherClient.ListTopicsPageStream"/> and <see cref="PublisherClient.ListTopicsPageStreamAsync"/>.
+        /// <see cref="PublisherClient.ListTopics"/> and <see cref="PublisherClient.ListTopicsAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="PublisherClient.ListTopicsPageStream"/> and
-        /// <see cref="PublisherClient.ListTopicsPageStreamAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="PublisherClient.ListTopics"/> and
+        /// <see cref="PublisherClient.ListTopicsAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -322,11 +322,11 @@ namespace Google.Pubsub.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="PublisherClient.ListTopicSubscriptionsPageStream"/> and <see cref="PublisherClient.ListTopicSubscriptionsPageStreamAsync"/>.
+        /// <see cref="PublisherClient.ListTopicSubscriptions"/> and <see cref="PublisherClient.ListTopicSubscriptionsAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="PublisherClient.ListTopicSubscriptionsPageStream"/> and
-        /// <see cref="PublisherClient.ListTopicSubscriptionsPageStreamAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="PublisherClient.ListTopicSubscriptions"/> and
+        /// <see cref="PublisherClient.ListTopicSubscriptionsAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -679,7 +679,7 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of Topic items.</returns>
-        public virtual IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsPageStreamAsync(
+        public virtual IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
             string project,
             string pageToken = null,
             int? pageSize = null,
@@ -699,7 +699,7 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of Topic items.</returns>
-        public virtual IPagedEnumerable<ListTopicsResponse, Topic> ListTopicsPageStream(
+        public virtual IPagedEnumerable<ListTopicsResponse, Topic> ListTopics(
             string project,
             string pageToken = null,
             int? pageSize = null,
@@ -719,7 +719,7 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of string items.</returns>
-        public virtual IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsPageStreamAsync(
+        public virtual IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(
             string topic,
             string pageToken = null,
             int? pageSize = null,
@@ -739,7 +739,7 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of string items.</returns>
-        public virtual IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsPageStream(
+        public virtual IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(
             string topic,
             string pageToken = null,
             int? pageSize = null,
@@ -956,7 +956,7 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of Topic items.</returns>
-        public override IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsPageStreamAsync(
+        public override IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
             string project,
             string pageToken = null,
             int? pageSize = null,
@@ -981,7 +981,7 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of Topic items.</returns>
-        public override IPagedEnumerable<ListTopicsResponse, Topic> ListTopicsPageStream(
+        public override IPagedEnumerable<ListTopicsResponse, Topic> ListTopics(
             string project,
             string pageToken = null,
             int? pageSize = null,
@@ -1006,7 +1006,7 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of string items.</returns>
-        public override IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsPageStreamAsync(
+        public override IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(
             string topic,
             string pageToken = null,
             int? pageSize = null,
@@ -1031,7 +1031,7 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of string items.</returns>
-        public override IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsPageStream(
+        public override IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(
             string topic,
             string pageToken = null,
             int? pageSize = null,

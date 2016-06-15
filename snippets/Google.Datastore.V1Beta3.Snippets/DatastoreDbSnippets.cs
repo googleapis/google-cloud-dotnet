@@ -85,21 +85,21 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQueryPageStream(Query,*,*)
+            // Snippet: RunQuery(Query,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query("book")
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            IPagedEnumerable<RunQueryResponse, Entity> results = db.RunQueryPageStream(query);
-            foreach (Entity entity in results.Flatten())
+            IPagedEnumerable<RunQueryResponse, Entity> results = db.RunQuery(query);
+            foreach (Entity entity in results)
             {
                 Console.WriteLine(entity);
             }
             // End snippet
 
             // This will run the query again, admittedly...
-            List<Entity> entities = results.Flatten().ToList();
+            List<Entity> entities = results.ToList();
             Assert.Equal(1, entities.Count);
             Entity book = entities[0];
             Assert.Equal("Jane Austen", (string)book["author"]);
@@ -112,21 +112,21 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQueryPageStreamAsync(Query,*,*)
+            // Snippet: RunQueryAsync(Query,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query("book")
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            IPagedAsyncEnumerable<RunQueryResponse, Entity> results = db.RunQueryPageStreamAsync(query);
-            await results.Flatten().ForEachAsync(entity =>
+            IPagedAsyncEnumerable<RunQueryResponse, Entity> results = db.RunQueryAsync(query);
+            await results.ForEachAsync(entity =>
             {
                 Console.WriteLine(entity);
             });
             // End snippet
 
             // This will run the query again, admittedly...
-            List<Entity> entities = await results.Flatten().ToList();
+            List<Entity> entities = await results.ToList();
             Assert.Equal(1, entities.Count);
             Entity book = entities[0];
             Assert.Equal("Jane Austen", (string)book["author"]);
@@ -139,7 +139,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuery(GqlQuery,*,*)
+            // Snippet: RunQuerySingleCall(GqlQuery,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
@@ -147,7 +147,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
             // Note: no page streaming for GQL yet.
-            RunQueryResponse response = db.RunQuery(gqlQuery);
+            RunQueryResponse response = db.RunQuerySingleCall(gqlQuery);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity);
@@ -166,7 +166,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQueryAsync(GqlQuery,*,*)
+            // Snippet: RunQuerySingleCallAsync(GqlQuery,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
@@ -174,7 +174,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
             // Note: no page streaming for GQL yet.
-            RunQueryResponse response = await db.RunQueryAsync(gqlQuery);
+            RunQueryResponse response = await db.RunQuerySingleCallAsync(gqlQuery);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity);
@@ -343,7 +343,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: NamespaceQuery
             DatastoreDb db = DatastoreDb.Create(projectId, "");
             Query query = new Query(DatastoreConstants.NamespaceKind);
-            foreach (Entity entity in db.RunQueryPageStream(query).Flatten())
+            foreach (Entity entity in db.RunQuery(query))
             {
                 Console.WriteLine(entity.Key.Path.Last().Name);
             }
@@ -359,7 +359,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: KindQuery
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query(DatastoreConstants.KindKind);
-            foreach (Entity entity in db.RunQueryPageStream(query).Flatten())
+            foreach (Entity entity in db.RunQuery(query))
             {
                 Console.WriteLine(entity.Key.Path.Last().Name);
             }
@@ -375,7 +375,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: PropertyQuery
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query(DatastoreConstants.PropertyKind);
-            foreach (Entity entity in db.RunQueryPageStream(query).Flatten())
+            foreach (Entity entity in db.RunQuery(query))
             {
                 Console.WriteLine(entity.Key.Path.Last().Name);
             }
@@ -563,7 +563,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             };
 
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);            
-            foreach (Entity entity in db.RunQueryPageStream(query).Flatten())
+            foreach (Entity entity in db.RunQuery(query))
             {
                 Console.WriteLine((string)entity["description"]);
             }
@@ -643,7 +643,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Projection = { "priority", "percentage_complete" }
             };
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-            foreach (Entity entity in db.RunQueryPageStream(query).Flatten())
+            foreach (Entity entity in db.RunQuery(query))
             {
                 Console.WriteLine($"{(int)entity["priority"]}: {(double?)entity["percentage_complete"]}");
             }            
@@ -707,7 +707,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Query query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
-            RunQueryResponse response = db.RunQuery(query, ReadConsistency.Eventual);
+            RunQueryResponse response = db.RunQuerySingleCall(query, ReadConsistency.Eventual);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Entity entity = result.Entity;

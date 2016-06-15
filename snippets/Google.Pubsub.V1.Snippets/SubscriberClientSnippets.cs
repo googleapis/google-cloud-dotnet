@@ -92,13 +92,13 @@ namespace Google.Pubsub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListSubscriptionsPageStream
+            // Snippet: ListSubscriptions
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
             string projectName = SubscriberClient.FormatProjectName(projectId);
-            foreach (Subscription subscription in client.ListSubscriptionsPageStream(projectName).Flatten())
+            foreach (Subscription subscription in client.ListSubscriptions(projectName))
             {
                 Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");
             }
@@ -110,13 +110,13 @@ namespace Google.Pubsub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListSubscriptionsPageStreamAsync
+            // Snippet: ListSubscriptionsAsync
             SubscriberClient client = SubscriberClient.Create();
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
             string projectName = SubscriberClient.FormatProjectName(projectId);
-            IAsyncEnumerable<Subscription> subscriptions = client.ListSubscriptionsPageStreamAsync(projectName).Flatten();
+            IAsyncEnumerable<Subscription> subscriptions = client.ListSubscriptionsAsync(projectName);
             await subscriptions.ForEachAsync(subscription =>
             {
                 Console.WriteLine($"{subscription.Name} subscribed to {subscription.Topic}");

@@ -34,17 +34,17 @@ namespace Google.Pubsub.V1.Snippets
         }
 
         [Fact]
-        public void ListTopicsPageStream()
+        public void ListTopics()
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListTopicsPageStream
+            // Snippet: ListTopics
             PublisherClient client = PublisherClient.Create();
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
             string projectName = PublisherClient.FormatProjectName(projectId);
-            foreach (Topic topic in client.ListTopicsPageStream(projectName).Flatten())
+            foreach (Topic topic in client.ListTopics(projectName))
             {
                 Console.WriteLine(topic.Name);
             }
@@ -52,17 +52,17 @@ namespace Google.Pubsub.V1.Snippets
         }
 
         [Fact]
-        public async Task ListTopicsPageStreamAsync()
+        public async Task ListTopicsAsync()
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListTopicsPageStreamAsync
+            // Snippet: ListTopicsAsync
             PublisherClient client = PublisherClient.Create();
 
             // Alternative: use a known project resource name:
             // "projects/{PROJECT_ID}"
             string projectName = PublisherClient.FormatProjectName(projectId);
-            IAsyncEnumerable<Topic> topics = client.ListTopicsPageStreamAsync(projectName).Flatten();
+            IAsyncEnumerable<Topic> topics = client.ListTopicsAsync(projectName);
             await topics.ForEachAsync(topic =>
             {
                 Console.WriteLine(topic.Name);

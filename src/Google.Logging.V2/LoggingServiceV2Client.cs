@@ -239,11 +239,11 @@ namespace Google.Logging.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="LoggingServiceV2Client.ListLogEntriesPageStream"/> and <see cref="LoggingServiceV2Client.ListLogEntriesPageStreamAsync"/>.
+        /// <see cref="LoggingServiceV2Client.ListLogEntries"/> and <see cref="LoggingServiceV2Client.ListLogEntriesAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="LoggingServiceV2Client.ListLogEntriesPageStream"/> and
-        /// <see cref="LoggingServiceV2Client.ListLogEntriesPageStreamAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="LoggingServiceV2Client.ListLogEntries"/> and
+        /// <see cref="LoggingServiceV2Client.ListLogEntriesAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -612,7 +612,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogEntry items.</returns>
-        public virtual IPagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesPageStreamAsync(
+        public virtual IPagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
             IEnumerable<string> projectIds,
             string filter,
             string orderBy,
@@ -653,7 +653,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogEntry items.</returns>
-        public virtual IPagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesPageStream(
+        public virtual IPagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
             IEnumerable<string> projectIds,
             string filter,
             string orderBy,
@@ -846,7 +846,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogEntry items.</returns>
-        public override IPagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesPageStreamAsync(
+        public override IPagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
             IEnumerable<string> projectIds,
             string filter,
             string orderBy,
@@ -894,7 +894,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogEntry items.</returns>
-        public override IPagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesPageStream(
+        public override IPagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
             IEnumerable<string> projectIds,
             string filter,
             string orderBy,
