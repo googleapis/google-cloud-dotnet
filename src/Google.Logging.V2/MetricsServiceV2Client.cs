@@ -137,11 +137,11 @@ namespace Google.Logging.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="MetricsServiceV2Client.ListLogMetricsPageStream"/> and <see cref="MetricsServiceV2Client.ListLogMetricsPageStreamAsync"/>.
+        /// <see cref="MetricsServiceV2Client.ListLogMetrics"/> and <see cref="MetricsServiceV2Client.ListLogMetricsAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricsServiceV2Client.ListLogMetricsPageStream"/> and
-        /// <see cref="MetricsServiceV2Client.ListLogMetricsPageStreamAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="MetricsServiceV2Client.ListLogMetrics"/> and
+        /// <see cref="MetricsServiceV2Client.ListLogMetricsAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -452,7 +452,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogMetric items.</returns>
-        public virtual IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStreamAsync(
+        public virtual IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsAsync(
             string parent,
             string pageToken = null,
             int? pageSize = null,
@@ -475,7 +475,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogMetric items.</returns>
-        public virtual IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStream(
+        public virtual IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetrics(
             string parent,
             string pageToken = null,
             int? pageSize = null,
@@ -769,7 +769,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogMetric items.</returns>
-        public override IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStreamAsync(
+        public override IPagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsAsync(
             string parent,
             string pageToken = null,
             int? pageSize = null,
@@ -797,7 +797,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogMetric items.</returns>
-        public override IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsPageStream(
+        public override IPagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetrics(
             string parent,
             string pageToken = null,
             int? pageSize = null,

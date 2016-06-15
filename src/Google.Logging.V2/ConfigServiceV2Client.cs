@@ -137,11 +137,11 @@ namespace Google.Logging.V2
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="ConfigServiceV2Client.ListSinksPageStream"/> and <see cref="ConfigServiceV2Client.ListSinksPageStreamAsync"/>.
+        /// <see cref="ConfigServiceV2Client.ListSinks"/> and <see cref="ConfigServiceV2Client.ListSinksAsync"/>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ConfigServiceV2Client.ListSinksPageStream"/> and
-        /// <see cref="ConfigServiceV2Client.ListSinksPageStreamAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <see cref="ConfigServiceV2Client.ListSinks"/> and
+        /// <see cref="ConfigServiceV2Client.ListSinksAsync"/> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -452,7 +452,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogSink items.</returns>
-        public virtual IPagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksPageStreamAsync(
+        public virtual IPagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
             string parent,
             string pageToken = null,
             int? pageSize = null,
@@ -475,7 +475,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogSink items.</returns>
-        public virtual IPagedEnumerable<ListSinksResponse, LogSink> ListSinksPageStream(
+        public virtual IPagedEnumerable<ListSinksResponse, LogSink> ListSinks(
             string parent,
             string pageToken = null,
             int? pageSize = null,
@@ -769,7 +769,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>An asynchronous sequence of pages of LogSink items.</returns>
-        public override IPagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksPageStreamAsync(
+        public override IPagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
             string parent,
             string pageToken = null,
             int? pageSize = null,
@@ -797,7 +797,7 @@ namespace Google.Logging.V2
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A sequence of pages of LogSink items.</returns>
-        public override IPagedEnumerable<ListSinksResponse, LogSink> ListSinksPageStream(
+        public override IPagedEnumerable<ListSinksResponse, LogSink> ListSinks(
             string parent,
             string pageToken = null,
             int? pageSize = null,

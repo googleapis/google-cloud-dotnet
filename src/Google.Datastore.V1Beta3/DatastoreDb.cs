@@ -142,13 +142,13 @@ namespace Google.Datastore.V1Beta3
         /// using this object's partition ID and the specified read consistency, not in a transaction.
         /// </summary>
         /// <remarks>
-        /// To automatically stream pages of results, use <see cref="RunQueryPageStream(Query, ReadConsistency?, CallSettings)"/>.
+        /// To automatically stream pages of results, use <see cref="RunQuery(Query, ReadConsistency?, CallSettings)"/>.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The response for the given query operation.</returns>
-        public virtual RunQueryResponse RunQuery(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        public virtual RunQueryResponse RunQuerySingleCall(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -158,13 +158,13 @@ namespace Google.Datastore.V1Beta3
         /// using this object's partition ID and the specified read consistency, not in a transaction.
         /// </summary>
         /// <remarks>
-        /// To automatically stream pages of results, use <see cref="RunQueryPageStreamAsync(Query, ReadConsistency?, CallSettings)"/>.
+        /// To automatically stream pages of results, use <see cref="RunQueryAsync(Query, ReadConsistency?, CallSettings)"/>.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The response for the given query operation.</returns>
-        public virtual Task<RunQueryResponse> RunQueryAsync(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        public virtual Task<RunQueryResponse> RunQuerySingleCallAsync(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -179,7 +179,7 @@ namespace Google.Datastore.V1Beta3
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The response for the given query operation.</returns>
-        public virtual RunQueryResponse RunQuery(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        public virtual RunQueryResponse RunQuerySingleCall(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -192,7 +192,7 @@ namespace Google.Datastore.V1Beta3
         /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The response for the given query operation.</returns>
-        public virtual Task<RunQueryResponse> RunQueryAsync(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        public virtual Task<RunQueryResponse> RunQuerySingleCallAsync(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -210,7 +210,7 @@ namespace Google.Datastore.V1Beta3
         /// the default.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A sequence of pages of entities.</returns>
-        public virtual IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(
+        public virtual IPagedEnumerable<RunQueryResponse, Entity> RunQuery(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -229,7 +229,7 @@ namespace Google.Datastore.V1Beta3
         /// the default.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A sequence of pages of entities.</returns>
-        public virtual IPagedAsyncEnumerable<RunQueryResponse, Entity> RunQueryPageStreamAsync(
+        public virtual IPagedAsyncEnumerable<RunQueryResponse, Entity> RunQueryAsync(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();

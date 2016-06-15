@@ -65,31 +65,31 @@ namespace Google.Datastore.V1Beta3
         public override KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
 
         /// <inheritdoc/>
-        public override RunQueryResponse RunQuery(
+        public override RunQueryResponse RunQuerySingleCall(
             Query query, 
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null) =>
             Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
 
         /// <inheritdoc/>
-        public override Task<RunQueryResponse> RunQueryAsync(
+        public override Task<RunQueryResponse> RunQuerySingleCallAsync(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null) =>
             Client.RunQueryAsync(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
 
         /// <inheritdoc/>
-        public override RunQueryResponse RunQuery(
+        public override RunQueryResponse RunQuerySingleCall(
             GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
             Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
 
         /// <inheritdoc/>
-        public override Task<RunQueryResponse> RunQueryAsync(
+        public override Task<RunQueryResponse> RunQuerySingleCallAsync(
             GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
             Client.RunQueryAsync(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
 
         /// <inheritdoc/>
-        public override IPagedEnumerable<RunQueryResponse, Entity> RunQueryPageStream(
+        public override IPagedEnumerable<RunQueryResponse, Entity> RunQuery(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
@@ -105,7 +105,7 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <inheritdoc/>
-        public override IPagedAsyncEnumerable<RunQueryResponse, Entity> RunQueryPageStreamAsync(
+        public override IPagedAsyncEnumerable<RunQueryResponse, Entity> RunQueryAsync(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
