@@ -451,7 +451,7 @@ namespace Google.Logging.V2
         /// The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>An asynchronous sequence of pages of LogSink items.</returns>
+        /// <returns>A pageable asynchronous sequence of LogSink resources.</returns>
         public virtual IPagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
             string parent,
             string pageToken = null,
@@ -474,7 +474,7 @@ namespace Google.Logging.V2
         /// The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A sequence of pages of LogSink items.</returns>
+        /// <returns>A pageable sequence of LogSink resources.</returns>
         public virtual IPagedEnumerable<ListSinksResponse, LogSink> ListSinks(
             string parent,
             string pageToken = null,
@@ -768,7 +768,7 @@ namespace Google.Logging.V2
         /// The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>An asynchronous sequence of pages of LogSink items.</returns>
+        /// <returns>A pageable asynchronous sequence of LogSink resources.</returns>
         public override IPagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
             string parent,
             string pageToken = null,
@@ -796,7 +796,7 @@ namespace Google.Logging.V2
         /// The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A sequence of pages of LogSink items.</returns>
+        /// <returns>A pageable sequence of LogSink resources.</returns>
         public override IPagedEnumerable<ListSinksResponse, LogSink> ListSinks(
             string parent,
             string pageToken = null,
