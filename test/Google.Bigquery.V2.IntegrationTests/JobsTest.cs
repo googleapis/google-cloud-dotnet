@@ -44,7 +44,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var oneMinuteAgo = ToMillisecondsSinceEpoch(DateTime.UtcNow.AddMinutes(-1));
 
             // Find all jobs started in the last minute.
-            var recentJobs = client.ListJobs().TakeWhile(job => job.Statistics.CreationTime >= jobToFind.Statistics.CreationTime).ToList();
+            var recentJobs = client.ListJobs().Flatten().TakeWhile(job => job.Statistics.CreationTime >= jobToFind.Statistics.CreationTime).ToList();
 
             // Note: can't find the job reference itself, as that would check equality by reference :(
             var jobIds = recentJobs.Select(job => job.Reference.JobId).ToList();

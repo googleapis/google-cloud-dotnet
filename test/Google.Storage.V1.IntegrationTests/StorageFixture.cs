@@ -148,7 +148,10 @@ namespace Google.Storage.V1.IntegrationTests
             var client = StorageClient.Create();
             foreach (var bucket in _bucketsToDelete)
             {
-                foreach (var obj in client.ListObjects(bucket, null, new ListObjectsOptions { Versions = true }).ToList())
+                var objects = client.ListObjects(bucket, null, new ListObjectsOptions { Versions = true })
+                    .Flatten()
+                    .ToList();
+                foreach (var obj in objects)
                 {
                     client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
                 }

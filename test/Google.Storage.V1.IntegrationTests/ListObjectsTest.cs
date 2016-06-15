@@ -59,7 +59,7 @@ namespace Google.Storage.V1.IntegrationTests
         public async Task CancellationTokenRespected()
         {
             var cts = new CancellationTokenSource();
-            var task = _fixture.Client.ListAllObjectsAsync(_fixture.ReadBucket, null, cancellationToken: cts.Token);
+            var task = _fixture.Client.ListObjectsAsync(_fixture.ReadBucket, null).ToList(cts.Token);
             cts.Cancel();
             await Assert.ThrowsAnyAsync<OperationCanceledException>(async () => await task);            
         }
@@ -79,9 +79,9 @@ namespace Google.Storage.V1.IntegrationTests
 
         private async Task AssertObjects(string prefix, ListObjectsOptions options, params string[] expectedNames)
         {
-            var actual = _fixture.Client.ListObjects(_fixture.ReadBucket, prefix, options);
+            var actual = _fixture.Client.ListObjects(_fixture.ReadBucket, prefix, options).Flatten();
             AssertObjectNames(actual, expectedNames);
-            actual = await _fixture.Client.ListAllObjectsAsync(_fixture.ReadBucket, prefix, options, CancellationToken.None);
+            actual = await _fixture.Client.ListObjectsAsync(_fixture.ReadBucket, prefix, options).Flatten().ToList();
             AssertObjectNames(actual, expectedNames);
         }
 

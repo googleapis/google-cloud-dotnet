@@ -141,6 +141,7 @@ namespace Google.Storage.V1.IntegrationTests
         private List<Object> ListObjects(string bucket, string name, bool versions) =>
             // Use the same prefix as the name - filtering to be certain later.
             _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = versions })
+                .Flatten()
                 .Where(o => o.Name == name)
                 .ToList();
 

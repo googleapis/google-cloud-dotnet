@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
@@ -57,8 +58,8 @@ namespace Google.Bigquery.V2
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The datasets within this project.</returns>
-        public virtual IEnumerable<BigqueryDataset> ListDatasets(ListDatasetsOptions options = null) =>
+        /// <returns>A sequence of pages of datasets within this project.</returns>
+        public virtual IPagedEnumerable<DatasetList, BigqueryDataset> ListDatasets(ListDatasetsOptions options = null) =>
             ListDatasets(GetProjectReference(ProjectId), options);
 
         /// <summary>
@@ -67,8 +68,8 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="projectId">The project to list the datasets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The datasets within the specified project.</returns>
-        public virtual IEnumerable<BigqueryDataset> ListDatasets(string projectId, ListDatasetsOptions options = null) =>
+        /// <returns>A sequence of pages of datasets within the specified project.</returns>
+        public virtual IPagedEnumerable<DatasetList, BigqueryDataset> ListDatasets(string projectId, ListDatasetsOptions options = null) =>
             ListDatasets(GetProjectReference(projectId), options);
 
         /// <summary>
@@ -77,8 +78,8 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The datasets within the specified project.</returns>
-        public virtual IEnumerable<BigqueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
+        /// <returns>A sequence of pages of datasets within the specified project.</returns>
+        public virtual IPagedEnumerable<DatasetList, BigqueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
             throw new NotImplementedException();
         }

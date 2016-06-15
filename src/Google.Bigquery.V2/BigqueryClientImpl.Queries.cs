@@ -23,12 +23,6 @@ namespace Google.Bigquery.V2
 {
     public partial class BigqueryClientImpl
     {
-        private static readonly PageStreamer<TableRow, GetQueryResultsRequest, GetQueryResultsResponse, string> s_queryResultPageStreamer =
-            new PageStreamer<TableRow, GetQueryResultsRequest, GetQueryResultsResponse, string>(
-                (request, token) => request.PageToken = token,
-                response => response.PageToken,
-                response => response.Rows);
-
         /// <inheritdoc />
         public override BigqueryResult ExecuteQuery(string sql, ExecuteQueryOptions options = null)
         {

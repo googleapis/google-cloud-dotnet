@@ -29,7 +29,7 @@ namespace Google.Bigquery.V2.IntegrationTests
         public void ListDatasets()
         {
             var client = BigqueryClient.Create(PublicDatasetsProject);
-            var datasets = client.ListDatasets();
+            var datasets = client.ListDatasets().Flatten();
             var datasetIds = datasets.Select(ds => ds.Reference.DatasetId).ToList();
 
             // Documented set of sample datasets in April 2016. More tables may be added
@@ -46,7 +46,7 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(PublicDatasetsProject);
             var dataset = client.GetDataset(PublicDatasetsDataset);
-            var tables = dataset.ListTables();
+            var tables = dataset.ListTables().Flatten();
 
             var tableIds = tables.Select(table => table.Reference.TableId).ToList();
 

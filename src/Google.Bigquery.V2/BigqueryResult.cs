@@ -28,6 +28,9 @@ namespace Google.Bigquery.V2
     /// </summary>
     public sealed class BigqueryResult
     {
+        // TODO: Consider using PageStreamEnumerable here instead of PageStreamer. It's a hidden
+        // implementation detail, but it may be cleaner.
+
         // TODO: Expose a REST resource? Slightly tricky as we have different paths to create a result (ListRows, ExecuteSql, GetQueryJobResults).
 
         private static readonly PageStreamer<TableRow, GetQueryResultsRequest, GetQueryResultsResponse, string> s_queryResultPageStreamer =

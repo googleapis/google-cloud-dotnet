@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using System.Collections.Generic;
 using System.IO;
@@ -96,8 +97,8 @@ namespace Google.Bigquery.V2
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigqueryClient.ListTables(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The tables within this dataset.</returns>
-        public IEnumerable<BigqueryTable> ListTables(ListTablesOptions options = null) => _client.ListTables(Reference, options);
+        /// <returns>A sequence of pages of tables within this dataset.</returns>
+        public IPagedEnumerable<TableList, BigqueryTable> ListTables(ListTablesOptions options = null) => _client.ListTables(Reference, options);
 
         /// <summary>
         /// Creates a table within this dataset.
