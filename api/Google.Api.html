@@ -1,0 +1,828 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Api
+   | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Api
+   | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.0.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Api" data-uid="Google.Api">Namespace Google.Api
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Google.Api.AnnotationsReflection.html#Google_Api_AnnotationsReflection">AnnotationsReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/annotations.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Authentication.html#Google_Api_Authentication">Authentication</a></h4>
+                  <section><p> <code>Authentication</code> defines the authentication configuration for an API.</p>
+<p> Example for an API targeted for external use:</p>
+<pre><code> name: calendar.googleapis.com
+ authentication:
+   rules:
+   - selector: &quot;*&quot;
+     oauth:
+       canonical_scopes: https://www.googleapis.com/auth/calendar
+
+   - selector: google.calendar.Delegate
+     oauth:
+       canonical_scopes: https://www.googleapis.com/auth/calendar.read
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.AuthenticationRule.html#Google_Api_AuthenticationRule">AuthenticationRule</a></h4>
+                  <section><p> Authentication rules for the service.</p>
+<p> By default, if a method has any authentication requirements, every request
+ must include a valid credential matching one of the requirements.
+ It&#39;s an error to include more than one kind of credential in a single
+ request.</p>
+<p> If a method doesn&#39;t have any auth requirements, request credentials will be
+ ignored.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.AuthProvider.html#Google_Api_AuthProvider">AuthProvider</a></h4>
+                  <section><p> Configuration for an anthentication provider, including support for
+ <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32">JSON Web Token (JWT)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.AuthReflection.html#Google_Api_AuthReflection">AuthReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/auth.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.AuthRequirement.html#Google_Api_AuthRequirement">AuthRequirement</a></h4>
+                  <section><p> User-defined authentication requirements, including support for
+ <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32">JSON Web Token (JWT)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Backend.html#Google_Api_Backend">Backend</a></h4>
+                  <section><p> <code>Backend</code> defines the backend configuration for a service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.BackendReflection.html#Google_Api_BackendReflection">BackendReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/backend.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.BackendRule.html#Google_Api_BackendRule">BackendRule</a></h4>
+                  <section><p> A backend rule provides configuration for an individual API element.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Billing.html#Google_Api_Billing">Billing</a></h4>
+                  <section><p> Billing related configuration of the service.</p>
+<p> The following example shows how to configure metrics for billing:</p>
+<pre><code> metrics:
+ - name: library.googleapis.com/read_calls
+   metric_kind: DELTA
+   value_type: INT64
+ - name: library.googleapis.com/write_calls
+   metric_kind: DELTA
+   value_type: INT64
+ billing:
+   metrics:
+   - library.googleapis.com/read_calls
+   - library.googleapis.com/write_calls
+</code></pre><p> The next example shows how to enable billing status check and customize the
+ check behavior. It makes sure billing status check is included in the <code>Check</code>
+ method of <a href="https://cloud.google.com/service-control/">Service Control API</a>.
+ In the example, &quot;google.storage.Get&quot; method can be served when the billing
+ status is either <code>current</code> or <code>delinquent</code>, while &quot;google.storage.Write&quot;
+ method can only be served when the billing status is <code>current</code>:</p>
+<pre><code> billing:
+   rules:
+   - selector: google.storage.Get
+     allowed_statuses:
+     - current
+     - delinquent
+   - selector: google.storage.Write
+     allowed_statuses: current
+</code></pre><p> Mostly services should only allow <code>current</code> status when serving requests.
+ In addition, services can choose to allow both <code>current</code> and <code>delinquent</code>
+ statuses when serving read-only requests to resources. If there&#39;s no
+ matching selector for operation, no billing status check will be performed.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.BillingReflection.html#Google_Api_BillingReflection">BillingReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/billing.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.BillingStatusRule.html#Google_Api_BillingStatusRule">BillingStatusRule</a></h4>
+                  <section><p> Defines the billing status requirements for operations.</p>
+<p> When used with
+ <a href="https://cloud.google.com/service-control/">Service Control API</a>, the
+ following statuses are supported:</p>
+<ul>
+<li><strong>current</strong>: the associated billing account is up to date and capable of<pre><code>         paying for resource usages.
+</code></pre></li>
+<li><p><strong>delinquent</strong>: the associated billing account has a correctable problem,</p>
+<pre><code>            such as late payment.
+</code></pre><p>Mostly services should only allow <code>current</code> status when serving requests.
+In addition, services can choose to allow both <code>current</code> and <code>delinquent</code>
+statuses when serving read-only requests to resources. If the list of
+allowed_statuses is empty, it means no billing requirement.</p>
+</li>
+</ul>
+</section>
+                  <h4><a class="xref" href="Google.Api.ConsumerReflection.html#Google_Api_ConsumerReflection">ConsumerReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/consumer.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Context.html#Google_Api_Context">Context</a></h4>
+                  <section><p> <code>Context</code> defines which contexts an API requests.</p>
+<p> Example:</p>
+<pre><code> context:
+   rules:
+   - selector: &quot;*&quot;
+     requested:
+     - google.rpc.context.ProjectContext
+     - google.rpc.context.OriginContext
+</code></pre><p> The above specifies that all methods in the API request
+ <code>google.rpc.context.ProjectContext</code> and
+ <code>google.rpc.context.OriginContext</code>.</p>
+<p> Available context types are defined in package
+ <code>google.rpc.context</code>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ContextReflection.html#Google_Api_ContextReflection">ContextReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/context.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ContextRule.html#Google_Api_ContextRule">ContextRule</a></h4>
+                  <section><p> A context rule provides information about the context for an individual API
+ element.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Control.html#Google_Api_Control">Control</a></h4>
+                  <section><p> Selects and configures the service controller used by the service.  The
+ service controller handles features like abuse, quota, billing, logging,
+ monitoring, etc.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ControlReflection.html#Google_Api_ControlReflection">ControlReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/control.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.CustomHttpPattern.html#Google_Api_CustomHttpPattern">CustomHttpPattern</a></h4>
+                  <section><p> A custom pattern is used for defining custom HTTP verb.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Documentation.html#Google_Api_Documentation">Documentation</a></h4>
+                  <section><p> <code>Documentation</code> provides the information for describing a service.</p>
+<p> Example:
+ <pre><code>documentation:
+   summary: &gt;
+     The Google Calendar API gives access
+     to most calendar features.
+   pages:<p>
+<ul>
+<li>name: Overview
+content: &#40;== include google/foo/overview.md ==&#41;</li>
+<li>name: Tutorial
+content: &#40;== include google/foo/tutorial.md ==&#41;
+subpages;<ul>
+<li>name: Java
+content: &#40;== include google/foo/tutorial_java.md ==&#41;
+rules:</li>
+</ul>
+</li>
+<li>selector: google.calendar.Calendar.Get
+description: &gt;
+  ...</li>
+<li><p>selector: google.calendar.Calendar.Put
+description: &gt;
+  ...
+</li></ul></code></pre>
+Documentation is provided in markdown syntax. In addition to
+standard markdown features, definition lists, tables and fenced
+code blocks are supported. Section headers can be provided and are
+interpreted relative to the section nesting of the context where
+a documentation fragment is embedded.</p>
+<p>Documentation from the IDL is merged with documentation defined
+via the config at normalization time, where documentation provided
+by config rules overrides IDL provided.</p>
+<p>A number of constructs specific to the API platform are supported
+in documentation text.</p>
+<p>In order to reference a proto element, the following
+notation can be used:
+<pre><code>&#91;fully.qualified.proto.name]&#91;]</code></pre>
+To override the display text used for the link, this can be used:
+<pre><code>&#91;display text]&#91;fully.qualified.proto.name]</code></pre>
+Text can be excluded from doc using the following notation:
+<pre><code>&#40;-- internal comment --&#41;</code></pre>
+Comments can be made conditional using a visibility label. The below
+text will be only rendered if the <code>BETA</code> label is available:
+<pre><code>&#40;--BETA: comment for BETA users --&#41;</code></pre>
+A few directives are available in documentation. Note that
+directives must appear on a single line to be properly
+identified. The <code>include</code> directive includes a markdown file from
+an external source:
+<pre><code>&#40;== include path/to/file ==&#41;</code></pre>
+The <code>resource_for</code> directive marks a message to be the resource of
+a collection in REST view. If it is not specified, tools attempt
+to infer the resource from the operations in a collection:
+<pre><code>&#40;== resource_for v1.shelves.books ==&#41;</code></pre>
+The directive <code>suppress_warning</code> does not directly affect documentation
+and is documented together with service config validation.</p>
+
+
+</section>
+                  <h4><a class="xref" href="Google.Api.DocumentationReflection.html#Google_Api_DocumentationReflection">DocumentationReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/documentation.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.DocumentationRule.html#Google_Api_DocumentationRule">DocumentationRule</a></h4>
+                  <section><p> A documentation rule provides information about individual API elements.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Http.html#Google_Api_Http">Http</a></h4>
+                  <section><p> Defines the HTTP configuration for a service. It contains a list of
+ [HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method
+ to one or more HTTP REST API methods.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.HttpReflection.html#Google_Api_HttpReflection">HttpReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/http.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.HttpRule.html#Google_Api_HttpRule">HttpRule</a></h4>
+                  <section><p> <code>HttpRule</code> defines the mapping of an RPC method to one or more HTTP
+ REST APIs.  The mapping determines what portions of the request
+ message are populated from the path, query parameters, or body of
+ the HTTP request.  The mapping is typically specified as an
+ <code>google.api.http</code> annotation, see &quot;google/api/annotations.proto&quot;
+ for details.</p>
+<p> The mapping consists of a field specifying the path template and
+ method kind.  The path template can refer to fields in the request
+ message, as in the example below which describes a REST GET
+ operation on a resource collection of messages:</p>
+<pre><code class="lang-proto"> service Messaging {
+   rpc GetMessage(GetMessageRequest) returns (Message) {
+     option (google.api.http).get = &quot;/v1/messages/{message_id}/{sub.subfield}&quot;;
+   }
+ }
+ message GetMessageRequest {
+   message SubMessage {
+     string subfield = 1;
+   }
+   string message_id = 1; // mapped to the URL
+   SubMessage sub = 2;    // `sub.subfield` is url-mapped
+ }
+ message Message {
+   string text = 1; // content of the resource
+ }
+</code></pre>
+<p> This definition enables an automatic, bidrectional mapping of HTTP
+ JSON to RPC. Example:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>GET /v1/messages/123456/foo</code></td>
+<td><code>GetMessage(message_id: &quot;123456&quot; sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
+</tr>
+</tbody>
+</table>
+<p> In general, not only fields but also field paths can be referenced
+ from a path pattern. Fields mapped to the path pattern cannot be
+ repeated and must have a primitive (non-message) type.</p>
+<p> Any fields in the request message which are not bound by the path
+ pattern automatically become (optional) HTTP query
+ parameters. Assume the following definition of the request message:</p>
+<pre><code class="lang-proto"> message GetMessageRequest {
+   message SubMessage {
+     string subfield = 1;
+   }
+   string message_id = 1; // mapped to the URL
+   int64 revision = 2;    // becomes a parameter
+   SubMessage sub = 3;    // `sub.subfield` becomes a parameter
+ }
+</code></pre>
+<p> This enables a HTTP JSON to RPC mapping as below:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>GET /v1/messages/123456?revision=2&amp;sub.subfield=foo</code></td>
+<td><code>GetMessage(message_id: &quot;123456&quot; revision: 2 sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
+</tr>
+</tbody>
+</table>
+<p> Note that fields which are mapped to HTTP parameters must have a
+ primitive type or a repeated primitive type. Message types are not
+ allowed. In the case of a repeated type, the parameter can be
+ repeated in the URL, as in <code>...?param=A&amp;param=B</code>.</p>
+<p> For HTTP method kinds which allow a request body, the <code>body</code> field
+ specifies the mapping. Consider a REST update method on the
+ message resource collection:</p>
+<pre><code class="lang-proto"> service Messaging {
+   rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
+     option (google.api.http) = {
+       put: &quot;/v1/messages/{message_id}&quot;
+       body: &quot;message&quot;
+     };
+   }
+ }
+ message UpdateMessageRequest {
+   string message_id = 1; // mapped to the URL
+   Message message = 2;   // mapped to the body
+ }
+</code></pre>
+<p> The following HTTP JSON to RPC mapping is enabled, where the
+ representation of the JSON in the request body is determined by
+ protos JSON encoding:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
+<td><code>UpdateMessage(message_id: &quot;123456&quot; message { text: &quot;Hi!&quot; })</code></td>
+</tr>
+</tbody>
+</table>
+<p> The special name <code>*</code> can be used in the body mapping to define that
+ every field not bound by the path template should be mapped to the
+ request body.  This enables the following alternative definition of
+ the update method:</p>
+<pre><code class="lang-proto"> service Messaging {
+   rpc UpdateMessage(Message) returns (Message) {
+     option (google.api.http) = {
+       put: &quot;/v1/messages/{message_id}&quot;
+       body: &quot;*&quot;
+     };
+   }
+ }
+ message Message {
+   string message_id = 1;
+   string text = 2;
+ }
+</code></pre>
+<p> The following HTTP JSON to RPC mapping is enabled:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
+<td><code>UpdateMessage(message_id: &quot;123456&quot; text: &quot;Hi!&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+<p> Note that when using <code>*</code> in the body mapping, it is not possible to
+ have HTTP parameters, as all fields not bound by the path end in
+ the body. This makes this option more rarely used in practice of
+ defining REST APIs. The common usage of <code>*</code> is in custom methods
+ which don&#39;t use the URL at all for transferring data.</p>
+<p> It is possible to define multiple HTTP methods for one RPC by using
+ the <code>additional_bindings</code> option. Example:</p>
+<pre><code class="lang-proto"> service Messaging {
+   rpc GetMessage(GetMessageRequest) returns (Message) {
+     option (google.api.http) = {
+       get: &quot;/v1/messages/{message_id}&quot;
+       additional_bindings {
+         get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
+       }
+     };
+   }
+ }
+ message GetMessageRequest {
+   string message_id = 1;
+   string user_id = 2;
+ }
+</code></pre>
+<p> This enables the following two alternative HTTP JSON to RPC
+ mappings:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>GET /v1/messages/123456</code></td>
+<td><code>GetMessage(message_id: &quot;123456&quot;)</code></td>
+</tr>
+<tr>
+<td> <code>GET /v1/users/me/messages/123456</code></td>
+<td><code>GetMessage(user_id: &quot;me&quot; message_id: &quot;123456&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="rules-for-http-mapping">Rules for HTTP mapping</h1>
+<p> The rules for mapping HTTP path, query parameters, and body fields
+ to the request message are as follows:</p>
+<ol>
+<li>The <code>body</code> field specifies either <code>*</code> or a field path, or is
+omitted. If omitted, it assumes there is no HTTP body.</li>
+<li>Leaf fields (recursive expansion of nested messages in the
+request) can be classified into three types:
+ (a) Matched in the URL template.
+ (b) Covered by body (if body is <code>*</code>, everything except (a) fields;<pre><code> else everything under the body field)
+</code></pre> (c) All other fields.</li>
+<li>URL query parameters found in the HTTP request are mapped to (c) fields.</li>
+<li><p>Any body sent with an HTTP request can contain only (b) fields.</p>
+<p>The syntax of the path template is as follows:</p>
+<p> Template = &quot;/&quot; Segments [ Verb ] ;
+ Segments = Segment { &quot;/&quot; Segment } ;
+ Segment  = &quot;<em>&quot; | &quot;</em>*&quot; | LITERAL | Variable ;
+ Variable = &quot;{&quot; FieldPath [ &quot;=&quot; Segments ] &quot;}&quot; ;
+ FieldPath = IDENT { &quot;.&quot; IDENT } ;
+ Verb     = &quot;:&quot; LITERAL ;</p>
+<p>The syntax <code>*</code> matches a single path segment. It follows the semantics of
+<a href="https://tools.ietf.org/html/rfc6570">RFC 6570</a> Section 3.2.2 Simple String
+Expansion.</p>
+<p>The syntax <code>**</code> matches zero or more path segments. It follows the semantics
+of <a href="https://tools.ietf.org/html/rfc6570">RFC 6570</a> Section 3.2.3 Reserved
+Expansion.</p>
+<p>The syntax <code>LITERAL</code> matches literal text in the URL path.</p>
+<p>The syntax <code>Variable</code> matches the entire path as specified by its template;
+this nested template must not contain further variables. If a variable
+matches a single path segment, its template may be omitted, e.g. <code>{var}</code>
+is equivalent to <code>{var=*}</code>.</p>
+<p>NOTE: the field paths in variables and in the <code>body</code> must not refer to
+repeated fields or map fields.</p>
+<p>Use CustomHttpPattern to specify any HTTP method that is not included in the
+<code>pattern</code> field, such as HEAD, or &quot;*&quot; to leave the HTTP method unspecified for
+a given URL path rule. The wild-card rule is useful for services that provide
+content to Web (HTML) clients.</p>
+</li>
+</ol>
+</section>
+                  <h4><a class="xref" href="Google.Api.LabelDescriptor.html#Google_Api_LabelDescriptor">LabelDescriptor</a></h4>
+                  <section><p> A description of a label.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LabelDescriptor.Types.html#Google_Api_LabelDescriptor_Types">LabelDescriptor.Types</a></h4>
+                  <section><p>Container for nested types declared in the LabelDescriptor message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LabelReflection.html#Google_Api_LabelReflection">LabelReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/label.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LogDescriptor.html#Google_Api_LogDescriptor">LogDescriptor</a></h4>
+                  <section><p> A description of a log type. Example in YAML format:</p>
+<pre><code> - name: library.googleapis.com/activity_history
+   description: The history of borrowing and returning library items.
+   display_name: Activity
+   labels:
+   - key: /customer_id
+     description: Identifier of a library customer
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.Logging.html#Google_Api_Logging">Logging</a></h4>
+                  <section><p> Logging configuration of the service.</p>
+<p> The following example shows how to configure logs to be sent to the
+ producer and consumer projects. In the example,
+ the <code>library.googleapis.com/activity_history</code> log is
+ sent to both the producer and consumer projects, whereas
+ the <code>library.googleapis.com/purchase_history</code> log is only sent to the
+ producer project:</p>
+<pre><code> monitored_resources:
+ - type: library.googleapis.com/branch
+   labels:
+   - key: /city
+     description: The city where the library branch is located in.
+   - key: /name
+     description: The name of the branch.
+ logs:
+ - name: library.googleapis.com/activity_history
+   labels:
+   - key: /customer_id
+ - name: library.googleapis.com/purchase_history
+ logging:
+   producer_destinations:
+   - monitored_resource: library.googleapis.com/branch
+     logs:
+     - library.googleapis.com/activity_history
+     - library.googleapis.com/purchase_history
+   consumer_destinations:
+   - monitored_resource: library.googleapis.com/branch
+     logs:
+     - library.googleapis.com/activity_history
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.Logging.Types.html#Google_Api_Logging_Types">Logging.Types</a></h4>
+                  <section><p>Container for nested types declared in the Logging message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Logging.Types.LoggingDestination.html#Google_Api_Logging_Types_LoggingDestination">Logging.Types.LoggingDestination</a></h4>
+                  <section><p> Configuration of a specific logging destination (the producer project
+ or the consumer project).</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LoggingReflection.html#Google_Api_LoggingReflection">LoggingReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/logging.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LogReflection.html#Google_Api_LogReflection">LogReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/log.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Metric.html#Google_Api_Metric">Metric</a></h4>
+                  <section><p> A specific metric identified by specifying values for all of the
+ labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></h4>
+                  <section><p> Defines a metric type and its schema.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.Types.html#Google_Api_MetricDescriptor_Types">MetricDescriptor.Types</a></h4>
+                  <section><p>Container for nested types declared in the MetricDescriptor message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricReflection.html#Google_Api_MetricReflection">MetricReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/metric.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></h4>
+                  <section><p> An object representing a resource that can be used for monitoring, logging,
+ billing, or other purposes. Examples include virtual machine instances,
+ databases, and storage devices such as disks. The <code>type</code> field identifies a
+ [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object that describes the resource&#39;s
+ schema. Information in the <code>labels</code> field identifies the actual resource and
+ its attributes according to the schema. For example, a particular Compute
+ Engine VM instance could be represented by the following object, because the
+ [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] for <code>&quot;gce_instance&quot;</code> has labels
+ <code>&quot;instance_id&quot;</code> and <code>&quot;zone&quot;</code>:</p>
+<pre><code> { &quot;type&quot;: &quot;gce_instance&quot;,
+   &quot;labels&quot;: { &quot;instance_id&quot;: &quot;my-instance&quot;,
+               &quot;zone&quot;: &quot;us-central1-a&quot; }}
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a></h4>
+                  <section><p> An object that describes the schema of a [MonitoredResource][google.api.MonitoredResource] object using a
+ type name and a set of labels.  For example, the monitored resource
+ descriptor for Google Compute Engine VM instances has a type of
+ <code>&quot;gce_instance&quot;</code> and specifies the use of the labels <code>&quot;instance_id&quot;</code> and
+ <code>&quot;zone&quot;</code> to identify particular VM instances.</p>
+<p> Different APIs can support different monitored resource types. APIs generally
+ provide a <code>list</code> method that returns the monitored resource descriptors used
+ by the API.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MonitoredResourceReflection.html#Google_Api_MonitoredResourceReflection">MonitoredResourceReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/monitored_resource.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Monitoring.html#Google_Api_Monitoring">Monitoring</a></h4>
+                  <section><p> Monitoring configuration of the service.</p>
+<p> The example below shows how to configure monitored resources and metrics
+ for monitoring. In the example, a monitored resource and two metrics are
+ defined. The <code>library.googleapis.com/book/returned_count</code> metric is sent
+ to both producer and consumer projects, whereas the
+ <code>library.googleapis.com/book/overdue_count</code> metric is only sent to the
+ consumer project.</p>
+<pre><code> monitored_resources:
+ - type: library.googleapis.com/branch
+   labels:
+   - key: /city
+     description: The city where the library branch is located in.
+   - key: /name
+     description: The name of the branch.
+ metrics:
+ - name: library.googleapis.com/book/returned_count
+   metric_kind: DELTA
+   value_type: INT64
+   labels:
+   - key: /customer_id
+ - name: library.googleapis.com/book/overdue_count
+   metric_kind: GAUGE
+   value_type: INT64
+   labels:
+   - key: /customer_id
+ monitoring:
+   producer_destinations:
+   - monitored_resource: library.googleapis.com/branch
+     metrics:
+     - library.googleapis.com/book/returned_count
+   consumer_destinations:
+   - monitored_resource: library.googleapis.com/branch
+     metrics:
+     - library.googleapis.com/book/returned_count
+     - library.googleapis.com/book/overdue_count
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.Monitoring.Types.html#Google_Api_Monitoring_Types">Monitoring.Types</a></h4>
+                  <section><p>Container for nested types declared in the Monitoring message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Monitoring.Types.MonitoringDestination.html#Google_Api_Monitoring_Types_MonitoringDestination">Monitoring.Types.MonitoringDestination</a></h4>
+                  <section><p> Configuration of a specific monitoring destination (the producer project
+ or the consumer project).</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MonitoringReflection.html#Google_Api_MonitoringReflection">MonitoringReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/monitoring.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.OAuthRequirements.html#Google_Api_OAuthRequirements">OAuthRequirements</a></h4>
+                  <section><p> OAuth scopes are a way to define data and permissions on data. For example,
+ there are scopes defined for &quot;Read-only access to Google Calendar&quot; and
+ &quot;Access to Cloud Platform&quot;. Users can consent to a scope for an application,
+ giving it permission to access that data on their behalf.</p>
+<p> OAuth scope specifications should be fairly coarse grained; a user will need
+ to see and understand the text description of what your scope means.</p>
+<p> In most cases: use one or at most two OAuth scopes for an entire family of
+ products. If your product has multiple APIs, you should probably be sharing
+ the OAuth scope across all of those APIs.</p>
+<p> When you need finer grained OAuth consent screens: talk with your product
+ management about how developers will use them in practice.</p>
+<p> Please note that even though each of the canonical scopes is enough for a
+ request to be accepted and passed to the backend, a request can still fail
+ due to the backend requiring additional scopes or permissions.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Page.html#Google_Api_Page">Page</a></h4>
+                  <section><p> Represents a documentation page. A page can contain subpages to represent
+ nested documentation set structure.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ProjectProperties.html#Google_Api_ProjectProperties">ProjectProperties</a></h4>
+                  <section><p> A descriptor for defining project properties for a service. One service may
+ have many consumer projects, and the service may want to behave differently
+ depending on some properties on the project. For example, a project may be
+ associated with a school, or a business, or a government agency, a business
+ type property on the project may affect how a service responds to the client.
+ This descriptor defines which properties are allowed to be set on a project.</p>
+<p> Example:</p>
+<pre><code>project_properties:
+  properties:
+  - name: NO_WATERMARK
+    type: BOOL
+    description: Allows usage of the API without watermarks.
+  - name: EXTENDED_TILE_CACHE_PERIOD
+    type: INT64
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.Property.html#Google_Api_Property">Property</a></h4>
+                  <section><p> Defines project properties.</p>
+<p> API services can define properties that can be assigned to consumer projects
+ so that backends can perform response customization without having to make
+ additional calls or maintain additional storage. For example, Maps API
+ defines properties that controls map tile cache period, or whether to embed a
+ watermark in a result.</p>
+<p> These values can be set via API producer console. Only API providers can
+ define and set these properties.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Property.Types.html#Google_Api_Property_Types">Property.Types</a></h4>
+                  <section><p>Container for nested types declared in the Property message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Service.html#Google_Api_Service">Service</a></h4>
+                  <section><p> <code>Service</code> is the root object of the configuration schema. It
+ describes basic information like the name of the service and the
+ exposed API interfaces, and delegates other aspects to configuration
+ sub-sections.</p>
+<p> Example:</p>
+<pre><code> type: google.api.Service
+ config_version: 1
+ name: calendar.googleapis.com
+ title: Google Calendar API
+ apis:
+ - name: google.calendar.Calendar
+ backend:
+   rules:
+   - selector: &quot;*&quot;
+     address: calendar.example.com
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.ServiceReflection.html#Google_Api_ServiceReflection">ServiceReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/service.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.SystemParameter.html#Google_Api_SystemParameter">SystemParameter</a></h4>
+                  <section><p> Define a parameter&#39;s name and location. The parameter may be passed as either
+ an HTTP header or a URL query parameter, and if both are passed the behavior
+ is implementation-dependent.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.SystemParameterReflection.html#Google_Api_SystemParameterReflection">SystemParameterReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/system_parameter.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.SystemParameterRule.html#Google_Api_SystemParameterRule">SystemParameterRule</a></h4>
+                  <section><p> Define a system parameter rule mapping system parameter definitions to
+ methods.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.SystemParameters.html#Google_Api_SystemParameters">SystemParameters</a></h4>
+                  <section><h3 id="system-parameter-configuration">System parameter configuration</h3>
+<p> A system parameter is a special kind of parameter defined by the API
+ system, not by an individual API. It is typically mapped to an HTTP header
+ and/or a URL query parameter. This configuration specifies which methods
+ change the names of the system parameters.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Usage.html#Google_Api_Usage">Usage</a></h4>
+                  <section><p> Configuration controlling usage of a service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Usage.Types.html#Google_Api_Usage_Types">Usage.Types</a></h4>
+                  <section><p>Container for nested types declared in the Usage message type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.UsageReflection.html#Google_Api_UsageReflection">UsageReflection</a></h4>
+                  <section><p>Holder for reflection information generated from google/api/usage.proto</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.UsageRule.html#Google_Api_UsageRule">UsageRule</a></h4>
+                  <section><p> Usage configuration rules for the service.</p>
+<p> NOTE: Under development.</p>
+<p> Use this rule to configure unregistered calls for the service. Unregistered
+ calls are calls that do not contain consumer project identity.
+ (Example: calls that do not contain an API key).
+ By default, API methods do not allow unregistered calls, and each method call
+ must be identified by a consumer project identity. Use this rule to
+ allow/disallow unregistered calls.</p>
+<p> Example of an API that wants to allow unregistered calls for entire service.</p>
+<pre><code> usage:
+   rules:
+   - selector: &quot;*&quot;
+     allow_unregistered_calls: true
+</code></pre><p> Example of a method that wants to allow unregistered calls.</p>
+<pre><code> usage:
+   rules:
+   - selector: &quot;google.example.library.v1.LibraryService.CreateBook&quot;
+     allow_unregistered_calls: true
+</code></pre></section>
+                <h3 id="enums">Enums
+              </h3>
+                  <h4><a class="xref" href="Google.Api.HttpRule.PatternOneofCase.html#Google_Api_HttpRule_PatternOneofCase">HttpRule.PatternOneofCase</a></h4>
+                  <section><p>Enum of possible cases for the &quot;pattern&quot; oneof.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LabelDescriptor.Types.ValueType.html#Google_Api_LabelDescriptor_Types_ValueType">LabelDescriptor.Types.ValueType</a></h4>
+                  <section><p> Value types that can be used as label values.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html#Google_Api_MetricDescriptor_Types_MetricKind">MetricDescriptor.Types.MetricKind</a></h4>
+                  <section><p> The kind of measurement. It describes how the data is reported.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.Types.ValueType.html#Google_Api_MetricDescriptor_Types_ValueType">MetricDescriptor.Types.ValueType</a></h4>
+                  <section><p> The value type of a metric.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Property.Types.PropertyType.html#Google_Api_Property_Types_PropertyType">Property.Types.PropertyType</a></h4>
+                  <section><p> Supported data type of the property values</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Usage.Types.ServiceAccess.html#Google_Api_Usage_Types_ServiceAccess">Usage.Types.ServiceAccess</a></h4>
+                  <section><p> Service access types.</p>
+<p> Access to restricted API features is always controlled by
+ [visibility][google.api.Visibility], independent of the ServiceAccess type.</p>
+</section>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
