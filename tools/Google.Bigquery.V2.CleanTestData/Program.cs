@@ -28,7 +28,7 @@ namespace Google.Bigquery.V2.CleanTestData
             }
             string projectId = args[0];
             var client = BigqueryClient.Create(projectId);
-            var datasets = client.ListDatasets().Flatten().ToList();
+            var datasets = client.ListDatasets().ToList();
             foreach (var dataset in datasets.Where(IsTestDataset))
             {
                 var id = dataset.Reference.DatasetId;

@@ -79,9 +79,9 @@ namespace Google.Storage.V1.IntegrationTests
 
         private async Task AssertObjects(string prefix, ListObjectsOptions options, params string[] expectedNames)
         {
-            var actual = _fixture.Client.ListObjects(_fixture.ReadBucket, prefix, options).Flatten();
+            IEnumerable<Object> actual = _fixture.Client.ListObjects(_fixture.ReadBucket, prefix, options);
             AssertObjectNames(actual, expectedNames);
-            actual = await _fixture.Client.ListObjectsAsync(_fixture.ReadBucket, prefix, options).Flatten().ToList();
+            actual = await _fixture.Client.ListObjectsAsync(_fixture.ReadBucket, prefix, options).ToList();
             AssertObjectNames(actual, expectedNames);
         }
 

@@ -62,9 +62,9 @@ namespace Google.Storage.V1.IntegrationTests
         // Fetches buckets using the given options in each possible way, validating that the expected bucket names are returned.
         private async Task AssertBuckets(ListBucketsOptions options, params string[] expectedBucketNames)
         {
-            IEnumerable<Bucket> actual = _fixture.Client.ListBuckets(_fixture.ProjectId, options).Flatten();
+            IEnumerable<Bucket> actual = _fixture.Client.ListBuckets(_fixture.ProjectId, options);
             AssertBucketNames(actual, expectedBucketNames);
-            actual = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, options).Flatten().ToList();
+            actual = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, options).ToList();
             AssertBucketNames(actual, expectedBucketNames);
         }
 

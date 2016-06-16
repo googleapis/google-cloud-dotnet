@@ -115,7 +115,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var bucket = _fixture.ReadBucket;
             var name = _fixture.SmallThenLargeObject;
-            var objects = _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true }).Flatten().ToList();
+            var objects = _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true }).ToList();
             Assert.Equal(2, objects.Count);
 
             // Fetch them by generation and check size matches
@@ -132,8 +132,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var bucket = _fixture.ReadBucket;
             var name = _fixture.SmallThenLargeObject;
-            var objects = _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true })
-                .Flatten()
+            var objects = _fixture.Client.ListObjects(bucket, name, new ListObjectsOptions { Versions = true })                
                 .OrderBy(x => x.Generation)
                 .ToList();
             Assert.Equal(2, objects.Count);
