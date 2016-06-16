@@ -18,24 +18,17 @@ the moment.
 
 # Build process
 
-Start in the `docs` directory (the one containing this readme).
+Start in the `docs` directory (the one containing this readme). On
+Windows, you can now run `builddocs.bat`, which goes through the
+following steps:
 
-- Delete the `site_` directory if it already exists. This is where
-  you will end up with output.
-- Run `docfx metadata -f`   
-  This extracts the XML comment files from
-  the projects in the `src` root folder, and builds YAML files in
-  `obj/api`.
-- Run `dnx -p ../tools/Google.GCloud.Tools.GenerateSnippetMarkdown
-run`  
-  This finds snippets in the projects in the `snippets` root folder,
-  extracts them to text files (in `obj/snippets`) and also generates
-  markdown files linking the snippets to the YAML files generated in
-  the previous step, so that the API documentation can use the
-  snippets as examples.
-- Run `docfx build`  
-  This builds the `_site` directory from the manually-written content
-  (`toc.yml`, `index.md`, `articles/*.md`) and the API documentation.
+- Deletes temporary/output folders (`external`, `obj`, `_site`)
+- Fetches source for external projects which should be documented in
+  the same set of reference documentation (e.g. GAX)
+- Extracts the metadata from the source code using `docfx`
+- Extracts the snippets from the `snippets` directory for use in
+  the site
+- Builds the site into `_site`.
 
 # Testing
 

@@ -4,4 +4,5 @@ obj
 bin
 project.lock.json
 _site
+external
 *~
