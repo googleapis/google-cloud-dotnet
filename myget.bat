@@ -5,7 +5,7 @@ REM We've found some oddities when using our own feed.
 REM Basically, we want to fetch everything from nuget.org.
 rmdir /s /q %USERPROFILE%\.dnx\packages
 
-call dnu restore
+call dnu restore src snippets test tools
 IF ERRORLEVEL 1 EXIT /B 1
 
 REM We want to build and package everthing under src.
