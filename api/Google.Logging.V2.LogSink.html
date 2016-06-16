@@ -69,7 +69,7 @@
               
               <h1 id="Google_Logging_V2_LogSink" data-uid="Google.Logging.V2.LogSink">Class LogSink
               </h1>
-              <div class="markdown level0 summary"><p> Describes a sink used to export log entries outside Cloud Logging.</p>
+              <div class="markdown level0 summary"><p> Describes a sink used to export log entries outside Stackdriver Logging.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -277,12 +277,13 @@ public sealed class LogSink : IMessage&lt;LogSink&gt;, IMessage, IEquatable&lt;L
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogSink_Filter" data-uid="Google.Logging.V2.LogSink.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p> An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>
- that defines the log entries to be exported.  The filter must be
- consistent with the log entry format designed by the
+              <div class="markdown level1 summary"><p> An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>. Only
+ log entries matching that filter are exported. The filter must be
+ consistent with the log entry format specified by the
  <code>outputVersionFormat</code> parameter, regardless of the format of the
- log entry that was originally written to Cloud Logging.
- Example: <code>&quot;logName:syslog AND severity&gt;=ERROR&quot;</code>.</p>
+ log entry that was originally written to Stackdriver Logging.
+ Example (V2 format):
+ <code>&quot;logName=projects/my-projectid/logs/syslog AND severity&gt;=ERROR&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -332,9 +333,9 @@ public sealed class LogSink : IMessage&lt;LogSink&gt;, IMessage, IEquatable&lt;L
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogSink_OutputVersionFormat" data-uid="Google.Logging.V2.LogSink.OutputVersionFormat">OutputVersionFormat</h4>
-              <div class="markdown level1 summary"><p> The log entry version used when exporting log entries from this
- sink.  This version does not have to correspond to the version of
- the log entry when it was written to Cloud Logging.</p>
+              <div class="markdown level1 summary"><p> The log entry version to use for this sink&#39;s exported log entries.
+ This version does not have to correspond to the version of the log entry
+ when it was written to Stackdriver Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

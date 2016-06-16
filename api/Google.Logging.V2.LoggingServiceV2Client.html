@@ -130,7 +130,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -204,7 +204,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.PathTemplate</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate">PathTemplate</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -228,7 +228,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.PathTemplate</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate">PathTemplate</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -256,9 +256,9 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <span class="xref">ServiceEndpoint</span>.</p>
+                    <td><p>Optional <a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a>.</p>
 </td>
                   </tr>
                   <tr>
@@ -354,9 +354,9 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <span class="xref">ServiceEndpoint</span>.</p>
+                    <td><p>Optional <a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a>.</p>
 </td>
                   </tr>
                   <tr>
@@ -405,10 +405,12 @@ The log will reappear if it receives new entries.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>logName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the log to delete.  Example:
+<code>&quot;projects/my-project/logs/syslog&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -437,10 +439,12 @@ The log will reappear if it receives new entries.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>logName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the log to delete.  Example:
+<code>&quot;projects/my-project/logs/syslog&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -485,7 +489,9 @@ The log will reappear if it receives new entries.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>logName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the log to delete.  Example:
+<code>&quot;projects/my-project/logs/syslog&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
@@ -511,13 +517,13 @@ The log will reappear if it receives new entries.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_LoggingServiceV2Client_GetLogName_System_String_System_String_" data-uid="Google.Logging.V2.LoggingServiceV2Client.GetLogName(System.String,System.String)">GetLogName(String, String)</h4>
+              <h4 id="Google_Logging_V2_LoggingServiceV2Client_FormatLogName_System_String_System_String_" data-uid="Google.Logging.V2.LoggingServiceV2Client.FormatLogName(System.String,System.String)">FormatLogName(String, String)</h4>
               <div class="markdown level1 summary"><p>Creates a log resource name from its component IDs.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static string GetLogName(string projectId, string logId)</code></pre>
+                <pre><code class="lang-csharp hljs">public static string FormatLogName(string projectId, string logId)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -559,13 +565,13 @@ The log will reappear if it receives new entries.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_LoggingServiceV2Client_GetProjectName_System_String_" data-uid="Google.Logging.V2.LoggingServiceV2Client.GetProjectName(System.String)">GetProjectName(String)</h4>
+              <h4 id="Google_Logging_V2_LoggingServiceV2Client_FormatProjectName_System_String_" data-uid="Google.Logging.V2.LoggingServiceV2Client.FormatProjectName(System.String)">FormatProjectName(String)</h4>
               <div class="markdown level1 summary"><p>Creates a project resource name from its component IDs.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static string GetProjectName(string projectId)</code></pre>
+                <pre><code class="lang-csharp hljs">public static string FormatProjectName(string projectId)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -601,7 +607,7 @@ The log will reappear if it receives new entries.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_LoggingServiceV2Client_ListLogEntriesPageStream_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.ListLogEntriesPageStream(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogEntriesPageStream(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Logging_V2_LoggingServiceV2Client_ListLogEntries_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.ListLogEntries(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogEntries(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
 Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
@@ -609,7 +615,7 @@ Logging.  For ways to export log entries, see
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesPageStream(IEnumerable&lt;string&gt; projectIds, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntries(IEnumerable&lt;string&gt; projectIds, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -624,7 +630,9 @@ Logging.  For ways to export log entries, see
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td><em>projectIds</em></td>
-                    <td></td>
+                    <td><p>Required. One or more project IDs or project numbers from which to retrieve
+log entries.  Examples of a project ID: <code>&quot;my-project-1A&quot;</code>, <code>&quot;1234567890&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
@@ -638,7 +646,13 @@ filter matches all log entries.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>orderBy</em></td>
-                    <td></td>
+                    <td><p>Optional. How the results should be sorted.  Presently, the only permitted
+values are <code>&quot;timestamp asc&quot;</code> (default) and <code>&quot;timestamp desc&quot;</code>. The first
+option returns entries in order of increasing values of
+<code>LogEntry.timestamp</code> (oldest first), and the second option returns entries
+in order of decreasing timestamps (newest first).  Entries with equal
+timestamps are returned in order of <code>LogEntry.insertId</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
@@ -656,7 +670,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -673,13 +687,13 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.ListLogEntriesResponse.html#Google_Logging_V2_ListLogEntriesResponse">ListLogEntriesResponse</a>, <a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
-                    <td><p>A sequence of pages of LogEntry items.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable%602.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogEntriesResponse.html#Google_Logging_V2_ListLogEntriesResponse">ListLogEntriesResponse</a>, <a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
+                    <td><p>A pageable sequence of LogEntry resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_LoggingServiceV2Client_ListLogEntriesPageStreamAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.ListLogEntriesPageStreamAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogEntriesPageStreamAsync(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogEntriesAsync(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
 Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
@@ -687,7 +701,7 @@ Logging.  For ways to export log entries, see
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesPageStreamAsync(IEnumerable&lt;string&gt; projectIds, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;ListLogEntriesResponse, LogEntry&gt; ListLogEntriesAsync(IEnumerable&lt;string&gt; projectIds, string filter, string orderBy, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -702,7 +716,9 @@ Logging.  For ways to export log entries, see
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td><em>projectIds</em></td>
-                    <td></td>
+                    <td><p>Required. One or more project IDs or project numbers from which to retrieve
+log entries.  Examples of a project ID: <code>&quot;my-project-1A&quot;</code>, <code>&quot;1234567890&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
@@ -716,7 +732,13 @@ filter matches all log entries.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>orderBy</em></td>
-                    <td></td>
+                    <td><p>Optional. How the results should be sorted.  Presently, the only permitted
+values are <code>&quot;timestamp asc&quot;</code> (default) and <code>&quot;timestamp desc&quot;</code>. The first
+option returns entries in order of increasing values of
+<code>LogEntry.timestamp</code> (oldest first), and the second option returns entries
+in order of decreasing timestamps (newest first).  Entries with equal
+timestamps are returned in order of <code>LogEntry.insertId</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
@@ -734,7 +756,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -751,8 +773,8 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.ListLogEntriesResponse.html#Google_Logging_V2_ListLogEntriesResponse">ListLogEntriesResponse</a>, <a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
-                    <td><p>An asynchronous sequence of pages of LogEntry items.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable%602.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogEntriesResponse.html#Google_Logging_V2_ListLogEntriesResponse">ListLogEntriesResponse</a>, <a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of LogEntry resources.</p>
 </td>
                   </tr>
                 </tbody>
@@ -789,8 +811,8 @@ and <a class="xref" href="Google.Logging.V2.LoggingServiceV2Client.html#Google_L
 in turn be shut down by another call to this method.</p>
 </div>
               <h4 id="Google_Logging_V2_LoggingServiceV2Client_WriteLogEntries_System_String_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Logging_V2_LogEntry__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.WriteLogEntries(System.String,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Logging.V2.LogEntry},Google.Api.Gax.CallSettings)">WriteLogEntries(String, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Cloud Logging.
-All log entries in Cloud Logging are written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
+written by this method.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -810,10 +832,14 @@ All log entries in Cloud Logging are written by this method.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>logName</em></td>
-                    <td></td>
+                    <td><p>Optional. A default log resource name for those log entries in <code>entries</code>
+that do not specify their own <code>logName</code>.  Example:
+<code>&quot;projects/my-project/logs/syslog&quot;</code>.  See
+[LogEntry][google.logging.v2.LogEntry].</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
                     <td><em>resource</em></td>
                     <td><p>Optional. A default monitored resource for those log entries in <code>entries</code>
 that do not specify their own <code>resource</code>.</p>
@@ -833,10 +859,13 @@ Example: <code>{ &quot;size&quot;: &quot;large&quot;, &quot;color&quot;:&quot;re
                     <td><em>entries</em></td>
                     <td><p>Required. The log entries to write. The log entries must have values for
 all required fields.</p>
+<p>To improve throughput and to avoid exceeding the quota limit for calls
+to <code>entries.write</code>, use this field to write multiple log entries at once
+rather than  // calling this method for each log entry.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -860,8 +889,8 @@ all required fields.</p>
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_System_String_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Logging_V2_LogEntry__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(System.String,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Logging.V2.LogEntry},Google.Api.Gax.CallSettings)">WriteLogEntriesAsync(String, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Cloud Logging.
-All log entries in Cloud Logging are written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
+written by this method.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -881,10 +910,14 @@ All log entries in Cloud Logging are written by this method.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>logName</em></td>
-                    <td></td>
+                    <td><p>Optional. A default log resource name for those log entries in <code>entries</code>
+that do not specify their own <code>logName</code>.  Example:
+<code>&quot;projects/my-project/logs/syslog&quot;</code>.  See
+[LogEntry][google.logging.v2.LogEntry].</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
                     <td><em>resource</em></td>
                     <td><p>Optional. A default monitored resource for those log entries in <code>entries</code>
 that do not specify their own <code>resource</code>.</p>
@@ -904,10 +937,13 @@ Example: <code>{ &quot;size&quot;: &quot;large&quot;, &quot;color&quot;:&quot;re
                     <td><em>entries</em></td>
                     <td><p>Required. The log entries to write. The log entries must have values for
 all required fields.</p>
+<p>To improve throughput and to avoid exceeding the quota limit for calls
+to <code>entries.write</code>, use this field to write multiple log entries at once
+rather than  // calling this method for each log entry.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -931,8 +967,8 @@ all required fields.</p>
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LoggingServiceV2Client_WriteLogEntriesAsync_System_String_Google_Api_MonitoredResource_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Google_Logging_V2_LogEntry__System_Threading_CancellationToken_" data-uid="Google.Logging.V2.LoggingServiceV2Client.WriteLogEntriesAsync(System.String,Google.Api.MonitoredResource,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IEnumerable{Google.Logging.V2.LogEntry},System.Threading.CancellationToken)">WriteLogEntriesAsync(String, MonitoredResource, IDictionary&lt;String, String&gt;, IEnumerable&lt;LogEntry&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Cloud Logging.
-All log entries in Cloud Logging are written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
+written by this method.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -952,10 +988,14 @@ All log entries in Cloud Logging are written by this method.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>logName</em></td>
-                    <td></td>
+                    <td><p>Optional. A default log resource name for those log entries in <code>entries</code>
+that do not specify their own <code>logName</code>.  Example:
+<code>&quot;projects/my-project/logs/syslog&quot;</code>.  See
+[LogEntry][google.logging.v2.LogEntry].</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
                     <td><em>resource</em></td>
                     <td><p>Optional. A default monitored resource for those log entries in <code>entries</code>
 that do not specify their own <code>resource</code>.</p>
@@ -975,6 +1015,9 @@ Example: <code>{ &quot;size&quot;: &quot;large&quot;, &quot;color&quot;:&quot;re
                     <td><em>entries</em></td>
                     <td><p>Required. The log entries to write. The log entries must have values for
 all required fields.</p>
+<p>To improve throughput and to avoid exceeding the quota limit for calls
+to <code>entries.write</code>, use this field to write multiple log entries at once
+rather than  // calling this method for each log entry.</p>
 </td>
                   </tr>
                   <tr>

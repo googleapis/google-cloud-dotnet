@@ -89,13 +89,13 @@
                   <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ProjectTemplate">ProjectTemplate</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_GetProjectName_System_String_">GetProjectName(String)</a>
+                  <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_FormatProjectName_System_String_">FormatProjectName(String)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_MetricTemplate">MetricTemplate</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_GetMetricName_System_String_System_String_">GetMetricName(String, String)</a>
+                  <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_FormatMetricName_System_String_System_String_">FormatMetricName(String, String)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Logging_V2_MetricsServiceV2Settings_">CreateAsync(ServiceEndpoint, MetricsServiceV2Settings)</a>
@@ -214,7 +214,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override LogMetric CreateLogMetric(string projectName, LogMetric metric, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override LogMetric CreateLogMetric(string parent, LogMetric metric, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -228,8 +228,11 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectName</em></td>
-                    <td></td>
+                    <td><em>parent</em></td>
+                    <td><p>The resource name of the project in which to create the metric.
+Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+<p>The new metric must be provided in the request.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
@@ -239,7 +242,7 @@ already exists.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -270,7 +273,7 @@ already exists.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Task&lt;LogMetric&gt; CreateLogMetricAsync(string projectName, LogMetric metric, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override Task&lt;LogMetric&gt; CreateLogMetricAsync(string parent, LogMetric metric, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -284,8 +287,11 @@ already exists.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectName</em></td>
-                    <td></td>
+                    <td><em>parent</em></td>
+                    <td><p>The resource name of the project in which to create the metric.
+Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+<p>The new metric must be provided in the request.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
@@ -295,7 +301,7 @@ already exists.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -341,10 +347,12 @@ already exists.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the metric to delete.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -374,10 +382,12 @@ already exists.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the metric to delete.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -423,10 +433,12 @@ already exists.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the desired metric.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -472,10 +484,12 @@ already exists.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the desired metric.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -500,13 +514,13 @@ already exists.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_GetLogMetricAsync_System_String_Google_Api_Gax_CallSettings_">GetLogMetricAsync(String, CallSettings)</a></div>
-              <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetricsPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetricsPageStream(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogMetricsPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetrics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetrics(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogMetrics(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetricsPageStream(string projectName, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetrics(string parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -520,8 +534,10 @@ already exists.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectName</em></td>
-                    <td></td>
+                    <td><em>parent</em></td>
+                    <td><p>Required. The resource name containing the metrics.
+Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
@@ -539,7 +555,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -556,21 +572,21 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsResponse.html#Google_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
-                    <td><p>A sequence of pages of LogMetric items.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable%602.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsResponse.html#Google_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A pageable sequence of LogMetric resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ListLogMetricsPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListLogMetricsPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
-              <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetricsPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetricsPageStreamAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogMetricsPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ListLogMetrics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListLogMetrics(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetricsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetricsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListLogMetricsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetricsPageStreamAsync(string projectName, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetricsAsync(string parent, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -584,8 +600,10 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectName</em></td>
-                    <td></td>
+                    <td><em>parent</em></td>
+                    <td><p>Required. The resource name containing the metrics.
+Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
@@ -603,7 +621,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -620,14 +638,14 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsResponse.html#Google_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
-                    <td><p>An asynchronous sequence of pages of LogMetric items.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable%602.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsResponse.html#Google_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of LogMetric resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ListLogMetricsPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListLogMetricsPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ListLogMetricsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListLogMetricsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetric_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetric(System.String,Google.Logging.V2.LogMetric,Google.Api.Gax.CallSettings)">UpdateLogMetric(String, LogMetric, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
 </div>
@@ -649,7 +667,12 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the metric to update.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+<p>The updated metric must be provided in the request and have the
+same identifier that is specified in <code>metricName</code>.
+If the metric does not exist, it is created.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
@@ -660,7 +683,7 @@ exist, then a new metric is created.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -706,7 +729,12 @@ exist, then a new metric is created.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the metric to update.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+<p>The updated metric must be provided in the request and have the
+same identifier that is specified in <code>metricName</code>.
+If the metric does not exist, it is created.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
@@ -717,7 +745,7 @@ exist, then a new metric is created.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>

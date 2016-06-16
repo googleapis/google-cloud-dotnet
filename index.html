@@ -98,12 +98,12 @@ simpler.</p>
 <h2 id="sample-code">Sample code</h2>
 <pre><code class="lang-cs">// First create a topic.
 PublisherClient publisher = PublisherClient.Create();
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 publisher.CreateTopic(topicName);
 
 // Subscribe to the topic.
 SubscriberClient subscriber = SubscriberClient.Create();
-string subscriptionName = SubscriberClient.GetSubscriptionName(projectId, subscriptionId);
+string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
 subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
 </code></pre><h1 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h1>
 <p>A wrapper library over

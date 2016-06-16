@@ -180,13 +180,13 @@ public sealed class ListLogMetricsRequest : IMessage&lt;ListLogMetricsRequest&gt
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_V2_ListLogMetricsRequest_ProjectNameFieldNumber" data-uid="Google.Logging.V2.ListLogMetricsRequest.ProjectNameFieldNumber">ProjectNameFieldNumber</h4>
-              <div class="markdown level1 summary"><p>Field number for the &quot;project_name&quot; field.</p>
+              <h4 id="Google_Logging_V2_ListLogMetricsRequest_ParentFieldNumber" data-uid="Google.Logging.V2.ListLogMetricsRequest.ParentFieldNumber">ParentFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;parent&quot; field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int ProjectNameFieldNumber = 1</code></pre>
+                <pre><code class="lang-csharp hljs">public const int ParentFieldNumber = 1</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -228,11 +228,10 @@ public sealed class ListLogMetricsRequest : IMessage&lt;ListLogMetricsRequest&gt
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_ListLogMetricsRequest_PageSize" data-uid="Google.Logging.V2.ListLogMetricsRequest.PageSize">PageSize</h4>
-              <div class="markdown level1 summary"><p> Optional. The maximum number of results to return from this request.  Fewer
- results might be returned. You must check for the <code>nextPageToken</code> result to
- determine if additional results are available, which you can retrieve by
- passing the <code>nextPageToken</code> value in the <code>pageToken</code> parameter to the next
- request.</p>
+              <div class="markdown level1 summary"><p> Optional. The maximum number of results to return from this request.
+ You must check for presence of <code>nextPageToken</code> to determine if additional
+ results are available, which you can retrieve by passing the
+ <code>nextPageToken</code> value as the <code>pageToken</code> parameter in the next request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -255,13 +254,12 @@ public sealed class ListLogMetricsRequest : IMessage&lt;ListLogMetricsRequest&gt
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Api.Gax.IPageRequest.PageSize</span></div>
+                  <div><a class="xref" href="Google.Api.Gax.IPageRequest.html#Google_Api_Gax_IPageRequest_PageSize">PageSize</a></div>
               <h4 id="Google_Logging_V2_ListLogMetricsRequest_PageToken" data-uid="Google.Logging.V2.ListLogMetricsRequest.PageToken">PageToken</h4>
-              <div class="markdown level1 summary"><p> Optional. If the <code>pageToken</code> request parameter is supplied, then the next
- page of results in the set are retrieved.  The <code>pageToken</code> parameter must
- be set with the value of the <code>nextPageToken</code> result parameter from the
- previous request.  The value of <code>projectName</code> must
- be the same as in the previous request.</p>
+              <div class="markdown level1 summary"><p> Optional. If the <code>pageToken</code> parameter is supplied, then the next page of
+ results is retrieved.  The <code>pageToken</code> parameter must be set to the value
+ of the <code>nextPageToken</code> from the previous response.
+ The value of <code>parent</code> must be the same as in the previous request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -284,7 +282,31 @@ public sealed class ListLogMetricsRequest : IMessage&lt;ListLogMetricsRequest&gt
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Api.Gax.IPageRequest.PageToken</span></div>
+                  <div><a class="xref" href="Google.Api.Gax.IPageRequest.html#Google_Api_Gax_IPageRequest_PageToken">PageToken</a></div>
+              <h4 id="Google_Logging_V2_ListLogMetricsRequest_Parent" data-uid="Google.Logging.V2.ListLogMetricsRequest.Parent">Parent</h4>
+              <div class="markdown level1 summary"><p> Required. The resource name containing the metrics.
+ Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Parent { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Logging_V2_ListLogMetricsRequest_Parser" data-uid="Google.Logging.V2.ListLogMetricsRequest.Parser">Parser</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -303,30 +325,6 @@ public sealed class ListLogMetricsRequest : IMessage&lt;ListLogMetricsRequest&gt
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsRequest.html#Google_Logging_V2_ListLogMetricsRequest">ListLogMetricsRequest</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Logging_V2_ListLogMetricsRequest_ProjectName" data-uid="Google.Logging.V2.ListLogMetricsRequest.ProjectName">ProjectName</h4>
-              <div class="markdown level1 summary"><p> Required. The resource name of the project containing the metrics.
- Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ProjectName { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
                     <td></td>
                   </tr>
                 </tbody>

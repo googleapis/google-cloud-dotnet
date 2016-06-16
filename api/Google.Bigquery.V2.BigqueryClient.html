@@ -2874,7 +2874,7 @@ This method just creates a <span class="xref">ProjectReference</span> and delega
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryDataset&gt; ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;DatasetList, BigqueryDataset&gt; ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2910,8 +2910,8 @@ This method just creates a <span class="xref">ProjectReference</span> and delega
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
-                    <td><p>The datasets within the specified project.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.DatasetList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td><p>A sequence of pages of datasets within the specified project.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2930,7 +2930,7 @@ foreach (var dataset in datasets)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryDataset&gt; ListDatasets(ListDatasetsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;DatasetList, BigqueryDataset&gt; ListDatasets(ListDatasetsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2960,8 +2960,8 @@ foreach (var dataset in datasets)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
-                    <td><p>The datasets within this project.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.DatasetList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td><p>A sequence of pages of datasets within this project.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2973,7 +2973,7 @@ This method just creates a <span class="xref">ProjectReference</span> and delega
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryDataset&gt; ListDatasets(string projectId, ListDatasetsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;DatasetList, BigqueryDataset&gt; ListDatasets(string projectId, ListDatasetsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -3009,8 +3009,8 @@ This method just creates a <span class="xref">ProjectReference</span> and delega
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
-                    <td><p>The datasets within the specified project.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.DatasetList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td><p>A sequence of pages of datasets within the specified project.</p>
 </td>
                   </tr>
                 </tbody>
@@ -3022,7 +3022,7 @@ This method just creates a <span class="xref">ProjectReference</span> and delega
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryJob&gt; ListJobs(ProjectReference projectReference, ListJobsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;JobList, BigqueryJob&gt; ListJobs(ProjectReference projectReference, ListJobsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -3058,8 +3058,8 @@ This method just creates a <span class="xref">ProjectReference</span> and delega
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
-                    <td><p>The jobs within the specified project.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.JobList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td><p>A sequence of pages of the jobs within the specified project.</p>
 </td>
                   </tr>
                 </tbody>
@@ -3078,7 +3078,7 @@ foreach (var job in jobs)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryJob&gt; ListJobs(ListJobsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;JobList, BigqueryJob&gt; ListJobs(ListJobsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -3108,8 +3108,8 @@ foreach (var job in jobs)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
-                    <td><p>The jobs within this project.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.JobList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td><p>A sequence of pages of the jobs within this project.</p>
 </td>
                   </tr>
                 </tbody>
@@ -3121,7 +3121,7 @@ This method just creates a <span class="xref">ProjectReference</span> and delega
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryJob&gt; ListJobs(string projectId, ListJobsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;JobList, BigqueryJob&gt; ListJobs(string projectId, ListJobsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -3157,8 +3157,8 @@ This method just creates a <span class="xref">ProjectReference</span> and delega
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
-                    <td><p>The jobs within the specified project.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.JobList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td><p>A sequence of pages of the jobs within the specified project.</p>
 </td>
                   </tr>
                 </tbody>
@@ -3363,7 +3363,7 @@ the table first.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryTable&gt; ListTables(DatasetReference datasetReference, ListTablesOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;TableList, BigqueryTable&gt; ListTables(DatasetReference datasetReference, ListTablesOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -3399,8 +3399,8 @@ the table first.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
-                    <td><p>The tables within the dataset.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.TableList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td><p>A sequence of pages of tables within the dataset.</p>
 </td>
                   </tr>
                 </tbody>
@@ -3419,7 +3419,7 @@ foreach (var table in tables)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryTable&gt; ListTables(string datasetId, ListTablesOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;TableList, BigqueryTable&gt; ListTables(string datasetId, ListTablesOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -3455,8 +3455,8 @@ foreach (var table in tables)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
-                    <td><p>The tables within the dataset.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.TableList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td><p>A sequence of pages of tables within the dataset.</p>
 </td>
                   </tr>
                 </tbody>
@@ -3468,7 +3468,7 @@ This method just creates a <span class="xref">DatasetReference</span> and delega
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BigqueryTable&gt; ListTables(string projectId, string datasetId, ListTablesOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;TableList, BigqueryTable&gt; ListTables(string projectId, string datasetId, ListTablesOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -3510,8 +3510,8 @@ This method just creates a <span class="xref">DatasetReference</span> and delega
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
-                    <td><p>The tables within the dataset.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.TableList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td><p>A sequence of pages of tables within the dataset.</p>
 </td>
                   </tr>
                 </tbody>

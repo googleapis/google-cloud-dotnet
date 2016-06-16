@@ -203,6 +203,29 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Logging_V2_WriteLogEntriesRequest_PartialSuccessFieldNumber" data-uid="Google.Logging.V2.WriteLogEntriesRequest.PartialSuccessFieldNumber">PartialSuccessFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;partial_success&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int PartialSuccessFieldNumber = 5</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_ResourceFieldNumber" data-uid="Google.Logging.V2.WriteLogEntriesRequest.ResourceFieldNumber">ResourceFieldNumber</h4>
               <div class="markdown level1 summary"><p>Field number for the &quot;resource&quot; field.</p>
 </div>
@@ -253,6 +276,9 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_Entries" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Entries">Entries</h4>
               <div class="markdown level1 summary"><p> Required. The log entries to write. The log entries must have values for
  all required fields.</p>
+<p> To improve throughput and to avoid exceeding the quota limit for calls
+ to <code>entries.write</code>, use this field to write multiple log entries at once
+ rather than  // calling this method for each log entry.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -348,6 +374,33 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Logging_V2_WriteLogEntriesRequest_PartialSuccess" data-uid="Google.Logging.V2.WriteLogEntriesRequest.PartialSuccess">PartialSuccess</h4>
+              <div class="markdown level1 summary"><p> Optional. Whether valid entries should be written even if some other
+ entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
+ entry is not written, the response status will be the error associated
+ with one of the failed entries and include error details in the form of
+ WriteLogEntriesPartialErrors.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool PartialSuccess { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_Resource" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Resource">Resource</h4>
               <div class="markdown level1 summary"><p> Optional. A default monitored resource for those log entries in <code>entries</code>
  that do not specify their own <code>resource</code>.</p>
@@ -367,7 +420,7 @@ public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
                     <td></td>
                   </tr>
                 </tbody>

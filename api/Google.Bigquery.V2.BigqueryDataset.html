@@ -432,7 +432,7 @@ This method just creates a <span class="xref">DatasetReference</span> and delega
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IEnumerable&lt;BigqueryTable&gt; ListTables(ListTablesOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public IPagedEnumerable&lt;TableList, BigqueryTable&gt; ListTables(ListTablesOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -462,8 +462,8 @@ This method just creates a <span class="xref">DatasetReference</span> and delega
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
-                    <td><p>The tables within this dataset.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Bigquery.v2.Data.TableList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td><p>A sequence of pages of tables within this dataset.</p>
 </td>
                   </tr>
                 </tbody>

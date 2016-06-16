@@ -436,10 +436,11 @@ public sealed class LogEntry : IMessage&lt;LogEntry&gt;, IMessage, IEquatable&lt
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_InsertId" data-uid="Google.Logging.V2.LogEntry.InsertId">InsertId</h4>
-              <div class="markdown level1 summary"><p> Optional. A unique ID for the log entry. If you provide this field, the
- logging service considers other log entries in the same log with the same
- ID as duplicates which can be removed.
- If omitted, Cloud Logging will generate a unique ID for this log entry.</p>
+              <div class="markdown level1 summary"><p> Optional. A unique ID for the log entry. If you provide this
+ field, the logging service considers other log entries in the
+ same log with the same ID as duplicates which can be removed.  If
+ omitted, Stackdriver Logging will generate a unique ID for this
+ log entry.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -512,9 +513,9 @@ public sealed class LogEntry : IMessage&lt;LogEntry&gt;, IMessage, IEquatable&lt
               <h4 id="Google_Logging_V2_LogEntry_LogName" data-uid="Google.Logging.V2.LogEntry.LogName">LogName</h4>
               <div class="markdown level1 summary"><p> Required. The resource name of the log to which this log entry
  belongs. The format of the name is
- <code>projects/&amp;lt;project-id&amp;gt;/logs/&amp;lt;log-id%gt;</code>.  Examples:
+ <code>&quot;projects/&lt;project-id&gt;/logs/&lt;log-id&gt;&quot;</code>.  Examples:
  <code>&quot;projects/my-projectid/logs/syslog&quot;</code>,
- <code>&quot;projects/1234567890/logs/library.googleapis.com%2Fbook_log&quot;</code>.</p>
+ <code>&quot;projects/my-projectid/logs/library.googleapis.com%2Fbook_log&quot;</code>.</p>
 <p> The log ID part of resource name must be less than 512 characters
  long and can only include the following characters: upper and
  lower case alphanumeric characters: [A-Za-z0-9]; and punctuation
@@ -655,7 +656,7 @@ public sealed class LogEntry : IMessage&lt;LogEntry&gt;, IMessage, IEquatable&lt
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -709,7 +710,7 @@ public sealed class LogEntry : IMessage&lt;LogEntry&gt;, IMessage, IEquatable&lt
               </table>
               <h4 id="Google_Logging_V2_LogEntry_Timestamp" data-uid="Google.Logging.V2.LogEntry.Timestamp">Timestamp</h4>
               <div class="markdown level1 summary"><p> Optional. The time the event described by the log entry occurred.  If
- omitted, Cloud Logging will use the time the log entry is written.</p>
+ omitted, Stackdriver Logging will use the time the log entry is received.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

@@ -1594,131 +1594,6 @@ defaults will be used.</p>
               <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Storage.V1.StorageClient.html#Google_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress<idownloadprogress>)</idownloadprogress></a>
 to download the content.</p>
 </div>
-              <h4 id="Google_Storage_V1_StorageClient_ListAllBucketsAsync_System_String_Google_Storage_V1_ListBucketsOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.ListAllBucketsAsync(System.String,Google.Storage.V1.ListBucketsOptions,System.Threading.CancellationToken)">ListAllBucketsAsync(String, ListBucketsOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously lists the buckets in a given project, returning the results as a list.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Bucket&gt;&gt; ListAllBucketsAsync(string projectId, ListBucketsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
-                    <td><p>The ID of the project to list the buckets from. Must not be null.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Storage.V1.ListBucketsOptions.html#Google_Storage_V1_ListBucketsOptions">ListBucketsOptions</a></td>
-                    <td><em>options</em></td>
-                    <td><p>The options for the operation. May be null, in which case
-defaults will be supplied.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td><p>The token to monitor for cancellation requests.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Bucket</span>&gt;&gt;</td>
-                    <td><p>A list of buckets within the project.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Storage_V1_StorageClient_ListAllBucketsAsync_System_String_Google_Storage_V1_ListBucketsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This lists all the buckets within a project before the returned task completes.
-This does not support reporting progress, or streaming the results.</p>
-</div>
-              <h4 id="Google_Storage_V1_StorageClient_ListAllObjectsAsync_System_String_System_String_Google_Storage_V1_ListObjectsOptions_System_Threading_CancellationToken_" data-uid="Google.Storage.V1.StorageClient.ListAllObjectsAsync(System.String,System.String,Google.Storage.V1.ListObjectsOptions,System.Threading.CancellationToken)">ListAllObjectsAsync(String, String, ListObjectsOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously lists the objects in a given bucket, returning the results as a list.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;IList&lt;Object&gt;&gt; ListAllObjectsAsync(string bucket, string prefix, ListObjectsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
-                    <td><p>The bucket to list the objects from. Must not be null.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>prefix</em></td>
-                    <td><p>The prefix to match. Only objects with names that start with this string will be returned.
-This parameter may be null, in which case no filtering is performed.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions">ListObjectsOptions</a></td>
-                    <td><em>options</em></td>
-                    <td><p>The options for the operation. May be null, in which case
-defaults will be supplied.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td><p>The token to monitor for cancellation requests.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;&gt;</td>
-                    <td><p>A list of objects within the bucket.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Storage_V1_StorageClient_ListAllObjectsAsync_System_String_System_String_Google_Storage_V1_ListObjectsOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This lists the objects within a bucket before the returned task completes.
-This does not support reporting progress, or streaming the results.</p>
-</div>
               <h4 id="Google_Storage_V1_StorageClient_ListBuckets_System_String_Google_Storage_V1_ListBucketsOptions_" data-uid="Google.Storage.V1.StorageClient.ListBuckets(System.String,Google.Storage.V1.ListBucketsOptions)">ListBuckets(String, ListBucketsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the buckets for a given project, synchronously but lazily.</p>
 </div>
@@ -1730,7 +1605,7 @@ var buckets = client.ListBuckets(projectId);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;Bucket&gt; ListBuckets(string projectId, ListBucketsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;Buckets, Bucket&gt; ListBuckets(string projectId, ListBucketsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1767,16 +1642,68 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Bucket</span>&gt;</td>
-                    <td><p>A sequence of buckets within the project.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Buckets</span>, <span class="xref">Google.Apis.Storage.v1.Data.Bucket</span>&gt;</td>
+                    <td><p>A sequence of pages of buckets within the project.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Storage_V1_StorageClient_ListBuckets_System_String_Google_Storage_V1_ListBucketsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
-for a page of results at a time, as required. To retrieve all the buckets in a single collection,
-simply call LINQ&#39;s <code>ToList()</code> method on the returned sequence.</p>
+for a page of results at a time, as required.</p>
+</div>
+              <h4 id="Google_Storage_V1_StorageClient_ListBucketsAsync_System_String_Google_Storage_V1_ListBucketsOptions_" data-uid="Google.Storage.V1.StorageClient.ListBucketsAsync(System.String,Google.Storage.V1.ListBucketsOptions)">ListBucketsAsync(String, ListBucketsOptions)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously lists the buckets in a given project.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;Buckets, Bucket&gt; ListBucketsAsync(string projectId, ListBucketsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project to list the buckets from. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.ListBucketsOptions.html#Google_Storage_V1_ListBucketsOptions">ListBucketsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedAsyncEnumerable%602.html#Google_Api_Gax_Rest_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Buckets</span>, <span class="xref">Google.Apis.Storage.v1.Data.Bucket</span>&gt;</td>
+                    <td><p>An asynchronous sequence of pages of buckets.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Storage_V1_StorageClient_ListBucketsAsync_System_String_Google_Storage_V1_ListBucketsOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
+for a page of results at a time, as required.</p>
 </div>
               <h4 id="Google_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Storage_V1_ListObjectsOptions_" data-uid="Google.Storage.V1.StorageClient.ListObjects(System.String,System.String,Google.Storage.V1.ListObjectsOptions)">ListObjects(String, String, ListObjectsOptions)</h4>
               <div class="markdown level1 summary"><p>Lists the objects in a given bucket, synchronously but lazily.</p>
@@ -1789,7 +1716,7 @@ var objects = client.ListObjects(bucketName, &quot;greet&quot;);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;Object&gt; ListObjects(string bucket, string prefix, ListObjectsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;Objects, Object&gt; ListObjects(string bucket, string prefix, ListObjectsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1833,16 +1760,75 @@ defaults will be supplied.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
-                    <td><p>A sequence of objects within the bucket.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable%602.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Objects</span>, <span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
+                    <td><p>A sequence of pages of objects in the specified bucket.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Storage_V1_ListObjectsOptions__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
-for a page of results at a time, as required. To retrieve all the objects in a single collection,
-simply call LINQ&#39;s <code>ToList()</code> method on the returned sequence.</p>
+for a page of results at a time, as required.</p>
+</div>
+              <h4 id="Google_Storage_V1_StorageClient_ListObjectsAsync_System_String_System_String_Google_Storage_V1_ListObjectsOptions_" data-uid="Google.Storage.V1.StorageClient.ListObjectsAsync(System.String,System.String,Google.Storage.V1.ListObjectsOptions)">ListObjectsAsync(String, String, ListObjectsOptions)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously lists the objects in a given bucket.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;Objects, Object&gt; ListObjectsAsync(string bucket, string prefix, ListObjectsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>bucket</em></td>
+                    <td><p>The bucket to list the objects from. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>prefix</em></td>
+                    <td><p>The prefix to match. Only objects with names that start with this string will be returned.
+This parameter may be null, in which case no filtering is performed.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Storage.V1.ListObjectsOptions.html#Google_Storage_V1_ListObjectsOptions">ListObjectsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Rest.IPagedAsyncEnumerable%602.html#Google_Api_Gax_Rest_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<span class="xref">Google.Apis.Storage.v1.Data.Objects</span>, <span class="xref">Google.Apis.Storage.v1.Data.Object</span>&gt;</td>
+                    <td><p>An asynchronous sequence of pages of objects in the specified bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Storage_V1_StorageClient_ListObjectsAsync_System_String_System_String_Google_Storage_V1_ListObjectsOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
+for a page of results at a time, as required.</p>
 </div>
               <h4 id="Google_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Storage_V1_PatchBucketOptions_" data-uid="Google.Storage.V1.StorageClient.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Storage.V1.PatchBucketOptions)">PatchBucket(Bucket, PatchBucketOptions)</h4>
               <div class="markdown level1 summary"><p>Patches the metadata for a storage bucket synchronously.</p>

@@ -134,13 +134,13 @@ public sealed class CreateSinkRequest : IMessage&lt;CreateSinkRequest&gt;, IMess
               </table>
               <h3 id="fields">Fields
               </h3>
-              <h4 id="Google_Logging_V2_CreateSinkRequest_ProjectNameFieldNumber" data-uid="Google.Logging.V2.CreateSinkRequest.ProjectNameFieldNumber">ProjectNameFieldNumber</h4>
-              <div class="markdown level1 summary"><p>Field number for the &quot;project_name&quot; field.</p>
+              <h4 id="Google_Logging_V2_CreateSinkRequest_ParentFieldNumber" data-uid="Google.Logging.V2.CreateSinkRequest.ParentFieldNumber">ParentFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;parent&quot; field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int ProjectNameFieldNumber = 1</code></pre>
+                <pre><code class="lang-csharp hljs">public const int ParentFieldNumber = 1</code></pre>
               </div>
               <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -204,6 +204,31 @@ public sealed class CreateSinkRequest : IMessage&lt;CreateSinkRequest&gt;, IMess
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Logging_V2_CreateSinkRequest_Parent" data-uid="Google.Logging.V2.CreateSinkRequest.Parent">Parent</h4>
+              <div class="markdown level1 summary"><p> The resource in which to create the sink.
+ Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+<p> The new sink must be provided in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Parent { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Logging_V2_CreateSinkRequest_Parser" data-uid="Google.Logging.V2.CreateSinkRequest.Parser">Parser</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -222,31 +247,6 @@ public sealed class CreateSinkRequest : IMessage&lt;CreateSinkRequest&gt;, IMess
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Logging.V2.CreateSinkRequest.html#Google_Logging_V2_CreateSinkRequest">CreateSinkRequest</a>&gt;</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Logging_V2_CreateSinkRequest_ProjectName" data-uid="Google.Logging.V2.CreateSinkRequest.ProjectName">ProjectName</h4>
-              <div class="markdown level1 summary"><p> The resource name of the project in which to create the sink.
- Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
-<p> The new sink must be provided in the request.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ProjectName { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
                     <td></td>
                   </tr>
                 </tbody>

@@ -129,7 +129,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -203,7 +203,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.PathTemplate</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate">PathTemplate</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -227,7 +227,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.PathTemplate</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate">PathTemplate</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -255,9 +255,9 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <span class="xref">ServiceEndpoint</span>.</p>
+                    <td><p>Optional <a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a>.</p>
 </td>
                   </tr>
                   <tr>
@@ -353,9 +353,9 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.ServiceEndpoint</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <span class="xref">ServiceEndpoint</span>.</p>
+                    <td><p>Optional <a class="xref" href="Google.Api.Gax.ServiceEndpoint.html#Google_Api_Gax_ServiceEndpoint">ServiceEndpoint</a>.</p>
 </td>
                   </tr>
                   <tr>
@@ -390,7 +390,7 @@ necessary.</p>
 
 // Alternative: use a known topic resource name
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 Topic topic = client.CreateTopic(topicName);
 Console.WriteLine($&quot;Created {topic.Name}&quot;);
 </code></pre></div>
@@ -420,7 +420,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -451,7 +451,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
 
 // Alternative: use a known topic resource name
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 Topic topic = await client.CreateTopicAsync(topicName);
 Console.WriteLine($&quot;Created {topic.Name}&quot;);
 </code></pre></div>
@@ -481,7 +481,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -512,7 +512,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
 
 // Alternative: use a known topic resource name
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 Topic topic = await client.CreateTopicAsync(topicName);
 Console.WriteLine($&quot;Created {topic.Name}&quot;);
 </code></pre></div>
@@ -577,7 +577,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 
 // Alternative: use a known topic resource name
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 client.DeleteTopic(topicName);
 Console.WriteLine($&quot;Deleted {topicName}&quot;);
 </code></pre></div>
@@ -602,7 +602,7 @@ Console.WriteLine($&quot;Deleted {topicName}&quot;);
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -621,7 +621,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 
 // Alternative: use a known topic resource name
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 await client.DeleteTopicAsync(topicName);
 Console.WriteLine($&quot;Deleted {topicName}&quot;);
 </code></pre></div>
@@ -646,7 +646,7 @@ Console.WriteLine($&quot;Deleted {topicName}&quot;);
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -681,7 +681,7 @@ not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_<
 
 // Alternative: use a known topic resource name
 // &quot;projects/{PROJECT_ID}/topics/{TOPIC_ID}&quot;
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 await client.DeleteTopicAsync(topicName);
 Console.WriteLine($&quot;Deleted {topicName}&quot;);
 </code></pre></div>
@@ -729,13 +729,13 @@ Console.WriteLine($&quot;Deleted {topicName}&quot;);
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClient_GetProjectName_System_String_" data-uid="Google.Pubsub.V1.PublisherClient.GetProjectName(System.String)">GetProjectName(String)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClient_FormatProjectName_System_String_" data-uid="Google.Pubsub.V1.PublisherClient.FormatProjectName(System.String)">FormatProjectName(String)</h4>
               <div class="markdown level1 summary"><p>Creates a project resource name from its component IDs.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static string GetProjectName(string projectId)</code></pre>
+                <pre><code class="lang-csharp hljs">public static string FormatProjectName(string projectId)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -771,6 +771,54 @@ Console.WriteLine($&quot;Deleted {topicName}&quot;);
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Pubsub_V1_PublisherClient_FormatTopicName_System_String_System_String_" data-uid="Google.Pubsub.V1.PublisherClient.FormatTopicName(System.String,System.String)">FormatTopicName(String, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a topic resource name from its component IDs.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string FormatTopicName(string projectId, string topicId)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>topicId</em></td>
+                    <td><p>The topic ID.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><p>The full topic resource name.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Pubsub_V1_PublisherClient_GetTopic_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.GetTopic(System.String,Google.Api.Gax.CallSettings)">GetTopic(String, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets the configuration of a topic.</p>
 </div>
@@ -796,7 +844,7 @@ Console.WriteLine($&quot;Deleted {topicName}&quot;);
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -844,7 +892,7 @@ Console.WriteLine($&quot;Deleted {topicName}&quot;);
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -915,55 +963,7 @@ Console.WriteLine($&quot;Deleted {topicName}&quot;);
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClient_GetTopicName_System_String_System_String_" data-uid="Google.Pubsub.V1.PublisherClient.GetTopicName(System.String,System.String)">GetTopicName(String, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a topic resource name from its component IDs.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static string GetTopicName(string projectId, string topicId)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
-                    <td><p>The project ID.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>topicId</em></td>
-                    <td><p>The topic ID.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><p>The full topic resource name.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicsPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicsPageStream(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicsPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopics(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopics(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching topics.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
@@ -971,15 +971,15 @@ Console.WriteLine($&quot;Deleted {topicName}&quot;);
 
 // Alternative: use a known project resource name:
 // &quot;projects/{PROJECT_ID}&quot;
-string projectName = PublisherClient.GetProjectName(projectId);
-foreach (Topic topic in client.ListTopicsPageStream(projectName).Flatten())
+string projectName = PublisherClient.FormatProjectName(projectId);
+foreach (Topic topic in client.ListTopics(projectName))
 {
     Console.WriteLine(topic.Name);
 }
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopicsPageStream(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopics(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1013,7 +1013,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1030,13 +1030,13 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
-                    <td><p>A sequence of pages of Topic items.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable%602.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A pageable sequence of Topic resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicsPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicsPageStreamAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicsPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists matching topics.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
@@ -1044,8 +1044,8 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 
 // Alternative: use a known project resource name:
 // &quot;projects/{PROJECT_ID}&quot;
-string projectName = PublisherClient.GetProjectName(projectId);
-IAsyncEnumerable&lt;Topic&gt; topics = client.ListTopicsPageStreamAsync(projectName).Flatten();
+string projectName = PublisherClient.FormatProjectName(projectId);
+IAsyncEnumerable&lt;Topic&gt; topics = client.ListTopicsAsync(projectName);
 await topics.ForEachAsync(topic =&gt;
 {
     Console.WriteLine(topic.Name);
@@ -1053,7 +1053,7 @@ await topics.ForEachAsync(topic =&gt;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopicsPageStreamAsync(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopicsAsync(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1087,7 +1087,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1104,19 +1104,19 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
-                    <td><p>An asynchronous sequence of pages of Topic items.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable%602.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of Topic resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicSubscriptionsPageStream_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicSubscriptionsPageStream(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicSubscriptionsPageStream(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicSubscriptions(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the name of the subscriptions for this topic.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;ListTopicSubscriptionsResponse, string&gt; ListTopicSubscriptionsPageStream(string topic, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedEnumerable&lt;ListTopicSubscriptionsResponse, string&gt; ListTopicSubscriptions(string topic, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1150,7 +1150,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1167,19 +1167,19 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
-                    <td><p>A sequence of pages of string items.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable%602.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A pageable sequence of string resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicSubscriptionsPageStreamAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicSubscriptionsPageStreamAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicSubscriptionsPageStreamAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Pubsub_V1_PublisherClient_ListTopicSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClient.ListTopicSubscriptionsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListTopicSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the name of the subscriptions for this topic.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;ListTopicSubscriptionsResponse, string&gt; ListTopicSubscriptionsPageStreamAsync(string topic, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IPagedAsyncEnumerable&lt;ListTopicSubscriptionsResponse, string&gt; ListTopicSubscriptionsAsync(string topic, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1213,7 +1213,7 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1230,8 +1230,8 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
-                    <td><p>An asynchronous sequence of pages of string items.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable%602.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of string resources.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1244,7 +1244,7 @@ does not exist. The message payload must not be empty; it must contain
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
 // Make sure we have a topic to publish to
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 client.CreateTopic(topicName);
 
 PubsubMessage message = new PubsubMessage
@@ -1286,7 +1286,7 @@ client.Publish(topicName, new[] { message });
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1317,7 +1317,7 @@ does not exist. The message payload must not be empty; it must contain
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
 // Make sure we have a topic to publish to
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 await client.CreateTopicAsync(topicName);
 
 PubsubMessage message = new PubsubMessage
@@ -1359,7 +1359,7 @@ await client.PublishAsync(topicName, new[] { message });
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Google.Api.Gax.CallSettings</span></td>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
@@ -1390,7 +1390,7 @@ does not exist. The message payload must not be empty; it must contain
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
 // Make sure we have a topic to publish to
-string topicName = PublisherClient.GetTopicName(projectId, topicId);
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 await client.CreateTopicAsync(topicName);
 
 PubsubMessage message = new PubsubMessage
