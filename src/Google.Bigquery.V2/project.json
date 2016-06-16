@@ -15,7 +15,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "0.1.0-CI00056",
+    "Google.Api.Gax.Rest": "0.1.0-CI00057",
     "Google.Apis": "1.13.0",
     "Google.Apis.Auth": "1.13.0",
     "Google.Apis.Bigquery.v2": "1.13.0.487",
