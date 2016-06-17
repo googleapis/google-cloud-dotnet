@@ -660,8 +660,8 @@ namespace Google.Datastore.V1Beta3.Snippets
                 DistinctOn = { "type" },
                 Order =
                 {
-                    { "type", Direction.Ascending },
-                    { "priority", Direction.Ascending }
+                    "type", // If only the name is specified, it's implicitly ascending
+                    { "priority", Direction.Ascending } // Either direction can be specified explicitly
                 }
             };
             // End sample
@@ -724,12 +724,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             Query query = new Query("Task")
             {
                 Filter = Filter.GreaterThan("priority", 3),
-                Order =
-                {
-                    // This property must be sorted first, as it is in the inequality filter
-                    { "priority", Direction.Ascending },
-                    { "created", Direction.Ascending }
-                }
+                // The "priority" property must be sorted first, as it is in the inequality filter
+                Order = { "priority", "created" },
             };
             // End sample
         }
