@@ -70,7 +70,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             var keyFactory = new KeyFactory(ProjectId, NamespaceId, TaskKind);
             var entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["type"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,

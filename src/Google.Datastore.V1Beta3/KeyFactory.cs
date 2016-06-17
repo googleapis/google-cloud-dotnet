@@ -106,6 +106,6 @@ namespace Google.Datastore.V1Beta3
         /// the ID is populated by the server.
         /// </summary>
         /// <returns>A key with no name or ID in the final path element.</returns>
-        public Key CreateInsertionKey() => _parent.WithElement(new PathElement { Kind = _kind });
+        public Key CreateIncompleteKey() => _parent.WithElement(new PathElement { Kind = _kind });
     }
 }

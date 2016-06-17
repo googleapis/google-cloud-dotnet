@@ -126,7 +126,7 @@ var db = DatastoreDb.Create(projectId, namespaceId);
 var keyFactory = db.CreateKeyFactory("message");
 var entity = new Entity
 {
-    Key = keyFactory.CreateInsertionKey(),
+    Key = keyFactory.CreateIncompleteKey(),
     ["created"] = DateTime.UtcNow,
     ["text"] = "Text of the message"
 };
