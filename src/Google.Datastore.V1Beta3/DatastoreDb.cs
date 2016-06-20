@@ -13,58 +13,14 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Protobuf;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
 
 namespace Google.Datastore.V1Beta3
 {
-    // Partial classes to allow page streaming, admittedly slightly unusually.
-    public partial class RunQueryResponse : IPageResponse<Entity>
-    {
-        string IPageResponse<Entity>.NextPageToken => Batch.MoreResults == MoreResultsType.NotFinished ? Batch.EndCursor.ToBase64() : "";
-
-        IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable<Entity>)this).GetEnumerator();
-
-        IEnumerator<Entity> IEnumerable<Entity>.GetEnumerator() => Batch.EntityResults.Select(result => result.Entity).GetEnumerator();
-    }
-
-    public partial class RunQueryRequest : IPageRequest
-    {
-        int IPageRequest.PageSize
-        {
-            set
-            {
-                if (Query != null)
-                {
-                    Query.Limit = value;
-                }
-                else
-                {
-                    throw new InvalidOperationException("Only structured queries are currently supported for automatic page streaming");
-                }
-            }
-        }
-        string IPageRequest.PageToken
-        {
-            set
-            {
-                if (Query != null)
-                {
-                    Query.StartCursor = ByteString.FromBase64(value);
-                }
-                else
-                {
-                    throw new InvalidOperationException("Only structured queries are currently supported for automatic page streaming");
-                }
-            }
-        }
-    }
 
     public partial class DatastoreClient
     {
@@ -138,103 +94,80 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Perform a single <see cref="DatastoreClient.RunQuery(string, PartitionId, ReadOptions, Query, CallSettings)"/> operation
-        /// using this object's partition ID and the specified read consistency, not in a transaction.
+        /// Executes the given GQL query, returning a result set that can be viewed as a sequence of
+        /// entities, entity results (with cursors), batches, or raw API responses.
         /// </summary>
         /// <remarks>
-        /// To automatically stream pages of results, use <see cref="RunQuery(Query, ReadConsistency?, CallSettings)"/>.
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The response for the given query operation.</returns>
-        public virtual RunQueryResponse RunQuerySingleCall(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Perform a single asynchronous <see cref="DatastoreClient.RunQueryAsync(string, PartitionId, ReadOptions, Query, CallSettings)"/> operation
-        /// using this object's partition ID and the specified read consistency, not in a transaction.
-        /// </summary>
-        /// <remarks>
-        /// To automatically stream pages of results, use <see cref="RunQueryAsync(Query, ReadConsistency?, CallSettings)"/>.
-        /// </remarks>
-        /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The response for the given query operation.</returns>
-        public virtual Task<RunQueryResponse> RunQuerySingleCallAsync(Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        // Note: no pagestreaming yet for GQL as it's tough to modify the limit/offset automatically.
-
-        /// <summary>
-        /// Perform a single <see cref="DatastoreClient.RunQuery(string, PartitionId, ReadOptions, Query, CallSettings)"/> operation
-        /// using this object's partition ID and the specified read consistency, not in a transaction.
-        /// </summary>
-        /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The response for the given query operation.</returns>
-        public virtual RunQueryResponse RunQuerySingleCall(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Perform a single asynchronous <see cref="DatastoreClient.RunQueryAsync(string, PartitionId, ReadOptions, Query, CallSettings)"/> operation
-        /// using this object's partition ID and the specified read consistency, not in a transaction.
-        /// </summary>
-        /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">The desired read consistency of the query, or null to use the default.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The response for the given query operation.</returns>
-        public virtual Task<RunQueryResponse> RunQuerySingleCallAsync(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Executes the given query, automatically streaming the pages of results.
-        /// </summary>
-        /// <remarks>
-        /// To start where a previous operation left off, specify <see cref="Query.StartCursor"/>.
-        /// If you have been using <see cref="FixedSizePage{Entity}"/>, convert the <see cref="FixedSizePage{TResource}.NextPageToken"/>
-        /// string into a <see cref="ByteString"/> using <see cref="ByteString.FromBase64(string)"/>.
-        /// </remarks>
-        /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">The desired read consistency of the query, or null to use
-        /// the default.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A sequence of pages of entities.</returns>
-        public virtual IPagedEnumerable<RunQueryResponse, Entity> RunQuery(
+        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
+        public virtual DatastoreQueryResults RunQuery(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Executes the given query, automatically streaming the pages of results asynchronously.
+        /// Executes the given GQL query, returning a result set that can be viewed as an asynchronous
+        /// sequence of entities, entity results (with cursors), batches, or raw API responses.
         /// </summary>
         /// <remarks>
-        /// To start where a previous operation left off, specify <see cref="Query.StartCursor"/>.
-        /// If you have been using <see cref="FixedSizePage{Entity}"/>, convert the <see cref="FixedSizePage{TResource}.NextPageToken"/>
-        /// string into a <see cref="ByteString"/> using <see cref="ByteString.FromBase64(string)"/>.
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">The desired read consistency of the query, or null to use
-        /// the default.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A sequence of pages of entities.</returns>
-        public virtual IPagedAsyncEnumerable<RunQueryResponse, Entity> RunQueryAsync(
-            Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
+        public virtual DatastoreAsyncQueryResults RunQueryAsync(
+            GqlQuery gqlQuery, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Executes the given structured query, returning a result set that can be viewed as a sequence of
+        /// entities, entity results (with cursors), batches, or raw API responses.
+        /// </summary>
+        /// <remarks>
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// multiple times will execute the query again, potentially returning different results.
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
+        public virtual DatastoreQueryResults RunQuery(
+            GqlQuery gqlQuery, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Executes the given structured query, returning a result set that can be viewed as an asynchronous
+        /// sequence of entities, entity results (with cursors), batches, or raw API responses.
+        /// </summary>
+        /// <remarks>
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// multiple times will execute the query again, potentially returning different results.
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
+        public virtual DatastoreAsyncQueryResults RunQueryAsync(
+            Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Begins a transaction, returning a <see cref="DatastoreTransaction"/> which can be used to operate on the transaction.
