@@ -27,7 +27,7 @@ namespace Google.Datastore.V1Beta3
     // Partial classes to allow page streaming, admittedly slightly unusually.
     public partial class RunQueryResponse : IPageResponse<Entity>
     {
-        string IPageResponse<Entity>.NextPageToken => Batch.MoreResults == MoreResultsType.NoMoreResults ? "" : Batch.EndCursor.ToBase64();
+        string IPageResponse<Entity>.NextPageToken => Batch.MoreResults == MoreResultsType.NotFinished ? Batch.EndCursor.ToBase64() : "";
 
         IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable<Entity>)this).GetEnumerator();
 

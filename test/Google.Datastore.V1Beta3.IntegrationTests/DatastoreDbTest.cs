@@ -37,7 +37,7 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
             var keyFactory = db.CreateKeyFactory("test");
             var entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["foo"] = "bar"
             };
             var key = db.Insert(entity);
@@ -54,7 +54,7 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
             var keyFactory = db.CreateKeyFactory("test");
             var entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["foo"] = "bar"
             };
             var insertedKey = db.Insert(entity);
@@ -73,7 +73,7 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
             var keyFactory = db.CreateKeyFactory("test");
             var entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["foo"] = "bar"
             };
             var insertedKey = db.Insert(entity);

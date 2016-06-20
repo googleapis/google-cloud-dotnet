@@ -198,14 +198,14 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = db.CreateKeyFactory("book");
             Entity book1 = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Harper Lee",
                 ["title"] = "To Kill a Mockingbird",
                 ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
             };
             Entity book2 = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Charlotte Brontë",
                 ["title"] = "Jane Eyre",
                 ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
@@ -232,14 +232,14 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = db.CreateKeyFactory("book");
             Entity book1 = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Harper Lee",
                 ["title"] = "To Kill a Mockingbird",
                 ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
             };
             Entity book2 = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Charlotte Brontë",
                 ["title"] = "Jane Eyre",
                 ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
@@ -260,14 +260,14 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = db.CreateKeyFactory("book");
             Entity book1 = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Harper Lee",
                 ["title"] = "To Kill a Mockingbird",
                 ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
             };
             Entity book2 = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Charlotte Brontë",
                 ["title"] = "Jane Eyre",
                 ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
@@ -286,7 +286,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: AllocateId
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             KeyFactory keyFactory = db.CreateKeyFactory("message");
-            Key key = db.AllocateId(keyFactory.CreateInsertionKey());
+            Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
             // End snippet
         }
 
@@ -299,7 +299,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: AllocateIdAsync
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             KeyFactory keyFactory = db.CreateKeyFactory("message");
-            Key key = await db.AllocateIdAsync(keyFactory.CreateInsertionKey());
+            Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
             // End snippet
         }
 
@@ -312,7 +312,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: AllocateIds(*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             KeyFactory keyFactory = db.CreateKeyFactory("message");
-            IReadOnlyList<Key> keys = db.AllocateIds(keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey());
+            IReadOnlyList<Key> keys = db.AllocateIds(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
             // End snippet
 
             Assert.Equal(2, keys.Count);
@@ -328,7 +328,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Snippet: AllocateIdsAsync(*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             KeyFactory keyFactory = db.CreateKeyFactory("message");
-            IReadOnlyList<Key> keys = await db.AllocateIdsAsync(keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey());
+            IReadOnlyList<Key> keys = await db.AllocateIdsAsync(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
             // End snippet
 
             Assert.Equal(2, keys.Count);
@@ -393,7 +393,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             var keyFactory = db.CreateKeyFactory("message");
             var entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["created"] = DateTime.UtcNow,
                 ["text"] = "Text of the message"
             };
@@ -420,7 +420,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = db.CreateKeyFactory("Task");
             Entity entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["type"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
@@ -441,7 +441,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = db.CreateKeyFactory("Task");
             Entity entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["type"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
@@ -495,7 +495,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = insertClient.CreateKeyFactory("Task");
             Entity entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["type"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
@@ -660,8 +660,8 @@ namespace Google.Datastore.V1Beta3.Snippets
                 DistinctOn = { "type" },
                 Order =
                 {
-                    { "type", Direction.Ascending },
-                    { "priority", Direction.Ascending }
+                    "type", // If only the name is specified, it's implicitly ascending
+                    { "priority", Direction.Ascending } // Either direction can be specified explicitly
                 }
             };
             // End sample
@@ -724,12 +724,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             Query query = new Query("Task")
             {
                 Filter = Filter.GreaterThan("priority", 3),
-                Order =
-                {
-                    // This property must be sorted first, as it is in the inequality filter
-                    { "priority", Direction.Ascending },
-                    { "created", Direction.Ascending }
-                }
+                // The "priority" property must be sorted first, as it is in the inequality filter
+                Order = { "priority", "created" },
             };
             // End sample
         }
@@ -772,7 +768,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory factory = db.CreateKeyFactory("Account");
             Entity entity = new Entity
             {
-                Key = factory.CreateInsertionKey(),
+                Key = factory.CreateIncompleteKey(),
                 ["name"] = name,
                 ["balance"] = balance
             };

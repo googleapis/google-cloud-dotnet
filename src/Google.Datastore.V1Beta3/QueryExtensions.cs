@@ -52,7 +52,7 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Adds an ordering by property name.
+        /// Adds an ordering by property name and direction.
         /// </summary>
         /// <param name="orderings">The ordering field to add the ordering to. Must not be null.</param>
         /// <param name="propertyName">The name of the property to order by. Must not be null.</param>
@@ -63,6 +63,17 @@ namespace Google.Datastore.V1Beta3
             GaxPreconditions.CheckArgument(direction == Direction.Ascending || direction == Direction.Descending,
                 nameof(direction), "Direction must be Ascending or Descending");
             orderings.Add(new PropertyOrder { Direction = direction, Property = new PropertyReference(propertyName) });
+        }
+
+        /// <summary>
+        /// Adds an ascending ordering by property name. The ordering is implicitly ascending.
+        /// </summary>
+        /// <param name="orderings">The ordering field to add the ordering to. Must not be null.</param>
+        /// <param name="propertyName">The name of the property to order by. Must not be null.</param>
+        public static void Add(this RepeatedField<PropertyOrder> orderings, string propertyName)
+        {
+            GaxPreconditions.CheckNotNull(orderings, nameof(orderings));
+            orderings.Add(new PropertyOrder { Direction = Direction.Ascending, Property = new PropertyReference(propertyName) });
         }
     }
 }

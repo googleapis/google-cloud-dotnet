@@ -130,14 +130,14 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
             Entity book1 = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Harper Lee",
                 ["title"] = "To Kill a Mockingbird",
                 ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
             };
             Entity book2 = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Charlotte Brontë",
                 ["title"] = "Jane Eyre",
                 ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
@@ -164,7 +164,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             DatastoreClient client = DatastoreClient.Create();
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "message");
             AllocateIdsResponse response = client.AllocateIds(projectId,
-                new[] { keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey() }
+                new[] { keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey() }
             );
             Entity entity1 = new Entity { Key = response.Keys[0], ["text"] = "Text 1" };
             Entity entity2 = new Entity { Key = response.Keys[1], ["text"] = "Text 2" };
@@ -243,7 +243,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             var keyFactory = new KeyFactory(projectId, namespaceId, "message");
             var entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["created"] = DateTime.UtcNow,
                 ["text"] = "Text of the message"
             };
@@ -270,7 +270,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
             Entity entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["type"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
@@ -290,7 +290,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
             Entity entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["type"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
@@ -349,7 +349,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "Task");
             Entity entity = new Entity
             {
-                Key = keyFactory.CreateInsertionKey(),
+                Key = keyFactory.CreateIncompleteKey(),
                 ["type"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
@@ -630,7 +630,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             KeyFactory factory = new KeyFactory(projectId, namespaceId, "Account");
             Entity entity = new Entity
             {
-                Key = factory.CreateInsertionKey(),
+                Key = factory.CreateIncompleteKey(),
                 ["name"] = name,
                 ["balance"] = balance
             };
