@@ -70,7 +70,6 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         public virtual string NamespaceId { get { throw new NotImplementedException(); } }
 
-
         /// <summary>
         /// Creates a <see cref="DatastoreDb"/> to operate on the partition identified by <paramref name="projectId"/>
         /// and <paramref name="namespaceId"/>, using the <paramref name="client"/> to perform remote operations.
@@ -94,44 +93,6 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Executes the given GQL query, returning a result set that can be viewed as a sequence of
-        /// entities, entity results (with cursors), batches, or raw API responses.
-        /// </summary>
-        /// <remarks>
-        /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
-        /// multiple times will execute the query again, potentially returning different results.
-        /// </remarks>
-        /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
-        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public virtual DatastoreQueryResults RunQuery(
-            Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Executes the given GQL query, returning a result set that can be viewed as an asynchronous
-        /// sequence of entities, entity results (with cursors), batches, or raw API responses.
-        /// </summary>
-        /// <remarks>
-        /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
-        /// multiple times will execute the query again, potentially returning different results.
-        /// </remarks>
-        /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
-        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public virtual DatastoreAsyncQueryResults RunQueryAsync(
-            GqlQuery gqlQuery, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Executes the given structured query, returning a result set that can be viewed as a sequence of
         /// entities, entity results (with cursors), batches, or raw API responses.
         /// </summary>
@@ -145,7 +106,7 @@ namespace Google.Datastore.V1Beta3
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
         public virtual DatastoreQueryResults RunQuery(
-            GqlQuery gqlQuery, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+            Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -165,6 +126,44 @@ namespace Google.Datastore.V1Beta3
         /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
         public virtual DatastoreAsyncQueryResults RunQueryAsync(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+        
+        /// <summary>
+        /// Executes the given GQL query, returning a result set that can be viewed as a sequence of
+        /// entities, entity results (with cursors), batches, or raw API responses.
+        /// </summary>
+        /// <remarks>
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// multiple times will execute the query again, potentially returning different results.
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
+        public virtual DatastoreQueryResults RunQuery(
+            GqlQuery gqlQuery, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Executes the given GQL query, returning a result set that can be viewed as an asynchronous
+        /// sequence of entities, entity results (with cursors), batches, or raw API responses.
+        /// </summary>
+        /// <remarks>
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// multiple times will execute the query again, potentially returning different results.
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
+        public virtual DatastoreAsyncQueryResults RunQueryAsync(
+            GqlQuery gqlQuery, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -279,10 +278,10 @@ namespace Google.Datastore.V1Beta3
         /// This call may perform multiple RPC operations in order to look up all keys.
         /// </para>
         /// <para>
-        /// This overload does not support the <see cref="ReadConsistency"/> or <see cref="CallSettings "/>to be specified due to restrictions with
+        /// This overload does not support the <see cref="ReadConsistency"/> or <see cref="CallSettings "/> to be specified due to restrictions with
         /// methods containing a parameter array and optional parameters.
         /// It simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>, passing in a <c>null</c>
-        /// value for the read consistency and all settings.
+        /// value for the read consistency and call settings.
         /// </para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
@@ -328,10 +327,10 @@ namespace Google.Datastore.V1Beta3
         /// This call may perform multiple RPC operations in order to look up all keys.
         /// </para>
         /// <para>
-        /// This overload does not support the <see cref="ReadConsistency"/> or <see cref="CallSettings "/>to be specified due to restrictions with
+        /// This overload does not support the <see cref="ReadConsistency"/> or <see cref="CallSettings "/> to be specified due to restrictions with
         /// methods containing a parameter array and optional parameters.
         /// It simply delegates to <see cref="LookupAsync(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>, passing in a <c>null</c>
-        /// value for the read consistency and all settings.
+        /// value for the read consistency and call settings.
         /// </para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
