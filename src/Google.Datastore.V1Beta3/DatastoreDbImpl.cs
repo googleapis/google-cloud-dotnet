@@ -63,37 +63,14 @@ namespace Google.Datastore.V1Beta3
 
         /// <inheritdoc/>
         public override KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
-
+        
         /// <inheritdoc/>
-        public override RunQueryResponse RunQuerySingleCall(
-            Query query, 
-            ReadConsistency? readConsistency = null,
-            CallSettings callSettings = null) =>
-            Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
-
-        /// <inheritdoc/>
-        public override Task<RunQueryResponse> RunQuerySingleCallAsync(
-            Query query,
-            ReadConsistency? readConsistency = null,
-            CallSettings callSettings = null) =>
-            Client.RunQueryAsync(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
-
-        /// <inheritdoc/>
-        public override RunQueryResponse RunQuerySingleCall(
-            GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
-            Client.RunQuery(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
-
-        /// <inheritdoc/>
-        public override Task<RunQueryResponse> RunQuerySingleCallAsync(
-            GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
-            Client.RunQueryAsync(ProjectId, _partitionId, GetReadOptions(readConsistency), query, callSettings);
-
-        /// <inheritdoc/>
-        public override IPagedEnumerable<RunQueryResponse, Entity> RunQuery(
+        public override DatastoreQueryResults RunQuery(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
         {
+            GaxPreconditions.CheckNotNull(query, nameof(query));
             var request = new RunQueryRequest
             {
                 ProjectId = ProjectId,
@@ -101,15 +78,17 @@ namespace Google.Datastore.V1Beta3
                 Query = query,
                 ReadOptions = GetReadOptions(readConsistency)
             };
-            return new PagedEnumerable<RunQueryRequest, RunQueryResponse, Entity>(Client.RunQueryApiCall, request, callSettings);
+            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
+            return new DatastoreQueryResults(streamer.Sync());
         }
 
         /// <inheritdoc/>
-        public override IPagedAsyncEnumerable<RunQueryResponse, Entity> RunQueryAsync(
+        public override DatastoreAsyncQueryResults RunQueryAsync(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
         {
+            GaxPreconditions.CheckNotNull(query, nameof(query));
             var request = new RunQueryRequest
             {
                 ProjectId = ProjectId,
@@ -117,7 +96,44 @@ namespace Google.Datastore.V1Beta3
                 Query = query,
                 ReadOptions = GetReadOptions(readConsistency)
             };
-            return new PagedAsyncEnumerable<RunQueryRequest, RunQueryResponse, Entity>(Client.RunQueryApiCall, request, callSettings);
+            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
+            return new DatastoreAsyncQueryResults(streamer.Async());
+        }
+
+        /// <inheritdoc/>
+        public override DatastoreQueryResults RunQuery(
+            GqlQuery gqlQuery,
+            ReadConsistency? readConsistency = null,
+            CallSettings callSettings = null)
+        {
+            GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
+            var request = new RunQueryRequest
+            {
+                ProjectId = ProjectId,
+                PartitionId = _partitionId,
+                GqlQuery = gqlQuery,
+                ReadOptions = GetReadOptions(readConsistency)
+            };
+            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
+            return new DatastoreQueryResults(streamer.Sync());
+        }
+
+        /// <inheritdoc/>
+        public override DatastoreAsyncQueryResults RunQueryAsync(
+            GqlQuery gqlQuery,
+            ReadConsistency? readConsistency = null,
+            CallSettings callSettings = null)
+        {
+            GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
+            var request = new RunQueryRequest
+            {
+                ProjectId = ProjectId,
+                PartitionId = _partitionId,
+                GqlQuery = gqlQuery,
+                ReadOptions = GetReadOptions(readConsistency)
+            };
+            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
+            return new DatastoreAsyncQueryResults(streamer.Async());
         }
 
         /// <inheritdoc/>

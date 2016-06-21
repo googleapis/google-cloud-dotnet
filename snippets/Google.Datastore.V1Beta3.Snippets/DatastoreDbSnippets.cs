@@ -11,7 +11,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Google.Api.Gax;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
@@ -91,7 +90,10 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            IPagedEnumerable<RunQueryResponse, Entity> results = db.RunQuery(query);
+            DatastoreQueryResults results = db.RunQuery(query);
+            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
+            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
+            // results in whatever way makes most sense for your application.
             foreach (Entity entity in results)
             {
                 Console.WriteLine(entity);
@@ -118,7 +120,10 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            IPagedAsyncEnumerable<RunQueryResponse, Entity> results = db.RunQueryAsync(query);
+            DatastoreAsyncQueryResults results = db.RunQueryAsync(query);
+            // DatastoreAsyncQueryResults implements IAsyncEnumerable<Entity>, but you can
+            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
+            // results in whatever way makes most sense for your application.
             await results.ForEachAsync(entity =>
             {
                 Console.WriteLine(entity);
@@ -139,23 +144,27 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuerySingleCall(GqlQuery,*,*)
+            // Snippet: RunQuery(GqlQuery,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
-            // Note: no page streaming for GQL yet.
-            RunQueryResponse response = db.RunQuerySingleCall(gqlQuery);
-            foreach (EntityResult result in response.Batch.EntityResults)
+            DatastoreQueryResults results = db.RunQuery(gqlQuery);
+            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
+            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
+            // results in whatever way makes most sense for your application.
+            foreach (Entity entity in results)
             {
-                Console.WriteLine(result.Entity);
+                Console.WriteLine(entity);
             }
             // End snippet
 
-            Assert.Equal(1, response.Batch.EntityResults.Count);
-            Entity book = response.Batch.EntityResults[0].Entity;
+            // This will run the query again, admittedly...
+            List<Entity> entities = results.ToList();
+            Assert.Equal(1, entities.Count);
+            Entity book = entities[0];
             Assert.Equal("Jane Austen", (string)book["author"]);
             Assert.Equal("Pride and Prejudice", (string)book["title"]);
         }
@@ -166,23 +175,27 @@ namespace Google.Datastore.V1Beta3.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuerySingleCallAsync(GqlQuery,*,*)
+            // Snippet: RunQueryAsync(GqlQuery,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
-            // Note: no page streaming for GQL yet.
-            RunQueryResponse response = await db.RunQuerySingleCallAsync(gqlQuery);
-            foreach (EntityResult result in response.Batch.EntityResults)
+            DatastoreAsyncQueryResults results = db.RunQueryAsync(gqlQuery);
+            // DatastoreAsyncQueryResults implements IAsyncEnumerable<Entity>, but you can
+            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
+            // results in whatever way makes most sense for your application.
+            await results.ForEachAsync(entity =>
             {
-                Console.WriteLine(result.Entity);
-            }
+                Console.WriteLine(entity);
+            });
             // End snippet
 
-            Assert.Equal(1, response.Batch.EntityResults.Count);
-            Entity book = response.Batch.EntityResults[0].Entity;
+            // This will run the query again, admittedly...
+            List<Entity> entities = await results.ToList();
+            Assert.Equal(1, entities.Count);
+            Entity book = entities[0];
             Assert.Equal("Jane Austen", (string)book["author"]);
             Assert.Equal("Pride and Prejudice", (string)book["title"]);
         }
@@ -707,13 +720,21 @@ namespace Google.Datastore.V1Beta3.Snippets
             Query query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
-            RunQueryResponse response = db.RunQuerySingleCall(query, ReadConsistency.Eventual);
-            foreach (EntityResult result in response.Batch.EntityResults)
+            List<EntityResult> entityResults = db.RunQuery(query, ReadConsistency.Eventual).AsEntityResults().ToList();
+            foreach (EntityResult result in entityResults)
             {
                 Entity entity = result.Entity;
                 // Do something with the task entity
             }
-            ByteString nextPageCursor = response.Batch.EndCursor;
+            // If we retrieved as many entities as we requested, there may be another page of results.
+            // (There may not be any more results, but the query stopped executing when it had found
+            // as many as we asked for.)
+            // If we ran out of results, this is definitely the last page.
+            if (entityResults.Count == pageSize)
+            {
+                ByteString nextPageCursor = entityResults.Last().Cursor;
+                // Store nextPageCursor to get the next page later.
+            }
             // End sample
         }
 
