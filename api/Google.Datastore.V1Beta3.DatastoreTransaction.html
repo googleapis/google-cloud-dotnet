@@ -69,7 +69,17 @@
               
               <h1 id="Google_Datastore_V1Beta3_DatastoreTransaction" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction">Class DatastoreTransaction
               </h1>
-              <div class="markdown level0 summary"><p>Convenience wrapper around a Datastore transaction.</p>
+              <div class="markdown level0 summary"><p>
+Convenience wrapper around a Datastore transaction. All mutation operations (<a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Insert(IEnumerable<entity>)</entity></a>,
+<a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__">Delete(IEnumerable<key>)</key></a>, <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Update(IEnumerable<entity>)</entity></a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Upsert(IEnumerable<entity>)</entity></a>)
+merely add to a list of mutations which are performed in a single <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Commit_Google_Api_Gax_CallSettings_">Commit(CallSettings)</a> or <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_CommitAsync_Google_Api_Gax_CallSettings_">CommitAsync(CallSettings)</a>
+operation. This means the mutation methods are all synchronous and do not take call settings, as they don&#39;t perform any
+API operations.
+</p>
+<p>
+Disposing of a transaction calls <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Rollback_Google_Api_Gax_CallSettings_">Rollback(CallSettings)</a> if the transaction has not already been committed
+or rolled back.
+</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -148,16 +158,58 @@ or the asynchronous equivalent.</p>
                   </tr>
                 </tbody>
               </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_TransactionId" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.TransactionId">TransactionId</h4>
+              <div class="markdown level1 summary"><p>The ID of the transaction, used implicitly in operations performed with this object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ByteString TransactionId { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Commit" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Commit">Commit()</h4>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Commit_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Commit(Google.Api.Gax.CallSettings)">Commit(CallSettings)</h4>
               <div class="markdown level1 summary"><p>Commits all mutations in this transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public CommitResponse Commit()</code></pre>
+                <pre><code class="lang-csharp hljs">public CommitResponse Commit(CallSettings callSettings = null)</code></pre>
               </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -169,6 +221,64 @@ or the asynchronous equivalent.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.CommitResponse.html#Google_Datastore_V1Beta3_CommitResponse">CommitResponse</a></td>
+                    <td><p>The response from the commit operation. This can be used to determine server-allocated keys.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The transaction has already been committed or rolled back.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_CommitAsync_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.CommitAsync(Google.Api.Gax.CallSettings)">CommitAsync(CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Commits all mutations in this transaction asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;CommitResponse&gt; CommitAsync(CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.CommitResponse.html#Google_Datastore_V1Beta3_CommitResponse">CommitResponse</a>&gt;</td>
                     <td><p>The response from the commit operation. This can be used to determine server-allocated keys.</p>
 </td>
                   </tr>
@@ -357,12 +467,13 @@ Otherwise, it rolls back the transaction.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_Google_Datastore_V1Beta3_Key_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Lookup(Google.Datastore.V1Beta3.Key)">Lookup(Key)</h4>
-              <div class="markdown level1 summary"></div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Lookup(Google.Datastore.V1Beta3.Key,Google.Api.Gax.CallSettings)">Lookup(Key, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up a single entity by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Entity Lookup(Key key)</code></pre>
+                <pre><code class="lang-csharp hljs">public Entity Lookup(Key key, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -377,7 +488,14 @@ Otherwise, it rolls back the transaction.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
                     <td><em>key</em></td>
-                    <td></td>
+                    <td><p>The key to look up. Must not be null, and must be complete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -392,12 +510,17 @@ Otherwise, it rolls back the transaction.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></td>
-                    <td></td>
+                    <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(IEnumerable<key>, CallSettings)</key></a>.</p>
+</div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Lookup(Google.Datastore.V1Beta3.Key[])">Lookup(Key[])</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -416,7 +539,8 @@ Otherwise, it rolls back the transaction.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>[]</td>
                     <td><em>keys</em></td>
-                    <td></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -431,16 +555,30 @@ Otherwise, it rolls back the transaction.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
-                    <td></td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Lookup(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key})">Lookup(IEnumerable&lt;Key&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_Google_Datastore_V1Beta3_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+This call may perform multiple RPC operations in order to look up all keys.
+</p>
+<p>
+This overload does not support the <a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> to be specified due to restrictions with
+methods containing a parameter array and optional parameters.
+It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(IEnumerable<key>, CallSettings)</key></a>, passing in a <code>null</code>
+value for the call settings.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Lookup(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">Lookup(IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys)</code></pre>
+                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -455,7 +593,14 @@ Otherwise, it rolls back the transaction.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -470,18 +615,198 @@ Otherwise, it rolls back the transaction.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
-                    <td></td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Rollback" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Rollback">Rollback()</h4>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.LookupAsync(Google.Datastore.V1Beta3.Key,Google.Api.Gax.CallSettings)">LookupAsync(Key, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up a single entity by key asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;Entity&gt; LookupAsync(Key key, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The key to look up. Must not be null, and must be complete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable<key>, CallSettings)</key></a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.LookupAsync(Google.Datastore.V1Beta3.Key[])">LookupAsync(Key[])</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_Google_Datastore_V1Beta3_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+This call may perform multiple RPC operations in order to look up all keys.
+</p>
+<p>
+This overload does not support the <a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> to be specified due to restrictions with
+methods containing a parameter array and optional parameters.
+It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable<key>, CallSettings)</key></a>, passing in a <code>null</code>
+value for the call settings.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.LookupAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">LookupAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Key.html#Google_Datastore_V1Beta3_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Rollback_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Rollback(Google.Api.Gax.CallSettings)">Rollback(CallSettings)</h4>
               <div class="markdown level1 summary"><p>Rolls back this transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RollbackResponse Rollback()</code></pre>
+                <pre><code class="lang-csharp hljs">public RollbackResponse Rollback(CallSettings callSettings = null)</code></pre>
               </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -497,7 +822,7 @@ Otherwise, it rolls back the transaction.</p>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_Rollback_remarks">Remarks</h5>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_Rollback_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method is rarely useful explicitly; the <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Dispose">Dispose()</a> method rolls back the transaction if it
 is still active, so a <code>using</code> statement is normally preferable to this.</p>
 </div>
@@ -517,13 +842,13 @@ is still active, so a <code>using</code> statement is normally preferable to thi
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_GqlQuery_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQuery(Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.GqlQuery)">RunQuery(PartitionId, GqlQuery)</h4>
-              <div class="markdown level1 summary"><p>Runs the specified query in this transaction.</p>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RollbackAsync_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RollbackAsync(Google.Api.Gax.CallSettings)">RollbackAsync(CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Rolls back this transaction asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RunQueryResponse RunQuery(PartitionId partitionId, GqlQuery query)</code></pre>
+                <pre><code class="lang-csharp hljs">public Task&lt;RollbackResponse&gt; RollbackAsync(CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -536,15 +861,9 @@ is still active, so a <code>using</code> statement is normally preferable to thi
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId">PartitionId</a></td>
-                    <td><em>partitionId</em></td>
-                    <td><p>The ID of the partition to run the query against. Must not be null.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
-                    <td><em>query</em></td>
-                    <td><p>The query to run. Must not be null.</p>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -559,24 +878,39 @@ is still active, so a <code>using</code> statement is normally preferable to thi
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a></td>
-                    <td><p>The result of the query.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.RollbackResponse.html#Google_Datastore_V1Beta3_RollbackResponse">RollbackResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RollbackAsync_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method is rarely useful explicitly; the <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Dispose">Dispose()</a> method rolls back the transaction if it
+is still active, so a <code>using</code> statement is normally preferable to this.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>The transaction has already been committed or rolled back.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_GqlQuery__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Using a transaction ensures that a commit operation will fail if any of the entities returned
-by this query have been modified while the transaction is active. Note that modifications performed
-as part of this operation are not reflected in the query results.</p>
-</div>
-              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_Query_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQuery(Google.Datastore.V1Beta3.PartitionId,Google.Datastore.V1Beta3.Query)">RunQuery(PartitionId, Query)</h4>
-              <div class="markdown level1 summary"><p>Runs the specified query in this transaction.</p>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_GqlQuery_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQuery(Google.Datastore.V1Beta3.GqlQuery,Google.Datastore.V1Beta3.PartitionId,Google.Api.Gax.CallSettings)">RunQuery(GqlQuery, PartitionId, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Executes the given GQL query in this transaction, returning a result set that can be viewed as a sequence of
+entities, entity results (with cursors), batches, or raw API responses.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public RunQueryResponse RunQuery(PartitionId partitionId, Query query)</code></pre>
+                <pre><code class="lang-csharp hljs">public DatastoreQueryResults RunQuery(GqlQuery gqlQuery, PartitionId partitionId, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -589,15 +923,89 @@ as part of this operation are not reflected in the query results.</p>
                 </thead>
                 <tbody>
                   <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId">PartitionId</a></td>
                     <td><em>partitionId</em></td>
-                    <td><p>The ID of the partition to run the query against. Must not be null.</p>
+                    <td><p>The partition in which to execute the query. May be null, in which case
+the query is executed in the partition associated with the empty namespace in the project used by this transaction.</p>
 </td>
                   </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_GqlQuery_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+Using a transaction ensures that a commit operation will fail if any of the entities returned
+by this query have been modified while the transaction is active. Note that modifications performed
+as part of this operation are not reflected in the query results.
+</p>
+<p>
+The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
+multiple times will execute the query again, potentially returning different results.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_Query_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQuery(Google.Datastore.V1Beta3.Query,Google.Datastore.V1Beta3.PartitionId,Google.Api.Gax.CallSettings)">RunQuery(Query, PartitionId, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Executes the given structured query in this transaction, returning a result set that can be viewed as a sequence of
+entities, entity results (with cursors), batches, or raw API responses.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatastoreQueryResults RunQuery(Query query, PartitionId partitionId, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></td>
                     <td><em>query</em></td>
-                    <td><p>The query to run. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId">PartitionId</a></td>
+                    <td><em>partitionId</em></td>
+                    <td><p>The partition in which to execute the query. May be null, in which case
+the query is executed in the partition associated with the empty namespace in the project used by this transaction.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -612,16 +1020,158 @@ as part of this operation are not reflected in the query results.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a></td>
-                    <td><p>The result of the query.</p>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_PartitionId_Google_Datastore_V1Beta3_Query__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Using a transaction ensures that a commit operation will fail if any of the entities returned
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQuery_Google_Datastore_V1Beta3_Query_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+Using a transaction ensures that a commit operation will fail if any of the entities returned
 by this query have been modified while the transaction is active. Note that modifications performed
-as part of this operation are not reflected in the query results.</p>
+as part of this operation are not reflected in the query results.
+</p>
+<p>
+The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
+multiple times will execute the query again, potentially returning different results.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.GqlQuery,Google.Datastore.V1Beta3.PartitionId,Google.Api.Gax.CallSettings)">RunQueryAsync(GqlQuery, PartitionId, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Executes the given GQL query in this transaction, returning a result set that can be viewed as an asynchronous
+sequence of entities, entity results (with cursors), batches, or raw API responses.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatastoreAsyncQueryResults RunQueryAsync(GqlQuery gqlQuery, PartitionId partitionId, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.GqlQuery.html#Google_Datastore_V1Beta3_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId">PartitionId</a></td>
+                    <td><em>partitionId</em></td>
+                    <td><p>The partition in which to execute the query. May be null, in which case
+the query is executed in the partition associated with the empty namespace in the project used by this transaction.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_GqlQuery_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+Using a transaction ensures that a commit operation will fail if any of the entities returned
+by this query have been modified while the transaction is active. Note that modifications performed
+as part of this operation are not reflected in the query results.
+</p>
+<p>
+The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
+multiple times will execute the query again, potentially returning different results.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_Query_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.RunQueryAsync(Google.Datastore.V1Beta3.Query,Google.Datastore.V1Beta3.PartitionId,Google.Api.Gax.CallSettings)">RunQueryAsync(Query, PartitionId, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Executes the given structured query in this transaction, returning a result set that can be viewed as an asynchronous
+sequence of entities, entity results (with cursors), batches, or raw API responses.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatastoreAsyncQueryResults RunQueryAsync(Query query, PartitionId partitionId, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.Query.html#Google_Datastore_V1Beta3_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.PartitionId.html#Google_Datastore_V1Beta3_PartitionId">PartitionId</a></td>
+                    <td><em>partitionId</em></td>
+                    <td><p>The partition in which to execute the query. May be null, in which case
+the query is executed in the partition associated with the empty namespace in the project used by this transaction.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> representing the result of the query.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_RunQueryAsync_Google_Datastore_V1Beta3_Query_Google_Datastore_V1Beta3_PartitionId_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+Using a transaction ensures that a commit operation will fail if any of the entities returned
+by this query have been modified while the transaction is active. Note that modifications performed
+as part of this operation are not reflected in the query results.
+</p>
+<p>
+The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a> object
+multiple times will execute the query again, potentially returning different results.
+</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Update_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Update(Google.Datastore.V1Beta3.Entity[])">Update(Entity[])</h4>
               <div class="markdown level1 summary"><p>Adds update operations for all the specified keys to this transaction.</p>

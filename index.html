@@ -105,6 +105,37 @@ publisher.CreateTopic(topicName);
 SubscriberClient subscriber = SubscriberClient.Create();
 string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
 subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
+
+// Publish a message to the topic.
+PubsubMessage message = new PubsubMessage
+{
+    // The data is any arbitrary ByteString. Here, we&#39;re using text.
+    Data = ByteString.CopyFromUtf8(&quot;Hello, Pubsub&quot;),
+    // The attributes provide metadata in a string-to-string dictionary.
+    Attributes =
+    {
+        { &quot;description&quot;, &quot;Simple text message&quot; }
+    }
+};
+publisher.Publish(topicName, new[] { message });
+
+// Pull messages from the subscription. We&#39;re returning immediately, whether or not there
+// are messages; in other cases you&#39;ll want to allow the call to wait until a message arrives.
+PullResponse response = subscriber.Pull(subscriptionName, returnImmediately: true, maxMessages: 10);
+foreach (ReceivedMessage received in response.ReceivedMessages)
+{
+    PubsubMessage msg = received.Message;
+    Console.WriteLine($&quot;Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}&quot;);
+    Console.WriteLine($&quot;Text: &#39;{msg.Data.ToStringUtf8()}&#39;&quot;);
+}
+
+// Acknowledge that we&#39;ve received the messages. If we don&#39;t do this within 60 seconds (as specified
+// when we created the subscription) we&#39;ll receive the messages again when we next pull.
+subscriber.Acknowledge(subscriptionName, response.ReceivedMessages.Select(m =&gt; m.AckId));
+
+// Tidy up by deleting the subscription and the topic.
+subscriber.DeleteSubscription(subscriptionName);
+publisher.DeleteTopic(topicName);
 </code></pre><h1 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h1>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
@@ -146,12 +177,13 @@ structured query results.</p>
 factory methods (particularly on <a href="api/Google.Datastore.V1Beta3.Filter.html">Filter</a>
 are provided to simplify working with the protobuf messages.</p>
 <h2 id="sample-code-1">Sample code</h2>
+<p>Inserting data:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
 var keyFactory = db.CreateKeyFactory(&quot;message&quot;);
 var entity = new Entity
 {
-    Key = keyFactory.CreateInsertionKey(),
+    Key = keyFactory.CreateIncompleteKey(),
     [&quot;created&quot;] = DateTime.UtcNow,
     [&quot;text&quot;] = &quot;Text of the message&quot;
 };
@@ -161,6 +193,22 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
     var commitResponse = transaction.Commit();
     var insertedKey = commitResponse.MutationResults[0].Key;
     Console.WriteLine($&quot;Inserted key: {insertedKey}&quot;);
+}
+</code></pre><p>Querying data:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+
+// Print the messages created in the last 5 minutes, most recent first
+DateTime cutoff = DateTime.UtcNow.AddMinutes(-5);
+Query query = new Query(&quot;message&quot;)
+{
+    Filter = Filter.GreaterThanOrEqual(&quot;created&quot;, cutoff),
+    Order = { { &quot;created&quot;, Direction.Descending } }
+};
+foreach (Entity entity in db.RunQuery(query))
+{
+    DateTime created = (DateTime)entity[&quot;created&quot;];
+    string text = (string)entity[&quot;text&quot;];
+    Console.WriteLine($&quot;{created:yyyy-MM-dd&#39;T&#39;HH:mm:ss}: {text}&quot;);
 }
 </code></pre><h1 id="google-logging-v2-alpha-">Google.Logging.V2 (alpha)</h1>
 <p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>

@@ -194,7 +194,7 @@ before it is inserted.</p>
 <pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
 KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;message&quot;);
 AllocateIdsResponse response = client.AllocateIds(projectId,
-    new[] { keyFactory.CreateInsertionKey(), keyFactory.CreateInsertionKey() }
+    new[] { keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey() }
 );
 Entity entity1 = new Entity { Key = response.Keys[0], [&quot;text&quot;] = &quot;Text 1&quot; };
 Entity entity2 = new Entity { Key = response.Keys[1], [&quot;text&quot;] = &quot;Text 2&quot; };

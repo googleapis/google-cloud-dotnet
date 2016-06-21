@@ -120,6 +120,9 @@
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Datastore.DatastoreClient.html#Google_Datastore_V1Beta3_Datastore_DatastoreClient">Datastore.DatastoreClient</a></h4>
                   <section><p>Client for Datastore</p>
 </section>
+                  <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreAsyncQueryResults.html#Google_Datastore_V1Beta3_DatastoreAsyncQueryResults">DatastoreAsyncQueryResults</a></h4>
+                  <section><p>An asynchronous Datastore query which is executed lazily and which be viewed in multiple ways.</p>
+</section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a></h4>
                   <section><p>Datastore client wrapper, for convenient use.</p>
 </section>
@@ -138,6 +141,9 @@ method to obtain an instance of this class.</p>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreExtensions.html#Google_Datastore_V1Beta3_DatastoreExtensions">DatastoreExtensions</a></h4>
                   <section><p>Extension methods to assist with using <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient">DatastoreClient</a>.</p>
 </section>
+                  <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults">DatastoreQueryResults</a></h4>
+                  <section><p>A Datastore query which is executed lazily and which be viewed in multiple ways.</p>
+</section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreReflection.html#Google_Datastore_V1Beta3_DatastoreReflection">DatastoreReflection</a></h4>
                   <section><p>Holder for reflection information generated from google/datastore/v1beta3/datastore.proto</p>
 </section>
@@ -145,7 +151,17 @@ method to obtain an instance of this class.</p>
                   <section><p>Settings for a Datastore wrapper.</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction">DatastoreTransaction</a></h4>
-                  <section><p>Convenience wrapper around a Datastore transaction.</p>
+                  <section><p>
+Convenience wrapper around a Datastore transaction. All mutation operations (<a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Insert(IEnumerable<entity>)</entity></a>,
+<a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__">Delete(IEnumerable<key>)</key></a>, <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Update(IEnumerable<entity>)</entity></a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Upsert(IEnumerable<entity>)</entity></a>)
+merely add to a list of mutations which are performed in a single <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Commit_Google_Api_Gax_CallSettings_">Commit(CallSettings)</a> or <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_CommitAsync_Google_Api_Gax_CallSettings_">CommitAsync(CallSettings)</a>
+operation. This means the mutation methods are all synchronous and do not take call settings, as they don&#39;t perform any
+API operations.
+</p>
+<p>
+Disposing of a transaction calls <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Rollback_Google_Api_Gax_CallSettings_">Rollback(CallSettings)</a> if the transaction has not already been committed
+or rolled back.
+</p>
 </section>
                   <h4><a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a></h4>
                   <section><p> A Datastore data object.</p>

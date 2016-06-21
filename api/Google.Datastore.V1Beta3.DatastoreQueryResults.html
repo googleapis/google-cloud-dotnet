@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DatastoreQueryResults
+   | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DatastoreQueryResults
+   | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.0.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Datastore_V1Beta3_DatastoreQueryResults" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults">Class DatastoreQueryResults
+              </h1>
+              <div class="markdown level0 summary"><p>A Datastore query which is executed lazily and which be viewed in multiple ways.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">DatastoreQueryResults</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Datastore.V1Beta3</h6>
+              <h6><strong>Assembly</strong>:Google.Datastore.V1Beta3.dll</h6>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreQueryResults_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class DatastoreQueryResults : IEnumerable&lt;Entity&gt;, IEnumerable</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults__ctor_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_RunQueryResponse__" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.#ctor(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.RunQueryResponse})">DatastoreQueryResults(IEnumerable&lt;RunQueryResponse&gt;)</h4>
+              <div class="markdown level1 summary"><p>Constructs a new instance from the given sequence of responses. This constructor
+is only present to facilitate testing; application code will normally obtain instances
+of this class by calling <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_RunQuery_Google_Datastore_V1Beta3_Query_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">RunQuery(Query, Nullable<readoptions.types.readconsistency>, CallSettings)</readoptions.types.readconsistency></a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatastoreQueryResults(IEnumerable&lt;RunQueryResponse&gt; responses)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><em>responses</em></td>
+                    <td><p>The responses to return.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1Beta3_DatastoreQueryResults__ctor_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_RunQueryResponse___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The sequence of responses will be returned directly from <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsResponses">AsResponses()</a>, and
+used to lazily construct the other sequences returned by this class. It should not
+contain any null references.</p>
+</div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_AsBatches" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.AsBatches">AsBatches()</h4>
+              <div class="markdown level1 summary"><p>Returns the results of this query as a sequence of <a class="xref" href="Google.Datastore.V1Beta3.QueryResultBatch.html#Google_Datastore_V1Beta3_QueryResultBatch">QueryResultBatch</a> values.
+This method is only useful if the application wishes to process a batch at a time; if the
+details of how the API splits the results into batches is not needed, use <a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsEntityResults">AsEntityResults()</a>
+or simply iterate over the entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;QueryResultBatch&gt; AsBatches()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.QueryResultBatch.html#Google_Datastore_V1Beta3_QueryResultBatch">QueryResultBatch</a>&gt;</td>
+                    <td><p>A sequence of <a class="xref" href="Google.Datastore.V1Beta3.QueryResultBatch.html#Google_Datastore_V1Beta3_QueryResultBatch">QueryResultBatch</a> values.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_AsEntityResults" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.AsEntityResults">AsEntityResults()</h4>
+              <div class="markdown level1 summary"><p>Returns the results of this query as a sequence of <a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult">EntityResult</a> values.
+The final result from each batch is modified to use the batch&#39;s end cursor instead of
+the original <a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult_Cursor">Cursor</a> value.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;EntityResult&gt; AsEntityResults()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult">EntityResult</a>&gt;</td>
+                    <td><p>A sequence of <a class="xref" href="Google.Datastore.V1Beta3.EntityResult.html#Google_Datastore_V1Beta3_EntityResult">EntityResult</a> values.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_AsResponses" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.AsResponses">AsResponses()</h4>
+              <div class="markdown level1 summary"><p>Returns the results of this query as a sequence of <a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a> values
+exactly as returned by the Datastore API. This method is only useful if the application
+wishes to examine the <a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse_Query">Query</a> property; otherwise, use</p>
+<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreQueryResults.html#Google_Datastore_V1Beta3_DatastoreQueryResults_AsBatches">AsBatches()</a> to obtain the sequence of batches.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerable&lt;RunQueryResponse&gt; AsResponses()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><p>A sequence of <a class="xref" href="Google.Datastore.V1Beta3.RunQueryResponse.html#Google_Datastore_V1Beta3_RunQueryResponse">RunQueryResponse</a> values.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_GetEnumerator" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.GetEnumerator">GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerator&lt;Entity&gt; GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Google.Datastore.V1Beta3.Entity.html#Google_Datastore_V1Beta3_Entity">Entity</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;Google.Datastore.V1Beta3.Entity&gt;.GetEnumerator()</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Datastore_V1Beta3_DatastoreQueryResults_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Datastore.V1Beta3.DatastoreQueryResults.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
