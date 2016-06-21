@@ -214,7 +214,7 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Looks up a single entity by key.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="Lookup(IEnumerable{Key}, CallSettings)"/>.</remarks>
         /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -256,7 +256,7 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Looks up a single entity by key asynchronously.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="LookupAsync(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>.</remarks>
+        /// <remarks>This method simply delegates to <see cref="LookupAsync(IEnumerable{Key}, CallSettings)"/>.</remarks>
         /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The entity with the specified key, or <c>null</c> if no such entity exists.</returns>

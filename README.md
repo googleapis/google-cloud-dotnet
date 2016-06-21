@@ -115,7 +115,9 @@ The package is available on Google's [public MyGet feed][google-myget-feed], whe
 PM> Install-Package Google.Datastore.V1Beta3 -Prerelease
 ```
 
-#### Example
+#### Examples
+
+Inserting data:
 
 ```c#
 using Google.Datastore.V1Beta3;
@@ -135,6 +137,29 @@ using (var transaction = db.BeginTransaction())
     transaction.Insert(entity);
     var commitResponse = transaction.Commit();
     var insertedKey = commitResponse.MutationResults[0].Key;
+}
+```
+
+Querying data:
+
+```c#
+using Google.Datastore.V1Beta3;
+...
+
+DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+
+// Print the messages created in the last 5 minutes, most recent first
+DateTime cutoff = DateTime.UtcNow.AddMinutes(-5);
+Query query = new Query("message")
+{
+    Filter = Filter.GreaterThanOrEqual("created", cutoff),
+    Order = { { "created", Direction.Descending } }
+};
+foreach (Entity entity in db.RunQuery(query))
+{
+    DateTime created = (DateTime)entity["created"];
+    string text = (string)entity["text"];
+    Console.WriteLine($"{created:yyyy-MM-dd'T'HH:mm:ss}: {text}");
 }
 ```
 
@@ -181,7 +206,46 @@ PM> Install-Package Google.Pubsub.V1 -Prerelease
 using Google.Pubsub.V1;
 ...
 
-Code coming soon...
+// First create a topic.
+PublisherClient publisher = PublisherClient.Create();
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+publisher.CreateTopic(topicName);
+
+// Subscribe to the topic.
+SubscriberClient subscriber = SubscriberClient.Create();
+string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
+subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
+
+// Publish a message to the topic.
+PubsubMessage message = new PubsubMessage
+{
+    // The data is any arbitrary ByteString. Here, we're using text.
+    Data = ByteString.CopyFromUtf8("Hello, Pubsub"),
+    // The attributes provide metadata in a string-to-string dictionary.
+    Attributes =
+    {
+        { "description", "Simple text message" }
+    }
+};
+publisher.Publish(topicName, new[] { message });
+
+// Pull messages from the subscription. We're returning immediately, whether or not there
+// are messages; in other cases you'll want to allow the call to wait until a message arrives.
+PullResponse response = subscriber.Pull(subscriptionName, returnImmediately: true, maxMessages: 10);
+foreach (ReceivedMessage received in response.ReceivedMessages)
+{
+    PubsubMessage msg = received.Message;
+    Console.WriteLine($"Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}");
+    Console.WriteLine($"Text: '{msg.Data.ToStringUtf8()}'");
+}
+
+// Acknowledge that we've received the messages. If we don't do this within 60 seconds (as specified
+// when we created the subscription) we'll receive the messages again when we next pull.
+subscriber.Acknowledge(subscriptionName, response.ReceivedMessages.Select(m => m.AckId));
+
+// Tidy up by deleting the subscription and the topic.
+subscriber.DeleteSubscription(subscriptionName);
+publisher.DeleteTopic(topicName);
 ```
 
 ## Google Cloud Storage

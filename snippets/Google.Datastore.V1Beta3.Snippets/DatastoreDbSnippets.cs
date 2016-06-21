@@ -396,11 +396,11 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
-        public void Overview()
+        public void InsertOverview()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
-            // Sample: Overview
+            // Sample: InsertOverview
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
             var keyFactory = db.CreateKeyFactory("message");
@@ -420,6 +420,30 @@ namespace Google.Datastore.V1Beta3.Snippets
             // End sample
         }
 
+        [Fact]
+        public void QueryOverview()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+            // Sample: QueryOverview
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+
+            // Print the messages created in the last 5 minutes, most recent first
+            DateTime cutoff = DateTime.UtcNow.AddMinutes(-5);
+            Query query = new Query("message")
+            {
+                Filter = Filter.GreaterThanOrEqual("created", cutoff),
+                Order = { { "created", Direction.Descending } }
+            };
+            foreach (Entity entity in db.RunQuery(query))
+            {
+                DateTime created = (DateTime)entity["created"];
+                string text = (string)entity["text"];
+                Console.WriteLine($"{created:yyyy-MM-dd'T'HH:mm:ss}: {text}");
+            }
+            // End sample
+        }
+        
         // Snippets ported from https://cloud.google.com/datastore/docs/concepts/entities
 
         [Fact]
