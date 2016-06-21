@@ -59,7 +59,7 @@ namespace Google.Pubsub.V1.Snippets
                 Attributes =
                 {
                     { "description", "Simple text message" }
-                }                
+                }
             };
             publisher.Publish(topicName, new[] { message });
 

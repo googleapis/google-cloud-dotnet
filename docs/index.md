@@ -43,8 +43,8 @@ and other Google Cloud services.
 
 A library for working with [Cloud Pub/Sub](https://cloud.google.com/pubsub/).
 
-[`PublisherClient`](obj/api/Google.Pubsub.V1.PublisherClient.yml) and
-[`SubscriberClient`](obj/api/Google.Pubsub.V1.SubscriberClient.yml)
+[PublisherClient](obj/api/Google.Pubsub.V1.PublisherClient.yml) and
+[SubscriberClient](obj/api/Google.Pubsub.V1.SubscriberClient.yml)
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.
@@ -60,7 +60,7 @@ A wrapper library over
 for working with [Google Cloud Storage](https://cloud.google.com/storage/).
 
 Common operations are exposed via the
-[`StorageClient`](obj/api/Google.Storage.V1.StorageClient.yml) class.
+[StorageClient](obj/api/Google.Storage.V1.StorageClient.yml) class.
 
 ## Sample code
 
@@ -70,20 +70,26 @@ Common operations are exposed via the
 
 A library for working with [Cloud Datastore](https://cloud.google.com/datastore/).
 
-The [`DatastoreDb`](obj/api/Google.Datastore.V1Beta3.DatastoreDb.yml)
+The [DatastoreDb](obj/api/Google.Datastore.V1Beta3.DatastoreDb.yml)
 class is provided as a wrapper for
-[`DatastoreClient`](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml),
+[DatastoreClient](obj/api/Google.Datastore.V1Beta3.DatastoreClient.yml),
 simplifying operations considerably by assuming all operations act
 on the same partition, and providing page streaming operations on
 structured query results.
 
 Several custom conversions, additional constructors,
-factory methods (particularly on [`Filter`](obj/api/Google.Datastore.V1Beta3.Filter.yml)
+factory methods (particularly on [Filter](obj/api/Google.Datastore.V1Beta3.Filter.yml)
 are provided to simplify working with the protobuf messages.
 
 ## Sample code
 
-[!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreDb.txt#Overview)]
+Inserting data:
+
+[!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreDb.txt#InsertOverview)]
+
+Querying data:
+
+[!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreDb.txt#QueryOverview)]
 
 # Google.Logging.V2 (alpha)
 
@@ -91,7 +97,7 @@ A library for working with [Stackdriver Logging](https://cloud.google.com/loggin
 
 (Depends on `Google.Logging.Type` for version-agnostic types.)
 
-See [`LoggingServiceV2Client`](obj/api/Google.Logging.V2.LoggingServiceV2Client.yml)
+See [LoggingServiceV2Client](obj/api/Google.Logging.V2.LoggingServiceV2Client.yml)
 for details.
 
 # Google.Bigquery.V2 (alpha)
@@ -101,7 +107,7 @@ A wrapper library over
 for working with [Google BigQuery](https://cloud.google.com/bigquery/)
 
 Common operations are exposed via the
-[`BigqueryClient`](obj/api/Google.Bigquery.V2.BigqueryClient.yml)
+[BigqueryClient](obj/api/Google.Bigquery.V2.BigqueryClient.yml)
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.
 
