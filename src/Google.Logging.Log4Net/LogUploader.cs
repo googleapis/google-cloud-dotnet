@@ -86,6 +86,7 @@ namespace Google.Logging.Log4Net
             while (true)
             {
                 IEnumerable<LogEntryExtra> entries;
+                // Wait/loop until there are some log entries that need uploading
                 while (true)
                 {
                     DateTimeRange logEntriesLost;
@@ -102,10 +103,12 @@ namespace Google.Logging.Log4Net
                     }
                     if (entries != null && entries.Count() > 0)
                     {
+                        // There are log entries that need uploading, so do that now.
                         break;
                     }
                     await _uploadReadyEvent.WaitAsync();
                 }
+                // Upload entries to the Cloud Logging server
                 try
                 {
                     await _client.WriteLogEntriesAsync("", null, s_emptyLabels, entries.Select(x => x.Entry));
@@ -126,6 +129,7 @@ namespace Google.Logging.Log4Net
             }
         }
 
+        // For testing only.
         public async Task WaitUntilEmptyAsync(TimeSpan timeout)
         {
             var timeoutTask = Task.Delay(timeout);

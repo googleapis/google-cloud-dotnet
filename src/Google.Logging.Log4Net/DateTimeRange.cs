@@ -16,7 +16,7 @@ using System;
 
 namespace Google.Logging.Log4Net
 {
-    public class DateTimeRange
+    internal class DateTimeRange
     {
         public DateTimeRange(DateTime from, DateTime to)
         {

@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace Google.Logging.Log4Net
 {
-    interface ILogQueue
+    internal interface ILogQueue
     {
         /// <summary>
         /// Get the next ID to use for sequential log entry numbering.
@@ -47,7 +47,7 @@ namespace Google.Logging.Log4Net
         Task RemoveUntilAsync(long id);
 
         /// <summary>
-        /// Is this queue currently empty?
+        /// Is this queue currently empty? For testing only.
         /// </summary>
         /// <returns></returns>
         bool IsEmpty();

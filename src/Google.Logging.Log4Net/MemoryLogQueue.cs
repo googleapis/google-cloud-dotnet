@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace Google.Logging.Log4Net
 {
-    class MemoryLogQueue : ILogQueue
+    internal class MemoryLogQueue : ILogQueue
     {
         private struct LogEntryExtraSize
         {
@@ -38,13 +38,12 @@ namespace Google.Logging.Log4Net
             _maxMemoryCount = maxMemoryCount;
         }
 
-        private object _lockObj = new object();
+        private readonly object _lockObj = new object();
         private readonly long _maxMemorySize;
         private readonly int _maxMemoryCount;
 
         private readonly Queue<LogEntryExtraSize> _q = new Queue<LogEntryExtraSize>();
         private long _currentMemorySize = 0;
-
         private long _maxIdSeen = -1;
 
         public DateTimeRange EnqueueAsync(IEnumerable<LogEntryExtra> logEntries)

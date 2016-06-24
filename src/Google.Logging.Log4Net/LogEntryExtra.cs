@@ -16,7 +16,7 @@ using Google.Logging.V2;
 
 namespace Google.Logging.Log4Net
 {
-    public struct LogEntryExtra
+    internal struct LogEntryExtra
     {
         public LogEntryExtra(long id, LogEntry entry)
         {
