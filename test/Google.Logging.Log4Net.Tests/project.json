@@ -1,0 +1,23 @@
+﻿{
+  "description": "Unit tests for the Google StackDriver log4net appender library.",
+
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Logging.Log4Net": "",
+    "Google.Api.Gax.Testing": "0.1.0-CI00059",
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-rc1-build204",
+    "Moq": "4.5.10"
+  },
+
+  "commands": {
+    "test": "xunit.runner.dnx"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

@@ -55,6 +55,10 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Bigquery.V2.Tests", 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Datastore.V1Beta3.IntegrationTests", "test\Google.Datastore.V1Beta3.IntegrationTests\Google.Datastore.V1Beta3.IntegrationTests.xproj", "{C4022DBE-9C3C-46EB-8D3F-412B37BF3F1C}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net", "src\Google.Logging.Log4Net\Google.Logging.Log4Net.xproj", "{B27E7461-3714-44F6-BD2D-E7579A85F759}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net.Tests", "test\Google.Logging.Log4Net.Tests\Google.Logging.Log4Net.Tests.xproj", "{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +137,14 @@ Global
 		{C4022DBE-9C3C-46EB-8D3F-412B37BF3F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4022DBE-9C3C-46EB-8D3F-412B37BF3F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4022DBE-9C3C-46EB-8D3F-412B37BF3F1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B27E7461-3714-44F6-BD2D-E7579A85F759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27E7461-3714-44F6-BD2D-E7579A85F759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27E7461-3714-44F6-BD2D-E7579A85F759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27E7461-3714-44F6-BD2D-E7579A85F759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -156,5 +168,7 @@ Global
 		{B5F7491C-ED9E-4032-88C0-22EE959D19E8} = {95457640-F06C-4390-9CCD-EDFECD772588}
 		{96BDCC84-EF76-4B35-A390-D2F6D7B8F55B} = {F87E02E7-3142-4439-8938-42DD79337135}
 		{C4022DBE-9C3C-46EB-8D3F-412B37BF3F1C} = {F87E02E7-3142-4439-8938-42DD79337135}
+		{B27E7461-3714-44F6-BD2D-E7579A85F759} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
+		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28} = {F87E02E7-3142-4439-8938-42DD79337135}
 	EndGlobalSection
 EndGlobal
