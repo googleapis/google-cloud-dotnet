@@ -138,13 +138,13 @@ namespace Google.Datastore.V1Beta3
 
         /// <inheritdoc/>
         public override DatastoreTransaction BeginTransaction(CallSettings callSettings = null) =>
-            new DatastoreTransaction(Client, ProjectId, Client.BeginTransaction(ProjectId, callSettings).Transaction);
+            new DatastoreTransaction(Client, ProjectId, NamespaceId, Client.BeginTransaction(ProjectId, callSettings).Transaction);
 
         /// <inheritdoc/>
         public async override Task<DatastoreTransaction> BeginTransactionAsync(CallSettings callSettings = null)
         {
             var response = await Client.BeginTransactionAsync(ProjectId, callSettings).ConfigureAwait(false);
-            return new DatastoreTransaction(Client, ProjectId, response.Transaction);
+            return new DatastoreTransaction(Client, ProjectId, NamespaceId, response.Transaction);
         }                
 
         /// <inheritdoc/>

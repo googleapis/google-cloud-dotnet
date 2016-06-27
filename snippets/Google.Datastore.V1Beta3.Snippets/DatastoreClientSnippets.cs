@@ -144,7 +144,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             };
 
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
+            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, namespaceId, transactionId))
             {
                 transaction.Insert(book1, book2);
                 CommitResponse response = transaction.Commit();
@@ -248,7 +248,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 ["text"] = "Text of the message"
             };
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
+            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, namespaceId, transactionId))
             {
                 transaction.Insert(entity);
                 var commitResponse = transaction.Commit();
@@ -324,12 +324,13 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void UpdateEntity()
         {
             string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
             Key key = _fixture.LearnDatastoreKey;
 
             // Sample: UpdateEntity
             DatastoreClient client = DatastoreClient.Create();
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
+            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, namespaceId, transactionId))
             {
                 Entity entity = transaction.Lookup(key);
                 entity["priority"] = 5;
@@ -598,6 +599,7 @@ namespace Google.Datastore.V1Beta3.Snippets
         public void TransactionReadAndWrite()
         {
             string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
             long amount = 1000L;
             Key fromKey = CreateAccount("Jill", 20000L);
             Key toKey = CreateAccount("Beth", 15500L);
@@ -605,7 +607,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: TransactionReadAndWrite
             DatastoreClient client = DatastoreClient.Create();
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, transactionId))
+            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, namespaceId, transactionId))
             {
                 // The return value from DatastoreTransaction.Get contains the fetched entities
                 // in the same order as they are in the call.
