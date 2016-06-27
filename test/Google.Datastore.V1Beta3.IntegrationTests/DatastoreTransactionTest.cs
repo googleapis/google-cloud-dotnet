@@ -28,10 +28,9 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
             _fixture = fixture;
         }
 
-        public void Query_NullPartitionId_UsesEmptyNamespace()
+        public void Query_ImplicitlyUsesPartition()
         {
-            // Deliberately in the empty namespace, which won't be cleaned up automatically - hence the db.Delete call later.
-            var db = DatastoreDb.Create(_fixture.ProjectId);
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
             var keyFactory = db.CreateKeyFactory("test");
             var entity = new Entity
             {
@@ -39,18 +38,11 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
                 ["foo"] = Guid.NewGuid().ToString()
             };
             var insertedKey = db.Insert(entity);
-            try
+            using (var transaction = db.BeginTransaction())
             {
-                using (var transaction = db.BeginTransaction())
-                {
-                    var query = new Query("test") { Filter = Filter.Equal("foo", entity["foo"]) };
-                    var results = transaction.RunQuery(query, partitionId: null);
-                    Assert.Equal(1, results.Count());
-                }
-            }
-            finally
-            {
-                db.Delete(insertedKey);
+                var query = new Query("test") { Filter = Filter.Equal("foo", entity["foo"]) };
+                var results = transaction.RunQuery(query);
+                Assert.Equal(1, results.Count());
             }
         }
     }

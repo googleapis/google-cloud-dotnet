@@ -26,7 +26,6 @@ namespace Google.Datastore.V1Beta3
     // TODO: Document cloning policy.
     // TODO: Change return type of Commit to something simpler?
     // TODO: Make Lookup return something which can be indexed by Key
-    // TODO: Give the transaction itself a partition ID rather than just a project ID?
 
     /// <summary>
     /// <para>
@@ -35,6 +34,10 @@ namespace Google.Datastore.V1Beta3
     /// merely add to a list of mutations which are performed in a single <see cref="Commit(CallSettings)"/> or <see cref="CommitAsync(CallSettings)"/>
     /// operation. This means the mutation methods are all synchronous and do not take call settings, as they don't perform any
     /// API operations.
+    /// </para>
+    /// <para>
+    /// Even though transactions aren't inherently related to a specific partition ID, the expected usage is that queries run inside
+    /// a transaction are likely to be in a single partition, specified in a <see cref="DatastoreDb"/> used to create the transaction.
     /// </para>
     /// <para>
     /// Disposing of a transaction calls <see cref="Rollback(CallSettings)"/> if the transaction has not already been committed
@@ -50,6 +53,7 @@ namespace Google.Datastore.V1Beta3
 
         private readonly DatastoreClient _client;
         private readonly string _projectId;
+        private readonly PartitionId _partitionId;
         private readonly List<Mutation> _mutations = new List<Mutation>();
         private readonly ReadOptions _readOptions;
         private bool _active;
@@ -57,14 +61,21 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Constructs a <see cref="DatastoreTransaction"/> from a client, project ID and transaction ID.
         /// </summary>
+        /// <remarks>
+        /// While this can be constructed manually, the expectation is that instances of this class are obtained via
+        /// <see cref="DatastoreDb.BeginTransaction(CallSettings)"/> or <see cref="DatastoreDb.BeginTransactionAsync(CallSettings)"/>.
+        /// </remarks>
         /// <param name="client">The client to use for Datastore operations.</param>
         /// <param name="projectId">The ID of the project of the Datastore operations.</param>
+        /// <param name="namespaceId">The ID of the namespace which is combined with <paramref name="projectId"/> to form a partition ID
+        /// to use in query operations.</param>
         /// <param name="transactionId">The transaction obtained by an earlier <see cref="DatastoreClient.BeginTransaction(string, CallSettings)"/>
         /// or the asynchronous equivalent.</param>
-        public DatastoreTransaction(DatastoreClient client, string projectId, ByteString transactionId)
+        public DatastoreTransaction(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            _partitionId = new PartitionId(projectId, namespaceId);
             TransactionId = GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
             _readOptions = new ReadOptions { Transaction = TransactionId };
             _active = true;
@@ -91,13 +102,13 @@ namespace Google.Datastore.V1Beta3
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public DatastoreQueryResults RunQuery(Query query, PartitionId partitionId, CallSettings callSettings = null)
+        public DatastoreQueryResults RunQuery(Query query, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             var request = new RunQueryRequest
             {
                 ProjectId = _projectId,
-                PartitionId = partitionId,
+                PartitionId = _partitionId,
                 Query = query,
                 ReadOptions = _readOptions
             };
@@ -127,13 +138,13 @@ namespace Google.Datastore.V1Beta3
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public DatastoreAsyncQueryResults RunQueryAsync(Query query, PartitionId partitionId, CallSettings callSettings = null)
+        public DatastoreAsyncQueryResults RunQueryAsync(Query query, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             var request = new RunQueryRequest
             {
                 ProjectId = _projectId,
-                PartitionId = partitionId,
+                PartitionId = _partitionId,
                 Query = query,
                 ReadOptions = _readOptions
             };
@@ -162,13 +173,13 @@ namespace Google.Datastore.V1Beta3
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public DatastoreQueryResults RunQuery(GqlQuery gqlQuery, PartitionId partitionId, CallSettings callSettings = null)
+        public DatastoreQueryResults RunQuery(GqlQuery gqlQuery, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
             var request = new RunQueryRequest
             {
                 ProjectId = _projectId,
-                PartitionId = partitionId,
+                PartitionId = _partitionId,
                 GqlQuery = gqlQuery,
                 ReadOptions = _readOptions
             };
