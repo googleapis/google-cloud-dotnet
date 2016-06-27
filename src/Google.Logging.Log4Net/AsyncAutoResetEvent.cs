@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace Google.Logging.Log4Net
 {
-    internal class AsyncAutoResetEvent
+    internal sealed class AsyncAutoResetEvent
     {
         private SemaphoreSlim _sem = new SemaphoreSlim(0, 1);
 

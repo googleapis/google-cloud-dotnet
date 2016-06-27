@@ -22,7 +22,17 @@ using System.Threading.Tasks;
 
 namespace Google.Logging.Log4Net
 {
-    internal class LogUploader
+    /// <summary>
+    /// Background task that uploads log entries to Google Logging from the local queue.
+    /// </summary>
+    /// <remarks>
+    /// LogUploader waits for log entries to be available in the queue, then retrieves a batch of log entries
+    /// from the queue and attempts to upload them to Google Logging. When it is confirmed that these entries
+    /// have been uploaded successfully, the entries are removed from the queue.
+    /// If Google Logging is unavailable for any reason, upload is retried indefinitely will exponential
+    /// backoff up to a configured maxmimum.
+    /// </remarks>
+    internal sealed class LogUploader
     {
         private static readonly Dictionary<string, string> s_emptyLabels = new Dictionary<string, string>();
 
@@ -65,7 +75,7 @@ namespace Google.Logging.Log4Net
         {
             lock (_lockObj)
             {
-                _logEntriesLost = _logEntriesLost != null ? _logEntriesLost.Merge(logEntriesLost) : logEntriesLost;
+                _logEntriesLost = _logEntriesLost != null ? _logEntriesLost.Union(logEntriesLost) : logEntriesLost;
                 _uploadReadyEvent.Set();
             }
         }
@@ -86,7 +96,9 @@ namespace Google.Logging.Log4Net
             while (true)
             {
                 IEnumerable<LogEntryExtra> entries;
-                // Wait/loop until there are some log entries that need uploading
+                // Wait/loop until there are some log entries that need uploading.
+                // TODO: See if log4net can be shutdown. If so, then this loop needs to terminate after
+                // all log entries have been uploaded.
                 while (true)
                 {
                     DateTimeRange logEntriesLost;

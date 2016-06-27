@@ -5,6 +5,39 @@ using System.Threading.Tasks;
 
 namespace Google.Logging.Log4Net
 {
+    /// <summary>
+    /// Types of metadata that can be attached to log events.
+    /// </summary>
+    public enum MetaDataType
+    {
+        Location,
+        Identity,
+        ThreadName,
+        UserName,
+        Domain,
+        LoggerName,
+        Level,
+    }
+
+    /// <summary>
+    /// Whether log events are queued in memory or to disk. Only in-memory is currently supported. 
+    /// </summary>
+    public enum LocalQueueType
+    {
+        /// <summary>
+        /// Queue log events in memory before sending to Cloud Logging.
+        /// Unsent log events will be lost on program crash.
+        /// </summary>
+        Memory,
+
+        /// <summary>
+        /// Queue log events to disk before sending to Cloud Logging.
+        /// Unsent log events will be sent on next program re-start.
+        /// Not yet implemented.
+        /// </summary>
+        Disk,
+    }
+
     public partial class GoogleStackdriverAppender
     {
         /// <summary>
@@ -14,39 +47,6 @@ namespace Google.Logging.Log4Net
         {
             public string Key { get; set; }
             public string Value { get; set; }
-        }
-
-        /// <summary>
-        /// Types of metadata that can be attached to log events.
-        /// </summary>
-        public enum MetaDataType
-        {
-            Location,
-            Identity,
-            ThreadName,
-            UserName,
-            Domain,
-            LoggerName,
-            Level,
-        }
-
-        /// <summary>
-        /// Whether log events are queued in memory or to disk. Only in-memory is currently supported. 
-        /// </summary>
-        public enum LocalQueueType
-        {
-            /// <summary>
-            /// Queue log events in memory before sending to Cloud Logging.
-            /// Unsent log events will be lost on program crash.
-            /// </summary>
-            Memory,
-
-            /// <summary>
-            /// Queue log events to disk before sending to Cloud Logging.
-            /// Unsent log events will be sent on next program re-start.
-            /// Not yet implemented.
-            /// </summary>
-            File,
         }
 
         /// <summary>
@@ -70,11 +70,35 @@ namespace Google.Logging.Log4Net
         public int MaxUploadBatchSize { get; set; } = 100;
 
         /// <summary>
-        /// The local persistance mechanism, used before the log is sent to Google logging.
+        /// The local queuing mechanism, used before the log is sent to Google Logging.
         /// Defaults to <see cref="LocalQueueType.Memory"/>.
         /// </summary>
-        /// <remarks>[TODO: Explaination + various warnings]</remarks>
-        public LocalQueueType LocalPersistance { get; set; } = LocalQueueType.Memory;
+        /// <remarks>
+        /// <para>All log entries are temporarily queued locally before being uploaded to Google Logging.
+        /// This is usually for a very brief duration; but if there are problems connecting to Google Logging
+        /// this local queue allows the application to continue functioning as normal, without blocking
+        /// on log events or immediately throwing aware log entries.</para>
+        /// <para>Two queue types are provided:
+        /// <list type="bullet">
+        /// <item><description>
+        /// <see cref="LocalQueueType.Memory"/>: Log entries are queued locally in memory. The maximum amount of memory and/or the maximum
+        /// number of log entries to queue can be configured. If the application exits or crashes before in-memory log entries have
+        /// been uploaded to Google Logging, then these log entries are permanently lost. If Google Logging becomes temporarily unavailable
+        /// then the number of log entries queued until Google Logging becomes available again will be limited by the configure maximum sizes;
+        /// log entries in excess of this configured maximum will cause the oldest queued log entries to be permanently lost.
+        /// </description></item>
+        /// <item><description>
+        /// <see cref="LocalQueueType.Disk"/>: Log entries are queued locally on disk. The maximum file size and file counts can be
+        /// configured. If the application exits or crashes before on-disk entries have been uplaoded to Google Logging, then these log
+        /// entries will be uploaded to Google Logging on program re-start (assuming the logging disk location is unchanged). If Google
+        /// Logging becomes temporarily unavailable then the number of log entries queued until Google Logging becomes available again will
+        /// be limited by the configured maximum file size and maxmimum file count. Log entries in excess of this configured maximum will
+        /// cause the oldest queued log entries to be permanently lost.
+        /// </description></item>
+        /// </list>
+        /// </para>
+        /// </remarks>
+        public LocalQueueType LocalQueueType { get; set; } = LocalQueueType.Memory;
 
         /// <summary>
         /// The maximum bytes of memory used by in-memory logging queue. Defaults to unconfigured.

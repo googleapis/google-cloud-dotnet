@@ -12,14 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using System;
 
 namespace Google.Logging.Log4Net
 {
-    internal class DateTimeRange
+    internal sealed class DateTimeRange
     {
+        /// <summary>
+        /// A range of DateTime's, inclusive from, exclusive to.
+        /// Parameters must be UTC.
+        /// </summary>
+        /// <param name="from">Inclusive from datetime, must be UTC.</param>
+        /// <param name="to">Exclusive to datetime, must be UTC.</param>
         public DateTimeRange(DateTime from, DateTime to)
         {
+            GaxPreconditions.CheckState(from.Kind == DateTimeKind.Utc, $"{nameof(from)} must be UTC.");
+            GaxPreconditions.CheckState(to.Kind == DateTimeKind.Utc, $"{nameof(to)} must be UTC.");
             From = from;
             To = to;
         }
@@ -29,7 +38,7 @@ namespace Google.Logging.Log4Net
 
         public DateTimeRange WithTo(DateTime to) => new DateTimeRange(From, to);
 
-        public DateTimeRange Merge(DateTimeRange other)
+        public DateTimeRange Union(DateTimeRange other)
         {
             if (other == null)
             {

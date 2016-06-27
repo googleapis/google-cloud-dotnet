@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace Google.Logging.Log4Net
 {
-    internal class MemoryLogQueue : ILogQueue
+    internal sealed class MemoryLogQueue : ILogQueue
     {
         private struct LogEntryExtraSize
         {

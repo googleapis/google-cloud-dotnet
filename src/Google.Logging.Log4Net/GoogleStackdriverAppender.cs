@@ -35,15 +35,15 @@ namespace Google.Logging.Log4Net
     /// network/server latency don't cause slow-downs in the program being logged.
     /// TODO: Explain all the configuration options.
     /// </remarks>
-    public partial class GoogleStackdriverAppender : AppenderSkeleton
+    public sealed partial class GoogleStackdriverAppender : AppenderSkeleton
     {
         // TODO:
         // * Various argument validations
         // * Send unsent logs on program exit? Using AppDomain.ProcessExit
         //   - Note this only allows 2 seconds 
 
-        public const string s_logsLostWarningMessage = "Logs lost due to insufficient process-local storage: {0} -> {1}";
-        public const string s_lostDateTimeFmt = "yyyy-MM-dd' 'HH:mm:ss";
+        internal const string s_logsLostWarningMessage = "Logs lost due to insufficient process-local storage: {0} -> {1}";
+        internal const string s_lostDateTimeFmt = "yyyy-MM-dd' 'HH:mm:ss'Z'";
 
         public GoogleStackdriverAppender() { }
 
@@ -58,8 +58,14 @@ namespace Google.Logging.Log4Net
 
         private static readonly Dictionary<Level, LogSeverity> s_levelMap = new Dictionary<Level, LogSeverity>
         {
-            // { Level.Off, LogSeverity.Info }, // Not for logging
-            // { Level.Log4Net_Debug, LogSeverity.Emergency }, // Duplicate of Emergency
+            // Map Log4net levels to Stackdriver LogSeveritys.
+            // The following levels are missing from the map:
+            //   Level.Off => This is not for use as a logging level
+            //   Level.All => This is not for use as a logging level
+            //   Level.Log4Net_Debug => Duplicate of Level.Emergency
+            //   Level.Fine => Duplicate of Level.Debug
+            //   Level.Finer => Duplicate of Level.Trace
+            //   Level.Finest => Duplicate of Level.Verbose
             { Level.Emergency, LogSeverity.Emergency },
             { Level.Fatal, LogSeverity.Emergency },
             { Level.Alert, LogSeverity.Alert },
@@ -70,12 +76,8 @@ namespace Google.Logging.Log4Net
             { Level.Notice, LogSeverity.Notice },
             { Level.Info, LogSeverity.Info },
             { Level.Debug, LogSeverity.Debug },
-            // { Level.Fine, LogSeverity.Debug }, // Duplicate of Debug
             { Level.Trace, LogSeverity.Debug },
-            // { Level.Finer, LogSeverity.Debug }, // Duplicate of Trace
             { Level.Verbose, LogSeverity.Debug },
-            // { Level.Finest, LogSeverity.Debug }, // Duplicate of Verbose
-            //{ Level.All, LogSeverity.Debug }, // Not for logging
         };
 
         private object _enqueueLock = new object();
@@ -98,33 +100,24 @@ namespace Google.Logging.Log4Net
             base.ActivateOptions();
 
             // Initialise services if not already initialised for testing
-            if (_client == null)
-            {
-                _client = LoggingServiceV2Client.Create();
-            }
-            if (_scheduler == null)
-            {
-                _scheduler = SystemScheduler.Instance;
-            }
-            if (_clock == null)
-            {
-                _clock = SystemClock.Instance;
-            }
+            _client = _client ?? LoggingServiceV2Client.Create();
+            _scheduler = _scheduler ?? SystemScheduler.Instance;
+            _clock = _clock ?? SystemClock.Instance;
 
             // Validate configuration
-            GaxPreconditions.CheckNotNullOrEmpty(ResourceType, nameof(ResourceType));
-            GaxPreconditions.CheckNotNullOrEmpty(ProjectId, nameof(ProjectId));
-            GaxPreconditions.CheckNotNullOrEmpty(LogId, nameof(LogId));
+            GaxPreconditions.CheckState(!string.IsNullOrEmpty(ResourceType), $"{nameof(ResourceType)} must be set.");
+            GaxPreconditions.CheckState(!string.IsNullOrEmpty(ProjectId), $"{nameof(ProjectId)} must be set.");
+            GaxPreconditions.CheckState(!string.IsNullOrEmpty(LogId), $"{nameof(LogId)} must be set.");
             GaxPreconditions.CheckState(MaxUploadBatchSize > 0, $"{nameof(MaxUploadBatchSize)} must be > 0");
-            GaxPreconditions.CheckEnumValue<LocalQueueType>(LocalPersistance, nameof(LocalPersistance));
-            switch (LocalPersistance)
+            GaxPreconditions.CheckEnumValue<LocalQueueType>(LocalQueueType, nameof(LocalQueueType));
+            switch (LocalQueueType)
             {
                 case LocalQueueType.Memory:
                     GaxPreconditions.CheckState(MaxMemoryCount > 0 || MaxMemorySize > 0,
                         $"Either {nameof(MaxMemoryCount)} or {nameof(MaxFileSize)} must be configured to be > 0");
                     break;
-                case LocalQueueType.File:
-                    GaxPreconditions.CheckNotNullOrEmpty(File, nameof(File));
+                case LocalQueueType.Disk:
+                    GaxPreconditions.CheckState(!string.IsNullOrEmpty(File), $"{nameof(File)} must be set.");
                     GaxPreconditions.CheckState(MaxFileSize > 0, $"{nameof(MaxFileSize)} must be > 0");
                     GaxPreconditions.CheckState(MaxSizeRollBackups > 0, $"{nameof(MaxSizeRollBackups)} must be > 0");
                     break;
@@ -144,17 +137,17 @@ namespace Google.Logging.Log4Net
             {
                 Type = ResourceType
             };
-            switch (LocalPersistance)
+            switch (LocalQueueType)
             {
                 case LocalQueueType.Memory:
                     _logQ = new MemoryLogQueue(MaxMemorySize, MaxMemoryCount);
                     break;
-                case LocalQueueType.File:
+                case LocalQueueType.Disk:
                     throw new NotImplementedException("File-base local queues not implemented.");
                 default:
                     throw new InvalidOperationException("Inconceivable!");
             }
-            _initNextIdTask = InitNextId();
+            _initNextIdTask = Task.Run(InitNextId);
             var labels = new Dictionary<string, string>();
             foreach (var customLabel in _customLabels)
             {
