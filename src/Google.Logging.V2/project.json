@@ -14,12 +14,12 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax": "0.1.0-CI00057",
+    "Google.Api.Gax": "0.1.0-CI00060",
     "Google.Apis.Auth": "1.13.0",
     "Google.Logging.Type":  "",
     "Google.Protobuf": "3.0.0-beta3",
-    "Grpc.Auth": "0.14.0",
-    "Grpc.Core": "0.14.0",
+    "Grpc.Auth": "0.15.0",
+    "Grpc.Core": "0.15.0",
     "Ix-Async": "1.2.5"
   },
 

@@ -73,118 +73,6 @@ namespace Google.Logging.V2 {
       get { return global::Google.Logging.V2.LoggingReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Client for LoggingServiceV2</summary>
-    [System.Obsolete("Client side interfaced will be removed in the next release. Use client class directly.")]
-    public interface ILoggingServiceV2Client
-    {
-      /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Logging.V2.DeleteLogRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Logging.V2.DeleteLogRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Logging.V2.DeleteLogRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Logging.V2.DeleteLogRequest request, CallOptions options);
-      /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
-      /// </summary>
-      global::Google.Logging.V2.WriteLogEntriesResponse WriteLogEntries(global::Google.Logging.V2.WriteLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
-      /// </summary>
-      global::Google.Logging.V2.WriteLogEntriesResponse WriteLogEntries(global::Google.Logging.V2.WriteLogEntriesRequest request, CallOptions options);
-      /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.WriteLogEntriesResponse> WriteLogEntriesAsync(global::Google.Logging.V2.WriteLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.WriteLogEntriesResponse> WriteLogEntriesAsync(global::Google.Logging.V2.WriteLogEntriesRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
-      /// </summary>
-      global::Google.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Logging.V2.ListLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
-      /// </summary>
-      global::Google.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Logging.V2.ListLogEntriesRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Logging.V2.ListLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Logging.V2.ListLogEntriesRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
-      /// </summary>
-      global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
-      /// </summary>
-      global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest request, CallOptions options);
-    }
-
-    /// <summary>Interface of server-side implementations of LoggingServiceV2</summary>
-    [System.Obsolete("Service implementations should inherit from the generated abstract base class instead.")]
-    public interface ILoggingServiceV2
-    {
-      /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLog(global::Google.Logging.V2.DeleteLogRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.WriteLogEntriesResponse> WriteLogEntries(global::Google.Logging.V2.WriteLogEntriesRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.ListLogEntriesResponse> ListLogEntries(global::Google.Logging.V2.ListLogEntriesRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptors(global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest request, ServerCallContext context);
-    }
-
     /// <summary>Base class for server-side implementations of LoggingServiceV2</summary>
     public abstract class LoggingServiceV2Base
     {
@@ -227,21 +115,24 @@ namespace Google.Logging.V2 {
     }
 
     /// <summary>Client for LoggingServiceV2</summary>
-    #pragma warning disable 0618
-    public class LoggingServiceV2Client : ClientBase<LoggingServiceV2Client>, ILoggingServiceV2Client
-    #pragma warning restore 0618
+    public class LoggingServiceV2Client : ClientBase<LoggingServiceV2Client>
     {
+      /// <summary>Creates a new client for LoggingServiceV2</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
       public LoggingServiceV2Client(Channel channel) : base(channel)
       {
       }
+      /// <summary>Creates a new client for LoggingServiceV2 that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       public LoggingServiceV2Client(CallInvoker callInvoker) : base(callInvoker)
       {
       }
-      ///<summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       protected LoggingServiceV2Client() : base()
       {
       }
-      ///<summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
       protected LoggingServiceV2Client(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -380,30 +271,10 @@ namespace Google.Logging.V2 {
       }
     }
 
-    /// <summary>Creates a new client for LoggingServiceV2</summary>
-    public static LoggingServiceV2Client NewClient(Channel channel)
-    {
-      return new LoggingServiceV2Client(channel);
-    }
-
     /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
-    public static ServerServiceDefinition BindService(ILoggingServiceV2 serviceImpl)
-    #pragma warning restore 0618
-    {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
-          .AddMethod(__Method_DeleteLog, serviceImpl.DeleteLog)
-          .AddMethod(__Method_WriteLogEntries, serviceImpl.WriteLogEntries)
-          .AddMethod(__Method_ListLogEntries, serviceImpl.ListLogEntries)
-          .AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl.ListMonitoredResourceDescriptors).Build();
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
     public static ServerServiceDefinition BindService(LoggingServiceV2Base serviceImpl)
-    #pragma warning restore 0618
     {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
+      return ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_DeleteLog, serviceImpl.DeleteLog)
           .AddMethod(__Method_WriteLogEntries, serviceImpl.WriteLogEntries)
           .AddMethod(__Method_ListLogEntries, serviceImpl.ListLogEntries)

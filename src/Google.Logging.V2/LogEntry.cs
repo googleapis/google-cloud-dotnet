@@ -602,7 +602,7 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  Required. An arbitrary producer identifier. The combination of
     ///  `id` and `producer` must be globally unique.  Examples for `producer`:
-    ///  `"MyDivision.MyBigCompany.com"`, "github.com/MyProject/MyApplication"`.
+    ///  `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
     /// </summary>
     public string Producer {
       get { return producer_; }
