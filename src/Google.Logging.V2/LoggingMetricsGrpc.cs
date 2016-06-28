@@ -23,6 +23,9 @@ using System.Threading.Tasks;
 using Grpc.Core;
 
 namespace Google.Logging.V2 {
+  /// <summary>
+  ///  Service for configuring logs-based metrics.
+  /// </summary>
   public static class MetricsServiceV2
   {
     static readonly string __ServiceName = "google.logging.v2.MetricsServiceV2";
@@ -77,118 +80,6 @@ namespace Google.Logging.V2 {
       get { return global::Google.Logging.V2.LoggingMetricsReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Client for MetricsServiceV2</summary>
-    [System.Obsolete("Client side interfaced will be removed in the next release. Use client class directly.")]
-    public interface IMetricsServiceV2Client
-    {
-      /// <summary>
-      ///  Lists logs-based metrics.
-      /// </summary>
-      global::Google.Logging.V2.ListLogMetricsResponse ListLogMetrics(global::Google.Logging.V2.ListLogMetricsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists logs-based metrics.
-      /// </summary>
-      global::Google.Logging.V2.ListLogMetricsResponse ListLogMetrics(global::Google.Logging.V2.ListLogMetricsRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists logs-based metrics.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.ListLogMetricsResponse> ListLogMetricsAsync(global::Google.Logging.V2.ListLogMetricsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists logs-based metrics.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.ListLogMetricsResponse> ListLogMetricsAsync(global::Google.Logging.V2.ListLogMetricsRequest request, CallOptions options);
-      /// <summary>
-      ///  Gets a logs-based metric.
-      /// </summary>
-      global::Google.Logging.V2.LogMetric GetLogMetric(global::Google.Logging.V2.GetLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Gets a logs-based metric.
-      /// </summary>
-      global::Google.Logging.V2.LogMetric GetLogMetric(global::Google.Logging.V2.GetLogMetricRequest request, CallOptions options);
-      /// <summary>
-      ///  Gets a logs-based metric.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogMetric> GetLogMetricAsync(global::Google.Logging.V2.GetLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Gets a logs-based metric.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogMetric> GetLogMetricAsync(global::Google.Logging.V2.GetLogMetricRequest request, CallOptions options);
-      /// <summary>
-      ///  Creates a logs-based metric.
-      /// </summary>
-      global::Google.Logging.V2.LogMetric CreateLogMetric(global::Google.Logging.V2.CreateLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates a logs-based metric.
-      /// </summary>
-      global::Google.Logging.V2.LogMetric CreateLogMetric(global::Google.Logging.V2.CreateLogMetricRequest request, CallOptions options);
-      /// <summary>
-      ///  Creates a logs-based metric.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogMetric> CreateLogMetricAsync(global::Google.Logging.V2.CreateLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates a logs-based metric.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogMetric> CreateLogMetricAsync(global::Google.Logging.V2.CreateLogMetricRequest request, CallOptions options);
-      /// <summary>
-      ///  Creates or updates a logs-based metric.
-      /// </summary>
-      global::Google.Logging.V2.LogMetric UpdateLogMetric(global::Google.Logging.V2.UpdateLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates or updates a logs-based metric.
-      /// </summary>
-      global::Google.Logging.V2.LogMetric UpdateLogMetric(global::Google.Logging.V2.UpdateLogMetricRequest request, CallOptions options);
-      /// <summary>
-      ///  Creates or updates a logs-based metric.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogMetric> UpdateLogMetricAsync(global::Google.Logging.V2.UpdateLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates or updates a logs-based metric.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogMetric> UpdateLogMetricAsync(global::Google.Logging.V2.UpdateLogMetricRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes a logs-based metric.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteLogMetric(global::Google.Logging.V2.DeleteLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes a logs-based metric.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteLogMetric(global::Google.Logging.V2.DeleteLogMetricRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes a logs-based metric.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogMetricAsync(global::Google.Logging.V2.DeleteLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes a logs-based metric.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogMetricAsync(global::Google.Logging.V2.DeleteLogMetricRequest request, CallOptions options);
-    }
-
-    /// <summary>Interface of server-side implementations of MetricsServiceV2</summary>
-    [System.Obsolete("Service implementations should inherit from the generated abstract base class instead.")]
-    public interface IMetricsServiceV2
-    {
-      /// <summary>
-      ///  Lists logs-based metrics.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.ListLogMetricsResponse> ListLogMetrics(global::Google.Logging.V2.ListLogMetricsRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Gets a logs-based metric.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.LogMetric> GetLogMetric(global::Google.Logging.V2.GetLogMetricRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Creates a logs-based metric.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.LogMetric> CreateLogMetric(global::Google.Logging.V2.CreateLogMetricRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Creates or updates a logs-based metric.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.LogMetric> UpdateLogMetric(global::Google.Logging.V2.UpdateLogMetricRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Deletes a logs-based metric.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogMetric(global::Google.Logging.V2.DeleteLogMetricRequest request, ServerCallContext context);
-    }
-
     /// <summary>Base class for server-side implementations of MetricsServiceV2</summary>
     public abstract class MetricsServiceV2Base
     {
@@ -235,21 +126,24 @@ namespace Google.Logging.V2 {
     }
 
     /// <summary>Client for MetricsServiceV2</summary>
-    #pragma warning disable 0618
-    public class MetricsServiceV2Client : ClientBase<MetricsServiceV2Client>, IMetricsServiceV2Client
-    #pragma warning restore 0618
+    public class MetricsServiceV2Client : ClientBase<MetricsServiceV2Client>
     {
+      /// <summary>Creates a new client for MetricsServiceV2</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
       public MetricsServiceV2Client(Channel channel) : base(channel)
       {
       }
+      /// <summary>Creates a new client for MetricsServiceV2 that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       public MetricsServiceV2Client(CallInvoker callInvoker) : base(callInvoker)
       {
       }
-      ///<summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       protected MetricsServiceV2Client() : base()
       {
       }
-      ///<summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
       protected MetricsServiceV2Client(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -400,31 +294,10 @@ namespace Google.Logging.V2 {
       }
     }
 
-    /// <summary>Creates a new client for MetricsServiceV2</summary>
-    public static MetricsServiceV2Client NewClient(Channel channel)
-    {
-      return new MetricsServiceV2Client(channel);
-    }
-
     /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
-    public static ServerServiceDefinition BindService(IMetricsServiceV2 serviceImpl)
-    #pragma warning restore 0618
-    {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
-          .AddMethod(__Method_ListLogMetrics, serviceImpl.ListLogMetrics)
-          .AddMethod(__Method_GetLogMetric, serviceImpl.GetLogMetric)
-          .AddMethod(__Method_CreateLogMetric, serviceImpl.CreateLogMetric)
-          .AddMethod(__Method_UpdateLogMetric, serviceImpl.UpdateLogMetric)
-          .AddMethod(__Method_DeleteLogMetric, serviceImpl.DeleteLogMetric).Build();
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
     public static ServerServiceDefinition BindService(MetricsServiceV2Base serviceImpl)
-    #pragma warning restore 0618
     {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
+      return ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListLogMetrics, serviceImpl.ListLogMetrics)
           .AddMethod(__Method_GetLogMetric, serviceImpl.GetLogMetric)
           .AddMethod(__Method_CreateLogMetric, serviceImpl.CreateLogMetric)

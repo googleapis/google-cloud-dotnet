@@ -105,308 +105,6 @@ namespace Google.Pubsub.V1 {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Client for Subscriber</summary>
-    [System.Obsolete("Client side interfaced will be removed in the next release. Use client class directly.")]
-    public interface ISubscriberClient
-    {
-      /// <summary>
-      ///  Creates a subscription to a given topic for a given subscriber.
-      ///  If the subscription already exists, returns `ALREADY_EXISTS`.
-      ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
-      ///
-      ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic.
-      /// </summary>
-      global::Google.Pubsub.V1.Subscription CreateSubscription(global::Google.Pubsub.V1.Subscription request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates a subscription to a given topic for a given subscriber.
-      ///  If the subscription already exists, returns `ALREADY_EXISTS`.
-      ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
-      ///
-      ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic.
-      /// </summary>
-      global::Google.Pubsub.V1.Subscription CreateSubscription(global::Google.Pubsub.V1.Subscription request, CallOptions options);
-      /// <summary>
-      ///  Creates a subscription to a given topic for a given subscriber.
-      ///  If the subscription already exists, returns `ALREADY_EXISTS`.
-      ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
-      ///
-      ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.Subscription> CreateSubscriptionAsync(global::Google.Pubsub.V1.Subscription request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates a subscription to a given topic for a given subscriber.
-      ///  If the subscription already exists, returns `ALREADY_EXISTS`.
-      ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
-      ///
-      ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.Subscription> CreateSubscriptionAsync(global::Google.Pubsub.V1.Subscription request, CallOptions options);
-      /// <summary>
-      ///  Gets the configuration details of a subscription.
-      /// </summary>
-      global::Google.Pubsub.V1.Subscription GetSubscription(global::Google.Pubsub.V1.GetSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Gets the configuration details of a subscription.
-      /// </summary>
-      global::Google.Pubsub.V1.Subscription GetSubscription(global::Google.Pubsub.V1.GetSubscriptionRequest request, CallOptions options);
-      /// <summary>
-      ///  Gets the configuration details of a subscription.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.Subscription> GetSubscriptionAsync(global::Google.Pubsub.V1.GetSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Gets the configuration details of a subscription.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.Subscription> GetSubscriptionAsync(global::Google.Pubsub.V1.GetSubscriptionRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists matching subscriptions.
-      /// </summary>
-      global::Google.Pubsub.V1.ListSubscriptionsResponse ListSubscriptions(global::Google.Pubsub.V1.ListSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists matching subscriptions.
-      /// </summary>
-      global::Google.Pubsub.V1.ListSubscriptionsResponse ListSubscriptions(global::Google.Pubsub.V1.ListSubscriptionsRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists matching subscriptions.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.ListSubscriptionsResponse> ListSubscriptionsAsync(global::Google.Pubsub.V1.ListSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists matching subscriptions.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.ListSubscriptionsResponse> ListSubscriptionsAsync(global::Google.Pubsub.V1.ListSubscriptionsRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
-      ///  are immediately dropped. Calls to `Pull` after deletion will return
-      ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-      ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
-      ///  are immediately dropped. Calls to `Pull` after deletion will return
-      ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-      ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
-      ///  are immediately dropped. Calls to `Pull` after deletion will return
-      ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-      ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
-      ///  are immediately dropped. Calls to `Pull` after deletion will return
-      ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-      ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options);
-      /// <summary>
-      ///  Modifies the ack deadline for a specific message. This method is useful
-      ///  to indicate that more time is needed to process a message by the
-      ///  subscriber, or to make the message available for redelivery if the
-      ///  processing was interrupted.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Modifies the ack deadline for a specific message. This method is useful
-      ///  to indicate that more time is needed to process a message by the
-      ///  subscriber, or to make the message available for redelivery if the
-      ///  processing was interrupted.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options);
-      /// <summary>
-      ///  Modifies the ack deadline for a specific message. This method is useful
-      ///  to indicate that more time is needed to process a message by the
-      ///  subscriber, or to make the message available for redelivery if the
-      ///  processing was interrupted.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Modifies the ack deadline for a specific message. This method is useful
-      ///  to indicate that more time is needed to process a message by the
-      ///  subscriber, or to make the message available for redelivery if the
-      ///  processing was interrupted.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options);
-      /// <summary>
-      ///  Acknowledges the messages associated with the `ack_ids` in the
-      ///  `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-      ///  from the subscription.
-      ///
-      ///  Acknowledging a message whose ack deadline has expired may succeed,
-      ///  but such a message may be redelivered later. Acknowledging a message more
-      ///  than once will not result in an error.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Acknowledges the messages associated with the `ack_ids` in the
-      ///  `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-      ///  from the subscription.
-      ///
-      ///  Acknowledging a message whose ack deadline has expired may succeed,
-      ///  but such a message may be redelivered later. Acknowledging a message more
-      ///  than once will not result in an error.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options);
-      /// <summary>
-      ///  Acknowledges the messages associated with the `ack_ids` in the
-      ///  `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-      ///  from the subscription.
-      ///
-      ///  Acknowledging a message whose ack deadline has expired may succeed,
-      ///  but such a message may be redelivered later. Acknowledging a message more
-      ///  than once will not result in an error.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Acknowledges the messages associated with the `ack_ids` in the
-      ///  `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-      ///  from the subscription.
-      ///
-      ///  Acknowledging a message whose ack deadline has expired may succeed,
-      ///  but such a message may be redelivered later. Acknowledging a message more
-      ///  than once will not result in an error.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options);
-      /// <summary>
-      ///  Pulls messages from the server. Returns an empty list if there are no
-      ///  messages available in the backlog. The server may return `UNAVAILABLE` if
-      ///  there are too many concurrent pull requests pending for the given
-      ///  subscription.
-      /// </summary>
-      global::Google.Pubsub.V1.PullResponse Pull(global::Google.Pubsub.V1.PullRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Pulls messages from the server. Returns an empty list if there are no
-      ///  messages available in the backlog. The server may return `UNAVAILABLE` if
-      ///  there are too many concurrent pull requests pending for the given
-      ///  subscription.
-      /// </summary>
-      global::Google.Pubsub.V1.PullResponse Pull(global::Google.Pubsub.V1.PullRequest request, CallOptions options);
-      /// <summary>
-      ///  Pulls messages from the server. Returns an empty list if there are no
-      ///  messages available in the backlog. The server may return `UNAVAILABLE` if
-      ///  there are too many concurrent pull requests pending for the given
-      ///  subscription.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.PullResponse> PullAsync(global::Google.Pubsub.V1.PullRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Pulls messages from the server. Returns an empty list if there are no
-      ///  messages available in the backlog. The server may return `UNAVAILABLE` if
-      ///  there are too many concurrent pull requests pending for the given
-      ///  subscription.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.PullResponse> PullAsync(global::Google.Pubsub.V1.PullRequest request, CallOptions options);
-      /// <summary>
-      ///  Modifies the `PushConfig` for a specified subscription.
-      ///
-      ///  This may be used to change a push subscription to a pull one (signified by
-      ///  an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-      ///  attributes of a push subscription. Messages will accumulate for delivery
-      ///  continuously through the call regardless of changes to the `PushConfig`.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Modifies the `PushConfig` for a specified subscription.
-      ///
-      ///  This may be used to change a push subscription to a pull one (signified by
-      ///  an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-      ///  attributes of a push subscription. Messages will accumulate for delivery
-      ///  continuously through the call regardless of changes to the `PushConfig`.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options);
-      /// <summary>
-      ///  Modifies the `PushConfig` for a specified subscription.
-      ///
-      ///  This may be used to change a push subscription to a pull one (signified by
-      ///  an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-      ///  attributes of a push subscription. Messages will accumulate for delivery
-      ///  continuously through the call regardless of changes to the `PushConfig`.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Modifies the `PushConfig` for a specified subscription.
-      ///
-      ///  This may be used to change a push subscription to a pull one (signified by
-      ///  an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-      ///  attributes of a push subscription. Messages will accumulate for delivery
-      ///  continuously through the call regardless of changes to the `PushConfig`.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options);
-    }
-
-    /// <summary>Interface of server-side implementations of Subscriber</summary>
-    [System.Obsolete("Service implementations should inherit from the generated abstract base class instead.")]
-    public interface ISubscriber
-    {
-      /// <summary>
-      ///  Creates a subscription to a given topic for a given subscriber.
-      ///  If the subscription already exists, returns `ALREADY_EXISTS`.
-      ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
-      ///
-      ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.Subscription> CreateSubscription(global::Google.Pubsub.V1.Subscription request, ServerCallContext context);
-      /// <summary>
-      ///  Gets the configuration details of a subscription.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.Subscription> GetSubscription(global::Google.Pubsub.V1.GetSubscriptionRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Lists matching subscriptions.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.ListSubscriptionsResponse> ListSubscriptions(global::Google.Pubsub.V1.ListSubscriptionsRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
-      ///  are immediately dropped. Calls to `Pull` after deletion will return
-      ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-      ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Modifies the ack deadline for a specific message. This method is useful
-      ///  to indicate that more time is needed to process a message by the
-      ///  subscriber, or to make the message available for redelivery if the
-      ///  processing was interrupted.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Acknowledges the messages associated with the `ack_ids` in the
-      ///  `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-      ///  from the subscription.
-      ///
-      ///  Acknowledging a message whose ack deadline has expired may succeed,
-      ///  but such a message may be redelivered later. Acknowledging a message more
-      ///  than once will not result in an error.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Pulls messages from the server. Returns an empty list if there are no
-      ///  messages available in the backlog. The server may return `UNAVAILABLE` if
-      ///  there are too many concurrent pull requests pending for the given
-      ///  subscription.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.PullResponse> Pull(global::Google.Pubsub.V1.PullRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Modifies the `PushConfig` for a specified subscription.
-      ///
-      ///  This may be used to change a push subscription to a pull one (signified by
-      ///  an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-      ///  attributes of a push subscription. Messages will accumulate for delivery
-      ///  continuously through the call regardless of changes to the `PushConfig`.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, ServerCallContext context);
-    }
-
     /// <summary>Base class for server-side implementations of Subscriber</summary>
     public abstract class SubscriberBase
     {
@@ -503,21 +201,24 @@ namespace Google.Pubsub.V1 {
     }
 
     /// <summary>Client for Subscriber</summary>
-    #pragma warning disable 0618
-    public class SubscriberClient : ClientBase<SubscriberClient>, ISubscriberClient
-    #pragma warning restore 0618
+    public class SubscriberClient : ClientBase<SubscriberClient>
     {
+      /// <summary>Creates a new client for Subscriber</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
       public SubscriberClient(Channel channel) : base(channel)
       {
       }
+      /// <summary>Creates a new client for Subscriber that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       public SubscriberClient(CallInvoker callInvoker) : base(callInvoker)
       {
       }
-      ///<summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       protected SubscriberClient() : base()
       {
       }
-      ///<summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
       protected SubscriberClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -856,34 +557,10 @@ namespace Google.Pubsub.V1 {
       }
     }
 
-    /// <summary>Creates a new client for Subscriber</summary>
-    public static SubscriberClient NewClient(Channel channel)
-    {
-      return new SubscriberClient(channel);
-    }
-
     /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
-    public static ServerServiceDefinition BindService(ISubscriber serviceImpl)
-    #pragma warning restore 0618
-    {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
-          .AddMethod(__Method_CreateSubscription, serviceImpl.CreateSubscription)
-          .AddMethod(__Method_GetSubscription, serviceImpl.GetSubscription)
-          .AddMethod(__Method_ListSubscriptions, serviceImpl.ListSubscriptions)
-          .AddMethod(__Method_DeleteSubscription, serviceImpl.DeleteSubscription)
-          .AddMethod(__Method_ModifyAckDeadline, serviceImpl.ModifyAckDeadline)
-          .AddMethod(__Method_Acknowledge, serviceImpl.Acknowledge)
-          .AddMethod(__Method_Pull, serviceImpl.Pull)
-          .AddMethod(__Method_ModifyPushConfig, serviceImpl.ModifyPushConfig).Build();
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
     public static ServerServiceDefinition BindService(SubscriberBase serviceImpl)
-    #pragma warning restore 0618
     {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
+      return ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateSubscription, serviceImpl.CreateSubscription)
           .AddMethod(__Method_GetSubscription, serviceImpl.GetSubscription)
           .AddMethod(__Method_ListSubscriptions, serviceImpl.ListSubscriptions)
@@ -962,168 +639,6 @@ namespace Google.Pubsub.V1 {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.Services[1]; }
     }
 
-    /// <summary>Client for Publisher</summary>
-    [System.Obsolete("Client side interfaced will be removed in the next release. Use client class directly.")]
-    public interface IPublisherClient
-    {
-      /// <summary>
-      ///  Creates the given topic with the given name.
-      /// </summary>
-      global::Google.Pubsub.V1.Topic CreateTopic(global::Google.Pubsub.V1.Topic request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates the given topic with the given name.
-      /// </summary>
-      global::Google.Pubsub.V1.Topic CreateTopic(global::Google.Pubsub.V1.Topic request, CallOptions options);
-      /// <summary>
-      ///  Creates the given topic with the given name.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.Topic> CreateTopicAsync(global::Google.Pubsub.V1.Topic request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates the given topic with the given name.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.Topic> CreateTopicAsync(global::Google.Pubsub.V1.Topic request, CallOptions options);
-      /// <summary>
-      ///  Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      ///  does not exist. The message payload must not be empty; it must contain
-      ///   either a non-empty data field, or at least one attribute.
-      /// </summary>
-      global::Google.Pubsub.V1.PublishResponse Publish(global::Google.Pubsub.V1.PublishRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      ///  does not exist. The message payload must not be empty; it must contain
-      ///   either a non-empty data field, or at least one attribute.
-      /// </summary>
-      global::Google.Pubsub.V1.PublishResponse Publish(global::Google.Pubsub.V1.PublishRequest request, CallOptions options);
-      /// <summary>
-      ///  Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      ///  does not exist. The message payload must not be empty; it must contain
-      ///   either a non-empty data field, or at least one attribute.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.PublishResponse> PublishAsync(global::Google.Pubsub.V1.PublishRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      ///  does not exist. The message payload must not be empty; it must contain
-      ///   either a non-empty data field, or at least one attribute.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.PublishResponse> PublishAsync(global::Google.Pubsub.V1.PublishRequest request, CallOptions options);
-      /// <summary>
-      ///  Gets the configuration of a topic.
-      /// </summary>
-      global::Google.Pubsub.V1.Topic GetTopic(global::Google.Pubsub.V1.GetTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Gets the configuration of a topic.
-      /// </summary>
-      global::Google.Pubsub.V1.Topic GetTopic(global::Google.Pubsub.V1.GetTopicRequest request, CallOptions options);
-      /// <summary>
-      ///  Gets the configuration of a topic.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.Topic> GetTopicAsync(global::Google.Pubsub.V1.GetTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Gets the configuration of a topic.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.Topic> GetTopicAsync(global::Google.Pubsub.V1.GetTopicRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists matching topics.
-      /// </summary>
-      global::Google.Pubsub.V1.ListTopicsResponse ListTopics(global::Google.Pubsub.V1.ListTopicsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists matching topics.
-      /// </summary>
-      global::Google.Pubsub.V1.ListTopicsResponse ListTopics(global::Google.Pubsub.V1.ListTopicsRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists matching topics.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.ListTopicsResponse> ListTopicsAsync(global::Google.Pubsub.V1.ListTopicsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists matching topics.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.ListTopicsResponse> ListTopicsAsync(global::Google.Pubsub.V1.ListTopicsRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists the name of the subscriptions for this topic.
-      /// </summary>
-      global::Google.Pubsub.V1.ListTopicSubscriptionsResponse ListTopicSubscriptions(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists the name of the subscriptions for this topic.
-      /// </summary>
-      global::Google.Pubsub.V1.ListTopicSubscriptionsResponse ListTopicSubscriptions(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists the name of the subscriptions for this topic.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists the name of the subscriptions for this topic.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Pubsub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      ///  does not exist. After a topic is deleted, a new topic may be created with
-      ///  the same name; this is an entirely new topic with none of the old
-      ///  configuration or subscriptions. Existing subscriptions to this topic are
-      ///  not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      ///  does not exist. After a topic is deleted, a new topic may be created with
-      ///  the same name; this is an entirely new topic with none of the old
-      ///  configuration or subscriptions. Existing subscriptions to this topic are
-      ///  not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      ///  does not exist. After a topic is deleted, a new topic may be created with
-      ///  the same name; this is an entirely new topic with none of the old
-      ///  configuration or subscriptions. Existing subscriptions to this topic are
-      ///  not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      ///  does not exist. After a topic is deleted, a new topic may be created with
-      ///  the same name; this is an entirely new topic with none of the old
-      ///  configuration or subscriptions. Existing subscriptions to this topic are
-      ///  not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options);
-    }
-
-    /// <summary>Interface of server-side implementations of Publisher</summary>
-    [System.Obsolete("Service implementations should inherit from the generated abstract base class instead.")]
-    public interface IPublisher
-    {
-      /// <summary>
-      ///  Creates the given topic with the given name.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.Topic> CreateTopic(global::Google.Pubsub.V1.Topic request, ServerCallContext context);
-      /// <summary>
-      ///  Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      ///  does not exist. The message payload must not be empty; it must contain
-      ///   either a non-empty data field, or at least one attribute.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.PublishResponse> Publish(global::Google.Pubsub.V1.PublishRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Gets the configuration of a topic.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.Topic> GetTopic(global::Google.Pubsub.V1.GetTopicRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Lists matching topics.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.ListTopicsResponse> ListTopics(global::Google.Pubsub.V1.ListTopicsRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Lists the name of the subscriptions for this topic.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Pubsub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptions(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-      ///  does not exist. After a topic is deleted, a new topic may be created with
-      ///  the same name; this is an entirely new topic with none of the old
-      ///  configuration or subscriptions. Existing subscriptions to this topic are
-      ///  not deleted, but their `topic` field is set to `_deleted-topic_`.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, ServerCallContext context);
-    }
-
     /// <summary>Base class for server-side implementations of Publisher</summary>
     public abstract class PublisherBase
     {
@@ -1184,21 +699,24 @@ namespace Google.Pubsub.V1 {
     }
 
     /// <summary>Client for Publisher</summary>
-    #pragma warning disable 0618
-    public class PublisherClient : ClientBase<PublisherClient>, IPublisherClient
-    #pragma warning restore 0618
+    public class PublisherClient : ClientBase<PublisherClient>
     {
+      /// <summary>Creates a new client for Publisher</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
       public PublisherClient(Channel channel) : base(channel)
       {
       }
+      /// <summary>Creates a new client for Publisher that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       public PublisherClient(CallInvoker callInvoker) : base(callInvoker)
       {
       }
-      ///<summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       protected PublisherClient() : base()
       {
       }
-      ///<summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
       protected PublisherClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -1401,32 +919,10 @@ namespace Google.Pubsub.V1 {
       }
     }
 
-    /// <summary>Creates a new client for Publisher</summary>
-    public static PublisherClient NewClient(Channel channel)
-    {
-      return new PublisherClient(channel);
-    }
-
     /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
-    public static ServerServiceDefinition BindService(IPublisher serviceImpl)
-    #pragma warning restore 0618
-    {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
-          .AddMethod(__Method_CreateTopic, serviceImpl.CreateTopic)
-          .AddMethod(__Method_Publish, serviceImpl.Publish)
-          .AddMethod(__Method_GetTopic, serviceImpl.GetTopic)
-          .AddMethod(__Method_ListTopics, serviceImpl.ListTopics)
-          .AddMethod(__Method_ListTopicSubscriptions, serviceImpl.ListTopicSubscriptions)
-          .AddMethod(__Method_DeleteTopic, serviceImpl.DeleteTopic).Build();
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
     public static ServerServiceDefinition BindService(PublisherBase serviceImpl)
-    #pragma warning restore 0618
     {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
+      return ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateTopic, serviceImpl.CreateTopic)
           .AddMethod(__Method_Publish, serviceImpl.Publish)
           .AddMethod(__Method_GetTopic, serviceImpl.GetTopic)

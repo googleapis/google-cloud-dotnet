@@ -23,6 +23,10 @@ using System.Threading.Tasks;
 using Grpc.Core;
 
 namespace Google.Logging.V2 {
+  /// <summary>
+  ///  Service for configuring sinks used to export log entries outside Stackdriver
+  ///  Logging.
+  /// </summary>
   public static class ConfigServiceV2
   {
     static readonly string __ServiceName = "google.logging.v2.ConfigServiceV2";
@@ -77,118 +81,6 @@ namespace Google.Logging.V2 {
       get { return global::Google.Logging.V2.LoggingConfigReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Client for ConfigServiceV2</summary>
-    [System.Obsolete("Client side interfaced will be removed in the next release. Use client class directly.")]
-    public interface IConfigServiceV2Client
-    {
-      /// <summary>
-      ///  Lists sinks.
-      /// </summary>
-      global::Google.Logging.V2.ListSinksResponse ListSinks(global::Google.Logging.V2.ListSinksRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists sinks.
-      /// </summary>
-      global::Google.Logging.V2.ListSinksResponse ListSinks(global::Google.Logging.V2.ListSinksRequest request, CallOptions options);
-      /// <summary>
-      ///  Lists sinks.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.ListSinksResponse> ListSinksAsync(global::Google.Logging.V2.ListSinksRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Lists sinks.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.ListSinksResponse> ListSinksAsync(global::Google.Logging.V2.ListSinksRequest request, CallOptions options);
-      /// <summary>
-      ///  Gets a sink.
-      /// </summary>
-      global::Google.Logging.V2.LogSink GetSink(global::Google.Logging.V2.GetSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Gets a sink.
-      /// </summary>
-      global::Google.Logging.V2.LogSink GetSink(global::Google.Logging.V2.GetSinkRequest request, CallOptions options);
-      /// <summary>
-      ///  Gets a sink.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogSink> GetSinkAsync(global::Google.Logging.V2.GetSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Gets a sink.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogSink> GetSinkAsync(global::Google.Logging.V2.GetSinkRequest request, CallOptions options);
-      /// <summary>
-      ///  Creates a sink.
-      /// </summary>
-      global::Google.Logging.V2.LogSink CreateSink(global::Google.Logging.V2.CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates a sink.
-      /// </summary>
-      global::Google.Logging.V2.LogSink CreateSink(global::Google.Logging.V2.CreateSinkRequest request, CallOptions options);
-      /// <summary>
-      ///  Creates a sink.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogSink> CreateSinkAsync(global::Google.Logging.V2.CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates a sink.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogSink> CreateSinkAsync(global::Google.Logging.V2.CreateSinkRequest request, CallOptions options);
-      /// <summary>
-      ///  Creates or updates a sink.
-      /// </summary>
-      global::Google.Logging.V2.LogSink UpdateSink(global::Google.Logging.V2.UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates or updates a sink.
-      /// </summary>
-      global::Google.Logging.V2.LogSink UpdateSink(global::Google.Logging.V2.UpdateSinkRequest request, CallOptions options);
-      /// <summary>
-      ///  Creates or updates a sink.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Logging.V2.UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Creates or updates a sink.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Logging.V2.UpdateSinkRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes a sink.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Logging.V2.DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes a sink.
-      /// </summary>
-      global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Logging.V2.DeleteSinkRequest request, CallOptions options);
-      /// <summary>
-      ///  Deletes a sink.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Logging.V2.DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Deletes a sink.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Logging.V2.DeleteSinkRequest request, CallOptions options);
-    }
-
-    /// <summary>Interface of server-side implementations of ConfigServiceV2</summary>
-    [System.Obsolete("Service implementations should inherit from the generated abstract base class instead.")]
-    public interface IConfigServiceV2
-    {
-      /// <summary>
-      ///  Lists sinks.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.ListSinksResponse> ListSinks(global::Google.Logging.V2.ListSinksRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Gets a sink.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.LogSink> GetSink(global::Google.Logging.V2.GetSinkRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Creates a sink.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.LogSink> CreateSink(global::Google.Logging.V2.CreateSinkRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Creates or updates a sink.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Logging.V2.LogSink> UpdateSink(global::Google.Logging.V2.UpdateSinkRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Deletes a sink.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSink(global::Google.Logging.V2.DeleteSinkRequest request, ServerCallContext context);
-    }
-
     /// <summary>Base class for server-side implementations of ConfigServiceV2</summary>
     public abstract class ConfigServiceV2Base
     {
@@ -235,21 +127,24 @@ namespace Google.Logging.V2 {
     }
 
     /// <summary>Client for ConfigServiceV2</summary>
-    #pragma warning disable 0618
-    public class ConfigServiceV2Client : ClientBase<ConfigServiceV2Client>, IConfigServiceV2Client
-    #pragma warning restore 0618
+    public class ConfigServiceV2Client : ClientBase<ConfigServiceV2Client>
     {
+      /// <summary>Creates a new client for ConfigServiceV2</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
       public ConfigServiceV2Client(Channel channel) : base(channel)
       {
       }
+      /// <summary>Creates a new client for ConfigServiceV2 that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       public ConfigServiceV2Client(CallInvoker callInvoker) : base(callInvoker)
       {
       }
-      ///<summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       protected ConfigServiceV2Client() : base()
       {
       }
-      ///<summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
       protected ConfigServiceV2Client(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -400,31 +295,10 @@ namespace Google.Logging.V2 {
       }
     }
 
-    /// <summary>Creates a new client for ConfigServiceV2</summary>
-    public static ConfigServiceV2Client NewClient(Channel channel)
-    {
-      return new ConfigServiceV2Client(channel);
-    }
-
     /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
-    public static ServerServiceDefinition BindService(IConfigServiceV2 serviceImpl)
-    #pragma warning restore 0618
-    {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
-          .AddMethod(__Method_ListSinks, serviceImpl.ListSinks)
-          .AddMethod(__Method_GetSink, serviceImpl.GetSink)
-          .AddMethod(__Method_CreateSink, serviceImpl.CreateSink)
-          .AddMethod(__Method_UpdateSink, serviceImpl.UpdateSink)
-          .AddMethod(__Method_DeleteSink, serviceImpl.DeleteSink).Build();
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
     public static ServerServiceDefinition BindService(ConfigServiceV2Base serviceImpl)
-    #pragma warning restore 0618
     {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
+      return ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListSinks, serviceImpl.ListSinks)
           .AddMethod(__Method_GetSink, serviceImpl.GetSink)
           .AddMethod(__Method_CreateSink, serviceImpl.CreateSink)

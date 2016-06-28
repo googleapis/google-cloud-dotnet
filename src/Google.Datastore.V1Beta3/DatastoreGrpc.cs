@@ -96,148 +96,6 @@ namespace Google.Datastore.V1Beta3 {
       get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Client for Datastore</summary>
-    [System.Obsolete("Client side interfaced will be removed in the next release. Use client class directly.")]
-    public interface IDatastoreClient
-    {
-      /// <summary>
-      ///  Looks up entities by key.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.LookupResponse Lookup(global::Google.Datastore.V1Beta3.LookupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Looks up entities by key.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.LookupResponse Lookup(global::Google.Datastore.V1Beta3.LookupRequest request, CallOptions options);
-      /// <summary>
-      ///  Looks up entities by key.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.LookupResponse> LookupAsync(global::Google.Datastore.V1Beta3.LookupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Looks up entities by key.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.LookupResponse> LookupAsync(global::Google.Datastore.V1Beta3.LookupRequest request, CallOptions options);
-      /// <summary>
-      ///  Queries for entities.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.RunQueryResponse RunQuery(global::Google.Datastore.V1Beta3.RunQueryRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Queries for entities.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.RunQueryResponse RunQuery(global::Google.Datastore.V1Beta3.RunQueryRequest request, CallOptions options);
-      /// <summary>
-      ///  Queries for entities.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.RunQueryResponse> RunQueryAsync(global::Google.Datastore.V1Beta3.RunQueryRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Queries for entities.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.RunQueryResponse> RunQueryAsync(global::Google.Datastore.V1Beta3.RunQueryRequest request, CallOptions options);
-      /// <summary>
-      ///  Begins a new transaction.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.BeginTransactionResponse BeginTransaction(global::Google.Datastore.V1Beta3.BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Begins a new transaction.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.BeginTransactionResponse BeginTransaction(global::Google.Datastore.V1Beta3.BeginTransactionRequest request, CallOptions options);
-      /// <summary>
-      ///  Begins a new transaction.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.BeginTransactionResponse> BeginTransactionAsync(global::Google.Datastore.V1Beta3.BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Begins a new transaction.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.BeginTransactionResponse> BeginTransactionAsync(global::Google.Datastore.V1Beta3.BeginTransactionRequest request, CallOptions options);
-      /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.CommitResponse Commit(global::Google.Datastore.V1Beta3.CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.CommitResponse Commit(global::Google.Datastore.V1Beta3.CommitRequest request, CallOptions options);
-      /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.CommitResponse> CommitAsync(global::Google.Datastore.V1Beta3.CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.CommitResponse> CommitAsync(global::Google.Datastore.V1Beta3.CommitRequest request, CallOptions options);
-      /// <summary>
-      ///  Rolls back a transaction.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.RollbackResponse Rollback(global::Google.Datastore.V1Beta3.RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Rolls back a transaction.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.RollbackResponse Rollback(global::Google.Datastore.V1Beta3.RollbackRequest request, CallOptions options);
-      /// <summary>
-      ///  Rolls back a transaction.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.RollbackResponse> RollbackAsync(global::Google.Datastore.V1Beta3.RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Rolls back a transaction.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.RollbackResponse> RollbackAsync(global::Google.Datastore.V1Beta3.RollbackRequest request, CallOptions options);
-      /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.AllocateIdsResponse AllocateIds(global::Google.Datastore.V1Beta3.AllocateIdsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
-      /// </summary>
-      global::Google.Datastore.V1Beta3.AllocateIdsResponse AllocateIds(global::Google.Datastore.V1Beta3.AllocateIdsRequest request, CallOptions options);
-      /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.AllocateIdsResponse> AllocateIdsAsync(global::Google.Datastore.V1Beta3.AllocateIdsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
-      /// </summary>
-      AsyncUnaryCall<global::Google.Datastore.V1Beta3.AllocateIdsResponse> AllocateIdsAsync(global::Google.Datastore.V1Beta3.AllocateIdsRequest request, CallOptions options);
-    }
-
-    /// <summary>Interface of server-side implementations of Datastore</summary>
-    [System.Obsolete("Service implementations should inherit from the generated abstract base class instead.")]
-    public interface IDatastore
-    {
-      /// <summary>
-      ///  Looks up entities by key.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Datastore.V1Beta3.LookupResponse> Lookup(global::Google.Datastore.V1Beta3.LookupRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Queries for entities.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Datastore.V1Beta3.RunQueryResponse> RunQuery(global::Google.Datastore.V1Beta3.RunQueryRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Begins a new transaction.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Datastore.V1Beta3.BeginTransactionResponse> BeginTransaction(global::Google.Datastore.V1Beta3.BeginTransactionRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Datastore.V1Beta3.CommitResponse> Commit(global::Google.Datastore.V1Beta3.CommitRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Rolls back a transaction.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Datastore.V1Beta3.RollbackResponse> Rollback(global::Google.Datastore.V1Beta3.RollbackRequest request, ServerCallContext context);
-      /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
-      /// </summary>
-      global::System.Threading.Tasks.Task<global::Google.Datastore.V1Beta3.AllocateIdsResponse> AllocateIds(global::Google.Datastore.V1Beta3.AllocateIdsRequest request, ServerCallContext context);
-    }
-
     /// <summary>Base class for server-side implementations of Datastore</summary>
     public abstract class DatastoreBase
     {
@@ -294,21 +152,24 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     /// <summary>Client for Datastore</summary>
-    #pragma warning disable 0618
-    public class DatastoreClient : ClientBase<DatastoreClient>, IDatastoreClient
-    #pragma warning restore 0618
+    public class DatastoreClient : ClientBase<DatastoreClient>
     {
+      /// <summary>Creates a new client for Datastore</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
       public DatastoreClient(Channel channel) : base(channel)
       {
       }
+      /// <summary>Creates a new client for Datastore that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       public DatastoreClient(CallInvoker callInvoker) : base(callInvoker)
       {
       }
-      ///<summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       protected DatastoreClient() : base()
       {
       }
-      ///<summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
       protected DatastoreClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -495,32 +356,10 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
-    /// <summary>Creates a new client for Datastore</summary>
-    public static DatastoreClient NewClient(Channel channel)
-    {
-      return new DatastoreClient(channel);
-    }
-
     /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
-    public static ServerServiceDefinition BindService(IDatastore serviceImpl)
-    #pragma warning restore 0618
-    {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
-          .AddMethod(__Method_Lookup, serviceImpl.Lookup)
-          .AddMethod(__Method_RunQuery, serviceImpl.RunQuery)
-          .AddMethod(__Method_BeginTransaction, serviceImpl.BeginTransaction)
-          .AddMethod(__Method_Commit, serviceImpl.Commit)
-          .AddMethod(__Method_Rollback, serviceImpl.Rollback)
-          .AddMethod(__Method_AllocateIds, serviceImpl.AllocateIds).Build();
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    #pragma warning disable 0618
     public static ServerServiceDefinition BindService(DatastoreBase serviceImpl)
-    #pragma warning restore 0618
     {
-      return ServerServiceDefinition.CreateBuilder(__ServiceName)
+      return ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_Lookup, serviceImpl.Lookup)
           .AddMethod(__Method_RunQuery, serviceImpl.RunQuery)
           .AddMethod(__Method_BeginTransaction, serviceImpl.BeginTransaction)

@@ -14,7 +14,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax": "0.1.0-CI00057",
+    "Google.Api.Gax": "0.1.0-CI00060",
     "Google.Protobuf": "3.0.0-beta3"
   },
 
