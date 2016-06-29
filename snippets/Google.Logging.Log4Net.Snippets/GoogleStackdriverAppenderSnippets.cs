@@ -12,17 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api;
-using Google.Api.Gax;
-using Google.Logging.V2;
 using log4net;
 using log4net.Config;
-using Moq;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Logging.Log4Net.Snippets
@@ -34,18 +27,6 @@ namespace Google.Logging.Log4Net.Snippets
         [Fact]
         public void Overview()
         {
-            var uploadedEntries = new List<LogEntry>();
-            var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-            fakeClient.Setup(x => x.WriteLogEntriesAsync("", null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), null))
-                .Returns<string, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CallSettings>((a, b, c, entries, d) =>
-                {
-                    uploadedEntries.AddRange(entries);
-                    var tcs = new TaskCompletionSource<WriteLogEntriesResponse>();
-                    tcs.SetResult(new WriteLogEntriesResponse());
-                    return tcs.Task;
-                });
-            GoogleStackdriverAppender.ClientOverride = fakeClient.Object;
-
             // Sample: Overview
             var xml = @"
 <?xml version=""1.0"" encoding=""utf-8"" ?>
@@ -75,9 +56,9 @@ namespace Google.Logging.Log4Net.Snippets
             log.Info("An exciting log entry!");
             // End sample
 
-            Thread.Sleep(100);
-            Assert.Equal(1, uploadedEntries.Count);
-            Assert.Contains("An exciting log entry!", uploadedEntries[0].TextPayload);
+            // We can't assert anything here because:
+            // * Log entries don't appear in the log instantly.
+            // * Uploads happen in the background, so we can't check RPC repsonses.
         }
     }
 }

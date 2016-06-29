@@ -40,12 +40,7 @@ namespace Google.Logging.Log4Net
         // TODO:
         // * Various argument validations
         // * Send unsent logs on program exit? Using AppDomain.ProcessExit
-        //   - Note this only allows 2 seconds
-
-        // For testing only.
-        internal static LoggingServiceV2Client ClientOverride { private get; set; }
-        internal static IScheduler SchedulerOverride { private get; set; }
-        internal static IClock ClockOverride { private get; set; }
+        //   - Note this only allows 2 seconds 
 
         internal const string s_logsLostWarningMessage = "Logs lost due to insufficient process-local storage: {0} -> {1}";
         internal const string s_lostDateTimeFmt = "yyyy-MM-dd' 'HH:mm:ss'Z'";
@@ -105,9 +100,9 @@ namespace Google.Logging.Log4Net
             base.ActivateOptions();
 
             // Initialise services if not already initialised for testing
-            _client = ClientOverride ?? _client ?? LoggingServiceV2Client.Create();
-            _scheduler = SchedulerOverride ?? _scheduler ?? SystemScheduler.Instance;
-            _clock = ClockOverride ?? _clock ?? SystemClock.Instance;
+            _client = _client ?? LoggingServiceV2Client.Create();
+            _scheduler = _scheduler ?? SystemScheduler.Instance;
+            _clock = _clock ?? SystemClock.Instance;
 
             // Validate configuration
             GaxPreconditions.CheckState(!string.IsNullOrEmpty(ResourceType), $"{nameof(ResourceType)} must be set.");

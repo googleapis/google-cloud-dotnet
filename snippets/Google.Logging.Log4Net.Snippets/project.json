@@ -1,10 +1,5 @@
 ﻿{
-  "version": "1.0.0-*",
   "description": "Google.Logging.Log4Net.Snippets Class Library",
-  "authors": [ "chrisbacon" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
 
   "compilationOptions": {
     "keyFile": "../../GoogleApis.snk"
@@ -14,7 +9,6 @@
     "Google.Logging.Log4Net": "",
     "xunit": "2.1.0",
     "xunit.runner.dnx": "2.1.0-rc1-build204",
-    "Moq": "4.5.10"
   },
 
   "commands": {
