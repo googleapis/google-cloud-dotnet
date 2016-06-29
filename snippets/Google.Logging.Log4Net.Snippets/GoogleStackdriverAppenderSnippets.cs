@@ -40,21 +40,21 @@ namespace Google.Logging.Log4Net.Snippets
 
             // Sample: Overview
             string xml = $@"
-<?xml version=""1.0"" encoding=""utf-8"" ?>
-<log4net>
-  <appender name=""CloudLogger"" type=""Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net"">
-    <layout type=""log4net.Layout.PatternLayout"">
-      <conversionPattern value=""%-4timestamp [%thread] %-5level %logger %ndc - %message""/>
-    </layout>
-    <projectId value = ""{projectId}""/>
-    <logId value=""{logId}""/>
-  </appender>
-  <root>
-    <level value=""ALL""/>
-    <appender-ref ref=""CloudLogger""/>
-  </root>
-</log4net>
-".Trim();
+            <?xml version=""1.0"" encoding=""utf-8"" ?>
+            <log4net>
+              <appender name=""CloudLogger"" type=""Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net"">
+                <layout type=""log4net.Layout.PatternLayout"">
+                  <conversionPattern value=""%-4timestamp [%thread] %-5level %logger %ndc - %message""/>
+                </layout>
+                <projectId value = ""{projectId}""/>
+                <logId value=""{logId}""/>
+              </appender>
+              <root>
+                <level value=""ALL""/>
+                <appender-ref ref=""CloudLogger""/>
+              </root>
+            </log4net>
+            ".Trim();
             MemoryStream xmlStream = new MemoryStream(Encoding.ASCII.GetBytes(xml));
             XmlConfigurator.Configure(xmlStream);
             // Usually the above configuration would use an XML configuration file,
