@@ -20,23 +20,31 @@ using Xunit;
 
 namespace Google.Logging.Log4Net.Snippets
 {
+    [Collection(nameof(Log4NetSnippetFixture))]
     public class GoogleStackdriverAppenderSnippets
     {
         private class Program { }
+
+        private readonly Log4NetSnippetFixture _fixture;
+
+        public GoogleStackdriverAppenderSnippets(Log4NetSnippetFixture fixture)
+        {
+            _fixture = fixture;
+        }
 
         [Fact]
         public void Overview()
         {
             // Sample: Overview
-            var xml = @"
+            var xml = $@"
 <?xml version=""1.0"" encoding=""utf-8"" ?>
 <log4net>
   <appender name=""CloudLogger"" type=""Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net"">
     <layout type=""log4net.Layout.PatternLayout"">
       <conversionPattern value=""%-4timestamp [%thread] %-5level %logger %ndc - %message""/>
     </layout>
-    <projectId value = ""your-project-ID""/>
-    <logId value=""your-log-ID""/>
+    <projectId value = ""{_fixture.ProjectId}""/>
+    <logId value=""{_fixture.LogId}""/>
   </appender>
   <root>
     <level value=""ALL""/>
