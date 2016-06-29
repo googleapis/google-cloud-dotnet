@@ -95,7 +95,7 @@ Querying data:
 
 A library for working with [Google Stackdriver Logging](https://cloud.google.com/logging/).
 
-## Log4net integration - Google.Logging.Log4Net (NuGet) (alpha)
+## Log4net integration - Google.Logging.Log4Net (alpha)
 
 [GoogleStackDriverAppender](obj/api.Google.Logging.GoogleStackdriverAppender.yml)
 provides a [log4net](https://logging.apache.org/log4net/) appender to log messages
@@ -111,13 +111,13 @@ See the
 [readme](https://github.com/GoogleCloudPlatform/gcloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md)
 for details on all the configuration options.
 
-## Basic logging library (NuGet) (alpha)
+## Basic logging library (alpha)
 
 (Depends on `Google.Logging.Type` for version-agnostic types.)
 
 If required,
 [LoggingServiceV2Client](obj/api/Google.Logging.V2.LoggingServiceV2Client.yml)
-provides a low-level abstraction over the raw RPC API
+provides a low-level abstraction over the raw RPC API.
 
 # Google.Bigquery.V2 (alpha)
 
