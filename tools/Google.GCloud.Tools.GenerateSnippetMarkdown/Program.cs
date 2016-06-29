@@ -321,6 +321,10 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
 
         private static void GenerateSnippetMarkdown(string outputFile, string relativeSnippetFile, IEnumerable<Snippet> snippets)
         {
+            if (!snippets.SelectMany(snippet => snippet.MetadataUids).Any())
+            {
+                return;
+            }
             using (var writer = File.CreateText(outputFile))
             {
                 foreach (var snippet in snippets)
