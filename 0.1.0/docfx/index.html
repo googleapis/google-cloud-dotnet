@@ -218,7 +218,7 @@ provides a <a href="https://logging.apache.org/log4net/">log4net</a> appender to
 to Google Stackdriver Logging.</p>
 <h3 id="sample-code-2">Sample code</h3>
 <p>Simple logging:</p>
-<pre><code class="lang-cs">            string xml = $@&quot;
+<pre><code class="lang-cs">string xml = $@&quot;
 &lt;?xml version=&quot;&quot;1.0&quot;&quot; encoding=&quot;&quot;utf-8&quot;&quot; ?&gt;
 &lt;log4net&gt;
   &lt;appender name=&quot;&quot;CloudLogger&quot;&quot; type=&quot;&quot;Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net&quot;&quot;&gt;
@@ -234,16 +234,16 @@ to Google Stackdriver Logging.</p>
   &lt;/root&gt;
 &lt;/log4net&gt;
 &quot;.Trim();
-            MemoryStream xmlStream = new MemoryStream(Encoding.ASCII.GetBytes(xml));
-            XmlConfigurator.Configure(xmlStream);
-            // Usually the above configuration would use an XML configuration file,
-            // rather than inline XML:
-            // XmlConfigurator.Configure(new FileInfo(&quot;log4net.xml&quot;));
+MemoryStream xmlStream = new MemoryStream(Encoding.ASCII.GetBytes(xml));
+XmlConfigurator.Configure(xmlStream);
+// Usually the above configuration would use an XML configuration file,
+// rather than inline XML:
+// XmlConfigurator.Configure(new FileInfo(&quot;log4net.xml&quot;));
 
-            // Retrieve a logger for this context.
-            ILog log = LogManager.GetLogger(typeof(Program));
-            // Log some information. This log entry will be sent to Google Stackdriver Logging.
-            log.Info(&quot;An exciting log entry!&quot;);
+// Retrieve a logger for this context.
+ILog log = LogManager.GetLogger(typeof(Program));
+// Log some information. This log entry will be sent to Google Stackdriver Logging.
+log.Info(&quot;An exciting log entry!&quot;);
 </code></pre><p>See the
 <a href="https://github.com/GoogleCloudPlatform/gcloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md">readme</a>
 for details on all the configuration options.</p>
