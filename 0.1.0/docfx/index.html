@@ -211,10 +211,47 @@ foreach (Entity entity in db.RunQuery(query))
     Console.WriteLine($&quot;{created:yyyy-MM-dd&#39;T&#39;HH:mm:ss}: {text}&quot;);
 }
 </code></pre><h1 id="google-logging-v2-alpha-">Google.Logging.V2 (alpha)</h1>
-<p>A library for working with <a href="https://cloud.google.com/logging/">Stackdriver Logging</a>.</p>
+<p>A library for working with <a href="https://cloud.google.com/logging/">Google Stackdriver Logging</a>.</p>
+<h2 id="log4net-integration-google-logging-log4net-alpha-">Log4net integration - Google.Logging.Log4Net (alpha)</h2>
+<p><a href="api/Google.Logging.Log4Net.GoogleStackdriverAppender.html">GoogleStackDriverAppender</a>
+provides a <a href="https://logging.apache.org/log4net/">log4net</a> appender to log messages
+to Google Stackdriver Logging.</p>
+<h3 id="sample-code-2">Sample code</h3>
+<p>Simple logging:</p>
+<pre><code class="lang-cs">            string xml = $@&quot;
+&lt;?xml version=&quot;&quot;1.0&quot;&quot; encoding=&quot;&quot;utf-8&quot;&quot; ?&gt;
+&lt;log4net&gt;
+  &lt;appender name=&quot;&quot;CloudLogger&quot;&quot; type=&quot;&quot;Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net&quot;&quot;&gt;
+    &lt;layout type=&quot;&quot;log4net.Layout.PatternLayout&quot;&quot;&gt;
+      &lt;conversionPattern value=&quot;&quot;%-4timestamp [%thread] %-5level %logger %ndc - %message&quot;&quot;/&gt;
+    &lt;/layout&gt;
+    &lt;projectId value = &quot;&quot;{projectId}&quot;&quot;/&gt;
+    &lt;logId value=&quot;&quot;{logId}&quot;&quot;/&gt;
+  &lt;/appender&gt;
+  &lt;root&gt;
+    &lt;level value=&quot;&quot;ALL&quot;&quot;/&gt;
+    &lt;appender-ref ref=&quot;&quot;CloudLogger&quot;&quot;/&gt;
+  &lt;/root&gt;
+&lt;/log4net&gt;
+&quot;.Trim();
+            MemoryStream xmlStream = new MemoryStream(Encoding.ASCII.GetBytes(xml));
+            XmlConfigurator.Configure(xmlStream);
+            // Usually the above configuration would use an XML configuration file,
+            // rather than inline XML:
+            // XmlConfigurator.Configure(new FileInfo(&quot;log4net.xml&quot;));
+
+            // Retrieve a logger for this context.
+            ILog log = LogManager.GetLogger(typeof(Program));
+            // Log some information. This log entry will be sent to Google Stackdriver Logging.
+            log.Info(&quot;An exciting log entry!&quot;);
+</code></pre><p>See the
+<a href="https://github.com/GoogleCloudPlatform/gcloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md">readme</a>
+for details on all the configuration options.</p>
+<h2 id="basic-logging-library-alpha-">Basic logging library (alpha)</h2>
 <p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
-<p>See <a href="api/Google.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a>
-for details.</p>
+<p>If required,
+<a href="api/Google.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a>
+provides a low-level abstraction over the raw RPC API.</p>
 <h1 id="google-bigquery-v2-alpha-">Google.Bigquery.V2 (alpha)</h1>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Bigquery.v2/">Google.Apis.Bigquery.v1</a>
@@ -223,7 +260,7 @@ for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a
 <a href="api/Google.Bigquery.V2.BigqueryClient.html">BigqueryClient</a>
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.</p>
-<h2 id="sample-code-2">Sample code</h2>
+<h2 id="sample-code-3">Sample code</h2>
 <p>Querying:</p>
 <pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
 var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);

@@ -69,24 +69,99 @@
               
               <h1 id="Google_Logging_Log4Net_GoogleStackdriverAppender" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender">Class GoogleStackdriverAppender
               </h1>
-              <div class="markdown level0 summary"><p>Appends logging events to <see cref="!:https://cloud.google.com/stackdriver/">Google Stackdriver Logging</see>.</p>
+              <div class="markdown level0 summary"><p>Appends logging events to Google Stackdriver Logging.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">GoogleStackdriverAppender</span></div>
+                  <div class="level1"><span class="xref">log4net.Appender.AppenderSkeleton</span></div>
+                  <div class="level2"><span class="xref">GoogleStackdriverAppender</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.Close()</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.DoAppend(log4net.Core.LoggingEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.DoAppend(log4net.Core.LoggingEvent[])</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.FilterEvent(log4net.Core.LoggingEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.AddFilter(log4net.Filter.IFilter)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.ClearFilters()</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.IsAsSevereAsThreshold(log4net.Core.Level)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.OnClose()</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.PreAppendCheck()</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.RenderLoggingEvent(log4net.Core.LoggingEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.RenderLoggingEvent(System.IO.TextWriter, log4net.Core.LoggingEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.Threshold</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.ErrorHandler</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.FilterHead</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.Layout</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.Name</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.RequiresLayout</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Logging.Log4Net</h6>
               <h6><strong>Assembly</strong>:Google.Logging.Log4Net.dll</h6>
               <h5 id="Google_Logging_Log4Net_GoogleStackdriverAppender_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class GoogleStackdriverAppender : AppenderSkeleton</code></pre>
+                <pre><code class="lang-csharp hljs">public sealed class GoogleStackdriverAppender : AppenderSkeleton, IBulkAppender, IAppender, IOptionHandler</code></pre>
               </div>
               <h5 id="Google_Logging_Log4Net_GoogleStackdriverAppender_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>Logging events are sent to</p>
-<p><see cref="!:https://cloud.google.com/stackdriver/">Google Stackdriver Logging</see>
-asychronously, via a local buffer. This  is to ensure that server errors or increased
+              <div class="markdown level0 remarks"><p>Logging events are sent to Google Stackdriver Logging asychronously,
+via a local buffer. This  is to ensure that server errors or increased
 network/server latency don&#39;t cause slow-downs in the program being logged.
 TODO: Explain all the configuration options.</p>
 </div>
@@ -434,6 +509,8 @@ Not used for file-based queuing.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
               </div>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">log4net.Appender.AppenderSkeleton.ActivateOptions()</span></div>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_AddCustomLabel_Google_Logging_Log4Net_GoogleStackdriverAppender_Label_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.AddCustomLabel(Google.Logging.Log4Net.GoogleStackdriverAppender.Label)">AddCustomLabel(GoogleStackdriverAppender.Label)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -482,7 +559,7 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_Append_LoggingEvent_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent)">Append(LoggingEvent)</h4>
+              <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_Append_log4net_Core_LoggingEvent_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent)">Append(LoggingEvent)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -500,13 +577,15 @@ Not used for file-based queuing.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">LoggingEvent</span></td>
+                    <td><span class="xref">log4net.Core.LoggingEvent</span></td>
                     <td><em>loggingEvent</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_Append_LoggingEvent___" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent[])">Append(LoggingEvent[])</h4>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent)</span></div>
+              <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_Append_log4net_Core_LoggingEvent___" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent[])">Append(LoggingEvent[])</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -524,12 +603,14 @@ Not used for file-based queuing.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">LoggingEvent</span>[]</td>
+                    <td><span class="xref">log4net.Core.LoggingEvent</span>[]</td>
                     <td><em>loggingEvents</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent[])</span></div>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_System_TimeSpan_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync(System.TimeSpan)">WaitUntilEmptyAsync(TimeSpan)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>

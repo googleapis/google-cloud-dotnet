@@ -12686,18 +12686,18 @@ references:
   href: api/Google.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Logging_Log4Net_GoogleStackdriverAppender_AddWithMetaData_Google_Logging_Log4Net_MetaDataType_
   commentId: M:Google.Logging.Log4Net.GoogleStackdriverAppender.AddWithMetaData(Google.Logging.Log4Net.MetaDataType)
   fullName: Google.Logging.Log4Net.GoogleStackdriverAppender.AddWithMetaData(Google.Logging.Log4Net.MetaDataType)
-- uid: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent)
+- uid: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent)
   name: Append(LoggingEvent)
-  href: api/Google.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Logging_Log4Net_GoogleStackdriverAppender_Append_LoggingEvent_
-  commentId: M:Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent)
-  fullName: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent)
-- uid: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent[])
+  href: api/Google.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Logging_Log4Net_GoogleStackdriverAppender_Append_log4net_Core_LoggingEvent_
+  commentId: M:Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent)
+  fullName: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent)
+- uid: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent[])
   name: Append(LoggingEvent[])
-  href: api/Google.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Logging_Log4Net_GoogleStackdriverAppender_Append_LoggingEvent___
-  commentId: M:Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent[])
+  href: api/Google.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Logging_Log4Net_GoogleStackdriverAppender_Append_log4net_Core_LoggingEvent___
+  commentId: M:Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent[])
   name.vb: Append(LoggingEvent())
-  fullName: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent[])
-  fullName.vb: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(LoggingEvent())
+  fullName: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent[])
+  fullName.vb: Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent())
 - uid: Google.Logging.Log4Net.GoogleStackdriverAppender.File
   name: File
   href: api/Google.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Logging_Log4Net_GoogleStackdriverAppender_File
