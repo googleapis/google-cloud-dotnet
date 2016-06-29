@@ -97,7 +97,7 @@ A library for working with [Google Stackdriver Logging](https://cloud.google.com
 
 ## Log4net integration - Google.Logging.Log4Net (alpha)
 
-[GoogleStackDriverAppender](obj/api.Google.Logging.GoogleStackdriverAppender.yml)
+[GoogleStackDriverAppender](obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml)
 provides a [log4net](https://logging.apache.org/log4net/) appender to log messages
 to Google Stackdriver Logging.
 

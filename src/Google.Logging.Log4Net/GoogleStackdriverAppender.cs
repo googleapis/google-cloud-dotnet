@@ -26,12 +26,11 @@ using System.Threading.Tasks;
 namespace Google.Logging.Log4Net
 {
     /// <summary>
-    /// Appends logging events to <see cref="https://cloud.google.com/stackdriver/">Google Stackdriver Logging</see>.
+    /// Appends logging events to Google Stackdriver Logging.
     /// </summary>
     /// <remarks>
-    /// Logging events are sent to
-    /// <see cref="https://cloud.google.com/stackdriver/">Google Stackdriver Logging</see>
-    /// asychronously, via a local buffer. This  is to ensure that server errors or increased
+    /// Logging events are sent to Google Stackdriver Logging asychronously,
+    /// via a local buffer. This  is to ensure that server errors or increased
     /// network/server latency don't cause slow-downs in the program being logged.
     /// TODO: Explain all the configuration options.
     /// </remarks>
