@@ -25,7 +25,7 @@ namespace Google.Logging.Log4Net.Snippets
 
         public string ProjectId { get; }
 
-        public string LogId { get; } = "TestLog";
+        public string LogId { get; } = "Log4NetTestLog";
 
         public Log4NetSnippetFixture()
         {
@@ -39,9 +39,9 @@ namespace Google.Logging.Log4Net.Snippets
 
         public void Dispose()
         {
-            var logging = LoggingServiceV2Client.Create();
-            var logName = LoggingServiceV2Client.FormatLogName(ProjectId, LogId);
-            logging.DeleteLog(logName);
+            // No clean-up here, because:
+            // - We can't assert log entries in tests, so it's useful to be able to check them manually later.
+            // - If the log entries haven't arrived yet, deleting them would cause an exception anyway.
         }
     }
 }
