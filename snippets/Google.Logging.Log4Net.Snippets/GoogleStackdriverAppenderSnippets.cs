@@ -35,16 +35,19 @@ namespace Google.Logging.Log4Net.Snippets
         [Fact]
         public void Overview()
         {
+            string projectId = _fixture.ProjectId;
+            string logId = _fixture.LogId;
+
             // Sample: Overview
-            var xml = $@"
+            string xml = $@"
 <?xml version=""1.0"" encoding=""utf-8"" ?>
 <log4net>
   <appender name=""CloudLogger"" type=""Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net"">
     <layout type=""log4net.Layout.PatternLayout"">
       <conversionPattern value=""%-4timestamp [%thread] %-5level %logger %ndc - %message""/>
     </layout>
-    <projectId value = ""{_fixture.ProjectId}""/>
-    <logId value=""{_fixture.LogId}""/>
+    <projectId value = ""{projectId}""/>
+    <logId value=""{logId}""/>
   </appender>
   <root>
     <level value=""ALL""/>
