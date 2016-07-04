@@ -7,6 +7,6 @@ $('.faq-btn').click(function(){
 });
 
 (function() {
-  var myAppModule = angular.module('gcloud-java', []);
+  var myAppModule = angular.module('gcloud-dotnet', []);
   hljs.initHighlightingOnLoad();
 })();
