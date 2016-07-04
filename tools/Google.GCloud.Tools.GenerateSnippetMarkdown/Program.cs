@@ -39,12 +39,19 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
     //   - Otherwise, fill in enough parameters to distinguish it from other overloads, e.g. Create(string,)
     //     Precise nature of parameter matching is TBD... we'll do our best.
 
+    // Additionally, outside a sample, a comment starting with "Resource: " indicates that the specified
+    // resource should be copied into the text output as if it were a sample in the current file. The snippet ID is provided
+    // as a second value, as the filename is unlikely to be a valid snippet ID. For example:
+    // Resource: foo.xml sample_foo
+    // creates a snippet with an ID of "sample_foo" with the content of "foo.xml".
+
     /// <summary>
-    /// Simple program to generate a snippets.md file for docfx to consume when generating documentation.
+    /// Simple program to generate markdown and text files for docfx to consume when generating documentation.
     /// The file basically links the snippets projects with the client libraries.
     /// </summary>
     public sealed class Program
     {
+        private const string Resource = "// Resource: ";
         private const string StartSample = "// Sample: ";
         private const string StartSnippet = "// Snippet: ";
         private const string AdditionalMember = "// Additional: ";
@@ -144,10 +151,11 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
             foreach (var line in File.ReadLines(file))
             {
                 lineNumber++;
-                // 4 kinds of line to consider:
+                // 5 kinds of line to consider:
                 // StartSnippet / StartSample: only valid when not in a snippet
                 // EndSnippet / EndSample: only valid when in a snippet
                 // Additional: only valid when at the start of a snippet
+                // Resource: only valid when not in a snippet
                 // Regular line; valid in either case, but with different results.
 
                 string location = $"{sourceFile}:{lineNumber}";
@@ -174,11 +182,13 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                             {
                                 SnippetId = id,
                                 SourceFile = sourceFile,
-                                Sample = sample,
                                 SourceStartLine = lineNumber
                             };
+                            if (!sample)
+                            {
+                                currentSnippet.MetadataMembers.Add(id);
+                            }
                         }
-
                     }
                     else
                     {
@@ -207,7 +217,7 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                         {
                             if (IsValidId(id))
                             {
-                                currentSnippet.AdditionalMembers.Add(id);
+                                currentSnippet.MetadataMembers.Add(id);
                             }
                             else
                             {
@@ -222,6 +232,41 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                     else
                     {
                         errors.Add($"{location}: Additional member ID not in snippet");
+                    }
+                }
+                else if (line.Contains(Resource))
+                {
+                    if (currentSnippet == null)
+                    {
+                        string[] fileAndId = GetContentAfterPrefix(line, Resource).Split(' ');
+                        if (fileAndId.Length != 2)
+                        {
+                            errors.Add($"{location}: Resource must specify file and snippet ID");
+                        }
+                        else if (!DocfxSnippetPattern.IsMatch(fileAndId[1]))
+                        {
+                            errors.Add($"{location}: Resource snippet ID {fileAndId[1]} is not a valid docfx ID");
+                        }
+                        else
+                        {
+                            string id = fileAndId[1];
+                            string directory = Path.GetDirectoryName(file);
+                            string resourceFile = Path.Combine(directory, fileAndId[0]);
+                            string[] resourceContent = File.ReadAllLines(resourceFile);
+
+                            var resourceSnippet = new Snippet
+                            {
+                                SnippetId = id,
+                                SourceFile = resourceFile,
+                                SourceStartLine = 1
+                            };
+                            resourceSnippet.Lines.AddRange(resourceContent);
+                            yield return resourceSnippet;
+                        }
+                    }
+                    else
+                    {
+                        errors.Add($"{location}: Resource specified within snippet");
                     }
                 }
                 else if (currentSnippet != null)
@@ -271,7 +316,7 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                     lineIndex++;
                     if (validDocfxId)
                     {
-                        writer.WriteLine($"// <{snippet.SnippetId}>");
+                        writer.WriteLine(snippet.DocfxSnippetStart);
                         lineIndex++;
                     }
                     snippet.StartLine = lineIndex;
@@ -280,7 +325,7 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
                     snippet.EndLine = lineIndex - 1;
                     if (validDocfxId)
                     {
-                        writer.WriteLine($"// </{snippet.SnippetId}>");
+                        writer.WriteLine(snippet.DocfxSnippetEnd);
                         lineIndex++;
                     }
                     writer.WriteLine();
@@ -298,8 +343,7 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
         {
             foreach (var snippet in snippets)
             {
-                IEnumerable<string> idsToMatch = snippet.Sample ? snippet.AdditionalMembers : new[] { snippet.SnippetId }.Concat(snippet.AdditionalMembers);
-                foreach (var snippetMemberId in idsToMatch)
+                foreach (var snippetMemberId in snippet.MetadataMembers)
                 {
                     var matches = members.Where(member => IsMemberMatch(member.Id, snippetMemberId)).ToList();
                     // We could potentially allow ambiguous matches and just use all of them...

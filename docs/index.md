@@ -105,6 +105,14 @@ to Google Stackdriver Logging.
 
 Simple logging:
 
+First create a `log4net` configuration file (`log4net.xml`) as below:
+
+[!code-xml[](obj/snippets/Google.Logging.Log4Net.GoogleStackdriverAppender.txt#log4net_template)]
+
+Edit the file replacing `PROJECT_ID` with your Google Cloud Project
+ID, and `LOG_ID` with an identifier for your application. Use this
+file to configure `log4net` and then log as normal.
+
 [!code-cs[](obj/snippets/Google.Logging.Log4Net.GoogleStackdriverAppender.txt#Overview)]
 
 See the
