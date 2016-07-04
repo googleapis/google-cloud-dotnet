@@ -15,7 +15,6 @@
 using log4net;
 using log4net.Config;
 using System.IO;
-using System.Text;
 using Xunit;
 
 namespace Google.Logging.Log4Net.Snippets
@@ -32,40 +31,46 @@ namespace Google.Logging.Log4Net.Snippets
             _fixture = fixture;
         }
 
+        // SampleResource: log4net-template.xml
+
         [Fact]
         public void Overview()
         {
             string projectId = _fixture.ProjectId;
             string logId = _fixture.LogId;
+            string fileName = "log4net.xml";
+            string resourceName = typeof(GoogleStackdriverAppenderSnippets).Namespace + ".log4net-template.xml";
 
-            // Sample: Overview
-            string xml = $@"
-            <?xml version=""1.0"" encoding=""utf-8"" ?>
-            <log4net>
-              <appender name=""CloudLogger"" type=""Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net"">
-                <layout type=""log4net.Layout.PatternLayout"">
-                  <conversionPattern value=""%-4timestamp [%thread] %-5level %logger %ndc - %message""/>
-                </layout>
-                <projectId value = ""{projectId}""/>
-                <logId value=""{logId}""/>
-              </appender>
-              <root>
-                <level value=""ALL""/>
-                <appender-ref ref=""CloudLogger""/>
-              </root>
-            </log4net>
-            ".Trim();
-            MemoryStream xmlStream = new MemoryStream(Encoding.ASCII.GetBytes(xml));
-            XmlConfigurator.Configure(xmlStream);
-            // Usually the above configuration would use an XML configuration file,
-            // rather than inline XML:
-            // XmlConfigurator.Configure(new FileInfo("log4net.xml"));
+            string xml;
+            using (var stream = typeof(GoogleStackdriverAppenderSnippets).Assembly
+                .GetManifestResourceStream(resourceName))
+            {
+                using (var reader = new StreamReader(stream))
+                {
+                    xml = reader.ReadToEnd();
+                }
+            }
+            xml = xml.Replace("PROJECT_ID", projectId).Replace("LOG_ID", logId);
+            Assert.False(File.Exists(fileName), "Test would overwrite existing file");
+            File.WriteAllText(fileName, xml);
 
-            // Retrieve a logger for this context.
-            ILog log = LogManager.GetLogger(typeof(Program));
-            // Log some information. This log entry will be sent to Google Stackdriver Logging.
-            log.Info("An exciting log entry!");
-            // End sample
+            try
+            {
+                // Resource: log4net-template.xml log4net_template
+                // Sample: Overview
+                // Configure log4net to use Google Stackdriver logging from the XML configuration file.
+                XmlConfigurator.Configure(new FileInfo("log4net.xml"));
+
+                // Retrieve a logger for this context.
+                ILog log = LogManager.GetLogger(typeof(Program));
+                // Log some information. This log entry will be sent to Google Stackdriver Logging.
+                log.Info("An exciting log entry!");
+                // End sample
+            }
+            finally
+            {
+                File.Delete(fileName);
+            }
 
             // We can't assert anything here because:
             // * Log entries don't appear in the log instantly.
