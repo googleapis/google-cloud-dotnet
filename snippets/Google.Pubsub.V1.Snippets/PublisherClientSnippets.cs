@@ -197,5 +197,93 @@ namespace Google.Pubsub.V1.Snippets
             Console.WriteLine($"Deleted {topicName}");
             // End snippet
         }
+
+        [Fact]
+        public void PageStreamingUseCases_AllResources()
+        {
+            string projectId = _fixture.ProjectId;
+            // Sample: PageStreamingUseCases_AllResources
+            PublisherClient client = PublisherClient.Create();
+            string projectName = PublisherClient.FormatProjectName(projectId);
+            IPagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
+            foreach (Topic topic in topics)
+            {
+                Console.WriteLine(topic.Name);
+            }
+            // End sample
+        }
+
+        [Fact]
+        public void PageStreamingUseCases_Responses()
+        {
+            string projectId = _fixture.ProjectId;
+            // Sample: PageStreamingUseCases_Responses
+            PublisherClient client = PublisherClient.Create();
+            string projectName = PublisherClient.FormatProjectName(projectId);
+            IPagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
+            IResponseEnumerable<ListTopicsResponse, Topic> topicPages = topics.AsPages();
+            foreach (ListTopicsResponse page in topicPages)
+            {
+                Console.WriteLine("Topics in response:");
+                foreach (Topic topic in page.Topics)
+                {
+                    Console.WriteLine($"  {topic.Name}");
+                }
+                // If you were processing items in batches, you might wish to store this
+                // in order to recover from failures. The page token can be passed into the ListTopics method.
+                Console.WriteLine($"Next page token: {page.NextPageToken}");
+            }
+            // End sample
+        }
+
+        [Fact]
+        public void PageStreamingUseCases_SingleResponse()
+        {
+            string projectId = _fixture.ProjectId;
+            // Sample: PageStreamingUseCases_SingleResponse
+            PublisherClient client = PublisherClient.Create();
+            string projectName = PublisherClient.FormatProjectName(projectId);
+            IPagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
+            IResponseEnumerable<ListTopicsResponse, Topic> topicPages = topics.AsPages();
+            // This is just the regular LINQ First() method. The sequence of pages will never be empty,
+            // but the page may have no resources.
+            ListTopicsResponse firstPage = topicPages.First();
+            Console.WriteLine("Topics in response:");
+            foreach (Topic topic in firstPage.Topics)
+            {
+                Console.WriteLine($"  {topic.Name}");
+            }
+            // If you were processing items in batches, you might wish to store this
+            // in order to recover from failures. The page token can be passed into the ListTopics method.
+            Console.WriteLine($"Next page token: {firstPage.NextPageToken}");
+            // End sample
+        }
+
+        [Fact]
+        public void PageStreamingUseCases_WithFixedSize()
+        {
+            string projectId = _fixture.ProjectId;
+            string pageTokenFromRequest = "";
+
+            // Sample: PageStreamingUseCases_WithFixedSize
+            PublisherClient client = PublisherClient.Create();
+            string projectName = PublisherClient.FormatProjectName(projectId);
+            IPagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageTokenFromRequest);
+
+            IEnumerable<FixedSizePage<Topic>> fixedSizePages = topics.AsPages().WithFixedSize(3);
+            // With fixed size pages, if there are no more resources, there are no more pages.
+            FixedSizePage<Topic> nextPage = fixedSizePages.FirstOrDefault();
+            if (nextPage != null)
+            {
+                // In a web application, this would be a matter of including the topics in the web page.
+                foreach (Topic topic in nextPage)
+                {
+                    Console.WriteLine(topic.Name);
+                }
+                // ... and embedding the next page token into a "next page" link.
+                Console.WriteLine($"Next page token: {nextPage.NextPageToken}");
+            }
+            // End sample
+        }
     }
 }
