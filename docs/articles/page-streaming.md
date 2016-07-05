@@ -6,7 +6,7 @@ Many Google APIs expose operations to list resources, possibly
 filtering them. Often, there may be many, many matching resources,
 so the results are returned one "page" at a time. Each request can
 specify a *page token* which identifies the start of the page of
-resluts to return, and each response specifies a *next page token*
+results to return, and each response specifies a *next page token*
 to use in the subsequent request. If the end of the logical result
 list has been reached, the next page token is not specified.
 
@@ -49,10 +49,6 @@ TODO(jonskeet): Complete this, talking about `AsPages` etc.
 ### Iterate over all resources, remembering page tokens
 
 ### Obtain a single page of results
-
-If you want to make exactly one API call, as if you were using the
-underlying API, you can call the page-streaming method and simply
-use the `First()` method from LINQ.
 
 ### Display results in fixed-sized pages
 
