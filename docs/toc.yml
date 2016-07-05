@@ -2,15 +2,15 @@
   href: index.md
 - name: API Reference
   href: obj/api/
-- Page streaming
+- name: Page streaming
   href: articles/page-streaming.md
-- Resource names and IDs
+- name: Resource names and IDs
   href: articles/resource-names.md
-- API layers
+- name: API layers
   href: articles/api-layers.md
-- Call settings
+- name: Call settings
   href: articles/call-settings.md
-- Resource cleanup
+- name: Resource cleanup
   href: articles/cleanup.md
 - name: BigQuery
   href: articles/bigquery.md
