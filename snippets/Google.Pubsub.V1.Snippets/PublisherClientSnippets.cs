@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Protobuf;
-using Google.Pubsub.V1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
