@@ -10,7 +10,7 @@
   href: articles/api-layers.md
 - name: Call settings
   href: articles/call-settings.md
-- name: Resource cleanup
+- name: Resource clean-up
   href: articles/cleanup.md
 - name: BigQuery
   href: articles/bigquery.md
