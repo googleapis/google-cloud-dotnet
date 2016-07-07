@@ -26,6 +26,13 @@ resources asynchronously return an
 These are equivalent other than their asynchrony, so
 this document focuses on the synchronous version for simplicity.
 
+The interfaces used in this document are the ones used by gRPC-based libraries.
+REST-based libraries have equivalent interfaces in the `Google.Api.Gax.Rest` namespace.
+They operate in exactly the same way for client code, but the generic type parameters
+have slightly different constraints due to differences in the access protocol. See the
+[API layers](api-layers.md) documentation for more details about the differences between
+gRPC-based and REST-based libraries.
+
 ## `IPagedEnumerable<TResponse, TResource>`
 
 Let's look at the generic type parameters first. The `TResponse` is
