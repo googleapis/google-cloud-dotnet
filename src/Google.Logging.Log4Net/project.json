@@ -14,8 +14,9 @@
   },
 
   "dependencies": {
+    "Google.Api.CommonProtos": "0.1.0-CI00061",
+    "Google.Api.Gax": "0.1.0-CI00061",
     "Google.Logging.V2": "",
-    "Google.Api.Gax": "0.1.0-CI00057",
     "log4net": "2.0.5"
   },
 
