@@ -14,9 +14,11 @@
 
 using Google.Api.Gax;
 using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -282,6 +284,127 @@ namespace Google.Pubsub.V1.Snippets
                 // ... and embedding the next page token into a "next page" link.
                 Console.WriteLine($"Next page token: {nextPage.NextPageToken}");
             }
+            // End sample
+        }
+
+        [Fact]
+        public void CallSettings_PerRpc()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+
+            // Sample: CallSettings_PerRpc
+            // Create a PublisherClient with default settings.
+            PublisherClient client = PublisherClient.Create();
+            // Format topicName from the projectId and topicId.
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            // Create a CallSettings with a custom header.
+            CallSettings callSettings = new CallSettings
+            {
+                Headers = new Metadata
+                {
+                    { "ClientVersion", "1.0.0" }
+                }
+            };
+            // This will cause the custom 'ClientVersion' header to be included in the RPC call.
+            Topic topic = client.CreateTopic(topicName, callSettings);
+            // End sample
+        }
+
+        [Fact]
+        public void CallSettings_Client()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+
+            // Sample: CallSettings_ClientWide
+            // Create a default PublisherSettings, with a custom header for calls to all RPC methods.
+            PublisherSettings publisherSettings = new PublisherSettings
+            {
+                CallSettings = new CallSettings
+                {
+                    Headers = new Metadata
+                    {
+                        { "ClientVersion", "1.0.0" }
+                    },
+                }
+            };
+            PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+            // Format topicName from the projectId and topicId.
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            // The custom 'ClientVersion' header will be included in the RPC call, due to
+            // the client being configured with 'publishersettings' above.
+            Topic topic = client.CreateTopic(topicName);
+            // End sample
+        }
+
+        [Fact]
+        public void CallSettings_ClientPerMethod()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+
+            // Sample: CallSettings_ClientPerMethod
+            // Create a default PublisherSettings, with a custom header for calls
+            // to the CreateTopic RPC method.
+            PublisherSettings publisherSettings = new PublisherSettings();
+            publisherSettings.CreateTopicSettings.Headers = new Metadata
+            {
+                { "ClientVersion", "1.0.0" }
+            };
+            PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+            // Format topicName from the projectId and topicId.
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            // The custom 'ClientVersion' header will be included in the RPC call, due to
+            // the client being configured with 'publishersettings' above.
+            Topic topic = client.CreateTopic(topicName);
+            // End sample
+        }
+
+        [Fact]
+        public void CallSettings_Overrides()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            DateTime deadline = DateTime.MaxValue;
+            CancellationToken cancellationToken = new CancellationTokenSource().Token;
+
+            // Sample: CallSettings_Overrides
+            // Create a default PublisherSettings, with customizations for CreateTopic RPCs:
+            // * A custom "ClientVersion" header.
+            // * A custom 5-second timeout Timing.
+            // * No cancellation token.
+            PublisherSettings publisherSettings = new PublisherSettings();
+            publisherSettings.CreateTopicSettings.Headers = new Metadata
+            {
+                { "ClientVersion", "1.0.0" }
+            };
+            publisherSettings.CreateTopicSettings.Timing = CallTiming.FromTimeout(TimeSpan.FromSeconds(5));
+            publisherSettings.CreateTopicSettings.CancellationToken = CancellationToken.None;
+
+            // Override the above Timing and CancellationToken in the client-wide CallSettings;
+            // the Headers are not overridden.
+            publisherSettings.CallSettings = new CallSettings
+            {
+                Timing = CallTiming.FromDeadline(deadline),
+                CancellationToken = CancellationToken.None,
+            };
+
+            // Create the client with the configured publisherSettings
+            PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+
+            // Format topicName from the projectId and topicId.
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+
+            // Call CreateTopic(). Override only the CancellationToken, using a per-RPC-method CallSettings.
+            // The CallSettings used during this RPC invocation is:
+            // * A custom "ClientVersion" header.
+            // * A Timing deadline of 'deadline' (*not* the overridden 5-second timeout).
+            // * The CancellationToken 'cancellationToken' (*not* CancellationToken.None).
+            Topic topic = client.CreateTopic(topicName, new CallSettings
+            {
+                CancellationToken = cancellationToken
+            });
             // End sample
         }
     }
