@@ -19,7 +19,7 @@ There are three distinct places where `CallSettings` may optionally be provided:
 
 * When calling an RPC method *(highest priority)*.
 * Client-wide when creating a client object (for example, using
-[PublisherClient.Create()](../obj/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_)).
+[PublisherClient.Create()](../obj/api/Google.Pubsub.V1.PublisherClient.yml#Google_Pubsub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_)).
 * Per-RPC-method when creating a client object *(lowest priority)*.
 
 It's important to understand exactly which properties of which `CallSettings` will be used during an RPC invocation.
@@ -30,9 +30,9 @@ property is used.
 The client-wide `CallSettings` is higher-priority than per-RPC-method `CallSettings`
 because it is often useful to be able to easily specify common properties to use
 for all RPC invocations. For example, a common set of
-[headers](../obj/api/Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings_Headers);
+[headers](../obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Headers);
 or a common
-[deadline](../obj/api/Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings_Timing)
+[deadline](../obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Timing)
 for multiple RPC invocations.
 
 ## Examples
@@ -57,4 +57,4 @@ for multiple RPC invocations.
 
 By default there is a per-RPC-method client configuration that specifies a sensible
 retry policy for every method. See, for example,
-[PublisherSettings.CreateTopicSettings](../obj/api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_CreateTopicSettings)
+[PublisherSettings.CreateTopicSettings](../obj/api/Google.Pubsub.V1.PublisherSettings.yml#Google_Pubsub_V1_PublisherSettings_CreateTopicSettings)
