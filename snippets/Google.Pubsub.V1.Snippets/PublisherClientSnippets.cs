@@ -396,7 +396,7 @@ namespace Google.Pubsub.V1.Snippets
             // Format topicName from the projectId and topicId.
             string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 
-            // Call CreateTopen(). Override only the CancellationToken, using a per-RPC-method CallSettings.
+            // Call CreateTopic(). Override only the CancellationToken, using a per-RPC-method CallSettings.
             // The CallSettings used during this RPC invocation is:
             // * A custom "ClientVersion" header.
             // * A Timing deadline of 'deadline' (*not* the overridden 5-second timeout).
