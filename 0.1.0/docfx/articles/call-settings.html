@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Call settings | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Call settings | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="call-settings">Call settings</h1>
+              
+<h2 id="introduction">Introduction</h2>
+<p>All client libraries wrapping gRPC-based APIs (see the <a href="api-layers.html">API layers</a> article)
+allow customization of RPC calls by using
+<a href="../api/Google.Api.Gax.CallSettings.html">CallSettings</a>. If <code>CallSettings</code> are
+not specified sensible defaults are automatically provided.
+See the <a href="../api/Google.Api.Gax.CallSettings.html">CallSettings documentation</a>
+for descriptions of the available properties.</p>
+<p>The underlying gRPC API uses
+<a href="http://www.grpc.io/grpc/csharp/html/T_Grpc_Core_CallOptions.htm">CallOptions</a>,
+which provides a slightly reduced feature set compared to <code>CallSettings</code>.
+Client libraries automatically construct a <code>CallOptions</code> from <code>Callsettings</code>
+to <code>CallOptions</code> as required.</p>
+<p>There are three distinct places where <code>CallSettings</code> may optionally be provided:</p>
+<ul>
+<li>When calling an RPC method <em>(highest priority)</em>.</li>
+<li>Client-wide when creating a client object (for example, using
+<a href="../api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_">PublisherClient.Create()</a>).</li>
+<li>Per-RPC-method when creating a client object <em>(lowest priority)</em>.</li>
+</ul>
+<p>It&#39;s important to understand exactly which properties of which <code>CallSettings</code> will be used during an RPC invocation.
+The three <code>CallSettings</code> objects are merged into a single effective <code>CallSettings</code>.
+Each property is merged separately: the highest priority non-<code>null</code> value for each
+property is used.</p>
+<p>The client-wide <code>CallSettings</code> is higher-priority than per-RPC-method <code>CallSettings</code>
+because it is often useful to be able to easily specify common properties to use
+for all RPC invocations. For example, a common set of
+<a href="../api/Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings_Headers">headers</a>;
+or a common
+<a href="../api/Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings_Timing">deadline</a>
+for multiple RPC invocations.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="per-rpc-highest-priority">Per-RPC (highest priority)</h3>
+<pre><code class="lang-cs">// Create a PublisherClient with default settings.
+PublisherClient client = PublisherClient.Create();
+// Format topicName from the projectId and topicId.
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+// Create a CallSettings with a custom header.
+CallSettings callSettings = new CallSettings
+{
+    Headers = new Metadata
+    {
+        { &quot;ClientVersion&quot;, &quot;1.0.0&quot; }
+    }
+};
+// This will cause the custom &#39;ClientVersion&#39; header to be included in the RPC call.
+Topic topic = client.CreateTopic(topicName, callSettings);
+</code></pre><h3 id="client-configuration-client-wide">Client configuration; client-wide</h3>
+<pre><code class="lang-cs">// Create a default PublisherSettings, with a custom header for calls to all RPC methods.
+PublisherSettings publisherSettings = new PublisherSettings
+{
+    CallSettings = new CallSettings
+    {
+        Headers = new Metadata
+        {
+            { &quot;ClientVersion&quot;, &quot;1.0.0&quot; }
+        },
+    }
+};
+PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+// Format topicName from the projectId and topicId.
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+// The custom &#39;ClientVersion&#39; header will be included in the RPC call, due to
+// the client being configured with &#39;publishersettings&#39; above.
+Topic topic = client.CreateTopic(topicName);
+</code></pre><h3 id="client-configuration-per-rpc-method-lowest-priority">Client configuration; per-RPC-method (lowest priority)</h3>
+<pre><code class="lang-cs">// Create a default PublisherSettings, with a custom header for calls
+// to the CreateTopic RPC method.
+PublisherSettings publisherSettings = new PublisherSettings();
+publisherSettings.CreateTopicSettings.Headers = new Metadata
+{
+    { &quot;ClientVersion&quot;, &quot;1.0.0&quot; }
+};
+PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+// Format topicName from the projectId and topicId.
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+// The custom &#39;ClientVersion&#39; header will be included in the RPC call, due to
+// the client being configured with &#39;publishersettings&#39; above.
+Topic topic = client.CreateTopic(topicName);
+</code></pre><h3 id="multiple-callsettings-specified">Multiple <code>Callsettings</code> specified</h3>
+<pre><code class="lang-cs">// Create a default PublisherSettings, with customizations for CreateTopic RPCs:
+// * A custom &quot;ClientVersion&quot; header.
+// * A custom 5-second timeout Timing.
+// * No cancellation token.
+PublisherSettings publisherSettings = new PublisherSettings();
+publisherSettings.CreateTopicSettings.Headers = new Metadata
+{
+    { &quot;ClientVersion&quot;, &quot;1.0.0&quot; }
+};
+publisherSettings.CreateTopicSettings.Timing = CallTiming.FromTimeout(TimeSpan.FromSeconds(5));
+publisherSettings.CreateTopicSettings.CancellationToken = CancellationToken.None;
+
+// Override the above Timing and CancellationToken in the client-wide CallSettings;
+// the Headers are not overridden.
+publisherSettings.CallSettings = new CallSettings
+{
+    Timing = CallTiming.FromDeadline(deadline),
+    CancellationToken = CancellationToken.None,
+};
+
+// Create the client with the configured publisherSettings
+PublisherClient client = PublisherClient.Create(settings: publisherSettings);
+
+// Format topicName from the projectId and topicId.
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+
+// Call CreateTopic(). Override only the CancellationToken, using a per-RPC-method CallSettings.
+// The CallSettings used during this RPC invocation is:
+// * A custom &quot;ClientVersion&quot; header.
+// * A Timing deadline of &#39;deadline&#39; (*not* the overridden 5-second timeout).
+// * The CancellationToken &#39;cancellationToken&#39; (*not* CancellationToken.None).
+Topic topic = client.CreateTopic(topicName, new CallSettings
+{
+    CancellationToken = cancellationToken
+});
+</code></pre><h2 id="defaults">Defaults</h2>
+<p>By default there is a per-RPC-method client configuration that specifies a sensible
+retry policy for every method. See, for example,
+<a href="../api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_CreateTopicSettings">PublisherSettings.CreateTopicSettings</a></p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

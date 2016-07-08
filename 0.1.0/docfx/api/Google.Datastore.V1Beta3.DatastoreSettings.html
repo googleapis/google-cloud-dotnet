@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreSettings
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.0.1.0">
+    <meta name="generator" content="docfx 2.1.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,10 +81,10 @@
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase_CallSettings">CallSettings</a>
+                  <a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase_CallSettings">ServiceSettingsBase.CallSettings</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase_Clock">Clock</a>
+                  <a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase_Clock">ServiceSettingsBase.Clock</a>
                 </div>
                 <div>
                   <span class="xref">System.Object.ToString()</span>
@@ -128,7 +128,7 @@
               </h3>
               <h4 id="Google_Datastore_V1Beta3_DatastoreSettings_AllocateIdsSettings" data-uid="Google.Datastore.V1Beta3.DatastoreSettings.AllocateIdsSettings">AllocateIdsSettings</h4>
               <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(String, IEnumerable<key>, CallSettings)</key></a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(String, IEnumerable<key>, CallSettings)</key></a>.</p>
+<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(String, IEnumerable&lt;Key&gt;, CallSettings)</a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -151,8 +151,8 @@
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreSettings_AllocateIdsSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(String, IEnumerable<key>, CallSettings)</key></a> and</p>
-<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(String, IEnumerable<key>, CallSettings)</key></a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(String, IEnumerable&lt;Key&gt;, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
 <p><ul><li>Initial retry delay: 300 milliseconds</li><li>Retry delay multiplier: 1.2</li><li>Retry maximum delay: 3000 milliseconds</li><li>Initial timeout: 3000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Timeout maximum delay: 20000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
 <p>Default RPC expiration is 30000 milliseconds.</p>
@@ -190,7 +190,7 @@ Retry will be attempted on the following response status codes:</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreSettings_CommitSettings" data-uid="Google.Datastore.V1Beta3.DatastoreSettings.CommitSettings">CommitSettings</h4>
               <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Commit_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable<mutation>, CallSettings)</mutation></a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable<mutation>, CallSettings)</mutation></a>.</p>
+<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Commit_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -213,15 +213,15 @@ Retry will be attempted on the following response status codes:</p>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreSettings_CommitSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Commit_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable<mutation>, CallSettings)</mutation></a> and</p>
-<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable<mutation>, CallSettings)</mutation></a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Commit_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1Beta3_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Mutation__Google_Api_Gax_CallSettings_">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
 <p><ul><li>Initial retry delay: 300 milliseconds</li><li>Retry delay multiplier: 1.2</li><li>Retry maximum delay: 3000 milliseconds</li><li>Initial timeout: 3000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Timeout maximum delay: 20000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
 <p>Default RPC expiration is 30000 milliseconds.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreSettings_LookupSettings" data-uid="Google.Datastore.V1Beta3.DatastoreSettings.LookupSettings">LookupSettings</h4>
               <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Lookup_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(String, ReadOptions, IEnumerable<key>, CallSettings)</key></a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(String, ReadOptions, IEnumerable<key>, CallSettings)</key></a>.</p>
+<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Lookup_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -244,8 +244,8 @@ Retry will be attempted on the following response status codes:</p>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreSettings_LookupSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Lookup_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(String, ReadOptions, IEnumerable<key>, CallSettings)</key></a> and</p>
-<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(String, ReadOptions, IEnumerable<key>, CallSettings)</key></a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_Lookup_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Datastore.V1Beta3.DatastoreClient.html#Google_Datastore_V1Beta3_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1Beta3_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
 <p><ul><li>Initial retry delay: 300 milliseconds</li><li>Retry delay multiplier: 1.2</li><li>Retry maximum delay: 3000 milliseconds</li><li>Initial timeout: 3000 milliseconds</li><li>Timeout multiplier: 1.5</li><li>Timeout maximum delay: 20000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
 <p>Default RPC expiration is 30000 milliseconds.</p>

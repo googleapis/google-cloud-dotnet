@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreTransaction
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.0.1.0">
+    <meta name="generator" content="docfx 2.1.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,8 +70,8 @@
               <h1 id="Google_Datastore_V1Beta3_DatastoreTransaction" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction">Class DatastoreTransaction
               </h1>
               <div class="markdown level0 summary"><p>
-Convenience wrapper around a Datastore transaction. All mutation operations (<a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Insert(IEnumerable<entity>)</entity></a>,
-<a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__">Delete(IEnumerable<key>)</key></a>, <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Update(IEnumerable<entity>)</entity></a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Upsert(IEnumerable<entity>)</entity></a>)
+Convenience wrapper around a Datastore transaction. All mutation operations (<a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Insert(IEnumerable&lt;Entity&gt;)</a>,
+<a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__">Delete(IEnumerable&lt;Key&gt;)</a>, <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Update(IEnumerable&lt;Entity&gt;)</a> and <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__">Upsert(IEnumerable&lt;Entity&gt;)</a>)
 merely add to a list of mutations which are performed in a single <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Commit_Google_Api_Gax_CallSettings_">Commit(CallSettings)</a> or <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_CommitAsync_Google_Api_Gax_CallSettings_">CommitAsync(CallSettings)</a>
 operation. This means the mutation methods are all synchronous and do not take call settings, as they don&#39;t perform any
 API operations.
@@ -531,7 +531,7 @@ Otherwise, it rolls back the transaction.</p>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.Lookup(Google.Datastore.V1Beta3.Key[])">Lookup(Key[])</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
@@ -583,7 +583,7 @@ This call may perform multiple RPC operations in order to look up all keys.
 <p>
 This overload does not support the <a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> to be specified due to restrictions with
 methods containing a parameter array and optional parameters.
-It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(IEnumerable<key>, CallSettings)</key></a>, passing in a <code>null</code>
+It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the call settings.
 </p>
 </div>
@@ -688,7 +688,7 @@ references, or <code>null</code> where the key was not found.</p>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreTransaction.LookupAsync(Google.Datastore.V1Beta3.Key[])">LookupAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
@@ -740,7 +740,7 @@ This call may perform multiple RPC operations in order to look up all keys.
 <p>
 This overload does not support the <a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> to be specified due to restrictions with
 methods containing a parameter array and optional parameters.
-It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable<key>, CallSettings)</key></a>, passing in a <code>null</code>
+It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreTransaction.html#Google_Datastore_V1Beta3_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the call settings.
 </p>
 </div>

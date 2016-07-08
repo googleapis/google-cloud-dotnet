@@ -1,16 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IResponseEnumerable&lt;TResponse, TResource&gt;
+    <title>Interface IPagedEnumerable&lt;TResponse, TResource&gt;
    | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IResponseEnumerable&lt;TResponse, TResource&gt;
+    <meta name="title" content="Interface IPagedEnumerable&lt;TResponse, TResource&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.0.1.0">
+    <meta name="generator" content="docfx 2.1.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,17 +67,25 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
-              <h1 id="Google_Api_Gax_Rest_IResponseEnumerable_2" data-uid="Google.Api.Gax.Rest.IResponseEnumerable`2">Interface IResponseEnumerable&lt;TResponse, TResource&gt;
+              <h1 id="Google_Api_Gax_IPagedEnumerable_2" data-uid="Google.Api.Gax.IPagedEnumerable`2">Interface IPagedEnumerable&lt;TResponse, TResource&gt;
               </h1>
-              <div class="markdown level0 summary"><p>A sequence of API responses, each of which contains a page of resources and
-potentially additional information (depending on the API).</p>
+              <div class="markdown level0 summary"><p>A sequence of resources obtained via API responses, each of which contributes a page of resources.
+Application code can treat this as a simple sequence (with API calls automatically being made
+lazily as more results are required), or call <a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2_AsPages">AsPages()</a> to retrieve
+a page at a time, potentially with additional information.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
-              <h6><strong>Namespace</strong>:Google.Api.Gax.Rest</h6>
-              <h6><strong>Assembly</strong>:Google.Api.Gax.Rest.dll</h6>
-              <h5 id="Google_Api_Gax_Rest_IResponseEnumerable_2_syntax">Syntax</h5>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Collections.Generic.IEnumerable&lt;TResource&gt;.GetEnumerator()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Api.Gax</h6>
+              <h6><strong>Assembly</strong>:Google.Api.Gax.dll</h6>
+              <h5 id="Google_Api_Gax_IPagedEnumerable_2_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IResponseEnumerable&lt;TResponse, TResource&gt; : IEnumerable&lt;TResponse&gt;, IEnumerable</code></pre>
+                <pre><code class="lang-csharp hljs">public interface IPagedEnumerable&lt;TResponse, TResource&gt; : IEnumerable&lt;TResource&gt;, IEnumerable</code></pre>
               </div>
               <h5 class="typeParameters">Type Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -100,14 +108,14 @@ potentially additional information (depending on the API).</p>
               </table>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Api_Gax_Rest_IResponseEnumerable_2_GetEnumerator" data-uid="Google.Api.Gax.Rest.IResponseEnumerable`2.GetEnumerator">GetEnumerator()</h4>
-              <div class="markdown level1 summary"><p>Begins lazily iterating over the sequence of pages, with an iterator allowing the page size to
-be specified on each step.</p>
+              <h4 id="Google_Api_Gax_IPagedEnumerable_2_AsPages" data-uid="Google.Api.Gax.IPagedEnumerable`2.AsPages">AsPages()</h4>
+              <div class="markdown level1 summary"><p>Returns the sequence of API responses, each of which contributes a page of
+resources to this sequence.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IResponseEnumerator&lt;TResponse&gt; GetEnumerator()</code></pre>
+                <pre><code class="lang-csharp hljs">IResponseEnumerable&lt;TResponse, TResource&gt; AsPages()</code></pre>
               </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -119,61 +127,12 @@ be specified on each step.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Rest.IResponseEnumerator%601.html#Google_Api_Gax_Rest_IResponseEnumerator_1">IResponseEnumerator</a>&lt;TResponse&gt;</td>
-                    <td><p>An iterator over the pages in the sequence.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2">IResponseEnumerable</a>&lt;TResponse, TResource&gt;</td>
+                    <td><p>A sequence of API responses, each containing a page of resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Api_Gax_Rest_IResponseEnumerable_2_WithFixedSize_System_Int32_" data-uid="Google.Api.Gax.Rest.IResponseEnumerable`2.WithFixedSize(System.Int32)">WithFixedSize(Int32)</h4>
-              <div class="markdown level1 summary"><p>Creates a lazily-evaluated sequence of pages of resources, where each page other
-than the final one is guaranteed to contain exactly <em>pageSize</em> resources.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IEnumerable&lt;FixedSizePage&lt;TResource&gt;&gt; WithFixedSize(int pageSize)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td><em>pageSize</em></td>
-                    <td><p>The page size. Must be greater than 0.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Api.Gax.Rest.FixedSizePage%601.html#Google_Api_Gax_Rest_FixedSizePage_1">FixedSizePage</a>&lt;TResource&gt;&gt;</td>
-                    <td><p>A lazily-evaluated sequence of fixed-size pages.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Api_Gax_Rest_IResponseEnumerable_2_WithFixedSize_System_Int32__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>&quot;Natural&quot; pages returned by the API may contain a smaller number of resources than requested.
-For example, a request for a page with 100 resources may return a page with 80 resources but
-a next page token for more to be retrieved. This is suitable for batch-processing, but not
-for user-visible paging such as in a web application, where fixed-size pages are expected.</p>
-</div>
             </article>
           </div>
           

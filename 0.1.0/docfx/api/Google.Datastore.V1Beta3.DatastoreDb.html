@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreDb
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.0.1.0">
+    <meta name="generator" content="docfx 2.1.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -250,7 +250,7 @@ Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateId_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIdAsync_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.AllocateIdAsync(Google.Datastore.V1Beta3.Key,Google.Api.Gax.CallSettings)">AllocateIdAsync(Key, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key asynchronously.</p>
@@ -305,7 +305,7 @@ Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIdAsync_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.AllocateIds(Google.Datastore.V1Beta3.Key[])">AllocateIds(Key[])</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
@@ -354,10 +354,10 @@ IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateIncompleteKey(),
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_Google_Datastore_V1Beta3_Key____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(IEnumerable<key>, CallSettings)</key></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.AllocateIds(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</h4>
@@ -455,10 +455,10 @@ IReadOnlyList&lt;Key&gt; keys = await db.AllocateIdsAsync(keyFactory.CreateIncom
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIdsAsync_Google_Datastore_V1Beta3_Key____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(IEnumerable<key>, CallSettings)</key></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.AllocateIdsAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Key},Google.Api.Gax.CallSettings)">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
@@ -724,7 +724,7 @@ using default settings.</p>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Delete(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(Google.Datastore.V1Beta3.Entity[])">Delete(Entity[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
@@ -753,10 +753,10 @@ using default settings.</p>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Delete(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Delete(IEnumerable<entity>, CallSettings)</entity></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(Google.Datastore.V1Beta3.Key,Google.Api.Gax.CallSettings)">Delete(Key, CallSettings)</h4>
@@ -792,7 +792,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Delete(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(Google.Datastore.V1Beta3.Key[])">Delete(Key[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
@@ -821,10 +821,10 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_Google_Datastore_V1Beta3_Key____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Delete(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Delete(IEnumerable<key>, CallSettings)</key></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
@@ -939,7 +939,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.DeleteAsync(Google.Datastore.V1Beta3.Entity[])">DeleteAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
@@ -983,10 +983,10 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable<entity>, CallSettings)</entity></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.DeleteAsync(Google.Datastore.V1Beta3.Key,Google.Api.Gax.CallSettings)">DeleteAsync(Key, CallSettings)</h4>
@@ -1037,7 +1037,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_Google_Datastore_V1Beta3_Key_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.DeleteAsync(Google.Datastore.V1Beta3.Key[])">DeleteAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
@@ -1081,10 +1081,10 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_Google_Datastore_V1Beta3_Key____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable<key>, CallSettings)</key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable<key>, CallSettings)</key></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__Google_Api_Gax_CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
@@ -1230,7 +1230,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Insert(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Insert(Google.Datastore.V1Beta3.Entity[])">Insert(Entity[])</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
@@ -1294,10 +1294,10 @@ Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Insert(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Insert(IEnumerable<entity>, CallSettings)</entity></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Insert(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
@@ -1397,7 +1397,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">InsertAsync(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.InsertAsync(Google.Datastore.V1Beta3.Entity[])">InsertAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
@@ -1461,10 +1461,10 @@ Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">InsertAsync(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">InsertAsync(IEnumerable<entity>, CallSettings)</entity></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.InsertAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
@@ -1570,7 +1570,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Lookup_Google_Datastore_V1Beta3_Key_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">Lookup(IEnumerable<key>, Nullable<readoptions.types.readconsistency>, CallSettings)</readoptions.types.readconsistency></key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Lookup_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Lookup(Google.Datastore.V1Beta3.Key[])">Lookup(Key[])</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
@@ -1631,7 +1631,7 @@ This call may perform multiple RPC operations in order to look up all keys.
 <p>
 This overload does not support the <a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a> or <a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> to be specified due to restrictions with
 methods containing a parameter array and optional parameters.
-It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">Lookup(IEnumerable<key>, Nullable<readoptions.types.readconsistency>, CallSettings)</readoptions.types.readconsistency></key></a>, passing in a <code>null</code>
+It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the read consistency and call settings.
 </p>
 </div>
@@ -1748,7 +1748,7 @@ references, or <code>null</code> where the key was not found.</p>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_LookupAsync_Google_Datastore_V1Beta3_Key_System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable<key>, Nullable<readoptions.types.readconsistency>, CallSettings)</readoptions.types.readconsistency></key></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_LookupAsync_Google_Datastore_V1Beta3_Key___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.LookupAsync(Google.Datastore.V1Beta3.Key[])">LookupAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
@@ -1800,7 +1800,7 @@ This call may perform multiple RPC operations in order to look up all keys.
 <p>
 This overload does not support the <a class="xref" href="Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a> or <a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> to be specified due to restrictions with
 methods containing a parameter array and optional parameters.
-It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable<key>, Nullable<readoptions.types.readconsistency>, CallSettings)</readoptions.types.readconsistency></key></a>, passing in a <code>null</code>
+It simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Key__System_Nullable_Google_Datastore_V1Beta3_ReadOptions_Types_ReadConsistency__Google_Api_Gax_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the read consistency and call settings.
 </p>
 </div>
@@ -2207,7 +2207,7 @@ multiple times will execute the query again, potentially returning different res
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Update(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Update(Google.Datastore.V1Beta3.Entity[])">Update(Entity[])</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
@@ -2252,10 +2252,10 @@ multiple times will execute the query again, potentially returning different res
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Update_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Update(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Update(IEnumerable<entity>, CallSettings)</entity></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Update(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">Update(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
@@ -2355,7 +2355,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpdateAsync(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.UpdateAsync(Google.Datastore.V1Beta3.Entity[])">UpdateAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
@@ -2400,10 +2400,10 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpdateAsync(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpdateAsync(IEnumerable<entity>, CallSettings)</entity></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.UpdateAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
@@ -2503,7 +2503,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Upsert(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Upsert(Google.Datastore.V1Beta3.Entity[])">Upsert(Entity[])</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
@@ -2548,10 +2548,10 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Upsert(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Upsert(IEnumerable<entity>, CallSettings)</entity></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.Upsert(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
@@ -2651,7 +2651,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_Google_Datastore_V1Beta3_Entity_Google_Api_Gax_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpsertAsync(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_Google_Datastore_V1Beta3_Entity___" data-uid="Google.Datastore.V1Beta3.DatastoreDb.UpsertAsync(Google.Datastore.V1Beta3.Entity[])">UpsertAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
@@ -2696,10 +2696,10 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_Google_Datastore_V1Beta3_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpsertAsync(IEnumerable<entity>, CallSettings)</entity></a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
-To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpsertAsync(IEnumerable<entity>, CallSettings)</entity></a>.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1Beta3.DatastoreDb.html#Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
               <h4 id="Google_Datastore_V1Beta3_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1Beta3_Entity__Google_Api_Gax_CallSettings_" data-uid="Google.Datastore.V1Beta3.DatastoreDb.UpsertAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1Beta3.Entity},Google.Api.Gax.CallSettings)">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>

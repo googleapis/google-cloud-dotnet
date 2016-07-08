@@ -1,16 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IPagedAsyncEnumerable&lt;TResponse, TResource&gt;
+    <title>Interface IPageResponse&lt;TResource&gt;
    | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IPagedAsyncEnumerable&lt;TResponse, TResource&gt;
+    <meta name="title" content="Interface IPageResponse&lt;TResource&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.0.1.0">
+    <meta name="generator" content="docfx 2.1.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,25 +67,22 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
-              <h1 id="Google_Api_Gax_Rest_IPagedAsyncEnumerable_2" data-uid="Google.Api.Gax.Rest.IPagedAsyncEnumerable`2">Interface IPagedAsyncEnumerable&lt;TResponse, TResource&gt;
+              <h1 id="Google_Api_Gax_IPageResponse_1" data-uid="Google.Api.Gax.IPageResponse`1">Interface IPageResponse&lt;TResource&gt;
               </h1>
-              <div class="markdown level0 summary"><p>An asynchronous sequence of resources obtained via API responses. Application code
-can treat this as a simple sequence (with API calls automatically being made
-lazily as more results are required), or call <a class="xref" href="Google.Api.Gax.Rest.IPagedAsyncEnumerable%602.html#Google_Api_Gax_Rest_IPagedAsyncEnumerable_2_AsPages">AsPages()</a> to retrieve
-a page at a time, potentially with additional information.</p>
+              <div class="markdown level0 summary"><p>A response in a page-streaming operation.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;TResource&gt;.GetEnumerator()</span>
+                  <span class="xref">System.Collections.Generic.IEnumerable&lt;TResource&gt;.GetEnumerator()</span>
                 </div>
               </div>
-              <h6><strong>Namespace</strong>:Google.Api.Gax.Rest</h6>
-              <h6><strong>Assembly</strong>:Google.Api.Gax.Rest.dll</h6>
-              <h5 id="Google_Api_Gax_Rest_IPagedAsyncEnumerable_2_syntax">Syntax</h5>
+              <h6><strong>Namespace</strong>:Google.Api.Gax</h6>
+              <h6><strong>Assembly</strong>:Google.Api.Gax.dll</h6>
+              <h5 id="Google_Api_Gax_IPageResponse_1_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IPagedAsyncEnumerable&lt;TResponse, TResource&gt; : IAsyncEnumerable&lt;TResource&gt;</code></pre>
+                <pre><code class="lang-csharp hljs">public interface IPageResponse&lt;TResource&gt; : IEnumerable&lt;TResource&gt;, IEnumerable</code></pre>
               </div>
               <h5 class="typeParameters">Type Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -97,27 +94,23 @@ a page at a time, potentially with additional information.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><em>TResponse</em></td>
-                    <td>The API response type. Each response contains a page of resources.</td>
-                  </tr>
-                  <tr>
                     <td><em>TResource</em></td>
-                    <td>The resource type contained within the response.</td>
+                    <td>The type of resource contained in the response.</td>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="methods">Methods
+              <h3 id="properties">Properties
               </h3>
-              <h4 id="Google_Api_Gax_Rest_IPagedAsyncEnumerable_2_AsPages" data-uid="Google.Api.Gax.Rest.IPagedAsyncEnumerable`2.AsPages">AsPages()</h4>
-              <div class="markdown level1 summary"><p>Returns the sequence of API responses, each of which contributes a page of
-resources to this sequence.</p>
+              <h4 id="Google_Api_Gax_IPageResponse_1_NextPageToken" data-uid="Google.Api.Gax.IPageResponse`1.NextPageToken">NextPageToken</h4>
+              <div class="markdown level1 summary"><p>The token to set in the <a class="xref" href="Google.Api.Gax.IPageRequest.html#Google_Api_Gax_IPageRequest_PageToken">PageToken</a> when requesting
+the next page of results.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">IResponseAsyncEnumerable&lt;TResponse, TResource&gt; AsPages()</code></pre>
+                <pre><code class="lang-csharp hljs">string NextPageToken { get; }</code></pre>
               </div>
-              <h5 class="returns">Returns</h5>
+              <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
@@ -127,9 +120,8 @@ resources to this sequence.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Rest.IResponseAsyncEnumerable%602.html#Google_Api_Gax_Rest_IResponseAsyncEnumerable_2">IResponseAsyncEnumerable</a>&lt;TResponse, TResource&gt;</td>
-                    <td><p>An asynchronous sequence of API responses, each containing a page of resources.</p>
-</td>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>

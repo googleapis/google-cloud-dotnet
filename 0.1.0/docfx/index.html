@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Introduction | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Introduction | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.0.1.0">
+    <meta name="generator" content="docfx 2.1.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -88,7 +88,7 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
 </code></pre>
 <p>At this point, you are now authenticated to make calls to Pub/Sub
 and other Google Cloud services.</p>
-<h1 id="google-pubsub-v1-nuget-https-www-nuget-org-packages-google-pubsub-v1-beta-">Google.Pubsub.V1 (<a href="https://www.nuget.org/packages/Google.Pubsub.V1">NuGet</a>) (beta)</h1>
+<h1 id="google-pubsub-v1-nuget-https-www-nuget-org-packages-google-pubsub-v1-beta">Google.Pubsub.V1 (<a href="https://www.nuget.org/packages/Google.Pubsub.V1">NuGet</a>) (beta)</h1>
 <p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/Sub</a>.</p>
 <p><a href="api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> and
 <a href="api/Google.Pubsub.V1.SubscriberClient.html">SubscriberClient</a>
@@ -136,7 +136,7 @@ subscriber.Acknowledge(subscriptionName, response.ReceivedMessages.Select(m =&gt
 // Tidy up by deleting the subscription and the topic.
 subscriber.DeleteSubscription(subscriptionName);
 publisher.DeleteTopic(topicName);
-</code></pre><h1 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta-">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h1>
+</code></pre><h1 id="google-storage-v1-nuget-https-www-nuget-org-packages-google-storage-v1-beta">Google.Storage.V1 (<a href="https://www.nuget.org/packages/Google.Storage.V1">NuGet</a>) (beta)</h1>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
 for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
@@ -165,7 +165,7 @@ using (var stream = File.OpenWrite(&quot;file1.txt&quot;))
 {
     client.DownloadObject(bucketName, &quot;file1.txt&quot;, stream);
 }
-</code></pre><h1 id="google-datastore-v1beta3-alpha-">Google.Datastore.V1Beta3 (alpha)</h1>
+</code></pre><h1 id="google-datastore-v1beta3-alpha">Google.Datastore.V1Beta3 (alpha)</h1>
 <p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
 <p>The <a href="api/Google.Datastore.V1Beta3.DatastoreDb.html">DatastoreDb</a>
 class is provided as a wrapper for
@@ -210,35 +210,34 @@ foreach (Entity entity in db.RunQuery(query))
     string text = (string)entity[&quot;text&quot;];
     Console.WriteLine($&quot;{created:yyyy-MM-dd&#39;T&#39;HH:mm:ss}: {text}&quot;);
 }
-</code></pre><h1 id="google-logging-v2-alpha-">Google.Logging.V2 (alpha)</h1>
+</code></pre><h1 id="google-logging-v2-alpha">Google.Logging.V2 (alpha)</h1>
 <p>A library for working with <a href="https://cloud.google.com/logging/">Google Stackdriver Logging</a>.</p>
-<h2 id="log4net-integration-google-logging-log4net-alpha-">Log4net integration - Google.Logging.Log4Net (alpha)</h2>
+<h2 id="log4net-integration-google-logging-log4net-alpha">Log4net integration - Google.Logging.Log4Net (alpha)</h2>
 <p><a href="api/Google.Logging.Log4Net.GoogleStackdriverAppender.html">GoogleStackDriverAppender</a>
 provides a <a href="https://logging.apache.org/log4net/">log4net</a> appender to log messages
 to Google Stackdriver Logging.</p>
 <h3 id="sample-code-2">Sample code</h3>
 <p>Simple logging:</p>
-<pre><code class="lang-cs">string xml = $@&quot;
-&lt;?xml version=&quot;&quot;1.0&quot;&quot; encoding=&quot;&quot;utf-8&quot;&quot; ?&gt;
+<p>First create a <code>log4net</code> configuration file (<code>log4net.xml</code>) as below:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
 &lt;log4net&gt;
-  &lt;appender name=&quot;&quot;CloudLogger&quot;&quot; type=&quot;&quot;Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net&quot;&quot;&gt;
-    &lt;layout type=&quot;&quot;log4net.Layout.PatternLayout&quot;&quot;&gt;
-      &lt;conversionPattern value=&quot;&quot;%-4timestamp [%thread] %-5level %logger %ndc - %message&quot;&quot;/&gt;
+  &lt;appender name=&quot;CloudLogger&quot; type=&quot;Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net&quot;&gt;
+    &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
+      &lt;conversionPattern value=&quot;%-4timestamp [%thread] %-5level %logger %ndc - %message&quot;/&gt;
     &lt;/layout&gt;
-    &lt;projectId value = &quot;&quot;{projectId}&quot;&quot;/&gt;
-    &lt;logId value=&quot;&quot;{logId}&quot;&quot;/&gt;
+    &lt;projectId value=&quot;PROJECT_ID&quot;/&gt;
+    &lt;logId value=&quot;LOG_ID&quot;/&gt;
   &lt;/appender&gt;
   &lt;root&gt;
-    &lt;level value=&quot;&quot;ALL&quot;&quot;/&gt;
-    &lt;appender-ref ref=&quot;&quot;CloudLogger&quot;&quot;/&gt;
+    &lt;level value=&quot;ALL&quot;/&gt;
+    &lt;appender-ref ref=&quot;CloudLogger&quot;/&gt;
   &lt;/root&gt;
 &lt;/log4net&gt;
-&quot;.Trim();
-MemoryStream xmlStream = new MemoryStream(Encoding.ASCII.GetBytes(xml));
-XmlConfigurator.Configure(xmlStream);
-// Usually the above configuration would use an XML configuration file,
-// rather than inline XML:
-// XmlConfigurator.Configure(new FileInfo(&quot;log4net.xml&quot;));
+</code></pre><p>Edit the file replacing <code>PROJECT_ID</code> with your Google Cloud Project
+ID, and <code>LOG_ID</code> with an identifier for your application. Use this
+file to configure <code>log4net</code> and then log as normal.</p>
+<pre><code class="lang-cs">// Configure log4net to use Google Stackdriver logging from the XML configuration file.
+XmlConfigurator.Configure(new FileInfo(&quot;log4net.xml&quot;));
 
 // Retrieve a logger for this context.
 ILog log = LogManager.GetLogger(typeof(Program));
@@ -247,12 +246,12 @@ log.Info(&quot;An exciting log entry!&quot;);
 </code></pre><p>See the
 <a href="https://github.com/GoogleCloudPlatform/gcloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md">readme</a>
 for details on all the configuration options.</p>
-<h2 id="basic-logging-library-alpha-">Basic logging library (alpha)</h2>
+<h2 id="basic-logging-library-alpha">Basic logging library (alpha)</h2>
 <p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
 <p>If required,
 <a href="api/Google.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a>
 provides a low-level abstraction over the raw RPC API.</p>
-<h1 id="google-bigquery-v2-alpha-">Google.Bigquery.V2 (alpha)</h1>
+<h1 id="google-bigquery-v2-alpha">Google.Bigquery.V2 (alpha)</h1>
 <p>A wrapper library over
 <a href="https://www.nuget.org/packages/Google.Apis.Bigquery.v2/">Google.Apis.Bigquery.v1</a>
 for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a></p>

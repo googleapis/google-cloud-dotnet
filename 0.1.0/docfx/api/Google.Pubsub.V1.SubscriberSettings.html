@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubscriberSettings
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.0.1.0">
+    <meta name="generator" content="docfx 2.1.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,10 +81,10 @@
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase_CallSettings">CallSettings</a>
+                  <a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase_CallSettings">ServiceSettingsBase.CallSettings</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase_Clock">Clock</a>
+                  <a class="xref" href="Google.Api.Gax.ServiceSettingsBase.html#Google_Api_Gax_ServiceSettingsBase_Clock">ServiceSettingsBase.Clock</a>
                 </div>
                 <div>
                   <span class="xref">System.Object.ToString()</span>
@@ -128,7 +128,7 @@
               </h3>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_AcknowledgeSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.AcknowledgeSettings">AcknowledgeSettings</h4>
               <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">Acknowledge(String, IEnumerable<string>, CallSettings)</string></a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">AcknowledgeAsync(String, IEnumerable<string>, CallSettings)</string></a>.</p>
+<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -151,8 +151,8 @@
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_AcknowledgeSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">Acknowledge(String, IEnumerable<string>, CallSettings)</string></a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">AcknowledgeAsync(String, IEnumerable<string>, CallSettings)</string></a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_CallSettings_">AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
 <p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 12000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
 <p>Default RPC expiration is 600000 milliseconds.</p>
@@ -280,7 +280,7 @@ for &quot;Idempotent&quot; <a class="xref" href="Google.Pubsub.V1.SubscriberClie
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_ListSubscriptionsSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.ListSubscriptionsSettings">ListSubscriptionsSettings</h4>
               <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListSubscriptions(String, String, Nullable<int32>, CallSettings)</int32></a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListSubscriptionsAsync(String, String, Nullable<int32>, CallSettings)</int32></a>.</p>
+<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -303,15 +303,15 @@ for &quot;Idempotent&quot; <a class="xref" href="Google.Pubsub.V1.SubscriberClie
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_ListSubscriptionsSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListSubscriptions(String, String, Nullable<int32>, CallSettings)</int32></a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListSubscriptionsAsync(String, String, Nullable<int32>, CallSettings)</int32></a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
 <p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
 <p>Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_ModifyAckDeadlineSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.ModifyAckDeadlineSettings">ModifyAckDeadlineSettings</h4>
               <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">ModifyAckDeadline(String, IEnumerable<string>, Int32, CallSettings)</string></a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">ModifyAckDeadlineAsync(String, IEnumerable<string>, Int32, CallSettings)</string></a>.</p>
+<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -334,8 +334,8 @@ Retry will be attempted on the following response status codes:</p>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_ModifyAckDeadlineSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">ModifyAckDeadline(String, IEnumerable<string>, Int32, CallSettings)</string></a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">ModifyAckDeadlineAsync(String, IEnumerable<string>, Int32, CallSettings)</string></a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
+              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a> and</p>
+<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_Google_Api_Gax_CallSettings_">ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a> <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> are:</p>
 <p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
 <p>Default RPC expiration is 600000 milliseconds.</p>
