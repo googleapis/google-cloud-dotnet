@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-*",
+  "version": "1.0.0-*",
   "summary": "Google Logging version-agnostic types",
   "description": "Google Logging version-agnostic types",
   "authors": [ "Google Inc." ],
@@ -14,7 +14,7 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "0.1.0-CI00061",
+    "Google.Api.CommonProtos": "1.0.0-CI00072",
     "Google.Protobuf": "3.0.0-beta3"
   },
 
