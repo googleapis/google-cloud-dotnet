@@ -1,5 +1,5 @@
 ﻿{
-  "version": "0.1.0-*",
+  "version": "1.0.0-*",
   "summary": "Google Pubsub v1 client library",
   "description": "Google Pubsub v1 client library",
   "authors": [ "Google Inc." ],
@@ -14,9 +14,9 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "0.1.0-CI00061",
-    "Google.Api.Gax": "0.1.0-CI00061",
-    "Google.Apis.Auth": "1.13.0",
+    "Google.Api.CommonProtos": "1.0.0-beta01",
+    "Google.Api.Gax": "1.0.0-beta01",
+    "Google.Apis.Auth": "1.14.0",
     "Google.Protobuf": "3.0.0-beta3",
     "Grpc.Auth": "0.15.0",
     "Grpc.Core": "0.15.0",
