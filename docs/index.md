@@ -116,7 +116,7 @@ file to configure `log4net` and then log as normal.
 [!code-cs[](obj/snippets/Google.Logging.Log4Net.GoogleStackdriverAppender.txt#Overview)]
 
 See the
-[readme](https://github.com/GoogleCloudPlatform/gcloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md)
+[readme](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md)
 for details on all the configuration options.
 
 ## Basic logging library (alpha)

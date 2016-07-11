@@ -31,11 +31,11 @@ namespace Google.Bigquery.V2
     public sealed partial class BigqueryClientImpl : BigqueryClient
     {
         private static readonly object _applicationNameLock = new object();
-        private static string _applicationName = "gcloud-dotnet";
+        private static string _applicationName = "google-cloud-dotnet";
 
         /// <summary>
         /// The default application name used when creating a <see cref="BigqueryService"/>.
-        /// Defaults to "gcloud-dotnet"; must not be null.
+        /// Defaults to "google-cloud-dotnet"; must not be null.
         /// </summary>
         /// <remarks>
         /// Most applications will never want to set this, which is why it's in this class rather than

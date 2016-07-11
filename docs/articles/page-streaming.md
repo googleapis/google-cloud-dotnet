@@ -111,5 +111,5 @@ but would very much welcome feedback on it. A few thoughts:
   the `IResponseEnumerable<,>` interface.
 
 What other use cases should we consider? Does this meet your current needs?
-Please [raise an issue on github](https://github.com/GoogleCloudPlatform/gcloud-dotnet/issues/new)
+Please [raise an issue on github](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new)
 to provide feedback.

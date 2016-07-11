@@ -4,9 +4,9 @@ The documentation uses [docfx](https://github.com/dotnet/docfx) but
 has some tweaks as well.
 
 The documentation is hosted in GitHub Pages, at
-https://googlecloudplatform.github.io/gcloud-dotnet. This is
+https://googlecloudplatform.github.io/google-cloud-dotnet. This is
 basically a served version of the
-[`gh-pages` branch](https://github.com/GoogleCloudPlatform/gcloud-dotnet/tree/gh-pages)
+[`gh-pages` branch](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/tree/gh-pages)
 of the main project repo.
 
 # Installation
