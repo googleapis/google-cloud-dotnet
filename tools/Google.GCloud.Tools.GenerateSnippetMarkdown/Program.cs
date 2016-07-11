@@ -77,7 +77,7 @@ namespace Google.GCloud.Tools.GenerateSnippetMarkdown
             string root = DetermineRootDirectory();
             if (root == null)
             {
-                throw new UserErrorException("Unable to determine root directory. Please run within gcloud-dotnet repository.");
+                throw new UserErrorException("Unable to determine root directory. Please run within google-cloud-dotnet repository.");
             }
 
             string snippetsSource = Path.Combine(root, "snippets");

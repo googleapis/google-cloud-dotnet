@@ -22,7 +22,7 @@ bidirectional streaming and many other features. New APIs are now being provided
 either the REST-based HTTP 1.1 and JSON, or gRPC over HTTP 2.0 and
 [Protocol Buffers](https://developers.google.com/protocol-buffers/).
 
-The gcloud-dotnet project provides client libraries for a mixture of these APIs. In particular,
+The google-cloud-dotnet project provides client libraries for a mixture of these APIs. In particular,
 `Google.Storage.V1` and `Google.Bigquery.V2` are hand-written layers over the existing REST-based
 libraries for the [Google Cloud Storage](https://cloud.google.com/storage) and
 [BigQuery](https://cloud.google.com/bigquery) APIs, whereas other libraries target gRPC-based APIs.
@@ -129,5 +129,5 @@ the client.
 
 The intent is that the most commonly-used functionality should be wrapped, however: if you
 find yourself frequently having to dig below the `StorageClient` abstraction, please
-[file a feature request](https://github.com/GoogleCloudPlatform/gcloud-dotnet/issues/new)
+[file a feature request](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new)
 with details of what functionality isn't being wrapped at the moment.

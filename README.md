@@ -1,7 +1,7 @@
 # Google Cloud .NET Client
 .NET idiomatic client libraries for [Google Cloud Platform][cloud-platform] services.
 
-[![Build Status](https://travis-ci.org/GoogleCloudPlatform/gcloud-dotnet.svg?branch=master)](https://travis-ci.org/GoogleCloudPlatform/gcloud-dotnet)
+[![Build Status](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet.svg?branch=master)](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet)
 
 * [Homepage][language-landing-dotnet]
 * [API Documentation][api-reference-dotnet]
@@ -38,15 +38,15 @@ before running any gRPC code.
 
 ## Specifying a Project ID
 
-Most `gcloud-dotnet` libraries require a project ID. If you don't remember yours (or haven't created a project yet), navigate to the [Google Developers Console][google-developers-console] to view your project ID (or create a new project and get the ID then). Once done, record the value and make sure to pass it as a parameter to the methods that require it.
+Most `google-cloud-dotnet` libraries require a project ID. If you don't remember yours (or haven't created a project yet), navigate to the [Google Developers Console][google-developers-console] to view your project ID (or create a new project and get the ID then). Once done, record the value and make sure to pass it as a parameter to the methods that require it.
 
 ## Authentication
 Every API call needs to be authenticated. In order to successfully make a call, first ensure that the necessary [Google Cloud APIs][cloud-api-enablement] are enabled for your project and that you've downloaded the right set of keys (if it applies to you) as explained in the [authentication document][cloud-common-authentication].
 
 Next, choose a method for authenticating API requests from within your project:
 
-1. When using `gcloud-dotnet` libraries from within Compute/App Engine, no additional authentication steps are necessary.
-2. When using `gcloud-dotnet` libraries elsewhere, you can do one of the following:
+1. When using `google-cloud-dotnet` libraries from within Compute/App Engine, no additional authentication steps are necessary.
+2. When using `google-cloud-dotnet` libraries elsewhere, you can do one of the following:
     * Define the environment variable GOOGLE_APPLICATION_CREDENTIALS to be the location of the key.  For example:
 
       ```
@@ -314,7 +314,7 @@ Apache 2.0 - See [LICENSE] for more information.
 [LICENSE]: ./LICENSE
 [cloud-platform]: https://cloud.google.com/
 [language-landing-dotnet]: https://cloud.google.com/dotnet/
-[api-reference-dotnet]: http://googlecloudplatform.github.io/gcloud-dotnet/
+[api-reference-dotnet]: http://googlecloudplatform.github.io/google-cloud-dotnet/
 [google-api-dotnet-client]: https://github.com/google/google-api-dotnet-client
 [getting-started-dotnet]: https://github.com/GoogleCloudPlatform/getting-started-dotnet/
 [cloud-api-enablement]:  https://console.developers.google.com/apis/library/
@@ -323,11 +323,11 @@ Apache 2.0 - See [LICENSE] for more information.
 [google-cloud-sdk]: https://cloud.google.com/sdk/
 [google-download-sdk]: https://cloud.google.com/sdk/docs/
 [google-myget-feed]: https://www.myget.org/gallery/google-dotnet-public/
-[cloud-bigquery-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Bigquery.V2.html
-[cloud-datastore-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Datastore.V1Beta3.html
-[cloud-logging-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Logging.V2.html
-[cloud-pubsub-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Pubsub.V1.html
-[cloud-storage-ref]: http://googlecloudplatform.github.io/gcloud-dotnet/api/Google.Storage.V1.html
+[cloud-bigquery-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Bigquery.V2.html
+[cloud-datastore-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Datastore.V1Beta3.html
+[cloud-logging-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Logging.V2.html
+[cloud-pubsub-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Pubsub.V1.html
+[cloud-storage-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Storage.V1.html
 [cloud-bigquery-docs]: https://cloud.google.com/bigquery/
 [cloud-datastore-docs]: https://cloud.google.com/datastore/
 [cloud-logging-docs]: https://cloud.google.com/logging/
