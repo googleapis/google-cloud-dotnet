@@ -15,7 +15,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.0-CI00072",
+    "Google.Api.Gax.Rest": "1.0.0-beta01",
     "Google.Apis": "1.14.0",
     "Google.Apis.Auth": "1.14.0",
     "Google.Apis.Core": "1.14.0",
