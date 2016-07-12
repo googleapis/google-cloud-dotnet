@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>google-cloud-dotnet</title>
+        <meta name="description" content="Idiomatic client libraries for accessing Google Cloud services in .NET">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/github.min.css">
+        <link rel="stylesheet" href="css/site.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Roboto:300,400,700,700italic,400italic|Open+Sans:300' rel='stylesheet' type='text/css'>
+    </head>
+    <body ng-app="google-cloud-dotnet" class="ng-scope">
+        <header class="page-header" role="banner">
+            <h1 class="logo"><img src="img/logo-full.svg" alt="Google Cloud Platform" /></h1>
+            <nav class="main-nav">
+                <div class="nav-current">.NET</div>
+                <ul class="menu">
+                    <li>
+                        <a href="#" title=".NET docs page">
+                            <img src="img/icon-lang-dotnet.svg" alt=".NET icon" class="menu-icon" width="24" height="24" />
+                            .NET
+                        </a>
+                    </li>
+		            <li>
+                        <a href="https://googlecloudplatform.github.io/gcloud-java/" title="Java docs page">
+                            <img src="img/icon-lang-java-duke-white.svg" alt="Java icon" class="menu-icon" width="24" height="24" />
+                            Java
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://googlecloudplatform.github.io/gcloud-node/" title="Node.js docs page">
+                            <img src="img/icon-lang-nodejs.svg" alt="Node.js icon" class="menu-icon" />
+                            Node.js
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://googlecloudplatform.github.io/gcloud-python/" title="Python docs page">
+                            <img src="img/icon-lang-python.svg" alt="Python icon" class="menu-icon" />
+                            Python
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://googlecloudplatform.github.io/gcloud-ruby/" title="Ruby docs page">
+                            <img src="img/icon-lang-ruby.svg" alt="Ruby icon" class="menu-icon" />
+                            Ruby
+                        </a>
+                    </li>
+                </ul>
+            </nav><!-- end of .main-nav -->
+        </header><!-- end of .page-header -->
+
+
+        <article class="main" role="main">
+            <section class="hero-banner">
+                <div class="container clearfix">
+                    <div class="col col-left">
+                        <h1>gcloud</h1>
+                        <p>Google APIs for .NET provide an idiomatic, intuitive, and natural way for .NET developers to integrate with Google Cloud Platform services, like Cloud Datastore and Cloud Storage.</p>
+                    </div><!-- end of .col.col-left -->
+                    <div class="col col-right">
+                        <!-- TODO: Use nuget buttons as per https://github.com/prabirshrestha/nuget-button ? -->
+                        <h2>Add NuGet pre-release packages to your project:</h2>
+                        <pre>
+Google.Bigquery.V2
+Google.Datastore.V1Beta3
+Google.Logging.Log4Net
+Google.Logging.V2
+Google.Pubsub.V1
+Google.Storage.V1
+                        </pre>
+                    </div><!-- end of .col.col-right -->
+                </div><!-- end of .container -->
+            </section><!-- end of .hero-banner -->
+
+            <section class="block featuring">
+                <div class="container">
+                    <ul class="featuring-links">
+                        <li>
+                            <a href="docfx/index.html" title="google-cloud-dotnet docs" class="btn btn-docs">
+                                <!-- <img src="img/icon-lang-dotnet-gray.svg" alt="API docs icon" class="menu-icon" /> -->
+                                API documentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet" title="google-cloud-dotnet on Github" class="ext-link">
+                                <img src="img/icon-link-github.svg" alt="Github icon" />
+                                Github
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues" title="google-cloud-dotnet issues on Github" class="ext-link">
+                                <img src="img/icon-link-github.svg" alt="Github icon" />
+                                Issues
+                            </a>
+                        </li>
+                        <li>
+                            <!-- FIXME: The tag doesn't exist yet -->
+                            <a href="http://stackoverflow.com/questions/tagged/google-cloud-dotnet" title="google-cloud-dotnet on StackOverflow" class="ext-link">
+                                <img src="img/icon-link-stackoverflow.svg" alt="StackOverflow icon" />
+				StackOverflow
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- end of .container -->
+            </section><!-- end of .featuring -->
+
+            <section class="block about">
+                <div class="container clearfix">
+                <div class="quote-box">
+                  <h3 class="block-title">What is it?</h3>
+
+                  <p>The google-cloud-dotnet project provides client libraries for accessing Google
+		    Cloud Platform services that significantly reduces the boilerplate
+		    code you have to write. The library provides high-level API
+		    abstractions so they're easier to understand. It embraces
+		    idioms of C#, works well with the standard library, and
+		    integrates better with your codebase.
+		    All this means you spend more time creating code that matters
+		    to you.</p>
+
+		  <p>The libraries are configured to access Google Cloud Platform
+		    services and authorize (OAuth 2.0) automatically on your behalf.
+		    Add the library dependency to your project and get a private key to be
+		    up and ready to go. Better yet, if you are running on a Google
+		    Compute Engine, authentication is completely automatic.</p>
+                </div>
+
+                <div class="quote-box--supplementary">
+                <h4>Example: Retrieving Datastore Entities</h4>
+                <div hljs="" language="csharp" class=""><pre>
+                  <code class="hljs csharp">
+using Google.Datastore.V1Beta3;
+...
+DatastoreDb db = DatastoreDb.Create("PROJECT_ID");
+Query query = new Query("Book")
+{
+    Filter = Filter.Equal("author", "Jane Austen")
+};
+foreach (Entity entity in db.RunQuery(query))
+{
+    string title = (string) entity["title"];
+    DateTime published = (DateTime) entity["published"];
+    Console.WriteLine("{0} was published in {1}",
+        title, published);
+}
+                  </code>
+                </pre>
+              </div>
+                </div>
+                </div><!-- end of .container -->
+            </section><!-- end of .featuring -->
+
+            <section class="block examples">
+                <div class="container clearfix">
+                    <h3 class="block-title">Examples</h3>
+
+                    <ul>
+                        <li>
+                            <a href="https://github.com/GoogleCloudPlatform/getting-started-dotnet/tree/master/aspnet"><code>Bookshelf</code></a> - An ASP.NET app that manages a virtual bookshelf using google-cloud-dotnet libraries for Datastore and Storage.
+                        </li>
+                        <li>
+                            <a href="docfx/index.html">Overview documentation</a> - a brief example of using each library provided by this project.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="block faq">
+                <div class="container">
+                    <h3 class="block-title">FAQ</h3>
+		    <h4>What is the relationship between the <code>google-cloud-dotnet</code> project and the <code>gcloud</code> command-line tool?</h4>
+		    <p>Both the <code>gcloud</code> command-line tool and libraries provided by <code>google-cloud-dotnet</code> are a part of the Google Cloud SDK: a collection of tools and libraries that enable you to easily create and manage resources on the Google Cloud Platform. The gcloud command-line tool can be used to manage both your development workflow and your Google Cloud Platform resources while the libraries provided
+            by the <code>google-cloud-dotnet</code> project are designed for integration within your application code.</p>
+
+		    <h4>What is the relationship between <code>google-cloud-dotnet</code> and the Google APIs Client Library for .NET?</h4>
+		    <p>The <a href="https://github.com/google/google-api-dotnet-client">Google APIs Client Library for .NET</a> is a client library for using the broad set of Google APIs. The google-cloud-dotnet project is built specifically for the Google Cloud Platform and is the recommended way to integrate Google Cloud APIs into your .NET applications. If your application requires both Google Cloud Platform and other Google APIs, the two libraries may be used side-by-side in your application.</p>
+                </div><!-- end of .container -->
+            </section><!-- end of .faq -->
+        </article><!-- end of .main -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/vendor/highlight.pack.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

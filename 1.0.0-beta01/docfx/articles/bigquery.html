@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BigQuery API design | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="BigQuery API design | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="bigquery-api-design">BigQuery API design</h1>
+              
+<p>The <code>Google.Bigquery.V2</code> package wraps a lot of the functionality of
+the underlying REST API. This document lays out the patterns
+involved to help guide further API extensions.</p>
+<h2 id="status">Status</h2>
+<p>This package is effectively experimental at this time. Some
+functionality is missing, and a lot is likely to change. Big ticket
+work items:</p>
+<ul>
+<li>Full support for nested fields and repeated fields</li>
+<li>Options for all relevant operations</li>
+<li>Alternative approaches for providing data and schema, e.g. simple property
+binding. (Note: we&#39;re not trying to become an ORM...)</li>
+<li>Async operations. (API design is progressing with sync-only
+operations; asynchrony will be added when we&#39;re done with that
+first pass.)</li>
+</ul>
+<h2 id="bigqueryclient"><code>BigqueryClient</code></h2>
+<p>Like other API wrappers, <code>BigqueryClient</code> is the entry point for
+everything. This is an abstract class (to allow for mocking) with
+<code>Create</code>/<code>CreateAsync</code> static methods which construct instances of
+<code>BigqueryClientImpl</code>. The implementation can be constructed directly
+if necessary, e.g. for constructor-based dependency injection.</p>
+<p>Methods which need to interact with the service should be declared
+and documented in <code>BigqueryClient</code>, as virtual methods which throw
+<code>NotImplementedException</code>. They are then implemented in
+<code>BigqueryClientImpl</code>.</p>
+<p>The canonical way of identifying any of the entities is via a <em>reference</em>,
+e.g. <code>DatasetReference</code>, <code>JobReference</code>, <code>TableReference</code>,
+<code>ProjectReference</code>. It is easy to construct a reference either manually or via
+<code>BigqueryClient</code> or a parent entity (e.g.
+<code>BigqueryDataset.GetTableReference</code>).</p>
+<p>Any operation on <code>BigqueryClient</code> must <em>at least</em> have a
+canonical form accepting a suitable reference. It <em>may</em> also have
+other overloads to retrieve entities via just component IDs. The
+overloads must be virtual to support simple mocking, but should not
+be overridden in the implementation. The documentation must be clear
+that the overloads simply delegate to the canonical form using a
+<code>*Reference</code> constructed with a <code>Get*Reference</code> method.</p>
+<p>The <code>Get*Reference</code> methods in <code>BigqueryClient</code> are not virtual;
+they are not a point of interaction with the service and so do not
+require faking for test purposes.</p>
+<p><code>BigqueryClient</code> requires a project ID to be specified, as almost
+all Bigquery operations require a project ID, and almost all
+operations will use the same one. The project ID is typically used
+as an invisible default, but it is still possible to query a
+dataset/table/job in a different project.</p>
+<h2 id="datasets-tables-and-results">Datasets, tables and results</h2>
+<p>All the relevant operations are available on <code>BigqueryClient</code>, but
+many are more conveniently placed on other classes representing
+entities:</p>
+<ul>
+<li><code>BigqueryDataset</code>: a dataset containing tables</li>
+<li><code>BigqueryTable</code>: a table</li>
+</ul>
+<p>Additionally, <code>BigqueryResult</code> represents the result of a query.</p>
+<p>The <code>Bigquery</code> prefix here avoids confusion with the underlying
+REST-based resources, which are still available.</p>
+<h2 id="synchronous-vs-asynchronous-c-calls">Synchronous vs asynchronous C# calls</h2>
+<p>All API calls potentially involving server interaction come in sync
+and async flavours. (Or at least, they will do...)</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

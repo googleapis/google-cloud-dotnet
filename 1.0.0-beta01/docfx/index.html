@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Introduction | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Introduction | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.1.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="introduction">Introduction</h1>
+              
+<p>This is preliminary documentation for the Google Cloud APIs
+repository.</p>
+<h1 id="installation">Installation</h1>
+<p>All APIs are available as NuGet packages. Add the relevant package
+to your project in the normal way (for example by right-clicking on
+the project in Visual Studio and choosing &quot;Manage NuGet
+Packages...&quot;). For beta packages, please ensure you enable
+pre-release packages (for example, in the Visual Studio NuGet user
+interface, check the &quot;Include prerelease&quot; box).</p>
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+installed, run the following command in a Google Cloud SDK Shell:</p>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre>
+<p>At this point, you are now authenticated to make calls to Pub/Sub
+and other Google Cloud services.</p>
+<h1 id="google-pubsub-v1-beta">Google.Pubsub.V1 (beta)</h1>
+<p><a href="https://www.nuget.org/packages/Google.Pubsub.V1">(Available on nuget.org)</a></p>
+<p>A library for working with <a href="https://cloud.google.com/pubsub/">Cloud Pub/Sub</a>.</p>
+<p><a href="api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> and
+<a href="api/Google.Pubsub.V1.SubscriberClient.html">SubscriberClient</a>
+provide a general-purpose abstraction over raw the RPC API, providing
+features such as page streaming to make client code cleaner and
+simpler.</p>
+<h2 id="sample-code">Sample code</h2>
+<pre><code class="lang-cs">// First create a topic.
+PublisherClient publisher = PublisherClient.Create();
+string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+publisher.CreateTopic(topicName);
+
+// Subscribe to the topic.
+SubscriberClient subscriber = SubscriberClient.Create();
+string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
+subscriber.CreateSubscription(subscriptionName, topicName, pushConfig: null, ackDeadlineSeconds: 60);
+
+// Publish a message to the topic.
+PubsubMessage message = new PubsubMessage
+{
+    // The data is any arbitrary ByteString. Here, we&#39;re using text.
+    Data = ByteString.CopyFromUtf8(&quot;Hello, Pubsub&quot;),
+    // The attributes provide metadata in a string-to-string dictionary.
+    Attributes =
+    {
+        { &quot;description&quot;, &quot;Simple text message&quot; }
+    }
+};
+publisher.Publish(topicName, new[] { message });
+
+// Pull messages from the subscription. We&#39;re returning immediately, whether or not there
+// are messages; in other cases you&#39;ll want to allow the call to wait until a message arrives.
+PullResponse response = subscriber.Pull(subscriptionName, returnImmediately: true, maxMessages: 10);
+foreach (ReceivedMessage received in response.ReceivedMessages)
+{
+    PubsubMessage msg = received.Message;
+    Console.WriteLine($&quot;Received message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}&quot;);
+    Console.WriteLine($&quot;Text: &#39;{msg.Data.ToStringUtf8()}&#39;&quot;);
+}
+
+// Acknowledge that we&#39;ve received the messages. If we don&#39;t do this within 60 seconds (as specified
+// when we created the subscription) we&#39;ll receive the messages again when we next pull.
+subscriber.Acknowledge(subscriptionName, response.ReceivedMessages.Select(m =&gt; m.AckId));
+
+// Tidy up by deleting the subscription and the topic.
+subscriber.DeleteSubscription(subscriptionName);
+publisher.DeleteTopic(topicName);
+</code></pre><h1 id="google-storage-v1-beta">Google.Storage.V1 (beta)</h1>
+<p><a href="https://www.nuget.org/packages/Google.Storage.V1">(Available on nuget.org)</a></p>
+<p>A wrapper library over
+<a href="https://www.nuget.org/packages/Google.Apis.Storage.v1/">Google.Apis.Storage.v1</a>
+for working with <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
+<p>Common operations are exposed via the
+<a href="api/Google.Storage.V1.StorageClient.html">StorageClient</a> class.</p>
+<h2 id="sample-code-0">Sample code</h2>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+
+// Create a bucket
+var bucketName = Guid.NewGuid().ToString(); // must be globally unique
+var bucket = client.CreateBucket(projectId, bucketName);
+
+// Upload some files
+var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
+var obj1 = client.UploadObject(bucketName, &quot;file1.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));
+var obj2 = client.UploadObject(bucketName, &quot;folder1/file2.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));
+
+// List objects
+foreach (var obj in client.ListObjects(bucketName, &quot;&quot;))
+{
+    Console.WriteLine(obj.Name);
+}
+
+// Download file
+using (var stream = File.OpenWrite(&quot;file1.txt&quot;))
+{
+    client.DownloadObject(bucketName, &quot;file1.txt&quot;, stream);
+}
+</code></pre><h1 id="google-datastore-v1beta3-beta">Google.Datastore.V1Beta3 (beta)</h1>
+<p><a href="https://www.nuget.org/packages/Google.Datastore.V1Beta3">(Available on nuget.org)</a></p>
+<p>A library for working with <a href="https://cloud.google.com/datastore/">Cloud Datastore</a>.</p>
+<p>The <a href="api/Google.Datastore.V1Beta3.DatastoreDb.html">DatastoreDb</a>
+class is provided as a wrapper for
+<a href="api/Google.Datastore.V1Beta3.DatastoreClient.html">DatastoreClient</a>,
+simplifying operations considerably by assuming all operations act
+on the same partition, and providing page streaming operations on
+structured query results.</p>
+<p>Several custom conversions, additional constructors,
+factory methods (particularly on <a href="api/Google.Datastore.V1Beta3.Filter.html">Filter</a>
+are provided to simplify working with the protobuf messages.</p>
+<h2 id="sample-code-1">Sample code</h2>
+<p>Inserting data:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+
+var keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+var entity = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;created&quot;] = DateTime.UtcNow,
+    [&quot;text&quot;] = &quot;Text of the message&quot;
+};
+using (DatastoreTransaction transaction = db.BeginTransaction())
+{
+    transaction.Insert(entity);
+    var commitResponse = transaction.Commit();
+    var insertedKey = commitResponse.MutationResults[0].Key;
+    Console.WriteLine($&quot;Inserted key: {insertedKey}&quot;);
+}
+</code></pre><p>Querying data:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+
+// Print the messages created in the last 5 minutes, most recent first
+DateTime cutoff = DateTime.UtcNow.AddMinutes(-5);
+Query query = new Query(&quot;message&quot;)
+{
+    Filter = Filter.GreaterThanOrEqual(&quot;created&quot;, cutoff),
+    Order = { { &quot;created&quot;, Direction.Descending } }
+};
+foreach (Entity entity in db.RunQuery(query))
+{
+    DateTime created = (DateTime)entity[&quot;created&quot;];
+    string text = (string)entity[&quot;text&quot;];
+    Console.WriteLine($&quot;{created:yyyy-MM-dd&#39;T&#39;HH:mm:ss}: {text}&quot;);
+}
+</code></pre><h1 id="google-logging-v2-beta">Google.Logging.V2 (beta)</h1>
+<p>A library for working with <a href="https://cloud.google.com/logging/">Google Stackdriver Logging</a>.</p>
+<h2 id="log4net-integration-google-logging-log4net-beta">Log4net integration - Google.Logging.Log4Net (beta)</h2>
+<p><a href="https://www.nuget.org/packages/Google.Logging.Log4Net">(Available on nuget.org)</a></p>
+<p><a href="api/Google.Logging.Log4Net.GoogleStackdriverAppender.html">GoogleStackDriverAppender</a>
+provides a <a href="https://logging.apache.org/log4net/">log4net</a> appender to log messages
+to Google Stackdriver Logging.</p>
+<h3 id="sample-code-2">Sample code</h3>
+<p>Simple logging:</p>
+<p>First create a <code>log4net</code> configuration file (<code>log4net.xml</code>) as below:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;log4net&gt;
+  &lt;appender name=&quot;CloudLogger&quot; type=&quot;Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net&quot;&gt;
+    &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
+      &lt;conversionPattern value=&quot;%-4timestamp [%thread] %-5level %logger %ndc - %message&quot;/&gt;
+    &lt;/layout&gt;
+    &lt;projectId value=&quot;PROJECT_ID&quot;/&gt;
+    &lt;logId value=&quot;LOG_ID&quot;/&gt;
+  &lt;/appender&gt;
+  &lt;root&gt;
+    &lt;level value=&quot;ALL&quot;/&gt;
+    &lt;appender-ref ref=&quot;CloudLogger&quot;/&gt;
+  &lt;/root&gt;
+&lt;/log4net&gt;
+</code></pre><p>Edit the file replacing <code>PROJECT_ID</code> with your Google Cloud Project
+ID, and <code>LOG_ID</code> with an identifier for your application. Use this
+file to configure <code>log4net</code> and then log as normal.</p>
+<pre><code class="lang-cs">// Configure log4net to use Google Stackdriver logging from the XML configuration file.
+XmlConfigurator.Configure(new FileInfo(&quot;log4net.xml&quot;));
+
+// Retrieve a logger for this context.
+ILog log = LogManager.GetLogger(typeof(Program));
+// Log some information. This log entry will be sent to Google Stackdriver Logging.
+log.Info(&quot;An exciting log entry!&quot;);
+</code></pre><p>See the
+<a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md">readme</a>
+for details on all the configuration options.</p>
+<h2 id="basic-logging-library-beta">Basic logging library (beta)</h2>
+<p><a href="https://www.nuget.org/packages/Google.Logging.V2">(Available on nuget.org)</a></p>
+<p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
+<p>If required,
+<a href="api/Google.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a>
+provides a low-level abstraction over the raw RPC API.</p>
+<h1 id="google-bigquery-v2-beta">Google.Bigquery.V2 (beta)</h1>
+<p><a href="https://www.nuget.org/packages/Google.Bigquery.V2">(Available on nuget.org)</a></p>
+<p>A wrapper library over
+<a href="https://www.nuget.org/packages/Google.Apis.Bigquery.v2/">Google.Apis.Bigquery.v1</a>
+for working with <a href="https://cloud.google.com/bigquery/">Google BigQuery</a></p>
+<p>Common operations are exposed via the
+<a href="api/Google.Bigquery.V2.BigqueryClient.html">BigqueryClient</a>
+class, and additional wrapper classes are present to make operations
+with datasets, tables and query results simpler.</p>
+<h2 id="sample-code-3">Sample code</h2>
+<p>Querying:</p>
+<pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
+var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
+
+string sql = $&quot;SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}&quot;;
+BigqueryResult query = client.ExecuteQuery(sql);
+
+foreach (BigqueryResult.Row row in query.Rows)
+{
+    Console.WriteLine($&quot;{row[&quot;title&quot;]}: {row[&quot;unique_words&quot;]}&quot;);
+}
+</code></pre><p>Data insertion:</p>
+<pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
+
+// Create the dataset if it doesn&#39;t exist.
+var dataset = client.GetOrCreateDataset(&quot;mydata&quot;);
+
+// Create the table if it doesn&#39;t exist.
+var table = dataset.GetOrCreateTable(&quot;scores&quot;, new TableSchemaBuilder
+{
+    { &quot;player&quot;, BigqueryDbType.String },
+    { &quot;gameStarted&quot;, BigqueryDbType.Timestamp },
+    { &quot;score&quot;, BigqueryDbType.Integer }
+}.Build());
+
+// Insert a single row. There are many other ways of inserting
+// data into a table.
+table.Insert(new InsertRow
+{
+    { &quot;player&quot;, &quot;Bob&quot; },
+    { &quot;score&quot;, 85 },
+    { &quot;gameStarted&quot;, new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
+});
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
