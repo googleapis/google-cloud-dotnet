@@ -1,5 +1,5 @@
 REM This is all ugly... we'll want to revisit this as soon as possible
-call dnvm use 1.0.0-rc1-update1 -r clr
+call dnvm use 1.0.0-rc1-update2 -r clr
 IF ERRORLEVEL 1 goto error
 
 REM We've found some oddities when using our own feed.
