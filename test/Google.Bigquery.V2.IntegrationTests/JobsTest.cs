@@ -18,12 +18,12 @@ using Xunit;
 
 namespace Google.Bigquery.V2.IntegrationTests
 {
-    [Collection(nameof(SampleDatasetFixture))]
+    [Collection(nameof(BigqueryFixture))]
     public class JobsTest
     {
-        private readonly SampleDatasetFixture _fixture;
+        private readonly BigqueryFixture _fixture;
 
-        public JobsTest(SampleDatasetFixture fixture)
+        public JobsTest(BigqueryFixture fixture)
         {
             _fixture = fixture;
         }
