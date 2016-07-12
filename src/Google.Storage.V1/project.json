@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-*",
+  "version": "1.0.0-*",
   "summary": "Wrapper library for Google.Apis.Storage.v1",
   "description": "Wrapper library for Google.Apis.Storage.v1, making common operations simpler in client code.",
   "authors": [ "Google Inc." ],
@@ -15,11 +15,11 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "0.1.0-CI00057",
-    "Google.Apis": "1.13.0",
-    "Google.Apis.Auth": "1.13.0",
-    "Google.Apis.Core": "1.13.0",
-    "Google.Apis.Storage.v1": "1.13.0.482"
+    "Google.Api.Gax.Rest": "1.0.0-CI00072",
+    "Google.Apis": "1.14.0",
+    "Google.Apis.Auth": "1.14.0",
+    "Google.Apis.Core": "1.14.0",
+    "Google.Apis.Storage.v1": "1.14.0.538"
   },
   "frameworks": {
     "net45": {

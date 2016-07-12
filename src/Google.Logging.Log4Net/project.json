@@ -1,5 +1,5 @@
 ﻿{
-  "version": "0.1.1-*",
+  "version": "1.0.0-*",
   "summary": "Google Stackdriver Logging Log4Net client Library",
   "description": "Google StackdriverLogging Log4Net client Library",
   "authors": [ "Google Inc." ],
@@ -14,8 +14,8 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "0.1.0-CI00061",
-    "Google.Api.Gax": "0.1.0-CI00061",
+    "Google.Api.CommonProtos": "1.0.0-CI00072",
+    "Google.Api.Gax": "1.0.0-CI00072",
     "Google.Logging.V2": "",
     "log4net": "2.0.5"
   },
