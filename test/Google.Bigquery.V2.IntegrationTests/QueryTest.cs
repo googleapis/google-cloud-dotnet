@@ -18,18 +18,25 @@ using Xunit;
 
 namespace Google.Bigquery.V2.IntegrationTests
 {
+    [Collection(nameof(BigqueryFixture))]
     public class QueryTest
     {
         private const string PublicDatasetsProject = "bigquery-public-data";
         private const string PublicDatasetsDataset = "samples";
         private const string ShakespeareTable = "shakespeare";
+        private readonly BigqueryFixture _fixture;
+
+        public QueryTest(BigqueryFixture fixture)
+        {
+            _fixture = fixture;
+        }
 
         [Fact]
         public void SynchronousTemporaryQuery()
         {
             // We create the client using our user, but then access a dataset in a public data
             // project. We can't run a query "as" the public data project.
-            var projectId = CloudConfiguration.Instance.Project;
+            var projectId = _fixture.ProjectId;
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
 
@@ -45,7 +52,7 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             // We create the client using our user, but then access a dataset in a public data
             // project. We can't run a query "as" the public data project.
-            var projectId = CloudConfiguration.Instance.Project;
+            var projectId = _fixture.ProjectId;
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
 
@@ -62,13 +69,13 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             // We create the client using our user, but then access a dataset in a public data
             // project. We can't run a query "as" the public data project.
-            var projectId = CloudConfiguration.Instance.Project;
+            var projectId = _fixture.ProjectId;
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
-            var userDataset = client.GetDataset("demo");
+            var userDataset = client.GetDataset(_fixture.DatasetId);
 
             var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
-            var destinationTable = userDataset.GetTableReference("test_" + Guid.NewGuid().ToString().Replace("-", "_"));
+            var destinationTable = userDataset.GetTableReference(_fixture.CreateTableId());
             var job = client.CreateQueryJob(sql, new CreateQueryJobOptions { DestinationTable = destinationTable });
             var rows = job.GetQueryResults().Rows.ToList();
             Assert.Equal(10, rows.Count);

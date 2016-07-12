@@ -20,12 +20,12 @@ using Xunit;
 
 namespace Google.Bigquery.V2.IntegrationTests
 {
-    [Collection(nameof(SampleDatasetFixture))]
+    [Collection(nameof(BigqueryFixture))]
     public class UploadTest
     {
-        private readonly SampleDatasetFixture _fixture;
+        private readonly BigqueryFixture _fixture;
 
-        public UploadTest(SampleDatasetFixture fixture)
+        public UploadTest(BigqueryFixture fixture)
         {
             _fixture = fixture;
         }

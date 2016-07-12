@@ -28,18 +28,25 @@ namespace Google.Bigquery.V2.IntegrationTests
     /// Test fixture which creates a new timestamped dataset for all the tests to
     /// operate on.
     /// </summary>
-    [CollectionDefinition(nameof(SampleDatasetFixture))]
-    public class SampleDatasetFixture : IDisposable, ICollectionFixture<SampleDatasetFixture>
+    [CollectionDefinition(nameof(BigqueryFixture))]
+    public class BigqueryFixture : IDisposable, ICollectionFixture<BigqueryFixture>
     {
+        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
+
         public string ProjectId { get; }
         public string DatasetId { get; }
         public string HighScoreTableId { get; } = "highscores";
         public string AddressbookTableId { get; } = "addressbook";
 
-        public SampleDatasetFixture()
+        public BigqueryFixture()
         {
-            // TODO: Inline the code, and remove CloudConfiguration?
-            ProjectId = CloudConfiguration.Instance.Project;
+            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
+            if (string.IsNullOrEmpty(ProjectId))
+            {
+                throw new InvalidOperationException(
+                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
+            }
+
             DatasetId = DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssFFF", CultureInfo.InvariantCulture);
 
             CreateData();
@@ -91,6 +98,8 @@ namespace Google.Bigquery.V2.IntegrationTests
                 }.Build());
             // TODO: Add data. InsertRow doesn't currently handle nested objects.
         }
+
+        internal string CreateTableId() => "test_" + Guid.NewGuid().ToString().Replace("-", "_");
 
         public void Dispose()
         {
