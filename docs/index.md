@@ -8,23 +8,9 @@ repository.
 All APIs are available as NuGet packages. Add the relevant package
 to your project in the normal way (for example by right-clicking on
 the project in Visual Studio and choosing "Manage NuGet
-Packages..."). Please ensure you enable pre-release packages (for
-example, in the Visual Studio NuGet user interface, check the "Include
-prerelease" box).
-
-Beta APIs are available
-from [nuget.org](https://nuget.org) and can be installed by most
-users without reconfiguring their build environment at all. There is
-no guarantee that the API surface will stay stable between beta and
-full release, but we have high confidence that the libraries work
-and are usable.
-
-Alpha APIs are available from Google's [public myget
-feed](https://www.myget.org/gallery/google-dotnet-public), which you
-will need to configure within your build system. These APIs are even
-more likely to have significant surface changes over time, and may
-fail or have usability issues. Still, if you would like to
-experiment with them, we would welcome your feedback.
+Packages..."). For beta packages, please ensure you enable
+pre-release packages (for example, in the Visual Studio NuGet user
+interface, check the "Include prerelease" box).
 
 # Authentication
 
@@ -39,7 +25,9 @@ installed, run the following command in a Google Cloud SDK Shell:
 At this point, you are now authenticated to make calls to Pub/Sub
 and other Google Cloud services.
 
-# Google.Pubsub.V1 ([NuGet](https://www.nuget.org/packages/Google.Pubsub.V1)) (beta)
+# Google.Pubsub.V1 (beta)
+
+[(Available on nuget.org)](https://www.nuget.org/packages/Google.Pubsub.V1)
 
 A library for working with [Cloud Pub/Sub](https://cloud.google.com/pubsub/).
 
@@ -53,7 +41,9 @@ simpler.
 
 [!code-cs[](obj/snippets/Google.Pubsub.V1.SubscriberClient.txt#Overview)]
 
-# Google.Storage.V1 ([NuGet](https://www.nuget.org/packages/Google.Storage.V1)) (beta)
+# Google.Storage.V1 (beta)
+
+[(Available on nuget.org)](https://www.nuget.org/packages/Google.Storage.V1)
 
 A wrapper library over
 [Google.Apis.Storage.v1](https://www.nuget.org/packages/Google.Apis.Storage.v1/)
@@ -66,7 +56,9 @@ Common operations are exposed via the
 
 [!code-cs[](obj/snippets/Google.Storage.V1.StorageClient.txt#Overview)]
 
-# Google.Datastore.V1Beta3 (alpha)
+# Google.Datastore.V1Beta3 (beta)
+
+[(Available on nuget.org)](https://www.nuget.org/packages/Google.Datastore.V1Beta3)
 
 A library for working with [Cloud Datastore](https://cloud.google.com/datastore/).
 
@@ -91,11 +83,13 @@ Querying data:
 
 [!code-cs[](obj/snippets/Google.Datastore.V1Beta3.DatastoreDb.txt#QueryOverview)]
 
-# Google.Logging.V2 (alpha)
+# Google.Logging.V2 (beta)
 
 A library for working with [Google Stackdriver Logging](https://cloud.google.com/logging/).
 
-## Log4net integration - Google.Logging.Log4Net (alpha)
+## Log4net integration - Google.Logging.Log4Net (beta)
+
+[(Available on nuget.org)](https://www.nuget.org/packages/Google.Logging.Log4Net)
 
 [GoogleStackDriverAppender](obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml)
 provides a [log4net](https://logging.apache.org/log4net/) appender to log messages
@@ -119,7 +113,9 @@ See the
 [readme](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md)
 for details on all the configuration options.
 
-## Basic logging library (alpha)
+## Basic logging library (beta)
+
+[(Available on nuget.org)](https://www.nuget.org/packages/Google.Logging.V2)
 
 (Depends on `Google.Logging.Type` for version-agnostic types.)
 
@@ -127,7 +123,9 @@ If required,
 [LoggingServiceV2Client](obj/api/Google.Logging.V2.LoggingServiceV2Client.yml)
 provides a low-level abstraction over the raw RPC API.
 
-# Google.Bigquery.V2 (alpha)
+# Google.Bigquery.V2 (beta)
+
+[(Available on nuget.org)](https://www.nuget.org/packages/Google.Bigquery.V2)
 
 A wrapper library over
 [Google.Apis.Bigquery.v1](https://www.nuget.org/packages/Google.Apis.Bigquery.v2/)
