@@ -30,13 +30,13 @@ namespace Google.Bigquery.V2.Tests
             Validate(converted, name);
         }
 
-        [Theory]
+        [Fact]
         public void InvalidConversion()
         {
-            Assert.Throws<InvalidOperationException>(() => EnumMap<WriteDisposition>.ToValue("WRITEIFEMPTY"));
-            Assert.Throws<InvalidOperationException>(() => EnumMap<WriteDisposition>.ToValue("Bogus"));
-            Assert.Throws<InvalidOperationException>(() => EnumMap<WriteDisposition>.ToValue("Write_Empty"));
-            Assert.Throws<InvalidOperationException>(() => EnumMap<WriteDisposition>.ToApiValue((WriteDisposition) 100));
+            Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToValue("WRITEIFEMPTY"));
+            Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToValue("Bogus"));
+            Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToValue("Write_Empty"));
+            Assert.Throws<ArgumentException>(() => EnumMap<WriteDisposition>.ToApiValue((WriteDisposition) 100));
         }
 
         private static void Validate<T>(T value, string name) where T : struct
