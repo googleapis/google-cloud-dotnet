@@ -7,7 +7,7 @@ if exist external rmdir /s /q external
 
 REM Fetch external sources we're including in the same docset
 mkdir external
-git clone https://github.com/googleapis/gax-dotnet.git external\gax-dotnet --depth=1
+git clone https://github.com/googleapis/gax-dotnet.git external\gax-dotnet --depth=1 -b 1.0.x
 IF ERRORLEVEL 1 EXIT /B 1
 
 REM Restore all the required packages
