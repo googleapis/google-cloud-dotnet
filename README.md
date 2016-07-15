@@ -1,4 +1,4 @@
-# Google Cloud .NET Client
+# Google Cloud Libraries for .NET
 .NET idiomatic client libraries for [Google Cloud Platform][cloud-platform] services.
 
 [![Build Status](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet.svg?branch=master)](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet)
@@ -6,7 +6,7 @@
 * [Homepage][language-landing-dotnet]
 * [API Documentation][api-reference-dotnet]
 
-This client supports the following Google Cloud Platform services:
+The Google Cloud Libraries for .NET support the following Google Cloud Platform services:
 
 * [Google BigQuery](#google-bigquery)
 * [Google Cloud Datastore](#google-cloud-datastore)
@@ -29,16 +29,11 @@ If you need support for other Google APIs, check out the [Google .NET API Client
 
 In order to build the code in this repository, you will need
 to [install DNVM][dnvm]. You do not need DNVM to use the code,
-provided as NuGet packages.
-
-Most projects in this repository require [gRPC], which has a
-component written in native code. Using that component from DNX
-currently [requires a workaround][grpc-workaround]; on Windows please run `fix_dnx_grpc.bat`
-before running any gRPC code.
+which is provided as NuGet packages.
 
 ## Specifying a Project ID
 
-Most `google-cloud-dotnet` libraries require a project ID. If you don't remember yours (or haven't created a project yet), navigate to the [Google Developers Console][google-developers-console] to view your project ID (or create a new project and get the ID then). Once done, record the value and make sure to pass it as a parameter to the methods that require it.
+Most Google Cloud Libraries for .NET require a project ID. If you don't remember yours (or haven't created a project yet), navigate to the [Google Developers Console][google-developers-console] to view your project ID (or create a new project and then get the ID). Once done, record the value and make sure to pass it as a parameter to the methods that require it.
 
 ## Authentication
 Every API call needs to be authenticated. In order to successfully make a call, first ensure that the necessary [Google Cloud APIs][cloud-api-enablement] are enabled for your project and that you've downloaded the right set of keys (if it applies to you) as explained in the [authentication document][cloud-common-authentication].
@@ -66,7 +61,7 @@ Next, choose a method for authenticating API requests from within your project:
 The BigQuery client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with it, we would welcome your feedback.
 
 #### Installation
-The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
+The package is available on [NuGet](https://www.nuget.org/packages/Google.Bigquery.V2) and can be installed in the following manner:
 
 ```sh
 PM> Install-Package Google.Bigquery.V2 -Prerelease
@@ -106,10 +101,8 @@ table.InsertRow(new Dictionary<string, object>
 - [API Reference][cloud-datastore-ref]
 - [API Overview][cloud-datastore-docs]
 
-The Cloud Datastore client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with it, we would welcome your feedback.
-
 #### Installation
-The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
+The package is available on [NuGet](https://www.nuget.org/packages/Google.Datastore.V1Beta3) and can be installed in the following manner:
 
 ```sh
 PM> Install-Package Google.Datastore.V1Beta3 -Prerelease
@@ -168,10 +161,9 @@ foreach (Entity entity in db.RunQuery(query))
 - [API Reference][cloud-logging-ref]
 - [API Overview][cloud-logging-docs]
 
-The Cloud Logging client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with it, we would welcome your feedback.
-
 #### Installation
-The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
+
+The package is available on [NuGet](https://www.nuget.org/packages/Google.Logging.V2) and can be installed in the following manner:
 
 ```sh
 PM> Install-Package Google.Logging.V2 -Prerelease
@@ -191,10 +183,9 @@ Code coming soon
 - [API Reference][cloud-pubsub-ref]
 - [API Overview][cloud-pubsub-docs]
 
-The Cloud Pub/Sub client library is in pre-release state and is more likely to have significant surface changes over time. Still, if you would like to experiment with it, we would welcome your feedback.
-
 #### Installation
-The package is available on Google's [public MyGet feed][google-myget-feed], where you'll also find the right Package Source to add in Visual Studio. Once done, the package can be installed in the following manner:
+
+The package is available on [NuGet](https://www.nuget.org/packages/Google.Pubsub.V1) and can be installed in the following manner:
 
 ```sh
 PM> Install-Package Google.Pubsub.V1 -Prerelease
@@ -253,8 +244,6 @@ publisher.DeleteTopic(topicName);
 - [API Reference][cloud-storage-ref]
 - [API Overview][cloud-storage-docs]
 
-The Cloud Storage client library is in a more advanced state. However, there is no guarantee that the API surface will stay stable until we reach 1.0 - but we have high confidence that the libraries work and are usable.
-
 #### Installation
 The package is available on [NuGet](https://www.nuget.org/packages/Google.Storage.V1) and can be installed in the following manner:
 
@@ -300,10 +289,13 @@ See [CONTRIBUTING] for more information on how to get started.
 
 ## Versioning
 
-These libraries follow [Semantic Versioning](http://semver.org/).
+The Google Cloud Client Libraries for .NET follow [Semantic Versioning](http://semver.org/).
 
-Anything with a major version of zero (``0.y.z``) should not be
+Anything with a major version of zero (`0.y.z`) should not be
 considered stable - anything may change at any time.
+
+Anything with a suffix after the three numbers (such as `1.0.0-beta01`) is expected to work,
+but further API changes may occur before the next stable release.
 
 ## License
 
@@ -335,4 +327,3 @@ Apache 2.0 - See [LICENSE] for more information.
 [cloud-storage-docs]: https://cloud.google.com/storage/
 [dnvm]: http://docs.asp.net/en/latest/getting-started/index.html
 [gRPC]: http://grpc.io
-[grpc-workaround]: https://github.com/grpc/grpc/issues/4872

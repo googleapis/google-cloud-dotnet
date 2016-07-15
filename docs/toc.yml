@@ -2,6 +2,8 @@
   href: index.md
 - name: API Reference
   href: obj/api/
+- name: FAQ
+  href: articles/faq.md
 - name: Page streaming
   href: articles/page-streaming.md
 - name: Resource names and IDs
