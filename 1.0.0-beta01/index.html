@@ -40,6 +40,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="https://googlecloudplatform.github.io/gcloud-php/" title="PHP docs page">
+                            <img src="img/icon-lang-php.svg" alt="PHP icon" class="menu-icon" />
+                            PHP
+                        </a>
+                    </li>
+                    <li>
                         <a href="https://googlecloudplatform.github.io/gcloud-python/" title="Python docs page">
                             <img src="img/icon-lang-python.svg" alt="Python icon" class="menu-icon" />
                             Python
@@ -66,14 +72,12 @@
                     <div class="col col-right">
                         <!-- TODO: Use nuget buttons as per https://github.com/prabirshrestha/nuget-button ? -->
                         <h2>Add NuGet pre-release packages to your project:</h2>
-                        <pre>
-Google.Bigquery.V2
+                        <pre>Google.Bigquery.V2
 Google.Datastore.V1Beta3
 Google.Logging.Log4Net
 Google.Logging.V2
 Google.Pubsub.V1
-Google.Storage.V1
-                        </pre>
+Google.Storage.V1</pre>
                     </div><!-- end of .col.col-right -->
                 </div><!-- end of .container -->
             </section><!-- end of .hero-banner -->
@@ -133,10 +137,11 @@ Google.Storage.V1
 
                 <div class="quote-box--supplementary">
                 <h4>Example: Retrieving Datastore Entities</h4>
-                <div hljs="" language="csharp" class=""><pre>
-                  <code class="hljs csharp">
-using Google.Datastore.V1Beta3;
+                <div hljs="" language="csharp" class="">
+                  <pre><code class="hljs csharp">using Google.Datastore.V1Beta3;
+
 ...
+
 DatastoreDb db = DatastoreDb.Create("PROJECT_ID");
 Query query = new Query("Book")
 {
@@ -148,9 +153,7 @@ foreach (Entity entity in db.RunQuery(query))
     DateTime published = (DateTime) entity["published"];
     Console.WriteLine("{0} was published in {1}",
         title, published);
-}
-                  </code>
-                </pre>
+}</code></pre>
               </div>
                 </div>
                 </div><!-- end of .container -->
