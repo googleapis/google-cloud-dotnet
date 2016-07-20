@@ -22,7 +22,7 @@ namespace Google.Bigquery.V2.IntegrationTests
 {
     // See https://xunit.github.io/docs/shared-context.html#collection-fixture
     // ... although I've removed the separate collection class, and instead just
-    // put the attribute on SampleDatasetFixture.
+    // put the attribute on BigqueryFixture.
 
     /// <summary>
     /// Test fixture which creates a new timestamped dataset for all the tests to
