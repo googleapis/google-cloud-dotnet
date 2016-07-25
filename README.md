@@ -315,11 +315,11 @@ Apache 2.0 - See [LICENSE] for more information.
 [google-cloud-sdk]: https://cloud.google.com/sdk/
 [google-download-sdk]: https://cloud.google.com/sdk/docs/
 [google-myget-feed]: https://www.myget.org/gallery/google-dotnet-public/
-[cloud-bigquery-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Bigquery.V2.html
-[cloud-datastore-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Datastore.V1Beta3.html
-[cloud-logging-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Logging.V2.html
-[cloud-pubsub-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Pubsub.V1.html
-[cloud-storage-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/api/Google.Storage.V1.html
+[cloud-bigquery-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/1.0.0-beta01/docfx/api/Google.Bigquery.V2.html
+[cloud-datastore-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/1.0.0-beta01/docfx/api/Google.Datastore.V1Beta3.html
+[cloud-logging-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/1.0.0-beta01/docfx/api/Google.Logging.V2.html
+[cloud-pubsub-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/1.0.0-beta01/docfx/api/Google.Pubsub.V1.html
+[cloud-storage-ref]: http://googlecloudplatform.github.io/google-cloud-dotnet/1.0.0-beta01/docfx/api/Google.Storage.V1.html
 [cloud-bigquery-docs]: https://cloud.google.com/bigquery/
 [cloud-datastore-docs]: https://cloud.google.com/datastore/
 [cloud-logging-docs]: https://cloud.google.com/logging/
