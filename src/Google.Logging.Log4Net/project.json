@@ -5,6 +5,7 @@
   "authors": [ "Google Inc." ],
   "owners": [ "google-apis-packages" ],
   "tags": [ "Google", "log4net", "logging" ],
+  "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
   "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
   "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
   "requireLicenseAcceptance": false,
