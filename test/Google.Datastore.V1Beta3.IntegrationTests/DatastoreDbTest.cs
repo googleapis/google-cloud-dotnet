@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Linq;
 using Xunit;
+using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 
 namespace Google.Datastore.V1Beta3.IntegrationTests
 {
@@ -84,6 +86,19 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
             {
                 db.Delete(insertedKey);
             }
+        }
+
+        [Fact]
+        public void RunQuery_NoResults()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var query = db.RunQuery(new Query("absent"));
+            Assert.Equal(0, query.Count());
+            Assert.Equal(0, query.AsEntityResults().Count());
+            var singleBatch = query.AsBatches().Single();
+            Assert.Equal(MoreResultsType.NoMoreResults, singleBatch.MoreResults);
+            var singleResponse = query.AsResponses().Single();
+            Assert.Equal(MoreResultsType.NoMoreResults, singleResponse.Batch.MoreResults);
         }
     }
 }

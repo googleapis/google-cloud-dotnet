@@ -15,6 +15,7 @@
 using System;
 using System.Linq;
 using Xunit;
+using static Google.Datastore.V1Beta3.Key.Types;
 
 namespace Google.Datastore.V1Beta3.IntegrationTests
 {
@@ -28,19 +29,25 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
             _fixture = fixture;
         }
 
+        [Fact]
         public void Query_ImplicitlyUsesPartition()
         {
             var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
-            var keyFactory = db.CreateKeyFactory("test");
-            var entity = new Entity
+            var keyFactory = db.CreateKeyFactory("parent");
+            var parent = new Entity
             {
-                Key = keyFactory.CreateIncompleteKey(),
-                ["foo"] = Guid.NewGuid().ToString()
+                Key = keyFactory.CreateIncompleteKey()
             };
-            var insertedKey = db.Insert(entity);
+            var parentKey = db.Insert(parent);
+
+            var child = new Entity
+            {
+                Key = parentKey.WithElement(new PathElement { Kind = "child" }),
+            };
+            db.Insert(child);
             using (var transaction = db.BeginTransaction())
             {
-                var query = new Query("test") { Filter = Filter.Equal("foo", entity["foo"]) };
+                var query = new Query("child") { Filter = Filter.HasAncestor(parentKey) };
                 var results = transaction.RunQuery(query);
                 Assert.Equal(1, results.Count());
             }
