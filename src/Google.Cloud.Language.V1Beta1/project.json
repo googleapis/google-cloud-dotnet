@@ -1,0 +1,39 @@
+﻿{
+  "version": "0.1.0-*",
+  "summary": "Google Cloud Natural Language API v1beta1 client library",
+  "description": "Google Cloud Natural Language API v1beta1 client library",
+  "authors": [ "Google Inc." ],
+  "owners": [ "google-apis-packages" ],
+  "tags": [ "Google" ],
+  "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+  "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
+  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+  "requireLicenseAcceptance": false,
+
+  "compilationOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Api.CommonProtos": "1.0.0-CI00072",
+    "Google.Api.Gax": "1.0.0-CI00072",
+    "Google.Apis.Auth": "1.14.0",
+    "Google.Protobuf": "3.0.0-beta3",
+    "Grpc.Auth": "0.15.0",
+    "Grpc.Core": "0.15.0",
+    "Ix-Async": "1.2.5"
+  },
+
+  "frameworks": {
+    "net45": {
+      "frameworkAssemblies": {
+        "System.Runtime": {
+          "type": "build"
+        },
+        "System.IO": {
+          "type": "build"
+        }
+      }
+    }
+  }
+}
