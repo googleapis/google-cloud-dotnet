@@ -93,8 +93,8 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Executes the given structured query, returning a result set that can be viewed as a sequence of
-        /// entities, entity results (with cursors), batches, or raw API responses.
+        /// Lazily executes the given structured query, returning a result set that can be viewed as a sequence of
+        /// entity results or raw RPC responses.
         /// </summary>
         /// <remarks>
         /// The results are requested lazily: no API calls will be made until the application starts
@@ -131,8 +131,8 @@ namespace Google.Datastore.V1Beta3
         }
         
         /// <summary>
-        /// Executes the given GQL query, returning a result set that can be viewed as a sequence of
-        /// entities, entity results (with cursors), batches, or raw API responses.
+        /// Lazily executes the given GQL query, returning a result set that can be viewed as a sequence of
+        /// entity results or raw RPC responses.
         /// </summary>
         /// <remarks>
         /// The results are requested lazily: no API calls will be made until the application starts

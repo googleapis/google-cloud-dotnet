@@ -76,13 +76,6 @@ namespace Google.Datastore.V1Beta3.Tests
         };
 
         [Fact]
-        public void AsEntities()
-        {
-            var results = new DatastoreQueryResults(_responses.Select(r => r.Clone()));
-            Assert.Equal(_entities, results);
-        }
-
-        [Fact]
         public void AsEntityResults()
         {
             var results = new DatastoreQueryResults(_responses.Select(r => r.Clone()));
@@ -90,22 +83,14 @@ namespace Google.Datastore.V1Beta3.Tests
             expected[4].Cursor = _responses[1].Batch.EndCursor;
             expected[14].Cursor = _responses[2].Batch.EndCursor;
             expected[19].Cursor = _responses[3].Batch.EndCursor;
-            Assert.Equal(expected, results.AsEntityResults());
-        }
-
-        [Fact]
-        public void AsBatches()
-        {
-            var results = new DatastoreQueryResults(_responses.Select(r => r.Clone()));
-            var expected = new[] { _responses[0].Batch, _responses[1].Batch, _responses[2].Batch, _responses[3].Batch };
-            Assert.Equal(expected, results.AsBatches());
+            Assert.Equal(expected, results);
         }
 
         [Fact]
         public void AsResponses()
         {
             var results = new DatastoreQueryResults(_responses.Select(r => r.Clone()));
-            Assert.Equal(_responses, results.AsResponses());
+            Assert.Equal(_responses, results.AsRpcResponses());
         }
     }
 }

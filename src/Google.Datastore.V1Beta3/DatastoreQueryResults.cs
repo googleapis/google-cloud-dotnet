@@ -21,8 +21,10 @@ namespace Google.Datastore.V1Beta3
 {
     /// <summary>
     /// A Datastore query which is executed lazily and which be viewed in multiple ways.
+    /// The lazy evaluation is important: if you iterate over the query multiple times, it will execute
+    /// multiple times, potentially returning different results each time.
     /// </summary>
-    public sealed class DatastoreQueryResults : IEnumerable<Entity>
+    public sealed class DatastoreQueryResults : IEnumerable<EntityResult>
     {
         private readonly IEnumerable<RunQueryResponse> _responses;
 
@@ -32,7 +34,7 @@ namespace Google.Datastore.V1Beta3
         /// of this class by calling <see cref="DatastoreDb.RunQuery"/>.
         /// </summary>
         /// <remarks>
-        /// The sequence of responses will be returned directly from <see cref="AsResponses"/>, and
+        /// The sequence of responses will be returned directly from <see cref="AsRpcResponses"/>, and
         /// used to lazily construct the other sequences returned by this class. It should not
         /// contain any null references.
         /// </remarks>
@@ -43,16 +45,7 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <inheritdoc />
-        public IEnumerator<Entity> GetEnumerator() => AsEntities().GetEnumerator();
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="Entity"/> values.
-        /// </summary>
-        /// <remarks>
-        /// This method only exists for symmetry with the other "As*" methods, to make the fact that
-        /// the class implements IEnumerable{Entity} more incidental.
-        /// </remarks>
-        private IEnumerable<Entity> AsEntities() => AsEntityResults().Select(er => er.Entity);
+        public IEnumerator<EntityResult> GetEnumerator() => AsEntityResults().GetEnumerator();
 
         /// <summary>
         /// Returns the results of this query as a sequence of <see cref="EntityResult"/> values.
@@ -62,9 +55,10 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>
         /// </remarks>
         /// <returns>A sequence of <see cref="EntityResult"/> values.</returns>
-        public IEnumerable<EntityResult> AsEntityResults() =>
-            AsBatches().SelectMany(batch =>
+        private IEnumerable<EntityResult> AsEntityResults() =>
+            AsRpcResponses().SelectMany(response =>
             {
+                var batch = response.Batch;
                 var lastResult = batch.EntityResults.LastOrDefault();
                 if (lastResult != null)
                 {
@@ -74,22 +68,13 @@ namespace Google.Datastore.V1Beta3
             });
 
         /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="RunQueryResponse"/> values
-        /// exactly as returned by the Datastore API. This method is only useful if the application
-        /// wishes to examine the <see cref="RunQueryResponse.Query"/> property; otherwise, use
-        /// <see cref="AsBatches"/> to obtain the sequence of batches.
+        /// This method is for advanced use cases only, where more diagnostic information is required;
+        /// most application code should merely iterate over the query results as <see cref="EntityResult"/>
+        /// values. The results of this query are returned as a sequence of <see cref="RunQueryResponse"/> values
+        /// exactly as returned by the Datastore API.
         /// </summary>
         /// <returns>A sequence of <see cref="RunQueryResponse"/> values.</returns>
-        public IEnumerable<RunQueryResponse> AsResponses() => _responses;
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="QueryResultBatch"/> values.
-        /// This method is only useful if the application wishes to process a batch at a time; if the
-        /// details of how the API splits the results into batches is not needed, use <see cref="AsEntityResults"/>
-        /// or simply iterate over the entities.
-        /// </summary>
-        /// <returns>A sequence of <see cref="QueryResultBatch"/> values.</returns>
-        public IEnumerable<QueryResultBatch> AsBatches() => _responses.Select(r => r.Batch);
+        public IEnumerable<RunQueryResponse> AsRpcResponses() => _responses;
 
         /// <inheritdoc />
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
