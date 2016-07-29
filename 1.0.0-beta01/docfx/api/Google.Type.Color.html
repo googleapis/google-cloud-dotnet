@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Color
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -66,6 +66,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content">
+              
               
               <h1 id="Google_Type_Color" data-uid="Google.Type.Color">Class Color
               </h1>
@@ -130,14 +131,14 @@
 
   static Color* toProto(UIColor* color) {
       CGFloat red, green, blue, alpha;
-      if (![color getRed:&amp;red green:&amp;green blue:&amp;blue alpha:&amp;alpha]) {
+      if (![color getRed:&amp;amp;red green:&amp;amp;green blue:&amp;amp;blue alpha:&amp;amp;alpha]) {
         return nil;
       }
       Color* result = [Color alloc] init];
       [result setRed:red];
       [result setGreen:green];
       [result setBlue:blue];
-      if (alpha &lt;= 0.9999) {
+      if (alpha &amp;lt;= 0.9999) {
         [result setAlpha:floatWrapperWithValue(alpha)];
       }
       [result autorelease];
@@ -165,11 +166,11 @@
  };
 
  var rgbToCssColor_ = function(red, green, blue) {
-   var rgbNumber = new Number((red &lt;&lt; 16) | (green &lt;&lt; 8) | blue);
+   var rgbNumber = new Number((red &amp;lt;&amp;lt; 16) | (green &amp;lt;&amp;lt; 8) | blue);
    var hexString = rgbNumber.toString(16);
    var missingZeros = 6 - hexString.length;
    var resultBuilder = [&#39;#&#39;];
-   for (var i = 0; i &lt; missingZeros; i++) {
+   for (var i = 0; i &amp;lt; missingZeros; i++) {
       resultBuilder.push(&#39;0&#39;);
    }
    resultBuilder.push(hexString);

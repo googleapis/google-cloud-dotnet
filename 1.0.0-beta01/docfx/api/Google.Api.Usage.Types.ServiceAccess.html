@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum Usage.Types.ServiceAccess
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,6 +67,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
+              
               <h1 id="Google_Api_Usage_Types_ServiceAccess" data-uid="Google.Api.Usage.Types.ServiceAccess">Enum Usage.Types.ServiceAccess
               </h1>
               <div class="markdown level0 summary"><p> Service access types.</p>
@@ -82,117 +83,51 @@
               </div>
               <h3 id="fields">Fields
               </h3>
-              <h4 id="Google_Api_Usage_Types_ServiceAccess_OrgPublic" data-uid="Google.Api.Usage.Types.ServiceAccess.OrgPublic">OrgPublic</h4>
-              <div class="markdown level1 summary"><p> The service can be seen/used by the group of users controlled by the
- administrator of the project/org that owns the service.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;ORG_PUBLIC&quot;)]
-OrgPublic = 3</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
-                    <th>Type</th>
+                    <th>Name</th>
                     <th>Description</th>
                   </tr>
-                </thead>
+                <thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Usage.Types.ServiceAccess.html#Google_Api_Usage_Types_ServiceAccess">Usage.Types.ServiceAccess</a></td>
-                    <td></td>
+                    <td id="Google_Api_Usage_Types_ServiceAccess_OrgPublic">OrgPublic</td>
+                    <td><p> The service can be seen/used by the group of users controlled by the
+ administrator of the project/org that owns the service.</p>
+</td>
                   </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Api_Usage_Types_ServiceAccess_OrgRestricted" data-uid="Google.Api.Usage.Types.ServiceAccess.OrgRestricted">OrgRestricted</h4>
-              <div class="markdown level1 summary"><p> The service can be seen/used by users identified in the service&#39;s
+                  <tr>
+                    <td id="Google_Api_Usage_Types_ServiceAccess_OrgRestricted">OrgRestricted</td>
+                    <td><p> The service can be seen/used by users identified in the service&#39;s
  access control policy and they are within the organization that owns the
  service.</p>
 <p> Access is further constrained to the group
  controlled by the administrator of the project/org that owns the
  service.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;ORG_RESTRICTED&quot;)]
-OrgRestricted = 2</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Usage.Types.ServiceAccess.html#Google_Api_Usage_Types_ServiceAccess">Usage.Types.ServiceAccess</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Api_Usage_Types_ServiceAccess_Public" data-uid="Google.Api.Usage.Types.ServiceAccess.Public">Public</h4>
-              <div class="markdown level1 summary"><p> The service can be seen/used by anyone.</p>
+                    <td id="Google_Api_Usage_Types_ServiceAccess_Public">Public</td>
+                    <td><p> The service can be seen/used by anyone.</p>
 <p> If the service has not been whitelisted by your domain administrator
  for out-of-org publishing, then this mode will be treated like
  ORG_PUBLIC.</p>
 <p> The discovery document for the service will also be public and allow
  unregistered access.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;PUBLIC&quot;)]
-Public = 1</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Usage.Types.ServiceAccess.html#Google_Api_Usage_Types_ServiceAccess">Usage.Types.ServiceAccess</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Api_Usage_Types_ServiceAccess_Restricted" data-uid="Google.Api.Usage.Types.ServiceAccess.Restricted">Restricted</h4>
-              <div class="markdown level1 summary"><p> The service can only be seen/used by users identified in the service&#39;s
+                    <td id="Google_Api_Usage_Types_ServiceAccess_Restricted">Restricted</td>
+                    <td><p> The service can only be seen/used by users identified in the service&#39;s
  access control policy.</p>
 <p> If the service has not been whitelisted by your domain administrator
  for out-of-org publishing, then this mode will be treated like
  ORG_RESTRICTED.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;RESTRICTED&quot;)]
-Restricted = 0</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Usage.Types.ServiceAccess.html#Google_Api_Usage_Types_ServiceAccess">Usage.Types.ServiceAccess</a></td>
-                    <td></td>
+</td>
                   </tr>
                 </tbody>
-              </table>
+              </thead></thead></table>
             </article>
           </div>
           

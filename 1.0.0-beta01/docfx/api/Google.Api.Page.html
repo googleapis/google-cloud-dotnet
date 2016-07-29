@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Page
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -66,6 +66,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content">
+              
               
               <h1 id="Google_Api_Page" data-uid="Google.Api.Page">Class Page
               </h1>
@@ -207,7 +208,7 @@ public sealed class Page : IMessage&lt;Page&gt;, IMessage, IEquatable&lt;Page&gt
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Api_Page_Content" data-uid="Google.Api.Page.Content">Content</h4>
-              <div class="markdown level1 summary"><p> The Markdown content of the page. You can use <code>&#40;== include {path} ==&#41;</code>
+              <div class="markdown level1 summary"><p> The Markdown content of the page. You can use &lt;code&gt;&amp;#40;== include {path} ==&amp;#41;&lt;/code&gt;
  to include content from a Markdown file.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -258,19 +259,19 @@ public sealed class Page : IMessage&lt;Page&gt;, IMessage, IEquatable&lt;Page&gt
  etc. The full page name (start from the root page name to this page
  concatenated with <code>.</code>) can be used as reference to the page in your
  documentation. For example:
- <pre><code>pages:<p>
+ &lt;pre&gt;&lt;code&gt;pages:</p>
 <ul>
 <li>name: Tutorial
-content: &#40;== include tutorial.md ==&#41;
+content: &amp;#40;== include tutorial.md ==&amp;#41;
 subpages:<ul>
 <li>name: Java
-content: &#40;== include tutorial_java.md ==&#41;
-</li></ul></li></ul></code></pre>
+content: &amp;#40;== include tutorial_java.md ==&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;
 You can reference <code>Java</code> page using Markdown reference link syntax:
-<code>[Java][Tutorial.Java]</code>.
-
-
-
+<code>[Java][Tutorial.Java]</code>.</li>
+</ul>
+</li>
+</ul>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

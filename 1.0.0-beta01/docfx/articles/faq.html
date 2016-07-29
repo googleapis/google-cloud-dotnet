@@ -8,7 +8,7 @@
     <title>Frequently Asked Questions | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Frequently Asked Questions | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,22 @@ sufficient for most customers, but please
 <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new">let us know</a>
 if you have specific environments where you need support for lower versions,
 and we can see what options are available.</p>
+<h2 id="why-do-credentials-specified-with-google-application-credentials-fail">Why do credentials specified with GOOGLE_APPLICATION_CREDENTIALS fail?</h2>
+<p>By default, if you don&#39;t have the <code>GOOGLE_APPLICATION_CREDENTIALS</code>
+environment variable set, the credentials will be obtained from the
+<code>gcloud</code> tool, and will work with no problems. When credentials are
+loaded from a file specified by the environment variable, they have
+no scopes attached, and our gRPC-based API code didn&#39;t attach the
+scopes required.</p>
+<p>See <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/294">issue
+294</a>
+for the details, but the upshot is that it&#39;s been fixed, but isn&#39;t
+in a public beta release yet.</p>
+<p>If you need to use credentials in this way, you can use our <a href="https://www.myget.org/gallery/google-dotnet-public">public
+myget feed</a> and
+fetch the latest version of the packages from there. (These are our
+continuous integration builds.) From CI00174 onwards, the problem
+should be fixed.</p>
 
             </article>
           </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Usage
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -66,6 +66,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content">
+              
               
               <h1 id="Google_Api_Usage" data-uid="Google.Api.Usage">Class Usage
               </h1>
@@ -278,9 +279,9 @@ public sealed class Usage : IMessage&lt;Usage&gt;, IMessage, IEquatable&lt;Usage
               <div class="markdown level1 summary"><p> Services that must be contacted before a consumer can begin using the
  service. Each service will be contacted in sequence, and, if any activation
  call fails, the entire activation will fail. Each hook is of the form
- <service.name>/<hook-id>, where <hook-id> is optional; for example:
- &#39;robotservice.googleapis.com/default&#39;.<p>
-</hook-id></hook-id></service.name></div>
+ &lt;service.name&gt;/&lt;hook-id&gt;, where &lt;hook-id&gt; is optional; for example:
+ &#39;robotservice.googleapis.com/default&#39;.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -305,10 +306,10 @@ public sealed class Usage : IMessage&lt;Usage&gt;, IMessage, IEquatable&lt;Usage
               <div class="markdown level1 summary"><p> Services that must be contacted before a consumer can deactivate a
  service. Each service will be contacted in sequence, and, if any
  deactivation call fails, the entire deactivation will fail. Each hook is
- of the form <service.name>/<hook-id>, where <hook-id> is optional; for
+ of the form &lt;service.name&gt;/&lt;hook-id&gt;, where &lt;hook-id&gt; is optional; for
  example:
- &#39;compute.googleapis.com/&#39;.<p>
-</hook-id></hook-id></service.name></div>
+ &#39;compute.googleapis.com/&#39;.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -401,9 +402,9 @@ public sealed class Usage : IMessage&lt;Usage&gt;, IMessage, IEquatable&lt;Usage
               </table>
               <h4 id="Google_Api_Usage_Requirements" data-uid="Google.Api.Usage.Requirements">Requirements</h4>
               <div class="markdown level1 summary"><p> Requirements that must be satisfied before a consumer project can use the
- service. Each requirement is of the form <service.name>/<requirement-id>;
- for example &#39;serviceusage.googleapis.com/billing-enabled&#39;.<p>
-</requirement-id></service.name></div>
+ service. Each requirement is of the form &lt;service.name&gt;/&lt;requirement-id&gt;;
+ for example &#39;serviceusage.googleapis.com/billing-enabled&#39;.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">

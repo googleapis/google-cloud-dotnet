@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Documentation
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,23 +67,24 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
+              
               <h1 id="Google_Api_Documentation" data-uid="Google.Api.Documentation">Class Documentation
               </h1>
               <div class="markdown level0 summary"><p> <code>Documentation</code> provides the information for describing a service.</p>
 <p> Example:
- <pre><code>documentation:
+ &lt;pre&gt;&lt;code&gt;documentation:
    summary: &gt;
      The Google Calendar API gives access
      to most calendar features.
-   pages:<p>
+   pages:</p>
 <ul>
 <li>name: Overview
-content: &#40;== include google/foo/overview.md ==&#41;</li>
+content: &amp;#40;== include google/foo/overview.md ==&amp;#41;</li>
 <li>name: Tutorial
-content: &#40;== include google/foo/tutorial.md ==&#41;
+content: &amp;#40;== include google/foo/tutorial.md ==&amp;#41;
 subpages;<ul>
 <li>name: Java
-content: &#40;== include google/foo/tutorial_java.md ==&#41;
+content: &amp;#40;== include google/foo/tutorial_java.md ==&amp;#41;
 rules:</li>
 </ul>
 </li>
@@ -93,7 +94,7 @@ description: &gt;
 <li><p>selector: google.calendar.Calendar.Put
 description: &gt;
   ...
-</li></ul></code></pre>
+&lt;/code&gt;&lt;/pre&gt;
 Documentation is provided in markdown syntax. In addition to
 standard markdown features, definition lists, tables and fenced
 code blocks are supported. Section headers can be provided and are
@@ -106,27 +107,27 @@ by config rules overrides IDL provided.</p>
 in documentation text.</p>
 <p>In order to reference a proto element, the following
 notation can be used:
-<pre><code>&#91;fully.qualified.proto.name]&#91;]</code></pre>
+&lt;pre&gt;&lt;code&gt;&amp;#91;fully.qualified.proto.name]&amp;#91;]&lt;/code&gt;&lt;/pre&gt;
 To override the display text used for the link, this can be used:
-<pre><code>&#91;display text]&#91;fully.qualified.proto.name]</code></pre>
+&lt;pre&gt;&lt;code&gt;&amp;#91;display text]&amp;#91;fully.qualified.proto.name]&lt;/code&gt;&lt;/pre&gt;
 Text can be excluded from doc using the following notation:
-<pre><code>&#40;-- internal comment --&#41;</code></pre>
+&lt;pre&gt;&lt;code&gt;&amp;#40;-- internal comment --&amp;#41;&lt;/code&gt;&lt;/pre&gt;
 Comments can be made conditional using a visibility label. The below
 text will be only rendered if the <code>BETA</code> label is available:
-<pre><code>&#40;--BETA: comment for BETA users --&#41;</code></pre>
+&lt;pre&gt;&lt;code&gt;&amp;#40;--BETA: comment for BETA users --&amp;#41;&lt;/code&gt;&lt;/pre&gt;
 A few directives are available in documentation. Note that
 directives must appear on a single line to be properly
 identified. The <code>include</code> directive includes a markdown file from
 an external source:
-<pre><code>&#40;== include path/to/file ==&#41;</code></pre>
+&lt;pre&gt;&lt;code&gt;&amp;#40;== include path/to/file ==&amp;#41;&lt;/code&gt;&lt;/pre&gt;
 The <code>resource_for</code> directive marks a message to be the resource of
 a collection in REST view. If it is not specified, tools attempt
 to infer the resource from the operations in a collection:
-<pre><code>&#40;== resource_for v1.shelves.books ==&#41;</code></pre>
+&lt;pre&gt;&lt;code&gt;&amp;#40;== resource_for v1.shelves.books ==&amp;#41;&lt;/code&gt;&lt;/pre&gt;
 The directive <code>suppress_warning</code> does not directly affect documentation
 and is documented together with service config validation.</p>
-
-
+</li>
+</ul>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -355,20 +356,20 @@ public sealed class Documentation : IMessage&lt;Documentation&gt;, IMessage, IEq
               </table>
               <h4 id="Google_Api_Documentation_Overview" data-uid="Google.Api.Documentation.Overview">Overview</h4>
               <div class="markdown level1 summary"><p> Declares a single overview page. For example:
- <pre><code>documentation:
+ &lt;pre&gt;&lt;code&gt;documentation:
    summary: ...
-   overview: &#40;== include overview.md ==&#41;
- </code></pre>
+   overview: &amp;#40;== include overview.md ==&amp;#41;
+ &lt;/code&gt;&lt;/pre&gt;
  This is a shortcut for the following declaration (using pages style):
- <pre><code>documentation:
+ &lt;pre&gt;&lt;code&gt;documentation:
    summary: ...
-   pages:<p>
+   pages:</p>
 <ul>
 <li>name: Overview
-content: &#40;== include overview.md ==&#41;
-</li></ul></code></pre>
-Note: you cannot specify both <code>overview</code> field and <code>pages</code> field.
-
+content: &amp;#40;== include overview.md ==&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;
+Note: you cannot specify both <code>overview</code> field and <code>pages</code> field.</li>
+</ul>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

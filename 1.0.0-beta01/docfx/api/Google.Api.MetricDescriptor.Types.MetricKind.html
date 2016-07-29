@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum MetricDescriptor.Types.MetricKind
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,6 +67,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
+              
               <h1 id="Google_Api_MetricDescriptor_Types_MetricKind" data-uid="Google.Api.MetricDescriptor.Types.MetricKind">Enum MetricDescriptor.Types.MetricKind
               </h1>
               <div class="markdown level0 summary"><p> The kind of measurement. It describes how the data is reported.</p>
@@ -80,103 +81,37 @@
               </div>
               <h3 id="fields">Fields
               </h3>
-              <h4 id="Google_Api_MetricDescriptor_Types_MetricKind_Cumulative" data-uid="Google.Api.MetricDescriptor.Types.MetricKind.Cumulative">Cumulative</h4>
-              <div class="markdown level1 summary"><p> Cumulative value over time intervals that can overlap.
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                <thead>
+                <tbody>
+                  <tr>
+                    <td id="Google_Api_MetricDescriptor_Types_MetricKind_Cumulative">Cumulative</td>
+                    <td><p> Cumulative value over time intervals that can overlap.
  The overlapping intervals must have the same start time.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;CUMULATIVE&quot;)]
-Cumulative = 3</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html#Google_Api_MetricDescriptor_Types_MetricKind">MetricDescriptor.Types.MetricKind</a></td>
-                    <td></td>
+                    <td id="Google_Api_MetricDescriptor_Types_MetricKind_Delta">Delta</td>
+                    <td><p> Changes over non-overlapping time intervals.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Api_MetricDescriptor_Types_MetricKind_Gauge">Gauge</td>
+                    <td><p> Instantaneous measurements of a varying quantity.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Api_MetricDescriptor_Types_MetricKind_Unspecified">Unspecified</td>
+                    <td><p> Do not use this default value.</p>
+</td>
                   </tr>
                 </tbody>
-              </table>
-              <h4 id="Google_Api_MetricDescriptor_Types_MetricKind_Delta" data-uid="Google.Api.MetricDescriptor.Types.MetricKind.Delta">Delta</h4>
-              <div class="markdown level1 summary"><p> Changes over non-overlapping time intervals.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;DELTA&quot;)]
-Delta = 2</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html#Google_Api_MetricDescriptor_Types_MetricKind">MetricDescriptor.Types.MetricKind</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Api_MetricDescriptor_Types_MetricKind_Gauge" data-uid="Google.Api.MetricDescriptor.Types.MetricKind.Gauge">Gauge</h4>
-              <div class="markdown level1 summary"><p> Instantaneous measurements of a varying quantity.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;GAUGE&quot;)]
-Gauge = 1</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html#Google_Api_MetricDescriptor_Types_MetricKind">MetricDescriptor.Types.MetricKind</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Api_MetricDescriptor_Types_MetricKind_Unspecified" data-uid="Google.Api.MetricDescriptor.Types.MetricKind.Unspecified">Unspecified</h4>
-              <div class="markdown level1 summary"><p> Do not use this default value.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;METRIC_KIND_UNSPECIFIED&quot;)]
-Unspecified = 0</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.Types.MetricKind.html#Google_Api_MetricDescriptor_Types_MetricKind">MetricDescriptor.Types.MetricKind</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              </thead></thead></table>
             </article>
           </div>
           

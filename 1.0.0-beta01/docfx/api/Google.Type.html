@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Type
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -136,14 +136,14 @@
 
   static Color* toProto(UIColor* color) {
       CGFloat red, green, blue, alpha;
-      if (![color getRed:&amp;red green:&amp;green blue:&amp;blue alpha:&amp;alpha]) {
+      if (![color getRed:&amp;amp;red green:&amp;amp;green blue:&amp;amp;blue alpha:&amp;amp;alpha]) {
         return nil;
       }
       Color* result = [Color alloc] init];
       [result setRed:red];
       [result setGreen:green];
       [result setBlue:blue];
-      if (alpha &lt;= 0.9999) {
+      if (alpha &amp;lt;= 0.9999) {
         [result setAlpha:floatWrapperWithValue(alpha)];
       }
       [result autorelease];
@@ -171,11 +171,11 @@
  };
 
  var rgbToCssColor_ = function(red, green, blue) {
-   var rgbNumber = new Number((red &lt;&lt; 16) | (green &lt;&lt; 8) | blue);
+   var rgbNumber = new Number((red &amp;lt;&amp;lt; 16) | (green &amp;lt;&amp;lt; 8) | blue);
    var hexString = rgbNumber.toString(16);
    var missingZeros = 6 - hexString.length;
    var resultBuilder = [&#39;#&#39;];
-   for (var i = 0; i &lt; missingZeros; i++) {
+   for (var i = 0; i &amp;lt; missingZeros; i++) {
       resultBuilder.push(&#39;0&#39;);
    }
    resultBuilder.push(hexString);
@@ -206,13 +206,13 @@
                   <section><p> An object representing a latitude/longitude pair. This is expressed as a pair
  of doubles representing degrees latitude and degrees longitude. Unless
  specified otherwise, this must conform to the
- <a href="http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf">WGS84
- standard</a>. Values must be within normalized ranges.</p>
+ &lt;a href=&quot;<a href="http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf&quot;&gt;WGS84">http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf"&gt;WGS84</a>
+ standard&lt;/a&gt;. Values must be within normalized ranges.</p>
 <p> Example of normalization code in Python:</p>
 <pre><code> def NormalizeLongitude(longitude):
    &quot;&quot;&quot;Wraps decimal degrees longitude to [-180.0, 180.0].&quot;&quot;&quot;
    q, r = divmod(longitude, 360.0)
-   if r &gt; 180.0 or (r == 180.0 and q &lt;= -1.0):
+   if r &amp;gt; 180.0 or (r == 180.0 and q &amp;lt;= -1.0):
      return r - 360.0
    return r
 
@@ -220,9 +220,9 @@
    &quot;&quot;&quot;Wraps decimal degrees latitude and longitude to
    [-180.0, 180.0] and [-90.0, 90.0], respectively.&quot;&quot;&quot;
    r = latitude % 360.0
-   if r &lt;= 90.0:
+   if r &amp;lt;= 90.0:
      return r, NormalizeLongitude(longitude)
-   elif r &gt;= 270.0:
+   elif r &amp;gt;= 270.0:
      return r - 360, NormalizeLongitude(longitude)
    else:
      return 180 - r, NormalizeLongitude(longitude + 180.0)

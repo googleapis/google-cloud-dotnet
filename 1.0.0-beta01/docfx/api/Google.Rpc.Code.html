@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum Code
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,6 +67,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
+              
               <h1 id="Google_Rpc_Code" data-uid="Google.Rpc.Code">Enum Code
               </h1>
               <div class="markdown level0 summary"><p> The canonical error codes for Google APIs.
@@ -91,141 +92,55 @@ Similarly prefer <code>NOT_FOUND</code> or <code>ALREADY_EXISTS</code> over <cod
               </div>
               <h3 id="fields">Fields
               </h3>
-              <h4 id="Google_Rpc_Code_Aborted" data-uid="Google.Rpc.Code.Aborted">Aborted</h4>
-              <div class="markdown level1 summary"><p> The operation was aborted, typically due to a concurrency issue such as
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                <thead>
+                <tbody>
+                  <tr>
+                    <td id="Google_Rpc_Code_Aborted">Aborted</td>
+                    <td><p> The operation was aborted, typically due to a concurrency issue such as
  a sequencer check failure or transaction abort.</p>
 <p> See the guidelines above for deciding between <code>FAILED_PRECONDITION</code>,
  <code>ABORTED</code>, and <code>UNAVAILABLE</code>.</p>
 <p> HTTP Mapping: 409 Conflict</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;ABORTED&quot;)]
-Aborted = 10</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_AlreadyExists" data-uid="Google.Rpc.Code.AlreadyExists">AlreadyExists</h4>
-              <div class="markdown level1 summary"><p> The entity that a client attempted to create (e.g., file or directory)
+                    <td id="Google_Rpc_Code_AlreadyExists">AlreadyExists</td>
+                    <td><p> The entity that a client attempted to create (e.g., file or directory)
  already exists.</p>
 <p> HTTP Mapping: 409 Conflict</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;ALREADY_EXISTS&quot;)]
-AlreadyExists = 6</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_Cancelled" data-uid="Google.Rpc.Code.Cancelled">Cancelled</h4>
-              <div class="markdown level1 summary"><p> The operation was cancelled, typically by the caller.</p>
+                    <td id="Google_Rpc_Code_Cancelled">Cancelled</td>
+                    <td><p> The operation was cancelled, typically by the caller.</p>
 <p> HTTP Mapping: 499 Client Closed Request</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;CANCELLED&quot;)]
-Cancelled = 1</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_DataLoss" data-uid="Google.Rpc.Code.DataLoss">DataLoss</h4>
-              <div class="markdown level1 summary"><p> Unrecoverable data loss or corruption.</p>
+                    <td id="Google_Rpc_Code_DataLoss">DataLoss</td>
+                    <td><p> Unrecoverable data loss or corruption.</p>
 <p> HTTP Mapping: 500 Internal Server Error</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;DATA_LOSS&quot;)]
-DataLoss = 15</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_DeadlineExceeded" data-uid="Google.Rpc.Code.DeadlineExceeded">DeadlineExceeded</h4>
-              <div class="markdown level1 summary"><p> The deadline expired before the operation could complete. For operations
+                    <td id="Google_Rpc_Code_DeadlineExceeded">DeadlineExceeded</td>
+                    <td><p> The deadline expired before the operation could complete. For operations
  that change the state of the system, this error may be returned
  even if the operation has completed successfully.  For example, a
  successful response from a server could have been delayed long
  enough for the deadline to expire.</p>
 <p> HTTP Mapping: 504 Gateway Timeout</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;DEADLINE_EXCEEDED&quot;)]
-DeadlineExceeded = 4</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_FailedPrecondition" data-uid="Google.Rpc.Code.FailedPrecondition">FailedPrecondition</h4>
-              <div class="markdown level1 summary"><p> The operation was rejected because the system is not in a state
+                    <td id="Google_Rpc_Code_FailedPrecondition">FailedPrecondition</td>
+                    <td><p> The operation was rejected because the system is not in a state
  required for the operation&#39;s execution.  For example, the directory
  to be deleted is non-empty, an rmdir operation is applied to
  a non-directory, etc.</p>
@@ -248,137 +163,42 @@ DeadlineExceeded = 4</code></pre>
  the request contains Etag-related headers. So if the server does see
  Etag-related headers in the request, it may choose to return 412
  instead of 400 for this error code.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;FAILED_PRECONDITION&quot;)]
-FailedPrecondition = 9</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_Internal" data-uid="Google.Rpc.Code.Internal">Internal</h4>
-              <div class="markdown level1 summary"><p> Internal errors.  This means that some invariants expected by the
+                    <td id="Google_Rpc_Code_Internal">Internal</td>
+                    <td><p> Internal errors.  This means that some invariants expected by the
  underlying system have been broken.  This error code is reserved
  for serious errors.</p>
 <p> HTTP Mapping: 500 Internal Server Error</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;INTERNAL&quot;)]
-Internal = 13</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_InvalidArgument" data-uid="Google.Rpc.Code.InvalidArgument">InvalidArgument</h4>
-              <div class="markdown level1 summary"><p> The client specified an invalid argument.  Note that this differs
+                    <td id="Google_Rpc_Code_InvalidArgument">InvalidArgument</td>
+                    <td><p> The client specified an invalid argument.  Note that this differs
  from <code>FAILED_PRECONDITION</code>.  <code>INVALID_ARGUMENT</code> indicates arguments
  that are problematic regardless of the state of the system
  (e.g., a malformed file name).</p>
 <p> HTTP Mapping: 400 Bad Request</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;INVALID_ARGUMENT&quot;)]
-InvalidArgument = 3</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_NotFound" data-uid="Google.Rpc.Code.NotFound">NotFound</h4>
-              <div class="markdown level1 summary"><p> Some requested entity (e.g., file or directory) was not found.
+                    <td id="Google_Rpc_Code_NotFound">NotFound</td>
+                    <td><p> Some requested entity (e.g., file or directory) was not found.
  For privacy reasons, this code <em>might</em> be returned when the client
  does not have the access rights to the entity.</p>
 <p> HTTP Mapping: 404 Not Found</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;NOT_FOUND&quot;)]
-NotFound = 5</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_Ok" data-uid="Google.Rpc.Code.Ok">Ok</h4>
-              <div class="markdown level1 summary"><p> Not an error; returned on success</p>
+                    <td id="Google_Rpc_Code_Ok">Ok</td>
+                    <td><p> Not an error; returned on success</p>
 <p> HTTP Mapping: 200 OK</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;OK&quot;)]
-Ok = 0</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_OutOfRange" data-uid="Google.Rpc.Code.OutOfRange">OutOfRange</h4>
-              <div class="markdown level1 summary"><p> The operation was attempted past the valid range.  E.g., seeking or
+                    <td id="Google_Rpc_Code_OutOfRange">OutOfRange</td>
+                    <td><p> The operation was attempted past the valid range.  E.g., seeking or
  reading past end-of-file.</p>
 <p> Unlike <code>INVALID_ARGUMENT</code>, this error indicates a problem that may
  be fixed if the system state changes. For example, a 32-bit file
@@ -392,194 +212,62 @@ Ok = 0</code></pre>
  a space can easily look for an <code>OUT_OF_RANGE</code> error to detect when
  they are done.</p>
 <p> HTTP Mapping: 400 Bad Request</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;OUT_OF_RANGE&quot;)]
-OutOfRange = 11</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_PermissionDenied" data-uid="Google.Rpc.Code.PermissionDenied">PermissionDenied</h4>
-              <div class="markdown level1 summary"><p> The caller does not have permission to execute the specified
+                    <td id="Google_Rpc_Code_PermissionDenied">PermissionDenied</td>
+                    <td><p> The caller does not have permission to execute the specified
  operation. <code>PERMISSION_DENIED</code> must not be used for rejections
  caused by exhausting some resource (use <code>RESOURCE_EXHAUSTED</code>
  instead for those errors). <code>PERMISSION_DENIED</code> must not be
  used if the caller can not be identified (use <code>UNAUTHENTICATED</code>
  instead for those errors).</p>
 <p> HTTP Mapping: 403 Forbidden</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;PERMISSION_DENIED&quot;)]
-PermissionDenied = 7</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_ResourceExhausted" data-uid="Google.Rpc.Code.ResourceExhausted">ResourceExhausted</h4>
-              <div class="markdown level1 summary"><p> Some resource has been exhausted, perhaps a per-user quota, or
+                    <td id="Google_Rpc_Code_ResourceExhausted">ResourceExhausted</td>
+                    <td><p> Some resource has been exhausted, perhaps a per-user quota, or
  perhaps the entire file system is out of space.</p>
 <p> HTTP Mapping: 429 Too Many Requests</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;RESOURCE_EXHAUSTED&quot;)]
-ResourceExhausted = 8</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_Unauthenticated" data-uid="Google.Rpc.Code.Unauthenticated">Unauthenticated</h4>
-              <div class="markdown level1 summary"><p> The request does not have valid authentication credentials for the
+                    <td id="Google_Rpc_Code_Unauthenticated">Unauthenticated</td>
+                    <td><p> The request does not have valid authentication credentials for the
  operation.</p>
 <p> HTTP Mapping: 401 Unauthorized</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;UNAUTHENTICATED&quot;)]
-Unauthenticated = 16</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_Unavailable" data-uid="Google.Rpc.Code.Unavailable">Unavailable</h4>
-              <div class="markdown level1 summary"><p> The service is currently unavailable.  This is most likely a
+                    <td id="Google_Rpc_Code_Unavailable">Unavailable</td>
+                    <td><p> The service is currently unavailable.  This is most likely a
  transient condition, which can be corrected by retrying with
  a backoff.</p>
 <p> See the guidelines above for deciding between <code>FAILED_PRECONDITION</code>,
  <code>ABORTED</code>, and <code>UNAVAILABLE</code>.</p>
 <p> HTTP Mapping: 503 Service Unavailable</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;UNAVAILABLE&quot;)]
-Unavailable = 14</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_Unimplemented" data-uid="Google.Rpc.Code.Unimplemented">Unimplemented</h4>
-              <div class="markdown level1 summary"><p> The operation is not implemented or is not supported/enabled in this
+                    <td id="Google_Rpc_Code_Unimplemented">Unimplemented</td>
+                    <td><p> The operation is not implemented or is not supported/enabled in this
  service.</p>
 <p> HTTP Mapping: 501 Not Implemented</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;UNIMPLEMENTED&quot;)]
-Unimplemented = 12</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
+</td>
                   </tr>
-                </thead>
-                <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Rpc_Code_Unknown" data-uid="Google.Rpc.Code.Unknown">Unknown</h4>
-              <div class="markdown level1 summary"><p> Unknown error.  For example, this error may be returned when
+                    <td id="Google_Rpc_Code_Unknown">Unknown</td>
+                    <td><p> Unknown error.  For example, this error may be returned when
  a <code>Status</code> value received from another address space belongs to
  an error space that is not known in this address space.  Also
  errors raised by APIs that do not return enough error information
  may be converted to this error.</p>
 <p> HTTP Mapping: 500 Internal Server Error</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[OriginalName(&quot;UNKNOWN&quot;)]
-Unknown = 2</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></td>
-                    <td></td>
+</td>
                   </tr>
                 </tbody>
-              </table>
+              </thead></thead></table>
             </article>
           </div>
           

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HttpRule
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -66,6 +66,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content">
+              
               
               <h1 id="Google_Api_HttpRule" data-uid="Google.Api.HttpRule">Class HttpRule
               </h1>
@@ -136,7 +137,7 @@
 </thead>
 <tbody>
 <tr>
-<td> <code>GET /v1/messages/123456?revision=2&amp;sub.subfield=foo</code></td>
+<td> <code>GET /v1/messages/123456?revision=2&amp;amp;sub.subfield=foo</code></td>
 <td><code>GetMessage(message_id: &quot;123456&quot; revision: 2 sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
 </tr>
 </tbody>
@@ -144,7 +145,7 @@
 <p> Note that fields which are mapped to HTTP parameters must have a
  primitive type or a repeated primitive type. Message types are not
  allowed. In the case of a repeated type, the parameter can be
- repeated in the URL, as in <code>...?param=A&amp;param=B</code>.</p>
+ repeated in the URL, as in <code>...?param=A&amp;amp;param=B</code>.</p>
 <p> For HTTP method kinds which allow a request body, the <code>body</code> field
  specifies the mapping. Consider a REST update method on the
  message resource collection:</p>

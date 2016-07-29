@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum PredefinedBucketAcl
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,6 +67,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
+              
               <h1 id="Google_Storage_V1_PredefinedBucketAcl" data-uid="Google.Storage.V1.PredefinedBucketAcl">Enum PredefinedBucketAcl
               </h1>
               <div class="markdown level0 summary"><p>Predefined access control lists (ACLs) that can be specified when creating or updating buckets.</p>
@@ -80,121 +81,41 @@
               </div>
               <h3 id="fields">Fields
               </h3>
-              <h4 id="Google_Storage_V1_PredefinedBucketAcl_AuthenticatedRead" data-uid="Google.Storage.V1.PredefinedBucketAcl.AuthenticatedRead">AuthenticatedRead</h4>
-              <div class="markdown level1 summary"><p>Object owner gets owner access, and all authenticated users get reader access.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">AuthenticatedRead = 0</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
-                    <th>Type</th>
+                    <th>Name</th>
                     <th>Description</th>
                   </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl">PredefinedBucketAcl</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Storage_V1_PredefinedBucketAcl_Private" data-uid="Google.Storage.V1.PredefinedBucketAcl.Private">Private</h4>
-              <div class="markdown level1 summary"><p>Object owner gets owner access.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">Private = 1</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
                 <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl">PredefinedBucketAcl</a></td>
-                    <td></td>
+                    <td id="Google_Storage_V1_PredefinedBucketAcl_AuthenticatedRead">AuthenticatedRead</td>
+                    <td><p>Object owner gets owner access, and all authenticated users get reader access.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Storage_V1_PredefinedBucketAcl_Private">Private</td>
+                    <td><p>Object owner gets owner access.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Storage_V1_PredefinedBucketAcl_ProjectPrivate">ProjectPrivate</td>
+                    <td><p>Object owner gets owner access, and project team members get access according to their roles.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Storage_V1_PredefinedBucketAcl_PublicRead">PublicRead</td>
+                    <td><p>Object owner gets owner access, and all users get reader access.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td id="Google_Storage_V1_PredefinedBucketAcl_PublicReadWrite">PublicReadWrite</td>
+                    <td><p>Object owner gets owner access, and all users get writer access.</p>
+</td>
                   </tr>
                 </tbody>
-              </table>
-              <h4 id="Google_Storage_V1_PredefinedBucketAcl_ProjectPrivate" data-uid="Google.Storage.V1.PredefinedBucketAcl.ProjectPrivate">ProjectPrivate</h4>
-              <div class="markdown level1 summary"><p>Object owner gets owner access, and project team members get access according to their roles.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">ProjectPrivate = 2</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl">PredefinedBucketAcl</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Storage_V1_PredefinedBucketAcl_PublicRead" data-uid="Google.Storage.V1.PredefinedBucketAcl.PublicRead">PublicRead</h4>
-              <div class="markdown level1 summary"><p>Object owner gets owner access, and all users get reader access.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">PublicRead = 3</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl">PredefinedBucketAcl</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Storage_V1_PredefinedBucketAcl_PublicReadWrite" data-uid="Google.Storage.V1.PredefinedBucketAcl.PublicReadWrite">PublicReadWrite</h4>
-              <div class="markdown level1 summary"><p>Object owner gets owner access, and all users get writer access.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">PublicReadWrite = 4</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Storage.V1.PredefinedBucketAcl.html#Google_Storage_V1_PredefinedBucketAcl">PredefinedBucketAcl</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              </thead></thead></table>
             </article>
           </div>
           

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LatLng
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.1.0.0">
+    <meta name="generator" content="docfx 2.2.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,18 +67,19 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content">
               
+              
               <h1 id="Google_Type_LatLng" data-uid="Google.Type.LatLng">Class LatLng
               </h1>
               <div class="markdown level0 summary"><p> An object representing a latitude/longitude pair. This is expressed as a pair
  of doubles representing degrees latitude and degrees longitude. Unless
  specified otherwise, this must conform to the
- <a href="http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf">WGS84
- standard</a>. Values must be within normalized ranges.</p>
+ &lt;a href=&quot;<a href="http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf&quot;&gt;WGS84">http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf"&gt;WGS84</a>
+ standard&lt;/a&gt;. Values must be within normalized ranges.</p>
 <p> Example of normalization code in Python:</p>
 <pre><code> def NormalizeLongitude(longitude):
    &quot;&quot;&quot;Wraps decimal degrees longitude to [-180.0, 180.0].&quot;&quot;&quot;
    q, r = divmod(longitude, 360.0)
-   if r &gt; 180.0 or (r == 180.0 and q &lt;= -1.0):
+   if r &amp;gt; 180.0 or (r == 180.0 and q &amp;lt;= -1.0):
      return r - 360.0
    return r
 
@@ -86,9 +87,9 @@
    &quot;&quot;&quot;Wraps decimal degrees latitude and longitude to
    [-180.0, 180.0] and [-90.0, 90.0], respectively.&quot;&quot;&quot;
    r = latitude % 360.0
-   if r &lt;= 90.0:
+   if r &amp;lt;= 90.0:
      return r, NormalizeLongitude(longitude)
-   elif r &gt;= 270.0:
+   elif r &amp;gt;= 270.0:
      return r - 360, NormalizeLongitude(longitude)
    else:
      return 180 - r, NormalizeLongitude(longitude + 180.0)
