@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AC0CC83C-0448-419E-914E-E63036A77BD9}"
 EndProject
@@ -60,6 +60,8 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net.Tests", "test\Google.Logging.Log4Net.Tests\Google.Logging.Log4Net.Tests.xproj", "{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net.Snippets", "snippets\Google.Logging.Log4Net.Snippets\Google.Logging.Log4Net.Snippets.xproj", "{A41CFEF8-67FF-47EF-9EB0-671EF5861733}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Language.V1Beta1", "src\Google.Cloud.Language.V1Beta1\Google.Cloud.Language.V1Beta1.xproj", "{366D5B92-63DC-4360-9226-59BD84B774DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +153,10 @@ Global
 		{A41CFEF8-67FF-47EF-9EB0-671EF5861733}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A41CFEF8-67FF-47EF-9EB0-671EF5861733}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A41CFEF8-67FF-47EF-9EB0-671EF5861733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366D5B92-63DC-4360-9226-59BD84B774DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366D5B92-63DC-4360-9226-59BD84B774DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366D5B92-63DC-4360-9226-59BD84B774DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366D5B92-63DC-4360-9226-59BD84B774DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -177,5 +183,6 @@ Global
 		{B27E7461-3714-44F6-BD2D-E7579A85F759} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
 		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28} = {F87E02E7-3142-4439-8938-42DD79337135}
 		{A41CFEF8-67FF-47EF-9EB0-671EF5861733} = {F638F51C-C1C3-449B-ADAE-8196073649A5}
+		{366D5B92-63DC-4360-9226-59BD84B774DF} = {AC0CC83C-0448-419E-914E-E63036A77BD9}
 	EndGlobalSection
 EndGlobal
