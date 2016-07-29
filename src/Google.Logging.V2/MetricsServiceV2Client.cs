@@ -311,8 +311,6 @@ namespace Google.Logging.V2
     /// </summary>
     public abstract partial class MetricsServiceV2Client
     {
-        private static readonly ChannelPool s_channelPool = new ChannelPool();
-
         /// <summary>
         /// The default endpoint for the MetricsServiceV2 service, which is a host of "logging.googleapis.com" and a port of 443.
         /// </summary>
@@ -338,6 +336,8 @@ namespace Google.Logging.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
             "https://www.googleapis.com/auth/cloud-platform",
         });
+
+        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
         /// <summary>
         /// Path template for a project resource. Parameters:

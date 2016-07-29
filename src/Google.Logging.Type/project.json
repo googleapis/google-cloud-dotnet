@@ -15,7 +15,7 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "1.0.0-CI00072",
+    "Google.Api.CommonProtos": "1.0.0-CI00074",
     "Google.Protobuf": "3.0.0-beta3"
   },
 
