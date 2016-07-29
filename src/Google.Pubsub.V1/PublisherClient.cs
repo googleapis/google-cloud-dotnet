@@ -399,8 +399,6 @@ namespace Google.Pubsub.V1
     /// </summary>
     public abstract partial class PublisherClient
     {
-        private static readonly ChannelPool s_channelPool = new ChannelPool();
-
         /// <summary>
         /// The default endpoint for the Publisher service, which is a host of "pubsub.googleapis.com" and a port of 443.
         /// </summary>
@@ -420,6 +418,8 @@ namespace Google.Pubsub.V1
             "https://www.googleapis.com/auth/pubsub",
             "https://www.googleapis.com/auth/cloud-platform",
         });
+
+        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
         /// <summary>
         /// Path template for a project resource. Parameters:

@@ -243,8 +243,6 @@ namespace Google.Cloud.Language.V1Beta1
     /// </summary>
     public abstract partial class LanguageServiceClient
     {
-        private static readonly ChannelPool s_channelPool = new ChannelPool();
-
         /// <summary>
         /// The default endpoint for the LanguageService service, which is a host of "language.googleapis.com" and a port of 443.
         /// </summary>
@@ -262,6 +260,8 @@ namespace Google.Cloud.Language.V1Beta1
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
+
+        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.

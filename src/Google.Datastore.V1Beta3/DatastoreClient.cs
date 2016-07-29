@@ -326,8 +326,6 @@ namespace Google.Datastore.V1Beta3
     /// </summary>
     public abstract partial class DatastoreClient
     {
-        private static readonly ChannelPool s_channelPool = new ChannelPool();
-
         /// <summary>
         /// The default endpoint for the Datastore service, which is a host of "datastore.googleapis.com" and a port of 443.
         /// </summary>
@@ -348,6 +346,8 @@ namespace Google.Datastore.V1Beta3
             "https://www.googleapis.com/auth/datastore",
         });
 
+        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
