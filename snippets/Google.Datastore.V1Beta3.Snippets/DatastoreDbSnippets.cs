@@ -93,9 +93,9 @@ namespace Google.Datastore.V1Beta3.Snippets
             DatastoreQueryResults results = db.RunQuery(query);
             // DatastoreQueryResults implements IEnumerable<EntityResult>, but you can
             // call AsRpcResponses() to see the raw RPC responses for diagnostic scenarios.
-            foreach (EntityResult result in results)
+            foreach (EntityResult entityResult in results)
             {
-                Console.WriteLine(result.Entity);
+                Console.WriteLine(entityResult.Entity);
             }
             // End snippet
 
@@ -151,9 +151,8 @@ namespace Google.Datastore.V1Beta3.Snippets
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
             DatastoreQueryResults results = db.RunQuery(gqlQuery);
-            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
+            // DatastoreQueryResults implements IEnumerable<EntityResult>, but you can
+            // call AsRpcResponses() to see the raw RPC responses for diagnostic scenarios.
             foreach (EntityResult entityResult in results)
             {
                 Console.WriteLine(entityResult);
