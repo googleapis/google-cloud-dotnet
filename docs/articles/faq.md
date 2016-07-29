@@ -33,3 +33,23 @@ sufficient for most customers, but please
 [let us know](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new)
 if you have specific environments where you need support for lower versions,
 and we can see what options are available.
+
+## Why do credentials specified with GOOGLE_APPLICATION_CREDENTIALS fail?
+
+By default, if you don't have the `GOOGLE_APPLICATION_CREDENTIALS`
+environment variable set, the credentials will be obtained from the
+`gcloud` tool, and will work with no problems. When credentials are
+loaded from a file specified by the environment variable, they have
+no scopes attached, and our gRPC-based API code didn't attach the
+scopes required.
+
+See [issue
+294](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/294)
+for the details, but the upshot is that it's been fixed, but isn't
+in a public beta release yet.
+
+If you need to use credentials in this way, you can use our [public
+myget feed](https://www.myget.org/gallery/google-dotnet-public) and
+fetch the latest version of the packages from there. (These are our
+continuous integration builds.) From CI00174 onwards, the problem
+should be fixed.
