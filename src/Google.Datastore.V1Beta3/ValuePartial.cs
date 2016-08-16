@@ -43,7 +43,6 @@ namespace Google.Datastore.V1Beta3
     {
         // TODO:
         // - Cloning?
-        // - Array handling? (either in ArrayValuePartial or here, or both...)
 
         /// <summary>
         /// Extracts the string value from a <see cref="Value"/>.
@@ -384,5 +383,45 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <value><c>true</c> if the type is <c>NullValue</c>; <c>false</c> otherwise.</value>
         public bool IsNull => ValueTypeCase == ValueTypeOneofCase.NullValue;
+
+        // Implicit conversions via ArrayValue
+        public static implicit operator Value(string[] values) => (ArrayValue) values;
+        public static implicit operator Value(long[] values) => (ArrayValue) values;
+        public static implicit operator Value(long?[] values) => (ArrayValue) values;
+        public static implicit operator Value(Key[] values) => (ArrayValue) values;
+        public static implicit operator Value(double[] values) => (ArrayValue) values;
+        public static implicit operator Value(double?[] values) => (ArrayValue) values;
+        public static implicit operator Value(bool[] values) => (ArrayValue) values;
+        public static implicit operator Value(bool?[] values) => (ArrayValue) values;
+        public static implicit operator Value(ArrayValue[] values) => (ArrayValue) values;
+        public static implicit operator Value(ByteString[] values) => (ArrayValue) values;
+        public static implicit operator Value(byte[][] values) => (ArrayValue) values;
+        public static implicit operator Value(Entity[] values) => (ArrayValue) values;
+        public static implicit operator Value(LatLng[] values) => (ArrayValue) values;
+        public static implicit operator Value(Timestamp[] values) => (ArrayValue) values;
+        public static implicit operator Value(DateTime[] values) => (ArrayValue) values;
+        public static implicit operator Value(DateTime?[] values) => (ArrayValue) values;
+        public static implicit operator Value(DateTimeOffset[] values) => (ArrayValue) values;
+        public static implicit operator Value(DateTimeOffset?[] values) => (ArrayValue) values;
+
+        // Explicit conversions via ArrayValue
+        public static explicit operator string[] (Value value) => (string[]) (ArrayValue) value;
+        public static explicit operator long[] (Value value) => (long[]) (ArrayValue) value;
+        public static explicit operator long?[] (Value value) => (long?[]) (ArrayValue) value;
+        public static explicit operator Key[] (Value value) => (Key[]) (ArrayValue) value;
+        public static explicit operator double[] (Value value) => (double[]) (ArrayValue) value;
+        public static explicit operator double?[] (Value value) => (double?[]) (ArrayValue) value;
+        public static explicit operator bool[] (Value value) => (bool[]) (ArrayValue) value;
+        public static explicit operator bool?[] (Value value) => (bool?[]) (ArrayValue) value;
+        public static explicit operator ArrayValue[] (Value value) => (ArrayValue[]) (ArrayValue) value;
+        public static explicit operator ByteString[] (Value value) => (ByteString[]) (ArrayValue) value;
+        public static explicit operator byte[][] (Value value) => (byte[][]) (ArrayValue) value;
+        public static explicit operator Entity[] (Value value) => (Entity[]) (ArrayValue) value;
+        public static explicit operator LatLng[] (Value value) => (LatLng[]) (ArrayValue) value;
+        public static explicit operator Timestamp[] (Value value) => (Timestamp[]) (ArrayValue) value;
+        public static explicit operator DateTime[] (Value value) => (DateTime[]) (ArrayValue) value;
+        public static explicit operator DateTime?[] (Value value) => (DateTime?[]) (ArrayValue) value;
+        public static explicit operator DateTimeOffset[] (Value value) => (DateTimeOffset[]) (ArrayValue) value;
+        public static explicit operator DateTimeOffset?[] (Value value) => (DateTimeOffset?[]) (ArrayValue) value;
     }
 }

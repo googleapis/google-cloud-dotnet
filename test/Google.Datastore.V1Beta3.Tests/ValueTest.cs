@@ -145,5 +145,20 @@ namespace Google.Datastore.V1Beta3.Tests
             Assert.True(new Value { NullValue = 0 }.IsNull);
             Assert.False(new Value { StringValue = "" }.IsNull);
         }
+
+        [Fact]
+        public void DirectArrayConversion_ToValue()
+        {
+            Value value = new[] { "foo", "bar" };
+            Assert.Equal(new Value { ArrayValue = new ArrayValue { Values = { "foo", "bar" } } }, value);
+        }
+
+        [Fact]
+        public void DirectArrayConversion_FromValue()
+        {
+            Value value = new Value { ArrayValue = new ArrayValue { Values = { "foo", "bar" } } };
+            var array = (string[])value;
+            Assert.Equal(new[] { "foo", "bar" }, array);
+        }
     }
 }
