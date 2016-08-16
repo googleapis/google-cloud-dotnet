@@ -6,3 +6,4 @@ project.lock.json
 _site
 external
 *~
+.cr
