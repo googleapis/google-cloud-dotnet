@@ -24,8 +24,6 @@ namespace Google.Datastore.V1Beta3.Tests
             Assert.Equal(new ArrayValue { Values = { "a", "b" } }, new[] { "a", "b" });
             Assert.Equal(new ArrayValue { Values = { 1, 2 } }, new long[] { 1, 2 });
             Assert.Equal(new ArrayValue { Values = { 1, 2 } }, new long?[] { 1, 2 });
-
-            Value value = (ArrayValue) new[] { "a", "b" };
         }
 
         [Fact]
