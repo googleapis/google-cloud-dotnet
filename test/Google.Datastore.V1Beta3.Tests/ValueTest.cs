@@ -138,5 +138,12 @@ namespace Google.Datastore.V1Beta3.Tests
             Value nonNull = new Value { StringValue = "" };
             Assert.Same(nonNull, nonNull.OrNull());
         }
+
+        [Fact]
+        public void IsNull()
+        {
+            Assert.True(new Value { NullValue = 0 }.IsNull);
+            Assert.False(new Value { StringValue = "" }.IsNull);
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace Google.Datastore.V1Beta3
         /// <param name="value">A <see cref="Value"/> reference, which may be null.</param>
         /// <returns><paramref name="value"/> if it is a non-null reference to a value with a kind
         /// other than <c>NullValue</c>; <c>null</c> otherwise</returns>
-        public static Value OrNull(this Value value) => value?.ValueTypeCase != Value.ValueTypeOneofCase.NullValue ? value : null;
+        public static Value OrNull(this Value value) => value?.IsNull == false ? value : null;
     }
 
     // Additional helper members.
@@ -378,5 +378,11 @@ namespace Google.Datastore.V1Beta3
         /// </summary>
         /// <returns>A value with a type of <c>NullValue</c>.</returns>
         public static Value ForNull() => new Value { NullValue = NullValue.NullValue };
+
+        /// <summary>
+        /// Convenience property to determine whether this value has a type of <c>NullValue</c>.
+        /// </summary>
+        /// <value><c>true</c> if the type is <c>NullValue</c>; <c>false</c> otherwise.</value>
+        public bool IsNull => ValueTypeCase == ValueTypeOneofCase.NullValue;
     }
 }
