@@ -21,6 +21,12 @@ namespace Google.Datastore.V1Beta3
     /// Provides a convenient way of producing keys of a specific kind, from a specified parent entity or key,
     /// or for root entities based on a partition ID.
     /// </summary>
+    /// <remarks>
+    /// If the key factory is constructed with just a partition ID and kind, then the parent key has an empty
+    /// path, and all keys created by the factory will be root keys. Otherwise, all keys created by the factory will
+    /// be direct children of the parent key, so both the parent key itself and any ancestors of that key will be
+    /// ancestors of the child key. Ancestors can be determined in queries using <see cref="Filter.HasAncestor(Key)"/>.
+    /// </remarks>
     public sealed class KeyFactory
     {
         private readonly Key _parent;

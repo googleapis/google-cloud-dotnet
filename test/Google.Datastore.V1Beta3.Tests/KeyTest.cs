@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using Xunit;
 using static Google.Datastore.V1Beta3.Key.Types;
 
@@ -49,6 +50,31 @@ namespace Google.Datastore.V1Beta3.Tests
                 }
             };
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void GetParent_Valid()
+        {
+            var partitionId = new PartitionId("project", "ns");
+            var parent = new Key { PartitionId = partitionId }.WithElement("foo", 0);
+            var child = parent.WithElement("bar", 1);
+            Assert.Equal(parent, child.GetParent());
+        }
+
+        [Fact]
+        public void GetParent_Invalid()
+        {
+            var key = new Key { PartitionId = new PartitionId("project", "ns") };
+            Assert.Throws<InvalidOperationException>(() => key.GetParent());
+        }
+
+        [Fact]
+        public void IsRoot()
+        {
+            var root = new Key { PartitionId = new PartitionId("project", "ns") };
+            var notRoot = root.WithElement("foo", 0);
+            Assert.True(root.IsRoot);
+            Assert.False(notRoot.IsRoot);
         }
     }
 }
