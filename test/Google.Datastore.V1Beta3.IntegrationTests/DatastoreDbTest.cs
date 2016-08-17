@@ -102,5 +102,41 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
             var singleResponse = query.AsResponses().Single();
             Assert.Equal(MoreResultsType.NoMoreResults, singleResponse.Batch.MoreResults);
         }
+
+        [Fact]
+        public void Insert_ResultKeys()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("insert_test");
+            var keys = db.Insert(
+                new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" },
+            new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" });
+
+            Assert.Null(keys[0]); // Insert with predefined key 
+            Assert.NotNull(keys[1]); // Insert with incomplete key
+
+            var fetchedEntity = db.Lookup(keys[1]);
+            Assert.Equal("incomplete_key", fetchedEntity["description"]);
+        }
+
+        [Fact]
+        public void Upsert_ResultKeys()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("upsert_test");
+            var insertedKey = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
+
+            var revisedEntity = new Entity { Key = insertedKey, ["description"] = "changed" };
+            var newEntity1 = new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" };
+            var newEntity2 = new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" };
+
+            var keys = db.Upsert(revisedEntity, newEntity1, newEntity2);
+            Assert.Null(keys[0]); // Update
+            Assert.Null(keys[1]); // Insert with predefined key 
+            Assert.NotNull(keys[2]); // Insert with incomplete key
+
+            var fetchedEntity = db.Lookup(keys[2]);
+            Assert.Equal("incomplete_key", fetchedEntity["description"]);
+        }
     }
 }

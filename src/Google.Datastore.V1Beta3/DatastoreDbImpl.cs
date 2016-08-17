@@ -194,11 +194,11 @@ namespace Google.Datastore.V1Beta3
             CommitAsync(entities, e => e.ToUpsert(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
-        public override IReadOnlyList<Key> Update(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+        public override void Update(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
             Commit(entities, e => e.ToUpdate(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
-        public override Task<IReadOnlyList<Key>> UpdateAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
+        public override Task UpdateAsync(IEnumerable<Entity> entities, CallSettings callSettings = null) =>
             CommitAsync(entities, e => e.ToUpdate(), nameof(entities), callSettings);
 
         /// <inheritdoc/>
