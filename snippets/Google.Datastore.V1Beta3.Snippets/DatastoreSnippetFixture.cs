@@ -71,7 +71,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             var entity = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
-                ["type"] = "Personal",
+                ["category"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
                 ["description"] = "Learn Cloud Datastore",
