@@ -11,13 +11,15 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using System.Linq;
 using Xunit;
 
 namespace Google.Datastore.V1Beta3.Tests
 {
     public class ArrayValueTest
     {
+        // We don't test for every single type, as it would be a waste of time - the implementation is the same for everything,
+        // so we just have tests for one reference type, one non-nullable value type, and one nullable value type.
+
         [Fact]
         public void ConversionToArrayValue_Simple()
         {
