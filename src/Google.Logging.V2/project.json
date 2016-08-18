@@ -15,14 +15,14 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "1.0.0-CI00074",
-    "Google.Api.Gax": "1.0.0-CI00074",
-    "Google.Apis.Auth": "1.14.0",
+    "Google.Api.CommonProtos": "1.0.0-CI00076",
+    "Google.Api.Gax": "1.0.0-CI00076",
+    "Google.Apis.Auth": "1.15.0",
     "Google.Logging.Type": "",
-    "Google.Protobuf": "3.0.0-beta3",
-    "Grpc.Auth": "0.15.0",
-    "Grpc.Core": "0.15.0",
-    "Ix-Async": "1.2.5"
+    "Google.Protobuf": "3.0.0",
+    "Grpc.Auth": "1.0.0-pre2",
+    "Grpc.Core": "1.0.0-pre2",
+    "System.Interactive.Async": "3.0.0"
   },
 
   "frameworks": {
