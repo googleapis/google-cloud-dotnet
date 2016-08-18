@@ -2,16 +2,21 @@
   "description": "Integration tests for the Cloud Storage client wrapper library",
 
   "dependencies": {
-    "Google.Storage.V1": "",
-    "xunit": "2.1.0",
-    "xunit.runner.dnx": "2.1.0-rc1-build204"
+    "Google.Storage.V1": { "target": "project" },
+    "xunit": "2.2.0-beta2-build3300",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
-
-  "commands": {
-    "test": "xunit.runner.dnx"
-  },
+  "testRunner": "xunit",
 
   "frameworks": {
-    "dnx451": { }
+    "net451": {},
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0",
+          "type": "platform"
+        }
+      }
+    }
   }
 }

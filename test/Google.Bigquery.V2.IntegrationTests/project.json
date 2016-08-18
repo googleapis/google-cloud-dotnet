@@ -1,22 +1,26 @@
 ﻿{
   "description": "Integration tests for the Google Bigquery library.",
 
-  "compilationOptions": {
-    "keyFile": "../../GoogleApis.snk",
-    "debugType": "full"
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
   },
 
   "dependencies": {
-    "Google.Bigquery.V2": "",
-    "xunit": "2.1.0",
-    "xunit.runner.dnx": "2.1.0-rc1-build204"
+    "Google.Bigquery.V2": { "target": "project" },
+    "xunit": "2.2.0-beta2-build3300",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
-
-  "commands": {
-    "test": "xunit.runner.dnx"
-  },
+  "testRunner": "xunit",
 
   "frameworks": {
-    "dnx451": { }
+    "net451": { },
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0",
+          "type": "platform"
+        }
+      }
+    }
   }
 }
