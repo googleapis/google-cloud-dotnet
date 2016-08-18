@@ -77,5 +77,26 @@ namespace Google.Datastore.V1Beta3.Tests
             Assert.Throws<InvalidOperationException>(() => entity.ToUpsert());
             Assert.Throws<InvalidOperationException>(() => entity.ToDelete());
         }
+
+        [Fact]
+        public void ArrayProperties()
+        {
+            // Demonstrating three ways of specifying arrays as entity properties
+            var variant1 = new Entity
+            {
+                ["tags"] = new[] { "a", "b", "c" }
+            };
+
+            var variant2 = new Entity
+            {
+                ["tags"] = new ArrayValue { Values = { "a", "b", "c" } }
+            };
+
+            Assert.Equal(variant1, variant2);
+
+            // ... and pulling them out again.
+            string[] tags = (string[])variant1["tags"];
+            Assert.Equal(new[] { "a", "b", "c" }, tags);
+        }
     }
 }
