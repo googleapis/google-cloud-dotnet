@@ -1,36 +1,30 @@
 ﻿{
   "version": "1.0.0-*",
-  "summary": "Google Stackdriver Logging Log4Net client Library",
   "description": "Google StackdriverLogging Log4Net client Library",
   "authors": [ "Google Inc." ],
-  "owners": [ "google-apis-packages" ],
-  "tags": [ "Google", "log4net", "logging" ],
-  "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
-  "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
-  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
-  "requireLicenseAcceptance": false,
 
-  "compilationOptions": {
+  "packOptions": {
+    "summary": "Google Stackdriver Logging Log4Net client Library",
+    "owners": [ "google-apis-packages" ],
+    "tags": [ "Google", "log4net", "logging" ],
+    "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+    "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+    "requireLicenseAcceptance": false
+  },
+
+  "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },
 
   "dependencies": {
     "Google.Api.CommonProtos": "1.0.0-CI00076",
     "Google.Api.Gax": "1.0.0-CI00076",
-    "Google.Logging.V2": "",
+    "Google.Logging.V2": { "target": "project" },
     "log4net": "2.0.5"
   },
 
   "frameworks": {
-    "net45": {
-      "frameworkAssemblies": {
-        "System.Runtime": {
-          "type": "build"
-        },
-        "System.IO": {
-          "type": "build"
-        }
-      }
-    }
+    "net45": { }
   }
 }

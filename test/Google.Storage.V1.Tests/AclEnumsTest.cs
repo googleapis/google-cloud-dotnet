@@ -16,7 +16,7 @@ using Google.Apis.Storage.v1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
 using Xunit;
 
 namespace Google.Storage.V1.Tests
@@ -81,7 +81,7 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void AllAclEnumsCovered()
         {
-            var allAclEnums = typeof(StorageService).Assembly.GetTypes().Where(t => t.IsEnum && t.Name.EndsWith("AclEnum"));
+            var allAclEnums = typeof(StorageService).GetTypeInfo().Assembly.GetTypes().Where(t => t.GetTypeInfo().IsEnum && t.Name.EndsWith("AclEnum"));
             // This gives a better error message than Assert.Empty
             Assert.Equal(new Type[0], allAclEnums.Except(s_BucketAclEnums).Except(s_ObjectAclEnums).ToArray());
         }

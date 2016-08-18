@@ -45,7 +45,7 @@ namespace Google.Bigquery.V2
             foreach (var field in typeof(T).GetTypeInfo().DeclaredFields.Where(f => f.IsStatic))
             {
                 var value = (T) field.GetValue(null);
-                var nameAttribute = (ApiValueAttribute) Attribute.GetCustomAttribute(field, typeof(ApiValueAttribute));
+                var nameAttribute = (ApiValueAttribute) field.GetCustomAttribute(typeof(ApiValueAttribute));
                 var name = nameAttribute?.Value ?? value.ToString().ToUpperInvariant();
                 s_stringToValue[name] = value;
                 s_valueToString[value] = name;

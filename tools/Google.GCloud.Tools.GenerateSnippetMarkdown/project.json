@@ -1,13 +1,13 @@
 ﻿{
   "description": "Console app to generate Markdown files for docfx with snippet references",
 
-  "compilationOptions": {
+  "buildOptions": {
     "emitEntryPoint": true
   },
 
   "dependencies": {
     "YamlDotNet": "3.8.0",
-    "docfx": "1.9.4"
+    "docfx": "2.3.0"
   },
 
   "commands": {
@@ -15,6 +15,8 @@
   },
 
   "frameworks": {
-    "dnx451": { }
+    "net451": {
+      "imports": "dnx451"
+    }
   }
 }

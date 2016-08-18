@@ -1,16 +1,19 @@
 {
   "version": "1.0.0-*",
-  "summary": "Google Logging version-agnostic types",
   "description": "Google Logging version-agnostic types",
   "authors": [ "Google Inc." ],
-  "owners": [ "google-apis-packages" ],
-  "tags": [ "Google" ],
-  "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
-  "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
-  "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
-  "requireLicenseAcceptance": false,
 
-  "compilationOptions": {
+  "packOptions": {
+    "summary": "Google Logging version-agnostic types",
+    "owners": [ "google-apis-packages" ],
+    "tags": [ "Google" ],
+    "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+    "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+    "requireLicenseAcceptance": false
+  },
+
+  "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },
 
@@ -20,15 +23,6 @@
   },
 
   "frameworks": {
-    "net45": {
-      "frameworkAssemblies": {
-        "System.Runtime": {
-          "type": "build"
-        },
-        "System.IO": {
-          "type": "build"
-        }
-      }
-    }
+    "net45": {}
   }
 }
