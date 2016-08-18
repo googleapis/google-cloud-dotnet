@@ -458,7 +458,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Entity entity = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
-                ["type"] = "Personal",
+                ["category"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
                 ["description"] = "Learn Cloud Datastore",
@@ -479,7 +479,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Entity entity = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
-                ["type"] = "Personal",
+                ["category"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
                 ["description"] = "Learn Cloud Datastore",
@@ -533,7 +533,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Entity entity = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
-                ["type"] = "Personal",
+                ["category"] = "Personal",
                 ["done"] = false,
                 ["priority"] = 4,
                 ["description"] = "Learn Cloud Datastore",
@@ -693,11 +693,11 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: GroupingQuery
             Query query = new Query("Task")
             {
-                Projection = { "type", "priority" },
-                DistinctOn = { "type" },
+                Projection = { "category", "priority" },
+                DistinctOn = { "category" },
                 Order =
                 {
-                    "type", // If only the name is specified, it's implicitly ascending
+                    "category", // If only the name is specified, it's implicitly ascending
                     { "priority", Direction.Ascending } // Either direction can be specified explicitly
                 }
             };
