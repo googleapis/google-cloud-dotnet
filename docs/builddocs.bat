@@ -11,7 +11,7 @@ git clone https://github.com/googleapis/gax-dotnet.git external\gax-dotnet --dep
 IF ERRORLEVEL 1 EXIT /B 1
 
 REM Restore all the required packages
-call dnu restore external\gax-dotnet
+dotnet restore external\gax-dotnet
 IF ERRORLEVEL 1 EXIT /B 1
 
 REM Extract metadata from code (this project and the external ones)
@@ -19,7 +19,7 @@ call docfx metadata -f
 IF ERRORLEVEL 1 EXIT /B 1
 
 REM Extract snippets
-call dnx -p ..\tools\Google.GCloud.Tools.GenerateSnippetMarkdown run
+dotnet run -p ..\tools\Google.GCloud.Tools.GenerateSnippetMarkdown
 IF ERRORLEVEL 1 EXIT /B 1
 
 REM Build the site itself

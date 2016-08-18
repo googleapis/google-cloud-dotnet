@@ -6,7 +6,7 @@
   },
 
   "dependencies": {
-    "YamlDotNet": "3.8.0",
+    "YamlDotNet.Signed": "3.9.0",
     "docfx": "2.3.0"
   },
 

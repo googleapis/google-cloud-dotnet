@@ -13,8 +13,9 @@ of the main project repo.
 
 First install docfx, as per the
 [getting started](http://dotnet.github.io/docfx/tutorial/docfx_getting_started.html)
-page. We're using DNX (soon to be dotnet cli) so follow step 4 for
-the moment.
+page. We're using .NET Core, so follow step 4 for the moment -
+currently docfx requires DNX to be installed, as they don't have
+tooling for dotnet cli, but that's likely to come soon.
 
 # Build process
 

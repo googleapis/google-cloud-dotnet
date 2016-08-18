@@ -72,7 +72,7 @@ set-up steps:
   the environment variable permanently, and restart Visual Studio if
   it's already running.
 - Build all the code, either from Visual Studio, or from the command line
-  with `dnu`/`dnx`.
+  with `dotnet test`
 
 <!---
 TODO: Can we just set the environment variable in the
@@ -86,7 +86,7 @@ third-party test tools such as ReSharper and CodeRush, or from the
 command line. To run from the command line, change to the project
 directory and simply run
 
-    dnx test
+    dotnet test
 
 Snippet extraction
 ---
