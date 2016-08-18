@@ -18,13 +18,11 @@ using Google.Type;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Collections;
 
 namespace Google.Datastore.V1Beta3
 {
     // Additional helper members.
-    public partial class ArrayValue : IEnumerable<Value>
+    public partial class ArrayValue
     {
         public static implicit operator ArrayValue(string[] values) => ToArrayValue(values, x => x);
         public static implicit operator ArrayValue(long[] values) => ToArrayValue(values, x => x);
@@ -69,14 +67,5 @@ namespace Google.Datastore.V1Beta3
 
         private static T[] FromArrayValue<T>(ArrayValue arrayValue, Func<Value, T> converter) =>
             arrayValue == null ? null : arrayValue.Values.Select(x => converter(x)).ToArray();
-
-        public IEnumerator<Value> GetEnumerator() => Values.Select(x => x.OrNull()).GetEnumerator();
-
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-        public void Add(Value value)
-        {
-            Values.Add(value ?? Value.ForNull());
-        }
     }
 }

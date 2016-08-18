@@ -89,16 +89,10 @@ namespace Google.Datastore.V1Beta3.Tests
 
             var variant2 = new Entity
             {
-                ["tags"] = new ArrayValue { "a", "b", "c" }
-            };
-
-            var variant3 = new Entity
-            {
                 ["tags"] = new ArrayValue { Values = { "a", "b", "c" } }
             };
 
             Assert.Equal(variant1, variant2);
-            Assert.Equal(variant1, variant3);
 
             // ... and pulling them out again.
             string[] tags = (string[])variant1["tags"];

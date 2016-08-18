@@ -40,21 +40,5 @@ namespace Google.Datastore.V1Beta3.Tests
             Assert.Equal(new ArrayValue { Values = { Value.ForNull(), "b" } }, new[] { null, "b" });
             Assert.Equal(new ArrayValue { Values = { Value.ForNull(), 2 } }, new long?[] { null, 2 });
         }
-
-        [Fact]
-        public void IterationWithNulls()
-        {
-            var arrayValue = new ArrayValue { Values = { "a", Value.ForNull(), "b" } };
-            var list = arrayValue.ToList();
-            Assert.Null(list[1]);
-        }
-
-        [Fact]
-        public void AddWithNull()
-        {
-            var actual = new ArrayValue { "a", null, "b" };
-            var expected = new ArrayValue { Values = { "a", Value.ForNull(), "b" } };
-            Assert.Equal(expected, actual);
-        }
     }
 }
