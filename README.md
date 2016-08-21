@@ -123,7 +123,8 @@ var entity = new Entity
 {
     Key = keyFactory.CreateIncompleteKey(),
     ["created"] = DateTime.UtcNow,
-    ["text"] = "Text of the message"
+    ["text"] = "Text of the message",
+    ["tags"] = new[] { "tag1", "tag2" }
 };
 using (var transaction = db.BeginTransaction())
 {
@@ -152,7 +153,8 @@ foreach (Entity entity in db.RunQuery(query))
 {
     DateTime created = (DateTime)entity["created"];
     string text = (string)entity["text"];
-    Console.WriteLine($"{created:yyyy-MM-dd'T'HH:mm:ss}: {text}");
+    string[] tags = (string[])entity["tags"];
+    Console.WriteLine($"{created:yyyy-MM-dd'T'HH:mm:ss}: {text} [{string.Join(", ", tags)}]");
 }
 ```
 
