@@ -214,14 +214,16 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Harper Lee",
                 ["title"] = "To Kill a Mockingbird",
-                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
+                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Southern drama", "Courtroom drama", "Bildungsroman" }
             };
             Entity book2 = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Charlotte Brontë",
                 ["title"] = "Jane Eyre",
-                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
+                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Gothic", "Romance", "Bildungsroman" }
             };
 
             using (DatastoreTransaction transaction = db.BeginTransaction())
@@ -248,14 +250,16 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Harper Lee",
                 ["title"] = "To Kill a Mockingbird",
-                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
+                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Southern drama", "Courtroom drama", "Bildungsroman" }
             };
             Entity book2 = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Charlotte Brontë",
                 ["title"] = "Jane Eyre",
-                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
+                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Gothic", "Romance", "Bildungsroman" }
             };
             IReadOnlyList<Key> insertedKeys = db.Insert(book1, book2);
             Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
@@ -276,14 +280,16 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Harper Lee",
                 ["title"] = "To Kill a Mockingbird",
-                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc)
+                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Southern drama", "Courtroom drama", "Bildungsroman" }
             };
             Entity book2 = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
                 ["author"] = "Charlotte Brontë",
                 ["title"] = "Jane Eyre",
-                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc)
+                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Gothic", "Romance", "Bildungsroman" }
             };
             IReadOnlyList<Key> insertedKeys = await db.InsertAsync(book1, book2);
             Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
@@ -408,7 +414,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Key = keyFactory.CreateIncompleteKey(),
                 ["created"] = DateTime.UtcNow,
-                ["text"] = "Text of the message"
+                ["text"] = "Text of the message",
+                ["tags"] = new[] { "tag1", "tag2" }
             };
             using (DatastoreTransaction transaction = db.BeginTransaction())
             {
@@ -575,8 +582,8 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: ArrayProperties
             Entity entity = new Entity
             {
-                ["tags"] = new ArrayValue { Values = { "fun", "programming" } },
-                ["collaborators"] = new ArrayValue { Values = { "alice", "bob" } }
+                ["tags"] = new[] { "fun", "programming" },
+                ["collaborators"] = new[] { "alice", "bob" }
             };
             // End sample
         }
