@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System;
 using static Google.Datastore.V1Beta3.Key.Types;
 
 namespace Google.Datastore.V1Beta3
@@ -62,9 +63,19 @@ namespace Google.Datastore.V1Beta3
         public Key GetParent()
         {
             var clone = Clone();
+            if (clone.IsRoot)
+            {
+                throw new InvalidOperationException("A root key has no parent");
+            }
             clone.Path.RemoveAt(clone.Path.Count - 1);
             return clone;
         }
+
+        /// <summary>
+        /// Convenience property to determine whether this key is a root or not. A root key is one
+        /// whose <see cref="Path"/> is empty.
+        /// </summary>
+        public bool IsRoot => Path.Count == 0;
 
         public static partial class Types
         {
