@@ -174,7 +174,6 @@ namespace Google.Bigquery.V2
                         case BigqueryDbType.Timestamp:
                             double epochSeconds = double.Parse((string)rawValue, CultureInfo.InvariantCulture);
                             return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(epochSeconds);
-                        // TODO: Handle record types and repeated fields.
                         default:
                             throw new InvalidOperationException($"Unhandled field type {type}");
                     }

@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.Linq;
 using Xunit;
 
@@ -88,6 +87,60 @@ namespace Google.Bigquery.V2.IntegrationTests
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0][0]);
             Assert.Equal(5318, (long)rows[0][1]);
+        }
+
+        [Fact]
+        public void RepeatedFields_Aggregate()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
+            var queryResults = client.ExecuteQuery($"SELECT fullName, COUNT(children.name) WITHIN RECORD AS childCount FROM {table} ORDER BY fullName").Rows
+                .Select(row => new { Name = (string)row["fullName"], Count = (long)row["childCount"] })
+                .ToList();
+            var expectedResults = new[]
+            {
+                new { Name = "Anna Karenina", Count = 0L },
+                new { Name = "John Doe", Count = 2L },
+                new { Name = "Mike Jones", Count = 3L },
+            };
+            Assert.Equal(expectedResults, queryResults);
+        }
+
+        [Fact]
+        public void RepeatedFields_Flattening()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
+            var queryResults = client.ExecuteQuery($"SELECT fullName, children.name AS childName FROM {table} ORDER BY fullName, childName").Rows
+                .Select(row => new { Name = (string)row["fullName"], Child = (string)row["childName"] })
+                .ToList();
+            var expectedResults = new[]
+            {
+                new { Name = "Anna Karenina", Child = (string) null },
+                new { Name = "John Doe", Child = "Jane" },
+                new { Name = "John Doe", Child = "John" },
+                new { Name = "Mike Jones", Child = "Earl" },
+                new { Name = "Mike Jones", Child = "Kit" },
+                new { Name = "Mike Jones", Child = "Sam" }
+            };
+            Assert.Equal(expectedResults, queryResults);
+        }
+
+        [Fact]
+        public void RecordField()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
+            var queryResults = client.ExecuteQuery($"SELECT fullName, phoneNumber.areaCode, phoneNumber.number FROM {table} ORDER BY fullName").Rows
+                .Select(row => new { Name = (string)row["fullName"], AreaCode = (long)row["phoneNumber_areaCode"], Number = (long)row["phoneNumber_number"] })
+                .ToList();
+            var expectedResults = new[]
+            {
+                new { Name = "Anna Karenina", AreaCode = 425L, Number = 1984783L },
+                new { Name = "John Doe", AreaCode = 206L, Number = 1234567L },
+                new { Name = "Mike Jones", AreaCode = 622L, Number = 1567845L }
+            };
+            Assert.Equal(expectedResults, queryResults);
         }
     }
 }

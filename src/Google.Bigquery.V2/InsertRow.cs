@@ -19,6 +19,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 
 namespace Google.Bigquery.V2
 {
@@ -43,24 +44,39 @@ namespace Google.Bigquery.V2
     ///   <item><description><c>System.String</c></description></item>
     ///   <item><description><c>System.DateTime</c></description></item>
     ///   <item><description><c>System.DateTimeOffset</c></description></item>
+    ///   <item><description>A <c>Google.Bigquery.V2.InsertRow</c> (for record fields)</description></item>
+    ///   <item><description>Any <c>IReadOnlyList&lt;T&gt;</c> of one of the above types (for repeated fields). This
+    ///   includes arrays and <c>List&lt;T&gt;</c> values.</description></item>
     /// </list>
     /// <para>
     /// Note that all integer types are stored as <c>System.Int64</c>, and all floating point
     /// types are stored as <c>System.Double.</c> Date/time values are converted to UTC and stored
     /// as timestamps with precision of a microsecond.
     /// </para>
+    /// <para>
+    /// <see cref="InsertRow"/> is used for record fields for convenience, but only the <see cref="InsertId"/>
+    /// of the top-level row is relevant.
+    /// </para>
+    /// <para>
+    /// Null elements within repeated fields are ignored by the server.
+    /// </para>
     /// </remarks>
     public sealed class InsertRow : IEnumerable
     {
-        private static HashSet<Type> ValidTypes = new HashSet<Type>
+        private static HashSet<Type> ValidSingleTypes = new HashSet<Type>
         {
             typeof(int), typeof(long), typeof(uint),
             typeof(short), typeof(ushort),
             typeof(float), typeof(double),
             typeof(string), typeof(byte[]),
             typeof(bool),
-            typeof(DateTime), typeof(DateTimeOffset)
+            typeof(DateTime), typeof(DateTimeOffset),
+            typeof(InsertRow)
         };
+
+        private static List<TypeInfo> ValidRepeatedTypes = ValidSingleTypes
+            .Select(t => typeof(IReadOnlyList<>).MakeGenericType(t).GetTypeInfo())
+            .ToList();
 
         private readonly IDictionary<string, object> _fields = new Dictionary<string, object>();
 
@@ -154,11 +170,17 @@ namespace Google.Bigquery.V2
             => new TableDataInsertAllRequest.RowsData
             {
                 InsertId = InsertId,
-                Json = _fields.ToDictionary(pair => pair.Key, pair => ConvertRowValue(pair.Value))
+                Json = GetJsonValues()
             };
+
+        internal Dictionary<string, object> GetJsonValues() => _fields.ToDictionary(pair => pair.Key, pair => ConvertRowValue(pair.Value));
 
         private static object ConvertRowValue(object value)
         {
+            if (value == null)
+            {
+                return null;
+            }
             if (value is DateTime)
             {
                 DateTime dt = (DateTime)value;
@@ -170,16 +192,37 @@ namespace Google.Bigquery.V2
                 DateTimeOffset dto = (DateTimeOffset)value;
                 return dto.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
             }
-            // Anything else should be fine as it is. We've already validated that it's a known type.
-            return value;
+            if (value is InsertRow)
+            {
+                return ((InsertRow)value).GetJsonValues();
+            }
+            if (ValidSingleTypes.Contains(value.GetType()))
+            {
+                // Anything single value should be fine as it is. We've already validated that it's a known type.
+                return value;
+            }
+            // Note: not IEnumerable<object> as we need to box value types.
+            IEnumerable values = (IEnumerable)value;
+            return values.Cast<object>().Select(ConvertRowValue).ToArray();
         }
 
         private void ValidateValue(object value, string paramName)
         {
-            if (value != null && !ValidTypes.Contains(value.GetType()))
+            if (value == null)
             {
-                throw new ArgumentException($"Unable to use value of type {value.GetType()} in {nameof(InsertRow)}", paramName);
+                return;
             }
+            Type type = value.GetType();
+            if (ValidSingleTypes.Contains(type))
+            {
+                return;
+            }
+            TypeInfo typeInfo = type.GetTypeInfo();
+            if (ValidRepeatedTypes.Any(ti => ti.IsAssignableFrom(typeInfo)))
+            {
+                return;
+            }
+            throw new ArgumentException($"Unable to use value of type {value.GetType()} in {nameof(InsertRow)}", paramName);
         }
     }
 }

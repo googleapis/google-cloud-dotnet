@@ -90,7 +90,57 @@ namespace Google.Bigquery.V2.IntegrationTests
             var row = new InsertRow { { "noSuchField", 10 } };
             table.Insert(row, new InsertOptions { AllowUnknownFields = true });
         }
-        
+
+        [Fact]
+        public void Insert_RecordField()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            var table = dataset.GetTable(_fixture.ComplexTypesTableId);
+            var guid = Guid.NewGuid().ToString();
+            var row = new InsertRow
+            {
+                ["guid"] = guid,
+                ["position"] = new InsertRow { ["x"] = 10L, ["y"] = 20L }
+            };
+            table.Insert(row);
+            // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
+            var queryResults = client.ExecuteQuery($"SELECT guid, position.x, position.y FROM {table} WHERE guid='{guid}'").Rows
+                .Select(r => new { Guid = (string)r["guid"], X = (long)r["position_x"], Y = (long)r["position_y"] })
+                .ToList();
+            var expectedResults = new[]
+            {
+                new { Guid = guid, X = 10L, Y = 20L }
+            };
+            Assert.Equal(expectedResults, queryResults);
+        }
+
+        [Fact]
+        public void Insert_RepeatedField()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            var table = dataset.GetTable(_fixture.ComplexTypesTableId);
+            var guid = Guid.NewGuid().ToString();
+            var row = new InsertRow
+            {
+                ["guid"] = guid,
+                // The null element will be ignored here (at the server side)
+                ["tags"] = new[] { "a", null, "b"}
+            };
+            table.Insert(row);
+            // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
+            var queryResults = client.ExecuteQuery($"SELECT guid, tags FROM {table} WHERE guid='{guid}' ORDER BY TAGS").Rows
+                .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tags"] })
+                .ToList();
+            var expectedResults = new[]
+            {
+                new { Guid = guid, Tag = "a" },
+                new { Guid = guid, Tag = "b" }
+            };
+            Assert.Equal(expectedResults, queryResults);
+        }
+
         private InsertRow BuildRow(string player, long score, DateTime gameStarted) =>
             new InsertRow
             {
