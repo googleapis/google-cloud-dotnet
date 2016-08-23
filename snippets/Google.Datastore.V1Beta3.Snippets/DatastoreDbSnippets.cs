@@ -91,19 +91,18 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Filter = Filter.Equal("author", "Jane Austen")
             };
             DatastoreQueryResults results = db.RunQuery(query);
-            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
-            foreach (Entity entity in results)
+            // DatastoreQueryResults implements IEnumerable<EntityResult>, but you can
+            // call AsRpcResponses() to see the raw RPC responses for diagnostic scenarios.
+            foreach (EntityResult entityResult in results)
             {
-                Console.WriteLine(entity);
+                Console.WriteLine(entityResult.Entity);
             }
             // End snippet
 
             // This will run the query again, admittedly...
-            List<Entity> entities = results.ToList();
-            Assert.Equal(1, entities.Count);
-            Entity book = entities[0];
+            var entityResults = results.ToList();
+            Assert.Equal(1, entityResults.Count);
+            Entity book = entityResults[0].Entity;
             Assert.Equal("Jane Austen", (string)book["author"]);
             Assert.Equal("Pride and Prejudice", (string)book["title"]);
         }
@@ -152,19 +151,18 @@ namespace Google.Datastore.V1Beta3.Snippets
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
             DatastoreQueryResults results = db.RunQuery(gqlQuery);
-            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
-            foreach (Entity entity in results)
+            // DatastoreQueryResults implements IEnumerable<EntityResult>, but you can
+            // call AsRpcResponses() to see the raw RPC responses for diagnostic scenarios.
+            foreach (EntityResult entityResult in results)
             {
-                Console.WriteLine(entity);
+                Console.WriteLine(entityResult);
             }
             // End snippet
 
             // This will run the query again, admittedly...
-            List<Entity> entities = results.ToList();
-            Assert.Equal(1, entities.Count);
-            Entity book = entities[0];
+            List<EntityResult> entityResults = results.ToList();
+            Assert.Equal(1, entityResults.Count);
+            Entity book = entityResults[0].Entity;
             Assert.Equal("Jane Austen", (string)book["author"]);
             Assert.Equal("Pride and Prejudice", (string)book["title"]);
         }
@@ -362,9 +360,9 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: NamespaceQuery
             DatastoreDb db = DatastoreDb.Create(projectId, "");
             Query query = new Query(DatastoreConstants.NamespaceKind);
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (EntityResult result in db.RunQuery(query))
             {
-                Console.WriteLine(entity.Key.Path.Last().Name);
+                Console.WriteLine(result.Entity.Key.Path.Last().Name);
             }
             // End sample
         }
@@ -378,9 +376,9 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: KindQuery
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query(DatastoreConstants.KindKind);
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (EntityResult entityResult in db.RunQuery(query))
             {
-                Console.WriteLine(entity.Key.Path.Last().Name);
+                Console.WriteLine(entityResult.Entity.Key.Path.Last().Name);
             }
             // End sample
         }
@@ -394,9 +392,9 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: PropertyQuery
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query(DatastoreConstants.PropertyKind);
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (EntityResult entityResult in db.RunQuery(query))
             {
-                Console.WriteLine(entity.Key.Path.Last().Name);
+                Console.WriteLine(entityResult.Entity.Key.Path.Last().Name);
             }
             // End sample
         }
@@ -442,8 +440,9 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Filter = Filter.GreaterThanOrEqual("created", cutoff),
                 Order = { { "created", Direction.Descending } }
             };
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (EntityResult entityResult in db.RunQuery(query))
             {
+                Entity entity = entityResult.Entity;
                 DateTime created = (DateTime)entity["created"];
                 string text = (string)entity["text"];
                 Console.WriteLine($"{created:yyyy-MM-dd'T'HH:mm:ss}: {text}");
@@ -607,9 +606,9 @@ namespace Google.Datastore.V1Beta3.Snippets
             };
 
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);            
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (EntityResult entityResult in db.RunQuery(query))
             {
-                Console.WriteLine((string)entity["description"]);
+                Console.WriteLine((string)entityResult.Entity["description"]);
             }
             // TODO: Results beyond this batch?
             // End sample           
@@ -687,8 +686,9 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Projection = { "priority", "percentage_complete" }
             };
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (EntityResult entityResult in db.RunQuery(query))
             {
+                var entity = entityResult.Entity;
                 Console.WriteLine($"{(int)entity["priority"]}: {(double?)entity["percentage_complete"]}");
             }            
             // End sample
@@ -751,7 +751,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             Query query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
-            List<EntityResult> entityResults = db.RunQuery(query, ReadConsistency.Eventual).AsEntityResults().ToList();
+            List<EntityResult> entityResults = db.RunQuery(query, ReadConsistency.Eventual).ToList();
             foreach (EntityResult result in entityResults)
             {
                 Entity entity = result.Entity;
