@@ -15,6 +15,9 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
+using System.Reflection;
+using System.Text;
 using Xunit;
 
 
@@ -36,7 +39,8 @@ namespace Google.Bigquery.V2.IntegrationTests
         public string ProjectId { get; }
         public string DatasetId { get; }
         public string HighScoreTableId { get; } = "highscores";
-        public string AddressbookTableId { get; } = "addressbook";
+        public string PeopleTableId { get; } = "people";
+        public string ComplexTypesTableId { get; } = "complex";
 
         public BigqueryFixture()
         {
@@ -57,7 +61,8 @@ namespace Google.Bigquery.V2.IntegrationTests
             var client = BigqueryClient.Create(ProjectId);
             var dataset = client.CreateDataset(DatasetId);
             CreateHighScoreTable(dataset);
-            CreateAddressbookTable(dataset);
+            CreatePeopleTable(dataset);
+            CreateComplexTypesTable(dataset);
         }
 
         private void CreateHighScoreTable(BigqueryDataset dataset)
@@ -75,28 +80,81 @@ namespace Google.Bigquery.V2.IntegrationTests
             });
         }
 
-        private void CreateAddressbookTable(BigqueryDataset dataset)
+        private void CreatePeopleTable(BigqueryDataset dataset)
         {
-            // Note: the address format here is purely for testing nested schemas.
-            // Address data is fiendishly complicated in reality. Ditto naming...
-            var table = dataset.CreateTable(AddressbookTableId, new TableSchemaBuilder
+            // Sample schema taken from 
+            // https://cloud.google.com/bigquery/docs/data
+            // Data is loaded in UploadTest.
+            var table = dataset.CreateTable(PeopleTableId, new TableSchemaBuilder
+            {
+                { "name", BigqueryDbType.String },
+                { "fullName", BigqueryDbType.String, FieldMode.Required },
+                { "age", BigqueryDbType.Integer },
+                { "gender", BigqueryDbType.String },
+                { "phoneNumber", new TableSchemaBuilder
+                    {
+                        { "areaCode", BigqueryDbType.Integer },
+                        { "number", BigqueryDbType.Integer }
+                    }
+                },
+                { "children", new TableSchemaBuilder
+                    {
+                        { "name", BigqueryDbType.String },
+                        { "gender", BigqueryDbType.String },
+                        { "age", BigqueryDbType.Integer },
+                    },
+                    FieldMode.Repeated
+                },
+                { "citiesLived", new TableSchemaBuilder
+                    {
+                        { "place", BigqueryDbType.String },
+                        { "yearsLived", BigqueryDbType.Integer, FieldMode.Repeated },
+                    },
+                    FieldMode.Repeated
+                }
+            }.Build());
+            // TODO: We need to make this easier to use.
+            List<string> jsonRows = LoadTextResource("personsData.json");
+            var bytes = Encoding.UTF8.GetBytes(string.Join("\n", jsonRows));
+            var job = table.UploadJson(new MemoryStream(bytes));
+
+            var result = job.Poll();
+            var errors = result.Status.ErrorResult;
+            if (errors != null)
+            {
+                throw new Exception("Errors uploading JSON: " + errors);
+            }
+        }
+
+        private void CreateComplexTypesTable(BigqueryDataset dataset)
+        {
+            dataset.CreateTable(ComplexTypesTableId, new TableSchemaBuilder
+            {
+                { "guid", BigqueryDbType.String },
+                { "tags", BigqueryDbType.String, FieldMode.Repeated },
+                { "position", new TableSchemaBuilder
+                    {
+                        { "x", BigqueryDbType.Integer },
+                        { "y", BigqueryDbType.Integer }
+                    }
+                }
+            }.Build());
+        }
+
+        internal List<string> LoadTextResource(string relativeName)
+        {
+            var typeInfo = typeof(BigqueryFixture).GetTypeInfo();
+            string resourceName = typeInfo.Namespace + "." + relativeName;
+            var ret = new List<string>();
+            using (var reader = new StreamReader(typeInfo.Assembly.GetManifestResourceStream(resourceName)))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    { "name", new TableSchemaBuilder
-                        {
-                            { "first", BigqueryDbType.String },
-                            { "last", BigqueryDbType.String }
-                        }
-                    },
-                    { "address", new TableSchemaBuilder
-                        {
-                            { "number", BigqueryDbType.Integer },
-                            { "street", BigqueryDbType.String },
-                            { "city", BigqueryDbType.String },
-                        }
-                    },
-                    { "lastModified", BigqueryDbType.Timestamp }
-                }.Build());
-            // TODO: Add data. InsertRow doesn't currently handle nested objects.
+                    ret.Add(line);
+                }
+            }
+            return ret;
         }
 
         internal string CreateTableId() => "test_" + Guid.NewGuid().ToString().Replace("-", "_");

@@ -65,16 +65,16 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
 
-            // This takes advantage of support for nested objects.
             // We use ' instead of " in the JSON to make it easier to write the string literals, then fix it up.
             var jsonRows = new[]
             {
-                "{ 'name': { 'first': 'James', 'last': 'Brock' }, 'address': { 'number': 35, 'street': 'Some road', 'city': 'London' }, 'lastModified': '2015-04-02 13:45:23' }"
+                "{ 'player': 'UploadJsonTest1', 'score': 90, 'GameStarted': '2015-01-01T00:00:00.000Z' }",
+                "{ 'player': 'UploadJsonTest2', 'score': 100, 'GameStarted': '2014-01-01T01:00:00.000Z' }"
             }.Select(x => x.Replace('\'', '"'));
 
             var bytes = Encoding.UTF8.GetBytes(string.Join("\n", jsonRows));
 
-            var table = client.GetTable(_fixture.DatasetId, _fixture.AddressbookTableId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             var beforeRowCount = table.ListRows().Rows.Count();
 
             var job = table.UploadJson(new MemoryStream(bytes));
@@ -82,19 +82,15 @@ namespace Google.Bigquery.V2.IntegrationTests
             Assert.Null(result.Status.ErrorResult);
 
             var afterRows = table.ListRows().Rows.ToList();
-            Assert.Equal(beforeRowCount + 1, afterRows.Count);
+            Assert.Equal(beforeRowCount + 2, afterRows.Count);
 
-            // Can't get at nested data using BigqueryResult yet, so use a SQL projection
-
-            var sql = $"SELECT name.first, address.number, address.city, lastModified FROM {table} WHERE name.last='Brock'";
-            var flatRows = client.ExecuteQuery(sql).Rows.ToList();
-            Assert.Equal(1, flatRows.Count);
-            var row = flatRows[0];
-            // The result comes back with dots replaced by underscores. It's probably not worth trying to disguise that.
-            Assert.Equal("James", (string)row["name_first"]);
-            Assert.Equal(35, (long)row["address_number"]);
-            Assert.Equal("London", (string)row["address_city"]);
-            Assert.Equal(new DateTime(2015, 4, 2, 13, 45, 23, DateTimeKind.Utc), (DateTime)row["lastModified"]);
+            var sql = $"SELECT player, score FROM {table} WHERE player CONTAINS 'UploadJsonTest' ORDER BY player";
+            var rows = client.ExecuteQuery(sql).Rows.ToList();
+            Assert.Equal(2, rows.Count);
+            Assert.Equal("UploadJsonTest1", (string)rows[0]["player"]);
+            Assert.Equal("UploadJsonTest2", (string)rows[1]["player"]);
+            Assert.Equal(90L, (long)rows[0]["score"]);
+            Assert.Equal(100L, (long)rows[1]["score"]);
         }
     }
 }

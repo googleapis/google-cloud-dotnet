@@ -10,8 +10,8 @@ This package is effectively experimental at this time. Some
 functionality is missing, and a lot is likely to change. Big ticket
 work items:
 
-- Full support for nested fields and repeated fields
-- Options for all relevant operations
+- Review query approach, exposing more information and being more
+  consistent
 - Alternative approaches for providing data and schema, e.g. simple property
   binding. (Note: we're not trying to become an ORM...)
 - Async operations. (API design is progressing with sync-only

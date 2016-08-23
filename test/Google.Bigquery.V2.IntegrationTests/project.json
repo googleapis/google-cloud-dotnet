@@ -2,7 +2,10 @@
   "description": "Integration tests for the Google Bigquery library.",
 
   "buildOptions": {
-    "keyFile": "../../GoogleApis.snk"
+    "keyFile": "../../GoogleApis.snk",
+    "embed": {
+      "include": [ "personsData.json" ]
+    }
   },
 
   "dependencies": {
