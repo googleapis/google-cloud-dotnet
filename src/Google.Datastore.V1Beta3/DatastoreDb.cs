@@ -422,7 +422,8 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>This method simply delegates to <see cref="Insert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to insert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The key of the inserted entity.</returns>
+        /// <returns>The key of the inserted entity if it was allocated by the server, or
+        /// <c>null</c> if the inserted entity had a predefined key.</returns>
         public virtual Key Insert(Entity entity, CallSettings callSettings = null) =>
             Insert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
         /// <summary>
@@ -436,14 +437,18 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
-        /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
+        /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.
+        /// Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+        /// the collection.</returns>
         public virtual IReadOnlyList<Key> Insert(params Entity[] entities) => Insert(entities, null);
         /// <summary>
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
+        /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.
+        /// Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+        /// the collection.</returns>
         public virtual IReadOnlyList<Key> Insert(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -455,7 +460,8 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity}, CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to insert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The key of the inserted entity.</returns>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the key of the inserted entity
+        /// if it was allocated by the server, or <c>null</c> if the inserted entity had a predefined key.</returns>
         public virtual async Task<Key> InsertAsync(Entity entity, CallSettings callSettings = null)
         {
             var results = await InsertAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings).ConfigureAwait(false);
@@ -473,14 +479,20 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
-        /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
+        /// <returns>A task representing the asynchronous operation. The result of the task is
+        /// a collection of keys of inserted entities, in the same order as <paramref name="entities"/>.
+        /// Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+        /// the collection.</returns>
         public virtual Task<IReadOnlyList<Key>> InsertAsync(params Entity[] entities) => InsertAsync(entities, null);
         /// <summary>
         /// Inserts a collection of entities, non-transactionally and asynchronously.
         /// </summary>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.</returns>
+        /// <returns>A task representing the asynchronous operation. The result of the task is
+        /// a collection of keys of inserted entities, in the same order as <paramref name="entities"/>.
+        /// Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+        /// the collection.</returns>
         public virtual Task<IReadOnlyList<Key>> InsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -492,7 +504,8 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>This method simply delegates to <see cref="Upsert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to upsert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The key of the upserted entity.</returns>
+        /// <returns><c>null</c> if the entity was updated or was inserted with a predefined key, or the new key if the entity was inserted
+        /// and the mutation allocated the key.</returns>
         public virtual Key Upsert(Entity entity, CallSettings callSettings = null) =>
             Upsert(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
         /// <summary>
@@ -506,14 +519,20 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
-        /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
+        /// <returns>A collection of allocated keys, in the same order as <paramref name="entities"/>. Each inserted entity
+        /// which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+        /// value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+        /// with a predefined key will have a null value in the collection.</returns>
         public virtual IReadOnlyList<Key> Upsert(params Entity[] entities) => Upsert(entities, null);
         /// <summary>
         /// Upserts a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
+        /// <returns>A collection of allocated keys, in the same order as <paramref name="entities"/>. Each inserted entity
+        /// which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+        /// value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+        /// with a predefined key will have a null value in the collection.</returns>
         public virtual IReadOnlyList<Key> Upsert(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -525,7 +544,9 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>This method simply delegates to <see cref="UpsertAsync(IEnumerable{Entity}, CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to upsert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The key of the upserted entity.</returns>
+        /// <returns>A task representing the asynchronous operation. The result of the task is
+        /// <c>null</c> if the entity was updated or was inserted with a predefined key, or the
+        /// new key if the entity was inserted and the mutation allocated the key.</returns>
         public virtual async Task<Key> UpsertAsync(Entity entity, CallSettings callSettings = null)
         {
             var results = await UpsertAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings).ConfigureAwait(false);
@@ -543,14 +564,22 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
-        /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
+        /// <returns>A task representing the asynchronous operation. The result of the task is
+        /// a collection of allocated keys, in the same order as <paramref name="entities"/>. Each inserted entity
+        /// which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+        /// value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+        /// with a predefined key will have a null value in the collection.</returns>
         public virtual Task<IReadOnlyList<Key>> UpsertAsync(params Entity[] entities) => UpsertAsync(entities, null);
         /// <summary>
         /// Upserts a collection of entities, non-transactionally and asynchronously.
         /// </summary>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A collection of keys of upserted entities, in the same order as <paramref name="entities"/>.</returns>
+        /// <returns>A task representing the asynchronous operation. The result of the task is
+        /// a collection of allocated keys, in the same order as <paramref name="entities"/>. Each inserted entity
+        /// which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+        /// value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+        /// with a predefined key will have a null value in the collection.</returns>
         public virtual Task<IReadOnlyList<Key>> UpsertAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -562,9 +591,8 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>This method simply delegates to <see cref="Update(IEnumerable{Entity},CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to update. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The key of the updated entity.</returns>
-        public virtual Key Update(Entity entity, CallSettings callSettings = null) =>
-            Update(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings)[0];
+        public virtual void Update(Entity entity, CallSettings callSettings = null) =>
+            Update(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings);
         /// <summary>
         /// Updates a collection of entities, non-transactionally.
         /// </summary>
@@ -576,15 +604,13 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// </remarks>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
-        /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public virtual IReadOnlyList<Key> Update(params Entity[] entities) => Update(entities, null);
+        public virtual void Update(params Entity[] entities) => Update(entities, null);
         /// <summary>
         /// Updates a collection of entities, non-transactionally.
         /// </summary>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public virtual IReadOnlyList<Key> Update(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        public virtual void Update(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -595,12 +621,10 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>This method simply delegates to <see cref="UpdateAsync(IEnumerable{Entity},CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to update. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The key of the updated entity.</returns>
-        public virtual async Task<Key> UpdateAsync(Entity entity, CallSettings callSettings = null)
-        {
-            var results = await UpdateAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings).ConfigureAwait(false);
-            return results[0];
-        }
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task UpdateAsync(Entity entity, CallSettings callSettings = null) =>
+            UpdateAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings);
+
         /// <summary>
         /// Updates a collection of entities, non-transactionally and asynchronously.
         /// </summary>
@@ -612,15 +636,15 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// </remarks>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
-        /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public virtual Task<IReadOnlyList<Key>> UpdateAsync(params Entity[] entities) => UpdateAsync(entities, null);
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task UpdateAsync(params Entity[] entities) => UpdateAsync(entities, null);
         /// <summary>
         /// Updates a collection of entities, non-transactionally and asynchronously.
         /// </summary>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A collection of keys of updated entities, in the same order as <paramref name="entities"/>.</returns>
-        public virtual Task<IReadOnlyList<Key>> UpdateAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task UpdateAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -661,6 +685,7 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>This method simply delegates to <see cref="DeleteAsync(IEnumerable{Entity},CallSettings)"/>.</remarks>
         /// <param name="entity">The entity to delete. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public virtual Task DeleteAsync(Entity entity, CallSettings callSettings = null) =>
             DeleteAsync(new[] { GaxPreconditions.CheckNotNull(entity, nameof(entity)) }, callSettings);
         /// <summary>
@@ -674,12 +699,14 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// </remarks>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public virtual Task DeleteAsync(params Entity[] entities) => DeleteAsync(entities, null);
         /// <summary>
         /// Deletes a collection of entities, non-transactionally and asynchronously.
         /// </summary>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public virtual Task DeleteAsync(IEnumerable<Entity> entities, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
