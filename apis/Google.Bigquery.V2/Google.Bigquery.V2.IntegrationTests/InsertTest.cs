@@ -130,13 +130,41 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             table.Insert(row);
             // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = client.ExecuteQuery($"SELECT guid, tags FROM {table} WHERE guid='{guid}' ORDER BY TAGS").Rows
+            var queryResults = client.ExecuteQuery($"SELECT guid, tags FROM {table} WHERE guid='{guid}' ORDER BY tags").Rows
                 .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tags"] })
                 .ToList();
             var expectedResults = new[]
             {
                 new { Guid = guid, Tag = "a" },
                 new { Guid = guid, Tag = "b" }
+            };
+            Assert.Equal(expectedResults, queryResults);
+        }
+
+        [Fact]
+        public void Insert_RepeatedRecordField()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            var table = dataset.GetTable(_fixture.ComplexTypesTableId);
+            var guid = Guid.NewGuid().ToString();
+            var row = new InsertRow
+            {
+                ["guid"] = guid,
+                ["names"] = new[] {
+                    new InsertRow { ["first"] = "a", ["last"] = "b" },
+                    new InsertRow { ["first"] = "x", ["last"] = "y" }
+                }
+            };
+            table.Insert(row);
+            // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
+            var queryResults = client.ExecuteQuery($"SELECT guid, names.first, names.last FROM {table} WHERE guid='{guid}' ORDER BY names.first").Rows
+                .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["names_first"], LastName = (string)r["names_last"] })
+                .ToList();
+            var expectedResults = new[]
+            {
+                new { Guid = guid, FirstName = "a", LastName = "b" },
+                new { Guid = guid, FirstName = "x", LastName = "y" }
             };
             Assert.Equal(expectedResults, queryResults);
         }

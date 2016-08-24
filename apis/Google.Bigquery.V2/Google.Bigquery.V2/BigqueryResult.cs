@@ -15,6 +15,7 @@
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -144,6 +145,14 @@ namespace Google.Bigquery.V2
                 RawRow = rawRow;
             }
 
+            private static readonly Func<string, string> StringConverter = v => v;
+            private static readonly Func<string, long> Int64Converter = v => long.Parse(v, CultureInfo.InvariantCulture);
+            private static readonly Func<string, double> DoubleConverter = v => double.Parse(v, CultureInfo.InvariantCulture);
+            private static readonly Func<string, DateTime> DateTimeConverter = v => new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(DoubleConverter(v));
+            private static readonly Func<string, byte[]> BytesConverter = v => Convert.FromBase64String(v);
+            private static readonly Func<string, bool> BooleanConverter = v => v == "true";
+
+
             /// <summary>
             /// Retrieves a cell value by field name.
             /// </summary>
@@ -158,29 +167,105 @@ namespace Google.Bigquery.V2
                 {
                     object rawValue = RawRow.F[index].V;
                     var field = _parent.Schema.Fields[index];
-                    var type = field.GetFieldType();
+
+                    return ConvertSingleValue(rawValue, field);
+                }
+            }
+
+            private static object ConvertSingleValue(object rawValue, TableFieldSchema field)
+            {
+                if (rawValue == null)
+                {
+                    return null;
+                }
+                var type = field.GetFieldType();
+
+                if (field.GetFieldMode() == FieldMode.Repeated)
+                {
+                    JArray array = (JArray)rawValue;
                     switch (type)
                     {
                         case BigqueryDbType.String:
-                            return (string)rawValue;
+                            return ConvertArray(array, StringConverter);
                         case BigqueryDbType.Integer:
-                            return long.Parse((string)rawValue, CultureInfo.InvariantCulture);
+                            return ConvertArray(array, Int64Converter);
                         case BigqueryDbType.Float:
-                            return double.Parse((string)rawValue, CultureInfo.InvariantCulture);
+                            return ConvertArray(array, DoubleConverter);
                         case BigqueryDbType.Bytes:
-                            return Convert.FromBase64String((string)rawValue);
+                            return ConvertArray(array, BytesConverter);
                         case BigqueryDbType.Boolean:
-                            return (string)rawValue == "true";
+                            return ConvertArray(array, BooleanConverter);
                         case BigqueryDbType.Timestamp:
-                            double epochSeconds = double.Parse((string)rawValue, CultureInfo.InvariantCulture);
-                            return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(epochSeconds);
+                            return ConvertArray(array, DateTimeConverter);
+                        case BigqueryDbType.Record:
+                            return ConvertRecordArray(array, field);
                         default:
-                            throw new InvalidOperationException($"Unhandled field type {type}");
+                            throw new InvalidOperationException($"Unhandled field type {type} {rawValue.GetType()}");
                     }
+                }
+                switch (type)
+                {
+                    case BigqueryDbType.String:
+                        return StringConverter((string)rawValue);
+                    case BigqueryDbType.Integer:
+                        return Int64Converter((string)rawValue);
+                    case BigqueryDbType.Float:
+                        return DoubleConverter((string)rawValue);
+                    case BigqueryDbType.Bytes:
+                        return BytesConverter((string)rawValue);
+                    case BigqueryDbType.Boolean:
+                        return BooleanConverter((string)rawValue);
+                    case BigqueryDbType.Timestamp:
+                        return DateTimeConverter((string)rawValue);
+                    case BigqueryDbType.Record:
+                        return ConvertRecord((JObject)rawValue, field);
+                    default:
+                        throw new InvalidOperationException($"Unhandled field type {type} {rawValue.GetType()}");
                 }
             }
 
             // TODO: GetString etc, like IDataReader etc. (Should we actually implement IDataReader?)
+
+            private static T[] ConvertArray<T>(JArray array, Func<string, T> converter)
+            {
+                T[] ret = new T[array.Count];
+                for (int i = 0; i < ret.Length; i++)
+                {
+                    JObject value = (JObject)array[i];
+                    ret[i] = converter((string) value["v"]);
+                }
+                return ret;
+            }
+
+            private static Dictionary<string, object>[] ConvertRecordArray(JArray array, TableFieldSchema fieldSchema)
+            {
+                var ret = new Dictionary<string, object>[array.Count];
+                for (int i = 0; i < ret.Length; i++)
+                {
+                    JObject value = (JObject)array[i];
+                    ret[i] = ConvertRecord((JObject)value["v"], fieldSchema);
+                }
+                return ret;
+            }
+
+            private static Dictionary<string, object> ConvertRecord(JObject record, TableFieldSchema fieldSchema)
+            {
+                var fields = fieldSchema.Fields;
+                JArray values = (JArray) record["f"];
+                if (values.Count != fields.Count)
+                {
+                    throw new InvalidOperationException($"Record had {values.Count} entries; expected {fields.Count}");
+                }
+                var ret = new Dictionary<string, object>(fields.Count);
+                for (int i = 0; i < fields.Count; i++)
+                {
+                    var field = fields[i];                    
+                    var token = values[i]["v"];
+                    Console.WriteLine($"Converting field {field.Name} from token type {token.Type} - token {token}");
+                    ret[field.Name] = ConvertSingleValue(token.Type == JTokenType.String ? (string)token : (object)token, field);
+                }
+                return ret;
+            }
         }
     }
 }
