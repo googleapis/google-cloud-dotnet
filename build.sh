@@ -9,6 +9,7 @@ else
   OS=Linux
 fi
 
+FIND=/usr/bin/find
 
 CONFIG=Release
 # Arguments to use for all build-related commands (build, pack)
@@ -18,12 +19,12 @@ DOTNET_TEST_ARGS="$DOTNET_BUILD_ARGS"
 
 # Three options:
 # - No environment variables: make sure it's not for release
-# - PrereleaseTag set: use that
-# - NoVersionSuffix set: use no suffix; build as per project.json
-if [ -n "$PrereleaseTag" ]
+# - PRERELEASETAG set: use that
+# - NOVERSIONSUFFIX set: use no suffix; build as per project.json
+if [ -n "$PRERELEASETAG" ]
 then
-  DOTNET_BUILD_ARGS="$DOTNET_BUILD_ARGS --version-suffix $PrereleaseTag"
-elif [ -z "$NoVersionSuffix" ]
+  DOTNET_BUILD_ARGS="$DOTNET_BUILD_ARGS --version-suffix $PRERELEASETAG"
+elif [ -z "$NOVERSIONSUFFIX" ]
 then
   DOTNET_BUILD_ARGS="$DOTNET_BUILD_ARGS --version-suffix not-for-release"  
 fi
@@ -34,12 +35,12 @@ echo Building
 
 cd tools
 dotnet restore
-dotnet build $DOTNET_BUILD_ARGS `find . -mindepth 1 -maxdepth 1 -name 'Google*' -type d `
+dotnet build $DOTNET_BUILD_ARGS `$FIND . -mindepth 1 -maxdepth 1 -name 'Google*' -type d `
 cd ..
 
 cd apis
 dotnet restore
-dotnet build $DOTNET_BUILD_ARGS `find * -mindepth 1 -maxdepth 1 -name 'Google*' -type d`
+dotnet build $DOTNET_BUILD_ARGS `$FIND * -mindepth 1 -maxdepth 1 -name 'Google*' -type d`
 
 # TODO: Tests. We need to:
 # - Run Mono for all tests
@@ -70,7 +71,7 @@ echo Packing
 
 # Assume each packagable project contains something like "version": "1.0.0-*"
 # and no other projects do.
-for package in `find . -name project.json | xargs grep -le 'version.*-\*' | sed 's/\/project.json//g'`
+for package in `$FIND . -name project.json | xargs grep -le 'version.*-\*' | sed 's/\/project.json//g'`
 do
   dotnet pack $DOTNET_BUILD_ARGS $package
 done
