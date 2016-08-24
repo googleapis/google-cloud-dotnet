@@ -12,4 +12,4 @@ install:
   - sudo apt-get install -qq dotnet-dev-1.0.0-preview2-003121
 
 script:
-  - ./travis.sh
+  - ./build.sh
