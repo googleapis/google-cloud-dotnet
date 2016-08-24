@@ -14,7 +14,7 @@
 
 using System.Collections.Generic;
 
-namespace Google.GCloud.Tools.GenerateSnippetMarkdown
+namespace Google.Cloud.Tools.GenerateSnippetMarkdown
 {
     public class CodeModel
     {

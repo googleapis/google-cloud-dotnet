@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Google.GCloud.Tools.GenerateSnippetMarkdown
+namespace Google.Cloud.Tools.GenerateSnippetMarkdown
 {
     /// <summary>
     /// An exception indicating user error: display the message, but not the stack trace.

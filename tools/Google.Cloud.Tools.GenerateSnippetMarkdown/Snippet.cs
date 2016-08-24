@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Google.GCloud.Tools.GenerateSnippetMarkdown
+namespace Google.Cloud.Tools.GenerateSnippetMarkdown
 {
     /// <summary>
     /// A snippet from the snippets directory.

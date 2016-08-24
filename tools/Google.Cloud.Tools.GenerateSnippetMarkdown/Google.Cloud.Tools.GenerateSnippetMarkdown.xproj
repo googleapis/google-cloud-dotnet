@@ -7,7 +7,7 @@
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>656e050f-d24b-4cbe-9771-b3ef472342c0</ProjectGuid>
-    <RootNamespace>Google.GCloud.Tools.GenerateSnippetMarkdown</RootNamespace>
+    <RootNamespace>Google.Cloud.Tools.GenerateSnippetMarkdown</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">..\..\artifacts\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
   </PropertyGroup>
