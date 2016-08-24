@@ -20,7 +20,7 @@ using System.Text.RegularExpressions;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace Google.GCloud.Tools.GenerateSnippetMarkdown
+namespace Google.Cloud.Tools.GenerateSnippetMarkdown
 {
     // Snippet format:
 
