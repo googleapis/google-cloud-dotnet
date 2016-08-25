@@ -25,9 +25,9 @@ To make everything concrete, we'll consider three resources:
 (We've deliberately used a different project in the subscription to highlight that they don't have to be the same.)
 
 The names above are the ones you would see and use in the Pub/Sub API. For example, to list all the topics
-in the `projects/petstore` project, you would use the [PublisherClient.ListTopics](../obj/api/Google.Pubsub.V1.PublisherClient.yml#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_) method:
+in the `projects/petstore` project, you would use the [PublisherClient.ListTopics](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_) method:
 
-[!code-cs[](../obj/snippets/Google.Pubsub.V1.ResourceNameDoc.txt#ListTopics)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#ListTopics)]
 
 Using a single string as a resource name makes many things simple - such as referring to a resource in a logging or monitoring API.
 However, there are times when an application would more naturally consider *resource IDs* - the parts within an resource name that vary.
@@ -46,15 +46,15 @@ provided by the class libraries, as described below.
 
 ## Formatting a resource name from resource IDs
 
-For each resource used by a particular API client, a static format method is generated. For example, the [PublisherClient](../obj/api/Google.Pubsub.V1.PublisherClient.yml) class has two format methods:
+For each resource used by a particular API client, a static format method is generated. For example, the [PublisherClient](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html) class has two format methods:
 
-- [FormatProjectName(string)](../obj/api/Google.Pubsub.V1.PublisherClient.yml#Google_Pubsub_V1_PublisherClient_FormatProjectName_System_String_)
-- [FormatTopicName(string, string)](../obj/api/Google.Pubsub.V1.PublisherClient.yml#Google_Pubsub_V1_PublisherClient_FormatTopicName_System_String_System_String_)
+- [FormatProjectName(string)](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatProjectName_System_String_)
+- [FormatTopicName(string, string)](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatTopicName_System_String_System_String_)
 
-Likewise, the [SubscriberClient](../obj/api/Google.Pubsub.V1.SubscriberClient.yml) class has three methods:
-- [FormatProjectName(string)](../obj/api/Google.Pubsub.V1.SubscriberClient.yml#Google_Pubsub_V1_SubscriberClient_FormatProjectName_System_String_)
-- [FormatTopicName(string, string)](../obj/api/Google.Pubsub.V1.SubscriberClient.yml#Google_Pubsub_V1_SubscriberClient_FormatTopicName_System_String_System_String_)
-- [FormatSubscriptionName(string, string)](../obj/api/Google.Pubsub.V1.SubscriberClient.yml#Google_Pubsub_V1_SubscriberClient_FormatSubscriptionName_System_String_System_String_)
+Likewise, the [SubscriberClient](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html) class has three methods:
+- [FormatProjectName(string)](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatProjectName_System_String_)
+- [FormatTopicName(string, string)](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatTopicName_System_String_System_String_)
+- [FormatSubscriptionName(string, string)](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatSubscriptionName_System_String_System_String_)
 
 (A publisher never needs to format a subscription name, whereas a subscriber *does* need to format a topic name in order to
 create a subscription.)
@@ -63,30 +63,30 @@ Each format method has one parameter for each resource ID present in the resourc
 
 Here's an example of formatting the resource name for our `offers` topic:
 
-[!code-cs[](../obj/snippets/Google.Pubsub.V1.ResourceNameDoc.txt#FormatResourceName)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#FormatResourceName)]
 
 ## Parsing resource IDs from a resource name
 
 As well as the format methods, a static property is provided for each resource, of type
-[PathTemplate](../obj/api/Google.Api.Gax.PathTemplate.yml). This can be used to parse a resource name (as a string)
-into a [ResourceName](../obj/api/Google.Api.Gax.ResourceName.yml) object. The resource IDs can then be extracted from
+[PathTemplate](obj/api/Google.Api.Gax.PathTemplate.yml). This can be used to parse a resource name (as a string)
+into a [ResourceName](obj/api/Google.Api.Gax.ResourceName.yml) object. The resource IDs can then be extracted from
 that object either by index or by name. The names of the resource IDs match the names of the parameters in the corresponding
 `Format` methods.
 
-The [PublisherClient](../obj/api/Google.Pubsub.V1.PublisherClient.yml) class has two template properties:
+The [PublisherClient](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html) class has two template properties:
 
-- [ProjectTemplate](../obj/api/Google.Pubsub.V1.PublisherClient.yml#Google_Pubsub_V1_PublisherClient_ProjectTemplate)
-- [TopicTemplate](../obj/api/Google.Pubsub.V1.PublisherClient.yml#Google_Pubsub_V1_PublisherClient_TopicTemplate)
+- [ProjectTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ProjectTemplate)
+- [TopicTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TopicTemplate)
 
-Likewise, the [SubscriberClient](../obj/api/Google.Pubsub.V1.SubscriberClient.yml) class has three properties:
-- [ProjectTemplate](../obj/api/Google.Pubsub.V1.SubscriberClient.yml#Google_Pubsub_V1_SubscriberClient_ProjectTemplate)
-- [TopicTemplate](../obj/api/Google.Pubsub.V1.SubscriberClient.yml#Google_Pubsub_V1_SubscriberClient_TopicTemplate)
-- [SubscriptionTemplate](../obj/api/Google.Pubsub.V1.SubscriberClient.yml#Google_Pubsub_V1_SubscriberClient_SubscriptionTemplate)
+Likewise, the [SubscriberClient](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html) class has three properties:
+- [ProjectTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ProjectTemplate)
+- [TopicTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_TopicTemplate)
+- [SubscriptionTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_SubscriptionTemplate)
 
 Example of extracting resource IDs by index:
 
-[!code-cs[](../obj/snippets/Google.Pubsub.V1.ResourceNameDoc.txt#ParseResourceName_Index)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#ParseResourceName_Index)]
 
 Example of extracting resource IDs by name:
 
-[!code-cs[](../obj/snippets/Google.Pubsub.V1.ResourceNameDoc.txt#ParseResourceName_Name)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#ParseResourceName_Name)]

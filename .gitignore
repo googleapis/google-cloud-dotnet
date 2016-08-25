@@ -4,6 +4,8 @@ obj
 bin
 project.lock.json
 _site
+site
 external
+output
 *~
 .cr

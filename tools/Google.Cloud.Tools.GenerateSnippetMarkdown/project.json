@@ -6,12 +6,8 @@
   },
 
   "dependencies": {
-    "YamlDotNet.Signed": "3.9.0",
-    "docfx": "2.3.0"
-  },
-
-  "commands": {
-    "run": "Google.GCloud.Tools.GenerateSnippetMarkdown"
+    "Google.Cloud.Tools.Common": { "target": "project" },
+    "YamlDotNet.Signed": "3.9.0"
   },
 
   "frameworks": {

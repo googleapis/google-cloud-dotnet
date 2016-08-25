@@ -12,18 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Pubsub.V1;
 using System;
 using Xunit;
-using Google.Api.Gax;
 
-namespace Google.Pubsub.V1.Snippets
+namespace Google.Cloud.Tools.Snippets
 {
-    // Snippets for resource name documentation. Any snippets which would make API calls
-    // are *not* tests. They use hard-coded resources names
-    // as we're demonstrating resource names - but this way we at least make sure
-    // they compile.
-    public class ResourceNameDocSnippets
+    public class ResourceNameSnippets
     {
+        // Not a test - the hard-coded project doesn't actually exist.
         public void ListTopics()
         {
             // Sample: ListTopics
@@ -83,5 +81,6 @@ namespace Google.Pubsub.V1.Snippets
             Assert.Equal("petstore", projectId);
             Assert.Equal("offers", topicId);
         }
+
     }
 }

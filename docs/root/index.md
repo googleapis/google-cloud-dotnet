@@ -1,0 +1,21 @@
+# Google Cloud Client Libraries for .NET
+
+The Google Cloud Client Libraries for .NET support accessing Google
+Cloud Platform services in a way that significantly reduces the
+boilerplate code you have to write. The libraries provide high-level
+API abstractions so they're easier to understand. They embrace
+idioms of C#, work well with the standard library, and integrates
+better with your codebase. All this means you spend more time
+creating code that matters to you.
+
+General articles are linked at the top of the page. These give
+background reading to help you make the most of any of the APIs
+supported here.
+
+APIs with supporting libraries:
+
+- [Google.Bigquery.V2](Google.Bigquery.V2/index.html)
+- [Google.Datastore.V1Beta3](Google.Datastore.V1Beta3/index.html)
+- [Google.Logging.V2](Google.Logging.V2/index.html)
+- [Google.Pubsub.V1](Google.Pubsub.V1/index.html)
+- [Google.Storage.V1](Google.Storage.V1/index.html)

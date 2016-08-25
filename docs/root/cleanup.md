@@ -18,8 +18,8 @@ slightly less control (but a simpler life) you can let the client
 libraries create channels themselves as necessary, and shut them
 down explicitly using the static `ShutDownDefaultChannelsAsync`
 method which each client class exposes. (For example,
-[PublisherClient.ShutDownDefaultChannelsAsync()](../obj/api/Google.Pubsub.V1.PublisherClient.yml#Google_Pubsub_V1_PublisherClient_ShutDownDefaultChannelsAsync) and
-[SubscriberClient.ShutDownDefaultChannelsAsync()](../obj/api/Google.Pubsub.V1.SubscriberClient.yml#Google_Pubsub_V1_SubscriberClient_ShutDownDefaultChannelsAsync).)
+[PublisherClient.ShutDownDefaultChannelsAsync()](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ShutDownDefaultChannelsAsync) and
+[SubscriberClient.ShutDownDefaultChannelsAsync()](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ShutDownDefaultChannelsAsync).)
 
 Finally, gRPC provides an environment-wide shutdown method of `GrpcEnvironment.ShutdownChannelsAsync()`.
 
