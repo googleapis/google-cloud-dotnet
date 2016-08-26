@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2.Responses;
+using Google.Apis.Compute.v1.Data;
 using Google.Apis.Http;
 using System;
 using System.Collections.Generic;
@@ -74,7 +75,7 @@ namespace Google.Cloud.Metadata.V1
         /// </remarks>
         /// <param name="key">The key of the instance's custom metadata value to get.</param>
         /// <exception cref="ArgumentException">The key is not in the proper format.</exception>
-        /// <seealso cref="InstanceMetadata.CustomMetadata"/>
+        /// <seealso cref="Instance.Metadata"/>
         public virtual string GetCustomInstanceMetadata(string key)
         {
             throw new NotImplementedException();
@@ -96,7 +97,7 @@ namespace Google.Cloud.Metadata.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <exception cref="ArgumentException">The key is not in the proper format.</exception>
         /// <returns>A task representing the asynchronous operation.</returns>
-        /// <seealso cref="InstanceMetadata.CustomMetadata"/>
+        /// <seealso cref="Instance.Metadata"/>
         public virtual Task<string> GetCustomInstanceMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
@@ -116,7 +117,7 @@ namespace Google.Cloud.Metadata.V1
         /// </remarks>
         /// <param name="key">The key of the project's custom metadata to get.</param>
         /// <exception cref="ArgumentException">The key is not in the proper format.</exception>
-        /// <seealso cref="ProjectMetadata.CustomMetadata"/>
+        /// <seealso cref="Project.Metadata"/>
         public virtual string GetCustomProjectMetadata(string key)
         {
             throw new NotImplementedException();
@@ -138,7 +139,7 @@ namespace Google.Cloud.Metadata.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <exception cref="ArgumentException">The key is not in the proper format.</exception>
         /// <returns>A task representing the asynchronous operation.</returns>
-        /// <seealso cref="ProjectMetadata.CustomMetadata"/>
+        /// <seealso cref="Project.Metadata"/>
         public virtual Task<string> GetCustomProjectMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
@@ -152,8 +153,8 @@ namespace Google.Cloud.Metadata.V1
         /// accessed without authentication from an application running on the instance. Check <see cref="IsServerAvailable"/> or
         /// <see cref="IsServerAvailableAsync(CancellationToken)"/> to determine if the metadata can be accessed.
         /// </remarks>
-        /// <returns>The <see cref="InstanceMetadata"/> representing the metadata.</returns>
-        public virtual InstanceMetadata GetInstanceMetadata()
+        /// <returns>The <see cref="Instance"/> representing the metadata.</returns>
+        public virtual Instance GetInstanceMetadata()
         {
             throw new NotImplementedException();
         }
@@ -167,8 +168,8 @@ namespace Google.Cloud.Metadata.V1
         /// <see cref="IsServerAvailableAsync(CancellationToken)"/> to determine if the metadata can be accessed.
         /// </remarks>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task containing the <see cref="InstanceMetadata"/> representing the metadata.</returns>
-        public virtual Task<InstanceMetadata> GetInstanceMetadataAsync(CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>A task containing the <see cref="Instance"/> representing the metadata.</returns>
+        public virtual Task<Instance> GetInstanceMetadataAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
@@ -177,13 +178,13 @@ namespace Google.Cloud.Metadata.V1
         /// Gets the maintenance status for the VM currently running this code synchronously.
         /// </summary>
         /// <remarks>
-        /// If the <see cref="InstanceMetadata.Scheduling"/>'s <see cref="SchedulingMetadata.MaintenanceEventBehavior"/> is set to
-        /// <see cref="MaintenanceEventBehavior.LiveMigrate"/>, the maintenance status will change to <see cref="MaintenanceStatus.MigrateOnHost"/>
-        /// 60 seconds before a maintenance event starts. This will give the application an opportunity to perform any tasks in preparation
-        /// for the event, such as backing up data or updating logs. Otherwise, the value will be <see cref="MaintenanceStatus.None"/>.
+        /// If the <see cref="Instance.Scheduling"/>'s <see cref="Scheduling.OnHostMaintenance"/> is set to "MIGRATE", the maintenance status will change
+        /// to <see cref="MaintenanceStatus.MigrateOnHost"/> 60 seconds before a maintenance event starts. This will give the application an opportunity
+        /// to perform any tasks in preparation for the event, such as backing up data or updating logs. Otherwise, the value will be
+        /// <see cref="MaintenanceStatus.None"/>.
         /// </remarks>
         /// <returns>The current maintenance status.</returns>
-        /// <seealso cref="SchedulingMetadata.MaintenanceEventBehavior"/>
+        /// <seealso cref="Scheduling.OnHostMaintenance"/>
         public virtual MaintenanceStatus GetMaintenanceStatus()
         {
             throw new NotImplementedException();
@@ -193,29 +194,29 @@ namespace Google.Cloud.Metadata.V1
         /// Gets the maintenance status for the VM currently running this code asynchronously.
         /// </summary>
         /// <remarks>
-        /// If the <see cref="InstanceMetadata.Scheduling"/>'s <see cref="SchedulingMetadata.MaintenanceEventBehavior"/> is set to
-        /// <see cref="MaintenanceEventBehavior.LiveMigrate"/>, the maintenance status will change to <see cref="MaintenanceStatus.MigrateOnHost"/>
-        /// 60 seconds before a maintenance event starts. This will give the application an opportunity to perform any tasks in preparation
-        /// for the event, such as backing up data or updating logs. Otherwise, the value will be <see cref="MaintenanceStatus.None"/>.
+        /// If the <see cref="Instance.Scheduling"/>'s <see cref="Scheduling.OnHostMaintenance"/> is set to "MIGRATE", the maintenance status will change
+        /// to <see cref="MaintenanceStatus.MigrateOnHost"/> 60 seconds before a maintenance event starts. This will give the application an opportunity
+        /// to perform any tasks in preparation for the event, such as backing up data or updating logs. Otherwise, the value will be
+        /// <see cref="MaintenanceStatus.None"/>.
         /// </remarks>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task containing the current maintenance status.</returns>
-        /// <seealso cref="SchedulingMetadata.MaintenanceEventBehavior"/>
+        /// <seealso cref="Scheduling.OnHostMaintenance"/>
         public virtual Task<MaintenanceStatus> GetMaintenanceStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Gets the metadata for the project of the VM currently running this code asynchronously.
+        /// Gets the metadata for the project of the VM currently running this code synchronously.
         /// </summary>
         /// <remarks>
         /// The project metadata contains information about the project, such as its ID, and custom metadata and it can be
         /// accessed without authentication from an application running on an instance of that project. Check <see cref="IsServerAvailable"/> or
         /// <see cref="IsServerAvailableAsync(CancellationToken)"/> to determine if the metadata can be accessed.
         /// </remarks>
-        /// <returns>A task containing the <see cref="InstanceMetadata"/> representing the metadata.</returns>
-        public virtual ProjectMetadata GetProjectMetadata()
+        /// <returns>The <see cref="Project"/> representing the metadata.</returns>
+        public virtual Project GetProjectMetadata()
         {
             throw new NotImplementedException();
         }
@@ -229,8 +230,8 @@ namespace Google.Cloud.Metadata.V1
         /// <see cref="IsServerAvailableAsync(CancellationToken)"/> to determine if the metadata can be accessed.
         /// </remarks>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task containing the <see cref="InstanceMetadata"/> representing the metadata.</returns>
-        public virtual Task<ProjectMetadata> GetProjectMetadataAsync(CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>A task containing the <see cref="Project"/> representing the metadata.</returns>
+        public virtual Task<Project> GetProjectMetadataAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
