@@ -18,6 +18,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Datastore.V1Beta3.PropertyOrder.Types;
+using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
 
 namespace Google.Datastore.V1Beta3.Snippets
@@ -90,10 +91,11 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            DatastoreQueryResults results = db.RunQuery(query);
-            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
+            LazyDatastoreQuery results = db.RunQuery(query);
+            // LazyDatastoreQuery implements IEnumerable<Entity>, but you can
+            // call AsResponses() to see the raw RPC responses, or
+            // GetAllResults() to get all the results into memory, complete with
+            // the end cursor and the reason for the query finishing.
             foreach (Entity entity in results)
             {
                 Console.WriteLine(entity);
@@ -120,10 +122,11 @@ namespace Google.Datastore.V1Beta3.Snippets
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            DatastoreAsyncQueryResults results = db.RunQueryAsync(query);
-            // DatastoreAsyncQueryResults implements IAsyncEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
+            AsyncLazyDatastoreQuery results = db.RunQueryAsync(query);
+            // AsyncLazyDatastoreQuery implements IAsyncEnumerable<Entity>, but you can
+            // call AsResponses() to see the raw RPC responses, or
+            // GetAllResultsAsync() to get all the results into memory, complete with
+            // the end cursor and the reason for the query finishing.
             await results.ForEachAsync(entity =>
             {
                 Console.WriteLine(entity);
@@ -151,10 +154,11 @@ namespace Google.Datastore.V1Beta3.Snippets
                 QueryString = "SELECT * FROM book WHERE author = @author",
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
-            DatastoreQueryResults results = db.RunQuery(gqlQuery);
-            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
+            LazyDatastoreQuery results = db.RunQuery(gqlQuery);
+            // LazyDatastoreQuery implements IEnumerable<Entity>, but you can
+            // call AsResponses() to see the raw RPC responses, or
+            // GetAllResults() to get all the results into memory, complete with
+            // the end cursor and the reason for the query finishing.
             foreach (Entity entity in results)
             {
                 Console.WriteLine(entity);
@@ -182,10 +186,11 @@ namespace Google.Datastore.V1Beta3.Snippets
                 QueryString = "SELECT * FROM book WHERE author = @author",
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
-            DatastoreAsyncQueryResults results = db.RunQueryAsync(gqlQuery);
-            // DatastoreAsyncQueryResults implements IAsyncEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
+            AsyncLazyDatastoreQuery results = db.RunQueryAsync(gqlQuery);
+            // AsyncLazyDatastoreQuery implements IAsyncEnumerable<Entity>, but you can
+            // call AsResponses() to see the raw RPC responses, or
+            // GetAllResultsAsync() to get all the results into memory, complete with
+            // the end cursor and the reason for the query finishing.
             await results.ForEachAsync(entity =>
             {
                 Console.WriteLine(entity);
@@ -751,19 +756,14 @@ namespace Google.Datastore.V1Beta3.Snippets
             Query query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
-            List<EntityResult> entityResults = db.RunQuery(query, ReadConsistency.Eventual).AsEntityResults().ToList();
-            foreach (EntityResult result in entityResults)
+            DatastoreQueryResults results = db.RunQuery(query, ReadConsistency.Eventual).GetAllResults();
+            foreach (Entity entity in results.Entities)
             {
-                Entity entity = result.Entity;
                 // Do something with the task entity
             }
-            // If we retrieved as many entities as we requested, there may be another page of results.
-            // (There may not be any more results, but the query stopped executing when it had found
-            // as many as we asked for.)
-            // If we ran out of results, this is definitely the last page.
-            if (entityResults.Count == pageSize)
+            if (results.MoreResults == MoreResultsType.MoreResultsAfterLimit)
             {
-                ByteString nextPageCursor = entityResults.Last().Cursor;
+                ByteString nextPageCursor = results.EndCursor;
                 // Store nextPageCursor to get the next page later.
             }
             // End sample

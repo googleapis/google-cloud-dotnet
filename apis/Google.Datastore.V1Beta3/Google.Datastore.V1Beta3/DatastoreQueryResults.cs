@@ -12,86 +12,44 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
-using System.Collections;
+using Google.Protobuf;
 using System.Collections.Generic;
-using System.Linq;
+using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 
 namespace Google.Datastore.V1Beta3
 {
     /// <summary>
-    /// A Datastore query which is executed lazily and which be viewed in multiple ways.
+    /// A complete set of query results, fetched and stored in memory. Results are
+    /// fetched from a <see cref="LazyDatastoreQuery"/> or <see cref="AsyncLazyDatastoreQuery"/>
+    /// until the query-specified limit or end cursor is reached, or no more results are available.
     /// </summary>
-    public sealed class DatastoreQueryResults : IEnumerable<Entity>
+    public sealed class DatastoreQueryResults
     {
-        private readonly IEnumerable<RunQueryResponse> _responses;
+        /// <summary>
+        /// The entities returned by the query.
+        /// </summary>
+        public IReadOnlyList<Entity> Entities { get; }
 
         /// <summary>
-        /// Constructs a new instance from the given sequence of responses. This constructor
-        /// is only present to facilitate testing; application code will normally obtain instances
-        /// of this class by calling <see cref="DatastoreDb.RunQuery"/>.
+        /// The condition that caused the query to complete, indicating whether more
+        /// results are available beyond the query limit or end cursor, or whether
+        /// the data has been exhausted.
         /// </summary>
-        /// <remarks>
-        /// The sequence of responses will be returned directly from <see cref="AsResponses"/>, and
-        /// used to lazily construct the other sequences returned by this class. It should not
-        /// contain any null references.
-        /// </remarks>
-        /// <param name="responses">The responses to return.</param>
-        public DatastoreQueryResults(IEnumerable<RunQueryResponse> responses)
+        public MoreResultsType MoreResults { get; }
+
+        /// <summary>
+        /// The cursor at the end of the results. This will never be null.
+        /// </summary>
+        public ByteString EndCursor { get; }
+
+        internal DatastoreQueryResults(
+            IReadOnlyList<Entity> entities,
+            MoreResultsType endCondition,
+            ByteString endCursor)
         {
-            _responses = GaxPreconditions.CheckNotNull(responses, nameof(responses));
+            MoreResults = endCondition;
+            Entities = entities;
+            EndCursor = endCursor;
         }
-
-        /// <inheritdoc />
-        public IEnumerator<Entity> GetEnumerator() => AsEntities().GetEnumerator();
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="Entity"/> values.
-        /// </summary>
-        /// <remarks>
-        /// This method only exists for symmetry with the other "As*" methods, to make the fact that
-        /// the class implements IEnumerable{Entity} more incidental.
-        /// </remarks>
-        private IEnumerable<Entity> AsEntities() => AsEntityResults().Select(er => er.Entity);
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="EntityResult"/> values.
-        /// The final result from each batch is modified to use the batch's end cursor instead of
-        /// the original <see cref="EntityResult.Cursor"/> value.
-        /// </summary>
-        /// <remarks>
-        /// </remarks>
-        /// <returns>A sequence of <see cref="EntityResult"/> values.</returns>
-        public IEnumerable<EntityResult> AsEntityResults() =>
-            AsBatches().SelectMany(batch =>
-            {
-                var lastResult = batch.EntityResults.LastOrDefault();
-                if (lastResult != null)
-                {
-                    lastResult.Cursor = batch.EndCursor;
-                }
-                return batch.EntityResults;
-            });
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="RunQueryResponse"/> values
-        /// exactly as returned by the Datastore API. This method is only useful if the application
-        /// wishes to examine the <see cref="RunQueryResponse.Query"/> property; otherwise, use
-        /// <see cref="AsBatches"/> to obtain the sequence of batches.
-        /// </summary>
-        /// <returns>A sequence of <see cref="RunQueryResponse"/> values.</returns>
-        public IEnumerable<RunQueryResponse> AsResponses() => _responses;
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="QueryResultBatch"/> values.
-        /// This method is only useful if the application wishes to process a batch at a time; if the
-        /// details of how the API splits the results into batches is not needed, use <see cref="AsEntityResults"/>
-        /// or simply iterate over the entities.
-        /// </summary>
-        /// <returns>A sequence of <see cref="QueryResultBatch"/> values.</returns>
-        public IEnumerable<QueryResultBatch> AsBatches() => _responses.Select(r => r.Batch);
-
-        /// <inheritdoc />
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

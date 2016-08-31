@@ -19,7 +19,7 @@ using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 
 namespace Google.Datastore.V1Beta3.Tests
 {
-    public class DatastoreQueryResultsTest
+    public class LazyDatastoreQueryTest
     {
         private static readonly Entity[] _entities = Enumerable
             .Range(0, 20)
@@ -78,34 +78,24 @@ namespace Google.Datastore.V1Beta3.Tests
         [Fact]
         public void AsEntities()
         {
-            var results = new DatastoreQueryResults(_responses.Select(r => r.Clone()));
-            Assert.Equal(_entities, results);
-        }
-
-        [Fact]
-        public void AsEntityResults()
-        {
-            var results = new DatastoreQueryResults(_responses.Select(r => r.Clone()));
-            var expected = _entityResults.ToList();
-            expected[4].Cursor = _responses[1].Batch.EndCursor;
-            expected[14].Cursor = _responses[2].Batch.EndCursor;
-            expected[19].Cursor = _responses[3].Batch.EndCursor;
-            Assert.Equal(expected, results.AsEntityResults());
-        }
-
-        [Fact]
-        public void AsBatches()
-        {
-            var results = new DatastoreQueryResults(_responses.Select(r => r.Clone()));
-            var expected = new[] { _responses[0].Batch, _responses[1].Batch, _responses[2].Batch, _responses[3].Batch };
-            Assert.Equal(expected, results.AsBatches());
+            var query = new LazyDatastoreQuery(_responses.Select(r => r.Clone()));
+            Assert.Equal(_entities, query);
         }
 
         [Fact]
         public void AsResponses()
         {
-            var results = new DatastoreQueryResults(_responses.Select(r => r.Clone()));
-            Assert.Equal(_responses, results.AsResponses());
+            var query = new LazyDatastoreQuery(_responses.Select(r => r.Clone()));
+            Assert.Equal(_responses, query.AsResponses());
+        }
+
+        [Fact]
+        public void GetAllResults()
+        {
+            var results = new LazyDatastoreQuery(_responses.Select(r => r.Clone())).GetAllResults();
+            Assert.Equal(_entities, results.Entities);
+            Assert.Equal(MoreResultsType.MoreResultsAfterLimit, results.MoreResults);
+            Assert.Equal(ByteString.CopyFromUtf8("after-batch-4"), results.EndCursor);
         }
     }
 }

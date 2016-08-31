@@ -93,7 +93,7 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// <para>
         /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </para>
         /// </remarks>
@@ -101,8 +101,8 @@ namespace Google.Datastore.V1Beta3
         /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public DatastoreQueryResults RunQuery(Query query, CallSettings callSettings = null)
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
+        public LazyDatastoreQuery RunQuery(Query query, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             var request = new RunQueryRequest
@@ -113,7 +113,7 @@ namespace Google.Datastore.V1Beta3
                 ReadOptions = _readOptions
             };
             var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
-            return new DatastoreQueryResults(streamer.Sync());
+            return new LazyDatastoreQuery(streamer.Sync());
         }
 
 
@@ -129,7 +129,7 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// <para>
         /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </para>
         /// </remarks>
@@ -137,8 +137,8 @@ namespace Google.Datastore.V1Beta3
         /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public DatastoreAsyncQueryResults RunQueryAsync(Query query, CallSettings callSettings = null)
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
+        public AsyncLazyDatastoreQuery RunQueryAsync(Query query, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             var request = new RunQueryRequest
@@ -149,7 +149,7 @@ namespace Google.Datastore.V1Beta3
                 ReadOptions = _readOptions
             };
             var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
-            return new DatastoreAsyncQueryResults(streamer.Async());
+            return new AsyncLazyDatastoreQuery(streamer.Async());
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// <para>
         /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </para>
         /// </remarks>
@@ -172,8 +172,8 @@ namespace Google.Datastore.V1Beta3
         /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public DatastoreQueryResults RunQuery(GqlQuery gqlQuery, CallSettings callSettings = null)
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
+        public LazyDatastoreQuery RunQuery(GqlQuery gqlQuery, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
             var request = new RunQueryRequest
@@ -184,7 +184,7 @@ namespace Google.Datastore.V1Beta3
                 ReadOptions = _readOptions
             };
             var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
-            return new DatastoreQueryResults(streamer.Sync());
+            return new LazyDatastoreQuery(streamer.Sync());
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace Google.Datastore.V1Beta3
         /// </para>
         /// <para>
         /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </para>
         /// </remarks>
@@ -207,8 +207,8 @@ namespace Google.Datastore.V1Beta3
         /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public DatastoreAsyncQueryResults RunQueryAsync(GqlQuery gqlQuery, PartitionId partitionId, CallSettings callSettings = null)
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
+        public AsyncLazyDatastoreQuery RunQueryAsync(GqlQuery gqlQuery, PartitionId partitionId, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
             var request = new RunQueryRequest
@@ -219,7 +219,7 @@ namespace Google.Datastore.V1Beta3
                 ReadOptions = _readOptions
             };
             var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
-            return new DatastoreAsyncQueryResults(streamer.Async());
+            return new AsyncLazyDatastoreQuery(streamer.Async());
         }
 
         /// <summary>

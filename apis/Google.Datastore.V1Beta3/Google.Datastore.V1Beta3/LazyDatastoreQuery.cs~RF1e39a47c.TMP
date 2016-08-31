@@ -13,17 +13,20 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Datastore.V1Beta3
 {
     /// <summary>
-    /// An asynchronous Datastore query which is executed lazily and which be viewed in multiple ways.
+    /// A Datastore query which is executed lazily and which be viewed in multiple ways.
+    /// The lazy evaluation is important: if you iterate over the query multiple times, it will execute
+    /// multiple times, potentially returning different results each time.
     /// </summary>
-    public sealed class DatastoreAsyncQueryResults : IAsyncEnumerable<Entity>
+    public sealed class LazyDatastoreQuery : IEnumerable<Entity>
     {
-        private readonly IAsyncEnumerable<RunQueryResponse> _responses;
+        private readonly IEnumerable<RunQueryResponse> _responses;
 
         /// <summary>
         /// Constructs a new instance from the given sequence of responses. This constructor
@@ -36,13 +39,32 @@ namespace Google.Datastore.V1Beta3
         /// contain any null references.
         /// </remarks>
         /// <param name="responses">The responses to return.</param>
-        public DatastoreAsyncQueryResults(IAsyncEnumerable<RunQueryResponse> responses)
+        public LazyDatastoreQuery(IEnumerable<RunQueryResponse> responses)
         {
             _responses = GaxPreconditions.CheckNotNull(responses, nameof(responses));
         }
 
+        /// <summary>
+        /// Reads all the results from this query, until either the query-specified limit or end cursor
+        /// is reached, or there is no more data to read. Note that all the entities are read into memory,
+        /// so this method is not appropriate for use cases where a query could return a very large number
+        /// of results. However, it is the simplest approach to use cases where the query is bounded, such
+        /// as displaying a page of results at a time in a web application.
+        /// </summary>
+        /// <returns>The complete set of query results.</returns>
+        public DatastoreQueryResults GetAllResults()
+        {
+            // This takes slightly more memory than we really need, due to extra
+            // cursors etc, but that's likely to be insignificant compared with the
+            // entity data, and is immediately eligible for garbage collection.
+            var responses = _responses.ToList();
+            var entities = responses.SelectMany(r => r.Batch.EntityResults.Select(er => er.Entity)).ToList().AsReadOnly();
+            var lastBatch = responses.Last().Batch;
+            return new DatastoreQueryResults(entities, lastBatch.MoreResults, lastBatch.EndCursor);
+        }
+
         /// <inheritdoc />
-        public IAsyncEnumerator<Entity> GetEnumerator() => AsEntities().GetEnumerator();
+        public IEnumerator<Entity> GetEnumerator() => AsEntities().GetEnumerator();
 
         /// <summary>
         /// Returns the results of this query as a sequence of <see cref="Entity"/> values.
@@ -51,7 +73,7 @@ namespace Google.Datastore.V1Beta3
         /// This method only exists for symmetry with the other "As*" methods, to make the fact that
         /// the class implements IEnumerable{Entity} more incidental.
         /// </remarks>
-        private IAsyncEnumerable<Entity> AsEntities() => AsEntityResults().Select(er => er.Entity);
+        private IEnumerable<Entity> AsEntities() => AsEntityResults().Select(er => er.Entity);
 
         /// <summary>
         /// Returns the results of this query as a sequence of <see cref="EntityResult"/> values.
@@ -61,33 +83,31 @@ namespace Google.Datastore.V1Beta3
         /// <remarks>
         /// </remarks>
         /// <returns>A sequence of <see cref="EntityResult"/> values.</returns>
-        public IAsyncEnumerable<EntityResult> AsEntityResults() =>
-            AsBatches().SelectMany(batch =>
+        public IEnumerable<EntityResult> AsEntityResults() =>
+            AsResponses().SelectMany(response =>
             {
+                var batch = response.Batch;
                 var lastResult = batch.EntityResults.LastOrDefault();
                 if (lastResult != null)
                 {
                     lastResult.Cursor = batch.EndCursor;
                 }
-                return batch.EntityResults.ToAsyncEnumerable();
+                return batch.EntityResults;
             });
 
         /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="RunQueryResponse"/> values
+        /// This method is for advanced use cases only, where more diagnostic information is required;
+        /// most application code should merely iterate over the query results as <see cref="Entity"/>
+        /// values, or call <see cref="GetAllResults()"/>.
+        /// The results of this query are returned as a sequence of <see cref="RunQueryResponse"/> values
         /// exactly as returned by the Datastore API. This method is only useful if the application
         /// wishes to examine the <see cref="RunQueryResponse.Query"/> property; otherwise, use
         /// <see cref="AsBatches"/> to obtain the sequence of batches.
         /// </summary>
         /// <returns>A sequence of <see cref="RunQueryResponse"/> values.</returns>
-        public IAsyncEnumerable<RunQueryResponse> AsResponses() => _responses;
+        public IEnumerable<RunQueryResponse> AsResponses() => _responses;
 
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="QueryResultBatch"/> values.
-        /// This method is only useful if the application wishes to process a batch at a time; if the
-        /// details of how the API splits the results into batches is not needed, use <see cref="AsEntityResults"/>
-        /// or simply iterate over the entities.
-        /// </summary>
-        /// <returns>A sequence of <see cref="QueryResultBatch"/> values.</returns>
-        public IAsyncEnumerable<QueryResultBatch> AsBatches() => _responses.Select(r => r.Batch);
+        /// <inheritdoc />
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

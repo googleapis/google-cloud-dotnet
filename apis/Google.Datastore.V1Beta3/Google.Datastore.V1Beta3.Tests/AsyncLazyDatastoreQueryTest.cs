@@ -20,7 +20,7 @@ using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 
 namespace Google.Datastore.V1Beta3.Tests
 {
-    public class DatastoreAsyncQueryResultsTest
+    public class AsyncLazyDatastoreQueryTest
     {
         private static readonly Entity[] _entities = Enumerable
             .Range(0, 20)
@@ -79,34 +79,25 @@ namespace Google.Datastore.V1Beta3.Tests
         [Fact]
         public async Task AsEntities()
         {
-            var results = new DatastoreAsyncQueryResults(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
-            Assert.Equal(_entities, await results.ToList());
-        }
-
-        [Fact]
-        public async Task AsEntityResults()
-        {
-            var results = new DatastoreAsyncQueryResults(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
-            var expected = _entityResults.ToList();
-            expected[4].Cursor = _responses[1].Batch.EndCursor;
-            expected[14].Cursor = _responses[2].Batch.EndCursor;
-            expected[19].Cursor = _responses[3].Batch.EndCursor;
-            Assert.Equal(expected, await results.AsEntityResults().ToList());
-        }
-
-        [Fact]
-        public async Task AsBatches()
-        {
-            var results = new DatastoreAsyncQueryResults(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
-            var expected = new[] { _responses[0].Batch, _responses[1].Batch, _responses[2].Batch, _responses[3].Batch };
-            Assert.Equal(expected, await results.AsBatches().ToList());
+            var query = new AsyncLazyDatastoreQuery(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
+            Assert.Equal(_entities, await query.ToList());
         }
 
         [Fact]
         public async Task AsResponses()
         {
-            var results = new DatastoreAsyncQueryResults(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
-            Assert.Equal(_responses, await results.AsResponses().ToList());
+            var query = new AsyncLazyDatastoreQuery(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
+            Assert.Equal(_responses, await query.AsResponses().ToList());
+        }
+
+        [Fact]
+        public async Task GetAllResultsAsync()
+        {
+            var query = new AsyncLazyDatastoreQuery(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
+            var results = await query.GetAllResultsAsync();
+            Assert.Equal(_entities, results.Entities);
+            Assert.Equal(MoreResultsType.MoreResultsAfterLimit, results.MoreResults);
+            Assert.Equal(ByteString.CopyFromUtf8("after-batch-4"), results.EndCursor);
         }
     }
 }

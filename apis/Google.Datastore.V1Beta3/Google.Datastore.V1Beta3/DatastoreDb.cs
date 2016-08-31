@@ -93,76 +93,72 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Executes the given structured query, returning a result set that can be viewed as a sequence of
-        /// entities, entity results (with cursors), batches, or raw API responses.
+        /// Lazily executes the given structured query.
         /// </summary>
         /// <remarks>
         /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public virtual DatastoreQueryResults RunQuery(
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the lazy query results.</returns>
+        public virtual LazyDatastoreQuery RunQuery(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Executes the given structured query, returning a result set that can be viewed as an asynchronous
-        /// sequence of entities, entity results (with cursors), batches, or raw API responses.
+        /// Lazily executes the given structured query.
         /// </summary>
         /// <remarks>
         /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public virtual DatastoreAsyncQueryResults RunQueryAsync(
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the lazy query results.</returns>
+        public virtual AsyncLazyDatastoreQuery RunQueryAsync(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
-        
+
         /// <summary>
-        /// Executes the given GQL query, returning a result set that can be viewed as a sequence of
-        /// entities, entity results (with cursors), batches, or raw API responses.
+        /// Executes the given GQL query.
         /// </summary>
         /// <remarks>
         /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public virtual DatastoreQueryResults RunQuery(
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the lazy query results.</returns>
+        public virtual LazyDatastoreQuery RunQuery(
             GqlQuery gqlQuery, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Executes the given GQL query, returning a result set that can be viewed as an asynchronous
-        /// sequence of entities, entity results (with cursors), batches, or raw API responses.
+        /// Executes the given GQL query.
         /// </summary>
         /// <remarks>
         /// The results are requested lazily: no API calls will be made until the application starts
-        /// iterating over the results. Iterating over the same <see cref="DatastoreQueryResults"/> object
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="DatastoreQueryResults"/> representing the result of the query.</returns>
-        public virtual DatastoreAsyncQueryResults RunQueryAsync(
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the lazy query results.</returns>
+        public virtual AsyncLazyDatastoreQuery RunQueryAsync(
             GqlQuery gqlQuery, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
