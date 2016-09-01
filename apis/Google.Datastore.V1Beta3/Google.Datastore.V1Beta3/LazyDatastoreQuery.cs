@@ -33,7 +33,7 @@ namespace Google.Datastore.V1Beta3
         /// <summary>
         /// Constructs a new instance from the given sequence of responses. This constructor
         /// is only present to facilitate testing; application code will normally obtain instances
-        /// of this class by calling <see cref="DatastoreDb.RunQuery"/>.
+        /// of this class by calling <see cref="DatastoreDb.RunQueryLazily"/>.
         /// </summary>
         /// <remarks>
         /// The sequence of responses will be returned directly from <see cref="AsResponses"/>, and

@@ -65,7 +65,7 @@ namespace Google.Datastore.V1Beta3
         public override KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
         
         /// <inheritdoc/>
-        public override LazyDatastoreQuery RunQuery(
+        public override LazyDatastoreQuery RunQueryLazily(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
@@ -83,7 +83,7 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <inheritdoc/>
-        public override AsyncLazyDatastoreQuery RunQueryAsync(
+        public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
@@ -101,7 +101,7 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <inheritdoc/>
-        public override LazyDatastoreQuery RunQuery(
+        public override LazyDatastoreQuery RunQueryLazily(
             GqlQuery gqlQuery,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
@@ -119,7 +119,7 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <inheritdoc/>
-        public override AsyncLazyDatastoreQuery RunQueryAsync(
+        public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(
             GqlQuery gqlQuery,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)

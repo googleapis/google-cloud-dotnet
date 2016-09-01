@@ -48,7 +48,7 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
             using (var transaction = db.BeginTransaction())
             {
                 var query = new Query("child") { Filter = Filter.HasAncestor(parentKey) };
-                var results = transaction.RunQuery(query);
+                var results = transaction.RunQueryLazily(query);
                 Assert.Equal(1, results.Count());
             }
         }

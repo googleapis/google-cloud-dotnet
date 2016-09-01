@@ -93,7 +93,7 @@ namespace Google.Datastore.V1Beta3.Tests
         public void GetAllResults()
         {
             var results = new LazyDatastoreQuery(_responses.Select(r => r.Clone())).GetAllResults();
-            Assert.Equal(_entities, results.Entities);
+            Assert.Equal(_entities, results.Entities.ToArray());
             Assert.Equal(MoreResultsType.MoreResultsAfterLimit, results.MoreResults);
             Assert.Equal(ByteString.CopyFromUtf8("after-batch-4"), results.EndCursor);
         }

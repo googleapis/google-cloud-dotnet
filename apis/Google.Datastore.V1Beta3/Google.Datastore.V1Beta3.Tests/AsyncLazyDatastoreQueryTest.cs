@@ -95,7 +95,7 @@ namespace Google.Datastore.V1Beta3.Tests
         {
             var query = new AsyncLazyDatastoreQuery(_responses.Select(r => r.Clone()).ToAsyncEnumerable());
             var results = await query.GetAllResultsAsync();
-            Assert.Equal(_entities, results.Entities);
+            Assert.Equal(_entities, results.Entities.ToArray());
             Assert.Equal(MoreResultsType.MoreResultsAfterLimit, results.MoreResults);
             Assert.Equal(ByteString.CopyFromUtf8("after-batch-4"), results.EndCursor);
         }

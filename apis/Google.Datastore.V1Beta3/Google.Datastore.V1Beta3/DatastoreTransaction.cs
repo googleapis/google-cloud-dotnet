@@ -82,8 +82,43 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Executes the given structured query in this transaction, returning a result set that can be viewed as a sequence of
-        /// entities, entity results (with cursors), batches, or raw API responses.
+        /// Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
+        /// results may be available beyond the query's limit. Use this method when your query has a limited
+        /// number of results, for example to build a web application which fetches results in pages.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Using a transaction ensures that a commit operation will fail if any of the entities returned
+        /// by this query have been modified while the transaction is active. Note that modifications performed
+        /// as part of this operation are not reflected in the query results.
+        /// </para>
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>The complete query results.</returns>
+        public DatastoreQueryResults RunQuery(Query query, CallSettings callSettings = null) =>
+            RunQueryLazily(query, callSettings).GetAllResults();
+
+        /// <summary>
+        /// Runs the given query eagerly and asynchronously in this transaction, retrieving all results in memory
+        /// and indicating whether more results may be available beyond the query's limit. Use this method when your query has a limited
+        /// number of results, for example to build a web application which fetches results in pages.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Using a transaction ensures that a commit operation will fail if any of the entities returned
+        /// by this query have been modified while the transaction is active. Note that modifications performed
+        /// as part of this operation are not reflected in the query results.
+        /// </para>
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the complete set of query results.</returns>
+        public Task<DatastoreQueryResults> RunQueryAsync(Query query, CallSettings callSettings = null) =>
+            RunQueryLazilyAsync(query, callSettings).GetAllResultsAsync();
+
+        /// <summary>
+        /// Lazily executes the given structured query in this transaction.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -101,8 +136,8 @@ namespace Google.Datastore.V1Beta3
         /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
-        public LazyDatastoreQuery RunQuery(Query query, CallSettings callSettings = null)
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the the lazy query results.</returns>
+        public LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             var request = new RunQueryRequest
@@ -116,10 +151,8 @@ namespace Google.Datastore.V1Beta3
             return new LazyDatastoreQuery(streamer.Sync());
         }
 
-
         /// <summary>
-        /// Executes the given structured query in this transaction, returning a result set that can be viewed as an asynchronous
-        /// sequence of entities, entity results (with cursors), batches, or raw API responses.
+        /// Lazily executes the given structured query in this transaction for asynchronous consumption.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -137,8 +170,8 @@ namespace Google.Datastore.V1Beta3
         /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
-        public AsyncLazyDatastoreQuery RunQueryAsync(Query query, CallSettings callSettings = null)
+        /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the result of the query.</returns>
+        public AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
             var request = new RunQueryRequest
@@ -153,8 +186,45 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Executes the given GQL query in this transaction, returning a result set that can be viewed as a sequence of
-        /// entities, entity results (with cursors), batches, or raw API responses.
+        /// Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
+        /// results may be available beyond the query's limit. Use this method when your query has a limited
+        /// number of results, for example to build a web application which fetches results in pages.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Using a transaction ensures that a commit operation will fail if any of the entities returned
+        /// by this query have been modified while the transaction is active. Note that modifications performed
+        /// as part of this operation are not reflected in the query results.
+        /// </para>
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>The complete query results.</returns>
+        public DatastoreQueryResults RunQuery(GqlQuery query, CallSettings callSettings = null) =>
+            RunQueryLazily(query, callSettings).GetAllResults();
+
+        /// <summary>
+        /// Runs the given query eagerly and asynchronously in this transaction, retrieving all results in memory and indicating whether more
+        /// results may be available beyond the query's limit. Use this method when your query has a limited
+        /// number of results, for example to build a web application which fetches results in pages.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Using a transaction ensures that a commit operation will fail if any of the entities returned
+        /// by this query have been modified while the transaction is active. Note that modifications performed
+        /// as part of this operation are not reflected in the query results.
+        /// </para>
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the complete set of query results.</returns>
+        public Task<DatastoreQueryResults> RunQueryAsync(GqlQuery query, CallSettings callSettings = null) =>
+            RunQueryLazilyAsync(query, callSettings).GetAllResultsAsync();
+
+        /// <summary>
+        /// Lazily executes the given GQL query in this transaction.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -173,7 +243,7 @@ namespace Google.Datastore.V1Beta3
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
-        public LazyDatastoreQuery RunQuery(GqlQuery gqlQuery, CallSettings callSettings = null)
+        public LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
             var request = new RunQueryRequest
@@ -188,8 +258,7 @@ namespace Google.Datastore.V1Beta3
         }
 
         /// <summary>
-        /// Executes the given GQL query in this transaction, returning a result set that can be viewed as an asynchronous
-        /// sequence of entities, entity results (with cursors), batches, or raw API responses.
+        /// Lazily executes the given structured query in this transaction for asynchronous consumption.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -207,14 +276,14 @@ namespace Google.Datastore.V1Beta3
         /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
         /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
-        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
-        public AsyncLazyDatastoreQuery RunQueryAsync(GqlQuery gqlQuery, PartitionId partitionId, CallSettings callSettings = null)
+        /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the result of the query.</returns>
+        public AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
             var request = new RunQueryRequest
             {
                 ProjectId = _projectId,
-                PartitionId = partitionId,
+                PartitionId = _partitionId,
                 GqlQuery = gqlQuery,
                 ReadOptions = _readOptions
             };
