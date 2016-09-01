@@ -13,17 +13,17 @@ fetch() {
 }
 
 build_api_docs() {
-  # TODO: Do everything relative to the root docs rather than the api docs directory?
-  # That way we could have an output directory, one per API...
-
   echo Building docs for $1
   local api=$1
+
+  # Special case "root" where we don't need to generate the sources
+  if [ "$api" == "root" ]
+  then
+    cp -r root output/root
+  else
+    dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
+  fi
   
-  # TODO: Generate docfx.json
-  # TODO: Generate toc.yaml
-  # TODO: Generate index.md
-  
-  dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   docfx.cmd metadata -f output/$api/docfx.json
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   docfx.cmd output/$api/docfx.json
@@ -56,15 +56,8 @@ if [ -n "$1" ]
 then
   build_api_docs $1
 else
-  for api in `find ../apis -mindepth 1 -maxdepth 1 -name 'Google*' -type d | cut -d/ -f3`
+  for api in `find ../apis -mindepth 1 -maxdepth 1 -name 'Google*' -type d | cut -d/ -f3` root
   do
     build_api_docs $api
   done
 fi
-
-# TODO: Allow this to happen or not...
-cp -r root output/root
-docfx.cmd metadata -f output/root/docfx.json
-dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- root
-docfx.cmd output/root/docfx.json
-cp -r output/root/site/* output/assembled
