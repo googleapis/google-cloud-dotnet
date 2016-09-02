@@ -92,13 +92,10 @@ namespace Google.Datastore.V1Beta3.IntegrationTests
         public void RunQuery_NoResults()
         {
             var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
-            var query = db.RunQuery(new Query("absent"));
+            var query = db.RunQueryLazily(new Query("absent"));
             // Each of the checks below will run the query again, as the query is only lazily
             // evaluated.
             Assert.Equal(0, query.Count());
-            Assert.Equal(0, query.AsEntityResults().Count());
-            var singleBatch = query.AsBatches().Single();
-            Assert.Equal(MoreResultsType.NoMoreResults, singleBatch.MoreResults);
             var singleResponse = query.AsResponses().Single();
             Assert.Equal(MoreResultsType.NoMoreResults, singleResponse.Batch.MoreResults);
         }

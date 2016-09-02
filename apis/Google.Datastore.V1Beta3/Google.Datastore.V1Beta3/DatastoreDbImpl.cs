@@ -65,7 +65,7 @@ namespace Google.Datastore.V1Beta3
         public override KeyFactory CreateKeyFactory(string kind) => new KeyFactory(_partitionId, kind);
         
         /// <inheritdoc/>
-        public override DatastoreQueryResults RunQuery(
+        public override LazyDatastoreQuery RunQueryLazily(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
@@ -79,11 +79,11 @@ namespace Google.Datastore.V1Beta3
                 ReadOptions = GetReadOptions(readConsistency)
             };
             var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
-            return new DatastoreQueryResults(streamer.Sync());
+            return new LazyDatastoreQuery(streamer.Sync());
         }
 
         /// <inheritdoc/>
-        public override DatastoreAsyncQueryResults RunQueryAsync(
+        public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(
             Query query,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
@@ -97,11 +97,11 @@ namespace Google.Datastore.V1Beta3
                 ReadOptions = GetReadOptions(readConsistency)
             };
             var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
-            return new DatastoreAsyncQueryResults(streamer.Async());
+            return new AsyncLazyDatastoreQuery(streamer.Async());
         }
 
         /// <inheritdoc/>
-        public override DatastoreQueryResults RunQuery(
+        public override LazyDatastoreQuery RunQueryLazily(
             GqlQuery gqlQuery,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
@@ -115,11 +115,11 @@ namespace Google.Datastore.V1Beta3
                 ReadOptions = GetReadOptions(readConsistency)
             };
             var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
-            return new DatastoreQueryResults(streamer.Sync());
+            return new LazyDatastoreQuery(streamer.Sync());
         }
 
         /// <inheritdoc/>
-        public override DatastoreAsyncQueryResults RunQueryAsync(
+        public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(
             GqlQuery gqlQuery,
             ReadConsistency? readConsistency = null,
             CallSettings callSettings = null)
@@ -133,7 +133,7 @@ namespace Google.Datastore.V1Beta3
                 ReadOptions = GetReadOptions(readConsistency)
             };
             var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
-            return new DatastoreAsyncQueryResults(streamer.Async());
+            return new AsyncLazyDatastoreQuery(streamer.Async());
         }
 
         /// <inheritdoc/>

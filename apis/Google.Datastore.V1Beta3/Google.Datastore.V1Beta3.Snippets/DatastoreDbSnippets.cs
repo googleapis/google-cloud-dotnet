@@ -18,6 +18,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Datastore.V1Beta3.PropertyOrder.Types;
+using static Google.Datastore.V1Beta3.QueryResultBatch.Types;
 using static Google.Datastore.V1Beta3.ReadOptions.Types;
 
 namespace Google.Datastore.V1Beta3.Snippets
@@ -79,21 +80,22 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
-        public void StructuredQuery()
+        public void LazyStructuredQuery()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuery(Query,*,*)
+            // Snippet: RunQueryLazily(Query,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query("book")
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            DatastoreQueryResults results = db.RunQuery(query);
-            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
+            LazyDatastoreQuery results = db.RunQueryLazily(query);
+            // LazyDatastoreQuery implements IEnumerable<Entity>, but you can
+            // call AsResponses() to see the raw RPC responses, or
+            // GetAllResults() to get all the results into memory, complete with
+            // the end cursor and the reason for the query finishing.
             foreach (Entity entity in results)
             {
                 Console.WriteLine(entity);
@@ -109,21 +111,22 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
-        public async Task StructuredQueryAsync()
+        public async Task LazyStructuredQueryAsync()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQueryAsync(Query,*,*)
+            // Snippet: RunQueryLazilyAsync(Query,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query("book")
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            DatastoreAsyncQueryResults results = db.RunQueryAsync(query);
-            // DatastoreAsyncQueryResults implements IAsyncEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
+            AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(query);
+            // AsyncLazyDatastoreQuery implements IAsyncEnumerable<Entity>, but you can
+            // call AsResponses() to see the raw RPC responses, or
+            // GetAllResultsAsync() to get all the results into memory, complete with
+            // the end cursor and the reason for the query finishing.
             await results.ForEachAsync(entity =>
             {
                 Console.WriteLine(entity);
@@ -139,22 +142,23 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
-        public void GqlQuery()
+        public void LazyGqlQuery()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: RunQuery(GqlQuery,*,*)
+            // Snippet: RunQueryLazily(GqlQuery,*,*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
-            DatastoreQueryResults results = db.RunQuery(gqlQuery);
-            // DatastoreQueryResults implements IEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
+            LazyDatastoreQuery results = db.RunQueryLazily(gqlQuery);
+            // LazyDatastoreQuery implements IEnumerable<Entity>, but you can
+            // call AsResponses() to see the raw RPC responses, or
+            // GetAllResults() to get all the results into memory, complete with
+            // the end cursor and the reason for the query finishing.
             foreach (Entity entity in results)
             {
                 Console.WriteLine(entity);
@@ -170,7 +174,134 @@ namespace Google.Datastore.V1Beta3.Snippets
         }
 
         [Fact]
-        public async Task GqlQueryAsync()
+        public async Task LazyGqlQueryAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: RunQueryLazilyAsync(GqlQuery,*,*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            GqlQuery gqlQuery = new GqlQuery
+            {
+                QueryString = "SELECT * FROM book WHERE author = @author",
+                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+            };
+            AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(gqlQuery);
+            // AsyncLazyDatastoreQuery implements IAsyncEnumerable<Entity>, but you can
+            // call AsResponses() to see the raw RPC responses, or
+            // GetAllResultsAsync() to get all the results into memory, complete with
+            // the end cursor and the reason for the query finishing.
+            await results.ForEachAsync(entity =>
+            {
+                Console.WriteLine(entity);
+            });
+            // End snippet
+
+            // This will run the query again, admittedly...
+            List<Entity> entities = await results.ToList();
+            Assert.Equal(1, entities.Count);
+            Entity book = entities[0];
+            Assert.Equal("Jane Austen", (string)book["author"]);
+            Assert.Equal("Pride and Prejudice", (string)book["title"]);
+        }
+
+        [Fact]
+        public void EagerStructuredQuery()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: RunQuery(Query,*,*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            Query query = new Query("book")
+            {
+                Filter = Filter.Equal("author", "Jane Austen"),
+                Limit = 10
+            };
+            // RunQuery fetches all the results into memory in a single call.
+            // Constrast this with RunQueryLazily, which merely prepares an enumerable
+            // query. Always specify a limit when you use RunQuery, to avoid running
+            // out of memory.
+            DatastoreQueryResults results = db.RunQuery(query);
+            foreach (Entity entity in results.Entities)
+            {
+                Console.WriteLine(entity);
+            }
+            // End snippet
+
+            // This will run the query again, admittedly...
+            Assert.Equal(1, results.Entities.Count);
+            Entity book = results.Entities[0];
+            Assert.Equal("Jane Austen", (string)book["author"]);
+            Assert.Equal("Pride and Prejudice", (string)book["title"]);
+        }
+
+        [Fact]
+        public async Task EagerStructuredQueryAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: RunQueryAsync(Query,*,*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            Query query = new Query("book")
+            {
+                Filter = Filter.Equal("author", "Jane Austen")
+            };
+            DatastoreQueryResults results = await db.RunQueryAsync(query);
+            // RunQuery fetches all the results into memory in a single call.
+            // Constrast this with RunQueryLazily, which merely prepares an enumerable
+            // query. Always specify a limit when you use RunQuery, to avoid running
+            // out of memory.
+            foreach (Entity entity in results.Entities)
+            {
+                Console.WriteLine(entity);
+            }
+            // End snippet
+
+            // This will run the query again, admittedly...
+            Assert.Equal(1, results.Entities.Count);
+            Entity book = results.Entities[0];
+            Assert.Equal("Jane Austen", (string)book["author"]);
+            Assert.Equal("Pride and Prejudice", (string)book["title"]);
+        }
+
+        [Fact]
+        public void EagerGqlQuery()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: RunQuery(GqlQuery,*,*)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            GqlQuery gqlQuery = new GqlQuery
+            {
+                QueryString = "SELECT * FROM book WHERE author = @author LIMIT @limit",
+                NamedBindings = {
+                    { "author", new GqlQueryParameter { Value = "Jane Austen" } },
+                    { "limit", new GqlQueryParameter { Value = 10 } }
+                },
+            };
+            DatastoreQueryResults results = db.RunQuery(gqlQuery);
+            // RunQuery fetches all the results into memory in a single call.
+            // Constrast this with RunQueryLazily, which merely prepares an enumerable
+            // query. Always specify a limit when you use RunQuery, to avoid running
+            // out of memory.
+            foreach (Entity entity in results.Entities)
+            {
+                Console.WriteLine(entity);
+            }
+            // End snippet
+
+            // This will run the query again, admittedly...
+            Assert.Equal(1, results.Entities.Count);
+            Entity book = results.Entities[0];
+            Assert.Equal("Jane Austen", (string)book["author"]);
+            Assert.Equal("Pride and Prejudice", (string)book["title"]);
+        }
+
+        [Fact]
+        public async Task EagerGqlQueryAsync()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
@@ -182,20 +313,20 @@ namespace Google.Datastore.V1Beta3.Snippets
                 QueryString = "SELECT * FROM book WHERE author = @author",
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
-            DatastoreAsyncQueryResults results = db.RunQueryAsync(gqlQuery);
-            // DatastoreAsyncQueryResults implements IAsyncEnumerable<Entity>, but you can
-            // call AsEntityResults(), AsBatches() or AsResponses() to see the query
-            // results in whatever way makes most sense for your application.
-            await results.ForEachAsync(entity =>
+            DatastoreQueryResults results = await db.RunQueryAsync(gqlQuery);
+            // RunQuery fetches all the results into memory in a single call.
+            // Constrast this with RunQueryLazily, which merely prepares an enumerable
+            // query. Always specify a limit when you use RunQuery, to avoid running
+            // out of memory.
+            foreach (Entity entity in results.Entities)
             {
                 Console.WriteLine(entity);
-            });
+            }
             // End snippet
 
             // This will run the query again, admittedly...
-            List<Entity> entities = await results.ToList();
-            Assert.Equal(1, entities.Count);
-            Entity book = entities[0];
+            Assert.Equal(1, results.Entities.Count);
+            Entity book = results.Entities[0];
             Assert.Equal("Jane Austen", (string)book["author"]);
             Assert.Equal("Pride and Prejudice", (string)book["title"]);
         }
@@ -362,7 +493,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: NamespaceQuery
             DatastoreDb db = DatastoreDb.Create(projectId, "");
             Query query = new Query(DatastoreConstants.NamespaceKind);
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (Entity entity in db.RunQueryLazily(query))
             {
                 Console.WriteLine(entity.Key.Path.Last().Name);
             }
@@ -378,7 +509,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: KindQuery
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query(DatastoreConstants.KindKind);
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (Entity entity in db.RunQueryLazily(query))
             {
                 Console.WriteLine(entity.Key.Path.Last().Name);
             }
@@ -394,7 +525,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             // Sample: PropertyQuery
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query(DatastoreConstants.PropertyKind);
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (Entity entity in db.RunQueryLazily(query))
             {
                 Console.WriteLine(entity.Key.Path.Last().Name);
             }
@@ -442,7 +573,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Filter = Filter.GreaterThanOrEqual("created", cutoff),
                 Order = { { "created", Direction.Descending } }
             };
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (Entity entity in db.RunQueryLazily(query))
             {
                 DateTime created = (DateTime)entity["created"];
                 string text = (string)entity["text"];
@@ -607,7 +738,7 @@ namespace Google.Datastore.V1Beta3.Snippets
             };
 
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);            
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (Entity entity in db.RunQueryLazily(query))
             {
                 Console.WriteLine((string)entity["description"]);
             }
@@ -687,7 +818,7 @@ namespace Google.Datastore.V1Beta3.Snippets
                 Projection = { "priority", "percentage_complete" }
             };
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-            foreach (Entity entity in db.RunQuery(query))
+            foreach (Entity entity in db.RunQueryLazily(query))
             {
                 Console.WriteLine($"{(int)entity["priority"]}: {(double?)entity["percentage_complete"]}");
             }            
@@ -751,19 +882,14 @@ namespace Google.Datastore.V1Beta3.Snippets
             Query query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
-            List<EntityResult> entityResults = db.RunQuery(query, ReadConsistency.Eventual).AsEntityResults().ToList();
-            foreach (EntityResult result in entityResults)
+            DatastoreQueryResults results = db.RunQueryLazily(query, ReadConsistency.Eventual).GetAllResults();
+            foreach (Entity entity in results.Entities)
             {
-                Entity entity = result.Entity;
                 // Do something with the task entity
             }
-            // If we retrieved as many entities as we requested, there may be another page of results.
-            // (There may not be any more results, but the query stopped executing when it had found
-            // as many as we asked for.)
-            // If we ran out of results, this is definitely the last page.
-            if (entityResults.Count == pageSize)
+            if (results.MoreResults == MoreResultsType.MoreResultsAfterLimit)
             {
-                ByteString nextPageCursor = entityResults.Last().Cursor;
+                ByteString nextPageCursor = results.EndCursor;
                 // Store nextPageCursor to get the next page later.
             }
             // End sample
