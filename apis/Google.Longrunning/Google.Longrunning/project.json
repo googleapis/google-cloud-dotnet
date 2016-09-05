@@ -1,0 +1,13 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Google.Api.CommonProtos": "1.0.0-CI00076",
+    "Grpc.Core": "1.0.0"
+  },
+
+  "frameworks": {
+    "net45": {
+    }
+  }
+}
