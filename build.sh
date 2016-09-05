@@ -26,7 +26,7 @@ then
   DOTNET_BUILD_ARGS="$DOTNET_BUILD_ARGS --version-suffix $PRERELEASETAG"
 elif [ -z "$NOVERSIONSUFFIX" ]
 then
-  DOTNET_BUILD_ARGS="$DOTNET_BUILD_ARGS --version-suffix not-for-release"  
+  DOTNET_BUILD_ARGS="$DOTNET_BUILD_ARGS --version-suffix dont-release"
 fi
 
 echo CLI args: $DOTNET_BUILD_ARGS
