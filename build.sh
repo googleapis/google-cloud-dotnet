@@ -33,13 +33,13 @@ echo CLI args: $DOTNET_BUILD_ARGS
 
 echo Building
 
+dotnet restore tools apis
+
 cd tools
-dotnet restore
 dotnet build $DOTNET_BUILD_ARGS `$FIND . -mindepth 1 -maxdepth 1 -name 'Google*' -type d `
 cd ..
 
 cd apis
-dotnet restore
 dotnet build $DOTNET_BUILD_ARGS `$FIND * -mindepth 1 -maxdepth 1 -name 'Google*' -type d`
 
 # TODO: Tests. We need to:
