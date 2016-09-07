@@ -20,9 +20,9 @@ difficult, but it is tedious and error-prone, so the C# client
 libraries have abstracted this away.
 
 Operations listing resources synchronously return an
-[IPagedEnumerable&lt;TResponse, TResource&gt;](../obj/api/Google.Api.Gax.IPagedEnumerable-2.yml), and operations listing
+[IPagedEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.IPagedEnumerable-2.yml), and operations listing
 resources asynchronously return an
-[IPagedAsyncEnumerable&lt;TResponse, TResource&gt;](../obj/api/Google.Api.Gax.IPagedAsyncEnumerable-2.yml).
+[IPagedAsyncEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.IPagedAsyncEnumerable-2.yml).
 These are equivalent other than their asynchrony, so
 this document focuses on the synchronous version for simplicity.
 
@@ -40,7 +40,7 @@ the API response type for the list operation, and the `TResource` is
 the type of the resource being listed. In the Pub/Sub API for
 example, the `ListTopics` operation accepts a `ListTopicsRequest`
 and returns a `ListTopicsResponse` containing a set of `Topic`
-resources - so the [PublisherClient.ListTopics](../obj/api/Google.Pubsub.V1.PublisherClient.yml#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_)
+resources - so the [PublisherClient.ListTopics](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_)
 method returns an `IPagedEnumerable<ListTopicsResponse, Topic>`.
 
 `IPagedEnumerable<TResponse, TResource>` implements
@@ -53,8 +53,8 @@ the resources as the caller requests them.
 
 For more advanced scenarios, however, your application may need access
 to the pages returned by the API instead. The
-[IPagedEnumerable&lt;TResponse, TResource&gt;.AsPages()](../obj/api/Google.Api.Gax.IPagedEnumerable-2.yml#Google_Api_Gax_IPagedEnumerable_2_AsPages)
-method returns an [IResponseEnumerable&lt;TResponse, TResource&gt;](../obj/api/Google.Api.Gax.IResponseEnumerable-2.yml) which
+[IPagedEnumerable&lt;TResponse, TResource&gt;.AsPages()](obj/api/Google.Api.Gax.IPagedEnumerable-2.yml#Google_Api_Gax_IPagedEnumerable_2_AsPages)
+method returns an [IResponseEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.IResponseEnumerable-2.yml) which
 implements `IEnumerable<TResponse>`, so you can iterate over the responses easily. Each
 response provides access to the individual resources within the page, and some APIs may
 provide additional information such as the time taken for the request or the total number of
@@ -62,7 +62,7 @@ results across all pages. As you iterate over the pages, API requests are made
 transparently, propagating the page token from one response to the next request.
 
 `IResourceEnumerable<TResponse, TResource>` provides one additional method, 
-[WithFixedSize()](../obj/api/Google.Api.Gax.IResponseEnumerable-2.yml#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_)
+[WithFixedSize()](obj/api/Google.Api.Gax.IResponseEnumerable-2.yml#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_)
 to cater for web applications which require precise page sizes.
 
 Although APIs generally allow the application to specify the page size to return, this
@@ -73,7 +73,7 @@ where typically you want to provide the exact same number of results per page.
 
 The `WithFixedSize` method makes multiple API requests if necessary, in order to "fill" each page
 until it reaches the end of the resources being listed. The return value is an `IEnumerable<FixedSizePage<TResource>>`, where
-[FixedSizePage&lt;TResource&gt;](../obj/api/Google.Api.Gax.FixedSizePage-1.yml#Google_Api_Gax_FixedSizePage_1) provides the items
+[FixedSizePage&lt;TResource&gt;](obj/api/Google.Api.Gax.FixedSizePage-1.yml#Google_Api_Gax_FixedSizePage_1) provides the items
 within each page, along with the page token used to retrieve the next page. (This would typically be used in a "next page" link
 in the web results.)
 
@@ -81,21 +81,21 @@ in the web results.)
 
 ### Iterate over all resources, ignoring pagination
 
-[!code-cs[](../obj/snippets/Google.Pubsub.V1.PublisherClient.txt#PageStreamingUseCases_AllResources)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#AllResources)]
 
 ### Iterate over all resources, remembering page tokens
 
-[!code-cs[](../obj/snippets/Google.Pubsub.V1.PublisherClient.txt#PageStreamingUseCases_Responses)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#Responses)]
 
 ### Obtain a single page of results
 
-[!code-cs[](../obj/snippets/Google.Pubsub.V1.PublisherClient.txt#PageStreamingUseCases_SingleResponse)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#SingleResponse)]
 
 ### Display results in fixed-sized pages
 
 This is typically used in web applications.
 
-[!code-cs[](../obj/snippets/Google.Pubsub.V1.PublisherClient.txt#PageStreamingUseCases_WithFixedSize)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#WithFixedSize)]
 
 ## Feedback
 

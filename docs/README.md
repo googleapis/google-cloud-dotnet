@@ -1,59 +1,78 @@
-## Generating the documentation
+This directory contains repo-wide documentation and build scripts
+for documentation. It also contains templates for API-specific
+documentation.
 
-The documentation uses [docfx](https://github.com/dotnet/docfx) but
-has some tweaks as well.
+The documentation is hosted on GitHub pages, and build using docfx.
 
-The documentation is hosted in GitHub Pages, at
-https://googlecloudplatform.github.io/google-cloud-dotnet. This is
-basically a served version of the
-[`gh-pages` branch](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/tree/gh-pages)
-of the main project repo.
+There are two kinds of documentation:
 
-# Installation
+- General, API-agnostic documentation such as how resource names work,
+  how we exposed paged lists of resources, etc.
+- API-specific documentation, including getting started guides,
+  introductory snippets, an API reference documentation.
+  
+The `gh-pages` branch has the following layout, using
+`Google.Pubsub.V1` as an example of an API.
 
-First install docfx, as per the
-[getting started](http://dotnet.github.io/docfx/tutorial/docfx_getting_started.html)
-page. We're using .NET Core, so follow step 4 for the moment -
-currently docfx requires DNX to be installed, as they don't have
-tooling for dotnet cli, but that's likely to come soon.
+(This is all currently under "docs" - there's a branded index.html
+at the very top level, which may change.)
 
-# Build process
+- index.html: Landing page listing all APIs and general articles
+- resource-names.html: General documentation page
+- api/ (API reference docs for GAX and other API-neutral libraries)
+- Google.Pubsub.V1
+  - index.html: Pub/Sub landing page, with:
+    - Authentication
+    - Getting started
+    - Links to API-specific articles (e.g. push.html)
+    - Links to general articles (e.g. resource-names.html)
+  - push.html: More details on Pub/Sub push notifications
+  - api/ (API reference documentation)
+    - index.html (table of contents)
+    - Google.Pubsub.V1.PublisherClient.html
+    - ...
+    
+The API reference documentation for each library should be complete
+in terms of direct dependencies. For example, gRPC-based APIs should
+include the gRPC API documentation, GAX etc.
 
-Start in the `docs` directory (the one containing this readme). On
-Windows, you can now run `builddocs.bat`, which goes through the
-following steps:
+Each API has its own specific documentation (if any) in a `docs`
+directory within `apis/Google.*`. If there is no specific
+documentation, it is auto-generated from the templates here.
 
-- Deletes temporary/output folders (`external`, `obj`, `_site`)
-- Fetches source for external projects which should be documented in
-  the same set of reference documentation (e.g. GAX)
-- Extracts the metadata from the source code using `docfx`
-- Extracts the snippets from the `snippets` directory for use in
-  the site
-- Builds the site into `_site`.
+Build process for general documentation
+===
 
-# Testing
+- Run docfx in this directory. There's no metadata; it's just
+articles.
+- Copy the output into the `gh-pages` branch
 
-Check that the site looks how you want it to by asking docfx to
-serve it on your local machine:
+Build process for per-API documentation
+===
 
-```sh
-docfx serve _site --port 12345
-```
+- Determine which projects are shipped. For example, for logging
+  we want to document Google.Logging.Type, Google.Logging.V2 and
+  Google.Logging.Log4Net. In general, if the project.json file
+  has a version number, it's a shipped package.
+- Examine project.json to find dependencies
+- Fetch those dependencies (hand-waving around versioning...)
+- Create a docfx.json to include all the dependencies and project
+  source
+- Run `docfx metadata -f` to generate all the metadata
+- Run our snippet extraction tool to generate snippets from the
+  `*.Snippets` projects
+- Apply the templates from this directory to the API-specific landing
+  page documentation (so we always get a consistent introductory step)
+- Run `docfx build`
+- Copy result into a directory for the API in `gh-pages`
+    
+Open questions
+===
 
-... then browse to http://localhost:12345 (or whatever port you
-specified).
-
-# Deployment
-
-- Check out the `gh-pages` branch.
-- Delete everything in it other than the `.git` directory.
-- Copy the content of the `_site` directory.
-- Commit all changes.
-- Push to github.
-
-(Of course, this requires push access to the repository.)
-
-If you want to see how it looks in github but not affect the main
-documentation yet, you can push to the `gh-pages` branch of your
-clone, after going through the normal
-[GitHub pages setup](https://pages.github.com/).
+- How long can we survive with no versioning?
+- Where does this get automated?
+- Do we really need a landing page and a separate docfx-generated
+  index.html? 
+- How do we clean up deleted general articles from the gh-pages branch? Or
+  does that never happen?
+- How does the per-API-landing-page template work?

@@ -1,0 +1,34 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "gax-dotnet/src/Google.Api.Gax.Rest/project.json",
+            "gax-dotnet/src/Google.Api.Gax/project.json"
+          ],
+          "cwd": "../../external"
+        }
+      ],
+      "dest": "obj/api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "**/*.yml" ],
+        "src": "obj/api",
+        "dest": "api"
+      },
+      {
+        "files": [ "index.md", "toc.yml", "*.md" ],
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "Google Cloud APIs",
+      "_disableContribution": true,
+      "_appFooter": " "
+    },
+    "dest": "site"
+  }
+}
