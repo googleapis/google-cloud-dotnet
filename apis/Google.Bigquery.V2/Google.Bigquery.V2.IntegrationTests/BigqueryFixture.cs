@@ -137,6 +137,13 @@ namespace Google.Bigquery.V2.IntegrationTests
                         { "x", BigqueryDbType.Integer },
                         { "y", BigqueryDbType.Integer }
                     }
+                },
+                { "names", new TableSchemaBuilder
+                    {
+                        { "first", BigqueryDbType.String },
+                        { "last", BigqueryDbType.String }
+                    },
+                    FieldMode.Repeated
                 }
             }.Build());
         }
