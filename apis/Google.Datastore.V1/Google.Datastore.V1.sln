@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Datastore.V1", "..\..\..\..\..\..\Test\Projects\google-cloud-dotnet\apis\Google.Datastore.V1\Google.Datastore.V1\Google.Datastore.V1.xproj", "{F8B4458D-72E0-4316-B921-EBD69B42CEC9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Datastore.V1.IntegrationTests", "..\..\..\..\..\..\Test\Projects\google-cloud-dotnet\apis\Google.Datastore.V1\Google.Datastore.V1.IntegrationTests\Google.Datastore.V1.IntegrationTests.xproj", "{5F3C8A95-6023-4C47-B118-51F1F06E1243}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Datastore.V1.Snippets", "..\..\..\..\..\..\Test\Projects\google-cloud-dotnet\apis\Google.Datastore.V1\Google.Datastore.V1.Snippets\Google.Datastore.V1.Snippets.xproj", "{39920E40-11B2-427D-8F39-9907CB9EB9CE}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Datastore.V1.Tests", "..\..\..\..\..\..\Test\Projects\google-cloud-dotnet\apis\Google.Datastore.V1\Google.Datastore.V1.Tests\Google.Datastore.V1.Tests.xproj", "{3D518A4B-DDE0-4DEA-B873-076F216B782B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8B4458D-72E0-4316-B921-EBD69B42CEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B4458D-72E0-4316-B921-EBD69B42CEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B4458D-72E0-4316-B921-EBD69B42CEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B4458D-72E0-4316-B921-EBD69B42CEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F3C8A95-6023-4C47-B118-51F1F06E1243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3C8A95-6023-4C47-B118-51F1F06E1243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3C8A95-6023-4C47-B118-51F1F06E1243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3C8A95-6023-4C47-B118-51F1F06E1243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39920E40-11B2-427D-8F39-9907CB9EB9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39920E40-11B2-427D-8F39-9907CB9EB9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39920E40-11B2-427D-8F39-9907CB9EB9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39920E40-11B2-427D-8F39-9907CB9EB9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D518A4B-DDE0-4DEA-B873-076F216B782B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D518A4B-DDE0-4DEA-B873-076F216B782B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D518A4B-DDE0-4DEA-B873-076F216B782B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D518A4B-DDE0-4DEA-B873-076F216B782B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
