@@ -1,0 +1,28 @@
+﻿{
+  "version": "1.0.0-beta01",
+  "description": "Google IAM v1 client library",
+  "authors": [ "Google Inc." ],
+
+  "packOptions": {
+    "summary": "Google IAM v1",
+    "owners": [ "google-apis-packages" ],
+    "tags": [ "Google" ],
+    "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+    "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+    "requireLicenseAcceptance": false
+  },
+
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Protobuf": "3.0.0",
+    "Grpc.Core": "1.0.0",
+  },
+
+  "frameworks": {
+    "net45": { }
+  }
+}
