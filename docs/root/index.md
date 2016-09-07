@@ -15,7 +15,11 @@ supported here.
 APIs with supporting libraries:
 
 - [Google.Bigquery.V2](Google.Bigquery.V2/index.html)
-- [Google.Datastore.V1Beta3](Google.Datastore.V1Beta3/index.html)
+- [Google.Datastore.V1](Google.Datastore.V1/index.html)
 - [Google.Logging.V2](Google.Logging.V2/index.html)
 - [Google.Pubsub.V1](Google.Pubsub.V1/index.html)
 - [Google.Storage.V1](Google.Storage.V1/index.html)
+
+Old versions:
+
+- [Google.Datastore.V1](Google.Datastore.V1Beta3/index.html)

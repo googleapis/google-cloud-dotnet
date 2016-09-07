@@ -3,6 +3,13 @@
 `Google.Datastore.V1Beta3` is a .NET client library for [Google
 Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview).
 
+# Please update to Google.Datastore.V1
+
+> **The Google.Datastore.V1Beta3 library has been superceded by
+> [Google.Datastore.V1](../Google.Datastore.V1/index.html). No
+> further changes will be performed on the V1Beta3 library; please
+> update to V1.**
+
 # Installation
 
 Install the `Google.Datastore.V1Beta3` package from NuGet. Add it to
