@@ -66,6 +66,7 @@ namespace Google.Datastore.V1
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             LookupSettings = existing.LookupSettings?.Clone();
+            RunQuerySettings = existing.RunQuerySettings?.Clone();
             BeginTransactionSettings = existing.BeginTransactionSettings?.Clone();
             CommitSettings = existing.CommitSettings?.Clone();
             RollbackSettings = existing.RollbackSettings?.Clone();
@@ -157,6 +158,39 @@ namespace Google.Datastore.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public CallSettings LookupSettings { get; set; } = new CallSettings
+        {
+            Timing = CallTiming.FromRetry(new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = IdempotentRetryFilter,
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
+        };
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <see cref="DatastoreClient.RunQuery"/> and <see cref="DatastoreClient.RunQueryAsync"/>.
+        /// </summary>
+        /// <remarks>
+        /// The default <see cref="DatastoreClient.RunQuery"/> and
+        /// <see cref="DatastoreClient.RunQueryAsync"/> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings RunQuerySettings { get; set; } = new CallSettings
         {
             Timing = CallTiming.FromRetry(new RetrySettings
             {
@@ -450,6 +484,154 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="query">The query to run.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            Query query,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="query">The query to run.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            Query query,
+            CancellationToken cancellationToken) => RunQueryAsync(
+                projectId,
+                partitionId,
+                readOptions,
+                query,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="query">The query to run.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RunQueryResponse RunQuery(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            Query query,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="gqlQuery">The GQL query to run.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            GqlQuery gqlQuery,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="gqlQuery">The GQL query to run.</param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            GqlQuery gqlQuery,
+            CancellationToken cancellationToken) => RunQueryAsync(
+                projectId,
+                partitionId,
+                readOptions,
+                gqlQuery,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="gqlQuery">The GQL query to run.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RunQueryResponse RunQuery(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            GqlQuery gqlQuery,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Begins a new transaction.
         /// </summary>
         /// <param name="projectId">The ID of the project against which to make the request.</param>
@@ -604,6 +786,103 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
+        /// <param name="mutations">
+        /// The mutations to perform.
+        ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<CommitResponse> CommitAsync(
+            string projectId,
+            CommitRequest.Types.Mode mode,
+            IEnumerable<Mutation> mutations,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
+        /// <param name="mutations">
+        /// The mutations to perform.
+        ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual Task<CommitResponse> CommitAsync(
+            string projectId,
+            CommitRequest.Types.Mode mode,
+            IEnumerable<Mutation> mutations,
+            CancellationToken cancellationToken) => CommitAsync(
+                projectId,
+                mode,
+                mutations,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        /// <summary>
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
+        /// <param name="mutations">
+        /// The mutations to perform.
+        ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CommitResponse Commit(
+            string projectId,
+            CommitRequest.Types.Mode mode,
+            IEnumerable<Mutation> mutations,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Rolls back a transaction.
         /// </summary>
         /// <param name="projectId">The ID of the project against which to make the request.</param>
@@ -720,6 +999,7 @@ namespace Google.Datastore.V1
     {
         private readonly ClientHelper _clientHelper;
         private readonly ApiCall<LookupRequest, LookupResponse> _callLookup;
+        private readonly ApiCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
         private readonly ApiCall<BeginTransactionRequest, BeginTransactionResponse> _callBeginTransaction;
         private readonly ApiCall<CommitRequest, CommitResponse> _callCommit;
         private readonly ApiCall<RollbackRequest, RollbackResponse> _callRollback;
@@ -732,6 +1012,8 @@ namespace Google.Datastore.V1
             _clientHelper = new ClientHelper(effectiveSettings);
             _callLookup = _clientHelper.BuildApiCall<LookupRequest, LookupResponse>(
                 GrpcClient.LookupAsync, GrpcClient.Lookup, effectiveSettings.LookupSettings);
+            _callRunQuery = _clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(
+                GrpcClient.RunQueryAsync, GrpcClient.RunQuery, effectiveSettings.RunQuerySettings);
             _callBeginTransaction = _clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(
                 GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings);
             _callCommit = _clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
@@ -783,6 +1065,122 @@ namespace Google.Datastore.V1
                     ProjectId = projectId,
                     ReadOptions = readOptions,
                     Keys = { keys },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="query">The query to run.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override Task<RunQueryResponse> RunQueryAsync(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            Query query,
+            CallSettings callSettings = null) => _callRunQuery.Async(
+                new RunQueryRequest
+                {
+                    ProjectId = projectId,
+                    PartitionId = partitionId,
+                    ReadOptions = readOptions,
+                    Query = query,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="query">The query to run.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RunQueryResponse RunQuery(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            Query query,
+            CallSettings callSettings = null) => _callRunQuery.Sync(
+                new RunQueryRequest
+                {
+                    ProjectId = projectId,
+                    PartitionId = partitionId,
+                    ReadOptions = readOptions,
+                    Query = query,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="gqlQuery">The GQL query to run.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override Task<RunQueryResponse> RunQueryAsync(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            GqlQuery gqlQuery,
+            CallSettings callSettings = null) => _callRunQuery.Async(
+                new RunQueryRequest
+                {
+                    ProjectId = projectId,
+                    PartitionId = partitionId,
+                    ReadOptions = readOptions,
+                    GqlQuery = gqlQuery,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="partitionId">
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
+        /// </param>
+        /// <param name="readOptions">The options for this query.</param>
+        /// <param name="gqlQuery">The GQL query to run.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RunQueryResponse RunQuery(
+            string projectId,
+            PartitionId partitionId,
+            ReadOptions readOptions,
+            GqlQuery gqlQuery,
+            CallSettings callSettings = null) => _callRunQuery.Sync(
+                new RunQueryRequest
+                {
+                    ProjectId = projectId,
+                    PartitionId = partitionId,
+                    ReadOptions = readOptions,
+                    GqlQuery = gqlQuery,
                 },
                 callSettings);
 
@@ -898,6 +1296,78 @@ namespace Google.Datastore.V1
                     ProjectId = projectId,
                     Mode = mode,
                     Transaction = transaction,
+                    Mutations = { mutations },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
+        /// <param name="mutations">
+        /// The mutations to perform.
+        ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override Task<CommitResponse> CommitAsync(
+            string projectId,
+            CommitRequest.Types.Mode mode,
+            IEnumerable<Mutation> mutations,
+            CallSettings callSettings = null) => _callCommit.Async(
+                new CommitRequest
+                {
+                    ProjectId = projectId,
+                    Mode = mode,
+                    Mutations = { mutations },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="projectId">The ID of the project against which to make the request.</param>
+        /// <param name="mode">The type of commit to perform. Defaults to `TRANSACTIONAL`.</param>
+        /// <param name="mutations">
+        /// The mutations to perform.
+        ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CommitResponse Commit(
+            string projectId,
+            CommitRequest.Types.Mode mode,
+            IEnumerable<Mutation> mutations,
+            CallSettings callSettings = null) => _callCommit.Sync(
+                new CommitRequest
+                {
+                    ProjectId = projectId,
+                    Mode = mode,
                     Mutations = { mutations },
                 },
                 callSettings);
