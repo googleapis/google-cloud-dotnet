@@ -12,13 +12,20 @@ General articles are linked at the top of the page. These give
 background reading to help you make the most of any of the APIs
 supported here.
 
-APIs with supporting libraries:
+## APIs with supporting libraries
+
+Beta releases from NuGet.org:
 
 - [Google.Bigquery.V2](Google.Bigquery.V2/index.html)
 - [Google.Datastore.V1](Google.Datastore.V1/index.html)
 - [Google.Logging.V2](Google.Logging.V2/index.html)
 - [Google.Pubsub.V1](Google.Pubsub.V1/index.html)
 - [Google.Storage.V1](Google.Storage.V1/index.html)
+
+Alpha releases from
+[MyGet](https://www.myget.org/gallery/google-dotnet-public):
+
+- [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 
 Old versions:
 

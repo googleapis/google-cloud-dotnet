@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1", "Google.Cloud.Vision.V1\Google.Cloud.Vision.V1.xproj", "{E9BEC793-0D92-4696-820B-B72268572D9D}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1.Snippets", "Google.Cloud.Vision.V1.Snippets\Google.Cloud.Vision.V1.Snippets.xproj", "{1306FD30-A8DC-42DC-8EB1-DA5784EB04A5}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1.Tests", "Google.Cloud.Vision.V1.Tests\Google.Cloud.Vision.V1.Tests.xproj", "{BEBAE9D9-36D8-4A04-91ED-BA9025973AE7}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1.IntegrationTests", "Google.Cloud.Vision.V1.IntegrationTests\Google.Cloud.Vision.V1.IntegrationTests.xproj", "{43B28767-4FBD-40C6-B2BE-8DFC91E2F6F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{E9BEC793-0D92-4696-820B-B72268572D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9BEC793-0D92-4696-820B-B72268572D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9BEC793-0D92-4696-820B-B72268572D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1306FD30-A8DC-42DC-8EB1-DA5784EB04A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1306FD30-A8DC-42DC-8EB1-DA5784EB04A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1306FD30-A8DC-42DC-8EB1-DA5784EB04A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1306FD30-A8DC-42DC-8EB1-DA5784EB04A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEBAE9D9-36D8-4A04-91ED-BA9025973AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBAE9D9-36D8-4A04-91ED-BA9025973AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBAE9D9-36D8-4A04-91ED-BA9025973AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBAE9D9-36D8-4A04-91ED-BA9025973AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43B28767-4FBD-40C6-B2BE-8DFC91E2F6F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B28767-4FBD-40C6-B2BE-8DFC91E2F6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B28767-4FBD-40C6-B2BE-8DFC91E2F6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B28767-4FBD-40C6-B2BE-8DFC91E2F6F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
