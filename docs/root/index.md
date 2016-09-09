@@ -26,6 +26,7 @@ Alpha releases from
 [MyGet](https://www.myget.org/gallery/google-dotnet-public):
 
 - [Google.Cloud.Language.V1Beta1](Google.Cloud.Language.V1Beta1/index.html)
+- [Google.Cloud.Speech.V1Beta1](Google.Cloud.Speech.V1Beta1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 
 Old versions:
