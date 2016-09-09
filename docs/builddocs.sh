@@ -27,7 +27,18 @@ build_api_docs() {
   docfx.cmd metadata -f output/$api/docfx.json
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   docfx.cmd output/$api/docfx.json
-  cp -r output/$api/site output/assembled/$api
+
+  # Special case root: that should end up in the root of the assembled
+  # site.
+  if [ "$api" == "root" ]
+  then
+    # We don't want to end up with a "site" directory under assembled...
+    # we want the contents of site directly under assembled.
+    # There may well be a better way of doing this!
+    cp -r -t output/assembled output/$api/site/*
+  else
+    cp -r output/$api/site output/assembled/$api
+  fi
 }
 
 if [ ! -d external ]
@@ -50,14 +61,15 @@ fetch grpc google/grpc
 # TODO: google/google-api-dotnet-client, but those projects
 # don't work with docfx right now
 
-# TODO: Support building multiple APIs (but not all) in one call
-
-if [ -n "$1" ]
+apis=$@
+if [ -z "$apis" ]
 then
-  build_api_docs $1
-else
-  for api in `find ../apis -mindepth 1 -maxdepth 1 -name 'Google*' -type d | cut -d/ -f3` root
-  do
-    build_api_docs $api
-  done
+  # Build all APIs, which means every ../apis subdirectory with a "docs" subdirectory,
+  # and "root" which is the special top-level docs.
+  apis="`find ../apis -mindepth 2 -maxdepth 2 -name docs -type d | cut -d/ -f3` root"
 fi
+
+for api in $apis
+do 
+  build_api_docs $api
+done
