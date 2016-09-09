@@ -46,7 +46,7 @@ namespace Google.Cloud.Vision.V1
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
             using (var client = new HttpClient())
             {
-                var bytes = await client.GetByteArrayAsync(uri);
+                var bytes = await client.GetByteArrayAsync(uri).ConfigureAwait(false);
                 return FromBytes(bytes);
             }
         }
@@ -61,7 +61,7 @@ namespace Google.Cloud.Vision.V1
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
             using (var client = new HttpClient())
             {
-                var bytes = await client.GetByteArrayAsync(uri);
+                var bytes = await client.GetByteArrayAsync(uri).ConfigureAwait(false);
                 return FromBytes(bytes);
             }
         }
@@ -114,7 +114,7 @@ namespace Google.Cloud.Vision.V1
             using (var input = File.OpenRead(path))
             {
                 return await FromStreamAsync(input).ConfigureAwait(false);
-            }                
+            }
         }
 
         /// <summary>
