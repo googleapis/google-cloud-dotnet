@@ -34,7 +34,7 @@ namespace Google.Storage.V1
     public sealed partial class StorageClientImpl : StorageClient
     {
         private static readonly object _applicationNameLock = new object();
-        private static string _applicationName = "google-cloud-dotnet";
+        private static string _applicationName = UserAgentHelper.GetDefaultUserAgent(typeof(StorageClient));
 
         /// <summary>
         /// The default application name used when creating a <see cref="StorageService"/>.

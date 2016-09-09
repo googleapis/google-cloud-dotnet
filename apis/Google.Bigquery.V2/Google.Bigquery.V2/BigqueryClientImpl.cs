@@ -31,7 +31,7 @@ namespace Google.Bigquery.V2
     public sealed partial class BigqueryClientImpl : BigqueryClient
     {
         private static readonly object _applicationNameLock = new object();
-        private static string _applicationName = "google-cloud-dotnet";
+        private static string _applicationName = UserAgentHelper.GetDefaultUserAgent(typeof(BigqueryClient));
 
         /// <summary>
         /// The default application name used when creating a <see cref="BigqueryService"/>.
