@@ -1,13 +1,13 @@
 {
-  "version": "1.0.0-beta01-*",
-  "description": "Wrapper library for Google.Apis.Bigquery.v2, making common operations simpler in client code.",
+  "version": "1.0.0-beta02-*",
+  "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
   "authors": [ "Google Inc." ],
 
   "packOptions": {
-    "summary": "Wrapper library for Google.Apis.Bigquery.v2",
-    "owners": [ "google-apis-packages" ],
-    "tags": [ "Google" ],
-    "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+    "summary": "Recommended Google client library to access the BigQuery API.",
+    "owners": [ "google-cloud" ],
+    "tags": [ "Google", "Cloud", "BigQuery" ],
+    "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
     "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
     "requireLicenseAcceptance": false
@@ -18,7 +18,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.0-beta01-CI00081",
+    "Google.Api.Gax.Rest": "1.0.0-beta02",
     "Google.Apis": "1.16.0",
     "Google.Apis.Auth": "1.16.0",
     "Google.Apis.Bigquery.v2": "1.16.0.591",

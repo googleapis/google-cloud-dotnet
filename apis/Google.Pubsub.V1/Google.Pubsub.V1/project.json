@@ -1,13 +1,13 @@
 ﻿{
-  "version": "1.0.0-beta01-*",
-  "description": "Google Pubsub v1 client library",
+  "version": "1.0.0-beta02-*",
+  "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
   "authors": [ "Google Inc." ],
 
   "packOptions": {
-    "summary": "Google Pubsub v1 client library",
-    "owners": [ "google-apis-packages" ],
-    "tags": [ "Google" ],
-    "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+    "summary": "Recommended Google client library to access the Google Cloud Pub/Sub API.",
+    "owners": [ "google-cloud" ],
+    "tags": [ "Google", "Cloud", "PubSub" ],
+    "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
     "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
     "requireLicenseAcceptance": false
@@ -18,8 +18,8 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "1.0.0-CI00076",
-    "Google.Api.Gax": "1.0.0-CI00076",
+    "Google.Api.CommonProtos": "1.0.0-beta02",
+    "Google.Api.Gax": "1.0.0-beta02",
     "Google.Apis.Auth": "1.16.0",
     "Google.Protobuf": "3.0.0",
     "Grpc.Auth": "1.0.0",
