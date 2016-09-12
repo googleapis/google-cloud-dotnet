@@ -1,13 +1,13 @@
 {
-  "version": "1.0.0-beta01-*",
-  "description": "Google Logging version-agnostic types",
+  "version": "1.0.0-beta02-*",
+  "description": "Version-agnostic types for the Google Stackdriver Logging API.",
   "authors": [ "Google Inc." ],
 
   "packOptions": {
-    "summary": "Google Logging version-agnostic types",
-    "owners": [ "google-apis-packages" ],
-    "tags": [ "Google" ],
-    "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+    "summary": "Version-agnostic types for the Google Stackdriver Logging API.",
+    "owners": [ "google-cloud" ],
+    "tags": [ "Google", "Cloud", "Logging", "Stackdriver" ],
+    "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
     "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
     "requireLicenseAcceptance": false
@@ -18,7 +18,7 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "1.0.0-CI00076",
+    "Google.Api.CommonProtos": "1.0.0-beta02",
     "Google.Protobuf": "3.0.0"
   },
 

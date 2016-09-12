@@ -1,13 +1,13 @@
 ﻿{
-  "version": "1.0.0-beta01",
-  "description": "Google IAM v1 client library",
+  "version": "1.0.0-beta02",
+  "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
   "authors": [ "Google Inc." ],
 
   "packOptions": {
-    "summary": "Google IAM v1",
-    "owners": [ "google-apis-packages" ],
-    "tags": [ "Google" ],
-    "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+    "summary": "gRPC services for the Google Identity and Access Management API.",
+    "owners": [ "google-cloud" ],
+    "tags": [ "Google", "Cloud", "IAM", "Identity", "Access" ],
+    "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
     "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
     "requireLicenseAcceptance": false
