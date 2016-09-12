@@ -31,4 +31,4 @@ Alpha releases from
 
 Old versions:
 
-- [Google.Datastore.V1](Google.Datastore.V1Beta3/index.html)
+- [Google.Datastore.V1Beta3](Google.Datastore.V1Beta3/index.html)
