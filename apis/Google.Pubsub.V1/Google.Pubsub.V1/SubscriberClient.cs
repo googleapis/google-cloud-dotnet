@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Iam.V1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -26,27 +27,6 @@ using System.Threading.Tasks;
 
 namespace Google.Pubsub.V1
 {
-
-    /// <summary>
-    /// Extension methods to assist with using <see cref="SubscriberClient"/>.
-    /// </summary>
-    public static partial class SubscriberExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC Subscriber client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="SubscriberSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="SubscriberClient"/> that wraps the specified GRPC client.</returns>
-        public static SubscriberClient ToClient(
-            this Subscriber.SubscriberClient grpcClient,
-            SubscriberSettings settings = null
-        ) => new SubscriberClientImpl(grpcClient, settings);
-    }
-
     /// <summary>
     /// Settings for a Subscriber wrapper.
     /// </summary>
@@ -436,6 +416,41 @@ namespace Google.Pubsub.V1
             }),
         };
 
+        // TODO:
+        // - Populate more sensibly. (These settings are taken from ModifyPushConfigSettings.)
+        // - Consider having a separate IAM settings 
+        public CallSettings GetIamPolicySettings { get; set; } = new CallSettings
+        {
+            Timing = CallTiming.FromRetry(new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
+        };
+
+        public CallSettings SetIamPolicySettings { get; set; } = new CallSettings
+        {
+            Timing = CallTiming.FromRetry(new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
+        };
+
+        public CallSettings TestIamPermissionSettings { get; set; } = new CallSettings
+        {
+            Timing = CallTiming.FromRetry(new RetrySettings
+            {
+                RetryBackoff = GetDefaultRetryBackoff(),
+                TimeoutBackoff = GetDefaultTimeoutBackoff(),
+                RetryFilter = NonIdempotentRetryFilter,
+                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+            }),
+        };
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
@@ -565,7 +580,8 @@ namespace Google.Pubsub.V1
         {
             GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
-            return new SubscriberClientImpl(grpcClient, settings);
+            IAMPolicy.IAMPolicyClient iamGrpcClient = new IAMPolicy.IAMPolicyClient(channel);
+            return new SubscriberClientImpl(grpcClient, iamGrpcClient, settings);
         }
 
         /// <summary>
@@ -583,6 +599,14 @@ namespace Google.Pubsub.V1
         /// The underlying GRPC Subscriber client.
         /// </summary>
         public virtual Subscriber.SubscriberClient GrpcClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// The underlying GRPC IAMPolicy client.
+        /// </summary>
+        public virtual IAMPolicy.IAMPolicyClient IamGrpcClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -1211,6 +1235,75 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+
+        // Mix-in methods
+        public virtual Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        public virtual Policy SetIamPolicy(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        public virtual Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual Policy GetIamPolicy(
+            string resource,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        public virtual TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public sealed partial class SubscriberClientImpl : SubscriberClient
@@ -1224,10 +1317,14 @@ namespace Google.Pubsub.V1
         private readonly ApiCall<AcknowledgeRequest, Empty> _callAcknowledge;
         private readonly ApiCall<PullRequest, PullResponse> _callPull;
         private readonly ApiCall<ModifyPushConfigRequest, Empty> _callModifyPushConfig;
+        private readonly ApiCall<GetIamPolicyRequest, Policy> _callGetIamPolicy;
+        private readonly ApiCall<SetIamPolicyRequest, Policy> _callSetIamPolicy;
+        private readonly ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> _callTestIamPermissions;
 
-        public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberSettings settings)
+        public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, IAMPolicy.IAMPolicyClient iamGrpcClient, SubscriberSettings settings)
         {
             this.GrpcClient = grpcClient;
+            this.IamGrpcClient = iamGrpcClient;
             SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
             _clientHelper = new ClientHelper(effectiveSettings);
             _callCreateSubscription = _clientHelper.BuildApiCall<Subscription, Subscription>(
@@ -1246,9 +1343,17 @@ namespace Google.Pubsub.V1
                 GrpcClient.PullAsync, GrpcClient.Pull, effectiveSettings.PullSettings);
             _callModifyPushConfig = _clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(
                 GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings);
+            _callGetIamPolicy = _clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
+                IamGrpcClient.GetIamPolicyAsync, IamGrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
+            _callSetIamPolicy = _clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
+                IamGrpcClient.SetIamPolicyAsync, IamGrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
+            _callTestIamPermissions = _clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
+                IamGrpcClient.TestIamPermissionsAsync, IamGrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionSettings);
         }
 
         public override Subscriber.SubscriberClient GrpcClient { get; }
+
+        public override IAMPolicy.IAMPolicyClient IamGrpcClient { get; }
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
@@ -1734,6 +1839,67 @@ namespace Google.Pubsub.V1
                 },
                 callSettings);
 
+        public override Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CallSettings callSettings = null) => _callGetIamPolicy.Async(
+                new GetIamPolicyRequest
+                {
+                    Resource = resource,
+                },
+                callSettings);
+
+        public override Policy GetIamPolicy(
+            string resource,
+            CallSettings callSettings = null) => _callGetIamPolicy.Sync(
+                new GetIamPolicyRequest
+                {
+                    Resource = resource,
+                },
+                callSettings);
+
+        public override Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null) => _callSetIamPolicy.Async(
+                new SetIamPolicyRequest
+                {
+                    Resource = resource,
+                    Policy = policy,
+                },
+                callSettings);
+
+        public override Policy SetIamPolicy(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null) => _callSetIamPolicy.Sync(
+                new SetIamPolicyRequest
+                {
+                    Resource = resource,
+                    Policy = policy,
+                },
+                callSettings);
+
+        public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null) => _callTestIamPermissions.Async(
+                new TestIamPermissionsRequest
+                {
+                    Resource = resource,
+                    Permissions = { permissions },
+                },
+                callSettings);
+
+        public override TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null) => _callTestIamPermissions.Sync(
+                new TestIamPermissionsRequest
+                {
+                    Resource = resource,
+                    Permissions = { permissions },
+                },
+                callSettings);
     }
 
     // Partial classes to enable page-streaming
