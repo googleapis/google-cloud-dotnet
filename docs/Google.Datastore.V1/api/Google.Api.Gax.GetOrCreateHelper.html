@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GetOrCreateHelper
+   | Google.Datastore.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GetOrCreateHelper
+   | Google.Datastore.V1 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Api_Gax_GetOrCreateHelper" data-uid="Google.Api.Gax.GetOrCreateHelper">Class GetOrCreateHelper
+              </h1>
+              <div class="markdown level0 summary"><p>Helper methods for client library code which provides &quot;get or create&quot; functionality,
+i.e. fetching an existing resource if it exists, and creating it otherwise.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">GetOrCreateHelper</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Api.Gax</h6>
+              <h6><strong>Assembly</strong>:Google.Api.Gax.dll</h6>
+              <h5 id="Google_Api_Gax_GetOrCreateHelper_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static class GetOrCreateHelper</code></pre>
+              </div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Api_Gax_GetOrCreateHelper_GetOrCreate__1_System_Func___0__System_Func___0__System_Func___0_System_String__System_Int32_" data-uid="Google.Api.Gax.GetOrCreateHelper.GetOrCreate``1(System.Func{``0},System.Func{``0},System.Func{``0,System.String},System.Int32)">GetOrCreate&lt;TResource&gt;(Func&lt;TResource&gt;, Func&lt;TResource&gt;, Func&lt;TResource, String&gt;, Int32)</h4>
+              <div class="markdown level1 summary"><p>Synchronously retrieves an existing resource or creates a new one if the 
+resource doesn&#39;t already exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TResource GetOrCreate&lt;TResource&gt;(Func&lt;TResource&gt; fetcher, Func&lt;TResource&gt; creator, Func&lt;TResource, string&gt; validator = null, int maxAttempts = 3)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;TResource&gt;</td>
+                    <td><em>fetcher</em></td>
+                    <td><p>A delegate to fetch the resource. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;TResource&gt;</td>
+                    <td><em>creator</em></td>
+                    <td><p>A delegate to create the resource if it doesn&#39;t already exist. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;TResource, <span class="xref">System.String</span>&gt;</td>
+                    <td><em>validator</em></td>
+                    <td><p>An optional delegate to validate that a fetched resource has the expected form.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>maxAttempts</em></td>
+                    <td><p>The maximum number of fetch/create cycles to try before giving up.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TResource</span></td>
+                    <td><p>The resource fetched or created.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>TResource</em></td>
+                    <td>The type of the resource being fetched or created.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Api_Gax_GetOrCreateHelper_GetOrCreate__1_System_Func___0__System_Func___0__System_Func___0_System_String__System_Int32__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+If <em>fetcher</em> fails with an <see cref="!:RpcException"></see> with a status code
+of <see cref="!:StatusCode.NotFound"></see>, it is assumed that the resource needs to be created, and
+<em>creator</em> is called. If this then fails with an <see cref="!:RpcException"></see> with
+a status code of <see cref="!:StatusCode.AlreadyExists"></see>, it is assumed that two clients have been
+racing to create the resource, and the whole process is retried. The maximum number of attempts
+(whole get/create cycles) is limited by <em>maxAttempts</em>.
+</p>
+<p>
+If <em>validator</em> is not <code>null</code>, it is called when a resource is fetched rather than created,
+with the fetched resource being passed in. If the result of the validation is non-null, it is used as the message
+of a <a class="xref" href="Google.Api.Gax.ResourceMismatchException.html#Google_Api_Gax_ResourceMismatchException">ResourceMismatchException</a> which is thrown as the result of the operation.
+</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.ResourceMismatchException.html#Google_Api_Gax_ResourceMismatchException">ResourceMismatchException</a></td>
+                    <td><p>The resource was fetched, but failed the specified validation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Api_Gax_GetOrCreateHelper_GetOrCreateAsync__1_System_Func_System_Threading_Tasks_Task___0___System_Func_System_Threading_Tasks_Task___0___System_Func___0_System_String__System_Int32_" data-uid="Google.Api.Gax.GetOrCreateHelper.GetOrCreateAsync``1(System.Func{System.Threading.Tasks.Task{``0}},System.Func{System.Threading.Tasks.Task{``0}},System.Func{``0,System.String},System.Int32)">GetOrCreateAsync&lt;TResource&gt;(Func&lt;Task&lt;TResource&gt;&gt;, Func&lt;Task&lt;TResource&gt;&gt;, Func&lt;TResource, String&gt;, Int32)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously retrieves an existing resource or creates a new one if the 
+resource doesn&#39;t already exist.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;TResource&gt; GetOrCreateAsync&lt;TResource&gt;(Func&lt;Task&lt;TResource&gt;&gt; fetcher, Func&lt;Task&lt;TResource&gt;&gt; creator, Func&lt;TResource, string&gt; validator = null, int maxAttempts = 3)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;TResource&gt;&gt;</td>
+                    <td><em>fetcher</em></td>
+                    <td><p>A delegate to asynchronously fetch the resource. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;TResource&gt;&gt;</td>
+                    <td><em>creator</em></td>
+                    <td><p>A delegate to asynchronously create the resource if it doesn&#39;t already exist. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;TResource, <span class="xref">System.String</span>&gt;</td>
+                    <td><em>validator</em></td>
+                    <td><p>An optional delegate to validate that a fetched resource has the expected form.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>maxAttempts</em></td>
+                    <td><p>The maximum number of fetch/create cycles to try before giving up.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TResource&gt;</td>
+                    <td><p>A task representing the asynchronous operation. When the task is completed, its result will be
+the resource fetched or created.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>TResource</em></td>
+                    <td>The type of the resource being fetched or created.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Api_Gax_GetOrCreateHelper_GetOrCreateAsync__1_System_Func_System_Threading_Tasks_Task___0___System_Func_System_Threading_Tasks_Task___0___System_Func___0_System_String__System_Int32__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+If <em>fetcher</em> fails with an <see cref="!:RpcException"></see> with a status code
+of <see cref="!:StatusCode.NotFound"></see>, it is assumed that the resource needs to be created, and
+<em>creator</em> is called. If this then fails with an <see cref="!:RpcException"></see> with
+a status code of <see cref="!:StatusCode.AlreadyExists"></see>, it is assumed that two clients have been
+racing to create the resource, and the whole process is retried. The maximum number of attempts
+(whole get/create cycles) is limited by <em>maxAttempts</em>. Both delegates are expected to be
+thread-safe: they are likely not to be called from the original synchronization context.
+</p>
+<p>
+It is expected that if cancellation support is required, it will be embedded in the calls to <em>fetcher</em>
+and <em>creator</em>.
+</p>
+<p>
+If <em>validator</em> is not <code>null</code>, it is called when a resource is fetched rather than created,
+with the fetched resource being passed in. If the result of the validation is non-null, it is used as the message
+of a <a class="xref" href="Google.Api.Gax.ResourceMismatchException.html#Google_Api_Gax_ResourceMismatchException">ResourceMismatchException</a> which is thrown as the result of the operation.
+</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.ResourceMismatchException.html#Google_Api_Gax_ResourceMismatchException">ResourceMismatchException</a></td>
+                    <td><p>The resource was fetched, but failed the specified validation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

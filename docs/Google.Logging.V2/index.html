@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Google.Logging.V2 | Google.Logging.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Google.Logging.V2 | Google.Logging.V2 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="googleloggingv2">Google.Logging.V2</h1>
+              
+<p><code>Google.Logging.V2</code> is a .NET client library for <a href="https://cloud.google.com/logging/">Google Stackdriver
+Logging</a>. Integration with
+<a href="https://logging.apache.org/log4net/">log4net</a> is provided by
+the <code>Google.Logging.Log4Net</code> package.</p>
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Logging.V2</code> package from NuGet. Add it to
+your project in the normal way (for example by right-clicking on the
+project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
+Please ensure you enable pre-release packages (for example, in the
+Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
+box).</p>
+<p>If you wish to use the log4net integration, install the
+<code>Google.Logging.Log4Net</code> package in the same way.</p>
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+installed, run the following command in a Google Cloud SDK Shell:</p>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started-log4net">Getting started (log4net)</h1>
+<p>First create a <code>log4net</code> configuration file (<code>log4net.xml</code>) as below:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;log4net&gt;
+  &lt;appender name=&quot;CloudLogger&quot; type=&quot;Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net&quot;&gt;
+    &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
+      &lt;conversionPattern value=&quot;%-4timestamp [%thread] %-5level %logger %ndc - %message&quot;/&gt;
+    &lt;/layout&gt;
+    &lt;projectId value=&quot;PROJECT_ID&quot;/&gt;
+    &lt;logId value=&quot;LOG_ID&quot;/&gt;
+  &lt;/appender&gt;
+  &lt;root&gt;
+    &lt;level value=&quot;ALL&quot;/&gt;
+    &lt;appender-ref ref=&quot;CloudLogger&quot;/&gt;
+  &lt;/root&gt;
+&lt;/log4net&gt;
+</code></pre><p>Edit the file replacing <code>PROJECT_ID</code> with your Google Cloud Project
+ID, and <code>LOG_ID</code> with an identifier for your application. Use this
+file to configure <code>log4net</code> and then log as normal.</p>
+<pre><code class="lang-cs">// Configure log4net to use Google Stackdriver logging from the XML configuration file.
+XmlConfigurator.Configure(new FileInfo(&quot;log4net.xml&quot;));
+
+// Retrieve a logger for this context.
+ILog log = LogManager.GetLogger(typeof(Program));
+// Log some information. This log entry will be sent to Google Stackdriver Logging.
+log.Info(&quot;An exciting log entry!&quot;);
+</code></pre><p>See the
+<a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md">readme</a>
+for details on all the configuration options.</p>
+<p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
+<h1 id="raw-rpc-api">Raw RPC API</h1>
+<p>If required,
+<a href="api/Google.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a>
+provides a low-level abstraction over the raw RPC API.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

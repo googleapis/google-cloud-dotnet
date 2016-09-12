@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RecognitionAudio
+   | Google.Cloud.Speech.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RecognitionAudio
+   | Google.Cloud.Speech.V1Beta1 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio">Class RecognitionAudio
+              </h1>
+              <div class="markdown level0 summary"><p> Contains audio data in the encoding specified in the <code>RecognitionConfig</code>.
+ Either <code>content</code> or <code>uri</code> must be supplied. Supplying both or neither
+ returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">RecognitionAudio</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1Beta1</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1Beta1.dll</h6>
+              <h5 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class RecognitionAudio : IMessage&lt;RecognitionAudio&gt;, IMessage, IEquatable&lt;RecognitionAudio&gt;, IDeepCloneable&lt;RecognitionAudio&gt;</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio__ctor" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.#ctor">RecognitionAudio()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RecognitionAudio()</code></pre>
+              </div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio__ctor_Google_Cloud_Speech_V1Beta1_RecognitionAudio_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.#ctor(Google.Cloud.Speech.V1Beta1.RecognitionAudio)">RecognitionAudio(RecognitionAudio)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RecognitionAudio(RecognitionAudio other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><em>other</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="fields">Fields
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_ContentFieldNumber" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.ContentFieldNumber">ContentFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;content&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int ContentFieldNumber = 1</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_UriFieldNumber" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.UriFieldNumber">UriFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;uri&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int UriFieldNumber = 2</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_AudioSourceCase" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.AudioSourceCase">AudioSourceCase</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RecognitionAudio.AudioSourceOneofCase AudioSourceCase { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.AudioSourceOneofCase.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio_AudioSourceOneofCase">RecognitionAudio.AudioSourceOneofCase</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Content" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Content">Content</h4>
+              <div class="markdown level1 summary"><p> The audio data bytes encoded as specified in
+ <code>RecognitionConfig</code>. Note: as with all bytes fields, protobuffers use a
+ pure binary representation, whereas JSON representations use base64.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ByteString Content { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Descriptor" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Descriptor">Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Parser" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Parser">Parser</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;RecognitionAudio&gt; Parser { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Uri" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Uri">Uri</h4>
+              <div class="markdown level1 summary"><p> URI that points to a file that contains audio data bytes as specified in
+ <code>RecognitionConfig</code>. Currently, only Google Cloud Storage URIs are
+ supported, which must be specified in the following format:
+ <code>gs://bucket_name/object_name</code> (other URI formats return
+ [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
+ <a href="/storage/docs/reference-uris">Request URIs</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Uri { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_CalculateSize" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.CalculateSize">CalculateSize()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_ClearAudioSource" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.ClearAudioSource">ClearAudioSource()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ClearAudioSource()</code></pre>
+              </div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Clone" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Clone">Clone()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RecognitionAudio Clone()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Cloud.Speech.V1Beta1.RecognitionAudio&gt;.Clone()</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Equals_Google_Cloud_Speech_V1Beta1_RecognitionAudio_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Equals(Google.Cloud.Speech.V1Beta1.RecognitionAudio)">Equals(RecognitionAudio)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Equals(RecognitionAudio other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><em>other</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Cloud.Speech.V1Beta1.RecognitionAudio&gt;.Equals(Google.Cloud.Speech.V1Beta1.RecognitionAudio)</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Equals_System_Object_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Equals(System.Object)">Equals(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>other</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromBytes_System_Byte___" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromBytes(System.Byte[])">FromBytes(Byte[])</h4>
+              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> from the given byte array.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static RecognitionAudio FromBytes(byte[] bytes)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><em>bytes</em></td>
+                    <td><p>The bytes representing the raw RecognitionAudio data.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromBytes_System_Byte____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method copies the data from the byte array; modifications to <em>bytes</em>
+after this method returns will not be reflected in the RecognitionAudio.</p>
+</div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromBytes_System_Byte___System_Int32_System_Int32_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromBytes(System.Byte[],System.Int32,System.Int32)">FromBytes(Byte[], Int32, Int32)</h4>
+              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> from a section of the given byte array.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static RecognitionAudio FromBytes(byte[] bytes, int offset, int count)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><em>bytes</em></td>
+                    <td><p>The bytes representing the raw RecognitionAudio data.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>offset</em></td>
+                    <td><p>The offset into the byte array of the start of the data to include in the RecognitionAudio.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>count</em></td>
+                    <td><p>The number of bytes to include in the RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromBytes_System_Byte___System_Int32_System_Int32__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method copies the data from the byte array; modifications to <em>bytes</em>
+after this method returns will not be reflected in the RecognitionAudio.</p>
+</div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromFile_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromFile(System.String)">FromFile(String)</h4>
+              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given file path.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static RecognitionAudio FromFile(string path)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>path</em></td>
+                    <td><p>The file path to load RecognitionAudio data from. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromFileAsync_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromFileAsync(System.String)">FromFileAsync(String)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given file path.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;RecognitionAudio&gt; FromFileAsync(string path)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>path</em></td>
+                    <td><p>The file path to load RecognitionAudio data from. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromStorageUri_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromStorageUri(System.String)">FromStorageUri(String)</h4>
+              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> with a <see cref="!:RecognitionAudio.Source"></see> property referring to a Google Cloud
+Storage URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static RecognitionAudio FromStorageUri(string storageUri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>storageUri</em></td>
+                    <td><p>A Google Cloud Storage URI, of the form <code>gs://bucket-name/object-name</code>. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromStream_System_IO_Stream_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromStream(System.IO.Stream)">FromStream(Stream)</h4>
+              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static RecognitionAudio FromStream(Stream stream)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>stream</em></td>
+                    <td><p>The stream to load RecognitionAudio data from. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromStreamAsync_System_IO_Stream_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromStreamAsync(System.IO.Stream)">FromStreamAsync(Stream)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;RecognitionAudio&gt; FromStreamAsync(Stream stream)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>stream</em></td>
+                    <td><p>The stream to load RecognitionAudio data from. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromUri_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromUri(System.String)">FromUri(String)</h4>
+              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static RecognitionAudio FromUri(string uri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>uri</em></td>
+                    <td><p>The URI to fetch. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromUri_System_Uri_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromUri(System.Uri)">FromUri(Uri)</h4>
+              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static RecognitionAudio FromUri(Uri uri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Uri</span></td>
+                    <td><em>uri</em></td>
+                    <td><p>The URI to fetch. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><p>The newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromUriAsync_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromUriAsync(System.String)">FromUriAsync(String)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;RecognitionAudio&gt; FromUriAsync(string uri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>uri</em></td>
+                    <td><p>The URI to fetch. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result will be the newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromUriAsync_System_Uri_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromUriAsync(System.Uri)">FromUriAsync(Uri)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;RecognitionAudio&gt; FromUriAsync(Uri uri)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Uri</span></td>
+                    <td><em>uri</em></td>
+                    <td><p>The URI to fetch. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result will be the newly created RecognitionAudio.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_GetHashCode" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.GetHashCode">GetHashCode()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_MergeFrom_Google_Cloud_Speech_V1Beta1_RecognitionAudio_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.MergeFrom(Google.Cloud.Speech.V1Beta1.RecognitionAudio)">MergeFrom(RecognitionAudio)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(RecognitionAudio other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
+                    <td><em>other</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Cloud.Speech.V1Beta1.RecognitionAudio&gt;.MergeFrom(Google.Cloud.Speech.V1Beta1.RecognitionAudio)</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
+                    <td><em>input</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_ToString" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.ToString">ToString()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
+                    <td><em>output</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

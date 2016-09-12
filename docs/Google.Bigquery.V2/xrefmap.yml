@@ -1,0 +1,1581 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Google.Api.Gax.Rest
+  name: Google.Api.Gax.Rest
+  href: api/Google.Api.Gax.Rest.html#Google_Api_Gax_Rest
+  commentId: N:Google.Api.Gax.Rest
+  fullName: Google.Api.Gax.Rest
+- uid: Google.Api.Gax.Rest.FixedSizePage`1
+  name: FixedSizePage<TResource>
+  href: api/Google.Api.Gax.Rest.FixedSizePage-1.html#Google_Api_Gax_Rest_FixedSizePage_1
+  commentId: T:Google.Api.Gax.Rest.FixedSizePage`1
+  name.vb: FixedSizePage(Of TResource)
+  fullName: Google.Api.Gax.Rest.FixedSizePage<TResource>
+  fullName.vb: Google.Api.Gax.Rest.FixedSizePage(Of TResource)
+- uid: Google.Api.Gax.Rest.FixedSizePage`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.String)
+  name: FixedSizePage(IEnumerable<TResource>, String)
+  href: api/Google.Api.Gax.Rest.FixedSizePage-1.html#Google_Api_Gax_Rest_FixedSizePage_1__ctor_System_Collections_Generic_IEnumerable__0__System_String_
+  commentId: M:Google.Api.Gax.Rest.FixedSizePage`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.String)
+  name.vb: FixedSizePage(IEnumerable(Of TResource), String)
+  fullName: Google.Api.Gax.Rest.FixedSizePage<TResource>.FixedSizePage(System.Collections.Generic.IEnumerable<TResource>, System.String)
+  fullName.vb: Google.Api.Gax.Rest.FixedSizePage(Of TResource).FixedSizePage(System.Collections.Generic.IEnumerable(Of TResource), System.String)
+- uid: Google.Api.Gax.Rest.FixedSizePage`1.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Api.Gax.Rest.FixedSizePage-1.html#Google_Api_Gax_Rest_FixedSizePage_1_GetEnumerator
+  commentId: M:Google.Api.Gax.Rest.FixedSizePage`1.GetEnumerator
+  fullName: Google.Api.Gax.Rest.FixedSizePage<TResource>.GetEnumerator()
+  fullName.vb: Google.Api.Gax.Rest.FixedSizePage(Of TResource).GetEnumerator()
+- uid: Google.Api.Gax.Rest.FixedSizePage`1.NextPageToken
+  name: NextPageToken
+  href: api/Google.Api.Gax.Rest.FixedSizePage-1.html#Google_Api_Gax_Rest_FixedSizePage_1_NextPageToken
+  commentId: P:Google.Api.Gax.Rest.FixedSizePage`1.NextPageToken
+  fullName: Google.Api.Gax.Rest.FixedSizePage<TResource>.NextPageToken
+  fullName.vb: Google.Api.Gax.Rest.FixedSizePage(Of TResource).NextPageToken
+- uid: Google.Api.Gax.Rest.FixedSizePage`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Api.Gax.Rest.FixedSizePage-1.html#Google_Api_Gax_Rest_FixedSizePage_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Api.Gax.Rest.FixedSizePage`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Api.Gax.Rest.FixedSizePage<TResource>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Google.Api.Gax.Rest.FixedSizePage(Of TResource).System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions
+  name: GaxRestPreconditions
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions
+  commentId: T:Google.Api.Gax.Rest.GaxRestPreconditions
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument(System.Boolean,System.String,System.String)
+  name: CheckArgument(Boolean, String, String)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckArgument_System_Boolean_System_String_System_String_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument(System.Boolean,System.String,System.String)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument(System.Boolean, System.String, System.String)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument``1(System.Boolean,System.String,System.String,``0)
+  name: CheckArgument<T>(Boolean, String, String, T)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckArgument__1_System_Boolean_System_String_System_String___0_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument``1(System.Boolean,System.String,System.String,``0)
+  name.vb: CheckArgument(Of T)(Boolean, String, String, T)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument<T>(System.Boolean, System.String, System.String, T)
+  fullName.vb: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument(Of T)(System.Boolean, System.String, System.String, T)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument``2(System.Boolean,System.String,System.String,``0,``1)
+  name: CheckArgument<T1, T2>(Boolean, String, String, T1, T2)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckArgument__2_System_Boolean_System_String_System_String___0___1_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument``2(System.Boolean,System.String,System.String,``0,``1)
+  name.vb: CheckArgument(Of T1, T2)(Boolean, String, String, T1, T2)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument<T1, T2>(System.Boolean, System.String, System.String, T1, T2)
+  fullName.vb: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgument(Of T1, T2)(System.Boolean, System.String, System.String, T1, T2)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgumentRange(System.Int32,System.String,System.Int32,System.Int32)
+  name: CheckArgumentRange(Int32, String, Int32, Int32)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckArgumentRange_System_Int32_System_String_System_Int32_System_Int32_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgumentRange(System.Int32,System.String,System.Int32,System.Int32)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckArgumentRange(System.Int32, System.String, System.Int32, System.Int32)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckEnumValue``1(``0,System.String)
+  name: CheckEnumValue<T>(T, String)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckEnumValue__1___0_System_String_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckEnumValue``1(``0,System.String)
+  name.vb: CheckEnumValue(Of T)(T, String)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckEnumValue<T>(T, System.String)
+  fullName.vb: Google.Api.Gax.Rest.GaxRestPreconditions.CheckEnumValue(Of T)(T, System.String)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckNotNull``1(``0,System.String)
+  name: CheckNotNull<T>(T, String)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckNotNull__1___0_System_String_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckNotNull``1(``0,System.String)
+  name.vb: CheckNotNull(Of T)(T, String)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckNotNull<T>(T, System.String)
+  fullName.vb: Google.Api.Gax.Rest.GaxRestPreconditions.CheckNotNull(Of T)(T, System.String)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckNotNullOrEmpty(System.String,System.String)
+  name: CheckNotNullOrEmpty(String, String)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckNotNullOrEmpty_System_String_System_String_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckNotNullOrEmpty(System.String,System.String)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckNotNullOrEmpty(System.String, System.String)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckState(System.Boolean,System.String)
+  name: CheckState(Boolean, String)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckState_System_Boolean_System_String_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckState(System.Boolean,System.String)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckState(System.Boolean, System.String)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckState``1(System.Boolean,System.String,``0)
+  name: CheckState<T>(Boolean, String, T)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckState__1_System_Boolean_System_String___0_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckState``1(System.Boolean,System.String,``0)
+  name.vb: CheckState(Of T)(Boolean, String, T)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckState<T>(System.Boolean, System.String, T)
+  fullName.vb: Google.Api.Gax.Rest.GaxRestPreconditions.CheckState(Of T)(System.Boolean, System.String, T)
+- uid: Google.Api.Gax.Rest.GaxRestPreconditions.CheckState``2(System.Boolean,System.String,``0,``1)
+  name: CheckState<T1, T2>(Boolean, String, T1, T2)
+  href: api/Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions_CheckState__2_System_Boolean_System_String___0___1_
+  commentId: M:Google.Api.Gax.Rest.GaxRestPreconditions.CheckState``2(System.Boolean,System.String,``0,``1)
+  name.vb: CheckState(Of T1, T2)(Boolean, String, T1, T2)
+  fullName: Google.Api.Gax.Rest.GaxRestPreconditions.CheckState<T1, T2>(System.Boolean, System.String, T1, T2)
+  fullName.vb: Google.Api.Gax.Rest.GaxRestPreconditions.CheckState(Of T1, T2)(System.Boolean, System.String, T1, T2)
+- uid: Google.Api.Gax.Rest.IPagedAsyncEnumerable`2
+  name: IPagedAsyncEnumerable<TResponse, TResource>
+  href: api/Google.Api.Gax.Rest.IPagedAsyncEnumerable-2.html#Google_Api_Gax_Rest_IPagedAsyncEnumerable_2
+  commentId: T:Google.Api.Gax.Rest.IPagedAsyncEnumerable`2
+  name.vb: IPagedAsyncEnumerable(Of TResponse, TResource)
+  fullName: Google.Api.Gax.Rest.IPagedAsyncEnumerable<TResponse, TResource>
+  fullName.vb: Google.Api.Gax.Rest.IPagedAsyncEnumerable(Of TResponse, TResource)
+- uid: Google.Api.Gax.Rest.IPagedAsyncEnumerable`2.AsPages
+  name: AsPages()
+  href: api/Google.Api.Gax.Rest.IPagedAsyncEnumerable-2.html#Google_Api_Gax_Rest_IPagedAsyncEnumerable_2_AsPages
+  commentId: M:Google.Api.Gax.Rest.IPagedAsyncEnumerable`2.AsPages
+  fullName: Google.Api.Gax.Rest.IPagedAsyncEnumerable<TResponse, TResource>.AsPages()
+  fullName.vb: Google.Api.Gax.Rest.IPagedAsyncEnumerable(Of TResponse, TResource).AsPages()
+- uid: Google.Api.Gax.Rest.IPagedEnumerable`2
+  name: IPagedEnumerable<TResponse, TResource>
+  href: api/Google.Api.Gax.Rest.IPagedEnumerable-2.html#Google_Api_Gax_Rest_IPagedEnumerable_2
+  commentId: T:Google.Api.Gax.Rest.IPagedEnumerable`2
+  name.vb: IPagedEnumerable(Of TResponse, TResource)
+  fullName: Google.Api.Gax.Rest.IPagedEnumerable<TResponse, TResource>
+  fullName.vb: Google.Api.Gax.Rest.IPagedEnumerable(Of TResponse, TResource)
+- uid: Google.Api.Gax.Rest.IPagedEnumerable`2.AsPages
+  name: AsPages()
+  href: api/Google.Api.Gax.Rest.IPagedEnumerable-2.html#Google_Api_Gax_Rest_IPagedEnumerable_2_AsPages
+  commentId: M:Google.Api.Gax.Rest.IPagedEnumerable`2.AsPages
+  fullName: Google.Api.Gax.Rest.IPagedEnumerable<TResponse, TResource>.AsPages()
+  fullName.vb: Google.Api.Gax.Rest.IPagedEnumerable(Of TResponse, TResource).AsPages()
+- uid: Google.Api.Gax.Rest.IPageManager`3
+  name: IPageManager<TRequest, TResponse, TResource>
+  href: api/Google.Api.Gax.Rest.IPageManager-3.html#Google_Api_Gax_Rest_IPageManager_3
+  commentId: T:Google.Api.Gax.Rest.IPageManager`3
+  name.vb: IPageManager(Of TRequest, TResponse, TResource)
+  fullName: Google.Api.Gax.Rest.IPageManager<TRequest, TResponse, TResource>
+  fullName.vb: Google.Api.Gax.Rest.IPageManager(Of TRequest, TResponse, TResource)
+- uid: Google.Api.Gax.Rest.IPageManager`3.GetNextPageToken(`1)
+  name: GetNextPageToken(TResponse)
+  href: api/Google.Api.Gax.Rest.IPageManager-3.html#Google_Api_Gax_Rest_IPageManager_3_GetNextPageToken__1_
+  commentId: M:Google.Api.Gax.Rest.IPageManager`3.GetNextPageToken(`1)
+  fullName: Google.Api.Gax.Rest.IPageManager<TRequest, TResponse, TResource>.GetNextPageToken(TResponse)
+  fullName.vb: Google.Api.Gax.Rest.IPageManager(Of TRequest, TResponse, TResource).GetNextPageToken(TResponse)
+- uid: Google.Api.Gax.Rest.IPageManager`3.GetResources(`1)
+  name: GetResources(TResponse)
+  href: api/Google.Api.Gax.Rest.IPageManager-3.html#Google_Api_Gax_Rest_IPageManager_3_GetResources__1_
+  commentId: M:Google.Api.Gax.Rest.IPageManager`3.GetResources(`1)
+  fullName: Google.Api.Gax.Rest.IPageManager<TRequest, TResponse, TResource>.GetResources(TResponse)
+  fullName.vb: Google.Api.Gax.Rest.IPageManager(Of TRequest, TResponse, TResource).GetResources(TResponse)
+- uid: Google.Api.Gax.Rest.IPageManager`3.SetPageSize(`0,System.Int32)
+  name: SetPageSize(TRequest, Int32)
+  href: api/Google.Api.Gax.Rest.IPageManager-3.html#Google_Api_Gax_Rest_IPageManager_3_SetPageSize__0_System_Int32_
+  commentId: M:Google.Api.Gax.Rest.IPageManager`3.SetPageSize(`0,System.Int32)
+  fullName: Google.Api.Gax.Rest.IPageManager<TRequest, TResponse, TResource>.SetPageSize(TRequest, System.Int32)
+  fullName.vb: Google.Api.Gax.Rest.IPageManager(Of TRequest, TResponse, TResource).SetPageSize(TRequest, System.Int32)
+- uid: Google.Api.Gax.Rest.IPageManager`3.SetPageToken(`0,System.String)
+  name: SetPageToken(TRequest, String)
+  href: api/Google.Api.Gax.Rest.IPageManager-3.html#Google_Api_Gax_Rest_IPageManager_3_SetPageToken__0_System_String_
+  commentId: M:Google.Api.Gax.Rest.IPageManager`3.SetPageToken(`0,System.String)
+  fullName: Google.Api.Gax.Rest.IPageManager<TRequest, TResponse, TResource>.SetPageToken(TRequest, System.String)
+  fullName.vb: Google.Api.Gax.Rest.IPageManager(Of TRequest, TResponse, TResource).SetPageToken(TRequest, System.String)
+- uid: Google.Api.Gax.Rest.IResponseAsyncEnumerable`2
+  name: IResponseAsyncEnumerable<TResponse, TResource>
+  href: api/Google.Api.Gax.Rest.IResponseAsyncEnumerable-2.html#Google_Api_Gax_Rest_IResponseAsyncEnumerable_2
+  commentId: T:Google.Api.Gax.Rest.IResponseAsyncEnumerable`2
+  name.vb: IResponseAsyncEnumerable(Of TResponse, TResource)
+  fullName: Google.Api.Gax.Rest.IResponseAsyncEnumerable<TResponse, TResource>
+  fullName.vb: Google.Api.Gax.Rest.IResponseAsyncEnumerable(Of TResponse, TResource)
+- uid: Google.Api.Gax.Rest.IResponseAsyncEnumerable`2.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Api.Gax.Rest.IResponseAsyncEnumerable-2.html#Google_Api_Gax_Rest_IResponseAsyncEnumerable_2_GetEnumerator
+  commentId: M:Google.Api.Gax.Rest.IResponseAsyncEnumerable`2.GetEnumerator
+  fullName: Google.Api.Gax.Rest.IResponseAsyncEnumerable<TResponse, TResource>.GetEnumerator()
+  fullName.vb: Google.Api.Gax.Rest.IResponseAsyncEnumerable(Of TResponse, TResource).GetEnumerator()
+- uid: Google.Api.Gax.Rest.IResponseAsyncEnumerable`2.WithFixedSize(System.Int32)
+  name: WithFixedSize(Int32)
+  href: api/Google.Api.Gax.Rest.IResponseAsyncEnumerable-2.html#Google_Api_Gax_Rest_IResponseAsyncEnumerable_2_WithFixedSize_System_Int32_
+  commentId: M:Google.Api.Gax.Rest.IResponseAsyncEnumerable`2.WithFixedSize(System.Int32)
+  fullName: Google.Api.Gax.Rest.IResponseAsyncEnumerable<TResponse, TResource>.WithFixedSize(System.Int32)
+  fullName.vb: Google.Api.Gax.Rest.IResponseAsyncEnumerable(Of TResponse, TResource).WithFixedSize(System.Int32)
+- uid: Google.Api.Gax.Rest.IResponseAsyncEnumerator`1
+  name: IResponseAsyncEnumerator<T>
+  href: api/Google.Api.Gax.Rest.IResponseAsyncEnumerator-1.html#Google_Api_Gax_Rest_IResponseAsyncEnumerator_1
+  commentId: T:Google.Api.Gax.Rest.IResponseAsyncEnumerator`1
+  name.vb: IResponseAsyncEnumerator(Of T)
+  fullName: Google.Api.Gax.Rest.IResponseAsyncEnumerator<T>
+  fullName.vb: Google.Api.Gax.Rest.IResponseAsyncEnumerator(Of T)
+- uid: Google.Api.Gax.Rest.IResponseAsyncEnumerator`1.MoveNext(System.Int32,System.Threading.CancellationToken)
+  name: MoveNext(Int32, CancellationToken)
+  href: api/Google.Api.Gax.Rest.IResponseAsyncEnumerator-1.html#Google_Api_Gax_Rest_IResponseAsyncEnumerator_1_MoveNext_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Google.Api.Gax.Rest.IResponseAsyncEnumerator`1.MoveNext(System.Int32,System.Threading.CancellationToken)
+  fullName: Google.Api.Gax.Rest.IResponseAsyncEnumerator<T>.MoveNext(System.Int32, System.Threading.CancellationToken)
+  fullName.vb: Google.Api.Gax.Rest.IResponseAsyncEnumerator(Of T).MoveNext(System.Int32, System.Threading.CancellationToken)
+- uid: Google.Api.Gax.Rest.IResponseEnumerable`2
+  name: IResponseEnumerable<TResponse, TResource>
+  href: api/Google.Api.Gax.Rest.IResponseEnumerable-2.html#Google_Api_Gax_Rest_IResponseEnumerable_2
+  commentId: T:Google.Api.Gax.Rest.IResponseEnumerable`2
+  name.vb: IResponseEnumerable(Of TResponse, TResource)
+  fullName: Google.Api.Gax.Rest.IResponseEnumerable<TResponse, TResource>
+  fullName.vb: Google.Api.Gax.Rest.IResponseEnumerable(Of TResponse, TResource)
+- uid: Google.Api.Gax.Rest.IResponseEnumerable`2.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Api.Gax.Rest.IResponseEnumerable-2.html#Google_Api_Gax_Rest_IResponseEnumerable_2_GetEnumerator
+  commentId: M:Google.Api.Gax.Rest.IResponseEnumerable`2.GetEnumerator
+  fullName: Google.Api.Gax.Rest.IResponseEnumerable<TResponse, TResource>.GetEnumerator()
+  fullName.vb: Google.Api.Gax.Rest.IResponseEnumerable(Of TResponse, TResource).GetEnumerator()
+- uid: Google.Api.Gax.Rest.IResponseEnumerable`2.WithFixedSize(System.Int32)
+  name: WithFixedSize(Int32)
+  href: api/Google.Api.Gax.Rest.IResponseEnumerable-2.html#Google_Api_Gax_Rest_IResponseEnumerable_2_WithFixedSize_System_Int32_
+  commentId: M:Google.Api.Gax.Rest.IResponseEnumerable`2.WithFixedSize(System.Int32)
+  fullName: Google.Api.Gax.Rest.IResponseEnumerable<TResponse, TResource>.WithFixedSize(System.Int32)
+  fullName.vb: Google.Api.Gax.Rest.IResponseEnumerable(Of TResponse, TResource).WithFixedSize(System.Int32)
+- uid: Google.Api.Gax.Rest.IResponseEnumerator`1
+  name: IResponseEnumerator<T>
+  href: api/Google.Api.Gax.Rest.IResponseEnumerator-1.html#Google_Api_Gax_Rest_IResponseEnumerator_1
+  commentId: T:Google.Api.Gax.Rest.IResponseEnumerator`1
+  name.vb: IResponseEnumerator(Of T)
+  fullName: Google.Api.Gax.Rest.IResponseEnumerator<T>
+  fullName.vb: Google.Api.Gax.Rest.IResponseEnumerator(Of T)
+- uid: Google.Api.Gax.Rest.IResponseEnumerator`1.MoveNext(System.Int32)
+  name: MoveNext(Int32)
+  href: api/Google.Api.Gax.Rest.IResponseEnumerator-1.html#Google_Api_Gax_Rest_IResponseEnumerator_1_MoveNext_System_Int32_
+  commentId: M:Google.Api.Gax.Rest.IResponseEnumerator`1.MoveNext(System.Int32)
+  fullName: Google.Api.Gax.Rest.IResponseEnumerator<T>.MoveNext(System.Int32)
+  fullName.vb: Google.Api.Gax.Rest.IResponseEnumerator(Of T).MoveNext(System.Int32)
+- uid: Google.Api.Gax.Rest.PagedAsyncEnumerable`3
+  name: PagedAsyncEnumerable<TRequest, TResponse, TResource>
+  href: api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.html#Google_Api_Gax_Rest_PagedAsyncEnumerable_3
+  commentId: T:Google.Api.Gax.Rest.PagedAsyncEnumerable`3
+  name.vb: PagedAsyncEnumerable(Of TRequest, TResponse, TResource)
+  fullName: Google.Api.Gax.Rest.PagedAsyncEnumerable<TRequest, TResponse, TResource>
+  fullName.vb: Google.Api.Gax.Rest.PagedAsyncEnumerable(Of TRequest, TResponse, TResource)
+- uid: Google.Api.Gax.Rest.PagedAsyncEnumerable`3.#ctor(System.Func{`0},Google.Api.Gax.Rest.IPageManager{`0,`1,`2})
+  name: PagedAsyncEnumerable(Func<TRequest>, IPageManager<TRequest, TResponse, TResource>)
+  href: api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.html#Google_Api_Gax_Rest_PagedAsyncEnumerable_3__ctor_System_Func__0__Google_Api_Gax_Rest_IPageManager__0__1__2__
+  commentId: M:Google.Api.Gax.Rest.PagedAsyncEnumerable`3.#ctor(System.Func{`0},Google.Api.Gax.Rest.IPageManager{`0,`1,`2})
+  name.vb: PagedAsyncEnumerable(Func(Of TRequest), IPageManager(Of TRequest, TResponse, TResource))
+  fullName: Google.Api.Gax.Rest.PagedAsyncEnumerable<TRequest, TResponse, TResource>.PagedAsyncEnumerable(System.Func<TRequest>, Google.Api.Gax.Rest.IPageManager<TRequest, TResponse, TResource>)
+  fullName.vb: Google.Api.Gax.Rest.PagedAsyncEnumerable(Of TRequest, TResponse, TResource).PagedAsyncEnumerable(System.Func(Of TRequest), Google.Api.Gax.Rest.IPageManager(Of TRequest, TResponse, TResource))
+- uid: Google.Api.Gax.Rest.PagedAsyncEnumerable`3.AsPages
+  name: AsPages()
+  href: api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.html#Google_Api_Gax_Rest_PagedAsyncEnumerable_3_AsPages
+  commentId: M:Google.Api.Gax.Rest.PagedAsyncEnumerable`3.AsPages
+  fullName: Google.Api.Gax.Rest.PagedAsyncEnumerable<TRequest, TResponse, TResource>.AsPages()
+  fullName.vb: Google.Api.Gax.Rest.PagedAsyncEnumerable(Of TRequest, TResponse, TResource).AsPages()
+- uid: Google.Api.Gax.Rest.PagedAsyncEnumerable`3.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.html#Google_Api_Gax_Rest_PagedAsyncEnumerable_3_GetEnumerator
+  commentId: M:Google.Api.Gax.Rest.PagedAsyncEnumerable`3.GetEnumerator
+  fullName: Google.Api.Gax.Rest.PagedAsyncEnumerable<TRequest, TResponse, TResource>.GetEnumerator()
+  fullName.vb: Google.Api.Gax.Rest.PagedAsyncEnumerable(Of TRequest, TResponse, TResource).GetEnumerator()
+- uid: Google.Api.Gax.Rest.PagedEnumerable`3
+  name: PagedEnumerable<TRequest, TResponse, TResource>
+  href: api/Google.Api.Gax.Rest.PagedEnumerable-3.html#Google_Api_Gax_Rest_PagedEnumerable_3
+  commentId: T:Google.Api.Gax.Rest.PagedEnumerable`3
+  name.vb: PagedEnumerable(Of TRequest, TResponse, TResource)
+  fullName: Google.Api.Gax.Rest.PagedEnumerable<TRequest, TResponse, TResource>
+  fullName.vb: Google.Api.Gax.Rest.PagedEnumerable(Of TRequest, TResponse, TResource)
+- uid: Google.Api.Gax.Rest.PagedEnumerable`3.#ctor(System.Func{`0},Google.Api.Gax.Rest.IPageManager{`0,`1,`2})
+  name: PagedEnumerable(Func<TRequest>, IPageManager<TRequest, TResponse, TResource>)
+  href: api/Google.Api.Gax.Rest.PagedEnumerable-3.html#Google_Api_Gax_Rest_PagedEnumerable_3__ctor_System_Func__0__Google_Api_Gax_Rest_IPageManager__0__1__2__
+  commentId: M:Google.Api.Gax.Rest.PagedEnumerable`3.#ctor(System.Func{`0},Google.Api.Gax.Rest.IPageManager{`0,`1,`2})
+  name.vb: PagedEnumerable(Func(Of TRequest), IPageManager(Of TRequest, TResponse, TResource))
+  fullName: Google.Api.Gax.Rest.PagedEnumerable<TRequest, TResponse, TResource>.PagedEnumerable(System.Func<TRequest>, Google.Api.Gax.Rest.IPageManager<TRequest, TResponse, TResource>)
+  fullName.vb: Google.Api.Gax.Rest.PagedEnumerable(Of TRequest, TResponse, TResource).PagedEnumerable(System.Func(Of TRequest), Google.Api.Gax.Rest.IPageManager(Of TRequest, TResponse, TResource))
+- uid: Google.Api.Gax.Rest.PagedEnumerable`3.AsPages
+  name: AsPages()
+  href: api/Google.Api.Gax.Rest.PagedEnumerable-3.html#Google_Api_Gax_Rest_PagedEnumerable_3_AsPages
+  commentId: M:Google.Api.Gax.Rest.PagedEnumerable`3.AsPages
+  fullName: Google.Api.Gax.Rest.PagedEnumerable<TRequest, TResponse, TResource>.AsPages()
+  fullName.vb: Google.Api.Gax.Rest.PagedEnumerable(Of TRequest, TResponse, TResource).AsPages()
+- uid: Google.Api.Gax.Rest.PagedEnumerable`3.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Api.Gax.Rest.PagedEnumerable-3.html#Google_Api_Gax_Rest_PagedEnumerable_3_GetEnumerator
+  commentId: M:Google.Api.Gax.Rest.PagedEnumerable`3.GetEnumerator
+  fullName: Google.Api.Gax.Rest.PagedEnumerable<TRequest, TResponse, TResource>.GetEnumerator()
+  fullName.vb: Google.Api.Gax.Rest.PagedEnumerable(Of TRequest, TResponse, TResource).GetEnumerator()
+- uid: Google.Api.Gax.Rest.PagedEnumerable`3.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Api.Gax.Rest.PagedEnumerable-3.html#Google_Api_Gax_Rest_PagedEnumerable_3_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Api.Gax.Rest.PagedEnumerable`3.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Api.Gax.Rest.PagedEnumerable<TRequest, TResponse, TResource>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Google.Api.Gax.Rest.PagedEnumerable(Of TRequest, TResponse, TResource).System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Api.Gax.Rest.UserAgentHelper
+  name: UserAgentHelper
+  href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper
+  commentId: T:Google.Api.Gax.Rest.UserAgentHelper
+  fullName: Google.Api.Gax.Rest.UserAgentHelper
+- uid: Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
+  name: GetDefaultUserAgent(Type)
+  href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_GetDefaultUserAgent_System_Type_
+  commentId: M:Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
+  fullName: Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
+- uid: Google.Bigquery.V2
+  name: Google.Bigquery.V2
+  href: api/Google.Bigquery.V2.html#Google_Bigquery_V2
+  commentId: N:Google.Bigquery.V2
+  fullName: Google.Bigquery.V2
+- uid: Google.Bigquery.V2.BigqueryClient
+  name: BigqueryClient
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient
+  commentId: T:Google.Bigquery.V2.BigqueryClient
+  fullName: Google.Bigquery.V2.BigqueryClient
+- uid: Google.Bigquery.V2.BigqueryClient.CancelJob(JobReference,Google.Bigquery.V2.CancelJobOptions)
+  name: CancelJob(JobReference, CancelJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_JobReference_Google_Bigquery_V2_CancelJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CancelJob(JobReference,Google.Bigquery.V2.CancelJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CancelJob(JobReference, Google.Bigquery.V2.CancelJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.CancelJob(System.String,Google.Bigquery.V2.CancelJobOptions)
+  name: CancelJob(String, CancelJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_Google_Bigquery_V2_CancelJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CancelJob(System.String,Google.Bigquery.V2.CancelJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CancelJob(System.String, Google.Bigquery.V2.CancelJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.CancelJob(System.String,System.String,Google.Bigquery.V2.CancelJobOptions)
+  name: CancelJob(String, String, CancelJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_System_String_Google_Bigquery_V2_CancelJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CancelJob(System.String,System.String,Google.Bigquery.V2.CancelJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CancelJob(System.String, System.String, Google.Bigquery.V2.CancelJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.Create(System.String,GoogleCredential)
+  name: Create(String, GoogleCredential)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Create_System_String_GoogleCredential_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Create(System.String,GoogleCredential)
+  fullName: Google.Bigquery.V2.BigqueryClient.Create(System.String, GoogleCredential)
+- uid: Google.Bigquery.V2.BigqueryClient.CreateAsync(System.String,GoogleCredential)
+  name: CreateAsync(String, GoogleCredential)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_GoogleCredential_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CreateAsync(System.String,GoogleCredential)
+  fullName: Google.Bigquery.V2.BigqueryClient.CreateAsync(System.String, GoogleCredential)
+- uid: Google.Bigquery.V2.BigqueryClient.CreateDataset(DatasetReference,Google.Bigquery.V2.CreateDatasetOptions)
+  name: CreateDataset(DatasetReference, CreateDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CreateDataset(DatasetReference,Google.Bigquery.V2.CreateDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CreateDataset(DatasetReference, Google.Bigquery.V2.CreateDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String,Google.Bigquery.V2.CreateDatasetOptions)
+  name: CreateDataset(String, CreateDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_System_String_Google_Bigquery_V2_CreateDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String,Google.Bigquery.V2.CreateDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String, Google.Bigquery.V2.CreateDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String,System.String,Google.Bigquery.V2.CreateDatasetOptions)
+  name: CreateDataset(String, String, CreateDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_System_String_System_String_Google_Bigquery_V2_CreateDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String,System.String,Google.Bigquery.V2.CreateDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CreateDataset(System.String, System.String, Google.Bigquery.V2.CreateDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.CreateQueryJob(System.String,Google.Bigquery.V2.CreateQueryJobOptions)
+  name: CreateQueryJob(String, CreateQueryJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateQueryJob_System_String_Google_Bigquery_V2_CreateQueryJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CreateQueryJob(System.String,Google.Bigquery.V2.CreateQueryJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CreateQueryJob(System.String, Google.Bigquery.V2.CreateQueryJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.CreateTable(System.String,System.String,System.String,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  name: CreateTable(String, String, String, TableSchema, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_System_String_System_String_System_String_TableSchema_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CreateTable(System.String,System.String,System.String,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CreateTable(System.String, System.String, System.String, TableSchema, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.CreateTable(System.String,System.String,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  name: CreateTable(String, String, TableSchema, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_System_String_System_String_TableSchema_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CreateTable(System.String,System.String,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CreateTable(System.String, System.String, TableSchema, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.CreateTable(TableReference,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  name: CreateTable(TableReference, TableSchema, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_TableReference_TableSchema_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.CreateTable(TableReference,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.CreateTable(TableReference, TableSchema, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.DeleteDataset(DatasetReference,Google.Bigquery.V2.DeleteDatasetOptions)
+  name: DeleteDataset(DatasetReference, DeleteDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.DeleteDataset(DatasetReference,Google.Bigquery.V2.DeleteDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.DeleteDataset(DatasetReference, Google.Bigquery.V2.DeleteDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String,Google.Bigquery.V2.DeleteDatasetOptions)
+  name: DeleteDataset(String, DeleteDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_Google_Bigquery_V2_DeleteDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String,Google.Bigquery.V2.DeleteDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String, Google.Bigquery.V2.DeleteDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String,System.String,Google.Bigquery.V2.DeleteDatasetOptions)
+  name: DeleteDataset(String, String, DeleteDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_System_String_Google_Bigquery_V2_DeleteDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String,System.String,Google.Bigquery.V2.DeleteDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.DeleteDataset(System.String, System.String, Google.Bigquery.V2.DeleteDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String,System.String,Google.Bigquery.V2.DeleteTableOptions)
+  name: DeleteTable(String, String, DeleteTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String,System.String,Google.Bigquery.V2.DeleteTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String, System.String, Google.Bigquery.V2.DeleteTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String,System.String,System.String,Google.Bigquery.V2.DeleteTableOptions)
+  name: DeleteTable(String, String, String, DeleteTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String,System.String,System.String,Google.Bigquery.V2.DeleteTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.DeleteTable(System.String, System.String, System.String, Google.Bigquery.V2.DeleteTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.DeleteTable(TableReference,Google.Bigquery.V2.DeleteTableOptions)
+  name: DeleteTable(TableReference, DeleteTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_TableReference_Google_Bigquery_V2_DeleteTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.DeleteTable(TableReference,Google.Bigquery.V2.DeleteTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.DeleteTable(TableReference, Google.Bigquery.V2.DeleteTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ExecuteQuery(System.String,Google.Bigquery.V2.ExecuteQueryOptions)
+  name: ExecuteQuery(String, ExecuteQueryOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ExecuteQuery_System_String_Google_Bigquery_V2_ExecuteQueryOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ExecuteQuery(System.String,Google.Bigquery.V2.ExecuteQueryOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ExecuteQuery(System.String, Google.Bigquery.V2.ExecuteQueryOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions)
+  name: GetDataset(DatasetReference, GetDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetDataset(DatasetReference, Google.Bigquery.V2.GetDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetDataset(System.String,Google.Bigquery.V2.GetDatasetOptions)
+  name: GetDataset(String, GetDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_System_String_Google_Bigquery_V2_GetDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetDataset(System.String,Google.Bigquery.V2.GetDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetDataset(System.String, Google.Bigquery.V2.GetDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetDataset(System.String,System.String,Google.Bigquery.V2.GetDatasetOptions)
+  name: GetDataset(String, String, GetDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_System_String_System_String_Google_Bigquery_V2_GetDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetDataset(System.String,System.String,Google.Bigquery.V2.GetDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetDataset(System.String, System.String, Google.Bigquery.V2.GetDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String)
+  name: GetDatasetReference(String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDatasetReference_System_String_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String,System.String)
+  name: GetDatasetReference(String, String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDatasetReference_System_String_System_String_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String,System.String)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetDatasetReference(System.String, System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.GetJob(JobReference,Google.Bigquery.V2.GetJobOptions)
+  name: GetJob(JobReference, GetJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_JobReference_Google_Bigquery_V2_GetJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetJob(JobReference,Google.Bigquery.V2.GetJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetJob(JobReference, Google.Bigquery.V2.GetJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetJob(System.String,Google.Bigquery.V2.GetJobOptions)
+  name: GetJob(String, GetJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_System_String_Google_Bigquery_V2_GetJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetJob(System.String,Google.Bigquery.V2.GetJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetJob(System.String, Google.Bigquery.V2.GetJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetJob(System.String,System.String,Google.Bigquery.V2.GetJobOptions)
+  name: GetJob(String, String, GetJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_System_String_System_String_Google_Bigquery_V2_GetJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetJob(System.String,System.String,Google.Bigquery.V2.GetJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetJob(System.String, System.String, Google.Bigquery.V2.GetJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String)
+  name: GetJobReference(String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String,System.String)
+  name: GetJobReference(String, String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_System_String_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String,System.String)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetJobReference(System.String, System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)
+  name: GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(DatasetReference, Google.Bigquery.V2.GetDatasetOptions, Google.Bigquery.V2.CreateDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)
+  name: GetOrCreateDataset(String, GetDatasetOptions, CreateDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_System_String_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String, Google.Bigquery.V2.GetDatasetOptions, Google.Bigquery.V2.CreateDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String,System.String,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)
+  name: GetOrCreateDataset(String, String, GetDatasetOptions, CreateDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_System_String_System_String_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String,System.String,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetOrCreateDataset(System.String, System.String, Google.Bigquery.V2.GetDatasetOptions, Google.Bigquery.V2.CreateDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String,System.String,System.String,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  name: GetOrCreateTable(String, String, String, TableSchema, GetTableOptions, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_System_String_System_String_System_String_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String,System.String,System.String,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String, System.String, System.String, TableSchema, Google.Bigquery.V2.GetTableOptions, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String,System.String,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  name: GetOrCreateTable(String, String, TableSchema, GetTableOptions, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_System_String_System_String_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String,System.String,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(System.String, System.String, TableSchema, Google.Bigquery.V2.GetTableOptions, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(TableReference,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  name: GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_TableReference_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(TableReference,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetOrCreateTable(TableReference, TableSchema, Google.Bigquery.V2.GetTableOptions, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetProjectReference(System.String)
+  name: GetProjectReference(String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetProjectReference_System_String_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetProjectReference(System.String)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetProjectReference(System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.GetQueryResults(JobReference,Google.Bigquery.V2.GetQueryResultsOptions)
+  name: GetQueryResults(JobReference, GetQueryResultsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetQueryResults(JobReference,Google.Bigquery.V2.GetQueryResultsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetQueryResults(JobReference, Google.Bigquery.V2.GetQueryResultsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetQueryResults(System.String,Google.Bigquery.V2.GetQueryResultsOptions)
+  name: GetQueryResults(String, GetQueryResultsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_System_String_Google_Bigquery_V2_GetQueryResultsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetQueryResults(System.String,Google.Bigquery.V2.GetQueryResultsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetQueryResults(System.String, Google.Bigquery.V2.GetQueryResultsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetQueryResults(System.String,System.String,Google.Bigquery.V2.GetQueryResultsOptions)
+  name: GetQueryResults(String, String, GetQueryResultsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_System_String_System_String_Google_Bigquery_V2_GetQueryResultsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetQueryResults(System.String,System.String,Google.Bigquery.V2.GetQueryResultsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetQueryResults(System.String, System.String, Google.Bigquery.V2.GetQueryResultsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetTable(System.String,System.String,Google.Bigquery.V2.GetTableOptions)
+  name: GetTable(String, String, GetTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_Google_Bigquery_V2_GetTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetTable(System.String,System.String,Google.Bigquery.V2.GetTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetTable(System.String, System.String, Google.Bigquery.V2.GetTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetTable(System.String,System.String,System.String,Google.Bigquery.V2.GetTableOptions)
+  name: GetTable(String, String, String, GetTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_System_String_Google_Bigquery_V2_GetTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetTable(System.String,System.String,System.String,Google.Bigquery.V2.GetTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetTable(System.String, System.String, System.String, Google.Bigquery.V2.GetTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetTable(TableReference,Google.Bigquery.V2.GetTableOptions)
+  name: GetTable(TableReference, GetTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_TableReference_Google_Bigquery_V2_GetTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetTable(TableReference,Google.Bigquery.V2.GetTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetTable(TableReference, Google.Bigquery.V2.GetTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String,System.String)
+  name: GetTableReference(String, String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTableReference_System_String_System_String_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String,System.String)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String, System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String,System.String,System.String)
+  name: GetTableReference(String, String, String)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTableReference_System_String_System_String_System_String_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String,System.String,System.String)
+  fullName: Google.Bigquery.V2.BigqueryClient.GetTableReference(System.String, System.String, System.String)
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)
+  name: Insert(String, String, InsertRow, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, Google.Bigquery.V2.InsertRow, Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,Google.Bigquery.V2.InsertRow[])
+  name: Insert(String, String, InsertRow[])
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_Google_Bigquery_V2_InsertRow___
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,Google.Bigquery.V2.InsertRow[])
+  name.vb: Insert(String, String, InsertRow())
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, Google.Bigquery.V2.InsertRow[])
+  fullName.vb: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, Google.Bigquery.V2.InsertRow())
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name: Insert(String, String, IEnumerable<InsertRow>, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name.vb: Insert(String, String, IEnumerable(Of InsertRow), InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, System.Collections.Generic.IEnumerable<Google.Bigquery.V2.InsertRow>, Google.Bigquery.V2.InsertOptions)
+  fullName.vb: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Bigquery.V2.InsertRow), Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)
+  name: Insert(String, String, String, InsertRow, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, System.String, Google.Bigquery.V2.InsertRow, Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,Google.Bigquery.V2.InsertRow[])
+  name: Insert(String, String, String, InsertRow[])
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow___
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,Google.Bigquery.V2.InsertRow[])
+  name.vb: Insert(String, String, String, InsertRow())
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, System.String, Google.Bigquery.V2.InsertRow[])
+  fullName.vb: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, System.String, Google.Bigquery.V2.InsertRow())
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name: Insert(String, String, String, IEnumerable<InsertRow>, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name.vb: Insert(String, String, String, IEnumerable(Of InsertRow), InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<Google.Bigquery.V2.InsertRow>, Google.Bigquery.V2.InsertOptions)
+  fullName.vb: Google.Bigquery.V2.BigqueryClient.Insert(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Bigquery.V2.InsertRow), Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(TableReference,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)
+  name: Insert(TableReference, InsertRow, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_TableReference_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(TableReference,Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(TableReference, Google.Bigquery.V2.InsertRow, Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(TableReference,Google.Bigquery.V2.InsertRow[])
+  name: Insert(TableReference, InsertRow[])
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_TableReference_Google_Bigquery_V2_InsertRow___
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(TableReference,Google.Bigquery.V2.InsertRow[])
+  name.vb: Insert(TableReference, InsertRow())
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(TableReference, Google.Bigquery.V2.InsertRow[])
+  fullName.vb: Google.Bigquery.V2.BigqueryClient.Insert(TableReference, Google.Bigquery.V2.InsertRow())
+- uid: Google.Bigquery.V2.BigqueryClient.Insert(TableReference,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name: Insert(TableReference, IEnumerable<InsertRow>, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.Insert(TableReference,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name.vb: Insert(TableReference, IEnumerable(Of InsertRow), InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.Insert(TableReference, System.Collections.Generic.IEnumerable<Google.Bigquery.V2.InsertRow>, Google.Bigquery.V2.InsertOptions)
+  fullName.vb: Google.Bigquery.V2.BigqueryClient.Insert(TableReference, System.Collections.Generic.IEnumerable(Of Google.Bigquery.V2.InsertRow), Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListDatasets(Google.Bigquery.V2.ListDatasetsOptions)
+  name: ListDatasets(ListDatasetsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Bigquery_V2_ListDatasetsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListDatasets(Google.Bigquery.V2.ListDatasetsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListDatasets(Google.Bigquery.V2.ListDatasetsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListDatasets(ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)
+  name: ListDatasets(ProjectReference, ListDatasetsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListDatasets(ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListDatasets(ProjectReference, Google.Bigquery.V2.ListDatasetsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListDatasets(System.String,Google.Bigquery.V2.ListDatasetsOptions)
+  name: ListDatasets(String, ListDatasetsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_System_String_Google_Bigquery_V2_ListDatasetsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListDatasets(System.String,Google.Bigquery.V2.ListDatasetsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListDatasets(System.String, Google.Bigquery.V2.ListDatasetsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Bigquery.V2.ListJobsOptions)
+  name: ListJobs(ListJobsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Bigquery_V2_ListJobsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Bigquery.V2.ListJobsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListJobs(Google.Bigquery.V2.ListJobsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListJobs(ProjectReference,Google.Bigquery.V2.ListJobsOptions)
+  name: ListJobs(ProjectReference, ListJobsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_ProjectReference_Google_Bigquery_V2_ListJobsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListJobs(ProjectReference,Google.Bigquery.V2.ListJobsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListJobs(ProjectReference, Google.Bigquery.V2.ListJobsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListJobs(System.String,Google.Bigquery.V2.ListJobsOptions)
+  name: ListJobs(String, ListJobsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_System_String_Google_Bigquery_V2_ListJobsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListJobs(System.String,Google.Bigquery.V2.ListJobsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListJobs(System.String, Google.Bigquery.V2.ListJobsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,System.String,TableSchema,Google.Bigquery.V2.ListRowsOptions)
+  name: ListRows(String, String, String, TableSchema, ListRowsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_System_String_TableSchema_Google_Bigquery_V2_ListRowsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,System.String,TableSchema,Google.Bigquery.V2.ListRowsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListRows(System.String, System.String, System.String, TableSchema, Google.Bigquery.V2.ListRowsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,TableSchema,Google.Bigquery.V2.ListRowsOptions)
+  name: ListRows(String, String, TableSchema, ListRowsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_TableSchema_Google_Bigquery_V2_ListRowsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListRows(System.String,System.String,TableSchema,Google.Bigquery.V2.ListRowsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListRows(System.String, System.String, TableSchema, Google.Bigquery.V2.ListRowsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListRows(TableReference,TableSchema,Google.Bigquery.V2.ListRowsOptions)
+  name: ListRows(TableReference, TableSchema, ListRowsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_TableReference_TableSchema_Google_Bigquery_V2_ListRowsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListRows(TableReference,TableSchema,Google.Bigquery.V2.ListRowsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListRows(TableReference, TableSchema, Google.Bigquery.V2.ListRowsOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListTables(DatasetReference,Google.Bigquery.V2.ListTablesOptions)
+  name: ListTables(DatasetReference, ListTablesOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_DatasetReference_Google_Bigquery_V2_ListTablesOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListTables(DatasetReference,Google.Bigquery.V2.ListTablesOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListTables(DatasetReference, Google.Bigquery.V2.ListTablesOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListTables(System.String,Google.Bigquery.V2.ListTablesOptions)
+  name: ListTables(String, ListTablesOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_System_String_Google_Bigquery_V2_ListTablesOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListTables(System.String,Google.Bigquery.V2.ListTablesOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListTables(System.String, Google.Bigquery.V2.ListTablesOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ListTables(System.String,System.String,Google.Bigquery.V2.ListTablesOptions)
+  name: ListTables(String, String, ListTablesOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_System_String_System_String_Google_Bigquery_V2_ListTablesOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.ListTables(System.String,System.String,Google.Bigquery.V2.ListTablesOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.ListTables(System.String, System.String, Google.Bigquery.V2.ListTablesOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.PollJob(JobReference,Google.Bigquery.V2.PollJobOptions)
+  name: PollJob(JobReference, PollJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_JobReference_Google_Bigquery_V2_PollJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.PollJob(JobReference,Google.Bigquery.V2.PollJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.PollJob(JobReference, Google.Bigquery.V2.PollJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.PollJob(System.String,Google.Bigquery.V2.PollJobOptions)
+  name: PollJob(String, PollJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_System_String_Google_Bigquery_V2_PollJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.PollJob(System.String,Google.Bigquery.V2.PollJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.PollJob(System.String, Google.Bigquery.V2.PollJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.PollJob(System.String,System.String,Google.Bigquery.V2.PollJobOptions)
+  name: PollJob(String, String, PollJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_System_String_System_String_Google_Bigquery_V2_PollJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.PollJob(System.String,System.String,Google.Bigquery.V2.PollJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.PollJob(System.String, System.String, Google.Bigquery.V2.PollJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.ProjectId
+  name: ProjectId
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ProjectId
+  commentId: P:Google.Bigquery.V2.BigqueryClient.ProjectId
+  fullName: Google.Bigquery.V2.BigqueryClient.ProjectId
+- uid: Google.Bigquery.V2.BigqueryClient.Service
+  name: Service
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Service
+  commentId: P:Google.Bigquery.V2.BigqueryClient.Service
+  fullName: Google.Bigquery.V2.BigqueryClient.Service
+- uid: Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String,System.String,System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  name: UploadCsv(String, String, String, TableSchema, Stream, UploadCsvOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String,System.String,System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String, System.String, System.String, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadCsvOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String,System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  name: UploadCsv(String, String, TableSchema, Stream, UploadCsvOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String,System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.UploadCsv(System.String, System.String, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadCsvOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.UploadCsv(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  name: UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.UploadCsv(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.UploadCsv(TableReference, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadCsvOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.UploadJson(System.String,System.String,System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  name: UploadJson(String, String, String, TableSchema, Stream, UploadJsonOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_System_String_System_String_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.UploadJson(System.String,System.String,System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.UploadJson(System.String, System.String, System.String, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadJsonOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.UploadJson(System.String,System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  name: UploadJson(String, String, TableSchema, Stream, UploadJsonOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_System_String_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.UploadJson(System.String,System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.UploadJson(System.String, System.String, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadJsonOptions)
+- uid: Google.Bigquery.V2.BigqueryClient.UploadJson(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  name: UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)
+  href: api/Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClient.UploadJson(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  fullName: Google.Bigquery.V2.BigqueryClient.UploadJson(TableReference, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadJsonOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl
+  name: BigqueryClientImpl
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl
+  commentId: T:Google.Bigquery.V2.BigqueryClientImpl
+  fullName: Google.Bigquery.V2.BigqueryClientImpl
+- uid: Google.Bigquery.V2.BigqueryClientImpl.#ctor(ProjectReference,BigqueryService)
+  name: BigqueryClientImpl(ProjectReference, BigqueryService)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl__ctor_ProjectReference_BigqueryService_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.#ctor(ProjectReference,BigqueryService)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.BigqueryClientImpl(ProjectReference, BigqueryService)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.#ctor(System.String,BigqueryService)
+  name: BigqueryClientImpl(String, BigqueryService)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl__ctor_System_String_BigqueryService_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.#ctor(System.String,BigqueryService)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.BigqueryClientImpl(System.String, BigqueryService)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.ApplicationName
+  name: ApplicationName
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ApplicationName
+  commentId: P:Google.Bigquery.V2.BigqueryClientImpl.ApplicationName
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.ApplicationName
+- uid: Google.Bigquery.V2.BigqueryClientImpl.CancelJob(JobReference,Google.Bigquery.V2.CancelJobOptions)
+  name: CancelJob(JobReference, CancelJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_CancelJob_JobReference_Google_Bigquery_V2_CancelJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.CancelJob(JobReference,Google.Bigquery.V2.CancelJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.CancelJob(JobReference, Google.Bigquery.V2.CancelJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.CreateDataset(DatasetReference,Google.Bigquery.V2.CreateDatasetOptions)
+  name: CreateDataset(DatasetReference, CreateDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_CreateDataset_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.CreateDataset(DatasetReference,Google.Bigquery.V2.CreateDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.CreateDataset(DatasetReference, Google.Bigquery.V2.CreateDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJob(System.String,Google.Bigquery.V2.CreateQueryJobOptions)
+  name: CreateQueryJob(String, CreateQueryJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJob_System_String_Google_Bigquery_V2_CreateQueryJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJob(System.String,Google.Bigquery.V2.CreateQueryJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJob(System.String, Google.Bigquery.V2.CreateQueryJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.CreateTable(TableReference,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  name: CreateTable(TableReference, TableSchema, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_CreateTable_TableReference_TableSchema_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.CreateTable(TableReference,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.CreateTable(TableReference, TableSchema, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.DeleteDataset(DatasetReference,Google.Bigquery.V2.DeleteDatasetOptions)
+  name: DeleteDataset(DatasetReference, DeleteDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_DeleteDataset_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.DeleteDataset(DatasetReference,Google.Bigquery.V2.DeleteDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.DeleteDataset(DatasetReference, Google.Bigquery.V2.DeleteDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.DeleteTable(TableReference,Google.Bigquery.V2.DeleteTableOptions)
+  name: DeleteTable(TableReference, DeleteTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_DeleteTable_TableReference_Google_Bigquery_V2_DeleteTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.DeleteTable(TableReference,Google.Bigquery.V2.DeleteTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.DeleteTable(TableReference, Google.Bigquery.V2.DeleteTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.ExecuteQuery(System.String,Google.Bigquery.V2.ExecuteQueryOptions)
+  name: ExecuteQuery(String, ExecuteQueryOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ExecuteQuery_System_String_Google_Bigquery_V2_ExecuteQueryOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.ExecuteQuery(System.String,Google.Bigquery.V2.ExecuteQueryOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.ExecuteQuery(System.String, Google.Bigquery.V2.ExecuteQueryOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.GetDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions)
+  name: GetDataset(DatasetReference, GetDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_GetDataset_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.GetDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.GetDataset(DatasetReference, Google.Bigquery.V2.GetDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.GetJob(JobReference,Google.Bigquery.V2.GetJobOptions)
+  name: GetJob(JobReference, GetJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_GetJob_JobReference_Google_Bigquery_V2_GetJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.GetJob(JobReference,Google.Bigquery.V2.GetJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.GetJob(JobReference, Google.Bigquery.V2.GetJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)
+  name: GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateDataset_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateDataset(DatasetReference, Google.Bigquery.V2.GetDatasetOptions, Google.Bigquery.V2.CreateDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateTable(TableReference,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  name: GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateTable_TableReference_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateTable(TableReference,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateTable(TableReference, TableSchema, Google.Bigquery.V2.GetTableOptions, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.GetQueryResults(JobReference,Google.Bigquery.V2.GetQueryResultsOptions)
+  name: GetQueryResults(JobReference, GetQueryResultsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_GetQueryResults_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.GetQueryResults(JobReference,Google.Bigquery.V2.GetQueryResultsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.GetQueryResults(JobReference, Google.Bigquery.V2.GetQueryResultsOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.GetTable(TableReference,Google.Bigquery.V2.GetTableOptions)
+  name: GetTable(TableReference, GetTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_GetTable_TableReference_Google_Bigquery_V2_GetTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.GetTable(TableReference,Google.Bigquery.V2.GetTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.GetTable(TableReference, Google.Bigquery.V2.GetTableOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.Insert(TableReference,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name: Insert(TableReference, IEnumerable<InsertRow>, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_Insert_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.Insert(TableReference,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name.vb: Insert(TableReference, IEnumerable(Of InsertRow), InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.Insert(TableReference, System.Collections.Generic.IEnumerable<Google.Bigquery.V2.InsertRow>, Google.Bigquery.V2.InsertOptions)
+  fullName.vb: Google.Bigquery.V2.BigqueryClientImpl.Insert(TableReference, System.Collections.Generic.IEnumerable(Of Google.Bigquery.V2.InsertRow), Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.ListDatasets(ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)
+  name: ListDatasets(ProjectReference, ListDatasetsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ListDatasets_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.ListDatasets(ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.ListDatasets(ProjectReference, Google.Bigquery.V2.ListDatasetsOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.ListJobs(ProjectReference,Google.Bigquery.V2.ListJobsOptions)
+  name: ListJobs(ProjectReference, ListJobsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ListJobs_ProjectReference_Google_Bigquery_V2_ListJobsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.ListJobs(ProjectReference,Google.Bigquery.V2.ListJobsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.ListJobs(ProjectReference, Google.Bigquery.V2.ListJobsOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.ListRows(TableReference,TableSchema,Google.Bigquery.V2.ListRowsOptions)
+  name: ListRows(TableReference, TableSchema, ListRowsOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ListRows_TableReference_TableSchema_Google_Bigquery_V2_ListRowsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.ListRows(TableReference,TableSchema,Google.Bigquery.V2.ListRowsOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.ListRows(TableReference, TableSchema, Google.Bigquery.V2.ListRowsOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.ListTables(DatasetReference,Google.Bigquery.V2.ListTablesOptions)
+  name: ListTables(DatasetReference, ListTablesOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ListTables_DatasetReference_Google_Bigquery_V2_ListTablesOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.ListTables(DatasetReference,Google.Bigquery.V2.ListTablesOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.ListTables(DatasetReference, Google.Bigquery.V2.ListTablesOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.PollJob(JobReference,Google.Bigquery.V2.PollJobOptions)
+  name: PollJob(JobReference, PollJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_PollJob_JobReference_Google_Bigquery_V2_PollJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.PollJob(JobReference,Google.Bigquery.V2.PollJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.PollJob(JobReference, Google.Bigquery.V2.PollJobOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.ProjectId
+  name: ProjectId
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_ProjectId
+  commentId: P:Google.Bigquery.V2.BigqueryClientImpl.ProjectId
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.ProjectId
+- uid: Google.Bigquery.V2.BigqueryClientImpl.Service
+  name: Service
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_Service
+  commentId: P:Google.Bigquery.V2.BigqueryClientImpl.Service
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.Service
+- uid: Google.Bigquery.V2.BigqueryClientImpl.UploadCsv(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  name: UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_UploadCsv_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.UploadCsv(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.UploadCsv(TableReference, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadCsvOptions)
+- uid: Google.Bigquery.V2.BigqueryClientImpl.UploadJson(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  name: UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)
+  href: api/Google.Bigquery.V2.BigqueryClientImpl.html#Google_Bigquery_V2_BigqueryClientImpl_UploadJson_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryClientImpl.UploadJson(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  fullName: Google.Bigquery.V2.BigqueryClientImpl.UploadJson(TableReference, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadJsonOptions)
+- uid: Google.Bigquery.V2.BigqueryDataset
+  name: BigqueryDataset
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset
+  commentId: T:Google.Bigquery.V2.BigqueryDataset
+  fullName: Google.Bigquery.V2.BigqueryDataset
+- uid: Google.Bigquery.V2.BigqueryDataset.CreateTable(System.String,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  name: CreateTable(String, TableSchema, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_CreateTable_System_String_TableSchema_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryDataset.CreateTable(System.String,TableSchema,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryDataset.CreateTable(System.String, TableSchema, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryDataset.Delete(Google.Bigquery.V2.DeleteDatasetOptions)
+  name: Delete(DeleteDatasetOptions)
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_Delete_Google_Bigquery_V2_DeleteDatasetOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryDataset.Delete(Google.Bigquery.V2.DeleteDatasetOptions)
+  fullName: Google.Bigquery.V2.BigqueryDataset.Delete(Google.Bigquery.V2.DeleteDatasetOptions)
+- uid: Google.Bigquery.V2.BigqueryDataset.FullyQualifiedId
+  name: FullyQualifiedId
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_FullyQualifiedId
+  commentId: P:Google.Bigquery.V2.BigqueryDataset.FullyQualifiedId
+  fullName: Google.Bigquery.V2.BigqueryDataset.FullyQualifiedId
+- uid: Google.Bigquery.V2.BigqueryDataset.GetOrCreateTable(System.String,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  name: GetOrCreateTable(String, TableSchema, GetTableOptions, CreateTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_GetOrCreateTable_System_String_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryDataset.GetOrCreateTable(System.String,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryDataset.GetOrCreateTable(System.String, TableSchema, Google.Bigquery.V2.GetTableOptions, Google.Bigquery.V2.CreateTableOptions)
+- uid: Google.Bigquery.V2.BigqueryDataset.GetTable(System.String,Google.Bigquery.V2.GetTableOptions)
+  name: GetTable(String, GetTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_GetTable_System_String_Google_Bigquery_V2_GetTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryDataset.GetTable(System.String,Google.Bigquery.V2.GetTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryDataset.GetTable(System.String, Google.Bigquery.V2.GetTableOptions)
+- uid: Google.Bigquery.V2.BigqueryDataset.GetTableReference(System.String)
+  name: GetTableReference(String)
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_GetTableReference_System_String_
+  commentId: M:Google.Bigquery.V2.BigqueryDataset.GetTableReference(System.String)
+  fullName: Google.Bigquery.V2.BigqueryDataset.GetTableReference(System.String)
+- uid: Google.Bigquery.V2.BigqueryDataset.ListTables(Google.Bigquery.V2.ListTablesOptions)
+  name: ListTables(ListTablesOptions)
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_ListTables_Google_Bigquery_V2_ListTablesOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryDataset.ListTables(Google.Bigquery.V2.ListTablesOptions)
+  fullName: Google.Bigquery.V2.BigqueryDataset.ListTables(Google.Bigquery.V2.ListTablesOptions)
+- uid: Google.Bigquery.V2.BigqueryDataset.Reference
+  name: Reference
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_Reference
+  commentId: P:Google.Bigquery.V2.BigqueryDataset.Reference
+  fullName: Google.Bigquery.V2.BigqueryDataset.Reference
+- uid: Google.Bigquery.V2.BigqueryDataset.Resource
+  name: Resource
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_Resource
+  commentId: P:Google.Bigquery.V2.BigqueryDataset.Resource
+  fullName: Google.Bigquery.V2.BigqueryDataset.Resource
+- uid: Google.Bigquery.V2.BigqueryDataset.UploadCsv(System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  name: UploadCsv(String, TableSchema, Stream, UploadCsvOptions)
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_UploadCsv_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryDataset.UploadCsv(System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  fullName: Google.Bigquery.V2.BigqueryDataset.UploadCsv(System.String, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadCsvOptions)
+- uid: Google.Bigquery.V2.BigqueryDataset.UploadJson(System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  name: UploadJson(String, TableSchema, Stream, UploadJsonOptions)
+  href: api/Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset_UploadJson_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryDataset.UploadJson(System.String,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  fullName: Google.Bigquery.V2.BigqueryDataset.UploadJson(System.String, TableSchema, System.IO.Stream, Google.Bigquery.V2.UploadJsonOptions)
+- uid: Google.Bigquery.V2.BigqueryDbType
+  name: BigqueryDbType
+  href: api/Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType
+  commentId: T:Google.Bigquery.V2.BigqueryDbType
+  fullName: Google.Bigquery.V2.BigqueryDbType
+- uid: Google.Bigquery.V2.BigqueryDbType.Boolean
+  name: Boolean
+  href: api/Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType_Boolean
+  commentId: F:Google.Bigquery.V2.BigqueryDbType.Boolean
+  fullName: Google.Bigquery.V2.BigqueryDbType.Boolean
+- uid: Google.Bigquery.V2.BigqueryDbType.Bytes
+  name: Bytes
+  href: api/Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType_Bytes
+  commentId: F:Google.Bigquery.V2.BigqueryDbType.Bytes
+  fullName: Google.Bigquery.V2.BigqueryDbType.Bytes
+- uid: Google.Bigquery.V2.BigqueryDbType.Float
+  name: Float
+  href: api/Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType_Float
+  commentId: F:Google.Bigquery.V2.BigqueryDbType.Float
+  fullName: Google.Bigquery.V2.BigqueryDbType.Float
+- uid: Google.Bigquery.V2.BigqueryDbType.Integer
+  name: Integer
+  href: api/Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType_Integer
+  commentId: F:Google.Bigquery.V2.BigqueryDbType.Integer
+  fullName: Google.Bigquery.V2.BigqueryDbType.Integer
+- uid: Google.Bigquery.V2.BigqueryDbType.Record
+  name: Record
+  href: api/Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType_Record
+  commentId: F:Google.Bigquery.V2.BigqueryDbType.Record
+  fullName: Google.Bigquery.V2.BigqueryDbType.Record
+- uid: Google.Bigquery.V2.BigqueryDbType.String
+  name: String
+  href: api/Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType_String
+  commentId: F:Google.Bigquery.V2.BigqueryDbType.String
+  fullName: Google.Bigquery.V2.BigqueryDbType.String
+- uid: Google.Bigquery.V2.BigqueryDbType.Timestamp
+  name: Timestamp
+  href: api/Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType_Timestamp
+  commentId: F:Google.Bigquery.V2.BigqueryDbType.Timestamp
+  fullName: Google.Bigquery.V2.BigqueryDbType.Timestamp
+- uid: Google.Bigquery.V2.BigqueryJob
+  name: BigqueryJob
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob
+  commentId: T:Google.Bigquery.V2.BigqueryJob
+  fullName: Google.Bigquery.V2.BigqueryJob
+- uid: Google.Bigquery.V2.BigqueryJob.Cancel(Google.Bigquery.V2.CancelJobOptions)
+  name: Cancel(CancelJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Cancel_Google_Bigquery_V2_CancelJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryJob.Cancel(Google.Bigquery.V2.CancelJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryJob.Cancel(Google.Bigquery.V2.CancelJobOptions)
+- uid: Google.Bigquery.V2.BigqueryJob.GetQueryResults(Google.Bigquery.V2.GetQueryResultsOptions)
+  name: GetQueryResults(GetQueryResultsOptions)
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_GetQueryResults_Google_Bigquery_V2_GetQueryResultsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryJob.GetQueryResults(Google.Bigquery.V2.GetQueryResultsOptions)
+  fullName: Google.Bigquery.V2.BigqueryJob.GetQueryResults(Google.Bigquery.V2.GetQueryResultsOptions)
+- uid: Google.Bigquery.V2.BigqueryJob.Poll(Google.Bigquery.V2.PollJobOptions)
+  name: Poll(PollJobOptions)
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Poll_Google_Bigquery_V2_PollJobOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryJob.Poll(Google.Bigquery.V2.PollJobOptions)
+  fullName: Google.Bigquery.V2.BigqueryJob.Poll(Google.Bigquery.V2.PollJobOptions)
+- uid: Google.Bigquery.V2.BigqueryJob.Reference
+  name: Reference
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Reference
+  commentId: P:Google.Bigquery.V2.BigqueryJob.Reference
+  fullName: Google.Bigquery.V2.BigqueryJob.Reference
+- uid: Google.Bigquery.V2.BigqueryJob.Resource
+  name: Resource
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Resource
+  commentId: P:Google.Bigquery.V2.BigqueryJob.Resource
+  fullName: Google.Bigquery.V2.BigqueryJob.Resource
+- uid: Google.Bigquery.V2.BigqueryJob.State
+  name: State
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_State
+  commentId: P:Google.Bigquery.V2.BigqueryJob.State
+  fullName: Google.Bigquery.V2.BigqueryJob.State
+- uid: Google.Bigquery.V2.BigqueryJob.Statistics
+  name: Statistics
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Statistics
+  commentId: P:Google.Bigquery.V2.BigqueryJob.Statistics
+  fullName: Google.Bigquery.V2.BigqueryJob.Statistics
+- uid: Google.Bigquery.V2.BigqueryJob.Status
+  name: Status
+  href: api/Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob_Status
+  commentId: P:Google.Bigquery.V2.BigqueryJob.Status
+  fullName: Google.Bigquery.V2.BigqueryJob.Status
+- uid: Google.Bigquery.V2.BigqueryResult
+  name: BigqueryResult
+  href: api/Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult
+  commentId: T:Google.Bigquery.V2.BigqueryResult
+  fullName: Google.Bigquery.V2.BigqueryResult
+- uid: Google.Bigquery.V2.BigqueryResult.Row
+  name: BigqueryResult.Row
+  href: api/Google.Bigquery.V2.BigqueryResult.Row.html#Google_Bigquery_V2_BigqueryResult_Row
+  commentId: T:Google.Bigquery.V2.BigqueryResult.Row
+  fullName: Google.Bigquery.V2.BigqueryResult.Row
+- uid: Google.Bigquery.V2.BigqueryResult.Row.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Google.Bigquery.V2.BigqueryResult.Row.html#Google_Bigquery_V2_BigqueryResult_Row_Item_System_Int32_
+  commentId: P:Google.Bigquery.V2.BigqueryResult.Row.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Google.Bigquery.V2.BigqueryResult.Row.Item[System.Int32]
+  fullName.vb: Google.Bigquery.V2.BigqueryResult.Row.Item(System.Int32)
+- uid: Google.Bigquery.V2.BigqueryResult.Row.Item(System.String)
+  name: Item[String]
+  href: api/Google.Bigquery.V2.BigqueryResult.Row.html#Google_Bigquery_V2_BigqueryResult_Row_Item_System_String_
+  commentId: P:Google.Bigquery.V2.BigqueryResult.Row.Item(System.String)
+  name.vb: Item(String)
+  fullName: Google.Bigquery.V2.BigqueryResult.Row.Item[System.String]
+  fullName.vb: Google.Bigquery.V2.BigqueryResult.Row.Item(System.String)
+- uid: Google.Bigquery.V2.BigqueryResult.Row.RawRow
+  name: RawRow
+  href: api/Google.Bigquery.V2.BigqueryResult.Row.html#Google_Bigquery_V2_BigqueryResult_Row_RawRow
+  commentId: P:Google.Bigquery.V2.BigqueryResult.Row.RawRow
+  fullName: Google.Bigquery.V2.BigqueryResult.Row.RawRow
+- uid: Google.Bigquery.V2.BigqueryResult.Rows
+  name: Rows
+  href: api/Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult_Rows
+  commentId: P:Google.Bigquery.V2.BigqueryResult.Rows
+  fullName: Google.Bigquery.V2.BigqueryResult.Rows
+- uid: Google.Bigquery.V2.BigqueryResult.Schema
+  name: Schema
+  href: api/Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult_Schema
+  commentId: P:Google.Bigquery.V2.BigqueryResult.Schema
+  fullName: Google.Bigquery.V2.BigqueryResult.Schema
+- uid: Google.Bigquery.V2.BigqueryTable
+  name: BigqueryTable
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable
+  commentId: T:Google.Bigquery.V2.BigqueryTable
+  fullName: Google.Bigquery.V2.BigqueryTable
+- uid: Google.Bigquery.V2.BigqueryTable.Delete(Google.Bigquery.V2.DeleteTableOptions)
+  name: Delete(DeleteTableOptions)
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_Delete_Google_Bigquery_V2_DeleteTableOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryTable.Delete(Google.Bigquery.V2.DeleteTableOptions)
+  fullName: Google.Bigquery.V2.BigqueryTable.Delete(Google.Bigquery.V2.DeleteTableOptions)
+- uid: Google.Bigquery.V2.BigqueryTable.FullyQualifiedId
+  name: FullyQualifiedId
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_FullyQualifiedId
+  commentId: P:Google.Bigquery.V2.BigqueryTable.FullyQualifiedId
+  fullName: Google.Bigquery.V2.BigqueryTable.FullyQualifiedId
+- uid: Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)
+  name: Insert(InsertRow, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_Insert_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow,Google.Bigquery.V2.InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow, Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow[])
+  name: Insert(InsertRow[])
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_Insert_Google_Bigquery_V2_InsertRow___
+  commentId: M:Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow[])
+  name.vb: Insert(InsertRow())
+  fullName: Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow[])
+  fullName.vb: Google.Bigquery.V2.BigqueryTable.Insert(Google.Bigquery.V2.InsertRow())
+- uid: Google.Bigquery.V2.BigqueryTable.Insert(System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name: Insert(IEnumerable<InsertRow>, InsertOptions)
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_Insert_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryTable.Insert(System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)
+  name.vb: Insert(IEnumerable(Of InsertRow), InsertOptions)
+  fullName: Google.Bigquery.V2.BigqueryTable.Insert(System.Collections.Generic.IEnumerable<Google.Bigquery.V2.InsertRow>, Google.Bigquery.V2.InsertOptions)
+  fullName.vb: Google.Bigquery.V2.BigqueryTable.Insert(System.Collections.Generic.IEnumerable(Of Google.Bigquery.V2.InsertRow), Google.Bigquery.V2.InsertOptions)
+- uid: Google.Bigquery.V2.BigqueryTable.ListRows(Google.Bigquery.V2.ListRowsOptions)
+  name: ListRows(ListRowsOptions)
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_ListRows_Google_Bigquery_V2_ListRowsOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryTable.ListRows(Google.Bigquery.V2.ListRowsOptions)
+  fullName: Google.Bigquery.V2.BigqueryTable.ListRows(Google.Bigquery.V2.ListRowsOptions)
+- uid: Google.Bigquery.V2.BigqueryTable.Reference
+  name: Reference
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_Reference
+  commentId: P:Google.Bigquery.V2.BigqueryTable.Reference
+  fullName: Google.Bigquery.V2.BigqueryTable.Reference
+- uid: Google.Bigquery.V2.BigqueryTable.Resource
+  name: Resource
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_Resource
+  commentId: P:Google.Bigquery.V2.BigqueryTable.Resource
+  fullName: Google.Bigquery.V2.BigqueryTable.Resource
+- uid: Google.Bigquery.V2.BigqueryTable.Schema
+  name: Schema
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_Schema
+  commentId: P:Google.Bigquery.V2.BigqueryTable.Schema
+  fullName: Google.Bigquery.V2.BigqueryTable.Schema
+- uid: Google.Bigquery.V2.BigqueryTable.ToString
+  name: ToString()
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_ToString
+  commentId: M:Google.Bigquery.V2.BigqueryTable.ToString
+  fullName: Google.Bigquery.V2.BigqueryTable.ToString()
+- uid: Google.Bigquery.V2.BigqueryTable.UploadCsv(System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  name: UploadCsv(Stream, UploadCsvOptions)
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_UploadCsv_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryTable.UploadCsv(System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)
+  fullName: Google.Bigquery.V2.BigqueryTable.UploadCsv(System.IO.Stream, Google.Bigquery.V2.UploadCsvOptions)
+- uid: Google.Bigquery.V2.BigqueryTable.UploadJson(System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  name: UploadJson(Stream, UploadJsonOptions)
+  href: api/Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable_UploadJson_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_
+  commentId: M:Google.Bigquery.V2.BigqueryTable.UploadJson(System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)
+  fullName: Google.Bigquery.V2.BigqueryTable.UploadJson(System.IO.Stream, Google.Bigquery.V2.UploadJsonOptions)
+- uid: Google.Bigquery.V2.CancelJobOptions
+  name: CancelJobOptions
+  href: api/Google.Bigquery.V2.CancelJobOptions.html#Google_Bigquery_V2_CancelJobOptions
+  commentId: T:Google.Bigquery.V2.CancelJobOptions
+  fullName: Google.Bigquery.V2.CancelJobOptions
+- uid: Google.Bigquery.V2.CreateDatasetOptions
+  name: CreateDatasetOptions
+  href: api/Google.Bigquery.V2.CreateDatasetOptions.html#Google_Bigquery_V2_CreateDatasetOptions
+  commentId: T:Google.Bigquery.V2.CreateDatasetOptions
+  fullName: Google.Bigquery.V2.CreateDatasetOptions
+- uid: Google.Bigquery.V2.CreateDatasetOptions.DefaultTableExpiration
+  name: DefaultTableExpiration
+  href: api/Google.Bigquery.V2.CreateDatasetOptions.html#Google_Bigquery_V2_CreateDatasetOptions_DefaultTableExpiration
+  commentId: P:Google.Bigquery.V2.CreateDatasetOptions.DefaultTableExpiration
+  fullName: Google.Bigquery.V2.CreateDatasetOptions.DefaultTableExpiration
+- uid: Google.Bigquery.V2.CreateDatasetOptions.Description
+  name: Description
+  href: api/Google.Bigquery.V2.CreateDatasetOptions.html#Google_Bigquery_V2_CreateDatasetOptions_Description
+  commentId: P:Google.Bigquery.V2.CreateDatasetOptions.Description
+  fullName: Google.Bigquery.V2.CreateDatasetOptions.Description
+- uid: Google.Bigquery.V2.CreateDatasetOptions.FriendlyName
+  name: FriendlyName
+  href: api/Google.Bigquery.V2.CreateDatasetOptions.html#Google_Bigquery_V2_CreateDatasetOptions_FriendlyName
+  commentId: P:Google.Bigquery.V2.CreateDatasetOptions.FriendlyName
+  fullName: Google.Bigquery.V2.CreateDatasetOptions.FriendlyName
+- uid: Google.Bigquery.V2.CreateDisposition
+  name: CreateDisposition
+  href: api/Google.Bigquery.V2.CreateDisposition.html#Google_Bigquery_V2_CreateDisposition
+  commentId: T:Google.Bigquery.V2.CreateDisposition
+  fullName: Google.Bigquery.V2.CreateDisposition
+- uid: Google.Bigquery.V2.CreateDisposition.CreateIfNeeded
+  name: CreateIfNeeded
+  href: api/Google.Bigquery.V2.CreateDisposition.html#Google_Bigquery_V2_CreateDisposition_CreateIfNeeded
+  commentId: F:Google.Bigquery.V2.CreateDisposition.CreateIfNeeded
+  fullName: Google.Bigquery.V2.CreateDisposition.CreateIfNeeded
+- uid: Google.Bigquery.V2.CreateDisposition.CreateNever
+  name: CreateNever
+  href: api/Google.Bigquery.V2.CreateDisposition.html#Google_Bigquery_V2_CreateDisposition_CreateNever
+  commentId: F:Google.Bigquery.V2.CreateDisposition.CreateNever
+  fullName: Google.Bigquery.V2.CreateDisposition.CreateNever
+- uid: Google.Bigquery.V2.CreateQueryJobOptions
+  name: CreateQueryJobOptions
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions
+  commentId: T:Google.Bigquery.V2.CreateQueryJobOptions
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.AllowLargeResults
+  name: AllowLargeResults
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_AllowLargeResults
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.AllowLargeResults
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.AllowLargeResults
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.CreateDisposition
+  name: CreateDisposition
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_CreateDisposition
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.CreateDisposition
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.CreateDisposition
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.DefaultDataset
+  name: DefaultDataset
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_DefaultDataset
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.DefaultDataset
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.DefaultDataset
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.DestinationTable
+  name: DestinationTable
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_DestinationTable
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.DestinationTable
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.DestinationTable
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.FlattenResults
+  name: FlattenResults
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_FlattenResults
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.FlattenResults
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.FlattenResults
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.MaximumBillingTier
+  name: MaximumBillingTier
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_MaximumBillingTier
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.MaximumBillingTier
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.MaximumBillingTier
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.Priority
+  name: Priority
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_Priority
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.Priority
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.Priority
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.UseQueryCache
+  name: UseQueryCache
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_UseQueryCache
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.UseQueryCache
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.UseQueryCache
+- uid: Google.Bigquery.V2.CreateQueryJobOptions.WriteDisposition
+  name: WriteDisposition
+  href: api/Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions_WriteDisposition
+  commentId: P:Google.Bigquery.V2.CreateQueryJobOptions.WriteDisposition
+  fullName: Google.Bigquery.V2.CreateQueryJobOptions.WriteDisposition
+- uid: Google.Bigquery.V2.CreateTableOptions
+  name: CreateTableOptions
+  href: api/Google.Bigquery.V2.CreateTableOptions.html#Google_Bigquery_V2_CreateTableOptions
+  commentId: T:Google.Bigquery.V2.CreateTableOptions
+  fullName: Google.Bigquery.V2.CreateTableOptions
+- uid: Google.Bigquery.V2.CreateTableOptions.Description
+  name: Description
+  href: api/Google.Bigquery.V2.CreateTableOptions.html#Google_Bigquery_V2_CreateTableOptions_Description
+  commentId: P:Google.Bigquery.V2.CreateTableOptions.Description
+  fullName: Google.Bigquery.V2.CreateTableOptions.Description
+- uid: Google.Bigquery.V2.CreateTableOptions.Expiration
+  name: Expiration
+  href: api/Google.Bigquery.V2.CreateTableOptions.html#Google_Bigquery_V2_CreateTableOptions_Expiration
+  commentId: P:Google.Bigquery.V2.CreateTableOptions.Expiration
+  fullName: Google.Bigquery.V2.CreateTableOptions.Expiration
+- uid: Google.Bigquery.V2.CreateTableOptions.FriendlyName
+  name: FriendlyName
+  href: api/Google.Bigquery.V2.CreateTableOptions.html#Google_Bigquery_V2_CreateTableOptions_FriendlyName
+  commentId: P:Google.Bigquery.V2.CreateTableOptions.FriendlyName
+  fullName: Google.Bigquery.V2.CreateTableOptions.FriendlyName
+- uid: Google.Bigquery.V2.DeleteDatasetOptions
+  name: DeleteDatasetOptions
+  href: api/Google.Bigquery.V2.DeleteDatasetOptions.html#Google_Bigquery_V2_DeleteDatasetOptions
+  commentId: T:Google.Bigquery.V2.DeleteDatasetOptions
+  fullName: Google.Bigquery.V2.DeleteDatasetOptions
+- uid: Google.Bigquery.V2.DeleteDatasetOptions.DeleteContents
+  name: DeleteContents
+  href: api/Google.Bigquery.V2.DeleteDatasetOptions.html#Google_Bigquery_V2_DeleteDatasetOptions_DeleteContents
+  commentId: P:Google.Bigquery.V2.DeleteDatasetOptions.DeleteContents
+  fullName: Google.Bigquery.V2.DeleteDatasetOptions.DeleteContents
+- uid: Google.Bigquery.V2.DeleteTableOptions
+  name: DeleteTableOptions
+  href: api/Google.Bigquery.V2.DeleteTableOptions.html#Google_Bigquery_V2_DeleteTableOptions
+  commentId: T:Google.Bigquery.V2.DeleteTableOptions
+  fullName: Google.Bigquery.V2.DeleteTableOptions
+- uid: Google.Bigquery.V2.ExecuteQueryOptions
+  name: ExecuteQueryOptions
+  href: api/Google.Bigquery.V2.ExecuteQueryOptions.html#Google_Bigquery_V2_ExecuteQueryOptions
+  commentId: T:Google.Bigquery.V2.ExecuteQueryOptions
+  fullName: Google.Bigquery.V2.ExecuteQueryOptions
+- uid: Google.Bigquery.V2.ExecuteQueryOptions.DefaultDataset
+  name: DefaultDataset
+  href: api/Google.Bigquery.V2.ExecuteQueryOptions.html#Google_Bigquery_V2_ExecuteQueryOptions_DefaultDataset
+  commentId: P:Google.Bigquery.V2.ExecuteQueryOptions.DefaultDataset
+  fullName: Google.Bigquery.V2.ExecuteQueryOptions.DefaultDataset
+- uid: Google.Bigquery.V2.ExecuteQueryOptions.PageSize
+  name: PageSize
+  href: api/Google.Bigquery.V2.ExecuteQueryOptions.html#Google_Bigquery_V2_ExecuteQueryOptions_PageSize
+  commentId: P:Google.Bigquery.V2.ExecuteQueryOptions.PageSize
+  fullName: Google.Bigquery.V2.ExecuteQueryOptions.PageSize
+- uid: Google.Bigquery.V2.ExecuteQueryOptions.UseQueryCache
+  name: UseQueryCache
+  href: api/Google.Bigquery.V2.ExecuteQueryOptions.html#Google_Bigquery_V2_ExecuteQueryOptions_UseQueryCache
+  commentId: P:Google.Bigquery.V2.ExecuteQueryOptions.UseQueryCache
+  fullName: Google.Bigquery.V2.ExecuteQueryOptions.UseQueryCache
+- uid: Google.Bigquery.V2.FieldMode
+  name: FieldMode
+  href: api/Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode
+  commentId: T:Google.Bigquery.V2.FieldMode
+  fullName: Google.Bigquery.V2.FieldMode
+- uid: Google.Bigquery.V2.FieldMode.Nullable
+  name: Nullable
+  href: api/Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode_Nullable
+  commentId: F:Google.Bigquery.V2.FieldMode.Nullable
+  fullName: Google.Bigquery.V2.FieldMode.Nullable
+- uid: Google.Bigquery.V2.FieldMode.Repeated
+  name: Repeated
+  href: api/Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode_Repeated
+  commentId: F:Google.Bigquery.V2.FieldMode.Repeated
+  fullName: Google.Bigquery.V2.FieldMode.Repeated
+- uid: Google.Bigquery.V2.FieldMode.Required
+  name: Required
+  href: api/Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode_Required
+  commentId: F:Google.Bigquery.V2.FieldMode.Required
+  fullName: Google.Bigquery.V2.FieldMode.Required
+- uid: Google.Bigquery.V2.GetDatasetOptions
+  name: GetDatasetOptions
+  href: api/Google.Bigquery.V2.GetDatasetOptions.html#Google_Bigquery_V2_GetDatasetOptions
+  commentId: T:Google.Bigquery.V2.GetDatasetOptions
+  fullName: Google.Bigquery.V2.GetDatasetOptions
+- uid: Google.Bigquery.V2.GetJobOptions
+  name: GetJobOptions
+  href: api/Google.Bigquery.V2.GetJobOptions.html#Google_Bigquery_V2_GetJobOptions
+  commentId: T:Google.Bigquery.V2.GetJobOptions
+  fullName: Google.Bigquery.V2.GetJobOptions
+- uid: Google.Bigquery.V2.GetQueryResultsOptions
+  name: GetQueryResultsOptions
+  href: api/Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions
+  commentId: T:Google.Bigquery.V2.GetQueryResultsOptions
+  fullName: Google.Bigquery.V2.GetQueryResultsOptions
+- uid: Google.Bigquery.V2.GetQueryResultsOptions.PageSize
+  name: PageSize
+  href: api/Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions_PageSize
+  commentId: P:Google.Bigquery.V2.GetQueryResultsOptions.PageSize
+  fullName: Google.Bigquery.V2.GetQueryResultsOptions.PageSize
+- uid: Google.Bigquery.V2.GetQueryResultsOptions.StartIndex
+  name: StartIndex
+  href: api/Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions_StartIndex
+  commentId: P:Google.Bigquery.V2.GetQueryResultsOptions.StartIndex
+  fullName: Google.Bigquery.V2.GetQueryResultsOptions.StartIndex
+- uid: Google.Bigquery.V2.GetQueryResultsOptions.Timeout
+  name: Timeout
+  href: api/Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions_Timeout
+  commentId: P:Google.Bigquery.V2.GetQueryResultsOptions.Timeout
+  fullName: Google.Bigquery.V2.GetQueryResultsOptions.Timeout
+- uid: Google.Bigquery.V2.GetTableOptions
+  name: GetTableOptions
+  href: api/Google.Bigquery.V2.GetTableOptions.html#Google_Bigquery_V2_GetTableOptions
+  commentId: T:Google.Bigquery.V2.GetTableOptions
+  fullName: Google.Bigquery.V2.GetTableOptions
+- uid: Google.Bigquery.V2.InsertOptions
+  name: InsertOptions
+  href: api/Google.Bigquery.V2.InsertOptions.html#Google_Bigquery_V2_InsertOptions
+  commentId: T:Google.Bigquery.V2.InsertOptions
+  fullName: Google.Bigquery.V2.InsertOptions
+- uid: Google.Bigquery.V2.InsertOptions.AllowUnknownFields
+  name: AllowUnknownFields
+  href: api/Google.Bigquery.V2.InsertOptions.html#Google_Bigquery_V2_InsertOptions_AllowUnknownFields
+  commentId: P:Google.Bigquery.V2.InsertOptions.AllowUnknownFields
+  fullName: Google.Bigquery.V2.InsertOptions.AllowUnknownFields
+- uid: Google.Bigquery.V2.InsertRow
+  name: InsertRow
+  href: api/Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow
+  commentId: T:Google.Bigquery.V2.InsertRow
+  fullName: Google.Bigquery.V2.InsertRow
+- uid: Google.Bigquery.V2.InsertRow.#ctor
+  name: InsertRow()
+  href: api/Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow__ctor
+  commentId: M:Google.Bigquery.V2.InsertRow.#ctor
+  fullName: Google.Bigquery.V2.InsertRow.InsertRow()
+- uid: Google.Bigquery.V2.InsertRow.#ctor(System.String)
+  name: InsertRow(String)
+  href: api/Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow__ctor_System_String_
+  commentId: M:Google.Bigquery.V2.InsertRow.#ctor(System.String)
+  fullName: Google.Bigquery.V2.InsertRow.InsertRow(System.String)
+- uid: Google.Bigquery.V2.InsertRow.Add(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: Add(IDictionary<String, Object>)
+  href: api/Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow_Add_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:Google.Bigquery.V2.InsertRow.Add(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: Add(IDictionary(Of String, Object))
+  fullName: Google.Bigquery.V2.InsertRow.Add(System.Collections.Generic.IDictionary<System.String, System.Object>)
+  fullName.vb: Google.Bigquery.V2.InsertRow.Add(System.Collections.Generic.IDictionary(Of System.String, System.Object))
+- uid: Google.Bigquery.V2.InsertRow.Add(System.String,System.Object)
+  name: Add(String, Object)
+  href: api/Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow_Add_System_String_System_Object_
+  commentId: M:Google.Bigquery.V2.InsertRow.Add(System.String,System.Object)
+  fullName: Google.Bigquery.V2.InsertRow.Add(System.String, System.Object)
+- uid: Google.Bigquery.V2.InsertRow.InsertId
+  name: InsertId
+  href: api/Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow_InsertId
+  commentId: P:Google.Bigquery.V2.InsertRow.InsertId
+  fullName: Google.Bigquery.V2.InsertRow.InsertId
+- uid: Google.Bigquery.V2.InsertRow.Item(System.String)
+  name: Item[String]
+  href: api/Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow_Item_System_String_
+  commentId: P:Google.Bigquery.V2.InsertRow.Item(System.String)
+  name.vb: Item(String)
+  fullName: Google.Bigquery.V2.InsertRow.Item[System.String]
+  fullName.vb: Google.Bigquery.V2.InsertRow.Item(System.String)
+- uid: Google.Bigquery.V2.InsertRow.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Bigquery.V2.InsertRow.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Bigquery.V2.InsertRow.System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Bigquery.V2.JobState
+  name: JobState
+  href: api/Google.Bigquery.V2.JobState.html#Google_Bigquery_V2_JobState
+  commentId: T:Google.Bigquery.V2.JobState
+  fullName: Google.Bigquery.V2.JobState
+- uid: Google.Bigquery.V2.JobState.Done
+  name: Done
+  href: api/Google.Bigquery.V2.JobState.html#Google_Bigquery_V2_JobState_Done
+  commentId: F:Google.Bigquery.V2.JobState.Done
+  fullName: Google.Bigquery.V2.JobState.Done
+- uid: Google.Bigquery.V2.JobState.Pending
+  name: Pending
+  href: api/Google.Bigquery.V2.JobState.html#Google_Bigquery_V2_JobState_Pending
+  commentId: F:Google.Bigquery.V2.JobState.Pending
+  fullName: Google.Bigquery.V2.JobState.Pending
+- uid: Google.Bigquery.V2.JobState.Running
+  name: Running
+  href: api/Google.Bigquery.V2.JobState.html#Google_Bigquery_V2_JobState_Running
+  commentId: F:Google.Bigquery.V2.JobState.Running
+  fullName: Google.Bigquery.V2.JobState.Running
+- uid: Google.Bigquery.V2.ListDatasetsOptions
+  name: ListDatasetsOptions
+  href: api/Google.Bigquery.V2.ListDatasetsOptions.html#Google_Bigquery_V2_ListDatasetsOptions
+  commentId: T:Google.Bigquery.V2.ListDatasetsOptions
+  fullName: Google.Bigquery.V2.ListDatasetsOptions
+- uid: Google.Bigquery.V2.ListDatasetsOptions.PageSize
+  name: PageSize
+  href: api/Google.Bigquery.V2.ListDatasetsOptions.html#Google_Bigquery_V2_ListDatasetsOptions_PageSize
+  commentId: P:Google.Bigquery.V2.ListDatasetsOptions.PageSize
+  fullName: Google.Bigquery.V2.ListDatasetsOptions.PageSize
+- uid: Google.Bigquery.V2.ListJobsOptions
+  name: ListJobsOptions
+  href: api/Google.Bigquery.V2.ListJobsOptions.html#Google_Bigquery_V2_ListJobsOptions
+  commentId: T:Google.Bigquery.V2.ListJobsOptions
+  fullName: Google.Bigquery.V2.ListJobsOptions
+- uid: Google.Bigquery.V2.ListJobsOptions.PageSize
+  name: PageSize
+  href: api/Google.Bigquery.V2.ListJobsOptions.html#Google_Bigquery_V2_ListJobsOptions_PageSize
+  commentId: P:Google.Bigquery.V2.ListJobsOptions.PageSize
+  fullName: Google.Bigquery.V2.ListJobsOptions.PageSize
+- uid: Google.Bigquery.V2.ListJobsOptions.StateFilter
+  name: StateFilter
+  href: api/Google.Bigquery.V2.ListJobsOptions.html#Google_Bigquery_V2_ListJobsOptions_StateFilter
+  commentId: P:Google.Bigquery.V2.ListJobsOptions.StateFilter
+  fullName: Google.Bigquery.V2.ListJobsOptions.StateFilter
+- uid: Google.Bigquery.V2.ListRowsOptions
+  name: ListRowsOptions
+  href: api/Google.Bigquery.V2.ListRowsOptions.html#Google_Bigquery_V2_ListRowsOptions
+  commentId: T:Google.Bigquery.V2.ListRowsOptions
+  fullName: Google.Bigquery.V2.ListRowsOptions
+- uid: Google.Bigquery.V2.ListRowsOptions.PageSize
+  name: PageSize
+  href: api/Google.Bigquery.V2.ListRowsOptions.html#Google_Bigquery_V2_ListRowsOptions_PageSize
+  commentId: P:Google.Bigquery.V2.ListRowsOptions.PageSize
+  fullName: Google.Bigquery.V2.ListRowsOptions.PageSize
+- uid: Google.Bigquery.V2.ListTablesOptions
+  name: ListTablesOptions
+  href: api/Google.Bigquery.V2.ListTablesOptions.html#Google_Bigquery_V2_ListTablesOptions
+  commentId: T:Google.Bigquery.V2.ListTablesOptions
+  fullName: Google.Bigquery.V2.ListTablesOptions
+- uid: Google.Bigquery.V2.ListTablesOptions.PageSize
+  name: PageSize
+  href: api/Google.Bigquery.V2.ListTablesOptions.html#Google_Bigquery_V2_ListTablesOptions_PageSize
+  commentId: P:Google.Bigquery.V2.ListTablesOptions.PageSize
+  fullName: Google.Bigquery.V2.ListTablesOptions.PageSize
+- uid: Google.Bigquery.V2.PollJobOptions
+  name: PollJobOptions
+  href: api/Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions
+  commentId: T:Google.Bigquery.V2.PollJobOptions
+  fullName: Google.Bigquery.V2.PollJobOptions
+- uid: Google.Bigquery.V2.PollJobOptions.Deadline
+  name: Deadline
+  href: api/Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Deadline
+  commentId: P:Google.Bigquery.V2.PollJobOptions.Deadline
+  fullName: Google.Bigquery.V2.PollJobOptions.Deadline
+- uid: Google.Bigquery.V2.PollJobOptions.Interval
+  name: Interval
+  href: api/Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Interval
+  commentId: P:Google.Bigquery.V2.PollJobOptions.Interval
+  fullName: Google.Bigquery.V2.PollJobOptions.Interval
+- uid: Google.Bigquery.V2.PollJobOptions.MaxRequests
+  name: MaxRequests
+  href: api/Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_MaxRequests
+  commentId: P:Google.Bigquery.V2.PollJobOptions.MaxRequests
+  fullName: Google.Bigquery.V2.PollJobOptions.MaxRequests
+- uid: Google.Bigquery.V2.PollJobOptions.Timeout
+  name: Timeout
+  href: api/Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Timeout
+  commentId: P:Google.Bigquery.V2.PollJobOptions.Timeout
+  fullName: Google.Bigquery.V2.PollJobOptions.Timeout
+- uid: Google.Bigquery.V2.QueryPriority
+  name: QueryPriority
+  href: api/Google.Bigquery.V2.QueryPriority.html#Google_Bigquery_V2_QueryPriority
+  commentId: T:Google.Bigquery.V2.QueryPriority
+  fullName: Google.Bigquery.V2.QueryPriority
+- uid: Google.Bigquery.V2.QueryPriority.Batch
+  name: Batch
+  href: api/Google.Bigquery.V2.QueryPriority.html#Google_Bigquery_V2_QueryPriority_Batch
+  commentId: F:Google.Bigquery.V2.QueryPriority.Batch
+  fullName: Google.Bigquery.V2.QueryPriority.Batch
+- uid: Google.Bigquery.V2.QueryPriority.Interactive
+  name: Interactive
+  href: api/Google.Bigquery.V2.QueryPriority.html#Google_Bigquery_V2_QueryPriority_Interactive
+  commentId: F:Google.Bigquery.V2.QueryPriority.Interactive
+  fullName: Google.Bigquery.V2.QueryPriority.Interactive
+- uid: Google.Bigquery.V2.TableSchemaBuilder
+  name: TableSchemaBuilder
+  href: api/Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder
+  commentId: T:Google.Bigquery.V2.TableSchemaBuilder
+  fullName: Google.Bigquery.V2.TableSchemaBuilder
+- uid: Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,Google.Bigquery.V2.BigqueryDbType,Google.Bigquery.V2.FieldMode,System.String)
+  name: Add(String, BigqueryDbType, FieldMode, String)
+  href: api/Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder_Add_System_String_Google_Bigquery_V2_BigqueryDbType_Google_Bigquery_V2_FieldMode_System_String_
+  commentId: M:Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,Google.Bigquery.V2.BigqueryDbType,Google.Bigquery.V2.FieldMode,System.String)
+  fullName: Google.Bigquery.V2.TableSchemaBuilder.Add(System.String, Google.Bigquery.V2.BigqueryDbType, Google.Bigquery.V2.FieldMode, System.String)
+- uid: Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,Google.Bigquery.V2.TableSchemaBuilder,Google.Bigquery.V2.FieldMode,System.String)
+  name: Add(String, TableSchemaBuilder, FieldMode, String)
+  href: api/Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder_Add_System_String_Google_Bigquery_V2_TableSchemaBuilder_Google_Bigquery_V2_FieldMode_System_String_
+  commentId: M:Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,Google.Bigquery.V2.TableSchemaBuilder,Google.Bigquery.V2.FieldMode,System.String)
+  fullName: Google.Bigquery.V2.TableSchemaBuilder.Add(System.String, Google.Bigquery.V2.TableSchemaBuilder, Google.Bigquery.V2.FieldMode, System.String)
+- uid: Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,TableSchema,Google.Bigquery.V2.FieldMode,System.String)
+  name: Add(String, TableSchema, FieldMode, String)
+  href: api/Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder_Add_System_String_TableSchema_Google_Bigquery_V2_FieldMode_System_String_
+  commentId: M:Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,TableSchema,Google.Bigquery.V2.FieldMode,System.String)
+  fullName: Google.Bigquery.V2.TableSchemaBuilder.Add(System.String, TableSchema, Google.Bigquery.V2.FieldMode, System.String)
+- uid: Google.Bigquery.V2.TableSchemaBuilder.Add(TableFieldSchema)
+  name: Add(TableFieldSchema)
+  href: api/Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder_Add_TableFieldSchema_
+  commentId: M:Google.Bigquery.V2.TableSchemaBuilder.Add(TableFieldSchema)
+  fullName: Google.Bigquery.V2.TableSchemaBuilder.Add(TableFieldSchema)
+- uid: Google.Bigquery.V2.TableSchemaBuilder.Build
+  name: Build()
+  href: api/Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder_Build
+  commentId: M:Google.Bigquery.V2.TableSchemaBuilder.Build
+  fullName: Google.Bigquery.V2.TableSchemaBuilder.Build()
+- uid: Google.Bigquery.V2.TableSchemaBuilder.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Bigquery.V2.TableSchemaBuilder.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Bigquery.V2.TableSchemaBuilder.System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Bigquery.V2.UploadCsvOptions
+  name: UploadCsvOptions
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions
+  commentId: T:Google.Bigquery.V2.UploadCsvOptions
+  fullName: Google.Bigquery.V2.UploadCsvOptions
+- uid: Google.Bigquery.V2.UploadCsvOptions.AllowJaggedRows
+  name: AllowJaggedRows
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_AllowJaggedRows
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.AllowJaggedRows
+  fullName: Google.Bigquery.V2.UploadCsvOptions.AllowJaggedRows
+- uid: Google.Bigquery.V2.UploadCsvOptions.AllowQuotedNewlines
+  name: AllowQuotedNewlines
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_AllowQuotedNewlines
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.AllowQuotedNewlines
+  fullName: Google.Bigquery.V2.UploadCsvOptions.AllowQuotedNewlines
+- uid: Google.Bigquery.V2.UploadCsvOptions.AllowTrailingColumns
+  name: AllowTrailingColumns
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_AllowTrailingColumns
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.AllowTrailingColumns
+  fullName: Google.Bigquery.V2.UploadCsvOptions.AllowTrailingColumns
+- uid: Google.Bigquery.V2.UploadCsvOptions.CreateDisposition
+  name: CreateDisposition
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_CreateDisposition
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.CreateDisposition
+  fullName: Google.Bigquery.V2.UploadCsvOptions.CreateDisposition
+- uid: Google.Bigquery.V2.UploadCsvOptions.FieldDelimiter
+  name: FieldDelimiter
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_FieldDelimiter
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.FieldDelimiter
+  fullName: Google.Bigquery.V2.UploadCsvOptions.FieldDelimiter
+- uid: Google.Bigquery.V2.UploadCsvOptions.MaxBadRecords
+  name: MaxBadRecords
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_MaxBadRecords
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.MaxBadRecords
+  fullName: Google.Bigquery.V2.UploadCsvOptions.MaxBadRecords
+- uid: Google.Bigquery.V2.UploadCsvOptions.Quote
+  name: Quote
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_Quote
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.Quote
+  fullName: Google.Bigquery.V2.UploadCsvOptions.Quote
+- uid: Google.Bigquery.V2.UploadCsvOptions.SkipLeadingRows
+  name: SkipLeadingRows
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_SkipLeadingRows
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.SkipLeadingRows
+  fullName: Google.Bigquery.V2.UploadCsvOptions.SkipLeadingRows
+- uid: Google.Bigquery.V2.UploadCsvOptions.WriteDisposition
+  name: WriteDisposition
+  href: api/Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions_WriteDisposition
+  commentId: P:Google.Bigquery.V2.UploadCsvOptions.WriteDisposition
+  fullName: Google.Bigquery.V2.UploadCsvOptions.WriteDisposition
+- uid: Google.Bigquery.V2.UploadJsonOptions
+  name: UploadJsonOptions
+  href: api/Google.Bigquery.V2.UploadJsonOptions.html#Google_Bigquery_V2_UploadJsonOptions
+  commentId: T:Google.Bigquery.V2.UploadJsonOptions
+  fullName: Google.Bigquery.V2.UploadJsonOptions
+- uid: Google.Bigquery.V2.UploadJsonOptions.AllowUnknownFields
+  name: AllowUnknownFields
+  href: api/Google.Bigquery.V2.UploadJsonOptions.html#Google_Bigquery_V2_UploadJsonOptions_AllowUnknownFields
+  commentId: P:Google.Bigquery.V2.UploadJsonOptions.AllowUnknownFields
+  fullName: Google.Bigquery.V2.UploadJsonOptions.AllowUnknownFields
+- uid: Google.Bigquery.V2.UploadJsonOptions.CreateDisposition
+  name: CreateDisposition
+  href: api/Google.Bigquery.V2.UploadJsonOptions.html#Google_Bigquery_V2_UploadJsonOptions_CreateDisposition
+  commentId: P:Google.Bigquery.V2.UploadJsonOptions.CreateDisposition
+  fullName: Google.Bigquery.V2.UploadJsonOptions.CreateDisposition
+- uid: Google.Bigquery.V2.UploadJsonOptions.MaxBadRecords
+  name: MaxBadRecords
+  href: api/Google.Bigquery.V2.UploadJsonOptions.html#Google_Bigquery_V2_UploadJsonOptions_MaxBadRecords
+  commentId: P:Google.Bigquery.V2.UploadJsonOptions.MaxBadRecords
+  fullName: Google.Bigquery.V2.UploadJsonOptions.MaxBadRecords
+- uid: Google.Bigquery.V2.UploadJsonOptions.WriteDisposition
+  name: WriteDisposition
+  href: api/Google.Bigquery.V2.UploadJsonOptions.html#Google_Bigquery_V2_UploadJsonOptions_WriteDisposition
+  commentId: P:Google.Bigquery.V2.UploadJsonOptions.WriteDisposition
+  fullName: Google.Bigquery.V2.UploadJsonOptions.WriteDisposition
+- uid: Google.Bigquery.V2.WriteDisposition
+  name: WriteDisposition
+  href: api/Google.Bigquery.V2.WriteDisposition.html#Google_Bigquery_V2_WriteDisposition
+  commentId: T:Google.Bigquery.V2.WriteDisposition
+  fullName: Google.Bigquery.V2.WriteDisposition
+- uid: Google.Bigquery.V2.WriteDisposition.WriteAppend
+  name: WriteAppend
+  href: api/Google.Bigquery.V2.WriteDisposition.html#Google_Bigquery_V2_WriteDisposition_WriteAppend
+  commentId: F:Google.Bigquery.V2.WriteDisposition.WriteAppend
+  fullName: Google.Bigquery.V2.WriteDisposition.WriteAppend
+- uid: Google.Bigquery.V2.WriteDisposition.WriteIfEmpty
+  name: WriteIfEmpty
+  href: api/Google.Bigquery.V2.WriteDisposition.html#Google_Bigquery_V2_WriteDisposition_WriteIfEmpty
+  commentId: F:Google.Bigquery.V2.WriteDisposition.WriteIfEmpty
+  fullName: Google.Bigquery.V2.WriteDisposition.WriteIfEmpty
+- uid: Google.Bigquery.V2.WriteDisposition.WriteTruncate
+  name: WriteTruncate
+  href: api/Google.Bigquery.V2.WriteDisposition.html#Google_Bigquery_V2_WriteDisposition_WriteTruncate
+  commentId: F:Google.Bigquery.V2.WriteDisposition.WriteTruncate
+  fullName: Google.Bigquery.V2.WriteDisposition.WriteTruncate

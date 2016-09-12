@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Google.Cloud.Speech.V1Beta1 | Google.Cloud.Speech.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Google.Cloud.Speech.V1Beta1 | Google.Cloud.Speech.V1Beta1 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="googlecloudspeechv1beta1">Google.Cloud.Speech.V1Beta1</h1>
+              
+<p><code>Google.Cloud.Speech.V1Beta1</code> is a .NET client library for the <a href="https://cloud.google.com/speech">Google
+Cloud Speech API</a>.</p>
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Cloud.Speech.V1Beta1</code> package from our
+<a href="https://www.myget.org/gallery/google-dotnet-public">early access MyGet
+feed</a>.
+First onfigure your environment to include the appropriate NuGet feed
+URL:</p>
+<ul>
+<li>NuGet v2: <code>https://www.myget.org/F/google-dotnet-public/</code></li>
+<li>NuGet v3: <code>https://www.myget.org/F/google-dotnet-public/api/v3/index.json</code></li>
+</ul>
+<p>Next, add the package to your project in the normal way (for example
+by right-clicking on the project in Visual Studio and choosing
+&quot;Manage NuGet Packages...&quot;). Please ensure you enable pre-release
+packages (for example, in the Visual Studio NuGet user interface,
+check the &quot;Include prerelease&quot; box).</p>
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+installed, run the following command in a Google Cloud SDK Shell:</p>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>The simplest option is to use the synchronous, one-shot API as shown
+below in the sample code. More complex scenarios are considered further down this page.</p>
+<p>Note that the audio data should be mono rather than stereo, and the
+format needs to be explicitly specified in the request.</p>
+<h1 id="sample-code">Sample code</h1>
+<h2 id="constructing-a-recognitionaudio-object">Constructing a RecognitionAudio object</h2>
+<p>There are various factory methods on the
+<a href="api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.html">RecognitionAudio</a> class to allow
+instances to be constructed from files, streams, byte arrays and URIs.</p>
+<pre><code class="lang-cs">RecognitionAudio audio1 = RecognitionAudio.FromFile(&quot;Sound/SpeechSample.flac&quot;);
+RecognitionAudio audio2 = RecognitionAudio.FromUri(&quot;https://.../HostedSpeech.flac&quot;);
+RecognitionAudio audio3 = RecognitionAudio.FromStorageUri(&quot;gs://my-bucket/my-file&quot;);
+
+byte[] bytes = ReadAudioData(); // For example, from a database
+RecognitionAudio audio4 = RecognitionAudio.FromBytes(bytes);
+
+using (Stream stream = OpenAudioStream()) // Any regular .NET stream
+{
+    RecognitionAudio audio5 = RecognitionAudio.FromStream(stream);
+}
+</code></pre><h2 id="detect-speech-in-a-single-file">Detect speech in a single file</h2>
+<pre><code class="lang-cs">SpeechClient client = SpeechClient.Create();
+RecognitionConfig config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
+SyncRecognizeResponse response = client.SyncRecognize(config, audio);
+Console.WriteLine(response);
+</code></pre><h1 id="synchronous-asynchronous-and-streaming-operations">Synchronous, asynchronous and streaming operations</h1>
+<p>The underlying RPC API contains three modes of operation.</p>
+<p>The simplest is via the SyncRecognize method. You make a single
+request, and get a single response with the result of the analysis.
+Despite the name, this can still be invoked asynchronously from C#
+with <code>SpeechClient.SyncRecognizeAsync</code>.</p>
+<p>The AsyncRecognize method still requires all of the audio data to be
+passed in a single request, but the response from the RPC is a
+Google.Longrunning.Operation, representing an operation which could
+take some time to complete. It contains a token which can be used to
+retrieve the results later - you can think of it as a more
+persistent and remote <code>Task&lt;T&gt;</code> to a first approximation. While this
+RPC works in the current Google.Cloud.Speech.V1Beta1 library, more
+work will be done to expose this functionality idiomatically.</p>
+<p>Finally, the RPC API supports StreamingRecognize, which is a
+bidirectional streaming API: the client makes a number of requests,
+and the server emits a number of responses. This enables a
+conversation to be transcribed in near real time, for example,
+without the client needing to split it into chunks for single
+operations. The streaming API is not exposed in the
+Google.Cloud.Speech.V1Beta1.SpeechClient type yet, but you can use
+the underlying gRPC client directly for this functionality. Again,
+more work will be done to expose the streaming API in a friendly way.</p>
+<p>It is very likely that we will add a very thin abstraction layer
+over the top of the generated code, partly to avoid method names
+such as <code>AsyncRecognizeAsync</code> which are confusing.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

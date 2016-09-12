@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SubscriberClientImpl
+   | Google.Pubsub.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SubscriberClientImpl
+   | Google.Pubsub.V1 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Pubsub_V1_SubscriberClientImpl" data-uid="Google.Pubsub.V1.SubscriberClientImpl">Class SubscriberClientImpl
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a></div>
+                  <div class="level2"><span class="xref">SubscriberClientImpl</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DefaultEndpoint">SubscriberClient.DefaultEndpoint</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DefaultScopes">SubscriberClient.DefaultScopes</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ProjectTemplate">SubscriberClient.ProjectTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatProjectName_System_String_">SubscriberClient.FormatProjectName(String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_SubscriptionTemplate">SubscriberClient.SubscriptionTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatSubscriptionName_System_String_System_String_">SubscriberClient.FormatSubscriptionName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_TopicTemplate">SubscriberClient.TopicTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatTopicName_System_String_System_String_">SubscriberClient.FormatTopicName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateAsync_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">SubscriberClient.CreateAsync(ServiceEndpoint, SubscriberSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_ServiceEndpoint_Google_Pubsub_V1_SubscriberSettings_">SubscriberClient.Create(ServiceEndpoint, SubscriberSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Create_Channel_Google_Pubsub_V1_SubscriberSettings_">SubscriberClient.Create(Channel, SubscriberSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ShutdownDefaultChannelsAsync">SubscriberClient.ShutdownDefaultChannelsAsync()</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_System_Threading_CancellationToken_">SubscriberClient.CreateSubscriptionAsync(String, String, PushConfig, Int32, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscriptionAsync_System_String_System_Threading_CancellationToken_">SubscriberClient.GetSubscriptionAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscriptionAsync_System_String_System_Threading_CancellationToken_">SubscriberClient.DeleteSubscriptionAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_System_Threading_CancellationToken_">SubscriberClient.ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_">SubscriberClient.AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_System_Threading_CancellationToken_">SubscriberClient.PullAsync(String, Boolean, Int32, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_System_Threading_CancellationToken_">SubscriberClient.ModifyPushConfigAsync(String, PushConfig, CancellationToken)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Pubsub.V1</h6>
+              <h6><strong>Assembly</strong>:Google.Pubsub.V1.dll</h6>
+              <h5 id="Google_Pubsub_V1_SubscriberClientImpl_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class SubscriberClientImpl : SubscriberClient</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl__ctor_Google_Pubsub_V1_Subscriber_SubscriberClient_Google_Pubsub_V1_SubscriberSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.#ctor(Google.Pubsub.V1.Subscriber.SubscriberClient,Google.Pubsub.V1.SubscriberSettings)">SubscriberClientImpl(Subscriber.SubscriberClient, SubscriberSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberSettings settings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.Subscriber.SubscriberClient.html#Google_Pubsub_V1_Subscriber_SubscriberClient">Subscriber.SubscriberClient</a></td>
+                    <td><em>grpcClient</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GrpcClient" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GrpcClient">GrpcClient</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Subscriber.SubscriberClient GrpcClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.Subscriber.SubscriberClient.html#Google_Pubsub_V1_Subscriber_SubscriberClient">Subscriber.SubscriberClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GrpcClient">SubscriberClient.GrpcClient</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.Acknowledge(System.String,System.Collections.Generic.IEnumerable{System.String},CallSettings)">Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Acknowledges the messages associated with the <code>ack_ids</code> in the
+<code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
+from the subscription.</p>
+<p>Acknowledging a message whose ack deadline has expired may succeed,
+but such a message may be redelivered later. Acknowledging a message more
+than once will not result in an error.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void Acknowledge(string subscription, IEnumerable&lt;string&gt; ackIds, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The subscription whose message is being acknowledged.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>ackIds</em></td>
+                    <td><p>The acknowledgment ID for the messages being acknowledged that was returned
+by the Pub/Sub system in the <code>Pull</code> response. Must not be empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_">SubscriberClient.Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.AcknowledgeAsync(System.String,System.Collections.Generic.IEnumerable{System.String},CallSettings)">AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Acknowledges the messages associated with the <code>ack_ids</code> in the
+<code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
+from the subscription.</p>
+<p>Acknowledging a message whose ack deadline has expired may succeed,
+but such a message may be redelivered later. Acknowledging a message more
+than once will not result in an error.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task AcknowledgeAsync(string subscription, IEnumerable&lt;string&gt; ackIds, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The subscription whose message is being acknowledged.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>ackIds</em></td>
+                    <td><p>The acknowledgment ID for the messages being acknowledged that was returned
+by the Pub/Sub system in the <code>Pull</code> response. Must not be empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_">SubscriberClient.AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.CreateSubscription(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,CallSettings)">CreateSubscription(String, String, PushConfig, Int32, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
+If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p>If the name is not provided in the request, the server will assign a random
+name for this subscription on the same project as the topic.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Subscription CreateSubscription(string name, string topic, PushConfig pushConfig, int ackDeadlineSeconds, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>The name of the subscription. It must have the format
+<code>&quot;projects/{project}/subscriptions/{subscription}&quot;</code>. <code>{subscription}</code> must
+start with a letter, and contain only letters (<code>[A-Za-z]</code>), numbers
+(<code>[0-9]</code>), dashes (<code>-</code>), underscores (<code>_</code>), periods (<code>.</code>), tildes (<code>~</code>),
+plus (<code>+</code>) or percent signs (<code>%</code>). It must be between 3 and 255 characters
+in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>topic</em></td>
+                    <td><p>The name of the topic from which this subscription is receiving messages.
+The value of this field will be <code>_deleted-topic_</code> if the topic has been
+deleted.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.PushConfig.html#Google_Pubsub_V1_PushConfig">PushConfig</a></td>
+                    <td><em>pushConfig</em></td>
+                    <td><p>If push delivery is used with this subscription, this field is
+used to configure it. An empty <code>pushConfig</code> signifies that the subscriber
+will pull and ack messages using API methods.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>ackDeadlineSeconds</em></td>
+                    <td><p>This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).</p>
+<p>For pull subscriptions, this value is used as the initial value for the ack
+deadline. To override this value for a given message, call
+<code>ModifyAckDeadline</code> with the corresponding <code>ack_id</code> if using
+pull.</p>
+<p>For push delivery, this value is also used to set the request timeout for
+the call to the push endpoint.</p>
+<p>If the subscriber never acknowledges the message, the Pub/Sub
+system will eventually redeliver the message.</p>
+<p>If this parameter is not set, the default value of 10 seconds is used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_">SubscriberClient.CreateSubscription(String, String, PushConfig, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.CreateSubscriptionAsync(System.String,System.String,Google.Pubsub.V1.PushConfig,System.Int32,CallSettings)">CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates a subscription to a given topic for a given subscriber.
+If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
+If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p>If the name is not provided in the request, the server will assign a random
+name for this subscription on the same project as the topic.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Subscription&gt; CreateSubscriptionAsync(string name, string topic, PushConfig pushConfig, int ackDeadlineSeconds, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>The name of the subscription. It must have the format
+<code>&quot;projects/{project}/subscriptions/{subscription}&quot;</code>. <code>{subscription}</code> must
+start with a letter, and contain only letters (<code>[A-Za-z]</code>), numbers
+(<code>[0-9]</code>), dashes (<code>-</code>), underscores (<code>_</code>), periods (<code>.</code>), tildes (<code>~</code>),
+plus (<code>+</code>) or percent signs (<code>%</code>). It must be between 3 and 255 characters
+in length, and it must not start with <code>&quot;goog&quot;</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>topic</em></td>
+                    <td><p>The name of the topic from which this subscription is receiving messages.
+The value of this field will be <code>_deleted-topic_</code> if the topic has been
+deleted.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.PushConfig.html#Google_Pubsub_V1_PushConfig">PushConfig</a></td>
+                    <td><em>pushConfig</em></td>
+                    <td><p>If push delivery is used with this subscription, this field is
+used to configure it. An empty <code>pushConfig</code> signifies that the subscriber
+will pull and ack messages using API methods.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>ackDeadlineSeconds</em></td>
+                    <td><p>This value is the maximum time after a subscriber receives a message
+before the subscriber should acknowledge the message. After message
+delivery but before the ack deadline expires and before the message is
+acknowledged, it is an outstanding message and will not be delivered
+again during that time (on a best-effort basis).</p>
+<p>For pull subscriptions, this value is used as the initial value for the ack
+deadline. To override this value for a given message, call
+<code>ModifyAckDeadline</code> with the corresponding <code>ack_id</code> if using
+pull.</p>
+<p>For push delivery, this value is also used to set the request timeout for
+the call to the push endpoint.</p>
+<p>If the subscriber never acknowledges the message, the Pub/Sub
+system will eventually redeliver the message.</p>
+<p>If this parameter is not set, the default value of 10 seconds is used.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_">SubscriberClient.CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_DeleteSubscription_System_String_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.DeleteSubscription(System.String,CallSettings)">DeleteSubscription(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
+are immediately dropped. Calls to <code>Pull</code> after deletion will return
+<code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
+the same name, but the new one has no association with the old
+subscription, or its topic unless the same topic is specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void DeleteSubscription(string subscription, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The subscription to delete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscription_System_String_CallSettings_">SubscriberClient.DeleteSubscription(String, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_DeleteSubscriptionAsync_System_String_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.DeleteSubscriptionAsync(System.String,CallSettings)">DeleteSubscriptionAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes an existing subscription. All pending messages in the subscription
+are immediately dropped. Calls to <code>Pull</code> after deletion will return
+<code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
+the same name, but the new one has no association with the old
+subscription, or its topic unless the same topic is specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task DeleteSubscriptionAsync(string subscription, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The subscription to delete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscriptionAsync_System_String_CallSettings_">SubscriberClient.DeleteSubscriptionAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GetSubscription_System_String_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GetSubscription(System.String,CallSettings)">GetSubscription(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Subscription GetSubscription(string subscription, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The name of the subscription to get.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscription_System_String_CallSettings_">SubscriberClient.GetSubscription(String, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_GetSubscriptionAsync_System_String_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.GetSubscriptionAsync(System.String,CallSettings)">GetSubscriptionAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets the configuration details of a subscription.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Subscription&gt; GetSubscriptionAsync(string subscription, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The name of the subscription to get.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscriptionAsync_System_String_CallSettings_">SubscriberClient.GetSubscriptionAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ListSubscriptions(System.String,System.String,System.Nullable{System.Int32},CallSettings)">ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListSubscriptionsResponse, Subscription&gt; ListSubscriptions(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>project</em></td>
+                    <td><p>The name of the cloud project that subscriptions belong to.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IPagedEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListSubscriptionsResponse.html#Google_Pubsub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a>&gt;</td>
+                    <td><p>A pageable sequence of Subscription resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__CallSettings_">SubscriberClient.ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ListSubscriptionsAsync(System.String,System.String,System.Nullable{System.Int32},CallSettings)">ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists matching subscriptions.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListSubscriptionsResponse, Subscription&gt; ListSubscriptionsAsync(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>project</em></td>
+                    <td><p>The name of the cloud project that subscriptions belong to.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.ListSubscriptionsResponse.html#Google_Pubsub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Subscription.html#Google_Pubsub_V1_Subscription">Subscription</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of Subscription resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__CallSettings_">SubscriberClient.ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyAckDeadline(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,CallSettings)">ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Modifies the ack deadline for a specific message. This method is useful
+to indicate that more time is needed to process a message by the
+subscriber, or to make the message available for redelivery if the
+processing was interrupted.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void ModifyAckDeadline(string subscription, IEnumerable&lt;string&gt; ackIds, int ackDeadlineSeconds, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The name of the subscription.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>ackIds</em></td>
+                    <td><p>List of acknowledgment IDs.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>ackDeadlineSeconds</em></td>
+                    <td><p>The new ack deadline with respect to the time this request was sent to
+the Pub/Sub system. Must be &gt;= 0. For example, if the value is 10, the new
+ack deadline will expire 10 seconds after the <code>ModifyAckDeadline</code> call
+was made. Specifying zero may immediately make the message available for
+another pull request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_">SubscriberClient.ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyAckDeadlineAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,CallSettings)">ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Modifies the ack deadline for a specific message. This method is useful
+to indicate that more time is needed to process a message by the
+subscriber, or to make the message available for redelivery if the
+processing was interrupted.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task ModifyAckDeadlineAsync(string subscription, IEnumerable&lt;string&gt; ackIds, int ackDeadlineSeconds, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The name of the subscription.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>ackIds</em></td>
+                    <td><p>List of acknowledgment IDs.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>ackDeadlineSeconds</em></td>
+                    <td><p>The new ack deadline with respect to the time this request was sent to
+the Pub/Sub system. Must be &gt;= 0. For example, if the value is 10, the new
+ack deadline will expire 10 seconds after the <code>ModifyAckDeadline</code> call
+was made. Specifying zero may immediately make the message available for
+another pull request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_">SubscriberClient.ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyPushConfig_System_String_Google_Pubsub_V1_PushConfig_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyPushConfig(System.String,Google.Pubsub.V1.PushConfig,CallSettings)">ModifyPushConfig(String, PushConfig, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Modifies the <code>PushConfig</code> for a specified subscription.</p>
+<p>This may be used to change a push subscription to a pull one (signified by
+an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
+attributes of a push subscription. Messages will accumulate for delivery
+continuously through the call regardless of changes to the <code>PushConfig</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void ModifyPushConfig(string subscription, PushConfig pushConfig, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The name of the subscription.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.PushConfig.html#Google_Pubsub_V1_PushConfig">PushConfig</a></td>
+                    <td><em>pushConfig</em></td>
+                    <td><p>The push configuration for future deliveries.</p>
+<p>An empty <code>pushConfig</code> indicates that the Pub/Sub system should
+stop pushing messages from the given subscription and allow
+messages to be pulled and acknowledged - effectively pausing
+the subscription if <code>Pull</code> is not called.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfig_System_String_Google_Pubsub_V1_PushConfig_CallSettings_">SubscriberClient.ModifyPushConfig(String, PushConfig, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.ModifyPushConfigAsync(System.String,Google.Pubsub.V1.PushConfig,CallSettings)">ModifyPushConfigAsync(String, PushConfig, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Modifies the <code>PushConfig</code> for a specified subscription.</p>
+<p>This may be used to change a push subscription to a pull one (signified by
+an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
+attributes of a push subscription. Messages will accumulate for delivery
+continuously through the call regardless of changes to the <code>PushConfig</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task ModifyPushConfigAsync(string subscription, PushConfig pushConfig, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The name of the subscription.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.PushConfig.html#Google_Pubsub_V1_PushConfig">PushConfig</a></td>
+                    <td><em>pushConfig</em></td>
+                    <td><p>The push configuration for future deliveries.</p>
+<p>An empty <code>pushConfig</code> indicates that the Pub/Sub system should
+stop pushing messages from the given subscription and allow
+messages to be pulled and acknowledged - effectively pausing
+the subscription if <code>Pull</code> is not called.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_CallSettings_">SubscriberClient.ModifyPushConfigAsync(String, PushConfig, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_Pull_System_String_System_Boolean_System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.Pull(System.String,System.Boolean,System.Int32,CallSettings)">Pull(String, Boolean, Int32, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
+messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
+there are too many concurrent pull requests pending for the given
+subscription.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PullResponse Pull(string subscription, bool returnImmediately, int maxMessages, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The subscription from which messages should be pulled.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><em>returnImmediately</em></td>
+                    <td><p>If this is specified as true the system will respond immediately even if
+it is not able to return a message in the <code>Pull</code> response. Otherwise the
+system is allowed to wait until at least one message is available rather
+than returning no messages. The client may cancel the request if it does
+not wish to wait any longer for the response.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>maxMessages</em></td>
+                    <td><p>The maximum number of messages returned for this request. The Pub/Sub
+system may return fewer than the number specified.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Pubsub.V1.PullResponse.html#Google_Pubsub_V1_PullResponse">PullResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Pull_System_String_System_Boolean_System_Int32_CallSettings_">SubscriberClient.Pull(String, Boolean, Int32, CallSettings)</a></div>
+              <h4 id="Google_Pubsub_V1_SubscriberClientImpl_PullAsync_System_String_System_Boolean_System_Int32_CallSettings_" data-uid="Google.Pubsub.V1.SubscriberClientImpl.PullAsync(System.String,System.Boolean,System.Int32,CallSettings)">PullAsync(String, Boolean, Int32, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
+messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
+there are too many concurrent pull requests pending for the given
+subscription.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;PullResponse&gt; PullAsync(string subscription, bool returnImmediately, int maxMessages, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>subscription</em></td>
+                    <td><p>The subscription from which messages should be pulled.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><em>returnImmediately</em></td>
+                    <td><p>If this is specified as true the system will respond immediately even if
+it is not able to return a message in the <code>Pull</code> response. Otherwise the
+system is allowed to wait until at least one message is available rather
+than returning no messages. The client may cancel the request if it does
+not wish to wait any longer for the response.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>maxMessages</em></td>
+                    <td><p>The maximum number of messages returned for this request. The Pub/Sub
+system may return fewer than the number specified.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Pubsub.V1.PullResponse.html#Google_Pubsub_V1_PullResponse">PullResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_CallSettings_">SubscriberClient.PullAsync(String, Boolean, Int32, CallSettings)</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

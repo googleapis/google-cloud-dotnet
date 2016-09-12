@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TableSchemaBuilder
+   | Google.Bigquery.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TableSchemaBuilder
+   | Google.Bigquery.V2 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Bigquery_V2_TableSchemaBuilder" data-uid="Google.Bigquery.V2.TableSchemaBuilder">Class TableSchemaBuilder
+              </h1>
+              <div class="markdown level0 summary"><p>Class making it simple to create a <see cref="!:TableSchema"></see>.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">TableSchemaBuilder</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Bigquery.V2</h6>
+              <h6><strong>Assembly</strong>:Google.Bigquery.V2.dll</h6>
+              <h5 id="Google_Bigquery_V2_TableSchemaBuilder_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class TableSchemaBuilder : IEnumerable</code></pre>
+              </div>
+              <h5 id="Google_Bigquery_V2_TableSchemaBuilder_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>This class only implements <span class="xref">IEnumerable</span> in order to allow it to be used in
+collection initializers.</p>
+</div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Bigquery_V2_TableSchemaBuilder_Add_System_String_Google_Bigquery_V2_BigqueryDbType_Google_Bigquery_V2_FieldMode_System_String_" data-uid="Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,Google.Bigquery.V2.BigqueryDbType,Google.Bigquery.V2.FieldMode,System.String)">Add(String, BigqueryDbType, FieldMode, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a field with the specified details, and adds it to the schema being built.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(string name, BigqueryDbType type, FieldMode mode = FieldMode.Nullable, string description = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>The name of the field. Must be a valid field name.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType">BigqueryDbType</a></td>
+                    <td><em>type</em></td>
+                    <td><p>The type of the field. Must be a defined member within <a class="xref" href="Google.Bigquery.V2.BigqueryDbType.html#Google_Bigquery_V2_BigqueryDbType">BigqueryDbType</a>, other than <code>Record</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode">FieldMode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The mode of the field. Must be a defined member within <a class="xref" href="Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode">FieldMode</a>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>description</em></td>
+                    <td><p>The description of the field. May be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_TableSchemaBuilder_Add_System_String_Google_Bigquery_V2_TableSchemaBuilder_Google_Bigquery_V2_FieldMode_System_String_" data-uid="Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,Google.Bigquery.V2.TableSchemaBuilder,Google.Bigquery.V2.FieldMode,System.String)">Add(String, TableSchemaBuilder, FieldMode, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a nested field with the specified schema, and adds it to the schema being built.
+This method simply delegates to <a class="xref" href="Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder_Add_System_String_TableSchema_Google_Bigquery_V2_FieldMode_System_String_">Add(String, TableSchema, FieldMode, String)</a> after calling <a class="xref" href="Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder_Build">Build()</a>
+on <em>nestedSchema</em>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(string name, TableSchemaBuilder nestedSchema, FieldMode mode = FieldMode.Nullable, string description = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>The name of the field. Must be a valid field name.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder">TableSchemaBuilder</a></td>
+                    <td><em>nestedSchema</em></td>
+                    <td><p>The schema for the nested field, in the form of a <a class="xref" href="Google.Bigquery.V2.TableSchemaBuilder.html#Google_Bigquery_V2_TableSchemaBuilder">TableSchemaBuilder</a>. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode">FieldMode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The mode of the field. Must be a defined member within <a class="xref" href="Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode">FieldMode</a>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>description</em></td>
+                    <td><p>The description of the field. May be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_TableSchemaBuilder_Add_System_String_TableSchema_Google_Bigquery_V2_FieldMode_System_String_" data-uid="Google.Bigquery.V2.TableSchemaBuilder.Add(System.String,TableSchema,Google.Bigquery.V2.FieldMode,System.String)">Add(String, TableSchema, FieldMode, String)</h4>
+              <div class="markdown level1 summary"><p>Creates a nested field with the specified schema, and adds it to the schema being built.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(string name, TableSchema nestedSchema, FieldMode mode = FieldMode.Nullable, string description = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>The name of the field. Must be a valid field name.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TableSchema</span></td>
+                    <td><em>nestedSchema</em></td>
+                    <td><p>The schema for the nested field. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode">FieldMode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The mode of the field. Must be a defined member within <a class="xref" href="Google.Bigquery.V2.FieldMode.html#Google_Bigquery_V2_FieldMode">FieldMode</a>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>description</em></td>
+                    <td><p>The description of the field. May be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_TableSchemaBuilder_Add_TableFieldSchema_" data-uid="Google.Bigquery.V2.TableSchemaBuilder.Add(TableFieldSchema)">Add(TableFieldSchema)</h4>
+              <div class="markdown level1 summary"><p>Adds the given field to the schema being built.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(TableFieldSchema field)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableFieldSchema</span></td>
+                    <td><em>field</em></td>
+                    <td><p>The field to add. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_TableSchemaBuilder_Build" data-uid="Google.Bigquery.V2.TableSchemaBuilder.Build">Build()</h4>
+              <div class="markdown level1 summary"><p>Constructs a <see cref="!:TableSchema"></see> from this builder.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TableSchema Build()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableSchema</span></td>
+                    <td><p>A <see cref="!:TableSchema"></see> from the fields added to this builder.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Bigquery_V2_TableSchemaBuilder_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Bigquery.V2.TableSchemaBuilder.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+              <div class="markdown level1 summary"><p>Returns an iterator over the fields in this builder.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td><p>An iterator over the fields in this builder.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+              <h5 id="Google_Bigquery_V2_TableSchemaBuilder_System_Collections_IEnumerable_GetEnumerator_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method only exists to satisfy the C# language rules on collection initializers.</p>
+</div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

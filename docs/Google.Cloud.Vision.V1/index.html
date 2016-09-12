@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Google.Cloud.Vision.V1 | Google.Cloud.Vision.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Google.Cloud.Vision.V1 | Google.Cloud.Vision.V1 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="googlecloudvisionv1">Google.Cloud.Vision.V1</h1>
+              
+<p><code>Google.Cloud.Vision.V1</code> is a .NET client library for the <a href="https://cloud.google.com/vision">Google
+Cloud Vision API</a>.</p>
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Cloud.Vision.V1</code> package from our
+<a href="https://www.myget.org/gallery/google-dotnet-public">early access MyGet
+feed</a>.
+First onfigure your environment to include the appropriate NuGet feed
+URL:</p>
+<ul>
+<li>NuGet v2: <code>https://www.myget.org/F/google-dotnet-public/</code></li>
+<li>NuGet v3: <code>https://www.myget.org/F/google-dotnet-public/api/v3/index.json</code></li>
+</ul>
+<p>Next, add the package to your project in the normal way (for example
+by right-clicking on the project in Visual Studio and choosing
+&quot;Manage NuGet Packages...&quot;). Please ensure you enable pre-release
+packages (for example, in the Visual Studio NuGet user interface,
+check the &quot;Include prerelease&quot; box).</p>
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+installed, run the following command in a Google Cloud SDK Shell:</p>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>All operations are performed through
+<a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>.</p>
+<p>The &quot;core&quot; method (<a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_">BatchAnnotateImages</a>
+can perform multiple (potentially different) annotations on multiple
+images, but convenience methods are provided for common cases of
+working with a single image, and for performing a single annotation
+operation on a single image.</p>
+<h1 id="sample-code">Sample code</h1>
+<h2 id="constructing-an-image-object">Constructing an Image object</h2>
+<p>There are various factory methods on the
+<a href="api/Google.Cloud.Vision.V1.Image.html">Image</a> class to allow
+instances to be constructed from files, streams, byte arrays and URIs.</p>
+<pre><code class="lang-cs">Image image1 = Image.FromFile(&quot;Pictures/LocalImage.jpg&quot;);
+Image image2 = Image.FromUri(&quot;https://cloud.google.com/images/devtools-icon-64x64.png&quot;);
+Image image3 = Image.FromStorageUri(&quot;gs://my-bucket/my-file&quot;);
+
+byte[] bytes = ReadImageData(); // For example, from a database
+Image image4 = Image.FromBytes(bytes);
+
+using (Stream stream = OpenImageStream()) // Any regular .NET stream
+{
+    Image image5 = Image.FromStream(stream);
+}
+</code></pre><p>All IO-related methods have async equivalents.</p>
+<h2 id="detect-faces-in-a-single-image">Detect faces in a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+AnnotationResult&lt;FaceAnnotation&gt; result = client.DetectFaces(image);
+foreach (FaceAnnotation face in result)
+{
+    Console.WriteLine($&quot;Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
+}
+if (result.Error != null)
+{
+    Console.WriteLine($&quot;Additional error detected: {result.Error}&quot;);
+}
+</code></pre><h2 id="detect-text-in-a-single-image">Detect text in a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+AnnotationResult&lt;EntityAnnotation&gt; textAnnotations = client.DetectText(image);
+foreach (EntityAnnotation text in textAnnotations)
+{
+    Console.WriteLine($&quot;Description: {text.Description}&quot;);
+}
+</code></pre><h2 id="detect-labels-in-a-single-image">Detect labels in a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+AnnotationResult&lt;EntityAnnotation&gt; labels = client.DetectLabels(image);
+foreach (EntityAnnotation label in labels)
+{
+    Console.WriteLine($&quot;Score: {(int)(label.Score * 100)}%; Description: {label.Description}&quot;);
+}
+</code></pre><h2 id="detect-landmarks-in-a-single-image">Detect landmarks in a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+AnnotationResult&lt;EntityAnnotation&gt; result = client.DetectLandmarks(image);
+foreach (EntityAnnotation landmark in result)
+{
+    Console.WriteLine($&quot;Score: {(int)(landmark.Score * 100)}%; Description: {landmark.Description}&quot;);
+}
+if (result.Error != null)
+{
+    Console.WriteLine($&quot;Additional error detected: {result.Error}&quot;);
+}
+</code></pre><h2 id="detect-logos-in-a-single-image">Detect logos in a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+AnnotationResult&lt;EntityAnnotation&gt; logos = client.DetectLogos(image);
+foreach (EntityAnnotation logo in logos)
+{
+    Console.WriteLine($&quot;Description: {logo.Description}&quot;);
+}
+</code></pre><h2 id="perform-safe-search-processing-on-a-single-image">Perform &quot;safe search&quot; processing on a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+SafeSearchAnnotation annotation = client.DetectSafeSearch(image);
+// Each category is classified as Very Unlikely, Unlikely, Possible, Likely or Very Likely.
+Console.WriteLine($&quot;Adult? {annotation.Adult}&quot;);
+Console.WriteLine($&quot;Spoof? {annotation.Spoof}&quot;);
+Console.WriteLine($&quot;Violence? {annotation.Violence}&quot;);
+Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
+</code></pre><h2 id="perform-image-property-processing-on-a-single-image">Perform image property processing on a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+ImageProperties properties = client.DetectImageProperties(image);
+ColorInfo dominantColor = properties.DominantColors.Colors.OrderByDescending(c =&gt; c.PixelFraction).First();
+Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
+</code></pre><h2 id="detect-faces-and-landmarks-in-a-single-image">Detect faces and landmarks in a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+AnnotateImageRequest request = new AnnotateImageRequest
+{
+    Image = image,
+    Features =
+    {
+        new Feature { Type = Feature.Types.Type.FaceDetection },
+        // By default, no limits are put on the number of results per annotation.
+        // Use the MaxResults property to specify a limit.
+        new Feature { Type = Feature.Types.Type.LandmarkDetection, MaxResults = 5 },
+    }
+};
+AnnotateImageResponse response = client.Annotate(request);
+Console.WriteLine(&quot;Faces:&quot;);
+foreach (FaceAnnotation face in response.FaceAnnotations)
+{
+    Console.WriteLine($&quot;  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
+}
+Console.WriteLine(&quot;Landmarks:&quot;);
+foreach (EntityAnnotation landmark in response.LandmarkAnnotations)
+{
+    Console.WriteLine($&quot;Score: {(int)(landmark.Score * 100)}%; Description: {landmark.Description}&quot;);
+}
+if (response.Error != null)
+{
+    Console.WriteLine($&quot;Error detected: {response.Error}&quot;);
+}
+</code></pre><h2 id="detect-faces-in-one-image-and-logos-in-another">Detect faces in one image and logos in another</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+// Perform face recognition on one image, and logo recognition on another.
+AnnotateImageRequest request1 = new AnnotateImageRequest
+{
+    Image = image1,
+    Features = { new Feature { Type = Feature.Types.Type.FaceDetection } }
+};
+AnnotateImageRequest request2 = new AnnotateImageRequest
+{
+    Image = image2,
+    Features = { new Feature { Type = Feature.Types.Type.LogoDetection } }
+};
+
+BatchAnnotateImagesResponse response = client.BatchAnnotateImages(new[] { request1, request2 });
+Console.WriteLine(&quot;Faces in image 1:&quot;);
+foreach (FaceAnnotation face in response.Responses[0].FaceAnnotations)
+{
+    Console.WriteLine($&quot;  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
+}
+Console.WriteLine(&quot;Logos in image 2:&quot;);
+foreach (EntityAnnotation logo in response.Responses[1].LogoAnnotations)
+{
+    Console.WriteLine($&quot;Description: {logo.Description}&quot;);
+}
+foreach (Status error in response.Responses.Select(r =&gt; r.Error))
+{
+    Console.WriteLine($&quot;Error detected: error&quot;);
+}
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

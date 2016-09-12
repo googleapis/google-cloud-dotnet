@@ -1,0 +1,3064 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DatastoreDb
+   | Google.Datastore.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DatastoreDb
+   | Google.Datastore.V1 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Datastore_V1_DatastoreDb" data-uid="Google.Datastore.V1.DatastoreDb">Class DatastoreDb
+              </h1>
+              <div class="markdown level0 summary"><p>An abstraction over <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> to simplify operations. Use the <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1_DatastoreClient_">Create(String, String, DatastoreClient)</a>
+method to obtain an instance of this class.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">DatastoreDb</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Datastore.V1</h6>
+              <h6><strong>Assembly</strong>:Google.Datastore.V1.dll</h6>
+              <h5 id="Google_Datastore_V1_DatastoreDb_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class DatastoreDb</code></pre>
+              </div>
+              <h5 id="Google_Datastore_V1_DatastoreDb_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>
+The project ID specified on creation is used for all operations, effectively supplying the first parameter of every
+operation specified on <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>.
+</p>
+<p>
+The project ID and namespace ID are combined to form a partition ID. This partition ID is used when creating a key
+factory or running a query. Operations that take keys or entities do not validate that the keys are within the
+partition associated with this object.
+</p>
+<p>
+This abstract class is provided to enable testability while permitting
+additional operations to be added in the future. See <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1_DatastoreClient_">Create(String, String, DatastoreClient)</a>
+to construct instances; alternatively, you can construct a <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> directly.
+</p>
+</div>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Client" data-uid="Google.Datastore.V1.DatastoreDb.Client">Client</h4>
+              <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> used for all remote operations.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual DatastoreClient Client { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_NamespaceId" data-uid="Google.Datastore.V1.DatastoreDb.NamespaceId">NamespaceId</h4>
+              <div class="markdown level1 summary"><p>The ID of the namespace this instance operates on.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string NamespaceId { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_ProjectId" data-uid="Google.Datastore.V1.DatastoreDb.ProjectId">ProjectId</h4>
+              <div class="markdown level1 summary"><p>The ID of the project this instance operates on.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual string ProjectId { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Datastore_V1_DatastoreDb_AllocateId_Google_Datastore_V1_Key_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateId(Google.Datastore.V1.Key,CallSettings)">AllocateId(Key, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Key AllocateId(Key key, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The incomplete key to allocate an ID for.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><p>The complete key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_AllocateId_Google_Datastore_V1_Key_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIdAsync_Google_Datastore_V1_Key_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdAsync(Google.Datastore.V1.Key,CallSettings)">AllocateIdAsync(Key, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Key&gt; AllocateIdAsync(Key key, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The incomplete key to allocate an ID for.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>The complete key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_AllocateIdAsync_Google_Datastore_V1_Key_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIds_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIds(Google.Datastore.V1.Key[])">AllocateIds(Key[])</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; AllocateIds(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_AllocateIds_Google_Datastore_V1_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIds(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; AllocateIds(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdsAsync(Google.Datastore.V1.Key[])">AllocateIdsAsync(Key[])</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+IReadOnlyList&lt;Key&gt; keys = await db.AllocateIdsAsync(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; AllocateIdsAsync(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Datastore_V1_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdsAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; AllocateIdsAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_BeginTransaction_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.BeginTransaction(CallSettings)">BeginTransaction(CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Begins a transaction, returning a <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual DatastoreTransaction BeginTransaction(CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a></td>
+                    <td><p>A new <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> for this object&#39;s project.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_BeginTransactionAsync_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.BeginTransactionAsync(CallSettings)">BeginTransactionAsync(CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Begins a transaction asynchronously, returning a <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreTransaction&gt; BeginTransactionAsync(CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a>&gt;</td>
+                    <td><p>A new <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> for this object&#39;s project.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1_DatastoreClient_" data-uid="Google.Datastore.V1.DatastoreDb.Create(System.String,System.String,Google.Datastore.V1.DatastoreClient)">Create(String, String, DatastoreClient)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a> to operate on the partition identified by <em>projectId</em>
+and <em>namespaceId</em>, using the <em>client</em> to perform remote operations.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static DatastoreDb Create(string projectId, string namespaceId = &quot;&quot;, DatastoreClient client = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The project ID to use in all operations.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>namespaceId</em></td>
+                    <td><p>The namespace ID to use in operations requiring a partition.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
+                    <td><em>client</em></td>
+                    <td><p>The client to use for remote operations. If this is null, an instance will be created
+using default settings.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a> operating on the specified partition.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_CreateKeyFactory_System_String_" data-uid="Google.Datastore.V1.DatastoreDb.CreateKeyFactory(System.String)">CreateKeyFactory(String)</h4>
+              <div class="markdown level1 summary"><p>Creates a key factory for root entities in this objects&#39;s partition.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual KeyFactory CreateKeyFactory(string kind)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>kind</em></td>
+                    <td><p>The kind of entity key to create. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.KeyFactory.html#Google_Datastore_V1_KeyFactory">KeyFactory</a></td>
+                    <td><p>A key factory with the specified kind and this object&#39;s partition.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Entity_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Delete(Google.Datastore.V1.Entity,CallSettings)">Delete(Entity, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Delete(Entity entity, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to delete. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Entity_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.Delete(Google.Datastore.V1.Entity[])">Delete(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Delete(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Key_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Delete(Google.Datastore.V1.Key,CallSettings)">Delete(Key, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Delete(Key key, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The key to delete. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Key_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.Delete(Google.Datastore.V1.Key[])">Delete(Key[])</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Delete(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},CallSettings)">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Delete(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">Delete(IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Delete(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Entity_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(Google.Datastore.V1.Entity,CallSettings)">DeleteAsync(Entity, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(Entity entity, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to delete. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Entity_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(Google.Datastore.V1.Entity[])">DeleteAsync(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Key_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(Google.Datastore.V1.Key,CallSettings)">DeleteAsync(Key, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(Key key, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The key to delete. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Key_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(Google.Datastore.V1.Key[])">DeleteAsync(Key[])</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},CallSettings)">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Insert_Google_Datastore_V1_Entity_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Insert(Google.Datastore.V1.Entity,CallSettings)">Insert(Entity, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Key Insert(Entity entity, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to insert. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><p>The key of the inserted entity if it was allocated by the server, or
+<code>null</code> if the inserted entity had a predefined key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Insert_Google_Datastore_V1_Entity_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Insert_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.Insert(Google.Datastore.V1.Entity[])">Insert(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Entity book1 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
+};
+Entity book2 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
+    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
+};
+IReadOnlyList&lt;Key&gt; insertedKeys = db.Insert(book1, book2);
+Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Insert(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of inserted entities, in the same order as <em>entities</em>.
+Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Insert_Google_Datastore_V1_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Insert(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},CallSettings)">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Insert(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of inserted entities, in the same order as <em>entities</em>.
+Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_InsertAsync_Google_Datastore_V1_Entity_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync(Google.Datastore.V1.Entity,CallSettings)">InsertAsync(Entity, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Key&gt; InsertAsync(Entity entity, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to insert. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the key of the inserted entity
+if it was allocated by the server, or <code>null</code> if the inserted entity had a predefined key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_InsertAsync_Google_Datastore_V1_Entity_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_InsertAsync_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync(Google.Datastore.V1.Entity[])">InsertAsync(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Entity book1 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
+};
+Entity book2 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
+    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
+};
+IReadOnlyList&lt;Key&gt; insertedKeys = await db.InsertAsync(book1, book2);
+Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys)}&quot;);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; InsertAsync(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
+a collection of keys of inserted entities, in the same order as <em>entities</em>.
+Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_InsertAsync_Google_Datastore_V1_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},CallSettings)">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; InsertAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
+a collection of keys of inserted entities, in the same order as <em>entities</em>.
+Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Lookup_Google_Datastore_V1_Key_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Lookup(Google.Datastore.V1.Key,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">Lookup(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up a single entity by key.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Entity Lookup(Key key, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The key to look up. Must not be null, and must be complete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Lookup_Google_Datastore_V1_Key_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Lookup_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.Lookup(Google.Datastore.V1.Key[])">Lookup(Key[])</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
+Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
+
+IReadOnlyList&lt;Entity&gt; entities = await db.LookupAsync(key1, key2);
+Console.WriteLine(entities[0]); // Pride and Prejudice entity
+Console.WriteLine(entities[1]); // Nothing (value is null reference)
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Entity&gt; Lookup(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Lookup_Google_Datastore_V1_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+This call may perform multiple RPC operations in order to look up all keys.
+</p>
+<p>
+This overload does not support the <a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a> or <see cref="!:CallSettings"></see> to be specified due to restrictions with
+methods containing a parameter array and optional parameters.
+It simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>, passing in a <code>null</code>
+value for the read consistency and call settings.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Lookup(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_LookupAsync_Google_Datastore_V1_Key_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync(Google.Datastore.V1.Key,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">LookupAsync(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up a single entity by key asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Entity&gt; LookupAsync(Key key, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><em>key</em></td>
+                    <td><p>The key to look up. Must not be null, and must be complete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_LookupAsync_Google_Datastore_V1_Key_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_LookupAsync_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync(Google.Datastore.V1.Key[])">LookupAsync(Key[])</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(params Key[] keys)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_LookupAsync_Google_Datastore_V1_Key____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+This call may perform multiple RPC operations in order to look up all keys.
+</p>
+<p>
+This overload does not support the <a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a> or <see cref="!:CallSettings"></see> to be specified due to restrictions with
+methods containing a parameter array and optional parameters.
+It simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>, passing in a <code>null</code>
+value for the read consistency and call settings.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_RunQuery_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQuery(Google.Datastore.V1.GqlQuery,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author LIMIT @limit&quot;,
+    NamedBindings = {
+        { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } },
+        { &quot;limit&quot;, new GqlQueryParameter { Value = 10 } }
+    },
+};
+DatastoreQueryResults results = db.RunQuery(gqlQuery);
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+foreach (Entity entity in results.Entities)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual DatastoreQueryResults RunQuery(GqlQuery query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a></td>
+                    <td><p>The complete query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_RunQuery_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQuery(Google.Datastore.V1.Query,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;),
+    Limit = 10
+};
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+DatastoreQueryResults results = db.RunQuery(query);
+foreach (Entity entity in results.Entities)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual DatastoreQueryResults RunQuery(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a></td>
+                    <td><p>The complete query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Datastore.V1.GqlQuery,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">RunQueryAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+};
+DatastoreQueryResults results = await db.RunQueryAsync(gqlQuery);
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+foreach (Entity entity in results.Entities)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreQueryResults&gt; RunQueryAsync(GqlQuery query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Datastore.V1.Query,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
+results may be available beyond the query&#39;s limit. Use this method when your query has a limited
+number of results, for example to build a web application which fetches results in pages.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+DatastoreQueryResults results = await db.RunQueryAsync(query);
+// RunQuery fetches all the results into memory in a single call.
+// Constrast this with RunQueryLazily, which merely prepares an enumerable
+// query. Always specify a limit when you use RunQuery, to avoid running
+// out of memory.
+foreach (Entity entity in results.Entities)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreQueryResults&gt; RunQueryAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazily(Google.Datastore.V1.GqlQuery,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+};
+LazyDatastoreQuery results = db.RunQueryLazily(gqlQuery);
+// LazyDatastoreQuery implements IEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResults() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+foreach (Entity entity in results)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazily(Google.Datastore.V1.Query,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+LazyDatastoreQuery results = db.RunQueryLazily(query);
+// LazyDatastoreQuery implements IEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResults() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+foreach (Entity entity in results)
+{
+    Console.WriteLine(entity);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual LazyDatastoreQuery RunQueryLazily(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1.GqlQuery,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">RunQueryLazilyAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+GqlQuery gqlQuery = new GqlQuery
+{
+    QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
+    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+};
+AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(gqlQuery);
+// AsyncLazyDatastoreQuery implements IAsyncEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResultsAsync() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+await results.ForEachAsync(entity =&gt;
+{
+    Console.WriteLine(entity);
+});
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
+                    <td><p>An <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1.Query,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},CallSettings)">RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query for asynchronous consumption.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+Query query = new Query(&quot;book&quot;)
+{
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+};
+AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(query);
+// AsyncLazyDatastoreQuery implements IAsyncEnumerable&lt;Entity&gt;, but you can
+// call AsResponses() to see the raw RPC responses, or
+// GetAllResultsAsync() to get all the results into memory, complete with
+// the end cursor and the reason for the query finishing.
+await results.ForEachAsync(entity =&gt;
+{
+    Console.WriteLine(entity);
+});
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Datastore.V1.ReadOptions.Types.ReadConsistency.html#Google_Datastore_V1_ReadOptions_Types_ReadConsistency">ReadOptions.Types.ReadConsistency</a>&gt;</td>
+                    <td><em>readConsistency</em></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
+                    <td><p>An <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Update_Google_Datastore_V1_Entity_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Update(Google.Datastore.V1.Entity,CallSettings)">Update(Entity, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Update(Entity entity, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to update. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Update_Google_Datastore_V1_Entity_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Update_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.Update(Google.Datastore.V1.Entity[])">Update(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Update(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Update_Google_Datastore_V1_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Update(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},CallSettings)">Update(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void Update(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_Google_Datastore_V1_Entity_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync(Google.Datastore.V1.Entity,CallSettings)">UpdateAsync(Entity, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(Entity entity, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to update. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_Google_Datastore_V1_Entity_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync(Google.Datastore.V1.Entity[])">UpdateAsync(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_Google_Datastore_V1_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},CallSettings)">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Upsert_Google_Datastore_V1_Entity_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Upsert(Google.Datastore.V1.Entity,CallSettings)">Upsert(Entity, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Key Upsert(Entity entity, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to upsert. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
+                    <td><p><code>null</code> if the entity was updated or was inserted with a predefined key, or the new key if the entity was inserted
+    and the mutation allocated the key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Upsert_Google_Datastore_V1_Entity_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Upsert_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.Upsert(Google.Datastore.V1.Entity[])">Upsert(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Upsert(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
+which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+with a predefined key will have a null value in the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_Upsert_Google_Datastore_V1_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Upsert(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},CallSettings)">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Upsert(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
+which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+with a predefined key will have a null value in the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_Google_Datastore_V1_Entity_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync(Google.Datastore.V1.Entity,CallSettings)">UpsertAsync(Entity, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Key&gt; UpsertAsync(Entity entity, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
+                    <td><em>entity</em></td>
+                    <td><p>The entity to upsert. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
+<code>null</code> if the entity was updated or was inserted with a predefined key, or the
+new key if the entity was inserted and the mutation allocated the key.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_Google_Datastore_V1_Entity_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync(Google.Datastore.V1.Entity[])">UpsertAsync(Entity[])</h4>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; UpsertAsync(params Entity[] entities)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
+a collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
+which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+with a predefined key will have a null value in the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_Google_Datastore_V1_Entity____remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>
+Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
+To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
+</p>
+</div>
+              <h4 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},CallSettings)">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; UpsertAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><em>entities</em></td>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
+a collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
+which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+with a predefined key will have a null value in the collection.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

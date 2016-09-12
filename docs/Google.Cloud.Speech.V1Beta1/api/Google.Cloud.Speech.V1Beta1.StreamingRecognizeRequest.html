@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StreamingRecognizeRequest
+   | Google.Cloud.Speech.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StreamingRecognizeRequest
+   | Google.Cloud.Speech.V1Beta1 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest">Class StreamingRecognizeRequest
+              </h1>
+              <div class="markdown level0 summary"><p> <code>StreamingRecognizeRequest</code> is the top-level message sent by the client for
+ the <code>StreamingRecognize</code>. Multiple <code>StreamingRecognizeRequest</code> messages are
+ sent. The first message must contain a <code>streaming_config</code> message and must
+ not contain <code>audio</code> data. All subsequent messages must contain <code>audio</code> data
+ and must not contain a <code>streaming_config</code> message.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">StreamingRecognizeRequest</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1Beta1</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1Beta1.dll</h6>
+              <h5 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class StreamingRecognizeRequest : IMessage&lt;StreamingRecognizeRequest&gt;, IMessage, IEquatable&lt;StreamingRecognizeRequest&gt;, IDeepCloneable&lt;StreamingRecognizeRequest&gt;</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest__ctor" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.#ctor">StreamingRecognizeRequest()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public StreamingRecognizeRequest()</code></pre>
+              </div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest__ctor_Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.#ctor(Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest)">StreamingRecognizeRequest(StreamingRecognizeRequest)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public StreamingRecognizeRequest(StreamingRecognizeRequest other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest">StreamingRecognizeRequest</a></td>
+                    <td><em>other</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="fields">Fields
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_AudioContentFieldNumber" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.AudioContentFieldNumber">AudioContentFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;audio_content&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int AudioContentFieldNumber = 2</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_StreamingConfigFieldNumber" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.StreamingConfigFieldNumber">StreamingConfigFieldNumber</h4>
+              <div class="markdown level1 summary"><p>Field number for the &quot;streaming_config&quot; field.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int StreamingConfigFieldNumber = 1</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_AudioContent" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.AudioContent">AudioContent</h4>
+              <div class="markdown level1 summary"><p> The audio data to be recognized. Sequential chunks of audio data are sent
+ in sequential <code>StreamingRecognizeRequest</code> messages. The first
+ <code>StreamingRecognizeRequest</code> message must not contain <code>audio_content</code> data
+ and all subsequent <code>StreamingRecognizeRequest</code> messages must contain
+ <code>audio_content</code> data. The audio bytes must be encoded as specified in
+ <code>RecognitionConfig</code>. Note: as with all bytes fields, protobuffers use a
+ pure binary representation (not base64).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ByteString AudioContent { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_Descriptor" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.Descriptor">Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_Parser" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.Parser">Parser</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static MessageParser&lt;StreamingRecognizeRequest&gt; Parser { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.MessageParser</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest">StreamingRecognizeRequest</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_StreamingConfig" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.StreamingConfig">StreamingConfig</h4>
+              <div class="markdown level1 summary"><p> The <code>streaming_config</code> message provides information to the recognizer
+ that specifies how to process the request.</p>
+<p> The first <code>StreamingRecognizeRequest</code> message must contain a
+ <code>streaming_config</code>  message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public StreamingRecognitionConfig StreamingConfig { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.html#Google_Cloud_Speech_V1Beta1_StreamingRecognitionConfig">StreamingRecognitionConfig</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_StreamingRequestCase" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.StreamingRequestCase">StreamingRequestCase</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public StreamingRecognizeRequest.StreamingRequestOneofCase StreamingRequestCase { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.StreamingRequestOneofCase.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_StreamingRequestOneofCase">StreamingRecognizeRequest.StreamingRequestOneofCase</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_CalculateSize" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.CalculateSize">CalculateSize()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_ClearStreamingRequest" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.ClearStreamingRequest">ClearStreamingRequest()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ClearStreamingRequest()</code></pre>
+              </div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_Clone" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.Clone">Clone()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public StreamingRecognizeRequest Clone()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest">StreamingRecognizeRequest</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest&gt;.Clone()</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_Equals_Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.Equals(Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest)">Equals(StreamingRecognizeRequest)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Equals(StreamingRecognizeRequest other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest">StreamingRecognizeRequest</a></td>
+                    <td><em>other</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IEquatable&lt;Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest&gt;.Equals(Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest)</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_Equals_System_Object_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.Equals(System.Object)">Equals(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>other</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_GetHashCode" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.GetHashCode">GetHashCode()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_MergeFrom_Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.MergeFrom(Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest)">MergeFrom(StreamingRecognizeRequest)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(StreamingRecognizeRequest other)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest">StreamingRecognizeRequest</a></td>
+                    <td><em>other</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest&gt;.MergeFrom(Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest)</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
+                    <td><em>input</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_ToString" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.ToString">ToString()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
+                    <td><em>output</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Reflection.MessageDescriptor</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Protobuf.IMessage.Descriptor</span></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

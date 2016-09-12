@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Frequently Asked Questions | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Frequently Asked Questions | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+              
+<h2 id="why-do-libraries-for-grpc-based-apis-fail-with-dotnet-cli">Why do libraries for gRPC-based APIs fail with dotnet cli?</h2>
+<p>The beta01 release of the libraries depends on gRPC 0.15. The
+C# implementation of gRPC uses native libraries (e.g.
+<code>grpc_csharp_ext.dll</code>), which are contained in the <code>Grpc.Core</code>
+NuGet package.</p>
+<p>The way in which these native libraries are copied at build time and
+discovered at execution time depends on the toolchain used to build
+the application, and gRPC 0.15 does not load these libraries correctly
+under <code>dotnet cli</code>.</p>
+<p>We hope to have a fix for this in time for the next beta release.</p>
+<h2 id="how-can-i-use-the-local-emulator-for-datastore-or-pubsub">How can I use the local emulator for Datastore or Pub/Sub?</h2>
+<p>Currently the libraries have no knowledge of the local emulators.
+However, when creating a client, you can configure the endpoint that the library
+connects to. If you set that endpoint to the port of an emulator, your
+application should be able to use the emulator with no issues.</p>
+<p>We hope to make this simpler to use in a future beta release.</p>
+<h2 id="why-do-the-libraries-not-support-net-core">Why do the libraries not support .NET Core?</h2>
+<p>Currently some of the dependencies have limited portability, which prevents
+us from targeting the <code>netstandard1.x</code> framework. We are working to resolve
+these restrictions, and hope to support <code>netstandard1.5</code> for gRPC-based APIs
+and <code>netstandard1.3</code> for REST-based APIs in the future. We expect this to be
+sufficient for most customers, but please
+<a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new">let us know</a>
+if you have specific environments where you need support for lower versions,
+and we can see what options are available.</p>
+<h2 id="why-do-credentials-specified-with-googleapplicationcredentials-fail">Why do credentials specified with GOOGLE_APPLICATION_CREDENTIALS fail?</h2>
+<p>By default, if you don&#39;t have the <code>GOOGLE_APPLICATION_CREDENTIALS</code>
+environment variable set, the credentials will be obtained from the
+<code>gcloud</code> tool, and will work with no problems. When credentials are
+loaded from a file specified by the environment variable, they have
+no scopes attached, and our gRPC-based API code didn&#39;t attach the
+scopes required.</p>
+<p>See <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/294">issue
+294</a>
+for the details, but the upshot is that it&#39;s been fixed, but isn&#39;t
+in a public beta release yet.</p>
+<p>If you need to use credentials in this way, you can use our <a href="https://www.myget.org/gallery/google-dotnet-public">public
+myget feed</a> and
+fetch the latest version of the packages from there. (These are our
+continuous integration builds.) From CI00174 onwards, the problem
+should be fixed.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

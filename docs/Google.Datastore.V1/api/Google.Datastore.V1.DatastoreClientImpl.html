@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DatastoreClientImpl
+   | Google.Datastore.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DatastoreClientImpl
+   | Google.Datastore.V1 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Datastore_V1_DatastoreClientImpl" data-uid="Google.Datastore.V1.DatastoreClientImpl">Class DatastoreClientImpl
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a></div>
+                  <div class="level2"><span class="xref">DatastoreClientImpl</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_DefaultEndpoint">DatastoreClient.DefaultEndpoint</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_DefaultScopes">DatastoreClient.DefaultScopes</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CreateAsync_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">DatastoreClient.CreateAsync(ServiceEndpoint, DatastoreSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Create_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">DatastoreClient.Create(ServiceEndpoint, DatastoreSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Create_Channel_Google_Datastore_V1_DatastoreSettings_">DatastoreClient.Create(Channel, DatastoreSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_ShutdownDefaultChannelsAsync">DatastoreClient.ShutdownDefaultChannelsAsync()</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Threading_CancellationToken_">DatastoreClient.LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_System_Threading_CancellationToken_">DatastoreClient.RunQueryAsync(String, PartitionId, ReadOptions, Query, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_System_Threading_CancellationToken_">DatastoreClient.RunQueryAsync(String, PartitionId, ReadOptions, GqlQuery, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_System_Threading_CancellationToken_">DatastoreClient.BeginTransactionAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__System_Threading_CancellationToken_">DatastoreClient.CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__System_Threading_CancellationToken_">DatastoreClient.CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_System_Threading_CancellationToken_">DatastoreClient.RollbackAsync(String, ByteString, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Threading_CancellationToken_">DatastoreClient.AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CancellationToken)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Datastore.V1</h6>
+              <h6><strong>Assembly</strong>:Google.Datastore.V1.dll</h6>
+              <h5 id="Google_Datastore_V1_DatastoreClientImpl_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class DatastoreClientImpl : DatastoreClient</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl__ctor_Google_Datastore_V1_Datastore_DatastoreClient_Google_Datastore_V1_DatastoreSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.#ctor(Google.Datastore.V1.Datastore.DatastoreClient,Google.Datastore.V1.DatastoreSettings)">DatastoreClientImpl(Datastore.DatastoreClient, DatastoreSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DatastoreClientImpl(Datastore.DatastoreClient grpcClient, DatastoreSettings settings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Datastore.DatastoreClient.html#Google_Datastore_V1_Datastore_DatastoreClient">Datastore.DatastoreClient</a></td>
+                    <td><em>grpcClient</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_GrpcClient" data-uid="Google.Datastore.V1.DatastoreClientImpl.GrpcClient">GrpcClient</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Datastore.DatastoreClient GrpcClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Datastore.DatastoreClient.html#Google_Datastore_V1_Datastore_DatastoreClient">Datastore.DatastoreClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_GrpcClient">DatastoreClient.GrpcClient</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.AllocateIds(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">AllocateIds(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
+before it is inserted.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override AllocateIdsResponse AllocateIds(string projectId, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>A list of keys with incomplete key paths for which to allocate IDs.
+No key may be reserved/read-only.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.AllocateIdsResponse.html#Google_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">DatastoreClient.AllocateIds(String, IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.AllocateIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
+before it is inserted.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;AllocateIdsResponse&gt; AllocateIdsAsync(string projectId, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>A list of keys with incomplete key paths for which to allocate IDs.
+No key may be reserved/read-only.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.AllocateIdsResponse.html#Google_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">DatastoreClient.AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_BeginTransaction_System_String_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.BeginTransaction(System.String,CallSettings)">BeginTransaction(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BeginTransactionResponse BeginTransaction(string projectId, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.BeginTransactionResponse.html#Google_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_BeginTransaction_System_String_CallSettings_">DatastoreClient.BeginTransaction(String, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_BeginTransactionAsync_System_String_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.BeginTransactionAsync(System.String,CallSettings)">BeginTransactionAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(string projectId, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.BeginTransactionResponse.html#Google_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_CallSettings_">DatastoreClient.BeginTransactionAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_Commit_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.Commit(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},CallSettings)">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
+entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.CommitRequest.Types.Mode.html#Google_Datastore_V1_CommitRequest_Types_Mode">CommitRequest.Types.Mode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
+                    <td><em>transaction</em></td>
+                    <td><p>The identifier of the transaction associated with the commit. A
+transaction identifier is returned by a call to
+[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
+                    <td><em>mutations</em></td>
+                    <td><p>The mutations to perform.</p>
+<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
+applied in order. The following sequences of mutations affecting a single
+entity are not permitted in a single <code>Commit</code> request:</p>
+<ul>
+<li><code>insert</code> followed by <code>insert</code></li>
+<li><code>update</code> followed by <code>insert</code></li>
+<li><code>upsert</code> followed by <code>insert</code></li>
+<li><code>delete</code> followed by <code>update</code></li>
+</ul>
+<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
+entity.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Commit_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_">DatastoreClient.Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_Commit_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.Commit(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},CallSettings)">Commit(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
+entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.CommitRequest.Types.Mode.html#Google_Datastore_V1_CommitRequest_Types_Mode">CommitRequest.Types.Mode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
+                    <td><em>mutations</em></td>
+                    <td><p>The mutations to perform.</p>
+<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
+applied in order. The following sequences of mutations affecting a single
+entity are not permitted in a single <code>Commit</code> request:</p>
+<ul>
+<li><code>insert</code> followed by <code>insert</code></li>
+<li><code>update</code> followed by <code>insert</code></li>
+<li><code>upsert</code> followed by <code>insert</code></li>
+<li><code>delete</code> followed by <code>update</code></li>
+</ul>
+<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
+entity.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Commit_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_">DatastoreClient.Commit(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.CommitAsync(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
+entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.CommitRequest.Types.Mode.html#Google_Datastore_V1_CommitRequest_Types_Mode">CommitRequest.Types.Mode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
+                    <td><em>transaction</em></td>
+                    <td><p>The identifier of the transaction associated with the commit. A
+transaction identifier is returned by a call to
+[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
+                    <td><em>mutations</em></td>
+                    <td><p>The mutations to perform.</p>
+<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
+applied in order. The following sequences of mutations affecting a single
+entity are not permitted in a single <code>Commit</code> request:</p>
+<ul>
+<li><code>insert</code> followed by <code>insert</code></li>
+<li><code>update</code> followed by <code>insert</code></li>
+<li><code>upsert</code> followed by <code>insert</code></li>
+<li><code>delete</code> followed by <code>update</code></li>
+</ul>
+<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
+entity.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_">DatastoreClient.CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.CommitAsync(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
+entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.CommitRequest.Types.Mode.html#Google_Datastore_V1_CommitRequest_Types_Mode">CommitRequest.Types.Mode</a></td>
+                    <td><em>mode</em></td>
+                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
+                    <td><em>mutations</em></td>
+                    <td><p>The mutations to perform.</p>
+<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
+applied in order. The following sequences of mutations affecting a single
+entity are not permitted in a single <code>Commit</code> request:</p>
+<ul>
+<li><code>insert</code> followed by <code>insert</code></li>
+<li><code>update</code> followed by <code>insert</code></li>
+<li><code>upsert</code> followed by <code>insert</code></li>
+<li><code>delete</code> followed by <code>update</code></li>
+</ul>
+<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
+entity.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_">DatastoreClient.CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_Lookup_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.Lookup(System.String,Google.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override LookupResponse Lookup(string projectId, ReadOptions readOptions, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
+                    <td><em>readOptions</em></td>
+                    <td><p>The options for this lookup request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>Keys of entities to look up.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.LookupResponse.html#Google_Datastore_V1_LookupResponse">LookupResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Lookup_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">DatastoreClient.Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_LookupAsync_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.LookupAsync(System.String,Google.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;LookupResponse&gt; LookupAsync(string projectId, ReadOptions readOptions, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
+                    <td><em>readOptions</em></td>
+                    <td><p>The options for this lookup request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><em>keys</em></td>
+                    <td><p>Keys of entities to look up.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.LookupResponse.html#Google_Datastore_V1_LookupResponse">LookupResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_">DatastoreClient.LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_Rollback_System_String_Google_Protobuf_ByteString_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.Rollback(System.String,Google.Protobuf.ByteString,CallSettings)">Rollback(String, ByteString, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override RollbackResponse Rollback(string projectId, ByteString transaction, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
+                    <td><em>transaction</em></td>
+                    <td><p>The transaction identifier, returned by a call to
+[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.RollbackResponse.html#Google_Datastore_V1_RollbackResponse">RollbackResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Rollback_System_String_Google_Protobuf_ByteString_CallSettings_">DatastoreClient.Rollback(String, ByteString, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_RollbackAsync_System_String_Google_Protobuf_ByteString_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.RollbackAsync(System.String,Google.Protobuf.ByteString,CallSettings)">RollbackAsync(String, ByteString, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;RollbackResponse&gt; RollbackAsync(string projectId, ByteString transaction, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
+                    <td><em>transaction</em></td>
+                    <td><p>The transaction identifier, returned by a call to
+[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RollbackResponse.html#Google_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_CallSettings_">DatastoreClient.RollbackAsync(String, ByteString, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_RunQuery_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.RunQuery(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.GqlQuery,CallSettings)">RunQuery(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override RunQueryResponse RunQuery(string projectId, PartitionId partitionId, ReadOptions readOptions, GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
+                    <td><em>partitionId</em></td>
+                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
+Queries are scoped to a single partition.
+This partition ID is normalized with the standard default context
+partition ID.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
+                    <td><em>readOptions</em></td>
+                    <td><p>The options for this query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td><p>The GQL query to run.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_RunQuery_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_CallSettings_">DatastoreClient.RunQuery(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_RunQuery_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.RunQuery(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.Query,CallSettings)">RunQuery(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override RunQueryResponse RunQuery(string projectId, PartitionId partitionId, ReadOptions readOptions, Query query, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
+                    <td><em>partitionId</em></td>
+                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
+Queries are scoped to a single partition.
+This partition ID is normalized with the standard default context
+partition ID.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
+                    <td><em>readOptions</em></td>
+                    <td><p>The options for this query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to run.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_RunQuery_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_CallSettings_">DatastoreClient.RunQuery(String, PartitionId, ReadOptions, Query, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.RunQueryAsync(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.GqlQuery,CallSettings)">RunQueryAsync(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;RunQueryResponse&gt; RunQueryAsync(string projectId, PartitionId partitionId, ReadOptions readOptions, GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
+                    <td><em>partitionId</em></td>
+                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
+Queries are scoped to a single partition.
+This partition ID is normalized with the standard default context
+partition ID.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
+                    <td><em>readOptions</em></td>
+                    <td><p>The options for this query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
+                    <td><em>gqlQuery</em></td>
+                    <td><p>The GQL query to run.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_CallSettings_">DatastoreClient.RunQueryAsync(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</a></div>
+              <h4 id="Google_Datastore_V1_DatastoreClientImpl_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClientImpl.RunQueryAsync(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.Query,CallSettings)">RunQueryAsync(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;RunQueryResponse&gt; RunQueryAsync(string projectId, PartitionId partitionId, ReadOptions readOptions, Query query, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project against which to make the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
+                    <td><em>partitionId</em></td>
+                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
+Queries are scoped to a single partition.
+This partition ID is normalized with the standard default context
+partition ID.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
+                    <td><em>readOptions</em></td>
+                    <td><p>The options for this query.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
+                    <td><em>query</em></td>
+                    <td><p>The query to run.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_CallSettings_">DatastoreClient.RunQueryAsync(String, PartitionId, ReadOptions, Query, CallSettings)</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

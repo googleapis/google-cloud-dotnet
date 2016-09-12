@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BigqueryClientImpl
+   | Google.Bigquery.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BigqueryClientImpl
+   | Google.Bigquery.V2 ">
+    <meta name="generator" content="docfx 2.4.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Bigquery_V2_BigqueryClientImpl" data-uid="Google.Bigquery.V2.BigqueryClientImpl">Class BigqueryClientImpl
+              </h1>
+              <div class="markdown level0 summary"><p>Wrapper around <see cref="!:BigqueryService"></see> to provide simpler operations.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a></div>
+                  <div class="level2"><span class="xref">BigqueryClientImpl</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_GoogleCredential_">BigqueryClient.CreateAsync(String, GoogleCredential)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Create_System_String_GoogleCredential_">BigqueryClient.Create(String, GoogleCredential)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTableReference_System_String_System_String_">BigqueryClient.GetTableReference(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTableReference_System_String_System_String_System_String_">BigqueryClient.GetTableReference(String, String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDatasetReference_System_String_">BigqueryClient.GetDatasetReference(String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDatasetReference_System_String_System_String_">BigqueryClient.GetDatasetReference(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetProjectReference_System_String_">BigqueryClient.GetProjectReference(String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_">BigqueryClient.GetJobReference(String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobReference_System_String_System_String_">BigqueryClient.GetJobReference(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_System_String_Google_Bigquery_V2_GetDatasetOptions_">BigqueryClient.GetDataset(String, GetDatasetOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_System_String_System_String_Google_Bigquery_V2_GetDatasetOptions_">BigqueryClient.GetDataset(String, String, GetDatasetOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Bigquery_V2_ListDatasetsOptions_">BigqueryClient.ListDatasets(ListDatasetsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_System_String_Google_Bigquery_V2_ListDatasetsOptions_">BigqueryClient.ListDatasets(String, ListDatasetsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_System_String_Google_Bigquery_V2_CreateDatasetOptions_">BigqueryClient.CreateDataset(String, CreateDatasetOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_System_String_System_String_Google_Bigquery_V2_CreateDatasetOptions_">BigqueryClient.CreateDataset(String, String, CreateDatasetOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_System_String_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_">BigqueryClient.GetOrCreateDataset(String, GetDatasetOptions, CreateDatasetOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_System_String_System_String_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_">BigqueryClient.GetOrCreateDataset(String, String, GetDatasetOptions, CreateDatasetOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_Google_Bigquery_V2_DeleteDatasetOptions_">BigqueryClient.DeleteDataset(String, DeleteDatasetOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_System_String_Google_Bigquery_V2_DeleteDatasetOptions_">BigqueryClient.DeleteDataset(String, String, DeleteDatasetOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">BigqueryClient.UploadCsv(String, String, String, TableSchema, Stream, UploadCsvOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">BigqueryClient.UploadCsv(String, String, TableSchema, Stream, UploadCsvOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_System_String_System_String_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">BigqueryClient.UploadJson(String, String, String, TableSchema, Stream, UploadJsonOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_System_String_System_String_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">BigqueryClient.UploadJson(String, String, TableSchema, Stream, UploadJsonOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_">BigqueryClient.Insert(String, String, String, InsertRow, InsertOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_">BigqueryClient.Insert(String, String, InsertRow, InsertOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_TableReference_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_">BigqueryClient.Insert(TableReference, InsertRow, InsertOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow___">BigqueryClient.Insert(String, String, String, InsertRow[])</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_Google_Bigquery_V2_InsertRow___">BigqueryClient.Insert(String, String, InsertRow[])</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_TableReference_Google_Bigquery_V2_InsertRow___">BigqueryClient.Insert(TableReference, InsertRow[])</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">BigqueryClient.Insert(String, String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">BigqueryClient.Insert(String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobs(ListJobsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_System_String_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobs(String, ListJobsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_System_String_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollJob(String, PollJobOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_System_String_System_String_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollJob(String, String, PollJobOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_System_String_Google_Bigquery_V2_GetJobOptions_">BigqueryClient.GetJob(String, GetJobOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_System_String_System_String_Google_Bigquery_V2_GetJobOptions_">BigqueryClient.GetJob(String, String, GetJobOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_Google_Bigquery_V2_CancelJobOptions_">BigqueryClient.CancelJob(String, CancelJobOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_System_String_Google_Bigquery_V2_CancelJobOptions_">BigqueryClient.CancelJob(String, String, CancelJobOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_System_String_Google_Bigquery_V2_GetQueryResultsOptions_">BigqueryClient.GetQueryResults(String, GetQueryResultsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_System_String_System_String_Google_Bigquery_V2_GetQueryResultsOptions_">BigqueryClient.GetQueryResults(String, String, GetQueryResultsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_System_String_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRows(String, String, String, TableSchema, ListRowsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRows(String, String, TableSchema, ListRowsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_System_String_Google_Bigquery_V2_GetTableOptions_">BigqueryClient.GetTable(String, String, String, GetTableOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_Google_Bigquery_V2_GetTableOptions_">BigqueryClient.GetTable(String, String, GetTableOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_System_String_System_String_Google_Bigquery_V2_ListTablesOptions_">BigqueryClient.ListTables(String, String, ListTablesOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_System_String_Google_Bigquery_V2_ListTablesOptions_">BigqueryClient.ListTables(String, ListTablesOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_System_String_System_String_System_String_TableSchema_Google_Bigquery_V2_CreateTableOptions_">BigqueryClient.CreateTable(String, String, String, TableSchema, CreateTableOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_System_String_System_String_TableSchema_Google_Bigquery_V2_CreateTableOptions_">BigqueryClient.CreateTable(String, String, TableSchema, CreateTableOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_System_String_System_String_System_String_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_">BigqueryClient.GetOrCreateTable(String, String, String, TableSchema, GetTableOptions, CreateTableOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_System_String_System_String_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_">BigqueryClient.GetOrCreateTable(String, String, TableSchema, GetTableOptions, CreateTableOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_">BigqueryClient.DeleteTable(String, String, String, DeleteTableOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_">BigqueryClient.DeleteTable(String, String, DeleteTableOptions)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Bigquery.V2</h6>
+              <h6><strong>Assembly</strong>:Google.Bigquery.V2.dll</h6>
+              <h5 id="Google_Bigquery_V2_BigqueryClientImpl_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class BigqueryClientImpl : BigqueryClient</code></pre>
+              </div>
+              <h5 id="Google_Bigquery_V2_BigqueryClientImpl_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>. Most client code
+should refer to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>, creating instances with</p>
+<p><see cref="!:BigqueryClient.Create(string, Apis.Auth.OAuth2.GoogleCredential)"></see> and</p>
+<p><see cref="!:BigqueryClient.CreateAsync(string, Apis.Auth.OAuth2.GoogleCredential)"></see>. The constructor
+of this class is public for the sake of constructor-based dependency injection.</p>
+</div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl__ctor_ProjectReference_BigqueryService_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.#ctor(ProjectReference,BigqueryService)">BigqueryClientImpl(ProjectReference, BigqueryService)</h4>
+              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <see cref="!:BigqueryService"></see>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigqueryClientImpl(ProjectReference projectReference, BigqueryService service)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">ProjectReference</span></td>
+                    <td><em>projectReference</em></td>
+                    <td><p>A fully-qualified identifier for the project. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">BigqueryService</span></td>
+                    <td><em>service</em></td>
+                    <td><p>The service to wrap. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl__ctor_System_String_BigqueryService_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.#ctor(System.String,BigqueryService)">BigqueryClientImpl(String, BigqueryService)</h4>
+              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <see cref="!:BigqueryService"></see>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigqueryClientImpl(string projectId, BigqueryService service)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>The ID of the project to work with. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">BigqueryService</span></td>
+                    <td><em>service</em></td>
+                    <td><p>The service to wrap. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ApplicationName" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ApplicationName">ApplicationName</h4>
+              <div class="markdown level1 summary"><p>The default application name used when creating a <see cref="!:BigqueryService"></see>.
+Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string ApplicationName { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Bigquery_V2_BigqueryClientImpl_ApplicationName_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Most applications will never want to set this, which is why it&#39;s in this class rather than</p>
+<p><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>.</p>
+</div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ProjectId" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ProjectId">ProjectId</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ProjectId { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ProjectId">BigqueryClient.ProjectId</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_Service" data-uid="Google.Bigquery.V2.BigqueryClientImpl.Service">Service</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryService Service { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">BigqueryService</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Service">BigqueryClient.Service</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CancelJob_JobReference_Google_Bigquery_V2_CancelJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CancelJob(JobReference,Google.Bigquery.V2.CancelJobOptions)">CancelJob(JobReference, CancelJobOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryJob CancelJob(JobReference jobReference, CancelJobOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">JobReference</span></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CancelJobOptions.html#Google_Bigquery_V2_CancelJobOptions">CancelJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_JobReference_Google_Bigquery_V2_CancelJobOptions_">BigqueryClient.CancelJob(JobReference, CancelJobOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateDataset_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateDataset(DatasetReference,Google.Bigquery.V2.CreateDatasetOptions)">CreateDataset(DatasetReference, CreateDatasetOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryDataset CreateDataset(DatasetReference datasetReference, CreateDatasetOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DatasetReference</span></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateDatasetOptions.html#Google_Bigquery_V2_CreateDatasetOptions">CreateDatasetOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_">BigqueryClient.CreateDataset(DatasetReference, CreateDatasetOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJob_System_String_Google_Bigquery_V2_CreateQueryJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJob(System.String,Google.Bigquery.V2.CreateQueryJobOptions)">CreateQueryJob(String, CreateQueryJobOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sql</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions">CreateQueryJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateQueryJob_System_String_Google_Bigquery_V2_CreateQueryJobOptions_">BigqueryClient.CreateQueryJob(String, CreateQueryJobOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateTable_TableReference_TableSchema_Google_Bigquery_V2_CreateTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateTable(TableReference,TableSchema,Google.Bigquery.V2.CreateTableOptions)">CreateTable(TableReference, TableSchema, CreateTableOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryTable CreateTable(TableReference tableReference, TableSchema schema, CreateTableOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableReference</span></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TableSchema</span></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateTableOptions.html#Google_Bigquery_V2_CreateTableOptions">CreateTableOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_TableReference_TableSchema_Google_Bigquery_V2_CreateTableOptions_">BigqueryClient.CreateTable(TableReference, TableSchema, CreateTableOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_DeleteDataset_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteDataset(DatasetReference,Google.Bigquery.V2.DeleteDatasetOptions)">DeleteDataset(DatasetReference, DeleteDatasetOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void DeleteDataset(DatasetReference datasetReference, DeleteDatasetOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DatasetReference</span></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.DeleteDatasetOptions.html#Google_Bigquery_V2_DeleteDatasetOptions">DeleteDatasetOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_">BigqueryClient.DeleteDataset(DatasetReference, DeleteDatasetOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_DeleteTable_TableReference_Google_Bigquery_V2_DeleteTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteTable(TableReference,Google.Bigquery.V2.DeleteTableOptions)">DeleteTable(TableReference, DeleteTableOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void DeleteTable(TableReference tableReference, DeleteTableOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableReference</span></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.DeleteTableOptions.html#Google_Bigquery_V2_DeleteTableOptions">DeleteTableOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_TableReference_Google_Bigquery_V2_DeleteTableOptions_">BigqueryClient.DeleteTable(TableReference, DeleteTableOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQuery_System_String_Google_Bigquery_V2_ExecuteQueryOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQuery(System.String,Google.Bigquery.V2.ExecuteQueryOptions)">ExecuteQuery(String, ExecuteQueryOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryResult ExecuteQuery(string sql, ExecuteQueryOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sql</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ExecuteQueryOptions.html#Google_Bigquery_V2_ExecuteQueryOptions">ExecuteQueryOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ExecuteQuery_System_String_Google_Bigquery_V2_ExecuteQueryOptions_">BigqueryClient.ExecuteQuery(String, ExecuteQueryOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetDataset_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions)">GetDataset(DatasetReference, GetDatasetOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryDataset GetDataset(DatasetReference datasetReference, GetDatasetOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DatasetReference</span></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetDatasetOptions.html#Google_Bigquery_V2_GetDatasetOptions">GetDatasetOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_">BigqueryClient.GetDataset(DatasetReference, GetDatasetOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetJob_JobReference_Google_Bigquery_V2_GetJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetJob(JobReference,Google.Bigquery.V2.GetJobOptions)">GetJob(JobReference, GetJobOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryJob GetJob(JobReference jobReference, GetJobOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">JobReference</span></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetJobOptions.html#Google_Bigquery_V2_GetJobOptions">GetJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_JobReference_Google_Bigquery_V2_GetJobOptions_">BigqueryClient.GetJob(JobReference, GetJobOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateDataset_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateDataset(DatasetReference,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)">GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryDataset GetOrCreateDataset(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DatasetReference</span></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetDatasetOptions.html#Google_Bigquery_V2_GetDatasetOptions">GetDatasetOptions</a></td>
+                    <td><em>getOptions</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateDatasetOptions.html#Google_Bigquery_V2_CreateDatasetOptions">CreateDatasetOptions</a></td>
+                    <td><em>createOptions</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_">BigqueryClient.GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateTable_TableReference_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateTable(TableReference,TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)">GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryTable GetOrCreateTable(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableReference</span></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TableSchema</span></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetTableOptions.html#Google_Bigquery_V2_GetTableOptions">GetTableOptions</a></td>
+                    <td><em>getOptions</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateTableOptions.html#Google_Bigquery_V2_CreateTableOptions">CreateTableOptions</a></td>
+                    <td><em>createOptions</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_TableReference_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_">BigqueryClient.GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetQueryResults_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetQueryResults(JobReference,Google.Bigquery.V2.GetQueryResultsOptions)">GetQueryResults(JobReference, GetQueryResultsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryResult GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">JobReference</span></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions">GetQueryResultsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_">BigqueryClient.GetQueryResults(JobReference, GetQueryResultsOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetTable_TableReference_Google_Bigquery_V2_GetTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetTable(TableReference,Google.Bigquery.V2.GetTableOptions)">GetTable(TableReference, GetTableOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryTable GetTable(TableReference tableReference, GetTableOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableReference</span></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetTableOptions.html#Google_Bigquery_V2_GetTableOptions">GetTableOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_TableReference_Google_Bigquery_V2_GetTableOptions_">BigqueryClient.GetTable(TableReference, GetTableOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_Insert_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.Insert(TableReference,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)">Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void Insert(TableReference tableReference, IEnumerable&lt;InsertRow&gt; rows, InsertOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableReference</span></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow">InsertRow</a>&gt;</td>
+                    <td><em>rows</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.InsertOptions.html#Google_Bigquery_V2_InsertOptions">InsertOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">BigqueryClient.Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListDatasets_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListDatasets(ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)">ListDatasets(ProjectReference, ListDatasetsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;DatasetList, BigqueryDataset&gt; ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">ProjectReference</span></td>
+                    <td><em>projectReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListDatasetsOptions.html#Google_Bigquery_V2_ListDatasetsOptions">ListDatasetsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IPagedEnumerable</span>&lt;<span class="xref">DatasetList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">BigqueryClient.ListDatasets(ProjectReference, ListDatasetsOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListJobs_ProjectReference_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListJobs(ProjectReference,Google.Bigquery.V2.ListJobsOptions)">ListJobs(ProjectReference, ListJobsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;JobList, BigqueryJob&gt; ListJobs(ProjectReference projectReference, ListJobsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">ProjectReference</span></td>
+                    <td><em>projectReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListJobsOptions.html#Google_Bigquery_V2_ListJobsOptions">ListJobsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IPagedEnumerable</span>&lt;<span class="xref">JobList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_ProjectReference_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobs(ProjectReference, ListJobsOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListRows_TableReference_TableSchema_Google_Bigquery_V2_ListRowsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListRows(TableReference,TableSchema,Google.Bigquery.V2.ListRowsOptions)">ListRows(TableReference, TableSchema, ListRowsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryResult ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableReference</span></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TableSchema</span></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListRowsOptions.html#Google_Bigquery_V2_ListRowsOptions">ListRowsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryResult.html#Google_Bigquery_V2_BigqueryResult">BigqueryResult</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_TableReference_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRows(TableReference, TableSchema, ListRowsOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListTables_DatasetReference_Google_Bigquery_V2_ListTablesOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListTables(DatasetReference,Google.Bigquery.V2.ListTablesOptions)">ListTables(DatasetReference, ListTablesOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;TableList, BigqueryTable&gt; ListTables(DatasetReference datasetReference, ListTablesOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">DatasetReference</span></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListTablesOptions.html#Google_Bigquery_V2_ListTablesOptions">ListTablesOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">IPagedEnumerable</span>&lt;<span class="xref">TableList</span>, <a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">BigqueryClient.ListTables(DatasetReference, ListTablesOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_PollJob_JobReference_Google_Bigquery_V2_PollJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollJob(JobReference,Google.Bigquery.V2.PollJobOptions)">PollJob(JobReference, PollJobOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryJob PollJob(JobReference jobReference, PollJobOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">JobReference</span></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions">PollJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJob_JobReference_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollJob(JobReference, PollJobOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_UploadCsv_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadCsv(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryJob UploadCsv(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableReference</span></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TableSchema</span></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions">UploadCsvOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">BigqueryClient.UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a></div>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_UploadJson_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadJson(TableReference,TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TableReference</span></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TableSchema</span></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.UploadJsonOptions.html#Google_Bigquery_V2_UploadJsonOptions">UploadJsonOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_TableReference_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">BigqueryClient.UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
