@@ -26,7 +26,7 @@ build_api_docs() {
   
   docfx.cmd metadata -f output/$api/docfx.json
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
-  docfx.cmd output/$api/docfx.json
+  docfx.cmd build output/$api/docfx.json
 
   # Special case root: that should end up in the root of the assembled
   # site.
@@ -55,6 +55,8 @@ mkdir output/assembled
 fetch gax-dotnet googleapis/gax-dotnet
 # For Google.Protobuf
 fetch protobuf google/protobuf
+# Remove // comments in project.json; dotnet cli is fine with it, but docfx isn't.
+sed -i -r 's/\s+\/\/.*//g' external/protobuf/csharp/src/Google.Protobuf/project.json
 # For Grpc.Core etc
 fetch grpc google/grpc
 

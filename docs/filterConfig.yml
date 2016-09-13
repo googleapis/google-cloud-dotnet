@@ -1,0 +1,39 @@
+apiRules:
+- exclude:
+    uidRegex: \.Google#Protobuf#IMessage#Descriptor$
+- exclude:
+    type: Field
+    uidRegex: FieldNumber$
+- exclude:
+    type: Property
+    uidRegex: Parser$
+- exclude:
+    type: Property
+    uidRegex: Descriptor$
+- exclude:
+    type: Method
+    uidRegex: Equals\(
+- exclude:
+    type: Method
+    uidRegex: WriteTo\(
+- exclude:
+    type: Method
+    uidRegex: MergeFrom\(
+- exclude:
+    type: Method
+    uidRegex: GetHashCode$
+- exclude:
+    type: Method
+    uidRegex: Clone$
+- exclude:
+    type: Method
+    uidRegex: CalculateSize$
+- exclude:
+    type: Method
+    uidRegex: ToString$
+- exclude:
+    type: Type
+    uidRegex: \.Types$
+- exclude:
+    type: Type
+    uidRegex: Reflection$
