@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace Google.Datastore.V1 {
 
   /// <summary>Holder for reflection information generated from google/datastore/v1/datastore.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class DatastoreReflection {
 
     #region Descriptor
@@ -118,31 +117,36 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The request for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LookupRequest : pb::IMessage<LookupRequest> {
     private static readonly pb::MessageParser<LookupRequest> _parser = new pb::MessageParser<LookupRequest>(() => new LookupRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<LookupRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LookupRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LookupRequest(LookupRequest other) : this() {
       projectId_ = other.projectId_;
       ReadOptions = other.readOptions_ != null ? other.ReadOptions.Clone() : null;
       keys_ = other.keys_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LookupRequest Clone() {
       return new LookupRequest(this);
     }
@@ -153,6 +157,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The ID of the project against which to make the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -166,6 +171,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The options for this lookup request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.ReadOptions ReadOptions {
       get { return readOptions_; }
       set {
@@ -181,14 +187,17 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  Keys of entities to look up.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Datastore.V1.Key> Keys {
       get { return keys_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LookupRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(LookupRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -202,6 +211,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
@@ -210,10 +220,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (readOptions_ != null) {
         output.WriteRawTag(10);
@@ -226,6 +238,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (ProjectId.Length != 0) {
@@ -238,6 +251,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(LookupRequest other) {
       if (other == null) {
         return;
@@ -254,6 +268,7 @@ namespace Google.Datastore.V1 {
       keys_.Add(other.keys_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -285,31 +300,36 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The response for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LookupResponse : pb::IMessage<LookupResponse> {
     private static readonly pb::MessageParser<LookupResponse> _parser = new pb::MessageParser<LookupResponse>(() => new LookupResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<LookupResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[1]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LookupResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LookupResponse(LookupResponse other) : this() {
       found_ = other.found_.Clone();
       missing_ = other.missing_.Clone();
       deferred_ = other.deferred_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LookupResponse Clone() {
       return new LookupResponse(this);
     }
@@ -324,6 +344,7 @@ namespace Google.Datastore.V1 {
     ///  field is undefined and has no relation to the order of the keys in the
     ///  input.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Datastore.V1.EntityResult> Found {
       get { return found_; }
     }
@@ -338,6 +359,7 @@ namespace Google.Datastore.V1 {
     ///  in this field is undefined and has no relation to the order of the keys
     ///  in the input.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Datastore.V1.EntityResult> Missing {
       get { return missing_; }
     }
@@ -352,14 +374,17 @@ namespace Google.Datastore.V1 {
     ///  order of results in this field is undefined and has no relation to the
     ///  order of the keys in the input.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Datastore.V1.Key> Deferred {
       get { return deferred_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LookupResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(LookupResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -373,6 +398,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= found_.GetHashCode();
@@ -381,16 +407,19 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       found_.WriteTo(output, _repeated_found_codec);
       missing_.WriteTo(output, _repeated_missing_codec);
       deferred_.WriteTo(output, _repeated_deferred_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += found_.CalculateSize(_repeated_found_codec);
@@ -399,6 +428,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(LookupResponse other) {
       if (other == null) {
         return;
@@ -408,6 +438,7 @@ namespace Google.Datastore.V1 {
       deferred_.Add(other.deferred_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -436,25 +467,29 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The request for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class RunQueryRequest : pb::IMessage<RunQueryRequest> {
     private static readonly pb::MessageParser<RunQueryRequest> _parser = new pb::MessageParser<RunQueryRequest>(() => new RunQueryRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RunQueryRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[2]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryRequest(RunQueryRequest other) : this() {
       projectId_ = other.projectId_;
       PartitionId = other.partitionId_ != null ? other.PartitionId.Clone() : null;
@@ -470,6 +505,7 @@ namespace Google.Datastore.V1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryRequest Clone() {
       return new RunQueryRequest(this);
     }
@@ -480,6 +516,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The ID of the project against which to make the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -496,6 +533,7 @@ namespace Google.Datastore.V1 {
     ///  This partition ID is normalized with the standard default context
     ///  partition ID.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.PartitionId PartitionId {
       get { return partitionId_; }
       set {
@@ -509,6 +547,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The options for this query.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.ReadOptions ReadOptions {
       get { return readOptions_; }
       set {
@@ -521,6 +560,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The query to run.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.Query Query {
       get { return queryTypeCase_ == QueryTypeOneofCase.Query ? (global::Google.Datastore.V1.Query) queryType_ : null; }
       set {
@@ -534,6 +574,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The GQL query to run.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.GqlQuery GqlQuery {
       get { return queryTypeCase_ == QueryTypeOneofCase.GqlQuery ? (global::Google.Datastore.V1.GqlQuery) queryType_ : null; }
       set {
@@ -550,19 +591,23 @@ namespace Google.Datastore.V1 {
       GqlQuery = 7,
     }
     private QueryTypeOneofCase queryTypeCase_ = QueryTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public QueryTypeOneofCase QueryTypeCase {
       get { return queryTypeCase_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void ClearQueryType() {
       queryTypeCase_ = QueryTypeOneofCase.None;
       queryType_ = null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RunQueryRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(RunQueryRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -579,6 +624,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
@@ -590,10 +636,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (readOptions_ != null) {
         output.WriteRawTag(10);
@@ -617,6 +665,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (ProjectId.Length != 0) {
@@ -637,6 +686,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(RunQueryRequest other) {
       if (other == null) {
         return;
@@ -667,6 +717,7 @@ namespace Google.Datastore.V1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -719,30 +770,35 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The response for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class RunQueryResponse : pb::IMessage<RunQueryResponse> {
     private static readonly pb::MessageParser<RunQueryResponse> _parser = new pb::MessageParser<RunQueryResponse>(() => new RunQueryResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RunQueryResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[3]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryResponse(RunQueryResponse other) : this() {
       Batch = other.batch_ != null ? other.Batch.Clone() : null;
       Query = other.query_ != null ? other.Query.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunQueryResponse Clone() {
       return new RunQueryResponse(this);
     }
@@ -753,6 +809,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  A batch of query results (always present).
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.QueryResultBatch Batch {
       get { return batch_; }
       set {
@@ -766,6 +823,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The parsed form of the `GqlQuery` from the request, if it was set.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.Query Query {
       get { return query_; }
       set {
@@ -773,10 +831,12 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RunQueryResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(RunQueryResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -789,6 +849,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (batch_ != null) hash ^= Batch.GetHashCode();
@@ -796,10 +857,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (batch_ != null) {
         output.WriteRawTag(10);
@@ -811,6 +874,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (batch_ != null) {
@@ -822,6 +886,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(RunQueryResponse other) {
       if (other == null) {
         return;
@@ -840,6 +905,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -870,29 +936,34 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The request for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest> {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<BeginTransactionRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[4]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionRequest(BeginTransactionRequest other) : this() {
       projectId_ = other.projectId_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionRequest Clone() {
       return new BeginTransactionRequest(this);
     }
@@ -903,6 +974,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The ID of the project against which to make the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -910,10 +982,12 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BeginTransactionRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(BeginTransactionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -925,16 +999,19 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(66);
@@ -942,6 +1019,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (ProjectId.Length != 0) {
@@ -950,6 +1028,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(BeginTransactionRequest other) {
       if (other == null) {
         return;
@@ -959,6 +1038,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -979,29 +1059,34 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The response for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class BeginTransactionResponse : pb::IMessage<BeginTransactionResponse> {
     private static readonly pb::MessageParser<BeginTransactionResponse> _parser = new pb::MessageParser<BeginTransactionResponse>(() => new BeginTransactionResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<BeginTransactionResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[5]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionResponse(BeginTransactionResponse other) : this() {
       transaction_ = other.transaction_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BeginTransactionResponse Clone() {
       return new BeginTransactionResponse(this);
     }
@@ -1012,6 +1097,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The transaction identifier (always present).
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
       get { return transaction_; }
       set {
@@ -1019,10 +1105,12 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BeginTransactionResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(BeginTransactionResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1034,16 +1122,19 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Transaction.Length != 0) hash ^= Transaction.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Transaction.Length != 0) {
         output.WriteRawTag(10);
@@ -1051,6 +1142,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Transaction.Length != 0) {
@@ -1059,6 +1151,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(BeginTransactionResponse other) {
       if (other == null) {
         return;
@@ -1068,6 +1161,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1088,30 +1182,35 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The request for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class RollbackRequest : pb::IMessage<RollbackRequest> {
     private static readonly pb::MessageParser<RollbackRequest> _parser = new pb::MessageParser<RollbackRequest>(() => new RollbackRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RollbackRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[6]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RollbackRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RollbackRequest(RollbackRequest other) : this() {
       projectId_ = other.projectId_;
       transaction_ = other.transaction_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RollbackRequest Clone() {
       return new RollbackRequest(this);
     }
@@ -1122,6 +1221,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The ID of the project against which to make the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -1136,6 +1236,7 @@ namespace Google.Datastore.V1 {
     ///  The transaction identifier, returned by a call to
     ///  [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
       get { return transaction_; }
       set {
@@ -1143,10 +1244,12 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RollbackRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(RollbackRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1159,6 +1262,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
@@ -1166,10 +1270,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Transaction.Length != 0) {
         output.WriteRawTag(10);
@@ -1181,6 +1287,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (ProjectId.Length != 0) {
@@ -1192,6 +1299,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(RollbackRequest other) {
       if (other == null) {
         return;
@@ -1204,6 +1312,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1229,36 +1338,43 @@ namespace Google.Datastore.V1 {
   ///  The response for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
   ///  (an empty message).
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class RollbackResponse : pb::IMessage<RollbackResponse> {
     private static readonly pb::MessageParser<RollbackResponse> _parser = new pb::MessageParser<RollbackResponse>(() => new RollbackResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RollbackResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[7]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RollbackResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RollbackResponse(RollbackResponse other) : this() {
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RollbackResponse Clone() {
       return new RollbackResponse(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RollbackResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(RollbackResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1269,29 +1385,35 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(RollbackResponse other) {
       if (other == null) {
         return;
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1308,25 +1430,29 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The request for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class CommitRequest : pb::IMessage<CommitRequest> {
     private static readonly pb::MessageParser<CommitRequest> _parser = new pb::MessageParser<CommitRequest>(() => new CommitRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<CommitRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[8]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommitRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommitRequest(CommitRequest other) : this() {
       projectId_ = other.projectId_;
       mode_ = other.mode_;
@@ -1339,6 +1465,7 @@ namespace Google.Datastore.V1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommitRequest Clone() {
       return new CommitRequest(this);
     }
@@ -1349,6 +1476,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The ID of the project against which to make the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -1362,6 +1490,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The type of commit to perform. Defaults to `TRANSACTIONAL`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.CommitRequest.Types.Mode Mode {
       get { return mode_; }
       set {
@@ -1376,6 +1505,7 @@ namespace Google.Datastore.V1 {
     ///  transaction identifier is returned by a call to
     ///  [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
       get { return transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction ? (pb::ByteString) transactionSelector_ : pb::ByteString.Empty; }
       set {
@@ -1404,6 +1534,7 @@ namespace Google.Datastore.V1 {
     ///  When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
     ///  entity.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Datastore.V1.Mutation> Mutations {
       get { return mutations_; }
     }
@@ -1415,19 +1546,23 @@ namespace Google.Datastore.V1 {
       Transaction = 1,
     }
     private TransactionSelectorOneofCase transactionSelectorCase_ = TransactionSelectorOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TransactionSelectorOneofCase TransactionSelectorCase {
       get { return transactionSelectorCase_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void ClearTransactionSelector() {
       transactionSelectorCase_ = TransactionSelectorOneofCase.None;
       transactionSelector_ = null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CommitRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(CommitRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1443,6 +1578,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
@@ -1453,10 +1589,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
         output.WriteRawTag(10);
@@ -1473,6 +1611,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (ProjectId.Length != 0) {
@@ -1488,6 +1627,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(CommitRequest other) {
       if (other == null) {
         return;
@@ -1507,6 +1647,7 @@ namespace Google.Datastore.V1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1536,7 +1677,7 @@ namespace Google.Datastore.V1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the CommitRequest message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  The modes available for commits.
@@ -1565,30 +1706,35 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The response for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class CommitResponse : pb::IMessage<CommitResponse> {
     private static readonly pb::MessageParser<CommitResponse> _parser = new pb::MessageParser<CommitResponse>(() => new CommitResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<CommitResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[9]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommitResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommitResponse(CommitResponse other) : this() {
       mutationResults_ = other.mutationResults_.Clone();
       indexUpdates_ = other.indexUpdates_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CommitResponse Clone() {
       return new CommitResponse(this);
     }
@@ -1602,6 +1748,7 @@ namespace Google.Datastore.V1 {
     ///  The result of performing the mutations.
     ///  The i-th mutation result corresponds to the i-th mutation in the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Datastore.V1.MutationResult> MutationResults {
       get { return mutationResults_; }
     }
@@ -1613,6 +1760,7 @@ namespace Google.Datastore.V1 {
     ///  The number of index entries updated during the commit, or zero if none were
     ///  updated.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int IndexUpdates {
       get { return indexUpdates_; }
       set {
@@ -1620,10 +1768,12 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CommitResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(CommitResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1636,6 +1786,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= mutationResults_.GetHashCode();
@@ -1643,10 +1794,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       mutationResults_.WriteTo(output, _repeated_mutationResults_codec);
       if (IndexUpdates != 0) {
@@ -1655,6 +1808,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += mutationResults_.CalculateSize(_repeated_mutationResults_codec);
@@ -1664,6 +1818,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(CommitResponse other) {
       if (other == null) {
         return;
@@ -1674,6 +1829,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1698,30 +1854,35 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The request for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AllocateIdsRequest : pb::IMessage<AllocateIdsRequest> {
     private static readonly pb::MessageParser<AllocateIdsRequest> _parser = new pb::MessageParser<AllocateIdsRequest>(() => new AllocateIdsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AllocateIdsRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[10]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AllocateIdsRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AllocateIdsRequest(AllocateIdsRequest other) : this() {
       projectId_ = other.projectId_;
       keys_ = other.keys_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AllocateIdsRequest Clone() {
       return new AllocateIdsRequest(this);
     }
@@ -1732,6 +1893,7 @@ namespace Google.Datastore.V1 {
     /// <summary>
     ///  The ID of the project against which to make the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -1748,14 +1910,17 @@ namespace Google.Datastore.V1 {
     ///  A list of keys with incomplete key paths for which to allocate IDs.
     ///  No key may be reserved/read-only.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Datastore.V1.Key> Keys {
       get { return keys_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AllocateIdsRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AllocateIdsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1768,6 +1933,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
@@ -1775,10 +1941,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       keys_.WriteTo(output, _repeated_keys_codec);
       if (ProjectId.Length != 0) {
@@ -1787,6 +1955,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (ProjectId.Length != 0) {
@@ -1796,6 +1965,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AllocateIdsRequest other) {
       if (other == null) {
         return;
@@ -1806,6 +1976,7 @@ namespace Google.Datastore.V1 {
       keys_.Add(other.keys_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1830,29 +2001,34 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The response for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AllocateIdsResponse : pb::IMessage<AllocateIdsResponse> {
     private static readonly pb::MessageParser<AllocateIdsResponse> _parser = new pb::MessageParser<AllocateIdsResponse>(() => new AllocateIdsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AllocateIdsResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[11]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AllocateIdsResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AllocateIdsResponse(AllocateIdsResponse other) : this() {
       keys_ = other.keys_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AllocateIdsResponse Clone() {
       return new AllocateIdsResponse(this);
     }
@@ -1866,14 +2042,17 @@ namespace Google.Datastore.V1 {
     ///  The keys specified in the request (in the same order), each with
     ///  its key path completed with a newly allocated ID.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Datastore.V1.Key> Keys {
       get { return keys_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AllocateIdsResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AllocateIdsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1885,26 +2064,31 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= keys_.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       keys_.WriteTo(output, _repeated_keys_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += keys_.CalculateSize(_repeated_keys_codec);
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AllocateIdsResponse other) {
       if (other == null) {
         return;
@@ -1912,6 +2096,7 @@ namespace Google.Datastore.V1 {
       keys_.Add(other.keys_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1932,25 +2117,29 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  A mutation to apply to an entity.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Mutation : pb::IMessage<Mutation> {
     private static readonly pb::MessageParser<Mutation> _parser = new pb::MessageParser<Mutation>(() => new Mutation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Mutation> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[12]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Mutation() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Mutation(Mutation other) : this() {
       switch (other.OperationCase) {
         case OperationOneofCase.Insert:
@@ -1975,6 +2164,7 @@ namespace Google.Datastore.V1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Mutation Clone() {
       return new Mutation(this);
     }
@@ -1985,6 +2175,7 @@ namespace Google.Datastore.V1 {
     ///  The entity to insert. The entity must not already exist.
     ///  The entity key's final path element may be incomplete.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.Entity Insert {
       get { return operationCase_ == OperationOneofCase.Insert ? (global::Google.Datastore.V1.Entity) operation_ : null; }
       set {
@@ -1999,6 +2190,7 @@ namespace Google.Datastore.V1 {
     ///  The entity to update. The entity must already exist.
     ///  Must have a complete key path.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.Entity Update {
       get { return operationCase_ == OperationOneofCase.Update ? (global::Google.Datastore.V1.Entity) operation_ : null; }
       set {
@@ -2013,6 +2205,7 @@ namespace Google.Datastore.V1 {
     ///  The entity to upsert. The entity may or may not already exist.
     ///  The entity key's final path element may be incomplete.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.Entity Upsert {
       get { return operationCase_ == OperationOneofCase.Upsert ? (global::Google.Datastore.V1.Entity) operation_ : null; }
       set {
@@ -2027,6 +2220,7 @@ namespace Google.Datastore.V1 {
     ///  The key of the entity to delete. The entity may or may not already exist.
     ///  Must have a complete key path and must not be reserved/read-only.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.Key Delete {
       get { return operationCase_ == OperationOneofCase.Delete ? (global::Google.Datastore.V1.Key) operation_ : null; }
       set {
@@ -2041,6 +2235,7 @@ namespace Google.Datastore.V1 {
     ///  The version of the entity that this mutation is being applied to. If this
     ///  does not match the current version on the server, the mutation conflicts.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long BaseVersion {
       get { return conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion ? (long) conflictDetectionStrategy_ : 0L; }
       set {
@@ -2059,10 +2254,12 @@ namespace Google.Datastore.V1 {
       Delete = 7,
     }
     private OperationOneofCase operationCase_ = OperationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public OperationOneofCase OperationCase {
       get { return operationCase_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void ClearOperation() {
       operationCase_ = OperationOneofCase.None;
       operation_ = null;
@@ -2075,19 +2272,23 @@ namespace Google.Datastore.V1 {
       BaseVersion = 8,
     }
     private ConflictDetectionStrategyOneofCase conflictDetectionStrategyCase_ = ConflictDetectionStrategyOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ConflictDetectionStrategyOneofCase ConflictDetectionStrategyCase {
       get { return conflictDetectionStrategyCase_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void ClearConflictDetectionStrategy() {
       conflictDetectionStrategyCase_ = ConflictDetectionStrategyOneofCase.None;
       conflictDetectionStrategy_ = null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Mutation);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Mutation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2105,6 +2306,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (operationCase_ == OperationOneofCase.Insert) hash ^= Insert.GetHashCode();
@@ -2117,10 +2319,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (operationCase_ == OperationOneofCase.Insert) {
         output.WriteRawTag(34);
@@ -2144,6 +2348,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (operationCase_ == OperationOneofCase.Insert) {
@@ -2164,6 +2369,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Mutation other) {
       if (other == null) {
         return;
@@ -2191,6 +2397,7 @@ namespace Google.Datastore.V1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2247,31 +2454,36 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The result of applying a mutation.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class MutationResult : pb::IMessage<MutationResult> {
     private static readonly pb::MessageParser<MutationResult> _parser = new pb::MessageParser<MutationResult>(() => new MutationResult());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<MutationResult> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[13]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MutationResult() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MutationResult(MutationResult other) : this() {
       Key = other.key_ != null ? other.Key.Clone() : null;
       version_ = other.version_;
       conflictDetected_ = other.conflictDetected_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public MutationResult Clone() {
       return new MutationResult(this);
     }
@@ -2283,6 +2495,7 @@ namespace Google.Datastore.V1 {
     ///  The automatically allocated key.
     ///  Set only when the mutation allocated a key.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.Key Key {
       get { return key_; }
       set {
@@ -2300,6 +2513,7 @@ namespace Google.Datastore.V1 {
     ///  that is strictly greater than the version of any previous entity and less
     ///  than the version of any possible future entity.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Version {
       get { return version_; }
       set {
@@ -2314,6 +2528,7 @@ namespace Google.Datastore.V1 {
     ///  Whether a conflict was detected for this mutation. Always false when a
     ///  conflict detection strategy field is not set in the mutation.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ConflictDetected {
       get { return conflictDetected_; }
       set {
@@ -2321,10 +2536,12 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MutationResult);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(MutationResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2338,6 +2555,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (key_ != null) hash ^= Key.GetHashCode();
@@ -2346,10 +2564,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (key_ != null) {
         output.WriteRawTag(26);
@@ -2365,6 +2585,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (key_ != null) {
@@ -2379,6 +2600,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(MutationResult other) {
       if (other == null) {
         return;
@@ -2397,6 +2619,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2428,25 +2651,29 @@ namespace Google.Datastore.V1 {
   /// <summary>
   ///  The options shared by read requests.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ReadOptions : pb::IMessage<ReadOptions> {
     private static readonly pb::MessageParser<ReadOptions> _parser = new pb::MessageParser<ReadOptions>(() => new ReadOptions());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ReadOptions> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[14]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReadOptions() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReadOptions(ReadOptions other) : this() {
       switch (other.ConsistencyTypeCase) {
         case ConsistencyTypeOneofCase.ReadConsistency:
@@ -2459,6 +2686,7 @@ namespace Google.Datastore.V1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReadOptions Clone() {
       return new ReadOptions(this);
     }
@@ -2469,6 +2697,7 @@ namespace Google.Datastore.V1 {
     ///  The non-transactional read consistency to use.
     ///  Cannot be set to `STRONG` for global queries.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Datastore.V1.ReadOptions.Types.ReadConsistency ReadConsistency {
       get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency ? (global::Google.Datastore.V1.ReadOptions.Types.ReadConsistency) consistencyType_ : 0; }
       set {
@@ -2484,6 +2713,7 @@ namespace Google.Datastore.V1 {
     ///  transaction identifier is returned by a call to
     ///  [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
       get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction ? (pb::ByteString) consistencyType_ : pb::ByteString.Empty; }
       set {
@@ -2500,19 +2730,23 @@ namespace Google.Datastore.V1 {
       Transaction = 2,
     }
     private ConsistencyTypeOneofCase consistencyTypeCase_ = ConsistencyTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ConsistencyTypeOneofCase ConsistencyTypeCase {
       get { return consistencyTypeCase_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void ClearConsistencyType() {
       consistencyTypeCase_ = ConsistencyTypeOneofCase.None;
       consistencyType_ = null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ReadOptions);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ReadOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2526,6 +2760,7 @@ namespace Google.Datastore.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) hash ^= ReadConsistency.GetHashCode();
@@ -2534,10 +2769,12 @@ namespace Google.Datastore.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) {
         output.WriteRawTag(8);
@@ -2549,6 +2786,7 @@ namespace Google.Datastore.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) {
@@ -2560,6 +2798,7 @@ namespace Google.Datastore.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ReadOptions other) {
       if (other == null) {
         return;
@@ -2575,6 +2814,7 @@ namespace Google.Datastore.V1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2597,7 +2837,7 @@ namespace Google.Datastore.V1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the ReadOptions message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  The possible values for read consistencies.

@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace Google.Logging.V2 {
 
   /// <summary>Holder for reflection information generated from google/logging/v2/logging_config.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class LoggingConfigReflection {
 
     #region Descriptor
@@ -54,8 +53,9 @@ namespace Google.Logging.V2 {
             "L3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfToEc2luaxJ7CgpEZWxl",
             "dGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlU2lua1JlcXVlc3Qa",
             "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiL4LT5JMCKSonL3YyYmV0YTEve3Np",
-            "bmtfbmFtZT1wcm9qZWN0cy8qL3NpbmtzLyp9QigKFWNvbS5nb29nbGUubG9n",
-            "Z2luZy52MkINTG9nZ2luZ0NvbmZpZ1ABYgZwcm90bzM="));
+            "bmtfbmFtZT1wcm9qZWN0cy8qL3NpbmtzLyp9QloKFWNvbS5nb29nbGUubG9n",
+            "Z2luZy52MkINTG9nZ2luZ0NvbmZpZ1ABWjBnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2xvZ2dpbmcvdjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -75,25 +75,29 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  Describes a sink used to export log entries outside Stackdriver Logging.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LogSink : pb::IMessage<LogSink> {
     private static readonly pb::MessageParser<LogSink> _parser = new pb::MessageParser<LogSink>(() => new LogSink());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<LogSink> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogSink() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogSink(LogSink other) : this() {
       name_ = other.name_;
       destination_ = other.destination_;
@@ -101,6 +105,7 @@ namespace Google.Logging.V2 {
       outputVersionFormat_ = other.outputVersionFormat_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogSink Clone() {
       return new LogSink(this);
     }
@@ -115,6 +120,7 @@ namespace Google.Logging.V2 {
     ///  and can include only the following characters: `A-Z`, `a-z`,
     ///  `0-9`, and the special characters `_-.`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
@@ -131,6 +137,7 @@ namespace Google.Logging.V2 {
     ///  Examples: `"storage.googleapis.com/a-bucket"`,
     ///  `"bigquery.googleapis.com/projects/a-project-id/datasets/a-dataset"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Destination {
       get { return destination_; }
       set {
@@ -150,6 +157,7 @@ namespace Google.Logging.V2 {
     ///  Example (V2 format):
     ///  `"logName=projects/my-projectid/logs/syslog AND severity>=ERROR"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
       get { return filter_; }
       set {
@@ -165,6 +173,7 @@ namespace Google.Logging.V2 {
     ///  This version does not have to correspond to the version of the log entry
     ///  when it was written to Stackdriver Logging.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.V2.LogSink.Types.VersionFormat OutputVersionFormat {
       get { return outputVersionFormat_; }
       set {
@@ -172,10 +181,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LogSink);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(LogSink other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -190,6 +201,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -199,10 +211,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -222,6 +236,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -239,6 +254,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(LogSink other) {
       if (other == null) {
         return;
@@ -257,6 +273,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -286,7 +303,7 @@ namespace Google.Logging.V2 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the LogSink message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  Available log entry formats. Log entries can be written to Cloud
@@ -316,31 +333,36 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to `ListSinks`.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListSinksRequest : pb::IMessage<ListSinksRequest> {
     private static readonly pb::MessageParser<ListSinksRequest> _parser = new pb::MessageParser<ListSinksRequest>(() => new ListSinksRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListSinksRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[1]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSinksRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSinksRequest(ListSinksRequest other) : this() {
       parent_ = other.parent_;
       pageToken_ = other.pageToken_;
       pageSize_ = other.pageSize_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSinksRequest Clone() {
       return new ListSinksRequest(this);
     }
@@ -352,6 +374,7 @@ namespace Google.Logging.V2 {
     ///  Required. The resource name containing the sinks.
     ///  Example: `"projects/my-logging-project"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
       get { return parent_; }
       set {
@@ -368,6 +391,7 @@ namespace Google.Logging.V2 {
     ///  of the `nextPageToken` from the previous response.
     ///  The value of `parent` must be the same as in the previous request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -384,6 +408,7 @@ namespace Google.Logging.V2 {
     ///  results are available, which you can retrieve by passing the
     ///  `nextPageToken` value as the `pageToken` parameter in the next request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -391,10 +416,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListSinksRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListSinksRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -408,6 +435,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -416,10 +444,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -435,6 +465,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -449,6 +480,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListSinksRequest other) {
       if (other == null) {
         return;
@@ -464,6 +496,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -492,30 +525,35 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  Result returned from `ListSinks`.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListSinksResponse : pb::IMessage<ListSinksResponse> {
     private static readonly pb::MessageParser<ListSinksResponse> _parser = new pb::MessageParser<ListSinksResponse>(() => new ListSinksResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListSinksResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[2]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSinksResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSinksResponse(ListSinksResponse other) : this() {
       sinks_ = other.sinks_.Clone();
       nextPageToken_ = other.nextPageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSinksResponse Clone() {
       return new ListSinksResponse(this);
     }
@@ -528,6 +566,7 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  A list of sinks.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Logging.V2.LogSink> Sinks {
       get { return sinks_; }
     }
@@ -540,6 +579,7 @@ namespace Google.Logging.V2 {
     ///  included in the response.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -547,10 +587,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListSinksResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListSinksResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -563,6 +605,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= sinks_.GetHashCode();
@@ -570,10 +613,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       sinks_.WriteTo(output, _repeated_sinks_codec);
       if (NextPageToken.Length != 0) {
@@ -582,6 +627,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += sinks_.CalculateSize(_repeated_sinks_codec);
@@ -591,6 +637,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListSinksResponse other) {
       if (other == null) {
         return;
@@ -601,6 +648,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -625,29 +673,34 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to `GetSink`.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class GetSinkRequest : pb::IMessage<GetSinkRequest> {
     private static readonly pb::MessageParser<GetSinkRequest> _parser = new pb::MessageParser<GetSinkRequest>(() => new GetSinkRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<GetSinkRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[3]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetSinkRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetSinkRequest(GetSinkRequest other) : this() {
       sinkName_ = other.sinkName_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetSinkRequest Clone() {
       return new GetSinkRequest(this);
     }
@@ -659,6 +712,7 @@ namespace Google.Logging.V2 {
     ///  The resource name of the sink to return.
     ///  Example: `"projects/my-project-id/sinks/my-sink-id"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {
       get { return sinkName_; }
       set {
@@ -666,10 +720,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetSinkRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(GetSinkRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -681,16 +737,19 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (SinkName.Length != 0) hash ^= SinkName.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (SinkName.Length != 0) {
         output.WriteRawTag(10);
@@ -698,6 +757,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (SinkName.Length != 0) {
@@ -706,6 +766,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(GetSinkRequest other) {
       if (other == null) {
         return;
@@ -715,6 +776,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -735,30 +797,35 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to `CreateSink`.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class CreateSinkRequest : pb::IMessage<CreateSinkRequest> {
     private static readonly pb::MessageParser<CreateSinkRequest> _parser = new pb::MessageParser<CreateSinkRequest>(() => new CreateSinkRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<CreateSinkRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[4]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateSinkRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateSinkRequest(CreateSinkRequest other) : this() {
       parent_ = other.parent_;
       Sink = other.sink_ != null ? other.Sink.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateSinkRequest Clone() {
       return new CreateSinkRequest(this);
     }
@@ -772,6 +839,7 @@ namespace Google.Logging.V2 {
     ///
     ///  The new sink must be provided in the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
       get { return parent_; }
       set {
@@ -786,6 +854,7 @@ namespace Google.Logging.V2 {
     ///  The new sink, which must not have an identifier that already
     ///  exists.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.V2.LogSink Sink {
       get { return sink_; }
       set {
@@ -793,10 +862,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateSinkRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(CreateSinkRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -809,6 +880,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -816,10 +888,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -831,6 +905,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -842,6 +917,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(CreateSinkRequest other) {
       if (other == null) {
         return;
@@ -857,6 +933,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -884,30 +961,35 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to `UpdateSink`.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class UpdateSinkRequest : pb::IMessage<UpdateSinkRequest> {
     private static readonly pb::MessageParser<UpdateSinkRequest> _parser = new pb::MessageParser<UpdateSinkRequest>(() => new UpdateSinkRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<UpdateSinkRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[5]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateSinkRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateSinkRequest(UpdateSinkRequest other) : this() {
       sinkName_ = other.sinkName_;
       Sink = other.sink_ != null ? other.Sink.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public UpdateSinkRequest Clone() {
       return new UpdateSinkRequest(this);
     }
@@ -923,6 +1005,7 @@ namespace Google.Logging.V2 {
     ///  same name that is specified in `sinkName`.  If the sink does not
     ///  exist, it is created.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {
       get { return sinkName_; }
       set {
@@ -938,6 +1021,7 @@ namespace Google.Logging.V2 {
     ///  identifier in `sinkName`.  If `sinkName` does not exist, then
     ///  this method creates a new sink.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.V2.LogSink Sink {
       get { return sink_; }
       set {
@@ -945,10 +1029,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UpdateSinkRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(UpdateSinkRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -961,6 +1047,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (SinkName.Length != 0) hash ^= SinkName.GetHashCode();
@@ -968,10 +1055,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (SinkName.Length != 0) {
         output.WriteRawTag(10);
@@ -983,6 +1072,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (SinkName.Length != 0) {
@@ -994,6 +1084,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(UpdateSinkRequest other) {
       if (other == null) {
         return;
@@ -1009,6 +1100,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1036,29 +1128,34 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to `DeleteSink`.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class DeleteSinkRequest : pb::IMessage<DeleteSinkRequest> {
     private static readonly pb::MessageParser<DeleteSinkRequest> _parser = new pb::MessageParser<DeleteSinkRequest>(() => new DeleteSinkRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<DeleteSinkRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingConfigReflection.Descriptor.MessageTypes[6]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteSinkRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteSinkRequest(DeleteSinkRequest other) : this() {
       sinkName_ = other.sinkName_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteSinkRequest Clone() {
       return new DeleteSinkRequest(this);
     }
@@ -1070,6 +1167,7 @@ namespace Google.Logging.V2 {
     ///  The resource name of the sink to delete.
     ///  Example: `"projects/my-project-id/sinks/my-sink-id"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {
       get { return sinkName_; }
       set {
@@ -1077,10 +1175,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DeleteSinkRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(DeleteSinkRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1092,16 +1192,19 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (SinkName.Length != 0) hash ^= SinkName.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (SinkName.Length != 0) {
         output.WriteRawTag(10);
@@ -1109,6 +1212,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (SinkName.Length != 0) {
@@ -1117,6 +1221,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(DeleteSinkRequest other) {
       if (other == null) {
         return;
@@ -1126,6 +1231,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

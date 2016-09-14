@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace Google.Cloud.Vision.V1 {
 
   /// <summary>Holder for reflection information generated from google/cloud/vision/v1/geometry.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class GeometryReflection {
 
     #region Descriptor
@@ -45,30 +44,35 @@ namespace Google.Cloud.Vision.V1 {
   ///  A vertex represents a 2D point in the image.
   ///  NOTE: the vertex coordinates are in the same scale as the original image.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Vertex : pb::IMessage<Vertex> {
     private static readonly pb::MessageParser<Vertex> _parser = new pb::MessageParser<Vertex>(() => new Vertex());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Vertex> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Vertex() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Vertex(Vertex other) : this() {
       x_ = other.x_;
       y_ = other.y_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Vertex Clone() {
       return new Vertex(this);
     }
@@ -79,6 +83,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  X coordinate.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int X {
       get { return x_; }
       set {
@@ -92,6 +97,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Y coordinate.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Y {
       get { return y_; }
       set {
@@ -99,10 +105,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Vertex);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Vertex other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -115,6 +123,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (X != 0) hash ^= X.GetHashCode();
@@ -122,10 +131,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (X != 0) {
         output.WriteRawTag(8);
@@ -137,6 +148,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (X != 0) {
@@ -148,6 +160,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Vertex other) {
       if (other == null) {
         return;
@@ -160,6 +173,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -184,29 +198,34 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  A bounding polygon for the detected image annotation.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class BoundingPoly : pb::IMessage<BoundingPoly> {
     private static readonly pb::MessageParser<BoundingPoly> _parser = new pb::MessageParser<BoundingPoly>(() => new BoundingPoly());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<BoundingPoly> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor.MessageTypes[1]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BoundingPoly() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BoundingPoly(BoundingPoly other) : this() {
       vertices_ = other.vertices_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BoundingPoly Clone() {
       return new BoundingPoly(this);
     }
@@ -219,14 +238,17 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  The bounding polygon vertices.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Vertex> Vertices {
       get { return vertices_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BoundingPoly);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(BoundingPoly other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -238,26 +260,31 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= vertices_.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       vertices_.WriteTo(output, _repeated_vertices_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += vertices_.CalculateSize(_repeated_vertices_codec);
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(BoundingPoly other) {
       if (other == null) {
         return;
@@ -265,6 +292,7 @@ namespace Google.Cloud.Vision.V1 {
       vertices_.Add(other.vertices_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -287,31 +315,36 @@ namespace Google.Cloud.Vision.V1 {
   ///  A valid Position must have both x and y coordinates.
   ///  The position coordinates are in the same scale as the original image.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Position : pb::IMessage<Position> {
     private static readonly pb::MessageParser<Position> _parser = new pb::MessageParser<Position>(() => new Position());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Position> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor.MessageTypes[2]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Position() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Position(Position other) : this() {
       x_ = other.x_;
       y_ = other.y_;
       z_ = other.z_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Position Clone() {
       return new Position(this);
     }
@@ -322,6 +355,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  X coordinate.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float X {
       get { return x_; }
       set {
@@ -335,6 +369,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Y coordinate.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Y {
       get { return y_; }
       set {
@@ -348,6 +383,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Z coordinate (or depth).
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Z {
       get { return z_; }
       set {
@@ -355,10 +391,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Position);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Position other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -372,6 +410,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (X != 0F) hash ^= X.GetHashCode();
@@ -380,10 +419,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (X != 0F) {
         output.WriteRawTag(13);
@@ -399,6 +440,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (X != 0F) {
@@ -413,6 +455,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Position other) {
       if (other == null) {
         return;
@@ -428,6 +471,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

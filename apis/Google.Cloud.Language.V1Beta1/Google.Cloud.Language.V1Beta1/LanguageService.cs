@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace Google.Cloud.Language.V1Beta1 {
 
   /// <summary>Holder for reflection information generated from google/cloud/language/v1beta1/language_service.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class LanguageServiceReflection {
 
     #region Descriptor
@@ -113,9 +112,10 @@ namespace Google.Cloud.Language.V1Beta1 {
             "QW5ub3RhdGVUZXh0EjIuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxYmV0YTEu",
             "QW5ub3RhdGVUZXh0UmVxdWVzdBozLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52",
             "MWJldGExLkFubm90YXRlVGV4dFJlc3BvbnNlIiqC0+STAiQiHy92MWJldGEx",
-            "L2RvY3VtZW50czphbm5vdGF0ZVRleHQ6ASpCOwohY29tLmdvb2dsZS5jbG91",
-            "ZC5sYW5ndWFnZS52MWJldGExQhRMYW5ndWFnZVNlcnZpY2VQcm90b1ABYgZw",
-            "cm90bzM="));
+            "L2RvY3VtZW50czphbm5vdGF0ZVRleHQ6ASpCeQohY29tLmdvb2dsZS5jbG91",
+            "ZC5sYW5ndWFnZS52MWJldGExQhRMYW5ndWFnZVNlcnZpY2VQcm90b1ABWjxn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2xh",
+            "bmd1YWdlL3YxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Language.V1Beta1.EncodingType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -181,25 +181,29 @@ namespace Google.Cloud.Language.V1Beta1 {
   ///
   ///  Represents the input to API methods.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Document : pb::IMessage<Document> {
     private static readonly pb::MessageParser<Document> _parser = new pb::MessageParser<Document>(() => new Document());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Document> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Document() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Document(Document other) : this() {
       type_ = other.type_;
       language_ = other.language_;
@@ -214,6 +218,7 @@ namespace Google.Cloud.Language.V1Beta1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Document Clone() {
       return new Document(this);
     }
@@ -225,6 +230,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  Required. If the type is not set or is `TYPE_UNSPECIFIED`,
     ///  returns an `INVALID_ARGUMENT` error.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.Document.Types.Type Type {
       get { return type_; }
       set {
@@ -237,6 +243,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The content of the input in string format.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Content {
       get { return sourceCase_ == SourceOneofCase.Content ? (string) source_ : ""; }
       set {
@@ -250,6 +257,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The Google Cloud Storage URI where the file content is located.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GcsContentUri {
       get { return sourceCase_ == SourceOneofCase.GcsContentUri ? (string) source_ : ""; }
       set {
@@ -274,6 +282,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  is not supported by the called API method, an `INVALID_ARGUMENT` error
     ///  is returned.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
       get { return language_; }
       set {
@@ -289,19 +298,23 @@ namespace Google.Cloud.Language.V1Beta1 {
       GcsContentUri = 3,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SourceOneofCase SourceCase {
       get { return sourceCase_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void ClearSource() {
       sourceCase_ = SourceOneofCase.None;
       source_ = null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Document);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Document other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -317,6 +330,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Type != 0) hash ^= Type.GetHashCode();
@@ -327,10 +341,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Type != 0) {
         output.WriteRawTag(8);
@@ -350,6 +366,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Type != 0) {
@@ -367,6 +384,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Document other) {
       if (other == null) {
         return;
@@ -388,6 +406,7 @@ namespace Google.Cloud.Language.V1Beta1 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -417,7 +436,7 @@ namespace Google.Cloud.Language.V1Beta1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the Document message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  The document types enum.
@@ -445,29 +464,34 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  Represents a sentence in the input document.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Sentence : pb::IMessage<Sentence> {
     private static readonly pb::MessageParser<Sentence> _parser = new pb::MessageParser<Sentence>(() => new Sentence());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Sentence> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Sentence() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Sentence(Sentence other) : this() {
       Text = other.text_ != null ? other.Text.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Sentence Clone() {
       return new Sentence(this);
     }
@@ -478,6 +502,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The sentence text.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.TextSpan Text {
       get { return text_; }
       set {
@@ -485,10 +510,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Sentence);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Sentence other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -500,16 +527,19 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (text_ != null) hash ^= Text.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (text_ != null) {
         output.WriteRawTag(10);
@@ -517,6 +547,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (text_ != null) {
@@ -525,6 +556,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Sentence other) {
       if (other == null) {
         return;
@@ -537,6 +569,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -562,25 +595,29 @@ namespace Google.Cloud.Language.V1Beta1 {
   ///  a person, an organization, or location. The API associates information, such
   ///  as salience and mentions, with entities.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Entity : pb::IMessage<Entity> {
     private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Entity> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Entity() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Entity(Entity other) : this() {
       name_ = other.name_;
       type_ = other.type_;
@@ -589,6 +626,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       mentions_ = other.mentions_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Entity Clone() {
       return new Entity(this);
     }
@@ -599,6 +637,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The representative name for the entity.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
@@ -612,6 +651,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The entity type.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.Entity.Types.Type Type {
       get { return type_; }
       set {
@@ -630,6 +670,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  Currently, only Wikipedia URLs are provided, if available.
     ///  The associated key is "wikipedia_url".
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -645,6 +686,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  Scores closer to 0 are less salient, while scores closer to 1.0 are highly
     ///  salient.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Salience {
       get { return salience_; }
       set {
@@ -661,14 +703,17 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  The mentions of this entity in the input document. The API currently
     ///  supports proper noun mentions.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1Beta1.EntityMention> Mentions {
       get { return mentions_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Entity);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Entity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -684,6 +729,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -694,10 +740,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -715,6 +763,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       mentions_.WriteTo(output, _repeated_mentions_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -731,6 +780,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Entity other) {
       if (other == null) {
         return;
@@ -748,6 +798,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       mentions_.Add(other.mentions_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -781,7 +832,7 @@ namespace Google.Cloud.Language.V1Beta1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the Entity message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  The type of the entity.
@@ -829,25 +880,29 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  Represents the smallest syntactic building block of the text.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Token : pb::IMessage<Token> {
     private static readonly pb::MessageParser<Token> _parser = new pb::MessageParser<Token>(() => new Token());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Token> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Token() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Token(Token other) : this() {
       Text = other.text_ != null ? other.Text.Clone() : null;
       PartOfSpeech = other.partOfSpeech_ != null ? other.PartOfSpeech.Clone() : null;
@@ -855,6 +910,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       lemma_ = other.lemma_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Token Clone() {
       return new Token(this);
     }
@@ -865,6 +921,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The token text.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.TextSpan Text {
       get { return text_; }
       set {
@@ -878,6 +935,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  Parts of speech tag for this token.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.PartOfSpeech PartOfSpeech {
       get { return partOfSpeech_; }
       set {
@@ -891,6 +949,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  Dependency tree parse for this token.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.DependencyEdge DependencyEdge {
       get { return dependencyEdge_; }
       set {
@@ -905,6 +964,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  [Lemma](https://en.wikipedia.org/wiki/Lemma_(morphology))
     ///  of the token.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Lemma {
       get { return lemma_; }
       set {
@@ -912,10 +972,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Token);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Token other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -930,6 +992,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (text_ != null) hash ^= Text.GetHashCode();
@@ -939,10 +1002,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (text_ != null) {
         output.WriteRawTag(10);
@@ -962,6 +1027,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (text_ != null) {
@@ -979,6 +1045,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Token other) {
       if (other == null) {
         return;
@@ -1006,6 +1073,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1048,30 +1116,35 @@ namespace Google.Cloud.Language.V1Beta1 {
   ///  Represents the feeling associated with the entire text or entities in
   ///  the text.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Sentiment : pb::IMessage<Sentiment> {
     private static readonly pb::MessageParser<Sentiment> _parser = new pb::MessageParser<Sentiment>(() => new Sentiment());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Sentiment> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Sentiment() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Sentiment(Sentiment other) : this() {
       polarity_ = other.polarity_;
       magnitude_ = other.magnitude_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Sentiment Clone() {
       return new Sentiment(this);
     }
@@ -1083,6 +1156,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  Polarity of the sentiment in the [-1.0, 1.0] range. Larger numbers
     ///  represent more positive sentiments.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Polarity {
       get { return polarity_; }
       set {
@@ -1098,6 +1172,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  the absolute magnitude of sentiment regardless of polarity (positive or
     ///  negative).
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Magnitude {
       get { return magnitude_; }
       set {
@@ -1105,10 +1180,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Sentiment);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Sentiment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1121,6 +1198,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Polarity != 0F) hash ^= Polarity.GetHashCode();
@@ -1128,10 +1206,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Polarity != 0F) {
         output.WriteRawTag(13);
@@ -1143,6 +1223,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Polarity != 0F) {
@@ -1154,6 +1235,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Sentiment other) {
       if (other == null) {
         return;
@@ -1166,6 +1248,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1190,29 +1273,34 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  Represents part of speech information for a token.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PartOfSpeech : pb::IMessage<PartOfSpeech> {
     private static readonly pb::MessageParser<PartOfSpeech> _parser = new pb::MessageParser<PartOfSpeech>(() => new PartOfSpeech());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PartOfSpeech> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PartOfSpeech() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PartOfSpeech(PartOfSpeech other) : this() {
       tag_ = other.tag_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PartOfSpeech Clone() {
       return new PartOfSpeech(this);
     }
@@ -1223,6 +1311,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The part of speech tag.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.PartOfSpeech.Types.Tag Tag {
       get { return tag_; }
       set {
@@ -1230,10 +1319,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PartOfSpeech);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(PartOfSpeech other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1245,16 +1336,19 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Tag != 0) hash ^= Tag.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Tag != 0) {
         output.WriteRawTag(8);
@@ -1262,6 +1356,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Tag != 0) {
@@ -1270,6 +1365,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(PartOfSpeech other) {
       if (other == null) {
         return;
@@ -1279,6 +1375,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1296,7 +1393,7 @@ namespace Google.Cloud.Language.V1Beta1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the PartOfSpeech message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  The part of speech tags enum.
@@ -1368,30 +1465,35 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  Represents dependency parse tree information for a token.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class DependencyEdge : pb::IMessage<DependencyEdge> {
     private static readonly pb::MessageParser<DependencyEdge> _parser = new pb::MessageParser<DependencyEdge>(() => new DependencyEdge());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<DependencyEdge> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DependencyEdge() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DependencyEdge(DependencyEdge other) : this() {
       headTokenIndex_ = other.headTokenIndex_;
       label_ = other.label_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DependencyEdge Clone() {
       return new DependencyEdge(this);
     }
@@ -1406,6 +1508,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  by the API method. If this token is a root token, then the
     ///  `head_token_index` is its own index.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int HeadTokenIndex {
       get { return headTokenIndex_; }
       set {
@@ -1419,6 +1522,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The parse label for the token.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.DependencyEdge.Types.Label Label {
       get { return label_; }
       set {
@@ -1426,10 +1530,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DependencyEdge);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(DependencyEdge other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1442,6 +1548,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (HeadTokenIndex != 0) hash ^= HeadTokenIndex.GetHashCode();
@@ -1449,10 +1556,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (HeadTokenIndex != 0) {
         output.WriteRawTag(8);
@@ -1464,6 +1573,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (HeadTokenIndex != 0) {
@@ -1475,6 +1585,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(DependencyEdge other) {
       if (other == null) {
         return;
@@ -1487,6 +1598,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1508,7 +1620,7 @@ namespace Google.Cloud.Language.V1Beta1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the DependencyEdge message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  The parse label enum for the token.
@@ -1833,29 +1945,34 @@ namespace Google.Cloud.Language.V1Beta1 {
   ///  Represents a mention for an entity in the text. Currently, proper noun
   ///  mentions are supported.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class EntityMention : pb::IMessage<EntityMention> {
     private static readonly pb::MessageParser<EntityMention> _parser = new pb::MessageParser<EntityMention>(() => new EntityMention());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<EntityMention> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityMention() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityMention(EntityMention other) : this() {
       Text = other.text_ != null ? other.Text.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityMention Clone() {
       return new EntityMention(this);
     }
@@ -1866,6 +1983,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The mention text.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.TextSpan Text {
       get { return text_; }
       set {
@@ -1873,10 +1991,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as EntityMention);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(EntityMention other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1888,16 +2008,19 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (text_ != null) hash ^= Text.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (text_ != null) {
         output.WriteRawTag(10);
@@ -1905,6 +2028,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (text_ != null) {
@@ -1913,6 +2037,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(EntityMention other) {
       if (other == null) {
         return;
@@ -1925,6 +2050,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1948,30 +2074,35 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  Represents an output piece of text.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class TextSpan : pb::IMessage<TextSpan> {
     private static readonly pb::MessageParser<TextSpan> _parser = new pb::MessageParser<TextSpan>(() => new TextSpan());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<TextSpan> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TextSpan() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TextSpan(TextSpan other) : this() {
       content_ = other.content_;
       beginOffset_ = other.beginOffset_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TextSpan Clone() {
       return new TextSpan(this);
     }
@@ -1982,6 +2113,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The content of the output text.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Content {
       get { return content_; }
       set {
@@ -1996,6 +2128,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  The API calculates the beginning offset of the content in the original
     ///  document according to the [EncodingType][google.cloud.language.v1beta1.EncodingType] specified in the API request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int BeginOffset {
       get { return beginOffset_; }
       set {
@@ -2003,10 +2136,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TextSpan);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(TextSpan other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2019,6 +2154,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Content.Length != 0) hash ^= Content.GetHashCode();
@@ -2026,10 +2162,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Content.Length != 0) {
         output.WriteRawTag(10);
@@ -2041,6 +2179,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Content.Length != 0) {
@@ -2052,6 +2191,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(TextSpan other) {
       if (other == null) {
         return;
@@ -2064,6 +2204,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2088,29 +2229,34 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  The sentiment analysis request message.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AnalyzeSentimentRequest : pb::IMessage<AnalyzeSentimentRequest> {
     private static readonly pb::MessageParser<AnalyzeSentimentRequest> _parser = new pb::MessageParser<AnalyzeSentimentRequest>(() => new AnalyzeSentimentRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AnalyzeSentimentRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSentimentRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSentimentRequest(AnalyzeSentimentRequest other) : this() {
       Document = other.document_ != null ? other.Document.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSentimentRequest Clone() {
       return new AnalyzeSentimentRequest(this);
     }
@@ -2122,6 +2268,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  Input document. Currently, `analyzeSentiment` only supports English text
     ///  ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.Document Document {
       get { return document_; }
       set {
@@ -2129,10 +2276,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnalyzeSentimentRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AnalyzeSentimentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2144,16 +2293,19 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (document_ != null) {
         output.WriteRawTag(10);
@@ -2161,6 +2313,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (document_ != null) {
@@ -2169,6 +2322,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AnalyzeSentimentRequest other) {
       if (other == null) {
         return;
@@ -2181,6 +2335,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2204,30 +2359,35 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  The sentiment analysis response message.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AnalyzeSentimentResponse : pb::IMessage<AnalyzeSentimentResponse> {
     private static readonly pb::MessageParser<AnalyzeSentimentResponse> _parser = new pb::MessageParser<AnalyzeSentimentResponse>(() => new AnalyzeSentimentResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AnalyzeSentimentResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSentimentResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSentimentResponse(AnalyzeSentimentResponse other) : this() {
       DocumentSentiment = other.documentSentiment_ != null ? other.DocumentSentiment.Clone() : null;
       language_ = other.language_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeSentimentResponse Clone() {
       return new AnalyzeSentimentResponse(this);
     }
@@ -2238,6 +2398,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The overall sentiment of the input document.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.Sentiment DocumentSentiment {
       get { return documentSentiment_; }
       set {
@@ -2252,6 +2413,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  The language of the text, which will be the same as the language specified
     ///  in the request or, if not specified, the automatically-detected language.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
       get { return language_; }
       set {
@@ -2259,10 +2421,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnalyzeSentimentResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AnalyzeSentimentResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2275,6 +2439,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (documentSentiment_ != null) hash ^= DocumentSentiment.GetHashCode();
@@ -2282,10 +2447,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (documentSentiment_ != null) {
         output.WriteRawTag(10);
@@ -2297,6 +2464,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (documentSentiment_ != null) {
@@ -2308,6 +2476,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AnalyzeSentimentResponse other) {
       if (other == null) {
         return;
@@ -2323,6 +2492,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2350,30 +2520,35 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  The entity analysis request message.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AnalyzeEntitiesRequest : pb::IMessage<AnalyzeEntitiesRequest> {
     private static readonly pb::MessageParser<AnalyzeEntitiesRequest> _parser = new pb::MessageParser<AnalyzeEntitiesRequest>(() => new AnalyzeEntitiesRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AnalyzeEntitiesRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeEntitiesRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeEntitiesRequest(AnalyzeEntitiesRequest other) : this() {
       Document = other.document_ != null ? other.Document.Clone() : null;
       encodingType_ = other.encodingType_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeEntitiesRequest Clone() {
       return new AnalyzeEntitiesRequest(this);
     }
@@ -2384,6 +2559,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  Input document.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.Document Document {
       get { return document_; }
       set {
@@ -2397,6 +2573,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The encoding type used by the API to calculate offsets.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.EncodingType EncodingType {
       get { return encodingType_; }
       set {
@@ -2404,10 +2581,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnalyzeEntitiesRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AnalyzeEntitiesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2420,6 +2599,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
@@ -2427,10 +2607,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (document_ != null) {
         output.WriteRawTag(10);
@@ -2442,6 +2624,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (document_ != null) {
@@ -2453,6 +2636,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AnalyzeEntitiesRequest other) {
       if (other == null) {
         return;
@@ -2468,6 +2652,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2495,30 +2680,35 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  The entity analysis response message.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AnalyzeEntitiesResponse : pb::IMessage<AnalyzeEntitiesResponse> {
     private static readonly pb::MessageParser<AnalyzeEntitiesResponse> _parser = new pb::MessageParser<AnalyzeEntitiesResponse>(() => new AnalyzeEntitiesResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AnalyzeEntitiesResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeEntitiesResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeEntitiesResponse(AnalyzeEntitiesResponse other) : this() {
       entities_ = other.entities_.Clone();
       language_ = other.language_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnalyzeEntitiesResponse Clone() {
       return new AnalyzeEntitiesResponse(this);
     }
@@ -2531,6 +2721,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The recognized entities in the input document.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1Beta1.Entity> Entities {
       get { return entities_; }
     }
@@ -2542,6 +2733,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  The language of the text, which will be the same as the language specified
     ///  in the request or, if not specified, the automatically-detected language.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
       get { return language_; }
       set {
@@ -2549,10 +2741,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnalyzeEntitiesResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AnalyzeEntitiesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2565,6 +2759,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= entities_.GetHashCode();
@@ -2572,10 +2767,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       entities_.WriteTo(output, _repeated_entities_codec);
       if (Language.Length != 0) {
@@ -2584,6 +2781,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += entities_.CalculateSize(_repeated_entities_codec);
@@ -2593,6 +2791,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AnalyzeEntitiesResponse other) {
       if (other == null) {
         return;
@@ -2603,6 +2802,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2628,31 +2828,36 @@ namespace Google.Cloud.Language.V1Beta1 {
   ///  The request message for the advanced text annotation API, which performs all
   ///  the above plus syntactic analysis.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AnnotateTextRequest : pb::IMessage<AnnotateTextRequest> {
     private static readonly pb::MessageParser<AnnotateTextRequest> _parser = new pb::MessageParser<AnnotateTextRequest>(() => new AnnotateTextRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AnnotateTextRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateTextRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateTextRequest(AnnotateTextRequest other) : this() {
       Document = other.document_ != null ? other.Document.Clone() : null;
       Features = other.features_ != null ? other.Features.Clone() : null;
       encodingType_ = other.encodingType_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateTextRequest Clone() {
       return new AnnotateTextRequest(this);
     }
@@ -2663,6 +2868,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  Input document.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.Document Document {
       get { return document_; }
       set {
@@ -2676,6 +2882,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The enabled features.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types.Features Features {
       get { return features_; }
       set {
@@ -2689,6 +2896,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     /// <summary>
     ///  The encoding type used by the API to calculate offsets.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.EncodingType EncodingType {
       get { return encodingType_; }
       set {
@@ -2696,10 +2904,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnnotateTextRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AnnotateTextRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2713,6 +2923,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
@@ -2721,10 +2932,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (document_ != null) {
         output.WriteRawTag(10);
@@ -2740,6 +2953,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (document_ != null) {
@@ -2754,6 +2968,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AnnotateTextRequest other) {
       if (other == null) {
         return;
@@ -2775,6 +2990,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2806,37 +3022,42 @@ namespace Google.Cloud.Language.V1Beta1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the AnnotateTextRequest message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  All available features for sentiment, syntax, and semantic analysis.
       ///  Setting each one to true will enable that specific analysis for the input.
       /// </summary>
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
       public sealed partial class Features : pb::IMessage<Features> {
         private static readonly pb::MessageParser<Features> _parser = new pb::MessageParser<Features>(() => new Features());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<Features> Parser { get { return _parser; } }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Descriptor.NestedTypes[0]; }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Features() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Features(Features other) : this() {
           extractSyntax_ = other.extractSyntax_;
           extractEntities_ = other.extractEntities_;
           extractDocumentSentiment_ = other.extractDocumentSentiment_;
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Features Clone() {
           return new Features(this);
         }
@@ -2847,6 +3068,7 @@ namespace Google.Cloud.Language.V1Beta1 {
         /// <summary>
         ///  Extract syntax information.
         /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool ExtractSyntax {
           get { return extractSyntax_; }
           set {
@@ -2860,6 +3082,7 @@ namespace Google.Cloud.Language.V1Beta1 {
         /// <summary>
         ///  Extract entities.
         /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool ExtractEntities {
           get { return extractEntities_; }
           set {
@@ -2873,6 +3096,7 @@ namespace Google.Cloud.Language.V1Beta1 {
         /// <summary>
         ///  Extract document-level sentiment.
         /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool ExtractDocumentSentiment {
           get { return extractDocumentSentiment_; }
           set {
@@ -2880,10 +3104,12 @@ namespace Google.Cloud.Language.V1Beta1 {
           }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as Features);
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool Equals(Features other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2897,6 +3123,7 @@ namespace Google.Cloud.Language.V1Beta1 {
           return true;
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
           if (ExtractSyntax != false) hash ^= ExtractSyntax.GetHashCode();
@@ -2905,10 +3132,12 @@ namespace Google.Cloud.Language.V1Beta1 {
           return hash;
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
           if (ExtractSyntax != false) {
             output.WriteRawTag(8);
@@ -2924,6 +3153,7 @@ namespace Google.Cloud.Language.V1Beta1 {
           }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
           if (ExtractSyntax != false) {
@@ -2938,6 +3168,7 @@ namespace Google.Cloud.Language.V1Beta1 {
           return size;
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(Features other) {
           if (other == null) {
             return;
@@ -2953,6 +3184,7 @@ namespace Google.Cloud.Language.V1Beta1 {
           }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2986,25 +3218,29 @@ namespace Google.Cloud.Language.V1Beta1 {
   /// <summary>
   ///  The text annotations response message.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AnnotateTextResponse : pb::IMessage<AnnotateTextResponse> {
     private static readonly pb::MessageParser<AnnotateTextResponse> _parser = new pb::MessageParser<AnnotateTextResponse>(() => new AnnotateTextResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AnnotateTextResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Language.V1Beta1.LanguageServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateTextResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateTextResponse(AnnotateTextResponse other) : this() {
       sentences_ = other.sentences_.Clone();
       tokens_ = other.tokens_.Clone();
@@ -3013,6 +3249,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       language_ = other.language_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateTextResponse Clone() {
       return new AnnotateTextResponse(this);
     }
@@ -3026,6 +3263,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  Sentences in the input document. Populated if the user enables
     ///  [AnnotateTextRequest.Features.extract_syntax][google.cloud.language.v1beta1.AnnotateTextRequest.Features.extract_syntax].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1Beta1.Sentence> Sentences {
       get { return sentences_; }
     }
@@ -3040,6 +3278,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  Populated if the user enables
     ///  [AnnotateTextRequest.Features.extract_syntax][google.cloud.language.v1beta1.AnnotateTextRequest.Features.extract_syntax].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1Beta1.Token> Tokens {
       get { return tokens_; }
     }
@@ -3054,6 +3293,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  Populated if the user enables
     ///  [AnnotateTextRequest.Features.extract_entities][google.cloud.language.v1beta1.AnnotateTextRequest.Features.extract_entities].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1Beta1.Entity> Entities {
       get { return entities_; }
     }
@@ -3065,6 +3305,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  The overall sentiment for the document. Populated if the user enables
     ///  [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1beta1.AnnotateTextRequest.Features.extract_document_sentiment].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1Beta1.Sentiment DocumentSentiment {
       get { return documentSentiment_; }
       set {
@@ -3079,6 +3320,7 @@ namespace Google.Cloud.Language.V1Beta1 {
     ///  The language of the text, which will be the same as the language specified
     ///  in the request or, if not specified, the automatically-detected language.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
       get { return language_; }
       set {
@@ -3086,10 +3328,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnnotateTextResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AnnotateTextResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3105,6 +3349,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= sentences_.GetHashCode();
@@ -3115,10 +3360,12 @@ namespace Google.Cloud.Language.V1Beta1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       sentences_.WriteTo(output, _repeated_sentences_codec);
       tokens_.WriteTo(output, _repeated_tokens_codec);
@@ -3133,6 +3380,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += sentences_.CalculateSize(_repeated_sentences_codec);
@@ -3147,6 +3395,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AnnotateTextResponse other) {
       if (other == null) {
         return;
@@ -3165,6 +3414,7 @@ namespace Google.Cloud.Language.V1Beta1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

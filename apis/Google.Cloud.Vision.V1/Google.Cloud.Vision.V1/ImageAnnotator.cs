@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace Google.Cloud.Vision.V1 {
 
   /// <summary>Holder for reflection information generated from google/cloud/vision/v1/image_annotator.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class ImageAnnotatorReflection {
 
     #region Descriptor
@@ -195,30 +194,35 @@ namespace Google.Cloud.Vision.V1 {
   ///  images by using &lt;em>Feature&lt;/em>s. Features encode the Cloud Vision API
   ///  vertical to operate on and the number of top-scoring results to return.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Feature : pb::IMessage<Feature> {
     private static readonly pb::MessageParser<Feature> _parser = new pb::MessageParser<Feature>(() => new Feature());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Feature> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Feature() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Feature(Feature other) : this() {
       type_ = other.type_;
       maxResults_ = other.maxResults_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Feature Clone() {
       return new Feature(this);
     }
@@ -229,6 +233,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  The feature type.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Feature.Types.Type Type {
       get { return type_; }
       set {
@@ -242,6 +247,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Maximum number of results of this type.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxResults {
       get { return maxResults_; }
       set {
@@ -249,10 +255,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Feature);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Feature other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -265,6 +273,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Type != 0) hash ^= Type.GetHashCode();
@@ -272,10 +281,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Type != 0) {
         output.WriteRawTag(8);
@@ -287,6 +298,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Type != 0) {
@@ -298,6 +310,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Feature other) {
       if (other == null) {
         return;
@@ -310,6 +323,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -331,7 +345,7 @@ namespace Google.Cloud.Vision.V1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the Feature message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  Type of image feature.
@@ -379,29 +393,34 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  External image source (Google Cloud Storage image location).
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ImageSource : pb::IMessage<ImageSource> {
     private static readonly pb::MessageParser<ImageSource> _parser = new pb::MessageParser<ImageSource>(() => new ImageSource());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ImageSource> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[1]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageSource() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageSource(ImageSource other) : this() {
       gcsImageUri_ = other.gcsImageUri_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageSource Clone() {
       return new ImageSource(this);
     }
@@ -415,6 +434,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  details, please see: https://cloud.google.com/storage/docs/reference-uris.
     ///  NOTE: Cloud Storage object versioning is not supported!
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GcsImageUri {
       get { return gcsImageUri_; }
       set {
@@ -422,10 +442,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ImageSource);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ImageSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -437,16 +459,19 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (GcsImageUri.Length != 0) hash ^= GcsImageUri.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (GcsImageUri.Length != 0) {
         output.WriteRawTag(10);
@@ -454,6 +479,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (GcsImageUri.Length != 0) {
@@ -462,6 +488,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ImageSource other) {
       if (other == null) {
         return;
@@ -471,6 +498,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -491,30 +519,35 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Client image to perform Google Cloud Vision API tasks over.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Image : pb::IMessage<Image> {
     private static readonly pb::MessageParser<Image> _parser = new pb::MessageParser<Image>(() => new Image());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Image> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[2]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Image() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Image(Image other) : this() {
       content_ = other.content_;
       Source = other.source_ != null ? other.Source.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Image Clone() {
       return new Image(this);
     }
@@ -527,6 +560,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  Note: as with all `bytes` fields, protobuffers use a pure binary
     ///  representation, whereas JSON representations use base64.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Content {
       get { return content_; }
       set {
@@ -542,6 +576,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  are filled for an image, 'content' takes precedence and it will be
     ///  used for performing the image annotation request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.ImageSource Source {
       get { return source_; }
       set {
@@ -549,10 +584,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Image);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Image other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -565,6 +602,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Content.Length != 0) hash ^= Content.GetHashCode();
@@ -572,10 +610,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Content.Length != 0) {
         output.WriteRawTag(10);
@@ -587,6 +627,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Content.Length != 0) {
@@ -598,6 +639,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Image other) {
       if (other == null) {
         return;
@@ -613,6 +655,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -640,25 +683,29 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  A face annotation object contains the results of face detection.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class FaceAnnotation : pb::IMessage<FaceAnnotation> {
     private static readonly pb::MessageParser<FaceAnnotation> _parser = new pb::MessageParser<FaceAnnotation>(() => new FaceAnnotation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<FaceAnnotation> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[3]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FaceAnnotation() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FaceAnnotation(FaceAnnotation other) : this() {
       BoundingPoly = other.boundingPoly_ != null ? other.BoundingPoly.Clone() : null;
       FdBoundingPoly = other.fdBoundingPoly_ != null ? other.FdBoundingPoly.Clone() : null;
@@ -677,6 +724,7 @@ namespace Google.Cloud.Vision.V1 {
       headwearLikelihood_ = other.headwearLikelihood_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FaceAnnotation Clone() {
       return new FaceAnnotation(this);
     }
@@ -693,6 +741,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  BoundingPoly (the polygon will be unbounded) if only a partial face appears in
     ///  the image to be annotated.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingPoly {
       get { return boundingPoly_; }
       set {
@@ -712,6 +761,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  landmarker results, only on the initial face detection, hence
     ///  the &lt;code>fd&lt;/code> (face detection) prefix.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly FdBoundingPoly {
       get { return fdBoundingPoly_; }
       set {
@@ -727,6 +777,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Detected face landmarks.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark> Landmarks {
       get { return landmarks_; }
     }
@@ -740,6 +791,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  face relative to the image vertical, about the axis perpendicular to the
     ///  face. Range [-180,180].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float RollAngle {
       get { return rollAngle_; }
       set {
@@ -755,6 +807,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  pointing, relative to the vertical plane perpendicular to the image. Range
     ///  [-180,180].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float PanAngle {
       get { return panAngle_; }
       set {
@@ -770,6 +823,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  pointing
     ///  relative to the image's horizontal plane. Range [-180,180].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float TiltAngle {
       get { return tiltAngle_; }
       set {
@@ -783,6 +837,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Detection confidence. Range [0, 1].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float DetectionConfidence {
       get { return detectionConfidence_; }
       set {
@@ -796,6 +851,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Face landmarking confidence. Range [0, 1].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float LandmarkingConfidence {
       get { return landmarkingConfidence_; }
       set {
@@ -809,6 +865,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Joy likelihood.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood JoyLikelihood {
       get { return joyLikelihood_; }
       set {
@@ -822,6 +879,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Sorrow likelihood.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood SorrowLikelihood {
       get { return sorrowLikelihood_; }
       set {
@@ -835,6 +893,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Anger likelihood.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood AngerLikelihood {
       get { return angerLikelihood_; }
       set {
@@ -848,6 +907,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Surprise likelihood.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood SurpriseLikelihood {
       get { return surpriseLikelihood_; }
       set {
@@ -861,6 +921,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Under-exposed likelihood.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood UnderExposedLikelihood {
       get { return underExposedLikelihood_; }
       set {
@@ -874,6 +935,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Blurred likelihood.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood BlurredLikelihood {
       get { return blurredLikelihood_; }
       set {
@@ -887,6 +949,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Headwear likelihood.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood HeadwearLikelihood {
       get { return headwearLikelihood_; }
       set {
@@ -894,10 +957,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as FaceAnnotation);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(FaceAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -923,6 +988,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (boundingPoly_ != null) hash ^= BoundingPoly.GetHashCode();
@@ -943,10 +1009,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (boundingPoly_ != null) {
         output.WriteRawTag(10);
@@ -1007,6 +1075,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (boundingPoly_ != null) {
@@ -1055,6 +1124,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(FaceAnnotation other) {
       if (other == null) {
         return;
@@ -1110,6 +1180,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1189,7 +1260,7 @@ namespace Google.Cloud.Vision.V1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the FaceAnnotation message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
       ///  A face-specific landmark (for example, a face feature).
@@ -1197,30 +1268,35 @@ namespace Google.Cloud.Vision.V1 {
       ///  when the face is near one or more edges of the image.
       ///  Therefore it is NOT guaranteed that 0 &lt;= x &lt; width or 0 &lt;= y &lt; height.
       /// </summary>
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
       public sealed partial class Landmark : pb::IMessage<Landmark> {
         private static readonly pb::MessageParser<Landmark> _parser = new pb::MessageParser<Landmark>(() => new Landmark());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pb::MessageParser<Landmark> Parser { get { return _parser; } }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Vision.V1.FaceAnnotation.Descriptor.NestedTypes[0]; }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Landmark() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Landmark(Landmark other) : this() {
           type_ = other.type_;
           Position = other.position_ != null ? other.Position.Clone() : null;
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Landmark Clone() {
           return new Landmark(this);
         }
@@ -1231,6 +1307,7 @@ namespace Google.Cloud.Vision.V1 {
         /// <summary>
         ///  Face landmark type.
         /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type Type {
           get { return type_; }
           set {
@@ -1244,6 +1321,7 @@ namespace Google.Cloud.Vision.V1 {
         /// <summary>
         ///  Face landmark position.
         /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Vision.V1.Position Position {
           get { return position_; }
           set {
@@ -1251,10 +1329,12 @@ namespace Google.Cloud.Vision.V1 {
           }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as Landmark);
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool Equals(Landmark other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1267,6 +1347,7 @@ namespace Google.Cloud.Vision.V1 {
           return true;
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
           if (Type != 0) hash ^= Type.GetHashCode();
@@ -1274,10 +1355,12 @@ namespace Google.Cloud.Vision.V1 {
           return hash;
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
           if (Type != 0) {
             output.WriteRawTag(24);
@@ -1289,6 +1372,7 @@ namespace Google.Cloud.Vision.V1 {
           }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
           if (Type != 0) {
@@ -1300,6 +1384,7 @@ namespace Google.Cloud.Vision.V1 {
           return size;
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(Landmark other) {
           if (other == null) {
             return;
@@ -1315,6 +1400,7 @@ namespace Google.Cloud.Vision.V1 {
           }
         }
 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1339,7 +1425,7 @@ namespace Google.Cloud.Vision.V1 {
 
         #region Nested types
         /// <summary>Container for nested types declared in the Landmark message type.</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static partial class Types {
           /// <summary>
           ///  Face landmark (feature) type.
@@ -1503,29 +1589,34 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Detected entity location information.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LocationInfo : pb::IMessage<LocationInfo> {
     private static readonly pb::MessageParser<LocationInfo> _parser = new pb::MessageParser<LocationInfo>(() => new LocationInfo());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<LocationInfo> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[4]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LocationInfo() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LocationInfo(LocationInfo other) : this() {
       LatLng = other.latLng_ != null ? other.LatLng.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LocationInfo Clone() {
       return new LocationInfo(this);
     }
@@ -1536,6 +1627,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Lat - long location coordinates.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng LatLng {
       get { return latLng_; }
       set {
@@ -1543,10 +1635,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LocationInfo);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(LocationInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1558,16 +1652,19 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (latLng_ != null) hash ^= LatLng.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (latLng_ != null) {
         output.WriteRawTag(10);
@@ -1575,6 +1672,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (latLng_ != null) {
@@ -1583,6 +1681,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(LocationInfo other) {
       if (other == null) {
         return;
@@ -1595,6 +1694,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1618,30 +1718,35 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Arbitrary name/value pair.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Property : pb::IMessage<Property> {
     private static readonly pb::MessageParser<Property> _parser = new pb::MessageParser<Property>(() => new Property());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Property> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[5]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Property() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Property(Property other) : this() {
       name_ = other.name_;
       value_ = other.value_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Property Clone() {
       return new Property(this);
     }
@@ -1652,6 +1757,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Name of the property.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
@@ -1665,6 +1771,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Value of the property.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Value {
       get { return value_; }
       set {
@@ -1672,10 +1779,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Property);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Property other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1688,6 +1797,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1695,10 +1805,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1710,6 +1822,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1721,6 +1834,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Property other) {
       if (other == null) {
         return;
@@ -1733,6 +1847,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1757,25 +1872,29 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Set of detected entity features.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class EntityAnnotation : pb::IMessage<EntityAnnotation> {
     private static readonly pb::MessageParser<EntityAnnotation> _parser = new pb::MessageParser<EntityAnnotation>(() => new EntityAnnotation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<EntityAnnotation> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[6]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityAnnotation() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityAnnotation(EntityAnnotation other) : this() {
       mid_ = other.mid_;
       locale_ = other.locale_;
@@ -1788,6 +1907,7 @@ namespace Google.Cloud.Vision.V1 {
       properties_ = other.properties_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EntityAnnotation Clone() {
       return new EntityAnnotation(this);
     }
@@ -1800,6 +1920,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  For more details on KG please see:
     ///  https://developers.google.com/knowledge-graph/
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Mid {
       get { return mid_; }
       set {
@@ -1814,6 +1935,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  The language code for the locale in which the entity textual
     ///  &lt;code>description&lt;/code> (next field) is expressed.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Locale {
       get { return locale_; }
       set {
@@ -1827,6 +1949,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Entity textual description, expressed in its &lt;code>locale&lt;/code> language.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
       get { return description_; }
       set {
@@ -1840,6 +1963,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Overall score of the result. Range [0, 1].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Score {
       get { return score_; }
       set {
@@ -1855,6 +1979,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  For example, for an image containing 'Eiffel Tower,' this field represents
     ///  the confidence that there is a tower in the query image. Range [0, 1].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -1872,6 +1997,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  building, though the confidence that there is a tower may be the same.
     ///  Range [0, 1].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Topicality {
       get { return topicality_; }
       set {
@@ -1888,6 +2014,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  are produced for the entire text detected in an image region, followed by
     ///  `boundingPoly`s for each word within the detected text.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingPoly {
       get { return boundingPoly_; }
       set {
@@ -1907,6 +2034,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  location of the place where the query image was taken. Location information
     ///  is usually present for landmarks.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.LocationInfo> Locations {
       get { return locations_; }
     }
@@ -1920,14 +2048,17 @@ namespace Google.Cloud.Vision.V1 {
     ///  Some entities can have additional optional &lt;code>Property&lt;/code> fields.
     ///  For example a different kind of score or string that qualifies the entity.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Property> Properties {
       get { return properties_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as EntityAnnotation);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(EntityAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1947,6 +2078,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Mid.Length != 0) hash ^= Mid.GetHashCode();
@@ -1961,10 +2093,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Mid.Length != 0) {
         output.WriteRawTag(10);
@@ -1998,6 +2132,7 @@ namespace Google.Cloud.Vision.V1 {
       properties_.WriteTo(output, _repeated_properties_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Mid.Length != 0) {
@@ -2026,6 +2161,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(EntityAnnotation other) {
       if (other == null) {
         return;
@@ -2058,6 +2194,7 @@ namespace Google.Cloud.Vision.V1 {
       properties_.Add(other.properties_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2115,25 +2252,29 @@ namespace Google.Cloud.Vision.V1 {
   ///  methods over safe-search verticals (for example, adult, spoof, medical,
   ///  violence).
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class SafeSearchAnnotation : pb::IMessage<SafeSearchAnnotation> {
     private static readonly pb::MessageParser<SafeSearchAnnotation> _parser = new pb::MessageParser<SafeSearchAnnotation>(() => new SafeSearchAnnotation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<SafeSearchAnnotation> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[7]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SafeSearchAnnotation() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SafeSearchAnnotation(SafeSearchAnnotation other) : this() {
       adult_ = other.adult_;
       spoof_ = other.spoof_;
@@ -2141,6 +2282,7 @@ namespace Google.Cloud.Vision.V1 {
       violence_ = other.violence_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SafeSearchAnnotation Clone() {
       return new SafeSearchAnnotation(this);
     }
@@ -2151,6 +2293,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Represents the adult contents likelihood for the image.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Adult {
       get { return adult_; }
       set {
@@ -2166,6 +2309,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  was made to the image's canonical version to make it appear
     ///  funny or offensive.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Spoof {
       get { return spoof_; }
       set {
@@ -2179,6 +2323,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Likelihood this is a medical image.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Medical {
       get { return medical_; }
       set {
@@ -2192,6 +2337,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Violence likelihood.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Violence {
       get { return violence_; }
       set {
@@ -2199,10 +2345,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SafeSearchAnnotation);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(SafeSearchAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2217,6 +2365,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Adult != 0) hash ^= Adult.GetHashCode();
@@ -2226,10 +2375,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Adult != 0) {
         output.WriteRawTag(8);
@@ -2249,6 +2400,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Adult != 0) {
@@ -2266,6 +2418,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(SafeSearchAnnotation other) {
       if (other == null) {
         return;
@@ -2284,6 +2437,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2316,30 +2470,35 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Rectangle determined by min and max LatLng pairs.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LatLongRect : pb::IMessage<LatLongRect> {
     private static readonly pb::MessageParser<LatLongRect> _parser = new pb::MessageParser<LatLongRect>(() => new LatLongRect());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<LatLongRect> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[8]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LatLongRect() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LatLongRect(LatLongRect other) : this() {
       MinLatLng = other.minLatLng_ != null ? other.MinLatLng.Clone() : null;
       MaxLatLng = other.maxLatLng_ != null ? other.MaxLatLng.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LatLongRect Clone() {
       return new LatLongRect(this);
     }
@@ -2350,6 +2509,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Min lat/long pair.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng MinLatLng {
       get { return minLatLng_; }
       set {
@@ -2363,6 +2523,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Max lat/long pair.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng MaxLatLng {
       get { return maxLatLng_; }
       set {
@@ -2370,10 +2531,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LatLongRect);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(LatLongRect other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2386,6 +2549,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (minLatLng_ != null) hash ^= MinLatLng.GetHashCode();
@@ -2393,10 +2557,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (minLatLng_ != null) {
         output.WriteRawTag(10);
@@ -2408,6 +2574,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (minLatLng_ != null) {
@@ -2419,6 +2586,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(LatLongRect other) {
       if (other == null) {
         return;
@@ -2437,6 +2605,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2468,31 +2637,36 @@ namespace Google.Cloud.Vision.V1 {
   ///  Color information consists of RGB channels, score and fraction of
   ///  image the color occupies in the image.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ColorInfo : pb::IMessage<ColorInfo> {
     private static readonly pb::MessageParser<ColorInfo> _parser = new pb::MessageParser<ColorInfo>(() => new ColorInfo());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ColorInfo> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[9]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ColorInfo() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ColorInfo(ColorInfo other) : this() {
       Color = other.color_ != null ? other.Color.Clone() : null;
       score_ = other.score_;
       pixelFraction_ = other.pixelFraction_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ColorInfo Clone() {
       return new ColorInfo(this);
     }
@@ -2503,6 +2677,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  RGB components of the color.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Color Color {
       get { return color_; }
       set {
@@ -2516,6 +2691,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Image-specific score for this color. Value in range [0, 1].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Score {
       get { return score_; }
       set {
@@ -2530,6 +2706,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  Stores the fraction of pixels the color occupies in the image.
     ///  Value in range [0, 1].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float PixelFraction {
       get { return pixelFraction_; }
       set {
@@ -2537,10 +2714,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ColorInfo);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ColorInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2554,6 +2733,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (color_ != null) hash ^= Color.GetHashCode();
@@ -2562,10 +2742,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (color_ != null) {
         output.WriteRawTag(10);
@@ -2581,6 +2763,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (color_ != null) {
@@ -2595,6 +2778,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ColorInfo other) {
       if (other == null) {
         return;
@@ -2613,6 +2797,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2644,29 +2829,34 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Set of dominant colors and their corresponding scores.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class DominantColorsAnnotation : pb::IMessage<DominantColorsAnnotation> {
     private static readonly pb::MessageParser<DominantColorsAnnotation> _parser = new pb::MessageParser<DominantColorsAnnotation>(() => new DominantColorsAnnotation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<DominantColorsAnnotation> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[10]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DominantColorsAnnotation() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DominantColorsAnnotation(DominantColorsAnnotation other) : this() {
       colors_ = other.colors_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DominantColorsAnnotation Clone() {
       return new DominantColorsAnnotation(this);
     }
@@ -2679,14 +2869,17 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  RGB color values, with their score and pixel fraction.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.ColorInfo> Colors {
       get { return colors_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DominantColorsAnnotation);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(DominantColorsAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2698,26 +2891,31 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= colors_.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       colors_.WriteTo(output, _repeated_colors_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += colors_.CalculateSize(_repeated_colors_codec);
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(DominantColorsAnnotation other) {
       if (other == null) {
         return;
@@ -2725,6 +2923,7 @@ namespace Google.Cloud.Vision.V1 {
       colors_.Add(other.colors_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2745,29 +2944,34 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Stores image properties (e.g. dominant colors).
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ImageProperties : pb::IMessage<ImageProperties> {
     private static readonly pb::MessageParser<ImageProperties> _parser = new pb::MessageParser<ImageProperties>(() => new ImageProperties());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ImageProperties> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[11]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageProperties() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageProperties(ImageProperties other) : this() {
       DominantColors = other.dominantColors_ != null ? other.DominantColors.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageProperties Clone() {
       return new ImageProperties(this);
     }
@@ -2778,6 +2982,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  If present, dominant colors completed successfully.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.DominantColorsAnnotation DominantColors {
       get { return dominantColors_; }
       set {
@@ -2785,10 +2990,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ImageProperties);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ImageProperties other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2800,16 +3007,19 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (dominantColors_ != null) hash ^= DominantColors.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (dominantColors_ != null) {
         output.WriteRawTag(10);
@@ -2817,6 +3027,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (dominantColors_ != null) {
@@ -2825,6 +3036,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ImageProperties other) {
       if (other == null) {
         return;
@@ -2837,6 +3049,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2860,30 +3073,35 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Image context.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ImageContext : pb::IMessage<ImageContext> {
     private static readonly pb::MessageParser<ImageContext> _parser = new pb::MessageParser<ImageContext>(() => new ImageContext());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ImageContext> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[12]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageContext() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageContext(ImageContext other) : this() {
       LatLongRect = other.latLongRect_ != null ? other.LatLongRect.Clone() : null;
       languageHints_ = other.languageHints_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageContext Clone() {
       return new ImageContext(this);
     }
@@ -2894,6 +3112,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Lat/long rectangle that specifies the location of the image.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.LatLongRect LatLongRect {
       get { return latLongRect_; }
       set {
@@ -2917,14 +3136,17 @@ namespace Google.Cloud.Vision.V1 {
     ///  [supported
     ///  languages](/translate/v2/translate-reference#supported_languages).
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> LanguageHints {
       get { return languageHints_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ImageContext);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ImageContext other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2937,6 +3159,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (latLongRect_ != null) hash ^= LatLongRect.GetHashCode();
@@ -2944,10 +3167,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (latLongRect_ != null) {
         output.WriteRawTag(10);
@@ -2956,6 +3181,7 @@ namespace Google.Cloud.Vision.V1 {
       languageHints_.WriteTo(output, _repeated_languageHints_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (latLongRect_ != null) {
@@ -2965,6 +3191,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ImageContext other) {
       if (other == null) {
         return;
@@ -2978,6 +3205,7 @@ namespace Google.Cloud.Vision.V1 {
       languageHints_.Add(other.languageHints_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3006,31 +3234,36 @@ namespace Google.Cloud.Vision.V1 {
   ///  Request for performing Google Cloud Vision API tasks over a user-provided
   ///  image, with user-requested features.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AnnotateImageRequest : pb::IMessage<AnnotateImageRequest> {
     private static readonly pb::MessageParser<AnnotateImageRequest> _parser = new pb::MessageParser<AnnotateImageRequest>(() => new AnnotateImageRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AnnotateImageRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[13]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateImageRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateImageRequest(AnnotateImageRequest other) : this() {
       Image = other.image_ != null ? other.Image.Clone() : null;
       features_ = other.features_.Clone();
       ImageContext = other.imageContext_ != null ? other.ImageContext.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateImageRequest Clone() {
       return new AnnotateImageRequest(this);
     }
@@ -3041,6 +3274,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  The image to be processed.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Image Image {
       get { return image_; }
       set {
@@ -3056,6 +3290,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Requested features.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Feature> Features {
       get { return features_; }
     }
@@ -3066,6 +3301,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Additional context that may accompany the image.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.ImageContext ImageContext {
       get { return imageContext_; }
       set {
@@ -3073,10 +3309,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnnotateImageRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AnnotateImageRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3090,6 +3328,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (image_ != null) hash ^= Image.GetHashCode();
@@ -3098,10 +3337,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (image_ != null) {
         output.WriteRawTag(10);
@@ -3114,6 +3355,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (image_ != null) {
@@ -3126,6 +3368,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AnnotateImageRequest other) {
       if (other == null) {
         return;
@@ -3145,6 +3388,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3179,25 +3423,29 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Response to an image annotation request.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AnnotateImageResponse : pb::IMessage<AnnotateImageResponse> {
     private static readonly pb::MessageParser<AnnotateImageResponse> _parser = new pb::MessageParser<AnnotateImageResponse>(() => new AnnotateImageResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AnnotateImageResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[14]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateImageResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateImageResponse(AnnotateImageResponse other) : this() {
       faceAnnotations_ = other.faceAnnotations_.Clone();
       landmarkAnnotations_ = other.landmarkAnnotations_.Clone();
@@ -3209,6 +3457,7 @@ namespace Google.Cloud.Vision.V1 {
       Error = other.error_ != null ? other.Error.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnnotateImageResponse Clone() {
       return new AnnotateImageResponse(this);
     }
@@ -3221,6 +3470,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  If present, face detection completed successfully.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation> FaceAnnotations {
       get { return faceAnnotations_; }
     }
@@ -3233,6 +3483,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  If present, landmark detection completed successfully.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LandmarkAnnotations {
       get { return landmarkAnnotations_; }
     }
@@ -3245,6 +3496,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  If present, logo detection completed successfully.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LogoAnnotations {
       get { return logoAnnotations_; }
     }
@@ -3257,6 +3509,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  If present, label detection completed successfully.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LabelAnnotations {
       get { return labelAnnotations_; }
     }
@@ -3269,6 +3522,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  If present, text (OCR) detection completed successfully.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> TextAnnotations {
       get { return textAnnotations_; }
     }
@@ -3279,6 +3533,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  If present, safe-search annotation completed successfully.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.SafeSearchAnnotation SafeSearchAnnotation {
       get { return safeSearchAnnotation_; }
       set {
@@ -3292,6 +3547,7 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  If present, image properties were extracted successfully.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.ImageProperties ImagePropertiesAnnotation {
       get { return imagePropertiesAnnotation_; }
       set {
@@ -3307,6 +3563,7 @@ namespace Google.Cloud.Vision.V1 {
     ///  Note that filled-in mage annotations are guaranteed to be
     ///  correct, even when &lt;code>error&lt;/code> is non-empty.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Error {
       get { return error_; }
       set {
@@ -3314,10 +3571,12 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnnotateImageResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AnnotateImageResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3336,6 +3595,7 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= faceAnnotations_.GetHashCode();
@@ -3349,10 +3609,12 @@ namespace Google.Cloud.Vision.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       faceAnnotations_.WriteTo(output, _repeated_faceAnnotations_codec);
       landmarkAnnotations_.WriteTo(output, _repeated_landmarkAnnotations_codec);
@@ -3373,6 +3635,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += faceAnnotations_.CalculateSize(_repeated_faceAnnotations_codec);
@@ -3392,6 +3655,7 @@ namespace Google.Cloud.Vision.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AnnotateImageResponse other) {
       if (other == null) {
         return;
@@ -3421,6 +3685,7 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3478,29 +3743,34 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Multiple image annotation requests are batched into a single service call.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class BatchAnnotateImagesRequest : pb::IMessage<BatchAnnotateImagesRequest> {
     private static readonly pb::MessageParser<BatchAnnotateImagesRequest> _parser = new pb::MessageParser<BatchAnnotateImagesRequest>(() => new BatchAnnotateImagesRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<BatchAnnotateImagesRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[15]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchAnnotateImagesRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchAnnotateImagesRequest(BatchAnnotateImagesRequest other) : this() {
       requests_ = other.requests_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchAnnotateImagesRequest Clone() {
       return new BatchAnnotateImagesRequest(this);
     }
@@ -3513,14 +3783,17 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Individual image annotation requests for this batch.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateImageRequest> Requests {
       get { return requests_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BatchAnnotateImagesRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(BatchAnnotateImagesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3532,26 +3805,31 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= requests_.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       requests_.WriteTo(output, _repeated_requests_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += requests_.CalculateSize(_repeated_requests_codec);
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(BatchAnnotateImagesRequest other) {
       if (other == null) {
         return;
@@ -3559,6 +3837,7 @@ namespace Google.Cloud.Vision.V1 {
       requests_.Add(other.requests_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3579,29 +3858,34 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   ///  Response to a batch image annotation request.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class BatchAnnotateImagesResponse : pb::IMessage<BatchAnnotateImagesResponse> {
     private static readonly pb::MessageParser<BatchAnnotateImagesResponse> _parser = new pb::MessageParser<BatchAnnotateImagesResponse>(() => new BatchAnnotateImagesResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<BatchAnnotateImagesResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[16]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchAnnotateImagesResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchAnnotateImagesResponse(BatchAnnotateImagesResponse other) : this() {
       responses_ = other.responses_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchAnnotateImagesResponse Clone() {
       return new BatchAnnotateImagesResponse(this);
     }
@@ -3614,14 +3898,17 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     ///  Individual responses to image annotation requests within the batch.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateImageResponse> Responses {
       get { return responses_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BatchAnnotateImagesResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(BatchAnnotateImagesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3633,26 +3920,31 @@ namespace Google.Cloud.Vision.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= responses_.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       responses_.WriteTo(output, _repeated_responses_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += responses_.CalculateSize(_repeated_responses_codec);
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(BatchAnnotateImagesResponse other) {
       if (other == null) {
         return;
@@ -3660,6 +3952,7 @@ namespace Google.Cloud.Vision.V1 {
       responses_.Add(other.responses_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

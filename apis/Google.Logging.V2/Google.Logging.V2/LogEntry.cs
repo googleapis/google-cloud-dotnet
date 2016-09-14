@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace Google.Logging.V2 {
 
   /// <summary>Holder for reflection information generated from google/logging/v2/log_entry.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class LogEntryReflection {
 
     #region Descriptor
@@ -43,8 +42,9 @@ namespace Google.Logging.V2 {
             "RW50cnlPcGVyYXRpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
             "BXZhbHVlGAIgASgJOgI4AUIJCgdwYXlsb2FkIk4KEUxvZ0VudHJ5T3BlcmF0",
             "aW9uEgoKAmlkGAEgASgJEhAKCHByb2R1Y2VyGAIgASgJEg0KBWZpcnN0GAMg",
-            "ASgIEgwKBGxhc3QYBCABKAhCKwoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1M",
-            "b2dFbnRyeVByb3RvUAH4AQFiBnByb3RvMw=="));
+            "ASgIEgwKBGxhc3QYBCABKAhCXQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1M",
+            "b2dFbnRyeVByb3RvUAFaMGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvbG9nZ2luZy92MvgBAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -59,25 +59,29 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  An individual entry in a log.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LogEntry : pb::IMessage<LogEntry> {
     private static readonly pb::MessageParser<LogEntry> _parser = new pb::MessageParser<LogEntry>(() => new LogEntry());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<LogEntry> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LogEntryReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogEntry() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogEntry(LogEntry other) : this() {
       logName_ = other.logName_;
       Resource = other.resource_ != null ? other.Resource.Clone() : null;
@@ -101,6 +105,7 @@ namespace Google.Logging.V2 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogEntry Clone() {
       return new LogEntry(this);
     }
@@ -121,6 +126,7 @@ namespace Google.Logging.V2 {
     ///  characters: forward-slash, underscore, hyphen, and period.
     ///  Forward-slash (`/`) characters in the log ID must be URL-encoded.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LogName {
       get { return logName_; }
       set {
@@ -137,6 +143,7 @@ namespace Google.Logging.V2 {
     ///  associated with the monitored resource designating the particular
     ///  database that reported the error.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MonitoredResource Resource {
       get { return resource_; }
       set {
@@ -151,6 +158,7 @@ namespace Google.Logging.V2 {
     ///  You can only use `protoPayload` values that belong to a set of approved
     ///  types.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Any ProtoPayload {
       get { return payloadCase_ == PayloadOneofCase.ProtoPayload ? (global::Google.Protobuf.WellKnownTypes.Any) payload_ : null; }
       set {
@@ -164,6 +172,7 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  The log entry payload, represented as a Unicode string (UTF-8).
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TextPayload {
       get { return payloadCase_ == PayloadOneofCase.TextPayload ? (string) payload_ : ""; }
       set {
@@ -178,6 +187,7 @@ namespace Google.Logging.V2 {
     ///  The log entry payload, represented as a structure that
     ///  is expressed as a JSON object.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct JsonPayload {
       get { return payloadCase_ == PayloadOneofCase.JsonPayload ? (global::Google.Protobuf.WellKnownTypes.Struct) payload_ : null; }
       set {
@@ -193,6 +203,7 @@ namespace Google.Logging.V2 {
     ///  Optional. The time the event described by the log entry occurred.  If
     ///  omitted, Stackdriver Logging will use the time the log entry is received.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
       get { return timestamp_; }
       set {
@@ -207,6 +218,7 @@ namespace Google.Logging.V2 {
     ///  Optional. The severity of the log entry. The default value is
     ///  `LogSeverity.DEFAULT`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.Type.LogSeverity Severity {
       get { return severity_; }
       set {
@@ -224,6 +236,7 @@ namespace Google.Logging.V2 {
     ///  omitted, Stackdriver Logging will generate a unique ID for this
     ///  log entry.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InsertId {
       get { return insertId_; }
       set {
@@ -238,6 +251,7 @@ namespace Google.Logging.V2 {
     ///  Optional. Information about the HTTP request associated with this log entry,
     ///  if applicable.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.Type.HttpRequest HttpRequest {
       get { return httpRequest_; }
       set {
@@ -254,6 +268,7 @@ namespace Google.Logging.V2 {
     ///  Optional. A set of user-defined (key, value) data that provides additional
     ///  information about the log entry.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -265,6 +280,7 @@ namespace Google.Logging.V2 {
     ///  Optional. Information about an operation associated with the log entry, if
     ///  applicable.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.V2.LogEntryOperation Operation {
       get { return operation_; }
       set {
@@ -281,19 +297,23 @@ namespace Google.Logging.V2 {
       JsonPayload = 6,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PayloadOneofCase PayloadCase {
       get { return payloadCase_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void ClearPayload() {
       payloadCase_ = PayloadOneofCase.None;
       payload_ = null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LogEntry);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(LogEntry other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -316,6 +336,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (LogName.Length != 0) hash ^= LogName.GetHashCode();
@@ -333,10 +354,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (payloadCase_ == PayloadOneofCase.ProtoPayload) {
         output.WriteRawTag(18);
@@ -381,6 +404,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (LogName.Length != 0) {
@@ -417,6 +441,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(LogEntry other) {
       if (other == null) {
         return;
@@ -469,6 +494,7 @@ namespace Google.Logging.V2 {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -552,25 +578,29 @@ namespace Google.Logging.V2 {
   ///  Additional information about a potentially long-running operation with which
   ///  a log entry is associated.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LogEntryOperation : pb::IMessage<LogEntryOperation> {
     private static readonly pb::MessageParser<LogEntryOperation> _parser = new pb::MessageParser<LogEntryOperation>(() => new LogEntryOperation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<LogEntryOperation> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LogEntryReflection.Descriptor.MessageTypes[1]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogEntryOperation() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogEntryOperation(LogEntryOperation other) : this() {
       id_ = other.id_;
       producer_ = other.producer_;
@@ -578,6 +608,7 @@ namespace Google.Logging.V2 {
       last_ = other.last_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LogEntryOperation Clone() {
       return new LogEntryOperation(this);
     }
@@ -589,6 +620,7 @@ namespace Google.Logging.V2 {
     ///  Required. An arbitrary operation identifier. Log entries with the
     ///  same identifier are assumed to be part of the same operation.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {
       get { return id_; }
       set {
@@ -604,6 +636,7 @@ namespace Google.Logging.V2 {
     ///  `id` and `producer` must be globally unique.  Examples for `producer`:
     ///  `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Producer {
       get { return producer_; }
       set {
@@ -617,6 +650,7 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  Optional. Set this to True if this is the first log entry in the operation.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool First {
       get { return first_; }
       set {
@@ -630,6 +664,7 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  Optional. Set this to True if this is the last log entry in the operation.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Last {
       get { return last_; }
       set {
@@ -637,10 +672,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LogEntryOperation);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(LogEntryOperation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -655,6 +692,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -664,10 +702,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -687,6 +727,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -704,6 +745,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(LogEntryOperation other) {
       if (other == null) {
         return;
@@ -722,6 +764,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
