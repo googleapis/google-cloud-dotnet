@@ -34,7 +34,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             { "Grpc.Core", "grpc/src/csharp/Grpc.Core/Grpc.Core.csproj" },
         };
 
-
         private static int Main(string[] args)
         {
             try
@@ -105,7 +104,8 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     new JObject
                     {
                         ["src"] = src,
-                        ["dest"] = "obj/api"
+                        ["dest"] = "obj/api",
+                        ["filter"] = "filterConfig.yml"
                     }
                 },
                 ["build"] = new JObject {
