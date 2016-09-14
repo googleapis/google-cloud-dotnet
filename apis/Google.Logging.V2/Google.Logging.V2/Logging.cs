@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace Google.Logging.V2 {
 
   /// <summary>Holder for reflection information generated from google/logging/v2/logging.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class LoggingReflection {
 
     #region Descriptor
@@ -60,8 +59,9 @@ namespace Google.Logging.V2 {
             "b2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVx",
             "dWVzdBo7Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJj",
             "ZURlc2NyaXB0b3JzUmVzcG9uc2UiLYLT5JMCJxIlL3YyYmV0YTEvbW9uaXRv",
-            "cmVkUmVzb3VyY2VEZXNjcmlwdG9yc0IqChVjb20uZ29vZ2xlLmxvZ2dpbmcu",
-            "djJCDExvZ2dpbmdQcm90b1AB+AEBYgZwcm90bzM="));
+            "cmVkUmVzb3VyY2VEZXNjcmlwdG9yc0JcChVjb20uZ29vZ2xlLmxvZ2dpbmcu",
+            "djJCDExvZ2dpbmdQcm90b1ABWjBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2xvZ2dpbmcvdjL4AQFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.V2.LogEntryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -81,29 +81,34 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to DeleteLog.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class DeleteLogRequest : pb::IMessage<DeleteLogRequest> {
     private static readonly pb::MessageParser<DeleteLogRequest> _parser = new pb::MessageParser<DeleteLogRequest>(() => new DeleteLogRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<DeleteLogRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteLogRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteLogRequest(DeleteLogRequest other) : this() {
       logName_ = other.logName_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteLogRequest Clone() {
       return new DeleteLogRequest(this);
     }
@@ -115,6 +120,7 @@ namespace Google.Logging.V2 {
     ///  Required. The resource name of the log to delete.  Example:
     ///  `"projects/my-project/logs/syslog"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LogName {
       get { return logName_; }
       set {
@@ -122,10 +128,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DeleteLogRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(DeleteLogRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -137,16 +145,19 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (LogName.Length != 0) hash ^= LogName.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (LogName.Length != 0) {
         output.WriteRawTag(10);
@@ -154,6 +165,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (LogName.Length != 0) {
@@ -162,6 +174,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(DeleteLogRequest other) {
       if (other == null) {
         return;
@@ -171,6 +184,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -191,25 +205,29 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to WriteLogEntries.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class WriteLogEntriesRequest : pb::IMessage<WriteLogEntriesRequest> {
     private static readonly pb::MessageParser<WriteLogEntriesRequest> _parser = new pb::MessageParser<WriteLogEntriesRequest>(() => new WriteLogEntriesRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<WriteLogEntriesRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingReflection.Descriptor.MessageTypes[1]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WriteLogEntriesRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WriteLogEntriesRequest(WriteLogEntriesRequest other) : this() {
       logName_ = other.logName_;
       Resource = other.resource_ != null ? other.Resource.Clone() : null;
@@ -218,6 +236,7 @@ namespace Google.Logging.V2 {
       partialSuccess_ = other.partialSuccess_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WriteLogEntriesRequest Clone() {
       return new WriteLogEntriesRequest(this);
     }
@@ -231,6 +250,7 @@ namespace Google.Logging.V2 {
     ///  `"projects/my-project/logs/syslog"`.  See
     ///  [LogEntry][google.logging.v2.LogEntry].
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LogName {
       get { return logName_; }
       set {
@@ -245,6 +265,7 @@ namespace Google.Logging.V2 {
     ///  Optional. A default monitored resource for those log entries in `entries`
     ///  that do not specify their own `resource`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MonitoredResource Resource {
       get { return resource_; }
       set {
@@ -263,6 +284,7 @@ namespace Google.Logging.V2 {
     ///  entry specifies its own `key:value` item with the same key.
     ///  Example: `{ "size": "large", "color":"red" }`
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -280,6 +302,7 @@ namespace Google.Logging.V2 {
     ///  to `entries.write`, use this field to write multiple log entries at once
     ///  rather than  // calling this method for each log entry.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Logging.V2.LogEntry> Entries {
       get { return entries_; }
     }
@@ -294,6 +317,7 @@ namespace Google.Logging.V2 {
     ///  with one of the failed entries and include error details in the form of
     ///  WriteLogEntriesPartialErrors.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool PartialSuccess {
       get { return partialSuccess_; }
       set {
@@ -301,10 +325,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as WriteLogEntriesRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(WriteLogEntriesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -320,6 +346,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (LogName.Length != 0) hash ^= LogName.GetHashCode();
@@ -330,10 +357,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (LogName.Length != 0) {
         output.WriteRawTag(10);
@@ -351,6 +380,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (LogName.Length != 0) {
@@ -367,6 +397,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(WriteLogEntriesRequest other) {
       if (other == null) {
         return;
@@ -387,6 +418,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -427,36 +459,43 @@ namespace Google.Logging.V2 {
   ///  Result returned from WriteLogEntries.
   ///  empty
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class WriteLogEntriesResponse : pb::IMessage<WriteLogEntriesResponse> {
     private static readonly pb::MessageParser<WriteLogEntriesResponse> _parser = new pb::MessageParser<WriteLogEntriesResponse>(() => new WriteLogEntriesResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<WriteLogEntriesResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingReflection.Descriptor.MessageTypes[2]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WriteLogEntriesResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WriteLogEntriesResponse(WriteLogEntriesResponse other) : this() {
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WriteLogEntriesResponse Clone() {
       return new WriteLogEntriesResponse(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as WriteLogEntriesResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(WriteLogEntriesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -467,29 +506,35 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(WriteLogEntriesResponse other) {
       if (other == null) {
         return;
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -506,25 +551,29 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to `ListLogEntries`.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListLogEntriesRequest : pb::IMessage<ListLogEntriesRequest> {
     private static readonly pb::MessageParser<ListLogEntriesRequest> _parser = new pb::MessageParser<ListLogEntriesRequest>(() => new ListLogEntriesRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListLogEntriesRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingReflection.Descriptor.MessageTypes[3]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListLogEntriesRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListLogEntriesRequest(ListLogEntriesRequest other) : this() {
       projectIds_ = other.projectIds_.Clone();
       filter_ = other.filter_;
@@ -533,6 +582,7 @@ namespace Google.Logging.V2 {
       pageToken_ = other.pageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListLogEntriesRequest Clone() {
       return new ListLogEntriesRequest(this);
     }
@@ -546,6 +596,7 @@ namespace Google.Logging.V2 {
     ///  Required. One or more project IDs or project numbers from which to retrieve
     ///  log entries.  Examples of a project ID: `"my-project-1A"`, `"1234567890"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> ProjectIds {
       get { return projectIds_; }
     }
@@ -559,6 +610,7 @@ namespace Google.Logging.V2 {
     ///  `projectIds`.  Only entries that match the filter are retrieved.  An empty
     ///  filter matches all log entries.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
       get { return filter_; }
       set {
@@ -577,6 +629,7 @@ namespace Google.Logging.V2 {
     ///  in order of decreasing timestamps (newest first).  Entries with equal
     ///  timestamps are returned in order of `LogEntry.insertId`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
       get { return orderBy_; }
       set {
@@ -593,6 +646,7 @@ namespace Google.Logging.V2 {
     ///  results are available, which you can retrieve by passing the
     ///  `nextPageToken` value as the `pageToken` parameter in the next request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -610,6 +664,7 @@ namespace Google.Logging.V2 {
     ///  The values of `projectIds`, `filter`, and `orderBy` must be the same
     ///  as in the previous request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -617,10 +672,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListLogEntriesRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListLogEntriesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -636,6 +693,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= projectIds_.GetHashCode();
@@ -646,10 +704,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       projectIds_.WriteTo(output, _repeated_projectIds_codec);
       if (Filter.Length != 0) {
@@ -670,6 +730,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += projectIds_.CalculateSize(_repeated_projectIds_codec);
@@ -688,6 +749,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListLogEntriesRequest other) {
       if (other == null) {
         return;
@@ -707,6 +769,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -743,30 +806,35 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  Result returned from `ListLogEntries`.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListLogEntriesResponse : pb::IMessage<ListLogEntriesResponse> {
     private static readonly pb::MessageParser<ListLogEntriesResponse> _parser = new pb::MessageParser<ListLogEntriesResponse>(() => new ListLogEntriesResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListLogEntriesResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingReflection.Descriptor.MessageTypes[4]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListLogEntriesResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListLogEntriesResponse(ListLogEntriesResponse other) : this() {
       entries_ = other.entries_.Clone();
       nextPageToken_ = other.nextPageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListLogEntriesResponse Clone() {
       return new ListLogEntriesResponse(this);
     }
@@ -779,6 +847,7 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  A list of log entries.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Logging.V2.LogEntry> Entries {
       get { return entries_; }
     }
@@ -791,6 +860,7 @@ namespace Google.Logging.V2 {
     ///  included in the response.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -798,10 +868,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListLogEntriesResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListLogEntriesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -814,6 +886,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= entries_.GetHashCode();
@@ -821,10 +894,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       entries_.WriteTo(output, _repeated_entries_codec);
       if (NextPageToken.Length != 0) {
@@ -833,6 +908,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += entries_.CalculateSize(_repeated_entries_codec);
@@ -842,6 +918,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListLogEntriesResponse other) {
       if (other == null) {
         return;
@@ -852,6 +929,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -876,30 +954,35 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  The parameters to ListMonitoredResourceDescriptors
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListMonitoredResourceDescriptorsRequest : pb::IMessage<ListMonitoredResourceDescriptorsRequest> {
     private static readonly pb::MessageParser<ListMonitoredResourceDescriptorsRequest> _parser = new pb::MessageParser<ListMonitoredResourceDescriptorsRequest>(() => new ListMonitoredResourceDescriptorsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListMonitoredResourceDescriptorsRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingReflection.Descriptor.MessageTypes[5]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListMonitoredResourceDescriptorsRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListMonitoredResourceDescriptorsRequest(ListMonitoredResourceDescriptorsRequest other) : this() {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListMonitoredResourceDescriptorsRequest Clone() {
       return new ListMonitoredResourceDescriptorsRequest(this);
     }
@@ -913,6 +996,7 @@ namespace Google.Logging.V2 {
     ///  results are available, which you can retrieve by passing the
     ///  `nextPageToken` value as the `pageToken` parameter in the next request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -928,6 +1012,7 @@ namespace Google.Logging.V2 {
     ///  results is retrieved.  The `pageToken` parameter must be set to the value
     ///  of the `nextPageToken` from the previous response.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -935,10 +1020,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListMonitoredResourceDescriptorsRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListMonitoredResourceDescriptorsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -951,6 +1038,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
@@ -958,10 +1046,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (PageSize != 0) {
         output.WriteRawTag(8);
@@ -973,6 +1063,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (PageSize != 0) {
@@ -984,6 +1075,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListMonitoredResourceDescriptorsRequest other) {
       if (other == null) {
         return;
@@ -996,6 +1088,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1020,30 +1113,35 @@ namespace Google.Logging.V2 {
   /// <summary>
   ///  Result returned from ListMonitoredResourceDescriptors.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListMonitoredResourceDescriptorsResponse : pb::IMessage<ListMonitoredResourceDescriptorsResponse> {
     private static readonly pb::MessageParser<ListMonitoredResourceDescriptorsResponse> _parser = new pb::MessageParser<ListMonitoredResourceDescriptorsResponse>(() => new ListMonitoredResourceDescriptorsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListMonitoredResourceDescriptorsResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Logging.V2.LoggingReflection.Descriptor.MessageTypes[6]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListMonitoredResourceDescriptorsResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListMonitoredResourceDescriptorsResponse(ListMonitoredResourceDescriptorsResponse other) : this() {
       resourceDescriptors_ = other.resourceDescriptors_.Clone();
       nextPageToken_ = other.nextPageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListMonitoredResourceDescriptorsResponse Clone() {
       return new ListMonitoredResourceDescriptorsResponse(this);
     }
@@ -1056,6 +1154,7 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  A list of resource descriptors.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Api.MonitoredResourceDescriptor> ResourceDescriptors {
       get { return resourceDescriptors_; }
     }
@@ -1068,6 +1167,7 @@ namespace Google.Logging.V2 {
     ///  included in the response.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -1075,10 +1175,12 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListMonitoredResourceDescriptorsResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListMonitoredResourceDescriptorsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1091,6 +1193,7 @@ namespace Google.Logging.V2 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= resourceDescriptors_.GetHashCode();
@@ -1098,10 +1201,12 @@ namespace Google.Logging.V2 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       resourceDescriptors_.WriteTo(output, _repeated_resourceDescriptors_codec);
       if (NextPageToken.Length != 0) {
@@ -1110,6 +1215,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += resourceDescriptors_.CalculateSize(_repeated_resourceDescriptors_codec);
@@ -1119,6 +1225,7 @@ namespace Google.Logging.V2 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListMonitoredResourceDescriptorsResponse other) {
       if (other == null) {
         return;
@@ -1129,6 +1236,7 @@ namespace Google.Logging.V2 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

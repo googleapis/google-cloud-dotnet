@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace Google.Pubsub.V1 {
 
   /// <summary>Holder for reflection information generated from google/pubsub/v1/pubsub.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class PubsubReflection {
 
     #region Descriptor
@@ -112,8 +111,9 @@ namespace Google.Pubsub.V1 {
             "Ki90b3BpY3MvKn0vc3Vic2NyaXB0aW9ucxJ0CgtEZWxldGVUb3BpYxIkLmdv",
             "b2dsZS5wdWJzdWIudjEuRGVsZXRlVG9waWNSZXF1ZXN0GhYuZ29vZ2xlLnBy",
             "b3RvYnVmLkVtcHR5IieC0+STAiEqHy92MS97dG9waWM9cHJvamVjdHMvKi90",
-            "b3BpY3MvKn1CJQoUY29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3Rv",
-            "UAFiBnByb3RvMw=="));
+            "b3BpY3MvKn1CVgoUY29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3Rv",
+            "UAFaL2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvcHVi",
+            "c3ViL3YxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -148,29 +148,34 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  A topic resource.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Topic : pb::IMessage<Topic> {
     private static readonly pb::MessageParser<Topic> _parser = new pb::MessageParser<Topic>(() => new Topic());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Topic> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Topic() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Topic(Topic other) : this() {
       name_ = other.name_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Topic Clone() {
       return new Topic(this);
     }
@@ -186,6 +191,7 @@ namespace Google.Pubsub.V1 {
     ///  signs (`%`). It must be between 3 and 255 characters in length, and it
     ///  must not start with `"goog"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
@@ -193,10 +199,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Topic);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Topic other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -208,16 +216,19 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -225,6 +236,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -233,6 +245,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Topic other) {
       if (other == null) {
         return;
@@ -242,6 +255,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -263,25 +277,29 @@ namespace Google.Pubsub.V1 {
   ///  A message data and its attributes. The message payload must not be empty;
   ///  it must contain either a non-empty data field, or at least one attribute.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PubsubMessage : pb::IMessage<PubsubMessage> {
     private static readonly pb::MessageParser<PubsubMessage> _parser = new pb::MessageParser<PubsubMessage>(() => new PubsubMessage());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PubsubMessage> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[1]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PubsubMessage() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PubsubMessage(PubsubMessage other) : this() {
       data_ = other.data_;
       attributes_ = other.attributes_.Clone();
@@ -289,6 +307,7 @@ namespace Google.Pubsub.V1 {
       PublishTime = other.publishTime_ != null ? other.PublishTime.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PubsubMessage Clone() {
       return new PubsubMessage(this);
     }
@@ -300,6 +319,7 @@ namespace Google.Pubsub.V1 {
     ///  The message payload. For JSON requests, the value of this field must be
     ///  base64-encoded.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -315,6 +335,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  Optional attributes for this message.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Attributes {
       get { return attributes_; }
     }
@@ -328,6 +349,7 @@ namespace Google.Pubsub.V1 {
     ///  subscriber that receives a `PubsubMessage` via a `Pull` call or a push
     ///  delivery. It must not be populated by the publisher in a `Publish` call.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MessageId {
       get { return messageId_; }
       set {
@@ -343,6 +365,7 @@ namespace Google.Pubsub.V1 {
     ///  it receives the `Publish` call. It must not be populated by the
     ///  publisher in a `Publish` call.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp PublishTime {
       get { return publishTime_; }
       set {
@@ -350,10 +373,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PubsubMessage);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(PubsubMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -368,6 +393,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
@@ -377,10 +403,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Data.Length != 0) {
         output.WriteRawTag(10);
@@ -397,6 +425,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Data.Length != 0) {
@@ -412,6 +441,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(PubsubMessage other) {
       if (other == null) {
         return;
@@ -431,6 +461,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -466,29 +497,34 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the GetTopic method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class GetTopicRequest : pb::IMessage<GetTopicRequest> {
     private static readonly pb::MessageParser<GetTopicRequest> _parser = new pb::MessageParser<GetTopicRequest>(() => new GetTopicRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<GetTopicRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[2]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTopicRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTopicRequest(GetTopicRequest other) : this() {
       topic_ = other.topic_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTopicRequest Clone() {
       return new GetTopicRequest(this);
     }
@@ -499,6 +535,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The name of the topic to get.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
       get { return topic_; }
       set {
@@ -506,10 +543,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetTopicRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(GetTopicRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -521,16 +560,19 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Topic.Length != 0) hash ^= Topic.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Topic.Length != 0) {
         output.WriteRawTag(10);
@@ -538,6 +580,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Topic.Length != 0) {
@@ -546,6 +589,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(GetTopicRequest other) {
       if (other == null) {
         return;
@@ -555,6 +599,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -575,30 +620,35 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the Publish method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PublishRequest : pb::IMessage<PublishRequest> {
     private static readonly pb::MessageParser<PublishRequest> _parser = new pb::MessageParser<PublishRequest>(() => new PublishRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PublishRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[3]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PublishRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PublishRequest(PublishRequest other) : this() {
       topic_ = other.topic_;
       messages_ = other.messages_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PublishRequest Clone() {
       return new PublishRequest(this);
     }
@@ -609,6 +659,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The messages in the request will be published on this topic.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
       get { return topic_; }
       set {
@@ -624,14 +675,17 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The messages to publish.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Pubsub.V1.PubsubMessage> Messages {
       get { return messages_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PublishRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(PublishRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -644,6 +698,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Topic.Length != 0) hash ^= Topic.GetHashCode();
@@ -651,10 +706,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Topic.Length != 0) {
         output.WriteRawTag(10);
@@ -663,6 +720,7 @@ namespace Google.Pubsub.V1 {
       messages_.WriteTo(output, _repeated_messages_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Topic.Length != 0) {
@@ -672,6 +730,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(PublishRequest other) {
       if (other == null) {
         return;
@@ -682,6 +741,7 @@ namespace Google.Pubsub.V1 {
       messages_.Add(other.messages_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -706,29 +766,34 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Response for the `Publish` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PublishResponse : pb::IMessage<PublishResponse> {
     private static readonly pb::MessageParser<PublishResponse> _parser = new pb::MessageParser<PublishResponse>(() => new PublishResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PublishResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[4]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PublishResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PublishResponse(PublishResponse other) : this() {
       messageIds_ = other.messageIds_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PublishResponse Clone() {
       return new PublishResponse(this);
     }
@@ -743,14 +808,17 @@ namespace Google.Pubsub.V1 {
     ///  the messages in the request. IDs are guaranteed to be unique within
     ///  the topic.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> MessageIds {
       get { return messageIds_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PublishResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(PublishResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -762,26 +830,31 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= messageIds_.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       messageIds_.WriteTo(output, _repeated_messageIds_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += messageIds_.CalculateSize(_repeated_messageIds_codec);
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(PublishResponse other) {
       if (other == null) {
         return;
@@ -789,6 +862,7 @@ namespace Google.Pubsub.V1 {
       messageIds_.Add(other.messageIds_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -809,31 +883,36 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the `ListTopics` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListTopicsRequest : pb::IMessage<ListTopicsRequest> {
     private static readonly pb::MessageParser<ListTopicsRequest> _parser = new pb::MessageParser<ListTopicsRequest>(() => new ListTopicsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListTopicsRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[5]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicsRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicsRequest(ListTopicsRequest other) : this() {
       project_ = other.project_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicsRequest Clone() {
       return new ListTopicsRequest(this);
     }
@@ -844,6 +923,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The name of the cloud project that topics belong to.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Project {
       get { return project_; }
       set {
@@ -857,6 +937,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  Maximum number of topics to return.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -872,6 +953,7 @@ namespace Google.Pubsub.V1 {
     ///  a continuation of a prior `ListTopics` call, and that the system should
     ///  return the next page of data.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -879,10 +961,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListTopicsRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListTopicsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -896,6 +980,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Project.Length != 0) hash ^= Project.GetHashCode();
@@ -904,10 +989,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Project.Length != 0) {
         output.WriteRawTag(10);
@@ -923,6 +1010,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Project.Length != 0) {
@@ -937,6 +1025,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListTopicsRequest other) {
       if (other == null) {
         return;
@@ -952,6 +1041,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -980,30 +1070,35 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Response for the `ListTopics` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListTopicsResponse : pb::IMessage<ListTopicsResponse> {
     private static readonly pb::MessageParser<ListTopicsResponse> _parser = new pb::MessageParser<ListTopicsResponse>(() => new ListTopicsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListTopicsResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[6]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicsResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicsResponse(ListTopicsResponse other) : this() {
       topics_ = other.topics_.Clone();
       nextPageToken_ = other.nextPageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicsResponse Clone() {
       return new ListTopicsResponse(this);
     }
@@ -1016,6 +1111,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The resulting topics.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Pubsub.V1.Topic> Topics {
       get { return topics_; }
     }
@@ -1027,6 +1123,7 @@ namespace Google.Pubsub.V1 {
     ///  If not empty, indicates that there may be more topics that match the
     ///  request; this value should be passed in a new `ListTopicsRequest`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -1034,10 +1131,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListTopicsResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListTopicsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1050,6 +1149,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= topics_.GetHashCode();
@@ -1057,10 +1157,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       topics_.WriteTo(output, _repeated_topics_codec);
       if (NextPageToken.Length != 0) {
@@ -1069,6 +1171,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += topics_.CalculateSize(_repeated_topics_codec);
@@ -1078,6 +1181,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListTopicsResponse other) {
       if (other == null) {
         return;
@@ -1088,6 +1192,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1112,31 +1217,36 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the `ListTopicSubscriptions` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListTopicSubscriptionsRequest : pb::IMessage<ListTopicSubscriptionsRequest> {
     private static readonly pb::MessageParser<ListTopicSubscriptionsRequest> _parser = new pb::MessageParser<ListTopicSubscriptionsRequest>(() => new ListTopicSubscriptionsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListTopicSubscriptionsRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[7]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicSubscriptionsRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicSubscriptionsRequest(ListTopicSubscriptionsRequest other) : this() {
       topic_ = other.topic_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicSubscriptionsRequest Clone() {
       return new ListTopicSubscriptionsRequest(this);
     }
@@ -1147,6 +1257,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The name of the topic that subscriptions are attached to.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
       get { return topic_; }
       set {
@@ -1160,6 +1271,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  Maximum number of subscription names to return.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -1175,6 +1287,7 @@ namespace Google.Pubsub.V1 {
     ///  that this is a continuation of a prior `ListTopicSubscriptions` call, and
     ///  that the system should return the next page of data.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -1182,10 +1295,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListTopicSubscriptionsRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListTopicSubscriptionsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1199,6 +1314,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Topic.Length != 0) hash ^= Topic.GetHashCode();
@@ -1207,10 +1323,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Topic.Length != 0) {
         output.WriteRawTag(10);
@@ -1226,6 +1344,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Topic.Length != 0) {
@@ -1240,6 +1359,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListTopicSubscriptionsRequest other) {
       if (other == null) {
         return;
@@ -1255,6 +1375,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1283,30 +1404,35 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Response for the `ListTopicSubscriptions` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListTopicSubscriptionsResponse : pb::IMessage<ListTopicSubscriptionsResponse> {
     private static readonly pb::MessageParser<ListTopicSubscriptionsResponse> _parser = new pb::MessageParser<ListTopicSubscriptionsResponse>(() => new ListTopicSubscriptionsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListTopicSubscriptionsResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[8]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicSubscriptionsResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicSubscriptionsResponse(ListTopicSubscriptionsResponse other) : this() {
       subscriptions_ = other.subscriptions_.Clone();
       nextPageToken_ = other.nextPageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListTopicSubscriptionsResponse Clone() {
       return new ListTopicSubscriptionsResponse(this);
     }
@@ -1319,6 +1445,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The names of the subscriptions that match the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Subscriptions {
       get { return subscriptions_; }
     }
@@ -1331,6 +1458,7 @@ namespace Google.Pubsub.V1 {
     ///  the request; this value should be passed in a new
     ///  `ListTopicSubscriptionsRequest` to get more subscriptions.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -1338,10 +1466,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListTopicSubscriptionsResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListTopicSubscriptionsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1354,6 +1484,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= subscriptions_.GetHashCode();
@@ -1361,10 +1492,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       subscriptions_.WriteTo(output, _repeated_subscriptions_codec);
       if (NextPageToken.Length != 0) {
@@ -1373,6 +1506,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += subscriptions_.CalculateSize(_repeated_subscriptions_codec);
@@ -1382,6 +1516,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListTopicSubscriptionsResponse other) {
       if (other == null) {
         return;
@@ -1392,6 +1527,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1416,29 +1552,34 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the `DeleteTopic` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class DeleteTopicRequest : pb::IMessage<DeleteTopicRequest> {
     private static readonly pb::MessageParser<DeleteTopicRequest> _parser = new pb::MessageParser<DeleteTopicRequest>(() => new DeleteTopicRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<DeleteTopicRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[9]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteTopicRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteTopicRequest(DeleteTopicRequest other) : this() {
       topic_ = other.topic_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteTopicRequest Clone() {
       return new DeleteTopicRequest(this);
     }
@@ -1449,6 +1590,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  Name of the topic to delete.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
       get { return topic_; }
       set {
@@ -1456,10 +1598,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DeleteTopicRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(DeleteTopicRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1471,16 +1615,19 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Topic.Length != 0) hash ^= Topic.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Topic.Length != 0) {
         output.WriteRawTag(10);
@@ -1488,6 +1635,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Topic.Length != 0) {
@@ -1496,6 +1644,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(DeleteTopicRequest other) {
       if (other == null) {
         return;
@@ -1505,6 +1654,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1525,25 +1675,29 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  A subscription resource.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Subscription : pb::IMessage<Subscription> {
     private static readonly pb::MessageParser<Subscription> _parser = new pb::MessageParser<Subscription>(() => new Subscription());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Subscription> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[10]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Subscription() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Subscription(Subscription other) : this() {
       name_ = other.name_;
       topic_ = other.topic_;
@@ -1551,6 +1705,7 @@ namespace Google.Pubsub.V1 {
       ackDeadlineSeconds_ = other.ackDeadlineSeconds_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Subscription Clone() {
       return new Subscription(this);
     }
@@ -1566,6 +1721,7 @@ namespace Google.Pubsub.V1 {
     ///  plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
     ///  in length, and it must not start with `"goog"`.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
@@ -1581,6 +1737,7 @@ namespace Google.Pubsub.V1 {
     ///  The value of this field will be `_deleted-topic_` if the topic has been
     ///  deleted.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
       get { return topic_; }
       set {
@@ -1596,6 +1753,7 @@ namespace Google.Pubsub.V1 {
     ///  used to configure it. An empty `pushConfig` signifies that the subscriber
     ///  will pull and ack messages using API methods.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Pubsub.V1.PushConfig PushConfig {
       get { return pushConfig_; }
       set {
@@ -1626,6 +1784,7 @@ namespace Google.Pubsub.V1 {
     ///
     ///  If this parameter is not set, the default value of 10 seconds is used.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AckDeadlineSeconds {
       get { return ackDeadlineSeconds_; }
       set {
@@ -1633,10 +1792,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Subscription);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Subscription other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1651,6 +1812,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1660,10 +1822,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1683,6 +1847,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1700,6 +1865,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Subscription other) {
       if (other == null) {
         return;
@@ -1721,6 +1887,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1756,30 +1923,35 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Configuration for a push delivery endpoint.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PushConfig : pb::IMessage<PushConfig> {
     private static readonly pb::MessageParser<PushConfig> _parser = new pb::MessageParser<PushConfig>(() => new PushConfig());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PushConfig> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[11]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PushConfig() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PushConfig(PushConfig other) : this() {
       pushEndpoint_ = other.pushEndpoint_;
       attributes_ = other.attributes_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PushConfig Clone() {
       return new PushConfig(this);
     }
@@ -1791,6 +1963,7 @@ namespace Google.Pubsub.V1 {
     ///  A URL locating the endpoint to which messages should be pushed.
     ///  For example, a Webhook endpoint might use "https://example.com/push".
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PushEndpoint {
       get { return pushEndpoint_; }
       set {
@@ -1827,14 +2000,17 @@ namespace Google.Pubsub.V1 {
     ///  * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API.
     ///  * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Attributes {
       get { return attributes_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PushConfig);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(PushConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1847,6 +2023,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (PushEndpoint.Length != 0) hash ^= PushEndpoint.GetHashCode();
@@ -1854,10 +2031,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (PushEndpoint.Length != 0) {
         output.WriteRawTag(10);
@@ -1866,6 +2045,7 @@ namespace Google.Pubsub.V1 {
       attributes_.WriteTo(output, _map_attributes_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (PushEndpoint.Length != 0) {
@@ -1875,6 +2055,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(PushConfig other) {
       if (other == null) {
         return;
@@ -1885,6 +2066,7 @@ namespace Google.Pubsub.V1 {
       attributes_.Add(other.attributes_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1909,30 +2091,35 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  A message and its corresponding acknowledgment ID.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ReceivedMessage : pb::IMessage<ReceivedMessage> {
     private static readonly pb::MessageParser<ReceivedMessage> _parser = new pb::MessageParser<ReceivedMessage>(() => new ReceivedMessage());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ReceivedMessage> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[12]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReceivedMessage() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReceivedMessage(ReceivedMessage other) : this() {
       ackId_ = other.ackId_;
       Message = other.message_ != null ? other.Message.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReceivedMessage Clone() {
       return new ReceivedMessage(this);
     }
@@ -1943,6 +2130,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  This ID can be used to acknowledge the received message.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AckId {
       get { return ackId_; }
       set {
@@ -1956,6 +2144,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The message.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Pubsub.V1.PubsubMessage Message {
       get { return message_; }
       set {
@@ -1963,10 +2152,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ReceivedMessage);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ReceivedMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1979,6 +2170,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (AckId.Length != 0) hash ^= AckId.GetHashCode();
@@ -1986,10 +2178,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (AckId.Length != 0) {
         output.WriteRawTag(10);
@@ -2001,6 +2195,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (AckId.Length != 0) {
@@ -2012,6 +2207,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ReceivedMessage other) {
       if (other == null) {
         return;
@@ -2027,6 +2223,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2054,29 +2251,34 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the GetSubscription method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class GetSubscriptionRequest : pb::IMessage<GetSubscriptionRequest> {
     private static readonly pb::MessageParser<GetSubscriptionRequest> _parser = new pb::MessageParser<GetSubscriptionRequest>(() => new GetSubscriptionRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<GetSubscriptionRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[13]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetSubscriptionRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetSubscriptionRequest(GetSubscriptionRequest other) : this() {
       subscription_ = other.subscription_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetSubscriptionRequest Clone() {
       return new GetSubscriptionRequest(this);
     }
@@ -2087,6 +2289,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The name of the subscription to get.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2094,10 +2297,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetSubscriptionRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(GetSubscriptionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2109,16 +2314,19 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Subscription.Length != 0) {
         output.WriteRawTag(10);
@@ -2126,6 +2334,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Subscription.Length != 0) {
@@ -2134,6 +2343,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(GetSubscriptionRequest other) {
       if (other == null) {
         return;
@@ -2143,6 +2353,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2163,31 +2374,36 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the `ListSubscriptions` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListSubscriptionsRequest : pb::IMessage<ListSubscriptionsRequest> {
     private static readonly pb::MessageParser<ListSubscriptionsRequest> _parser = new pb::MessageParser<ListSubscriptionsRequest>(() => new ListSubscriptionsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListSubscriptionsRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[14]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSubscriptionsRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSubscriptionsRequest(ListSubscriptionsRequest other) : this() {
       project_ = other.project_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSubscriptionsRequest Clone() {
       return new ListSubscriptionsRequest(this);
     }
@@ -2198,6 +2414,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The name of the cloud project that subscriptions belong to.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Project {
       get { return project_; }
       set {
@@ -2211,6 +2428,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  Maximum number of subscriptions to return.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -2226,6 +2444,7 @@ namespace Google.Pubsub.V1 {
     ///  this is a continuation of a prior `ListSubscriptions` call, and that the
     ///  system should return the next page of data.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -2233,10 +2452,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListSubscriptionsRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListSubscriptionsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2250,6 +2471,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Project.Length != 0) hash ^= Project.GetHashCode();
@@ -2258,10 +2480,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Project.Length != 0) {
         output.WriteRawTag(10);
@@ -2277,6 +2501,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Project.Length != 0) {
@@ -2291,6 +2516,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListSubscriptionsRequest other) {
       if (other == null) {
         return;
@@ -2306,6 +2532,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2334,30 +2561,35 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Response for the `ListSubscriptions` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListSubscriptionsResponse : pb::IMessage<ListSubscriptionsResponse> {
     private static readonly pb::MessageParser<ListSubscriptionsResponse> _parser = new pb::MessageParser<ListSubscriptionsResponse>(() => new ListSubscriptionsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ListSubscriptionsResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[15]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSubscriptionsResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSubscriptionsResponse(ListSubscriptionsResponse other) : this() {
       subscriptions_ = other.subscriptions_.Clone();
       nextPageToken_ = other.nextPageToken_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListSubscriptionsResponse Clone() {
       return new ListSubscriptionsResponse(this);
     }
@@ -2370,6 +2602,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The subscriptions that match the request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Pubsub.V1.Subscription> Subscriptions {
       get { return subscriptions_; }
     }
@@ -2382,6 +2615,7 @@ namespace Google.Pubsub.V1 {
     ///  the request; this value should be passed in a new
     ///  `ListSubscriptionsRequest` to get more subscriptions.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -2389,10 +2623,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListSubscriptionsResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ListSubscriptionsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2405,6 +2641,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= subscriptions_.GetHashCode();
@@ -2412,10 +2649,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       subscriptions_.WriteTo(output, _repeated_subscriptions_codec);
       if (NextPageToken.Length != 0) {
@@ -2424,6 +2663,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += subscriptions_.CalculateSize(_repeated_subscriptions_codec);
@@ -2433,6 +2673,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ListSubscriptionsResponse other) {
       if (other == null) {
         return;
@@ -2443,6 +2684,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2467,29 +2709,34 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the DeleteSubscription method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class DeleteSubscriptionRequest : pb::IMessage<DeleteSubscriptionRequest> {
     private static readonly pb::MessageParser<DeleteSubscriptionRequest> _parser = new pb::MessageParser<DeleteSubscriptionRequest>(() => new DeleteSubscriptionRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<DeleteSubscriptionRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[16]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteSubscriptionRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteSubscriptionRequest(DeleteSubscriptionRequest other) : this() {
       subscription_ = other.subscription_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteSubscriptionRequest Clone() {
       return new DeleteSubscriptionRequest(this);
     }
@@ -2500,6 +2747,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The subscription to delete.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2507,10 +2755,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DeleteSubscriptionRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(DeleteSubscriptionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2522,16 +2772,19 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Subscription.Length != 0) {
         output.WriteRawTag(10);
@@ -2539,6 +2792,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Subscription.Length != 0) {
@@ -2547,6 +2801,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(DeleteSubscriptionRequest other) {
       if (other == null) {
         return;
@@ -2556,6 +2811,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2576,30 +2832,35 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the ModifyPushConfig method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ModifyPushConfigRequest : pb::IMessage<ModifyPushConfigRequest> {
     private static readonly pb::MessageParser<ModifyPushConfigRequest> _parser = new pb::MessageParser<ModifyPushConfigRequest>(() => new ModifyPushConfigRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ModifyPushConfigRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[17]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ModifyPushConfigRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ModifyPushConfigRequest(ModifyPushConfigRequest other) : this() {
       subscription_ = other.subscription_;
       PushConfig = other.pushConfig_ != null ? other.PushConfig.Clone() : null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ModifyPushConfigRequest Clone() {
       return new ModifyPushConfigRequest(this);
     }
@@ -2610,6 +2871,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The name of the subscription.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2628,6 +2890,7 @@ namespace Google.Pubsub.V1 {
     ///  messages to be pulled and acknowledged - effectively pausing
     ///  the subscription if `Pull` is not called.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Pubsub.V1.PushConfig PushConfig {
       get { return pushConfig_; }
       set {
@@ -2635,10 +2898,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ModifyPushConfigRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ModifyPushConfigRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2651,6 +2916,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
@@ -2658,10 +2924,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Subscription.Length != 0) {
         output.WriteRawTag(10);
@@ -2673,6 +2941,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Subscription.Length != 0) {
@@ -2684,6 +2953,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ModifyPushConfigRequest other) {
       if (other == null) {
         return;
@@ -2699,6 +2969,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2726,31 +2997,36 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the `Pull` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PullRequest : pb::IMessage<PullRequest> {
     private static readonly pb::MessageParser<PullRequest> _parser = new pb::MessageParser<PullRequest>(() => new PullRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PullRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[18]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PullRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PullRequest(PullRequest other) : this() {
       subscription_ = other.subscription_;
       returnImmediately_ = other.returnImmediately_;
       maxMessages_ = other.maxMessages_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PullRequest Clone() {
       return new PullRequest(this);
     }
@@ -2761,6 +3037,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The subscription from which messages should be pulled.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2778,6 +3055,7 @@ namespace Google.Pubsub.V1 {
     ///  than returning no messages. The client may cancel the request if it does
     ///  not wish to wait any longer for the response.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ReturnImmediately {
       get { return returnImmediately_; }
       set {
@@ -2792,6 +3070,7 @@ namespace Google.Pubsub.V1 {
     ///  The maximum number of messages returned for this request. The Pub/Sub
     ///  system may return fewer than the number specified.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxMessages {
       get { return maxMessages_; }
       set {
@@ -2799,10 +3078,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PullRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(PullRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2816,6 +3097,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
@@ -2824,10 +3106,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Subscription.Length != 0) {
         output.WriteRawTag(10);
@@ -2843,6 +3127,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Subscription.Length != 0) {
@@ -2857,6 +3142,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(PullRequest other) {
       if (other == null) {
         return;
@@ -2872,6 +3158,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2900,29 +3187,34 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Response for the `Pull` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PullResponse : pb::IMessage<PullResponse> {
     private static readonly pb::MessageParser<PullResponse> _parser = new pb::MessageParser<PullResponse>(() => new PullResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<PullResponse> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[19]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PullResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PullResponse(PullResponse other) : this() {
       receivedMessages_ = other.receivedMessages_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PullResponse Clone() {
       return new PullResponse(this);
     }
@@ -2938,14 +3230,17 @@ namespace Google.Pubsub.V1 {
     ///  fewer than the `maxMessages` requested even if there are more messages
     ///  available in the backlog.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Pubsub.V1.ReceivedMessage> ReceivedMessages {
       get { return receivedMessages_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PullResponse);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(PullResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2957,26 +3252,31 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= receivedMessages_.GetHashCode();
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       receivedMessages_.WriteTo(output, _repeated_receivedMessages_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += receivedMessages_.CalculateSize(_repeated_receivedMessages_codec);
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(PullResponse other) {
       if (other == null) {
         return;
@@ -2984,6 +3284,7 @@ namespace Google.Pubsub.V1 {
       receivedMessages_.Add(other.receivedMessages_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3004,31 +3305,36 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the ModifyAckDeadline method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ModifyAckDeadlineRequest : pb::IMessage<ModifyAckDeadlineRequest> {
     private static readonly pb::MessageParser<ModifyAckDeadlineRequest> _parser = new pb::MessageParser<ModifyAckDeadlineRequest>(() => new ModifyAckDeadlineRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<ModifyAckDeadlineRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[20]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ModifyAckDeadlineRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ModifyAckDeadlineRequest(ModifyAckDeadlineRequest other) : this() {
       subscription_ = other.subscription_;
       ackIds_ = other.ackIds_.Clone();
       ackDeadlineSeconds_ = other.ackDeadlineSeconds_;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ModifyAckDeadlineRequest Clone() {
       return new ModifyAckDeadlineRequest(this);
     }
@@ -3039,6 +3345,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The name of the subscription.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
       get { return subscription_; }
       set {
@@ -3054,6 +3361,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  List of acknowledgment IDs.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> AckIds {
       get { return ackIds_; }
     }
@@ -3068,6 +3376,7 @@ namespace Google.Pubsub.V1 {
     ///  was made. Specifying zero may immediately make the message available for
     ///  another pull request.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AckDeadlineSeconds {
       get { return ackDeadlineSeconds_; }
       set {
@@ -3075,10 +3384,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ModifyAckDeadlineRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(ModifyAckDeadlineRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3092,6 +3403,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
@@ -3100,10 +3412,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Subscription.Length != 0) {
         output.WriteRawTag(10);
@@ -3116,6 +3430,7 @@ namespace Google.Pubsub.V1 {
       ackIds_.WriteTo(output, _repeated_ackIds_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Subscription.Length != 0) {
@@ -3128,6 +3443,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(ModifyAckDeadlineRequest other) {
       if (other == null) {
         return;
@@ -3141,6 +3457,7 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3169,30 +3486,35 @@ namespace Google.Pubsub.V1 {
   /// <summary>
   ///  Request for the Acknowledge method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AcknowledgeRequest : pb::IMessage<AcknowledgeRequest> {
     private static readonly pb::MessageParser<AcknowledgeRequest> _parser = new pb::MessageParser<AcknowledgeRequest>(() => new AcknowledgeRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<AcknowledgeRequest> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[21]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AcknowledgeRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AcknowledgeRequest(AcknowledgeRequest other) : this() {
       subscription_ = other.subscription_;
       ackIds_ = other.ackIds_.Clone();
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AcknowledgeRequest Clone() {
       return new AcknowledgeRequest(this);
     }
@@ -3203,6 +3525,7 @@ namespace Google.Pubsub.V1 {
     /// <summary>
     ///  The subscription whose message is being acknowledged.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
       get { return subscription_; }
       set {
@@ -3219,14 +3542,17 @@ namespace Google.Pubsub.V1 {
     ///  The acknowledgment ID for the messages being acknowledged that was returned
     ///  by the Pub/Sub system in the `Pull` response. Must not be empty.
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> AckIds {
       get { return ackIds_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AcknowledgeRequest);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(AcknowledgeRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3239,6 +3565,7 @@ namespace Google.Pubsub.V1 {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
@@ -3246,10 +3573,12 @@ namespace Google.Pubsub.V1 {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Subscription.Length != 0) {
         output.WriteRawTag(10);
@@ -3258,6 +3587,7 @@ namespace Google.Pubsub.V1 {
       ackIds_.WriteTo(output, _repeated_ackIds_codec);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (Subscription.Length != 0) {
@@ -3267,6 +3597,7 @@ namespace Google.Pubsub.V1 {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(AcknowledgeRequest other) {
       if (other == null) {
         return;
@@ -3277,6 +3608,7 @@ namespace Google.Pubsub.V1 {
       ackIds_.Add(other.ackIds_);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
