@@ -1,13 +1,13 @@
 ﻿{
-  "version": "1.0.0-*",
+  "version": "0.1.0-*",
   "description": "Google Compute Engine Metadata v1 client library",
   "authors": [ "Google Inc." ],
 
   "packOptions": {
     "summary": "Google Compute Engine Metadata v1 client library",
-    "owners": [ "google-apis-packages" ],
-    "tags": [ "Google" ],
-    "iconUrl": "https://cloud.google.com/images/devtools-icon-64x64.png",
+    "owners": [ "google-cloud" ],
+    "tags": [ "Google", "Cloud", "Metadata" ],
+    "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
     "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
     "requireLicenseAcceptance": false

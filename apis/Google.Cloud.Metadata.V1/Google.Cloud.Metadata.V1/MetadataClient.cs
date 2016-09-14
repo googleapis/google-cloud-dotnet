@@ -269,8 +269,13 @@ namespace Google.Cloud.Metadata.V1
         /// <summary>
         /// Occurs when the the instance's metadata has changed.
         /// </summary>
+        /// <remarks>
+        /// To wait on changes for individual parts of the metadata, see <see cref="WaitForChanges"/> or <see cref="WaitForChangesAsync"/>.
+        /// </remarks>
         /// <seealso cref="GetInstanceMetadata"/>
         /// <seealso cref="GetInstanceMetadataAsync"/>
+        /// <seealso cref="WaitForChanges"/>
+        /// <seealso cref="WaitForChangesAsync"/>
         public virtual event EventHandler InstanceMetadataChanged
         {
             add { throw new NotImplementedException(); }
@@ -292,12 +297,76 @@ namespace Google.Cloud.Metadata.V1
         /// <summary>
         /// Occurs when the the project's metadata has changed.
         /// </summary>
+        /// <remarks>
+        /// To wait on changes for individual parts of the metadata, see <see cref="WaitForChanges"/> or <see cref="WaitForChangesAsync"/>.
+        /// </remarks>
         /// <seealso cref="GetProjectMetadata"/>
         /// <seealso cref="GetProjectMetadataAsync"/>
+        /// <seealso cref="WaitForChanges"/>
+        /// <seealso cref="WaitForChangesAsync"/>
         public virtual event EventHandler ProjectMetadataChanged
         {
             add { throw new NotImplementedException(); }
             remove { throw new NotImplementedException(); }
+        }
+
+        // TODO(mdour): To support ETags (https://cloud.google.com/compute/docs/storing-retrieving-metadata#etags), we may want to have a result object
+        //              returned here instead and then have overloads which take the previous result or an ETag exposed off the previous result.
+
+        /// <summary>
+        /// Waits for changes to the value or values specified by the relative URL synchronously.
+        /// </summary>
+        /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <remarks>
+        /// <para>
+        /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
+        /// If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
+        /// </para>
+        /// <para>
+        /// If the timeout in the <see cref="HttpClient"/> elapses before any changes occur, this will return the current value.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata for more information on available keys.
+        /// </para>
+        /// <para>
+        /// To detect any changes at the project or instance level, use a <paramref name="key"/> of "project" or "instance".
+        /// Alternatively, use <seealso cref="ProjectMetadataChanged"/> or <seealso cref="InstanceMetadataChanged"/>, respectively.
+        /// </para>
+        /// </remarks>
+        /// <returns>The changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
+        /// <seealso cref="InstanceMetadataChanged"/>
+        /// <seealso cref="ProjectMetadataChanged"/>
+        public virtual string WaitForChanges(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Waits for changes to the value or values specified by the relative URL asynchronously.
+        /// </summary>
+        /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <remarks>
+        /// <para>
+        /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
+        /// If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
+        /// </para>
+        /// <para>
+        /// If the timeout in the <see cref="HttpClient"/> elapses before any changes occur, this will return the current value.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata for more information on available keys.
+        /// </para>
+        /// <para>
+        /// To detect any changes at the project or instance level, use a <paramref name="key"/> of "project" or "instance".
+        /// Alternatively, use <seealso cref="ProjectMetadataChanged"/> or <seealso cref="InstanceMetadataChanged"/>, respectively.
+        /// </para>
+        /// </remarks>
+        /// <returns>A task containing the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
+        /// <seealso cref="InstanceMetadataChanged"/>
+        /// <seealso cref="ProjectMetadataChanged"/>
+        public virtual Task<string> WaitForChangesAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
         }
     }
 }
