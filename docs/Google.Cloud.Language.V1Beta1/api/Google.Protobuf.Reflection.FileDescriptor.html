@@ -83,15 +83,6 @@ and the FullName is the same as the Name.</p>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
                   <span class="xref">System.Object.GetHashCode()</span>
                 </div>
                 <div>
@@ -132,37 +123,6 @@ and the FullName is the same as the Name.</p>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Protobuf_Reflection_FileDescriptor_DescriptorProtoFileDescriptor" data-uid="Google.Protobuf.Reflection.FileDescriptor.DescriptorProtoFileDescriptor">DescriptorProtoFileDescriptor</h4>
-              <div class="markdown level1 summary"><p>Returns the file descriptor for descriptor.proto.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static FileDescriptor DescriptorProtoFileDescriptor { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.FileDescriptor.html#Google_Protobuf_Reflection_FileDescriptor">FileDescriptor</a></td>
-                    <td><p>The file descriptor for <code>descriptor.proto</code>.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 id="Google_Protobuf_Reflection_FileDescriptor_DescriptorProtoFileDescriptor_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This is used for protos which take a direct dependency on <code>descriptor.proto</code>, typically for
-annotations. While <code>descriptor.proto</code> is a proto2 file, it is built into the Google.Protobuf
-runtime for reflection purposes. The messages are internal to the runtime as they would require
-proto2 semantics for full support, but the file descriptor is available via this property. The
-C# codegen in protoc automatically uses this property when it detects a dependency on <code>descriptor.proto</code>.</p>
-</div>
               <h4 id="Google_Protobuf_Reflection_FileDescriptor_EnumTypes" data-uid="Google.Protobuf.Reflection.FileDescriptor.EnumTypes">EnumTypes</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>

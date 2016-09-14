@@ -108,29 +108,11 @@ Any annotations returned are valid, even if an error message is present.</p>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.html#Google_Cloud_Vision_V1_FaceAnnotation">FaceAnnotation</a></h4>
                   <section><p> A face annotation object contains the results of face detection.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.Types.html#Google_Cloud_Vision_V1_FaceAnnotation_Types">FaceAnnotation.Types</a></h4>
-                  <section><p>Container for nested types declared in the FaceAnnotation message type.</p>
-</section>
-                  <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.html#Google_Cloud_Vision_V1_FaceAnnotation_Types_Landmark">FaceAnnotation.Types.Landmark</a></h4>
-                  <section><p> A face-specific landmark (for example, a face feature).
- Landmark positions may fall outside the bounds of the image
- when the face is near one or more edges of the image.
- Therefore it is NOT guaranteed that 0 &lt;= x &lt; width or 0 &lt;= y &lt; height.</p>
-</section>
-                  <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.html#Google_Cloud_Vision_V1_FaceAnnotation_Types_Landmark_Types">FaceAnnotation.Types.Landmark.Types</a></h4>
-                  <section><p>Container for nested types declared in the Landmark message type.</p>
-</section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Feature.html#Google_Cloud_Vision_V1_Feature">Feature</a></h4>
                   <section><p> The &lt;em&gt;Feature&lt;/em&gt; indicates what type of image detection task to perform.
  Users describe the type of Google Cloud Vision API tasks to perform over
  images by using &lt;em&gt;Feature&lt;/em&gt;s. Features encode the Cloud Vision API
  vertical to operate on and the number of top-scoring results to return.</p>
-</section>
-                  <h4><a class="xref" href="Google.Cloud.Vision.V1.Feature.Types.html#Google_Cloud_Vision_V1_Feature_Types">Feature.Types</a></h4>
-                  <section><p>Container for nested types declared in the Feature message type.</p>
-</section>
-                  <h4><a class="xref" href="Google.Cloud.Vision.V1.GeometryReflection.html#Google_Cloud_Vision_V1_GeometryReflection">GeometryReflection</a></h4>
-                  <section><p>Holder for reflection information generated from google/cloud/vision/v1/geometry.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></h4>
                   <section><p> Client image to perform Google Cloud Vision API tasks over.</p>
@@ -153,9 +135,6 @@ Any annotations returned are valid, even if an error message is present.</p>
                   <section></section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorExtensions.html#Google_Cloud_Vision_V1_ImageAnnotatorExtensions">ImageAnnotatorExtensions</a></h4>
                   <section><p>Extension methods to assist with using <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a>.</p>
-</section>
-                  <h4><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorReflection.html#Google_Cloud_Vision_V1_ImageAnnotatorReflection">ImageAnnotatorReflection</a></h4>
-                  <section><p>Holder for reflection information generated from google/cloud/vision/v1/image_annotator.proto</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a></h4>
                   <section><p>Settings for a ImageAnnotator wrapper.</p>
@@ -194,15 +173,6 @@ Any annotations returned are valid, even if an error message is present.</p>
 </section>
                 <h3 id="enums">Enums
               </h3>
-                  <h4><a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type.html#Google_Cloud_Vision_V1_FaceAnnotation_Types_Landmark_Types_Type">FaceAnnotation.Types.Landmark.Types.Type</a></h4>
-                  <section><p> Face landmark (feature) type.
- Left and right are defined from the vantage of the viewer of the image,
- without considering mirror projections typical of photos. So, LEFT_EYE,
- typically is the person&#39;s right eye.</p>
-</section>
-                  <h4><a class="xref" href="Google.Cloud.Vision.V1.Feature.Types.Type.html#Google_Cloud_Vision_V1_Feature_Types_Type">Feature.Types.Type</a></h4>
-                  <section><p> Type of image feature.</p>
-</section>
                   <h4><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html#Google_Cloud_Vision_V1_Likelihood">Likelihood</a></h4>
                   <section><p> A bucketized representation of likelihood meant to give our clients highly
  stable results across model upgrades.</p>

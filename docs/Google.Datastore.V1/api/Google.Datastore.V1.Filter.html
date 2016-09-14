@@ -81,10 +81,10 @@
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                  <span class="xref">System.Object.ToString()</span>
                 </div>
                 <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                  <span class="xref">System.Object.GetHashCode()</span>
                 </div>
                 <div>
                   <span class="xref">System.Object.GetType()</span>
@@ -99,87 +99,6 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class Filter : IMessage&lt;Filter&gt;, IMessage, IEquatable&lt;Filter&gt;, IDeepCloneable&lt;Filter&gt;</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <h4 id="Google_Datastore_V1_Filter__ctor" data-uid="Google.Datastore.V1.Filter.#ctor">Filter()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Filter()</code></pre>
-              </div>
-              <h4 id="Google_Datastore_V1_Filter__ctor_Google_Datastore_V1_Filter_" data-uid="Google.Datastore.V1.Filter.#ctor(Google.Datastore.V1.Filter)">Filter(Filter)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Filter(Filter other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Datastore.V1.Filter.html#Google_Datastore_V1_Filter">Filter</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="fields">Fields
-              </h3>
-              <h4 id="Google_Datastore_V1_Filter_CompositeFilterFieldNumber" data-uid="Google.Datastore.V1.Filter.CompositeFilterFieldNumber">CompositeFilterFieldNumber</h4>
-              <div class="markdown level1 summary"><p>Field number for the &quot;composite_filter&quot; field.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int CompositeFilterFieldNumber = 1</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1_Filter_PropertyFilterFieldNumber" data-uid="Google.Datastore.V1.Filter.PropertyFilterFieldNumber">PropertyFilterFieldNumber</h4>
-              <div class="markdown level1 summary"><p>Field number for the &quot;property_filter&quot; field.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public const int PropertyFilterFieldNumber = 2</code></pre>
-              </div>
-              <h5 class="fieldValue">Field Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Datastore_V1_Filter_CompositeFilter" data-uid="Google.Datastore.V1.Filter.CompositeFilter">CompositeFilter</h4>
@@ -205,28 +124,6 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_Filter_Descriptor" data-uid="Google.Datastore.V1.Filter.Descriptor">Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageDescriptor Descriptor { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h4 id="Google_Datastore_V1_Filter_FilterTypeCase" data-uid="Google.Datastore.V1.Filter.FilterTypeCase">FilterTypeCase</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -245,28 +142,6 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Filter.FilterTypeOneofCase.html#Google_Datastore_V1_Filter_FilterTypeOneofCase">Filter.FilterTypeOneofCase</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1_Filter_Parser" data-uid="Google.Datastore.V1.Filter.Parser">Parser</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static MessageParser&lt;Filter&gt; Parser { get; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.MessageParser-1.html#Google_Protobuf_MessageParser_1">MessageParser</a>&lt;<a class="xref" href="Google.Datastore.V1.Filter.html#Google_Datastore_V1_Filter">Filter</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -380,61 +255,6 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_Filter_CalculateSize" data-uid="Google.Datastore.V1.Filter.CalculateSize">CalculateSize()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
-              <h4 id="Google_Datastore_V1_Filter_ClearFilterType" data-uid="Google.Datastore.V1.Filter.ClearFilterType">ClearFilterType()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void ClearFilterType()</code></pre>
-              </div>
-              <h4 id="Google_Datastore_V1_Filter_Clone" data-uid="Google.Datastore.V1.Filter.Clone">Clone()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Filter Clone()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Datastore.V1.Filter.html#Google_Datastore_V1_Filter">Filter</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;Filter&gt;.Clone()</a></div>
               <h4 id="Google_Datastore_V1_Filter_Equal_System_String_Google_Datastore_V1_Value_" data-uid="Google.Datastore.V1.Filter.Equal(System.String,Google.Datastore.V1.Value)">Equal(String, Value)</h4>
               <div class="markdown level1 summary"><p>Creates a filter to check that the specified property is equal to a given value.</p>
 </div>
@@ -484,112 +304,6 @@ a value with <a class="xref" href="Google.Datastore.V1.Value.html#Google_Datasto
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_Filter_Equals_Google_Datastore_V1_Filter_" data-uid="Google.Datastore.V1.Filter.Equals(Google.Datastore.V1.Filter)">Equals(Filter)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool Equals(Filter other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Datastore.V1.Filter.html#Google_Datastore_V1_Filter">Filter</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.IEquatable&lt;Google.Datastore.V1.Filter&gt;.Equals(Google.Datastore.V1.Filter)</span></div>
-              <h4 id="Google_Datastore_V1_Filter_Equals_System_Object_" data-uid="Google.Datastore.V1.Filter.Equals(System.Object)">Equals(Object)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
-              <h4 id="Google_Datastore_V1_Filter_GetHashCode" data-uid="Google.Datastore.V1.Filter.GetHashCode">GetHashCode()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.GetHashCode()</span></div>
               <h4 id="Google_Datastore_V1_Filter_GreaterThan_System_String_Google_Datastore_V1_Value_" data-uid="Google.Datastore.V1.Filter.GreaterThan(System.String,Google.Datastore.V1.Value)">GreaterThan(String, Value)</h4>
               <div class="markdown level1 summary"><p>Creates a filter to check that the specified property is greater than a given value.</p>
 </div>
@@ -828,58 +542,6 @@ a value with <a class="xref" href="Google.Datastore.V1.Value.html#Google_Datasto
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_Filter_MergeFrom_Google_Datastore_V1_Filter_" data-uid="Google.Datastore.V1.Filter.MergeFrom(Google.Datastore.V1.Filter)">MergeFrom(Filter)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(Filter other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Datastore.V1.Filter.html#Google_Datastore_V1_Filter">Filter</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;Filter&gt;.MergeFrom(Filter)</a></div>
-              <h4 id="Google_Datastore_V1_Filter_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Datastore.V1.Filter.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
-                    <td><em>input</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
               <h4 id="Google_Datastore_V1_Filter_Property_System_String_Google_Datastore_V1_Value_Google_Datastore_V1_PropertyFilter_Types_Operator_" data-uid="Google.Datastore.V1.Filter.Property(System.String,Google.Datastore.V1.Value,Google.Datastore.V1.PropertyFilter.Types.Operator)">Property(String, Value, PropertyFilter.Types.Operator)</h4>
               <div class="markdown level1 summary"><p>Creates a filter comparing the specified property with a given value, using a specified operator.</p>
 </div>
@@ -912,9 +574,9 @@ a value with <a class="xref" href="Google.Datastore.V1.Value.html#Google_Datasto
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Datastore.V1.PropertyFilter.Types.Operator.html#Google_Datastore_V1_PropertyFilter_Types_Operator">PropertyFilter.Types.Operator</a></td>
+                    <td><span class="xref">Google.Datastore.V1.PropertyFilter.Types.Operator</span></td>
                     <td><em>op</em></td>
-                    <td><p>The comparison operator to use. Must be one of the <a class="xref" href="Google.Datastore.V1.PropertyFilter.Types.Operator.html#Google_Datastore_V1_PropertyFilter_Types_Operator">PropertyFilter.Types.Operator</a> values,
+                    <td><p>The comparison operator to use. Must be one of the <span class="xref">Google.Datastore.V1.PropertyFilter.Types.Operator</span> values,
 and not <code>Unspecified</code>.</p>
 </td>
                   </tr>
@@ -940,82 +602,6 @@ and not <code>Unspecified</code>.</p>
               <div class="markdown level1 remarks"><p>If the operator is known in advance, methods such as <a class="xref" href="Google.Datastore.V1.Filter.html#Google_Datastore_V1_Filter_Equal_System_String_Google_Datastore_V1_Value_">Equal(String, Value)</a> and <a class="xref" href="Google.Datastore.V1.Filter.html#Google_Datastore_V1_Filter_GreaterThan_System_String_Google_Datastore_V1_Value_">GreaterThan(String, Value)</a> usually
 allow for better readability. This method is intended for situations where the operator is only known dynamically.</p>
 </div>
-              <h4 id="Google_Datastore_V1_Filter_ToString" data-uid="Google.Datastore.V1.Filter.ToString">ToString()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
-              <h4 id="Google_Datastore_V1_Filter_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Datastore.V1.Filter.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
-                    <td><em>output</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
-              <h3 id="eii">Explicit Interface Implementations
-              </h3>
-              <h4 id="Google_Datastore_V1_Filter_Google_Protobuf_IMessage_Descriptor" data-uid="Google.Datastore.V1.Filter.Google#Protobuf#IMessage#Descriptor">IMessage.Descriptor</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">MessageDescriptor IMessage.Descriptor { get; }</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.Reflection.MessageDescriptor.html#Google_Protobuf_Reflection_MessageDescriptor">MessageDescriptor</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_Descriptor">IMessage.Descriptor</a></div>
             </article>
           </div>
           

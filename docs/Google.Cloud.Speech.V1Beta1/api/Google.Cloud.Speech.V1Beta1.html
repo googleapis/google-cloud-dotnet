@@ -83,9 +83,6 @@
  <code>AsyncRecognize</code>. It contains the result as zero or more
  sequential <code>RecognizeResponse</code> messages.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.html#Google_Cloud_Speech_V1Beta1_CloudSpeechReflection">CloudSpeechReflection</a></h4>
-                  <section><p>Holder for reflection information generated from google/cloud/speech/v1beta1/cloud_speech.proto</p>
-</section>
                   <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></h4>
                   <section><p> Contains audio data in the encoding specified in the <code>RecognitionConfig</code>.
  Either <code>content</code> or <code>uri</code> must be supplied. Supplying both or neither
@@ -94,9 +91,6 @@
                   <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionConfig.html#Google_Cloud_Speech_V1Beta1_RecognitionConfig">RecognitionConfig</a></h4>
                   <section><p> The <code>RecognitionConfig</code> message provides information to the recognizer
  that specifies how to process the request.</p>
-</section>
-                  <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.html#Google_Cloud_Speech_V1Beta1_RecognitionConfig_Types">RecognitionConfig.Types</a></h4>
-                  <section><p>Container for nested types declared in the RecognitionConfig message type.</p>
 </section>
                   <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.Speech.html#Google_Cloud_Speech_V1Beta1_Speech">Speech</a></h4>
                   <section><p> Service that implements Google Cloud Speech API.</p>
@@ -148,9 +142,6 @@
  <code>StreamingRecognize</code>. It contains the result as zero or more
  sequential <code>RecognizeResponse</code> messages.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_Types">StreamingRecognizeResponse.Types</a></h4>
-                  <section><p>Container for nested types declared in the StreamingRecognizeResponse message type.</p>
-</section>
                   <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest">SyncRecognizeRequest</a></h4>
                   <section><p> <code>SyncRecognizeRequest</code> is the top-level message sent by the client for
  the <code>SyncRecognize</code> method.</p>
@@ -165,21 +156,8 @@
                   <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.AudioSourceOneofCase.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio_AudioSourceOneofCase">RecognitionAudio.AudioSourceOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;audio_source&quot; oneof.</p>
 </section>
-                  <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.AudioEncoding.html#Google_Cloud_Speech_V1Beta1_RecognitionConfig_Types_AudioEncoding">RecognitionConfig.Types.AudioEncoding</a></h4>
-                  <section><p> Audio encoding of the data sent in the audio message. All encodings support
- only 1 channel (mono) audio. Only <code>FLAC</code> includes a header that describes
- the bytes of audio that follow the header. The other encodings are raw
- audio bytes with no header.</p>
-<p> For best results, the audio source should be captured and transmitted using
- a lossless encoding (<code>FLAC</code> or <code>LINEAR16</code>). Recognition accuracy may be
- reduced if lossy codecs (such as AMR, AMR_WB and MULAW) are used to capture
- or transmit the audio, particularly if background noise is present.</p>
-</section>
                   <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.StreamingRequestOneofCase.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_StreamingRequestOneofCase">StreamingRecognizeRequest.StreamingRequestOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;streaming_request&quot; oneof.</p>
-</section>
-                  <h4><a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_Types_EndpointerType">StreamingRecognizeResponse.Types.EndpointerType</a></h4>
-                  <section><p> Indicates the type of endpointer event.</p>
 </section>
             </article>
           </div>
