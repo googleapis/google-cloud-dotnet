@@ -11,6 +11,11 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1.Test
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Vision.V1.IntegrationTests", "Google.Cloud.Vision.V1.IntegrationTests\Google.Cloud.Vision.V1.IntegrationTests.xproj", "{43B28767-4FBD-40C6-B2BE-8DFC91E2F6F2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{655FEAA7-59DF-4CAE-8035-63CEB11D136B}"
+	ProjectSection(SolutionItems) = preProject
+		docs\index.md = docs\index.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

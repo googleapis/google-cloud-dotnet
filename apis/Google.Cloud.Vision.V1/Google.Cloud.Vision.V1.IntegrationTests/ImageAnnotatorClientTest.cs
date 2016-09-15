@@ -21,38 +21,34 @@ namespace Google.Cloud.Vision.V1.IntegrationTests
     {
         private static readonly Image s_badImage = Image.FromBytes(new byte[10]);
 
-        // TODO: Should this just throw an exception instead?
         [Fact]
         public void AnnotateImage_BadImage()
         {
             var client = ImageAnnotatorClient.Create();
-            var response = client.Annotate(new AnnotateImageRequest
+            var request = new AnnotateImageRequest
             {
                 Image = s_badImage,
                 Features = { new Feature { Type = Feature.Types.Type.FaceDetection } }
-            });
-            Assert.NotNull(response.Error);
-            Assert.Equal((int)Code.InvalidArgument, response.Error.Code);            
+            };
+            var exception = Assert.Throws<AnnotateImageException>(() => client.Annotate(request));
+            Assert.Equal((int)Code.InvalidArgument, exception.Response.Error.Code);
         }
 
-        // TODO: Should this just throw an exception instead?
         [Fact]
         public void DetectFaces_BadImage()
         {
             var client = ImageAnnotatorClient.Create();
-            var result = client.DetectFaces(s_badImage);
-            Assert.NotNull(result.Error);
-            Assert.Equal((int)Code.InvalidArgument, result.Error.Code);
+            var exception = Assert.Throws<AnnotateImageException>(() => client.DetectFaces(s_badImage));
+            Assert.Equal((int)Code.InvalidArgument, exception.Response.Error.Code);
         }
 
-        // TODO: Here we lose the error entirely! Throw an exception?
-        // Awaiting more information from the API team.
         [Fact]
         public void DetectSafeSearch_BadImage()
         {
             var client = ImageAnnotatorClient.Create();
-            var result = client.DetectSafeSearch(s_badImage);
-            Assert.Null(result);
+            var exception = Assert.Throws<AnnotateImageException>(() => client.DetectSafeSearch(s_badImage));
+            // TODO: Re-enable this assertion. At the moment the code is "Internal"...
+            // Assert.Equal((int)Code.InvalidArgument, exception.Response.Error.Code);
         }
 
         // No "bad image" tests for the other Detect* methods; the behaviour is covered by the above.
