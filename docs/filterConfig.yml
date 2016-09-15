@@ -1,5 +1,9 @@
 apiRules:
 - exclude:
+    type: Method
+    hasAttribute:
+      uid: System.Diagnostics.DebuggerNonUserCodeAttribute
+- exclude:
     uidRegex: \.Google#Protobuf#IMessage#Descriptor$
 - exclude:
     type: Field
@@ -13,24 +17,6 @@ apiRules:
 - exclude:
     type: Method
     uidRegex: Equals\(
-- exclude:
-    type: Method
-    uidRegex: WriteTo\(
-- exclude:
-    type: Method
-    uidRegex: MergeFrom\(
-- exclude:
-    type: Method
-    uidRegex: GetHashCode$
-- exclude:
-    type: Method
-    uidRegex: Clone$
-- exclude:
-    type: Method
-    uidRegex: CalculateSize$
-- exclude:
-    type: Method
-    uidRegex: ToString$
 - exclude:
     type: Type
     uidRegex: \.Types$
