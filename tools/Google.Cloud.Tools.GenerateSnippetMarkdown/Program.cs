@@ -415,7 +415,8 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
             else
             {
-                return memberId.StartsWith(snippetId + "(");
+                // Parameterless methods have a UID without brackets.
+                return memberId.StartsWith(snippetId + "(") || memberId == snippetId;
             }
         }
 
