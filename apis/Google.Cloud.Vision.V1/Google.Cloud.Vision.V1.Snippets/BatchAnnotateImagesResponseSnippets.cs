@@ -41,10 +41,14 @@ namespace Google.Cloud.Vision.V1.Snippets
                 // individual response.
                 response.ThrowOnAnyError();
             }
-            catch (AnnotateImageException e)
+            catch (AggregateException e)
             {
-                AnnotateImageResponse response = e.Response;
-                Console.WriteLine(response.Error);
+                // Because a batch can have multiple errors, the exception thrown is AggregateException.
+                // Each inner exception is an AnnotateImageException
+                foreach (AnnotateImageException innerException in e.InnerExceptions)
+                {
+                    Console.WriteLine(innerException.Response.Error);
+                }
             }
             // End snippet
         }

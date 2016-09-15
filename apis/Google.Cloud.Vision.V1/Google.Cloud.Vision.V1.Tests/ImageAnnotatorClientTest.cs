@@ -170,17 +170,10 @@ namespace Google.Cloud.Vision.V1.Tests
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => syncCall(s_allAnnotationsImage, null, -1, null));
             await Assert.ThrowsAsync<ArgumentOutOfRangeException>(() => asyncCall(s_allAnnotationsImage, null, -1, null));
-            AssertAnnotationsSuccess(allAnnotations, syncCall(s_allAnnotationsImage, null, 0, null));
-            AssertAnnotationsSuccess(allAnnotations, await asyncCall(s_allAnnotationsImage, null, 0, null));
-            AssertAnnotationsSuccess(allAnnotations.Take(1), syncCall(s_allAnnotationsImage, null, 1, null));
-            AssertAnnotationsSuccess(allAnnotations.Take(1), await asyncCall(s_allAnnotationsImage, null, 1, null));
+            Assert.Equal(allAnnotations, syncCall(s_allAnnotationsImage, null, 0, null));
+            Assert.Equal(allAnnotations, await asyncCall(s_allAnnotationsImage, null, 0, null));
             Assert.Throws<AnnotateImageException>(() => syncCall(s_errorImage, null, 0, null));
             await Assert.ThrowsAsync<AnnotateImageException>(() => asyncCall(s_errorImage, null, 0, null));
-        }
-
-        private void AssertAnnotationsSuccess<T>(IEnumerable<T> expectedAnnotations, IReadOnlyList<T> actualResult)
-        {
-            Assert.Equal(expectedAnnotations, actualResult);
         }
     }
 }

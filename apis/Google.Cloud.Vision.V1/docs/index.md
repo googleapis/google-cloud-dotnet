@@ -99,6 +99,7 @@ contains an error.
 
 The [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_)
 method does not throw this exception, but [BatchAnnotateImagesResponse.ThrowOnAnyError()](obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml##Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError) checks
-all responses are successful, throwing AnnotateImageException if there are any errors.
+all responses are successful, throwing an AggregateException if there are any errors.
+The AggregateException contains one AnnotateImageException for each response that contains an error.
 
 [!code-cs[](obj/snippets/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.txt#ThrowOnAnyError)]

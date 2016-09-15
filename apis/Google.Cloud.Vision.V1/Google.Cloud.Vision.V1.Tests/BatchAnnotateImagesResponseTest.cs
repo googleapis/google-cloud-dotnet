@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Vision.V1.Tests
@@ -43,9 +45,10 @@ namespace Google.Cloud.Vision.V1.Tests
                     new AnnotateImageResponse { Error = new Rpc.Status { Message = "Bang" } }
                 }
             };
-            var exception = Assert.Throws<AnnotateImageException>(() => response.ThrowOnAnyError());
-            Assert.Equal("Bang", exception.Message);
-            Assert.Same(response.Responses[1], exception.Response);
+            var exception = Assert.Throws<AggregateException>(() => response.ThrowOnAnyError());
+            var nestedException = (AnnotateImageException)exception.InnerExceptions[0];
+            Assert.Equal("Bang", nestedException.Message);
+            Assert.Same(response.Responses[1], nestedException.Response);
         }
 
         [Fact]
@@ -56,12 +59,18 @@ namespace Google.Cloud.Vision.V1.Tests
                 Responses =
                 {
                     new AnnotateImageResponse { Error = new Rpc.Status { Message = "Boom" } },
+                    new AnnotateImageResponse { TextAnnotations = { new EntityAnnotation { Description = "X" } } },
                     new AnnotateImageResponse { Error = new Rpc.Status { Message = "Bang" } }
                 }
             };
-            var exception = Assert.Throws<AnnotateImageException>(() => response.ThrowOnAnyError());
-            Assert.Equal("Boom", exception.Message);
-            Assert.Same(response.Responses[0], exception.Response);
+            var exception = Assert.Throws<AggregateException>(() => response.ThrowOnAnyError());
+            var nestedExceptions = exception.InnerExceptions.Cast<AnnotateImageException>().ToList();
+            Assert.Equal(2, nestedExceptions.Count);
+            Assert.Equal("Boom", nestedExceptions[0].Message);
+            Assert.Equal("Bang", nestedExceptions[1].Message);
+            Assert.Same(response.Responses[0], nestedExceptions[0].Response);
+            // response.Responses[1] is skipped as it had no error.
+            Assert.Same(response.Responses[2], nestedExceptions[1].Response);
         }
     }
 }
