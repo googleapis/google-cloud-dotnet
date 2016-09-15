@@ -164,8 +164,8 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         private async Task AssertRepeatedAnnotation<T>(
-            Func<Image, ImageContext, int, CallSettings, AnnotationResult<T>> syncCall,
-            Func<Image, ImageContext, int, CallSettings, Task<AnnotationResult<T>>> asyncCall,
+            Func<Image, ImageContext, int, CallSettings, IReadOnlyList<T>> syncCall,
+            Func<Image, ImageContext, int, CallSettings, Task<IReadOnlyList<T>>> asyncCall,
             RepeatedField<T> allAnnotations)
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => syncCall(s_allAnnotationsImage, null, -1, null));
@@ -174,20 +174,13 @@ namespace Google.Cloud.Vision.V1.Tests
             AssertAnnotationsSuccess(allAnnotations, await asyncCall(s_allAnnotationsImage, null, 0, null));
             AssertAnnotationsSuccess(allAnnotations.Take(1), syncCall(s_allAnnotationsImage, null, 1, null));
             AssertAnnotationsSuccess(allAnnotations.Take(1), await asyncCall(s_allAnnotationsImage, null, 1, null));
-            AssertAnnotationError(syncCall(s_errorImage, null, 0, null));
-            AssertAnnotationError(await asyncCall(s_errorImage, null, 0, null));
+            Assert.Throws<AnnotateImageException>(() => syncCall(s_errorImage, null, 0, null));
+            await Assert.ThrowsAsync<AnnotateImageException>(() => asyncCall(s_errorImage, null, 0, null));
         }
 
-        private void AssertAnnotationsSuccess<T>(IEnumerable<T> expectedAnnotations, AnnotationResult<T> actualResult)
+        private void AssertAnnotationsSuccess<T>(IEnumerable<T> expectedAnnotations, IReadOnlyList<T> actualResult)
         {
-            Assert.Null(actualResult.Error);
-            Assert.Equal(expectedAnnotations.ToList(), actualResult.ToList());
-        }
-
-        private void AssertAnnotationError<T>(AnnotationResult<T> result)
-        {
-            Assert.Empty(result);
-            Assert.Equal(s_errorResponse.Error, result.Error);
+            Assert.Equal(expectedAnnotations, actualResult);
         }
     }
 }

@@ -15,6 +15,7 @@
 using Google.Rpc;
 using Google.Type;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -106,15 +107,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             Image image = LoadResourceImage("SchmidtBrinPage.jpg");
             // Snippet: DetectFaces
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-            AnnotationResult<FaceAnnotation> result = client.DetectFaces(image);
+            IReadOnlyList<FaceAnnotation> result = client.DetectFaces(image);
             foreach (FaceAnnotation face in result)
             {
                 Console.WriteLine($"Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}");
-            }
-            if (result.Error != null)
-            {
-                Console.WriteLine($"Additional error detected: {result.Error}");
-            }
+            }            
             // End snippet
 
             Assert.Equal(3, result.Count);
@@ -134,14 +131,10 @@ namespace Google.Cloud.Vision.V1.Snippets
             Image image = LoadResourceImage("SydneyOperaHouse.jpg");
             // Snippet: DetectLandmarks
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-            AnnotationResult<EntityAnnotation> result = client.DetectLandmarks(image);
+            IReadOnlyList<EntityAnnotation> result = client.DetectLandmarks(image);
             foreach (EntityAnnotation landmark in result)
             {
                 Console.WriteLine($"Score: {(int)(landmark.Score * 100)}%; Description: {landmark.Description}");
-            }
-            if (result.Error != null)
-            {
-                Console.WriteLine($"Additional error detected: {result.Error}");
             }
             // End snippet
 
@@ -171,7 +164,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             Image image = LoadResourceImage("Gladiolos.jpg");
             // Snippet: DetectLabels
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-            AnnotationResult<EntityAnnotation> labels = client.DetectLabels(image);
+            IReadOnlyList<EntityAnnotation> labels = client.DetectLabels(image);
             foreach (EntityAnnotation label in labels)
             {
                 Console.WriteLine($"Score: {(int)(label.Score * 100)}%; Description: {label.Description}");
@@ -191,7 +184,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             Image image = LoadResourceImage("Ellesborough.png");
             // Snippet: DetectText
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-            AnnotationResult<EntityAnnotation> textAnnotations = client.DetectText(image);
+            IReadOnlyList<EntityAnnotation> textAnnotations = client.DetectText(image);
             foreach (EntityAnnotation text in textAnnotations)
             {
                 Console.WriteLine($"Description: {text.Description}");
@@ -227,7 +220,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             Image image = LoadResourceImage("Chrome.png");
             // Snippet: DetectLogos
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
-            AnnotationResult<EntityAnnotation> logos = client.DetectLogos(image);
+            IReadOnlyList<EntityAnnotation> logos = client.DetectLogos(image);
             foreach (EntityAnnotation logo in logos)
             {
                 Console.WriteLine($"Description: {logo.Description}");
@@ -235,6 +228,25 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
             Assert.Equal(1, logos.Count);
             Assert.Equal("Google Chrome", logos[0].Description);
+        }
+
+        [Fact]
+        public void ErrorHandling_SingleImage()
+        {
+            // Sample: ErrorHandling_SingleImage
+            Image image = new Image(); // No content or source!
+            ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+            try
+            {
+                IReadOnlyList<EntityAnnotation> logos = client.DetectLogos(image);
+                // Normally use logos here...
+            }
+            catch (AnnotateImageException e)
+            {
+                AnnotateImageResponse response = e.Response;
+                Console.WriteLine(response.Error);
+            }
+            // End sample
         }
 
         private static Image LoadResourceImage(string name)

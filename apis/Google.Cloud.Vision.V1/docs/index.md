@@ -35,7 +35,7 @@ installed, run the following command in a Google Cloud SDK Shell:
 All operations are performed through
 [ImageAnnotatorClient](obj/api/Google.Cloud.Vision.V1.ImageAnnotatorClient.yml).
 
-The "core" method ([BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_)
+The "core" method [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_)
 can perform multiple (potentially different) annotations on multiple
 images, but convenience methods are provided for common cases of
 working with a single image, and for performing a single annotation
@@ -88,3 +88,17 @@ All IO-related methods have async equivalents.
 ## Detect faces in one image and logos in another
 
 [!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#BatchAnnotateImages)]
+
+## Error handling
+
+All the methods which annotate a single image (and therefore have a single response) throw
+([AnnotateImageException](obj/api/Google.Cloud.Vision.V1.AnnotateImageException.yml) if the response
+contains an error.
+
+[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#ErrorHandling_SingleImage)]
+
+The [BatchAnnotateImages](obj/api/Google.Cloud.Vision.V1.ImageAnnotatorClient.yml#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_)
+method does not throw this exception, but [BatchAnnotateImagesResponse.ThrowOnAnyError()](obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml##Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError) checks
+all responses are successful, throwing AnnotateImageException if there are any errors.
+
+[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.txt#ThrowOnAnyError)]
