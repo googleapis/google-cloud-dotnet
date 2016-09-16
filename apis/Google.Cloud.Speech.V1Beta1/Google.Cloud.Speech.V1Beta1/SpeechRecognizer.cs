@@ -88,7 +88,7 @@ namespace Google.Cloud.Speech.V1Beta1
         public Task<Operation<AsyncRecognizeResponse>> PollRecognizeAsync(string operationName) =>
             Operation<AsyncRecognizeResponse>.PollFromNameAsync(operationName, _operationsClient);
 
-        public async Task<RecognizerStream> BeginStreamingRecognize(StreamingRecognitionConfig config, CallSettings settings = null)
+        public async Task<RecognizerStream> BeginStreamingRecognizeAsync(StreamingRecognitionConfig config, CallSettings settings = null)
         {            
             var stream = _client.GrpcClient.StreamingRecognize(new CallOptions());
             await stream.RequestStream.WriteAsync(new StreamingRecognizeRequest { StreamingConfig = config }).ConfigureAwait(false);

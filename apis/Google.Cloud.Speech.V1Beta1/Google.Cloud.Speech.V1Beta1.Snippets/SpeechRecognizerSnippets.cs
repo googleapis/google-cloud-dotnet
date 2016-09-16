@@ -103,7 +103,7 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             SpeechRecognizer recognizer = SpeechRecognizer.Create();
             RecognitionConfig config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
             StreamingRecognitionConfig streamingConfig = new StreamingRecognitionConfig { Config = config };
-            RecognizerStream stream = await recognizer.BeginStreamingRecognize(streamingConfig);
+            RecognizerStream stream = await recognizer.BeginStreamingRecognizeAsync(streamingConfig);
             Task displayResponsesTask = Task.Run(async () =>
             {
                 Console.WriteLine("Start of streaming output");
