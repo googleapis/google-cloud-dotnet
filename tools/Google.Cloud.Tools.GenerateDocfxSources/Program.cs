@@ -31,6 +31,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             { "Google.Protobuf", "protobuf/csharp/src/Google.Protobuf/project.json" },
             { "Google.Api.Gax", "gax-dotnet/src/Google.Api.Gax/project.json" },
             { "Google.Api.Gax.Rest", "gax-dotnet/src/Google.Api.Gax.Rest/project.json" },
+            { "Google.Api.CommonProtos", "gax-dotnet/src/Google.Api.CommonProtos/project.json" },
             { "Grpc.Core", "grpc/src/csharp/Grpc.Core/Grpc.Core.csproj" },
         };
 
@@ -95,6 +96,18 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["files"] = new JArray { path },
                         ["cwd"] = $"../../external"
                     });
+                    continue;
+                }
+                // Cross-API dependencies (currently for IAM and LRO)
+                string candidateDependency = $"../../../apis/{dependency}";
+                if (Directory.Exists(Path.Combine(outputDirectory, candidateDependency)))
+                {
+                    src.Add(new JObject
+                    {
+                        ["files"] = new JArray { $"{dependency}/project.json" },
+                        ["cwd"] = candidateDependency
+                    });
+                    continue;
                 }
             }
 
