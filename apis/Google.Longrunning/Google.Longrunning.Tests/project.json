@@ -1,0 +1,21 @@
+﻿{
+  "description": "Unit tests for the Google Cloud Datastore library.",
+
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Api.Gax.Testing": "1.0.0-beta02-CI00085",
+    "Google.Cloud.ClientTesting": { "target": "project" },
+    "Google.Longrunning": { "target": "project" },
+    "System.Interactive.Async": "3.0.0",
+    "xunit": "2.2.0-beta2-build3300",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
+  },
+  "testRunner": "xunit",
+
+  "frameworks": {
+    "net451": {}
+  }
+}
