@@ -18,12 +18,20 @@ using static Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types;
 
 namespace Google.Cloud.Speech.V1Beta1.Snippets
 {
+    [Collection(nameof(SpeechFixture))]
     public class SpeechClientSnippets
     {
+        private readonly SpeechFixture _fixture;
+
+        public SpeechClientSnippets(SpeechFixture fixture)
+        {
+            _fixture = fixture;
+        }
+
         [Fact]
         public void SyncRecognize()
         {
-            var audio = LoadResourceAudio("speech.raw");
+            var audio = _fixture.LoadResourceAudio("speech.raw");
             // Snippet: SyncRecognize
             SpeechClient client = SpeechClient.Create();
             RecognitionConfig config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
@@ -35,15 +43,6 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
                 "this is a test file for the google cloud speech api",
                 response.Results[0].Alternatives[0].Transcript,
                 true);
-        }
-
-        private static RecognitionAudio LoadResourceAudio(string name)
-        {
-            var type = typeof(SpeechClientSnippets);
-            using (var stream = type.Assembly.GetManifestResourceStream($"{type.Namespace}.{name}"))
-            {
-                return RecognitionAudio.FromStream(stream);
-            }
         }
     }
 }
