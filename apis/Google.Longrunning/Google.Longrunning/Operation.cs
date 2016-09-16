@@ -37,11 +37,15 @@ namespace Google.Longrunning
         /// </summary>
         public Operation Proto { get; }
         public OperationsClient Client { get; }
+        private readonly Lazy<OperationFailedException> _lazyException;
 
         public Operation(Operation proto, OperationsClient client)
         {
             Proto = GaxPreconditions.CheckNotNull(proto, nameof(proto));
             Client = GaxPreconditions.CheckNotNull(client, nameof(proto));
+            _lazyException = new Lazy<OperationFailedException>(
+                () => Proto.Error == null ? null : new OperationFailedException(Proto),
+                LazyThreadSafetyMode.ExecutionAndPublication);
         }
 
         /// <summary>
@@ -52,6 +56,9 @@ namespace Google.Longrunning
         /// Only the in-memory representation of the operation (this object) is consulted for its state.
         /// </remarks>
         public string Name => Proto.Name;
+
+        // TODO: Use ResultCase instead? It's slightly odd that we have both Done and ResultCase,
+        // but we could at least ignore Done entirely in this code...
 
         /// <summary>
         /// Whether the operation has completed, where "complete" can include "failed".
@@ -66,11 +73,19 @@ namespace Google.Longrunning
         /// </summary>
         public bool IsFaulted => Proto.ResultCase == Operation.ResultOneofCase.Error;
 
-        // TODO: An Exception property? Would probably want to use a Lazy<OperationFailedException> to avoid creating
-        // a new one each time. Hmm.
+        /// <summary>
+        /// The error associated with the operation, as an <see cref="OperationFailedException"/>, or <c>null</c>
+        /// if the operation is not in an error state (either because it completed successfully, or because it
+        /// has not yet completed).
+        /// </summary>
+        /// <remarks>
+        /// Only the in-memory representation of the operation (this object) is consulted for its state.
+        /// </remarks>
+        public OperationFailedException Exception => _lazyException.Value;
 
         /// <summary>
         /// Retrieves the result of the operation, throwing an exception if the operation failed or hasn't completed.
+        /// Unlike <see cref="Task.Result"/>, this does not block.
         /// </summary>
         /// <remarks>
         /// Only the in-memory representation of the operation (this object) is consulted for its state.
@@ -84,9 +99,7 @@ namespace Google.Longrunning
                 switch (Proto.ResultCase)
                 {
                     case Operation.ResultOneofCase.Error:
-                        var error = Proto.Error;
-                        // TODO: Construct a new exception type?
-                        throw new RpcException(new Status((StatusCode) error.Code, error.Message));
+                        throw Exception;
                     case Operation.ResultOneofCase.Response:
                         return Proto.Response.Unpack<T>();
                     default:
