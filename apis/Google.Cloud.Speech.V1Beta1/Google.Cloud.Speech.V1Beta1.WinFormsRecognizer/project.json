@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "additionalArguments": [ "/target:winexe" ]
+  },
+
+  "dependencies": {
+    "NAudio": "1.7.3",
+    "Google.Cloud.Speech.V1Beta1": { "target": "project" },
+    "Grpc.Core": "1.0.0",
+    "Google.Protobuf": "3.0.0",
+    "System.Windows.Forms": "4.0.0",
+    "System.Drawing.Common": "4.0.0"
+  },
+
+  "frameworks": {
+    "net451": {
+      "dependencies": {
+        "Microsoft.NETCore.Platforms": "1.0.1"
+      }
+    }
+  }
+}
