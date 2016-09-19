@@ -1,7 +1,8 @@
 # Google Cloud Libraries for .NET
 .NET idiomatic client libraries for [Google Cloud Platform][cloud-platform] services.
 
-[![Build Status](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet.svg?branch=master)](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet)
+[![Travis build Status](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet.svg?branch=master)](https://travis-ci.org/GoogleCloudPlatform/google-cloud-dotnet)
+[![Appveyor build status](https://ci.appveyor.com/api/projects/status/d25hbwksdu6y9v5t?svg=true)](https://ci.appveyor.com/project/GoogleCloudPlatform/google-cloud-dotnet)
 
 * [Homepage][language-landing-dotnet]
 * [API Documentation][api-reference-dotnet]
