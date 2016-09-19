@@ -64,11 +64,16 @@ do
       # OpenCover is picky about how it finds the excluded files. There may be a better approach than this,
       # but it'll do for now.
       generatedFiles=`find $api/$api -name '*.cs' | xargs grep -l "// Generated" | sed 's/.*\/.*\//*\\\\*\\\\/g' | tr '\n' ';'`
-
+      
+      # TODO: We still end up with output lines for the service and client, but with nothing
+      # available to be covered or uncovered. Protobuf messages don't appear (which is right!)
+      # so excludebyfile appears to be working. Odd.
       $OPENCOVER \
         -target:"c:\Program Files\dotnet\dotnet.exe" \
         -targetargs:"test -f net451 $DOTNET_TEST_ARGS $testdir" \
-        -output:$coverage/$api.xml \
+        -mergeoutput \
+        -hideskipped:File \
+        -output:$coverage/coverage.xml \
         -oldStyle \
         -filter:"+[$api]*" \
         -searchdirs:$testdir/bin/$CONFIG/net451/win7-x64 \
@@ -85,7 +90,7 @@ done
 if [ -n "$OPENCOVER" -a -n "REPORTGENERATOR" ]
 then
   $REPORTGENERATOR \
-    -reports:$coverage/*.xml \
+    -reports:$coverage/coverage.xml \
     -targetdir:$coverage \
     -verbosity:Error
 fi

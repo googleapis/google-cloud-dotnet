@@ -10,6 +10,10 @@ branches:
   only:
     - master
 
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: 0F41/ccYgoYS098AEpBDGjBToFMvBsrjGLRzOW+ViyY4QrIzVIUmMlKiuNXDDeAs
+
 # Install the pre-requisites for the build.
 install:
   # Download the installer for dotnet.
@@ -24,6 +28,8 @@ install:
 build_script:
   - dotnet --info
   - bash build.sh
+  - nuget install -OutputDirectory packages -Version 0.7.0 coveralls.net
+  - packages\coveralls.net.0.7.0\tools\csmacnz.Coveralls.exe --opencover -i coverage\coverage.xml
 
 # The tests are run as part of the build.
 test: off
