@@ -9,3 +9,5 @@ external
 output
 *~
 .cr
+packages
+coverage

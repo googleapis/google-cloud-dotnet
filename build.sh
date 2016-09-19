@@ -5,6 +5,11 @@ set -e
 if [ $(dotnet --info | grep "OS Platform" | grep -c Windows) -ne 0 ]
 then
   OS=Windows
+  nuget install -OutputDirectory packages OpenCover -Version 4.6.519
+  nuget install -OutputDirectory packages ReportGenerator -Version 2.4.5.0
+  # Comment out the lines below to disable coverage
+  OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
+  REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
 else
   OS=Linux
 fi
@@ -42,24 +47,48 @@ cd ..
 cd apis
 dotnet build $DOTNET_BUILD_ARGS `$FIND * -mindepth 1 -maxdepth 1 -name 'Google*' -type d`
 
-# TODO: Tests. We need to:
-# - Run Mono for all tests
-# - Run dotnet test for all netcore-supporting tests.
-
 echo Testing
+
+coverage=../coverage
+rm -rf $coverage
+mkdir $coverage
 
 for testdir in */*.Tests
 do
+  api=`echo $testdir | cut -d/ -f1`
   if [ $OS == "Windows" ]
   then
-    dotnet test -f net451 $DOTNET_TEST_ARGS $testdir 
+    dotnet test -f net451 $DOTNET_TEST_ARGS $testdir
+    if [ -n "$OPENCOVER" ]
+    then
+      # OpenCover is picky about how it finds the excluded files. There may be a better approach than this,
+      # but it'll do for now.
+      generatedFiles=`find $api/$api -name '*.cs' | xargs grep -l "// Generated" | sed 's/.*\/.*\//*\\\\*\\\\/g' | tr '\n' ';'`
+
+      $OPENCOVER \
+        -target:"c:\Program Files\dotnet\dotnet.exe" \
+        -targetargs:"test -f net451 $DOTNET_TEST_ARGS $testdir" \
+        -output:$coverage/$api.xml \
+        -oldStyle \
+        -filter:"+[$api]*" \
+        -searchdirs:$testdir/bin/$CONFIG/net451/win7-x64 \
+        -register:user \
+        -excludebyfile:$generatedFiles
+    fi
   else
-    api=`echo $testdir | cut -d/ -f1`
     project=`echo $testdir | cut -d/ -f2`
     bin=$testdir/bin/$CONFIG/net451/ubuntu.14.04-x64
     mono $bin/dotnet-test-xunit.exe $bin/$project.dll
   fi
 done
+
+if [ -n "$OPENCOVER" -a -n "REPORTGENERATOR" ]
+then
+  $REPORTGENERATOR \
+    -reports:$coverage/*.xml \
+    -targetdir:$coverage \
+    -verbosity:Error
+fi
 
 # TODO: Work out all projects we can test with dotnet test
 # automatically
