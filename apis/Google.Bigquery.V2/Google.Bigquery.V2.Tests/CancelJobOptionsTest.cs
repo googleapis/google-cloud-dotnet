@@ -12,23 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
-using System.Collections.Generic;
-using System.Reflection;
 using Xunit;
+using static Google.Apis.Bigquery.v2.JobsResource;
 
-namespace Google.Storage.V1.Tests
+namespace Google.Bigquery.V2.Tests
 {
-    public class StorageClientTest : AbstractClientTester<StorageClient, StorageClientTest.DerivedStorageClient>
+    public class CancelJobOptionsTest
     {
-        public static IEnumerable<object[]> NotImplementedMethods => AllInstanceMethods;
-        public class DerivedStorageClient : StorageClient { }
-
-        [Theory]
-        [MemberData(nameof(NotImplementedMethods))]
-        public void NotImplementedMethodsThrow(MethodInfo method)
+        // The test doesn't do anything yet... but neither does the code.
+        [Fact]
+        public void ModifyRequest_NoOp()
         {
-            AssertNotImplemented(method);
+            var request = new CancelRequest(null, "project", "job");
+            var options = new CancelJobOptions();
+            options.ModifyRequest(request);
         }
     }
 }

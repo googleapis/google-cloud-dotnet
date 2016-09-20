@@ -56,5 +56,18 @@ namespace Google.Bigquery.V2.Tests
             };
             Assert.Throws<ArgumentException>(() => options.Validate());
         }
+
+        [Fact]
+        public void Interval_NegativeIsInvalid()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new PollJobOptions { Interval = TimeSpan.FromDays(-1) }.ToString());
+        }
+
+        [Fact]
+        public void Interval_ZeroIsValid()
+        {
+            var options = new PollJobOptions { Interval = TimeSpan.Zero };
+            Assert.Equal(TimeSpan.Zero, options.Interval);
+        }
     }
 }
