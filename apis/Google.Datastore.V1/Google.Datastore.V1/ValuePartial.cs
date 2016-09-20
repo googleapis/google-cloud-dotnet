@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Google.Type;
@@ -222,10 +223,7 @@ namespace Google.Datastore.V1
 
         private static Value CheckKindForNonNullable(Value value, ValueTypeOneofCase expectedCase)
         {
-            if (value == null)
-            {
-                throw new ArgumentNullException(nameof(value));
-            }
+            GaxPreconditions.CheckNotNull(value, nameof(value));
             if (value.ValueTypeCase != expectedCase)
             {
                 throw new InvalidOperationException($"Cannot convert value; expected kind {expectedCase}; was {value.ValueTypeCase}");

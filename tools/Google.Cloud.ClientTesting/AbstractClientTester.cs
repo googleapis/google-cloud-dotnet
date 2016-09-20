@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.ClientTesting
@@ -32,12 +33,34 @@ namespace Google.Cloud.ClientTesting
 
         protected void AssertNotImplemented(MethodInfo method)
         {
+            var exception = Assert.Throws<NotImplementedException>(() => Invoke(method));
+        }
+
+        private void Invoke(MethodInfo method)
+        {
+            // Handle async methods, which can either fail immediately, or return a task which will be faulted
+            // when completed.
             var client = new TConcrete();
             var arguments = method.GetParameters()
                 .Select(GetArgument)
                 .ToArray();
-            var exception = Assert.Throws<TargetInvocationException>(() => method.Invoke(client, arguments));
-            Assert.IsType<NotImplementedException>(exception.InnerException);
+            try
+            {
+                object result = method.Invoke(client, arguments);
+                Task task = result as Task;
+                if (task != null)
+                {
+                    task.Wait();
+                }
+            }
+            catch (AggregateException e)
+            {
+                throw e.InnerExceptions[0];
+            }
+            catch (TargetInvocationException e)
+            {
+                throw e.InnerException;
+            }
         }
 
         protected virtual object GetArgument(ParameterInfo parameter)
