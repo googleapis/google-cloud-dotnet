@@ -63,7 +63,8 @@ do
     then
       # OpenCover is picky about how it finds the excluded files. There may be a better approach than this,
       # but it'll do for now.
-      generatedFiles=`find $api/$api -name '*.cs' | xargs grep -l "// Generated" | sed 's/.*\/.*\//*\\\\*\\\\/g' | tr '\n' ';'`
+      generatedFiles=`$FIND $api/$api -name '*.cs' | xargs grep -l "// Generated" | sed 's/.*\/.*\//*\\\\*\\\\/g' | tr '\n' ';'`
+      echo Coverage excluding files $generatedFiles
       
       # TODO: We still end up with output lines for the service and client, but with nothing
       # available to be covered or uncovered. Protobuf messages don't appear (which is right!)
