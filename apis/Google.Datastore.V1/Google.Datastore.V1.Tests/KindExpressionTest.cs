@@ -12,19 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
+using Xunit;
 
-namespace Google.Datastore.V1
+namespace Google.Datastore.V1.Tests
 {
-    public partial class KindExpression
+    public class KindExpressionTest
     {
-        /// <summary>
-        /// Constructs a <see cref="KindExpression"/> directly from the name of the kind.
-        /// </summary>
-        /// <param name="name">The name of the kind. Must not be null.</param>
-        public KindExpression(string name) : this()
+        [Fact]
+        public void Constructor()
         {
-            Name = GaxPreconditions.CheckNotNull(name, nameof(name));
+            Assert.Equal(new KindExpression { Name = "name" }, new KindExpression("name"));
         }
     }
 }

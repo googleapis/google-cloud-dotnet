@@ -6,7 +6,9 @@
   },
 
   "dependencies": {
+    "Google.Cloud.ClientTesting": { "target": "project" },
     "Google.Datastore.V1": { "target": "project" },
+    "System.Interactive.Async": "3.0.0",
     "xunit": "2.2.0-beta2-build3300",
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
