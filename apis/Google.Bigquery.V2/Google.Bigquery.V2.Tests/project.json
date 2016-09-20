@@ -7,6 +7,7 @@
 
   "dependencies": {
     "Google.Bigquery.V2": { "target": "project" },
+    "Google.Cloud.ClientTesting": { "target": "project" },
     "xunit": "2.2.0-beta2-build3300",
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },

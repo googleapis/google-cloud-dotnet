@@ -17,12 +17,12 @@ using System.Collections.Generic;
 using System.Reflection;
 using Xunit;
 
-namespace Google.Storage.V1.Tests
+namespace Google.Bigquery.V2.Tests
 {
-    public class StorageClientTest : AbstractClientTester<StorageClient, StorageClientTest.DerivedStorageClient>
+    public class BigqueryClientTest : AbstractClientTester<BigqueryClient, BigqueryClientTest.DerivedBigqueryClient>
     {
         public static IEnumerable<object[]> NotImplementedMethods => AllInstanceMethods;
-        public class DerivedStorageClient : StorageClient { }
+        public class DerivedBigqueryClient : BigqueryClient { }
 
         [Theory]
         [MemberData(nameof(NotImplementedMethods))]
