@@ -11,21 +11,70 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
+using Google.Type;
+using System;
 using Xunit;
+using static Google.Datastore.V1Beta3.Key.Types;
 
 namespace Google.Datastore.V1Beta3.Tests
 {
     public class ArrayValueTest
     {
-        // We don't test for every single type, as it would be a waste of time - the implementation is the same for everything,
-        // so we just have tests for one reference type, one non-nullable value type, and one nullable value type.
-
         [Fact]
-        public void ConversionToArrayValue_Simple()
+        public void SimpleArrayConversions()
         {
-            Assert.Equal(new ArrayValue { Values = { "a", "b" } }, new[] { "a", "b" });
-            Assert.Equal(new ArrayValue { Values = { 1, 2 } }, new long[] { 1, 2 });
-            Assert.Equal(new ArrayValue { Values = { 1, 2 } }, new long?[] { 1, 2 });
+            DateTime sampleDateTime = new DateTime(2016, 9, 20, 1, 1, 1, DateTimeKind.Utc);
+            Key sampleKey = new Key { PartitionId = new PartitionId("proj", "ns"), Path = { new PathElement("kind", 0L) } };
+            ArrayValue sampleArray = new[] { "a", "b" };
+            ByteString sampleByteString = ByteString.CopyFrom(1, 2);
+            Entity sampleEntity = new Entity();
+            LatLng sampleLatLng = new LatLng { Latitude = 1, Longitude = 2 };
+            Timestamp sampleTimestamp = Timestamp.FromDateTime(sampleDateTime);
+            DateTimeOffset sampleDateTimeOffset = new DateTimeOffset(sampleDateTime, TimeSpan.Zero);
+
+            AssertArrayConversions(new ArrayValue { Values = { "a", "b" } }, new[] { "a", "b" });
+            AssertArrayConversions(new ArrayValue { Values = { 1, 2 } }, new long[] { 1, 2 });
+            AssertArrayConversions(new ArrayValue { Values = { 1, 2 } }, new long?[] { 1, 2 });
+            AssertArrayConversions(new ArrayValue { Values = { sampleKey } }, new Key[] { sampleKey });
+            AssertArrayConversions(new ArrayValue { Values = { 1.0, 2.0 } }, new double[] { 1.0, 2.0 });
+            AssertArrayConversions(new ArrayValue { Values = { 1.0, 2.0 } }, new double?[] { 1.0, 2.0 });
+            AssertArrayConversions(new ArrayValue { Values = { false, true } }, new bool[] { false, true });
+            AssertArrayConversions(new ArrayValue { Values = { false, true } }, new bool?[] { false, true });
+            AssertArrayConversions(new ArrayValue { Values = { sampleArray } }, new ArrayValue[] { sampleArray });
+            AssertArrayConversions(new ArrayValue { Values = { sampleByteString } }, new ByteString[] { sampleByteString });
+            AssertArrayConversions(new ArrayValue { Values = { new byte[] { 1, 2 } } }, new byte[][] { new byte[] { 1, 2 } });
+            AssertArrayConversions(new ArrayValue { Values = { sampleEntity } }, new Entity[] { sampleEntity });
+            AssertArrayConversions(new ArrayValue { Values = { sampleLatLng } }, new LatLng[] { sampleLatLng });
+            AssertArrayConversions(new ArrayValue { Values = { sampleTimestamp } }, new Timestamp[] { sampleTimestamp });
+
+            AssertArrayConversions(new ArrayValue { Values = { sampleDateTime } }, new DateTime[] { sampleDateTime });
+            AssertArrayConversions(new ArrayValue { Values = { sampleDateTime } }, new DateTime?[] { sampleDateTime });
+            AssertArrayConversions(new ArrayValue { Values = { sampleDateTimeOffset } }, new DateTimeOffset[] { sampleDateTime });
+            AssertArrayConversions(new ArrayValue { Values = { sampleDateTimeOffset } }, new DateTimeOffset?[] { sampleDateTime });
+            AssertArrayConversions(new ArrayValue { Values = { "a", 1, true, Value.ForNull() } }, new Value[] { "a", 1, true, null });
+        }
+
+        private static void AssertArrayConversions<T>(ArrayValue arrayValue, T[] input)
+        {
+            dynamic dynamicInput = input;
+            ArrayValue convertedInput = dynamicInput;
+            // Test implicit conversion to ArrayValue
+            Assert.Equal(arrayValue, convertedInput);
+
+            // Test explicit conversion back to an array
+            T[] convertedBack = (T[])(dynamic)arrayValue;
+            Assert.Equal(input, convertedBack);
+
+            // Test conversion from array to just Value
+            Value singleValue = new Value { ArrayValue = arrayValue };
+            Value convertedInputToValue = dynamicInput;
+            Assert.Equal(singleValue, convertedInputToValue);
+
+            // Test conversion from Value to array
+            convertedBack = (T[])(dynamic)singleValue;
+            Assert.Equal(input, convertedBack);
         }
 
         [Fact]
@@ -34,6 +83,22 @@ namespace Google.Datastore.V1Beta3.Tests
             Assert.Null((ArrayValue) (string[]) null);
             Assert.Null((ArrayValue) (long[])null);
             Assert.Null((ArrayValue) (long?[])null);
+            Assert.Null((ArrayValue) (Key[])null);
+            Assert.Null((ArrayValue) (double[])null);
+            Assert.Null((ArrayValue) (double?[])null);
+            Assert.Null((ArrayValue) (bool[])null);
+            Assert.Null((ArrayValue) (bool?[])null);
+            Assert.Null((ArrayValue) (ArrayValue[])null);
+            Assert.Null((ArrayValue) (ByteString[])null);
+            Assert.Null((ArrayValue) (byte[][])null);
+            Assert.Null((ArrayValue) (Entity[])null);
+            Assert.Null((ArrayValue) (LatLng[])null);
+            Assert.Null((ArrayValue) (Timestamp[])null);
+            Assert.Null((ArrayValue) (DateTime[])null);
+            Assert.Null((ArrayValue) (DateTime?[])null);
+            Assert.Null((ArrayValue) (DateTimeOffset[])null);
+            Assert.Null((ArrayValue) (DateTimeOffset?[])null);
+            Assert.Null((ArrayValue) (Value[])null);
         }
 
         [Fact]
