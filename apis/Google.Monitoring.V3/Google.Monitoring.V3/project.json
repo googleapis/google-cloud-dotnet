@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1-*",
+  "description": "Recommended Google client library to access the Stackdriver Monitoring API, which manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.",
+  "authors": [ "Google Inc." ],
+
+  "packOptions": {
+    "summary": "Recommended Google client library to access the Google Stackdriver Monitoring API.",
+    "owners": [ "google-cloud" ],
+    "tags": [ "Google", "Cloud", "Monitoring", "Stackdriver" ],
+    "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
+    "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+    "requireLicenseAcceptance": false
+  },
+
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "Google.Api.CommonProtos": "1.0.0-beta04",
+    "Google.Api.Gax": "1.0.0-beta02",
+    "Google.Apis.Auth": "1.16.0",
+    "Google.Protobuf": "3.0.0",
+    "Grpc.Auth": "1.0.0",
+    "Grpc.Core": "1.0.0",
+    "System.Interactive.Async": "3.0.0"
+  },
+
+  "frameworks": {
+    "net45": { }
+  }
+}
