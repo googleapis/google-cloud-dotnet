@@ -13,11 +13,13 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Testing;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 using static Google.Datastore.V1.QueryResultBatch.Types;
 
@@ -68,6 +70,49 @@ namespace Google.Datastore.V1.Tests
             AssertOffsets(server, 5, 0);
         }
 
+        [Fact]
+        public async Task GqlQueryIsTransformedAsync()
+        {
+            var structured = new Query
+            {
+                Limit = 10,
+                Projection = { "foo", "bar" }
+            };
+            // No, this isn't real GQL. But it's an easy way of testing things.
+            var gql = new GqlQuery { QueryString = structured.ToString() };
+            var server = new FakeServer(4);
+            var streamer = new QueryStreamer(new RunQueryRequest { GqlQuery = gql }, server.CreateApiCall(), null);
+            await AssertEntitiesAsync(streamer, 0, 10);
+            var firstStructured = new Query(structured) { Limit = 6, StartCursor = ByteString.CopyFromUtf8("4") };
+            Assert.Equal(firstStructured, server.Requests[1].Query);
+        }
+
+        [Fact]
+        public async Task LimitAndOffsetAsync()
+        {
+            var query = new Query
+            {
+                Limit = 7,
+                Offset = 5
+            };
+            var server = new FakeServer(4);
+            var streamer = new QueryStreamer(new RunQueryRequest { Query = query }, server.CreateApiCall(), null);
+            await AssertEntitiesAsync(streamer, 5, 7);
+            AssertLimits(server, 7, 7, 4);
+            AssertOffsets(server, 5, 1, 0);
+        }
+
+        [Fact]
+        public async Task NoLimitAsync()
+        {
+            var query = new Query { Offset = 5 };
+            var server = new FakeServer(11);
+            var streamer = new QueryStreamer(new RunQueryRequest { Query = query }, server.CreateApiCall(), null);
+            await AssertEntitiesAsync(streamer, 5, 15);
+            AssertLimits(server, null, null);
+            AssertOffsets(server, 5, 0);
+        }
+
         private void AssertLimits(FakeServer server, params int?[] expectedLimits)
         {
             Assert.Equal(expectedLimits, server.Requests.Select(r => r.Query?.Limit));
@@ -81,6 +126,12 @@ namespace Google.Datastore.V1.Tests
         private void AssertEntities(QueryStreamer streamer, int offset, int limit)
         {
             var entities = streamer.Sync().SelectMany(response => response.Batch.EntityResults).Select(er => er.Entity).ToList();
+            Assert.Equal(FakeServer.Entities.Skip(offset).Take(limit), entities);
+        }
+
+        private async Task AssertEntitiesAsync(QueryStreamer streamer, int offset, int limit)
+        {
+            var entities = await streamer.Async().SelectMany(response => response.Batch.EntityResults.ToAsyncEnumerable()).Select(er => er.Entity).ToList();
             Assert.Equal(FakeServer.Entities.Skip(offset).Take(limit), entities);
         }
 
@@ -111,7 +162,7 @@ namespace Google.Datastore.V1.Tests
 
             internal ApiCall<RunQueryRequest, RunQueryResponse> CreateApiCall()
             {
-                return new ClientHelper(DatastoreSettings.GetDefault()).BuildApiCall<RunQueryRequest, RunQueryResponse>(RunQueryAsync, RunQuery, null);
+                return FakeApiCall.Create<RunQueryRequest, RunQueryResponse>(RunQuery);
             }
 
             private RunQueryResponse RunQuery(RunQueryRequest request, CallOptions options)
@@ -164,11 +215,6 @@ namespace Google.Datastore.V1.Tests
                     batch.MoreResults = MoreResultsType.MoreResultsAfterLimit;
                 }
                 return response;
-            }
-
-            private AsyncUnaryCall<RunQueryResponse> RunQueryAsync(RunQueryRequest request, CallOptions options)
-            {
-                throw new NotImplementedException("Faking async calls is currently awkward.");
             }
         }
     }

@@ -19,7 +19,7 @@
 
   "dependencies": {
     "Google.Api.CommonProtos": "1.0.0-beta02",
-    "Google.Api.Gax": "1.0.0-beta02",
+    "Google.Api.Gax": "1.0.0-beta02-CI00085",
     "Google.Apis.Auth": "1.16.0",
     "Google.Protobuf": "3.0.0",
     "Grpc.Auth": "1.0.0",

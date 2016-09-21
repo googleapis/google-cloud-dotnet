@@ -6,6 +6,7 @@
   },
 
   "dependencies": {
+    "Google.Api.Gax.Testing": "1.0.0-beta02-CI00085",
     "Google.Cloud.ClientTesting": { "target": "project" },
     "Google.Datastore.V1": { "target": "project" },
     "System.Interactive.Async": "3.0.0",
