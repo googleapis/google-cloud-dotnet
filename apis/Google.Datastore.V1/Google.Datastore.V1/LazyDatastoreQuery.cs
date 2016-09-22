@@ -74,9 +74,7 @@ namespace Google.Datastore.V1
         /// most application code should merely iterate over the query results as <see cref="Entity"/>
         /// values, or call <see cref="GetAllResults()"/>.
         /// The results of this query are returned as a sequence of <see cref="RunQueryResponse"/> values
-        /// exactly as returned by the Datastore API. This method is only useful if the application
-        /// wishes to examine the <see cref="RunQueryResponse.Query"/> property; otherwise, use
-        /// <see cref="AsBatches"/> to obtain the sequence of batches.
+        /// exactly as returned by the Datastore API.
         /// </summary>
         /// <returns>A sequence of <see cref="RunQueryResponse"/> values.</returns>
         public IEnumerable<RunQueryResponse> AsResponses() => _responses;

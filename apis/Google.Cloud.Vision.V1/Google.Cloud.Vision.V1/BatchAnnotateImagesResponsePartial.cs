@@ -24,7 +24,7 @@ namespace Google.Cloud.Vision.V1
         /// throws an <see cref="AggregateException"/>, containing one <see cref="AnnotateImageException"/>
         /// for each failed response. Otherwise, returns <c>this</c> (so that the method can be called in a fluent manner).
         /// </summary>
-        /// <exception cref="AggregateException">The <see cref="Error"/> property is non-null on one or
+        /// <exception cref="AggregateException">The <see cref="AnnotateImageResponse.Error"/> property is non-null on one or
         /// more element of <see cref="Responses"/>.</exception>
         /// <returns><c>this</c> if no responses contain errors.</returns>
         public BatchAnnotateImagesResponse ThrowOnAnyError()
