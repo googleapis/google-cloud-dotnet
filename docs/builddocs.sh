@@ -24,9 +24,9 @@ build_api_docs() {
     dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   fi
   
-  docfx.cmd metadata -f output/$api/docfx.json
+  docfx metadata -f output/$api/docfx.json
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
-  docfx.cmd build output/$api/docfx.json
+  docfx build output/$api/docfx.json
 
   # Special case root: that should end up in the root of the assembled
   # site.
