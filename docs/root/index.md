@@ -28,6 +28,9 @@ Alpha releases from
 - [Google.Cloud.Language.V1Beta1](Google.Cloud.Language.V1Beta1/index.html)
 - [Google.Cloud.Speech.V1Beta1](Google.Cloud.Speech.V1Beta1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
+- [Google.Devtools.Clouderrorreporting.V1Beta1](Google.Devtools.Clouderrorreporting.V1Beta1/index.html)
+- [Google.Devtools.Cloudtrace.V1](Google.Devtools.Cloudtrace.V1/index.html)
+- [Google.Monitoring.V3](Google.Monitoring.V3/index.html)
 
 Old versions:
 
