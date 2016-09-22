@@ -14,9 +14,11 @@ supported here.
 
 ## APIs with supporting libraries
 
-Beta releases from NuGet.org:
+Alpha and beta releases from NuGet.org:
 
 - [Google.Bigquery.V2](Google.Bigquery.V2/index.html)
+- [Google.Cloud.Language.V1Beta1](Google.Cloud.Language.V1Beta1/index.html)
+- [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 - [Google.Datastore.V1](Google.Datastore.V1/index.html)
 - [Google.Logging.V2](Google.Logging.V2/index.html)
 - [Google.Pubsub.V1](Google.Pubsub.V1/index.html)
@@ -25,9 +27,7 @@ Beta releases from NuGet.org:
 Alpha releases from
 [MyGet](https://www.myget.org/gallery/google-dotnet-public):
 
-- [Google.Cloud.Language.V1Beta1](Google.Cloud.Language.V1Beta1/index.html)
 - [Google.Cloud.Speech.V1Beta1](Google.Cloud.Speech.V1Beta1/index.html)
-- [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 - [Google.Devtools.Clouderrorreporting.V1Beta1](Google.Devtools.Clouderrorreporting.V1Beta1/index.html)
 - [Google.Devtools.Cloudtrace.V1](Google.Devtools.Cloudtrace.V1/index.html)
 - [Google.Monitoring.V3](Google.Monitoring.V3/index.html)
