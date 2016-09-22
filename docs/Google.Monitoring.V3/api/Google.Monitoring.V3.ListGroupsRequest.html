@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ListGroupsRequest
+   | Google.Monitoring.V3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ListGroupsRequest
+   | Google.Monitoring.V3 ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Monitoring_V3_ListGroupsRequest" data-uid="Google.Monitoring.V3.ListGroupsRequest">Class ListGroupsRequest
+              </h1>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListGroupsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The <code>ListGroup</code> request.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">ListGroupsRequest</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Monitoring.V3</h6>
+              <h6><strong>Assembly</strong>:Google.Monitoring.V3.dll</h6>
+              <h5 id="Google_Monitoring_V3_ListGroupsRequest_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class ListGroupsRequest : IMessage&lt;ListGroupsRequest&gt;, IMessage, IEquatable&lt;ListGroupsRequest&gt;, IDeepCloneable&lt;ListGroupsRequest&gt;, IPageRequest</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Monitoring_V3_ListGroupsRequest_AncestorsOfGroup" data-uid="Google.Monitoring.V3.ListGroupsRequest.AncestorsOfGroup">AncestorsOfGroup</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListGroupsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> A group name: <code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
+ Returns groups that are ancestors of the specified group.
+ The groups are returned in order, starting with the immediate parent and
+ ending with the most distant ancestor.  If the specified group has no
+ immediate parent, the results are empty.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string AncestorsOfGroup { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Monitoring_V3_ListGroupsRequest_ChildrenOfGroup" data-uid="Google.Monitoring.V3.ListGroupsRequest.ChildrenOfGroup">ChildrenOfGroup</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListGroupsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> A group name: <code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
+ Returns groups whose <code>parentName</code> field contains the group
+ name.  If no groups have this parent, the results are empty.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string ChildrenOfGroup { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Monitoring_V3_ListGroupsRequest_DescendantsOfGroup" data-uid="Google.Monitoring.V3.ListGroupsRequest.DescendantsOfGroup">DescendantsOfGroup</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListGroupsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> A group name: <code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
+ Returns the descendants of the specified group.  This is a superset of
+ the results returned by the <code>childrenOfGroup</code> filter, and includes
+ children-of-children, and so forth.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string DescendantsOfGroup { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Monitoring_V3_ListGroupsRequest_FilterCase" data-uid="Google.Monitoring.V3.ListGroupsRequest.FilterCase">FilterCase</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ListGroupsRequest.FilterOneofCase FilterCase { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Monitoring.V3.ListGroupsRequest.FilterOneofCase.html#Google_Monitoring_V3_ListGroupsRequest_FilterOneofCase">ListGroupsRequest.FilterOneofCase</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Monitoring_V3_ListGroupsRequest_Name" data-uid="Google.Monitoring.V3.ListGroupsRequest.Name">Name</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListGroupsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The project whose groups are to be listed. The format is
+ <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Monitoring_V3_ListGroupsRequest_PageSize" data-uid="Google.Monitoring.V3.ListGroupsRequest.PageSize">PageSize</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListGroupsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A positive number that is the maximum number of results to return.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int PageSize { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Api.Gax.IPageRequest.html#Google_Api_Gax_IPageRequest_PageSize">IPageRequest.PageSize</a></div>
+              <h4 id="Google_Monitoring_V3_ListGroupsRequest_PageToken" data-uid="Google.Monitoring.V3.ListGroupsRequest.PageToken">PageToken</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListGroupsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> If this field is not empty then it must contain the <code>nextPageToken</code> value
+ returned by a previous call to this method.  Using this field causes the
+ method to return additional results from the previous method call.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string PageToken { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Api.Gax.IPageRequest.html#Google_Api_Gax_IPageRequest_PageToken">IPageRequest.PageToken</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

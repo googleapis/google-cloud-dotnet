@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ErrorGroupStats
+   | Google.Devtools.Clouderrorreporting.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ErrorGroupStats
+   | Google.Devtools.Clouderrorreporting.V1Beta1 ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats">Class ErrorGroupStats
+              </h1>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Data extracted for a specific group based on certain selection criteria,
+ such as a given time period and/or service filter.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">ErrorGroupStats</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Devtools.Clouderrorreporting.V1Beta1</h6>
+              <h6><strong>Assembly</strong>:Google.Devtools.Clouderrorreporting.V1Beta1.dll</h6>
+              <h5 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class ErrorGroupStats : IMessage&lt;ErrorGroupStats&gt;, IMessage, IEquatable&lt;ErrorGroupStats&gt;, IDeepCloneable&lt;ErrorGroupStats&gt;</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_AffectedServices" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.AffectedServices">AffectedServices</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Service contexts with a non-zero error count for the given selection
+ criteria. This list can be truncated if multiple services are affected.
+ Refer to <code>num_affected_services</code> for the total count.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;ServiceContext&gt; AffectedServices { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext.html#Google_Devtools_Clouderrorreporting_V1Beta1_ServiceContext">ServiceContext</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_AffectedUsersCount" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.AffectedUsersCount">AffectedUsersCount</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="13"> Approximate number of affected users in the given group that
+ match the selection criteria.
+ Users are distinguished by data in the <code>ErrorContext</code> of the
+ individual error events, such as their login name or their remote
+ IP address in case of HTTP requests.
+ The number of affected users can be zero even if the number of
+ errors is non-zero if no data was provided from which the
+ affected user could be deduced.
+ Users are counted based on data in the request
+ context that was provided in the error report. If more users are
+ implicitly affected, such as due to a crash of the whole service,
+ this is not reflected here.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long AffectedUsersCount { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_Count" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.Count">Count</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Approximate total number of events in the given group that match
+ the selection criteria.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long Count { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_FirstSeenTime" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.FirstSeenTime">FirstSeenTime</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Approximate first occurrence that was seen for this group and
+ which matches the given selection criteria.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Timestamp FirstSeenTime { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_Group" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.Group">Group</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Group data that is independent of the selection criteria.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ErrorGroup Group { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup.html#Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroup">ErrorGroup</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_LastSeenTime" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.LastSeenTime">LastSeenTime</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Approximate last occurrence that was seen for this group
+ and which matches the given selection criteria.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Timestamp LastSeenTime { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_NumAffectedServices" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.NumAffectedServices">NumAffectedServices</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The total number of services with a non-zero error count for the given
+ selection criteria.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int NumAffectedServices { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_Representative" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.Representative">Representative</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> An arbitrary event that is chosen as representative for the whole group.
+ The representative event is intended to be used as a quick preview for
+ the whole group. Events in the group are usually sufficiently similar
+ to each other such that showing an arbitrary representative provides
+ insight into the characteristics of the group as a whole.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ErrorEvent Representative { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorEvent.html#Google_Devtools_Clouderrorreporting_V1Beta1_ErrorEvent">ErrorEvent</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorGroupStats_TimedCounts" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.TimedCounts">TimedCounts</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Approximate number of occurrences over time.
+ Timed counts returned by ListGroups are guaranteed to be:</p>
+<ul sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="5" sourceendlinenumber="7">
+<li sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="5" sourceendlinenumber="5">Inside the requested time interval</li>
+<li sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="6" sourceendlinenumber="6">Non-overlapping, and</li>
+<li sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupStats.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Ordered by ascending time.</li>
+</ul>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;TimedCount&gt; TimedCounts { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.TimedCount.html#Google_Devtools_Clouderrorreporting_V1Beta1_TimedCount">TimedCount</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

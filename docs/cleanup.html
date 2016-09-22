@@ -8,7 +8,7 @@
     <title>Unmanaged resource clean-up | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Unmanaged resource clean-up | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,29 +57,29 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="unmanaged-resource-clean-up">Unmanaged resource clean-up</h1>
+              <h1 id="unmanaged-resource-clean-up" sourcefile="cleanup.md" sourcestartlinenumber="1" sourceendlinenumber="1">Unmanaged resource clean-up</h1>
               
-<p>Note: this article is only relevant to libraries which use <a href="http://www.grpc.io">gRPC</a>.
-See the <a href="api-layers.html">API layers</a> article for more details around the differences between
+<p sourcefile="cleanup.md" sourcestartlinenumber="3" sourceendlinenumber="5">Note: this article is only relevant to libraries which use <a href="http://www.grpc.io" sourcefile="cleanup.md" sourcestartlinenumber="3" sourceendlinenumber="3">gRPC</a>.
+See the <a href="api-layers.html" sourcefile="cleanup.md" sourcestartlinenumber="4" sourceendlinenumber="4">API layers</a> article for more details around the differences between
 gRPC-based APIs and REST-based APIs.</p>
-<p>gRPC uses the concept of a <em>channel</em> between your application
+<p sourcefile="cleanup.md" sourcestartlinenumber="7" sourceendlinenumber="10">gRPC uses the concept of a <em>channel</em> between your application
 and the service implementing an API. This consists of a network
 connection and some unmanaged resources which handle its status and
 multiplex the requests and responses on it.</p>
-<p>Most of the time, you don&#39;t need to worry about cleaning up the
+<p sourcefile="cleanup.md" sourcestartlinenumber="12" sourceendlinenumber="13">Most of the time, you don&#39;t need to worry about cleaning up the
 unmanaged resources from the C# client libraries.</p>
-<p>If you want to handle this explicitly, you can do so by creating
+<p sourcefile="cleanup.md" sourcestartlinenumber="15" sourceendlinenumber="22">If you want to handle this explicitly, you can do so by creating
 channels yourself and shutting them down in an orderly fashion. For
 slightly less control (but a simpler life) you can let the client
 libraries create channels themselves as necessary, and shut them
 down explicitly using the static <code>ShutDownDefaultChannelsAsync</code>
 method which each client class exposes. (For example,
-<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ShutDownDefaultChannelsAsync">PublisherClient.ShutDownDefaultChannelsAsync()</a> and
-<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ShutDownDefaultChannelsAsync">SubscriberClient.ShutDownDefaultChannelsAsync()</a>.)</p>
-<p>Finally, gRPC provides an environment-wide shutdown method of <code>GrpcEnvironment.ShutdownChannelsAsync()</code>.</p>
-<p>In all of these cases, it&#39;s entirely feasible to create more channels (implicitly or explicitly)
+<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ShutDownDefaultChannelsAsync" sourcefile="cleanup.md" sourcestartlinenumber="21" sourceendlinenumber="21">PublisherClient.ShutDownDefaultChannelsAsync()</a> and
+<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ShutDownDefaultChannelsAsync" sourcefile="cleanup.md" sourcestartlinenumber="22" sourceendlinenumber="22">SubscriberClient.ShutDownDefaultChannelsAsync()</a>.)</p>
+<p sourcefile="cleanup.md" sourcestartlinenumber="24" sourceendlinenumber="24">Finally, gRPC provides an environment-wide shutdown method of <code>GrpcEnvironment.ShutdownChannelsAsync()</code>.</p>
+<p sourcefile="cleanup.md" sourcestartlinenumber="26" sourceendlinenumber="27">In all of these cases, it&#39;s entirely feasible to create more channels (implicitly or explicitly)
 after shutting others down... it will just require a new network connection to be opened.</p>
-<p>If you do not shut down the channels explicitly, they will be closed automatically
+<p sourcefile="cleanup.md" sourcestartlinenumber="29" sourceendlinenumber="32">If you do not shut down the channels explicitly, they will be closed automatically
 when either the application domain is unloaded, or the process exits. For most applications, this is
 perfectly adequate; explicit shutdown is only required when your application needs to ensure that
 it has handled all requests appropriately before exiting.</p>
@@ -112,8 +112,8 @@ it has handled all requests appropriately before exiting.</p>
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

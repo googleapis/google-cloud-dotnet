@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Duration
+   | Google.Devtools.Cloudtrace.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Duration
+   | Google.Devtools.Cloudtrace.V1 ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Protobuf_WellKnownTypes_Duration" data-uid="Google.Protobuf.WellKnownTypes.Duration">Class Duration
+              </h1>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> A Duration represents a signed, fixed-length span of time represented
+ as a count of seconds and fractions of seconds at nanosecond
+ resolution. It is independent of any calendar and concepts like &quot;day&quot;
+ or &quot;month&quot;. It is related to Timestamp in that the difference between
+ two Timestamp values is a Duration and it can be added or subtracted
+ from a Timestamp. Range is approximately +-10,000 years.</p>
+<p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="9" sourceendlinenumber="9"> Example 1: Compute Duration from two Timestamps in pseudo code.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="11" sourceendlinenumber="24"><code> Timestamp start = ...;
+ Timestamp end = ...;
+ Duration duration = ...;
+
+ duration.seconds = end.seconds - start.seconds;
+ duration.nanos = end.nanos - start.nanos;
+
+ if (duration.seconds &amp;lt; 0 &amp;amp;&amp;amp; duration.nanos &amp;gt; 0) {
+   duration.seconds += 1;
+   duration.nanos -= 1000000000;
+ } else if (durations.seconds &amp;gt; 0 &amp;amp;&amp;amp; duration.nanos &amp;lt; 0) {
+   duration.seconds -= 1;
+   duration.nanos += 1000000000;
+ }
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="26" sourceendlinenumber="26"> Example 2: Compute Timestamp from Timestamp + Duration in pseudo code.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="28" sourceendlinenumber="41"><code> Timestamp start = ...;
+ Duration duration = ...;
+ Timestamp end = ...;
+
+ end.seconds = start.seconds + duration.seconds;
+ end.nanos = start.nanos + duration.nanos;
+
+ if (end.nanos &amp;lt; 0) {
+   end.seconds -= 1;
+   end.nanos += 1000000000;
+ } else if (end.nanos &amp;gt;= 1000000000) {
+   end.seconds += 1;
+   end.nanos -= 1000000000;
+ }
+</code></pre></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">Duration</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Protobuf.WellKnownTypes</h6>
+              <h6><strong>Assembly</strong>:Google.Protobuf.dll</h6>
+              <h5 id="Google_Protobuf_WellKnownTypes_Duration_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class Duration : IMessage&lt;Duration&gt;, IEquatable&lt;Duration&gt;, IDeepCloneable&lt;Duration&gt;, ICustomDiagnosticMessage, IMessage</code></pre>
+              </div>
+              <h3 id="fields">Fields
+              </h3>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_MaxSeconds" data-uid="Google.Protobuf.WellKnownTypes.Duration.MaxSeconds">MaxSeconds</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The maximum permitted number of seconds.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const long MaxSeconds = 315576000000L</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_MinSeconds" data-uid="Google.Protobuf.WellKnownTypes.Duration.MinSeconds">MinSeconds</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The minimum permitted number of seconds.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const long MinSeconds = -315576000000L</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_NanosecondsPerSecond" data-uid="Google.Protobuf.WellKnownTypes.Duration.NanosecondsPerSecond">NanosecondsPerSecond</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The number of nanoseconds in a second.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int NanosecondsPerSecond = 1000000000</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_NanosecondsPerTick" data-uid="Google.Protobuf.WellKnownTypes.Duration.NanosecondsPerTick">NanosecondsPerTick</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The number of nanoseconds in a BCL tick (as used by <span class="xref">TimeSpan</span> and <span class="xref">DateTime</span>).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const int NanosecondsPerTick = 100</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_Nanos" data-uid="Google.Protobuf.WellKnownTypes.Duration.Nanos">Nanos</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> Signed fractions of a second at nanosecond resolution of the span
+ of time. Durations less than one second are represented with a 0
+ <code>seconds</code> field and a positive or negative <code>nanos</code> field. For durations
+ of one second or more, a non-zero value for the <code>nanos</code> field must be
+ of the same sign as the <code>seconds</code> field. Must be from -999,999,999
+ to +999,999,999 inclusive.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int Nanos { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_Seconds" data-uid="Google.Protobuf.WellKnownTypes.Duration.Seconds">Seconds</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Signed seconds of the span of time. Must be from -315,576,000,000
+ to +315,576,000,000 inclusive.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long Seconds { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_FromTimeSpan_System_TimeSpan_" data-uid="Google.Protobuf.WellKnownTypes.Duration.FromTimeSpan(System.TimeSpan)">FromTimeSpan(TimeSpan)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Converts the given <span class="xref">TimeSpan</span> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Duration FromTimeSpan(TimeSpan timeSpan)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.TimeSpan</span></td>
+                    <td><em>timeSpan</em></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The <code>TimeSpan</code> to convert.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value of the given <code>TimeSpan</code>, as a <code>Duration</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_ToDiagnosticString" data-uid="Google.Protobuf.WellKnownTypes.Duration.ToDiagnosticString">ToDiagnosticString()</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns a string representation of this <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> for diagnostic purposes.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string ToDiagnosticString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A string representation of this value.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Protobuf.ICustomDiagnosticMessage.html#Google_Protobuf_ICustomDiagnosticMessage_ToDiagnosticString">ICustomDiagnosticMessage.ToDiagnosticString()</a></div>
+              <h5 id="Google_Protobuf_WellKnownTypes_Duration_ToDiagnosticString_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="6">Normally the returned value will be a JSON string value (including leading and trailing quotes) but
+when the value is non-normalized or out of range, a JSON object representation will be returned
+instead, including a warning. This is to avoid exceptions being thrown when trying to
+diagnose problems - the regular JSON formatter will still throw an exception for non-normalized
+values.</p>
+</div>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_ToTimeSpan" data-uid="Google.Protobuf.WellKnownTypes.Duration.ToTimeSpan">ToTimeSpan()</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Converts this <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> to a <span class="xref">TimeSpan</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TimeSpan ToTimeSpan()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.TimeSpan</span></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value of this duration, as a <code>TimeSpan</code>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Protobuf_WellKnownTypes_Duration_ToTimeSpan_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If the duration is not a precise number of ticks, it is truncated towards 0.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="2">This value isn&#39;t a valid normalized duration, as
+described in the documentation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="operators">Operators
+              </h3>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_op_Addition_Google_Protobuf_WellKnownTypes_Duration_Google_Protobuf_WellKnownTypes_Duration_" data-uid="Google.Protobuf.WellKnownTypes.Duration.op_Addition(Google.Protobuf.WellKnownTypes.Duration,Google.Protobuf.WellKnownTypes.Duration)">Addition(Duration, Duration)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Adds the two specified <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> values together.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Duration operator +(Duration lhs, Duration rhs)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td><em>lhs</em></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The first value to add. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td><em>rhs</em></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The second value to add. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_op_Subtraction_Google_Protobuf_WellKnownTypes_Duration_Google_Protobuf_WellKnownTypes_Duration_" data-uid="Google.Protobuf.WellKnownTypes.Duration.op_Subtraction(Google.Protobuf.WellKnownTypes.Duration,Google.Protobuf.WellKnownTypes.Duration)">Subtraction(Duration, Duration)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Subtracts one <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> from another.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Duration operator -(Duration lhs, Duration rhs)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td><em>lhs</em></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The duration to subtract from. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td><em>rhs</em></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The duration to subtract. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The difference between the two specified durations.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Protobuf_WellKnownTypes_Duration_op_UnaryNegation_Google_Protobuf_WellKnownTypes_Duration_" data-uid="Google.Protobuf.WellKnownTypes.Duration.op_UnaryNegation(Google.Protobuf.WellKnownTypes.Duration)">UnaryNegation(Duration)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns the result of negating the duration. For example, the negation of 5 minutes is -5 minutes.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Duration operator -(Duration value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td><em>value</em></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The duration to negate. Must not be null.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The negated value of this duration.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeFrom_Google_Protobuf_IMessage_System_Byte___">MessageExtensions.MergeFrom(Byte[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeFrom_Google_Protobuf_IMessage_Google_Protobuf_ByteString_">MessageExtensions.MergeFrom(ByteString)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeFrom_Google_Protobuf_IMessage_System_IO_Stream_">MessageExtensions.MergeFrom(Stream)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_MergeDelimitedFrom_Google_Protobuf_IMessage_System_IO_Stream_">MessageExtensions.MergeDelimitedFrom(Stream)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_ToByteArray_Google_Protobuf_IMessage_">MessageExtensions.ToByteArray()</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_WriteTo_Google_Protobuf_IMessage_System_IO_Stream_">MessageExtensions.WriteTo(Stream)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_WriteDelimitedTo_Google_Protobuf_IMessage_System_IO_Stream_">MessageExtensions.WriteDelimitedTo(Stream)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Google.Protobuf.MessageExtensions.html#Google_Protobuf_MessageExtensions_ToByteString_Google_Protobuf_IMessage_">MessageExtensions.ToByteString()</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

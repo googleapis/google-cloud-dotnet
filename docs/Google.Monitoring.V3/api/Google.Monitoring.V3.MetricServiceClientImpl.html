@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MetricServiceClientImpl
+   | Google.Monitoring.V3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MetricServiceClientImpl
+   | Google.Monitoring.V3 ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Monitoring_V3_MetricServiceClientImpl" data-uid="Google.Monitoring.V3.MetricServiceClientImpl">Class MetricServiceClientImpl
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient">MetricServiceClient</a></div>
+                  <div class="level2"><span class="xref">MetricServiceClientImpl</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_DefaultEndpoint">MetricServiceClient.DefaultEndpoint</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_DefaultScopes">MetricServiceClient.DefaultScopes</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_ProjectTemplate">MetricServiceClient.ProjectTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_FormatProjectName_System_String_">MetricServiceClient.FormatProjectName(String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_MetricDescriptorPathTemplate">MetricServiceClient.MetricDescriptorPathTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_FormatMetricDescriptorPathName_System_String_System_String_">MetricServiceClient.FormatMetricDescriptorPathName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_MonitoredResourceDescriptorTemplate">MetricServiceClient.MonitoredResourceDescriptorTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_FormatMonitoredResourceDescriptorName_System_String_System_String_">MetricServiceClient.FormatMonitoredResourceDescriptorName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_CreateAsync_Google_Api_Gax_ServiceEndpoint_Google_Monitoring_V3_MetricServiceSettings_">MetricServiceClient.CreateAsync(ServiceEndpoint, MetricServiceSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Monitoring_V3_MetricServiceSettings_">MetricServiceClient.Create(ServiceEndpoint, MetricServiceSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_Create_Grpc_Core_Channel_Google_Monitoring_V3_MetricServiceSettings_">MetricServiceClient.Create(Channel, MetricServiceSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_ShutdownDefaultChannelsAsync">MetricServiceClient.ShutdownDefaultChannelsAsync()</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_System_String_System_Threading_CancellationToken_">MetricServiceClient.GetMonitoredResourceDescriptorAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_System_String_System_Threading_CancellationToken_">MetricServiceClient.GetMetricDescriptorAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_System_String_Google_Api_MetricDescriptor_System_Threading_CancellationToken_">MetricServiceClient.CreateMetricDescriptorAsync(String, MetricDescriptor, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_System_String_System_Threading_CancellationToken_">MetricServiceClient.DeleteMetricDescriptorAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_System_String_System_Collections_Generic_IEnumerable_Google_Monitoring_V3_TimeSeries__System_Threading_CancellationToken_">MetricServiceClient.CreateTimeSeriesAsync(String, IEnumerable&lt;TimeSeries&gt;, CancellationToken)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Monitoring.V3</h6>
+              <h6><strong>Assembly</strong>:Google.Monitoring.V3.dll</h6>
+              <h5 id="Google_Monitoring_V3_MetricServiceClientImpl_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class MetricServiceClientImpl : MetricServiceClient</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl__ctor_Google_Monitoring_V3_MetricService_MetricServiceClient_Google_Monitoring_V3_MetricServiceSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.#ctor(Google.Monitoring.V3.MetricService.MetricServiceClient,Google.Monitoring.V3.MetricServiceSettings)">MetricServiceClientImpl(MetricService.MetricServiceClient, MetricServiceSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public MetricServiceClientImpl(MetricService.MetricServiceClient grpcClient, MetricServiceSettings settings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Monitoring.V3.MetricService.MetricServiceClient.html#Google_Monitoring_V3_MetricService_MetricServiceClient">MetricService.MetricServiceClient</a></td>
+                    <td><em>grpcClient</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Monitoring.V3.MetricServiceSettings.html#Google_Monitoring_V3_MetricServiceSettings">MetricServiceSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_GrpcClient" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.GrpcClient">GrpcClient</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override MetricService.MetricServiceClient GrpcClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Monitoring.V3.MetricService.MetricServiceClient.html#Google_Monitoring_V3_MetricService_MetricServiceClient">MetricService.MetricServiceClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_GrpcClient">MetricServiceClient.GrpcClient</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_CreateMetricDescriptor_System_String_Google_Api_MetricDescriptor_Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.CreateMetricDescriptor(System.String,Google.Api.MetricDescriptor,Google.Api.Gax.CallSettings)">CreateMetricDescriptor(String, MetricDescriptor, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override MetricDescriptor CreateMetricDescriptor(string name, MetricDescriptor metricDescriptor, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></td>
+                    <td><em>metricDescriptor</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_CreateMetricDescriptor_System_String_Google_Api_MetricDescriptor_Google_Api_Gax_CallSettings_">MetricServiceClient.CreateMetricDescriptor(String, MetricDescriptor, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_CreateMetricDescriptorAsync_System_String_Google_Api_MetricDescriptor_Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.CreateMetricDescriptorAsync(System.String,Google.Api.MetricDescriptor,Google.Api.Gax.CallSettings)">CreateMetricDescriptorAsync(String, MetricDescriptor, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;MetricDescriptor&gt; CreateMetricDescriptorAsync(string name, MetricDescriptor metricDescriptor, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></td>
+                    <td><em>metricDescriptor</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_System_String_Google_Api_MetricDescriptor_Google_Api_Gax_CallSettings_">MetricServiceClient.CreateMetricDescriptorAsync(String, MetricDescriptor, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_CreateTimeSeries_System_String_System_Collections_Generic_IEnumerable_Google_Monitoring_V3_TimeSeries__Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.CreateTimeSeries(System.String,System.Collections.Generic.IEnumerable{Google.Monitoring.V3.TimeSeries},Google.Api.Gax.CallSettings)">CreateTimeSeries(String, IEnumerable&lt;TimeSeries&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void CreateTimeSeries(string name, IEnumerable&lt;TimeSeries&gt; timeSeries, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Monitoring.V3.TimeSeries.html#Google_Monitoring_V3_TimeSeries">TimeSeries</a>&gt;</td>
+                    <td><em>timeSeries</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_CreateTimeSeries_System_String_System_Collections_Generic_IEnumerable_Google_Monitoring_V3_TimeSeries__Google_Api_Gax_CallSettings_">MetricServiceClient.CreateTimeSeries(String, IEnumerable&lt;TimeSeries&gt;, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_CreateTimeSeriesAsync_System_String_System_Collections_Generic_IEnumerable_Google_Monitoring_V3_TimeSeries__Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.CreateTimeSeriesAsync(System.String,System.Collections.Generic.IEnumerable{Google.Monitoring.V3.TimeSeries},Google.Api.Gax.CallSettings)">CreateTimeSeriesAsync(String, IEnumerable&lt;TimeSeries&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task CreateTimeSeriesAsync(string name, IEnumerable&lt;TimeSeries&gt; timeSeries, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Monitoring.V3.TimeSeries.html#Google_Monitoring_V3_TimeSeries">TimeSeries</a>&gt;</td>
+                    <td><em>timeSeries</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_System_String_System_Collections_Generic_IEnumerable_Google_Monitoring_V3_TimeSeries__Google_Api_Gax_CallSettings_">MetricServiceClient.CreateTimeSeriesAsync(String, IEnumerable&lt;TimeSeries&gt;, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_DeleteMetricDescriptor_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.DeleteMetricDescriptor(System.String,Google.Api.Gax.CallSettings)">DeleteMetricDescriptor(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void DeleteMetricDescriptor(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptor_System_String_Google_Api_Gax_CallSettings_">MetricServiceClient.DeleteMetricDescriptor(String, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_DeleteMetricDescriptorAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.DeleteMetricDescriptorAsync(System.String,Google.Api.Gax.CallSettings)">DeleteMetricDescriptorAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task DeleteMetricDescriptorAsync(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_System_String_Google_Api_Gax_CallSettings_">MetricServiceClient.DeleteMetricDescriptorAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_GetMetricDescriptor_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.GetMetricDescriptor(System.String,Google.Api.Gax.CallSettings)">GetMetricDescriptor(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a single metric descriptor. This method does not require a Stackdriver account.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override MetricDescriptor GetMetricDescriptor(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_GetMetricDescriptor_System_String_Google_Api_Gax_CallSettings_">MetricServiceClient.GetMetricDescriptor(String, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_GetMetricDescriptorAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.GetMetricDescriptorAsync(System.String,Google.Api.Gax.CallSettings)">GetMetricDescriptorAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a single metric descriptor. This method does not require a Stackdriver account.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;MetricDescriptor&gt; GetMetricDescriptorAsync(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_System_String_Google_Api_Gax_CallSettings_">MetricServiceClient.GetMetricDescriptorAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_GetMonitoredResourceDescriptor_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.GetMonitoredResourceDescriptor(System.String,Google.Api.Gax.CallSettings)">GetMonitoredResourceDescriptor(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a single monitored resource descriptor. This method does not require a Stackdriver account.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override MonitoredResourceDescriptor GetMonitoredResourceDescriptor(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptor_System_String_Google_Api_Gax_CallSettings_">MetricServiceClient.GetMonitoredResourceDescriptor(String, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_GetMonitoredResourceDescriptorAsync_System_String_Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.GetMonitoredResourceDescriptorAsync(System.String,Google.Api.Gax.CallSettings)">GetMonitoredResourceDescriptorAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a single monitored resource descriptor. This method does not require a Stackdriver account.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;MonitoredResourceDescriptor&gt; GetMonitoredResourceDescriptorAsync(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_System_String_Google_Api_Gax_CallSettings_">MetricServiceClient.GetMonitoredResourceDescriptorAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_ListMetricDescriptors_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.ListMetricDescriptors(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListMetricDescriptors(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lists metric descriptors that match a filter. This method does not require a Stackdriver account.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; ListMetricDescriptors(string name, string filter, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>filter</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Monitoring.V3.ListMetricDescriptorsResponse.html#Google_Monitoring_V3_ListMetricDescriptorsResponse">ListMetricDescriptorsResponse</a>, <a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A pageable sequence of MetricDescriptor resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_ListMetricDescriptors_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">MetricServiceClient.ListMetricDescriptors(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_ListMetricDescriptorsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.ListMetricDescriptorsAsync(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListMetricDescriptorsAsync(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lists metric descriptors that match a filter. This method does not require a Stackdriver account.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; ListMetricDescriptorsAsync(string name, string filter, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>filter</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Monitoring.V3.ListMetricDescriptorsResponse.html#Google_Monitoring_V3_ListMetricDescriptorsResponse">ListMetricDescriptorsResponse</a>, <a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A pageable asynchronous sequence of MetricDescriptor resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_ListMetricDescriptorsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">MetricServiceClient.ListMetricDescriptorsAsync(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_ListMonitoredResourceDescriptors_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.ListMonitoredResourceDescriptors(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListMonitoredResourceDescriptors(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptors(string name, string filter, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>filter</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html#Google_Monitoring_V3_ListMonitoredResourceDescriptorsResponse">ListMonitoredResourceDescriptorsResponse</a>, <a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A pageable sequence of MonitoredResourceDescriptor resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptors_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">MetricServiceClient.ListMonitoredResourceDescriptors(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Monitoring_V3_MetricServiceClientImpl_ListMonitoredResourceDescriptorsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" data-uid="Google.Monitoring.V3.MetricServiceClientImpl.ListMonitoredResourceDescriptorsAsync(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.CallSettings)">ListMonitoredResourceDescriptorsAsync(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptorsAsync(string name, string filter, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>filter</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The size of page to request.
+The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html#Google_Monitoring_V3_ListMonitoredResourceDescriptorsResponse">ListMonitoredResourceDescriptorsResponse</a>, <a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Monitoring.V3.MetricServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A pageable asynchronous sequence of MonitoredResourceDescriptor resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Monitoring.V3.MetricServiceClient.html#Google_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptorsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">MetricServiceClient.ListMonitoredResourceDescriptorsAsync(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

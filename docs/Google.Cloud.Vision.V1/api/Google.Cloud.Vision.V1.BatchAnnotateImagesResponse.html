@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BatchAnnotateImagesResponse
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Cloud_Vision_V1_BatchAnnotateImagesResponse" data-uid="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse">Class BatchAnnotateImagesResponse
               </h1>
-              <div class="markdown level0 summary"><p> Response to a batch image annotation request.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Response to a batch image annotation request.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,7 +102,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_Responses" data-uid="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Responses">Responses</h4>
-              <div class="markdown level1 summary"><p> Individual responses to image annotation requests within the batch.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Individual responses to image annotation requests within the batch.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -121,6 +121,79 @@
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse">AnnotateImageResponse</a>&gt;</td>
                     <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError" data-uid="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.ThrowOnAnyError">ThrowOnAnyError()</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="4">If the <see cref="!:Error"></see> property is non-null for any response within <a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_Responses">Responses</a>,
+throws an <span class="xref">System.AggregateException</span>, containing one <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a>
+for each failed response. Otherwise, returns <code>this</code> (so that the method can be called in a fluent manner).</p>
+</div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.md" sourcestartlinenumber="5" sourceendlinenumber="5">Example:</p>
+<pre><code class="lang-cs">Image image = new Image(); // No content or source!
+// Just a single request in this example, but usually BatchAnnotateImages would be
+// used with multiple requests.
+var request = new AnnotateImageRequest
+{
+    Image = image,
+    Features = { new Feature { Type = Feature.Types.Type.SafeSearchDetection } }
+};
+ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+try
+{
+    BatchAnnotateImagesResponse response = client.BatchAnnotateImages(new[] { request });
+    // ThrowOnAnyError will throw if any individual response in response.Responses
+    // contains an error. Other responses may still have useful results.
+    // Errors can be detected manually by checking the Error property in each
+    // individual response.
+    response.ThrowOnAnyError();
+}
+catch (AggregateException e)
+{
+    // Because a batch can have multiple errors, the exception thrown is AggregateException.
+    // Each inner exception is an AnnotateImageException
+    foreach (AnnotateImageException innerException in e.InnerExceptions)
+    {
+        Console.WriteLine(innerException.Response.Error);
+    }
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BatchAnnotateImagesResponse ThrowOnAnyError()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a></td>
+                    <td><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><code>this</code> if no responses contain errors.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.AggregateException</span></td>
+                    <td><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_Error">Error</a> property is non-null on one or
+more element of <a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_Responses">Responses</a>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -152,8 +225,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

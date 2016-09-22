@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MessageParser&lt;T&gt;
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Protobuf_MessageParser_1" data-uid="Google.Protobuf.MessageParser`1">Class MessageParser&lt;T&gt;
               </h1>
-              <div class="markdown level0 summary"><p>A parser for a specific message type.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A parser for a specific message type.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -130,7 +130,7 @@ parser for that type.
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Google_Protobuf_MessageParser_1__ctor_System_Func__0__" data-uid="Google.Protobuf.MessageParser`1.#ctor(System.Func{`0})">MessageParser(Func&lt;T&gt;)</h4>
-              <div class="markdown level1 summary"><p>Creates a new parser.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a new parser.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -150,19 +150,19 @@ parser for that type.
                   <tr>
                     <td><span class="xref">System.Func</span>&lt;T&gt;</td>
                     <td><em>factory</em></td>
-                    <td><p>Function to invoke when a new, empty message is required.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Function to invoke when a new, empty message is required.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Protobuf_MessageParser_1__ctor_System_Func__0___remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The factory method is effectively an optimization over using a generic constraint
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The factory method is effectively an optimization over using a generic constraint
 to require a parameterless constructor: delegates are significantly faster to execute.</p>
 </div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Protobuf_MessageParser_1_ParseDelimitedFrom_System_IO_Stream_" data-uid="Google.Protobuf.MessageParser`1.ParseDelimitedFrom(System.IO.Stream)">ParseDelimitedFrom(Stream)</h4>
-              <div class="markdown level1 summary"><p>Parses a length-delimited message from the given stream.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Parses a length-delimited message from the given stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -182,7 +182,7 @@ to require a parameterless constructor: delegates are significantly faster to ex
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><em>input</em></td>
-                    <td><p>The stream to parse.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The stream to parse.</p>
 </td>
                   </tr>
                 </tbody>
@@ -198,17 +198,17 @@ to require a parameterless constructor: delegates are significantly faster to ex
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p>The parsed message.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The parsed message.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Protobuf_MessageParser_1_ParseDelimitedFrom_System_IO_Stream__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The stream is expected to contain a length and then the data. Only the amount of data
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The stream is expected to contain a length and then the data. Only the amount of data
 specified by the length will be consumed.</p>
 </div>
               <h4 id="Google_Protobuf_MessageParser_1_ParseFrom_Google_Protobuf_ByteString_" data-uid="Google.Protobuf.MessageParser`1.ParseFrom(Google.Protobuf.ByteString)">ParseFrom(ByteString)</h4>
-              <div class="markdown level1 summary"><p>Parses a message from the given byte string.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Parses a message from the given byte string.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -228,7 +228,7 @@ specified by the length will be consumed.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>data</em></td>
-                    <td><p>The data to parse.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The data to parse.</p>
 </td>
                   </tr>
                 </tbody>
@@ -244,13 +244,13 @@ specified by the length will be consumed.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p>The parsed message.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The parsed message.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_MessageParser_1_ParseFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Protobuf.MessageParser`1.ParseFrom(Google.Protobuf.CodedInputStream)">ParseFrom(CodedInputStream)</h4>
-              <div class="markdown level1 summary"><p>Parses a message from the given coded input stream.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Parses a message from the given coded input stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -270,7 +270,7 @@ specified by the length will be consumed.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
                     <td><em>input</em></td>
-                    <td><p>The stream to parse.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The stream to parse.</p>
 </td>
                   </tr>
                 </tbody>
@@ -286,13 +286,13 @@ specified by the length will be consumed.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p>The parsed message.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The parsed message.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_MessageParser_1_ParseFrom_System_Byte___" data-uid="Google.Protobuf.MessageParser`1.ParseFrom(System.Byte[])">ParseFrom(Byte[])</h4>
-              <div class="markdown level1 summary"><p>Parses a message from a byte array.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Parses a message from a byte array.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -312,7 +312,7 @@ specified by the length will be consumed.</p>
                   <tr>
                     <td><span class="xref">System.Byte</span>[]</td>
                     <td><em>data</em></td>
-                    <td><p>The byte array containing the message. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The byte array containing the message. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -328,13 +328,13 @@ specified by the length will be consumed.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p>The newly parsed message.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly parsed message.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_MessageParser_1_ParseFrom_System_IO_Stream_" data-uid="Google.Protobuf.MessageParser`1.ParseFrom(System.IO.Stream)">ParseFrom(Stream)</h4>
-              <div class="markdown level1 summary"><p>Parses a message from the given stream.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Parses a message from the given stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -354,7 +354,7 @@ specified by the length will be consumed.</p>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><em>input</em></td>
-                    <td><p>The stream to parse.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The stream to parse.</p>
 </td>
                   </tr>
                 </tbody>
@@ -370,13 +370,13 @@ specified by the length will be consumed.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p>The parsed message.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The parsed message.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_MessageParser_1_ParseJson_System_String_" data-uid="Google.Protobuf.MessageParser`1.ParseJson(System.String)">ParseJson(String)</h4>
-              <div class="markdown level1 summary"><p>Parses a message from the given JSON.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Parses a message from the given JSON.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -396,7 +396,7 @@ specified by the length will be consumed.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>json</em></td>
-                    <td><p>The JSON to parse.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The JSON to parse.</p>
 </td>
                   </tr>
                 </tbody>
@@ -412,7 +412,7 @@ specified by the length will be consumed.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p>The parsed message.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The parsed message.</p>
 </td>
                   </tr>
                 </tbody>
@@ -428,12 +428,12 @@ specified by the length will be consumed.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.InvalidJsonException.html#Google_Protobuf_InvalidJsonException">InvalidJsonException</a></td>
-                    <td><p>The JSON does not comply with RFC 7159</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The JSON does not comply with RFC 7159</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.InvalidProtocolBufferException.html#Google_Protobuf_InvalidProtocolBufferException">InvalidProtocolBufferException</a></td>
-                    <td><p>The JSON does not represent a Protocol Buffers message correctly</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.MessageParser-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The JSON does not represent a Protocol Buffers message correctly</p>
 </td>
                   </tr>
                 </tbody>
@@ -466,8 +466,8 @@ specified by the length will be consumed.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

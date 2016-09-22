@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RetrySettings
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_RetrySettings" data-uid="Google.Api.Gax.RetrySettings">Class RetrySettings
               </h1>
-              <div class="markdown level0 summary"><p>Settings for retrying RPCs.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Settings for retrying RPCs.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,7 +102,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Api_Gax_RetrySettings_DefaultFilter" data-uid="Google.Api.Gax.RetrySettings.DefaultFilter">DefaultFilter</h4>
-              <div class="markdown level1 summary"><p>The default retry filter, which retries operations which fail due to a status code of &quot;not found&quot;.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The default retry filter, which retries operations which fail due to a status code of &quot;not found&quot;.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -119,13 +119,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+                    <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html#Grpc_Core_RpcException">RpcException</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_RetrySettings_DelayJitter" data-uid="Google.Api.Gax.RetrySettings.DelayJitter">DelayJitter</h4>
-              <div class="markdown level1 summary"><p>The delay jitter to apply for delays, defaulting to <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings_RandomJitter">RandomJitter</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The delay jitter to apply for delays, defaulting to <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings_RandomJitter">RandomJitter</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -148,14 +148,14 @@
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_RetrySettings_DelayJitter_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>&quot;Jitter&quot; is used to introduce randomness into the pattern of delays. This is to avoid multiple
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="6">&quot;Jitter&quot; is used to introduce randomness into the pattern of delays. This is to avoid multiple
 clients performing the same delay pattern starting at the same point in time,
 leading to higher-than-necessary contention. The default jitter simply takes each maximum delay
 and returns an actual delay which is a uniformly random value between 0 and the maximum. This
 is good enough for most applications, but makes precise testing difficult.</p>
 </div>
               <h4 id="Google_Api_Gax_RetrySettings_NoJitter" data-uid="Google.Api.Gax.RetrySettings.NoJitter">NoJitter</h4>
-              <div class="markdown level1 summary"><p>A jitter which simply returns the specified maximum delay.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A jitter which simply returns the specified maximum delay.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -178,7 +178,7 @@ is good enough for most applications, but makes precise testing difficult.</p>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_RetrySettings_RandomJitter" data-uid="Google.Api.Gax.RetrySettings.RandomJitter">RandomJitter</h4>
-              <div class="markdown level1 summary"><p>The default jitter which returns a uniformly distributed random delay between 0 and
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default jitter which returns a uniformly distributed random delay between 0 and
 the specified maximum.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -202,7 +202,7 @@ the specified maximum.</p>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_RetrySettings_RetryBackoff" data-uid="Google.Api.Gax.RetrySettings.RetryBackoff">RetryBackoff</h4>
-              <div class="markdown level1 summary"><p>The backoff policy for the time between retries.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The backoff policy for the time between retries.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -225,7 +225,7 @@ the specified maximum.</p>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_RetrySettings_RetryFilter" data-uid="Google.Api.Gax.RetrySettings.RetryFilter">RetryFilter</h4>
-              <div class="markdown level1 summary"><p>A predicate to determine whether or not a particular exception should cause the operation to be retried.
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A predicate to determine whether or not a particular exception should cause the operation to be retried.
 Usually this is simply a matter of checking the status codes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -243,13 +243,13 @@ Usually this is simply a matter of checking the status codes.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+                    <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html#Grpc_Core_RpcException">RpcException</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_RetrySettings_TimeoutBackoff" data-uid="Google.Api.Gax.RetrySettings.TimeoutBackoff">TimeoutBackoff</h4>
-              <div class="markdown level1 summary"><p>The backoff policy for timeouts of retries.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The backoff policy for timeouts of retries.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -272,7 +272,7 @@ Usually this is simply a matter of checking the status codes.</p>
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_RetrySettings_TimeoutBackoff_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This allows an increasing timeout, initially requesting a fast call,
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="4">This allows an increasing timeout, initially requesting a fast call,
 then allowing a bit more time, then a bit more, and so on. However,
 the timeout will also be adjusted to accommodate <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings_TotalExpiration">TotalExpiration</a>.</p>
 </div>
@@ -301,7 +301,7 @@ the timeout will also be adjusted to accommodate <a class="xref" href="Google.Ap
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Api_Gax_RetrySettings_Clone" data-uid="Google.Api.Gax.RetrySettings.Clone">Clone()</h4>
-              <div class="markdown level1 summary"><p>Creates a deep clone of this instance. No validation is performed.
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a deep clone of this instance. No validation is performed.
 It is assumed that the delay jitter does not require deep cloning.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -320,13 +320,13 @@ It is assumed that the delay jitter does not require deep cloning.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a></td>
-                    <td><p>A deep clone of this instance.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A deep clone of this instance.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Api_Gax_RetrySettings_FilterForStatusCodes_StatusCode___" data-uid="Google.Api.Gax.RetrySettings.FilterForStatusCodes(StatusCode[])">FilterForStatusCodes(StatusCode[])</h4>
-              <div class="markdown level1 summary"><p>Creates a retry filter based on status codes.</p>
+              <h4 id="Google_Api_Gax_RetrySettings_FilterForStatusCodes_Grpc_Core_StatusCode___" data-uid="Google.Api.Gax.RetrySettings.FilterForStatusCodes(Grpc.Core.StatusCode[])">FilterForStatusCodes(StatusCode[])</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a retry filter based on status codes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -344,9 +344,9 @@ It is assumed that the delay jitter does not require deep cloning.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">StatusCode</span>[]</td>
+                    <td><a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode">StatusCode</a>[]</td>
                     <td><em>statusCodes</em></td>
-                    <td><p>The status codes to retry. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The status codes to retry. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -361,14 +361,14 @@ It is assumed that the delay jitter does not require deep cloning.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
-                    <td><p>A retry filter based on status codes.</p>
+                    <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html#Grpc_Core_RpcException">RpcException</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A retry filter based on status codes.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Api_Gax_RetrySettings_FilterForStatusCodes_System_Collections_Generic_IEnumerable_StatusCode__" data-uid="Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable{StatusCode})">FilterForStatusCodes(IEnumerable&lt;StatusCode&gt;)</h4>
-              <div class="markdown level1 summary"><p>Creates a retry filter based on status codes.</p>
+              <h4 id="Google_Api_Gax_RetrySettings_FilterForStatusCodes_System_Collections_Generic_IEnumerable_Grpc_Core_StatusCode__" data-uid="Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable{Grpc.Core.StatusCode})">FilterForStatusCodes(IEnumerable&lt;StatusCode&gt;)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a retry filter based on status codes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -386,9 +386,9 @@ It is assumed that the delay jitter does not require deep cloning.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">StatusCode</span>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode">StatusCode</a>&gt;</td>
                     <td><em>statusCodes</em></td>
-                    <td><p>The status codes to retry. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The status codes to retry. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -403,14 +403,14 @@ It is assumed that the delay jitter does not require deep cloning.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
-                    <td><p>A retry filter based on status codes.</p>
+                    <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html#Grpc_Core_RpcException">RpcException</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A retry filter based on status codes.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_RetrySettings_Validate_System_String_" data-uid="Google.Api.Gax.RetrySettings.Validate(System.String)">Validate(String)</h4>
-              <div class="markdown level1 summary"><p>Validates the settings.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Validates the settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -430,7 +430,7 @@ It is assumed that the delay jitter does not require deep cloning.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>paramName</em></td>
-                    <td><p>The parameter name to use in any exception thrown.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The parameter name to use in any exception thrown.</p>
 </td>
                   </tr>
                 </tbody>
@@ -446,7 +446,7 @@ It is assumed that the delay jitter does not require deep cloning.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a></td>
-                    <td><p>A reference to this instance, for use in chaining calls.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A reference to this instance, for use in chaining calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -462,7 +462,7 @@ It is assumed that the delay jitter does not require deep cloning.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentException</span></td>
-                    <td><p>The settings are invalid.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.RetrySettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The settings are invalid.</p>
 </td>
                   </tr>
                 </tbody>
@@ -495,8 +495,8 @@ It is assumed that the delay jitter does not require deep cloning.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

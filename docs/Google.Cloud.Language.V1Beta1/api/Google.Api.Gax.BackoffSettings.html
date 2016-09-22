@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BackoffSettings
    | Google.Cloud.Language.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_BackoffSettings" data-uid="Google.Api.Gax.BackoffSettings">Class BackoffSettings
               </h1>
-              <div class="markdown level0 summary"><p>Backoff settings used within <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> to implement
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Backoff settings used within <a class="xref" href="Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings">RetrySettings</a> to implement
 exponential backoff.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -103,7 +103,7 @@ exponential backoff.</p>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Api_Gax_BackoffSettings_Delay" data-uid="Google.Api.Gax.BackoffSettings.Delay">Delay</h4>
-              <div class="markdown level1 summary"><p>The initial delay, either for the first retry or as the initial RPC timeout.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The initial delay, either for the first retry or as the initial RPC timeout.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -126,7 +126,7 @@ exponential backoff.</p>
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_BackoffSettings_Delay_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default value of this property is <span class="xref">System.TimeSpan.Zero</span>.</p>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The default value of this property is <span class="xref">System.TimeSpan.Zero</span>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -139,13 +139,13 @@ exponential backoff.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
-                    <td><p>The value is negative.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value is negative.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_BackoffSettings_DelayMultiplier" data-uid="Google.Api.Gax.BackoffSettings.DelayMultiplier">DelayMultiplier</h4>
-              <div class="markdown level1 summary"><p>The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -189,13 +189,13 @@ between the third response and the fourth request.
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
-                    <td><p>The value is not a number, or is less than 1.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value is not a number, or is less than 1.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_BackoffSettings_MaxDelay" data-uid="Google.Api.Gax.BackoffSettings.MaxDelay">MaxDelay</h4>
-              <div class="markdown level1 summary"><p>The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
 this maximum is used instead.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -214,13 +214,13 @@ this maximum is used instead.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
-                    <td><p>The maximum delay. Must not be negative.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The maximum delay. Must not be negative.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_BackoffSettings_MaxDelay_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default value of this property is <span class="xref">System.TimeSpan.Zero</span>.</p>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The default value of this property is <span class="xref">System.TimeSpan.Zero</span>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -233,7 +233,7 @@ this maximum is used instead.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
-                    <td><p>The value is negative.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value is negative.</p>
 </td>
                   </tr>
                 </tbody>
@@ -241,7 +241,7 @@ this maximum is used instead.</p>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Api_Gax_BackoffSettings_Clone" data-uid="Google.Api.Gax.BackoffSettings.Clone">Clone()</h4>
-              <div class="markdown level1 summary"><p>Creates a clone of this instance.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a clone of this instance.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -259,7 +259,7 @@ this maximum is used instead.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.BackoffSettings.html#Google_Api_Gax_BackoffSettings">BackoffSettings</a></td>
-                    <td><p>A clone of this instance.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.BackoffSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A clone of this instance.</p>
 </td>
                   </tr>
                 </tbody>
@@ -292,8 +292,8 @@ this maximum is used instead.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

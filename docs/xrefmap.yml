@@ -197,13 +197,13 @@ references:
   href: api/Google.Api.Gax.ClientHelper.html#Google_Api_Gax_ClientHelper__ctor_Google_Api_Gax_ServiceSettingsBase_
   commentId: M:Google.Api.Gax.ClientHelper.#ctor(Google.Api.Gax.ServiceSettingsBase)
   fullName: Google.Api.Gax.ClientHelper.ClientHelper(Google.Api.Gax.ServiceSettingsBase)
-- uid: Google.Api.Gax.ClientHelper.BuildApiCall``2(System.Func{``0,CallOptions,AsyncUnaryCall{``1}},System.Func{``0,CallOptions,``1},Google.Api.Gax.CallSettings)
+- uid: Google.Api.Gax.ClientHelper.BuildApiCall``2(System.Func{``0,Grpc.Core.CallOptions,Grpc.Core.AsyncUnaryCall{``1}},System.Func{``0,Grpc.Core.CallOptions,``1},Google.Api.Gax.CallSettings)
   name: BuildApiCall<TRequest, TResponse>(Func<TRequest, CallOptions, AsyncUnaryCall<TResponse>>, Func<TRequest, CallOptions, TResponse>, CallSettings)
-  href: api/Google.Api.Gax.ClientHelper.html#Google_Api_Gax_ClientHelper_BuildApiCall__2_System_Func___0_CallOptions_AsyncUnaryCall___1___System_Func___0_CallOptions___1__Google_Api_Gax_CallSettings_
-  commentId: M:Google.Api.Gax.ClientHelper.BuildApiCall``2(System.Func{``0,CallOptions,AsyncUnaryCall{``1}},System.Func{``0,CallOptions,``1},Google.Api.Gax.CallSettings)
+  href: api/Google.Api.Gax.ClientHelper.html#Google_Api_Gax_ClientHelper_BuildApiCall__2_System_Func___0_Grpc_Core_CallOptions_Grpc_Core_AsyncUnaryCall___1___System_Func___0_Grpc_Core_CallOptions___1__Google_Api_Gax_CallSettings_
+  commentId: M:Google.Api.Gax.ClientHelper.BuildApiCall``2(System.Func{``0,Grpc.Core.CallOptions,Grpc.Core.AsyncUnaryCall{``1}},System.Func{``0,Grpc.Core.CallOptions,``1},Google.Api.Gax.CallSettings)
   name.vb: BuildApiCall(Of TRequest, TResponse)(Func(Of TRequest, CallOptions, AsyncUnaryCall(Of TResponse)), Func(Of TRequest, CallOptions, TResponse), CallSettings)
-  fullName: Google.Api.Gax.ClientHelper.BuildApiCall<TRequest, TResponse>(System.Func<TRequest, CallOptions, AsyncUnaryCall<TResponse>>, System.Func<TRequest, CallOptions, TResponse>, Google.Api.Gax.CallSettings)
-  fullName.vb: Google.Api.Gax.ClientHelper.BuildApiCall(Of TRequest, TResponse)(System.Func(Of TRequest, CallOptions, AsyncUnaryCall(Of TResponse)), System.Func(Of TRequest, CallOptions, TResponse), Google.Api.Gax.CallSettings)
+  fullName: Google.Api.Gax.ClientHelper.BuildApiCall<TRequest, TResponse>(System.Func<TRequest, Grpc.Core.CallOptions, Grpc.Core.AsyncUnaryCall<TResponse>>, System.Func<TRequest, Grpc.Core.CallOptions, TResponse>, Google.Api.Gax.CallSettings)
+  fullName.vb: Google.Api.Gax.ClientHelper.BuildApiCall(Of TRequest, TResponse)(System.Func(Of TRequest, Grpc.Core.CallOptions, Grpc.Core.AsyncUnaryCall(Of TResponse)), System.Func(Of TRequest, Grpc.Core.CallOptions, TResponse), Google.Api.Gax.CallSettings)
 - uid: Google.Api.Gax.Expiration
   name: Expiration
   href: api/Google.Api.Gax.Expiration.html#Google_Api_Gax_Expiration
@@ -1007,20 +1007,20 @@ references:
   href: api/Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings_DelayJitter
   commentId: P:Google.Api.Gax.RetrySettings.DelayJitter
   fullName: Google.Api.Gax.RetrySettings.DelayJitter
-- uid: Google.Api.Gax.RetrySettings.FilterForStatusCodes(StatusCode[])
+- uid: Google.Api.Gax.RetrySettings.FilterForStatusCodes(Grpc.Core.StatusCode[])
   name: FilterForStatusCodes(StatusCode[])
-  href: api/Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings_FilterForStatusCodes_StatusCode___
-  commentId: M:Google.Api.Gax.RetrySettings.FilterForStatusCodes(StatusCode[])
+  href: api/Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings_FilterForStatusCodes_Grpc_Core_StatusCode___
+  commentId: M:Google.Api.Gax.RetrySettings.FilterForStatusCodes(Grpc.Core.StatusCode[])
   name.vb: FilterForStatusCodes(StatusCode())
-  fullName: Google.Api.Gax.RetrySettings.FilterForStatusCodes(StatusCode[])
-  fullName.vb: Google.Api.Gax.RetrySettings.FilterForStatusCodes(StatusCode())
-- uid: Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable{StatusCode})
+  fullName: Google.Api.Gax.RetrySettings.FilterForStatusCodes(Grpc.Core.StatusCode[])
+  fullName.vb: Google.Api.Gax.RetrySettings.FilterForStatusCodes(Grpc.Core.StatusCode())
+- uid: Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable{Grpc.Core.StatusCode})
   name: FilterForStatusCodes(IEnumerable<StatusCode>)
-  href: api/Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings_FilterForStatusCodes_System_Collections_Generic_IEnumerable_StatusCode__
-  commentId: M:Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable{StatusCode})
+  href: api/Google.Api.Gax.RetrySettings.html#Google_Api_Gax_RetrySettings_FilterForStatusCodes_System_Collections_Generic_IEnumerable_Grpc_Core_StatusCode__
+  commentId: M:Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable{Grpc.Core.StatusCode})
   name.vb: FilterForStatusCodes(IEnumerable(Of StatusCode))
-  fullName: Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable<StatusCode>)
-  fullName.vb: Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable(Of StatusCode))
+  fullName: Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable<Grpc.Core.StatusCode>)
+  fullName.vb: Google.Api.Gax.RetrySettings.FilterForStatusCodes(System.Collections.Generic.IEnumerable(Of Grpc.Core.StatusCode))
 - uid: Google.Api.Gax.RetrySettings.IJitter
   name: RetrySettings.IJitter
   href: api/Google.Api.Gax.RetrySettings.IJitter.html#Google_Api_Gax_RetrySettings_IJitter
