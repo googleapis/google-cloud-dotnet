@@ -24,7 +24,7 @@ namespace Google.Cloud.Speech.V1Beta1
     public partial class RecognitionAudio
     {
         /// <summary>
-        /// Constructs a <see cref="RecognitionAudio"/> with a <see cref="RecognitionAudio.Source"/> property referring to a Google Cloud
+        /// Constructs a <see cref="RecognitionAudio"/> with a <see cref="Uri"/> property referring to a Google Cloud
         /// Storage URI.
         /// </summary>
         /// <param name="storageUri">A Google Cloud Storage URI, of the form <c>gs://bucket-name/object-name</c>. Must not be null.</param>
