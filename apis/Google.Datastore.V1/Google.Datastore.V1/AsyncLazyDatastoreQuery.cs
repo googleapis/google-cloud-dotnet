@@ -67,52 +67,17 @@ namespace Google.Datastore.V1
         }
 
         /// <inheritdoc />
-        public IAsyncEnumerator<Entity> GetEnumerator() => AsEntities().GetEnumerator();
+        public IAsyncEnumerator<Entity> GetEnumerator() =>
+            _responses.SelectMany(r => r.Batch.EntityResults.Select(er => er.Entity).ToAsyncEnumerable()).GetEnumerator();
 
         /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="Entity"/> values.
-        /// </summary>
-        /// <remarks>
-        /// This method only exists for symmetry with the other "As*" methods, to make the fact that
-        /// the class implements IEnumerable{Entity} more incidental.
-        /// </remarks>
-        private IAsyncEnumerable<Entity> AsEntities() => AsEntityResults().Select(er => er.Entity);
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="EntityResult"/> values.
-        /// The final result from each batch is modified to use the batch's end cursor instead of
-        /// the original <see cref="EntityResult.Cursor"/> value.
-        /// </summary>
-        /// <remarks>
-        /// </remarks>
-        /// <returns>A sequence of <see cref="EntityResult"/> values.</returns>
-        private IAsyncEnumerable<EntityResult> AsEntityResults() =>
-            AsBatches().SelectMany(batch =>
-            {
-                var lastResult = batch.EntityResults.LastOrDefault();
-                if (lastResult != null)
-                {
-                    lastResult.Cursor = batch.EndCursor;
-                }
-                return batch.EntityResults.ToAsyncEnumerable();
-            });
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="RunQueryResponse"/> values
-        /// exactly as returned by the Datastore API. This method is only useful if the application
-        /// wishes to examine the <see cref="RunQueryResponse.Query"/> property; otherwise, use
-        /// <see cref="AsBatches"/> to obtain the sequence of batches.
+        /// This method is for advanced use cases only, where more diagnostic information is required;
+        /// most application code should merely iterate over the query results as <see cref="Entity"/>
+        /// values, or call <see cref="GetAllResults()"/>.
+        /// The results of this query are returned as a sequence of <see cref="RunQueryResponse"/> values
+        /// exactly as returned by the Datastore API.
         /// </summary>
         /// <returns>A sequence of <see cref="RunQueryResponse"/> values.</returns>
         public IAsyncEnumerable<RunQueryResponse> AsResponses() => _responses;
-
-        /// <summary>
-        /// Returns the results of this query as a sequence of <see cref="QueryResultBatch"/> values.
-        /// This method is only useful if the application wishes to process a batch at a time; if the
-        /// details of how the API splits the results into batches is not needed, use <see cref="AsEntityResults"/>
-        /// or simply iterate over the entities.
-        /// </summary>
-        /// <returns>A sequence of <see cref="QueryResultBatch"/> values.</returns>
-        public IAsyncEnumerable<QueryResultBatch> AsBatches() => _responses.Select(r => r.Batch);
     }
 }
