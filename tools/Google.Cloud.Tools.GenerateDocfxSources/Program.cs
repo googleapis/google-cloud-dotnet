@@ -29,10 +29,17 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
         private static readonly Dictionary<string, string> s_dependencyReferences = new Dictionary<string, string>
         {
             { "Google.Protobuf", "protobuf/csharp/src/Google.Protobuf/project.json" },
+            { "Google.Apis", "google-api-dotnet-client/Src/Support/GoogleApis/Net45/GoogleApis_Net45.csproj" },
+            { "Google.Apis.Core", "google-api-dotnet-client/Src/Support/GoogleApis.Core/Net45/GoogleApis.Core_Net45.csproj" },
+            { "Google.Apis.Auth", "google-api-dotnet-client/Src/Support/GoogleApis.Auth/Net45/GoogleApis.Auth_Net45.csproj" },
             { "Google.Api.Gax", "gax-dotnet/src/Google.Api.Gax/project.json" },
             { "Google.Api.Gax.Rest", "gax-dotnet/src/Google.Api.Gax.Rest/project.json" },
             { "Google.Api.CommonProtos", "gax-dotnet/src/Google.Api.CommonProtos/project.json" },
             { "Grpc.Core", "grpc/src/csharp/Grpc.Core/Grpc.Core.csproj" },
+
+            // It's easier to hard-code these for now than generalise them...
+            { "Google.Apis.Storage.v1", "google-api-dotnet-client/Src/Generated/Google.Apis.Storage.v1/NetStandard/Google.Apis.Storage.v1.csproj" },
+            { "Google.Apis.Bigquery.v2", "google-api-dotnet-client/Src/Generated/Google.Apis.Bigquery.v2/NetStandard/Google.Apis.Bigquery.v2.csproj" },
         };
 
         private static int Main(string[] args)

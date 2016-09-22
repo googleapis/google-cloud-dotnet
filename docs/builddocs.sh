@@ -3,17 +3,15 @@
 set -e
 
 fetch() {
-  # $1: directory
-  # $2: repo
-  # $3: path to call dotnet restore on
+  # $1: repo (and directory name)
+  # $2: organization
   if [ -d "external/$1" ]
   then
     echo Skipping $1
     return
   fi
   echo Fetching $1
-  git clone https://github.com/$2 external/$1 --quiet --depth=1
-  dotnet restore external/$1/$3
+  git clone https://github.com/$2/$1 external/$1 --quiet --depth=1
 }
 
 build_api_docs() {
@@ -56,13 +54,23 @@ mkdir output
 mkdir output/assembled
 
 # For Google.Api.Gax and Google.Api.Gax.Rest
-fetch gax-dotnet googleapis/gax-dotnet .
+fetch gax-dotnet googleapis
+dotnet restore external/gax-dotnet
+
 # For Google.Protobuf
-fetch protobuf google/protobuf .
+fetch protobuf google
+dotnet restore external/protobuf
 # Remove // comments in project.json; dotnet cli is fine with it, but docfx isn't.
 sed -i -r 's/\s+\/\/.*//g' external/protobuf/csharp/src/Google.Protobuf/project.json
+
 # For Grpc.Core etc
-fetch grpc google/grpc src/csharp
+fetch grpc grpc
+dotnet restore external/grpc/src/csharp
+
+# For all REST-based APIs
+fetch google-api-dotnet-client google
+mkdir -p external/google-api-dotnet-client/NuPkgs/Support
+dotnet restore external/google-api-dotnet-client
 
 # TODO: google/google-api-dotnet-client, but those projects
 # don't work with docfx right now
