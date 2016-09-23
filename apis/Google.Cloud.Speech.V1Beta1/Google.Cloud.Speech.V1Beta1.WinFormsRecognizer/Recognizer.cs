@@ -29,6 +29,7 @@ namespace Google.Cloud.Speech.V1Beta1.WinFormsRecognizer
         private readonly TextBox _ongoingTextOutput;
         private readonly IWaveIn _waveIn;
         private RecognizerStream _recognizerStream;
+        private RequestQueue<ByteString> _requestQueue;
         private Task _doneTask;
 
         internal Recognizer(TextBox finalizedTextOutput, TextBox ongoingTextOutput, IWaveIn waveIn)
@@ -42,18 +43,13 @@ namespace Google.Cloud.Speech.V1Beta1.WinFormsRecognizer
 
         private async void RecordingStopped(object sender, StoppedEventArgs e)
         {
-            await _recognizerStream.RequestStream.CompleteAsync();
+            await _requestQueue.CompleteAsync();
         }
 
-        private async void ConsumeMicrophoneData(object sender, WaveInEventArgs e)
+        private void ConsumeMicrophoneData(object sender, WaveInEventArgs e)
         {
             ByteString data = ByteString.CopyFrom(e.Buffer, 0, e.BytesRecorded);
-            // This await isn't actually useful, because nothing's waiting for this async
-            // method to finish. Really, we want a BufferBlock or similar so we can just
-            // shovel data into a queue. gRPC will fail if there's more than one pending request,
-            // but I haven't actually seen it fail with this sample code yet, presumably because my
-            // network connection is fast.
-            await _recognizerStream.RequestStream.WriteAsync(data);
+            _requestQueue.Post(data);
         }
 
         internal async Task Start()
@@ -70,6 +66,7 @@ namespace Google.Cloud.Speech.V1Beta1.WinFormsRecognizer
                 InterimResults = true
             };
             _recognizerStream = await recognizer.BeginStreamingRecognizeAsync(config);
+            _requestQueue = new RequestQueue<ByteString>(_recognizerStream.RequestStream, 100);
             _waveIn.StartRecording();
             _doneTask = ConsumeResultsAsync();
         }
