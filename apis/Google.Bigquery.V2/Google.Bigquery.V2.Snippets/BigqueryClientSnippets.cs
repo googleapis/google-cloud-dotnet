@@ -46,7 +46,7 @@ namespace Google.Bigquery.V2.Snippets
             string sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
             BigqueryResult query = client.ExecuteQuery(sql);
 
-            foreach (BigqueryResult.Row row in query.Rows)
+            foreach (BigqueryRow row in query.Rows)
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
@@ -196,7 +196,7 @@ namespace Google.Bigquery.V2.Snippets
             // Snippet: ListRows(*,*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryResult result = client.ListRows(datasetId, tableId);
-            foreach (BigqueryResult.Row row in result.Rows)
+            foreach (BigqueryRow row in result.Rows)
             {
                 DateTime timestamp = (DateTime) row["game_started"];
                 long level = (long) row["level"];
@@ -493,7 +493,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Now list its rows
             BigqueryResult result = client.ListRows(datasetId, destinationTableId);
-            foreach (BigqueryResult.Row row in result.Rows)
+            foreach (BigqueryRow row in result.Rows)
             {
                 DateTime timestamp = (DateTime)row["game_started"];
                 long level = (long)row["level"];

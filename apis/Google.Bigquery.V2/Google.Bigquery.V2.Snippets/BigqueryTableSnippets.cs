@@ -41,7 +41,7 @@ namespace Google.Bigquery.V2.Snippets
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, tableId);
             BigqueryResult result = table.ListRows();
-            foreach (BigqueryResult.Row row in result.Rows)
+            foreach (BigqueryRow row in result.Rows)
             {
                 DateTime timestamp = (DateTime)row["game_started"];
                 long level = (long)row["level"];
