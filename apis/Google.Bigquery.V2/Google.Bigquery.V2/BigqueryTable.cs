@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using System.Collections.Generic;
 using System.IO;
@@ -96,7 +97,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public BigqueryResult ListRows(ListRowsOptions options = null) => _client.ListRows(Reference, Schema, options);
+        public IPagedEnumerable<TableDataList, BigqueryRow> ListRows(ListRowsOptions options = null) => _client.ListRows(Reference, Schema, options);
 
         /// <summary>
         /// Inserts a single row of data into this table.

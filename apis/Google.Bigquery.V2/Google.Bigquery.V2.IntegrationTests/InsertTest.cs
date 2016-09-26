@@ -35,17 +35,17 @@ namespace Google.Bigquery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.HighScoreTableId);
 
-            var countBefore = table.ListRows().Rows.Count();
+            var countBefore = table.ListRows().Count();
 
             var row = BuildRow("Joe", 100, new DateTime(2016, 4, 26, 11, 43, 1, DateTimeKind.Utc));
             table.Insert(row);
 
             var rowsAfter = table.ListRows();
-            var fetched = rowsAfter.Rows.Single(r => (string)r["player"] == "Joe");
+            var fetched = rowsAfter.Single(r => (string)r["player"] == "Joe");
             Assert.Equal(row["score"], fetched["score"]);
             Assert.Equal(row["gameStarted"], fetched["gameStarted"]);
 
-            Assert.Equal(countBefore + 1, rowsAfter.Rows.Count());
+            Assert.Equal(countBefore + 1, rowsAfter.Count());
         }
 
         [Fact]
@@ -55,7 +55,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.HighScoreTableId);
 
-            var countBefore = table.ListRows().Rows.Count();
+            var countBefore = table.ListRows().Count();
 
             var rows = new[]
             {
@@ -65,10 +65,10 @@ namespace Google.Bigquery.V2.IntegrationTests
             table.Insert(rows);
 
             var rowsAfter = table.ListRows();
-            Assert.True(rowsAfter.Rows.Any(r => (string)r["player"] == "Jenny"));
-            Assert.True(rowsAfter.Rows.Any(r => (string)r["player"] == "Lisa"));
+            Assert.True(rowsAfter.Any(r => (string)r["player"] == "Jenny"));
+            Assert.True(rowsAfter.Any(r => (string)r["player"] == "Lisa"));
 
-            Assert.Equal(countBefore + 2, rowsAfter.Rows.Count());
+            Assert.Equal(countBefore + 2, rowsAfter.Count());
         }
 
         [Fact]

@@ -52,7 +52,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             table.Insert(insertRow);
             var result = table.ListRows();
-            var row = result.Rows.Single(r => (string)r["guid"] == guid);
+            var row = result.Single(r => (string)r["guid"] == guid);
             var tags = (string[])row["tags"];
             Assert.Equal(new[] { "a", "b" }, tags);
 

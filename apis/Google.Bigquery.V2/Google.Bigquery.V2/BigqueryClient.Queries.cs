@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 
@@ -86,7 +87,7 @@ namespace Google.Bigquery.V2
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public virtual BigqueryResult ListRows(string projectId, string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
+        public virtual IPagedEnumerable<TableDataList, BigqueryRow> ListRows(string projectId, string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
             ListRows(GetTableReference(projectId, datasetId, tableId), schema, options);
 
         /// <summary>
@@ -98,7 +99,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
         /// the table first.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public virtual BigqueryResult ListRows(string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
+        public virtual IPagedEnumerable<TableDataList, BigqueryRow> ListRows(string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
             ListRows(GetTableReference(datasetId, tableId), schema, options);
 
         /// <summary>
@@ -108,7 +109,7 @@ namespace Google.Bigquery.V2
         /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
         /// the table first.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public virtual BigqueryResult ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        public virtual IPagedEnumerable<TableDataList, BigqueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             throw new NotImplementedException();
         }

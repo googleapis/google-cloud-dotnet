@@ -35,7 +35,6 @@ namespace Google.Bigquery.V2
         /// </summary>
         public TableSchema Schema { get; }
 
-
         internal BigqueryRow(TableRow rawRow, TableSchema schema)
         {
             Schema = schema;

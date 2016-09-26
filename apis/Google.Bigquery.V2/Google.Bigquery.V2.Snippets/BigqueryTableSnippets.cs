@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
+using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Linq;
 using Xunit;
@@ -40,8 +42,8 @@ namespace Google.Bigquery.V2.Snippets
             // Snippet: ListRows
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, tableId);
-            BigqueryResult result = table.ListRows();
-            foreach (BigqueryRow row in result.Rows)
+            IPagedEnumerable<TableDataList, BigqueryRow> result = table.ListRows();
+            foreach (BigqueryRow row in result)
             {
                 DateTime timestamp = (DateTime)row["game_started"];
                 long level = (long)row["level"];
@@ -52,7 +54,7 @@ namespace Google.Bigquery.V2.Snippets
             // End snippet
 
             // We set up 7 results in the fixture. Other tests may add more.
-            Assert.True(result.Rows.Count() >= 7);
+            Assert.True(result.Count() >= 7);
         }
     }
 }
