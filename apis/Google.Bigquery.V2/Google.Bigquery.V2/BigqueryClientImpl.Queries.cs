@@ -18,7 +18,7 @@ using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static Google.Apis.Bigquery.v2.JobsResource;
+using System.Threading;
 
 namespace Google.Bigquery.V2
 {
@@ -42,7 +42,7 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryResult ExecuteQuery(string sql, ExecuteQueryOptions options = null)
+        public override BigqueryQueryJob ExecuteQuery(string sql, ExecuteQueryOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
 
@@ -50,7 +50,7 @@ namespace Google.Bigquery.V2
             options?.ModifyRequest(queryRequest);
             var request = Service.Jobs.Query(queryRequest, ProjectId);
             var queryResponse = request.Execute();
-            return new BigqueryResult(this, queryResponse);
+            return new BigqueryQueryJob(this, queryResponse, options);
         }
 
         /// <inheritdoc />
@@ -70,18 +70,36 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryResult GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)
+        public override BigqueryQueryJob PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollJobOptions pollOptions = null)
+        {
+            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            pollOptions?.Validate();
+
+            DateTime? deadline = pollOptions?.GetEffectiveDeadline() ?? DateTime.SpecifyKind(DateTime.MaxValue, DateTimeKind.Utc);
+            long maxRequests = pollOptions?.MaxRequests ?? long.MaxValue;
+            TimeSpan interval = pollOptions?.Interval ?? TimeSpan.FromSeconds(1);
+
+            for (long i = 0; i < maxRequests && DateTime.UtcNow < deadline; i++)
+            {
+                var job = GetQueryJob(jobReference, options);
+                if (job.Completed)
+                {
+                    return job;
+                }
+                Thread.Sleep(interval);
+            }
+            throw new TimeoutException($"Job {jobReference.JobId} did not complete in time.");
+        }
+
+        /// <inheritdoc />
+        public override BigqueryQueryJob GetQueryJob(JobReference jobReference, GetQueryResultsOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
-            Func<GetQueryResultsRequest> requestProvider = () =>
-            {
-                var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
-                options?.ModifyRequest(request);
-                return request;
-            };
-            var firstResponse = requestProvider().Execute();
-            return new BigqueryResult(this, firstResponse, requestProvider);
+            var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
+            options?.ModifyRequest(request);
+            var firstResponse = request.Execute();
+            return new BigqueryQueryJob(this, firstResponse, options);
         }
 
         /// <inheritdoc />

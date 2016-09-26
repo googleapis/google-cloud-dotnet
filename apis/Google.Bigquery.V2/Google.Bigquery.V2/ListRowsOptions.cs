@@ -27,6 +27,8 @@ namespace Google.Bigquery.V2
         /// </summary>
         public int? PageSize { get; set; }
 
+        // FIXME: PageToken
+
         internal void ModifyRequest(ListRequest request)
         {
             if (PageSize != null)

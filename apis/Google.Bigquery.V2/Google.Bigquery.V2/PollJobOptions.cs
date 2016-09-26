@@ -18,7 +18,7 @@ using System;
 namespace Google.Bigquery.V2
 {
     /// <summary>
-    /// Options for <c>PollJob</c> operations. When no options are specified, the
+    /// Options for operations that poll jobs until they have completed. When no options are specified, the
     /// default behavior is to poll forever, at one second intervals.
     /// </summary>
     public sealed class PollJobOptions
@@ -56,7 +56,7 @@ namespace Google.Bigquery.V2
         /// <summary>
         /// The maximum overall time to poll for. Populating this property
         /// is equivalent to setting the <see cref="Deadline"/> property
-        /// to "the time of calling <c>PollJob</c>, plus the timeout".
+        /// to "the time of calling <c>PollJobUntilCompleted</c>, plus the timeout".
         /// </summary>
         /// <remarks>
         /// A <see cref="PollJobOptions"/> with both <see cref="Timeout"/>
@@ -65,15 +65,27 @@ namespace Google.Bigquery.V2
         /// </remarks>
         public TimeSpan? Timeout { get; set; }
 
+        private DateTime? _deadline;
         /// <summary>
         /// A deadline for polling; no requests will be made after this point
-        /// in time.
+        /// in time. Must have a <see cref="DateTime.Kind"/> of <see cref="DateTimeKind.Utc"/>.
         /// </summary>
         /// <remarks>
         /// Currently, requests are not cancelled at this deadline; it only
         /// affects when the last request is started.
         /// </remarks>
-        public DateTimeOffset? Deadline { get; set; }
+        public DateTime? Deadline
+        {
+            get { return _deadline; }
+            set
+            {
+                GaxRestPreconditions.CheckArgument(
+                    value == null || value.Value.Kind == DateTimeKind.Utc,
+                    nameof(value),
+                    "Only UTC deadlines are supported");
+                _deadline = value;
+            }
+        }
 
         internal void Validate()
         {
@@ -81,6 +93,6 @@ namespace Google.Bigquery.V2
                 $"Cannot set both {nameof(Timeout)} and {nameof(Deadline)} to non-null values");
         }
 
-        internal DateTimeOffset? GetEffectiveDeadline() => Deadline ?? DateTime.UtcNow + Timeout;
+        internal DateTime? GetEffectiveDeadline() => Deadline ?? DateTime.UtcNow + Timeout;
     }
 }

@@ -73,7 +73,6 @@ namespace Google.Bigquery.V2
         {
             var job = new Job { Configuration = new JobConfiguration { Load = loadConfiguration } };
             var mediaUpload = Service.Jobs.Insert(job, ProjectId, input, contentType);
-
             var finalProgress = mediaUpload.Upload();
             if (finalProgress.Exception != null)
             {

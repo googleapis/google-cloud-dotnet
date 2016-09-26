@@ -104,7 +104,6 @@ namespace Google.Bigquery.V2
         /// Creates a table within this project, specified by a dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateTable(TableReference, TableSchema, CreateTableOptions)"/>.
         /// </summary>
-        /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="schema">The schema for the new table. Must not be null.</param>

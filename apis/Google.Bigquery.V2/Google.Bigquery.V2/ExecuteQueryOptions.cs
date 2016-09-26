@@ -57,5 +57,15 @@ namespace Google.Bigquery.V2
 
             // TODO: more options. DryRun would be useful, but we have no way of returning the results...
         }
+
+        /// <summary>
+        /// Returns a <see cref="GetQueryResultsOptions"/> with equivalent options, to be used
+        /// for subsequent requests.
+        /// </summary>
+        internal GetQueryResultsOptions ToGetQueryResultsOptions() =>
+            new GetQueryResultsOptions
+            {
+                PageSize = PageSize                
+            };
     }
 }

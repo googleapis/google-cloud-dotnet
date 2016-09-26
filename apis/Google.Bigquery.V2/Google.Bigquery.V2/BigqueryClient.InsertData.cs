@@ -54,7 +54,7 @@ namespace Google.Bigquery.V2
         /// <summary>
         /// Uploads a stream of CSV data to a table.
         /// </summary>
-        /// /// <param name="datasetReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>

@@ -64,6 +64,7 @@ namespace Google.Bigquery.V2
         /// <remarks>
         /// The credentials are scoped as necessary.
         /// </remarks>
+        /// <param name="projectId">The ID of the project containing the BigQuery data. Must not be null.</param>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <returns>The task representing the created <see cref="BigqueryClient"/>.</returns>
         public static async Task<BigqueryClient> CreateAsync(string projectId, GoogleCredential credential = null) =>
@@ -80,6 +81,7 @@ namespace Google.Bigquery.V2
         /// <remarks>
         /// The credentials are scoped as necessary.
         /// </remarks>
+        /// <param name="projectId">The ID of the project containing the BigQuery data. Must not be null.</param>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <returns>The created <see cref="BigqueryClient"/>.</returns>
         public static BigqueryClient Create(string projectId, GoogleCredential credential = null)

@@ -40,7 +40,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
 
             var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
-            var rows = client.ExecuteQuery(sql).Rows.ToList();
+            var rows = client.ExecuteQuery(sql).PollUntilCompleted().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string) rows[0]["title"]);
             Assert.Equal(5318, (long) rows[0]["unique_words"]);
@@ -57,7 +57,7 @@ namespace Google.Bigquery.V2.IntegrationTests
 
             var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
             var job = client.CreateQueryJob(sql);
-            var rows = job.GetQueryResults().Rows.ToList();
+            var rows = job.PollQueryUntilCompleted().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0]["title"]);
             Assert.Equal(5318, (long)rows[0]["unique_words"]);
@@ -76,14 +76,14 @@ namespace Google.Bigquery.V2.IntegrationTests
             var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
             var destinationTable = userDataset.GetTableReference(_fixture.CreateTableId());
             var job = client.CreateQueryJob(sql, new CreateQueryJobOptions { DestinationTable = destinationTable });
-            var rows = job.GetQueryResults().Rows.ToList();
+            var rows = job.PollQueryUntilCompleted().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0][0]);
             Assert.Equal(5318, (long)rows[0][1]);
 
             // Read the table again later - synchronously this time
             table = client.GetTable(destinationTable);
-            rows = client.ExecuteQuery($"SELECT * FROM {table}").Rows.ToList();
+            rows = client.ExecuteQuery($"SELECT * FROM {table}").PollUntilCompleted().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0][0]);
             Assert.Equal(5318, (long)rows[0][1]);
@@ -94,7 +94,9 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, COUNT(children.name) WITHIN RECORD AS childCount FROM {table} ORDER BY fullName").Rows
+            var queryResults = client.ExecuteQuery($"SELECT fullName, COUNT(children.name) WITHIN RECORD AS childCount FROM {table} ORDER BY fullName")
+                .PollUntilCompleted()
+                .GetRows()
                 .Select(row => new { Name = (string)row["fullName"], Count = (long)row["childCount"] })
                 .ToList();
             var expectedResults = new[]
@@ -111,7 +113,9 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, children.name AS childName FROM {table} ORDER BY fullName, childName").Rows
+            var queryResults = client.ExecuteQuery($"SELECT fullName, children.name AS childName FROM {table} ORDER BY fullName, childName")
+                .PollUntilCompleted()
+                .GetRows()
                 .Select(row => new { Name = (string)row["fullName"], Child = (string)row["childName"] })
                 .ToList();
             var expectedResults = new[]
@@ -131,7 +135,9 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, phoneNumber.areaCode, phoneNumber.number FROM {table} ORDER BY fullName").Rows
+            var queryResults = client.ExecuteQuery($"SELECT fullName, phoneNumber.areaCode, phoneNumber.number FROM {table} ORDER BY fullName")
+                .PollUntilCompleted()
+                .GetRows()
                 .Select(row => new { Name = (string)row["fullName"], AreaCode = (long)row["phoneNumber_areaCode"], Number = (long)row["phoneNumber_number"] })
                 .ToList();
             var expectedResults = new[]

@@ -44,8 +44,6 @@ namespace Google.Bigquery.V2
         /// </remarks>
         public JobReference Reference => Resource.JobReference;
 
-        // TODO: Use an enum instead? Definitely nicer than magic strings.
-
         /// <summary>
         /// The state of the job.
         /// </summary>
@@ -87,14 +85,23 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
-        public BigqueryJob Poll(PollJobOptions options = null) => _client.PollJob(Reference, options);
+        public BigqueryJob PollUntilCompleted(PollJobOptions options = null) => _client.PollJobUntilCompleted(Reference, options);
+
+        /// <summary>
+        /// Polls this job for completion, which must be a query job.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollOptions">The options controlling polling. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The completed job.</returns>
+        public BigqueryQueryJob PollQueryUntilCompleted(GetQueryResultsOptions options = null, PollJobOptions pollOptions = null) =>
+            _client.PollQueryUntilCompleted(Reference, options, pollOptions);
 
         /// <summary>
         /// Retrieves the result of this job, which must be a query job.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public BigqueryResult GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryResults(Reference, options);
+        public BigqueryQueryJob GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryJob(Reference, options);
 
         /// <summary>
         /// Cancels this job.
