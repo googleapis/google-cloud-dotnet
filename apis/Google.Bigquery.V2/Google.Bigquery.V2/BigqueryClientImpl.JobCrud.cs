@@ -58,16 +58,16 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryJob PollJob(JobReference jobReference, PollJobOptions options = null)
+        public override BigqueryJob PollJobUntilCompleted(JobReference jobReference, PollJobOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             options?.Validate();
 
-            DateTimeOffset? deadline = options?.GetEffectiveDeadline() ?? DateTimeOffset.MaxValue;
+            DateTime? deadline = options?.GetEffectiveDeadline() ?? DateTime.SpecifyKind(DateTime.MaxValue, DateTimeKind.Utc);
             long maxRequests = options?.MaxRequests ?? long.MaxValue;
             TimeSpan interval = options?.Interval ?? TimeSpan.FromSeconds(1);
 
-            for (long i = 0; i < maxRequests && DateTimeOffset.UtcNow < deadline; i++)
+            for (long i = 0; i < maxRequests && DateTime.UtcNow < deadline; i++)
             {
                 var job = GetJob(jobReference);
                 if (job.State == JobState.Done)

@@ -30,6 +30,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// If set, the zero-based index of the first row of results to retrieve.
+        /// If this property is non-null, <see cref="PageToken"/> must be null.
         /// </summary>
         public ulong? StartIndex { get; set; }
 
@@ -39,11 +40,25 @@ namespace Google.Bigquery.V2
         /// </summary>
         public TimeSpan? Timeout { get; set; }
 
+        /// <summary>
+        /// The page token to use continue retrieving results after a previous request.
+        /// If this property is non-null, <see cref="StartIndex"/> must be null.
+        /// </summary>
+        public string PageToken { get; set; }
+
         internal void ModifyRequest(GetQueryResultsRequest request)
         {
+            if (PageToken != null && StartIndex != null)
+            {
+                throw new ArgumentException($"Cannot specify both {nameof(PageToken)} and {nameof(StartIndex)}");
+            }
             if (PageSize != null)
             {
                 request.MaxResults = PageSize;
+            }
+            if (PageToken != null)
+            {
+                request.PageToken = PageToken;
             }
             if (StartIndex != null)
             {
@@ -54,5 +69,13 @@ namespace Google.Bigquery.V2
                 request.TimeoutMs = (long) Timeout.Value.TotalMilliseconds;
             }
         }
+
+        internal GetQueryResultsOptions Clone() =>
+            new GetQueryResultsOptions
+            {
+                PageSize = PageSize,
+                StartIndex = StartIndex, 
+                Timeout = Timeout
+            };
     }
 }

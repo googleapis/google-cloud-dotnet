@@ -74,6 +74,9 @@ namespace Google.Bigquery.V2
         /// </summary>
         public int? MaximumBillingTier { get; set; }
 
+        /// <summary>
+        /// The priority of the query.
+        /// </summary>
         public QueryPriority? Priority { get; set; }
 
         internal void ModifyRequest(JobConfigurationQuery query)

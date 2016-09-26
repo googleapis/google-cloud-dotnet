@@ -45,9 +45,9 @@ namespace Google.Bigquery.V2.Snippets
             var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
-            BigqueryResult query = client.ExecuteQuery(sql);
+            BigqueryQueryJob query = client.ExecuteQuery(sql).PollUntilCompleted();
 
-            foreach (BigqueryRow row in query.Rows)
+            foreach (BigqueryRow row in query.GetRows())
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
@@ -94,18 +94,18 @@ namespace Google.Bigquery.V2.Snippets
             // Snippet: ExecuteQuery
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, historyTableId);
-            BigqueryResult result = client.ExecuteQuery(
+            BigqueryQueryJob result = client.ExecuteQuery(
                 $@"SELECT player, MAX(score) AS score
                    FROM {table}
                    GROUP BY player
-                   ORDER BY score DESC");
-            foreach (var row in result.Rows)
+                   ORDER BY score DESC").PollUntilCompleted();
+            foreach (var row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
             }
             // End snippet
 
-            var players = result.Rows.Select(r => (string)r["player"]).ToList();
+            var players = result.GetRows().Select(r => (string)r["player"]).ToList();
             Assert.Contains("Ben", players);
             Assert.Contains("Nadia", players);
             Assert.Contains("Tim", players);
@@ -133,7 +133,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListDatasets(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var datasets = client.ListDatasets().ToList();
+            var datasets = client.ListDatasets().Take(20).ToList();
             foreach (var dataset in datasets)
             {
                 Console.WriteLine(dataset.FullyQualifiedId);
@@ -152,7 +152,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListTables(string,ListTablesOptions)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var tables = client.ListTables(datasetId).ToList();
+            var tables = client.ListTables(datasetId).Take(20).ToList();
             foreach (var table in tables)
             {
                 Console.WriteLine(table.FullyQualifiedId);
@@ -280,7 +280,7 @@ namespace Google.Bigquery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            var result = job.Poll();
+            var result = job.PollUntilCompleted();
             // If there are any errors, display them *then* fail.
             if (result.Status.ErrorResult != null)
             {
@@ -326,7 +326,7 @@ namespace Google.Bigquery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            var result = job.Poll();
+            var result = job.PollUntilCompleted();
             // If there are any errors, display them *then* fail.
             if (result.Status.ErrorResult != null)
             {
@@ -363,18 +363,18 @@ namespace Google.Bigquery.V2.Snippets
                 new CreateQueryJobOptions { DestinationTable = destination });
 
             // Wait for the job to complete.
-            job.Poll();
+            job.PollUntilCompleted();
 
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
-            BigqueryResult result = client.GetQueryResults(job.Reference);
-            foreach (var row in result.Rows)
+            BigqueryQueryJob result = client.GetQueryJob(job.Reference);
+            foreach (var row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
             }
             // End snippet
 
-            var players = result.Rows.Select(r => (string)r["player"]).ToList();
+            var players = result.GetRows().Select(r => (string)r["player"]).ToList();
             Assert.Contains("Ben", players);
             Assert.Contains("Nadia", players);
             Assert.Contains("Tim", players);
@@ -387,7 +387,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListJobs(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var jobs = client.ListJobs().ToList();
+            var jobs = client.ListJobs().Take(20).ToList();
             foreach (var job in jobs)
             {
                 Console.WriteLine(job.Reference.JobId);
@@ -435,7 +435,7 @@ namespace Google.Bigquery.V2.Snippets
             }, projectId).Execute();
 
             // Wait until the export has finished.
-            var result = client.PollJob(job.JobReference);
+            var result = client.PollJobUntilCompleted(job.JobReference);
             // If there are any errors, display them *then* fail.
             if (result.Status.ErrorResult != null)
             {
@@ -490,7 +490,7 @@ namespace Google.Bigquery.V2.Snippets
             }, projectId).Execute();
 
             // Wait until the copy has finished.
-            client.PollJob(job.JobReference);
+            client.PollJobUntilCompleted(job.JobReference);
 
             // Now list its rows
             IPagedEnumerable<TableDataList, BigqueryRow> result = client.ListRows(datasetId, destinationTableId);
