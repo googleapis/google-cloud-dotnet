@@ -46,13 +46,13 @@ namespace Google.Bigquery.V2.IntegrationTests
             var bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
             
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
-            var beforeRowCount = table.ListRows().Rows.Count();
+            var beforeRowCount = table.ListRows().Count();
 
             var job = table.UploadCsv(new MemoryStream(bytes), new UploadCsvOptions { SkipLeadingRows = 1 });
             var result = job.Poll();
             Assert.Null(result.Status.ErrorResult);
 
-            var afterRows = table.ListRows().Rows.ToList();
+            var afterRows = table.ListRows().ToList();
             Assert.Equal(beforeRowCount + 3, afterRows.Count);
 
             var ben = afterRows.Single(row => (string)row["player"] == "Ben");
@@ -75,13 +75,13 @@ namespace Google.Bigquery.V2.IntegrationTests
             var bytes = Encoding.UTF8.GetBytes(string.Join("\n", jsonRows));
 
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
-            var beforeRowCount = table.ListRows().Rows.Count();
+            var beforeRowCount = table.ListRows().Count();
 
             var job = table.UploadJson(new MemoryStream(bytes));
             var result = job.Poll();
             Assert.Null(result.Status.ErrorResult);
 
-            var afterRows = table.ListRows().Rows.ToList();
+            var afterRows = table.ListRows().ToList();
             Assert.Equal(beforeRowCount + 2, afterRows.Count);
 
             var sql = $"SELECT player, score FROM {table} WHERE player CONTAINS 'UploadJsonTest' ORDER BY player";

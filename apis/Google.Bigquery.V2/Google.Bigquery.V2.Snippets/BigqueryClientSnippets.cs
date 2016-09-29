@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Storage.V1;
 using System;
@@ -46,7 +47,7 @@ namespace Google.Bigquery.V2.Snippets
             string sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
             BigqueryResult query = client.ExecuteQuery(sql);
 
-            foreach (BigqueryResult.Row row in query.Rows)
+            foreach (BigqueryRow row in query.Rows)
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
@@ -195,8 +196,8 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListRows(*,*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            BigqueryResult result = client.ListRows(datasetId, tableId);
-            foreach (BigqueryResult.Row row in result.Rows)
+            IPagedEnumerable<TableDataList, BigqueryRow> result = client.ListRows(datasetId, tableId);
+            foreach (BigqueryRow row in result)
             {
                 DateTime timestamp = (DateTime) row["game_started"];
                 long level = (long) row["level"];
@@ -207,7 +208,7 @@ namespace Google.Bigquery.V2.Snippets
             // End snippet
 
             // We set up 7 results in the fixture. Other tests may add more.
-            Assert.True(result.Rows.Count() >= 7);
+            Assert.True(result.Count() >= 7);
         }
 
         [Fact]
@@ -218,7 +219,7 @@ namespace Google.Bigquery.V2.Snippets
             string tableId = _fixture.HistoryTableId;
 
             BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
-            int rowsBefore = table.ListRows().Rows.Count();
+            int rowsBefore = table.ListRows().Count();
 
             // Snippet: Insert(string,string,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
@@ -241,7 +242,7 @@ namespace Google.Bigquery.V2.Snippets
             client.Insert(datasetId, tableId, row1, row2);
             // End snippet
 
-            int rowsAfter = table.ListRows().Rows.Count();
+            int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
 
@@ -253,7 +254,7 @@ namespace Google.Bigquery.V2.Snippets
             string tableId = _fixture.HistoryTableId;
 
             BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
-            int rowsBefore = table.ListRows().Rows.Count();
+            int rowsBefore = table.ListRows().Count();
 
             // Snippet: UploadCsv(*,*,*,*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
@@ -290,7 +291,7 @@ namespace Google.Bigquery.V2.Snippets
             }
             Assert.Null(result.Status.ErrorResult);
 
-            int rowsAfter = table.ListRows().Rows.Count();
+            int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 3, rowsAfter);
         }
 
@@ -302,7 +303,7 @@ namespace Google.Bigquery.V2.Snippets
             string tableId = _fixture.HistoryTableId;
 
             BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
-            int rowsBefore = table.ListRows().Rows.Count();
+            int rowsBefore = table.ListRows().Count();
 
             // Snippet: UploadJson(*,*,*,*,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
@@ -336,7 +337,7 @@ namespace Google.Bigquery.V2.Snippets
             }
             Assert.Null(result.Status.ErrorResult);
 
-            int rowsAfter = table.ListRows().Rows.Count();
+            int rowsAfter = table.ListRows().Count();
             Assert.Equal(rowsBefore + 2, rowsAfter);
         }
 
@@ -492,8 +493,8 @@ namespace Google.Bigquery.V2.Snippets
             client.PollJob(job.JobReference);
 
             // Now list its rows
-            BigqueryResult result = client.ListRows(datasetId, destinationTableId);
-            foreach (BigqueryResult.Row row in result.Rows)
+            IPagedEnumerable<TableDataList, BigqueryRow> result = client.ListRows(datasetId, destinationTableId);
+            foreach (BigqueryRow row in result)
             {
                 DateTime timestamp = (DateTime)row["game_started"];
                 long level = (long)row["level"];
@@ -503,8 +504,8 @@ namespace Google.Bigquery.V2.Snippets
             }
             // End sample
 
-            var originalRows = client.ListRows(datasetId, historyTableId).Rows.Count();
-            var copiedRows = result.Rows.Count();
+            var originalRows = client.ListRows(datasetId, historyTableId).Count();
+            var copiedRows = result.Count();
 
             Assert.Equal(originalRows, copiedRows);
         }

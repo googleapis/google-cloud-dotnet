@@ -15,14 +15,32 @@
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
-using Google.Apis.Requests;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using static Google.Apis.Bigquery.v2.JobsResource;
 
 namespace Google.Bigquery.V2
 {
     public partial class BigqueryClientImpl
     {
+        private sealed class TableRowPageManager : IPageManager<TabledataResource.ListRequest, TableDataList, BigqueryRow>
+        {
+            private readonly BigqueryClient _client;
+            private readonly TableSchema _schema;
+
+            internal TableRowPageManager(BigqueryClient client, TableSchema schema)
+            {
+                _client = client;
+                _schema = schema;
+            }
+
+            public string GetNextPageToken(TableDataList response) => response.PageToken;
+            public IEnumerable<BigqueryRow> GetResources(TableDataList response) => response.Rows.Select(row => new BigqueryRow(row, _schema));
+            public void SetPageSize(TabledataResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
+            public void SetPageToken(TabledataResource.ListRequest request, string pageToken) => request.PageToken = pageToken;
+        }
+
         /// <inheritdoc />
         public override BigqueryResult ExecuteQuery(string sql, ExecuteQueryOptions options = null)
         {
@@ -67,19 +85,22 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryResult ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        public override IPagedEnumerable<TableDataList, BigqueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
-            
+
+            var pageManager = new TableRowPageManager(this, schema);
+
             Func<TabledataResource.ListRequest> requestProvider = () =>
             {
                 var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
                 options?.ModifyRequest(request);
                 return request;
             };
-            var firstResponse = requestProvider().Execute();
-            return new BigqueryResult(this, firstResponse, schema, requestProvider);
+            return new PagedEnumerable<TabledataResource.ListRequest, TableDataList, BigqueryRow>(
+                requestProvider,
+                pageManager);
         }
     }
 }
