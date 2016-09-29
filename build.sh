@@ -2,11 +2,31 @@
 
 set -e
 
+# Myget has sometimes used caps and sometimes not for
+# its environment variables...
+if [ -n "$PrereleaseTag" -a -z "$PRERELEASETAG" ]
+then
+  PRERELEASETAG="$PrereleaseTag"
+fi
+
+# Use an appropriate version of nuget... preferring
+# first an existing NUGET variable, then NuGet, then
+# just falling back to the path.
+if [ -z "$NUGET" ]
+then
+  if [ -n "$NuGet" ]
+  then
+    NUGET="$NuGet"
+  else
+    NUGET="nuget"
+  fi
+fi
+
 if [ $(dotnet --info | grep "OS Platform" | grep -c Windows) -ne 0 ]
 then
   OS=Windows
-  nuget install -OutputDirectory packages OpenCover -Version 4.6.519
-  nuget install -OutputDirectory packages ReportGenerator -Version 2.4.5.0
+  $NUGET install -OutputDirectory packages -Version 4.6.519 OpenCover
+  $NUGET install -OutputDirectory packages -Version 2.4.5.0 ReportGenerator
   # Comment out the lines below to disable coverage
   OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
   REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
