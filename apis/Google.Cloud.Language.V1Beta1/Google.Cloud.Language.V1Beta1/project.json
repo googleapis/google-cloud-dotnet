@@ -14,7 +14,8 @@
   },
 
   "buildOptions": {
-    "keyFile": "../../GoogleApis.snk"
+    "keyFile": "../../GoogleApis.snk",
+    "xmlDoc": true    
   },
 
   "dependencies": {
