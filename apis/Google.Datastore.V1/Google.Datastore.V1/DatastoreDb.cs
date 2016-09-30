@@ -188,7 +188,7 @@ namespace Google.Datastore.V1
         /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
-        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="gqlQuery">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="LazyDatastoreQuery"/> representing the lazy query results.</returns>
@@ -206,7 +206,7 @@ namespace Google.Datastore.V1
         /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
         /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
-        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="gqlQuery">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the lazy query results.</returns>

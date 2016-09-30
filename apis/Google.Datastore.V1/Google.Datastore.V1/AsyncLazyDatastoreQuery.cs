@@ -33,7 +33,7 @@ namespace Google.Datastore.V1
         /// <summary>
         /// Constructs a new instance from the given sequence of responses. This constructor
         /// is only present to facilitate testing; application code will normally obtain instances
-        /// of this class by calling <see cref="DatastoreDb.RunQueryLazily"/>.
+        /// of this class by calling <see cref="DatastoreDb.RunQueryLazilyAsync(Query, ReadOptions.Types.ReadConsistency?, CallSettings)"/>.
         /// </summary>
         /// <remarks>
         /// The sequence of responses will be returned directly from <see cref="AsResponses"/>, and
@@ -73,7 +73,7 @@ namespace Google.Datastore.V1
         /// <summary>
         /// This method is for advanced use cases only, where more diagnostic information is required;
         /// most application code should merely iterate over the query results as <see cref="Entity"/>
-        /// values, or call <see cref="GetAllResults()"/>.
+        /// values, or call <see cref="GetAllResultsAsync"/>.
         /// The results of this query are returned as a sequence of <see cref="RunQueryResponse"/> values
         /// exactly as returned by the Datastore API.
         /// </summary>

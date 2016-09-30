@@ -133,8 +133,6 @@ namespace Google.Datastore.V1
         /// </para>
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
-        /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="LazyDatastoreQuery"/> representing the the lazy query results.</returns>
         public LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)
@@ -167,8 +165,6 @@ namespace Google.Datastore.V1
         /// </para>
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
-        /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the result of the query.</returns>
         public AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, CallSettings callSettings = null)
@@ -198,7 +194,6 @@ namespace Google.Datastore.V1
         /// </para>
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>The complete query results.</returns>
         public DatastoreQueryResults RunQuery(GqlQuery query, CallSettings callSettings = null) =>
@@ -217,7 +212,6 @@ namespace Google.Datastore.V1
         /// </para>
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is the complete set of query results.</returns>
         public Task<DatastoreQueryResults> RunQueryAsync(GqlQuery query, CallSettings callSettings = null) =>
@@ -238,9 +232,7 @@ namespace Google.Datastore.V1
         /// multiple times will execute the query again, potentially returning different results.
         /// </para>
         /// </remarks>
-        /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
-        /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
+        /// <param name="gqlQuery">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
         public LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, CallSettings callSettings = null)
@@ -272,9 +264,7 @@ namespace Google.Datastore.V1
         /// multiple times will execute the query again, potentially returning different results.
         /// </para>
         /// </remarks>
-        /// <param name="query">The query to execute. Must not be null.</param>
-        /// <param name="partitionId">The partition in which to execute the query. May be null, in which case
-        /// the query is executed in the partition associated with the empty namespace in the project used by this transaction.</param>
+        /// <param name="gqlQuery">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the result of the query.</returns>
         public AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, CallSettings callSettings = null)
@@ -296,7 +286,6 @@ namespace Google.Datastore.V1
         /// </summary>
         /// <remarks>This method simply delegates to <see cref="Lookup(IEnumerable{Key}, CallSettings)"/>.</remarks>
         /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
-        /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The entity with the specified key, or <c>null</c> if no such entity exists.</returns>
         public Entity Lookup(Key key, CallSettings callSettings = null) => Lookup(new[] { key }, callSettings)[0];
@@ -372,7 +361,6 @@ namespace Google.Datastore.V1
         /// This call may perform multiple RPC operations in order to look up all keys.
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
-        /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
