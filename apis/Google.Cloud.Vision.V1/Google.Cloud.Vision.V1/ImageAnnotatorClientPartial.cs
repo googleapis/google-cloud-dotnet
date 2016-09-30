@@ -194,7 +194,6 @@ namespace Google.Cloud.Vision.V1
         /// </remarks>
         /// <param name="image">The image to process. Must not be null.</param>
         /// <param name="context">Additional contextual information, if any.</param>
-        /// <param name="maxResults">The maximum number of results to return. 0 (the default) means "unlimited". Must not be negative.</param>
         /// <param name="callSettings">Call settings to apply to the RPC, if any.</param>
         /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
         /// <returns>The safe search categorization for the image.</returns>
@@ -220,7 +219,6 @@ namespace Google.Cloud.Vision.V1
         /// </remarks>
         /// <param name="image">The image to process. Must not be null.</param>
         /// <param name="context">Additional contextual information, if any.</param>
-        /// <param name="maxResults">The maximum number of results to return. 0 (the default) means "unlimited". Must not be negative.</param>
         /// <param name="callSettings">Call settings to apply to the RPC, if any.</param>
         /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
         /// <returns>A task representing the asynchronous operation. The task result will be the safe search categorization for the image.</returns>
@@ -246,7 +244,6 @@ namespace Google.Cloud.Vision.V1
         /// </remarks>
         /// <param name="image">The image to process. Must not be null.</param>
         /// <param name="context">Additional contextual information, if any.</param>
-        /// <param name="maxResults">The maximum number of results to return. 0 (the default) means "unlimited". Must not be negative.</param>
         /// <param name="callSettings">Call settings to apply to the RPC, if any.</param>
         /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
         /// <returns>The detected properties for the image.</returns>
@@ -272,7 +269,6 @@ namespace Google.Cloud.Vision.V1
         /// </remarks>
         /// <param name="image">The image to process. Must not be null.</param>
         /// <param name="context">Additional contextual information, if any.</param>
-        /// <param name="maxResults">The maximum number of results to return. 0 (the default) means "unlimited". Must not be negative.</param>
         /// <param name="callSettings">Call settings to apply to the RPC, if any.</param>
         /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
         /// <returns>A task representing the asynchronous operation. The task result will be the detected properties for the image.</returns>
