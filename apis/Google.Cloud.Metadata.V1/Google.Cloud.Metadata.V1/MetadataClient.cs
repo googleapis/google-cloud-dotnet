@@ -117,7 +117,7 @@ namespace Google.Cloud.Metadata.V1
         /// </remarks>
         /// <param name="key">The key of the project's custom metadata to get.</param>
         /// <exception cref="ArgumentException">The key is not in the proper format.</exception>
-        /// <seealso cref="Project.Metadata"/>
+        /// <seealso cref="Project.CommonInstanceMetadata"/>
         public virtual string GetCustomProjectMetadata(string key)
         {
             throw new NotImplementedException();
@@ -139,7 +139,7 @@ namespace Google.Cloud.Metadata.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <exception cref="ArgumentException">The key is not in the proper format.</exception>
         /// <returns>A task representing the asynchronous operation.</returns>
-        /// <seealso cref="Project.Metadata"/>
+        /// <seealso cref="Project.CommonInstanceMetadata"/>
         public virtual Task<string> GetCustomProjectMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
@@ -287,7 +287,6 @@ namespace Google.Cloud.Metadata.V1
         /// </summary>
         /// <seealso cref="GetMaintenanceStatus"/>
         /// <seealso cref="GetMaintenanceStatusAsync(CancellationToken)"/>
-        /// <seealso cref="SchedulingMetadata.MaintenanceEventBehavior"/>
         public virtual event EventHandler<MaintenanceStatus> MaintenanceStatusChanged
         {
             add { throw new NotImplementedException(); }
@@ -345,6 +344,7 @@ namespace Google.Cloud.Metadata.V1
         /// Waits for changes to the value or values specified by the relative URL asynchronously.
         /// </summary>
         /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <remarks>
         /// <para>
         /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.

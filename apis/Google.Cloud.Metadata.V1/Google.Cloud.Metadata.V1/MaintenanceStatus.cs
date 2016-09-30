@@ -19,7 +19,6 @@ namespace Google.Cloud.Metadata.V1
     /// </summary>
     /// <seealso cref="MetadataClient.GetMaintenanceStatus"/>
     /// <seealso cref="MetadataClient.GetMaintenanceStatusAsync"/>
-    /// <seealso cref="SchedulingMetadata.MaintenanceEventBehavior"/>
     public enum MaintenanceStatus
     {
         /// <summary>
