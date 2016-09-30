@@ -37,6 +37,8 @@ namespace Google.Storage.V1
         /// Deletes a bucket asynchronously.
         /// </summary>
         /// <param name="bucket">The name of the bucket to delete. Must not be null.</param>
+        /// <param name="options">Additional options for the operation. May be null, in which case appropriate
+        /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         public virtual Task DeleteBucketAsync(

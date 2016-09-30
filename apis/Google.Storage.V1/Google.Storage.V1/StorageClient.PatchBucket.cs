@@ -27,7 +27,7 @@ namespace Google.Storage.V1
         /// <param name="bucket">Bucket to update. Must not be null, and must have a populated <c>Name</c> property.</param>
         /// <param name="options">Additional options for the update. May be null, in which case appropriate
         /// defaults will be used.</param>
-        /// <returns>The <see cref="Object"/> representation of the updated storage bucket.</returns>
+        /// <returns>The <see cref="Bucket"/> representation of the updated storage bucket.</returns>
         public virtual Bucket PatchBucket(
             Bucket bucket,
             PatchBucketOptions options = null)
