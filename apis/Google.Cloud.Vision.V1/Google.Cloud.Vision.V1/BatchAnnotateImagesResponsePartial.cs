@@ -20,7 +20,7 @@ namespace Google.Cloud.Vision.V1
     public partial class BatchAnnotateImagesResponse
     {
         /// <summary>
-        /// If the <see cref="Error"/> property is non-null for any response within <see cref="Responses"/>,
+        /// If the <see cref="AnnotateImageResponse.Error"/> property is non-null for any response within <see cref="Responses"/>,
         /// throws an <see cref="AggregateException"/>, containing one <see cref="AnnotateImageException"/>
         /// for each failed response. Otherwise, returns <c>this</c> (so that the method can be called in a fluent manner).
         /// </summary>
