@@ -137,7 +137,8 @@ namespace Google.Datastore.V1
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="DatastoreClient.Lookup"/> and <see cref="DatastoreClient.LookupAsync"/>.
+        /// <see cref="DatastoreClient.Lookup(string, ReadOptions, IEnumerable{Key}, CallSettings)"/> and
+        /// <see cref="DatastoreClient.LookupAsync(string, ReadOptions, IEnumerable{Key}, CallSettings)"/>.
         /// </summary>
         /// <remarks>
         /// The default <see cref="DatastoreClient.Lookup"/> and
