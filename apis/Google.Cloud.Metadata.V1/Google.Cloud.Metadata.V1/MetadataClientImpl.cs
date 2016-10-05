@@ -113,11 +113,23 @@ namespace Google.Cloud.Metadata.V1
             }
         }
 
-        private Task<HttpResponseMessage> RequestMetadataAsync(string relativeUrl, CancellationToken cancellationToken)
+        private async Task<HttpResponseMessage> RequestMetadataAsync(string relativeUrl, CancellationToken cancellationToken, bool requireMetadataFlavorHeader = true)
         {
             var httpRequest = new HttpRequestMessage(HttpMethod.Get, CreateAbsoluteUrl(relativeUrl));
             httpRequest.Headers.Add(MetadataFlavor, GoogleMetadataHeader);
-            return HttpClient.SendAsync(httpRequest, cancellationToken);
+            var response = await HttpClient.SendAsync(httpRequest, cancellationToken).ConfigureAwait(false);
+            response.EnsureSuccessStatusCode();
+
+            if (requireMetadataFlavorHeader)
+            {
+                IEnumerable<string> metadataFlavorHeaders;
+                if (!response.Headers.TryGetValues(MetadataFlavor, out metadataFlavorHeaders) ||
+                    !metadataFlavorHeaders.Contains(GoogleMetadataHeader))
+                {
+                    throw new HttpRequestException("The response from the metadata server was not valid.");
+                }
+            }
+            return response;
         }
 
         private static void ValidateMetadataKey(string key)
@@ -155,7 +167,7 @@ namespace Google.Cloud.Metadata.V1
         public override async Task<TokenResponse> GetAccessTokenAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             // TODO: Most of this is taken from Google.Apis.Auth.OAuth2.ComputeCredential.RequestAccessTokenAsync. Perhaps move that to a helper which can be shared.
-            var response = await RequestMetadataAsync("instance/service-accounts/default/token", cancellationToken).ConfigureAwait(false);
+            var response = await RequestMetadataAsync("instance/service-accounts/default/token", cancellationToken, requireMetadataFlavorHeader: false).ConfigureAwait(false);
 
             // Read the response.
             var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -451,7 +463,8 @@ namespace Google.Cloud.Metadata.V1
                 timeout = new TimeSpan(HttpClient.Timeout.Ticks / 2);
             }
 
-            key += $"?wait_for_change=true&timeout_sec={(int)timeout.TotalSeconds}";
+            // Always add recursive. It is ignored for values and required for directories when waiting for changes.
+            key += $"?wait_for_change=true&recursive=true&timeout_sec={(int)timeout.TotalSeconds}";
             var response = await RequestMetadataAsync(key, cancellationToken).ConfigureAwait(false);
             return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
         }

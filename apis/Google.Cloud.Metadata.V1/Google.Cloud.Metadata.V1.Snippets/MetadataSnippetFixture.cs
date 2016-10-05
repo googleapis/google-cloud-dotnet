@@ -12,25 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Metadata.V1.IntegrationTests;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Sockets;
-using System.Reflection;
+using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Metadata.V1.IntegrationTests
+namespace Google.Cloud.Metadata.V1.Snippets
 {
     /// <summary>
     /// Fixture which is set up at the start of the test run, and torn down at the end.
     /// </summary>
-    [CollectionDefinition(nameof(MetadataFixture))]
-    public class MetadataFixture : MetadataFixtureBase, ICollectionFixture<MetadataFixture>
+    [CollectionDefinition(nameof(MetadataSnippetFixture))]
+    public class MetadataSnippetFixture : MetadataFixtureBase, ICollectionFixture<MetadataSnippetFixture>
     {
-        public MetadataFixture()
+        public MetadataSnippetFixture()
         {
         }
     }
