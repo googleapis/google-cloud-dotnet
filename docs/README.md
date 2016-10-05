@@ -2,7 +2,7 @@ This directory contains repo-wide documentation and build scripts
 for documentation. It also contains templates for API-specific
 documentation.
 
-The documentation is hosted on GitHub pages, and build using docfx.
+The documentation is hosted on GitHub pages, and built using docfx.
 
 There are two kinds of documentation:
 
