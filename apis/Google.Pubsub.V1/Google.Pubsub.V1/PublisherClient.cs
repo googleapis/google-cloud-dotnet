@@ -21,6 +21,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -419,39 +420,7 @@ namespace Google.Pubsub.V1
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
-
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>The full project resource name.</returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
-        /// Path template for a topic resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>topic</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate TopicTemplate { get; } = new PathTemplate("projects/{project}/topics/{topic}");
-
-        /// <summary>
-        /// Creates a topic resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="topicId">The topic ID.</param>
-        /// <returns>The full topic resource name.</returns>
-        public static string FormatTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
+        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);        
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -523,7 +492,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
-        /// <param name="name">
+        /// <param name="topicName">
         /// The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
@@ -534,7 +503,7 @@ namespace Google.Pubsub.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Topic> CreateTopicAsync(
-            string name,
+            TopicName topicName,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -543,7 +512,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
-        /// <param name="name">
+        /// <param name="topicName">
         /// The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
@@ -554,15 +523,15 @@ namespace Google.Pubsub.V1
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Topic> CreateTopicAsync(
-            string name,
+            TopicName topicName,
             CancellationToken cancellationToken) => CreateTopicAsync(
-                name,
+                topicName,
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
-        /// <param name="name">
+        /// <param name="topicName">
         /// The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
@@ -573,7 +542,7 @@ namespace Google.Pubsub.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual Topic CreateTopic(
-            string name,
+            TopicName topicName,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -584,12 +553,12 @@ namespace Google.Pubsub.V1
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="topicName">The messages in the request will be published on this topic.</param>
         /// <param name="messages">The messages to publish.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<PublishResponse> PublishAsync(
-            string topic,
+            TopicName topicName,
             IEnumerable<PubsubMessage> messages,
             CallSettings callSettings = null)
         {
@@ -601,15 +570,15 @@ namespace Google.Pubsub.V1
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="topicName">The messages in the request will be published on this topic.</param>
         /// <param name="messages">The messages to publish.</param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<PublishResponse> PublishAsync(
-            string topic,
+            TopicName topicName,
             IEnumerable<PubsubMessage> messages,
             CancellationToken cancellationToken) => PublishAsync(
-                topic,
+                topicName,
                 messages,
                 new CallSettings { CancellationToken = cancellationToken });
 
@@ -618,12 +587,12 @@ namespace Google.Pubsub.V1
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="topicName">The messages in the request will be published on this topic.</param>
         /// <param name="messages">The messages to publish.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual PublishResponse Publish(
-            string topic,
+            TopicName topicName,
             IEnumerable<PubsubMessage> messages,
             CallSettings callSettings = null)
         {
@@ -633,11 +602,11 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="topicName">The name of the topic to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Topic> GetTopicAsync(
-            string topic,
+            TopicName topicName,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -646,23 +615,23 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="topicName">The name of the topic to get.</param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task<Topic> GetTopicAsync(
-            string topic,
+            TopicName topicName,
             CancellationToken cancellationToken) => GetTopicAsync(
-                topic,
+                topicName,
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="topicName">The name of the topic to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual Topic GetTopic(
-            string topic,
+            TopicName topicName,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -671,7 +640,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Lists matching topics.
         /// </summary>
-        /// <param name="project">The name of the cloud project that topics belong to.</param>
+        /// <param name="projectName">The name of the cloud project that topics belong to.</param>
         /// <param name="pageToken">The token returned from the previous request.
         /// A value of <c>null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request.
@@ -680,7 +649,7 @@ namespace Google.Pubsub.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of Topic resources.</returns>
         public virtual IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            string project,
+            ProjectName projectName,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -691,7 +660,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Lists matching topics.
         /// </summary>
-        /// <param name="project">The name of the cloud project that topics belong to.</param>
+        /// <param name="projectName">The name of the cloud project that topics belong to.</param>
         /// <param name="pageToken">The token returned from the previous request.
         /// A value of <c>null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request.
@@ -700,7 +669,7 @@ namespace Google.Pubsub.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of Topic resources.</returns>
         public virtual IPagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            string project,
+            ProjectName projectName,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -711,7 +680,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
         /// </summary>
-        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
+        /// <param name="topicName">The name of the topic that subscriptions are attached to.</param>
         /// <param name="pageToken">The token returned from the previous request.
         /// A value of <c>null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request.
@@ -719,8 +688,8 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of string resources.</returns>
-        public virtual IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(
-            string topic,
+        public virtual IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
+            TopicName topicName,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -731,7 +700,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
         /// </summary>
-        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
+        /// <param name="topicName">The name of the topic that subscriptions are attached to.</param>
         /// <param name="pageToken">The token returned from the previous request.
         /// A value of <c>null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request.
@@ -739,8 +708,8 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of string resources.</returns>
-        public virtual IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(
-            string topic,
+        public virtual IPagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
+            TopicName topicName,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -755,11 +724,11 @@ namespace Google.Pubsub.V1
         /// configuration or subscriptions. Existing subscriptions to this topic are
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="topicName">Name of the topic to delete.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task DeleteTopicAsync(
-            string topic,
+            TopicName topicName,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -772,13 +741,13 @@ namespace Google.Pubsub.V1
         /// configuration or subscriptions. Existing subscriptions to this topic are
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="topicName">Name of the topic to delete.</param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual Task DeleteTopicAsync(
-            string topic,
+            TopicName topicName,
             CancellationToken cancellationToken) => DeleteTopicAsync(
-                topic,
+                topicName,
                 new CallSettings { CancellationToken = cancellationToken });
 
         /// <summary>
@@ -788,11 +757,11 @@ namespace Google.Pubsub.V1
         /// configuration or subscriptions. Existing subscriptions to this topic are
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="topicName">Name of the topic to delete.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual void DeleteTopic(
-            string topic,
+            TopicName topicName,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -834,7 +803,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
-        /// <param name="name">
+        /// <param name="topicName">
         /// The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
@@ -845,18 +814,18 @@ namespace Google.Pubsub.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> CreateTopicAsync(
-            string name,
+            TopicName topicName,
             CallSettings callSettings = null) => _callCreateTopic.Async(
                 new Topic
                 {
-                    Name = name,
+                    Name = topicName.ToString(),
                 },
                 callSettings);
 
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
-        /// <param name="name">
+        /// <param name="topicName">
         /// The name of the topic. It must have the format
         /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
         /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
@@ -867,11 +836,11 @@ namespace Google.Pubsub.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public override Topic CreateTopic(
-            string name,
+            TopicName topicName,
             CallSettings callSettings = null) => _callCreateTopic.Sync(
                 new Topic
                 {
-                    Name = name,
+                    Name = topicName.ToString(),
                 },
                 callSettings);
 
@@ -880,17 +849,17 @@ namespace Google.Pubsub.V1
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="topicName">The messages in the request will be published on this topic.</param>
         /// <param name="messages">The messages to publish.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<PublishResponse> PublishAsync(
-            string topic,
+            TopicName topicName,
             IEnumerable<PubsubMessage> messages,
             CallSettings callSettings = null) => _callPublish.Async(
                 new PublishRequest
                 {
-                    Topic = topic,
+                    Topic = topicName.ToString(),
                     Messages = { messages },
                 },
                 callSettings);
@@ -900,17 +869,17 @@ namespace Google.Pubsub.V1
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
+        /// <param name="topicName">The messages in the request will be published on this topic.</param>
         /// <param name="messages">The messages to publish.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public override PublishResponse Publish(
-            string topic,
+            TopicName topicName,
             IEnumerable<PubsubMessage> messages,
             CallSettings callSettings = null) => _callPublish.Sync(
                 new PublishRequest
                 {
-                    Topic = topic,
+                    Topic = topicName.ToString(),
                     Messages = { messages },
                 },
                 callSettings);
@@ -918,37 +887,37 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="topicName">The name of the topic to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task<Topic> GetTopicAsync(
-            string topic,
+            TopicName topicName,
             CallSettings callSettings = null) => _callGetTopic.Async(
                 new GetTopicRequest
                 {
-                    Topic = topic,
+                    Topic = topicName.ToString(),
                 },
                 callSettings);
 
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
+        /// <param name="topicName">The name of the topic to get.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public override Topic GetTopic(
-            string topic,
+            TopicName topicName,
             CallSettings callSettings = null) => _callGetTopic.Sync(
                 new GetTopicRequest
                 {
-                    Topic = topic,
+                    Topic = topicName.ToString(),
                 },
                 callSettings);
 
         /// <summary>
         /// Lists matching topics.
         /// </summary>
-        /// <param name="project">The name of the cloud project that topics belong to.</param>
+        /// <param name="projectName">The name of the cloud project that topics belong to.</param>
         /// <param name="pageToken">The token returned from the previous request.
         /// A value of <c>null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request.
@@ -957,14 +926,14 @@ namespace Google.Pubsub.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of Topic resources.</returns>
         public override IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            string project,
+            ProjectName projectName,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => new PagedAsyncEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(
                 _callListTopics,
                 new ListTopicsRequest
                 {
-                    Project = project,
+                    Project = projectName.ToString(),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -973,7 +942,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Lists matching topics.
         /// </summary>
-        /// <param name="project">The name of the cloud project that topics belong to.</param>
+        /// <param name="projectName">The name of the cloud project that topics belong to.</param>
         /// <param name="pageToken">The token returned from the previous request.
         /// A value of <c>null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request.
@@ -982,14 +951,14 @@ namespace Google.Pubsub.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of Topic resources.</returns>
         public override IPagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            string project,
+            ProjectName projectName,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => new PagedEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(
                 _callListTopics,
                 new ListTopicsRequest
                 {
-                    Project = project,
+                    Project = projectName.ToString(),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -998,7 +967,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
         /// </summary>
-        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
+        /// <param name="topicName">The name of the topic that subscriptions are attached to.</param>
         /// <param name="pageToken">The token returned from the previous request.
         /// A value of <c>null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request.
@@ -1006,15 +975,15 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of string resources.</returns>
-        public override IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(
-            string topic,
+        public override IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
+            TopicName topicName,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, string>(
+            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, SubscriptionName>(
                 _callListTopicSubscriptions,
                 new ListTopicSubscriptionsRequest
                 {
-                    Topic = topic,
+                    Topic = topicName.ToString(),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1023,7 +992,7 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
         /// </summary>
-        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
+        /// <param name="topicName">The name of the topic that subscriptions are attached to.</param>
         /// <param name="pageToken">The token returned from the previous request.
         /// A value of <c>null</c> or an empty string retrieves the first page.</param>
         /// <param name="pageSize">The size of page to request.
@@ -1031,15 +1000,15 @@ namespace Google.Pubsub.V1
         /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of string resources.</returns>
-        public override IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(
-            string topic,
+        public override IPagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
+            TopicName topicName,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, string>(
+            CallSettings callSettings = null) => new PagedEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, SubscriptionName>(
                 _callListTopicSubscriptions,
                 new ListTopicSubscriptionsRequest
                 {
-                    Topic = topic,
+                    Topic = topicName.ToString(),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1052,15 +1021,15 @@ namespace Google.Pubsub.V1
         /// configuration or subscriptions. Existing subscriptions to this topic are
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="topicName">Name of the topic to delete.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public override Task DeleteTopicAsync(
-            string topic,
+            TopicName topicName,
             CallSettings callSettings = null) => _callDeleteTopic.Async(
                 new DeleteTopicRequest
                 {
-                    Topic = topic,
+                    Topic = topicName.ToString(),
                 },
                 callSettings);
 
@@ -1071,15 +1040,15 @@ namespace Google.Pubsub.V1
         /// configuration or subscriptions. Existing subscriptions to this topic are
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
+        /// <param name="topicName">Name of the topic to delete.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public override void DeleteTopic(
-            string topic,
+            TopicName topicName,
             CallSettings callSettings = null) => _callDeleteTopic.Sync(
                 new DeleteTopicRequest
                 {
-                    Topic = topic,
+                    Topic = topicName.ToString(),
                 },
                 callSettings);
 
@@ -1095,9 +1064,9 @@ namespace Google.Pubsub.V1
     }
 
     public partial class ListTopicSubscriptionsRequest : IPageRequest { }
-    public partial class ListTopicSubscriptionsResponse : IPageResponse<string>
+    public partial class ListTopicSubscriptionsResponse : IPageResponse<SubscriptionName>
     {
-        public IEnumerator<string> GetEnumerator() => Subscriptions.GetEnumerator();
+        public IEnumerator<SubscriptionName> GetEnumerator() => Subscriptions.Select(SubscriptionName.Parse).GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

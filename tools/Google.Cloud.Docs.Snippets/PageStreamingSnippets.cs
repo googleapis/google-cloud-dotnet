@@ -37,7 +37,7 @@ namespace Google.Cloud.Tools.Snippets
             string projectId = _fixture.ProjectId;
             // Sample: AllResources
             PublisherClient client = PublisherClient.Create();
-            string projectName = PublisherClient.FormatProjectName(projectId);
+            ProjectName projectName = new ProjectName(projectId);
             IPagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
             foreach (Topic topic in topics)
             {
@@ -52,7 +52,7 @@ namespace Google.Cloud.Tools.Snippets
             string projectId = _fixture.ProjectId;
             // Sample: Responses
             PublisherClient client = PublisherClient.Create();
-            string projectName = PublisherClient.FormatProjectName(projectId);
+            ProjectName projectName = new ProjectName(projectId);
             IPagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
             IResponseEnumerable<ListTopicsResponse, Topic> topicPages = topics.AsPages();
             foreach (ListTopicsResponse page in topicPages)
@@ -75,7 +75,7 @@ namespace Google.Cloud.Tools.Snippets
             string projectId = _fixture.ProjectId;
             // Sample: SingleResponse
             PublisherClient client = PublisherClient.Create();
-            string projectName = PublisherClient.FormatProjectName(projectId);
+            ProjectName projectName = new ProjectName(projectId);
             IPagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageSize: 3);
             IResponseEnumerable<ListTopicsResponse, Topic> topicPages = topics.AsPages();
             // This is just the regular LINQ First() method. The sequence of pages will never be empty,
@@ -100,7 +100,7 @@ namespace Google.Cloud.Tools.Snippets
 
             // Sample: WithFixedSize
             PublisherClient client = PublisherClient.Create();
-            string projectName = PublisherClient.FormatProjectName(projectId);
+            ProjectName projectName = new ProjectName(projectId);
             IPagedEnumerable<ListTopicsResponse, Topic> topics = client.ListTopics(projectName, pageTokenFromRequest);
 
             IEnumerable<FixedSizePage<Topic>> fixedSizePages = topics.AsPages().WithFixedSize(3);
