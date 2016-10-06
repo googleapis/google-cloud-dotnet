@@ -1,4 +1,4 @@
-# Google.Google.Cloud.Metadata.V1
+# Google.Cloud.Metadata.V1
 
 `Google.Cloud.Metadata.V1` is a .NET client library for the [Google
 Compute Engine Metadata Server](https://cloud.google.com/compute/docs/storing-retrieving-metadata).
