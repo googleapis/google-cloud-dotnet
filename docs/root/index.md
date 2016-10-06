@@ -27,6 +27,7 @@ Alpha and beta releases from NuGet.org:
 Alpha releases from
 [MyGet](https://www.myget.org/gallery/google-dotnet-public):
 
+- [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
 - [Google.Cloud.Speech.V1Beta1](Google.Cloud.Speech.V1Beta1/index.html)
 - [Google.Devtools.Clouderrorreporting.V1Beta1](Google.Devtools.Clouderrorreporting.V1Beta1/index.html)
 - [Google.Devtools.Cloudtrace.V1](Google.Devtools.Cloudtrace.V1/index.html)
