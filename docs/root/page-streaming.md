@@ -49,7 +49,7 @@ retrieve one resource at a time. The implementation will make API
 calls as it needs to, retrieving a page at a time and then returning
 the resources as the caller requests them.
 
-## `IResourceEnumerable<TResponse, TResource>`
+## `IResponseEnumerable<TResponse, TResource>`
 
 For more advanced scenarios, however, your application may need access
 to the pages returned by the API instead. The
@@ -61,7 +61,7 @@ provide additional information such as the time taken for the request or the tot
 results across all pages. As you iterate over the pages, API requests are made
 transparently, propagating the page token from one response to the next request.
 
-`IResourceEnumerable<TResponse, TResource>` provides one additional method, 
+`IResponseEnumerable<TResponse, TResource>` provides one additional method, 
 [WithFixedSize()](obj/api/Google.Api.Gax.IResponseEnumerable-2.yml#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_)
 to cater for web applications which require precise page sizes.
 
