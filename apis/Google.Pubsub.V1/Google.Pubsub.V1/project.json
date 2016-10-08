@@ -25,7 +25,8 @@
     "Google.Protobuf": "3.0.0",
     "Grpc.Auth": "1.0.0",
     "Grpc.Core": "1.0.0",
-    "System.Interactive.Async": "3.0.0"
+    "System.Interactive.Async": "3.0.0",
+    "Google.Iam.V1": { "target": "project" }
   },
 
   "frameworks": {

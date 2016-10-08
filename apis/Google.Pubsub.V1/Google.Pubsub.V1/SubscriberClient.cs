@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Iam.V1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -26,27 +27,6 @@ using System.Threading.Tasks;
 
 namespace Google.Pubsub.V1
 {
-
-    /// <summary>
-    /// Extension methods to assist with using <see cref="SubscriberClient"/>.
-    /// </summary>
-    public static partial class SubscriberExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC Subscriber client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="SubscriberSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="SubscriberClient"/> that wraps the specified GRPC client.</returns>
-        public static SubscriberClient ToClient(
-            this Subscriber.SubscriberClient grpcClient,
-            SubscriberSettings settings = null
-        ) => new SubscriberClientImpl(grpcClient, settings);
-    }
-
     /// <summary>
     /// Settings for a Subscriber wrapper.
     /// </summary>
@@ -74,6 +54,7 @@ namespace Google.Pubsub.V1
             AcknowledgeSettings = existing.AcknowledgeSettings?.Clone();
             PullSettings = existing.PullSettings?.Clone();
             ModifyPushConfigSettings = existing.ModifyPushConfigSettings?.Clone();
+            IAMPolicySettings = existing.IAMPolicySettings?.Clone();
         }
 
         /// <summary>
@@ -436,6 +417,7 @@ namespace Google.Pubsub.V1
             }),
         };
 
+        public IAMPolicySettings IAMPolicySettings { get; set; } = IAMPolicySettings.GetDefault();
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
@@ -565,7 +547,8 @@ namespace Google.Pubsub.V1
         {
             GaxPreconditions.CheckNotNull(channel, nameof(channel));
             Subscriber.SubscriberClient grpcClient = new Subscriber.SubscriberClient(channel);
-            return new SubscriberClientImpl(grpcClient, settings);
+            IAMPolicyClient iamClient = IAMPolicyClient.Create(channel, settings?.IAMPolicySettings);
+            return new SubscriberClientImpl(grpcClient, iamClient, settings);
         }
 
         /// <summary>
@@ -583,6 +566,14 @@ namespace Google.Pubsub.V1
         /// The underlying GRPC Subscriber client.
         /// </summary>
         public virtual Subscriber.SubscriberClient GrpcClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// The underlying IAMPolicy client.
+        /// </summary>
+        public virtual IAMPolicyClient IAMPolicyClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -1211,6 +1202,63 @@ namespace Google.Pubsub.V1
             throw new NotImplementedException();
         }
 
+
+        // Mix-in methods
+        public virtual Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null) =>
+            IAMPolicyClient.SetIamPolicyAsync(resource, policy, callSettings);
+
+        public virtual Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        public virtual Policy SetIamPolicy(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null) =>
+            IAMPolicyClient.SetIamPolicy(resource, policy, callSettings);
+
+        public virtual Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        public virtual Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CallSettings callSettings = null) =>
+            IAMPolicyClient.GetIamPolicyAsync(resource, callSettings);
+
+        public virtual Policy GetIamPolicy(
+            string resource,
+            CallSettings callSettings = null) =>
+            IAMPolicyClient.GetIamPolicy(resource, callSettings);
+
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null) =>
+            IAMPolicyClient.TestIamPermissionsAsync(resource, permissions, callSettings);
+
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                new CallSettings { CancellationToken = cancellationToken });
+
+        public virtual TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null) =>
+            IAMPolicyClient.TestIamPermissions(resource, permissions, callSettings);
     }
 
     public sealed partial class SubscriberClientImpl : SubscriberClient
@@ -1225,9 +1273,10 @@ namespace Google.Pubsub.V1
         private readonly ApiCall<PullRequest, PullResponse> _callPull;
         private readonly ApiCall<ModifyPushConfigRequest, Empty> _callModifyPushConfig;
 
-        public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberSettings settings)
+        public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, IAMPolicyClient iamPolicyClient, SubscriberSettings settings)
         {
             this.GrpcClient = grpcClient;
+            this.IAMPolicyClient = iamPolicyClient;
             SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
             _clientHelper = new ClientHelper(effectiveSettings);
             _callCreateSubscription = _clientHelper.BuildApiCall<Subscription, Subscription>(
@@ -1249,6 +1298,8 @@ namespace Google.Pubsub.V1
         }
 
         public override Subscriber.SubscriberClient GrpcClient { get; }
+
+        public override IAMPolicyClient IAMPolicyClient { get; }
 
         /// <summary>
         /// Creates a subscription to a given topic for a given subscriber.
@@ -1733,7 +1784,6 @@ namespace Google.Pubsub.V1
                     PushConfig = pushConfig,
                 },
                 callSettings);
-
     }
 
     // Partial classes to enable page-streaming

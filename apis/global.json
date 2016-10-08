@@ -1,6 +1,7 @@
 ﻿{
   "projects": [
     "Google.Storage.V1",
+    "Google.Iam.V1",
     "Google.Longrunning",
     "../tools"
   ],

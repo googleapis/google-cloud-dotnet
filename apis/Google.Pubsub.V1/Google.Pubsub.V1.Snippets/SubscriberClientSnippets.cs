@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Iam.V1;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
@@ -247,6 +248,37 @@ namespace Google.Pubsub.V1.Snippets
             // successfully-pulled messages before they will be redelivered.
             var ackIds = pullResponse.ReceivedMessages.Select(rm => rm.AckId);
             await client.AcknowledgeAsync(subscriptionName, ackIds);
+            // End snippet
+        }
+
+        [Fact]
+        public void GetIamPolicy()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            string subscriptionId = _fixture.CreateSubscriptionId();
+
+            PublisherClient publisher = PublisherClient.Create();
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            publisher.CreateTopic(topicName);
+            SubscriberClient.Create().CreateSubscription(SubscriberClient.FormatSubscriptionName(projectId, subscriptionId), topicName, null, 60);
+
+            // Snippet: GetIamPolicy
+            SubscriberClient client = SubscriberClient.Create();
+
+            // Alternative: use an existing subscription resource name:
+            // "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
+            string subscriptionName = SubscriberClient.FormatSubscriptionName(projectId, subscriptionId);
+
+            Policy subscriptionPolicy = client.SetIamPolicy(subscriptionName, new Policy
+            {
+                Bindings =
+                {
+                    new Binding { Members = { "allUsers" }, Role = "roles/viewer" }
+                }
+            });
+            Policy fetchedPolicy = client.GetIamPolicy(subscriptionName);
+            Console.WriteLine(subscriptionPolicy);
             // End snippet
         }
     }
