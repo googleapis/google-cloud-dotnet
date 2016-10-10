@@ -629,6 +629,17 @@ pre, code {
     display: block;
 }
 
+/*
+  List of packages
+ */
+
+.package-list a {
+  color: white
+}
+
+.package-list a:visited {
+  color: aqua
+}
 
 /* Docs Content
    ========================================================================== */
