@@ -12,28 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Google.Cloud.Metadata.V1
 {
-    /// <summary>
-    /// The current maintenance status for the Google Compute Engine VM instance.
-    /// </summary>
-    /// <seealso cref="MetadataClient.GetMaintenanceStatus"/>
-    /// <seealso cref="MetadataClient.GetMaintenanceStatusAsync"/>
-    public enum MaintenanceStatus
+    internal static class JExtensions
     {
-        /// <summary>
-        /// Unknown maintenance status.
-        /// </summary>
-        Unknown = 0,
+        public static List<T> ToList<T>(this JArray obj, Func<dynamic, T> selector)
+        {
+            return obj.Select(selector).ToList();
+        }
 
-        /// <summary>
-        /// The are no upcoming maintenance events.
-        /// </summary>
-        None,
-
-        /// <summary>
-        /// The instance will live migrate in the next 60 seconds.
-        /// </summary>
-        Migrate
+        public static List<T> ToList<T>(this JObject obj, Func<dynamic, T> selector)
+        {
+            return ((IEnumerable<JToken>)obj).Select(selector).ToList();
+        }
     }
 }

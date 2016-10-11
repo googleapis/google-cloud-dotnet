@@ -37,6 +37,18 @@ namespace Google.Cloud.Metadata.V1
     /// </remarks>
     public abstract class MetadataClient
     {
+        /// <summary>
+        /// Creates a new <see cref="MetadataClient"/>
+        /// </summary>
+        /// <returns>The created <see cref="MetadataClient"/>.</returns>
+        public static MetadataClient Create(ConfigurableHttpClient httpClient = null) => new MetadataClientImpl(httpClient);
+
+        /// <summary>
+        /// Creates a new <see cref="MetadataClient"/>
+        /// </summary>
+        /// <returns>The created <see cref="MetadataClient"/>.</returns>
+        public static MetadataClient Create(IHttpClientFactory httpClientFactory) => new MetadataClientImpl(httpClientFactory);
+
         /// <summary>The HTTP client which is used to create requests.</summary>
         public virtual ConfigurableHttpClient HttpClient { get { throw new NotImplementedException(); } }
 
@@ -146,7 +158,7 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <summary>
-        /// Gets the metadata for the VM currently running this code synchronously.
+        /// Synchronously gets the metadata for the VM currently running this code.
         /// </summary>
         /// <remarks>
         /// The instance metadata contains information about the instance, such as the host name, instance ID, and custom metadata and it can be
@@ -160,7 +172,7 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <summary>
-        /// Gets the metadata for the VM currently running this code asynchronously.
+        /// Asynchronously gets the metadata for the VM currently running this code.
         /// </summary>
         /// <remarks>
         /// The instance metadata contains information about the instance, such as the host name, instance ID, and custom metadata and it can be
@@ -175,11 +187,11 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <summary>
-        /// Gets the maintenance status for the VM currently running this code synchronously.
+        /// Synchronously gets the maintenance status for the VM currently running this code.
         /// </summary>
         /// <remarks>
         /// If the <see cref="Instance.Scheduling"/>'s <see cref="Scheduling.OnHostMaintenance"/> is set to "MIGRATE", the maintenance status will change
-        /// to <see cref="MaintenanceStatus.MigrateOnHost"/> 60 seconds before a maintenance event starts. This will give the application an opportunity
+        /// to <see cref="MaintenanceStatus.Migrate"/> 60 seconds before a maintenance event starts. This will give the application an opportunity
         /// to perform any tasks in preparation for the event, such as backing up data or updating logs. Otherwise, the value will be
         /// <see cref="MaintenanceStatus.None"/>.
         /// </remarks>
@@ -191,11 +203,11 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <summary>
-        /// Gets the maintenance status for the VM currently running this code asynchronously.
+        /// Asynchronously gets the maintenance status for the VM currently running this code.
         /// </summary>
         /// <remarks>
         /// If the <see cref="Instance.Scheduling"/>'s <see cref="Scheduling.OnHostMaintenance"/> is set to "MIGRATE", the maintenance status will change
-        /// to <see cref="MaintenanceStatus.MigrateOnHost"/> 60 seconds before a maintenance event starts. This will give the application an opportunity
+        /// to <see cref="MaintenanceStatus.Migrate"/> 60 seconds before a maintenance event starts. This will give the application an opportunity
         /// to perform any tasks in preparation for the event, such as backing up data or updating logs. Otherwise, the value will be
         /// <see cref="MaintenanceStatus.None"/>.
         /// </remarks>
@@ -208,7 +220,7 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <summary>
-        /// Gets the metadata for the project of the VM currently running this code synchronously.
+        /// Synchronously gets the metadata for the project of the VM currently running this code.
         /// </summary>
         /// <remarks>
         /// The project metadata contains information about the project, such as its ID, and custom metadata and it can be
@@ -222,7 +234,7 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <summary>
-        /// Gets the metadata for the project of the VM currently running this code asynchronously.
+        /// Asynchronously gets the metadata for the project of the VM currently running this code.
         /// </summary>
         /// <remarks>
         /// The project metadata contains information about the project, such as its ID, and custom metadata and it can be
@@ -264,18 +276,22 @@ namespace Google.Cloud.Metadata.V1
         }
 
         // TODO: Do we want separate events for when standard and custom metadata changes? Same question for project metadata.
-        // TODO: Should we suppress firing these when the custom metadata is updated from here?
-
+        
         /// <summary>
         /// Occurs when the the instance's metadata has changed.
         /// </summary>
         /// <remarks>
-        /// To wait on changes for individual parts of the metadata, see <see cref="WaitForChanges"/> or <see cref="WaitForChangesAsync"/>.
+        /// <para>
+        /// To wait on changes for individual parts of the metadata, see <see cref="WaitForChange"/> or <see cref="WaitForChangeAsync"/>.
+        /// </para>
+        /// <para>
+        /// Note: the event may be fired on a different thread from the one used to add the handler.
+        /// </para>
         /// </remarks>
         /// <seealso cref="GetInstanceMetadata"/>
         /// <seealso cref="GetInstanceMetadataAsync"/>
-        /// <seealso cref="WaitForChanges"/>
-        /// <seealso cref="WaitForChangesAsync"/>
+        /// <seealso cref="WaitForChange"/>
+        /// <seealso cref="WaitForChangeAsync"/>
         public virtual event EventHandler InstanceMetadataChanged
         {
             add { throw new NotImplementedException(); }
@@ -285,6 +301,11 @@ namespace Google.Cloud.Metadata.V1
         /// <summary>
         /// Occurs when the the instance's maintenance status has changed.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note: the event may be fired on a different thread from the one used to add the handler.
+        /// </para>
+        /// </remarks>
         /// <seealso cref="GetMaintenanceStatus"/>
         /// <seealso cref="GetMaintenanceStatusAsync(CancellationToken)"/>
         public virtual event EventHandler<MaintenanceStatus> MaintenanceStatusChanged
@@ -297,12 +318,17 @@ namespace Google.Cloud.Metadata.V1
         /// Occurs when the the project's metadata has changed.
         /// </summary>
         /// <remarks>
-        /// To wait on changes for individual parts of the metadata, see <see cref="WaitForChanges"/> or <see cref="WaitForChangesAsync"/>.
+        /// <para>
+        /// To wait on changes for individual parts of the metadata, see <see cref="WaitForChange"/> or <see cref="WaitForChangeAsync"/>.
+        /// </para>
+        /// <para>
+        /// Note: the event may be fired on a different thread from the one used to add the handler.
+        /// </para>
         /// </remarks>
         /// <seealso cref="GetProjectMetadata"/>
         /// <seealso cref="GetProjectMetadataAsync"/>
-        /// <seealso cref="WaitForChanges"/>
-        /// <seealso cref="WaitForChangesAsync"/>
+        /// <seealso cref="WaitForChange"/>
+        /// <seealso cref="WaitForChangeAsync"/>
         public virtual event EventHandler ProjectMetadataChanged
         {
             add { throw new NotImplementedException(); }
@@ -316,13 +342,17 @@ namespace Google.Cloud.Metadata.V1
         /// Waits for changes to the value or values specified by the relative URL synchronously.
         /// </summary>
         /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="timeout">The amount of time to wait for changes.</param>
         /// <remarks>
         /// <para>
         /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
-        /// If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
+        /// If the key specified is a directory, a recursive request must be made and the result will be a JSON object containing all values in the directory.
+        /// For example, to wait for changes on all instance metadata use a key of "instance?recursive=true".
         /// </para>
         /// <para>
-        /// If the timeout in the <see cref="HttpClient"/> elapses before any changes occur, this will return the current value.
+        /// If the <paramref name="timeout"/> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
+        /// the <see cref="HttpClient"/> will be used instead. Note that if the the timeout in the <see cref="HttpClient"/> elapses before the wait timeout elapses
+        /// on the server a <see cref="TaskCanceledException"/> exception will occur.
         /// </para>
         /// <para>
         /// See https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata for more information on available keys.
@@ -332,10 +362,13 @@ namespace Google.Cloud.Metadata.V1
         /// Alternatively, use <seealso cref="ProjectMetadataChanged"/> or <seealso cref="InstanceMetadataChanged"/>, respectively.
         /// </para>
         /// </remarks>
+        /// <exception cref="TaskCanceledException">
+        /// The timeout in the <see cref="HttpClient"/> elapses before the response comes back from the server.
+        /// </exception>
         /// <returns>The changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
         /// <seealso cref="InstanceMetadataChanged"/>
         /// <seealso cref="ProjectMetadataChanged"/>
-        public virtual string WaitForChanges(string key)
+        public virtual string WaitForChange(string key, TimeSpan timeout = default(TimeSpan))
         {
             throw new NotImplementedException();
         }
@@ -344,14 +377,18 @@ namespace Google.Cloud.Metadata.V1
         /// Waits for changes to the value or values specified by the relative URL asynchronously.
         /// </summary>
         /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="timeout">The amount of time to wait for changes.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <remarks>
         /// <para>
         /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
-        /// If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
+        /// If the key specified is a directory, a recursive request must be made and the result will be a JSON object containing all values in the directory.
+        /// For example, to wait for changes on all instance metadata use a key of "instance?recursive=true".
         /// </para>
         /// <para>
-        /// If the timeout in the <see cref="HttpClient"/> elapses before any changes occur, this will return the current value.
+        /// If the <paramref name="timeout"/> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
+        /// the <see cref="HttpClient"/> will be used instead. Note that if the the timeout in the <see cref="HttpClient"/> elapses before the wait timeout elapses
+        /// on the server a <see cref="TaskCanceledException"/> exception will occur.
         /// </para>
         /// <para>
         /// See https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata for more information on available keys.
@@ -361,10 +398,13 @@ namespace Google.Cloud.Metadata.V1
         /// Alternatively, use <seealso cref="ProjectMetadataChanged"/> or <seealso cref="InstanceMetadataChanged"/>, respectively.
         /// </para>
         /// </remarks>
+        /// <exception cref="TaskCanceledException">
+        /// The timeout in the <see cref="HttpClient"/> elapses before the response comes back from the server.
+        /// </exception>
         /// <returns>A task containing the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
         /// <seealso cref="InstanceMetadataChanged"/>
         /// <seealso cref="ProjectMetadataChanged"/>
-        public virtual Task<string> WaitForChangesAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<string> WaitForChangeAsync(string key, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }

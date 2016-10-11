@@ -1,0 +1,81 @@
+{
+  "instance": {
+    "attributes": {
+      "my_instance_key1": "my_instance_value1"
+    },
+    "cpu-platform": "Intel Haswell",
+    "description": "Fake instance for metadata server emulator",
+    "disks": [
+      {
+        "device-name": "boot",
+        "index": 0,
+        "mode": "READ_WRITE",
+        "type": "PERSISTENT"
+      }
+    ],
+    "hostname": "name.project.google.com.internal",
+    "id": 67890,
+    "image": "",
+    "licenses": [
+      {
+        "id": "0"
+      }
+    ],
+    "machine-type": "projects/<NUMERIC_PROJECT_ID>/machineTypes/n1-standard-1",
+    "maintenance-event": "NONE",
+    "network-interfaces": [
+      {
+        "access-configs": [
+          {
+            "external-ip": "0.0.0.0",
+            "type": "ONE_TO_ONE_NAT"
+          }
+        ],
+        "forwarded-ips": [],
+        "ip": "0.0.0.0",
+        "ip-aliases": [],
+        "mac": "00:00:00:00:00:00",
+        "network": "projects/<NUMERIC_PROJECT_ID>/networks/default"
+      }
+    ],
+    "scheduling": {
+      "automatic-restart": "TRUE",
+      "on-host-maintenance": "MIGRATE",
+      "preemptible": "FALSE"
+    },
+    "service-accounts": {
+      "<NUMERIC_PROJECT_ID>-compute@developer.gserviceaccount.com": {
+        "aliases": [ "default" ],
+        "email": "<NUMERIC_PROJECT_ID>-compute@developer.gserviceaccount.com",
+        "scopes": [ "https://www.googleapis.com/auth/cloud-platform", "https://www.googleapis.com/auth/userinfo.email" ],
+        "token": {
+          "access_token": "0123456789ABCDEF",
+          "expires_in": 3000,
+          "token_type": "Bearer"
+        }
+      },
+      "default": {
+        "aliases": [ "default" ],
+        "email": "<NUMERIC_PROJECT_ID>-compute@developer.gserviceaccount.com",
+        "scopes": [ "https://www.googleapis.com/auth/cloud-platform", "https://www.googleapis.com/auth/userinfo.email" ],
+        "token": {
+          "access_token": "0123456789ABCDEF",
+          "expires_in": 3000,
+          "token_type": "Bearer"
+        }
+      }
+    },
+    "tags": [ "a", "b", "c" ],
+    "virtual-clock": {
+      "drift-token": "0"
+    },
+    "zone": "projects/<NUMERIC_PROJECT_ID>/zones/us-central1-f"
+  },
+  "project": {
+    "attributes": {
+      "my_project_key1": "my_project_value1"
+    },
+    "numeric-project-id": "<NUMERIC_PROJECT_ID>",
+    "project-id": "<PROJECT_ID>"
+  }
+}
