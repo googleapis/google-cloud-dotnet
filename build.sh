@@ -76,6 +76,8 @@ mkdir $coverage
 for testdir in */*.Tests
 do
   api=`echo $testdir | cut -d/ -f1`
+  # The full framework test is different under Windows and Linux, and
+  # we only do coverage tests on Windows.
   if [ $OS == "Windows" ]
   then
     dotnet test -f net451 $DOTNET_TEST_ARGS $testdir
@@ -106,6 +108,12 @@ do
     bin=$testdir/bin/$CONFIG/net451/ubuntu.14.04-x64
     mono $bin/dotnet-test-xunit.exe $bin/$project.dll
   fi
+  
+  # Other than log4net, everything can be tested under .NET Core.
+  if [ "$testdir" != "Google.Logging.V2/Google.Logging.Log4Net.Tests" ]
+  then
+    dotnet test -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir
+  fi
 done
 
 if [ -n "$OPENCOVER" -a -n "REPORTGENERATOR" ]
@@ -115,12 +123,6 @@ then
     -targetdir:$coverage \
     -verbosity:Error
 fi
-
-# TODO: Work out all projects we can test with dotnet test
-# automatically
-
-dotnet test -f netcoreapp1.0 $DOTNET_TEST_ARGS Google.Storage.V1/Google.Storage.V1.Tests
-dotnet test -f netcoreapp1.0 $DOTNET_TEST_ARGS Google.Bigquery.V2/Google.Bigquery.V2.Tests
 
 echo Packing
 

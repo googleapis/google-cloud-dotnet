@@ -6,7 +6,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Testing": "1.0.0-beta02-CI00085",
+    "Google.Api.Gax.Testing": "1.0.0-beta02-CI00093",
     "Google.Cloud.ClientTesting": { "target": "project" },
     "Google.Datastore.V1": { "target": "project" },
     "System.Interactive.Async": "3.0.0",
@@ -16,6 +16,15 @@
   "testRunner": "xunit",
 
   "frameworks": {
-    "net451": {}
+    "net451": {},
+    "netcoreapp1.0": {
+      "imports": "netcore50",
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0",
+          "type": "platform"
+        }
+      }
+    }
   }
 }
