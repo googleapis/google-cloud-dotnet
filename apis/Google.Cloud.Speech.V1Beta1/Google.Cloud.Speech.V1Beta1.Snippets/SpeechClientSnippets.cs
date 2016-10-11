@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Reflection;
 using Xunit;
 using static Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types;
 
@@ -40,7 +41,7 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
         private static RecognitionAudio LoadResourceAudio(string name)
         {
             var type = typeof(SpeechClientSnippets);
-            using (var stream = type.Assembly.GetManifestResourceStream($"{type.Namespace}.{name}"))
+            using (var stream = type.GetTypeInfo().Assembly.GetManifestResourceStream($"{type.Namespace}.{name}"))
             {
                 return RecognitionAudio.FromStream(stream);
             }

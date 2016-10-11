@@ -17,6 +17,7 @@ using Google.Type;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Xunit;
 
 namespace Google.Cloud.Vision.V1.Snippets
@@ -252,7 +253,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         private static Image LoadResourceImage(string name)
         {
             var type = typeof(ImageAnnotatorClientSnippets);
-            using (var stream = type.Assembly.GetManifestResourceStream($"{type.Namespace}.{name}"))
+            using (var stream = type.GetTypeInfo().Assembly.GetManifestResourceStream($"{type.Namespace}.{name}"))
             {
                 return Image.FromStream(stream);
             }

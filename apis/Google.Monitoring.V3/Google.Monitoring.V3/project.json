@@ -20,15 +20,16 @@
 
   "dependencies": {
     "Google.Api.CommonProtos": "1.0.0-beta04",
-    "Google.Api.Gax": "1.0.0-beta02",
+    "Google.Api.Gax": "1.0.0-beta02-CI00093",
     "Google.Apis.Auth": "1.16.0",
     "Google.Protobuf": "3.0.0",
-    "Grpc.Auth": "1.0.0",
-    "Grpc.Core": "1.0.0",
+    "Grpc.Auth": "1.0.1-pre1",
+    "Grpc.Core": "1.0.1-pre1",
     "System.Interactive.Async": "3.0.0"
   },
 
   "frameworks": {
-    "net45": { }
+    "net45": { },
+    "netstandard1.5": {}
   }
 }

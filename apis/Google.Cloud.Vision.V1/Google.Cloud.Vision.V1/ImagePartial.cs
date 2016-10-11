@@ -127,7 +127,11 @@ namespace Google.Cloud.Vision.V1
             GaxPreconditions.CheckNotNull(stream, nameof(stream));
             var output = new MemoryStream();
             stream.CopyTo(output);
+#if NETSTANDARD1_5
+            return FromBytes(output.ToArray());
+#else
             return FromBytes(output.GetBuffer(), 0, checked((int)output.Length));
+#endif
         }
 
         /// <summary>
@@ -139,7 +143,11 @@ namespace Google.Cloud.Vision.V1
         {
             var output = new MemoryStream();
             await stream.CopyToAsync(output).ConfigureAwait(false);
+#if NETSTANDARD1_5
+            return FromBytes(output.ToArray());
+#else
             return FromBytes(output.GetBuffer(), 0, checked((int)output.Length));
+#endif
         }
 
         /// <summary>
