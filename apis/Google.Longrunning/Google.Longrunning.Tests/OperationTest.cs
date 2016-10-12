@@ -12,19 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Protobuf.WellKnownTypes;
-using Google.Rpc;
-using System.Threading.Tasks;
-using Xunit;
 using Google.Api.Gax;
 using Google.Api.Gax.Testing;
-using Grpc.Core;
-using ProtoStatus = Google.Rpc.Status;
-using GrpcStatus = Grpc.Core.Status;
-using StatusCode = Grpc.Core.StatusCode;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Xunit;
+using GrpcStatus = Grpc.Core.Status;
+using ProtoStatus = Google.Rpc.Status;
+using StatusCode = Grpc.Core.StatusCode;
 
 namespace Google.Longrunning.Tests
 {
@@ -143,42 +143,37 @@ namespace Google.Longrunning.Tests
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 Assert.Throws<TimeoutException>(() => initial.PollUntilCompleted(settings));
                 Assert.Equal(4, client.RequestCount);
-                return 0; // TODO: Remove the need for this, by improving FakeScheduler.
             });
         }
 
-        // FIXME: These tests being non-async is all kinds of wrong...
         [Fact]
-        public void PollUntilCompletedAsync_Success()
+        public async Task PollUntilCompletedAsync_Success()
         {
             var client = new FakeOperationsClient();
-            var completedOperation = client.FakeScheduler.Run(() =>
+            await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
                 var initial = Operation<StringValue>.PollOnceFromNameAsync("op", client).Result;
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 // Second request at t=2, then another at t=4
-                return initial.PollUntilCompletedAsync(settings).Result;
+                var completedOperation = await initial.PollUntilCompletedAsync(settings);
+                Assert.Equal("result", completedOperation.Result.Value);
             });
-            Assert.Equal("result", completedOperation.Result.Value);
             Assert.Equal(4, client.RequestCount);
         }
 
         [Fact]
-        public void PollUntilCompletedAsync_Timeout()
+        public async Task PollUntilCompletedAsync_Timeout()
         {
             var client = new FakeOperationsClient();
-            Func<Exception> func = () =>
+            await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(10), new StringValue { Value = "result" });
                 var initial = Operation<StringValue>.PollOnceFromNameAsync("op", client).Result;
                 // Second request at t=0, then at t=2, then at t=4, then we give up.
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
-                var aggregate = Assert.Throws<AggregateException>(() => initial.PollUntilCompletedAsync(settings).Result);
-                return aggregate.InnerException;
-            };
-            var exception = client.FakeScheduler.Run(func);
-            Assert.IsType<TimeoutException>(exception);
+                await Assert.ThrowsAsync<TimeoutException>(() => initial.PollUntilCompletedAsync(settings));
+            });
             Assert.Equal(4, client.RequestCount);
         }
 
