@@ -510,6 +510,46 @@ namespace Google.Bigquery.V2.Snippets
             Assert.Equal(originalRows, copiedRows);
         }
 
+        [Fact]
+        public void DeleteTable()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = Guid.NewGuid().ToString().Replace("-", "_");
+            TableSchema schema = new TableSchemaBuilder
+            {
+                { "from_player", BigqueryDbType.String },
+                { "to_player", BigqueryDbType.String },
+                { "message", BigqueryDbType.String }
+            }.Build();
+            BigqueryClient.Create(projectId).CreateTable(datasetId, tableId, schema);
+
+            // Snippet: DeleteTable(string,string,*)
+            BigqueryClient client = BigqueryClient.Create(projectId);
+            client.DeleteTable(datasetId, tableId);
+            // End snippet
+
+            var tables = client.ListTables(datasetId);
+            var ids = tables.Select(ds => ds.Reference.TableId).ToList();
+            Assert.DoesNotContain(tableId, ids);
+        }
+
+        [Fact]
+        public void DeleteDataset()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GenerateDatasetId();
+            BigqueryClient.Create(projectId).CreateDataset(datasetId);
+            // Snippet: DeleteDataset(string,DeleteDatasetOptions)
+            BigqueryClient client = BigqueryClient.Create(projectId);
+            client.DeleteDataset(datasetId);
+            // End snippet
+
+            var datasets = client.ListDatasets();
+            var ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
+            Assert.DoesNotContain(datasetId, ids);
+        }
+
         private bool WaitForStreamingBufferToEmpty(string tableId)
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
@@ -521,9 +561,7 @@ namespace Google.Bigquery.V2.Snippets
             }
             return table.Resource.StreamingBuffer == null;
         }
-
-        // TODO: Snippets for DeleteTable and DeleteDataset; they fail with "still in use" at the moment (when just created).
-
+        
         // TODO: Repeated fields and record types.
 
         // TODO:
