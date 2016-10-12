@@ -100,7 +100,7 @@ namespace Google.Bigquery.V2
         public override void DeleteTable(TableReference tableReference, DeleteTableOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.TableId, tableReference.TableId);
+            var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             options?.ModifyRequest(request);
             request.Execute();
         }
