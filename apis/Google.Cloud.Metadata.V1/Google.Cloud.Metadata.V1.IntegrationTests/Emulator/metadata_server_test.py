@@ -19,22 +19,21 @@ import common, datetime, json, os, urllib2
 
 try:
   server_address = 'http://' + os.environ[common.host_environment_variable]
-  request = urllib2.Request(server_address,
-                            headers={common.metadata_flavor : common.metadata_flavor_google})
-  urllib2.urlopen(request)
 except KeyError:
   raise Exception('%s must be set' % common.host_environment_variable)
-except urllib2.URLError:
-  raise Exception('The emulator cannot be reached at %s' % server_address)
+
+request_template = server_address + '/computeMetadata/v1/{}'
 
 def check_header(headers, url, key, value):
-  key_lower = key.lower()
-  assert key_lower in headers
-  assert headers[key_lower] == value
+  assert headers.get(key.lower()) == value
 
 def expect_content_absolute(url, expected, expected_content_type, expect_metadata_header=True):
   request = urllib2.Request(url, headers={common.metadata_flavor : common.metadata_flavor_google})
-  response = urllib2.urlopen(request)
+  try:
+    response = urllib2.urlopen(request)
+  except urllib2.URLError:
+    raise Exception('The emulator cannot be reached at %s' % server_address)
+
   headers = response.info().dict
 
   if expect_metadata_header:
@@ -49,13 +48,13 @@ def expect_content_absolute(url, expected, expected_content_type, expect_metadat
   assert expected == contents
 
 def expect_content(path, expected, expected_content_type, expect_metadata_header=True):
-  expect_content_absolute(server_address + '/computeMetadata/v1/' + path,
+  expect_content_absolute(request_template.format(path),
                           expected,
                           expected_content_type,
                           expect_metadata_header)
 
 def expect_error(path, expected_code, metadata_flavor_value=common.metadata_flavor_google):
-  url = server_address + '/computeMetadata/v1/' + path
+  url = request_template.format(path)
   request = urllib2.Request(url,
                             headers={common.metadata_flavor :
                                      metadata_flavor_value} if metadata_flavor_value else {})
@@ -68,6 +67,8 @@ def expect_error(path, expected_code, metadata_flavor_value=common.metadata_flav
     check_header(e.headers, url, common.server, common.server_value)
     check_header(e.headers, url, common.content_type, common.content_type_html)
     assert e.code == expected_code
+  except urllib2.URLError:
+    raise Exception('The emulator cannot be reached at %s' % server_address)
 
 def check_path(path, expected, default='text'):
   expected_json = json.dumps(expected, separators=(',', ':'))
