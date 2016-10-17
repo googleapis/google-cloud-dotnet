@@ -157,7 +157,6 @@ namespace Google.Bigquery.V2
             {
                 var field = fields[i];
                 var token = values[i]["v"];
-                Console.WriteLine($"Converting field {field.Name} from token type {token.Type} - token {token}");
                 ret[field.Name] = ConvertSingleValue(token.Type == JTokenType.String ? (string)token : (object)token, field);
             }
             return ret;
