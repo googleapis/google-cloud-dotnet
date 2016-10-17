@@ -33,10 +33,21 @@ with datasets, tables and query results simpler.
 
 # Sample code
 
-Querying:
+## Querying
 
 [!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#QueryOverview)]
 
-Data insertion:
+## Using legacy SQL
+
+By default, [BigqueryClient](obj/api/Google.Bigquery.V2.BigqueryClient.yml)
+uses [Standard SQL](https://cloud.google.com/bigquery/sql-reference/). To
+use [Legacy SQL](https://cloud.google.com/bigquery/query-reference),
+simply set `UseLegacySql` to true in the query options, and make
+sure that you use the legacy format for the table name, as shown
+below.
+
+[!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#LegacySql)]
+
+## Data insertion
 
 [!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#InsertOverview)]

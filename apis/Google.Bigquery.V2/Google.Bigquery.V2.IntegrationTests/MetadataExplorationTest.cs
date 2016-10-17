@@ -66,7 +66,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var dataset = client.GetDataset(PublicDatasetsDataset);
 
             var table = dataset.GetTable("wikipedia");
-            Assert.Equal("bigquery-public-data:samples.wikipedia", table.FullyQualifiedId);
+            Assert.Equal("bigquery-public-data.samples.wikipedia", table.FullyQualifiedId);
         }
 
         [Fact]
@@ -75,7 +75,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var client = BigqueryClient.Create(PublicDatasetsProject);
             var table = client.GetTable(PublicDatasetsDataset, "wikipedia");
 
-            Assert.Equal("bigquery-public-data:samples.wikipedia", table.FullyQualifiedId);
+            Assert.Equal("bigquery-public-data.samples.wikipedia", table.FullyQualifiedId);
         }
     }
 }

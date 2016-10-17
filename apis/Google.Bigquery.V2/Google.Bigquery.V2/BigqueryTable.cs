@@ -14,6 +14,7 @@
 
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -26,7 +27,7 @@ namespace Google.Bigquery.V2
     /// This class wraps the underlying REST API resource and retains a reference to the original
     /// client, allowing for simpler table-oriented operations.
     /// </remarks>
-    public sealed class BigqueryTable
+    public sealed class BigqueryTable : IFormattable
     {
         private readonly BigqueryClient _client;
 
@@ -39,9 +40,9 @@ namespace Google.Bigquery.V2
         public Table Resource { get; }
 
         /// <summary>
-        /// The fully-qualified identifier for the table in a string form of <c>project:dataset.table</c>.
+        /// The fully-qualified identifier for the table in a string form of <c>project.dataset.table</c>.
         /// </summary>
-        public string FullyQualifiedId => $"{Reference.ProjectId}:{Reference.DatasetId}.{Reference.TableId}";
+        public string FullyQualifiedId => $"{Reference.ProjectId}.{Reference.DatasetId}.{Reference.TableId}";
 
         /// <summary>
         /// The schema of this table, if known. Schemas are not retrieved when listing the tables within a dataset,
@@ -129,7 +130,15 @@ namespace Google.Bigquery.V2
         public void Delete(DeleteTableOptions options = null) => _client.DeleteTable(Reference, options);
 
         /// <summary>
-        /// Returns the fully qualified ID of the table in square brackets.
+        /// Returns the fully-qualified ID of the table in Legacy SQL format. The Legacy SQL
+        /// format uses square brackets instead of backticks to surround the ID, and uses a colon
+        /// instead of a period between the project ID and the dataset ID.
+        /// </summary>
+        /// <returns>The fully-qualified </returns>
+        public string ToLegacySqlFormat() => $"[{Reference.ProjectId}:{Reference.DatasetId}.{Reference.TableId}]";
+
+        /// <summary>
+        /// Returns the fully-qualified ID of the table in backticks.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -143,6 +152,29 @@ namespace Google.Bigquery.V2
         /// </code>
         /// </example>
         /// </remarks>
-        public override string ToString() => $"[{FullyQualifiedId}]";
+        public override string ToString() => $"`{FullyQualifiedId}`";
+
+        /// <summary>
+        /// Returns the fully-qualified ID of the table, in either the Standard SQL
+        /// or Legacy SQL format.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// This method allows the Legacy SQL format to be used simply within an
+        /// interpolated string.
+        /// </para>
+        /// <example>
+        /// <code>
+        /// var table = client.GetTable(datasetId, tableId);
+        /// var query = $"SELECT name, age from {table:legacy}";
+        /// </code>
+        /// </example>
+        /// </remarks>
+        /// <param name="format">If this has a value of <c>"legacy"</c>, the Legacy SQL format
+        /// is used; otherwise, the Standard SQL format is used.</param>
+        /// <param name="formatProvider">Ignored.</param>
+        /// <returns>The formatted table name.</returns>
+        public string ToString(string format, IFormatProvider formatProvider) =>
+            format == "legacy" ? ToLegacySqlFormat() : ToString();
     }
 }

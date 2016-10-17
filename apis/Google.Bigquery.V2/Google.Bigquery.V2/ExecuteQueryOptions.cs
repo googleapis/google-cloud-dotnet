@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
-using System;
 
 namespace Google.Bigquery.V2
 {
@@ -40,6 +39,14 @@ namespace Google.Bigquery.V2
         /// </summary>
         public DatasetReference DefaultDataset { get; set; }
 
+        // Note: we default the QueryRequest to set UseLegacySql to false
+        // in BigqueryClientImpl. This option is nullable for potential merging purposes.
+
+        /// <summary>
+        /// Set to true to use legacy SQL instead of standard SQL.
+        /// </summary>
+        public bool? UseLegacySql { get; set; }
+
         internal void ModifyRequest(QueryRequest request)
         {
             if (PageSize != null)
@@ -54,6 +61,10 @@ namespace Google.Bigquery.V2
             {
                 request.DefaultDataset = DefaultDataset;
             }
+            if (UseLegacySql != null)
+            {
+                request.UseLegacySql = UseLegacySql;
+            }
 
             // TODO: more options. DryRun would be useful, but we have no way of returning the results...
         }
@@ -65,7 +76,7 @@ namespace Google.Bigquery.V2
         internal GetQueryResultsOptions ToGetQueryResultsOptions() =>
             new GetQueryResultsOptions
             {
-                PageSize = PageSize                
+                PageSize = PageSize
             };
     }
 }

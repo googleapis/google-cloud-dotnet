@@ -75,9 +75,23 @@ namespace Google.Bigquery.V2
         public int? MaximumBillingTier { get; set; }
 
         /// <summary>
+        /// Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
+        /// If not set, this is effectively the project default.
+        /// </summary>
+        public long? MaximumBytesBilled { get; set; }
+
+        /// <summary>
         /// The priority of the query.
         /// </summary>
         public QueryPriority? Priority { get; set; }
+
+        // Note: we default the JobConfigurationQuery to set UseLegacySql to false
+        // in BigqueryClientImpl. This option is nullable for potential merging purposes.
+
+        /// <summary>
+        /// Set to true to use legacy SQL instead of standard SQL.
+        /// </summary>
+        public bool? UseLegacySql { get; set; }
 
         internal void ModifyRequest(JobConfigurationQuery query)
         {
@@ -107,6 +121,10 @@ namespace Google.Bigquery.V2
             {
                 query.MaximumBillingTier = MaximumBillingTier;
             }
+            if (MaximumBytesBilled != null)
+            {
+                query.MaximumBytesBilled = MaximumBytesBilled;
+            }
             if (Priority != null)
             {
                 query.Priority = EnumMap<QueryPriority>.ToApiValue(Priority.Value);
@@ -118,6 +136,10 @@ namespace Google.Bigquery.V2
             if (WriteDisposition != null)
             {
                 query.WriteDisposition = EnumMap<WriteDisposition>.ToApiValue(WriteDisposition.Value);
+            }
+            if (UseLegacySql != null)
+            {
+                query.UseLegacySql = UseLegacySql;
             }
         }
     }

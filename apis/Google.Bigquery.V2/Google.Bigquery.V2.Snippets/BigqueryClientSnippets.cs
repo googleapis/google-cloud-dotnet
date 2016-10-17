@@ -44,8 +44,27 @@ namespace Google.Bigquery.V2.Snippets
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
-            string sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
+            string sql = $"SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
             BigqueryQueryJob query = client.ExecuteQuery(sql).PollUntilCompleted();
+
+            foreach (BigqueryRow row in query.GetRows())
+            {
+                Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
+            }
+            // End sample
+        }
+
+        [Fact]
+        public void LegacySqlOverview()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Sample: LegacySql
+            var client = BigqueryClient.Create(projectId);
+            var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
+
+            string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
+            BigqueryQueryJob query = client.ExecuteQuery(sql, new ExecuteQueryOptions { UseLegacySql = true }).PollUntilCompleted();
 
             foreach (BigqueryRow row in query.GetRows())
             {
