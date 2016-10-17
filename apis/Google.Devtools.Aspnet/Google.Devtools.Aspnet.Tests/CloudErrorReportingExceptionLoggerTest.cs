@@ -19,11 +19,9 @@ namespace Google.Devtools.Aspnet.Tests
 {
     public class CloudErrorReportingExceptionLoggerTest
     {
-        [Fact]
         public async Task Test()
         {
             // TODO(talarico): Write tests.
-            Assert.True(true);
         }
     }
 }
