@@ -30,9 +30,11 @@ namespace Google.Bigquery.V2.Tests
                 DestinationTable = new TableReference { ProjectId = "a", DatasetId = "b", TableId = "c" },
                 FlattenResults = false,
                 MaximumBillingTier = 10,
+                MaximumBytesBilled = 1000,
                 Priority = QueryPriority.Batch, 
                 UseQueryCache = false,
-                WriteDisposition = WriteDisposition.WriteIfEmpty
+                WriteDisposition = WriteDisposition.WriteIfEmpty,
+                UseLegacySql = true
             };
 
             JobConfigurationQuery query = new JobConfigurationQuery();
@@ -43,9 +45,11 @@ namespace Google.Bigquery.V2.Tests
             Assert.Equal("c", query.DestinationTable.TableId);
             Assert.Equal(false, query.FlattenResults);
             Assert.Equal(10, query.MaximumBillingTier);
+            Assert.Equal(1000, query.MaximumBytesBilled);
             Assert.Equal("BATCH", query.Priority);
             Assert.Equal(false, query.UseQueryCache);
             Assert.Equal("WRITE_EMPTY", query.WriteDisposition);
+            Assert.Equal(true, query.UseLegacySql);
         }
     }
 }

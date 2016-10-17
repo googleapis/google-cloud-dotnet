@@ -46,7 +46,7 @@ namespace Google.Bigquery.V2
         {
             GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
 
-            var queryRequest = new Apis.Bigquery.v2.Data.QueryRequest { Query = sql };
+            var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
             options?.ModifyRequest(queryRequest);
             var request = Service.Jobs.Query(queryRequest, ProjectId);
             var queryResponse = request.Execute();
@@ -57,7 +57,7 @@ namespace Google.Bigquery.V2
         public override BigqueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)
         {
             GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
-            var query = new JobConfigurationQuery { Query = sql };
+            var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
             options?.ModifyRequest(query);
             var job = Service.Jobs.Insert(new Job
             {
