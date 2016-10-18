@@ -188,16 +188,16 @@ namespace Google.Bigquery.V2
                 // TODO: Maybe enforce universal only?
                 return dt.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
             }
-            if (value is DateTimeOffset)
+            else if (value is DateTimeOffset)
             {
                 DateTimeOffset dto = (DateTimeOffset)value;
                 return dto.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
             }
-            if (value is InsertRow)
+            else if (value is InsertRow)
             {
                 return ((InsertRow)value).GetJsonValues();
             }
-            if (ValidSingleTypes.Contains(value.GetType()))
+            else if (ValidSingleTypes.Contains(value.GetType()))
             {
                 // Anything single value should be fine as it is. We've already validated that it's a known type.
                 return value;

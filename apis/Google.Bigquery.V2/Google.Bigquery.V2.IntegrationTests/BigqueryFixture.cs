@@ -84,6 +84,11 @@ namespace Google.Bigquery.V2.IntegrationTests
                     { "player", "Angela" },
                     { "score", 95 },
                     { "gameStarted", new DateTime(2002, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
+                },
+                new InsertRow {
+                    { "player", null }, // Unnamed player...
+                    { "score", 1 },
+                    { "gameStarted", new DateTime(2001, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
                 }
             });
         }

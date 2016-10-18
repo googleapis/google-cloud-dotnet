@@ -103,7 +103,7 @@ namespace Google.Bigquery.V2
             }
             if (CreateDisposition != null)
             {
-                query.CreateDisposition = EnumMap<CreateDisposition>.ToApiValue(CreateDisposition.Value);
+                query.CreateDisposition = EnumMap.ToApiValue(CreateDisposition.Value);
             }
             if (DefaultDataset != null)
             {
@@ -127,7 +127,7 @@ namespace Google.Bigquery.V2
             }
             if (Priority != null)
             {
-                query.Priority = EnumMap<QueryPriority>.ToApiValue(Priority.Value);
+                query.Priority = EnumMap.ToApiValue(Priority.Value);
             }
             if (UseQueryCache != null)
             {
@@ -135,7 +135,7 @@ namespace Google.Bigquery.V2
             }
             if (WriteDisposition != null)
             {
-                query.WriteDisposition = EnumMap<WriteDisposition>.ToApiValue(WriteDisposition.Value);
+                query.WriteDisposition = EnumMap.ToApiValue(WriteDisposition.Value);
             }
             if (UseLegacySql != null)
             {

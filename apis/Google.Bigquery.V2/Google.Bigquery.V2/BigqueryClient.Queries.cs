@@ -21,9 +21,9 @@ namespace Google.Bigquery.V2
     public abstract partial class BigqueryClient
     {
         /// <summary>
-        /// Executes a query synchronously.
+        /// Executes a query.
         /// </summary>
-        /// <param name="sql">The query in BigQuery's SQL dialect. Must not be null.</param>
+        /// <param name="sql">The SQL query. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
         public virtual BigqueryQueryJob ExecuteQuery(string sql, ExecuteQueryOptions options = null)
@@ -32,14 +32,40 @@ namespace Google.Bigquery.V2
         }
 
         /// <summary>
-        /// Creates a query job, with more facilities than <see cref="ExecuteQuery"/>, including the option
+        /// Executes a command. This overload allows query parameterization, and is preferred over
+        /// <see cref="ExecuteQuery(string, ExecuteQueryOptions)"/> when values need to be passed in.
+        /// </summary>
+        /// <param name="command">The command to execute. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The result of the query.</returns>
+        public virtual BigqueryQueryJob ExecuteQuery(BigqueryCommand command, ExecuteQueryOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a job for a SQL query, with more facilities than <see cref="ExecuteQuery(string, ExecuteQueryOptions)"/>, including the option
         /// to store the results in a persistent table.
         /// </summary>
-        /// <param name="sql">The query in BigQuery's SQL dialect. Must not be null.</param>
+        /// <param name="sql">The SQL query. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The query job created. Use <see cref="GetQueryJob(JobReference,GetQueryResultsOptions)"/> to retrieve
         /// the results of the query.</returns>
         public virtual BigqueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a job for a query/command, with more facilities than <see cref="ExecuteQuery(BigqueryCommand, ExecuteQueryOptions)"/>,
+        /// including the option to store the results in a persistent table. This overload allows query parameterization, and is preferred over
+        /// <see cref="CreateQueryJob(string, CreateQueryJobOptions)"/> when values need to be passed in.
+        /// </summary>
+        /// <param name="command">The command to execute. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The query job created. Use <see cref="GetQueryJob(JobReference,GetQueryResultsOptions)"/> to retrieve
+        /// the results of the query.</returns>
+        public virtual BigqueryJob CreateQueryJob(BigqueryCommand command, CreateQueryJobOptions options = null)
         {
             throw new NotImplementedException();
         }

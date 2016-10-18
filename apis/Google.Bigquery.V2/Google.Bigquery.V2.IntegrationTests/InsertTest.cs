@@ -106,8 +106,11 @@ namespace Google.Bigquery.V2.IntegrationTests
                 ["position"] = new InsertRow { ["x"] = 10L, ["y"] = 20L }
             };
             table.Insert(row);
-            // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = WaitForRows(client, $"SELECT guid, position.x, position.y FROM {table} WHERE guid='{guid}'")
+            var command = new BigqueryCommand($"SELECT guid, position.x, position.y FROM {table} WHERE guid=@guid")
+            {
+                Parameters = { { "guid", BigqueryParameterType.String, guid } }
+            };
+            var queryResults = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], X = (long)r["x"], Y = (long)r["y"] })
                 .ToList();
             var expectedResults = new[]
@@ -131,8 +134,11 @@ namespace Google.Bigquery.V2.IntegrationTests
                 ["tags"] = new[] { "a", null, "b"}
             };
             table.Insert(row);
-            // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = WaitForRows(client, $"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid='{guid}' ORDER BY tag")
+            var command = new BigqueryCommand($"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid=@guid ORDER BY tag")
+            {
+                Parameters = { { "guid", BigqueryParameterType.String, guid } }
+            };
+            var queryResults = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tag"] })
                 .ToList();
             var expectedResults = new[]
@@ -159,8 +165,11 @@ namespace Google.Bigquery.V2.IntegrationTests
                 }
             };
             table.Insert(row);
-            // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = WaitForRows(client, $"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid='{guid}' ORDER BY name.first")
+            var command = new BigqueryCommand($"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid=@guid ORDER BY name.first")
+            {
+                Parameters = { { "guid", BigqueryParameterType.String, guid } }
+            };
+            var queryResults = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["first"], LastName = (string)r["last"] })
                 .ToList();
             var expectedResults = new[]
@@ -175,11 +184,11 @@ namespace Google.Bigquery.V2.IntegrationTests
         /// Waits for a query to return a non-empty result set. Some inserts may take a few seconds before the results are visible
         /// via queries - and much longer to show up in ListRows. (It looks like these are inserts with repeated fields and/or record fields.)
         /// </summary>
-        private IEnumerable<BigqueryRow> WaitForRows(BigqueryClient client, string query)
+        private IEnumerable<BigqueryRow> WaitForRows(BigqueryClient client, BigqueryCommand command)
         {
             for (int i = 0; i < 5; i++)
             {
-                var rows = client.ExecuteQuery(query)
+                var rows = client.ExecuteQuery(command)
                     .PollUntilCompleted()
                     .GetRows()
                     .ToList();

@@ -19,7 +19,6 @@ using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 
 namespace Google.Bigquery.V2
 {
@@ -46,8 +45,19 @@ namespace Google.Bigquery.V2
         public override BigqueryQueryJob ExecuteQuery(string sql, ExecuteQueryOptions options = null)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
-
             var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
+            options?.ModifyRequest(queryRequest);
+            var request = Service.Jobs.Query(queryRequest, ProjectId);
+            var queryResponse = request.Execute();
+            return new BigqueryQueryJob(this, queryResponse, options);
+        }
+
+        /// <inheritdoc />
+        public override BigqueryQueryJob ExecuteQuery(BigqueryCommand command, ExecuteQueryOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(command, nameof(command));
+            var queryRequest = new QueryRequest { UseLegacySql = false };
+            command.PopulateQueryRequest(queryRequest);
             options?.ModifyRequest(queryRequest);
             var request = Service.Jobs.Query(queryRequest, ProjectId);
             var queryResponse = request.Execute();
@@ -59,6 +69,23 @@ namespace Google.Bigquery.V2
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
             var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
+            options?.ModifyRequest(query);
+            var job = Service.Jobs.Insert(new Job
+            {
+                Configuration = new JobConfiguration
+                {
+                    Query = query
+                },
+            }, ProjectId).Execute();
+            return new BigqueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        public override BigqueryJob CreateQueryJob(BigqueryCommand command, CreateQueryJobOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(command, nameof(command));
+            var query = new JobConfigurationQuery { UseLegacySql = false };
+            command.PopulateJobConfigurationQuery(query);
             options?.ModifyRequest(query);
             var job = Service.Jobs.Insert(new Job
             {

@@ -64,8 +64,8 @@ namespace Google.Bigquery.V2
             Add(new TableFieldSchema
             {
                 Name = name,
-                Type = EnumMap<BigqueryDbType>.ToApiValue(type, nameof(type)),
-                Mode = EnumMap<FieldMode>.ToApiValue(mode, nameof(mode)),
+                Type = EnumMap.ToApiValue(type, nameof(type)),
+                Mode = EnumMap.ToApiValue(mode, nameof(mode)),
                 Description = description,
             });
         }
@@ -92,8 +92,8 @@ namespace Google.Bigquery.V2
             {
                 Name = name,
                 Fields = nestedSchema.Fields,
-                Type = EnumMap<BigqueryDbType>.ToApiValue(BigqueryDbType.Record),
-                Mode = EnumMap<FieldMode>.ToApiValue(mode, nameof(mode)),
+                Type = EnumMap.ToApiValue(BigqueryDbType.Record),
+                Mode = EnumMap.ToApiValue(mode, nameof(mode)),
                 Description = description,
             });
         }

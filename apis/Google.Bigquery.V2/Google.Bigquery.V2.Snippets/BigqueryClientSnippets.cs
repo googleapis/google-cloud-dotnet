@@ -585,6 +585,68 @@ namespace Google.Bigquery.V2.Snippets
             Assert.Contains(_fixture.ProjectId, projects.Select(p => p.ProjectId));
         }
 
+        [Fact]
+        public void ParameterizedQuery_NamedParameters()
+        {
+            // Sample: ParameterizedQueryNamedParameters
+            // Additional: ExecuteQuery(BigqueryCommand,*)
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+            var command = new BigqueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
+            // Note: could also use a collection initializer to populate the parameters.
+            command.Parameters.Add("level", BigqueryParameterType.Int64).Value = 2;
+            command.Parameters.Add("score", BigqueryParameterType.Int64).Value = 1500;
+            IEnumerable<BigqueryRow> queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
+            foreach (BigqueryRow row in queryResults)
+            {
+                Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
+            }
+            // End sample
+
+            var resultsList = client.ExecuteQuery(command)
+                 .PollUntilCompleted()
+                 .GetRows()
+                 .Select(row => new { Name = (string)row["player"], Score = (long)row["score"], Level = (long)row["level"] })
+                 .ToList();
+
+            Assert.Contains(new { Name = "Tim", Score = 5310L, Level = 3L }, resultsList);
+            Assert.Contains(new { Name = "Tim", Score = 2000L, Level = 2L }, resultsList);
+            Assert.Contains(new { Name = "Nadia", Score = 8310L, Level = 5L }, resultsList);
+            Assert.DoesNotContain(new { Name = "Tim", Score = 503L, Level = 1L }, resultsList);
+            Assert.DoesNotContain(new { Name = "Nadia", Score = 1320L, Level = 2L }, resultsList);
+        }
+
+        [Fact]
+        public void ParameterizedQuery_PositionalParameters()
+        {
+            /// Sample: ParameterizedQueryPositionalParameters
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+            var command = new BigqueryCommand($"SELECT player, score, level FROM {table} WHERE score >= ? AND level >= ?");
+            command.ParameterMode = BigqueryParameterMode.Positional;
+            command.Parameters.Add(BigqueryParameterType.Int64, 1500); // For score
+            command.Parameters.Add(BigqueryParameterType.Int64, 2); // For level
+            IEnumerable<BigqueryRow> queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
+            foreach (BigqueryRow row in queryResults)
+            {
+                Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
+            }
+            /// End snippet
+
+            // Execute the same command again for validation.
+            var resultsList = client.ExecuteQuery(command)
+                .PollUntilCompleted()
+                .GetRows()
+                .Select(row => new { Name = (string)row["player"], Score = (long)row["score"], Level = (long)row["level"] })
+                .ToList();
+            
+            Assert.Contains(new { Name = "Tim", Score = 5310L, Level = 3L }, resultsList);
+            Assert.Contains(new { Name = "Tim", Score = 2000L, Level = 2L }, resultsList);
+            Assert.Contains(new { Name = "Nadia", Score = 8310L, Level = 5L }, resultsList);
+            Assert.DoesNotContain(new { Name = "Tim", Score = 503L, Level = 1L }, resultsList);
+            Assert.DoesNotContain(new { Name = "Nadia", Score = 1320L, Level = 2L }, resultsList);
+        }
+
         private bool WaitForStreamingBufferToEmpty(string tableId)
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
