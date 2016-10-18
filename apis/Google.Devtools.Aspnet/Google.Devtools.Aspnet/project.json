@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha01-*",
+  "version": "1.0.0-alpha00-*",
   "description": "ExceptionLogger for the Google Stackdriver Error Reporting API.",
   "authors": [ "Google Inc." ],
 
