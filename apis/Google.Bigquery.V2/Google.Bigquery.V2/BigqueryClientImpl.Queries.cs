@@ -36,7 +36,7 @@ namespace Google.Bigquery.V2
             }
 
             public string GetNextPageToken(TableDataList response) => response.PageToken;
-            public IEnumerable<BigqueryRow> GetResources(TableDataList response) => response.Rows.Select(row => new BigqueryRow(row, _schema));
+            public IEnumerable<BigqueryRow> GetResources(TableDataList response) => response.Rows?.Select(row => new BigqueryRow(row, _schema));
             public void SetPageSize(TabledataResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
             public void SetPageToken(TabledataResource.ListRequest request, string pageToken) => request.PageToken = pageToken;
         }

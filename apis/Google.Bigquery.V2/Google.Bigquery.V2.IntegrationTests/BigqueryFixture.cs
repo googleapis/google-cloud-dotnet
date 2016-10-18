@@ -73,10 +73,18 @@ namespace Google.Bigquery.V2.IntegrationTests
                     { "gameStarted", BigqueryDbType.Timestamp },
                     { "score", BigqueryDbType.Integer }
                 }.Build());
-            table.Insert(new InsertRow {
-                { "player", "Bob" },
-                { "score", 85 },
-                { "gameStarted", new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
+            table.Insert(new[]
+            {
+                new InsertRow {
+                    { "player", "Bob" },
+                    { "score", 85 },
+                    { "gameStarted", new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
+                },
+                new InsertRow {
+                    { "player", "Angela" },
+                    { "score", 95 },
+                    { "gameStarted", new DateTime(2002, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
+                }
             });
         }
 

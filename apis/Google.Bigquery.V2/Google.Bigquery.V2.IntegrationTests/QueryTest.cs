@@ -148,5 +148,53 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             Assert.Equal(expectedResults, queryResults);
         }
+
+        [Fact]
+        public void MultiRequestQueryStreaming()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var queryResults = client.ExecuteQuery($"SELECT * FROM {table}", new ExecuteQueryOptions { PageSize = 1 })
+                .PollUntilCompleted()
+                .GetRows()
+                .ToList();
+            Assert.True(queryResults.Count >= 2);
+        }
+
+        [Fact]
+        public void EmptyQueryResults_ExecuteQuery()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var queryResults = client.ExecuteQuery($"SELECT * FROM {table} WHERE score < 0")
+                .PollUntilCompleted()
+                .GetRows()
+                .ToList();
+            Assert.Empty(queryResults);
+        }
+
+        [Fact]
+        public void EmptyQueryResults_CreateQueryJob()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var queryResults = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
+                .PollQueryUntilCompleted()
+                .GetRows()
+                .ToList();
+            Assert.Empty(queryResults);
+        }
+
+        [Fact]
+        public void EmptyQueryResults_GetResultSet()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            // Deliberately overfetch
+            var queryJob = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
+                .PollQueryUntilCompleted(new GetQueryResultsOptions { PageSize = 100 });
+            var resultSet = queryJob.GetResultSet(10);
+            Assert.Empty(resultSet.Rows);
+        }
     }
 }
