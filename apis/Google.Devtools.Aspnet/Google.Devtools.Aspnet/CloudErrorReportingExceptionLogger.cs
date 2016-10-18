@@ -43,7 +43,7 @@ namespace Google.Devtools.Aspnet
     public sealed class CloudErrorReportingExceptionLogger : ExceptionLogger
     {
         // The formated Google Cloud Platform project id.
-        private readonly string _projectId;
+        private readonly string _projectResourceName;
 
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
@@ -59,10 +59,8 @@ namespace Google.Devtools.Aspnet
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
         public static CloudErrorReportingExceptionLogger Create(
-            ReportErrorsServiceClient client, string projectId, string serviceName, string version)
-        {
-            return new CloudErrorReportingExceptionLogger(client, projectId, serviceName, version);
-        }
+            ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
+                new CloudErrorReportingExceptionLogger(client, projectId, serviceName, version);
 
         /// <summary>
         /// Creates an instance of <see cref="CloudErrorReportingExceptionLogger"/> using credentials as
@@ -71,17 +69,14 @@ namespace Google.Devtools.Aspnet
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
-        public static CloudErrorReportingExceptionLogger Create(string projectId, string serviceName, string version)
-        {
-            return new CloudErrorReportingExceptionLogger(
-                ReportErrorsServiceClient.Create(), projectId, serviceName, version);
-        }
+        public static CloudErrorReportingExceptionLogger Create(string projectId, string serviceName, string version) =>
+            new CloudErrorReportingExceptionLogger(ReportErrorsServiceClient.Create(), projectId, serviceName, version);
 
         private CloudErrorReportingExceptionLogger(
             ReportErrorsServiceClient client, string projectId, string serviceName, string version) : base()
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
-            _projectId = ReportErrorsServiceClient.FormatProjectName(
+            _projectResourceName = ReportErrorsServiceClient.FormatProjectName(
                 GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
             _serviceContext = new ServiceContext
             {
@@ -90,18 +85,21 @@ namespace Google.Devtools.Aspnet
             };
         }
 
+        /// <inheritdoc />
         public override Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
             ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            return _client.ReportErrorEventAsync(_projectId, errorEvent);
+            return _client.ReportErrorEventAsync(_projectResourceName, errorEvent);
         }
 
+        /// <inheritdoc />
         public override void Log(ExceptionLoggerContext context)
         {
             ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            _client.ReportErrorEvent(_projectId, errorEvent);
+            _client.ReportErrorEvent(_projectResourceName, errorEvent);
         }
 
+        /// <inheritdoc />
         public override bool ShouldLog(ExceptionLoggerContext context)
         {
             return context?.Exception != null;
@@ -117,19 +115,13 @@ namespace Google.Devtools.Aspnet
             HttpRequestMessage requestMessage = exceptionContext?.Request;
             HttpResponseMessage responseMessage = exceptionContext?.Response;
 
-            HttpRequestContext requestContext = new HttpRequestContext()
+            return new HttpRequestContext()
             {
-                Method = requestMessage?.Method?.ToString(),
-                Url = requestMessage?.RequestUri?.ToString(),
-                UserAgent = requestMessage?.Headers?.UserAgent?.ToString(),
+                Method = requestMessage?.Method?.ToString() ?? "",
+                Url = requestMessage?.RequestUri?.ToString() ?? "",
+                UserAgent = requestMessage?.Headers?.UserAgent?.ToString() ?? "",
+                ResponseStatusCode = (int) (responseMessage?.StatusCode ?? 0),
             };
-
-            if (responseMessage?.StatusCode != null)
-            {
-                requestContext.ResponseStatusCode = (int)responseMessage.StatusCode;
-            }
-
-            return requestContext;
         }
 
         /// <summary>
@@ -153,9 +145,9 @@ namespace Google.Devtools.Aspnet
             StackFrame frame = stackTrace.GetFrame(0);
             return new SourceLocation()
             {
-                FilePath = frame.GetFileName(),
+                FilePath = frame.GetFileName() ?? "",
                 LineNumber = frame.GetFileLineNumber(),
-                FunctionName = frame.GetMethod()?.Name,
+                FunctionName = frame.GetMethod()?.Name ?? "",
             };
         }
 
@@ -173,7 +165,7 @@ namespace Google.Devtools.Aspnet
 
             return new ReportedErrorEvent()
             {
-                Message = context.Exception.ToString(),
+                Message = context.Exception.ToString() ?? "",
                 Context = errorContext,
                 ServiceContext = _serviceContext,
             };
