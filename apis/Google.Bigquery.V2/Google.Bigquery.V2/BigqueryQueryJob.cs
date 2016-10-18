@@ -34,7 +34,7 @@ namespace Google.Bigquery.V2
         /// <summary>
         /// The reference to the job.
         /// </summary>
-        public JobReference JobReference { get; }
+        public JobReference JobReference => _response.JobReference;
 
         /// <summary>
         /// Whether or not the query has completed or not.
@@ -51,7 +51,10 @@ namespace Google.Bigquery.V2
         /// </summary>
         public ulong? TotalRows => _response.TotalRows;
 
-        private IEnumerable<BigqueryRow> ResponseRows => _response.Rows.Select(r => new BigqueryRow(r, Schema));
+        /// <summary>
+        /// The rows in the response, or an empty sequence if the response contains no rows.
+        /// </summary>
+        private IEnumerable<BigqueryRow> ResponseRows => (_response.Rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigqueryRow(r, Schema));
 
         internal BigqueryQueryJob(BigqueryClient client, GetQueryResultsResponse response, GetQueryResultsOptions options)
         {
@@ -132,7 +135,7 @@ namespace Google.Bigquery.V2
             }
             GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
             List<BigqueryRow> rows = new List<BigqueryRow>(maxRows);
-            if (_options.PageSize > maxRows && _response.Rows.Count > maxRows)
+            if ((_options.PageSize == null || _options.PageSize > maxRows) && _response.Rows?.Count > maxRows)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = maxRows;

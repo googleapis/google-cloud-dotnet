@@ -159,6 +159,8 @@ namespace Google.Bigquery.V2.Snippets
             }
             // End snippet
 
+            // Note: if this fails, run the clean-up tool to make sure there
+            // are fewer than 20 datasets in the project, then rerun.
             var ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
             Assert.Contains(_fixture.GameDatasetId, ids);
         }
