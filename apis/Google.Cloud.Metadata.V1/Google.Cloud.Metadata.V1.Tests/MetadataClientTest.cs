@@ -55,5 +55,20 @@ namespace Google.Cloud.Metadata.V1.Tests
             Assert.ThrowsAsync<ArgumentException>(() => client.GetCustomProjectMetadataAsync(
                 "0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF"));
         }
+
+        [Fact]
+        public void WaitForChange_Validations()
+        {
+            var client = MetadataClient.Create();
+            Assert.Throws<ArgumentException>(() => client.WaitForChange("a b"));
+            Assert.Throws<ArgumentException>(() => client.WaitForChange("a?b"));
+            Assert.Throws<ArgumentException>(() => client.WaitForChange("http://www.google.com"));
+            Assert.Throws<ArgumentException>(() => client.WaitForChange("instance", TimeSpan.FromSeconds(-1)));
+
+            Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("a b"));
+            Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("a?b"));
+            Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("http://www.google.com"));
+            Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("instance", TimeSpan.FromSeconds(-1)));
+        }
     }
 }

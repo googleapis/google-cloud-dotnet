@@ -362,6 +362,9 @@ namespace Google.Cloud.Metadata.V1
         /// Alternatively, use <seealso cref="ProjectMetadataChanged"/> or <seealso cref="InstanceMetadataChanged"/>, respectively.
         /// </para>
         /// </remarks>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL, or <paramref name="timeout"/> represents a negative duration.
+        /// </exception>
         /// <exception cref="TaskCanceledException">
         /// The timeout in the <see cref="HttpClient"/> elapses before the response comes back from the server.
         /// </exception>
@@ -398,6 +401,9 @@ namespace Google.Cloud.Metadata.V1
         /// Alternatively, use <seealso cref="ProjectMetadataChanged"/> or <seealso cref="InstanceMetadataChanged"/>, respectively.
         /// </para>
         /// </remarks>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL, or <paramref name="timeout"/> represents a negative duration.
+        /// </exception>
         /// <exception cref="TaskCanceledException">
         /// The timeout in the <see cref="HttpClient"/> elapses before the response comes back from the server.
         /// </exception>

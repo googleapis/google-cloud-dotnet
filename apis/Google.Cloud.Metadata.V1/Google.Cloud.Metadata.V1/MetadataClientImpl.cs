@@ -50,7 +50,7 @@ namespace Google.Cloud.Metadata.V1
         private const string GoogleMetadataHeader = "Google";
 
         private static readonly CreateHttpClientArgs HttpClientArgs = new CreateHttpClientArgs();
-        private static readonly Regex KeyRegex = new Regex(@"\A[a-zA-Z0-9-_]{1,127}\Z", RegexOptions.Compiled);
+        private static readonly Regex CustomKeyRegex = new Regex(@"\A[a-zA-Z0-9-_]{1,127}\Z", RegexOptions.Compiled);
         // TODO: Should this be created with a MetadataClient instead?
         private static readonly ILogger Logger = ApplicationContext.Logger.ForType<MetadataClientImpl>();
         private static readonly Lazy<string> MetadataHost = new Lazy<string>(() =>
@@ -88,6 +88,9 @@ namespace Google.Cloud.Metadata.V1
         {
         }
 
+        private static string CreateAbsoluteUrl(string relativeUrl) =>
+            $"http://{MetadataHost.Value}/computeMetadata/v1/{relativeUrl}";
+
         private static MaintenanceStatus GetMaintenanceStatus(string result)
         {
             switch (result)
@@ -97,7 +100,7 @@ namespace Google.Cloud.Metadata.V1
                 default: return MaintenanceStatus.Unknown;
             }
         }
-        
+
         private static T GetResult<T>(Func<CancellationToken, Task<T>> operation)
         {
             try
@@ -109,19 +112,39 @@ namespace Google.Cloud.Metadata.V1
                 throw e.InnerExceptions.FirstOrDefault() ?? e;
             }
         }
-        
+
         private Task<HttpResponseMessage> RequestMetadataAsync(string relativeUrl, CancellationToken cancellationToken)
         {
-            var httpRequest = new HttpRequestMessage(HttpMethod.Get, $"http://{MetadataHost.Value}/computeMetadata/v1/{relativeUrl}");
+            var httpRequest = new HttpRequestMessage(HttpMethod.Get, CreateAbsoluteUrl(relativeUrl));
             httpRequest.Headers.Add(MetadataFlavor, GoogleMetadataHeader);
             return HttpClient.SendAsync(httpRequest, cancellationToken);
         }
-        
+
+        private static void ValidateMetadataKey(string key)
+        {
+            if (Uri.IsWellFormedUriString(key, UriKind.Relative))
+            {
+                var absoluteUrl = CreateAbsoluteUrl(key);
+
+                Uri uri;
+                if (Uri.TryCreate(absoluteUrl, UriKind.Absolute, out uri))
+                {
+                    if (StringComparer.OrdinalIgnoreCase.Equals(absoluteUrl, uri.AbsoluteUri) &&
+                        string.IsNullOrEmpty(uri.Query))
+                    {
+                        return;
+                    }
+                }
+            }
+
+            throw new ArgumentException("Invalid metadata key.", nameof(key));
+        }
+
         private static void ValidateCustomMetadataKey(string key)
         {
-            if (!KeyRegex.IsMatch(key))
+            if (!CustomKeyRegex.IsMatch(key))
             {
-                throw new ArgumentException("Invalid custom metadata key.", "key");
+                throw new ArgumentException("Invalid custom metadata key.", nameof(key));
             }
         }
 
@@ -416,7 +439,12 @@ namespace Google.Cloud.Metadata.V1
         /// <inheritdoc/>
         public override async Task<string> WaitForChangeAsync(string key, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
         {
-            // TODO: Validate the key and make sure there are no parameters specified.
+            ValidateMetadataKey(key);
+
+            if (timeout.Ticks < 0)
+            {
+                throw new ArgumentException("The specified timeout represents a negative duration.", nameof(timeout));
+            }
 
             if (timeout == TimeSpan.Zero)
             {
