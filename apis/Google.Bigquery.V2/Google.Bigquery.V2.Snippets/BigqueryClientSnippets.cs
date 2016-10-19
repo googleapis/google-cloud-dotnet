@@ -571,6 +571,20 @@ namespace Google.Bigquery.V2.Snippets
             Assert.DoesNotContain(datasetId, ids);
         }
 
+        [Fact]
+        public void ListProjects()
+        {
+            // Snippet: ListProjects(*)
+            BigqueryClient client = BigqueryClient.Create("irrelevant");
+            IPagedEnumerable<ProjectList, CloudProject> projects = client.ListProjects();
+            foreach (CloudProject project in projects)
+            {
+                Console.WriteLine($"{project.ProjectId}: {project.FriendlyName}");
+            }
+            // End snippet
+            Assert.Contains(_fixture.ProjectId, projects.Select(p => p.ProjectId));
+        }
+
         private bool WaitForStreamingBufferToEmpty(string tableId)
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
