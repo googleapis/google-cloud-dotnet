@@ -41,7 +41,7 @@ namespace Google.Cloud.Tools.Snippets
             // Create a PublisherClient with default settings.
             PublisherClient client = PublisherClient.Create();
             // Format topicName from the projectId and topicId.
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             // Create a CallSettings with a custom header.
             CallSettings callSettings = new CallSettings
             {
@@ -75,7 +75,7 @@ namespace Google.Cloud.Tools.Snippets
             };
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
             // Format topicName from the projectId and topicId.
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             // The custom 'ClientVersion' header will be included in the RPC call, due to
             // the client being configured with 'publishersettings' above.
             Topic topic = client.CreateTopic(topicName);
@@ -98,7 +98,7 @@ namespace Google.Cloud.Tools.Snippets
             };
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
             // Format topicName from the projectId and topicId.
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             // The custom 'ClientVersion' header will be included in the RPC call, due to
             // the client being configured with 'publishersettings' above.
             Topic topic = client.CreateTopic(topicName);
@@ -138,7 +138,7 @@ namespace Google.Cloud.Tools.Snippets
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
 
             // Format topicName from the projectId and topicId.
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
 
             // Call CreateTopic(). Override only the CancellationToken, using a per-RPC-method CallSettings.
             // The CallSettings used during this RPC invocation is:
