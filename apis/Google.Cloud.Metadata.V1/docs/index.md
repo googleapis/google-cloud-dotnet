@@ -29,3 +29,21 @@ instance. Neither this library nor the metadata server API provide
 support for modifying custom metadata. Modifications must be done
 via the [Compute Engine API](https://cloud.google.com/compute/docs/reference/latest/)
 or the [Google Cloud Console](https://console.cloud.google.com).
+
+# Sample code
+
+# Getting instance metadata
+
+[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetInstanceMetadata)]
+
+# Getting a custom metadata value
+
+[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetCustomInstanceMetadata)]
+
+# Getting the maintenance status
+
+[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetMaintenanceStatus)]
+
+# Waiting for changes
+
+[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#WaitForChange)]

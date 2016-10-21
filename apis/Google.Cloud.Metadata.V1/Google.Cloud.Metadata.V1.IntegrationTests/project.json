@@ -2,8 +2,12 @@
   "description": "Integration tests for Google.Cloud.Metadata.V1.",
 
   "buildOptions": {
-    "copyToOutput": {
-      "include": "Emulator/*"
+    "embed": {
+      "include": [
+        "Emulator/common.py",
+        "Emulator/initial_data.json",
+        "Emulator/metadata_server.py"
+      ]
     },
     "keyFile": "../../GoogleApis.snk"
   },

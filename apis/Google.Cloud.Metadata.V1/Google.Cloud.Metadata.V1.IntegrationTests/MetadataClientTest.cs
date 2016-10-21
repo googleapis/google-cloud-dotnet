@@ -24,6 +24,13 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
     [Collection(nameof(MetadataFixture))]
     public class MetadataClientTest
     {
+        private readonly MetadataFixture _fixture;
+
+        public MetadataClientTest(MetadataFixture fixture)
+        {
+            _fixture = fixture;
+        }
+
         [Fact]
         public void GetAccessToken()
         {
@@ -120,14 +127,23 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
         }
 
         [Fact]
-        public void WaitForChanges()
+        public void WaitForChange()
         {
             var client = MetadataClient.Create();
+
+            // Wait for change on a value key
             var sw = Stopwatch.StartNew();
             var result = client.WaitForChange("instance/tags", TimeSpan.FromSeconds(7));
             sw.Stop();
             Assert.Equal(result, "[\"a\",\"b\",\"c\"]");
             Assert.True(sw.Elapsed.TotalSeconds >= 7);
+
+            // Wait for change on a directory key
+            sw = Stopwatch.StartNew();
+            result = client.WaitForChange("instance/attributes", TimeSpan.FromSeconds(5));
+            sw.Stop();
+            Assert.Equal(result, "{\"my_instance_key1\":\"my_instance_value1\"}");
+            Assert.True(sw.Elapsed.TotalSeconds >= 5);
         }
     }
 }
