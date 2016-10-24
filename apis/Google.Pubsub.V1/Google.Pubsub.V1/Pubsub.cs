@@ -111,9 +111,8 @@ namespace Google.Pubsub.V1 {
             "Ki90b3BpY3MvKn0vc3Vic2NyaXB0aW9ucxJ0CgtEZWxldGVUb3BpYxIkLmdv",
             "b2dsZS5wdWJzdWIudjEuRGVsZXRlVG9waWNSZXF1ZXN0GhYuZ29vZ2xlLnBy",
             "b3RvYnVmLkVtcHR5IieC0+STAiEqHy92MS97dG9waWM9cHJvamVjdHMvKi90",
-            "b3BpY3MvKn1CVgoUY29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3Rv",
-            "UAFaL2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvcHVi",
-            "c3ViL3YxYgZwcm90bzM="));
+            "b3BpY3MvKn1CKAoUY29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3Rv",
+            "UAH4AQFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -317,7 +316,7 @@ namespace Google.Pubsub.V1 {
     private pb::ByteString data_ = pb::ByteString.Empty;
     /// <summary>
     ///  The message payload. For JSON requests, the value of this field must be
-    ///  base64-encoded.
+    ///  [base64-encoded](https://tools.ietf.org/html/rfc4648).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Data {
@@ -1775,6 +1774,7 @@ namespace Google.Pubsub.V1 {
     ///  deadline. To override this value for a given message, call
     ///  `ModifyAckDeadline` with the corresponding `ack_id` if using
     ///  pull.
+    ///  The maximum custom deadline you can specify is 600 seconds (10 minutes).
     ///
     ///  For push delivery, this value is also used to set the request timeout for
     ///  the call to the push endpoint.
@@ -1782,7 +1782,7 @@ namespace Google.Pubsub.V1 {
     ///  If the subscriber never acknowledges the message, the Pub/Sub
     ///  system will eventually redeliver the message.
     ///
-    ///  If this parameter is not set, the default value of 10 seconds is used.
+    ///  If this parameter is 0, a default value of 10 seconds is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AckDeadlineSeconds {

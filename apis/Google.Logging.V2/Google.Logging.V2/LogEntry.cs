@@ -154,9 +154,9 @@ namespace Google.Logging.V2 {
     /// <summary>Field number for the "proto_payload" field.</summary>
     public const int ProtoPayloadFieldNumber = 2;
     /// <summary>
-    ///  The log entry payload, represented as a protocol buffer.
-    ///  You can only use `protoPayload` values that belong to a set of approved
-    ///  types.
+    ///  The log entry payload, represented as a protocol buffer.  Some
+    ///  Google Cloud Platform services use this field for their log
+    ///  entry payloads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Any ProtoPayload {
@@ -232,7 +232,7 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  Optional. A unique ID for the log entry. If you provide this
     ///  field, the logging service considers other log entries in the
-    ///  same log with the same ID as duplicates which can be removed.  If
+    ///  same project with the same ID as duplicates which can be removed.  If
     ///  omitted, Stackdriver Logging will generate a unique ID for this
     ///  log entry.
     /// </summary>
@@ -248,8 +248,8 @@ namespace Google.Logging.V2 {
     public const int HttpRequestFieldNumber = 7;
     private global::Google.Logging.Type.HttpRequest httpRequest_;
     /// <summary>
-    ///  Optional. Information about the HTTP request associated with this log entry,
-    ///  if applicable.
+    ///  Optional. Information about the HTTP request associated with this
+    ///  log entry, if applicable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.Type.HttpRequest HttpRequest {
@@ -617,7 +617,7 @@ namespace Google.Logging.V2 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    ///  Required. An arbitrary operation identifier. Log entries with the
+    ///  Optional. An arbitrary operation identifier. Log entries with the
     ///  same identifier are assumed to be part of the same operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -632,7 +632,7 @@ namespace Google.Logging.V2 {
     public const int ProducerFieldNumber = 2;
     private string producer_ = "";
     /// <summary>
-    ///  Required. An arbitrary producer identifier. The combination of
+    ///  Optional. An arbitrary producer identifier. The combination of
     ///  `id` and `producer` must be globally unique.  Examples for `producer`:
     ///  `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
     /// </summary>
