@@ -14,9 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
+using AnnotateTextRequest.Types;
+using Google.Api.Gax.Grpc;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
@@ -24,49 +27,30 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Language.V1Beta1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="LanguageServiceClient"/>.
-    /// </summary>
-    public static partial class LanguageServiceExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC LanguageService client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="LanguageServiceSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="LanguageServiceClient"/> that wraps the specified GRPC client.</returns>
-        public static LanguageServiceClient ToClient(
-            this LanguageService.LanguageServiceClient grpcClient,
-            LanguageServiceSettings settings = null
-        ) => new LanguageServiceClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a LanguageService wrapper.
+    /// Settings for a <see cref="LanguageServiceClient"/>.
     /// </summary>
     public sealed partial class LanguageServiceSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="LanguageServiceSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default LanguageServiceSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="LanguageServiceSettings"/>.
+        /// </returns>
         public static LanguageServiceSettings GetDefault() => new LanguageServiceSettings();
 
         /// <summary>
-        /// Constructs a new LanguageServiceSettings object with default settings.
+        /// Constructs a new <see cref="LanguageServiceSettings"/> object with default settings.
         /// </summary>
         public LanguageServiceSettings() { }
 
         private LanguageServiceSettings(LanguageServiceSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            AnalyzeSentimentSettings = existing.AnalyzeSentimentSettings?.Clone();
-            AnalyzeEntitiesSettings = existing.AnalyzeEntitiesSettings?.Clone();
-            AnnotateTextSettings = existing.AnnotateTextSettings?.Clone();
+            AnalyzeSentimentSettings = existing.AnalyzeSentimentSettings;
+            AnalyzeEntitiesSettings = existing.AnalyzeEntitiesSettings;
+            AnnotateTextSettings = existing.AnnotateTextSettings;
         }
 
         /// <summary>
@@ -96,26 +80,29 @@ namespace Google.Cloud.Language.V1Beta1
         /// <summary>
         /// "Default" retry backoff for <see cref="LanguageServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="LanguageServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="LanguageServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="LanguageServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="LanguageServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="LanguageServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="LanguageServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="LanguageServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -124,20 +111,19 @@ namespace Google.Cloud.Language.V1Beta1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(60000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(60000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="LanguageServiceClient.AnalyzeSentiment"/> and <see cref="LanguageServiceClient.AnalyzeSentimentAsync"/>.
+        /// <c>LanguageServiceClient.AnalyzeSentiment</c> and <c>LanguageServiceClient.AnalyzeSentimentAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="LanguageServiceClient.AnalyzeSentiment"/> and
-        /// <see cref="LanguageServiceClient.AnalyzeSentimentAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>LanguageServiceClient.AnalyzeSentiment</c> and
+        /// <c>LanguageServiceClient.AnalyzeSentimentAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -153,24 +139,21 @@ namespace Google.Cloud.Language.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AnalyzeSentimentSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings AnalyzeSentimentSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="LanguageServiceClient.AnalyzeEntities"/> and <see cref="LanguageServiceClient.AnalyzeEntitiesAsync"/>.
+        /// <c>LanguageServiceClient.AnalyzeEntities</c> and <c>LanguageServiceClient.AnalyzeEntitiesAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="LanguageServiceClient.AnalyzeEntities"/> and
-        /// <see cref="LanguageServiceClient.AnalyzeEntitiesAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>LanguageServiceClient.AnalyzeEntities</c> and
+        /// <c>LanguageServiceClient.AnalyzeEntitiesAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -186,24 +169,21 @@ namespace Google.Cloud.Language.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AnalyzeEntitiesSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings AnalyzeEntitiesSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="LanguageServiceClient.AnnotateText"/> and <see cref="LanguageServiceClient.AnnotateTextAsync"/>.
+        /// <c>LanguageServiceClient.AnnotateText</c> and <c>LanguageServiceClient.AnnotateTextAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="LanguageServiceClient.AnnotateText"/> and
-        /// <see cref="LanguageServiceClient.AnnotateTextAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>LanguageServiceClient.AnnotateText</c> and
+        /// <c>LanguageServiceClient.AnnotateTextAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -219,22 +199,18 @@ namespace Google.Cloud.Language.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AnnotateTextSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings AnnotateTextSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of LanguageService settings.</returns>
+        /// <returns>A deep clone of this <see cref="LanguageServiceSettings"/> object.</returns>
         public LanguageServiceSettings Clone() => new LanguageServiceSettings(this);
     }
 
@@ -249,7 +225,7 @@ namespace Google.Cloud.Language.V1Beta1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("language.googleapis.com", 443);
 
         /// <summary>
-        /// The default LanguageService scopes
+        /// The default LanguageService scopes.
         /// </summary>
         /// <remarks>
         /// The default LanguageService scopes are:
@@ -257,7 +233,7 @@ namespace Google.Cloud.Language.V1Beta1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -323,7 +299,7 @@ namespace Google.Cloud.Language.V1Beta1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC LanguageService client.
+        /// The underlying gRPC LanguageService client.
         /// </summary>
         public virtual LanguageService.LanguageServiceClient GrpcClient
         {
@@ -331,14 +307,17 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        /// Analyzes the sentiment of the provided text.
+        ///
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             Document document,
             CallSettings callSettings = null)
@@ -347,29 +326,35 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        /// Analyzes the sentiment of the provided text.
+        ///
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
+        ///
         /// </param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             Document document,
             CancellationToken cancellationToken) => AnalyzeSentimentAsync(
                 document,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Analyzes the sentiment of the provided text.
+        ///
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual AnalyzeSentimentResponse AnalyzeSentiment(
             Document document,
             CallSettings callSettings = null)
@@ -378,13 +363,20 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
             EncodingType encodingType,
@@ -394,29 +386,43 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
             EncodingType encodingType,
             CancellationToken cancellationToken) => AnalyzeEntitiesAsync(
                 document,
                 encodingType,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual AnalyzeEntitiesResponse AnalyzeEntities(
             Document document,
             EncodingType encodingType,
@@ -426,19 +432,26 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        /// Advanced API that analyzes the document and provides a full set of text
-        /// annotations, including semantic, syntactic, and sentiment information. This
-        /// API is intended for users who are familiar with machine learning and need
-        /// in-depth text features to build upon.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="features">The enabled features.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="features">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
-            AnnotateTextRequest.Types.Features features,
+            Features features,
             EncodingType encodingType,
             CallSettings callSettings = null)
         {
@@ -446,40 +459,54 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        /// Advanced API that analyzes the document and provides a full set of text
-        /// annotations, including semantic, syntactic, and sentiment information. This
-        /// API is intended for users who are familiar with machine learning and need
-        /// in-depth text features to build upon.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="features">The enabled features.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="features">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
-            AnnotateTextRequest.Types.Features features,
+            Features features,
             EncodingType encodingType,
             CancellationToken cancellationToken) => AnnotateTextAsync(
                 document,
                 features,
                 encodingType,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Advanced API that analyzes the document and provides a full set of text
-        /// annotations, including semantic, syntactic, and sentiment information. This
-        /// API is intended for users who are familiar with machine learning and need
-        /// in-depth text features to build upon.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="features">The enabled features.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="features">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual AnnotateTextResponse AnnotateText(
             Document document,
-            AnnotateTextRequest.Types.Features features,
+            Features features,
             EncodingType encodingType,
             CallSettings callSettings = null)
         {
@@ -488,6 +515,9 @@ namespace Google.Cloud.Language.V1Beta1
 
     }
 
+    /// <summary>
+    /// LanguageService client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class LanguageServiceClientImpl : LanguageServiceClient
     {
         private readonly ClientHelper _clientHelper;
@@ -495,6 +525,11 @@ namespace Google.Cloud.Language.V1Beta1
         private readonly ApiCall<AnalyzeEntitiesRequest, AnalyzeEntitiesResponse> _callAnalyzeEntities;
         private readonly ApiCall<AnnotateTextRequest, AnnotateTextResponse> _callAnnotateText;
 
+        /// <summary>
+        /// Constructs a client wrapper for the LanguageService service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="LanguageServiceSettings"/> used within this client </param>
         public LanguageServiceClientImpl(LanguageService.LanguageServiceClient grpcClient, LanguageServiceSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -508,17 +543,23 @@ namespace Google.Cloud.Language.V1Beta1
                 GrpcClient.AnnotateTextAsync, GrpcClient.AnnotateText, effectiveSettings.AnnotateTextSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC LanguageService client.
+        /// </summary>
         public override LanguageService.LanguageServiceClient GrpcClient { get; }
 
         /// <summary>
-        /// Analyzes the sentiment of the provided text.
+        ///
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             Document document,
             CallSettings callSettings = null) => _callAnalyzeSentiment.Async(
@@ -529,14 +570,17 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Analyzes the sentiment of the provided text.
+        ///
         /// </summary>
         /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override AnalyzeSentimentResponse AnalyzeSentiment(
             Document document,
             CallSettings callSettings = null) => _callAnalyzeSentiment.Sync(
@@ -547,13 +591,20 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
             EncodingType encodingType,
@@ -566,13 +617,20 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override AnalyzeEntitiesResponse AnalyzeEntities(
             Document document,
             EncodingType encodingType,
@@ -585,19 +643,26 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Advanced API that analyzes the document and provides a full set of text
-        /// annotations, including semantic, syntactic, and sentiment information. This
-        /// API is intended for users who are familiar with machine learning and need
-        /// in-depth text features to build upon.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="features">The enabled features.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="features">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
-            AnnotateTextRequest.Types.Features features,
+            Features features,
             EncodingType encodingType,
             CallSettings callSettings = null) => _callAnnotateText.Async(
                 new AnnotateTextRequest
@@ -609,19 +674,26 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Advanced API that analyzes the document and provides a full set of text
-        /// annotations, including semantic, syntactic, and sentiment information. This
-        /// API is intended for users who are familiar with machine learning and need
-        /// in-depth text features to build upon.
+        ///
         /// </summary>
-        /// <param name="document">Input document.</param>
-        /// <param name="features">The enabled features.</param>
-        /// <param name="encodingType">The encoding type used by the API to calculate offsets.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="document">
+        ///
+        /// </param>
+        /// <param name="features">
+        ///
+        /// </param>
+        /// <param name="encodingType">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override AnnotateTextResponse AnnotateText(
             Document document,
-            AnnotateTextRequest.Types.Features features,
+            Features features,
             EncodingType encodingType,
             CallSettings callSettings = null) => _callAnnotateText.Sync(
                 new AnnotateTextRequest
