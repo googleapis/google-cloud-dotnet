@@ -25,65 +25,69 @@ namespace Google.Cloud.Speech.V1Beta1 {
             "Ci5nb29nbGUvY2xvdWQvc3BlZWNoL3YxYmV0YTEvY2xvdWRfc3BlZWNoLnBy",
             "b3RvEhtnb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEaHGdvb2dsZS9hcGkv",
             "YW5ub3RhdGlvbnMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRp",
-            "b25zLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKUAQoUU3luY1Jl",
-            "Y29nbml6ZVJlcXVlc3QSPgoGY29uZmlnGAEgASgLMi4uZ29vZ2xlLmNsb3Vk",
-            "LnNwZWVjaC52MWJldGExLlJlY29nbml0aW9uQ29uZmlnEjwKBWF1ZGlvGAIg",
-            "ASgLMi0uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlJlY29nbml0aW9u",
-            "QXVkaW8ilQEKFUFzeW5jUmVjb2duaXplUmVxdWVzdBI+CgZjb25maWcYASAB",
-            "KAsyLi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuUmVjb2duaXRpb25D",
-            "b25maWcSPAoFYXVkaW8YAiABKAsyLS5nb29nbGUuY2xvdWQuc3BlZWNoLnYx",
-            "YmV0YTEuUmVjb2duaXRpb25BdWRpbyKeAQoZU3RyZWFtaW5nUmVjb2duaXpl",
-            "UmVxdWVzdBJTChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMjcuZ29vZ2xlLmNs",
-            "b3VkLnNwZWVjaC52MWJldGExLlN0cmVhbWluZ1JlY29nbml0aW9uQ29uZmln",
-            "SAASFwoNYXVkaW9fY29udGVudBgCIAEoDEgAQhMKEXN0cmVhbWluZ19yZXF1",
-            "ZXN0Io8BChpTdHJlYW1pbmdSZWNvZ25pdGlvbkNvbmZpZxI+CgZjb25maWcY",
-            "ASABKAsyLi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuUmVjb2duaXRp",
-            "b25Db25maWcSGAoQc2luZ2xlX3V0dGVyYW5jZRgCIAEoCBIXCg9pbnRlcmlt",
-            "X3Jlc3VsdHMYAyABKAgi6gIKEVJlY29nbml0aW9uQ29uZmlnEk4KCGVuY29k",
-            "aW5nGAEgASgOMjwuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlJlY29n",
-            "bml0aW9uQ29uZmlnLkF1ZGlvRW5jb2RpbmcSEwoLc2FtcGxlX3JhdGUYAiAB",
-            "KAUSFQoNbGFuZ3VhZ2VfY29kZRgDIAEoCRIYChBtYXhfYWx0ZXJuYXRpdmVz",
-            "GAQgASgFEhgKEHByb2Zhbml0eV9maWx0ZXIYBSABKAgSQgoOc3BlZWNoX2Nv",
-            "bnRleHQYBiABKAsyKi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuU3Bl",
-            "ZWNoQ29udGV4dCJhCg1BdWRpb0VuY29kaW5nEhgKFEVOQ09ESU5HX1VOU1BF",
-            "Q0lGSUVEEAASDAoITElORUFSMTYQARIICgRGTEFDEAISCQoFTVVMQVcQAxIH",
-            "CgNBTVIQBBIKCgZBTVJfV0IQBSIgCg1TcGVlY2hDb250ZXh0Eg8KB3BocmFz",
-            "ZXMYASADKAkiRAoQUmVjb2duaXRpb25BdWRpbxIRCgdjb250ZW50GAEgASgM",
-            "SAASDQoDdXJpGAIgASgJSABCDgoMYXVkaW9fc291cmNlIl4KFVN5bmNSZWNv",
-            "Z25pemVSZXNwb25zZRJFCgdyZXN1bHRzGAIgAygLMjQuZ29vZ2xlLmNsb3Vk",
-            "LnNwZWVjaC52MWJldGExLlNwZWVjaFJlY29nbml0aW9uUmVzdWx0Il8KFkFz",
-            "eW5jUmVjb2duaXplUmVzcG9uc2USRQoHcmVzdWx0cxgCIAMoCzI0Lmdvb2ds",
-            "ZS5jbG91ZC5zcGVlY2gudjFiZXRhMS5TcGVlY2hSZWNvZ25pdGlvblJlc3Vs",
-            "dCKFAwoaU3RyZWFtaW5nUmVjb2duaXplUmVzcG9uc2USIQoFZXJyb3IYASAB",
-            "KAsyEi5nb29nbGUucnBjLlN0YXR1cxJICgdyZXN1bHRzGAIgAygLMjcuZ29v",
-            "Z2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlN0cmVhbWluZ1JlY29nbml0aW9u",
-            "UmVzdWx0EhQKDHJlc3VsdF9pbmRleBgDIAEoBRJfCg9lbmRwb2ludGVyX3R5",
-            "cGUYBCABKA4yRi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuU3RyZWFt",
-            "aW5nUmVjb2duaXplUmVzcG9uc2UuRW5kcG9pbnRlclR5cGUiggEKDkVuZHBv",
-            "aW50ZXJUeXBlEiAKHEVORFBPSU5URVJfRVZFTlRfVU5TUEVDSUZJRUQQABIT",
-            "Cg9TVEFSVF9PRl9TUEVFQ0gQARIRCg1FTkRfT0ZfU1BFRUNIEAISEAoMRU5E",
-            "X09GX0FVRElPEAMSFAoQRU5EX09GX1VUVEVSQU5DRRAEIpIBChpTdHJlYW1p",
-            "bmdSZWNvZ25pdGlvblJlc3VsdBJPCgxhbHRlcm5hdGl2ZXMYASADKAsyOS5n",
-            "b29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuU3BlZWNoUmVjb2duaXRpb25B",
-            "bHRlcm5hdGl2ZRIQCghpc19maW5hbBgCIAEoCBIRCglzdGFiaWxpdHkYAyAB",
-            "KAIiagoXU3BlZWNoUmVjb2duaXRpb25SZXN1bHQSTwoMYWx0ZXJuYXRpdmVz",
-            "GAEgAygLMjkuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlNwZWVjaFJl",
-            "Y29nbml0aW9uQWx0ZXJuYXRpdmUiRgocU3BlZWNoUmVjb2duaXRpb25BbHRl",
-            "cm5hdGl2ZRISCgp0cmFuc2NyaXB0GAEgASgJEhIKCmNvbmZpZGVuY2UYAiAB",
-            "KAIyyAMKBlNwZWVjaBKgAQoNU3luY1JlY29nbml6ZRIxLmdvb2dsZS5jbG91",
-            "ZC5zcGVlY2gudjFiZXRhMS5TeW5jUmVjb2duaXplUmVxdWVzdBoyLmdvb2ds",
-            "ZS5jbG91ZC5zcGVlY2gudjFiZXRhMS5TeW5jUmVjb2duaXplUmVzcG9uc2Ui",
-            "KILT5JMCIiIdL3YxYmV0YTEvc3BlZWNoOnN5bmNyZWNvZ25pemU6ASoSjgEK",
-            "DkFzeW5jUmVjb2duaXplEjIuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJldGEx",
-            "LkFzeW5jUmVjb2duaXplUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24iKYLT5JMCIyIeL3YxYmV0YTEvc3BlZWNoOmFzeW5jcmVjb2du",
-            "aXplOgEqEokBChJTdHJlYW1pbmdSZWNvZ25pemUSNi5nb29nbGUuY2xvdWQu",
-            "c3BlZWNoLnYxYmV0YTEuU3RyZWFtaW5nUmVjb2duaXplUmVxdWVzdBo3Lmdv",
-            "b2dsZS5jbG91ZC5zcGVlY2gudjFiZXRhMS5TdHJlYW1pbmdSZWNvZ25pemVS",
-            "ZXNwb25zZSgBMAFCMAofY29tLmdvb2dsZS5jbG91ZC5zcGVlY2gudjFiZXRh",
-            "MUILU3BlZWNoUHJvdG9QAWIGcHJvdG8z"));
+            "b25zLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdn",
+            "b29nbGUvcnBjL3N0YXR1cy5wcm90byKUAQoUU3luY1JlY29nbml6ZVJlcXVl",
+            "c3QSPgoGY29uZmlnGAEgASgLMi4uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJl",
+            "dGExLlJlY29nbml0aW9uQ29uZmlnEjwKBWF1ZGlvGAIgASgLMi0uZ29vZ2xl",
+            "LmNsb3VkLnNwZWVjaC52MWJldGExLlJlY29nbml0aW9uQXVkaW8ilQEKFUFz",
+            "eW5jUmVjb2duaXplUmVxdWVzdBI+CgZjb25maWcYASABKAsyLi5nb29nbGUu",
+            "Y2xvdWQuc3BlZWNoLnYxYmV0YTEuUmVjb2duaXRpb25Db25maWcSPAoFYXVk",
+            "aW8YAiABKAsyLS5nb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuUmVjb2du",
+            "aXRpb25BdWRpbyKeAQoZU3RyZWFtaW5nUmVjb2duaXplUmVxdWVzdBJTChBz",
+            "dHJlYW1pbmdfY29uZmlnGAEgASgLMjcuZ29vZ2xlLmNsb3VkLnNwZWVjaC52",
+            "MWJldGExLlN0cmVhbWluZ1JlY29nbml0aW9uQ29uZmlnSAASFwoNYXVkaW9f",
+            "Y29udGVudBgCIAEoDEgAQhMKEXN0cmVhbWluZ19yZXF1ZXN0Io8BChpTdHJl",
+            "YW1pbmdSZWNvZ25pdGlvbkNvbmZpZxI+CgZjb25maWcYASABKAsyLi5nb29n",
+            "bGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuUmVjb2duaXRpb25Db25maWcSGAoQ",
+            "c2luZ2xlX3V0dGVyYW5jZRgCIAEoCBIXCg9pbnRlcmltX3Jlc3VsdHMYAyAB",
+            "KAgi6gIKEVJlY29nbml0aW9uQ29uZmlnEk4KCGVuY29kaW5nGAEgASgOMjwu",
+            "Z29vZ2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlJlY29nbml0aW9uQ29uZmln",
+            "LkF1ZGlvRW5jb2RpbmcSEwoLc2FtcGxlX3JhdGUYAiABKAUSFQoNbGFuZ3Vh",
+            "Z2VfY29kZRgDIAEoCRIYChBtYXhfYWx0ZXJuYXRpdmVzGAQgASgFEhgKEHBy",
+            "b2Zhbml0eV9maWx0ZXIYBSABKAgSQgoOc3BlZWNoX2NvbnRleHQYBiABKAsy",
+            "Ki5nb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuU3BlZWNoQ29udGV4dCJh",
+            "Cg1BdWRpb0VuY29kaW5nEhgKFEVOQ09ESU5HX1VOU1BFQ0lGSUVEEAASDAoI",
+            "TElORUFSMTYQARIICgRGTEFDEAISCQoFTVVMQVcQAxIHCgNBTVIQBBIKCgZB",
+            "TVJfV0IQBSIgCg1TcGVlY2hDb250ZXh0Eg8KB3BocmFzZXMYASADKAkiRAoQ",
+            "UmVjb2duaXRpb25BdWRpbxIRCgdjb250ZW50GAEgASgMSAASDQoDdXJpGAIg",
+            "ASgJSABCDgoMYXVkaW9fc291cmNlIl4KFVN5bmNSZWNvZ25pemVSZXNwb25z",
+            "ZRJFCgdyZXN1bHRzGAIgAygLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJl",
+            "dGExLlNwZWVjaFJlY29nbml0aW9uUmVzdWx0Il8KFkFzeW5jUmVjb2duaXpl",
+            "UmVzcG9uc2USRQoHcmVzdWx0cxgCIAMoCzI0Lmdvb2dsZS5jbG91ZC5zcGVl",
+            "Y2gudjFiZXRhMS5TcGVlY2hSZWNvZ25pdGlvblJlc3VsdCKYAQoWQXN5bmNS",
+            "ZWNvZ25pemVNZXRhZGF0YRIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFEi4K",
+            "CnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EjQKEGxhc3RfdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIoUDChpTdHJlYW1pbmdSZWNvZ25pemVSZXNwb25zZRIhCgVl",
+            "cnJvchgBIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEkgKB3Jlc3VsdHMYAiAD",
+            "KAsyNy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEuU3RyZWFtaW5nUmVj",
+            "b2duaXRpb25SZXN1bHQSFAoMcmVzdWx0X2luZGV4GAMgASgFEl8KD2VuZHBv",
+            "aW50ZXJfdHlwZRgEIAEoDjJGLmdvb2dsZS5jbG91ZC5zcGVlY2gudjFiZXRh",
+            "MS5TdHJlYW1pbmdSZWNvZ25pemVSZXNwb25zZS5FbmRwb2ludGVyVHlwZSKC",
+            "AQoORW5kcG9pbnRlclR5cGUSIAocRU5EUE9JTlRFUl9FVkVOVF9VTlNQRUNJ",
+            "RklFRBAAEhMKD1NUQVJUX09GX1NQRUVDSBABEhEKDUVORF9PRl9TUEVFQ0gQ",
+            "AhIQCgxFTkRfT0ZfQVVESU8QAxIUChBFTkRfT0ZfVVRURVJBTkNFEAQikgEK",
+            "GlN0cmVhbWluZ1JlY29nbml0aW9uUmVzdWx0Ek8KDGFsdGVybmF0aXZlcxgB",
+            "IAMoCzI5Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjFiZXRhMS5TcGVlY2hSZWNv",
+            "Z25pdGlvbkFsdGVybmF0aXZlEhAKCGlzX2ZpbmFsGAIgASgIEhEKCXN0YWJp",
+            "bGl0eRgDIAEoAiJqChdTcGVlY2hSZWNvZ25pdGlvblJlc3VsdBJPCgxhbHRl",
+            "cm5hdGl2ZXMYASADKAsyOS5nb29nbGUuY2xvdWQuc3BlZWNoLnYxYmV0YTEu",
+            "U3BlZWNoUmVjb2duaXRpb25BbHRlcm5hdGl2ZSJGChxTcGVlY2hSZWNvZ25p",
+            "dGlvbkFsdGVybmF0aXZlEhIKCnRyYW5zY3JpcHQYASABKAkSEgoKY29uZmlk",
+            "ZW5jZRgCIAEoAjLIAwoGU3BlZWNoEqABCg1TeW5jUmVjb2duaXplEjEuZ29v",
+            "Z2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlN5bmNSZWNvZ25pemVSZXF1ZXN0",
+            "GjIuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlN5bmNSZWNvZ25pemVS",
+            "ZXNwb25zZSIogtPkkwIiIh0vdjFiZXRhMS9zcGVlY2g6c3luY3JlY29nbml6",
+            "ZToBKhKOAQoOQXN5bmNSZWNvZ25pemUSMi5nb29nbGUuY2xvdWQuc3BlZWNo",
+            "LnYxYmV0YTEuQXN5bmNSZWNvZ25pemVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
+            "dW5uaW5nLk9wZXJhdGlvbiIpgtPkkwIjIh4vdjFiZXRhMS9zcGVlY2g6YXN5",
+            "bmNyZWNvZ25pemU6ASoSiQEKElN0cmVhbWluZ1JlY29nbml6ZRI2Lmdvb2ds",
+            "ZS5jbG91ZC5zcGVlY2gudjFiZXRhMS5TdHJlYW1pbmdSZWNvZ25pemVSZXF1",
+            "ZXN0GjcuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlN0cmVhbWluZ1Jl",
+            "Y29nbml6ZVJlc3BvbnNlKAEwAUIwCh9jb20uZ29vZ2xlLmNsb3VkLnNwZWVj",
+            "aC52MWJldGExQgtTcGVlY2hQcm90b1ABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Longrunning.OperationsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Longrunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest), global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest), global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
@@ -94,6 +98,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.RecognitionAudio), global::Google.Cloud.Speech.V1Beta1.RecognitionAudio.Parser, new[]{ "Content", "Uri" }, new[]{ "AudioSource" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse), global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse), global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeMetadata), global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeMetadata.Parser, new[]{ "ProgressPercent", "StartTime", "LastUpdateTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse), global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Parser, new[]{ "Error", "Results", "ResultIndex", "EndpointerType" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult), global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult.Parser, new[]{ "Alternatives", "IsFinal", "Stability" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult), global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult.Parser, new[]{ "Alternatives" }, null, null, null),
@@ -514,7 +519,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
     ///  and all subsequent `StreamingRecognizeRequest` messages must contain
     ///  `audio_content` data. The audio bytes must be encoded as specified in
     ///  `RecognitionConfig`. Note: as with all bytes fields, protobuffers use a
-    ///  pure binary representation (not base64).
+    ///  pure binary representation (not base64). See
+    ///  [audio limits](https://cloud.google.com/speech/limits#content).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AudioContent {
@@ -704,13 +710,13 @@ namespace Google.Cloud.Speech.V1Beta1 {
     ///  [Optional] If `false` or omitted, the recognizer will perform continuous
     ///  recognition (continuing to process audio even if the user pauses speaking)
     ///  until the client closes the output stream (gRPC API) or when the maximum
-    ///  time limit has been reached. Multiple `SpeechRecognitionResult`s with the
-    ///  `is_final` flag set to `true` may be returned.
+    ///  time limit has been reached. Multiple `StreamingRecognitionResult`s with
+    ///  the `is_final` flag set to `true` may be returned.
     ///
     ///  If `true`, the recognizer will detect a single spoken utterance. When it
     ///  detects that the user has paused or stopped speaking, it will return an
     ///  `END_OF_UTTERANCE` event and cease recognition. It will return no more than
-    ///  one `SpeechRecognitionResult` with the `is_final` flag set to `true`.
+    ///  one `StreamingRecognitionResult` with the `is_final` flag set to `true`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SingleUtterance {
@@ -929,8 +935,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
     ///  [Optional] The language of the supplied audio as a BCP-47 language tag.
     ///  Example: "en-GB"  https://www.rfc-editor.org/rfc/bcp/bcp47.txt
     ///  If omitted, defaults to "en-US". See
-    ///  [Language Support](/speech/docs/best-practices#language_support) for
-    ///  a list of the currently supported language codes.
+    ///  [Language Support](https://cloud.google.com/speech/docs/best-practices#language_support)
+    ///  for a list of the currently supported language codes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -1169,7 +1175,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("ENCODING_UNSPECIFIED")] EncodingUnspecified = 0,
         /// <summary>
-        ///  Uncompressed 16-bit signed little-endian samples.
+        ///  Uncompressed 16-bit signed little-endian samples (Linear PCM).
         ///  This is the only encoding that may be used by `AsyncRecognize`.
         /// </summary>
         [pbr::OriginalName("LINEAR16")] Linear16 = 1,
@@ -1180,7 +1186,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
         ///
         ///  The stream FLAC (Free Lossless Audio Codec) encoding is specified at:
         ///  http://flac.sourceforge.net/documentation.html.
-        ///  Only 16-bit samples are supported.
+        ///  16-bit and 24-bit samples are supported.
         ///  Not all fields in STREAMINFO are supported.
         /// </summary>
         [pbr::OriginalName("FLAC")] Flac = 2,
@@ -1245,9 +1251,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> phrases_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  [Optional] A list of up to 50 phrases of up to 100 characters each to
-    ///  provide words and phrases "hints" to the speech recognition so that it is
-    ///  more likely to recognize them.
+    ///  [Optional] A list of strings containing words and phrases "hints" so that
+    ///  the speech recognition is more likely to recognize them. This can be used
+    ///  to improve the accuracy for specific words and phrases, for example, if
+    ///  specific commands are typically spoken by the user. This can also be used
+    ///  to add additional words to the vocabulary of the recognizer. See
+    ///  [usage limits](https://cloud.google.com/speech/limits#content).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Phrases {
@@ -1324,7 +1333,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
   /// <summary>
   ///  Contains audio data in the encoding specified in the `RecognitionConfig`.
   ///  Either `content` or `uri` must be supplied. Supplying both or neither
-  ///  returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+  ///  returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. See
+  ///  [audio limits](https://cloud.google.com/speech/limits#content).
   /// </summary>
   public sealed partial class RecognitionAudio : pb::IMessage<RecognitionAudio> {
     private static readonly pb::MessageParser<RecognitionAudio> _parser = new pb::MessageParser<RecognitionAudio>(() => new RecognitionAudio());
@@ -1390,7 +1400,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     ///  supported, which must be specified in the following format:
     ///  `gs://bucket_name/object_name` (other URI formats return
     ///  [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-    ///  [Request URIs](/storage/docs/reference-uris).
+    ///  [Request URIs](https://cloud.google.com/storage/docs/reference-uris).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
@@ -1517,8 +1527,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
   /// <summary>
   ///  `SyncRecognizeResponse` is the only message returned to the client by
-  ///  `SyncRecognize`. It contains the result as zero or more
-  ///  sequential `RecognizeResponse` messages.
+  ///  `SyncRecognize`. It contains the result as zero or more sequential
+  ///  `SpeechRecognitionResult` messages.
   /// </summary>
   public sealed partial class SyncRecognizeResponse : pb::IMessage<SyncRecognizeResponse> {
     private static readonly pb::MessageParser<SyncRecognizeResponse> _parser = new pb::MessageParser<SyncRecognizeResponse>(() => new SyncRecognizeResponse());
@@ -1635,8 +1645,10 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
   /// <summary>
   ///  `AsyncRecognizeResponse` is the only message returned to the client by
-  ///  `AsyncRecognize`. It contains the result as zero or more
-  ///  sequential `RecognizeResponse` messages.
+  ///  `AsyncRecognize`. It contains the result as zero or more sequential
+  ///  `SpeechRecognitionResult` messages. It is included in the `result.response`
+  ///  field of the `Operation` returned by the `GetOperation` call of the
+  ///  `google::longrunning::Operations` service.
   /// </summary>
   public sealed partial class AsyncRecognizeResponse : pb::IMessage<AsyncRecognizeResponse> {
     private static readonly pb::MessageParser<AsyncRecognizeResponse> _parser = new pb::MessageParser<AsyncRecognizeResponse>(() => new AsyncRecognizeResponse());
@@ -1752,9 +1764,264 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
+  ///  `AsyncRecognizeMetadata` describes the progress of a long-running
+  ///  `AsyncRecognize` call. It is included in the `metadata` field of the
+  ///  `Operation` returned by the `GetOperation` call of the
+  ///  `google::longrunning::Operations` service.
+  /// </summary>
+  public sealed partial class AsyncRecognizeMetadata : pb::IMessage<AsyncRecognizeMetadata> {
+    private static readonly pb::MessageParser<AsyncRecognizeMetadata> _parser = new pb::MessageParser<AsyncRecognizeMetadata>(() => new AsyncRecognizeMetadata());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AsyncRecognizeMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AsyncRecognizeMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AsyncRecognizeMetadata(AsyncRecognizeMetadata other) : this() {
+      progressPercent_ = other.progressPercent_;
+      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
+      LastUpdateTime = other.lastUpdateTime_ != null ? other.LastUpdateTime.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AsyncRecognizeMetadata Clone() {
+      return new AsyncRecognizeMetadata(this);
+    }
+
+    /// <summary>Field number for the "progress_percent" field.</summary>
+    public const int ProgressPercentFieldNumber = 1;
+    private int progressPercent_;
+    /// <summary>
+    ///  Approximate percentage of audio processed thus far. Guaranteed to be 100
+    ///  when the audio is fully processed and the results are available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ProgressPercent {
+      get { return progressPercent_; }
+      set {
+        progressPercent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    ///  Time when the request was received.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_update_time" field.</summary>
+    public const int LastUpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
+    /// <summary>
+    ///  Time of the most recent processing update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdateTime {
+      get { return lastUpdateTime_; }
+      set {
+        lastUpdateTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AsyncRecognizeMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AsyncRecognizeMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProgressPercent != other.ProgressPercent) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(LastUpdateTime, other.LastUpdateTime)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProgressPercent != 0) hash ^= ProgressPercent.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (lastUpdateTime_ != null) hash ^= LastUpdateTime.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ProgressPercent != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ProgressPercent);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (lastUpdateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LastUpdateTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProgressPercent != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProgressPercent);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (lastUpdateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUpdateTime);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AsyncRecognizeMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProgressPercent != 0) {
+        ProgressPercent = other.ProgressPercent;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.lastUpdateTime_ != null) {
+        if (lastUpdateTime_ == null) {
+          lastUpdateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LastUpdateTime.MergeFrom(other.LastUpdateTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            ProgressPercent = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(startTime_);
+            break;
+          }
+          case 26: {
+            if (lastUpdateTime_ == null) {
+              lastUpdateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(lastUpdateTime_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   ///  `StreamingRecognizeResponse` is the only message returned to the client by
-  ///  `StreamingRecognize`. It contains the result as zero or more
-  ///  sequential `RecognizeResponse` messages.
+  ///  `StreamingRecognize`. A series of one or more `StreamingRecognizeResponse`
+  ///  messages are streamed back to the client.
+  ///
+  ///  Here's an example of a series of ten `StreamingRecognizeResponse`s that might
+  ///  be returned while processing audio:
+  ///
+  ///  1. endpointer_type: START_OF_SPEECH
+  ///
+  ///  2. results { alternatives { transcript: "tube" } stability: 0.01 }
+  ///     result_index: 0
+  ///
+  ///  3. results { alternatives { transcript: "to be a" } stability: 0.01 }
+  ///     result_index: 0
+  ///
+  ///  4. results { alternatives { transcript: "to be" } stability: 0.9 }
+  ///     results { alternatives { transcript: " or not to be" } stability: 0.01 }
+  ///     result_index: 0
+  ///
+  ///  5. results { alternatives { transcript: "to be or not to be"
+  ///                              confidence: 0.92 }
+  ///               alternatives { transcript: "to bee or not to bee" }
+  ///               is_final: true }
+  ///     result_index: 0
+  ///
+  ///  6. results { alternatives { transcript: " that's" } stability: 0.01 }
+  ///     result_index: 1
+  ///
+  ///  7. results { alternatives { transcript: " that is" } stability: 0.9 }
+  ///     results { alternatives { transcript: " the question" } stability: 0.01 }
+  ///     result_index: 1
+  ///
+  ///  8. endpointer_type: END_OF_SPEECH
+  ///
+  ///  9. results { alternatives { transcript: " that is the question"
+  ///                              confidence: 0.98 }
+  ///               alternatives { transcript: " that was the question" }
+  ///               is_final: true }
+  ///     result_index: 1
+  ///
+  ///  10. endpointer_type: END_OF_AUDIO
+  ///
+  ///  Notes:
+  ///
+  ///  - Only two of the above responses #5 and #9 contain final results, they are
+  ///    indicated by `is_final: true`. Concatenating these together generates the
+  ///    full transcript: "to be or not to be that is the question".
+  ///
+  ///  - The others contain interim `results`. #4 and #7 contain two interim
+  ///    `results`, the first portion has a high stability and is less likely to
+  ///    change, the second portion has a low stability and is very likely to
+  ///    change. A UI designer might choose to show only high stability `results`.
+  ///
+  ///  - The `result_index` indicates the portion of audio that has had final
+  ///    results returned, and is no longer being processed. For example, the
+  ///    `results` in #6 and later correspond to the portion of audio after
+  ///    "to be or not to be".
   /// </summary>
   public sealed partial class StreamingRecognizeResponse : pb::IMessage<StreamingRecognizeResponse> {
     private static readonly pb::MessageParser<StreamingRecognizeResponse> _parser = new pb::MessageParser<StreamingRecognizeResponse>(() => new StreamingRecognizeResponse());
@@ -1763,7 +2030,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1827,7 +2094,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     private int resultIndex_;
     /// <summary>
     ///  [Output-only] Indicates the lowest index in the `results` array that has
-    ///  changed. The repeated `SpeechRecognitionResult` results overwrite past
+    ///  changed. The repeated `StreamingRecognitionResult` results overwrite past
     ///  results at this index and higher.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2010,8 +2277,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  A speech recognition result corresponding to a portion of the audio that is
-  ///  currently being processed.
+  ///  A streaming speech recognition result corresponding to a portion of the audio
+  ///  that is currently being processed.
   /// </summary>
   public sealed partial class StreamingRecognitionResult : pb::IMessage<StreamingRecognitionResult> {
     private static readonly pb::MessageParser<StreamingRecognitionResult> _parser = new pb::MessageParser<StreamingRecognitionResult>(() => new StreamingRecognitionResult());
@@ -2020,7 +2287,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2065,9 +2332,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int IsFinalFieldNumber = 2;
     private bool isFinal_;
     /// <summary>
-    ///  [Output-only] If `false`, this `SpeechRecognitionResult` represents an
+    ///  [Output-only] If `false`, this `StreamingRecognitionResult` represents an
     ///  interim result that may change. If `true`, this is the final time the
-    ///  speech service will return this particular `SpeechRecognitionResult`,
+    ///  speech service will return this particular `StreamingRecognitionResult`,
     ///  the recognizer will not return any further hypotheses for this portion of
     ///  the transcript and corresponding audio.
     /// </summary>
@@ -2208,7 +2475,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2324,7 +2591,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
