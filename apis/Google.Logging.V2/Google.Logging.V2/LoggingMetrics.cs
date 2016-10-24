@@ -24,41 +24,43 @@ namespace Google.Logging.V2 {
           string.Concat(
             "Cidnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX21ldHJpY3MucHJvdG8SEWdv",
             "b2dsZS5sb2dnaW5nLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
-            "Ghtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8iPgoJTG9nTWV0cmljEgwK",
-            "BG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSDgoGZmlsdGVyGAMg",
-            "ASgJIk4KFUxpc3RMb2dNZXRyaWNzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
-            "EgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUiYAoWTGlz",
-            "dExvZ01ldHJpY3NSZXNwb25zZRItCgdtZXRyaWNzGAEgAygLMhwuZ29vZ2xl",
-            "LmxvZ2dpbmcudjIuTG9nTWV0cmljEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSIqChNHZXRMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJ",
-            "IlYKFkNyZWF0ZUxvZ01ldHJpY1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEiwK",
-            "Bm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyJb",
-            "ChZVcGRhdGVMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEgASgJ",
-            "EiwKBm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJp",
-            "YyItChZEZWxldGVMb2dNZXRyaWNSZXF1ZXN0EhMKC21ldHJpY19uYW1lGAEg",
-            "ASgJMu0FChBNZXRyaWNzU2VydmljZVYyEpMBCg5MaXN0TG9nTWV0cmljcxIo",
-            "Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVxdWVzdBopLmdv",
-            "b2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dNZXRyaWNzUmVzcG9uc2UiLILT5JMC",
-            "JhIkL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9tZXRyaWNzEokBCgxH",
-            "ZXRMb2dNZXRyaWMSJi5nb29nbGUubG9nZ2luZy52Mi5HZXRMb2dNZXRyaWNS",
-            "ZXF1ZXN0GhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljIjOC0+STAi0S",
-            "Ky92MmJldGExL3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21ldHJpY3MvKn0S",
-            "kAEKD0NyZWF0ZUxvZ01ldHJpYxIpLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0",
-            "ZUxvZ01ldHJpY1JlcXVlc3QaHC5nb29nbGUubG9nZ2luZy52Mi5Mb2dNZXRy",
-            "aWMiNILT5JMCLiIkL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9tZXRy",
-            "aWNzOgZtZXRyaWMSlwEKD1VwZGF0ZUxvZ01ldHJpYxIpLmdvb2dsZS5sb2dn",
-            "aW5nLnYyLlVwZGF0ZUxvZ01ldHJpY1JlcXVlc3QaHC5nb29nbGUubG9nZ2lu",
-            "Zy52Mi5Mb2dNZXRyaWMiO4LT5JMCNRorL3YyYmV0YTEve21ldHJpY19uYW1l",
-            "PXByb2plY3RzLyovbWV0cmljcy8qfToGbWV0cmljEokBCg9EZWxldGVMb2dN",
-            "ZXRyaWMSKS5nb29nbGUubG9nZ2luZy52Mi5EZWxldGVMb2dNZXRyaWNSZXF1",
-            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjOC0+STAi0qKy92MmJldGEx",
-            "L3ttZXRyaWNfbmFtZT1wcm9qZWN0cy8qL21ldHJpY3MvKn1CSwoVY29tLmdv",
-            "b2dsZS5sb2dnaW5nLnYyUAFaMGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvbG9nZ2luZy92MmIGcHJvdG8z"));
+            "Ghtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8ilgEKCUxvZ01ldHJpYxIM",
+            "CgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEg4KBmZpbHRlchgD",
+            "IAEoCRI4Cgd2ZXJzaW9uGAQgASgOMicuZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
+            "TWV0cmljLkFwaVZlcnNpb24iHAoKQXBpVmVyc2lvbhIGCgJWMhAAEgYKAlYx",
+            "EAEiTgoVTGlzdExvZ01ldHJpY3NSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIS",
+            "CgpwYWdlX3Rva2VuGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBSJgChZMaXN0",
+            "TG9nTWV0cmljc1Jlc3BvbnNlEi0KB21ldHJpY3MYASADKAsyHC5nb29nbGUu",
+            "bG9nZ2luZy52Mi5Mb2dNZXRyaWMSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
+            "IioKE0dldExvZ01ldHJpY1JlcXVlc3QSEwoLbWV0cmljX25hbWUYASABKAki",
+            "VgoWQ3JlYXRlTG9nTWV0cmljUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSLAoG",
+            "bWV0cmljGAIgASgLMhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljIlsK",
+            "FlVwZGF0ZUxvZ01ldHJpY1JlcXVlc3QSEwoLbWV0cmljX25hbWUYASABKAkS",
+            "LAoGbWV0cmljGAIgASgLMhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmlj",
+            "Ii0KFkRlbGV0ZUxvZ01ldHJpY1JlcXVlc3QSEwoLbWV0cmljX25hbWUYASAB",
+            "KAky1AUKEE1ldHJpY3NTZXJ2aWNlVjISjgEKDkxpc3RMb2dNZXRyaWNzEigu",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTGlzdExvZ01ldHJpY3NSZXF1ZXN0GikuZ29v",
+            "Z2xlLmxvZ2dpbmcudjIuTGlzdExvZ01ldHJpY3NSZXNwb25zZSIngtPkkwIh",
+            "Eh8vdjIve3BhcmVudD1wcm9qZWN0cy8qfS9tZXRyaWNzEoQBCgxHZXRMb2dN",
+            "ZXRyaWMSJi5nb29nbGUubG9nZ2luZy52Mi5HZXRMb2dNZXRyaWNSZXF1ZXN0",
+            "GhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljIi6C0+STAigSJi92Mi97",
+            "bWV0cmljX25hbWU9cHJvamVjdHMvKi9tZXRyaWNzLyp9EosBCg9DcmVhdGVM",
+            "b2dNZXRyaWMSKS5nb29nbGUubG9nZ2luZy52Mi5DcmVhdGVMb2dNZXRyaWNS",
+            "ZXF1ZXN0GhwuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljIi+C0+STAiki",
+            "Hy92Mi97cGFyZW50PXByb2plY3RzLyp9L21ldHJpY3M6Bm1ldHJpYxKSAQoP",
+            "VXBkYXRlTG9nTWV0cmljEikuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRlTG9n",
+            "TWV0cmljUmVxdWVzdBocLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYyI2",
+            "gtPkkwIwGiYvdjIve21ldHJpY19uYW1lPXByb2plY3RzLyovbWV0cmljcy8q",
+            "fToGbWV0cmljEoQBCg9EZWxldGVMb2dNZXRyaWMSKS5nb29nbGUubG9nZ2lu",
+            "Zy52Mi5EZWxldGVMb2dNZXRyaWNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5Ii6C0+STAigqJi92Mi97bWV0cmljX25hbWU9cHJvamVjdHMvKi9t",
+            "ZXRyaWNzLyp9QlsKFWNvbS5nb29nbGUubG9nZ2luZy52MkIOTG9nZ2luZ01l",
+            "dHJpY3NQAVowZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9sb2dnaW5nL3YyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogMetric), global::Google.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogMetric), global::Google.Logging.V2.LogMetric.Parser, new[]{ "Name", "Description", "Filter", "Version" }, null, new[]{ typeof(global::Google.Logging.V2.LogMetric.Types.ApiVersion) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogMetricsRequest), global::Google.Logging.V2.ListLogMetricsRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogMetricsResponse), global::Google.Logging.V2.ListLogMetricsResponse.Parser, new[]{ "Metrics", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.GetLogMetricRequest), global::Google.Logging.V2.GetLogMetricRequest.Parser, new[]{ "MetricName" }, null, null, null),
@@ -102,6 +104,7 @@ namespace Google.Logging.V2 {
       name_ = other.name_;
       description_ = other.description_;
       filter_ = other.filter_;
+      version_ = other.version_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -114,11 +117,13 @@ namespace Google.Logging.V2 {
     private string name_ = "";
     /// <summary>
     ///  Required. The client-assigned metric identifier. Example:
-    ///  `"severe_errors"`.  Metric identifiers are limited to 1000
+    ///  `"severe_errors"`.  Metric identifiers are limited to 100
     ///  characters and can include only the following characters: `A-Z`,
-    ///  `a-z`, `0-9`, and the special characters `_-.,+!*',()%/\`.  The
+    ///  `a-z`, `0-9`, and the special characters `_-.,+!*',()%/`.  The
     ///  forward-slash character (`/`) denotes a hierarchy of name pieces,
-    ///  and it cannot be the first character of the name.
+    ///  and it cannot be the first character of the name.  The '%' character
+    ///  is used to URL encode unsafe and reserved characters and must be
+    ///  followed by two hexadecimal digits according to RFC 1738.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -132,7 +137,7 @@ namespace Google.Logging.V2 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    ///  A description of this metric, which is used in documentation.
+    ///  Optional. A description of this metric, which is used in documentation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -146,14 +151,30 @@ namespace Google.Logging.V2 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    ///  An [advanced logs filter](/logging/docs/view/advanced_filters).
-    ///  Example: `"logName:syslog AND severity>=ERROR"`.
+    ///  Required. An [advanced logs filter](/logging/docs/view/advanced_filters).
+    ///  Example: `"resource.type=gae_app AND severity>=ERROR"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
       get { return filter_; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 4;
+    private global::Google.Logging.V2.LogMetric.Types.ApiVersion version_ = 0;
+    /// <summary>
+    ///  Output only. The API version that created or updated this metric.
+    ///  The version also dictates the syntax of the filter expression. When a value
+    ///  for this field is missing, the default value of V2 should be assumed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Logging.V2.LogMetric.Types.ApiVersion Version {
+      get { return version_; }
+      set {
+        version_ = value;
       }
     }
 
@@ -173,6 +194,7 @@ namespace Google.Logging.V2 {
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
       if (Filter != other.Filter) return false;
+      if (Version != other.Version) return false;
       return true;
     }
 
@@ -182,6 +204,7 @@ namespace Google.Logging.V2 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (Version != 0) hash ^= Version.GetHashCode();
       return hash;
     }
 
@@ -204,6 +227,10 @@ namespace Google.Logging.V2 {
         output.WriteRawTag(26);
         output.WriteString(Filter);
       }
+      if (Version != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Version);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -217,6 +244,9 @@ namespace Google.Logging.V2 {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (Version != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Version);
       }
       return size;
     }
@@ -234,6 +264,9 @@ namespace Google.Logging.V2 {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
+      }
+      if (other.Version != 0) {
+        Version = other.Version;
       }
     }
 
@@ -257,9 +290,34 @@ namespace Google.Logging.V2 {
             Filter = input.ReadString();
             break;
           }
+          case 32: {
+            version_ = (global::Google.Logging.V2.LogMetric.Types.ApiVersion) input.ReadEnum();
+            break;
+          }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LogMetric message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      ///  Stackdriver Logging API version.
+      /// </summary>
+      public enum ApiVersion {
+        /// <summary>
+        ///  Stackdriver Logging API v2.
+        /// </summary>
+        [pbr::OriginalName("V2")] V2 = 0,
+        /// <summary>
+        ///  Stackdriver Logging API v1.
+        /// </summary>
+        [pbr::OriginalName("V1")] V1 = 1,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -319,10 +377,10 @@ namespace Google.Logging.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If the `pageToken` parameter is supplied, then the next page of
-    ///  results is retrieved.  The `pageToken` parameter must be set to the value
-    ///  of the `nextPageToken` from the previous response.
-    ///  The value of `parent` must be the same as in the previous request.
+    ///  Optional. If present, then retrieve the next batch of results from the
+    ///  preceding call to this method.  `pageToken` must be the value of
+    ///  `nextPageToken` from the previous response.  The values of other method
+    ///  parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -337,9 +395,8 @@ namespace Google.Logging.V2 {
     private int pageSize_;
     /// <summary>
     ///  Optional. The maximum number of results to return from this request.
-    ///  You must check for presence of `nextPageToken` to determine if additional
-    ///  results are available, which you can retrieve by passing the
-    ///  `nextPageToken` value as the `pageToken` parameter in the next request.
+    ///  Non-positive values are ignored.  The presence of `nextPageToken` in the
+    ///  response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -508,8 +565,8 @@ namespace Google.Logging.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there are more results than were returned, then `nextPageToken` is
-    ///  included in the response.  To get the next set of results, call this
+    ///  If there might be more results than appear in this response, then
+    ///  `nextPageToken` is included.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

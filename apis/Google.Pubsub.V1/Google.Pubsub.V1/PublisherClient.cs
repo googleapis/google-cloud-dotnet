@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -26,52 +27,33 @@ using System.Threading.Tasks;
 
 namespace Google.Pubsub.V1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="PublisherClient"/>.
-    /// </summary>
-    public static partial class PublisherExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC Publisher client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="PublisherSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="PublisherClient"/> that wraps the specified GRPC client.</returns>
-        public static PublisherClient ToClient(
-            this Publisher.PublisherClient grpcClient,
-            PublisherSettings settings = null
-        ) => new PublisherClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a Publisher wrapper.
+    /// Settings for a <see cref="PublisherClient"/>.
     /// </summary>
     public sealed partial class PublisherSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="PublisherSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default PublisherSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="PublisherSettings"/>.
+        /// </returns>
         public static PublisherSettings GetDefault() => new PublisherSettings();
 
         /// <summary>
-        /// Constructs a new PublisherSettings object with default settings.
+        /// Constructs a new <see cref="PublisherSettings"/> object with default settings.
         /// </summary>
         public PublisherSettings() { }
 
         private PublisherSettings(PublisherSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            CreateTopicSettings = existing.CreateTopicSettings?.Clone();
-            PublishSettings = existing.PublishSettings?.Clone();
-            GetTopicSettings = existing.GetTopicSettings?.Clone();
-            ListTopicsSettings = existing.ListTopicsSettings?.Clone();
-            ListTopicSubscriptionsSettings = existing.ListTopicSubscriptionsSettings?.Clone();
-            DeleteTopicSettings = existing.DeleteTopicSettings?.Clone();
+            CreateTopicSettings = existing.CreateTopicSettings;
+            PublishSettings = existing.PublishSettings;
+            GetTopicSettings = existing.GetTopicSettings;
+            ListTopicsSettings = existing.ListTopicsSettings;
+            ListTopicSubscriptionsSettings = existing.ListTopicSubscriptionsSettings;
+            DeleteTopicSettings = existing.DeleteTopicSettings;
         }
 
         /// <summary>
@@ -115,26 +97,29 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="PublisherClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="PublisherClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -143,36 +128,38 @@ namespace Google.Pubsub.V1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(60000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(60000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Messaging" retry backoff for <see cref="PublisherClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetMessagingRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetMessagingRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Messaging" timeout backoff for <see cref="PublisherClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -181,20 +168,19 @@ namespace Google.Pubsub.V1
         /// <item><description>Maximum timeout: 12000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetMessagingTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(12000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(12000),
-        };
+        public static BackoffSettings GetMessagingTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(12000),
+            maxDelay: TimeSpan.FromMilliseconds(12000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="PublisherClient.CreateTopic"/> and <see cref="PublisherClient.CreateTopicAsync"/>.
+        /// <c>PublisherClient.CreateTopic</c> and <c>PublisherClient.CreateTopicAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="PublisherClient.CreateTopic"/> and
-        /// <see cref="PublisherClient.CreateTopicAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherClient.CreateTopic</c> and
+        /// <c>PublisherClient.CreateTopicAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -210,24 +196,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateTopicSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings CreateTopicSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="PublisherClient.Publish"/> and <see cref="PublisherClient.PublishAsync"/>.
+        /// <c>PublisherClient.Publish</c> and <c>PublisherClient.PublishAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="PublisherClient.Publish"/> and
-        /// <see cref="PublisherClient.PublishAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherClient.Publish</c> and
+        /// <c>PublisherClient.PublishAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -243,24 +226,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings PublishSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetMessagingRetryBackoff(),
-                TimeoutBackoff = GetMessagingTimeoutBackoff(),
-                RetryFilter = OnePlusDeliveryRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings PublishSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetMessagingRetryBackoff(),
+                timeoutBackoff: GetMessagingTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: OnePlusDeliveryRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="PublisherClient.GetTopic"/> and <see cref="PublisherClient.GetTopicAsync"/>.
+        /// <c>PublisherClient.GetTopic</c> and <c>PublisherClient.GetTopicAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="PublisherClient.GetTopic"/> and
-        /// <see cref="PublisherClient.GetTopicAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherClient.GetTopic</c> and
+        /// <c>PublisherClient.GetTopicAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -276,24 +256,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetTopicSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings GetTopicSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="PublisherClient.ListTopics"/> and <see cref="PublisherClient.ListTopicsAsync"/>.
+        /// <c>PublisherClient.ListTopics</c> and <c>PublisherClient.ListTopicsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="PublisherClient.ListTopics"/> and
-        /// <see cref="PublisherClient.ListTopicsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherClient.ListTopics</c> and
+        /// <c>PublisherClient.ListTopicsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -309,24 +286,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListTopicsSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings ListTopicsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="PublisherClient.ListTopicSubscriptions"/> and <see cref="PublisherClient.ListTopicSubscriptionsAsync"/>.
+        /// <c>PublisherClient.ListTopicSubscriptions</c> and <c>PublisherClient.ListTopicSubscriptionsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="PublisherClient.ListTopicSubscriptions"/> and
-        /// <see cref="PublisherClient.ListTopicSubscriptionsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherClient.ListTopicSubscriptions</c> and
+        /// <c>PublisherClient.ListTopicSubscriptionsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -342,24 +316,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListTopicSubscriptionsSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings ListTopicSubscriptionsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="PublisherClient.DeleteTopic"/> and <see cref="PublisherClient.DeleteTopicAsync"/>.
+        /// <c>PublisherClient.DeleteTopic</c> and <c>PublisherClient.DeleteTopicAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="PublisherClient.DeleteTopic"/> and
-        /// <see cref="PublisherClient.DeleteTopicAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>PublisherClient.DeleteTopic</c> and
+        /// <c>PublisherClient.DeleteTopicAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -375,22 +346,18 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteTopicSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings DeleteTopicSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of Publisher settings.</returns>
+        /// <returns>A deep clone of this <see cref="PublisherSettings"/> object.</returns>
         public PublisherSettings Clone() => new PublisherSettings(this);
     }
 
@@ -405,18 +372,18 @@ namespace Google.Pubsub.V1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("pubsub.googleapis.com", 443);
 
         /// <summary>
-        /// The default Publisher scopes
+        /// The default Publisher scopes.
         /// </summary>
         /// <remarks>
         /// The default Publisher scopes are:
         /// <list type="bullet">
-        /// <item><description>"https://www.googleapis.com/auth/pubsub"</description></item>
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/pubsub"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
-            "https://www.googleapis.com/auth/pubsub",
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/pubsub",
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
@@ -433,7 +400,9 @@ namespace Google.Pubsub.V1
         /// Creates a project resource name from its component IDs.
         /// </summary>
         /// <param name="projectId">The project ID.</param>
-        /// <returns>The full project resource name.</returns>
+        /// <returns>
+        /// The full project resource name.
+        /// </returns>
         public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         /// <summary>
@@ -450,7 +419,9 @@ namespace Google.Pubsub.V1
         /// </summary>
         /// <param name="projectId">The project ID.</param>
         /// <param name="topicId">The topic ID.</param>
-        /// <returns>The full topic resource name.</returns>
+        /// <returns>
+        /// The full topic resource name.
+        /// </returns>
         public static string FormatTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
@@ -513,7 +484,7 @@ namespace Google.Pubsub.V1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC Publisher client.
+        /// The underlying gRPC Publisher client.
         /// </summary>
         public virtual Publisher.PublisherClient GrpcClient
         {
@@ -521,7 +492,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        ///
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -531,8 +502,12 @@ namespace Google.Pubsub.V1
         /// signs (`%`). It must be between 3 and 255 characters in length, and it
         /// must not start with `"goog"`.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Topic> CreateTopicAsync(
             string name,
             CallSettings callSettings = null)
@@ -541,7 +516,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        ///
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -551,16 +526,20 @@ namespace Google.Pubsub.V1
         /// signs (`%`). It must be between 3 and 255 characters in length, and it
         /// must not start with `"goog"`.
         /// </param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Topic> CreateTopicAsync(
             string name,
             CancellationToken cancellationToken) => CreateTopicAsync(
                 name,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        ///
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -570,8 +549,12 @@ namespace Google.Pubsub.V1
         /// signs (`%`). It must be between 3 and 255 characters in length, and it
         /// must not start with `"goog"`.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual Topic CreateTopic(
             string name,
             CallSettings callSettings = null)
@@ -580,14 +563,20 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        ///
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
-        /// <param name="messages">The messages to publish.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="messages">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
@@ -597,31 +586,43 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        ///
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
-        /// <param name="messages">The messages to publish.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="messages">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
             CancellationToken cancellationToken) => PublishAsync(
                 topic,
                 messages,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        ///
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
-        /// <param name="messages">The messages to publish.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="messages">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual PublishResponse Publish(
             string topic,
             IEnumerable<PubsubMessage> messages,
@@ -631,11 +632,17 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Gets the configuration of a topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Topic> GetTopicAsync(
             string topic,
             CallSettings callSettings = null)
@@ -644,23 +651,35 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Gets the configuration of a topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Topic> GetTopicAsync(
             string topic,
             CancellationToken cancellationToken) => GetTopicAsync(
                 topic,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the configuration of a topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual Topic GetTopic(
             string topic,
             CallSettings callSettings = null)
@@ -669,16 +688,25 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Lists matching topics.
+        ///
         /// </summary>
-        /// <param name="project">The name of the cloud project that topics belong to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of Topic resources.</returns>
+        /// <param name="project">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
+        /// </returns>
         public virtual IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
             string project,
             string pageToken = null,
@@ -689,16 +717,25 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Lists matching topics.
+        ///
         /// </summary>
-        /// <param name="project">The name of the cloud project that topics belong to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of Topic resources.</returns>
+        /// <param name="project">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Topic"/> resources.
+        /// </returns>
         public virtual IPagedEnumerable<ListTopicsResponse, Topic> ListTopics(
             string project,
             string pageToken = null,
@@ -709,16 +746,25 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of string resources.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="string"/> resources.
+        /// </returns>
         public virtual IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(
             string topic,
             string pageToken = null,
@@ -729,16 +775,25 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of string resources.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="string"/> resources.
+        /// </returns>
         public virtual IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(
             string topic,
             string pageToken = null,
@@ -749,15 +804,17 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        ///
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task DeleteTopicAsync(
             string topic,
             CallSettings callSettings = null)
@@ -766,31 +823,35 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        ///
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task DeleteTopicAsync(
             string topic,
             CancellationToken cancellationToken) => DeleteTopicAsync(
                 topic,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        ///
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual void DeleteTopic(
             string topic,
             CallSettings callSettings = null)
@@ -800,6 +861,9 @@ namespace Google.Pubsub.V1
 
     }
 
+    /// <summary>
+    /// Publisher client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class PublisherClientImpl : PublisherClient
     {
         private readonly ClientHelper _clientHelper;
@@ -810,6 +874,11 @@ namespace Google.Pubsub.V1
         private readonly ApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse> _callListTopicSubscriptions;
         private readonly ApiCall<DeleteTopicRequest, Empty> _callDeleteTopic;
 
+        /// <summary>
+        /// Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="PublisherSettings"/> used within this client </param>
         public PublisherClientImpl(Publisher.PublisherClient grpcClient, PublisherSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -829,10 +898,13 @@ namespace Google.Pubsub.V1
                 GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC Publisher client.
+        /// </summary>
         public override Publisher.PublisherClient GrpcClient { get; }
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        ///
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -842,8 +914,12 @@ namespace Google.Pubsub.V1
         /// signs (`%`). It must be between 3 and 255 characters in length, and it
         /// must not start with `"goog"`.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<Topic> CreateTopicAsync(
             string name,
             CallSettings callSettings = null) => _callCreateTopic.Async(
@@ -854,7 +930,7 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Creates the given topic with the given name.
+        ///
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -864,8 +940,12 @@ namespace Google.Pubsub.V1
         /// signs (`%`). It must be between 3 and 255 characters in length, and it
         /// must not start with `"goog"`.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override Topic CreateTopic(
             string name,
             CallSettings callSettings = null) => _callCreateTopic.Sync(
@@ -876,14 +956,20 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        ///
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
-        /// <param name="messages">The messages to publish.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="messages">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
@@ -896,14 +982,20 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        ///
         /// </summary>
-        /// <param name="topic">The messages in the request will be published on this topic.</param>
-        /// <param name="messages">The messages to publish.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="messages">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override PublishResponse Publish(
             string topic,
             IEnumerable<PubsubMessage> messages,
@@ -916,11 +1008,17 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Gets the configuration of a topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<Topic> GetTopicAsync(
             string topic,
             CallSettings callSettings = null) => _callGetTopic.Async(
@@ -931,11 +1029,17 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Gets the configuration of a topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic to get.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override Topic GetTopic(
             string topic,
             CallSettings callSettings = null) => _callGetTopic.Sync(
@@ -946,16 +1050,25 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists matching topics.
+        ///
         /// </summary>
-        /// <param name="project">The name of the cloud project that topics belong to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of Topic resources.</returns>
+        /// <param name="project">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
+        /// </returns>
         public override IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
             string project,
             string pageToken = null,
@@ -971,16 +1084,25 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists matching topics.
+        ///
         /// </summary>
-        /// <param name="project">The name of the cloud project that topics belong to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of Topic resources.</returns>
+        /// <param name="project">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Topic"/> resources.
+        /// </returns>
         public override IPagedEnumerable<ListTopicsResponse, Topic> ListTopics(
             string project,
             string pageToken = null,
@@ -996,16 +1118,25 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of string resources.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="string"/> resources.
+        /// </returns>
         public override IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(
             string topic,
             string pageToken = null,
@@ -1021,16 +1152,25 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists the name of the subscriptions for this topic.
+        ///
         /// </summary>
-        /// <param name="topic">The name of the topic that subscriptions are attached to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of string resources.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="string"/> resources.
+        /// </returns>
         public override IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(
             string topic,
             string pageToken = null,
@@ -1046,15 +1186,17 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        ///
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task DeleteTopicAsync(
             string topic,
             CallSettings callSettings = null) => _callDeleteTopic.Async(
@@ -1065,15 +1207,17 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
-        /// does not exist. After a topic is deleted, a new topic may be created with
-        /// the same name; this is an entirely new topic with none of the old
-        /// configuration or subscriptions. Existing subscriptions to this topic are
-        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        ///
         /// </summary>
-        /// <param name="topic">Name of the topic to delete.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="topic">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override void DeleteTopic(
             string topic,
             CallSettings callSettings = null) => _callDeleteTopic.Sync(
@@ -1090,14 +1234,24 @@ namespace Google.Pubsub.V1
     public partial class ListTopicsRequest : IPageRequest { }
     public partial class ListTopicsResponse : IPageResponse<Topic>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<Topic> GetEnumerator() => Topics.GetEnumerator();
+
+        <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListTopicSubscriptionsRequest : IPageRequest { }
     public partial class ListTopicSubscriptionsResponse : IPageResponse<string>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<string> GetEnumerator() => Subscriptions.GetEnumerator();
+
+        <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

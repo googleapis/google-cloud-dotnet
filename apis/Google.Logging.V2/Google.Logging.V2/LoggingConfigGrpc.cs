@@ -109,7 +109,7 @@ namespace Google.Logging.V2 {
       }
 
       /// <summary>
-      ///  Creates or updates a sink.
+      ///  Updates or creates a sink.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Logging.V2.LogSink> UpdateSink(global::Google.Logging.V2.UpdateSinkRequest request, ServerCallContext context)
       {
@@ -234,28 +234,28 @@ namespace Google.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSink, null, options, request);
       }
       /// <summary>
-      ///  Creates or updates a sink.
+      ///  Updates or creates a sink.
       /// </summary>
       public virtual global::Google.Logging.V2.LogSink UpdateSink(global::Google.Logging.V2.UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateSink(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates or updates a sink.
+      ///  Updates or creates a sink.
       /// </summary>
       public virtual global::Google.Logging.V2.LogSink UpdateSink(global::Google.Logging.V2.UpdateSinkRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSink, null, options, request);
       }
       /// <summary>
-      ///  Creates or updates a sink.
+      ///  Updates or creates a sink.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Logging.V2.UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateSinkAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates or updates a sink.
+      ///  Updates or creates a sink.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Logging.V2.UpdateSinkRequest request, CallOptions options)
       {
