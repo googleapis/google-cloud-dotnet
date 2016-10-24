@@ -104,8 +104,7 @@ namespace Google.Monitoring.V3 {
     public abstract class GroupServiceBase
     {
       /// <summary>
-      ///  Lists the existing groups. The project ID in the URL path must refer
-      ///  to a Stackdriver account.
+      ///  Lists the existing groups.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.ListGroupsResponse> ListGroups(global::Google.Monitoring.V3.ListGroupsRequest request, ServerCallContext context)
       {
@@ -113,8 +112,7 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Gets a single group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Gets a single group.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.Group> GetGroup(global::Google.Monitoring.V3.GetGroupRequest request, ServerCallContext context)
       {
@@ -122,8 +120,7 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Creates a new group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Creates a new group.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.Group> CreateGroup(global::Google.Monitoring.V3.CreateGroupRequest request, ServerCallContext context)
       {
@@ -133,7 +130,6 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
-      ///  The project ID in the URL path must refer to a Stackdriver account.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.Group> UpdateGroup(global::Google.Monitoring.V3.UpdateGroupRequest request, ServerCallContext context)
       {
@@ -141,8 +137,7 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Deletes an existing group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Deletes an existing group.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroup(global::Google.Monitoring.V3.DeleteGroupRequest request, ServerCallContext context)
       {
@@ -150,8 +145,7 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Lists the monitored resources that are members of a group. The project ID
-      ///  in the URL path must refer to a Stackdriver account.
+      ///  Lists the monitored resources that are members of a group.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.ListGroupMembersResponse> ListGroupMembers(global::Google.Monitoring.V3.ListGroupMembersRequest request, ServerCallContext context)
       {
@@ -184,96 +178,84 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Lists the existing groups. The project ID in the URL path must refer
-      ///  to a Stackdriver account.
+      ///  Lists the existing groups.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Monitoring.V3.ListGroupsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroups(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the existing groups. The project ID in the URL path must refer
-      ///  to a Stackdriver account.
+      ///  Lists the existing groups.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Monitoring.V3.ListGroupsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGroups, null, options, request);
       }
       /// <summary>
-      ///  Lists the existing groups. The project ID in the URL path must refer
-      ///  to a Stackdriver account.
+      ///  Lists the existing groups.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Monitoring.V3.ListGroupsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the existing groups. The project ID in the URL path must refer
-      ///  to a Stackdriver account.
+      ///  Lists the existing groups.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Monitoring.V3.ListGroupsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListGroups, null, options, request);
       }
       /// <summary>
-      ///  Gets a single group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Gets a single group.
       /// </summary>
       public virtual global::Google.Monitoring.V3.Group GetGroup(global::Google.Monitoring.V3.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Gets a single group.
       /// </summary>
       public virtual global::Google.Monitoring.V3.Group GetGroup(global::Google.Monitoring.V3.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
-      ///  Gets a single group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Gets a single group.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> GetGroupAsync(global::Google.Monitoring.V3.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Gets a single group.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> GetGroupAsync(global::Google.Monitoring.V3.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
-      ///  Creates a new group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Creates a new group.
       /// </summary>
       public virtual global::Google.Monitoring.V3.Group CreateGroup(global::Google.Monitoring.V3.CreateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Creates a new group.
       /// </summary>
       public virtual global::Google.Monitoring.V3.Group CreateGroup(global::Google.Monitoring.V3.CreateGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateGroup, null, options, request);
       }
       /// <summary>
-      ///  Creates a new group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Creates a new group.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> CreateGroupAsync(global::Google.Monitoring.V3.CreateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Creates a new group.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> CreateGroupAsync(global::Google.Monitoring.V3.CreateGroupRequest request, CallOptions options)
       {
@@ -282,7 +264,6 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
-      ///  The project ID in the URL path must refer to a Stackdriver account.
       /// </summary>
       public virtual global::Google.Monitoring.V3.Group UpdateGroup(global::Google.Monitoring.V3.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -291,7 +272,6 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
-      ///  The project ID in the URL path must refer to a Stackdriver account.
       /// </summary>
       public virtual global::Google.Monitoring.V3.Group UpdateGroup(global::Google.Monitoring.V3.UpdateGroupRequest request, CallOptions options)
       {
@@ -300,7 +280,6 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
-      ///  The project ID in the URL path must refer to a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Monitoring.V3.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -309,71 +288,62 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
-      ///  The project ID in the URL path must refer to a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Monitoring.V3.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGroup, null, options, request);
       }
       /// <summary>
-      ///  Deletes an existing group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Deletes an existing group.
       /// </summary>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Monitoring.V3.DeleteGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes an existing group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Deletes an existing group.
       /// </summary>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Monitoring.V3.DeleteGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteGroup, null, options, request);
       }
       /// <summary>
-      ///  Deletes an existing group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Deletes an existing group.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Monitoring.V3.DeleteGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes an existing group. The project ID in the URL path must refer to a
-      ///  Stackdriver account.
+      ///  Deletes an existing group.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Monitoring.V3.DeleteGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteGroup, null, options, request);
       }
       /// <summary>
-      ///  Lists the monitored resources that are members of a group. The project ID
-      ///  in the URL path must refer to a Stackdriver account.
+      ///  Lists the monitored resources that are members of a group.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Monitoring.V3.ListGroupMembersRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupMembers(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the monitored resources that are members of a group. The project ID
-      ///  in the URL path must refer to a Stackdriver account.
+      ///  Lists the monitored resources that are members of a group.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Monitoring.V3.ListGroupMembersRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGroupMembers, null, options, request);
       }
       /// <summary>
-      ///  Lists the monitored resources that are members of a group. The project ID
-      ///  in the URL path must refer to a Stackdriver account.
+      ///  Lists the monitored resources that are members of a group.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Monitoring.V3.ListGroupMembersRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupMembersAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the monitored resources that are members of a group. The project ID
-      ///  in the URL path must refer to a Stackdriver account.
+      ///  Lists the monitored resources that are members of a group.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Monitoring.V3.ListGroupMembersRequest request, CallOptions options)
       {

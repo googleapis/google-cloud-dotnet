@@ -425,7 +425,8 @@ namespace Google.Devtools.Cloudtrace.V1 {
     public const int SpanIdFieldNumber = 1;
     private ulong spanId_;
     /// <summary>
-    ///  Identifier for the span. This identifier must be unique within a trace.
+    ///  Identifier for the span. Must be a 64-bit integer other than 0 and
+    ///  unique within a trace.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong SpanId {
@@ -456,10 +457,11 @@ namespace Google.Devtools.Cloudtrace.V1 {
     private string name_ = "";
     /// <summary>
     ///  Name of the trace. The trace name is sanitized and displayed in the
-    ///  Cloud Trace tool in the Google Developers Console. The name may be a method
-    ///  name or some other per-call site name. For the same executable and the same
-    ///  call point, a best practice is to use a consistent name, which makes it
-    ///  easier to correlate cross-trace spans.
+    ///  Stackdriver Trace tool in the Google Developers Console.
+    ///  The name may be a method name or some other per-call site name.
+    ///  For the same executable and the same call point, a best practice is
+    ///  to use a consistent name, which makes it easier to correlate
+    ///  cross-trace spans.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {

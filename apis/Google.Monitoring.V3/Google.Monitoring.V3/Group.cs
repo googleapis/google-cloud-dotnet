@@ -105,13 +105,11 @@ namespace Google.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of this group.
-    ///  The format is
+    ///  Output only. The name of this group. The format is
     ///  `"projects/{project_id_or_number}/groups/{group_id}"`.
     ///  When creating a group, this field is ignored and a new name is created
     ///  consisting of the project specified in the call to `CreateGroup`
     ///  and a unique `{group_id}` that is generated automatically.
-    ///  @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {

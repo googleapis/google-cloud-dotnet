@@ -14,9 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
@@ -24,48 +26,29 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Clouderrorreporting.V1Beta1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="ErrorGroupServiceClient"/>.
-    /// </summary>
-    public static partial class ErrorGroupServiceExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC ErrorGroupService client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="ErrorGroupServiceSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="ErrorGroupServiceClient"/> that wraps the specified GRPC client.</returns>
-        public static ErrorGroupServiceClient ToClient(
-            this ErrorGroupService.ErrorGroupServiceClient grpcClient,
-            ErrorGroupServiceSettings settings = null
-        ) => new ErrorGroupServiceClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a ErrorGroupService wrapper.
+    /// Settings for a <see cref="ErrorGroupServiceClient"/>.
     /// </summary>
     public sealed partial class ErrorGroupServiceSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ErrorGroupServiceSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default ErrorGroupServiceSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="ErrorGroupServiceSettings"/>.
+        /// </returns>
         public static ErrorGroupServiceSettings GetDefault() => new ErrorGroupServiceSettings();
 
         /// <summary>
-        /// Constructs a new ErrorGroupServiceSettings object with default settings.
+        /// Constructs a new <see cref="ErrorGroupServiceSettings"/> object with default settings.
         /// </summary>
         public ErrorGroupServiceSettings() { }
 
         private ErrorGroupServiceSettings(ErrorGroupServiceSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            GetGroupSettings = existing.GetGroupSettings?.Clone();
-            UpdateGroupSettings = existing.UpdateGroupSettings?.Clone();
+            GetGroupSettings = existing.GetGroupSettings;
+            UpdateGroupSettings = existing.UpdateGroupSettings;
         }
 
         /// <summary>
@@ -95,26 +78,29 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         /// "Default" retry backoff for <see cref="ErrorGroupServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="ErrorGroupServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="ErrorGroupServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="ErrorGroupServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="ErrorGroupServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="ErrorGroupServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="ErrorGroupServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="ErrorGroupServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -123,20 +109,19 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(20000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(20000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(20000),
+            maxDelay: TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="ErrorGroupServiceClient.GetGroup"/> and <see cref="ErrorGroupServiceClient.GetGroupAsync"/>.
+        /// <c>ErrorGroupServiceClient.GetGroup</c> and <c>ErrorGroupServiceClient.GetGroupAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ErrorGroupServiceClient.GetGroup"/> and
-        /// <see cref="ErrorGroupServiceClient.GetGroupAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>ErrorGroupServiceClient.GetGroup</c> and
+        /// <c>ErrorGroupServiceClient.GetGroupAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -152,24 +137,21 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetGroupSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings GetGroupSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="ErrorGroupServiceClient.UpdateGroup"/> and <see cref="ErrorGroupServiceClient.UpdateGroupAsync"/>.
+        /// <c>ErrorGroupServiceClient.UpdateGroup</c> and <c>ErrorGroupServiceClient.UpdateGroupAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ErrorGroupServiceClient.UpdateGroup"/> and
-        /// <see cref="ErrorGroupServiceClient.UpdateGroupAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>ErrorGroupServiceClient.UpdateGroup</c> and
+        /// <c>ErrorGroupServiceClient.UpdateGroupAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -185,22 +167,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings UpdateGroupSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings UpdateGroupSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of ErrorGroupService settings.</returns>
+        /// <returns>A deep clone of this <see cref="ErrorGroupServiceSettings"/> object.</returns>
         public ErrorGroupServiceSettings Clone() => new ErrorGroupServiceSettings(this);
     }
 
@@ -215,7 +193,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("clouderrorreporting.googleapis.com", 443);
 
         /// <summary>
-        /// The default ErrorGroupService scopes
+        /// The default ErrorGroupService scopes.
         /// </summary>
         /// <remarks>
         /// The default ErrorGroupService scopes are:
@@ -223,7 +201,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -243,7 +221,9 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </summary>
         /// <param name="projectId">The project ID.</param>
         /// <param name="groupId">The group ID.</param>
-        /// <returns>The full group resource name.</returns>
+        /// <returns>
+        /// The full group resource name.
+        /// </returns>
         public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
@@ -306,7 +286,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC ErrorGroupService client.
+        /// The underlying gRPC ErrorGroupService client.
         /// </summary>
         public virtual ErrorGroupService.ErrorGroupServiceClient GrpcClient
         {
@@ -316,9 +296,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="groupName"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="groupName">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<ErrorGroup> GetGroupAsync(
             string groupName,
             CallSettings callSettings = null)
@@ -329,21 +315,33 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="groupName"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="groupName">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<ErrorGroup> GetGroupAsync(
             string groupName,
             CancellationToken cancellationToken) => GetGroupAsync(
                 groupName,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="groupName"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="groupName">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual ErrorGroup GetGroup(
             string groupName,
             CallSettings callSettings = null)
@@ -354,9 +352,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="group"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="group">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<ErrorGroup> UpdateGroupAsync(
             ErrorGroup group,
             CallSettings callSettings = null)
@@ -367,21 +371,33 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="group"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="group">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<ErrorGroup> UpdateGroupAsync(
             ErrorGroup group,
             CancellationToken cancellationToken) => UpdateGroupAsync(
                 group,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="group"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="group">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual ErrorGroup UpdateGroup(
             ErrorGroup group,
             CallSettings callSettings = null)
@@ -391,12 +407,20 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
 
     }
 
+    /// <summary>
+    /// ErrorGroupService client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class ErrorGroupServiceClientImpl : ErrorGroupServiceClient
     {
         private readonly ClientHelper _clientHelper;
         private readonly ApiCall<GetGroupRequest, ErrorGroup> _callGetGroup;
         private readonly ApiCall<UpdateGroupRequest, ErrorGroup> _callUpdateGroup;
 
+        /// <summary>
+        /// Constructs a client wrapper for the ErrorGroupService service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="ErrorGroupServiceSettings"/> used within this client </param>
         public ErrorGroupServiceClientImpl(ErrorGroupService.ErrorGroupServiceClient grpcClient, ErrorGroupServiceSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -408,14 +432,23 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 GrpcClient.UpdateGroupAsync, GrpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC ErrorGroupService client.
+        /// </summary>
         public override ErrorGroupService.ErrorGroupServiceClient GrpcClient { get; }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="groupName"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="groupName">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<ErrorGroup> GetGroupAsync(
             string groupName,
             CallSettings callSettings = null) => _callGetGroup.Async(
@@ -428,9 +461,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="groupName"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="groupName">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override ErrorGroup GetGroup(
             string groupName,
             CallSettings callSettings = null) => _callGetGroup.Sync(
@@ -443,9 +482,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="group"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="group">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<ErrorGroup> UpdateGroupAsync(
             ErrorGroup group,
             CallSettings callSettings = null) => _callUpdateGroup.Async(
@@ -458,9 +503,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="group"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="group">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override ErrorGroup UpdateGroup(
             ErrorGroup group,
             CallSettings callSettings = null) => _callUpdateGroup.Sync(
