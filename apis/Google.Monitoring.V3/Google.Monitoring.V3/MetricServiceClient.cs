@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api;
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using ListTimeSeriesRequest.Types;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,53 +28,35 @@ using System.Threading.Tasks;
 
 namespace Google.Monitoring.V3
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="MetricServiceClient"/>.
-    /// </summary>
-    public static partial class MetricServiceExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC MetricService client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="MetricServiceSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="MetricServiceClient"/> that wraps the specified GRPC client.</returns>
-        public static MetricServiceClient ToClient(
-            this MetricService.MetricServiceClient grpcClient,
-            MetricServiceSettings settings = null
-        ) => new MetricServiceClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a MetricService wrapper.
+    /// Settings for a <see cref="MetricServiceClient"/>.
     /// </summary>
     public sealed partial class MetricServiceSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="MetricServiceSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default MetricServiceSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="MetricServiceSettings"/>.
+        /// </returns>
         public static MetricServiceSettings GetDefault() => new MetricServiceSettings();
 
         /// <summary>
-        /// Constructs a new MetricServiceSettings object with default settings.
+        /// Constructs a new <see cref="MetricServiceSettings"/> object with default settings.
         /// </summary>
         public MetricServiceSettings() { }
 
         private MetricServiceSettings(MetricServiceSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            ListMonitoredResourceDescriptorsSettings = existing.ListMonitoredResourceDescriptorsSettings?.Clone();
-            GetMonitoredResourceDescriptorSettings = existing.GetMonitoredResourceDescriptorSettings?.Clone();
-            ListMetricDescriptorsSettings = existing.ListMetricDescriptorsSettings?.Clone();
-            GetMetricDescriptorSettings = existing.GetMetricDescriptorSettings?.Clone();
-            CreateMetricDescriptorSettings = existing.CreateMetricDescriptorSettings?.Clone();
-            DeleteMetricDescriptorSettings = existing.DeleteMetricDescriptorSettings?.Clone();
-            CreateTimeSeriesSettings = existing.CreateTimeSeriesSettings?.Clone();
+            ListMonitoredResourceDescriptorsSettings = existing.ListMonitoredResourceDescriptorsSettings;
+            GetMonitoredResourceDescriptorSettings = existing.GetMonitoredResourceDescriptorSettings;
+            ListMetricDescriptorsSettings = existing.ListMetricDescriptorsSettings;
+            GetMetricDescriptorSettings = existing.GetMetricDescriptorSettings;
+            CreateMetricDescriptorSettings = existing.CreateMetricDescriptorSettings;
+            DeleteMetricDescriptorSettings = existing.DeleteMetricDescriptorSettings;
+            ListTimeSeriesSettings = existing.ListTimeSeriesSettings;
+            CreateTimeSeriesSettings = existing.CreateTimeSeriesSettings;
         }
 
         /// <summary>
@@ -103,26 +86,29 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// "Default" retry backoff for <see cref="MetricServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="MetricServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="MetricServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="MetricServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="MetricServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="MetricServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="MetricServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="MetricServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -131,20 +117,19 @@ namespace Google.Monitoring.V3
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(20000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(20000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(20000),
+            maxDelay: TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="MetricServiceClient.ListMonitoredResourceDescriptors"/> and <see cref="MetricServiceClient.ListMonitoredResourceDescriptorsAsync"/>.
+        /// <c>MetricServiceClient.ListMonitoredResourceDescriptors</c> and <c>MetricServiceClient.ListMonitoredResourceDescriptorsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricServiceClient.ListMonitoredResourceDescriptors"/> and
-        /// <see cref="MetricServiceClient.ListMonitoredResourceDescriptorsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>MetricServiceClient.ListMonitoredResourceDescriptors</c> and
+        /// <c>MetricServiceClient.ListMonitoredResourceDescriptorsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -160,24 +145,21 @@ namespace Google.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="MetricServiceClient.GetMonitoredResourceDescriptor"/> and <see cref="MetricServiceClient.GetMonitoredResourceDescriptorAsync"/>.
+        /// <c>MetricServiceClient.GetMonitoredResourceDescriptor</c> and <c>MetricServiceClient.GetMonitoredResourceDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricServiceClient.GetMonitoredResourceDescriptor"/> and
-        /// <see cref="MetricServiceClient.GetMonitoredResourceDescriptorAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>MetricServiceClient.GetMonitoredResourceDescriptor</c> and
+        /// <c>MetricServiceClient.GetMonitoredResourceDescriptorAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -193,24 +175,21 @@ namespace Google.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetMonitoredResourceDescriptorSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings GetMonitoredResourceDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="MetricServiceClient.ListMetricDescriptors"/> and <see cref="MetricServiceClient.ListMetricDescriptorsAsync"/>.
+        /// <c>MetricServiceClient.ListMetricDescriptors</c> and <c>MetricServiceClient.ListMetricDescriptorsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricServiceClient.ListMetricDescriptors"/> and
-        /// <see cref="MetricServiceClient.ListMetricDescriptorsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>MetricServiceClient.ListMetricDescriptors</c> and
+        /// <c>MetricServiceClient.ListMetricDescriptorsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -226,24 +205,21 @@ namespace Google.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListMetricDescriptorsSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings ListMetricDescriptorsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="MetricServiceClient.GetMetricDescriptor"/> and <see cref="MetricServiceClient.GetMetricDescriptorAsync"/>.
+        /// <c>MetricServiceClient.GetMetricDescriptor</c> and <c>MetricServiceClient.GetMetricDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricServiceClient.GetMetricDescriptor"/> and
-        /// <see cref="MetricServiceClient.GetMetricDescriptorAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>MetricServiceClient.GetMetricDescriptor</c> and
+        /// <c>MetricServiceClient.GetMetricDescriptorAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -259,24 +235,21 @@ namespace Google.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetMetricDescriptorSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings GetMetricDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="MetricServiceClient.CreateMetricDescriptor"/> and <see cref="MetricServiceClient.CreateMetricDescriptorAsync"/>.
+        /// <c>MetricServiceClient.CreateMetricDescriptor</c> and <c>MetricServiceClient.CreateMetricDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricServiceClient.CreateMetricDescriptor"/> and
-        /// <see cref="MetricServiceClient.CreateMetricDescriptorAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>MetricServiceClient.CreateMetricDescriptor</c> and
+        /// <c>MetricServiceClient.CreateMetricDescriptorAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -291,24 +264,21 @@ namespace Google.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateMetricDescriptorSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings CreateMetricDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="MetricServiceClient.DeleteMetricDescriptor"/> and <see cref="MetricServiceClient.DeleteMetricDescriptorAsync"/>.
+        /// <c>MetricServiceClient.DeleteMetricDescriptor</c> and <c>MetricServiceClient.DeleteMetricDescriptorAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricServiceClient.DeleteMetricDescriptor"/> and
-        /// <see cref="MetricServiceClient.DeleteMetricDescriptorAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>MetricServiceClient.DeleteMetricDescriptor</c> and
+        /// <c>MetricServiceClient.DeleteMetricDescriptorAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -324,24 +294,51 @@ namespace Google.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteMetricDescriptorSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings DeleteMetricDescriptorSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="MetricServiceClient.CreateTimeSeries"/> and <see cref="MetricServiceClient.CreateTimeSeriesAsync"/>.
+        /// <c>MetricServiceClient.ListTimeSeries</c> and <c>MetricServiceClient.ListTimeSeriesAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="MetricServiceClient.CreateTimeSeries"/> and
-        /// <see cref="MetricServiceClient.CreateTimeSeriesAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>MetricServiceClient.ListTimeSeries</c> and
+        /// <c>MetricServiceClient.ListTimeSeriesAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings ListTimeSeriesSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MetricServiceClient.CreateTimeSeries</c> and <c>MetricServiceClient.CreateTimeSeriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>MetricServiceClient.CreateTimeSeries</c> and
+        /// <c>MetricServiceClient.CreateTimeSeriesAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -356,22 +353,18 @@ namespace Google.Monitoring.V3
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateTimeSeriesSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings CreateTimeSeriesSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of MetricService settings.</returns>
+        /// <returns>A deep clone of this <see cref="MetricServiceSettings"/> object.</returns>
         public MetricServiceSettings Clone() => new MetricServiceSettings(this);
     }
 
@@ -386,7 +379,7 @@ namespace Google.Monitoring.V3
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("monitoring.googleapis.com", 443);
 
         /// <summary>
-        /// The default MetricService scopes
+        /// The default MetricService scopes.
         /// </summary>
         /// <remarks>
         /// The default MetricService scopes are:
@@ -394,7 +387,6 @@ namespace Google.Monitoring.V3
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
-            "https://www.googleapis.com/auth/cloud-platform"
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
@@ -411,42 +403,48 @@ namespace Google.Monitoring.V3
         /// Creates a project resource name from its component IDs.
         /// </summary>
         /// <param name="projectId">The project ID.</param>
-        /// <returns>The full project resource name.</returns>
+        /// <returns>
+        /// The full project resource name.
+        /// </returns>
         public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         /// <summary>
-        /// Path template for a metricDescriptorPath resource. Parameters:
+        /// Path template for a metric_descriptor resource. Parameters:
         /// <list type="bullet">
         /// <item><description>project</description></item>
-        /// <item><description>metric_descriptor_path</description></item>
+        /// <item><description>metricDescriptor</description></item>
         /// </list>
         /// </summary>
-        public static PathTemplate MetricDescriptorPathTemplate { get; } = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor_path=**}");
+        public static PathTemplate MetricDescriptorTemplate { get; } = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
 
         /// <summary>
-        /// Creates a metricDescriptorPath resource name from its component IDs.
+        /// Creates a metric_descriptor resource name from its component IDs.
         /// </summary>
         /// <param name="projectId">The project ID.</param>
-        /// <param name="metric_descriptor_pathId">The metric_descriptor_path ID.</param>
-        /// <returns>The full metricDescriptorPath resource name.</returns>
-        public static string FormatMetricDescriptorPathName(string projectId, string metric_descriptor_pathId) => MetricDescriptorPathTemplate.Expand(projectId, metric_descriptor_pathId);
+        /// <param name="metricDescriptorId">The metricDescriptor ID.</param>
+        /// <returns>
+        /// The full metric_descriptor resource name.
+        /// </returns>
+        public static string FormatMetricDescriptorName(string projectId, string metricDescriptorId) => MetricDescriptorTemplate.Expand(projectId, metricDescriptorId);
 
         /// <summary>
-        /// Path template for a monitoredResourceDescriptor resource. Parameters:
+        /// Path template for a monitored_resource_descriptor resource. Parameters:
         /// <list type="bullet">
         /// <item><description>project</description></item>
-        /// <item><description>monitored_resource_descriptor</description></item>
+        /// <item><description>monitoredResourceDescriptor</description></item>
         /// </list>
         /// </summary>
         public static PathTemplate MonitoredResourceDescriptorTemplate { get; } = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
 
         /// <summary>
-        /// Creates a monitoredResourceDescriptor resource name from its component IDs.
+        /// Creates a monitored_resource_descriptor resource name from its component IDs.
         /// </summary>
         /// <param name="projectId">The project ID.</param>
-        /// <param name="monitored_resource_descriptorId">The monitored_resource_descriptor ID.</param>
-        /// <returns>The full monitoredResourceDescriptor resource name.</returns>
-        public static string FormatMonitoredResourceDescriptorName(string projectId, string monitored_resource_descriptorId) => MonitoredResourceDescriptorTemplate.Expand(projectId, monitored_resource_descriptorId);
+        /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID.</param>
+        /// <returns>
+        /// The full monitored_resource_descriptor resource name.
+        /// </returns>
+        public static string FormatMonitoredResourceDescriptorName(string projectId, string monitoredResourceDescriptorId) => MonitoredResourceDescriptorTemplate.Expand(projectId, monitoredResourceDescriptorId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -508,7 +506,7 @@ namespace Google.Monitoring.V3
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC MetricService client.
+        /// The underlying gRPC MetricService client.
         /// </summary>
         public virtual MetricService.MetricServiceClient GrpcClient
         {
@@ -518,18 +516,25 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="filter"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of MonitoredResourceDescriptor resources.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// </returns>
         public virtual IPagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             string name,
-            string filter,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -540,18 +545,25 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="filter"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of MonitoredResourceDescriptor resources.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// </returns>
         public virtual IPagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             string name,
-            string filter,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -562,9 +574,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             string name,
             CallSettings callSettings = null)
@@ -575,21 +593,33 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             string name,
             CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
                 name,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             string name,
             CallSettings callSettings = null)
@@ -600,18 +630,25 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="filter"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of MetricDescriptor resources.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
+        /// </returns>
         public virtual IPagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
             string name,
-            string filter,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -622,18 +659,25 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="filter"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of MetricDescriptor resources.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
+        /// </returns>
         public virtual IPagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
             string name,
-            string filter,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -644,9 +688,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
             string name,
             CallSettings callSettings = null)
@@ -657,21 +707,33 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
             string name,
             CancellationToken cancellationToken) => GetMetricDescriptorAsync(
                 name,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual MetricDescriptor GetMetricDescriptor(
             string name,
             CallSettings callSettings = null)
@@ -682,10 +744,18 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="metricDescriptor"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="metricDescriptor">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
             string name,
             MetricDescriptor metricDescriptor,
@@ -697,25 +767,41 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="metricDescriptor"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="metricDescriptor">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
             string name,
             MetricDescriptor metricDescriptor,
             CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
                 name,
                 metricDescriptor,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="metricDescriptor"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="metricDescriptor">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual MetricDescriptor CreateMetricDescriptor(
             string name,
             MetricDescriptor metricDescriptor,
@@ -727,9 +813,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task DeleteMetricDescriptorAsync(
             string name,
             CallSettings callSettings = null)
@@ -740,21 +832,33 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task DeleteMetricDescriptorAsync(
             string name,
             CancellationToken cancellationToken) => DeleteMetricDescriptorAsync(
                 name,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual void DeleteMetricDescriptor(
             string name,
             CallSettings callSettings = null)
@@ -763,12 +867,102 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
+        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="filter">
+        ///
+        /// </param>
+        /// <param name="interval">
+        ///
+        /// </param>
+        /// <param name="view">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
+        /// </returns>
+        public virtual IPagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
+            string name,
+            string filter,
+            TimeInterval interval,
+            TimeSeriesView view,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="filter">
+        ///
+        /// </param>
+        /// <param name="interval">
+        ///
+        /// </param>
+        /// <param name="view">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="TimeSeries"/> resources.
+        /// </returns>
+        public virtual IPagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
+            string name,
+            string filter,
+            TimeInterval interval,
+            TimeSeriesView view,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="timeSeries"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="timeSeries">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task CreateTimeSeriesAsync(
             string name,
             IEnumerable<TimeSeries> timeSeries,
@@ -780,25 +974,41 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="timeSeries"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="timeSeries">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task CreateTimeSeriesAsync(
             string name,
             IEnumerable<TimeSeries> timeSeries,
             CancellationToken cancellationToken) => CreateTimeSeriesAsync(
                 name,
                 timeSeries,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="timeSeries"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="timeSeries">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual void CreateTimeSeries(
             string name,
             IEnumerable<TimeSeries> timeSeries,
@@ -809,6 +1019,9 @@ namespace Google.Monitoring.V3
 
     }
 
+    /// <summary>
+    /// MetricService client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class MetricServiceClientImpl : MetricServiceClient
     {
         private readonly ClientHelper _clientHelper;
@@ -818,8 +1031,14 @@ namespace Google.Monitoring.V3
         private readonly ApiCall<GetMetricDescriptorRequest, MetricDescriptor> _callGetMetricDescriptor;
         private readonly ApiCall<CreateMetricDescriptorRequest, MetricDescriptor> _callCreateMetricDescriptor;
         private readonly ApiCall<DeleteMetricDescriptorRequest, Empty> _callDeleteMetricDescriptor;
+        private readonly ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> _callListTimeSeries;
         private readonly ApiCall<CreateTimeSeriesRequest, Empty> _callCreateTimeSeries;
 
+        /// <summary>
+        /// Constructs a client wrapper for the MetricService service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="MetricServiceSettings"/> used within this client </param>
         public MetricServiceClientImpl(MetricService.MetricServiceClient grpcClient, MetricServiceSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -837,27 +1056,39 @@ namespace Google.Monitoring.V3
                 GrpcClient.CreateMetricDescriptorAsync, GrpcClient.CreateMetricDescriptor, effectiveSettings.CreateMetricDescriptorSettings);
             _callDeleteMetricDescriptor = _clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, Empty>(
                 GrpcClient.DeleteMetricDescriptorAsync, GrpcClient.DeleteMetricDescriptor, effectiveSettings.DeleteMetricDescriptorSettings);
+            _callListTimeSeries = _clientHelper.BuildApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse>(
+                GrpcClient.ListTimeSeriesAsync, GrpcClient.ListTimeSeries, effectiveSettings.ListTimeSeriesSettings);
             _callCreateTimeSeries = _clientHelper.BuildApiCall<CreateTimeSeriesRequest, Empty>(
                 GrpcClient.CreateTimeSeriesAsync, GrpcClient.CreateTimeSeries, effectiveSettings.CreateTimeSeriesSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC MetricService client.
+        /// </summary>
         public override MetricService.MetricServiceClient GrpcClient { get; }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="filter"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of MonitoredResourceDescriptor resources.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// </returns>
         public override IPagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             string name,
-            string filter,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => new PagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(
@@ -865,7 +1096,6 @@ namespace Google.Monitoring.V3
                 new ListMonitoredResourceDescriptorsRequest
                 {
                     Name = name,
-                    Filter = filter,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -874,18 +1104,25 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="filter"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of MonitoredResourceDescriptor resources.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// </returns>
         public override IPagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             string name,
-            string filter,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => new PagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(
@@ -893,7 +1130,6 @@ namespace Google.Monitoring.V3
                 new ListMonitoredResourceDescriptorsRequest
                 {
                     Name = name,
-                    Filter = filter,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -902,9 +1138,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             string name,
             CallSettings callSettings = null) => _callGetMonitoredResourceDescriptor.Async(
@@ -917,9 +1159,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             string name,
             CallSettings callSettings = null) => _callGetMonitoredResourceDescriptor.Sync(
@@ -932,18 +1180,25 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="filter"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of MetricDescriptor resources.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
+        /// </returns>
         public override IPagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
             string name,
-            string filter,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => new PagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(
@@ -951,7 +1206,6 @@ namespace Google.Monitoring.V3
                 new ListMetricDescriptorsRequest
                 {
                     Name = name,
-                    Filter = filter,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -960,18 +1214,25 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="filter"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of MetricDescriptor resources.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
+        /// </returns>
         public override IPagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
             string name,
-            string filter,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => new PagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(
@@ -979,7 +1240,6 @@ namespace Google.Monitoring.V3
                 new ListMetricDescriptorsRequest
                 {
                     Name = name,
-                    Filter = filter,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -988,9 +1248,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<MetricDescriptor> GetMetricDescriptorAsync(
             string name,
             CallSettings callSettings = null) => _callGetMetricDescriptor.Async(
@@ -1003,9 +1269,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override MetricDescriptor GetMetricDescriptor(
             string name,
             CallSettings callSettings = null) => _callGetMetricDescriptor.Sync(
@@ -1018,10 +1290,18 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="metricDescriptor"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="metricDescriptor">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<MetricDescriptor> CreateMetricDescriptorAsync(
             string name,
             MetricDescriptor metricDescriptor,
@@ -1036,10 +1316,18 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="metricDescriptor"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="metricDescriptor">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override MetricDescriptor CreateMetricDescriptor(
             string name,
             MetricDescriptor metricDescriptor,
@@ -1054,9 +1342,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task DeleteMetricDescriptorAsync(
             string name,
             CallSettings callSettings = null) => _callDeleteMetricDescriptor.Async(
@@ -1069,9 +1363,15 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override void DeleteMetricDescriptor(
             string name,
             CallSettings callSettings = null) => _callDeleteMetricDescriptor.Sync(
@@ -1082,12 +1382,118 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
+        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="filter">
+        ///
+        /// </param>
+        /// <param name="interval">
+        ///
+        /// </param>
+        /// <param name="view">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
+        /// </returns>
+        public override IPagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
+            string name,
+            string filter,
+            TimeInterval interval,
+            TimeSeriesView view,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(
+                _callListTimeSeries,
+                new ListTimeSeriesRequest
+                {
+                    Name = name,
+                    Filter = filter,
+                    Interval = interval,
+                    View = view,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="filter">
+        ///
+        /// </param>
+        /// <param name="interval">
+        ///
+        /// </param>
+        /// <param name="view">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="TimeSeries"/> resources.
+        /// </returns>
+        public override IPagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
+            string name,
+            string filter,
+            TimeInterval interval,
+            TimeSeriesView view,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => new PagedEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(
+                _callListTimeSeries,
+                new ListTimeSeriesRequest
+                {
+                    Name = name,
+                    Filter = filter,
+                    Interval = interval,
+                    View = view,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="timeSeries"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="timeSeries">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task CreateTimeSeriesAsync(
             string name,
             IEnumerable<TimeSeries> timeSeries,
@@ -1102,10 +1508,18 @@ namespace Google.Monitoring.V3
         /// <summary>
         ///
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="timeSeries"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="name">
+        ///
+        /// </param>
+        /// <param name="timeSeries">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override void CreateTimeSeries(
             string name,
             IEnumerable<TimeSeries> timeSeries,
@@ -1124,21 +1538,36 @@ namespace Google.Monitoring.V3
     public partial class ListMonitoredResourceDescriptorsRequest : IPageRequest { }
     public partial class ListMonitoredResourceDescriptorsResponse : IPageResponse<MonitoredResourceDescriptor>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
+
+        <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListMetricDescriptorsRequest : IPageRequest { }
     public partial class ListMetricDescriptorsResponse : IPageResponse<MetricDescriptor>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<MetricDescriptor> GetEnumerator() => MetricDescriptors.GetEnumerator();
+
+        <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListTimeSeriesRequest : IPageRequest { }
     public partial class ListTimeSeriesResponse : IPageResponse<TimeSeries>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<TimeSeries> GetEnumerator() => TimeSeries.GetEnumerator();
+
+        <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

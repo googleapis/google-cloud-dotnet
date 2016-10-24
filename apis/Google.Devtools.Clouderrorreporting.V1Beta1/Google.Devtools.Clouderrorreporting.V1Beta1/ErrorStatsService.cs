@@ -243,8 +243,6 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     private readonly pbc::RepeatedField<string> groupId_ = new pbc::RepeatedField<string>();
     /// <summary>
     ///  [Optional] List all &lt;code>ErrorGroupStats&lt;/code> with these IDs.
-    ///  If not specified, all error group stats with a non-zero error count
-    ///  for the given selection criteria are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> GroupId {
@@ -272,9 +270,10 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     private global::Google.Devtools.Clouderrorreporting.V1Beta1.QueryTimeRange timeRange_;
     /// <summary>
     ///  [Required] List data for the given time range.
-    ///  The service is tuned for retrieving data up to (approximately) 'now'.
-    ///  Retrieving data for arbitrary time periods in the past can result in
-    ///  higher response times or in returning incomplete results.
+    ///  Only &lt;code>ErrorGroupStats&lt;/code> with a non-zero count in the given time
+    ///  range are returned, unless the request contains an explicit group_id list.
+    ///  If a group_id list is given, also &lt;code>ErrorGroupStats&lt;/code> with zero
+    ///  occurrences are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Devtools.Clouderrorreporting.V1Beta1.QueryTimeRange TimeRange {
@@ -759,7 +758,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Data extracted for a specific group based on certain selection criteria,
+  ///  Data extracted for a specific group based on certain filter criteria,
   ///  such as a given time period and/or service filter.
   /// </summary>
   public sealed partial class ErrorGroupStats : pb::IMessage<ErrorGroupStats> {
@@ -806,7 +805,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     public const int GroupFieldNumber = 1;
     private global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup group_;
     /// <summary>
-    ///  Group data that is independent of the selection criteria.
+    ///  Group data that is independent of the filter criteria.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup Group {
@@ -821,7 +820,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     private long count_;
     /// <summary>
     ///  Approximate total number of events in the given group that match
-    ///  the selection criteria.
+    ///  the filter criteria.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Count {
@@ -836,7 +835,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     private long affectedUsersCount_;
     /// <summary>
     ///  Approximate number of affected users in the given group that
-    ///  match the selection criteria.
+    ///  match the filter criteria.
     ///  Users are distinguished by data in the `ErrorContext` of the
     ///  individual error events, such as their login name or their remote
     ///  IP address in case of HTTP requests.
@@ -878,8 +877,9 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     public const int FirstSeenTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp firstSeenTime_;
     /// <summary>
-    ///  Approximate first occurrence that was seen for this group and
-    ///  which matches the given selection criteria.
+    ///  Approximate first occurrence that was ever seen for this group
+    ///  and which matches the given filter criteria, ignoring the
+    ///  time_range that was specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp FirstSeenTime {
@@ -893,8 +893,9 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     public const int LastSeenTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastSeenTime_;
     /// <summary>
-    ///  Approximate last occurrence that was seen for this group
-    ///  and which matches the given selection criteria.
+    ///  Approximate last occurrence that was ever seen for this group and
+    ///  which matches the given filter criteria, ignoring the time_range
+    ///  that was specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastSeenTime {
@@ -910,7 +911,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext.Parser);
     private readonly pbc::RepeatedField<global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext> affectedServices_ = new pbc::RepeatedField<global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext>();
     /// <summary>
-    ///  Service contexts with a non-zero error count for the given selection
+    ///  Service contexts with a non-zero error count for the given filter
     ///  criteria. This list can be truncated if multiple services are affected.
     ///  Refer to `num_affected_services` for the total count.
     /// </summary>
@@ -924,7 +925,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     private int numAffectedServices_;
     /// <summary>
     ///  The total number of services with a non-zero error count for the given
-    ///  selection criteria.
+    ///  filter criteria.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int NumAffectedServices {
@@ -1455,10 +1456,6 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     private global::Google.Devtools.Clouderrorreporting.V1Beta1.QueryTimeRange timeRange_;
     /// <summary>
     ///  [Optional] List only data for the given time range.
-    ///  The service is tuned for retrieving data up to (approximately) 'now'.
-    ///  Retrieving data for arbitrary time periods in the past can result in
-    ///  higher response times or in returning incomplete results.
-    ///  Data for the last hour until now is returned if not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Devtools.Clouderrorreporting.V1Beta1.QueryTimeRange TimeRange {

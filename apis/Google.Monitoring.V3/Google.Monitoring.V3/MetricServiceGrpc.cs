@@ -112,7 +112,7 @@ namespace Google.Monitoring.V3 {
     public abstract class MetricServiceBase
     {
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter.
+      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptors(global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, ServerCallContext context)
       {
@@ -120,7 +120,7 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Gets a single monitored resource descriptor.
+      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptor(global::Google.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, ServerCallContext context)
       {
@@ -128,7 +128,7 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Lists metric descriptors that match a filter.
+      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptors(global::Google.Monitoring.V3.ListMetricDescriptorsRequest request, ServerCallContext context)
       {
@@ -136,7 +136,7 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Gets a single metric descriptor.
+      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.MetricDescriptor> GetMetricDescriptor(global::Google.Monitoring.V3.GetMetricDescriptorRequest request, ServerCallContext context)
       {
@@ -163,7 +163,7 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Lists time series that match a filter.
+      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeries(global::Google.Monitoring.V3.ListTimeSeriesRequest request, ServerCallContext context)
       {
@@ -207,112 +207,112 @@ namespace Google.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter.
+      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMonitoredResourceDescriptors(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter.
+      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter.
+      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMonitoredResourceDescriptorsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter.
+      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Gets a single monitored resource descriptor.
+      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Api.MonitoredResourceDescriptor GetMonitoredResourceDescriptor(global::Google.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetMonitoredResourceDescriptor(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single monitored resource descriptor.
+      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Api.MonitoredResourceDescriptor GetMonitoredResourceDescriptor(global::Google.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMonitoredResourceDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Gets a single monitored resource descriptor.
+      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(global::Google.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetMonitoredResourceDescriptorAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single monitored resource descriptor.
+      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(global::Google.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMonitoredResourceDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Lists metric descriptors that match a filter.
+      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListMetricDescriptorsResponse ListMetricDescriptors(global::Google.Monitoring.V3.ListMetricDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMetricDescriptors(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists metric descriptors that match a filter.
+      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListMetricDescriptorsResponse ListMetricDescriptors(global::Google.Monitoring.V3.ListMetricDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMetricDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Lists metric descriptors that match a filter.
+      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptorsAsync(global::Google.Monitoring.V3.ListMetricDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMetricDescriptorsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists metric descriptors that match a filter.
+      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptorsAsync(global::Google.Monitoring.V3.ListMetricDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMetricDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Gets a single metric descriptor.
+      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Api.MetricDescriptor GetMetricDescriptor(global::Google.Monitoring.V3.GetMetricDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetMetricDescriptor(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single metric descriptor.
+      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Api.MetricDescriptor GetMetricDescriptor(global::Google.Monitoring.V3.GetMetricDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMetricDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Gets a single metric descriptor.
+      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Api.MetricDescriptor> GetMetricDescriptorAsync(global::Google.Monitoring.V3.GetMetricDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetMetricDescriptorAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single metric descriptor.
+      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Api.MetricDescriptor> GetMetricDescriptorAsync(global::Google.Monitoring.V3.GetMetricDescriptorRequest request, CallOptions options)
       {
@@ -387,28 +387,28 @@ namespace Google.Monitoring.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteMetricDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Lists time series that match a filter.
+      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListTimeSeriesResponse ListTimeSeries(global::Google.Monitoring.V3.ListTimeSeriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListTimeSeries(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists time series that match a filter.
+      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual global::Google.Monitoring.V3.ListTimeSeriesResponse ListTimeSeries(global::Google.Monitoring.V3.ListTimeSeriesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTimeSeries, null, options, request);
       }
       /// <summary>
-      ///  Lists time series that match a filter.
+      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeriesAsync(global::Google.Monitoring.V3.ListTimeSeriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListTimeSeriesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists time series that match a filter.
+      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeriesAsync(global::Google.Monitoring.V3.ListTimeSeriesRequest request, CallOptions options)
       {

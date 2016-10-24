@@ -360,8 +360,9 @@ namespace Google.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  A time interval extending from after `startTime` through `endTime`.  If
-  ///  `startTime` is omitted, the interval is the single point in time, `endTime`.
+  ///  A time interval extending just after a start time through an end time.
+  ///  If the start time is the same as the end time, then the interval
+  ///  represents a single point in time.
   /// </summary>
   public sealed partial class TimeInterval : pb::IMessage<TimeInterval> {
     private static readonly pb::MessageParser<TimeInterval> _parser = new pb::MessageParser<TimeInterval>(() => new TimeInterval());
@@ -400,8 +401,7 @@ namespace Google.Monitoring.V3 {
     public const int EndTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    ///  Required. The end of the interval. The interval includes this
-    ///  time.
+    ///  Required. The end of the time interval.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -415,10 +415,9 @@ namespace Google.Monitoring.V3 {
     public const int StartTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    ///  If this value is omitted, the interval is a point in time,
-    ///  `endTime`.  If `startTime` is present, it must be earlier than
-    ///  (less than) `endTime`.  The interval begins after
-    ///  `startTime`&amp;mdash;it does not include `startTime`.
+    ///  Optional. The beginning of the time interval.  The default value
+    ///  for the start time is the end time. The start time must not be
+    ///  later than the end time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
