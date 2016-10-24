@@ -14,13 +14,17 @@
 
 from collections import OrderedDict
 from flask import Flask, request
+from oauth2client import service_account
 from werkzeug.wrappers import Request
-import common, errno, getopt, json, logging, os, socket, sys, time
+import common, errno, getopt, json, logging, os, socket, string, sys, time
 
-numeric_project_id = 12345;
-numeric_project_id_token = u'<NUMERIC_PROJECT_ID>';
-project_id = u'fake-project';
-project_id_token = u'<PROJECT_ID>';
+numeric_project_id = 12345
+numeric_project_id_token = u'<NUMERIC_PROJECT_ID>'
+project_id = u'fake-project'
+project_id_token = u'<PROJECT_ID>'
+
+credential_scopes = [ "https://www.googleapis.com/auth/cloud-platform", "https://www.googleapis.com/auth/userinfo.email" ]
+credentials = {}
 
 app = Flask(__name__)
 
@@ -56,6 +60,9 @@ class MetadataValue:
     return self._value
 
   def isDirectory(self):
+    return False
+
+  def isServiceAccount(self):
     return False
 
   def prepareResult(self, is_recursive, is_directory, is_json, alt):
@@ -124,14 +131,16 @@ class MetadataDict(MetadataDirectory):
       if excludeKeyInRecursiveGet(key):
         continue
 
-      if key.endswith(u'@developer.gserviceaccount.com'):
-        newKey = key
-      else:
-        newKey = common.convertToCamelCase(key)
+      value = self[key]
 
-      result[newKey] = self[key].getValueToJSONEncode()
+      # Service account email keys should not be converted to camel case.
+      newKey = key if value.isServiceAccount() else common.convertToCamelCase(key)
+      result[newKey] = value.getValueToJSONEncode()
 
     return result
+
+  def isServiceAccount(self):
+    return "email" in self and "scopes" in self and "token" in self
 
   def prepareNonRecursiveResult(self, is_json):
     def includeSlash(key):
@@ -228,6 +237,9 @@ bad_request_error = formatResponse(u'Error: bad request', 400, common.content_ty
 all_data = {}
 def loadData():
   global all_data
+  global credential_scopes
+  global credentials
+
   with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'initial_data.json')) as initial_data_file:
     all_data = json.load(initial_data_file, object_pairs_hook=OrderedDict)
     indexed_lists = [
@@ -252,6 +264,19 @@ def loadData():
 
       process(all_data, 0)
 
+    # Replace service-accounts if any credentials were specified via flags.
+    if len(credentials) != 0:
+      def make_service_account(email, account_credentials):
+        is_default = email == u'default'
+        return OrderedDict((
+            (u'aliases', ([ u'default' ] if is_default else [])),
+            (u'email', (account_credentials.client_id if is_default else account_credentials.service_account_email)),
+            (u'scopes', credential_scopes),
+            (u'token', None) # Real values will be substituted here upon request.
+          ))
+      all_data[u'instance'][u'service-accounts'] = OrderedDict(
+        {email : make_service_account(email, credentials[email]) for email in credentials})
+
     def convertToMetadata(value):
       if isinstance(value, OrderedDict):
         result = OrderedDict()
@@ -263,16 +288,10 @@ def loadData():
         return MetadataDict(result)
 
       if isinstance(value, MetadataIndexedList):
-        for i in range(len(value)):
-          value[i] = convertToMetadata(value[i])
-
-        return value
+        return MetadataIndexedList([convertToMetadata(item) for item in value])
 
       if isinstance(value, list):
-        for i in range(len(value)):
-          value[i] = convertToMetadata(value[i])
-
-        return MetadataList(value)
+        return MetadataList([convertToMetadata(item) for item in value])
 
       if isinstance(value, unicode):
         if value == numeric_project_id_token:
@@ -322,6 +341,7 @@ def getRootData():
 @app.route('/computeMetadata/v1/<path:path>', methods = ['GET'])
 def getData(path):
   global all_data
+  global credentials
 
   # TODO There are 500 max hanging gets (not sure if we need to enforce this)
   # TODO Actually handle waiting for changes and last_etag
@@ -351,12 +371,20 @@ def getData(path):
   if error:
     return error
 
-  
   is_directory = raw_data.isDirectory()
   if path.endswith('/token'):
     # Even though this acts like a directory, trailing slashes are not allowed for tokens.
     if ends_with_slash:
       return not_found_error
+
+    if len(credentials) != 0:
+      email = [component for component in path.split('/') if component][-2]
+      if email in credentials:
+        token_result = credentials[email].get_access_token()
+        raw_data = MetadataDict(OrderedDict((
+          (u'access_token', MetadataString(token_result.access_token)),
+          (u'expires_in', MetadataValue(token_result.expires_in)),
+          (u'token_type', MetadataString(u'Bearer')))))
 
     is_json = (alt != 'text')
     is_recursive = True
@@ -391,16 +419,61 @@ if __name__ == '__main__':
 
   port = None
   is_for_testing = False
+  credentials_files = None
   argv = sys.argv[1:]
+  usage = """SYNOPSIS
+     python metadata_server.py [-h] [-i <project_id>] [-d]
+         [-c <json_credentials_files>] [-n <numeric_project_id>] [-t]
+         [-p <port>]
+
+FLAGS
+      -h, --help
+         Display help for the emulator.
+
+      -t, --test
+         Sets the emulator up for tests to be run on it, which will prevent it
+         from picking up the TEST_PROJECT environment variable to initialize
+         the project id. Instead the value of the value of %s will be
+         used (or the --id value if specified).
+
+      -i PROJECT_ID, --id=PROJECT_ID
+         The project id to use. If unspecified and --test is also not
+         specified, the value of the TEST_PROJECT environment variable will be
+         used if set. Otherwise, the value of %s will be used.
+
+      -n NUMERIC_PROJECT_ID, --num_id=NUMERIC_PROJECT_ID
+         The numeric project id to use. If unspecified the value of %s will
+         be used.
+
+      -p PORT, --port=PORT
+         Specifies the port on which to listen to requests. If unspecified, an
+         open port will be selected automatically and an environment variable
+         containing this port will be printed when the emulator is started.
+
+      -d, --default_credentials
+         Use the application default credentials as one of the service accounts
+         for the emulated instance metadata. If this or --credentials are
+         specified, the dummy service accounts will not be used for the
+         emulator.
+
+      -c FILES, --credentials=FILES
+         A %s separated list of JSON files from which to obtain service account
+         credentials for the emulated instance metadata. If this or
+         --default_credentials are specified, the dummy service accounts will
+         not be used for the emulator.""" % (test_project_id, test_project_id, numeric_project_id, os.pathsep)
   try:
-    opts, args = getopt.getopt(argv, 'hti:n:p:', ['help=', 'test', 'id=', 'num_id=', 'port='])
+    opts, args = getopt.getopt(argv, 'htdc:i:n:p:', ['help', 'test', "default_credentials", 'credentials=', 'id=', 'num_id=', 'port='])
   except getopt.GetoptError:
-    print 'metadata_server.py [-i <project_id>] [-n <numeric_project_id>] [-t] [-p <port>]'
+    print usage
     sys.exit(2)
   for opt, arg in opts:
-    if opt == ('-h', '--help'):
-      print 'metadata_server.py [-i <project_id>] [-n <numeric_project_id>] [-t] [-p <port>]'
+    if opt in ('-h', '--help'):
+      print usage
       sys.exit()
+    elif opt in ('-d', '--default_credentials'):
+      credentials[u'default'] = service_account.ServiceAccountCredentials.get_application_default()
+    elif opt in ('-c', '--credentials'):
+      credentials_files = arg
     elif opt in ('-i', '--id'):
       project_id = arg
       test_project_id = arg
@@ -410,6 +483,13 @@ if __name__ == '__main__':
       is_for_testing = True
     elif opt in ('-p', '--port'):
       port = int(arg)
+
+  if credentials_files:
+    for path in string.split(credentials_files, os.pathsep):
+      account_credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
+        path,
+        scopes = credential_scopes)
+      credentials[account_credentials.service_account_email] = account_credentials
 
   if is_for_testing:
     project_id = test_project_id
