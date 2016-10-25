@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System.Collections.Generic;
 
@@ -56,9 +56,9 @@ namespace Google.Bigquery.V2
         /// that there are no more results.</param>
         public BigqueryResultSet(List<BigqueryRow> rows, TableSchema schema, JobReference jobReference, string pageToken)
         {
-            Rows = GaxRestPreconditions.CheckNotNull(rows, nameof(rows));
-            Schema = GaxRestPreconditions.CheckNotNull(schema, nameof(schema));
-            JobReference = GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            Rows = GaxPreconditions.CheckNotNull(rows, nameof(rows));
+            Schema = GaxPreconditions.CheckNotNull(schema, nameof(schema));
+            JobReference = GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             PageToken = pageToken;
         }
     }

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using System;
 
@@ -79,7 +80,7 @@ namespace Google.Bigquery.V2
             get { return _deadline; }
             set
             {
-                GaxRestPreconditions.CheckArgument(
+                GaxPreconditions.CheckArgument(
                     value == null || value.Value.Kind == DateTimeKind.Utc,
                     nameof(value),
                     "Only UTC deadlines are supported");
@@ -89,7 +90,7 @@ namespace Google.Bigquery.V2
 
         internal void Validate()
         {
-            GaxRestPreconditions.CheckArgument(Timeout == null || Deadline == null, "options",
+            GaxPreconditions.CheckArgument(Timeout == null || Deadline == null, "options",
                 $"Cannot set both {nameof(Timeout)} and {nameof(Deadline)} to non-null values");
         }
 

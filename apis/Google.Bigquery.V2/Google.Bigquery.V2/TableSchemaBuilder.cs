@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System;
 using System.Text.RegularExpressions;
 using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 
 namespace Google.Bigquery.V2
 {
@@ -43,7 +44,7 @@ namespace Google.Bigquery.V2
         /// <param name="field">The field to add. Must not be null.</param>
         public void Add(TableFieldSchema field)
         {
-            GaxRestPreconditions.CheckNotNull(field, nameof(field));
+            GaxPreconditions.CheckNotNull(field, nameof(field));
 
             _fields.Add(field);
         }
@@ -58,7 +59,7 @@ namespace Google.Bigquery.V2
         public void Add(string name, BigqueryDbType type, FieldMode mode = FieldMode.Nullable, string description = null)
         {
             ValidateFieldName(name, nameof(name));
-            GaxRestPreconditions.CheckArgument(type != BigqueryDbType.Record, nameof(type), "Record fields must be specified with their schema");
+            GaxPreconditions.CheckArgument(type != BigqueryDbType.Record, nameof(type), "Record fields must be specified with their schema");
 
             Add(new TableFieldSchema
             {
@@ -71,8 +72,8 @@ namespace Google.Bigquery.V2
 
         internal static void ValidateFieldName(string name, string paramName)
         {
-            GaxRestPreconditions.CheckNotNull(name, paramName);
-            GaxRestPreconditions.CheckArgument(s_fieldNamePattern.IsMatch(name), paramName, "Invalid field name '{0}'", name);
+            GaxPreconditions.CheckNotNull(name, paramName);
+            GaxPreconditions.CheckArgument(s_fieldNamePattern.IsMatch(name), paramName, "Invalid field name '{0}'", name);
         }
 
         /// <summary>
@@ -85,7 +86,7 @@ namespace Google.Bigquery.V2
         public void Add(string name, TableSchema nestedSchema, FieldMode mode = FieldMode.Nullable, string description = null)
         {
             ValidateFieldName(name, nameof(name));
-            GaxRestPreconditions.CheckNotNull(nestedSchema, nameof(nestedSchema));
+            GaxPreconditions.CheckNotNull(nestedSchema, nameof(nestedSchema));
 
             Add(new TableFieldSchema
             {
@@ -108,7 +109,7 @@ namespace Google.Bigquery.V2
         /// <param name="description">The description of the field. May be null.</param>
         public void Add(string name, TableSchemaBuilder nestedSchema, FieldMode mode = FieldMode.Nullable, string description = null)
         {
-            var builtSchema = GaxRestPreconditions.CheckNotNull(nestedSchema, nameof(nestedSchema)).Build();
+            var builtSchema = GaxPreconditions.CheckNotNull(nestedSchema, nameof(nestedSchema)).Build();
             Add(name, builtSchema, mode, description);
         }
 

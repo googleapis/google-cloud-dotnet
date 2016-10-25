@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
@@ -44,7 +45,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryQueryJob ExecuteQuery(string sql, ExecuteQueryOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
 
             var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
             options?.ModifyRequest(queryRequest);
@@ -56,7 +57,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
             var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
             options?.ModifyRequest(query);
             var job = Service.Jobs.Insert(new Job
@@ -72,7 +73,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryQueryJob PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollJobOptions pollOptions = null)
         {
-            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             pollOptions?.Validate();
 
             DateTime? deadline = pollOptions?.GetEffectiveDeadline() ?? DateTime.SpecifyKind(DateTime.MaxValue, DateTimeKind.Utc);
@@ -94,7 +95,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryQueryJob GetQueryJob(JobReference jobReference, GetQueryResultsOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
             options?.ModifyRequest(request);
@@ -105,7 +106,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override IPagedEnumerable<TableDataList, BigqueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
 
             var pageManager = new TableRowPageManager(this, schema);

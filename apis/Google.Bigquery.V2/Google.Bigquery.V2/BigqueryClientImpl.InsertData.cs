@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
@@ -28,8 +29,8 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob UploadCsv(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            GaxRestPreconditions.CheckNotNull(input, nameof(input));
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(input, nameof(input));
             schema = schema ?? GetSchema(tableReference);
 
             var configuration = new JobConfigurationLoad
@@ -47,8 +48,8 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            GaxRestPreconditions.CheckNotNull(input, nameof(input));
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(input, nameof(input));
             schema = schema ?? GetSchema(tableReference);
 
             var configuration = new JobConfigurationLoad
@@ -84,14 +85,14 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override void Insert(TableReference tableReference, IEnumerable<InsertRow> rows, InsertOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            GaxRestPreconditions.CheckNotNull(rows, nameof(rows));
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(rows, nameof(rows));
 
             var body = new TableDataInsertAllRequest
             {
                 Rows = rows.Select(row =>
                 {
-                    GaxRestPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
+                    GaxPreconditions.CheckArgument(row != null, nameof(rows), "Entries must not be null");
                     return row.ToRowsData();
                 }).ToList()
             };
