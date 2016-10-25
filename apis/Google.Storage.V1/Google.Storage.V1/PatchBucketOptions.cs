@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using System;
 using static Google.Apis.Storage.v1.BucketsResource;
 using static Google.Apis.Storage.v1.BucketsResource.PatchRequest;
@@ -68,17 +68,17 @@ namespace Google.Storage.V1
             }
             if (Projection != null)
             {
-                request.Projection = GaxRestPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+                request.Projection = GaxPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
             }
             if (PredefinedAcl != null)
             {
                 request.PredefinedAcl =
-                    GaxRestPreconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
+                    GaxPreconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
             }
             if (PredefinedDefaultObjectAcl != null)
             {
                 request.PredefinedDefaultObjectAcl =
-                    GaxRestPreconditions.CheckEnumValue((PredefinedDefaultObjectAclEnum) PredefinedDefaultObjectAcl, nameof(PredefinedDefaultObjectAcl));
+                    GaxPreconditions.CheckEnumValue((PredefinedDefaultObjectAclEnum) PredefinedDefaultObjectAcl, nameof(PredefinedDefaultObjectAcl));
             }
         }
     }

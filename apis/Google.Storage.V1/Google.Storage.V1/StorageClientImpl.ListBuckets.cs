@@ -12,13 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Rest;
-using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Google.Storage.V1
 {
@@ -38,7 +36,7 @@ namespace Google.Storage.V1
         public override IPagedAsyncEnumerable<Buckets, Bucket> ListBucketsAsync(
             string projectId, ListBucketsOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             return new PagedAsyncEnumerable<BucketsResource.ListRequest, Buckets, Bucket>(
                 () => CreateListBucketsRequest(projectId, options), BucketPageManager.Instance);
         }
@@ -46,7 +44,7 @@ namespace Google.Storage.V1
         /// <inheritdoc />
         public override IPagedEnumerable<Buckets, Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             return new PagedEnumerable<BucketsResource.ListRequest, Buckets, Bucket>(
                 () => CreateListBucketsRequest(projectId, options), BucketPageManager.Instance);
         }
