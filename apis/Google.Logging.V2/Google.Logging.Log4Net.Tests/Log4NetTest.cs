@@ -14,6 +14,7 @@
 
 using Google.Api;
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
 using Google.Logging.V2;
 using Grpc.Core;

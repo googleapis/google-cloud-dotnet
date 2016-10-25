@@ -14,6 +14,7 @@
 
 using Google.Api;
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Logging.Type;
 using Google.Logging.V2;
 using log4net.Appender;
@@ -160,12 +161,11 @@ namespace Google.Logging.Log4Net
                 Resource = _resource,
                 Labels = { labels },
             };
-            var serverErrorBackoffSettings = new BackoffSettings
-            {
-                Delay = TimeSpan.FromSeconds(ServerErrorBackoffDelaySeconds),
-                DelayMultiplier = ServerErrorBackoffMultiplier,
-                MaxDelay = TimeSpan.FromSeconds(ServerErrorBackoffMaxDelaySeconds),
-            };
+            var serverErrorBackoffSettings = new BackoffSettings(
+                delay: TimeSpan.FromSeconds(ServerErrorBackoffDelaySeconds),
+                delayMultiplier: ServerErrorBackoffMultiplier,
+                maxDelay: TimeSpan.FromSeconds(ServerErrorBackoffMaxDelaySeconds)
+            );
             _logUploader = new LogUploader(
                 _client, _scheduler, _clock,
                 _logQ, logsLostWarningEntry, MaxUploadBatchSize,
