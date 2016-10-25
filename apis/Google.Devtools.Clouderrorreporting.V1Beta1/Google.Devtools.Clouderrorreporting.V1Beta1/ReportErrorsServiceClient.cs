@@ -277,7 +277,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
             string projectName,
-            ReportedErrorEvent event,
+            ReportedErrorEvent @event,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -300,10 +300,10 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
             string projectName,
-            ReportedErrorEvent event,
+            ReportedErrorEvent @event,
             CancellationToken cancellationToken) => ReportErrorEventAsync(
                 projectName,
-                event,
+                @event,
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -323,7 +323,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public virtual ReportErrorEventResponse ReportErrorEvent(
             string projectName,
-            ReportedErrorEvent event,
+            ReportedErrorEvent @event,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -375,12 +375,12 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public override Task<ReportErrorEventResponse> ReportErrorEventAsync(
             string projectName,
-            ReportedErrorEvent event,
+            ReportedErrorEvent @event,
             CallSettings callSettings = null) => _callReportErrorEvent.Async(
                 new ReportErrorEventRequest
                 {
                     ProjectName = projectName,
-                    Event = event,
+                    Event = @event,
                 },
                 callSettings);
 
@@ -401,12 +401,12 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public override ReportErrorEventResponse ReportErrorEvent(
             string projectName,
-            ReportedErrorEvent event,
+            ReportedErrorEvent @event,
             CallSettings callSettings = null) => _callReportErrorEvent.Sync(
                 new ReportErrorEventRequest
                 {
                     ProjectName = projectName,
-                    Event = event,
+                    Event = @event,
                 },
                 callSettings);
 
