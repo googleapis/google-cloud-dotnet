@@ -280,7 +280,7 @@ namespace Google.Iam.V1
         public static IamPolicyClient Create(Channel channel, IamPolicySettings settings = null)
         {
             GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            IamPolicy.IamPolicyClient grpcClient = new IamPolicy.IamPolicyClient(channel);
+            IAMPolicy.IAMPolicyClient grpcClient = new IAMPolicy.IAMPolicyClient(channel);
             return new IamPolicyClientImpl(grpcClient, settings);
         }
 
@@ -298,7 +298,7 @@ namespace Google.Iam.V1
         /// <summary>
         /// The underlying gRPC IamPolicy client.
         /// </summary>
-        public virtual IamPolicy.IamPolicyClient GrpcClient
+        public virtual IAMPolicy.IAMPolicyClient GrpcClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -514,7 +514,7 @@ namespace Google.Iam.V1
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
         /// <param name="settings">The base <see cref="IamPolicySettings"/> used within this client </param>
-        public IamPolicyClientImpl(IamPolicy.IamPolicyClient grpcClient, IamPolicySettings settings)
+        public IamPolicyClientImpl(IAMPolicy.IAMPolicyClient grpcClient, IamPolicySettings settings)
         {
             this.GrpcClient = grpcClient;
             IamPolicySettings effectiveSettings = settings ?? IamPolicySettings.GetDefault();
@@ -530,7 +530,7 @@ namespace Google.Iam.V1
         /// <summary>
         /// The underlying gRPC IamPolicy client.
         /// </summary>
-        public override IamPolicy.IamPolicyClient GrpcClient { get; }
+        public override IAMPolicy.IAMPolicyClient GrpcClient { get; }
 
         /// <summary>
         ///
