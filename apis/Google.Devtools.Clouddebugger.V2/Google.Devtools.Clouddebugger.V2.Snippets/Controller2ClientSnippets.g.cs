@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Clouddebugger.V2.Snippets
 {
-    public class Controller2ClientSnippets
+    public class GeneratedController2ClientSnippets
     {
         public async Task RegisterDebuggeeAsync()
         {

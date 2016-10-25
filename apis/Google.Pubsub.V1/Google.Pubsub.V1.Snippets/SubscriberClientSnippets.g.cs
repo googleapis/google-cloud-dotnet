@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Pubsub.V1.Snippets
 {
-    public class SubscriberClientSnippets
+    public class GeneratedSubscriberClientSnippets
     {
         public async Task CreateSubscriptionAsync()
         {

@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Speech.V1Beta1.Snippets
 {
-    public class SpeechClientSnippets
+    public class GeneratedSpeechClientSnippets
     {
         public async Task SyncRecognizeAsync()
         {

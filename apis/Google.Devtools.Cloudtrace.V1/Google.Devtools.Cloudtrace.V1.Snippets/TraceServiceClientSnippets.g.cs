@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Cloudtrace.V1.Snippets
 {
-    public class TraceServiceClientSnippets
+    public class GeneratedTraceServiceClientSnippets
     {
         public async Task PatchTracesAsync()
         {

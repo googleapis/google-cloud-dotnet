@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Vision.V1.Snippets
 {
-    public class ImageAnnotatorClientSnippets
+    public class GeneratedImageAnnotatorClientSnippets
     {
         public async Task BatchAnnotateImagesAsync()
         {

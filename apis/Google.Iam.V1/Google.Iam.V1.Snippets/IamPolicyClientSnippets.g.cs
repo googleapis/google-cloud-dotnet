@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 
 namespace Google.Iam.V1.Snippets
 {
-    public class IamPolicyClientSnippets
+    public class GeneratedIamPolicyClientSnippets
     {
         public async Task SetIamPolicyAsync()
         {

@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Clouddebugger.V2.Snippets
 {
-    public class Debugger2ClientSnippets
+    public class GeneratedDebugger2ClientSnippets
     {
         public async Task SetBreakpointAsync()
         {

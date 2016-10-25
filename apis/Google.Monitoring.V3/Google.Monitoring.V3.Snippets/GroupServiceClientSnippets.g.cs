@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Monitoring.V3.Snippets
 {
-    public class GroupServiceClientSnippets
+    public class GeneratedGroupServiceClientSnippets
     {
         public async Task GetGroupAsync()
         {

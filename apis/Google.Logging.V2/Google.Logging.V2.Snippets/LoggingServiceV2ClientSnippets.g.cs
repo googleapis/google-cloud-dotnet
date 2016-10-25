@@ -30,7 +30,7 @@ using WriteLogEntriesRequest.Types;
 
 namespace Google.Logging.V2.Snippets
 {
-    public class LoggingServiceV2ClientSnippets
+    public class GeneratedLoggingServiceV2ClientSnippets
     {
         public async Task DeleteLogAsync()
         {
