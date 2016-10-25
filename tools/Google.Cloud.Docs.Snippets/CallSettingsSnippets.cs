@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Pubsub.V1;
 using Grpc.Core;
 using System;
@@ -43,13 +43,7 @@ namespace Google.Cloud.Tools.Snippets
             // Format topicName from the projectId and topicId.
             string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             // Create a CallSettings with a custom header.
-            CallSettings callSettings = new CallSettings
-            {
-                Headers = new Metadata
-                {
-                    { "ClientVersion", "1.0.0" }
-                }
-            };
+            CallSettings callSettings = new CallSettings(null, null, null, metadata => metadata.Add("ClientVersion", "1.0.0"), null, null);
             // This will cause the custom 'ClientVersion' header to be included in the RPC call.
             Topic topic = client.CreateTopic(topicName, callSettings);
             // End sample
@@ -65,13 +59,7 @@ namespace Google.Cloud.Tools.Snippets
             // Create a default PublisherSettings, with a custom header for calls to all RPC methods.
             PublisherSettings publisherSettings = new PublisherSettings
             {
-                CallSettings = new CallSettings
-                {
-                    Headers = new Metadata
-                    {
-                        { "ClientVersion", "1.0.0" }
-                    },
-                }
+                CallSettings = new CallSettings(null, null, null, metadata => metadata.Add("ClientVersion", "1.0.0"), null, null)
             };
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
             // Format topicName from the projectId and topicId.
@@ -92,10 +80,7 @@ namespace Google.Cloud.Tools.Snippets
             // Create a default PublisherSettings, with a custom header for calls
             // to the CreateTopic RPC method.
             PublisherSettings publisherSettings = new PublisherSettings();
-            publisherSettings.CreateTopicSettings.Headers = new Metadata
-            {
-                { "ClientVersion", "1.0.0" }
-            };
+            publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings.WithHeader("ClientVersion", "1.0.0");
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
             // Format topicName from the projectId and topicId.
             string topicName = PublisherClient.FormatTopicName(projectId, topicId);
@@ -119,20 +104,16 @@ namespace Google.Cloud.Tools.Snippets
             // * A custom 5-second timeout Timing.
             // * No cancellation token.
             PublisherSettings publisherSettings = new PublisherSettings();
-            publisherSettings.CreateTopicSettings.Headers = new Metadata
-            {
-                { "ClientVersion", "1.0.0" }
-            };
-            publisherSettings.CreateTopicSettings.Timing = CallTiming.FromTimeout(TimeSpan.FromSeconds(5));
-            publisherSettings.CreateTopicSettings.CancellationToken = CancellationToken.None;
+            publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings
+                .WithCancellationToken(CancellationToken.None)
+                .WithCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(5)))
+                .WithHeader("ClientVersion", "1.0.0");
 
             // Override the above Timing and CancellationToken in the client-wide CallSettings;
             // the Headers are not overridden.
-            publisherSettings.CallSettings = new CallSettings
-            {
-                Timing = CallTiming.FromDeadline(deadline),
-                CancellationToken = CancellationToken.None,
-            };
+            publisherSettings.CallSettings = CallSettings
+                .FromCallTiming(CallTiming.FromDeadline(deadline))
+                .WithCancellationToken(CancellationToken.None);
 
             // Create the client with the configured publisherSettings
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
@@ -145,10 +126,7 @@ namespace Google.Cloud.Tools.Snippets
             // * A custom "ClientVersion" header.
             // * A Timing deadline of 'deadline' (*not* the overridden 5-second timeout).
             // * The CancellationToken 'cancellationToken' (*not* CancellationToken.None).
-            Topic topic = client.CreateTopic(topicName, new CallSettings
-            {
-                CancellationToken = cancellationToken
-            });
+            Topic topic = client.CreateTopic(topicName, CallSettings.FromCancellationToken(cancellationToken));
             // End sample
         }
     }
