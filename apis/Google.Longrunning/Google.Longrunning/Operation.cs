@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using System;
 using System.Threading;
@@ -122,39 +123,45 @@ namespace Google.Longrunning
         /// <summary>
         /// Polls the operation until it is complete, returning the completed operation.
         /// </summary>
-        /// <param name="pollSettings">The settings to use for repeated polling, or null
-        /// to use the default poll settings (poll once every 10 seconds, forever).</param>
         /// <remarks>
         /// If this object already represents a completed operation, it is returned immediately,
         /// with no further RPCs.
         /// </remarks>
+        /// <param name="pollSettings">The settings to use for repeated polling, or null
+        /// to use the default poll settings (poll once every 10 seconds, forever).</param>
+        /// <param name="callSettings">The call settings to apply on each call, or null for default settings.</param>
         /// <returns>The completed operation, which can then be checked for errors or a result.</returns>
-        public Operation<T> PollUntilCompleted(PollSettings pollSettings = null)
+        public Operation<T> PollUntilCompleted(PollSettings pollSettings = null, CallSettings callSettings = null)
         {
             if (IsCompleted)
             {
                 return this;
             }
-            return Polling.PollRepeatedly(PollOnce, o => o.IsCompleted, Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings);
+            // TODO: Use the deadline.
+            Func<DateTime?, Operation<T>> pollAction = deadline => PollOnce(callSettings);
+            return Polling.PollRepeatedly(pollAction, o => o.IsCompleted, Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings);
         }
 
         /// <summary>
         /// Asynchronously polls the operation until it is complete, returning the completed operation.
         /// </summary>
-        /// <param name="pollSettings">The settings to use for repeated polling, or null
-        /// to use the default poll settings (poll once every 10 seconds, forever).</param>
         /// <remarks>
         /// If this object already represents a completed operation, it is returned immediately,
         /// with no further RPCs.
         /// </remarks>
+        /// <param name="pollSettings">The settings to use for repeated polling, or null
+        /// to use the default poll settings (poll once every 10 seconds, forever).</param>
+        /// <param name="callSettings">The call settings to apply on each call, or null for default settings.</param>
         /// <returns>The completed operation, which can then be checked for errors or a result.</returns>
-        public Task<Operation<T>> PollUntilCompletedAsync(PollSettings pollSettings = null)
+        public Task<Operation<T>> PollUntilCompletedAsync(PollSettings pollSettings = null, CallSettings callSettings = null)
         {
             if (IsCompleted)
             {
                 return Task.FromResult(this);
             }
-            return Polling.PollRepeatedlyAsync(PollOnceAsync, o => o.IsCompleted, Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings);
+            // TODO: Use the deadline.
+            Func<DateTime?, Task<Operation<T>>> pollAction = deadline => PollOnceAsync(callSettings);
+            return Polling.PollRepeatedlyAsync(pollAction, o => o.IsCompleted, Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings);
         }
 
         /// <summary>
@@ -184,7 +191,7 @@ namespace Google.Longrunning
         /// the most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
         public Task<Operation<T>> PollOnceAsync(CancellationToken cancellationToken) =>
-            PollOnceAsync(new CallSettings { CancellationToken = cancellationToken });
+            PollOnceAsync(CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Attempts to cancel the long-running operation.
@@ -283,6 +290,6 @@ namespace Google.Longrunning
         /// <returns>A task representing the asynchronous "fetch" operation. The result of the task is
         /// the current state of the operation identified by <paramref name="name"/>.</returns>
         public static Task<Operation<T>> PollOnceFromNameAsync(string name, OperationsClient client, CancellationToken cancellationToken) =>
-            PollOnceFromNameAsync(name, client, new CallSettings { CancellationToken = cancellationToken });
+            PollOnceFromNameAsync(name, client, CallSettings.FromCancellationToken(cancellationToken));
     }
 }
