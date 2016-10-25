@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Protobuf.WellKnownTypes;
@@ -24,7 +25,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
-using WriteLogEntriesRequest.Types;
 
 namespace Google.Logging.V2
 {
