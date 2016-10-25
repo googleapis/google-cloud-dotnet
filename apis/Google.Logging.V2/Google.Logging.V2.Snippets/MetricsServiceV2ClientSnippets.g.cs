@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Logging.V2.Snippets
 {
-    public class MetricsServiceV2ClientSnippets
+    public class GeneratedMetricsServiceV2ClientSnippets
     {
         public async Task ListLogMetricsAsync()
         {

@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Longrunning.Snippets
 {
-    public class OperationsClientSnippets
+    public class GeneratedOperationsClientSnippets
     {
         public async Task GetOperationAsync()
         {

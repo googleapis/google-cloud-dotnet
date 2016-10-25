@@ -30,7 +30,7 @@ using System.Threading.Tasks;
 
 namespace Google.Monitoring.V3.Snippets
 {
-    public class MetricServiceClientSnippets
+    public class GeneratedMetricServiceClientSnippets
     {
         public async Task ListMonitoredResourceDescriptorsAsync()
         {

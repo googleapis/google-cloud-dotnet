@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
 {
-    public class ErrorGroupServiceClientSnippets
+    public class GeneratedErrorGroupServiceClientSnippets
     {
         public async Task GetGroupAsync()
         {

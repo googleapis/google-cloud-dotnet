@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Datastore.V1.Snippets
 {
-    public class DatastoreClientSnippets
+    public class GeneratedDatastoreClientSnippets
     {
         public async Task LookupAsync()
         {

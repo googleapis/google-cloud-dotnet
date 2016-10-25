@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
 {
-    public class ErrorStatsServiceClientSnippets
+    public class GeneratedErrorStatsServiceClientSnippets
     {
         public async Task ListGroupStatsAsync()
         {

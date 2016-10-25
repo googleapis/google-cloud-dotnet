@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Logging.V2.Snippets
 {
-    public class ConfigServiceV2ClientSnippets
+    public class GeneratedConfigServiceV2ClientSnippets
     {
         public async Task ListSinksAsync()
         {

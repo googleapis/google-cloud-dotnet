@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Language.V1Beta1.Snippets
 {
-    public class LanguageServiceClientSnippets
+    public class GeneratedLanguageServiceClientSnippets
     {
         public async Task AnalyzeSentimentAsync()
         {
