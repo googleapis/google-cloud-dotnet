@@ -12,19 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Protobuf.WellKnownTypes;
-using Google.Rpc;
-using System.Threading.Tasks;
-using Xunit;
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
-using Grpc.Core;
-using ProtoStatus = Google.Rpc.Status;
-using GrpcStatus = Grpc.Core.Status;
-using StatusCode = Grpc.Core.StatusCode;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Xunit;
+using GrpcStatus = Grpc.Core.Status;
+using ProtoStatus = Google.Rpc.Status;
+using StatusCode = Grpc.Core.StatusCode;
 
 namespace Google.Longrunning.Tests
 {
@@ -40,9 +41,9 @@ namespace Google.Longrunning.Tests
             Assert.Equal("foo", operation.Result.Value);
             Assert.False(operation.IsFaulted);
             Assert.Null(operation.Exception);
-            Assert.Same(operation, operation.Poll());
+            Assert.Same(operation, operation.PollOnce());
             Assert.Same(operation, operation.PollUntilCompleted());
-            Assert.Same(operation, await operation.PollAsync());
+            Assert.Same(operation, await operation.PollOnceAsync());
             Assert.Same(operation, await operation.PollUntilCompletedAsync());
             Assert.Equal(0, client.RequestCount);
         }
@@ -60,9 +61,9 @@ namespace Google.Longrunning.Tests
             Assert.Same(operation.RpcMessage, exception.Operation);
             Assert.True(operation.IsFaulted);
             Assert.Same(exception, operation.Exception);
-            Assert.Same(operation, operation.Poll());
+            Assert.Same(operation, operation.PollOnce());
             Assert.Same(operation, operation.PollUntilCompleted());
-            Assert.Same(operation, await operation.PollAsync());
+            Assert.Same(operation, await operation.PollOnceAsync());
             Assert.Same(operation, await operation.PollUntilCompletedAsync());
             Assert.Equal(0, client.RequestCount);
         }
@@ -81,47 +82,47 @@ namespace Google.Longrunning.Tests
         }
 
         [Fact]
-        public void Poll()
+        public void PollOnce()
         {
             var client = new FakeOperationsClient();
             client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-            var initial = Operation<StringValue>.PollFromName("op", client);
+            var initial = Operation<StringValue>.PollOnceFromName("op", client);
             Assert.False(initial.IsCompleted);
             client.FakeClock.Advance(TimeSpan.FromSeconds(2));
-            var polled = initial.Poll();
+            var polled = initial.PollOnce();
             Assert.False(polled.IsCompleted);
             client.FakeClock.Advance(TimeSpan.FromSeconds(2));
-            polled = polled.Poll();
+            polled = polled.PollOnce();
             Assert.True(polled.IsCompleted);
             Assert.Equal("result", polled.Result.Value);
             Assert.Equal(3, client.RequestCount);
         }
 
         [Fact]
-        public async Task PollAsync()
+        public async Task PollOnceAsync()
         {
             var client = new FakeOperationsClient();
             client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-            var initial = await Operation<StringValue>.PollFromNameAsync("op", client);
+            var initial = await Operation<StringValue>.PollOnceFromNameAsync("op", client);
             Assert.False(initial.IsCompleted);
             client.FakeClock.Advance(TimeSpan.FromSeconds(2));
-            var polled = await initial.PollAsync();
+            var polled = await initial.PollOnceAsync();
             Assert.False(polled.IsCompleted);
             client.FakeClock.Advance(TimeSpan.FromSeconds(2));
-            polled = await polled.PollAsync();
+            polled = await polled.PollOnceAsync();
             Assert.True(polled.IsCompleted);
             Assert.Equal("result", polled.Result.Value);
             Assert.Equal(3, client.RequestCount);
         }
 
         [Fact]
-        public void PollToCompletion_Success()
+        public void PollUntilCompleted_Success()
         {
             var client = new FakeOperationsClient();
             client.FakeScheduler.Run(() =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue>.PollFromName("op", client);
+                var initial = Operation<StringValue>.PollOnceFromName("op", client);
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 // Second request at t=2, then another at t=4
                 var final = initial.PollUntilCompleted(settings);
@@ -132,53 +133,48 @@ namespace Google.Longrunning.Tests
         }
 
         [Fact]
-        public void PollToCompletion_Timeout()
+        public void PollUntilCompleted_Timeout()
         {
             var client = new FakeOperationsClient();
             client.FakeScheduler.Run(() =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(10), new StringValue { Value = "result" });
-                var initial = Operation<StringValue>.PollFromName("op", client);
+                var initial = Operation<StringValue>.PollOnceFromName("op", client);
                 // Second request at t=0, then at t=2, then at t=4, then we give up.
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 Assert.Throws<TimeoutException>(() => initial.PollUntilCompleted(settings));
                 Assert.Equal(4, client.RequestCount);
-                return 0; // TODO: Remove the need for this, by improving FakeScheduler.
             });
         }
 
-        // FIXME: These tests being non-async is all kinds of wrong...
         [Fact]
-        public void PollToCompletionAsync_Success()
+        public async Task PollUntilCompletedAsync_Success()
         {
             var client = new FakeOperationsClient();
-            var completedOperation = client.FakeScheduler.Run(() =>
+            await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
-                var initial = Operation<StringValue>.PollFromNameAsync("op", client).Result;
+                var initial = Operation<StringValue>.PollOnceFromNameAsync("op", client).Result;
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
                 // Second request at t=2, then another at t=4
-                return initial.PollUntilCompletedAsync(settings).Result;
+                var completedOperation = await initial.PollUntilCompletedAsync(settings);
+                Assert.Equal("result", completedOperation.Result.Value);
             });
-            Assert.Equal("result", completedOperation.Result.Value);
             Assert.Equal(4, client.RequestCount);
         }
 
         [Fact]
-        public void PollToCompletionAsync_Timeout()
+        public async Task PollUntilCompletedAsync_Timeout()
         {
             var client = new FakeOperationsClient();
-            Func<Exception> func = () =>
+            await client.FakeScheduler.RunAsync(async () =>
             {
                 client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(10), new StringValue { Value = "result" });
-                var initial = Operation<StringValue>.PollFromNameAsync("op", client).Result;
+                var initial = Operation<StringValue>.PollOnceFromNameAsync("op", client).Result;
                 // Second request at t=0, then at t=2, then at t=4, then we give up.
                 var settings = new PollSettings(Expiration.FromTimeout(TimeSpan.FromSeconds(5)), TimeSpan.FromSeconds(2));
-                var aggregate = Assert.Throws<AggregateException>(() => initial.PollUntilCompletedAsync(settings).Result);
-                return aggregate.InnerException;
-            };
-            var exception = client.FakeScheduler.Run(func);
-            Assert.IsType<TimeoutException>(exception);
+                await Assert.ThrowsAsync<TimeoutException>(() => initial.PollUntilCompletedAsync(settings));
+            });
             Assert.Equal(4, client.RequestCount);
         }
 

@@ -23,22 +23,25 @@ namespace Google.Iam.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5nb29nbGUvaWFtL3YxL2lhbV9wb2xpY3kucHJvdG8SDWdvb2dsZS5pYW0u",
-            "djEaGmdvb2dsZS9pYW0vdjEvcG9saWN5LnByb3RvIk4KE1NldElhbVBvbGlj",
-            "eVJlcXVlc3QSEAoIcmVzb3VyY2UYASABKAkSJQoGcG9saWN5GAIgASgLMhUu",
-            "Z29vZ2xlLmlhbS52MS5Qb2xpY3kiJwoTR2V0SWFtUG9saWN5UmVxdWVzdBIQ",
-            "CghyZXNvdXJjZRgBIAEoCSJCChlUZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0",
-            "EhAKCHJlc291cmNlGAEgASgJEhMKC3Blcm1pc3Npb25zGAIgAygJIjEKGlRl",
-            "c3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlEhMKC3Blcm1pc3Npb25zGAEgAygJ",
-            "MowCCglJQU1Qb2xpY3kSSQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52",
-            "MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kS",
-            "SQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lS",
-            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kSaQoSVGVzdElhbVBlcm1p",
-            "c3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1",
-            "ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25z",
-            "ZUIlChFjb20uZ29vZ2xlLmlhbS52MUIOSWFtUG9saWN5UHJvdG9QAWIGcHJv",
-            "dG8z"));
+            "djEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aGmdvb2dsZS9pYW0v",
+            "djEvcG9saWN5LnByb3RvIk4KE1NldElhbVBvbGljeVJlcXVlc3QSEAoIcmVz",
+            "b3VyY2UYASABKAkSJQoGcG9saWN5GAIgASgLMhUuZ29vZ2xlLmlhbS52MS5Q",
+            "b2xpY3kiJwoTR2V0SWFtUG9saWN5UmVxdWVzdBIQCghyZXNvdXJjZRgBIAEo",
+            "CSJCChlUZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0EhAKCHJlc291cmNlGAEg",
+            "ASgJEhMKC3Blcm1pc3Npb25zGAIgAygJIjEKGlRlc3RJYW1QZXJtaXNzaW9u",
+            "c1Jlc3BvbnNlEhMKC3Blcm1pc3Npb25zGAEgAygJMpQDCglJQU1Qb2xpY3kS",
+            "dAoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lS",
+            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiKYLT5JMCIyIeL3YxL3ty",
+            "ZXNvdXJjZT0qKn06c2V0SWFtUG9saWN5OgEqEnQKDEdldElhbVBvbGljeRIi",
+            "Lmdvb2dsZS5pYW0udjEuR2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5p",
+            "YW0udjEuUG9saWN5IimC0+STAiMiHi92MS97cmVzb3VyY2U9Kip9OmdldElh",
+            "bVBvbGljeToBKhKaAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlh",
+            "bS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52",
+            "MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSIvgtPkkwIpIiQvdjEve3Jl",
+            "c291cmNlPSoqfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpCKAoRY29tLmdvb2ds",
+            "ZS5pYW0udjFCDklhbVBvbGljeVByb3RvUAH4AQFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Iam.V1.PolicyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Iam.V1.PolicyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Iam.V1.SetIamPolicyRequest), global::Google.Iam.V1.SetIamPolicyRequest.Parser, new[]{ "Resource", "Policy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Iam.V1.GetIamPolicyRequest), global::Google.Iam.V1.GetIamPolicyRequest.Parser, new[]{ "Resource" }, null, null, null),
@@ -90,9 +93,9 @@ namespace Google.Iam.V1 {
     public const int ResourceFieldNumber = 1;
     private string resource_ = "";
     /// <summary>
-    ///  REQUIRED: The resource for which policy is being specified.
-    ///  Resource is usually specified as a path, such as,
-    ///  projects/{project}/zones/{zone}/disks/{disk}.
+    ///  REQUIRED: The resource for which the policy is being specified.
+    ///  `resource` is usually specified as a path. For example, a Project
+    ///  resource is specified as `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Resource {
@@ -106,9 +109,10 @@ namespace Google.Iam.V1 {
     public const int PolicyFieldNumber = 2;
     private global::Google.Iam.V1.Policy policy_;
     /// <summary>
-    ///  REQUIRED: The complete policy to be applied to the 'resource'. The size of
-    ///  the policy is limited to a few 10s of KB. An empty policy is in general a
-    ///  valid policy but certain services (like Projects) might reject them.
+    ///  REQUIRED: The complete policy to be applied to the `resource`. The size of
+    ///  the policy is limited to a few 10s of KB. An empty policy is a
+    ///  valid policy but certain Cloud Platform services (such as Projects)
+    ///  might reject them.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Iam.V1.Policy Policy {
@@ -253,8 +257,9 @@ namespace Google.Iam.V1 {
     public const int ResourceFieldNumber = 1;
     private string resource_ = "";
     /// <summary>
-    ///  REQUIRED: The resource for which policy is being requested. Resource
-    ///  is usually specified as a path, such as, projects/{project}.
+    ///  REQUIRED: The resource for which the policy is being requested.
+    ///  `resource` is usually specified as a path. For example, a Project
+    ///  resource is specified as `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Resource {
@@ -378,8 +383,9 @@ namespace Google.Iam.V1 {
     public const int ResourceFieldNumber = 1;
     private string resource_ = "";
     /// <summary>
-    ///  REQUIRED: The resource for which policy detail is being requested.
-    ///  Resource is usually specified as a path, such as, projects/{project}.
+    ///  REQUIRED: The resource for which the policy detail is being requested.
+    ///  `resource` is usually specified as a path. For example, a Project
+    ///  resource is specified as `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Resource {
@@ -395,8 +401,10 @@ namespace Google.Iam.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> permissions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  The set of permissions to check for the 'resource'. Permissions with
-    ///  wildcards (such as '*' or 'storage.*') are not allowed.
+    ///  The set of permissions to check for the `resource`. Permissions with
+    ///  wildcards (such as '*' or 'storage.*') are not allowed. For more
+    ///  information see
+    ///  [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Permissions {

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
@@ -52,7 +53,7 @@ namespace Google.Bigquery.V2
             }
             set
             {
-                GaxRestPreconditions.CheckNotNull(value, nameof(value));
+                GaxPreconditions.CheckNotNull(value, nameof(value));
                 lock (_applicationNameLock)
                 {
                     _applicationName = value;
@@ -73,8 +74,8 @@ namespace Google.Bigquery.V2
         /// <param name="service">The service to wrap. Must not be null.</param>
         public BigqueryClientImpl(string projectId, BigqueryService service)
         {            
-            ProjectId = GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
-            Service = GaxRestPreconditions.CheckNotNull(service, nameof(service));
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            Service = GaxPreconditions.CheckNotNull(service, nameof(service));
         }
 
         /// <summary>
@@ -83,7 +84,7 @@ namespace Google.Bigquery.V2
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="service">The service to wrap. Must not be null.</param>
         public BigqueryClientImpl(ProjectReference projectReference, BigqueryService service)
-            : this(GaxRestPreconditions.CheckNotNull(projectReference, nameof(projectReference)).ProjectId, service)
+            : this(GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference)).ProjectId, service)
         {
         }
     }

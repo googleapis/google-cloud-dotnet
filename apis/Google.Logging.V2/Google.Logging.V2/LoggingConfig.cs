@@ -25,41 +25,41 @@ namespace Google.Logging.V2 {
             "CiZnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX2NvbmZpZy5wcm90bxIRZ29v",
             "Z2xlLmxvZ2dpbmcudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
             "G2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byLGAQoHTG9nU2luaxIMCgRuYW1lGAEgASgJEhMK",
+            "L3RpbWVzdGFtcC5wcm90byLfAQoHTG9nU2luaxIMCgRuYW1lGAEgASgJEhMK",
             "C2Rlc3RpbmF0aW9uGAMgASgJEg4KBmZpbHRlchgFIAEoCRJHChVvdXRwdXRf",
             "dmVyc2lvbl9mb3JtYXQYBiABKA4yKC5nb29nbGUubG9nZ2luZy52Mi5Mb2dT",
-            "aW5rLlZlcnNpb25Gb3JtYXQiPwoNVmVyc2lvbkZvcm1hdBIeChpWRVJTSU9O",
-            "X0ZPUk1BVF9VTlNQRUNJRklFRBAAEgYKAlYyEAESBgoCVjEQAiJJChBMaXN0",
-            "U2lua3NSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRISCgpwYWdlX3Rva2VuGAIg",
-            "ASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBSJXChFMaXN0U2lua3NSZXNwb25zZRIp",
-            "CgVzaW5rcxgBIAMoCzIaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1NpbmsSFwoP",
-            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIiMKDkdldFNpbmtSZXF1ZXN0EhEKCXNp",
-            "bmtfbmFtZRgBIAEoCSJNChFDcmVhdGVTaW5rUmVxdWVzdBIOCgZwYXJlbnQY",
-            "ASABKAkSKAoEc2luaxgCIAEoCzIaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1Np",
-            "bmsiUAoRVXBkYXRlU2lua1JlcXVlc3QSEQoJc2lua19uYW1lGAEgASgJEigK",
-            "BHNpbmsYAiABKAsyGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIiYKEURl",
-            "bGV0ZVNpbmtSZXF1ZXN0EhEKCXNpbmtfbmFtZRgBIAEoCTKZBQoPQ29uZmln",
-            "U2VydmljZVYyEoIBCglMaXN0U2lua3MSIy5nb29nbGUubG9nZ2luZy52Mi5M",
-            "aXN0U2lua3NSZXF1ZXN0GiQuZ29vZ2xlLmxvZ2dpbmcudjIuTGlzdFNpbmtz",
-            "UmVzcG9uc2UiKoLT5JMCJBIiL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9zaW5rcxJ5CgdHZXRTaW5rEiEuZ29vZ2xlLmxvZ2dpbmcudjIuR2V0U2lu",
-            "a1JlcXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIi+C0+STAikS",
-            "Jy92MmJldGExL3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfRKAAQoK",
-            "Q3JlYXRlU2luaxIkLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0ZVNpbmtSZXF1",
-            "ZXN0GhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luayIwgtPkkwIqIiIvdjJi",
-            "ZXRhMS97cGFyZW50PXByb2plY3RzLyp9L3NpbmtzOgRzaW5rEoUBCgpVcGRh",
-            "dGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuVXBkYXRlU2lua1JlcXVlc3Qa",
-            "Gi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIjWC0+STAi8aJy92MmJldGEx",
-            "L3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfToEc2luaxJ7CgpEZWxl",
-            "dGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlU2lua1JlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiL4LT5JMCKSonL3YyYmV0YTEve3Np",
-            "bmtfbmFtZT1wcm9qZWN0cy8qL3NpbmtzLyp9QloKFWNvbS5nb29nbGUubG9n",
-            "Z2luZy52MkINTG9nZ2luZ0NvbmZpZ1ABWjBnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2xvZ2dpbmcvdjJiBnByb3RvMw=="));
+            "aW5rLlZlcnNpb25Gb3JtYXQSFwoPd3JpdGVyX2lkZW50aXR5GAggASgJIj8K",
+            "DVZlcnNpb25Gb3JtYXQSHgoaVkVSU0lPTl9GT1JNQVRfVU5TUEVDSUZJRUQQ",
+            "ABIGCgJWMhABEgYKAlYxEAIiSQoQTGlzdFNpbmtzUmVxdWVzdBIOCgZwYXJl",
+            "bnQYASABKAkSEgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyAB",
+            "KAUiVwoRTGlzdFNpbmtzUmVzcG9uc2USKQoFc2lua3MYASADKAsyGi5nb29n",
+            "bGUubG9nZ2luZy52Mi5Mb2dTaW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CSIjCg5HZXRTaW5rUmVxdWVzdBIRCglzaW5rX25hbWUYASABKAkiTQoRQ3Jl",
+            "YXRlU2lua1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEigKBHNpbmsYAiABKAsy",
+            "Gi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIlAKEVVwZGF0ZVNpbmtSZXF1",
+            "ZXN0EhEKCXNpbmtfbmFtZRgBIAEoCRIoCgRzaW5rGAIgASgLMhouZ29vZ2xl",
+            "LmxvZ2dpbmcudjIuTG9nU2luayImChFEZWxldGVTaW5rUmVxdWVzdBIRCglz",
+            "aW5rX25hbWUYASABKAky/gQKD0NvbmZpZ1NlcnZpY2VWMhJ9CglMaXN0U2lu",
+            "a3MSIy5nb29nbGUubG9nZ2luZy52Mi5MaXN0U2lua3NSZXF1ZXN0GiQuZ29v",
+            "Z2xlLmxvZ2dpbmcudjIuTGlzdFNpbmtzUmVzcG9uc2UiJYLT5JMCHxIdL3Yy",
+            "L3twYXJlbnQ9cHJvamVjdHMvKn0vc2lua3MSdAoHR2V0U2luaxIhLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyLkdldFNpbmtSZXF1ZXN0GhouZ29vZ2xlLmxvZ2dpbmcu",
+            "djIuTG9nU2luayIqgtPkkwIkEiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0cy8q",
+            "L3NpbmtzLyp9EnsKCkNyZWF0ZVNpbmsSJC5nb29nbGUubG9nZ2luZy52Mi5D",
+            "cmVhdGVTaW5rUmVxdWVzdBoaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1Npbmsi",
+            "K4LT5JMCJSIdL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vc2lua3M6BHNpbmsS",
+            "gAEKClVwZGF0ZVNpbmsSJC5nb29nbGUubG9nZ2luZy52Mi5VcGRhdGVTaW5r",
+            "UmVxdWVzdBoaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1NpbmsiMILT5JMCKhoi",
+            "L3YyL3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfToEc2luaxJ2CgpE",
+            "ZWxldGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlU2lua1JlcXVl",
+            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiKoLT5JMCJCoiL3YyL3tzaW5r",
+            "X25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfUJaChVjb20uZ29vZ2xlLmxvZ2dp",
+            "bmcudjJCDUxvZ2dpbmdDb25maWdQAVowZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogSink), global::Google.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat" }, null, new[]{ typeof(global::Google.Logging.V2.LogSink.Types.VersionFormat) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogSink), global::Google.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity" }, null, new[]{ typeof(global::Google.Logging.V2.LogSink.Types.VersionFormat) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksRequest), global::Google.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksResponse), global::Google.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.GetSinkRequest), global::Google.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
@@ -103,6 +103,7 @@ namespace Google.Logging.V2 {
       destination_ = other.destination_;
       filter_ = other.filter_;
       outputVersionFormat_ = other.outputVersionFormat_;
+      writerIdentity_ = other.writerIdentity_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -114,11 +115,11 @@ namespace Google.Logging.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Required. The client-assigned sink identifier. Example:
-    ///  `"my-severe-errors-to-pubsub"`.
-    ///  Sink identifiers are limited to 1000 characters
-    ///  and can include only the following characters: `A-Z`, `a-z`,
-    ///  `0-9`, and the special characters `_-.`.
+    ///  Required. The client-assigned sink identifier, unique within the
+    ///  project. Example: `"my-syslog-errors-to-pubsub"`.  Sink identifiers are
+    ///  limited to 1000 characters and can include only the following characters:
+    ///  `A-Z`, `a-z`, `0-9`, and the special characters `_-.`.  The maximum length
+    ///  of the name is 100 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -132,10 +133,13 @@ namespace Google.Logging.V2 {
     public const int DestinationFieldNumber = 3;
     private string destination_ = "";
     /// <summary>
-    ///  The export destination. See
+    ///  Required. The export destination. See
     ///  [Exporting Logs With Sinks](/logging/docs/api/tasks/exporting-logs).
-    ///  Examples: `"storage.googleapis.com/a-bucket"`,
-    ///  `"bigquery.googleapis.com/projects/a-project-id/datasets/a-dataset"`.
+    ///  Examples:
+    ///
+    ///      "storage.googleapis.com/my-gcs-bucket"
+    ///      "bigquery.googleapis.com/projects/my-project-id/datasets/my-dataset"
+    ///      "pubsub.googleapis.com/projects/my-project/topics/my-topic"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Destination {
@@ -149,13 +153,14 @@ namespace Google.Logging.V2 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    ///  An [advanced logs filter](/logging/docs/view/advanced_filters). Only
-    ///  log entries matching that filter are exported. The filter must be
-    ///  consistent with the log entry format specified by the
+    ///  Optional. An [advanced logs filter](/logging/docs/view/advanced_filters).
+    ///  Only log entries matching the filter are exported. The filter
+    ///  must be consistent with the log entry format specified by the
     ///  `outputVersionFormat` parameter, regardless of the format of the
     ///  log entry that was originally written to Stackdriver Logging.
-    ///  Example (V2 format):
-    ///  `"logName=projects/my-projectid/logs/syslog AND severity>=ERROR"`.
+    ///  Example filter (V2 format):
+    ///
+    ///      logName=projects/my-projectid/logs/syslog AND severity>=ERROR
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -169,15 +174,39 @@ namespace Google.Logging.V2 {
     public const int OutputVersionFormatFieldNumber = 6;
     private global::Google.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = 0;
     /// <summary>
-    ///  The log entry version to use for this sink's exported log entries.
-    ///  This version does not have to correspond to the version of the log entry
-    ///  when it was written to Stackdriver Logging.
+    ///  Optional. The log entry version to use for this sink's exported log
+    ///  entries.  This version does not have to correspond to the version of the
+    ///  log entry that was written to Stackdriver Logging. If omitted, the
+    ///  v2 format is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.V2.LogSink.Types.VersionFormat OutputVersionFormat {
       get { return outputVersionFormat_; }
       set {
         outputVersionFormat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "writer_identity" field.</summary>
+    public const int WriterIdentityFieldNumber = 8;
+    private string writerIdentity_ = "";
+    /// <summary>
+    ///  Output only. The iam identity to which the destination needs to grant write
+    ///  access.  This may be a service account or a group.
+    ///  Examples (Do not assume these specific values):
+    ///     "serviceAccount:cloud-logs@system.gserviceaccount.com"
+    ///     "group:cloud-logs@google.com"
+    ///
+    ///    For GCS destinations, the role "roles/owner" is required on the bucket
+    ///    For Cloud Pubsub destinations, the role "roles/pubsub.publisher" is
+    ///      required on the topic
+    ///    For BigQuery, the role "roles/editor" is required on the dataset
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string WriterIdentity {
+      get { return writerIdentity_; }
+      set {
+        writerIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -198,6 +227,7 @@ namespace Google.Logging.V2 {
       if (Destination != other.Destination) return false;
       if (Filter != other.Filter) return false;
       if (OutputVersionFormat != other.OutputVersionFormat) return false;
+      if (WriterIdentity != other.WriterIdentity) return false;
       return true;
     }
 
@@ -208,6 +238,7 @@ namespace Google.Logging.V2 {
       if (Destination.Length != 0) hash ^= Destination.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (OutputVersionFormat != 0) hash ^= OutputVersionFormat.GetHashCode();
+      if (WriterIdentity.Length != 0) hash ^= WriterIdentity.GetHashCode();
       return hash;
     }
 
@@ -234,6 +265,10 @@ namespace Google.Logging.V2 {
         output.WriteRawTag(48);
         output.WriteEnum((int) OutputVersionFormat);
       }
+      if (WriterIdentity.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(WriterIdentity);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -250,6 +285,9 @@ namespace Google.Logging.V2 {
       }
       if (OutputVersionFormat != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OutputVersionFormat);
+      }
+      if (WriterIdentity.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WriterIdentity);
       }
       return size;
     }
@@ -270,6 +308,9 @@ namespace Google.Logging.V2 {
       }
       if (other.OutputVersionFormat != 0) {
         OutputVersionFormat = other.OutputVersionFormat;
+      }
+      if (other.WriterIdentity.Length != 0) {
+        WriterIdentity = other.WriterIdentity;
       }
     }
 
@@ -295,6 +336,10 @@ namespace Google.Logging.V2 {
           }
           case 48: {
             outputVersionFormat_ = (global::Google.Logging.V2.LogSink.Types.VersionFormat) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            WriterIdentity = input.ReadString();
             break;
           }
         }
@@ -371,7 +416,7 @@ namespace Google.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  Required. The resource name containing the sinks.
+    ///  Required. The cloud resource containing the sinks.
     ///  Example: `"projects/my-logging-project"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -386,10 +431,10 @@ namespace Google.Logging.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If the `pageToken` parameter is supplied, then the next page of
-    ///  results is retrieved.  The `pageToken` parameter must be set to the value
-    ///  of the `nextPageToken` from the previous response.
-    ///  The value of `parent` must be the same as in the previous request.
+    ///  Optional. If present, then retrieve the next batch of results from the
+    ///  preceding call to this method.  `pageToken` must be the value of
+    ///  `nextPageToken` from the previous response.  The values of other method
+    ///  parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -404,9 +449,8 @@ namespace Google.Logging.V2 {
     private int pageSize_;
     /// <summary>
     ///  Optional. The maximum number of results to return from this request.
-    ///  You must check for presence of `nextPageToken` to determine if additional
-    ///  results are available, which you can retrieve by passing the
-    ///  `nextPageToken` value as the `pageToken` parameter in the next request.
+    ///  Non-positive values are ignored.  The presence of `nextPageToken` in the
+    ///  response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -575,8 +619,8 @@ namespace Google.Logging.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there are more results than were returned, then `nextPageToken` is
-    ///  included in the response.  To get the next set of results, call this
+    ///  If there might be more results than appear in this response, then
+    ///  `nextPageToken` is included.  To get the next set of results, call the same
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -709,7 +753,7 @@ namespace Google.Logging.V2 {
     public const int SinkNameFieldNumber = 1;
     private string sinkName_ = "";
     /// <summary>
-    ///  The resource name of the sink to return.
+    ///  Required. The resource name of the sink to return.
     ///  Example: `"projects/my-project-id/sinks/my-sink-id"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -834,9 +878,8 @@ namespace Google.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  The resource in which to create the sink.
+    ///  Required. The resource in which to create the sink.
     ///  Example: `"projects/my-project-id"`.
-    ///
     ///  The new sink must be provided in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -851,8 +894,8 @@ namespace Google.Logging.V2 {
     public const int SinkFieldNumber = 2;
     private global::Google.Logging.V2.LogSink sink_;
     /// <summary>
-    ///  The new sink, which must not have an identifier that already
-    ///  exists.
+    ///  Required. The new sink, whose `name` parameter is a sink identifier that
+    ///  is not already in use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.V2.LogSink Sink {
@@ -998,12 +1041,9 @@ namespace Google.Logging.V2 {
     public const int SinkNameFieldNumber = 1;
     private string sinkName_ = "";
     /// <summary>
-    ///  The resource name of the sink to update.
-    ///  Example: `"projects/my-project-id/sinks/my-sink-id"`.
-    ///
-    ///  The updated sink must be provided in the request and have the
-    ///  same name that is specified in `sinkName`.  If the sink does not
-    ///  exist, it is created.
+    ///  Required. The resource name of the sink to update, including the parent
+    ///  resource and the sink identifier.  If the sink does not exist, this method
+    ///  creates the sink.  Example: `"projects/my-project-id/sinks/my-sink-id"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {
@@ -1017,8 +1057,8 @@ namespace Google.Logging.V2 {
     public const int SinkFieldNumber = 2;
     private global::Google.Logging.V2.LogSink sink_;
     /// <summary>
-    ///  The updated sink, whose name must be the same as the sink
-    ///  identifier in `sinkName`.  If `sinkName` does not exist, then
+    ///  Required. The updated sink, whose name is the same identifier that appears
+    ///  as part of `sinkName`.  If `sinkName` does not exist, then
     ///  this method creates a new sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1164,8 +1204,10 @@ namespace Google.Logging.V2 {
     public const int SinkNameFieldNumber = 1;
     private string sinkName_ = "";
     /// <summary>
-    ///  The resource name of the sink to delete.
-    ///  Example: `"projects/my-project-id/sinks/my-sink-id"`.
+    ///  Required. The resource name of the sink to delete, including the parent
+    ///  resource and the sink identifier.  Example:
+    ///  `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if the sink
+    ///  does not exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {

@@ -35,40 +35,40 @@ namespace Google.Logging.V2 {
             "RW50cmllc1JlcXVlc3QuTGFiZWxzRW50cnkSLAoHZW50cmllcxgEIAMoCzIb",
             "Lmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5EhcKD3BhcnRpYWxfc3VjY2Vz",
             "cxgFIAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBIhkKF1dyaXRlTG9nRW50cmllc1Jlc3BvbnNlInUKFUxpc3RM",
-            "b2dFbnRyaWVzUmVxdWVzdBITCgtwcm9qZWN0X2lkcxgBIAMoCRIOCgZmaWx0",
-            "ZXIYAiABKAkSEAoIb3JkZXJfYnkYAyABKAkSEQoJcGFnZV9zaXplGAQgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YBSABKAkiXwoWTGlzdExvZ0VudHJpZXNSZXNwb25z",
-            "ZRIsCgdlbnRyaWVzGAEgAygLMhsuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50",
-            "cnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlAKJ0xpc3RNb25pdG9yZWRS",
-            "ZXNvdXJjZURlc2NyaXB0b3JzUmVxdWVzdBIRCglwYWdlX3NpemUYASABKAUS",
-            "EgoKcGFnZV90b2tlbhgCIAEoCSKKAQooTGlzdE1vbml0b3JlZFJlc291cmNl",
-            "RGVzY3JpcHRvcnNSZXNwb25zZRJFChRyZXNvdXJjZV9kZXNjcmlwdG9ycxgB",
-            "IAMoCzInLmdvb2dsZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9y",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTLwBAoQTG9nZ2luZ1NlcnZpY2VW",
-            "MhJ3CglEZWxldGVMb2cSIy5nb29nbGUubG9nZ2luZy52Mi5EZWxldGVMb2dS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ii2C0+STAicqJS92MmJl",
-            "dGExL3tsb2dfbmFtZT1wcm9qZWN0cy8qL2xvZ3MvKn0SiwEKD1dyaXRlTG9n",
-            "RW50cmllcxIpLmdvb2dsZS5sb2dnaW5nLnYyLldyaXRlTG9nRW50cmllc1Jl",
-            "cXVlc3QaKi5nb29nbGUubG9nZ2luZy52Mi5Xcml0ZUxvZ0VudHJpZXNSZXNw",
-            "b25zZSIhgtPkkwIbIhYvdjJiZXRhMS9lbnRyaWVzOndyaXRlOgEqEocBCg5M",
-            "aXN0TG9nRW50cmllcxIoLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dFbnRy",
-            "aWVzUmVxdWVzdBopLmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RMb2dFbnRyaWVz",
-            "UmVzcG9uc2UiIILT5JMCGiIVL3YyYmV0YTEvZW50cmllczpsaXN0OgEqEsoB",
-            "CiBMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9ycxI6Lmdvb2dsZS5s",
-            "b2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVx",
-            "dWVzdBo7Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJj",
-            "ZURlc2NyaXB0b3JzUmVzcG9uc2UiLYLT5JMCJxIlL3YyYmV0YTEvbW9uaXRv",
-            "cmVkUmVzb3VyY2VEZXNjcmlwdG9yc0JcChVjb20uZ29vZ2xlLmxvZ2dpbmcu",
-            "djJCDExvZ2dpbmdQcm90b1ABWjBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2xvZ2dpbmcvdjL4AQFiBnByb3RvMw=="));
+            "AiABKAk6AjgBIhkKF1dyaXRlTG9nRW50cmllc1Jlc3BvbnNlIo0BChVMaXN0",
+            "TG9nRW50cmllc1JlcXVlc3QSEwoLcHJvamVjdF9pZHMYASADKAkSFgoOcmVz",
+            "b3VyY2VfbmFtZXMYCCADKAkSDgoGZmlsdGVyGAIgASgJEhAKCG9yZGVyX2J5",
+            "GAMgASgJEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJ",
+            "Il8KFkxpc3RMb2dFbnRyaWVzUmVzcG9uc2USLAoHZW50cmllcxgBIAMoCzIb",
+            "Lmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5EhcKD25leHRfcGFnZV90b2tl",
+            "bhgCIAEoCSJQCidMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlwdG9yc1Jl",
+            "cXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAki",
+            "igEKKExpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2US",
+            "RQoUcmVzb3VyY2VfZGVzY3JpcHRvcnMYASADKAsyJy5nb29nbGUuYXBpLk1v",
+            "bml0b3JlZFJlc291cmNlRGVzY3JpcHRvchIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAky4QQKEExvZ2dpbmdTZXJ2aWNlVjISdwoJRGVsZXRlTG9nEiMuZ29v",
+            "Z2xlLmxvZ2dpbmcudjIuRGVsZXRlTG9nUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSItgtPkkwInKiUvdjJiZXRhMS97bG9nX25hbWU9cHJvamVj",
+            "dHMvKi9sb2dzLyp9EoYBCg9Xcml0ZUxvZ0VudHJpZXMSKS5nb29nbGUubG9n",
+            "Z2luZy52Mi5Xcml0ZUxvZ0VudHJpZXNSZXF1ZXN0GiouZ29vZ2xlLmxvZ2dp",
+            "bmcudjIuV3JpdGVMb2dFbnRyaWVzUmVzcG9uc2UiHILT5JMCFiIRL3YyL2Vu",
+            "dHJpZXM6d3JpdGU6ASoSggEKDkxpc3RMb2dFbnRyaWVzEiguZ29vZ2xlLmxv",
+            "Z2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXF1ZXN0GikuZ29vZ2xlLmxvZ2dp",
+            "bmcudjIuTGlzdExvZ0VudHJpZXNSZXNwb25zZSIbgtPkkwIVIhAvdjIvZW50",
+            "cmllczpsaXN0OgEqEsUBCiBMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlw",
+            "dG9ycxI6Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJj",
+            "ZURlc2NyaXB0b3JzUmVxdWVzdBo7Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RN",
+            "b25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2UiKILT5JMCIhIg",
+            "L3YyL21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnNCXAoVY29tLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyQgxMb2dnaW5nUHJvdG9QAVowZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3Yy+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.V2.LogEntryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.DeleteLogRequest), global::Google.Logging.V2.DeleteLogRequest.Parser, new[]{ "LogName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesRequest), global::Google.Logging.V2.WriteLogEntriesRequest.Parser, new[]{ "LogName", "Resource", "Labels", "Entries", "PartialSuccess" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.WriteLogEntriesResponse), global::Google.Logging.V2.WriteLogEntriesResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogEntriesRequest), global::Google.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogEntriesRequest), global::Google.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "ResourceNames", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListLogEntriesResponse), global::Google.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null)
@@ -245,8 +245,8 @@ namespace Google.Logging.V2 {
     public const int LogNameFieldNumber = 1;
     private string logName_ = "";
     /// <summary>
-    ///  Optional. A default log resource name for those log entries in `entries`
-    ///  that do not specify their own `logName`.  Example:
+    ///  Optional. A default log resource name that is assigned to all log entries
+    ///  in `entries` that do not specify a value for `log_name`.  Example:
     ///  `"projects/my-project/logs/syslog"`.  See
     ///  [LogEntry][google.logging.v2.LogEntry].
     /// </summary>
@@ -262,8 +262,14 @@ namespace Google.Logging.V2 {
     public const int ResourceFieldNumber = 2;
     private global::Google.Api.MonitoredResource resource_;
     /// <summary>
-    ///  Optional. A default monitored resource for those log entries in `entries`
-    ///  that do not specify their own `resource`.
+    ///  Optional. A default monitored resource object that is assigned to all log
+    ///  entries in `entries` that do not specify a value for `resource`. Example:
+    ///
+    ///      { "type": "gce_instance",
+    ///        "labels": {
+    ///          "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
+    ///
+    ///  See [LogEntry][google.logging.v2.LogEntry].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MonitoredResource Resource {
@@ -279,10 +285,10 @@ namespace Google.Logging.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    ///  Optional. User-defined `key:value` items that are added to
-    ///  the `labels` field of each log entry in `entries`, except when a log
-    ///  entry specifies its own `key:value` item with the same key.
-    ///  Example: `{ "size": "large", "color":"red" }`
+    ///  Optional. Default labels that are added to the `labels` field of all log
+    ///  entries in `entries`. If a log entry already has a label with the same key
+    ///  as a label in this parameter, then the log entry's label is not changed.
+    ///  See [LogEntry][google.logging.v2.LogEntry].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -295,12 +301,15 @@ namespace Google.Logging.V2 {
         = pb::FieldCodec.ForMessage(34, global::Google.Logging.V2.LogEntry.Parser);
     private readonly pbc::RepeatedField<global::Google.Logging.V2.LogEntry> entries_ = new pbc::RepeatedField<global::Google.Logging.V2.LogEntry>();
     /// <summary>
-    ///  Required. The log entries to write. The log entries must have values for
-    ///  all required fields.
+    ///  Required. The log entries to write. Values supplied for the fields
+    ///  `log_name`, `resource`, and `labels` in this `entries.write` request are
+    ///  added to those log entries that do not provide their own values for the
+    ///  fields.
     ///
-    ///  To improve throughput and to avoid exceeding the quota limit for calls
-    ///  to `entries.write`, use this field to write multiple log entries at once
-    ///  rather than  // calling this method for each log entry.
+    ///  To improve throughput and to avoid exceeding the
+    ///  [quota limit](/logging/quota-policy) for calls to `entries.write`,
+    ///  you should write multiple log entries at once rather than
+    ///  calling this method for each individual log entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Logging.V2.LogEntry> Entries {
@@ -576,6 +585,7 @@ namespace Google.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListLogEntriesRequest(ListLogEntriesRequest other) : this() {
       projectIds_ = other.projectIds_.Clone();
+      resourceNames_ = other.resourceNames_.Clone();
       filter_ = other.filter_;
       orderBy_ = other.orderBy_;
       pageSize_ = other.pageSize_;
@@ -593,22 +603,39 @@ namespace Google.Logging.V2 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> projectIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  Required. One or more project IDs or project numbers from which to retrieve
-    ///  log entries.  Examples of a project ID: `"my-project-1A"`, `"1234567890"`.
+    ///  Deprecated. One or more project identifiers or project numbers from which
+    ///  to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
+    ///  present, these project identifiers are converted to resource format and
+    ///  added to the list of resources in `resourceNames`. Callers should use
+    ///  `resourceNames` rather than this parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> ProjectIds {
       get { return projectIds_; }
     }
 
+    /// <summary>Field number for the "resource_names" field.</summary>
+    public const int ResourceNamesFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_resourceNames_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> resourceNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///  Optional. One or more cloud resources from which to retrieve log entries.
+    ///  Example: `"projects/my-project-1A"`, `"projects/1234567890"`.  Projects
+    ///  listed in `projectIds` are added to this list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> ResourceNames {
+      get { return resourceNames_; }
+    }
+
     /// <summary>Field number for the "filter" field.</summary>
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    ///  Optional. An [advanced logs filter](/logging/docs/view/advanced_filters).
-    ///  The filter is compared against all log entries in the projects specified by
-    ///  `projectIds`.  Only entries that match the filter are retrieved.  An empty
-    ///  filter matches all log entries.
+    ///  Optional. A filter that chooses which log entries to return.  See [Advanced
+    ///  Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+    ///  match the filter are returned.  An empty filter matches all log entries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -642,9 +669,8 @@ namespace Google.Logging.V2 {
     private int pageSize_;
     /// <summary>
     ///  Optional. The maximum number of results to return from this request.
-    ///  You must check for presence of `nextPageToken` to determine if additional
-    ///  results are available, which you can retrieve by passing the
-    ///  `nextPageToken` value as the `pageToken` parameter in the next request.
+    ///  Non-positive values are ignored.  The presence of `nextPageToken` in the
+    ///  response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -658,11 +684,10 @@ namespace Google.Logging.V2 {
     public const int PageTokenFieldNumber = 5;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If the `pageToken` parameter is supplied, then the next page of
-    ///  results is retrieved.  The `pageToken` parameter must be set to the value
-    ///  of the `nextPageToken` from the previous response.
-    ///  The values of `projectIds`, `filter`, and `orderBy` must be the same
-    ///  as in the previous request.
+    ///  Optional. If present, then retrieve the next batch of results from the
+    ///  preceding call to this method.  `pageToken` must be the value of
+    ///  `nextPageToken` from the previous response.  The values of other method
+    ///  parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -686,6 +711,7 @@ namespace Google.Logging.V2 {
         return true;
       }
       if(!projectIds_.Equals(other.projectIds_)) return false;
+      if(!resourceNames_.Equals(other.resourceNames_)) return false;
       if (Filter != other.Filter) return false;
       if (OrderBy != other.OrderBy) return false;
       if (PageSize != other.PageSize) return false;
@@ -697,6 +723,7 @@ namespace Google.Logging.V2 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= projectIds_.GetHashCode();
+      hash ^= resourceNames_.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
@@ -728,12 +755,14 @@ namespace Google.Logging.V2 {
         output.WriteRawTag(42);
         output.WriteString(PageToken);
       }
+      resourceNames_.WriteTo(output, _repeated_resourceNames_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       size += projectIds_.CalculateSize(_repeated_projectIds_codec);
+      size += resourceNames_.CalculateSize(_repeated_resourceNames_codec);
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
       }
@@ -755,6 +784,7 @@ namespace Google.Logging.V2 {
         return;
       }
       projectIds_.Add(other.projectIds_);
+      resourceNames_.Add(other.resourceNames_);
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
       }
@@ -795,6 +825,10 @@ namespace Google.Logging.V2 {
           }
           case 42: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 66: {
+            resourceNames_.AddEntriesFrom(input, _repeated_resourceNames_codec);
             break;
           }
         }
@@ -856,8 +890,8 @@ namespace Google.Logging.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there are more results than were returned, then `nextPageToken` is
-    ///  included in the response.  To get the next set of results, call this
+    ///  If there might be more results than appear in this response, then
+    ///  `nextPageToken` is included.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -992,9 +1026,8 @@ namespace Google.Logging.V2 {
     private int pageSize_;
     /// <summary>
     ///  Optional. The maximum number of results to return from this request.
-    ///  You must check for presence of `nextPageToken` to determine if additional
-    ///  results are available, which you can retrieve by passing the
-    ///  `nextPageToken` value as the `pageToken` parameter in the next request.
+    ///  Non-positive values are ignored.  The presence of `nextPageToken` in the
+    ///  response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -1008,9 +1041,10 @@ namespace Google.Logging.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If the `pageToken` parameter is supplied, then the next page of
-    ///  results is retrieved.  The `pageToken` parameter must be set to the value
-    ///  of the `nextPageToken` from the previous response.
+    ///  Optional. If present, then retrieve the next batch of results from the
+    ///  preceding call to this method.  `pageToken` must be the value of
+    ///  `nextPageToken` from the previous response.  The values of other method
+    ///  parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1163,8 +1197,8 @@ namespace Google.Logging.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there are more results than were returned, then `nextPageToken` is
-    ///  included in the response.  To get the next set of results, call this
+    ///  If there might be more results than appear in this response, then
+    ///  `nextPageToken` is included.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

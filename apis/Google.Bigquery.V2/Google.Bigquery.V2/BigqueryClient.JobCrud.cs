@@ -12,10 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
-using System.Collections.Generic;
 
 namespace Google.Bigquery.V2
 {
@@ -54,24 +53,24 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Polls the job with the specified ID in this client's project for completion.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJob(JobReference,PollJobOptions)"/>.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJobUntilCompleted(JobReference,PollJobOptions)"/>.
         /// </summary>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
-        public virtual BigqueryJob PollJob(string jobId, PollJobOptions options = null) =>
-            PollJob(GetJobReference(jobId), options);
+        public virtual BigqueryJob PollJobUntilCompleted(string jobId, PollJobOptions options = null) =>
+            PollJobUntilCompleted(GetJobReference(jobId), options);
 
         /// <summary>
         /// Polls the job with the specified project ID and job ID.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJob(JobReference,PollJobOptions)"/>.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJobUntilCompleted(JobReference,PollJobOptions)"/>.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
-        public virtual BigqueryJob PollJob(string projectId, string jobId, PollJobOptions options = null) =>
-            PollJob(GetJobReference(projectId, jobId), options);
+        public virtual BigqueryJob PollJobUntilCompleted(string projectId, string jobId, PollJobOptions options = null) =>
+            PollJobUntilCompleted(GetJobReference(projectId, jobId), options);
 
         /// <summary>
         /// Polls the specified job for completion.
@@ -79,7 +78,7 @@ namespace Google.Bigquery.V2
         /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
-        public virtual BigqueryJob PollJob(JobReference jobReference, PollJobOptions options = null)
+        public virtual BigqueryJob PollJobUntilCompleted(JobReference jobReference, PollJobOptions options = null)
         {
             throw new NotImplementedException();
         }

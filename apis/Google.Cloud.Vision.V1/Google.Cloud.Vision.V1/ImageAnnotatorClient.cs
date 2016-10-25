@@ -15,8 +15,11 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
@@ -24,47 +27,28 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Vision.V1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="ImageAnnotatorClient"/>.
-    /// </summary>
-    public static partial class ImageAnnotatorExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC ImageAnnotator client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="ImageAnnotatorSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="ImageAnnotatorClient"/> that wraps the specified GRPC client.</returns>
-        public static ImageAnnotatorClient ToClient(
-            this ImageAnnotator.ImageAnnotatorClient grpcClient,
-            ImageAnnotatorSettings settings = null
-        ) => new ImageAnnotatorClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a ImageAnnotator wrapper.
+    /// Settings for a <see cref="ImageAnnotatorClient"/>.
     /// </summary>
     public sealed partial class ImageAnnotatorSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ImageAnnotatorSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default ImageAnnotatorSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="ImageAnnotatorSettings"/>.
+        /// </returns>
         public static ImageAnnotatorSettings GetDefault() => new ImageAnnotatorSettings();
 
         /// <summary>
-        /// Constructs a new ImageAnnotatorSettings object with default settings.
+        /// Constructs a new <see cref="ImageAnnotatorSettings"/> object with default settings.
         /// </summary>
         public ImageAnnotatorSettings() { }
 
         private ImageAnnotatorSettings(ImageAnnotatorSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            BatchAnnotateImagesSettings = existing.BatchAnnotateImagesSettings?.Clone();
+            BatchAnnotateImagesSettings = existing.BatchAnnotateImagesSettings;
         }
 
         /// <summary>
@@ -94,26 +78,29 @@ namespace Google.Cloud.Vision.V1
         /// <summary>
         /// "Default" retry backoff for <see cref="ImageAnnotatorClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="ImageAnnotatorClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="ImageAnnotatorClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="ImageAnnotatorClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="ImageAnnotatorClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="ImageAnnotatorClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="ImageAnnotatorClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="ImageAnnotatorClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -122,20 +109,19 @@ namespace Google.Cloud.Vision.V1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(60000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(60000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="ImageAnnotatorClient.BatchAnnotateImages"/> and <see cref="ImageAnnotatorClient.BatchAnnotateImagesAsync"/>.
+        /// <c>ImageAnnotatorClient.BatchAnnotateImages</c> and <c>ImageAnnotatorClient.BatchAnnotateImagesAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ImageAnnotatorClient.BatchAnnotateImages"/> and
-        /// <see cref="ImageAnnotatorClient.BatchAnnotateImagesAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>ImageAnnotatorClient.BatchAnnotateImages</c> and
+        /// <c>ImageAnnotatorClient.BatchAnnotateImagesAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -151,22 +137,18 @@ namespace Google.Cloud.Vision.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings BatchAnnotateImagesSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings BatchAnnotateImagesSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of ImageAnnotator settings.</returns>
+        /// <returns>A deep clone of this <see cref="ImageAnnotatorSettings"/> object.</returns>
         public ImageAnnotatorSettings Clone() => new ImageAnnotatorSettings(this);
     }
 
@@ -181,7 +163,7 @@ namespace Google.Cloud.Vision.V1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("vision.googleapis.com", 443);
 
         /// <summary>
-        /// The default ImageAnnotator scopes
+        /// The default ImageAnnotator scopes.
         /// </summary>
         /// <remarks>
         /// The default ImageAnnotator scopes are:
@@ -189,7 +171,7 @@ namespace Google.Cloud.Vision.V1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -255,7 +237,7 @@ namespace Google.Cloud.Vision.V1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC ImageAnnotator client.
+        /// The underlying gRPC ImageAnnotator client.
         /// </summary>
         public virtual ImageAnnotator.ImageAnnotatorClient GrpcClient
         {
@@ -263,11 +245,17 @@ namespace Google.Cloud.Vision.V1
         }
 
         /// <summary>
-        /// Run image detection and annotation for a batch of images.
+        ///
         /// </summary>
-        /// <param name="requests">Individual image annotation requests for this batch.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="requests">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
             IEnumerable<AnnotateImageRequest> requests,
             CallSettings callSettings = null)
@@ -276,23 +264,35 @@ namespace Google.Cloud.Vision.V1
         }
 
         /// <summary>
-        /// Run image detection and annotation for a batch of images.
+        ///
         /// </summary>
-        /// <param name="requests">Individual image annotation requests for this batch.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="requests">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
             IEnumerable<AnnotateImageRequest> requests,
             CancellationToken cancellationToken) => BatchAnnotateImagesAsync(
                 requests,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Run image detection and annotation for a batch of images.
+        ///
         /// </summary>
-        /// <param name="requests">Individual image annotation requests for this batch.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="requests">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual BatchAnnotateImagesResponse BatchAnnotateImages(
             IEnumerable<AnnotateImageRequest> requests,
             CallSettings callSettings = null)
@@ -302,11 +302,19 @@ namespace Google.Cloud.Vision.V1
 
     }
 
+    /// <summary>
+    /// ImageAnnotator client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class ImageAnnotatorClientImpl : ImageAnnotatorClient
     {
         private readonly ClientHelper _clientHelper;
         private readonly ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> _callBatchAnnotateImages;
 
+        /// <summary>
+        /// Constructs a client wrapper for the ImageAnnotator service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="ImageAnnotatorSettings"/> used within this client </param>
         public ImageAnnotatorClientImpl(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -316,14 +324,23 @@ namespace Google.Cloud.Vision.V1
                 GrpcClient.BatchAnnotateImagesAsync, GrpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC ImageAnnotator client.
+        /// </summary>
         public override ImageAnnotator.ImageAnnotatorClient GrpcClient { get; }
 
         /// <summary>
-        /// Run image detection and annotation for a batch of images.
+        ///
         /// </summary>
-        /// <param name="requests">Individual image annotation requests for this batch.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="requests">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
             IEnumerable<AnnotateImageRequest> requests,
             CallSettings callSettings = null) => _callBatchAnnotateImages.Async(
@@ -334,11 +351,17 @@ namespace Google.Cloud.Vision.V1
                 callSettings);
 
         /// <summary>
-        /// Run image detection and annotation for a batch of images.
+        ///
         /// </summary>
-        /// <param name="requests">Individual image annotation requests for this batch.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="requests">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override BatchAnnotateImagesResponse BatchAnnotateImages(
             IEnumerable<AnnotateImageRequest> requests,
             CallSettings callSettings = null) => _callBatchAnnotateImages.Sync(

@@ -15,8 +15,11 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
@@ -24,47 +27,28 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Clouderrorreporting.V1Beta1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="ReportErrorsServiceClient"/>.
-    /// </summary>
-    public static partial class ReportErrorsServiceExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC ReportErrorsService client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="ReportErrorsServiceSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="ReportErrorsServiceClient"/> that wraps the specified GRPC client.</returns>
-        public static ReportErrorsServiceClient ToClient(
-            this ReportErrorsService.ReportErrorsServiceClient grpcClient,
-            ReportErrorsServiceSettings settings = null
-        ) => new ReportErrorsServiceClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a ReportErrorsService wrapper.
+    /// Settings for a <see cref="ReportErrorsServiceClient"/>.
     /// </summary>
     public sealed partial class ReportErrorsServiceSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ReportErrorsServiceSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default ReportErrorsServiceSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="ReportErrorsServiceSettings"/>.
+        /// </returns>
         public static ReportErrorsServiceSettings GetDefault() => new ReportErrorsServiceSettings();
 
         /// <summary>
-        /// Constructs a new ReportErrorsServiceSettings object with default settings.
+        /// Constructs a new <see cref="ReportErrorsServiceSettings"/> object with default settings.
         /// </summary>
         public ReportErrorsServiceSettings() { }
 
         private ReportErrorsServiceSettings(ReportErrorsServiceSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            ReportErrorEventSettings = existing.ReportErrorEventSettings?.Clone();
+            ReportErrorEventSettings = existing.ReportErrorEventSettings;
         }
 
         /// <summary>
@@ -94,26 +78,29 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         /// "Default" retry backoff for <see cref="ReportErrorsServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="ReportErrorsServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="ReportErrorsServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="ReportErrorsServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="ReportErrorsServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="ReportErrorsServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="ReportErrorsServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="ReportErrorsServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -122,20 +109,19 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(20000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(20000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(20000),
+            maxDelay: TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="ReportErrorsServiceClient.ReportErrorEvent"/> and <see cref="ReportErrorsServiceClient.ReportErrorEventAsync"/>.
+        /// <c>ReportErrorsServiceClient.ReportErrorEvent</c> and <c>ReportErrorsServiceClient.ReportErrorEventAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ReportErrorsServiceClient.ReportErrorEvent"/> and
-        /// <see cref="ReportErrorsServiceClient.ReportErrorEventAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>ReportErrorsServiceClient.ReportErrorEvent</c> and
+        /// <c>ReportErrorsServiceClient.ReportErrorEventAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -150,22 +136,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ReportErrorEventSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings ReportErrorEventSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of ReportErrorsService settings.</returns>
+        /// <returns>A deep clone of this <see cref="ReportErrorsServiceSettings"/> object.</returns>
         public ReportErrorsServiceSettings Clone() => new ReportErrorsServiceSettings(this);
     }
 
@@ -180,7 +162,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("clouderrorreporting.googleapis.com", 443);
 
         /// <summary>
-        /// The default ReportErrorsService scopes
+        /// The default ReportErrorsService scopes.
         /// </summary>
         /// <remarks>
         /// The default ReportErrorsService scopes are:
@@ -188,7 +170,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -206,7 +188,9 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// Creates a project resource name from its component IDs.
         /// </summary>
         /// <param name="projectId">The project ID.</param>
-        /// <returns>The full project resource name.</returns>
+        /// <returns>
+        /// The full project resource name.
+        /// </returns>
         public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
@@ -269,7 +253,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC ReportErrorsService client.
+        /// The underlying gRPC ReportErrorsService client.
         /// </summary>
         public virtual ReportErrorsService.ReportErrorsServiceClient GrpcClient
         {
@@ -279,10 +263,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="event"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="event">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
             string projectName,
             ReportedErrorEvent @event,
@@ -294,25 +286,41 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="event"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="event">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
             string projectName,
             ReportedErrorEvent @event,
             CancellationToken cancellationToken) => ReportErrorEventAsync(
                 projectName,
                 @event,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="event"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="event">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual ReportErrorEventResponse ReportErrorEvent(
             string projectName,
             ReportedErrorEvent @event,
@@ -323,11 +331,19 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
 
     }
 
+    /// <summary>
+    /// ReportErrorsService client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class ReportErrorsServiceClientImpl : ReportErrorsServiceClient
     {
         private readonly ClientHelper _clientHelper;
         private readonly ApiCall<ReportErrorEventRequest, ReportErrorEventResponse> _callReportErrorEvent;
 
+        /// <summary>
+        /// Constructs a client wrapper for the ReportErrorsService service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="ReportErrorsServiceSettings"/> used within this client </param>
         public ReportErrorsServiceClientImpl(ReportErrorsService.ReportErrorsServiceClient grpcClient, ReportErrorsServiceSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -337,15 +353,26 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 GrpcClient.ReportErrorEventAsync, GrpcClient.ReportErrorEvent, effectiveSettings.ReportErrorEventSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC ReportErrorsService client.
+        /// </summary>
         public override ReportErrorsService.ReportErrorsServiceClient GrpcClient { get; }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="event"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="event">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<ReportErrorEventResponse> ReportErrorEventAsync(
             string projectName,
             ReportedErrorEvent @event,
@@ -360,10 +387,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="event"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="event">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override ReportErrorEventResponse ReportErrorEvent(
             string projectName,
             ReportedErrorEvent @event,

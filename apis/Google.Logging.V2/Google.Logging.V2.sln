@@ -13,6 +13,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net.Snip
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net.Tests", "Google.Logging.Log4Net.Tests\Google.Logging.Log4Net.Tests.xproj", "{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.V2.Snippets", "Google.Logging.V2.Snippets\Google.Logging.V2.Snippets.xproj", "{569CFE43-C1A1-4BF4-9D88-C69621195C3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569CFE43-C1A1-4BF4-9D88-C69621195C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569CFE43-C1A1-4BF4-9D88-C69621195C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569CFE43-C1A1-4BF4-9D88-C69621195C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569CFE43-C1A1-4BF4-9D88-C69621195C3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

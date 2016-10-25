@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,7 +64,7 @@ namespace Google.Bigquery.V2
 
         internal static T ToValue(string apiValue, string paramName = "name")
         {
-            GaxRestPreconditions.CheckNotNull(apiValue, paramName);
+            GaxPreconditions.CheckNotNull(apiValue, paramName);
             T value;
             if (s_stringToValue.TryGetValue(apiValue, out value))
             {

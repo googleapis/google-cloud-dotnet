@@ -49,7 +49,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             var beforeRowCount = table.ListRows().Count();
 
             var job = table.UploadCsv(new MemoryStream(bytes), new UploadCsvOptions { SkipLeadingRows = 1 });
-            var result = job.Poll();
+            var result = job.PollUntilCompleted();
             Assert.Null(result.Status.ErrorResult);
 
             var afterRows = table.ListRows().ToList();
@@ -78,14 +78,14 @@ namespace Google.Bigquery.V2.IntegrationTests
             var beforeRowCount = table.ListRows().Count();
 
             var job = table.UploadJson(new MemoryStream(bytes));
-            var result = job.Poll();
+            var result = job.PollUntilCompleted();
             Assert.Null(result.Status.ErrorResult);
 
             var afterRows = table.ListRows().ToList();
             Assert.Equal(beforeRowCount + 2, afterRows.Count);
 
-            var sql = $"SELECT player, score FROM {table} WHERE player CONTAINS 'UploadJsonTest' ORDER BY player";
-            var rows = client.ExecuteQuery(sql).Rows.ToList();
+            var sql = $"SELECT player, score FROM {table} WHERE STARTS_WITH(player, 'UploadJsonTest') ORDER BY player";
+            var rows = client.ExecuteQuery(sql).GetRows().ToList();
             Assert.Equal(2, rows.Count);
             Assert.Equal("UploadJsonTest1", (string)rows[0]["player"]);
             Assert.Equal("UploadJsonTest2", (string)rows[1]["player"]);

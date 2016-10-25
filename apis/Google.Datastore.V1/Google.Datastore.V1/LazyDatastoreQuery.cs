@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;

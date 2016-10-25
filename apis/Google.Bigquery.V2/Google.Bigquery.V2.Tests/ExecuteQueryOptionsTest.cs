@@ -26,13 +26,15 @@ namespace Google.Bigquery.V2.Tests
             {
                 DefaultDataset = new DatasetReference { ProjectId = "a", DatasetId = "b" },
                 PageSize = 25,
-                UseQueryCache = false
+                UseQueryCache = false,
+                UseLegacySql = true
             };
             var request = new QueryRequest();
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal("a", request.DefaultDataset.ProjectId);
             Assert.Equal(false, request.UseQueryCache);
+            Assert.Equal(true, request.UseLegacySql);
         }
     }
 }

@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -26,54 +27,35 @@ using System.Threading.Tasks;
 
 namespace Google.Pubsub.V1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="SubscriberClient"/>.
-    /// </summary>
-    public static partial class SubscriberExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC Subscriber client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="SubscriberSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="SubscriberClient"/> that wraps the specified GRPC client.</returns>
-        public static SubscriberClient ToClient(
-            this Subscriber.SubscriberClient grpcClient,
-            SubscriberSettings settings = null
-        ) => new SubscriberClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a Subscriber wrapper.
+    /// Settings for a <see cref="SubscriberClient"/>.
     /// </summary>
     public sealed partial class SubscriberSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="SubscriberSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default SubscriberSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="SubscriberSettings"/>.
+        /// </returns>
         public static SubscriberSettings GetDefault() => new SubscriberSettings();
 
         /// <summary>
-        /// Constructs a new SubscriberSettings object with default settings.
+        /// Constructs a new <see cref="SubscriberSettings"/> object with default settings.
         /// </summary>
         public SubscriberSettings() { }
 
         private SubscriberSettings(SubscriberSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            CreateSubscriptionSettings = existing.CreateSubscriptionSettings?.Clone();
-            GetSubscriptionSettings = existing.GetSubscriptionSettings?.Clone();
-            ListSubscriptionsSettings = existing.ListSubscriptionsSettings?.Clone();
-            DeleteSubscriptionSettings = existing.DeleteSubscriptionSettings?.Clone();
-            ModifyAckDeadlineSettings = existing.ModifyAckDeadlineSettings?.Clone();
-            AcknowledgeSettings = existing.AcknowledgeSettings?.Clone();
-            PullSettings = existing.PullSettings?.Clone();
-            ModifyPushConfigSettings = existing.ModifyPushConfigSettings?.Clone();
+            CreateSubscriptionSettings = existing.CreateSubscriptionSettings;
+            GetSubscriptionSettings = existing.GetSubscriptionSettings;
+            ListSubscriptionsSettings = existing.ListSubscriptionsSettings;
+            DeleteSubscriptionSettings = existing.DeleteSubscriptionSettings;
+            ModifyAckDeadlineSettings = existing.ModifyAckDeadlineSettings;
+            AcknowledgeSettings = existing.AcknowledgeSettings;
+            PullSettings = existing.PullSettings;
+            ModifyPushConfigSettings = existing.ModifyPushConfigSettings;
         }
 
         /// <summary>
@@ -103,26 +85,29 @@ namespace Google.Pubsub.V1
         /// <summary>
         /// "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -131,36 +116,38 @@ namespace Google.Pubsub.V1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(60000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(60000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Messaging" retry backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetMessagingRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetMessagingRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Messaging" timeout backoff for <see cref="SubscriberClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -169,20 +156,19 @@ namespace Google.Pubsub.V1
         /// <item><description>Maximum timeout: 12000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetMessagingTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(12000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(12000),
-        };
+        public static BackoffSettings GetMessagingTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(12000),
+            maxDelay: TimeSpan.FromMilliseconds(12000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SubscriberClient.CreateSubscription"/> and <see cref="SubscriberClient.CreateSubscriptionAsync"/>.
+        /// <c>SubscriberClient.CreateSubscription</c> and <c>SubscriberClient.CreateSubscriptionAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.CreateSubscription"/> and
-        /// <see cref="SubscriberClient.CreateSubscriptionAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberClient.CreateSubscription</c> and
+        /// <c>SubscriberClient.CreateSubscriptionAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -198,24 +184,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings CreateSubscriptionSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings CreateSubscriptionSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SubscriberClient.GetSubscription"/> and <see cref="SubscriberClient.GetSubscriptionAsync"/>.
+        /// <c>SubscriberClient.GetSubscription</c> and <c>SubscriberClient.GetSubscriptionAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.GetSubscription"/> and
-        /// <see cref="SubscriberClient.GetSubscriptionAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberClient.GetSubscription</c> and
+        /// <c>SubscriberClient.GetSubscriptionAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -231,24 +214,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings GetSubscriptionSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings GetSubscriptionSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SubscriberClient.ListSubscriptions"/> and <see cref="SubscriberClient.ListSubscriptionsAsync"/>.
+        /// <c>SubscriberClient.ListSubscriptions</c> and <c>SubscriberClient.ListSubscriptionsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.ListSubscriptions"/> and
-        /// <see cref="SubscriberClient.ListSubscriptionsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberClient.ListSubscriptions</c> and
+        /// <c>SubscriberClient.ListSubscriptionsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -264,24 +244,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListSubscriptionsSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings ListSubscriptionsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SubscriberClient.DeleteSubscription"/> and <see cref="SubscriberClient.DeleteSubscriptionAsync"/>.
+        /// <c>SubscriberClient.DeleteSubscription</c> and <c>SubscriberClient.DeleteSubscriptionAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.DeleteSubscription"/> and
-        /// <see cref="SubscriberClient.DeleteSubscriptionAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberClient.DeleteSubscription</c> and
+        /// <c>SubscriberClient.DeleteSubscriptionAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -297,24 +274,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteSubscriptionSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings DeleteSubscriptionSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SubscriberClient.ModifyAckDeadline"/> and <see cref="SubscriberClient.ModifyAckDeadlineAsync"/>.
+        /// <c>SubscriberClient.ModifyAckDeadline</c> and <c>SubscriberClient.ModifyAckDeadlineAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.ModifyAckDeadline"/> and
-        /// <see cref="SubscriberClient.ModifyAckDeadlineAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberClient.ModifyAckDeadline</c> and
+        /// <c>SubscriberClient.ModifyAckDeadlineAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -329,24 +303,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ModifyAckDeadlineSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings ModifyAckDeadlineSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SubscriberClient.Acknowledge"/> and <see cref="SubscriberClient.AcknowledgeAsync"/>.
+        /// <c>SubscriberClient.Acknowledge</c> and <c>SubscriberClient.AcknowledgeAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.Acknowledge"/> and
-        /// <see cref="SubscriberClient.AcknowledgeAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberClient.Acknowledge</c> and
+        /// <c>SubscriberClient.AcknowledgeAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -361,24 +332,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AcknowledgeSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetMessagingRetryBackoff(),
-                TimeoutBackoff = GetMessagingTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings AcknowledgeSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetMessagingRetryBackoff(),
+                timeoutBackoff: GetMessagingTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SubscriberClient.Pull"/> and <see cref="SubscriberClient.PullAsync"/>.
+        /// <c>SubscriberClient.Pull</c> and <c>SubscriberClient.PullAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.Pull"/> and
-        /// <see cref="SubscriberClient.PullAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberClient.Pull</c> and
+        /// <c>SubscriberClient.PullAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -393,24 +361,21 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings PullSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetMessagingRetryBackoff(),
-                TimeoutBackoff = GetMessagingTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings PullSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetMessagingRetryBackoff(),
+                timeoutBackoff: GetMessagingTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SubscriberClient.ModifyPushConfig"/> and <see cref="SubscriberClient.ModifyPushConfigAsync"/>.
+        /// <c>SubscriberClient.ModifyPushConfig</c> and <c>SubscriberClient.ModifyPushConfigAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SubscriberClient.ModifyPushConfig"/> and
-        /// <see cref="SubscriberClient.ModifyPushConfigAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SubscriberClient.ModifyPushConfig</c> and
+        /// <c>SubscriberClient.ModifyPushConfigAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -425,22 +390,18 @@ namespace Google.Pubsub.V1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ModifyPushConfigSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings ModifyPushConfigSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of Subscriber settings.</returns>
+        /// <returns>A deep clone of this <see cref="SubscriberSettings"/> object.</returns>
         public SubscriberSettings Clone() => new SubscriberSettings(this);
     }
 
@@ -455,18 +416,18 @@ namespace Google.Pubsub.V1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("pubsub.googleapis.com", 443);
 
         /// <summary>
-        /// The default Subscriber scopes
+        /// The default Subscriber scopes.
         /// </summary>
         /// <remarks>
         /// The default Subscriber scopes are:
         /// <list type="bullet">
-        /// <item><description>"https://www.googleapis.com/auth/pubsub"</description></item>
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/pubsub"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
-            "https://www.googleapis.com/auth/pubsub",
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/pubsub",
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
@@ -483,7 +444,9 @@ namespace Google.Pubsub.V1
         /// Creates a project resource name from its component IDs.
         /// </summary>
         /// <param name="projectId">The project ID.</param>
-        /// <returns>The full project resource name.</returns>
+        /// <returns>
+        /// The full project resource name.
+        /// </returns>
         public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         /// <summary>
@@ -500,7 +463,9 @@ namespace Google.Pubsub.V1
         /// </summary>
         /// <param name="projectId">The project ID.</param>
         /// <param name="subscriptionId">The subscription ID.</param>
-        /// <returns>The full subscription resource name.</returns>
+        /// <returns>
+        /// The full subscription resource name.
+        /// </returns>
         public static string FormatSubscriptionName(string projectId, string subscriptionId) => SubscriptionTemplate.Expand(projectId, subscriptionId);
 
         /// <summary>
@@ -517,7 +482,9 @@ namespace Google.Pubsub.V1
         /// </summary>
         /// <param name="projectId">The project ID.</param>
         /// <param name="topicId">The topic ID.</param>
-        /// <returns>The full topic resource name.</returns>
+        /// <returns>
+        /// The full topic resource name.
+        /// </returns>
         public static string FormatTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
@@ -580,7 +547,7 @@ namespace Google.Pubsub.V1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC Subscriber client.
+        /// The underlying gRPC Subscriber client.
         /// </summary>
         public virtual Subscriber.SubscriberClient GrpcClient
         {
@@ -588,12 +555,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
-        /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -604,37 +566,20 @@ namespace Google.Pubsub.V1
         /// in length, and it must not start with `"goog"`.
         /// </param>
         /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
+        ///
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        ///
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// This value is the maximum time after a subscriber receives a message
-        /// before the subscriber should acknowledge the message. After message
-        /// delivery but before the ack deadline expires and before the message is
-        /// acknowledged, it is an outstanding message and will not be delivered
-        /// again during that time (on a best-effort basis).
         ///
-        /// For pull subscriptions, this value is used as the initial value for the ack
-        /// deadline. To override this value for a given message, call
-        /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
-        ///
-        /// For push delivery, this value is also used to set the request timeout for
-        /// the call to the push endpoint.
-        ///
-        /// If the subscriber never acknowledges the message, the Pub/Sub
-        /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is not set, the default value of 10 seconds is used.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Subscription> CreateSubscriptionAsync(
             string name,
             string topic,
@@ -646,12 +591,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
-        /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -662,37 +602,20 @@ namespace Google.Pubsub.V1
         /// in length, and it must not start with `"goog"`.
         /// </param>
         /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
+        ///
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        ///
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// This value is the maximum time after a subscriber receives a message
-        /// before the subscriber should acknowledge the message. After message
-        /// delivery but before the ack deadline expires and before the message is
-        /// acknowledged, it is an outstanding message and will not be delivered
-        /// again during that time (on a best-effort basis).
         ///
-        /// For pull subscriptions, this value is used as the initial value for the ack
-        /// deadline. To override this value for a given message, call
-        /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
-        ///
-        /// For push delivery, this value is also used to set the request timeout for
-        /// the call to the push endpoint.
-        ///
-        /// If the subscriber never acknowledges the message, the Pub/Sub
-        /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is not set, the default value of 10 seconds is used.
         /// </param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Subscription> CreateSubscriptionAsync(
             string name,
             string topic,
@@ -703,15 +626,10 @@ namespace Google.Pubsub.V1
                 topic,
                 pushConfig,
                 ackDeadlineSeconds,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
-        /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -722,37 +640,20 @@ namespace Google.Pubsub.V1
         /// in length, and it must not start with `"goog"`.
         /// </param>
         /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
+        ///
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        ///
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// This value is the maximum time after a subscriber receives a message
-        /// before the subscriber should acknowledge the message. After message
-        /// delivery but before the ack deadline expires and before the message is
-        /// acknowledged, it is an outstanding message and will not be delivered
-        /// again during that time (on a best-effort basis).
         ///
-        /// For pull subscriptions, this value is used as the initial value for the ack
-        /// deadline. To override this value for a given message, call
-        /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
-        ///
-        /// For push delivery, this value is also used to set the request timeout for
-        /// the call to the push endpoint.
-        ///
-        /// If the subscriber never acknowledges the message, the Pub/Sub
-        /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is not set, the default value of 10 seconds is used.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual Subscription CreateSubscription(
             string name,
             string topic,
@@ -764,11 +665,17 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Gets the configuration details of a subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription to get.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Subscription> GetSubscriptionAsync(
             string subscription,
             CallSettings callSettings = null)
@@ -777,23 +684,35 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Gets the configuration details of a subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription to get.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Subscription> GetSubscriptionAsync(
             string subscription,
             CancellationToken cancellationToken) => GetSubscriptionAsync(
                 subscription,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the configuration details of a subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription to get.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual Subscription GetSubscription(
             string subscription,
             CallSettings callSettings = null)
@@ -802,16 +721,25 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Lists matching subscriptions.
+        ///
         /// </summary>
-        /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of Subscription resources.</returns>
+        /// <param name="project">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Subscription"/> resources.
+        /// </returns>
         public virtual IPagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
             string project,
             string pageToken = null,
@@ -822,16 +750,25 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Lists matching subscriptions.
+        ///
         /// </summary>
-        /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of Subscription resources.</returns>
+        /// <param name="project">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Subscription"/> resources.
+        /// </returns>
         public virtual IPagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
             string project,
             string pageToken = null,
@@ -842,15 +779,17 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
-        /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-        /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription to delete.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task DeleteSubscriptionAsync(
             string subscription,
             CallSettings callSettings = null)
@@ -859,31 +798,35 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
-        /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-        /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription to delete.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task DeleteSubscriptionAsync(
             string subscription,
             CancellationToken cancellationToken) => DeleteSubscriptionAsync(
                 subscription,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
-        /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-        /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription to delete.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual void DeleteSubscription(
             string subscription,
             CallSettings callSettings = null)
@@ -892,22 +835,23 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Modifies the ack deadline for a specific message. This method is useful
-        /// to indicate that more time is needed to process a message by the
-        /// subscriber, or to make the message available for redelivery if the
-        /// processing was interrupted.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ackIds">List of acknowledgment IDs.</param>
-        /// <param name="ackDeadlineSeconds">
-        /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
-        /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-        /// was made. Specifying zero may immediately make the message available for
-        /// another pull request.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="ackDeadlineSeconds">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task ModifyAckDeadlineAsync(
             string subscription,
             IEnumerable<string> ackIds,
@@ -918,22 +862,23 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Modifies the ack deadline for a specific message. This method is useful
-        /// to indicate that more time is needed to process a message by the
-        /// subscriber, or to make the message available for redelivery if the
-        /// processing was interrupted.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ackIds">List of acknowledgment IDs.</param>
-        /// <param name="ackDeadlineSeconds">
-        /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
-        /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-        /// was made. Specifying zero may immediately make the message available for
-        /// another pull request.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="ackDeadlineSeconds">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task ModifyAckDeadlineAsync(
             string subscription,
             IEnumerable<string> ackIds,
@@ -942,25 +887,26 @@ namespace Google.Pubsub.V1
                 subscription,
                 ackIds,
                 ackDeadlineSeconds,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Modifies the ack deadline for a specific message. This method is useful
-        /// to indicate that more time is needed to process a message by the
-        /// subscriber, or to make the message available for redelivery if the
-        /// processing was interrupted.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ackIds">List of acknowledgment IDs.</param>
-        /// <param name="ackDeadlineSeconds">
-        /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
-        /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-        /// was made. Specifying zero may immediately make the message available for
-        /// another pull request.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="ackDeadlineSeconds">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual void ModifyAckDeadline(
             string subscription,
             IEnumerable<string> ackIds,
@@ -971,21 +917,20 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Acknowledges the messages associated with the `ack_ids` in the
-        /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-        /// from the subscription.
         ///
-        /// Acknowledging a message whose ack deadline has expired may succeed,
-        /// but such a message may be redelivered later. Acknowledging a message more
-        /// than once will not result in an error.
         /// </summary>
-        /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ackIds">
-        /// The acknowledgment ID for the messages being acknowledged that was returned
-        /// by the Pub/Sub system in the `Pull` response. Must not be empty.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
@@ -995,45 +940,43 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Acknowledges the messages associated with the `ack_ids` in the
-        /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-        /// from the subscription.
         ///
-        /// Acknowledging a message whose ack deadline has expired may succeed,
-        /// but such a message may be redelivered later. Acknowledging a message more
-        /// than once will not result in an error.
         /// </summary>
-        /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ackIds">
-        /// The acknowledgment ID for the messages being acknowledged that was returned
-        /// by the Pub/Sub system in the `Pull` response. Must not be empty.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
             CancellationToken cancellationToken) => AcknowledgeAsync(
                 subscription,
                 ackIds,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Acknowledges the messages associated with the `ack_ids` in the
-        /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-        /// from the subscription.
         ///
-        /// Acknowledging a message whose ack deadline has expired may succeed,
-        /// but such a message may be redelivered later. Acknowledging a message more
-        /// than once will not result in an error.
         /// </summary>
-        /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ackIds">
-        /// The acknowledgment ID for the messages being acknowledged that was returned
-        /// by the Pub/Sub system in the `Pull` response. Must not be empty.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual void Acknowledge(
             string subscription,
             IEnumerable<string> ackIds,
@@ -1043,25 +986,23 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
-        /// there are too many concurrent pull requests pending for the given
-        /// subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription from which messages should be pulled.</param>
+        /// <param name="subscription">
+        ///
+        /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        ///
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<PullResponse> PullAsync(
             string subscription,
             bool returnImmediately,
@@ -1072,25 +1013,23 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
-        /// there are too many concurrent pull requests pending for the given
-        /// subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription from which messages should be pulled.</param>
+        /// <param name="subscription">
+        ///
+        /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        ///
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        ///
         /// </param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<PullResponse> PullAsync(
             string subscription,
             bool returnImmediately,
@@ -1099,28 +1038,26 @@ namespace Google.Pubsub.V1
                 subscription,
                 returnImmediately,
                 maxMessages,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
-        /// there are too many concurrent pull requests pending for the given
-        /// subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription from which messages should be pulled.</param>
+        /// <param name="subscription">
+        ///
+        /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        ///
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual PullResponse Pull(
             string subscription,
             bool returnImmediately,
@@ -1131,24 +1068,20 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Modifies the `PushConfig` for a specified subscription.
         ///
-        /// This may be used to change a push subscription to a pull one (signified by
-        /// an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-        /// attributes of a push subscription. Messages will accumulate for delivery
-        /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="pushConfig">
-        /// The push configuration for future deliveries.
+        /// <param name="subscription">
         ///
-        /// An empty `pushConfig` indicates that the Pub/Sub system should
-        /// stop pushing messages from the given subscription and allow
-        /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="pushConfig">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
@@ -1158,51 +1091,43 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        /// Modifies the `PushConfig` for a specified subscription.
         ///
-        /// This may be used to change a push subscription to a pull one (signified by
-        /// an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-        /// attributes of a push subscription. Messages will accumulate for delivery
-        /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="pushConfig">
-        /// The push configuration for future deliveries.
+        /// <param name="subscription">
         ///
-        /// An empty `pushConfig` indicates that the Pub/Sub system should
-        /// stop pushing messages from the given subscription and allow
-        /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
         /// </param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="pushConfig">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
             CancellationToken cancellationToken) => ModifyPushConfigAsync(
                 subscription,
                 pushConfig,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Modifies the `PushConfig` for a specified subscription.
         ///
-        /// This may be used to change a push subscription to a pull one (signified by
-        /// an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-        /// attributes of a push subscription. Messages will accumulate for delivery
-        /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="pushConfig">
-        /// The push configuration for future deliveries.
+        /// <param name="subscription">
         ///
-        /// An empty `pushConfig` indicates that the Pub/Sub system should
-        /// stop pushing messages from the given subscription and allow
-        /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="pushConfig">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual void ModifyPushConfig(
             string subscription,
             PushConfig pushConfig,
@@ -1213,6 +1138,9 @@ namespace Google.Pubsub.V1
 
     }
 
+    /// <summary>
+    /// Subscriber client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class SubscriberClientImpl : SubscriberClient
     {
         private readonly ClientHelper _clientHelper;
@@ -1225,6 +1153,11 @@ namespace Google.Pubsub.V1
         private readonly ApiCall<PullRequest, PullResponse> _callPull;
         private readonly ApiCall<ModifyPushConfigRequest, Empty> _callModifyPushConfig;
 
+        /// <summary>
+        /// Constructs a client wrapper for the Subscriber service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="SubscriberSettings"/> used within this client </param>
         public SubscriberClientImpl(Subscriber.SubscriberClient grpcClient, SubscriberSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -1248,15 +1181,13 @@ namespace Google.Pubsub.V1
                 GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC Subscriber client.
+        /// </summary>
         public override Subscriber.SubscriberClient GrpcClient { get; }
 
         /// <summary>
-        /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
-        /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -1267,37 +1198,20 @@ namespace Google.Pubsub.V1
         /// in length, and it must not start with `"goog"`.
         /// </param>
         /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
+        ///
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        ///
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// This value is the maximum time after a subscriber receives a message
-        /// before the subscriber should acknowledge the message. After message
-        /// delivery but before the ack deadline expires and before the message is
-        /// acknowledged, it is an outstanding message and will not be delivered
-        /// again during that time (on a best-effort basis).
         ///
-        /// For pull subscriptions, this value is used as the initial value for the ack
-        /// deadline. To override this value for a given message, call
-        /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
-        ///
-        /// For push delivery, this value is also used to set the request timeout for
-        /// the call to the push endpoint.
-        ///
-        /// If the subscriber never acknowledges the message, the Pub/Sub
-        /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is not set, the default value of 10 seconds is used.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<Subscription> CreateSubscriptionAsync(
             string name,
             string topic,
@@ -1314,12 +1228,7 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Creates a subscription to a given topic for a given subscriber.
-        /// If the subscription already exists, returns `ALREADY_EXISTS`.
-        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
-        /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -1330,37 +1239,20 @@ namespace Google.Pubsub.V1
         /// in length, and it must not start with `"goog"`.
         /// </param>
         /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
+        ///
         /// </param>
         /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
+        ///
         /// </param>
         /// <param name="ackDeadlineSeconds">
-        /// This value is the maximum time after a subscriber receives a message
-        /// before the subscriber should acknowledge the message. After message
-        /// delivery but before the ack deadline expires and before the message is
-        /// acknowledged, it is an outstanding message and will not be delivered
-        /// again during that time (on a best-effort basis).
         ///
-        /// For pull subscriptions, this value is used as the initial value for the ack
-        /// deadline. To override this value for a given message, call
-        /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
-        ///
-        /// For push delivery, this value is also used to set the request timeout for
-        /// the call to the push endpoint.
-        ///
-        /// If the subscriber never acknowledges the message, the Pub/Sub
-        /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is not set, the default value of 10 seconds is used.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override Subscription CreateSubscription(
             string name,
             string topic,
@@ -1377,11 +1269,17 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Gets the configuration details of a subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription to get.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<Subscription> GetSubscriptionAsync(
             string subscription,
             CallSettings callSettings = null) => _callGetSubscription.Async(
@@ -1392,11 +1290,17 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Gets the configuration details of a subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription to get.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override Subscription GetSubscription(
             string subscription,
             CallSettings callSettings = null) => _callGetSubscription.Sync(
@@ -1407,16 +1311,25 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists matching subscriptions.
+        ///
         /// </summary>
-        /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of Subscription resources.</returns>
+        /// <param name="project">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Subscription"/> resources.
+        /// </returns>
         public override IPagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
             string project,
             string pageToken = null,
@@ -1432,16 +1345,25 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Lists matching subscriptions.
+        ///
         /// </summary>
-        /// <param name="project">The name of the cloud project that subscriptions belong to.</param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of Subscription resources.</returns>
+        /// <param name="project">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Subscription"/> resources.
+        /// </returns>
         public override IPagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
             string project,
             string pageToken = null,
@@ -1457,15 +1379,17 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
-        /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-        /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription to delete.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task DeleteSubscriptionAsync(
             string subscription,
             CallSettings callSettings = null) => _callDeleteSubscription.Async(
@@ -1476,15 +1400,17 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
-        /// are immediately dropped. Calls to `Pull` after deletion will return
-        /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
-        /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription to delete.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="subscription">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override void DeleteSubscription(
             string subscription,
             CallSettings callSettings = null) => _callDeleteSubscription.Sync(
@@ -1495,22 +1421,23 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Modifies the ack deadline for a specific message. This method is useful
-        /// to indicate that more time is needed to process a message by the
-        /// subscriber, or to make the message available for redelivery if the
-        /// processing was interrupted.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ackIds">List of acknowledgment IDs.</param>
-        /// <param name="ackDeadlineSeconds">
-        /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
-        /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-        /// was made. Specifying zero may immediately make the message available for
-        /// another pull request.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="ackDeadlineSeconds">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task ModifyAckDeadlineAsync(
             string subscription,
             IEnumerable<string> ackIds,
@@ -1525,22 +1452,23 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Modifies the ack deadline for a specific message. This method is useful
-        /// to indicate that more time is needed to process a message by the
-        /// subscriber, or to make the message available for redelivery if the
-        /// processing was interrupted.
+        ///
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="ackIds">List of acknowledgment IDs.</param>
-        /// <param name="ackDeadlineSeconds">
-        /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
-        /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-        /// was made. Specifying zero may immediately make the message available for
-        /// another pull request.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="ackDeadlineSeconds">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override void ModifyAckDeadline(
             string subscription,
             IEnumerable<string> ackIds,
@@ -1555,21 +1483,20 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Acknowledges the messages associated with the `ack_ids` in the
-        /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-        /// from the subscription.
         ///
-        /// Acknowledging a message whose ack deadline has expired may succeed,
-        /// but such a message may be redelivered later. Acknowledging a message more
-        /// than once will not result in an error.
         /// </summary>
-        /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ackIds">
-        /// The acknowledgment ID for the messages being acknowledged that was returned
-        /// by the Pub/Sub system in the `Pull` response. Must not be empty.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
@@ -1582,21 +1509,20 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Acknowledges the messages associated with the `ack_ids` in the
-        /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
-        /// from the subscription.
         ///
-        /// Acknowledging a message whose ack deadline has expired may succeed,
-        /// but such a message may be redelivered later. Acknowledging a message more
-        /// than once will not result in an error.
         /// </summary>
-        /// <param name="subscription">The subscription whose message is being acknowledged.</param>
-        /// <param name="ackIds">
-        /// The acknowledgment ID for the messages being acknowledged that was returned
-        /// by the Pub/Sub system in the `Pull` response. Must not be empty.
+        /// <param name="subscription">
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="ackIds">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override void Acknowledge(
             string subscription,
             IEnumerable<string> ackIds,
@@ -1609,25 +1535,23 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
-        /// there are too many concurrent pull requests pending for the given
-        /// subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription from which messages should be pulled.</param>
+        /// <param name="subscription">
+        ///
+        /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        ///
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<PullResponse> PullAsync(
             string subscription,
             bool returnImmediately,
@@ -1642,25 +1566,23 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
-        /// there are too many concurrent pull requests pending for the given
-        /// subscription.
+        ///
         /// </summary>
-        /// <param name="subscription">The subscription from which messages should be pulled.</param>
+        /// <param name="subscription">
+        ///
+        /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        ///
         /// </param>
         /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        ///
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override PullResponse Pull(
             string subscription,
             bool returnImmediately,
@@ -1675,24 +1597,20 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Modifies the `PushConfig` for a specified subscription.
         ///
-        /// This may be used to change a push subscription to a pull one (signified by
-        /// an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-        /// attributes of a push subscription. Messages will accumulate for delivery
-        /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="pushConfig">
-        /// The push configuration for future deliveries.
+        /// <param name="subscription">
         ///
-        /// An empty `pushConfig` indicates that the Pub/Sub system should
-        /// stop pushing messages from the given subscription and allow
-        /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="pushConfig">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
@@ -1705,24 +1623,20 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        /// Modifies the `PushConfig` for a specified subscription.
         ///
-        /// This may be used to change a push subscription to a pull one (signified by
-        /// an empty `PushConfig`) or vice versa, or change the endpoint URL and other
-        /// attributes of a push subscription. Messages will accumulate for delivery
-        /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
-        /// <param name="subscription">The name of the subscription.</param>
-        /// <param name="pushConfig">
-        /// The push configuration for future deliveries.
+        /// <param name="subscription">
         ///
-        /// An empty `pushConfig` indicates that the Pub/Sub system should
-        /// stop pushing messages from the given subscription and allow
-        /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
         /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="pushConfig">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override void ModifyPushConfig(
             string subscription,
             PushConfig pushConfig,
@@ -1741,7 +1655,12 @@ namespace Google.Pubsub.V1
     public partial class ListSubscriptionsRequest : IPageRequest { }
     public partial class ListSubscriptionsResponse : IPageResponse<Subscription>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<Subscription> GetEnumerator() => Subscriptions.GetEnumerator();
+
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

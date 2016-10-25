@@ -65,5 +65,15 @@ namespace Google.Bigquery.V2.IntegrationTests
                 new Dictionary<string, object> { ["first"] = "x", ["last"] = "y" }
             }, names);
         }
+
+        [Fact]
+        public void EmptyTable()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var schema = new TableSchemaBuilder { { "name", BigqueryDbType.String } }.Build();
+            var table = client.CreateTable(_fixture.DatasetId, _fixture.CreateTableId(), schema);
+            var rows = table.ListRows().ToList();
+            Assert.Empty(rows);
+        }
     }
 }

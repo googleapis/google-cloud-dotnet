@@ -39,8 +39,8 @@ namespace Google.Bigquery.V2.IntegrationTests
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
 
-            var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
-            var rows = client.ExecuteQuery(sql).Rows.ToList();
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
+            var rows = client.ExecuteQuery(sql).PollUntilCompleted().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string) rows[0]["title"]);
             Assert.Equal(5318, (long) rows[0]["unique_words"]);
@@ -55,9 +55,9 @@ namespace Google.Bigquery.V2.IntegrationTests
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
 
-            var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
             var job = client.CreateQueryJob(sql);
-            var rows = job.GetQueryResults().Rows.ToList();
+            var rows = job.PollQueryUntilCompleted().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0]["title"]);
             Assert.Equal(5318, (long)rows[0]["unique_words"]);
@@ -73,17 +73,17 @@ namespace Google.Bigquery.V2.IntegrationTests
             var table = client.GetTable(PublicDatasetsProject, PublicDatasetsDataset, ShakespeareTable);
             var userDataset = client.GetDataset(_fixture.DatasetId);
 
-            var sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
+            var sql = $"SELECT corpus as title, COUNT(word) as unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
             var destinationTable = userDataset.GetTableReference(_fixture.CreateTableId());
             var job = client.CreateQueryJob(sql, new CreateQueryJobOptions { DestinationTable = destinationTable });
-            var rows = job.GetQueryResults().Rows.ToList();
+            var rows = job.PollQueryUntilCompleted().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0][0]);
             Assert.Equal(5318, (long)rows[0][1]);
 
             // Read the table again later - synchronously this time
             table = client.GetTable(destinationTable);
-            rows = client.ExecuteQuery($"SELECT * FROM {table}").Rows.ToList();
+            rows = client.ExecuteQuery($"SELECT * FROM {table} ORDER BY unique_words DESC").PollUntilCompleted().GetRows().ToList();
             Assert.Equal(10, rows.Count);
             Assert.Equal("hamlet", (string)rows[0][0]);
             Assert.Equal(5318, (long)rows[0][1]);
@@ -94,7 +94,9 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, COUNT(children.name) WITHIN RECORD AS childCount FROM {table} ORDER BY fullName").Rows
+            var queryResults = client.ExecuteQuery($"SELECT fullName, ARRAY_LENGTH(children) AS childCount FROM {table} ORDER BY fullName")
+                .PollUntilCompleted()
+                .GetRows()
                 .Select(row => new { Name = (string)row["fullName"], Count = (long)row["childCount"] })
                 .ToList();
             var expectedResults = new[]
@@ -111,7 +113,9 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, children.name AS childName FROM {table} ORDER BY fullName, childName").Rows
+            var queryResults = client.ExecuteQuery($"SELECT fullName, child.name AS childName FROM {table} LEFT JOIN UNNEST(children) AS child ORDER BY fullName, childName")
+                .PollUntilCompleted()
+                .GetRows()
                 .Select(row => new { Name = (string)row["fullName"], Child = (string)row["childName"] })
                 .ToList();
             var expectedResults = new[]
@@ -131,8 +135,10 @@ namespace Google.Bigquery.V2.IntegrationTests
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, phoneNumber.areaCode, phoneNumber.number FROM {table} ORDER BY fullName").Rows
-                .Select(row => new { Name = (string)row["fullName"], AreaCode = (long)row["phoneNumber_areaCode"], Number = (long)row["phoneNumber_number"] })
+            var queryResults = client.ExecuteQuery($"SELECT fullName, phoneNumber.areaCode, phoneNumber.number FROM {table} ORDER BY fullName")
+                .PollUntilCompleted()
+                .GetRows()
+                .Select(row => new { Name = (string)row["fullName"], AreaCode = (long)row["areaCode"], Number = (long)row["number"] })
                 .ToList();
             var expectedResults = new[]
             {
@@ -141,6 +147,54 @@ namespace Google.Bigquery.V2.IntegrationTests
                 new { Name = "Mike Jones", AreaCode = 622L, Number = 1567845L }
             };
             Assert.Equal(expectedResults, queryResults);
+        }
+
+        [Fact]
+        public void MultiRequestQueryStreaming()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var queryResults = client.ExecuteQuery($"SELECT * FROM {table}", new ExecuteQueryOptions { PageSize = 1 })
+                .PollUntilCompleted()
+                .GetRows()
+                .ToList();
+            Assert.True(queryResults.Count >= 2);
+        }
+
+        [Fact]
+        public void EmptyQueryResults_ExecuteQuery()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var queryResults = client.ExecuteQuery($"SELECT * FROM {table} WHERE score < 0")
+                .PollUntilCompleted()
+                .GetRows()
+                .ToList();
+            Assert.Empty(queryResults);
+        }
+
+        [Fact]
+        public void EmptyQueryResults_CreateQueryJob()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var queryResults = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
+                .PollQueryUntilCompleted()
+                .GetRows()
+                .ToList();
+            Assert.Empty(queryResults);
+        }
+
+        [Fact]
+        public void EmptyQueryResults_GetResultSet()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            // Deliberately overfetch
+            var queryJob = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
+                .PollQueryUntilCompleted(new GetQueryResultsOptions { PageSize = 100 });
+            var resultSet = queryJob.GetResultSet(10);
+            Assert.Empty(resultSet.Rows);
         }
     }
 }

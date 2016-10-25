@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
@@ -64,13 +64,14 @@ namespace Google.Bigquery.V2
         /// <remarks>
         /// The credentials are scoped as necessary.
         /// </remarks>
+        /// <param name="projectId">The ID of the project containing the BigQuery data. Must not be null.</param>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <returns>The task representing the created <see cref="BigqueryClient"/>.</returns>
         public static async Task<BigqueryClient> CreateAsync(string projectId, GoogleCredential credential = null) =>
             // If no credentials have been specified, we fetch them "properly asynchronously"
             // to avoid the Task.Run in the synchronous call
             Create(
-                GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId)),
+                GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
                 credential ?? await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false));
 
         /// <summary>
@@ -80,11 +81,12 @@ namespace Google.Bigquery.V2
         /// <remarks>
         /// The credentials are scoped as necessary.
         /// </remarks>
+        /// <param name="projectId">The ID of the project containing the BigQuery data. Must not be null.</param>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <returns>The created <see cref="BigqueryClient"/>.</returns>
         public static BigqueryClient Create(string projectId, GoogleCredential credential = null)
         {
-            GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             try
             {
                 credential = credential ?? Task.Run(() => GoogleCredential.GetApplicationDefaultAsync()).Result;
@@ -134,9 +136,9 @@ namespace Google.Bigquery.V2
         public TableReference GetTableReference(string projectId, string datasetId, string tableId) =>
             new TableReference
             {
-                ProjectId = GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId)),
-                DatasetId = GaxRestPreconditions.CheckNotNull(datasetId, nameof(datasetId)),
-                TableId = GaxRestPreconditions.CheckNotNull(tableId, nameof(tableId)),
+                ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
+                DatasetId = GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId)),
+                TableId = GaxPreconditions.CheckNotNull(tableId, nameof(tableId)),
             };
 
         /// <summary>
@@ -157,8 +159,8 @@ namespace Google.Bigquery.V2
         public DatasetReference GetDatasetReference(string projectId, string datasetId) =>
             new DatasetReference
             {
-                ProjectId = GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId)),
-                DatasetId = GaxRestPreconditions.CheckNotNull(datasetId, nameof(datasetId)),
+                ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
+                DatasetId = GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId)),
             };
 
         /// <summary>
@@ -169,7 +171,7 @@ namespace Google.Bigquery.V2
         public ProjectReference GetProjectReference(string projectId) =>
             new ProjectReference
             {
-                ProjectId = GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId)),
+                ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
             };
 
         /// <summary>
@@ -190,8 +192,8 @@ namespace Google.Bigquery.V2
         public JobReference GetJobReference(string projectId, string jobId) =>
             new JobReference
             {
-                ProjectId = GaxRestPreconditions.CheckNotNull(projectId, nameof(projectId)),
-                JobId = GaxRestPreconditions.CheckNotNull(jobId, nameof(jobId))
+                ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
+                JobId = GaxPreconditions.CheckNotNull(jobId, nameof(jobId))
             };
     }
 }

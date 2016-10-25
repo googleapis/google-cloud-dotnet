@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using System;
 using System.Threading;
@@ -30,6 +31,8 @@ namespace Google.Longrunning
     /// <typeparam name="T">The response message type.</typeparam>
     public class Operation<T> where T : IMessage<T>, new()
     {
+        private static readonly PollSettings s_defaultPollSettings = new PollSettings(Expiration.None, TimeSpan.FromSeconds(10));
+
         /// <summary>
         /// The protobuf message associated with the long-running operation, containing the name (for
         /// further retrieval) and any error/result already computed. This should not be mutated.
@@ -120,82 +123,45 @@ namespace Google.Longrunning
         /// <summary>
         /// Polls the operation until it is complete, returning the completed operation.
         /// </summary>
-        /// <param name="pollSettings">The settings to use for repeated polling, or null
-        /// to use <see cref="PollSettings.Default"/>.</param>
         /// <remarks>
         /// If this object already represents a completed operation, it is returned immediately,
         /// with no further RPCs.
         /// </remarks>
+        /// <param name="pollSettings">The settings to use for repeated polling, or null
+        /// to use the default poll settings (poll once every 10 seconds, forever).</param>
+        /// <param name="callSettings">The call settings to apply on each call, or null for default settings.</param>
         /// <returns>The completed operation, which can then be checked for errors or a result.</returns>
-        public Operation<T> PollUntilCompleted(PollSettings pollSettings = null)
+        public Operation<T> PollUntilCompleted(PollSettings pollSettings = null, CallSettings callSettings = null)
         {
             if (IsCompleted)
             {
                 return this;
             }
-            var clock = Client.Clock;
-            var scheduler = Client.Scheduler;
-
-            pollSettings = pollSettings ?? PollSettings.Default;
-            var deadline = pollSettings.CalculateDeadline(clock);
-            while (true)
-            {
-                // FIXME: Override the RPC deadline if it's before the one we would use?
-                // Or just tweak the documentation for Expiration...
-                var latest = Poll(pollSettings.CallSettings);
-                if (latest.IsCompleted)
-                {
-                    return latest;
-                }
-                if (clock.GetCurrentDateTimeUtc() + pollSettings.Delay >= deadline)
-                {
-                    // TODO: Could return null instead. Unclear what's better here.
-                    throw new TimeoutException("Operation did not complete within the specified expiry time");
-                }
-                scheduler.Sleep(pollSettings.Delay);
-            }
+            // TODO: Use the deadline.
+            Func<DateTime?, Operation<T>> pollAction = deadline => PollOnce(callSettings);
+            return Polling.PollRepeatedly(pollAction, o => o.IsCompleted, Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings);
         }
 
         /// <summary>
         /// Asynchronously polls the operation until it is complete, returning the completed operation.
         /// </summary>
-        /// <param name="pollSettings">The settings to use for repeated polling, or null
-        /// to use <see cref="PollSettings.Default"/>.</param>
         /// <remarks>
         /// If this object already represents a completed operation, it is returned immediately,
         /// with no further RPCs.
         /// </remarks>
+        /// <param name="pollSettings">The settings to use for repeated polling, or null
+        /// to use the default poll settings (poll once every 10 seconds, forever).</param>
+        /// <param name="callSettings">The call settings to apply on each call, or null for default settings.</param>
         /// <returns>The completed operation, which can then be checked for errors or a result.</returns>
-        public async Task<Operation<T>> PollUntilCompletedAsync(PollSettings pollSettings = null)
+        public Task<Operation<T>> PollUntilCompletedAsync(PollSettings pollSettings = null, CallSettings callSettings = null)
         {
             if (IsCompleted)
             {
-                return this;
+                return Task.FromResult(this);
             }
-            var clock = Client.Clock;
-            var scheduler = Client.Scheduler;
-
-            pollSettings = pollSettings ?? PollSettings.Default;
-            var deadline = pollSettings.CalculateDeadline(clock);
-            while (true)
-            {
-                // FIXME: Override the RPC deadline if it's before the one we would use?
-                // Or just tweak the documentation for Expiration...
-                var latest = await PollAsync(pollSettings.CallSettings).ConfigureAwait(false);
-                if (latest.IsCompleted)
-                {
-                    return latest;
-                }
-                if (clock.GetCurrentDateTimeUtc() + pollSettings.Delay >= deadline)
-                {
-                    // TODO: Could return null instead. Unclear what's better here.
-                    throw new TimeoutException("Operation did not complete within the specified expiry time");
-                }
-                // TODO: Use a cancellation token if we have one. Not clear where we'd get it from though,
-                // as it could be in the underlying call settings which we don't have access to. Maybe
-                // only use a cancellation token if it's specified in pollSettings.CallSettings?
-                await scheduler.Delay(pollSettings.Delay).ConfigureAwait(false);
-            }
+            // TODO: Use the deadline.
+            Func<DateTime?, Task<Operation<T>>> pollAction = deadline => PollOnceAsync(callSettings);
+            return Polling.PollRepeatedlyAsync(pollAction, o => o.IsCompleted, Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings);
         }
 
         /// <summary>
@@ -204,8 +170,8 @@ namespace Google.Longrunning
         /// <param name="callSettings">Any overriding call settings to apply to the RPC.</param>
         /// <returns>The most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
-        public Operation<T> Poll(CallSettings callSettings = null)
-            => IsCompleted ? this : PollFromName(Name, Client, callSettings);
+        public Operation<T> PollOnce(CallSettings callSettings = null)
+            => IsCompleted ? this : PollOnceFromName(Name, Client, callSettings);
 
         /// <summary>
         /// Asynchronously returns a new instance reflecting the most recent state of the operation.
@@ -214,8 +180,8 @@ namespace Google.Longrunning
         /// <returns>A task representing the asynchronous poll operation. The result of the task is 
         /// the most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
-        public Task<Operation<T>> PollAsync(CallSettings callSettings = null) =>
-            IsCompleted ? Task.FromResult(this) : PollFromNameAsync(Name, Client, callSettings);
+        public Task<Operation<T>> PollOnceAsync(CallSettings callSettings = null) =>
+            IsCompleted ? Task.FromResult(this) : PollOnceFromNameAsync(Name, Client, callSettings);
 
         /// <summary>
         /// Asynchronously returns a new instance reflecting the most recent state of the operation.
@@ -224,8 +190,8 @@ namespace Google.Longrunning
         /// <returns>A task representing the asynchronous poll operation. The result of the task is 
         /// the most recent state of the operation, or a reference to the same
         /// object if the operation has already completed.</returns>
-        public Task<Operation<T>> PollAsync(CancellationToken cancellationToken) =>
-            PollAsync(new CallSettings { CancellationToken = cancellationToken });
+        public Task<Operation<T>> PollOnceAsync(CancellationToken cancellationToken) =>
+            PollOnceAsync(CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Attempts to cancel the long-running operation.
@@ -290,7 +256,7 @@ namespace Google.Longrunning
         /// <param name="callSettings">Any overriding call settings to apply to the RPC. May be null, in which case
         /// the default settings are used.</param>
         /// <returns>The current state of the operation identified by <paramref name="name"/>.</returns>
-        public static Operation<T> PollFromName(string name, OperationsClient client, CallSettings callSettings = null)
+        public static Operation<T> PollOnceFromName(string name, OperationsClient client, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
             GaxPreconditions.CheckNotNull(client, nameof(client));
@@ -307,7 +273,7 @@ namespace Google.Longrunning
         /// the default settings are used.</param>
         /// <returns>A task representing the asynchronous "fetch" operation. The result of the task is
         /// the current state of the operation identified by <paramref name="name"/>.</returns>
-        public static async Task<Operation<T>> PollFromNameAsync(string name, OperationsClient client, CallSettings callSettings = null)
+        public static async Task<Operation<T>> PollOnceFromNameAsync(string name, OperationsClient client, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
             GaxPreconditions.CheckNotNull(client, nameof(client));
@@ -323,7 +289,7 @@ namespace Google.Longrunning
         /// <param name="cancellationToken">A cancellation token for the "fetch" operation.</param>
         /// <returns>A task representing the asynchronous "fetch" operation. The result of the task is
         /// the current state of the operation identified by <paramref name="name"/>.</returns>
-        public static Task<Operation<T>> PollFromNameAsync(string name, OperationsClient client, CancellationToken cancellationToken) =>
-            PollFromNameAsync(name, client, new CallSettings { CancellationToken = cancellationToken });
+        public static Task<Operation<T>> PollOnceFromNameAsync(string name, OperationsClient client, CancellationToken cancellationToken) =>
+            PollOnceFromNameAsync(name, client, CallSettings.FromCancellationToken(cancellationToken));
     }
 }

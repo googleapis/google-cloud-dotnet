@@ -29,10 +29,17 @@ namespace Google.Bigquery.V2.Tests
         [Fact]
         public void Deadline()
         {
-            var deadline = new DateTimeOffset(2016, 6, 19, 2, 3, 4, TimeSpan.FromHours(1));
+            var deadline = new DateTime(2016, 6, 19, 2, 3, 4, DateTimeKind.Utc);
             var options = new PollJobOptions { Deadline = deadline };
             options.Validate();
             Assert.Equal(deadline, options.GetEffectiveDeadline());
+        }
+
+        [Fact]
+        public void DeadlineMustBeUtc()
+        {
+            Assert.Throws<ArgumentException>(() => new PollJobOptions { Deadline = new DateTime(2016, 6, 19, 0, 0, 0, DateTimeKind.Local) });
+            Assert.Throws<ArgumentException>(() => new PollJobOptions { Deadline = new DateTime(2016, 6, 19, 0, 0, 0, DateTimeKind.Unspecified) });
         }
 
         [Fact]
@@ -51,7 +58,7 @@ namespace Google.Bigquery.V2.Tests
         {
             var options = new PollJobOptions
             {
-                Deadline = DateTimeOffset.UtcNow,
+                Deadline = DateTime.UtcNow,
                 Timeout = TimeSpan.FromDays(1)
             };
             Assert.Throws<ArgumentException>(() => options.Validate());

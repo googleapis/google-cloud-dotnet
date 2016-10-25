@@ -15,6 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 using System.Collections;
@@ -25,49 +27,30 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Clouderrorreporting.V1Beta1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="ErrorStatsServiceClient"/>.
-    /// </summary>
-    public static partial class ErrorStatsServiceExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC ErrorStatsService client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="ErrorStatsServiceSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="ErrorStatsServiceClient"/> that wraps the specified GRPC client.</returns>
-        public static ErrorStatsServiceClient ToClient(
-            this ErrorStatsService.ErrorStatsServiceClient grpcClient,
-            ErrorStatsServiceSettings settings = null
-        ) => new ErrorStatsServiceClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a ErrorStatsService wrapper.
+    /// Settings for a <see cref="ErrorStatsServiceClient"/>.
     /// </summary>
     public sealed partial class ErrorStatsServiceSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="ErrorStatsServiceSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default ErrorStatsServiceSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="ErrorStatsServiceSettings"/>.
+        /// </returns>
         public static ErrorStatsServiceSettings GetDefault() => new ErrorStatsServiceSettings();
 
         /// <summary>
-        /// Constructs a new ErrorStatsServiceSettings object with default settings.
+        /// Constructs a new <see cref="ErrorStatsServiceSettings"/> object with default settings.
         /// </summary>
         public ErrorStatsServiceSettings() { }
 
         private ErrorStatsServiceSettings(ErrorStatsServiceSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            ListGroupStatsSettings = existing.ListGroupStatsSettings?.Clone();
-            ListEventsSettings = existing.ListEventsSettings?.Clone();
-            DeleteEventsSettings = existing.DeleteEventsSettings?.Clone();
+            ListGroupStatsSettings = existing.ListGroupStatsSettings;
+            ListEventsSettings = existing.ListEventsSettings;
+            DeleteEventsSettings = existing.DeleteEventsSettings;
         }
 
         /// <summary>
@@ -97,26 +80,29 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         /// "Default" retry backoff for <see cref="ErrorStatsServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="ErrorStatsServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="ErrorStatsServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="ErrorStatsServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="ErrorStatsServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="ErrorStatsServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="ErrorStatsServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="ErrorStatsServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -125,20 +111,19 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <item><description>Maximum timeout: 20000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(20000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(20000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(20000),
+            maxDelay: TimeSpan.FromMilliseconds(20000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="ErrorStatsServiceClient.ListGroupStats"/> and <see cref="ErrorStatsServiceClient.ListGroupStatsAsync"/>.
+        /// <c>ErrorStatsServiceClient.ListGroupStats</c> and <c>ErrorStatsServiceClient.ListGroupStatsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ErrorStatsServiceClient.ListGroupStats"/> and
-        /// <see cref="ErrorStatsServiceClient.ListGroupStatsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>ErrorStatsServiceClient.ListGroupStats</c> and
+        /// <c>ErrorStatsServiceClient.ListGroupStatsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -154,24 +139,21 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListGroupStatsSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings ListGroupStatsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="ErrorStatsServiceClient.ListEvents"/> and <see cref="ErrorStatsServiceClient.ListEventsAsync"/>.
+        /// <c>ErrorStatsServiceClient.ListEvents</c> and <c>ErrorStatsServiceClient.ListEventsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ErrorStatsServiceClient.ListEvents"/> and
-        /// <see cref="ErrorStatsServiceClient.ListEventsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>ErrorStatsServiceClient.ListEvents</c> and
+        /// <c>ErrorStatsServiceClient.ListEventsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -187,24 +169,21 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings ListEventsSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings ListEventsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="ErrorStatsServiceClient.DeleteEvents"/> and <see cref="ErrorStatsServiceClient.DeleteEventsAsync"/>.
+        /// <c>ErrorStatsServiceClient.DeleteEvents</c> and <c>ErrorStatsServiceClient.DeleteEventsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="ErrorStatsServiceClient.DeleteEvents"/> and
-        /// <see cref="ErrorStatsServiceClient.DeleteEventsAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>ErrorStatsServiceClient.DeleteEvents</c> and
+        /// <c>ErrorStatsServiceClient.DeleteEventsAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -220,22 +199,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings DeleteEventsSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings DeleteEventsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of ErrorStatsService settings.</returns>
+        /// <returns>A deep clone of this <see cref="ErrorStatsServiceSettings"/> object.</returns>
         public ErrorStatsServiceSettings Clone() => new ErrorStatsServiceSettings(this);
     }
 
@@ -250,7 +225,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("clouderrorreporting.googleapis.com", 443);
 
         /// <summary>
-        /// The default ErrorStatsService scopes
+        /// The default ErrorStatsService scopes.
         /// </summary>
         /// <remarks>
         /// The default ErrorStatsService scopes are:
@@ -258,7 +233,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -276,7 +251,9 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// Creates a project resource name from its component IDs.
         /// </summary>
         /// <param name="projectId">The project ID.</param>
-        /// <returns>The full project resource name.</returns>
+        /// <returns>
+        /// The full project resource name.
+        /// </returns>
         public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
@@ -339,7 +316,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC ErrorStatsService client.
+        /// The underlying gRPC ErrorStatsService client.
         /// </summary>
         public virtual ErrorStatsService.ErrorStatsServiceClient GrpcClient
         {
@@ -349,15 +326,26 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="timeRange"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of ErrorGroupStats resources.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="timeRange">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
+        /// </returns>
         public virtual IPagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
             string projectName,
             QueryTimeRange timeRange,
@@ -371,15 +359,26 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="timeRange"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of ErrorGroupStats resources.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="timeRange">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
+        /// </returns>
         public virtual IPagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
             string projectName,
             QueryTimeRange timeRange,
@@ -393,15 +392,26 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="groupId"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of ErrorEvent resources.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="groupId">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
+        /// </returns>
         public virtual IPagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
             string projectName,
             string groupId,
@@ -415,15 +425,26 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="groupId"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of ErrorEvent resources.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="groupId">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ErrorEvent"/> resources.
+        /// </returns>
         public virtual IPagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
             string projectName,
             string groupId,
@@ -437,9 +458,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
             string projectName,
             CallSettings callSettings = null)
@@ -450,21 +477,33 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
             string projectName,
             CancellationToken cancellationToken) => DeleteEventsAsync(
                 projectName,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual DeleteEventsResponse DeleteEvents(
             string projectName,
             CallSettings callSettings = null)
@@ -474,6 +513,9 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
 
     }
 
+    /// <summary>
+    /// ErrorStatsService client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class ErrorStatsServiceClientImpl : ErrorStatsServiceClient
     {
         private readonly ClientHelper _clientHelper;
@@ -481,6 +523,11 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         private readonly ApiCall<ListEventsRequest, ListEventsResponse> _callListEvents;
         private readonly ApiCall<DeleteEventsRequest, DeleteEventsResponse> _callDeleteEvents;
 
+        /// <summary>
+        /// Constructs a client wrapper for the ErrorStatsService service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="ErrorStatsServiceSettings"/> used within this client </param>
         public ErrorStatsServiceClientImpl(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -494,20 +541,34 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 GrpcClient.DeleteEventsAsync, GrpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC ErrorStatsService client.
+        /// </summary>
         public override ErrorStatsService.ErrorStatsServiceClient GrpcClient { get; }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="timeRange"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of ErrorGroupStats resources.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="timeRange">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
+        /// </returns>
         public override IPagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
             string projectName,
             QueryTimeRange timeRange,
@@ -527,15 +588,26 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="timeRange"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of ErrorGroupStats resources.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="timeRange">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
+        /// </returns>
         public override IPagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
             string projectName,
             QueryTimeRange timeRange,
@@ -555,15 +627,26 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="groupId"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of ErrorEvent resources.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="groupId">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
+        /// </returns>
         public override IPagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
             string projectName,
             string groupId,
@@ -583,15 +666,26 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="groupId"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of ErrorEvent resources.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="groupId">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ErrorEvent"/> resources.
+        /// </returns>
         public override IPagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
             string projectName,
             string groupId,
@@ -611,9 +705,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<DeleteEventsResponse> DeleteEventsAsync(
             string projectName,
             CallSettings callSettings = null) => _callDeleteEvents.Async(
@@ -626,9 +726,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectName"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="projectName">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override DeleteEventsResponse DeleteEvents(
             string projectName,
             CallSettings callSettings = null) => _callDeleteEvents.Sync(
@@ -645,14 +751,24 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
     public partial class ListGroupStatsRequest : IPageRequest { }
     public partial class ListGroupStatsResponse : IPageResponse<ErrorGroupStats>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<ErrorGroupStats> GetEnumerator() => ErrorGroupStats.GetEnumerator();
+
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListEventsRequest : IPageRequest { }
     public partial class ListEventsResponse : IPageResponse<ErrorEvent>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<ErrorEvent> GetEnumerator() => ErrorEvents.GetEnumerator();
+
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

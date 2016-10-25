@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Storage.V1;
 using System;
@@ -44,10 +44,29 @@ namespace Google.Bigquery.V2.Snippets
             var client = BigqueryClient.Create(projectId);
             var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
-            string sql = $"SELECT TOP(corpus, 10) as title, COUNT(*) as unique_words FROM {table}";
-            BigqueryResult query = client.ExecuteQuery(sql);
+            string sql = $"SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
+            BigqueryQueryJob query = client.ExecuteQuery(sql).PollUntilCompleted();
 
-            foreach (BigqueryRow row in query.Rows)
+            foreach (BigqueryRow row in query.GetRows())
+            {
+                Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
+            }
+            // End sample
+        }
+
+        [Fact]
+        public void LegacySqlOverview()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Sample: LegacySql
+            var client = BigqueryClient.Create(projectId);
+            var table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
+
+            string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
+            BigqueryQueryJob query = client.ExecuteQuery(sql, new ExecuteQueryOptions { UseLegacySql = true }).PollUntilCompleted();
+
+            foreach (BigqueryRow row in query.GetRows())
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
@@ -94,18 +113,18 @@ namespace Google.Bigquery.V2.Snippets
             // Snippet: ExecuteQuery
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, historyTableId);
-            BigqueryResult result = client.ExecuteQuery(
+            BigqueryQueryJob result = client.ExecuteQuery(
                 $@"SELECT player, MAX(score) AS score
                    FROM {table}
                    GROUP BY player
-                   ORDER BY score DESC");
-            foreach (var row in result.Rows)
+                   ORDER BY score DESC").PollUntilCompleted();
+            foreach (var row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
             }
             // End snippet
 
-            var players = result.Rows.Select(r => (string)r["player"]).ToList();
+            var players = result.GetRows().Select(r => (string)r["player"]).ToList();
             Assert.Contains("Ben", players);
             Assert.Contains("Nadia", players);
             Assert.Contains("Tim", players);
@@ -133,13 +152,15 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListDatasets(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var datasets = client.ListDatasets().ToList();
+            var datasets = client.ListDatasets().Take(20).ToList();
             foreach (var dataset in datasets)
             {
                 Console.WriteLine(dataset.FullyQualifiedId);
             }
             // End snippet
 
+            // Note: if this fails, run the clean-up tool to make sure there
+            // are fewer than 20 datasets in the project, then rerun.
             var ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
             Assert.Contains(_fixture.GameDatasetId, ids);
         }
@@ -152,7 +173,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListTables(string,ListTablesOptions)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var tables = client.ListTables(datasetId).ToList();
+            var tables = client.ListTables(datasetId).Take(20).ToList();
             foreach (var table in tables)
             {
                 Console.WriteLine(table.FullyQualifiedId);
@@ -280,7 +301,7 @@ namespace Google.Bigquery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            var result = job.Poll();
+            var result = job.PollUntilCompleted();
             // If there are any errors, display them *then* fail.
             if (result.Status.ErrorResult != null)
             {
@@ -326,7 +347,7 @@ namespace Google.Bigquery.V2.Snippets
             // report errors etc.
             // End snippet
 
-            var result = job.Poll();
+            var result = job.PollUntilCompleted();
             // If there are any errors, display them *then* fail.
             if (result.Status.ErrorResult != null)
             {
@@ -363,18 +384,18 @@ namespace Google.Bigquery.V2.Snippets
                 new CreateQueryJobOptions { DestinationTable = destination });
 
             // Wait for the job to complete.
-            job.Poll();
+            job.PollUntilCompleted();
 
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
-            BigqueryResult result = client.GetQueryResults(job.Reference);
-            foreach (var row in result.Rows)
+            BigqueryQueryJob result = client.GetQueryJob(job.Reference);
+            foreach (var row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
             }
             // End snippet
 
-            var players = result.Rows.Select(r => (string)r["player"]).ToList();
+            var players = result.GetRows().Select(r => (string)r["player"]).ToList();
             Assert.Contains("Ben", players);
             Assert.Contains("Nadia", players);
             Assert.Contains("Tim", players);
@@ -387,7 +408,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Snippet: ListJobs(*)
             BigqueryClient client = BigqueryClient.Create(projectId);
-            var jobs = client.ListJobs().ToList();
+            var jobs = client.ListJobs().Take(20).ToList();
             foreach (var job in jobs)
             {
                 Console.WriteLine(job.Reference.JobId);
@@ -435,7 +456,7 @@ namespace Google.Bigquery.V2.Snippets
             }, projectId).Execute();
 
             // Wait until the export has finished.
-            var result = client.PollJob(job.JobReference);
+            var result = client.PollJobUntilCompleted(job.JobReference);
             // If there are any errors, display them *then* fail.
             if (result.Status.ErrorResult != null)
             {
@@ -490,7 +511,7 @@ namespace Google.Bigquery.V2.Snippets
             }, projectId).Execute();
 
             // Wait until the copy has finished.
-            client.PollJob(job.JobReference);
+            client.PollJobUntilCompleted(job.JobReference);
 
             // Now list its rows
             IPagedEnumerable<TableDataList, BigqueryRow> result = client.ListRows(datasetId, destinationTableId);
@@ -510,6 +531,60 @@ namespace Google.Bigquery.V2.Snippets
             Assert.Equal(originalRows, copiedRows);
         }
 
+        [Fact]
+        public void DeleteTable()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = Guid.NewGuid().ToString().Replace("-", "_");
+            TableSchema schema = new TableSchemaBuilder
+            {
+                { "from_player", BigqueryDbType.String },
+                { "to_player", BigqueryDbType.String },
+                { "message", BigqueryDbType.String }
+            }.Build();
+            BigqueryClient.Create(projectId).CreateTable(datasetId, tableId, schema);
+
+            // Snippet: DeleteTable(string,string,*)
+            BigqueryClient client = BigqueryClient.Create(projectId);
+            client.DeleteTable(datasetId, tableId);
+            // End snippet
+
+            var tables = client.ListTables(datasetId);
+            var ids = tables.Select(ds => ds.Reference.TableId).ToList();
+            Assert.DoesNotContain(tableId, ids);
+        }
+
+        [Fact]
+        public void DeleteDataset()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GenerateDatasetId();
+            BigqueryClient.Create(projectId).CreateDataset(datasetId);
+            // Snippet: DeleteDataset(string,DeleteDatasetOptions)
+            BigqueryClient client = BigqueryClient.Create(projectId);
+            client.DeleteDataset(datasetId);
+            // End snippet
+
+            var datasets = client.ListDatasets();
+            var ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
+            Assert.DoesNotContain(datasetId, ids);
+        }
+
+        [Fact]
+        public void ListProjects()
+        {
+            // Snippet: ListProjects(*)
+            BigqueryClient client = BigqueryClient.Create("irrelevant");
+            IPagedEnumerable<ProjectList, CloudProject> projects = client.ListProjects();
+            foreach (CloudProject project in projects)
+            {
+                Console.WriteLine($"{project.ProjectId}: {project.FriendlyName}");
+            }
+            // End snippet
+            Assert.Contains(_fixture.ProjectId, projects.Select(p => p.ProjectId));
+        }
+
         private bool WaitForStreamingBufferToEmpty(string tableId)
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
@@ -521,9 +596,7 @@ namespace Google.Bigquery.V2.Snippets
             }
             return table.Resource.StreamingBuffer == null;
         }
-
-        // TODO: Snippets for DeleteTable and DeleteDataset; they fail with "still in use" at the moment (when just created).
-
+        
         // TODO: Repeated fields and record types.
 
         // TODO:

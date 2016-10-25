@@ -12,9 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
-using System.Collections.Generic;
 using System.IO;
 
 namespace Google.Bigquery.V2

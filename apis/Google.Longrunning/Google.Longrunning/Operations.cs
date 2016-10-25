@@ -116,8 +116,9 @@ namespace Google.Longrunning {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of the operation resource, which is only unique within the same
-    ///  service that originally returns it.
+    ///  The server-assigned name, which is only unique within the same service that
+    ///  originally returns it. If you use the default HTTP mapping, the
+    ///  `name` should have the format of `operations/some/unique/name`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -131,9 +132,9 @@ namespace Google.Longrunning {
     public const int MetadataFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Any metadata_;
     /// <summary>
-    ///  Some service-specific metadata associated with the operation.  It typically
+    ///  Service-specific metadata associated with the operation.  It typically
     ///  contains progress information and common metadata such as create time.
-    ///  Some services may not provide such metadata.  Any method that returns a
+    ///  Some services might not provide such metadata.  Any method that returns a
     ///  long-running operation should document the metadata type, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,8 +149,9 @@ namespace Google.Longrunning {
     public const int DoneFieldNumber = 3;
     private bool done_;
     /// <summary>
-    ///  If the value is false, it means the operation is still in progress.
-    ///  If true, the operation is completed and the `result` is available.
+    ///  If the value is `false`, it means the operation is still in progress.
+    ///  If true, the operation is completed, and either `error` or `response` is
+    ///  available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Done {
@@ -162,7 +164,7 @@ namespace Google.Longrunning {
     /// <summary>Field number for the "error" field.</summary>
     public const int ErrorFieldNumber = 4;
     /// <summary>
-    ///  The error result of the operation in case of failure.
+    ///  The error result of the operation in case of failure or cancellation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Error {
@@ -177,12 +179,12 @@ namespace Google.Longrunning {
     public const int ResponseFieldNumber = 5;
     /// <summary>
     ///  The normal response of the operation in case of success.  If the original
-    ///  method returns no data on success, such as `Delete`, the response will be
+    ///  method returns no data on success, such as `Delete`, the response is
     ///  `google.protobuf.Empty`.  If the original method is standard
     ///  `Get`/`Create`/`Update`, the response should be the resource.  For other
     ///  methods, the response should have the type `XxxResponse`, where `Xxx`
     ///  is the original method name.  For example, if the original method name
-    ///  is `TakeSnapshot()`, the inferred response type will be
+    ///  is `TakeSnapshot()`, the inferred response type is
     ///  `TakeSnapshotResponse`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -551,7 +553,7 @@ namespace Google.Longrunning {
     public const int FilterFieldNumber = 1;
     private string filter_ = "";
     /// <summary>
-    ///  The standard List filter.
+    ///  The standard list filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -565,7 +567,7 @@ namespace Google.Longrunning {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    ///  The standard List page size.
+    ///  The standard list page size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -579,7 +581,7 @@ namespace Google.Longrunning {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    ///  The standard List page token.
+    ///  The standard list page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -753,7 +755,7 @@ namespace Google.Longrunning {
         = pb::FieldCodec.ForMessage(10, global::Google.Longrunning.Operation.Parser);
     private readonly pbc::RepeatedField<global::Google.Longrunning.Operation> operations_ = new pbc::RepeatedField<global::Google.Longrunning.Operation>();
     /// <summary>
-    ///  A list of operations that match the specified filter in the request.
+    ///  A list of operations that matches the specified filter in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Longrunning.Operation> Operations {

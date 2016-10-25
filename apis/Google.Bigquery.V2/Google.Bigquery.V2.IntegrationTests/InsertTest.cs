@@ -105,8 +105,10 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             table.Insert(row);
             // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = client.ExecuteQuery($"SELECT guid, position.x, position.y FROM {table} WHERE guid='{guid}'").Rows
-                .Select(r => new { Guid = (string)r["guid"], X = (long)r["position_x"], Y = (long)r["position_y"] })
+            var queryResults = client.ExecuteQuery($"SELECT guid, position.x, position.y FROM {table} WHERE guid='{guid}'")
+                .PollUntilCompleted()
+                .GetRows()
+                .Select(r => new { Guid = (string)r["guid"], X = (long)r["x"], Y = (long)r["y"] })
                 .ToList();
             var expectedResults = new[]
             {
@@ -130,8 +132,10 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             table.Insert(row);
             // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = client.ExecuteQuery($"SELECT guid, tags FROM {table} WHERE guid='{guid}' ORDER BY tags").Rows
-                .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tags"] })
+            var queryResults = client.ExecuteQuery($"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid='{guid}' ORDER BY tag")
+                .PollUntilCompleted()
+                .GetRows()
+                .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tag"] })
                 .ToList();
             var expectedResults = new[]
             {
@@ -158,8 +162,10 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             table.Insert(row);
             // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = client.ExecuteQuery($"SELECT guid, names.first, names.last FROM {table} WHERE guid='{guid}' ORDER BY names.first").Rows
-                .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["names_first"], LastName = (string)r["names_last"] })
+            var queryResults = client.ExecuteQuery($"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid='{guid}' ORDER BY name.first")
+                .PollUntilCompleted()
+                .GetRows()
+                .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["first"], LastName = (string)r["last"] })
                 .ToList();
             var expectedResults = new[]
             {

@@ -12,13 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static Google.Apis.Bigquery.v2.JobsResource;
+using System.Threading;
 
 namespace Google.Bigquery.V2
 {
@@ -36,28 +37,28 @@ namespace Google.Bigquery.V2
             }
 
             public string GetNextPageToken(TableDataList response) => response.PageToken;
-            public IEnumerable<BigqueryRow> GetResources(TableDataList response) => response.Rows.Select(row => new BigqueryRow(row, _schema));
+            public IEnumerable<BigqueryRow> GetResources(TableDataList response) => response.Rows?.Select(row => new BigqueryRow(row, _schema));
             public void SetPageSize(TabledataResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
             public void SetPageToken(TabledataResource.ListRequest request, string pageToken) => request.PageToken = pageToken;
         }
 
         /// <inheritdoc />
-        public override BigqueryResult ExecuteQuery(string sql, ExecuteQueryOptions options = null)
+        public override BigqueryQueryJob ExecuteQuery(string sql, ExecuteQueryOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
 
-            var queryRequest = new Apis.Bigquery.v2.Data.QueryRequest { Query = sql };
+            var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
             options?.ModifyRequest(queryRequest);
             var request = Service.Jobs.Query(queryRequest, ProjectId);
             var queryResponse = request.Execute();
-            return new BigqueryResult(this, queryResponse);
+            return new BigqueryQueryJob(this, queryResponse, options);
         }
 
         /// <inheritdoc />
         public override BigqueryJob CreateQueryJob(string sql, CreateQueryJobOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(sql, nameof(sql));
-            var query = new JobConfigurationQuery { Query = sql };
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
             options?.ModifyRequest(query);
             var job = Service.Jobs.Insert(new Job
             {
@@ -70,24 +71,42 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryResult GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)
+        public override BigqueryQueryJob PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollJobOptions pollOptions = null)
         {
-            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            pollOptions?.Validate();
 
-            Func<GetQueryResultsRequest> requestProvider = () =>
+            DateTime? deadline = pollOptions?.GetEffectiveDeadline() ?? DateTime.SpecifyKind(DateTime.MaxValue, DateTimeKind.Utc);
+            long maxRequests = pollOptions?.MaxRequests ?? long.MaxValue;
+            TimeSpan interval = pollOptions?.Interval ?? TimeSpan.FromSeconds(1);
+
+            for (long i = 0; i < maxRequests && DateTime.UtcNow < deadline; i++)
             {
-                var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
-                options?.ModifyRequest(request);
-                return request;
-            };
-            var firstResponse = requestProvider().Execute();
-            return new BigqueryResult(this, firstResponse, requestProvider);
+                var job = GetQueryJob(jobReference, options);
+                if (job.Completed)
+                {
+                    return job;
+                }
+                Thread.Sleep(interval);
+            }
+            throw new TimeoutException($"Job {jobReference.JobId} did not complete in time.");
+        }
+
+        /// <inheritdoc />
+        public override BigqueryQueryJob GetQueryJob(JobReference jobReference, GetQueryResultsOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+
+            var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
+            options?.ModifyRequest(request);
+            var firstResponse = request.Execute();
+            return new BigqueryQueryJob(this, firstResponse, options);
         }
 
         /// <inheritdoc />
         public override IPagedEnumerable<TableDataList, BigqueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
 
             var pageManager = new TableRowPageManager(this, schema);

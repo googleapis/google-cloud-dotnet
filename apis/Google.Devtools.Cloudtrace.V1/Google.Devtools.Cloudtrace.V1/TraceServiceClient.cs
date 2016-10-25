@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -26,49 +27,30 @@ using System.Threading.Tasks;
 
 namespace Google.Devtools.Cloudtrace.V1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="TraceServiceClient"/>.
-    /// </summary>
-    public static partial class TraceServiceExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC TraceService client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="TraceServiceSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="TraceServiceClient"/> that wraps the specified GRPC client.</returns>
-        public static TraceServiceClient ToClient(
-            this TraceService.TraceServiceClient grpcClient,
-            TraceServiceSettings settings = null
-        ) => new TraceServiceClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a TraceService wrapper.
+    /// Settings for a <see cref="TraceServiceClient"/>.
     /// </summary>
     public sealed partial class TraceServiceSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="TraceServiceSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default TraceServiceSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="TraceServiceSettings"/>.
+        /// </returns>
         public static TraceServiceSettings GetDefault() => new TraceServiceSettings();
 
         /// <summary>
-        /// Constructs a new TraceServiceSettings object with default settings.
+        /// Constructs a new <see cref="TraceServiceSettings"/> object with default settings.
         /// </summary>
         public TraceServiceSettings() { }
 
         private TraceServiceSettings(TraceServiceSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            ListTracesSettings = existing.ListTracesSettings?.Clone();
-            GetTraceSettings = existing.GetTraceSettings?.Clone();
-            PatchTracesSettings = existing.PatchTracesSettings?.Clone();
+            PatchTracesSettings = existing.PatchTracesSettings;
+            GetTraceSettings = existing.GetTraceSettings;
+            ListTracesSettings = existing.ListTracesSettings;
         }
 
         /// <summary>
@@ -98,26 +80,29 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <summary>
         /// "Default" retry backoff for <see cref="TraceServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="TraceServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="TraceServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="TraceServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.2</description></item>
         /// <item><description>Maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.2</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.2,
-            MaxDelay = TimeSpan.FromMilliseconds(1000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(1000),
+            delayMultiplier: 1.2
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="TraceServiceClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="TraceServiceClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="TraceServiceClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="TraceServiceClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -126,86 +111,19 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <item><description>Maximum timeout: 30000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(20000),
-            DelayMultiplier = 1.5,
-            MaxDelay = TimeSpan.FromMilliseconds(30000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(20000),
+            maxDelay: TimeSpan.FromMilliseconds(30000),
+            delayMultiplier: 1.5
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="TraceServiceClient.ListTraces"/> and <see cref="TraceServiceClient.ListTracesAsync"/>.
+        /// <c>TraceServiceClient.PatchTraces</c> and <c>TraceServiceClient.PatchTracesAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="TraceServiceClient.ListTraces"/> and
-        /// <see cref="TraceServiceClient.ListTracesAsync"/> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
-        /// </remarks>
-        public CallSettings ListTracesSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
-            }),
-        };
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="TraceServiceClient.GetTrace"/> and <see cref="TraceServiceClient.GetTraceAsync"/>.
-        /// </summary>
-        /// <remarks>
-        /// The default <see cref="TraceServiceClient.GetTrace"/> and
-        /// <see cref="TraceServiceClient.GetTraceAsync"/> <see cref="RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.2</description></item>
-        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.5</description></item>
-        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 45000 milliseconds.
-        /// </remarks>
-        public CallSettings GetTraceSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
-            }),
-        };
-
-        /// <summary>
-        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="TraceServiceClient.PatchTraces"/> and <see cref="TraceServiceClient.PatchTracesAsync"/>.
-        /// </summary>
-        /// <remarks>
-        /// The default <see cref="TraceServiceClient.PatchTraces"/> and
-        /// <see cref="TraceServiceClient.PatchTracesAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>TraceServiceClient.PatchTraces</c> and
+        /// <c>TraceServiceClient.PatchTracesAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.2</description></item>
@@ -220,22 +138,78 @@ namespace Google.Devtools.Cloudtrace.V1
         /// </list>
         /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
-        public CallSettings PatchTracesSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = NonIdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
-            }),
-        };
+        public CallSettings PatchTracesSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
 
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TraceServiceClient.GetTrace</c> and <c>TraceServiceClient.GetTraceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>TraceServiceClient.GetTrace</c> and
+        /// <c>TraceServiceClient.GetTraceAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
+        /// </remarks>
+        public CallSettings GetTraceSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TraceServiceClient.ListTraces</c> and <c>TraceServiceClient.ListTracesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>TraceServiceClient.ListTraces</c> and
+        /// <c>TraceServiceClient.ListTracesAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
+        /// </remarks>
+        public CallSettings ListTracesSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of TraceService settings.</returns>
+        /// <returns>A deep clone of this <see cref="TraceServiceSettings"/> object.</returns>
         public TraceServiceSettings Clone() => new TraceServiceSettings(this);
     }
 
@@ -250,7 +224,7 @@ namespace Google.Devtools.Cloudtrace.V1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("cloudtrace.googleapis.com", 443);
 
         /// <summary>
-        /// The default TraceService scopes
+        /// The default TraceService scopes.
         /// </summary>
         /// <remarks>
         /// The default TraceService scopes are:
@@ -260,7 +234,7 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <item><description>"https://www.googleapis.com/auth/trace.readonly"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/trace.append",
             "https://www.googleapis.com/auth/trace.readonly",
@@ -328,7 +302,7 @@ namespace Google.Devtools.Cloudtrace.V1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC TraceService client.
+        /// The underlying gRPC TraceService client.
         /// </summary>
         public virtual TraceService.TraceServiceClient GrpcClient
         {
@@ -338,14 +312,161 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of Trace resources.</returns>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traces">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task PatchTracesAsync(
+            string projectId,
+            Traces traces,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traces">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task PatchTracesAsync(
+            string projectId,
+            Traces traces,
+            CancellationToken cancellationToken) => PatchTracesAsync(
+                projectId,
+                traces,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traces">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void PatchTraces(
+            string projectId,
+            Traces traces,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traceId">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Trace> GetTraceAsync(
+            string projectId,
+            string traceId,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traceId">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Trace> GetTraceAsync(
+            string projectId,
+            string traceId,
+            CancellationToken cancellationToken) => GetTraceAsync(
+                projectId,
+                traceId,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traceId">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Trace GetTrace(
+            string projectId,
+            string traceId,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
+        /// </returns>
         public virtual IPagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
             string projectId,
             string pageToken = null,
@@ -358,14 +479,23 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of Trace resources.</returns>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Trace"/> resources.
+        /// </returns>
         public virtual IPagedEnumerable<ListTracesResponse, Trace> ListTraces(
             string projectId,
             string pageToken = null,
@@ -375,131 +505,165 @@ namespace Google.Devtools.Cloudtrace.V1
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traceId"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual Task<Trace> GetTraceAsync(
-            string projectId,
-            string traceId,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traceId"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual Task<Trace> GetTraceAsync(
-            string projectId,
-            string traceId,
-            CancellationToken cancellationToken) => GetTraceAsync(
-                projectId,
-                traceId,
-                new CallSettings { CancellationToken = cancellationToken });
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traceId"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual Trace GetTrace(
-            string projectId,
-            string traceId,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traces"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual Task PatchTracesAsync(
-            string projectId,
-            Traces traces,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traces"></param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual Task PatchTracesAsync(
-            string projectId,
-            Traces traces,
-            CancellationToken cancellationToken) => PatchTracesAsync(
-                projectId,
-                traces,
-                new CallSettings { CancellationToken = cancellationToken });
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traces"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual void PatchTraces(
-            string projectId,
-            Traces traces,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 
+    /// <summary>
+    /// TraceService client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class TraceServiceClientImpl : TraceServiceClient
     {
         private readonly ClientHelper _clientHelper;
-        private readonly ApiCall<ListTracesRequest, ListTracesResponse> _callListTraces;
-        private readonly ApiCall<GetTraceRequest, Trace> _callGetTrace;
         private readonly ApiCall<PatchTracesRequest, Empty> _callPatchTraces;
+        private readonly ApiCall<GetTraceRequest, Trace> _callGetTrace;
+        private readonly ApiCall<ListTracesRequest, ListTracesResponse> _callListTraces;
 
+        /// <summary>
+        /// Constructs a client wrapper for the TraceService service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="TraceServiceSettings"/> used within this client </param>
         public TraceServiceClientImpl(TraceService.TraceServiceClient grpcClient, TraceServiceSettings settings)
         {
             this.GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
             _clientHelper = new ClientHelper(effectiveSettings);
-            _callListTraces = _clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(
-                GrpcClient.ListTracesAsync, GrpcClient.ListTraces, effectiveSettings.ListTracesSettings);
-            _callGetTrace = _clientHelper.BuildApiCall<GetTraceRequest, Trace>(
-                GrpcClient.GetTraceAsync, GrpcClient.GetTrace, effectiveSettings.GetTraceSettings);
             _callPatchTraces = _clientHelper.BuildApiCall<PatchTracesRequest, Empty>(
                 GrpcClient.PatchTracesAsync, GrpcClient.PatchTraces, effectiveSettings.PatchTracesSettings);
+            _callGetTrace = _clientHelper.BuildApiCall<GetTraceRequest, Trace>(
+                GrpcClient.GetTraceAsync, GrpcClient.GetTrace, effectiveSettings.GetTraceSettings);
+            _callListTraces = _clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(
+                GrpcClient.ListTracesAsync, GrpcClient.ListTraces, effectiveSettings.ListTracesSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC TraceService client.
+        /// </summary>
         public override TraceService.TraceServiceClient GrpcClient { get; }
 
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of Trace resources.</returns>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traces">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task PatchTracesAsync(
+            string projectId,
+            Traces traces,
+            CallSettings callSettings = null) => _callPatchTraces.Async(
+                new PatchTracesRequest
+                {
+                    ProjectId = projectId,
+                    Traces = traces,
+                },
+                callSettings);
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traces">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override void PatchTraces(
+            string projectId,
+            Traces traces,
+            CallSettings callSettings = null) => _callPatchTraces.Sync(
+                new PatchTracesRequest
+                {
+                    ProjectId = projectId,
+                    Traces = traces,
+                },
+                callSettings);
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traceId">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Trace> GetTraceAsync(
+            string projectId,
+            string traceId,
+            CallSettings callSettings = null) => _callGetTrace.Async(
+                new GetTraceRequest
+                {
+                    ProjectId = projectId,
+                    TraceId = traceId,
+                },
+                callSettings);
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="traceId">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Trace GetTrace(
+            string projectId,
+            string traceId,
+            CallSettings callSettings = null) => _callGetTrace.Sync(
+                new GetTraceRequest
+                {
+                    ProjectId = projectId,
+                    TraceId = traceId,
+                },
+                callSettings);
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
+        /// </returns>
         public override IPagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
             string projectId,
             string pageToken = null,
@@ -517,14 +681,23 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <summary>
         ///
         /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="pageToken">The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.</param>
-        /// <param name="pageSize">The size of page to request.
-        /// The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of Trace resources.</returns>
+        /// <param name="projectId">
+        ///
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Trace"/> resources.
+        /// </returns>
         public override IPagedEnumerable<ListTracesResponse, Trace> ListTraces(
             string projectId,
             string pageToken = null,
@@ -539,78 +712,6 @@ namespace Google.Devtools.Cloudtrace.V1
                 },
                 callSettings);
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traceId"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override Task<Trace> GetTraceAsync(
-            string projectId,
-            string traceId,
-            CallSettings callSettings = null) => _callGetTrace.Async(
-                new GetTraceRequest
-                {
-                    ProjectId = projectId,
-                    TraceId = traceId,
-                },
-                callSettings);
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traceId"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override Trace GetTrace(
-            string projectId,
-            string traceId,
-            CallSettings callSettings = null) => _callGetTrace.Sync(
-                new GetTraceRequest
-                {
-                    ProjectId = projectId,
-                    TraceId = traceId,
-                },
-                callSettings);
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traces"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override Task PatchTracesAsync(
-            string projectId,
-            Traces traces,
-            CallSettings callSettings = null) => _callPatchTraces.Async(
-                new PatchTracesRequest
-                {
-                    ProjectId = projectId,
-                    Traces = traces,
-                },
-                callSettings);
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="traces"></param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override void PatchTraces(
-            string projectId,
-            Traces traces,
-            CallSettings callSettings = null) => _callPatchTraces.Sync(
-                new PatchTracesRequest
-                {
-                    ProjectId = projectId,
-                    Traces = traces,
-                },
-                callSettings);
-
     }
 
     // Partial classes to enable page-streaming
@@ -618,7 +719,12 @@ namespace Google.Devtools.Cloudtrace.V1
     public partial class ListTracesRequest : IPageRequest { }
     public partial class ListTracesResponse : IPageResponse<Trace>
     {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
         public IEnumerator<Trace> GetEnumerator() => Traces.GetEnumerator();
+
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

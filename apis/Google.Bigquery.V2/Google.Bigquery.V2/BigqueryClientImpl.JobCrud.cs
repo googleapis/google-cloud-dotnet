@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using System;
@@ -42,7 +43,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override IPagedEnumerable<JobList, BigqueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(projectReference, nameof(projectReference));
+            GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
             var pageManager = new JobPageManager(this);
             return new PagedEnumerable<ListRequest, JobList, BigqueryJob>(
@@ -58,16 +59,16 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryJob PollJob(JobReference jobReference, PollJobOptions options = null)
+        public override BigqueryJob PollJobUntilCompleted(JobReference jobReference, PollJobOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             options?.Validate();
 
-            DateTimeOffset? deadline = options?.GetEffectiveDeadline() ?? DateTimeOffset.MaxValue;
+            DateTime? deadline = options?.GetEffectiveDeadline() ?? DateTime.SpecifyKind(DateTime.MaxValue, DateTimeKind.Utc);
             long maxRequests = options?.MaxRequests ?? long.MaxValue;
             TimeSpan interval = options?.Interval ?? TimeSpan.FromSeconds(1);
 
-            for (long i = 0; i < maxRequests && DateTimeOffset.UtcNow < deadline; i++)
+            for (long i = 0; i < maxRequests && DateTime.UtcNow < deadline; i++)
             {
                 var job = GetJob(jobReference);
                 if (job.State == JobState.Done)
@@ -82,7 +83,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob GetJob(JobReference jobReference, GetJobOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
             options?.ModifyRequest(request);
@@ -93,7 +94,7 @@ namespace Google.Bigquery.V2
         /// <inheritdoc />
         public override BigqueryJob CancelJob(JobReference jobReference, CancelJobOptions options = null)
         {
-            GaxRestPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
             options?.ModifyRequest(request);
             var job = request.Execute().Job;

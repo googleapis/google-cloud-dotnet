@@ -34,6 +34,6 @@ namespace Google.Cloud.Metadata.V1
         /// <summary>
         /// The instance will live migrate in the next 60 seconds.
         /// </summary>
-        MigrateOnHost
+        Migrate
     }
 }

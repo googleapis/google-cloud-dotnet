@@ -78,8 +78,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
       /// <summary>
       ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. `Operation.response` returns
-      ///  `AsyncRecognizeResponse`.
+      ///  google.longrunning.Operations interface. Returns either an
+      ///  `Operation.error` or an `Operation.response` which contains
+      ///  an `AsyncRecognizeResponse` message.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Longrunning.Operation> AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, ServerCallContext context)
       {
@@ -154,8 +155,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
       /// <summary>
       ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. `Operation.response` returns
-      ///  `AsyncRecognizeResponse`.
+      ///  google.longrunning.Operations interface. Returns either an
+      ///  `Operation.error` or an `Operation.response` which contains
+      ///  an `AsyncRecognizeResponse` message.
       /// </summary>
       public virtual global::Google.Longrunning.Operation AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -163,8 +165,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
       /// <summary>
       ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. `Operation.response` returns
-      ///  `AsyncRecognizeResponse`.
+      ///  google.longrunning.Operations interface. Returns either an
+      ///  `Operation.error` or an `Operation.response` which contains
+      ///  an `AsyncRecognizeResponse` message.
       /// </summary>
       public virtual global::Google.Longrunning.Operation AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, CallOptions options)
       {
@@ -172,8 +175,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
       /// <summary>
       ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. `Operation.response` returns
-      ///  `AsyncRecognizeResponse`.
+      ///  google.longrunning.Operations interface. Returns either an
+      ///  `Operation.error` or an `Operation.response` which contains
+      ///  an `AsyncRecognizeResponse` message.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Longrunning.Operation> AsyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -181,8 +185,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
       /// <summary>
       ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. `Operation.response` returns
-      ///  `AsyncRecognizeResponse`.
+      ///  google.longrunning.Operations interface. Returns either an
+      ///  `Operation.error` or an `Operation.response` which contains
+      ///  an `AsyncRecognizeResponse` message.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Longrunning.Operation> AsyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, CallOptions options)
       {

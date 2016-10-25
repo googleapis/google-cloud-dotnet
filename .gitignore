@@ -1,4 +1,5 @@
 .vs
+*.pyc
 *.user
 obj
 bin
@@ -12,3 +13,8 @@ output
 packages
 coverage
 releasebuild
+
+# Used when generating APIs
+tmp
+googleapis
+toolkit

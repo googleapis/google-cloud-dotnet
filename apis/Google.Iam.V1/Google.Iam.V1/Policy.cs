@@ -25,8 +25,8 @@ namespace Google.Iam.V1 {
             "Chpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90bxINZ29vZ2xlLmlhbS52MSJR",
             "CgZQb2xpY3kSDwoHdmVyc2lvbhgBIAEoBRIoCghiaW5kaW5ncxgEIAMoCzIW",
             "Lmdvb2dsZS5pYW0udjEuQmluZGluZxIMCgRldGFnGAMgASgMIigKB0JpbmRp",
-            "bmcSDAoEcm9sZRgBIAEoCRIPCgdtZW1iZXJzGAIgAygJQiIKEWNvbS5nb29n",
-            "bGUuaWFtLnYxQgtQb2xpY3lQcm90b1ABYgZwcm90bzM="));
+            "bmcSDAoEcm9sZRgBIAEoCRIPCgdtZW1iZXJzGAIgAygJQiUKEWNvbS5nb29n",
+            "bGUuaWFtLnYxQgtQb2xpY3lQcm90b1AB+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -39,44 +39,36 @@ namespace Google.Iam.V1 {
   }
   #region Messages
   /// <summary>
-  ///  # Overview
+  ///  Defines an Identity and Access Management (IAM) policy. It is used to
+  ///  specify access control policies for Cloud Platform resources.
   ///
-  ///  The `Policy` defines an access control policy language. It is used to
-  ///  define policies that are attached to resources like files, folders, VMs,
-  ///  etc.
+  ///  A `Policy` consists of a list of `bindings`. A `Binding` binds a list of
+  ///  `members` to a `role`, where the members can be user accounts, Google groups,
+  ///  Google domains, and service accounts. A `role` is a named list of permissions
+  ///  defined by IAM.
   ///
-  ///  # Policy structure
+  ///  **Example**
   ///
-  ///  A `Policy` consists of a list of bindings. A `Binding` binds a set of members
-  ///  to a role, where the members include user accounts, user groups, user
-  ///  domains, and service accounts. A 'role' is a named set of permissions,
-  ///  defined by IAM. The definition of a role is outside the policy.
-  ///
-  ///  A permission check first determines the roles that include the specified
-  ///  permission, and then determines if the principal specified is a
-  ///  member of a binding to at least one of these roles. The membership check is
-  ///  recursive when a group is bound to a role.
-  ///
-  ///  Policy examples:
-  ///
-  ///  ```
-  ///  {
-  ///    "bindings": [
   ///      {
-  ///        "role": "roles/owner",
-  ///        "members": [
-  ///          "user:mike@example.com",
-  ///          "group:admins@example.com",
-  ///          "domain:google.com",
-  ///          "serviceAccount:frontend@example.iam.gserviceaccounts.com"]
-  ///      },
-  ///      {
-  ///        "role": "roles/viewer",
-  ///        "members": ["user:sean@example.com"]
+  ///        "bindings": [
+  ///          {
+  ///            "role": "roles/owner",
+  ///            "members": [
+  ///              "user:mike@example.com",
+  ///              "group:admins@example.com",
+  ///              "domain:google.com",
+  ///              "serviceAccount:my-other-app@appspot.gserviceaccount.com",
+  ///            ]
+  ///          },
+  ///          {
+  ///            "role": "roles/viewer",
+  ///            "members": ["user:sean@example.com"]
+  ///          }
+  ///        ]
   ///      }
-  ///    ]
-  ///  }
-  ///  ```
+  ///
+  ///  For a description of IAM and its features, see the
+  ///  [IAM developer's guide](https://cloud.google.com/iam).
   /// </summary>
   public sealed partial class Policy : pb::IMessage<Policy> {
     private static readonly pb::MessageParser<Policy> _parser = new pb::MessageParser<Policy>(() => new Policy());
@@ -116,8 +108,7 @@ namespace Google.Iam.V1 {
     public const int VersionFieldNumber = 1;
     private int version_;
     /// <summary>
-    ///  The policy language version. The version of the policy is
-    ///  represented by the etag. The default version is 0.
+    ///  Version of the `Policy`. The default version is 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Version {
@@ -133,8 +124,9 @@ namespace Google.Iam.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Iam.V1.Binding.Parser);
     private readonly pbc::RepeatedField<global::Google.Iam.V1.Binding> bindings_ = new pbc::RepeatedField<global::Google.Iam.V1.Binding>();
     /// <summary>
-    ///  It is an error to specify multiple bindings for the same role.
-    ///  It is an error to specify a binding with no members.
+    ///  Associates a list of `members` to a `role`.
+    ///  Multiple `bindings` must not be specified for the same `role`.
+    ///  `bindings` with no members will result in an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Iam.V1.Binding> Bindings {
@@ -145,7 +137,16 @@ namespace Google.Iam.V1 {
     public const int EtagFieldNumber = 3;
     private pb::ByteString etag_ = pb::ByteString.Empty;
     /// <summary>
-    ///  Can be used to perform a read-modify-write.
+    ///  `etag` is used for optimistic concurrency control as a way to help
+    ///  prevent simultaneous updates of a policy from overwriting each other.
+    ///  It is strongly suggested that systems make use of the `etag` in the
+    ///  read-modify-write cycle to perform policy updates in order to avoid race
+    ///  conditions: An `etag` is returned in the response to `getIamPolicy`, and
+    ///  systems are expected to put that etag in the request to `setIamPolicy` to
+    ///  ensure that their change will be applied to the same version of the policy.
+    ///
+    ///  If no `etag` is provided in the call to `setIamPolicy`, then the existing
+    ///  policy is overwritten blindly.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Etag {
@@ -255,8 +256,7 @@ namespace Google.Iam.V1 {
   }
 
   /// <summary>
-  ///  Associates members with roles. See below for allowed
-  ///  formats of members.
+  ///  Associates `members` with a `role`.
   /// </summary>
   public sealed partial class Binding : pb::IMessage<Binding> {
     private static readonly pb::MessageParser<Binding> _parser = new pb::MessageParser<Binding>(() => new Binding());
@@ -295,8 +295,8 @@ namespace Google.Iam.V1 {
     public const int RoleFieldNumber = 1;
     private string role_ = "";
     /// <summary>
-    ///  The name of the role to which the members should be bound.
-    ///  Examples: "roles/viewer", "roles/editor", "roles/owner".
+    ///  Role that is assigned to `members`.
+    ///  For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
     ///  Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -313,28 +313,26 @@ namespace Google.Iam.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> members_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  Format of member entries:
-    ///  1. allUsers
-    ///     Matches any requesting principal (users, service accounts or anonymous).
+    ///  Specifies the identities requesting access for a Cloud Platform resource.
+    ///  `members` can have the following values:
     ///
-    ///  2. allAuthenticatedUsers
-    ///     Matches any requesting authenticated principal (users or service
-    ///     accounts).
+    ///  * `allUsers`: A special identifier that represents anyone who is
+    ///     on the internet; with or without a Google account.
     ///
-    ///  3. user:{emailid}
-    ///     A google user account using an email address.
-    ///     For example alice@gmail.com, joe@example.com
+    ///  * `allAuthenticatedUsers`: A special identifier that represents anyone
+    ///     who is authenticated with a Google account or a service account.
     ///
-    ///  4. serviceAccount:{emailid}
-    ///     An service account email.
+    ///  * `user:{emailid}`: An email address that represents a specific Google
+    ///     account. For example, `alice@gmail.com` or `joe@example.com`.
     ///
-    ///  5. group:{emailid}
-    ///     A google group with an email address. For example
-    ///     auth-ti-cloud@google.com
+    ///  * `serviceAccount:{emailid}`: An email address that represents a service
+    ///     account. For example, `my-other-app@appspot.gserviceaccount.com`.
     ///
-    ///  6. domain:{domain}
-    ///     A Google Apps domain name.
-    ///     For example google.com, example.com
+    ///  * `group:{emailid}`: An email address that represents a Google group.
+    ///     For example, `admins@example.com`.
+    ///
+    ///  * `domain:{domain}`: A Google Apps domain name that represents all the
+    ///     users of that domain. For example, `google.com` or `example.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Members {

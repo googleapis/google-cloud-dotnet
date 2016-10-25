@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
@@ -54,7 +54,7 @@ namespace Google.Bigquery.V2
         /// <summary>
         /// Uploads a stream of CSV data to a table.
         /// </summary>
-        /// /// <param name="datasetReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -138,7 +138,7 @@ namespace Google.Bigquery.V2
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         public virtual void Insert(TableReference tableReference, InsertRow row, InsertOptions options = null) =>
-            Insert(tableReference, new[] { GaxRestPreconditions.CheckNotNull(row, nameof(row)) }, options);
+            Insert(tableReference, new[] { GaxPreconditions.CheckNotNull(row, nameof(row)) }, options);
 
         /// <summary>
         /// Inserts all the specified rows into a table.

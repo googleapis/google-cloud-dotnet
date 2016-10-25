@@ -15,9 +15,12 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Longrunning;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
@@ -25,48 +28,29 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Speech.V1Beta1
 {
-
     /// <summary>
-    /// Extension methods to assist with using <see cref="SpeechClient"/>.
-    /// </summary>
-    public static partial class SpeechExtensions
-    {
-        /// <summary>
-        /// Wrap a GRPC Speech client for more convenient use.
-        /// </summary>
-        /// <param name="grpcClient">A GRPC client to wrap.</param>
-        /// <param name="settings">
-        /// An optional <see cref="SpeechSettings"/> to configure this wrapper.
-        /// If null or not specified, then the default settings are used.
-        /// </param>
-        /// <returns>A <see cref="SpeechClient"/> that wraps the specified GRPC client.</returns>
-        public static SpeechClient ToClient(
-            this Speech.SpeechClient grpcClient,
-            SpeechSettings settings = null
-        ) => new SpeechClientImpl(grpcClient, settings);
-    }
-
-    /// <summary>
-    /// Settings for a Speech wrapper.
+    /// Settings for a <see cref="SpeechClient"/>.
     /// </summary>
     public sealed partial class SpeechSettings : ServiceSettingsBase
     {
         /// <summary>
         /// Get a new instance of the default <see cref="SpeechSettings"/>.
         /// </summary>
-        /// <returns>A new instance of the default SpeechSettings.</returns>
+        /// <returns>
+        /// A new instance of the default <see cref="SpeechSettings"/>.
+        /// </returns>
         public static SpeechSettings GetDefault() => new SpeechSettings();
 
         /// <summary>
-        /// Constructs a new SpeechSettings object with default settings.
+        /// Constructs a new <see cref="SpeechSettings"/> object with default settings.
         /// </summary>
         public SpeechSettings() { }
 
         private SpeechSettings(SpeechSettings existing) : base(existing)
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            SyncRecognizeSettings = existing.SyncRecognizeSettings?.Clone();
-            AsyncRecognizeSettings = existing.AsyncRecognizeSettings?.Clone();
+            SyncRecognizeSettings = existing.SyncRecognizeSettings;
+            AsyncRecognizeSettings = existing.AsyncRecognizeSettings;
         }
 
         /// <summary>
@@ -96,26 +80,29 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <summary>
         /// "Default" retry backoff for <see cref="SpeechClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" retry backoff for <see cref="SpeechClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" retry backoff for <see cref="SpeechClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" retry backoff for <see cref="SpeechClient"/> RPC methods is defined as:
         /// <list type="bullet">
         /// <item><description>Initial delay: 100 milliseconds</description></item>
-        /// <item><description>Delay multiplier: 1.3</description></item>
         /// <item><description>Maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(100),
-            DelayMultiplier = 1.3,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultRetryBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(100),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.3
+        );
 
         /// <summary>
         /// "Default" timeout backoff for <see cref="SpeechClient"/> RPC methods.
         /// </summary>
-        /// <returns>The "Default" timeout backoff for <see cref="SpeechClient"/> RPC methods.</returns>
+        /// <returns>
+        /// The "Default" timeout backoff for <see cref="SpeechClient"/> RPC methods.
+        /// </returns>
         /// <remarks>
         /// The "Default" timeout backoff for <see cref="SpeechClient"/> RPC methods is defined as:
         /// <list type="bullet">
@@ -124,20 +111,19 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <item><description>Maximum timeout: 60000 milliseconds</description></item>
         /// </list>
         /// </remarks>
-        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings
-        {
-            Delay = TimeSpan.FromMilliseconds(60000),
-            DelayMultiplier = 1.0,
-            MaxDelay = TimeSpan.FromMilliseconds(60000),
-        };
+        public static BackoffSettings GetDefaultTimeoutBackoff() => new BackoffSettings(
+            delay: TimeSpan.FromMilliseconds(60000),
+            maxDelay: TimeSpan.FromMilliseconds(60000),
+            delayMultiplier: 1.0
+        );
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SpeechClient.SyncRecognize"/> and <see cref="SpeechClient.SyncRecognizeAsync"/>.
+        /// <c>SpeechClient.SyncRecognize</c> and <c>SpeechClient.SyncRecognizeAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SpeechClient.SyncRecognize"/> and
-        /// <see cref="SpeechClient.SyncRecognizeAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SpeechClient.SyncRecognize</c> and
+        /// <c>SpeechClient.SyncRecognizeAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -153,24 +139,21 @@ namespace Google.Cloud.Speech.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings SyncRecognizeSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
+        public CallSettings SyncRecognizeSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
-        /// <see cref="SpeechClient.AsyncRecognize"/> and <see cref="SpeechClient.AsyncRecognizeAsync"/>.
+        /// <c>SpeechClient.AsyncRecognize</c> and <c>SpeechClient.AsyncRecognizeAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <see cref="SpeechClient.AsyncRecognize"/> and
-        /// <see cref="SpeechClient.AsyncRecognizeAsync"/> <see cref="RetrySettings"/> are:
+        /// The default <c>SpeechClient.AsyncRecognize</c> and
+        /// <c>SpeechClient.AsyncRecognizeAsync</c> <see cref="RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -186,22 +169,18 @@ namespace Google.Cloud.Speech.V1Beta1
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public CallSettings AsyncRecognizeSettings { get; set; } = new CallSettings
-        {
-            Timing = CallTiming.FromRetry(new RetrySettings
-            {
-                RetryBackoff = GetDefaultRetryBackoff(),
-                TimeoutBackoff = GetDefaultTimeoutBackoff(),
-                RetryFilter = IdempotentRetryFilter,
-                TotalExpiration = Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
-            }),
-        };
-
+        public CallSettings AsyncRecognizeSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
-        /// <returns>A deep clone of this set of Speech settings.</returns>
+        /// <returns>A deep clone of this <see cref="SpeechSettings"/> object.</returns>
         public SpeechSettings Clone() => new SpeechSettings(this);
     }
 
@@ -216,7 +195,7 @@ namespace Google.Cloud.Speech.V1Beta1
         public static ServiceEndpoint DefaultEndpoint { get; } = new ServiceEndpoint("speech.googleapis.com", 443);
 
         /// <summary>
-        /// The default Speech scopes
+        /// The default Speech scopes.
         /// </summary>
         /// <remarks>
         /// The default Speech scopes are:
@@ -224,7 +203,7 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
-        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new[] {
+        public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -290,7 +269,7 @@ namespace Google.Cloud.Speech.V1Beta1
         public static Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
 
         /// <summary>
-        /// The underlying GRPC Speech client.
+        /// The underlying gRPC Speech client.
         /// </summary>
         public virtual Speech.SpeechClient GrpcClient
         {
@@ -298,16 +277,20 @@ namespace Google.Cloud.Speech.V1Beta1
         }
 
         /// <summary>
-        /// Perform synchronous speech-recognition: receive results after all audio
-        /// has been sent and processed.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<SyncRecognizeResponse> SyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
@@ -317,35 +300,43 @@ namespace Google.Cloud.Speech.V1Beta1
         }
 
         /// <summary>
-        /// Perform synchronous speech-recognition: receive results after all audio
-        /// has been sent and processed.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<SyncRecognizeResponse> SyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
             CancellationToken cancellationToken) => SyncRecognizeAsync(
                 config,
                 audio,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Perform synchronous speech-recognition: receive results after all audio
-        /// has been sent and processed.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual SyncRecognizeResponse SyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
@@ -355,17 +346,20 @@ namespace Google.Cloud.Speech.V1Beta1
         }
 
         /// <summary>
-        /// Perform asynchronous speech-recognition: receive results via the
-        /// google.longrunning.Operations interface. `Operation.response` returns
-        /// `AsyncRecognizeResponse`.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Operation> AsyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
@@ -375,37 +369,43 @@ namespace Google.Cloud.Speech.V1Beta1
         }
 
         /// <summary>
-        /// Perform asynchronous speech-recognition: receive results via the
-        /// google.longrunning.Operations interface. `Operation.response` returns
-        /// `AsyncRecognizeResponse`.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="cancellationToken">A <see cref="CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public virtual Task<Operation> AsyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
             CancellationToken cancellationToken) => AsyncRecognizeAsync(
                 config,
                 audio,
-                new CallSettings { CancellationToken = cancellationToken });
+                CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Perform asynchronous speech-recognition: receive results via the
-        /// google.longrunning.Operations interface. `Operation.response` returns
-        /// `AsyncRecognizeResponse`.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public virtual Operation AsyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
@@ -416,12 +416,20 @@ namespace Google.Cloud.Speech.V1Beta1
 
     }
 
+    /// <summary>
+    /// Speech client wrapper implementation, for convenient use.
+    /// </summary>
     public sealed partial class SpeechClientImpl : SpeechClient
     {
         private readonly ClientHelper _clientHelper;
         private readonly ApiCall<SyncRecognizeRequest, SyncRecognizeResponse> _callSyncRecognize;
         private readonly ApiCall<AsyncRecognizeRequest, Operation> _callAsyncRecognize;
 
+        /// <summary>
+        /// Constructs a client wrapper for the Speech service, with the specified gRPC client and settings.
+        /// </summary>
+        /// <param name="grpcClient">The underlying gRPC client.</param>
+        /// <param name="settings">The base <see cref="SpeechSettings"/> used within this client </param>
         public SpeechClientImpl(Speech.SpeechClient grpcClient, SpeechSettings settings)
         {
             this.GrpcClient = grpcClient;
@@ -433,19 +441,26 @@ namespace Google.Cloud.Speech.V1Beta1
                 GrpcClient.AsyncRecognizeAsync, GrpcClient.AsyncRecognize, effectiveSettings.AsyncRecognizeSettings);
         }
 
+        /// <summary>
+        /// The underlying gRPC Speech client.
+        /// </summary>
         public override Speech.SpeechClient GrpcClient { get; }
 
         /// <summary>
-        /// Perform synchronous speech-recognition: receive results after all audio
-        /// has been sent and processed.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<SyncRecognizeResponse> SyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
@@ -458,16 +473,20 @@ namespace Google.Cloud.Speech.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Perform synchronous speech-recognition: receive results after all audio
-        /// has been sent and processed.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override SyncRecognizeResponse SyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
@@ -480,17 +499,20 @@ namespace Google.Cloud.Speech.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Perform asynchronous speech-recognition: receive results via the
-        /// google.longrunning.Operations interface. `Operation.response` returns
-        /// `AsyncRecognizeResponse`.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
         public override Task<Operation> AsyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
@@ -503,17 +525,20 @@ namespace Google.Cloud.Speech.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Perform asynchronous speech-recognition: receive results via the
-        /// google.longrunning.Operations interface. `Operation.response` returns
-        /// `AsyncRecognizeResponse`.
+        ///
         /// </summary>
         /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
+        ///
         /// </param>
-        /// <param name="audio">[Required] The audio data to be recognized.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
+        /// <param name="audio">
+        ///
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
         public override Operation AsyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
