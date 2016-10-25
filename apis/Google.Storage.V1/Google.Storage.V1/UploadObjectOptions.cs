@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Upload;
 using System;
 using static Google.Apis.Storage.v1.ObjectsResource;
@@ -66,7 +66,7 @@ namespace Google.Storage.V1
             get { return _chunkSize; }
             set
             {
-                GaxRestPreconditions.CheckArgument(
+                GaxPreconditions.CheckArgument(
                     value == null || (value.Value % MinimumChunkSize == 0 && value.Value >= 1),
                     nameof(value),
                     "Requested chunk size {0} is not a positive multiple of {1}",
@@ -105,7 +105,7 @@ namespace Google.Storage.V1
             if (PredefinedAcl != null)
             {
                 upload.PredefinedAcl =
-                    GaxRestPreconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
+                    GaxPreconditions.CheckEnumValue((PredefinedAclEnum) PredefinedAcl, nameof(PredefinedAcl));
             }
             if (IfGenerationMatch != null)
             {
@@ -125,7 +125,7 @@ namespace Google.Storage.V1
             }
             if (Projection != null)
             {
-                upload.Projection = GaxRestPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+                upload.Projection = GaxPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
             }
         }
     }

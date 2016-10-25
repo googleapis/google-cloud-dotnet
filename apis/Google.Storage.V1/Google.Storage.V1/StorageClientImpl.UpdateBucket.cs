@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System.Threading;
@@ -38,7 +38,7 @@ namespace Google.Storage.V1
         private BucketsResource.UpdateRequest CreateUpdateBucketRequest(Bucket bucket, UpdateBucketOptions options)
         {
             ValidateBucket(bucket, nameof(bucket));
-            GaxRestPreconditions.CheckArgument(bucket.Acl != null, nameof(bucket), "The Acl property of the bucket to update is null");
+            GaxPreconditions.CheckArgument(bucket.Acl != null, nameof(bucket), "The Acl property of the bucket to update is null");
             var request = Service.Buckets.Update(bucket, bucket.Name);
             options?.ModifyRequest(request);
             return request;

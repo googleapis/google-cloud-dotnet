@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
@@ -55,7 +56,7 @@ namespace Google.Storage.V1
             }
             set
             {
-                GaxRestPreconditions.CheckNotNull(value, nameof(value));
+                GaxPreconditions.CheckNotNull(value, nameof(value));
                 lock (_applicationNameLock)
                 {
                     _applicationName = value;
@@ -72,7 +73,7 @@ namespace Google.Storage.V1
         /// <param name="service">The service to wrap. Must not be null.</param>
         public StorageClientImpl(StorageService service)
         {            
-            Service = GaxRestPreconditions.CheckNotNull(service, nameof(service));
+            Service = GaxPreconditions.CheckNotNull(service, nameof(service));
         }
 
         /// <summary>
@@ -89,7 +90,7 @@ namespace Google.Storage.V1
         /// </summary>
         internal static void ValidateBucketName(string bucket)
         {
-            GaxRestPreconditions.CheckNotNull(bucket, nameof(bucket));
+            GaxPreconditions.CheckNotNull(bucket, nameof(bucket));
             if (!ValidBucketName.IsMatch(bucket))
             {
                 throw new ArgumentException($"Invalid bucket name '{bucket}' - see https://cloud.google.com/storage/docs/bucket-naming", nameof(bucket));
@@ -103,9 +104,9 @@ namespace Google.Storage.V1
         /// <param name="paramName">The parameter name in the calling method</param>
         private void ValidateBucket(Bucket bucket, string paramName)
         {
-            GaxRestPreconditions.CheckNotNull(bucket, paramName);
-            GaxRestPreconditions.CheckArgument(bucket.Name != null, paramName, "Bucket must have a name");
-            GaxRestPreconditions.CheckArgument(ValidBucketName.IsMatch(bucket.Name),
+            GaxPreconditions.CheckNotNull(bucket, paramName);
+            GaxPreconditions.CheckArgument(bucket.Name != null, paramName, "Bucket must have a name");
+            GaxPreconditions.CheckArgument(ValidBucketName.IsMatch(bucket.Name),
                 paramName,
                 "Invalid bucket name '{0}' - see https://cloud.google.com/storage/docs/bucket-naming", bucket.Name);
         }
@@ -117,12 +118,12 @@ namespace Google.Storage.V1
         /// <param name="paramName">The parameter name in the calling method</param>
         private void ValidateObject(Object obj, string paramName)
         {
-            GaxRestPreconditions.CheckNotNull(obj, paramName);
-            GaxRestPreconditions.CheckArgument(
+            GaxPreconditions.CheckNotNull(obj, paramName);
+            GaxPreconditions.CheckArgument(
                 obj.Name != null && obj.Bucket != null,
                 paramName,
                 "Object must have a name and bucket");
-            GaxRestPreconditions.CheckArgument(ValidBucketName.IsMatch(obj.Bucket),
+            GaxPreconditions.CheckArgument(ValidBucketName.IsMatch(obj.Bucket),
                 paramName,
                 "Object bucket '{0}' is invalid", obj.Bucket);
         }

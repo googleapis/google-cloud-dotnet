@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Storage.v1;
 using System;
 using System.Threading;
@@ -67,10 +67,10 @@ namespace Google.Storage.V1
             string destinationObjectName,
             CopyObjectOptions options)
         {
-            GaxRestPreconditions.CheckNotNull(sourceBucket, nameof(sourceBucket));
-            GaxRestPreconditions.CheckNotNull(sourceObjectName, nameof(sourceObjectName));
-            GaxRestPreconditions.CheckNotNull(destinationBucket, nameof(destinationBucket));
-            GaxRestPreconditions.CheckNotNull(destinationObjectName, nameof(destinationObjectName));
+            GaxPreconditions.CheckNotNull(sourceBucket, nameof(sourceBucket));
+            GaxPreconditions.CheckNotNull(sourceObjectName, nameof(sourceObjectName));
+            GaxPreconditions.CheckNotNull(destinationBucket, nameof(destinationBucket));
+            GaxPreconditions.CheckNotNull(destinationObjectName, nameof(destinationObjectName));
             if (destinationBucket == sourceBucket && destinationObjectName == sourceObjectName)
             {
                 throw new ArgumentException("Cannot copy an object to itself. Specify either a different destination bucket or a different destination object name");

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Storage.v1;
 using System.Threading;
 using System.Threading.Tasks;
@@ -37,10 +37,10 @@ namespace Google.Storage.V1
 
         private ObjectsResource.UpdateRequest CreateUpdateObjectRequest(Object obj, UpdateObjectOptions options)
         {
-            GaxRestPreconditions.CheckNotNull(obj, nameof(obj));
-            GaxRestPreconditions.CheckArgument(obj.Bucket != null, nameof(obj), "The Bucket property of the object to update is null");
-            GaxRestPreconditions.CheckArgument(obj.Name != null, nameof(obj), "The Name property of the object to update is null");
-            GaxRestPreconditions.CheckArgument(obj.Acl != null, nameof(obj), "The Acl property of the object to update is null");
+            GaxPreconditions.CheckNotNull(obj, nameof(obj));
+            GaxPreconditions.CheckArgument(obj.Bucket != null, nameof(obj), "The Bucket property of the object to update is null");
+            GaxPreconditions.CheckArgument(obj.Name != null, nameof(obj), "The Name property of the object to update is null");
+            GaxPreconditions.CheckArgument(obj.Acl != null, nameof(obj), "The Acl property of the object to update is null");
             var request = Service.Objects.Update(obj, obj.Bucket, obj.Name);
             options?.ModifyRequest(request);
             return request;

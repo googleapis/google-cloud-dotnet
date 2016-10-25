@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Download;
 using System;
 using System.IO;
@@ -74,13 +74,13 @@ namespace Google.Storage.V1
 
         /// <summary>
         /// Constructs the media URL of an object from its bucket and name. This does not include the generation
-        /// or any GaxRestPreconditions. The returned string will always have a query parameter, so later query parameters
+        /// or any GaxPreconditions. The returned string will always have a query parameter, so later query parameters
         /// can unconditionally be appended with an "&amp;" prefix.
         /// </summary>
         private static string GetBaseUri(string bucket, string objectName)
         {
             ValidateBucketName(bucket);
-            GaxRestPreconditions.CheckNotNull(objectName, nameof(objectName));
+            GaxPreconditions.CheckNotNull(objectName, nameof(objectName));
             return $"https://www.googleapis.com/download/storage/v1/b/{bucket}/o/{Uri.EscapeDataString(objectName)}?alt=media";
         }
 
@@ -102,7 +102,7 @@ namespace Google.Storage.V1
             IProgress<IDownloadProgress> progress)
         {
             // URI will definitely not be null; that's constructed internally.
-            GaxRestPreconditions.CheckNotNull(destination, nameof(destination));
+            GaxPreconditions.CheckNotNull(destination, nameof(destination));
             var downloader = new MediaDownloader(Service);
             options?.ModifyDownloader(downloader);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
@@ -125,7 +125,7 @@ namespace Google.Storage.V1
             CancellationToken cancellationToken,
             IProgress<IDownloadProgress> progress)
         {
-            GaxRestPreconditions.CheckNotNull(destination, nameof(destination));
+            GaxPreconditions.CheckNotNull(destination, nameof(destination));
             var downloader = new MediaDownloader(Service);
             options?.ModifyDownloader(downloader);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
