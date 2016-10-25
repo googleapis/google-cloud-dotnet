@@ -22,6 +22,7 @@ using Xunit;
 using Google.Type;
 using Google.Api.Gax;
 using Google.Protobuf.Collections;
+using Google.Api.Gax.Grpc;
 
 namespace Google.Cloud.Vision.V1.Tests
 {

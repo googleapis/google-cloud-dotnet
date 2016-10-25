@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types;
