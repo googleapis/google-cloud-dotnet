@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax.Rest;
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
@@ -58,13 +58,13 @@ namespace Google.Bigquery.V2
 
         internal BigqueryQueryJob(BigqueryClient client, GetQueryResultsResponse response, GetQueryResultsOptions options)
         {
-            _client = GaxRestPreconditions.CheckNotNull(client, nameof(client));
-            _response = GaxRestPreconditions.CheckNotNull(response, nameof(response));
+            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _response = GaxPreconditions.CheckNotNull(response, nameof(response));
             _options = options;
         }
 
         internal BigqueryQueryJob(BigqueryClient client, QueryResponse response, ExecuteQueryOptions options)
-            : this(client, ConvertQueryResponse(GaxRestPreconditions.CheckNotNull(response, nameof(response))), options?.ToGetQueryResultsOptions())
+            : this(client, ConvertQueryResponse(GaxPreconditions.CheckNotNull(response, nameof(response))), options?.ToGetQueryResultsOptions())
         {
         }
 
@@ -128,7 +128,7 @@ namespace Google.Bigquery.V2
         /// <returns>An in-memory result set of at most the given number of rows.</returns>
         public BigqueryResultSet GetResultSet(int maxRows)
         {
-            GaxRestPreconditions.CheckArgumentRange(maxRows, nameof(maxRows), 1, int.MaxValue);
+            GaxPreconditions.CheckArgumentRange(maxRows, nameof(maxRows), 1, int.MaxValue);
             if (!Completed)
             {
                 throw new InvalidOperationException($"Cannot call {nameof(GetResultSet)} on an incomplete job");
