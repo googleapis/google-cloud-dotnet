@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
