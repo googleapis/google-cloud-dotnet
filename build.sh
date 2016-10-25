@@ -112,7 +112,7 @@ do
   # Other than log4net and aspnet, everything can be tested under .NET Core.
   if [[ "$testdir" =~ (AspNet|Log4Net) ]]
   then
-    echo "Skipping test that will not run on .NET Core"
+    echo "Skipping $testdir, it will not run on .NET Core"
   else
     dotnet test -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir
   fi
