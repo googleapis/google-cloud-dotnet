@@ -109,9 +109,11 @@ do
     mono $bin/dotnet-test-xunit.exe $bin/$project.dll
   fi
   
-  # Other than log4net, everything can be tested under .NET Core.
-  if [ "$testdir" != "Google.Logging.V2/Google.Logging.Log4Net.Tests" ]
+  # Other than log4net and aspnet, everything can be tested under .NET Core.
+  if [[ "$testdir" =~ (AspNet|Log4Net) ]]
   then
+    echo "Skipping $testdir, it will not run on .NET Core"
+  else
     dotnet test -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir
   fi
 done

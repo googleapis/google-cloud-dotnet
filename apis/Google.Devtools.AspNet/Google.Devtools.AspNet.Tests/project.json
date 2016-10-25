@@ -1,0 +1,18 @@
+{
+  "description": "Unit tests for the Google Stackdriver Error Reporting ExceptionLogger library.",
+
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "dotnet-test-xunit": "2.2.0-preview2-build1029",
+    "Google.Devtools.AspNet": { "target": "project" },
+    "xunit": "2.2.0-beta3-build3402"
+  },
+  "testRunner": "xunit",
+
+  "frameworks": {
+    "net451": {},
+  }
+}
