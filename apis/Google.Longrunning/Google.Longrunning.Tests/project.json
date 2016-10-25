@@ -6,7 +6,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Testing": "1.0.0-beta02-CI00094",
+    "Google.Api.Gax.Testing": "1.0.0-beta03",
     "Google.Cloud.ClientTesting": { "target": "project" },
     "Google.Longrunning": { "target": "project" },
     "System.Interactive.Async": "3.0.0",
