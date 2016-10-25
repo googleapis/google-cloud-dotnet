@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf.Collections;
 using System;
 using System.Collections.Generic;
@@ -320,7 +321,7 @@ namespace Google.Cloud.Vision.V1
         /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
         /// <returns>A task representing the asynchronous operation. The task result will be the annotation response.</returns>
         public Task<AnnotateImageResponse> AnnotateAsync(AnnotateImageRequest request, CancellationToken cancellationToken)
-            => AnnotateAsync(request, new CallSettings { CancellationToken = cancellationToken });
+            => AnnotateAsync(request, CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Annotates a single image asynchronously.
