@@ -21,7 +21,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
 
-namespace Google.Devtools.Aspnet
+namespace Google.Devtools.AspNet
 {
     /// <summary>
     ///  Google Cloud Error Reporting <see cref="ExceptionLogger"/>.

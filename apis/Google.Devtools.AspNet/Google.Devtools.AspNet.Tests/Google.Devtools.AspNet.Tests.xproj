@@ -7,11 +7,11 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>d85333c3-f612-4d92-8ecd-e674a73aec8f</ProjectGuid>
-    <RootNamespace>Google.Devtools.Aspnet</RootNamespace>
+    <ProjectGuid>575cd5c0-c69d-495e-90fd-028be94178e4</ProjectGuid>
+    <RootNamespace>Google.Devtools.AspNet.Tests</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
 
   <PropertyGroup>

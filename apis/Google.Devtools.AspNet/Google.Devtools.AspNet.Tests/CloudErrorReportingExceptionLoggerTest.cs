@@ -15,7 +15,7 @@
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Devtools.Aspnet.Tests
+namespace Google.Devtools.AspNet.Tests
 {
     public class CloudErrorReportingExceptionLoggerTest
     {
