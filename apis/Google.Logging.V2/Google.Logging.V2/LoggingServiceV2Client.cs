@@ -757,7 +757,7 @@ namespace Google.Logging.V2
                 {
                     LogName = logName,
                     Resource = resource,
-                    Labels = labels,
+                    Labels = { labels },
                     Entries = { entries },
                 },
                 callSettings);
@@ -793,7 +793,7 @@ namespace Google.Logging.V2
                 {
                     LogName = logName,
                     Resource = resource,
-                    Labels = labels,
+                    Labels = { labels },
                     Entries = { entries },
                 },
                 callSettings);
