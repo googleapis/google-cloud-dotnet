@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -109,8 +110,7 @@ namespace Google.Datastore.V1
                     CallSettings effectiveCallSettings = _parent._callSettings;
                     if (cancellationToken != default(CancellationToken))
                     {
-                        effectiveCallSettings = effectiveCallSettings?.Clone() ?? new CallSettings();
-                        effectiveCallSettings.CancellationToken = cancellationToken;
+                        effectiveCallSettings = effectiveCallSettings.WithCancellationToken(cancellationToken);
                     }
                     var response = await _parent._apiCall.Async(_request, effectiveCallSettings);
                     _finished = !MoreResultsAvailable(response);
