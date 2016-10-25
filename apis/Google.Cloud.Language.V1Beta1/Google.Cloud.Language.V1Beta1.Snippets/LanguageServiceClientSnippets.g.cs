@@ -14,7 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-using AnnotateTextRequest.Types;
 using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -26,6 +25,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types;
 
 namespace Google.Cloud.Language.V1Beta1.Snippets
 {

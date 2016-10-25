@@ -14,7 +14,6 @@
 
 // Generated code. DO NOT EDIT!
 
-using CommitRequest.Types;
 using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -26,6 +25,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Datastore.V1.CommitRequest.Types;
 
 namespace Google.Datastore.V1.Snippets
 {

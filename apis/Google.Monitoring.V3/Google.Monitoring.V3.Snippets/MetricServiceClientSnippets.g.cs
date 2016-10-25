@@ -14,12 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
+using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using ListTimeSeriesRequest.Types;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,6 +27,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Monitoring.V3.ListTimeSeriesRequest.Types;
 
 namespace Google.Monitoring.V3.Snippets
 {
