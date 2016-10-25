@@ -29,6 +29,7 @@ namespace Google.Monitoring.V3
             _fixture = fixture;
         }
 
+        /* TODO: Reinstate when ListGroups is present again.
         [Fact]
         public void ListGroups()
         {
@@ -44,5 +45,6 @@ namespace Google.Monitoring.V3
             }
             // End snippet
         }
+        */
     }
 }
