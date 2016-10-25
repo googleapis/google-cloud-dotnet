@@ -1027,7 +1027,7 @@ namespace Google.Logging.V2
         /// </summary>
         public IEnumerator<LogMetric> GetEnumerator() => Metrics.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

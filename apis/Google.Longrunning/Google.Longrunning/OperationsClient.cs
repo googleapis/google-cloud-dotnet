@@ -840,7 +840,7 @@ namespace Google.Longrunning
         /// </summary>
         public IEnumerator<Operation> GetEnumerator() => Operations.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

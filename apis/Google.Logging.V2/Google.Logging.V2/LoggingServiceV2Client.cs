@@ -898,7 +898,7 @@ namespace Google.Logging.V2
         /// </summary>
         public IEnumerator<LogEntry> GetEnumerator() => Entries.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

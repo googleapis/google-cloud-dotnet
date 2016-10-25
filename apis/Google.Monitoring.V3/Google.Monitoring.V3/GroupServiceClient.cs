@@ -1029,7 +1029,7 @@ namespace Google.Monitoring.V3
         /// </summary>
         public IEnumerator<MonitoredResource> GetEnumerator() => Members.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

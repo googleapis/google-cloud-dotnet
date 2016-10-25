@@ -756,7 +756,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </summary>
         public IEnumerator<ErrorGroupStats> GetEnumerator() => ErrorGroupStats.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
@@ -768,7 +768,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </summary>
         public IEnumerator<ErrorEvent> GetEnumerator() => ErrorEvents.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
