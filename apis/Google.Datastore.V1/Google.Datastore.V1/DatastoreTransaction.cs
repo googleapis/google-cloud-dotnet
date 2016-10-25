@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
