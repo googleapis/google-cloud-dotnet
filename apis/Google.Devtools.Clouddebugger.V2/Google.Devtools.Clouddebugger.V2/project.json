@@ -1,12 +1,12 @@
 {
   "version": "0.1.0-*",
-  "description": "Recommended Google client library to access the Stackdriver Error Reporting API, which groups and counts similar errors from cloud services. The Stackdriver Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
+  "description": "Recommended Google client library to access the Stackdriver Debugger API, which examines the call stack and variables of a running application without stopping or slowing it down.",
   "authors": [ "Google Inc." ],
 
   "packOptions": {
-    "summary": "Recommended Google client library to access the Google Stackdriver Error Reporting API.",
+    "summary": "Recommended Google client library to access the Google Stackdriver Debugger API.",
     "owners": [ "google-cloud" ],
-    "tags": [ "Google", "Cloud", "ErrorReporting", "Stackdriver" ],
+    "tags": [ "Google", "Cloud", "Debugging", "Stackdriver" ],
     "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
     "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
@@ -19,6 +19,7 @@
   },
 
   "dependencies": {
+    "Google.Devtools.Source.V1": { "target": "project" },
     "Google.Api.CommonProtos": "1.0.0-beta02",
     "Google.Api.Gax.Grpc": "1.0.0-beta02-CI00099",
     "Google.Apis.Auth": "1.16.0",
@@ -29,7 +30,7 @@
   },
 
   "frameworks": {
-    "net45": { },
-    "netstandard1.5": { }
+    "net45": {},
+    "netstandard1.5": {}
   }
 }

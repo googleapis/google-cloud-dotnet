@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Iam.V1", "Google.Iam.V1\Google.Iam.V1.xproj", "{8BF4C91C-5611-444B-8550-D67DEBAF72F1}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Iam.V1.Snippets", "Google.Iam.V1.Snippets\Google.Iam.V1.Snippets.xproj", "{26BF2023-9A4F-4594-A347-1756C1EC6E08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8BF4C91C-5611-444B-8550-D67DEBAF72F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BF4C91C-5611-444B-8550-D67DEBAF72F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BF4C91C-5611-444B-8550-D67DEBAF72F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BF2023-9A4F-4594-A347-1756C1EC6E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BF2023-9A4F-4594-A347-1756C1EC6E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BF2023-9A4F-4594-A347-1756C1EC6E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BF2023-9A4F-4594-A347-1756C1EC6E08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
