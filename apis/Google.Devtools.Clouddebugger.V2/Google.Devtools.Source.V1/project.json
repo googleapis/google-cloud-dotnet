@@ -1,12 +1,12 @@
 {
   "version": "0.1.0-*",
-  "description": "Recommended Google client library to access the Stackdriver Error Reporting API, which groups and counts similar errors from cloud services. The Stackdriver Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
+  "description": "Shared library for source contexts, used by Google Stackdriver APIs.",
   "authors": [ "Google Inc." ],
 
   "packOptions": {
-    "summary": "Recommended Google client library to access the Google Stackdriver Error Reporting API.",
+    "summary": "Shared library for source contexts, used by Google Stackdriver APIs.",
     "owners": [ "google-cloud" ],
-    "tags": [ "Google", "Cloud", "ErrorReporting", "Stackdriver" ],
+    "tags": [ "Google", "Cloud", "Stackdriver" ],
     "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
     "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
