@@ -724,7 +724,7 @@ namespace Google.Devtools.Cloudtrace.V1
         /// </summary>
         public IEnumerator<Trace> GetEnumerator() => Traces.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

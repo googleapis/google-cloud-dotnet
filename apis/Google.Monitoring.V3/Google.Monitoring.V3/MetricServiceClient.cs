@@ -1543,7 +1543,7 @@ namespace Google.Monitoring.V3
         /// </summary>
         public IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
@@ -1555,7 +1555,7 @@ namespace Google.Monitoring.V3
         /// </summary>
         public IEnumerator<MetricDescriptor> GetEnumerator() => MetricDescriptors.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
@@ -1567,7 +1567,7 @@ namespace Google.Monitoring.V3
         /// </summary>
         public IEnumerator<TimeSeries> GetEnumerator() => TimeSeries.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

@@ -1660,7 +1660,7 @@ namespace Google.Pubsub.V1
         /// </summary>
         public IEnumerator<Subscription> GetEnumerator() => Subscriptions.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 

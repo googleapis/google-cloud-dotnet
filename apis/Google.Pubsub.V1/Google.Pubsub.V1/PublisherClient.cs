@@ -1239,7 +1239,7 @@ namespace Google.Pubsub.V1
         /// </summary>
         public IEnumerator<Topic> GetEnumerator() => Topics.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
@@ -1251,7 +1251,7 @@ namespace Google.Pubsub.V1
         /// </summary>
         public IEnumerator<string> GetEnumerator() => Subscriptions.GetEnumerator();
 
-        <inheritdoc/>
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
