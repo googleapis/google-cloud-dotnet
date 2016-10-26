@@ -2,6 +2,7 @@
   "projects": [
     "Google.Storage.V1",
     "Google.Longrunning",
+    "Google.Iam.V1",
     "../tools"
   ],
   "sdk": {
