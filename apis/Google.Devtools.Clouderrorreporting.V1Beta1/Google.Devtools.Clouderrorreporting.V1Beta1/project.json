@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-*",
+  "version": "0.2.0-*",
   "description": "Recommended Google client library to access the Stackdriver Error Reporting API, which groups and counts similar errors from cloud services. The Stackdriver Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
   "authors": [ "Google Inc." ],
 

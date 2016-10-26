@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0-beta02-*",
+  "version": "1.0.0-beta03-*",
   "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
   "authors": [ "Google Inc." ],
 
