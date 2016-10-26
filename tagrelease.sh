@@ -5,6 +5,8 @@
 # Make sure github_access_token is set to a valid github personal
 # access token first.
 
+# TODO: Auto-detect the version from project.json.
+
 set -e
 
 if [ -z "$1" -o -z "$2" ]
@@ -25,11 +27,19 @@ version=$2
 # Do everything from the repository root for sanity.
 cd $(dirname $0)
 
-# Check that the API exists
+# Check that the API exists. Some libraries
+# don't exist in an api/api directory; allow an override with --force
+# for now.
+# TODO: Allow X/Y format, e.g. Google.Logging.V2/Google.Logging.Type
 if [ ! -d apis/$api ]
 then
-  echo Can\'t find apis/$api\; check for typos
-  exit 1
+  if [[ "$3" == "--force" ]]
+  then
+    echo Can\'t find apis/$api\, but --force specified.
+  else
+    echo Can\'t find apis/$api\; check for typos
+    exit 1
+  fi
 fi
 
 # Check that our master is up-to-date with upstream.
