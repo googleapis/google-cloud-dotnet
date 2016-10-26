@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListLogEntriesResponse
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_ListLogEntriesResponse" data-uid="Google.Logging.V2.ListLogEntriesResponse">Class ListLogEntriesResponse
               </h1>
-              <div class="markdown level0 summary"><p> Result returned from <code>ListLogEntries</code>.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Result returned from <code>ListLogEntries</code>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -78,16 +78,31 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ListLogEntriesResponse</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Logging.V2</h6>
               <h6><strong>Assembly</strong>:Google.Logging.V2.dll</h6>
               <h5 id="Google_Logging_V2_ListLogEntriesResponse_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class ListLogEntriesResponse : IPageResponse&lt;LogEntry&gt;, IMessage&lt;ListLogEntriesResponse&gt;, IMessage, IEquatable&lt;ListLogEntriesResponse&gt;, IDeepCloneable&lt;ListLogEntriesResponse&gt;</code></pre>
+                <pre><code class="lang-csharp hljs">public sealed class ListLogEntriesResponse : IMessage&lt;ListLogEntriesResponse&gt;, IMessage, IEquatable&lt;ListLogEntriesResponse&gt;, IDeepCloneable&lt;ListLogEntriesResponse&gt;, IPageResponse&lt;LogEntry&gt;, IEnumerable&lt;LogEntry&gt;, IEnumerable</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Logging_V2_ListLogEntriesResponse_Entries" data-uid="Google.Logging.V2.ListLogEntriesResponse.Entries">Entries</h4>
-              <div class="markdown level1 summary"><p> A list of log entries.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A list of log entries.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -110,8 +125,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_ListLogEntriesResponse_NextPageToken" data-uid="Google.Logging.V2.ListLogEntriesResponse.NextPageToken">NextPageToken</h4>
-              <div class="markdown level1 summary"><p> If there are more results than were returned, then <code>nextPageToken</code> is
- included in the response.  To get the next set of results, call this
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> If there might be more results than appear in this response, then
+ <code>nextPageToken</code> is included.  To get the next set of results, call this
  method again using the value of <code>nextPageToken</code> as <code>pageToken</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -134,10 +149,13 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.Grpc.IPageResponse&lt;Google.Logging.V2.LogEntry&gt;.NextPageToken</span></div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Logging_V2_ListLogEntriesResponse_GetEnumerator" data-uid="Google.Logging.V2.ListLogEntriesResponse.GetEnumerator">GetEnumerator()</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns an enumerator that iterates through the resources in this response.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -158,6 +176,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;Google.Logging.V2.LogEntry&gt;.GetEnumerator()</span></div>
               <h3 id="eii">Explicit Interface Implementations
               </h3>
               <h4 id="Google_Logging_V2_ListLogEntriesResponse_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Logging.V2.ListLogEntriesResponse.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -182,6 +202,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
             </article>
           </div>
           
@@ -210,8 +232,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

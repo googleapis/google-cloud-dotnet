@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OperationsClientImpl
+   | Google.Cloud.Speech.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OperationsClientImpl
+   | Google.Cloud.Speech.V1Beta1 ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Longrunning_OperationsClientImpl" data-uid="Google.Longrunning.OperationsClientImpl">Class OperationsClientImpl
+              </h1>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Operations client wrapper implementation, for convenient use.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient">OperationsClient</a></div>
+                  <div class="level2"><span class="xref">OperationsClientImpl</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_DefaultEndpoint">OperationsClient.DefaultEndpoint</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_DefaultScopes">OperationsClient.DefaultScopes</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_OperationPathTemplate">OperationsClient.OperationPathTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_FormatOperationPathName_System_String_">OperationsClient.FormatOperationPathName(String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Longrunning_OperationsSettings_">OperationsClient.CreateAsync(ServiceEndpoint, OperationsSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Longrunning_OperationsSettings_">OperationsClient.Create(ServiceEndpoint, OperationsSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_Create_Grpc_Core_Channel_Google_Longrunning_OperationsSettings_">OperationsClient.Create(Channel, OperationsSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_ShutdownDefaultChannelsAsync">OperationsClient.ShutdownDefaultChannelsAsync()</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_GetOperationAsync_System_String_System_Threading_CancellationToken_">OperationsClient.GetOperationAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_CancelOperationAsync_System_String_System_Threading_CancellationToken_">OperationsClient.CancelOperationAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_DeleteOperationAsync_System_String_System_Threading_CancellationToken_">OperationsClient.DeleteOperationAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Longrunning</h6>
+              <h6><strong>Assembly</strong>:Google.Longrunning.dll</h6>
+              <h5 id="Google_Longrunning_OperationsClientImpl_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class OperationsClientImpl : OperationsClient</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Longrunning_OperationsClientImpl__ctor_Google_Longrunning_Operations_OperationsClient_Google_Longrunning_OperationsSettings_" data-uid="Google.Longrunning.OperationsClientImpl.#ctor(Google.Longrunning.Operations.OperationsClient,Google.Longrunning.OperationsSettings)">OperationsClientImpl(Operations.OperationsClient, OperationsSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a client wrapper for the Operations service, with the specified gRPC client and settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public OperationsClientImpl(Operations.OperationsClient grpcClient, OperationsSettings settings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Longrunning.Operations.OperationsClient.html#Google_Longrunning_Operations_OperationsClient">Operations.OperationsClient</a></td>
+                    <td><em>grpcClient</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The underlying gRPC client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Longrunning.OperationsSettings.html#Google_Longrunning_OperationsSettings">OperationsSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The base <a class="xref" href="Google.Longrunning.OperationsSettings.html#Google_Longrunning_OperationsSettings">OperationsSettings</a> used within this client </p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Longrunning_OperationsClientImpl_Clock" data-uid="Google.Longrunning.OperationsClientImpl.Clock">Clock</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IClock Clock { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.IClock</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_Clock">OperationsClient.Clock</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_GrpcClient" data-uid="Google.Longrunning.OperationsClientImpl.GrpcClient">GrpcClient</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The underlying gRPC Operations client.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Operations.OperationsClient GrpcClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Longrunning.Operations.OperationsClient.html#Google_Longrunning_Operations_OperationsClient">Operations.OperationsClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_GrpcClient">OperationsClient.GrpcClient</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_Scheduler" data-uid="Google.Longrunning.OperationsClientImpl.Scheduler">Scheduler</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IScheduler Scheduler { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.IScheduler</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_Scheduler">OperationsClient.Scheduler</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Longrunning_OperationsClientImpl_CancelOperation_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Longrunning.OperationsClientImpl.CancelOperation(System.String,Google.Api.Gax.Grpc.CallSettings)">CancelOperation(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void CancelOperation(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_CancelOperation_System_String_Google_Api_Gax_Grpc_CallSettings_">OperationsClient.CancelOperation(String, CallSettings)</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_CancelOperationAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Longrunning.OperationsClientImpl.CancelOperationAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">CancelOperationAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task CancelOperationAsync(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_CancelOperationAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">OperationsClient.CancelOperationAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_DeleteOperation_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Longrunning.OperationsClientImpl.DeleteOperation(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteOperation(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void DeleteOperation(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_DeleteOperation_System_String_Google_Api_Gax_Grpc_CallSettings_">OperationsClient.DeleteOperation(String, CallSettings)</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_DeleteOperationAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Longrunning.OperationsClientImpl.DeleteOperationAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteOperationAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task DeleteOperationAsync(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_DeleteOperationAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">OperationsClient.DeleteOperationAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_GetOperation_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Longrunning.OperationsClientImpl.GetOperation(System.String,Google.Api.Gax.Grpc.CallSettings)">GetOperation(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Operation GetOperation(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_GetOperation_System_String_Google_Api_Gax_Grpc_CallSettings_">OperationsClient.GetOperation(String, CallSettings)</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_GetOperationAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Longrunning.OperationsClientImpl.GetOperationAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetOperationAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Operation&gt; GetOperationAsync(string name, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_GetOperationAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">OperationsClient.GetOperationAsync(String, CallSettings)</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_ListOperations_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Longrunning.OperationsClientImpl.ListOperations(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListOperations(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedEnumerable&lt;ListOperationsResponse, Operation&gt; ListOperations(string name, string filter, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>filter</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.IPagedEnumerable</span>&lt;<a class="xref" href="Google.Longrunning.ListOperationsResponse.html#Google_Longrunning_ListOperationsResponse">ListOperationsResponse</a>, <a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable sequence of <a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_ListOperations_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">OperationsClient.ListOperations(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <h4 id="Google_Longrunning_OperationsClientImpl_ListOperationsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Longrunning.OperationsClientImpl.ListOperationsAsync(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListOperationsAsync(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ListOperationsResponse, Operation&gt; ListOperationsAsync(string name, string filter, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>filter</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable</span>&lt;<a class="xref" href="Google.Longrunning.ListOperationsResponse.html#Google_Longrunning_ListOperationsResponse">ListOperationsResponse</a>, <a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a>&gt;</td>
+                    <td><p sourcefile="obj/api/Google.Longrunning.OperationsClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable asynchronous sequence of <a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Longrunning.OperationsClient.html#Google_Longrunning_OperationsClient_ListOperationsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">OperationsClient.ListOperationsAsync(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

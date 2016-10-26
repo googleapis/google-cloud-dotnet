@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Timestamp
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Protobuf_WellKnownTypes_Timestamp" data-uid="Google.Protobuf.WellKnownTypes.Timestamp">Class Timestamp
               </h1>
-              <div class="markdown level0 summary"><p> A Timestamp represents a point in time independent of any time zone
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="12"> A Timestamp represents a point in time independent of any time zone
  or calendar, represented as seconds and fractions of seconds at
  nanosecond resolution in UTC Epoch time. It is encoded using the
  Proleptic Gregorian Calendar which extends the Gregorian calendar
@@ -80,20 +80,20 @@
  0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z.
  By restricting to that range, we ensure that we can convert to
  and from  RFC 3339 date strings.
- See <a href="https://www.ietf.org/rfc/rfc3339.txt"><a href="https://www.ietf.org/rfc/rfc3339.txt">https://www.ietf.org/rfc/rfc3339.txt</a></a>.</p>
-<p> Example 1: Compute Timestamp from POSIX <code>time()</code>.</p>
-<pre><code> Timestamp timestamp;
+ See <a href="https://www.ietf.org/rfc/rfc3339.txt" sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="12" sourceendlinenumber="12"><a href="https://www.ietf.org/rfc/rfc3339.txt" sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="12" sourceendlinenumber="12">https://www.ietf.org/rfc/rfc3339.txt</a></a>.</p>
+<p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="14" sourceendlinenumber="14"> Example 1: Compute Timestamp from POSIX <code>time()</code>.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="16" sourceendlinenumber="18"><code> Timestamp timestamp;
  timestamp.set_seconds(time(NULL));
  timestamp.set_nanos(0);
-</code></pre><p> Example 2: Compute Timestamp from POSIX <code>gettimeofday()</code>.</p>
-<pre><code> struct timeval tv;
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> Example 2: Compute Timestamp from POSIX <code>gettimeofday()</code>.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="22" sourceendlinenumber="27"><code> struct timeval tv;
  gettimeofday(&amp;amp;tv, NULL);
 
  Timestamp timestamp;
  timestamp.set_seconds(tv.tv_sec);
  timestamp.set_nanos(tv.tv_usec * 1000);
-</code></pre><p> Example 3: Compute Timestamp from Win32 <code>GetSystemTimeAsFileTime()</code>.</p>
-<pre><code> FILETIME ft;
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="29" sourceendlinenumber="29"> Example 3: Compute Timestamp from Win32 <code>GetSystemTimeAsFileTime()</code>.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="31" sourceendlinenumber="39"><code> FILETIME ft;
  GetSystemTimeAsFileTime(&amp;amp;ft);
  UINT64 ticks = (((UINT64)ft.dwHighDateTime) &amp;lt;&amp;lt; 32) | ft.dwLowDateTime;
 
@@ -102,16 +102,14 @@
  Timestamp timestamp;
  timestamp.set_seconds((INT64) ((ticks / 10000000) - 11644473600LL));
  timestamp.set_nanos((INT32) ((ticks % 10000000) * 100));
-</code></pre><p> Example 4: Compute Timestamp from Java <code>System.currentTimeMillis()</code>.</p>
-<pre><code> long millis = System.currentTimeMillis();
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="41" sourceendlinenumber="41"> Example 4: Compute Timestamp from Java <code>System.currentTimeMillis()</code>.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="43" sourceendlinenumber="46"><code> long millis = System.currentTimeMillis();
 
  Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
      .setNanos((int) ((millis % 1000) * 1000000)).build();
-</code></pre><p> Example 5: Compute Timestamp from current time in Python.</p>
-<pre><code> now = time.time()
- seconds = int(now)
- nanos = int((now - seconds) * 10**9)
- timestamp = Timestamp(seconds=seconds, nanos=nanos)
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="48" sourceendlinenumber="48"> Example 5: Compute Timestamp from current time in Python.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="50" sourceendlinenumber="51"><code> timestamp = Timestamp()
+ timestamp.GetCurrentTime()
 </code></pre></div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -143,7 +141,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Nanos" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Nanos">Nanos</h4>
-              <div class="markdown level1 summary"><p> Non-negative fractions of a second at nanosecond resolution. Negative
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Non-negative fractions of a second at nanosecond resolution. Negative
  second values with fractions must still have non-negative nanos values
  that count forward in time. Must be from 0 to 999,999,999
  inclusive.</p>
@@ -169,8 +167,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Seconds" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Seconds">Seconds</h4>
-              <div class="markdown level1 summary"><p> Represents seconds of UTC time since Unix epoch
- 1970-01-01T00:00:00Z. Must be from from 0001-01-01T00:00:00Z to
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Represents seconds of UTC time since Unix epoch
+ 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to
  9999-12-31T23:59:59Z inclusive.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -196,7 +194,7 @@
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_FromDateTime_System_DateTime_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.FromDateTime(System.DateTime)">FromDateTime(DateTime)</h4>
-              <div class="markdown level1 summary"><p>Converts the specified <span class="xref">DateTime</span> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Converts the specified <span class="xref">DateTime</span> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -231,7 +229,7 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
-                    <td><p>The converted timestamp.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The converted timestamp.</p>
 </td>
                   </tr>
                 </tbody>
@@ -247,13 +245,13 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentException</span></td>
-                    <td><p>The <code>Kind</code> of <em>dateTime</em> is not <code>DateTimeKind.Utc</code>.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The <code>Kind</code> of <em>dateTime</em> is not <code>DateTimeKind.Utc</code>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_FromDateTimeOffset_System_DateTimeOffset_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.FromDateTimeOffset(System.DateTimeOffset)">FromDateTimeOffset(DateTimeOffset)</h4>
-              <div class="markdown level1 summary"><p>Converts the given <span class="xref">DateTimeOffset</span> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Converts the given <span class="xref">DateTimeOffset</span> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -273,7 +271,7 @@
                   <tr>
                     <td><span class="xref">System.DateTimeOffset</span></td>
                     <td><em>dateTimeOffset</em></td>
-                    <td><p>The date and time (with UTC offset) to convert to a timestamp.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The date and time (with UTC offset) to convert to a timestamp.</p>
 </td>
                   </tr>
                 </tbody>
@@ -289,18 +287,18 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
-                    <td><p>The converted timestamp.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The converted timestamp.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Protobuf_WellKnownTypes_Timestamp_FromDateTimeOffset_System_DateTimeOffset__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The offset is taken into consideration when converting the value (so the same instant in time
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The offset is taken into consideration when converting the value (so the same instant in time
 is represented) but is not a separate part of the resulting value. In other words, there is no
 roundtrip operation to retrieve the original <code>DateTimeOffset</code>.</p>
 </div>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_ToDateTime" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.ToDateTime">ToDateTime()</h4>
-              <div class="markdown level1 summary"><p>Converts this timestamp into a <span class="xref">DateTime</span>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Converts this timestamp into a <span class="xref">DateTime</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -318,16 +316,16 @@ roundtrip operation to retrieve the original <code>DateTimeOffset</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.DateTime</span></td>
-                    <td><p>This timestamp as a <code>DateTime</code>.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This timestamp as a <code>DateTime</code>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Protobuf_WellKnownTypes_Timestamp_ToDateTime_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The resulting <code>DateTime</code> will always have a <code>Kind</code> of <code>Utc</code>.
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="4">The resulting <code>DateTime</code> will always have a <code>Kind</code> of <code>Utc</code>.
 If the timestamp is not a precise number of ticks, it will be truncated towards the start
 of time. For example, a timestamp with a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp_Nanos">Nanos</a> value of 99 will result in a</p>
-<p><span class="xref">DateTime</span> value precisely on a second.</p>
+<p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="5" sourceendlinenumber="5"><span class="xref">DateTime</span> value precisely on a second.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -340,14 +338,14 @@ of time. For example, a timestamp with a <a class="xref" href="Google.Protobuf.W
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The timestamp contains invalid values; either it is
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The timestamp contains invalid values; either it is
 incorrectly normalized or is outside the valid range.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_ToDateTimeOffset" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.ToDateTimeOffset">ToDateTimeOffset()</h4>
-              <div class="markdown level1 summary"><p>Converts this timestamp into a <span class="xref">DateTimeOffset</span>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Converts this timestamp into a <span class="xref">DateTimeOffset</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -365,16 +363,16 @@ incorrectly normalized or is outside the valid range.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.DateTimeOffset</span></td>
-                    <td><p>This timestamp as a <code>DateTimeOffset</code>.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This timestamp as a <code>DateTimeOffset</code>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Protobuf_WellKnownTypes_Timestamp_ToDateTimeOffset_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The resulting <code>DateTimeOffset</code> will always have an <code>Offset</code> of zero.
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="4">The resulting <code>DateTimeOffset</code> will always have an <code>Offset</code> of zero.
 If the timestamp is not a precise number of ticks, it will be truncated towards the start
 of time. For example, a timestamp with a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp_Nanos">Nanos</a> value of 99 will result in a</p>
-<p><span class="xref">DateTimeOffset</span> value precisely on a second.</p>
+<p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="5" sourceendlinenumber="5"><span class="xref">DateTimeOffset</span> value precisely on a second.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -387,14 +385,14 @@ of time. For example, a timestamp with a <a class="xref" href="Google.Protobuf.W
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The timestamp contains invalid values; either it is
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The timestamp contains invalid values; either it is
 incorrectly normalized or is outside the valid range.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_ToDiagnosticString" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.ToDiagnosticString">ToDiagnosticString()</h4>
-              <div class="markdown level1 summary"><p>Returns a string representation of this <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a> for diagnostic purposes.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns a string representation of this <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a> for diagnostic purposes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -412,7 +410,7 @@ incorrectly normalized or is outside the valid range.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p>A string representation of this value.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A string representation of this value.</p>
 </td>
                   </tr>
                 </tbody>
@@ -420,7 +418,7 @@ incorrectly normalized or is outside the valid range.</p>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Protobuf.ICustomDiagnosticMessage.html#Google_Protobuf_ICustomDiagnosticMessage_ToDiagnosticString">ICustomDiagnosticMessage.ToDiagnosticString()</a></div>
               <h5 id="Google_Protobuf_WellKnownTypes_Timestamp_ToDiagnosticString_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Normally the returned value will be a JSON string value (including leading and trailing quotes) but
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="6">Normally the returned value will be a JSON string value (including leading and trailing quotes) but
 when the value is non-normalized or out of range, a JSON object representation will be returned
 instead, including a warning. This is to avoid exceptions being thrown when trying to
 diagnose problems - the regular JSON formatter will still throw an exception for non-normalized
@@ -429,7 +427,7 @@ values.</p>
               <h3 id="operators">Operators
               </h3>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_op_Addition_Google_Protobuf_WellKnownTypes_Timestamp_Google_Protobuf_WellKnownTypes_Duration_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.op_Addition(Google.Protobuf.WellKnownTypes.Timestamp,Google.Protobuf.WellKnownTypes.Duration)">Addition(Timestamp, Duration)</h4>
-              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a>, to obtain another <code>Timestamp</code>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Adds a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a>, to obtain another <code>Timestamp</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -449,13 +447,13 @@ values.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
                     <td><em>lhs</em></td>
-                    <td><p>The timestamp to add the duration to. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The timestamp to add the duration to. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
                     <td><em>rhs</em></td>
-                    <td><p>The duration to add. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The duration to add. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -471,13 +469,13 @@ values.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
-                    <td><p>The result of adding the duration to the timestamp.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The result of adding the duration to the timestamp.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_op_Subtraction_Google_Protobuf_WellKnownTypes_Timestamp_Google_Protobuf_WellKnownTypes_Duration_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.op_Subtraction(Google.Protobuf.WellKnownTypes.Timestamp,Google.Protobuf.WellKnownTypes.Duration)">Subtraction(Timestamp, Duration)</h4>
-              <div class="markdown level1 summary"><p>Subtracts a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> from a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a>, to obtain another <code>Timestamp</code>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Subtracts a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> from a <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a>, to obtain another <code>Timestamp</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -497,13 +495,13 @@ values.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
                     <td><em>lhs</em></td>
-                    <td><p>The timestamp to subtract the duration from. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The timestamp to subtract the duration from. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
                     <td><em>rhs</em></td>
-                    <td><p>The duration to subtract.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The duration to subtract.</p>
 </td>
                   </tr>
                 </tbody>
@@ -519,13 +517,13 @@ values.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
-                    <td><p>The result of subtracting the duration from the timestamp.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The result of subtracting the duration from the timestamp.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_op_Subtraction_Google_Protobuf_WellKnownTypes_Timestamp_Google_Protobuf_WellKnownTypes_Timestamp_" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.op_Subtraction(Google.Protobuf.WellKnownTypes.Timestamp,Google.Protobuf.WellKnownTypes.Timestamp)">Subtraction(Timestamp, Timestamp)</h4>
-              <div class="markdown level1 summary"><p>Returns the difference between one <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a> and another, as a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns the difference between one <a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a> and another, as a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -545,13 +543,13 @@ values.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
                     <td><em>lhs</em></td>
-                    <td><p>The timestamp to subtract from. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The timestamp to subtract from. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
                     <td><em>rhs</em></td>
-                    <td><p>The timestamp to subtract. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The timestamp to subtract. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -567,7 +565,7 @@ values.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
-                    <td><p>The difference between the two specified timestamps.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The difference between the two specified timestamps.</p>
 </td>
                   </tr>
                 </tbody>
@@ -625,8 +623,8 @@ values.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

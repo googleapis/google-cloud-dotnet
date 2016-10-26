@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubscriberSettings
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,13 +70,38 @@
               
               <h1 id="Google_Pubsub_V1_SubscriberSettings" data-uid="Google.Pubsub.V1.SubscriberSettings">Class SubscriberSettings
               </h1>
-              <div class="markdown level0 summary"><p>Settings for a Subscriber wrapper.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Settings for a <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">SubscriberSettings</span></div>
+                  <div class="level1"><span class="xref">Google.Api.Gax.Grpc.ServiceSettingsBase</span></div>
+                  <div class="level2"><span class="xref">SubscriberSettings</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">Google.Api.Gax.Grpc.ServiceSettingsBase.CallSettings</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Api.Gax.Grpc.ServiceSettingsBase.Clock</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Api.Gax.Grpc.ServiceSettingsBase.Scheduler</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Pubsub.V1</h6>
               <h6><strong>Assembly</strong>:Google.Pubsub.V1.dll</h6>
@@ -87,7 +112,7 @@
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Google_Pubsub_V1_SubscriberSettings__ctor" data-uid="Google.Pubsub.V1.SubscriberSettings.#ctor">SubscriberSettings()</h4>
-              <div class="markdown level1 summary"><p>Constructs a new SubscriberSettings object with default settings.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a new <a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a> object with default settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -97,8 +122,8 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_AcknowledgeSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.AcknowledgeSettings">AcknowledgeSettings</h4>
-              <div class="markdown level1 summary"><p><see cref="!:CallSettings"></see> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_">Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_">AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3"><span class="xref">CallSettings</span> for synchronous and asynchronous calls to
+<code>SubscriberClient.Acknowledge</code> and <code>SubscriberClient.AcknowledgeAsync</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -115,21 +140,21 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_AcknowledgeSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Acknowledge_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_">Acknowledge(String, IEnumerable&lt;String&gt;, CallSettings)</a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_AcknowledgeAsync_System_String_System_Collections_Generic_IEnumerable_System_String__CallSettings_">AcknowledgeAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a> <see cref="!:RetrySettings"></see> are:</p>
-<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 12000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default <code>SubscriberClient.Acknowledge</code> and
+<code>SubscriberClient.AcknowledgeAsync</code> <span class="xref">Google.Api.Gax.Grpc.RetrySettings</span> are:</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 12000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
-<p>Default RPC expiration is 600000 milliseconds.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_CreateSubscriptionSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.CreateSubscriptionSettings">CreateSubscriptionSettings</h4>
-              <div class="markdown level1 summary"><p><see cref="!:CallSettings"></see> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_">CreateSubscription(String, String, PushConfig, Int32, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_">CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3"><span class="xref">CallSettings</span> for synchronous and asynchronous calls to
+<code>SubscriberClient.CreateSubscription</code> and <code>SubscriberClient.CreateSubscriptionAsync</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -146,21 +171,21 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_CreateSubscriptionSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscription_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_">CreateSubscription(String, String, PushConfig, Int32, CallSettings)</a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_CreateSubscriptionAsync_System_String_System_String_Google_Pubsub_V1_PushConfig_System_Int32_CallSettings_">CreateSubscriptionAsync(String, String, PushConfig, Int32, CallSettings)</a> <see cref="!:RetrySettings"></see> are:</p>
-<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default <code>SubscriberClient.CreateSubscription</code> and
+<code>SubscriberClient.CreateSubscriptionAsync</code> <span class="xref">Google.Api.Gax.Grpc.RetrySettings</span> are:</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
-<p>Default RPC expiration is 600000 milliseconds.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_DeleteSubscriptionSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.DeleteSubscriptionSettings">DeleteSubscriptionSettings</h4>
-              <div class="markdown level1 summary"><p><see cref="!:CallSettings"></see> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscription_System_String_CallSettings_">DeleteSubscription(String, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscriptionAsync_System_String_CallSettings_">DeleteSubscriptionAsync(String, CallSettings)</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3"><span class="xref">CallSettings</span> for synchronous and asynchronous calls to
+<code>SubscriberClient.DeleteSubscription</code> and <code>SubscriberClient.DeleteSubscriptionAsync</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -177,21 +202,21 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_DeleteSubscriptionSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscription_System_String_CallSettings_">DeleteSubscription(String, CallSettings)</a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_DeleteSubscriptionAsync_System_String_CallSettings_">DeleteSubscriptionAsync(String, CallSettings)</a> <see cref="!:RetrySettings"></see> are:</p>
-<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default <code>SubscriberClient.DeleteSubscription</code> and
+<code>SubscriberClient.DeleteSubscriptionAsync</code> <span class="xref">Google.Api.Gax.Grpc.RetrySettings</span> are:</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
-<p>Default RPC expiration is 600000 milliseconds.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_GetSubscriptionSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.GetSubscriptionSettings">GetSubscriptionSettings</h4>
-              <div class="markdown level1 summary"><p><see cref="!:CallSettings"></see> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscription_System_String_CallSettings_">GetSubscription(String, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscriptionAsync_System_String_CallSettings_">GetSubscriptionAsync(String, CallSettings)</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3"><span class="xref">CallSettings</span> for synchronous and asynchronous calls to
+<code>SubscriberClient.GetSubscription</code> and <code>SubscriberClient.GetSubscriptionAsync</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -208,20 +233,20 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_GetSubscriptionSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscription_System_String_CallSettings_">GetSubscription(String, CallSettings)</a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_GetSubscriptionAsync_System_String_CallSettings_">GetSubscriptionAsync(String, CallSettings)</a> <see cref="!:RetrySettings"></see> are:</p>
-<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default <code>SubscriberClient.GetSubscription</code> and
+<code>SubscriberClient.GetSubscriptionAsync</code> <span class="xref">Google.Api.Gax.Grpc.RetrySettings</span> are:</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
-<p>Default RPC expiration is 600000 milliseconds.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_IdempotentRetryFilter" data-uid="Google.Pubsub.V1.SubscriberSettings.IdempotentRetryFilter">IdempotentRetryFilter</h4>
-              <div class="markdown level1 summary"><p>The filter specifying which RPC <see cref="!:StatusCode"></see>s are eligible for retry
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The filter specifying which RPC <a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode">StatusCode</a>s are eligible for retry
 for &quot;Idempotent&quot; <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -239,18 +264,18 @@ for &quot;Idempotent&quot; <a class="xref" href="Google.Pubsub.V1.SubscriberClie
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+                    <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html#Grpc_Core_RpcException">RpcException</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_IdempotentRetryFilter_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The eligible RPC <see cref="!:StatusCode"></see>s for retry for &quot;Idempotent&quot; RPC methods are:</p>
-<ul><li><see cref="!:StatusCode.DeadlineExceeded"></see></li><li><see cref="!:StatusCode.Unavailable"></see></li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The eligible RPC <a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode">StatusCode</a>s for retry for &quot;Idempotent&quot; RPC methods are:</p>
+<ul><li><a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode_DeadlineExceeded">DeadlineExceeded</a></li><li><a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode_Unavailable">Unavailable</a></li></ul>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_ListSubscriptionsSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.ListSubscriptionsSettings">ListSubscriptionsSettings</h4>
-              <div class="markdown level1 summary"><p><see cref="!:CallSettings"></see> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__CallSettings_">ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__CallSettings_">ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3"><span class="xref">CallSettings</span> for synchronous and asynchronous calls to
+<code>SubscriberClient.ListSubscriptions</code> and <code>SubscriberClient.ListSubscriptionsAsync</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -267,21 +292,21 @@ for &quot;Idempotent&quot; <a class="xref" href="Google.Pubsub.V1.SubscriberClie
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_ListSubscriptionsSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptions_System_String_System_String_System_Nullable_System_Int32__CallSettings_">ListSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ListSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__CallSettings_">ListSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a> <see cref="!:RetrySettings"></see> are:</p>
-<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default <code>SubscriberClient.ListSubscriptions</code> and
+<code>SubscriberClient.ListSubscriptionsAsync</code> <span class="xref">Google.Api.Gax.Grpc.RetrySettings</span> are:</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
-<p>Default RPC expiration is 600000 milliseconds.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_ModifyAckDeadlineSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.ModifyAckDeadlineSettings">ModifyAckDeadlineSettings</h4>
-              <div class="markdown level1 summary"><p><see cref="!:CallSettings"></see> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_">ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_">ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3"><span class="xref">CallSettings</span> for synchronous and asynchronous calls to
+<code>SubscriberClient.ModifyAckDeadline</code> and <code>SubscriberClient.ModifyAckDeadlineAsync</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -298,21 +323,21 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_ModifyAckDeadlineSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadline_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_">ModifyAckDeadline(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyAckDeadlineAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Int32_CallSettings_">ModifyAckDeadlineAsync(String, IEnumerable&lt;String&gt;, Int32, CallSettings)</a> <see cref="!:RetrySettings"></see> are:</p>
-<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default <code>SubscriberClient.ModifyAckDeadline</code> and
+<code>SubscriberClient.ModifyAckDeadlineAsync</code> <span class="xref">Google.Api.Gax.Grpc.RetrySettings</span> are:</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
-<p>Default RPC expiration is 600000 milliseconds.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_ModifyPushConfigSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.ModifyPushConfigSettings">ModifyPushConfigSettings</h4>
-              <div class="markdown level1 summary"><p><see cref="!:CallSettings"></see> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfig_System_String_Google_Pubsub_V1_PushConfig_CallSettings_">ModifyPushConfig(String, PushConfig, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_CallSettings_">ModifyPushConfigAsync(String, PushConfig, CallSettings)</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3"><span class="xref">CallSettings</span> for synchronous and asynchronous calls to
+<code>SubscriberClient.ModifyPushConfig</code> and <code>SubscriberClient.ModifyPushConfigAsync</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -329,20 +354,20 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_ModifyPushConfigSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfig_System_String_Google_Pubsub_V1_PushConfig_CallSettings_">ModifyPushConfig(String, PushConfig, CallSettings)</a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ModifyPushConfigAsync_System_String_Google_Pubsub_V1_PushConfig_CallSettings_">ModifyPushConfigAsync(String, PushConfig, CallSettings)</a> <see cref="!:RetrySettings"></see> are:</p>
-<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default <code>SubscriberClient.ModifyPushConfig</code> and
+<code>SubscriberClient.ModifyPushConfigAsync</code> <span class="xref">Google.Api.Gax.Grpc.RetrySettings</span> are:</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 60000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
-<p>Default RPC expiration is 600000 milliseconds.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_NonIdempotentRetryFilter" data-uid="Google.Pubsub.V1.SubscriberSettings.NonIdempotentRetryFilter">NonIdempotentRetryFilter</h4>
-              <div class="markdown level1 summary"><p>The filter specifying which RPC <see cref="!:StatusCode"></see>s are eligible for retry
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The filter specifying which RPC <a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode">StatusCode</a>s are eligible for retry
 for &quot;NonIdempotent&quot; <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -360,17 +385,17 @@ for &quot;NonIdempotent&quot; <a class="xref" href="Google.Pubsub.V1.SubscriberC
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">RpcException</span>&gt;</td>
+                    <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Grpc.Core.RpcException.html#Grpc_Core_RpcException">RpcException</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_NonIdempotentRetryFilter_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>There are no RPC <see cref="!:StatusCode"></see>s eligible for retry for &quot;NonIdempotent&quot; RPC methods.</p>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">There are no RPC <a class="xref" href="Grpc.Core.StatusCode.html#Grpc_Core_StatusCode">StatusCode</a>s eligible for retry for &quot;NonIdempotent&quot; RPC methods.</p>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_PullSettings" data-uid="Google.Pubsub.V1.SubscriberSettings.PullSettings">PullSettings</h4>
-              <div class="markdown level1 summary"><p><see cref="!:CallSettings"></see> for synchronous and asynchronous calls to</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Pull_System_String_System_Boolean_System_Int32_CallSettings_">Pull(String, Boolean, Int32, CallSettings)</a> and <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_CallSettings_">PullAsync(String, Boolean, Int32, CallSettings)</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3"><span class="xref">CallSettings</span> for synchronous and asynchronous calls to
+<code>SubscriberClient.Pull</code> and <code>SubscriberClient.PullAsync</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -387,22 +412,22 @@ for &quot;NonIdempotent&quot; <a class="xref" href="Google.Pubsub.V1.SubscriberC
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_PullSettings_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_Pull_System_String_System_Boolean_System_Int32_CallSettings_">Pull(String, Boolean, Int32, CallSettings)</a> and</p>
-<p><a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_PullAsync_System_String_System_Boolean_System_Int32_CallSettings_">PullAsync(String, Boolean, Int32, CallSettings)</a> <see cref="!:RetrySettings"></see> are:</p>
-<p><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 12000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default <code>SubscriberClient.Pull</code> and
+<code>SubscriberClient.PullAsync</code> <span class="xref">Google.Api.Gax.Grpc.RetrySettings</span> are:</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><ul><li>Initial retry delay: 100 milliseconds</li><li>Retry delay multiplier: 1.3</li><li>Retry maximum delay: 60000 milliseconds</li><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Timeout maximum delay: 12000 milliseconds</li></ul>
 Retry will be attempted on the following response status codes:</p>
-<p>Default RPC expiration is 600000 milliseconds.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Default RPC expiration is 600000 milliseconds.</p>
 </div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_Clone" data-uid="Google.Pubsub.V1.SubscriberSettings.Clone">Clone()</h4>
-              <div class="markdown level1 summary"><p>Creates a deep clone of this object, with all the same property values.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a deep clone of this object, with all the same property values.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -420,13 +445,13 @@ Retry will be attempted on the following response status codes:</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a></td>
-                    <td><p>A deep clone of this set of Subscriber settings.</p>
+                    <td><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A deep clone of this <a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a> object.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_GetDefault" data-uid="Google.Pubsub.V1.SubscriberSettings.GetDefault">GetDefault()</h4>
-              <div class="markdown level1 summary"><p>Get a new instance of the default <a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Get a new instance of the default <a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -444,13 +469,13 @@ Retry will be attempted on the following response status codes:</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a></td>
-                    <td><p>A new instance of the default SubscriberSettings.</p>
+                    <td><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A new instance of the default <a class="xref" href="Google.Pubsub.V1.SubscriberSettings.html#Google_Pubsub_V1_SubscriberSettings">SubscriberSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_GetDefaultRetryBackoff" data-uid="Google.Pubsub.V1.SubscriberSettings.GetDefaultRetryBackoff">GetDefaultRetryBackoff()</h4>
-              <div class="markdown level1 summary"><p>&quot;Default&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">&quot;Default&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -467,18 +492,18 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">BackoffSettings</span></td>
-                    <td><p>The &quot;Default&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
+                    <td><span class="xref">Google.Api.Gax.Grpc.BackoffSettings</span></td>
+                    <td><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The &quot;Default&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_GetDefaultRetryBackoff_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The &quot;Default&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods is defined as:</p>
-<ul><li>Initial delay: 100 milliseconds</li><li>Delay multiplier: 1.3</li><li>Maximum delay: 60000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The &quot;Default&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods is defined as:</p>
+<ul><li>Initial delay: 100 milliseconds</li><li>Maximum delay: 60000 milliseconds</li><li>Delay multiplier: 1.3</li></ul>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_GetDefaultTimeoutBackoff" data-uid="Google.Pubsub.V1.SubscriberSettings.GetDefaultTimeoutBackoff">GetDefaultTimeoutBackoff()</h4>
-              <div class="markdown level1 summary"><p>&quot;Default&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">&quot;Default&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -495,18 +520,18 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">BackoffSettings</span></td>
-                    <td><p>The &quot;Default&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
+                    <td><span class="xref">Google.Api.Gax.Grpc.BackoffSettings</span></td>
+                    <td><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The &quot;Default&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_GetDefaultTimeoutBackoff_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The &quot;Default&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods is defined as:</p>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The &quot;Default&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods is defined as:</p>
 <ul><li>Initial timeout: 60000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Maximum timeout: 60000 milliseconds</li></ul>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_GetMessagingRetryBackoff" data-uid="Google.Pubsub.V1.SubscriberSettings.GetMessagingRetryBackoff">GetMessagingRetryBackoff()</h4>
-              <div class="markdown level1 summary"><p>&quot;Messaging&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">&quot;Messaging&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -523,18 +548,18 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">BackoffSettings</span></td>
-                    <td><p>The &quot;Messaging&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
+                    <td><span class="xref">Google.Api.Gax.Grpc.BackoffSettings</span></td>
+                    <td><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The &quot;Messaging&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_GetMessagingRetryBackoff_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The &quot;Messaging&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods is defined as:</p>
-<ul><li>Initial delay: 100 milliseconds</li><li>Delay multiplier: 1.3</li><li>Maximum delay: 60000 milliseconds</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The &quot;Messaging&quot; retry backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods is defined as:</p>
+<ul><li>Initial delay: 100 milliseconds</li><li>Maximum delay: 60000 milliseconds</li><li>Delay multiplier: 1.3</li></ul>
 </div>
               <h4 id="Google_Pubsub_V1_SubscriberSettings_GetMessagingTimeoutBackoff" data-uid="Google.Pubsub.V1.SubscriberSettings.GetMessagingTimeoutBackoff">GetMessagingTimeoutBackoff()</h4>
-              <div class="markdown level1 summary"><p>&quot;Messaging&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">&quot;Messaging&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -551,14 +576,14 @@ Retry will be attempted on the following response status codes:</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">BackoffSettings</span></td>
-                    <td><p>The &quot;Messaging&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
+                    <td><span class="xref">Google.Api.Gax.Grpc.BackoffSettings</span></td>
+                    <td><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The &quot;Messaging&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Pubsub_V1_SubscriberSettings_GetMessagingTimeoutBackoff_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The &quot;Messaging&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods is defined as:</p>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Pubsub.V1.SubscriberSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The &quot;Messaging&quot; timeout backoff for <a class="xref" href="Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient">SubscriberClient</a> RPC methods is defined as:</p>
 <ul><li>Initial timeout: 12000 milliseconds</li><li>Timeout multiplier: 1.0</li><li>Maximum timeout: 12000 milliseconds</li></ul>
 </div>
             </article>
@@ -589,8 +614,8 @@ Retry will be attempted on the following response status codes:</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

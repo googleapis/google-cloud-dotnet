@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListSinksRequest
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,13 +70,28 @@
               
               <h1 id="Google_Logging_V2_ListSinksRequest" data-uid="Google.Logging.V2.ListSinksRequest">Class ListSinksRequest
               </h1>
-              <div class="markdown level0 summary"><p> The parameters to <code>ListSinks</code>.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.ListSinksRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The parameters to <code>ListSinks</code>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ListSinksRequest</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Logging.V2</h6>
               <h6><strong>Assembly</strong>:Google.Logging.V2.dll</h6>
@@ -87,10 +102,9 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Logging_V2_ListSinksRequest_PageSize" data-uid="Google.Logging.V2.ListSinksRequest.PageSize">PageSize</h4>
-              <div class="markdown level1 summary"><p> Optional. The maximum number of results to return from this request.
- You must check for presence of <code>nextPageToken</code> to determine if additional
- results are available, which you can retrieve by passing the
- <code>nextPageToken</code> value as the <code>pageToken</code> parameter in the next request.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListSinksRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Optional. The maximum number of results to return from this request.
+ Non-positive values are ignored.  The presence of <code>nextPageToken</code> in the
+ response indicates that more results might be available.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -112,11 +126,13 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.Grpc.IPageRequest.PageSize</span></div>
               <h4 id="Google_Logging_V2_ListSinksRequest_PageToken" data-uid="Google.Logging.V2.ListSinksRequest.PageToken">PageToken</h4>
-              <div class="markdown level1 summary"><p> Optional. If the <code>pageToken</code> parameter is supplied, then the next page of
- results is retrieved.  The <code>pageToken</code> parameter must be set to the value
- of the <code>nextPageToken</code> from the previous response.
- The value of <code>parent</code> must be the same as in the previous request.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListSinksRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Optional. If present, then retrieve the next batch of results from the
+ preceding call to this method.  <code>pageToken</code> must be the value of
+ <code>nextPageToken</code> from the previous response.  The values of other method
+ parameters should be identical to those in the previous call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -138,8 +154,10 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.Grpc.IPageRequest.PageToken</span></div>
               <h4 id="Google_Logging_V2_ListSinksRequest_Parent" data-uid="Google.Logging.V2.ListSinksRequest.Parent">Parent</h4>
-              <div class="markdown level1 summary"><p> Required. The resource name containing the sinks.
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListSinksRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Required. The cloud resource containing the sinks.
  Example: <code>&quot;projects/my-logging-project&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -190,8 +208,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

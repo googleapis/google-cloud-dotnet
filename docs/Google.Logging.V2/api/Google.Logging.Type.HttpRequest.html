@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HttpRequest
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,9 @@
               
               <h1 id="Google_Logging_Type_HttpRequest" data-uid="Google.Logging.Type.HttpRequest">Class HttpRequest
               </h1>
-              <div class="markdown level0 summary"><p> A common proto for logging HTTP requests.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> A common proto for logging HTTP requests. Only contains semantics
+ defined by the HTTP specification. Product-specific logging
+ information MUST be defined in a separate message.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -80,6 +82,12 @@
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
                 <div>
                   <span class="xref">System.Object.GetType()</span>
                 </div>
@@ -93,43 +101,34 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class HttpRequest : IMessage&lt;HttpRequest&gt;, IMessage, IEquatable&lt;HttpRequest&gt;, IDeepCloneable&lt;HttpRequest&gt;</code></pre>
               </div>
-              <h3 id="constructors">Constructors
+              <h3 id="properties">Properties
               </h3>
-              <h4 id="Google_Logging_Type_HttpRequest__ctor" data-uid="Google.Logging.Type.HttpRequest.#ctor">HttpRequest()</h4>
-              <div class="markdown level1 summary"></div>
+              <h4 id="Google_Logging_Type_HttpRequest_CacheFillBytes" data-uid="Google.Logging.Type.HttpRequest.CacheFillBytes">CacheFillBytes</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The number of HTTP response bytes inserted into cache. Set only when a
+ cache fill was attempted.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public HttpRequest()</code></pre>
+                <pre><code class="lang-csharp hljs">public long CacheFillBytes { get; set; }</code></pre>
               </div>
-              <h4 id="Google_Logging_Type_HttpRequest__ctor_Google_Logging_Type_HttpRequest_" data-uid="Google.Logging.Type.HttpRequest.#ctor(Google.Logging.Type.HttpRequest)">HttpRequest(HttpRequest)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public HttpRequest(HttpRequest other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
+              <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
                     <th>Type</th>
-                    <th>Name</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Logging.Type.HttpRequest.html#Google_Logging_Type_HttpRequest">HttpRequest</a></td>
-                    <td><em>other</em></td>
+                    <td><span class="xref">System.Int64</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="properties">Properties
-              </h3>
               <h4 id="Google_Logging_Type_HttpRequest_CacheHit" data-uid="Google.Logging.Type.HttpRequest.CacheHit">CacheHit</h4>
-              <div class="markdown level1 summary"><p> Whether or not an entity was served from cache
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Whether or not an entity was served from cache
  (with or without validation).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -152,9 +151,81 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Logging_Type_HttpRequest_CacheLookup" data-uid="Google.Logging.Type.HttpRequest.CacheLookup">CacheLookup</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Whether or not a cache lookup was attempted.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool CacheLookup { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_Type_HttpRequest_CacheValidatedWithOriginServer" data-uid="Google.Logging.Type.HttpRequest.CacheValidatedWithOriginServer">CacheValidatedWithOriginServer</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Whether or not the response was validated with the origin server before
+ being served from cache. This field is only meaningful if <code>cache_hit</code> is
+ True.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool CacheValidatedWithOriginServer { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_Type_HttpRequest_Latency" data-uid="Google.Logging.Type.HttpRequest.Latency">Latency</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The request processing latency on the server, from the time the request was
+ received until the response was sent.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Duration Latency { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Logging_Type_HttpRequest_Referer" data-uid="Google.Logging.Type.HttpRequest.Referer">Referer</h4>
-              <div class="markdown level1 summary"><p> The referer URL of the request, as defined in
- <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">HTTP/1.1 Header Field Definitions</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The referer URL of the request, as defined in
+ <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html" sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="3" sourceendlinenumber="3">HTTP/1.1 Header Field Definitions</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -177,7 +248,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_Type_HttpRequest_RemoteIp" data-uid="Google.Logging.Type.HttpRequest.RemoteIp">RemoteIp</h4>
-              <div class="markdown level1 summary"><p> The IP address (IPv4 or IPv6) of the client that issued the HTTP
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The IP address (IPv4 or IPv6) of the client that issued the HTTP
  request. Examples: <code>&quot;192.168.1.1&quot;</code>, <code>&quot;FE80::0202:B3FF:FE1E:8329&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -201,7 +272,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_Type_HttpRequest_RequestMethod" data-uid="Google.Logging.Type.HttpRequest.RequestMethod">RequestMethod</h4>
-              <div class="markdown level1 summary"><p> The request method. Examples: <code>&quot;GET&quot;</code>, <code>&quot;HEAD&quot;</code>, <code>&quot;PUT&quot;</code>, <code>&quot;POST&quot;</code>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The request method. Examples: <code>&quot;GET&quot;</code>, <code>&quot;HEAD&quot;</code>, <code>&quot;PUT&quot;</code>, <code>&quot;POST&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -224,7 +295,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_Type_HttpRequest_RequestSize" data-uid="Google.Logging.Type.HttpRequest.RequestSize">RequestSize</h4>
-              <div class="markdown level1 summary"><p> The size of the HTTP request message in bytes, including the request
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The size of the HTTP request message in bytes, including the request
  headers and the request body.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -248,7 +319,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_Type_HttpRequest_RequestUrl" data-uid="Google.Logging.Type.HttpRequest.RequestUrl">RequestUrl</h4>
-              <div class="markdown level1 summary"><p> The scheme (http, https), the host name, the path and the query
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The scheme (http, https), the host name, the path and the query
  portion of the URL that was requested.
  Example: <code>&quot;http://example.com/some/info?color=red&quot;</code>.</p>
 </div>
@@ -273,7 +344,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_Type_HttpRequest_ResponseSize" data-uid="Google.Logging.Type.HttpRequest.ResponseSize">ResponseSize</h4>
-              <div class="markdown level1 summary"><p> The size of the HTTP response message sent back to the client, in bytes,
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The size of the HTTP response message sent back to the client, in bytes,
  including the response headers and the response body.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -296,8 +367,32 @@
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Logging_Type_HttpRequest_ServerIp" data-uid="Google.Logging.Type.HttpRequest.ServerIp">ServerIp</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The IP address (IPv4 or IPv6) of the origin server that the request was
+ sent to.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string ServerIp { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Logging_Type_HttpRequest_Status" data-uid="Google.Logging.Type.HttpRequest.Status">Status</h4>
-              <div class="markdown level1 summary"><p> The response code indicating the status of response.
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The response code indicating the status of response.
  Examples: 200, 404.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -321,7 +416,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_Type_HttpRequest_UserAgent" data-uid="Google.Logging.Type.HttpRequest.UserAgent">UserAgent</h4>
-              <div class="markdown level1 summary"><p> The user agent sent by the client. Example:
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The user agent sent by the client. Example:
  <code>&quot;Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Q312461; .NET CLR 1.0.3705)&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -344,207 +439,6 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Logging_Type_HttpRequest_ValidatedWithOriginServer" data-uid="Google.Logging.Type.HttpRequest.ValidatedWithOriginServer">ValidatedWithOriginServer</h4>
-              <div class="markdown level1 summary"><p> Whether or not the response was validated with the origin server before
- being served from cache. This field is only meaningful if <code>cache_hit</code> is
- True.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool ValidatedWithOriginServer { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="methods">Methods
-              </h3>
-              <h4 id="Google_Logging_Type_HttpRequest_CalculateSize" data-uid="Google.Logging.Type.HttpRequest.CalculateSize">CalculateSize()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
-              <h4 id="Google_Logging_Type_HttpRequest_Clone" data-uid="Google.Logging.Type.HttpRequest.Clone">Clone()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public HttpRequest Clone()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Logging.Type.HttpRequest.html#Google_Logging_Type_HttpRequest">HttpRequest</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;HttpRequest&gt;.Clone()</a></div>
-              <h4 id="Google_Logging_Type_HttpRequest_GetHashCode" data-uid="Google.Logging.Type.HttpRequest.GetHashCode">GetHashCode()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.GetHashCode()</span></div>
-              <h4 id="Google_Logging_Type_HttpRequest_MergeFrom_Google_Logging_Type_HttpRequest_" data-uid="Google.Logging.Type.HttpRequest.MergeFrom(Google.Logging.Type.HttpRequest)">MergeFrom(HttpRequest)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(HttpRequest other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Logging.Type.HttpRequest.html#Google_Logging_Type_HttpRequest">HttpRequest</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;HttpRequest&gt;.MergeFrom(HttpRequest)</a></div>
-              <h4 id="Google_Logging_Type_HttpRequest_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Logging.Type.HttpRequest.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
-                    <td><em>input</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
-              <h4 id="Google_Logging_Type_HttpRequest_ToString" data-uid="Google.Logging.Type.HttpRequest.ToString">ToString()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
-              <h4 id="Google_Logging_Type_HttpRequest_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Logging.Type.HttpRequest.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
-                    <td><em>output</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
             </article>
           </div>
           
@@ -573,8 +467,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

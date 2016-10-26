@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AsyncRecognizeResponse
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,9 +70,11 @@
               
               <h1 id="Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse" data-uid="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse">Class AsyncRecognizeResponse
               </h1>
-              <div class="markdown level0 summary"><p> <code>AsyncRecognizeResponse</code> is the only message returned to the client by
- <code>AsyncRecognize</code>. It contains the result as zero or more
- sequential <code>RecognizeResponse</code> messages.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> <code>AsyncRecognizeResponse</code> is the only message returned to the client by
+ <code>AsyncRecognize</code>. It contains the result as zero or more sequential
+ <code>SpeechRecognitionResult</code> messages. It is included in the <code>result.response</code>
+ field of the <code>Operation</code> returned by the <code>GetOperation</code> call of the
+ <code>google::longrunning::Operations</code> service.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -104,7 +106,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse_Results" data-uid="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.Results">Results</h4>
-              <div class="markdown level1 summary"><p> [Output-only] Sequential list of transcription results corresponding to
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> [Output-only] Sequential list of transcription results corresponding to
  sequential portions of audio.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -155,8 +157,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

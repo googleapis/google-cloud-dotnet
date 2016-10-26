@@ -98,7 +98,7 @@ method returns an <code>IPagedEnumerable&lt;ListTopicsResponse, Topic&gt;</code>
 retrieve one resource at a time. The implementation will make API
 calls as it needs to, retrieving a page at a time and then returning
 the resources as the caller requests them.</p>
-<h2 id="iresourceenumerabletresponse-tresource" sourcefile="page-streaming.md" sourcestartlinenumber="52" sourceendlinenumber="52"><code>IResourceEnumerable&lt;TResponse, TResource&gt;</code></h2>
+<h2 id="iresponseenumerabletresponse-tresource" sourcefile="page-streaming.md" sourcestartlinenumber="52" sourceendlinenumber="52"><code>IResponseEnumerable&lt;TResponse, TResource&gt;</code></h2>
 <p sourcefile="page-streaming.md" sourcestartlinenumber="54" sourceendlinenumber="62">For more advanced scenarios, however, your application may need access
 to the pages returned by the API instead. The
 <a href="api/Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2_AsPages" sourcefile="page-streaming.md" sourcestartlinenumber="56" sourceendlinenumber="56">IPagedEnumerable&lt;TResponse, TResource&gt;.AsPages()</a>
@@ -108,7 +108,7 @@ response provides access to the individual resources within the page, and some A
 provide additional information such as the time taken for the request or the total number of
 results across all pages. As you iterate over the pages, API requests are made
 transparently, propagating the page token from one response to the next request.</p>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="64" sourceendlinenumber="66"><code>IResourceEnumerable&lt;TResponse, TResource&gt;</code> provides one additional method, 
+<p sourcefile="page-streaming.md" sourcestartlinenumber="64" sourceendlinenumber="66"><code>IResponseEnumerable&lt;TResponse, TResource&gt;</code> provides one additional method, 
 <a href="api/Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_" sourcefile="page-streaming.md" sourcestartlinenumber="65" sourceendlinenumber="65">WithFixedSize()</a>
 to cater for web applications which require precise page sizes.</p>
 <p sourcefile="page-streaming.md" sourcestartlinenumber="68" sourceendlinenumber="72">Although APIs generally allow the application to specify the page size to return, this

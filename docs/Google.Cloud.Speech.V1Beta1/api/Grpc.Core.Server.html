@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Server
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Grpc_Core_Server" data-uid="Grpc.Core.Server">Class Server
               </h1>
-              <div class="markdown level0 summary"><p>gRPC server. A single server can server arbitrary number of services and can listen on more than one ports.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="2">gRPC server. A single server can server arbitrary number of services and can listen on more than one ports.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,7 +102,7 @@
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Grpc_Core_Server__ctor" data-uid="Grpc.Core.Server.#ctor">Server()</h4>
-              <div class="markdown level1 summary"><p>Creates a new server.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a new server.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -110,7 +110,7 @@
                 <pre><code class="lang-csharp hljs">public Server()</code></pre>
               </div>
               <h4 id="Grpc_Core_Server__ctor_System_Collections_Generic_IEnumerable_Grpc_Core_ChannelOption__" data-uid="Grpc.Core.Server.#ctor(System.Collections.Generic.IEnumerable{Grpc.Core.ChannelOption})">Server(IEnumerable&lt;ChannelOption&gt;)</h4>
-              <div class="markdown level1 summary"><p>Creates a new server.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a new server.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -130,7 +130,7 @@
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Grpc.Core.ChannelOption.html#Grpc_Core_ChannelOption">ChannelOption</a>&gt;</td>
                     <td><em>options</em></td>
-                    <td><p>Channel options.</p>
+                    <td><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Channel options.</p>
 </td>
                   </tr>
                 </tbody>
@@ -138,7 +138,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Grpc_Core_Server_Ports" data-uid="Grpc.Core.Server.Ports">Ports</h4>
-              <div class="markdown level1 summary"><p>Ports on which the server will listen once started. Register a port with this
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Ports on which the server will listen once started. Register a port with this
 server by adding its definition to this collection.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -161,8 +161,32 @@ server by adding its definition to this collection.</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Grpc_Core_Server_RequestCallTokensPerCompletionQueue" data-uid="Grpc.Core.Server.RequestCallTokensPerCompletionQueue">RequestCallTokensPerCompletionQueue</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Experimental API. Might anytime change without prior notice.
+Number or calls requested via grpc_server_request_call at any given time for each completion queue.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int RequestCallTokensPerCompletionQueue { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Grpc_Core_Server_Services" data-uid="Grpc.Core.Server.Services">Services</h4>
-              <div class="markdown level1 summary"><p>Services that will be exported by the server once started. Register a service with this
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Services that will be exported by the server once started. Register a service with this
 server by adding its definition to this collection.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -186,7 +210,7 @@ server by adding its definition to this collection.</p>
                 </tbody>
               </table>
               <h4 id="Grpc_Core_Server_ShutdownTask" data-uid="Grpc.Core.Server.ShutdownTask">ShutdownTask</h4>
-              <div class="markdown level1 summary"><p>To allow awaiting termination of the server.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="2">To allow awaiting termination of the server.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -211,7 +235,7 @@ server by adding its definition to this collection.</p>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Grpc_Core_Server_KillAsync" data-uid="Grpc.Core.Server.KillAsync">KillAsync()</h4>
-              <div class="markdown level1 summary"><p>Requests server shutdown while cancelling all the in-progress calls.
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Requests server shutdown while cancelling all the in-progress calls.
 The returned task finishes when shutdown procedure is complete.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -235,10 +259,10 @@ The returned task finishes when shutdown procedure is complete.</p>
                 </tbody>
               </table>
               <h5 id="Grpc_Core_Server_KillAsync_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>It is strongly recommended to shutdown all previously created servers before exiting from the process.</p>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="2">It is strongly recommended to shutdown all previously created servers before exiting from the process.</p>
 </div>
               <h4 id="Grpc_Core_Server_ShutdownAsync" data-uid="Grpc.Core.Server.ShutdownAsync">ShutdownAsync()</h4>
-              <div class="markdown level1 summary"><p>Requests server shutdown and when there are no more calls being serviced,
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Requests server shutdown and when there are no more calls being serviced,
 cleans up used resources. The returned task finishes when shutdown procedure
 is complete.</p>
 </div>
@@ -263,10 +287,10 @@ is complete.</p>
                 </tbody>
               </table>
               <h5 id="Grpc_Core_Server_ShutdownAsync_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>It is strongly recommended to shutdown all previously created servers before exiting from the process.</p>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="2">It is strongly recommended to shutdown all previously created servers before exiting from the process.</p>
 </div>
               <h4 id="Grpc_Core_Server_Start" data-uid="Grpc.Core.Server.Start">Start()</h4>
-              <div class="markdown level1 summary"><p>Starts the server.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Grpc.Core.Server.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Starts the server.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -301,8 +325,8 @@ is complete.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

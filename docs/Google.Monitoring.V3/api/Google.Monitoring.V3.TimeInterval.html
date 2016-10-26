@@ -70,8 +70,9 @@
               
               <h1 id="Google_Monitoring_V3_TimeInterval" data-uid="Google.Monitoring.V3.TimeInterval">Class TimeInterval
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeInterval.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> A time interval extending from after <code>startTime</code> through <code>endTime</code>.  If
- <code>startTime</code> is omitted, the interval is the single point in time, <code>endTime</code>.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeInterval.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> A time interval extending just after a start time through an end time.
+ If the start time is the same as the end time, then the interval
+ represents a single point in time.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -103,8 +104,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Monitoring_V3_TimeInterval_EndTime" data-uid="Google.Monitoring.V3.TimeInterval.EndTime">EndTime</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeInterval.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Required. The end of the interval. The interval includes this
- time.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeInterval.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Required. The end of the time interval.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -127,10 +127,9 @@
                 </tbody>
               </table>
               <h4 id="Google_Monitoring_V3_TimeInterval_StartTime" data-uid="Google.Monitoring.V3.TimeInterval.StartTime">StartTime</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeInterval.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> If this value is omitted, the interval is a point in time,
- <code>endTime</code>.  If <code>startTime</code> is present, it must be earlier than
- (less than) <code>endTime</code>.  The interval begins after
- <code>startTime</code>&amp;mdash;it does not include <code>startTime</code>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeInterval.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Optional. The beginning of the time interval.  The default value
+ for the start time is the end time. The start time must not be
+ later than the end time.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

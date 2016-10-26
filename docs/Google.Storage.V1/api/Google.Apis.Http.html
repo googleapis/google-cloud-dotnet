@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Apis.Http
+   | Google.Storage.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Apis.Http
+   | Google.Storage.V1 ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Apis_Http" data-uid="Google.Apis.Http">Namespace Google.Apis.Http
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Google.Apis.Http.BackOffHandler.html#Google_Apis_Http_BackOffHandler">BackOffHandler</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.BackOffHandler.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A thread-safe back-off handler which handles an abnormal HTTP response or an exception with </p>
+<p sourcefile="obj/api/Google.Apis.Http.BackOffHandler.yml" sourcestartlinenumber="3" sourceendlinenumber="3"><a class="xref" href="Google.Apis.Util.IBackOff.html#Google_Apis_Util_IBackOff">IBackOff</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.BackOffHandler.Initializer.html#Google_Apis_Http_BackOffHandler_Initializer">BackOffHandler.Initializer</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.BackOffHandler.Initializer.yml" sourcestartlinenumber="1" sourceendlinenumber="1">An initializer class to initialize a back-off handler.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.ConfigurableHttpClient.html#Google_Apis_Http_ConfigurableHttpClient">ConfigurableHttpClient</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.ConfigurableHttpClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Configurable HTTP client inherits from <span class="xref">HttpClient</span> and contains a reference to </p>
+<p sourcefile="obj/api/Google.Apis.Http.ConfigurableHttpClient.yml" sourcestartlinenumber="3" sourceendlinenumber="3"><a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler">ConfigurableMessageHandler</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler">ConfigurableMessageHandler</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.ConfigurableMessageHandler.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A message handler which contains the main logic of our HTTP requests. It contains a list of </p>
+<p sourcefile="obj/api/Google.Apis.Http.ConfigurableMessageHandler.yml" sourcestartlinenumber="3" sourceendlinenumber="3"><a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html#Google_Apis_Http_IHttpUnsuccessfulResponseHandler">IHttpUnsuccessfulResponseHandler</a>s for handling abnormal responses, a list of </p>
+<p sourcefile="obj/api/Google.Apis.Http.ConfigurableMessageHandler.yml" sourcestartlinenumber="4" sourceendlinenumber="4"><a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html#Google_Apis_Http_IHttpExceptionHandler">IHttpExceptionHandler</a>s for handling exception in a request and a list of </p>
+<p sourcefile="obj/api/Google.Apis.Http.ConfigurableMessageHandler.yml" sourcestartlinenumber="5" sourceendlinenumber="6"><a class="xref" href="Google.Apis.Http.IHttpExecuteInterceptor.html#Google_Apis_Http_IHttpExecuteInterceptor">IHttpExecuteInterceptor</a>s for intercepting a request before it has been sent to the server.
+It also contains important properties like number of tries, follow redirect, etc.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.CreateHttpClientArgs.html#Google_Apis_Http_CreateHttpClientArgs">CreateHttpClientArgs</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.CreateHttpClientArgs.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Arguments for creating a HTTP client.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.ExponentialBackOffInitializer.html#Google_Apis_Http_ExponentialBackOffInitializer">ExponentialBackOffInitializer</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.ExponentialBackOffInitializer.yml" sourcestartlinenumber="2" sourceendlinenumber="3">An initializer which adds exponential back-off as exception handler and \ or unsuccessful response handler by
+the given <a class="xref" href="Google.Apis.Http.ExponentialBackOffPolicy.html#Google_Apis_Http_ExponentialBackOffPolicy">ExponentialBackOffPolicy</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HandleExceptionArgs.html#Google_Apis_Http_HandleExceptionArgs">HandleExceptionArgs</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.HandleExceptionArgs.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Argument class to <a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html#Google_Apis_Http_IHttpExceptionHandler_HandleExceptionAsync_Google_Apis_Http_HandleExceptionArgs_">HandleExceptionAsync(HandleExceptionArgs)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HandleUnsuccessfulResponseArgs.html#Google_Apis_Http_HandleUnsuccessfulResponseArgs">HandleUnsuccessfulResponseArgs</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.HandleUnsuccessfulResponseArgs.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Argument class to <a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html#Google_Apis_Http_IHttpUnsuccessfulResponseHandler_HandleResponseAsync_Google_Apis_Http_HandleUnsuccessfulResponseArgs_">HandleResponseAsync(HandleUnsuccessfulResponseArgs)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HttpClientFactory.html#Google_Apis_Http_HttpClientFactory">HttpClientFactory</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.HttpClientFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The default implementation of the HTTP client factory.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HttpConsts.html#Google_Apis_Http_HttpConsts">HttpConsts</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.HttpConsts.yml" sourcestartlinenumber="1" sourceendlinenumber="1">HTTP constants.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.HttpExtenstions.html#Google_Apis_Http_HttpExtenstions">HttpExtenstions</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.HttpExtenstions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Extension methods to <span class="xref">HttpRequestMessage</span> and </p>
+<p sourcefile="obj/api/Google.Apis.Http.HttpExtenstions.yml" sourcestartlinenumber="3" sourceendlinenumber="3"><span class="xref">HttpResponseMessage</span>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.MaxUrlLengthInterceptor.html#Google_Apis_Http_MaxUrlLengthInterceptor">MaxUrlLengthInterceptor</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.MaxUrlLengthInterceptor.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Intercepts HTTP GET requests with a URLs longer than a specified maximum number of characters.
+The interceptor will change such requests as follows:</p>
+<ul><li></li><li></li><li></li><li></li></ul>
+</section>
+                <h3 id="interfaces">Interfaces
+              </h3>
+                  <h4><a class="xref" href="Google.Apis.Http.IConfigurableHttpClientInitializer.html#Google_Apis_Http_IConfigurableHttpClientInitializer">IConfigurableHttpClientInitializer</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.IConfigurableHttpClientInitializer.yml" sourcestartlinenumber="2" sourceendlinenumber="4">HTTP client initializer for changing the default behavior of HTTP client. 
+Use this initializer to change default values like timeout and number of tries. 
+You can also set different handlers and interceptors like <a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html#Google_Apis_Http_IHttpUnsuccessfulResponseHandler">IHttpUnsuccessfulResponseHandler</a>s, </p>
+<p sourcefile="obj/api/Google.Apis.Http.IConfigurableHttpClientInitializer.yml" sourcestartlinenumber="5" sourceendlinenumber="5"><a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html#Google_Apis_Http_IHttpExceptionHandler">IHttpExceptionHandler</a>s and <a class="xref" href="Google.Apis.Http.IHttpExecuteInterceptor.html#Google_Apis_Http_IHttpExecuteInterceptor">IHttpExecuteInterceptor</a>s.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.IHttpClientFactory.html#Google_Apis_Http_IHttpClientFactory">IHttpClientFactory</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.IHttpClientFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="2">HTTP client factory creates configurable HTTP clients. A unique HTTP client should be created for each service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.IHttpExceptionHandler.html#Google_Apis_Http_IHttpExceptionHandler">IHttpExceptionHandler</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.IHttpExceptionHandler.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Exception handler is invoked when an exception is thrown during a HTTP request.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.IHttpExecuteInterceptor.html#Google_Apis_Http_IHttpExecuteInterceptor">IHttpExecuteInterceptor</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.IHttpExecuteInterceptor.yml" sourcestartlinenumber="2" sourceendlinenumber="3">HTTP request execute interceptor to intercept a <span class="xref">HttpRequestMessage</span> before it has
+been sent. Sample usage is attaching &quot;Authorization&quot; header to a request.</p>
+</section>
+                  <h4><a class="xref" href="Google.Apis.Http.IHttpUnsuccessfulResponseHandler.html#Google_Apis_Http_IHttpUnsuccessfulResponseHandler">IHttpUnsuccessfulResponseHandler</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.IHttpUnsuccessfulResponseHandler.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Unsuccessful response handler which is invoked when an abnormal HTTP response is returned when sending a HTTP
+request.</p>
+</section>
+                <h3 id="enums">Enums
+              </h3>
+                  <h4><a class="xref" href="Google.Apis.Http.ExponentialBackOffPolicy.html#Google_Apis_Http_ExponentialBackOffPolicy">ExponentialBackOffPolicy</a></h4>
+                  <section><p sourcefile="obj/api/Google.Apis.Http.ExponentialBackOffPolicy.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Indicates if exponential back-off is used automatically on exceptions in a service requests and \ or when 503 
+responses is returned form the server.</p>
+</section>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

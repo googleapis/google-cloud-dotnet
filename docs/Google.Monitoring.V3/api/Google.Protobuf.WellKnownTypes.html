@@ -183,6 +183,10 @@
    end.seconds += 1;
    end.nanos -= 1000000000;
  }
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="43" sourceendlinenumber="43"> Example 3: Compute Duration from datetime.timedelta in Python.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="45" sourceendlinenumber="47"><code> td = datetime.timedelta(days=3, minutes=10)
+ duration = Duration()
+ duration.FromTimedelta(td)
 </code></pre></section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Empty.html#Google_Protobuf_WellKnownTypes_Empty">Empty</a></h4>
                   <section><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Empty.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> A generic empty message that you can re-use to avoid defining duplicated
@@ -236,7 +240,7 @@
    }
  }
 </code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml" sourcestartlinenumber="43" sourceendlinenumber="44"> A repeated field is not allowed except at the last position of a
- field mask.</p>
+ paths string.</p>
 <p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml" sourcestartlinenumber="46" sourceendlinenumber="48"> If a FieldMask object is not present in a get operation, the
  operation applies to all fields (as if a FieldMask of all fields
  had been specified).</p>
@@ -258,8 +262,8 @@
  fields not covered by the mask.</p>
 <p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml" sourcestartlinenumber="69" sourceendlinenumber="72"> If a repeated field is specified for an update operation, the existing
  repeated values in the target resource will be overwritten by the new values.
- Note that a repeated field is only allowed in the last position of a field
- mask.</p>
+ Note that a repeated field is only allowed in the last position of a <code>paths</code>
+ string.</p>
 <p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml" sourcestartlinenumber="74" sourceendlinenumber="76"> If a sub-message is specified in the last position of the field mask for an
  update operation, then the existing sub-message in the target resource is
  overwritten. Given the target message:</p>
@@ -516,10 +520,8 @@ rpc GetAcl(GetAclRequest) returns (Acl) {
  Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
      .setNanos((int) ((millis % 1000) * 1000000)).build();
 </code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="48" sourceendlinenumber="48"> Example 5: Compute Timestamp from current time in Python.</p>
-<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="50" sourceendlinenumber="53"><code> now = time.time()
- seconds = int(now)
- nanos = int((now - seconds) * 10**9)
- timestamp = Timestamp(seconds=seconds, nanos=nanos)
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="50" sourceendlinenumber="51"><code> timestamp = Timestamp()
+ timestamp.GetCurrentTime()
 </code></pre></section>
                   <h4><a class="xref" href="Google.Protobuf.WellKnownTypes.Type.html#Google_Protobuf_WellKnownTypes_Type">Type</a></h4>
                   <section><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Type.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A protocol buffer message type.</p>

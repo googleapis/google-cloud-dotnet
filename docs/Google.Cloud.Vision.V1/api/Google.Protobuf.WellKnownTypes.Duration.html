@@ -106,6 +106,10 @@
    end.seconds += 1;
    end.nanos -= 1000000000;
  }
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="43" sourceendlinenumber="43"> Example 3: Compute Duration from datetime.timedelta in Python.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="45" sourceendlinenumber="47"><code> td = datetime.timedelta(days=3, minutes=10)
+ duration = Duration()
+ duration.FromTimedelta(td)
 </code></pre></div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">

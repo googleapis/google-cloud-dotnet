@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListTopicSubscriptionsResponse
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Pubsub_V1_ListTopicSubscriptionsResponse" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsResponse">Class ListTopicSubscriptionsResponse
               </h1>
-              <div class="markdown level0 summary"><p> Response for the <code>ListTopicSubscriptions</code> method.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Pubsub.V1.ListTopicSubscriptionsResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Response for the <code>ListTopicSubscriptions</code> method.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -78,16 +78,31 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ListTopicSubscriptionsResponse</span></div>
               </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
               <h6><strong>Namespace</strong>:Google.Pubsub.V1</h6>
               <h6><strong>Assembly</strong>:Google.Pubsub.V1.dll</h6>
               <h5 id="Google_Pubsub_V1_ListTopicSubscriptionsResponse_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class ListTopicSubscriptionsResponse : IPageResponse&lt;string&gt;, IMessage&lt;ListTopicSubscriptionsResponse&gt;, IMessage, IEquatable&lt;ListTopicSubscriptionsResponse&gt;, IDeepCloneable&lt;ListTopicSubscriptionsResponse&gt;</code></pre>
+                <pre><code class="lang-csharp hljs">public sealed class ListTopicSubscriptionsResponse : IPageResponse&lt;string&gt;, IEnumerable&lt;string&gt;, IEnumerable, IMessage&lt;ListTopicSubscriptionsResponse&gt;, IMessage, IEquatable&lt;ListTopicSubscriptionsResponse&gt;, IDeepCloneable&lt;ListTopicSubscriptionsResponse&gt;</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsResponse_NextPageToken" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsResponse.NextPageToken">NextPageToken</h4>
-              <div class="markdown level1 summary"><p> If not empty, indicates that there may be more subscriptions that match
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.ListTopicSubscriptionsResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> If not empty, indicates that there may be more subscriptions that match
  the request; this value should be passed in a new
  <code>ListTopicSubscriptionsRequest</code> to get more subscriptions.</p>
 </div>
@@ -111,8 +126,10 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">Google.Api.Gax.Grpc.IPageResponse&lt;System.String&gt;.NextPageToken</span></div>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsResponse_Subscriptions" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsResponse.Subscriptions">Subscriptions</h4>
-              <div class="markdown level1 summary"><p> The names of the subscriptions that match the request.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.ListTopicSubscriptionsResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The names of the subscriptions that match the request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -137,7 +154,8 @@
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsResponse_GetEnumerator" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsResponse.GetEnumerator">GetEnumerator()</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.ListTopicSubscriptionsResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns an enumerator that iterates through the resources in this response.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -158,6 +176,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;System.String&gt;.GetEnumerator()</span></div>
               <h3 id="eii">Explicit Interface Implementations
               </h3>
               <h4 id="Google_Pubsub_V1_ListTopicSubscriptionsResponse_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Pubsub.V1.ListTopicSubscriptionsResponse.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -182,6 +202,8 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
             </article>
           </div>
           
@@ -210,8 +232,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

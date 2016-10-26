@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class KeyFactory
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Datastore_V1_KeyFactory" data-uid="Google.Datastore.V1.KeyFactory">Class KeyFactory
               </h1>
-              <div class="markdown level0 summary"><p>Provides a convenient way of producing keys of a specific kind, from a specified parent entity or key,
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Provides a convenient way of producing keys of a specific kind, from a specified parent entity or key,
 or for root entities based on a partition ID.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -101,7 +101,7 @@ or for root entities based on a partition ID.</p>
                 <pre><code class="lang-csharp hljs">public sealed class KeyFactory</code></pre>
               </div>
               <h5 id="Google_Datastore_V1_KeyFactory_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>If the key factory is constructed with just a partition ID and kind, then the parent key has an empty
+              <div class="markdown level0 remarks"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="5">If the key factory is constructed with just a partition ID and kind, then the parent key has an empty
 path, and all keys created by the factory will be root keys. Otherwise, all keys created by the factory will
 be direct children of the parent key, so both the parent key itself and any ancestors of that key will be
 ancestors of the child key. Ancestors can be determined in queries using <a class="xref" href="Google.Datastore.V1.Filter.html#Google_Datastore_V1_Filter_HasAncestor_Google_Datastore_V1_Key_">HasAncestor(Key)</a>.</p>
@@ -109,7 +109,7 @@ ancestors of the child key. Ancestors can be determined in queries using <a clas
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Google_Datastore_V1_KeyFactory__ctor_Google_Datastore_V1_Entity_System_String_" data-uid="Google.Datastore.V1.KeyFactory.#ctor(Google.Datastore.V1.Entity,System.String)">KeyFactory(Entity, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a key factory for children of the given key. Keys created by the new
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a key factory for children of the given key. Keys created by the new
 factory will have the same path as this key, but with one extra path element.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -130,24 +130,24 @@ factory will have the same path as this key, but with one extra path element.</p
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>parent</em></td>
-                    <td><p>The &quot;parent&quot; entity for keys created by the new factory.
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The &quot;parent&quot; entity for keys created by the new factory.
 Must not be null, and must have a key.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>kind</em></td>
-                    <td><p>The kind of child entity keys to create. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The kind of child entity keys to create. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_KeyFactory__ctor_Google_Datastore_V1_Entity_System_String__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The entity key is cloned before being stored, so may be mutated after the factory
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The entity key is cloned before being stored, so may be mutated after the factory
 is constructed without affecting the factory.</p>
 </div>
               <h4 id="Google_Datastore_V1_KeyFactory__ctor_Google_Datastore_V1_Key_System_String_" data-uid="Google.Datastore.V1.KeyFactory.#ctor(Google.Datastore.V1.Key,System.String)">KeyFactory(Key, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a key factory for children of the given key. Keys created by the new
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a key factory for children of the given key. Keys created by the new
 factory will have the same path as this key, but with one extra path element.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -168,23 +168,23 @@ factory will have the same path as this key, but with one extra path element.</p
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
                     <td><em>parent</em></td>
-                    <td><p>The &quot;parent&quot; key for keys created by the new factory. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The &quot;parent&quot; key for keys created by the new factory. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>kind</em></td>
-                    <td><p>The kind of child entity keys to create. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The kind of child entity keys to create. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_KeyFactory__ctor_Google_Datastore_V1_Key_System_String__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The key is cloned before being stored, so may be mutated after the factory
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The key is cloned before being stored, so may be mutated after the factory
 is constructed without affecting the factory.</p>
 </div>
               <h4 id="Google_Datastore_V1_KeyFactory__ctor_Google_Datastore_V1_PartitionId_System_String_" data-uid="Google.Datastore.V1.KeyFactory.#ctor(Google.Datastore.V1.PartitionId,System.String)">KeyFactory(PartitionId, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a key factory for the root of a partition.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a key factory for the root of a partition.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -204,19 +204,19 @@ is constructed without affecting the factory.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
                     <td><em>partitionId</em></td>
-                    <td><p>The partition ID for the factory. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The partition ID for the factory. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>kind</em></td>
-                    <td><p>The kind of root entity keys to create. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The kind of root entity keys to create. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_KeyFactory__ctor_System_String_System_String_System_String_" data-uid="Google.Datastore.V1.KeyFactory.#ctor(System.String,System.String,System.String)">KeyFactory(String, String, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a key factory for the root of a partition.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a key factory for the root of a partition.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -236,19 +236,19 @@ is constructed without affecting the factory.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The project ID for the factory. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The project ID for the factory. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>namespaceId</em></td>
-                    <td><p>The namespace ID for the factory. May be null in which case an empty string is used.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The namespace ID for the factory. May be null in which case an empty string is used.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>kind</em></td>
-                    <td><p>The kind of root entity keys to create. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The kind of root entity keys to create. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -256,7 +256,7 @@ is constructed without affecting the factory.</p>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Datastore_V1_KeyFactory_CreateIncompleteKey" data-uid="Google.Datastore.V1.KeyFactory.CreateIncompleteKey">CreateIncompleteKey()</h4>
-              <div class="markdown level1 summary"><p>Creates a key with only the kind specified in the final path element, intended for insertions where
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a key with only the kind specified in the final path element, intended for insertions where
 the ID is populated by the server.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -275,13 +275,13 @@ the ID is populated by the server.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
-                    <td><p>A key with no name or ID in the final path element.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A key with no name or ID in the final path element.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_KeyFactory_CreateKey_System_Int64_" data-uid="Google.Datastore.V1.KeyFactory.CreateKey(System.Int64)">CreateKey(Int64)</h4>
-              <div class="markdown level1 summary"><p>Creates a key for the given entity ID.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a key for the given entity ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -301,7 +301,7 @@ the ID is populated by the server.</p>
                   <tr>
                     <td><span class="xref">System.Int64</span></td>
                     <td><em>id</em></td>
-                    <td><p>The numeric entity ID.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The numeric entity ID.</p>
 </td>
                   </tr>
                 </tbody>
@@ -317,13 +317,13 @@ the ID is populated by the server.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
-                    <td><p>A key whose final path element contains the given ID.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A key whose final path element contains the given ID.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_KeyFactory_CreateKey_System_String_" data-uid="Google.Datastore.V1.KeyFactory.CreateKey(System.String)">CreateKey(String)</h4>
-              <div class="markdown level1 summary"><p>Creates a key for the given entity name.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a key for the given entity name.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -343,7 +343,7 @@ the ID is populated by the server.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td><p>The entity name. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity name. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -359,7 +359,7 @@ the ID is populated by the server.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
-                    <td><p>A key whose final path element contains the given name.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.KeyFactory.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A key whose final path element contains the given name.</p>
 </td>
                   </tr>
                 </tbody>
@@ -392,8 +392,8 @@ the ID is populated by the server.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

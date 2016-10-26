@@ -108,10 +108,8 @@
  Timestamp timestamp = Timestamp.newBuilder().setSeconds(millis / 1000)
      .setNanos((int) ((millis % 1000) * 1000000)).build();
 </code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="48" sourceendlinenumber="48"> Example 5: Compute Timestamp from current time in Python.</p>
-<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="50" sourceendlinenumber="53"><code> now = time.time()
- seconds = int(now)
- nanos = int((now - seconds) * 10**9)
- timestamp = Timestamp(seconds=seconds, nanos=nanos)
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="50" sourceendlinenumber="51"><code> timestamp = Timestamp()
+ timestamp.GetCurrentTime()
 </code></pre></div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -170,7 +168,7 @@
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Timestamp_Seconds" data-uid="Google.Protobuf.WellKnownTypes.Timestamp.Seconds">Seconds</h4>
               <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Timestamp.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Represents seconds of UTC time since Unix epoch
- 1970-01-01T00:00:00Z. Must be from from 0001-01-01T00:00:00Z to
+ 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to
  9999-12-31T23:59:59Z inclusive.</p>
 </div>
               <div class="markdown level1 conceptual"></div>

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Api
+   | Google.Logging.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Api
+   | Google.Logging.V2 ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Api" data-uid="Google.Api">Namespace Google.Api
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Google.Api.Advice.html#Google_Api_Advice">Advice</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Advice.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Generated advice about this change, used for providing more
+ information about how a change will affect the existing service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Authentication.html#Google_Api_Authentication">Authentication</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> <code>Authentication</code> defines the authentication configuration for an API.</p>
+<p sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> Example for an API targeted for external use:</p>
+<pre sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="6" sourceendlinenumber="15"><code> name: calendar.googleapis.com
+ authentication:
+   rules:
+   - selector: &quot;*&quot;
+     oauth:
+       canonical_scopes: https://www.googleapis.com/auth/calendar
+
+   - selector: google.calendar.Delegate
+     oauth:
+       canonical_scopes: https://www.googleapis.com/auth/calendar.read
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.AuthenticationRule.html#Google_Api_AuthenticationRule">AuthenticationRule</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.AuthenticationRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Authentication rules for the service.</p>
+<p sourcefile="obj/api/Google.Api.AuthenticationRule.yml" sourcestartlinenumber="4" sourceendlinenumber="7"> By default, if a method has any authentication requirements, every request
+ must include a valid credential matching one of the requirements.
+ It&#39;s an error to include more than one kind of credential in a single
+ request.</p>
+<p sourcefile="obj/api/Google.Api.AuthenticationRule.yml" sourcestartlinenumber="9" sourceendlinenumber="10"> If a method doesn&#39;t have any auth requirements, request credentials will be
+ ignored.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.AuthProvider.html#Google_Api_AuthProvider">AuthProvider</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Configuration for an anthentication provider, including support for
+ <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32" sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="3" sourceendlinenumber="3">JSON Web Token (JWT)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.AuthRequirement.html#Google_Api_AuthRequirement">AuthRequirement</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.AuthRequirement.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> User-defined authentication requirements, including support for
+ <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32" sourcefile="obj/api/Google.Api.AuthRequirement.yml" sourcestartlinenumber="3" sourceendlinenumber="3">JSON Web Token (JWT)</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Backend.html#Google_Api_Backend">Backend</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Backend.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> <code>Backend</code> defines the backend configuration for a service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.BackendRule.html#Google_Api_BackendRule">BackendRule</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.BackendRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A backend rule provides configuration for an individual API element.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Billing.html#Google_Api_Billing">Billing</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Billing related configuration of the service.</p>
+<p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> The following example shows how to configure metrics for billing:</p>
+<pre sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="6" sourceendlinenumber="16"><code> metrics:
+ - name: library.googleapis.com/read_calls
+   metric_kind: DELTA
+   value_type: INT64
+ - name: library.googleapis.com/write_calls
+   metric_kind: DELTA
+   value_type: INT64
+ billing:
+   metrics:
+   - library.googleapis.com/read_calls
+   - library.googleapis.com/write_calls
+</code></pre><p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="18" sourceendlinenumber="23"> The next example shows how to enable billing status check and customize the
+ check behavior. It makes sure billing status check is included in the <code>Check</code>
+ method of <a href="https://cloud.google.com/service-control/" sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="20" sourceendlinenumber="20">Service Control API</a>.
+ In the example, &quot;google.storage.Get&quot; method can be served when the billing
+ status is either <code>current</code> or <code>delinquent</code>, while &quot;google.storage.Write&quot;
+ method can only be served when the billing status is <code>current</code>:</p>
+<pre sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="25" sourceendlinenumber="32"><code> billing:
+   rules:
+   - selector: google.storage.Get
+     allowed_statuses:
+     - current
+     - delinquent
+   - selector: google.storage.Write
+     allowed_statuses: current
+</code></pre><p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="34" sourceendlinenumber="37"> Mostly services should only allow <code>current</code> status when serving requests.
+ In addition, services can choose to allow both <code>current</code> and <code>delinquent</code>
+ statuses when serving read-only requests to resources. If there&#39;s no
+ matching selector for operation, no billing status check will be performed.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.BillingStatusRule.html#Google_Api_BillingStatusRule">BillingStatusRule</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Defines the billing status requirements for operations.</p>
+<p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="4" sourceendlinenumber="6"> When used with
+ <a href="https://cloud.google.com/service-control/" sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="5" sourceendlinenumber="5">Service Control API</a>, the
+ following statuses are supported:</p>
+<ul sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="8" sourceendlinenumber="16">
+<li sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="8" sourceendlinenumber="9"><strong>current</strong>: the associated billing account is up to date and capable of
+             paying for resource usages.</li>
+<li sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="10" sourceendlinenumber="16"><p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="10" sourceendlinenumber="10"><strong>delinquent</strong>: the associated billing account has a correctable problem,</p>
+<pre sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="11" sourceendlinenumber="11"><code>            such as late payment.
+</code></pre><p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="10" sourceendlinenumber="13">Mostly services should only allow <code>current</code> status when serving requests.
+In addition, services can choose to allow both <code>current</code> and <code>delinquent</code>
+statuses when serving read-only requests to resources. If the list of
+allowed_statuses is empty, it means no billing requirement.</p>
+</li>
+</ul>
+</section>
+                  <h4><a class="xref" href="Google.Api.ConfigChange.html#Google_Api_ConfigChange">ConfigChange</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Output generated from semantically comparing two versions of a service
+ configuration.</p>
+<p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="5" sourceendlinenumber="7"> Includes detailed information about a field that have changed with
+ applicable advice about potential consequences for the change, such as
+ backwards-incompatibility.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Context.html#Google_Api_Context">Context</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Context.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> <code>Context</code> defines which contexts an API requests.</p>
+<p sourcefile="obj/api/Google.Api.Context.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> Example:</p>
+<pre sourcefile="obj/api/Google.Api.Context.yml" sourcestartlinenumber="6" sourceendlinenumber="11"><code> context:
+   rules:
+   - selector: &quot;*&quot;
+     requested:
+     - google.rpc.context.ProjectContext
+     - google.rpc.context.OriginContext
+</code></pre><p sourcefile="obj/api/Google.Api.Context.yml" sourcestartlinenumber="13" sourceendlinenumber="15"> The above specifies that all methods in the API request
+ <code>google.rpc.context.ProjectContext</code> and
+ <code>google.rpc.context.OriginContext</code>.</p>
+<p sourcefile="obj/api/Google.Api.Context.yml" sourcestartlinenumber="17" sourceendlinenumber="18"> Available context types are defined in package
+ <code>google.rpc.context</code>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ContextRule.html#Google_Api_ContextRule">ContextRule</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.ContextRule.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> A context rule provides information about the context for an individual API
+ element.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Control.html#Google_Api_Control">Control</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Control.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Selects and configures the service controller used by the service.  The
+ service controller handles features like abuse, quota, billing, logging,
+ monitoring, etc.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.CustomHttpPattern.html#Google_Api_CustomHttpPattern">CustomHttpPattern</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.CustomHttpPattern.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A custom pattern is used for defining custom HTTP verb.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Distribution.html#Google_Api_Distribution">Distribution</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Distribution.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Distribution contains summary statistics for a population of values and,
+ optionally, a histogram representing the distribution of those values across
+ a specified set of histogram buckets.</p>
+<p sourcefile="obj/api/Google.Api.Distribution.yml" sourcestartlinenumber="6" sourceendlinenumber="7"> The summary statistics are the count, mean, sum of the squared deviation from
+ the mean, the minimum, and the maximum of the set of population of values.</p>
+<p sourcefile="obj/api/Google.Api.Distribution.yml" sourcestartlinenumber="9" sourceendlinenumber="12"> The histogram is based on a sequence of buckets and gives a count of values
+ that fall into each bucket.  The boundaries of the buckets are given either
+ explicitly or by specifying parameters for a method of computing them
+ (buckets of fixed width or buckets of exponentially increasing width).</p>
+<p sourcefile="obj/api/Google.Api.Distribution.yml" sourcestartlinenumber="14" sourceendlinenumber="16"> Although it is not forbidden, it is generally a bad idea to include
+ non-finite values (infinities or NaNs) in the population of values, as this
+ will render the <code>mean</code> and <code>sum_of_squared_deviation</code> fields meaningless.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Documentation.html#Google_Api_Documentation">Documentation</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> <code>Documentation</code> provides the information for describing a service.</p>
+<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="4" sourceendlinenumber="9"> Example:
+ &lt;pre&gt;&lt;code&gt;documentation:
+   summary: &gt;
+     The Google Calendar API gives access
+     to most calendar features.
+   pages:</p>
+<ul sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="10" sourceendlinenumber="58">
+<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="10" sourceendlinenumber="11">name: Overview
+content: &amp;#40;== include google/foo/overview.md ==&amp;#41;</li>
+<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="12" sourceendlinenumber="17">name: Tutorial
+content: &amp;#40;== include google/foo/tutorial.md ==&amp;#41;
+subpages;<ul sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="15" sourceendlinenumber="17">
+<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="15" sourceendlinenumber="17">name: Java
+content: &amp;#40;== include google/foo/tutorial_java.md ==&amp;#41;
+rules:</li>
+</ul>
+</li>
+<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="18" sourceendlinenumber="20">selector: google.calendar.Calendar.Get
+description: &gt;
+  ...</li>
+<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="58"><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="29">selector: google.calendar.Calendar.Put
+description: &gt;
+  ...
+&lt;/code&gt;&lt;/pre&gt;
+Documentation is provided in markdown syntax. In addition to
+standard markdown features, definition lists, tables and fenced
+code blocks are supported. Section headers can be provided and are
+interpreted relative to the section nesting of the context where
+a documentation fragment is embedded.</p>
+<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="23">Documentation from the IDL is merged with documentation defined
+via the config at normalization time, where documentation provided
+by config rules overrides IDL provided.</p>
+<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="22">A number of constructs specific to the API platform are supported
+in documentation text.</p>
+<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="41">In order to reference a proto element, the following
+notation can be used:
+&lt;pre&gt;&lt;code&gt;&amp;#91;fully.qualified.proto.name]&amp;#91;]&lt;/code&gt;&lt;/pre&gt;
+To override the display text used for the link, this can be used:
+&lt;pre&gt;&lt;code&gt;&amp;#91;display text]&amp;#91;fully.qualified.proto.name]&lt;/code&gt;&lt;/pre&gt;
+Text can be excluded from doc using the following notation:
+&lt;pre&gt;&lt;code&gt;&amp;#40;-- internal comment --&amp;#41;&lt;/code&gt;&lt;/pre&gt;
+Comments can be made conditional using a visibility label. The below
+text will be only rendered if the <code>BETA</code> label is available:
+&lt;pre&gt;&lt;code&gt;&amp;#40;--BETA: comment for BETA users --&amp;#41;&lt;/code&gt;&lt;/pre&gt;
+A few directives are available in documentation. Note that
+directives must appear on a single line to be properly
+identified. The <code>include</code> directive includes a markdown file from
+an external source:
+&lt;pre&gt;&lt;code&gt;&amp;#40;== include path/to/file ==&amp;#41;&lt;/code&gt;&lt;/pre&gt;
+The <code>resource_for</code> directive marks a message to be the resource of
+a collection in REST view. If it is not specified, tools attempt
+to infer the resource from the operations in a collection:
+&lt;pre&gt;&lt;code&gt;&amp;#40;== resource_for v1.shelves.books ==&amp;#41;&lt;/code&gt;&lt;/pre&gt;
+The directive <code>suppress_warning</code> does not directly affect documentation
+and is documented together with service config validation.</p>
+</li>
+</ul>
+</section>
+                  <h4><a class="xref" href="Google.Api.DocumentationRule.html#Google_Api_DocumentationRule">DocumentationRule</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.DocumentationRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A documentation rule provides information about individual API elements.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Endpoint.html#Google_Api_Endpoint">Endpoint</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> <code>Endpoint</code> describes a network endpoint that serves a set of APIs.
+ A service may expose any number of endpoints, and all endpoints share the
+ same service configuration, such as quota configuration and monitoring
+ configuration.</p>
+<p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="7" sourceendlinenumber="7"> Example service configuration:</p>
+<pre sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="9" sourceendlinenumber="25"><code> name: library-example.googleapis.com
+ endpoints:
+   # Below entry makes &#39;google.example.library.v1.Library&#39;
+   # API be served from endpoint address library-example.googleapis.com.
+   # It also allows HTTP OPTIONS calls to be passed to the backend, for
+   # it to decide whether the subsequent cross-origin request is
+   # allowed to proceed.
+ - name: library-example.googleapis.com
+   apis: google.example.library.v1.Library
+   allow_cors: true
+   # Below entry makes &#39;google.example.library.v1.Library&#39;
+   # API be served from endpoint address
+   # google.example.library-example.v1.LibraryManager.
+ - name: library-manager.googleapis.com
+   apis: google.example.library.v1.LibraryManager
+   # BNS address for a borg job. Can specify a task by appending
+   # &quot;/taskId&quot; (e.g. &quot;/0&quot;) to the job spec.
+</code></pre><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="27" sourceendlinenumber="27"> Example OpenAPI extension for endpoint with allow_cors set to true:</p>
+<pre sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="29" sourceendlinenumber="39"><code> {
+   &quot;swagger&quot;: &quot;2.0&quot;,
+   &quot;info&quot;: {
+     &quot;description&quot;: &quot;A simple...&quot;
+   },
+   &quot;host&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
+   &quot;x-google-endpoints&quot;: [{
+     &quot;name&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
+     &quot;allow_cors&quot;: &quot;true&quot;
+   }]
+ }
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.Http.html#Google_Api_Http">Http</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Http.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Defines the HTTP configuration for a service. It contains a list of
+ [HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method
+ to one or more HTTP REST API methods.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.HttpRule.html#Google_Api_HttpRule">HttpRule</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> <code>HttpRule</code> defines the mapping of an RPC method to one or more HTTP
+ REST APIs.  The mapping determines what portions of the request
+ message are populated from the path, query parameters, or body of
+ the HTTP request.  The mapping is typically specified as an
+ <code>google.api.http</code> annotation, see &quot;google/api/annotations.proto&quot;
+ for details.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="9" sourceendlinenumber="12"> The mapping consists of a field specifying the path template and
+ method kind.  The path template can refer to fields in the request
+ message, as in the example below which describes a REST GET
+ operation on a resource collection of messages:</p>
+<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="14" sourceendlinenumber="30"><code class="lang-proto"> service Messaging {
+   rpc GetMessage(GetMessageRequest) returns (Message) {
+     option (google.api.http).get = &quot;/v1/messages/{message_id}/{sub.subfield}&quot;;
+   }
+ }
+ message GetMessageRequest {
+   message SubMessage {
+     string subfield = 1;
+   }
+   string message_id = 1; // mapped to the URL
+   SubMessage sub = 2;    // `sub.subfield` is url-mapped
+ }
+ message Message {
+   string text = 1; // content of the resource
+ }
+</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="32" sourceendlinenumber="33"> This definition enables an automatic, bidrectional mapping of HTTP
+ JSON to RPC. Example:</p>
+<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="35" sourceendlinenumber="37">
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>GET /v1/messages/123456/foo</code></td>
+<td><code>GetMessage(message_id: &quot;123456&quot; sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="39" sourceendlinenumber="41"> In general, not only fields but also field paths can be referenced
+ from a path pattern. Fields mapped to the path pattern cannot be
+ repeated and must have a primitive (non-message) type.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="43" sourceendlinenumber="45"> Any fields in the request message which are not bound by the path
+ pattern automatically become (optional) HTTP query
+ parameters. Assume the following definition of the request message:</p>
+<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="47" sourceendlinenumber="56"><code class="lang-proto"> message GetMessageRequest {
+   message SubMessage {
+     string subfield = 1;
+   }
+   string message_id = 1; // mapped to the URL
+   int64 revision = 2;    // becomes a parameter
+   SubMessage sub = 3;    // `sub.subfield` becomes a parameter
+ }
+</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="58" sourceendlinenumber="58"> This enables a HTTP JSON to RPC mapping as below:</p>
+<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="60" sourceendlinenumber="62">
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>GET /v1/messages/123456?revision=2&amp;amp;sub.subfield=foo</code></td>
+<td><code>GetMessage(message_id: &quot;123456&quot; revision: 2 sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="64" sourceendlinenumber="67"> Note that fields which are mapped to HTTP parameters must have a
+ primitive type or a repeated primitive type. Message types are not
+ allowed. In the case of a repeated type, the parameter can be
+ repeated in the URL, as in <code>...?param=A&amp;amp;param=B</code>.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="69" sourceendlinenumber="71"> For HTTP method kinds which allow a request body, the <code>body</code> field
+ specifies the mapping. Consider a REST update method on the
+ message resource collection:</p>
+<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="73" sourceendlinenumber="86"><code class="lang-proto"> service Messaging {
+   rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
+     option (google.api.http) = {
+       put: &quot;/v1/messages/{message_id}&quot;
+       body: &quot;message&quot;
+     };
+   }
+ }
+ message UpdateMessageRequest {
+   string message_id = 1; // mapped to the URL
+   Message message = 2;   // mapped to the body
+ }
+</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="88" sourceendlinenumber="90"> The following HTTP JSON to RPC mapping is enabled, where the
+ representation of the JSON in the request body is determined by
+ protos JSON encoding:</p>
+<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="92" sourceendlinenumber="94">
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
+<td><code>UpdateMessage(message_id: &quot;123456&quot; message { text: &quot;Hi!&quot; })</code></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="96" sourceendlinenumber="99"> The special name <code>*</code> can be used in the body mapping to define that
+ every field not bound by the path template should be mapped to the
+ request body.  This enables the following alternative definition of
+ the update method:</p>
+<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="101" sourceendlinenumber="114"><code class="lang-proto"> service Messaging {
+   rpc UpdateMessage(Message) returns (Message) {
+     option (google.api.http) = {
+       put: &quot;/v1/messages/{message_id}&quot;
+       body: &quot;*&quot;
+     };
+   }
+ }
+ message Message {
+   string message_id = 1;
+   string text = 2;
+ }
+</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="116" sourceendlinenumber="116"> The following HTTP JSON to RPC mapping is enabled:</p>
+<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="118" sourceendlinenumber="120">
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
+<td><code>UpdateMessage(message_id: &quot;123456&quot; text: &quot;Hi!&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="122" sourceendlinenumber="126"> Note that when using <code>*</code> in the body mapping, it is not possible to
+ have HTTP parameters, as all fields not bound by the path end in
+ the body. This makes this option more rarely used in practice of
+ defining REST APIs. The common usage of <code>*</code> is in custom methods
+ which don&#39;t use the URL at all for transferring data.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="128" sourceendlinenumber="129"> It is possible to define multiple HTTP methods for one RPC by using
+ the <code>additional_bindings</code> option. Example:</p>
+<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="131" sourceendlinenumber="146"><code class="lang-proto"> service Messaging {
+   rpc GetMessage(GetMessageRequest) returns (Message) {
+     option (google.api.http) = {
+       get: &quot;/v1/messages/{message_id}&quot;
+       additional_bindings {
+         get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
+       }
+     };
+   }
+ }
+ message GetMessageRequest {
+   string message_id = 1;
+   string user_id = 2;
+ }
+</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="148" sourceendlinenumber="149"> This enables the following two alternative HTTP JSON to RPC
+ mappings:</p>
+<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="151" sourceendlinenumber="154">
+<thead>
+<tr>
+<th>HTTP</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>GET /v1/messages/123456</code></td>
+<td><code>GetMessage(message_id: &quot;123456&quot;)</code></td>
+</tr>
+<tr>
+<td> <code>GET /v1/users/me/messages/123456</code></td>
+<td><code>GetMessage(user_id: &quot;me&quot; message_id: &quot;123456&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="rules-for-http-mapping" sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="156" sourceendlinenumber="156">Rules for HTTP mapping</h1>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="158" sourceendlinenumber="159"> The rules for mapping HTTP path, query parameters, and body fields
+ to the request message are as follows:</p>
+<ol sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="161" sourceendlinenumber="202">
+<li sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="161" sourceendlinenumber="162">The <code>body</code> field specifies either <code>*</code> or a field path, or is
+omitted. If omitted, it assumes there is no HTTP body.</li>
+<li sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="163" sourceendlinenumber="168">Leaf fields (recursive expansion of nested messages in the
+request) can be classified into three types:
+ (a) Matched in the URL template.
+ (b) Covered by body (if body is <code>*</code>, everything except (a) fields;
+     else everything under the body field)
+ (c) All other fields.</li>
+<li sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="169" sourceendlinenumber="169">URL query parameters found in the HTTP request are mapped to (c) fields.</li>
+<li sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="202"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="170">Any body sent with an HTTP request can contain only (b) fields.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="170">The syntax of the path template is as follows:</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="175"> Template = &quot;/&quot; Segments [ Verb ] ;
+ Segments = Segment { &quot;/&quot; Segment } ;
+ Segment  = &quot;<em>&quot; | &quot;</em>*&quot; | LITERAL | Variable ;
+ Variable = &quot;{&quot; FieldPath [ &quot;=&quot; Segments ] &quot;}&quot; ;
+ FieldPath = IDENT { &quot;.&quot; IDENT } ;
+ Verb     = &quot;:&quot; LITERAL ;</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="172">The syntax <code>*</code> matches a single path segment. It follows the semantics of
+<a href="https://tools.ietf.org/html/rfc6570" sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="171" sourceendlinenumber="171">RFC 6570</a> Section 3.2.2 Simple String
+Expansion.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="172">The syntax <code>**</code> matches zero or more path segments. It follows the semantics
+of <a href="https://tools.ietf.org/html/rfc6570" sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="171" sourceendlinenumber="171">RFC 6570</a> Section 3.2.3 Reserved
+Expansion.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="170">The syntax <code>LITERAL</code> matches literal text in the URL path.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="173">The syntax <code>Variable</code> matches the entire path as specified by its template;
+this nested template must not contain further variables. If a variable
+matches a single path segment, its template may be omitted, e.g. <code>{var}</code>
+is equivalent to <code>{var=*}</code>.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="171">NOTE: the field paths in variables and in the <code>body</code> must not refer to
+repeated fields or map fields.</p>
+<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="173">Use CustomHttpPattern to specify any HTTP method that is not included in the
+<code>pattern</code> field, such as HEAD, or &quot;*&quot; to leave the HTTP method unspecified for
+a given URL path rule. The wild-card rule is useful for services that provide
+content to Web (HTML) clients.</p>
+</li>
+</ol>
+</section>
+                  <h4><a class="xref" href="Google.Api.LabelDescriptor.html#Google_Api_LabelDescriptor">LabelDescriptor</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.LabelDescriptor.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A description of a label.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.LogDescriptor.html#Google_Api_LogDescriptor">LogDescriptor</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.LogDescriptor.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A description of a log type. Example in YAML format:</p>
+<pre sourcefile="obj/api/Google.Api.LogDescriptor.yml" sourcestartlinenumber="4" sourceendlinenumber="9"><code> - name: library.googleapis.com/activity_history
+   description: The history of borrowing and returning library items.
+   display_name: Activity
+   labels:
+   - key: /customer_id
+     description: Identifier of a library customer
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.Logging.html#Google_Api_Logging">Logging</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Logging.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Logging configuration of the service.</p>
+<p sourcefile="obj/api/Google.Api.Logging.yml" sourcestartlinenumber="4" sourceendlinenumber="9"> The following example shows how to configure logs to be sent to the
+ producer and consumer projects. In the example,
+ the <code>library.googleapis.com/activity_history</code> log is
+ sent to both the producer and consumer projects, whereas
+ the <code>library.googleapis.com/purchase_history</code> log is only sent to the
+ producer project:</p>
+<pre sourcefile="obj/api/Google.Api.Logging.yml" sourcestartlinenumber="11" sourceendlinenumber="32"><code> monitored_resources:
+ - type: library.googleapis.com/branch
+   labels:
+   - key: /city
+     description: The city where the library branch is located in.
+   - key: /name
+     description: The name of the branch.
+ logs:
+ - name: library.googleapis.com/activity_history
+   labels:
+   - key: /customer_id
+ - name: library.googleapis.com/purchase_history
+ logging:
+   producer_destinations:
+   - monitored_resource: library.googleapis.com/branch
+     logs:
+     - library.googleapis.com/activity_history
+     - library.googleapis.com/purchase_history
+   consumer_destinations:
+   - monitored_resource: library.googleapis.com/branch
+     logs:
+     - library.googleapis.com/activity_history
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.Metric.html#Google_Api_Metric">Metric</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Metric.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> A specific metric identified by specifying values for all of the
+ labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.MetricDescriptor.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Defines a metric type and its schema.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.MonitoredResource.yml" sourcestartlinenumber="2" sourceendlinenumber="10"> An object representing a resource that can be used for monitoring, logging,
+ billing, or other purposes. Examples include virtual machine instances,
+ databases, and storage devices such as disks. The <code>type</code> field identifies a
+ [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object that describes the resource&#39;s
+ schema. Information in the <code>labels</code> field identifies the actual resource and
+ its attributes according to the schema. For example, a particular Compute
+ Engine VM instance could be represented by the following object, because the
+ [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] for <code>&quot;gce_instance&quot;</code> has labels
+ <code>&quot;instance_id&quot;</code> and <code>&quot;zone&quot;</code>:</p>
+<pre sourcefile="obj/api/Google.Api.MonitoredResource.yml" sourcestartlinenumber="12" sourceendlinenumber="14"><code> { &quot;type&quot;: &quot;gce_instance&quot;,
+   &quot;labels&quot;: { &quot;instance_id&quot;: &quot;12345678901234&quot;,
+               &quot;zone&quot;: &quot;us-central1-a&quot; }}
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.MonitoredResourceDescriptor.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> An object that describes the schema of a [MonitoredResource][google.api.MonitoredResource] object using a
+ type name and a set of labels.  For example, the monitored resource
+ descriptor for Google Compute Engine VM instances has a type of
+ <code>&quot;gce_instance&quot;</code> and specifies the use of the labels <code>&quot;instance_id&quot;</code> and
+ <code>&quot;zone&quot;</code> to identify particular VM instances.</p>
+<p sourcefile="obj/api/Google.Api.MonitoredResourceDescriptor.yml" sourcestartlinenumber="8" sourceendlinenumber="10"> Different APIs can support different monitored resource types. APIs generally
+ provide a <code>list</code> method that returns the monitored resource descriptors used
+ by the API.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Monitoring.html#Google_Api_Monitoring">Monitoring</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Monitoring.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Monitoring configuration of the service.</p>
+<p sourcefile="obj/api/Google.Api.Monitoring.yml" sourcestartlinenumber="4" sourceendlinenumber="9"> The example below shows how to configure monitored resources and metrics
+ for monitoring. In the example, a monitored resource and two metrics are
+ defined. The <code>library.googleapis.com/book/returned_count</code> metric is sent
+ to both producer and consumer projects, whereas the
+ <code>library.googleapis.com/book/overdue_count</code> metric is only sent to the
+ consumer project.</p>
+<pre sourcefile="obj/api/Google.Api.Monitoring.yml" sourcestartlinenumber="11" sourceendlinenumber="38"><code> monitored_resources:
+ - type: library.googleapis.com/branch
+   labels:
+   - key: /city
+     description: The city where the library branch is located in.
+   - key: /name
+     description: The name of the branch.
+ metrics:
+ - name: library.googleapis.com/book/returned_count
+   metric_kind: DELTA
+   value_type: INT64
+   labels:
+   - key: /customer_id
+ - name: library.googleapis.com/book/overdue_count
+   metric_kind: GAUGE
+   value_type: INT64
+   labels:
+   - key: /customer_id
+ monitoring:
+   producer_destinations:
+   - monitored_resource: library.googleapis.com/branch
+     metrics:
+     - library.googleapis.com/book/returned_count
+   consumer_destinations:
+   - monitored_resource: library.googleapis.com/branch
+     metrics:
+     - library.googleapis.com/book/returned_count
+     - library.googleapis.com/book/overdue_count
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.OAuthRequirements.html#Google_Api_OAuthRequirements">OAuthRequirements</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> OAuth scopes are a way to define data and permissions on data. For example,
+ there are scopes defined for &quot;Read-only access to Google Calendar&quot; and
+ &quot;Access to Cloud Platform&quot;. Users can consent to a scope for an application,
+ giving it permission to access that data on their behalf.</p>
+<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="7" sourceendlinenumber="8"> OAuth scope specifications should be fairly coarse grained; a user will need
+ to see and understand the text description of what your scope means.</p>
+<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="10" sourceendlinenumber="12"> In most cases: use one or at most two OAuth scopes for an entire family of
+ products. If your product has multiple APIs, you should probably be sharing
+ the OAuth scope across all of those APIs.</p>
+<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="14" sourceendlinenumber="15"> When you need finer grained OAuth consent screens: talk with your product
+ management about how developers will use them in practice.</p>
+<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="17" sourceendlinenumber="19"> Please note that even though each of the canonical scopes is enough for a
+ request to be accepted and passed to the backend, a request can still fail
+ due to the backend requiring additional scopes or permissions.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Page.html#Google_Api_Page">Page</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Page.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Represents a documentation page. A page can contain subpages to represent
+ nested documentation set structure.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.ProjectProperties.html#Google_Api_ProjectProperties">ProjectProperties</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.ProjectProperties.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> A descriptor for defining project properties for a service. One service may
+ have many consumer projects, and the service may want to behave differently
+ depending on some properties on the project. For example, a project may be
+ associated with a school, or a business, or a government agency, a business
+ type property on the project may affect how a service responds to the client.
+ This descriptor defines which properties are allowed to be set on a project.</p>
+<p sourcefile="obj/api/Google.Api.ProjectProperties.yml" sourcestartlinenumber="9" sourceendlinenumber="9"> Example:</p>
+<pre sourcefile="obj/api/Google.Api.ProjectProperties.yml" sourcestartlinenumber="11" sourceendlinenumber="17"><code>project_properties:
+  properties:
+  - name: NO_WATERMARK
+    type: BOOL
+    description: Allows usage of the API without watermarks.
+  - name: EXTENDED_TILE_CACHE_PERIOD
+    type: INT64
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.Property.html#Google_Api_Property">Property</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Property.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Defines project properties.</p>
+<p sourcefile="obj/api/Google.Api.Property.yml" sourcestartlinenumber="4" sourceendlinenumber="8"> API services can define properties that can be assigned to consumer projects
+ so that backends can perform response customization without having to make
+ additional calls or maintain additional storage. For example, Maps API
+ defines properties that controls map tile cache period, or whether to embed a
+ watermark in a result.</p>
+<p sourcefile="obj/api/Google.Api.Property.yml" sourcestartlinenumber="10" sourceendlinenumber="11"> These values can be set via API producer console. Only API providers can
+ define and set these properties.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Service.html#Google_Api_Service">Service</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Service.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> <code>Service</code> is the root object of the configuration schema. It
+ describes basic information like the name of the service and the
+ exposed API interfaces, and delegates other aspects to configuration
+ sub-sections.</p>
+<p sourcefile="obj/api/Google.Api.Service.yml" sourcestartlinenumber="7" sourceendlinenumber="7"> Example:</p>
+<pre sourcefile="obj/api/Google.Api.Service.yml" sourcestartlinenumber="9" sourceendlinenumber="18"><code> type: google.api.Service
+ config_version: 1
+ name: calendar.googleapis.com
+ title: Google Calendar API
+ apis:
+ - name: google.calendar.Calendar
+ backend:
+   rules:
+   - selector: &quot;*&quot;
+     address: calendar.example.com
+</code></pre></section>
+                  <h4><a class="xref" href="Google.Api.SystemParameter.html#Google_Api_SystemParameter">SystemParameter</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.SystemParameter.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Define a parameter&#39;s name and location. The parameter may be passed as either
+ an HTTP header or a URL query parameter, and if both are passed the behavior
+ is implementation-dependent.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.SystemParameterRule.html#Google_Api_SystemParameterRule">SystemParameterRule</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.SystemParameterRule.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Define a system parameter rule mapping system parameter definitions to
+ methods.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.SystemParameters.html#Google_Api_SystemParameters">SystemParameters</a></h4>
+                  <section><h3 id="system-parameter-configuration" sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="2" sourceendlinenumber="2">System parameter configuration</h3>
+<p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="4" sourceendlinenumber="7"> A system parameter is a special kind of parameter defined by the API
+ system, not by an individual API. It is typically mapped to an HTTP header
+ and/or a URL query parameter. This configuration specifies which methods
+ change the names of the system parameters.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Usage.html#Google_Api_Usage">Usage</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.Usage.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Configuration controlling usage of a service.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.UsageRule.html#Google_Api_UsageRule">UsageRule</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Usage configuration rules for the service.</p>
+<p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> NOTE: Under development.</p>
+<p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="6" sourceendlinenumber="11"> Use this rule to configure unregistered calls for the service. Unregistered
+ calls are calls that do not contain consumer project identity.
+ (Example: calls that do not contain an API key).
+ By default, API methods do not allow unregistered calls, and each method call
+ must be identified by a consumer project identity. Use this rule to
+ allow/disallow unregistered calls.</p>
+<p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="13" sourceendlinenumber="13"> Example of an API that wants to allow unregistered calls for entire service.</p>
+<pre sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="15" sourceendlinenumber="18"><code> usage:
+   rules:
+   - selector: &quot;*&quot;
+     allow_unregistered_calls: true
+</code></pre><p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> Example of a method that wants to allow unregistered calls.</p>
+<pre sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="22" sourceendlinenumber="25"><code> usage:
+   rules:
+   - selector: &quot;google.example.library.v1.LibraryService.CreateBook&quot;
+     allow_unregistered_calls: true
+</code></pre></section>
+                <h3 id="enums">Enums
+              </h3>
+                  <h4><a class="xref" href="Google.Api.ChangeType.html#Google_Api_ChangeType">ChangeType</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.ChangeType.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Classifies set of possible modifications to an object in the service
+ configuration.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.HttpRule.PatternOneofCase.html#Google_Api_HttpRule_PatternOneofCase">HttpRule.PatternOneofCase</a></h4>
+                  <section><p sourcefile="obj/api/Google.Api.HttpRule.PatternOneofCase.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Enum of possible cases for the &quot;pattern&quot; oneof.</p>
+</section>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

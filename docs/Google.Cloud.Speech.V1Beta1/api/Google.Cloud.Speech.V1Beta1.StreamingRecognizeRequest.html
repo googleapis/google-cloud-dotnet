@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StreamingRecognizeRequest
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest">Class StreamingRecognizeRequest
               </h1>
-              <div class="markdown level0 summary"><p> <code>StreamingRecognizeRequest</code> is the top-level message sent by the client for
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> <code>StreamingRecognizeRequest</code> is the top-level message sent by the client for
  the <code>StreamingRecognize</code>. Multiple <code>StreamingRecognizeRequest</code> messages are
  sent. The first message must contain a <code>streaming_config</code> message and must
  not contain <code>audio</code> data. All subsequent messages must contain <code>audio</code> data
@@ -106,13 +106,14 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_AudioContent" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.AudioContent">AudioContent</h4>
-              <div class="markdown level1 summary"><p> The audio data to be recognized. Sequential chunks of audio data are sent
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="9"> The audio data to be recognized. Sequential chunks of audio data are sent
  in sequential <code>StreamingRecognizeRequest</code> messages. The first
  <code>StreamingRecognizeRequest</code> message must not contain <code>audio_content</code> data
  and all subsequent <code>StreamingRecognizeRequest</code> messages must contain
  <code>audio_content</code> data. The audio bytes must be encoded as specified in
  <code>RecognitionConfig</code>. Note: as with all bytes fields, protobuffers use a
- pure binary representation (not base64).</p>
+ pure binary representation (not base64). See
+ <a href="https://cloud.google.com/speech/limits#content" sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.yml" sourcestartlinenumber="9" sourceendlinenumber="9">audio limits</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -135,9 +136,9 @@
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest_StreamingConfig" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.StreamingConfig">StreamingConfig</h4>
-              <div class="markdown level1 summary"><p> The <code>streaming_config</code> message provides information to the recognizer
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The <code>streaming_config</code> message provides information to the recognizer
  that specifies how to process the request.</p>
-<p> The first <code>StreamingRecognizeRequest</code> message must contain a
+<p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.yml" sourcestartlinenumber="5" sourceendlinenumber="6"> The first <code>StreamingRecognizeRequest</code> message must contain a
  <code>streaming_config</code>  message.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -210,8 +211,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

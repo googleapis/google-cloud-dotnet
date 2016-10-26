@@ -62,9 +62,9 @@
 <h2 id="introduction" sourcefile="call-settings.md" sourcestartlinenumber="3" sourceendlinenumber="3">Introduction</h2>
 <p sourcefile="call-settings.md" sourcestartlinenumber="5" sourceendlinenumber="10">All client libraries wrapping gRPC-based APIs (see the <a href="api-layers.html" sourcefile="call-settings.md" sourcestartlinenumber="5" sourceendlinenumber="5">API layers</a> article)
 allow customization of RPC calls by using
-<a href="api/Google.Api.Gax.CallSettings.html" sourcefile="call-settings.md" sourcestartlinenumber="7" sourceendlinenumber="7">CallSettings</a>. If <code>CallSettings</code> are
+<a href="obj/api/Google.Api.Gax.CallSettings.yml" sourcefile="call-settings.md" sourcestartlinenumber="7" sourceendlinenumber="7">CallSettings</a>. If <code>CallSettings</code> are
 not specified sensible defaults are automatically provided.
-See the <a href="api/Google.Api.Gax.CallSettings.html" sourcefile="call-settings.md" sourcestartlinenumber="9" sourceendlinenumber="9">CallSettings documentation</a>
+See the <a href="obj/api/Google.Api.Gax.CallSettings.yml" sourcefile="call-settings.md" sourcestartlinenumber="9" sourceendlinenumber="9">CallSettings documentation</a>
 for descriptions of the available properties.</p>
 <p sourcefile="call-settings.md" sourcestartlinenumber="12" sourceendlinenumber="16">The underlying gRPC API uses
 <a href="http://www.grpc.io/grpc/csharp/html/T_Grpc_Core_CallOptions.htm" sourcefile="call-settings.md" sourcestartlinenumber="13" sourceendlinenumber="13">CallOptions</a>,
@@ -85,9 +85,9 @@ property is used.</p>
 <p sourcefile="call-settings.md" sourcestartlinenumber="30" sourceendlinenumber="36">The client-wide <code>CallSettings</code> is higher-priority than per-RPC-method <code>CallSettings</code>
 because it is often useful to be able to easily specify common properties to use
 for all RPC invocations. For example, a common set of
-<a href="api/Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings_Headers" sourcefile="call-settings.md" sourcestartlinenumber="33" sourceendlinenumber="33">headers</a>;
+<a href="obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Headers" sourcefile="call-settings.md" sourcestartlinenumber="33" sourceendlinenumber="33">headers</a>;
 or a common
-<a href="api/Google.Api.Gax.CallSettings.html#Google_Api_Gax_CallSettings_Timing" sourcefile="call-settings.md" sourcestartlinenumber="35" sourceendlinenumber="35">deadline</a>
+<a href="obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Timing" sourcefile="call-settings.md" sourcestartlinenumber="35" sourceendlinenumber="35">deadline</a>
 for multiple RPC invocations.</p>
 <h2 id="examples" sourcefile="call-settings.md" sourcestartlinenumber="38" sourceendlinenumber="38">Examples</h2>
 <h3 id="per-rpc-highest-priority" sourcefile="call-settings.md" sourcestartlinenumber="40" sourceendlinenumber="40">Per-RPC (highest priority)</h3>
@@ -96,26 +96,14 @@ PublisherClient client = PublisherClient.Create();
 // Format topicName from the projectId and topicId.
 string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 // Create a CallSettings with a custom header.
-CallSettings callSettings = new CallSettings
-{
-    Headers = new Metadata
-    {
-        { &quot;ClientVersion&quot;, &quot;1.0.0&quot; }
-    }
-};
+CallSettings callSettings = new CallSettings(null, null, null, metadata =&gt; metadata.Add(&quot;ClientVersion&quot;, &quot;1.0.0&quot;), null, null);
 // This will cause the custom &#39;ClientVersion&#39; header to be included in the RPC call.
 Topic topic = client.CreateTopic(topicName, callSettings);
 </code></pre><h3 id="client-configuration-client-wide" sourcefile="call-settings.md" sourcestartlinenumber="44" sourceendlinenumber="44">Client configuration; client-wide</h3>
 <pre><code class="lang-cs">// Create a default PublisherSettings, with a custom header for calls to all RPC methods.
 PublisherSettings publisherSettings = new PublisherSettings
 {
-    CallSettings = new CallSettings
-    {
-        Headers = new Metadata
-        {
-            { &quot;ClientVersion&quot;, &quot;1.0.0&quot; }
-        },
-    }
+    CallSettings = new CallSettings(null, null, null, metadata =&gt; metadata.Add(&quot;ClientVersion&quot;, &quot;1.0.0&quot;), null, null)
 };
 PublisherClient client = PublisherClient.Create(settings: publisherSettings);
 // Format topicName from the projectId and topicId.
@@ -127,10 +115,7 @@ Topic topic = client.CreateTopic(topicName);
 <pre><code class="lang-cs">// Create a default PublisherSettings, with a custom header for calls
 // to the CreateTopic RPC method.
 PublisherSettings publisherSettings = new PublisherSettings();
-publisherSettings.CreateTopicSettings.Headers = new Metadata
-{
-    { &quot;ClientVersion&quot;, &quot;1.0.0&quot; }
-};
+publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings.WithHeader(&quot;ClientVersion&quot;, &quot;1.0.0&quot;);
 PublisherClient client = PublisherClient.Create(settings: publisherSettings);
 // Format topicName from the projectId and topicId.
 string topicName = PublisherClient.FormatTopicName(projectId, topicId);
@@ -143,20 +128,16 @@ Topic topic = client.CreateTopic(topicName);
 // * A custom 5-second timeout Timing.
 // * No cancellation token.
 PublisherSettings publisherSettings = new PublisherSettings();
-publisherSettings.CreateTopicSettings.Headers = new Metadata
-{
-    { &quot;ClientVersion&quot;, &quot;1.0.0&quot; }
-};
-publisherSettings.CreateTopicSettings.Timing = CallTiming.FromTimeout(TimeSpan.FromSeconds(5));
-publisherSettings.CreateTopicSettings.CancellationToken = CancellationToken.None;
+publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings
+    .WithCancellationToken(CancellationToken.None)
+    .WithCallTiming(CallTiming.FromTimeout(TimeSpan.FromSeconds(5)))
+    .WithHeader(&quot;ClientVersion&quot;, &quot;1.0.0&quot;);
 
 // Override the above Timing and CancellationToken in the client-wide CallSettings;
 // the Headers are not overridden.
-publisherSettings.CallSettings = new CallSettings
-{
-    Timing = CallTiming.FromDeadline(deadline),
-    CancellationToken = CancellationToken.None,
-};
+publisherSettings.CallSettings = CallSettings
+    .FromCallTiming(CallTiming.FromDeadline(deadline))
+    .WithCancellationToken(CancellationToken.None);
 
 // Create the client with the configured publisherSettings
 PublisherClient client = PublisherClient.Create(settings: publisherSettings);
@@ -169,10 +150,7 @@ string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 // * A custom &quot;ClientVersion&quot; header.
 // * A Timing deadline of &#39;deadline&#39; (*not* the overridden 5-second timeout).
 // * The CancellationToken &#39;cancellationToken&#39; (*not* CancellationToken.None).
-Topic topic = client.CreateTopic(topicName, new CallSettings
-{
-    CancellationToken = cancellationToken
-});
+Topic topic = client.CreateTopic(topicName, CallSettings.FromCancellationToken(cancellationToken));
 </code></pre><h2 id="defaults" sourcefile="call-settings.md" sourcestartlinenumber="56" sourceendlinenumber="56">Defaults</h2>
 <p sourcefile="call-settings.md" sourcestartlinenumber="58" sourceendlinenumber="60">By default there is a per-RPC-method client configuration that specifies a sensible
 retry policy for every method. See, for example,

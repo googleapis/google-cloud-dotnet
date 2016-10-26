@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Logging.Type
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,18 +75,25 @@
                 <h3 id="classes">Classes
               </h3>
                   <h4><a class="xref" href="Google.Logging.Type.HttpRequest.html#Google_Logging_Type_HttpRequest">HttpRequest</a></h4>
-                  <section><p> A common proto for logging HTTP requests.</p>
+                  <section><p sourcefile="obj/api/Google.Logging.Type.HttpRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> A common proto for logging HTTP requests. Only contains semantics
+ defined by the HTTP specification. Product-specific logging
+ information MUST be defined in a separate message.</p>
 </section>
                 <h3 id="enums">Enums
               </h3>
                   <h4><a class="xref" href="Google.Logging.Type.LogSeverity.html#Google_Logging_Type_LogSeverity">LogSeverity</a></h4>
-                  <section><p> The severity of the event described in a log entry.  These guideline severity
- levels are ordered, with numerically smaller levels treated as less severe
- than numerically larger levels. If the source of the log entries uses a
- different set of severity levels, the client should select the closest
- corresponding <code>LogSeverity</code> value. For example, Java&#39;s FINE, FINER, and
- FINEST levels might all map to <code>LogSeverity.DEBUG</code>. If the original severity
- code must be preserved, it can be stored in the payload.</p>
+                  <section><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> The severity of the event described in a log entry, expressed as one of the
+ standard severity levels listed below.  For your reference, the levels are
+ assigned the listed numeric values. The effect of using numeric values other
+ than those listed is undefined.</p>
+<p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="7" sourceendlinenumber="9"> You can filter for log entries by severity.  For example, the following
+ filter expression will match log entries with severities <code>INFO</code>, <code>NOTICE</code>,
+ and <code>WARNING</code>:</p>
+<pre sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="11" sourceendlinenumber="11"><code> severity &amp;gt; DEBUG AND severity &amp;lt;= WARNING
+</code></pre><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="13" sourceendlinenumber="16"> If you are writing log entries, you should map other severity encodings to
+ one of these standard levels. For example, you might map all of Java&#39;s FINE,
+ FINER, and FINEST levels to <code>LogSeverity.DEBUG</code>. You can preserve the
+ original severity level in the log entry payload if you wish.</p>
 </section>
             </article>
           </div>
@@ -116,8 +123,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

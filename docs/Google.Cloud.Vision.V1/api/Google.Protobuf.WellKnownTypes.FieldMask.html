@@ -103,7 +103,7 @@
    }
  }
 </code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml" sourcestartlinenumber="43" sourceendlinenumber="44"> A repeated field is not allowed except at the last position of a
- field mask.</p>
+ paths string.</p>
 <p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml" sourcestartlinenumber="46" sourceendlinenumber="48"> If a FieldMask object is not present in a get operation, the
  operation applies to all fields (as if a FieldMask of all fields
  had been specified).</p>
@@ -125,8 +125,8 @@
  fields not covered by the mask.</p>
 <p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml" sourcestartlinenumber="69" sourceendlinenumber="72"> If a repeated field is specified for an update operation, the existing
  repeated values in the target resource will be overwritten by the new values.
- Note that a repeated field is only allowed in the last position of a field
- mask.</p>
+ Note that a repeated field is only allowed in the last position of a <code>paths</code>
+ string.</p>
 <p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.FieldMask.yml" sourcestartlinenumber="74" sourceendlinenumber="76"> If a sub-message is specified in the last position of the field mask for an
  update operation, then the existing sub-message in the target resource is
  overwritten. Given the target message:</p>

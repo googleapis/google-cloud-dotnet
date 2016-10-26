@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WriteLogEntriesRequest
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_WriteLogEntriesRequest" data-uid="Google.Logging.V2.WriteLogEntriesRequest">Class WriteLogEntriesRequest
               </h1>
-              <div class="markdown level0 summary"><p> The parameters to WriteLogEntries.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The parameters to WriteLogEntries.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,11 +102,14 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_Entries" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Entries">Entries</h4>
-              <div class="markdown level1 summary"><p> Required. The log entries to write. The log entries must have values for
- all required fields.</p>
-<p> To improve throughput and to avoid exceeding the quota limit for calls
- to <code>entries.write</code>, use this field to write multiple log entries at once
- rather than  // calling this method for each log entry.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Required. The log entries to write. Values supplied for the fields
+ <code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
+ added to those log entries that do not provide their own values for the
+ fields.</p>
+<p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="7" sourceendlinenumber="10"> To improve throughput and to avoid exceeding the
+ <a href="/logging/quota-policy" sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="8" sourceendlinenumber="8">quota limit</a> for calls to <code>entries.write</code>,
+ you should write multiple log entries at once rather than
+ calling this method for each individual log entry.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -129,10 +132,10 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_Labels" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Labels">Labels</h4>
-              <div class="markdown level1 summary"><p> Optional. User-defined <code>key:value</code> items that are added to
- the <code>labels</code> field of each log entry in <code>entries</code>, except when a log
- entry specifies its own <code>key:value</code> item with the same key.
- Example: <code>{ &quot;size&quot;: &quot;large&quot;, &quot;color&quot;:&quot;red&quot; }</code></p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Optional. Default labels that are added to the <code>labels</code> field of all log
+ entries in <code>entries</code>. If a log entry already has a label with the same key
+ as a label in this parameter, then the log entry&#39;s label is not changed.
+ See [LogEntry][google.logging.v2.LogEntry].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -155,8 +158,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_LogName" data-uid="Google.Logging.V2.WriteLogEntriesRequest.LogName">LogName</h4>
-              <div class="markdown level1 summary"><p> Optional. A default log resource name for those log entries in <code>entries</code>
- that do not specify their own <code>logName</code>.  Example:
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Optional. A default log resource name that is assigned to all log entries
+ in <code>entries</code> that do not specify a value for <code>log_name</code>.  Example:
  <code>&quot;projects/my-project/logs/syslog&quot;</code>.  See
  [LogEntry][google.logging.v2.LogEntry].</p>
 </div>
@@ -181,7 +184,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_PartialSuccess" data-uid="Google.Logging.V2.WriteLogEntriesRequest.PartialSuccess">PartialSuccess</h4>
-              <div class="markdown level1 summary"><p> Optional. Whether valid entries should be written even if some other
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Optional. Whether valid entries should be written even if some other
  entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
  entry is not written, the response status will be the error associated
  with one of the failed entries and include error details in the form of
@@ -208,13 +211,17 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_Resource" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Resource">Resource</h4>
-              <div class="markdown level1 summary"><p> Optional. A default monitored resource for those log entries in <code>entries</code>
- that do not specify their own <code>resource</code>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Optional. A default monitored resource object that is assigned to all log
+ entries in <code>entries</code> that do not specify a value for <code>resource</code>. Example:</p>
+<pre sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="5" sourceendlinenumber="7"><code> { &quot;type&quot;: &quot;gce_instance&quot;,
+   &quot;labels&quot;: {
+     &quot;zone&quot;: &quot;us-central1-a&quot;, &quot;instance_id&quot;: &quot;00000000000000000000&quot; }}
+</code></pre><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="9" sourceendlinenumber="9"> See [LogEntry][google.logging.v2.LogEntry].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Api.MonitoredResource Resource { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public MonitoredResource Resource { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -226,7 +233,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -259,8 +266,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

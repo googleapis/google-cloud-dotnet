@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PartitionId
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,20 +70,20 @@
               
               <h1 id="Google_Datastore_V1_PartitionId" data-uid="Google.Datastore.V1.PartitionId">Class PartitionId
               </h1>
-              <div class="markdown level0 summary"><p> A partition ID identifies a grouping of entities. The grouping is always
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> A partition ID identifies a grouping of entities. The grouping is always
  by project and namespace, however the namespace ID may be empty.</p>
-<p> A partition ID contains several dimensions:
+<p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="5" sourceendlinenumber="6"> A partition ID contains several dimensions:
  project ID and namespace ID.</p>
-<p> Partition dimensions:</p>
-<ul>
-<li>May be <code>&quot;&quot;</code>.</li>
-<li>Must be valid UTF-8 bytes.</li>
-<li><p>Must have values that match regex <code>[A-Za-z\d\.\-_]{1,100}</code>
+<p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="8" sourceendlinenumber="8"> Partition dimensions:</p>
+<ul sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="10" sourceendlinenumber="20">
+<li sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="10" sourceendlinenumber="10">May be <code>&quot;&quot;</code>.</li>
+<li sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="11" sourceendlinenumber="11">Must be valid UTF-8 bytes.</li>
+<li sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="12" sourceendlinenumber="20"><p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="12" sourceendlinenumber="16">Must have values that match regex <code>[A-Za-z\d\.\-_]{1,100}</code>
 If the value of any dimension matches regex <code>__.*__</code>, the partition is
 reserved/read-only.
 A reserved/read-only partition ID is forbidden in certain documented
 contexts.</p>
-<p>Foreign partition IDs (in which the project ID does
+<p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="12" sourceendlinenumber="14">Foreign partition IDs (in which the project ID does
 not match the context project ID ) are discouraged.
 Reads and writes of foreign partition IDs may fail if the project is not in an active state.</p>
 </li>
@@ -119,7 +119,7 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Google_Datastore_V1_PartitionId__ctor_System_String_System_String_" data-uid="Google.Datastore.V1.PartitionId.#ctor(System.String,System.String)">PartitionId(String, String)</h4>
-              <div class="markdown level1 summary"><p>Creates a partition ID from the given project ID and namespace ID.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a partition ID from the given project ID and namespace ID.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -139,13 +139,13 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The project ID of the partition. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The project ID of the partition. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>namespaceId</em></td>
-                    <td><p>The namespace ID of the partition. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The namespace ID of the partition. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -153,7 +153,7 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Datastore_V1_PartitionId_NamespaceId" data-uid="Google.Datastore.V1.PartitionId.NamespaceId">NamespaceId</h4>
-              <div class="markdown level1 summary"><p> If not empty, the ID of the namespace to which the entities belong.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> If not empty, the ID of the namespace to which the entities belong.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -176,7 +176,7 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_PartitionId_ProjectId" data-uid="Google.Datastore.V1.PartitionId.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p> The ID of the project to which the entities belong.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.PartitionId.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The ID of the project to which the entities belong.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -226,8 +226,8 @@ Reads and writes of foreign partition IDs may fail if the project is not in an a
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

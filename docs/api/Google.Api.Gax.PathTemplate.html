@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PathTemplate
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_PathTemplate" data-uid="Google.Api.Gax.PathTemplate">Class PathTemplate
               </h1>
-              <div class="markdown level0 summary"><p>Represents a path template used for resource names which may be composed of multiple IDs.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Represents a path template used for resource names which may be composed of multiple IDs.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -107,9 +107,9 @@
               </div>
               <h5 id="Google_Api_Gax_PathTemplate_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>
-Templates use a subset of the syntax of the API platform. See the protobuf of <see cref="!:HttpRule"></see> for
-details of the API platform. (The source for <code>HttpRule</code> is at
-<a href="https://github.com/googleapis/googleapis/blob/master/google/api/http.proto">https://github.com/googleapis/googleapis/blob/master/google/api/http.proto</a>)
+Templates use a subset of the syntax of the API platform. See
+<a href="https://github.com/googleapis/googleapis/blob/master/google/api/http.proto" sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="4" sourceendlinenumber="4">https://github.com/googleapis/googleapis/blob/master/google/api/http.proto</a>
+for details of the API platform.
 </p>
 <p>
 This class performs no URL escaping or unescaping. It is designed for use within GRPC, where no
@@ -119,7 +119,7 @@ URL encoding is required.
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Google_Api_Gax_PathTemplate__ctor_System_String_" data-uid="Google.Api.Gax.PathTemplate.#ctor(System.String)">PathTemplate(String)</h4>
-              <div class="markdown level1 summary"><p>Constructs a template from its textual representation, such as <code>shelves/*/books/**</code>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a template from its textual representation, such as <code>shelves/*/books/**</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -139,7 +139,7 @@ URL encoding is required.
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>template</em></td>
-                    <td><p>The textual representation of the template. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The textual representation of the template. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -147,7 +147,7 @@ URL encoding is required.
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Api_Gax_PathTemplate_ParameterCount" data-uid="Google.Api.Gax.PathTemplate.ParameterCount">ParameterCount</h4>
-              <div class="markdown level1 summary"><p>The number of parameter segments (regular wildcards or path wildcards, named or unnamed) in the template.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The number of parameter segments (regular wildcards or path wildcards, named or unnamed) in the template.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -170,7 +170,7 @@ URL encoding is required.
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_PathTemplate_ParameterNames" data-uid="Google.Api.Gax.PathTemplate.ParameterNames">ParameterNames</h4>
-              <div class="markdown level1 summary"><p>The names of the parameters within the template. This collection has one element per parameter,
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The names of the parameters within the template. This collection has one element per parameter,
 but unnamed parameters have a name of <code>null</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -196,7 +196,7 @@ but unnamed parameters have a name of <code>null</code>.</p>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Api_Gax_PathTemplate_Expand_System_String___" data-uid="Google.Api.Gax.PathTemplate.Expand(System.String[])">Expand(String[])</h4>
-              <div class="markdown level1 summary"><p>Validates that the given resource IDs are valid for this template, and returns a string representation</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Validates that the given resource IDs are valid for this template, and returns a string representation</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -216,7 +216,7 @@ but unnamed parameters have a name of <code>null</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span>[]</td>
                     <td><em>resourceIds</em></td>
-                    <td><p>The resource IDs to use to populate the parameters in this template. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The resource IDs to use to populate the parameters in this template. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -232,7 +232,7 @@ but unnamed parameters have a name of <code>null</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p>The string representation of the resource name.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The string representation of the resource name.</p>
 </td>
                   </tr>
                 </tbody>
@@ -247,7 +247,7 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
 </p>
 </div>
               <h4 id="Google_Api_Gax_PathTemplate_ExpandWithService_System_String_System_String___" data-uid="Google.Api.Gax.PathTemplate.ExpandWithService(System.String,System.String[])">ExpandWithService(String, String[])</h4>
-              <div class="markdown level1 summary"><p>Validates that the given resource IDs are valid for this template, and returns a string representation</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Validates that the given resource IDs are valid for this template, and returns a string representation</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -267,13 +267,13 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>serviceName</em></td>
-                    <td><p>The service name, which may be null.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The service name, which may be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span>[]</td>
                     <td><em>resourceIds</em></td>
-                    <td><p>The resource IDs to use to populate the parameters in this template. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The resource IDs to use to populate the parameters in this template. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -289,13 +289,13 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p>The string representation of the resource name.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The string representation of the resource name.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_PathTemplate_ParseName_System_String_" data-uid="Google.Api.Gax.PathTemplate.ParseName(System.String)">ParseName(String)</h4>
-              <div class="markdown level1 summary"><p>Attempts to parse the given resource name against this template, throwing <span class="xref">System.ArgumentException</span> on failure.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Attempts to parse the given resource name against this template, throwing <span class="xref">System.ArgumentException</span> on failure.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -315,7 +315,7 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td><p>The resource name to parse against this template. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The resource name to parse against this template. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -331,13 +331,13 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName">ResourceName</a></td>
-                    <td><p>The parsed name as a <a class="xref" href="Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName">ResourceName</a>.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The parsed name as a <a class="xref" href="Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName">ResourceName</a>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Api_Gax_PathTemplate_ToString" data-uid="Google.Api.Gax.PathTemplate.ToString">ToString()</h4>
-              <div class="markdown level1 summary"><p>Returns the textual representation of this template.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns the textual representation of this template.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -355,7 +355,7 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p>The same textual representation that this template was initially constructed with.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The same textual representation that this template was initially constructed with.</p>
 </td>
                   </tr>
                 </tbody>
@@ -363,7 +363,7 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
               <h4 id="Google_Api_Gax_PathTemplate_TryParseName_System_String_Google_Api_Gax_ResourceName__" data-uid="Google.Api.Gax.PathTemplate.TryParseName(System.String,Google.Api.Gax.ResourceName@)">TryParseName(String, out ResourceName)</h4>
-              <div class="markdown level1 summary"><p>Attempts to parse the given resource name against this template, returning <code>null</code> on failure.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Attempts to parse the given resource name against this template, returning <code>null</code> on failure.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -383,13 +383,13 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td><p>The resource name to parse against this template. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The resource name to parse against this template. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName">ResourceName</a></td>
                     <td><em>result</em></td>
-                    <td><p>When this method returns, the parsed resource name or <code>null</code> if parsing fails.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1">When this method returns, the parsed resource name or <code>null</code> if parsing fails.</p>
 </td>
                   </tr>
                 </tbody>
@@ -405,13 +405,13 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
-                    <td><p><code>true</code> if the name was parsed successfully; <code>false</code> otherwise.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><code>true</code> if the name was parsed successfully; <code>false</code> otherwise.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_PathTemplate_TryParseName_System_String_Google_Api_Gax_ResourceName___remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Although this method returns <code>null</code> if a name is passed in which doesn&#39;t match the template,
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.PathTemplate.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Although this method returns <code>null</code> if a name is passed in which doesn&#39;t match the template,
 it still throws <span class="xref">System.ArgumentNullException</span> if <em>name</em> is null, as this would
 usually indicate a programming error rather than a data error.</p>
 </div>
@@ -443,8 +443,8 @@ usually indicate a programming error rather than a data error.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RecognitionAudio
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,9 +70,10 @@
               
               <h1 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio">Class RecognitionAudio
               </h1>
-              <div class="markdown level0 summary"><p> Contains audio data in the encoding specified in the <code>RecognitionConfig</code>.
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Contains audio data in the encoding specified in the <code>RecognitionConfig</code>.
  Either <code>content</code> or <code>uri</code> must be supplied. Supplying both or neither
- returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].</p>
+ returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. See
+ <a href="https://cloud.google.com/speech/limits#content" sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="5" sourceendlinenumber="5">audio limits</a>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -126,7 +127,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Content" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Content">Content</h4>
-              <div class="markdown level1 summary"><p> The audio data bytes encoded as specified in
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The audio data bytes encoded as specified in
  <code>RecognitionConfig</code>. Note: as with all bytes fields, protobuffers use a
  pure binary representation, whereas JSON representations use base64.</p>
 </div>
@@ -151,12 +152,12 @@
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_Uri" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.Uri">Uri</h4>
-              <div class="markdown level1 summary"><p> URI that points to a file that contains audio data bytes as specified in
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> URI that points to a file that contains audio data bytes as specified in
  <code>RecognitionConfig</code>. Currently, only Google Cloud Storage URIs are
  supported, which must be specified in the following format:
  <code>gs://bucket_name/object_name</code> (other URI formats return
  [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
- <a href="/storage/docs/reference-uris">Request URIs</a>.</p>
+ <a href="https://cloud.google.com/storage/docs/reference-uris" sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Request URIs</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -181,7 +182,7 @@
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromBytes_System_Byte___" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromBytes(System.Byte[])">FromBytes(Byte[])</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> from the given byte array.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> from the given byte array.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -201,7 +202,7 @@
                   <tr>
                     <td><span class="xref">System.Byte</span>[]</td>
                     <td><em>bytes</em></td>
-                    <td><p>The bytes representing the raw RecognitionAudio data.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The bytes representing the raw RecognitionAudio data.</p>
 </td>
                   </tr>
                 </tbody>
@@ -217,17 +218,17 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromBytes_System_Byte____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method copies the data from the byte array; modifications to <em>bytes</em>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="2">This method copies the data from the byte array; modifications to <em>bytes</em>
 after this method returns will not be reflected in the RecognitionAudio.</p>
 </div>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromBytes_System_Byte___System_Int32_System_Int32_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromBytes(System.Byte[],System.Int32,System.Int32)">FromBytes(Byte[], Int32, Int32)</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> from a section of the given byte array.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> from a section of the given byte array.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -247,19 +248,19 @@ after this method returns will not be reflected in the RecognitionAudio.</p>
                   <tr>
                     <td><span class="xref">System.Byte</span>[]</td>
                     <td><em>bytes</em></td>
-                    <td><p>The bytes representing the raw RecognitionAudio data.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The bytes representing the raw RecognitionAudio data.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><em>offset</em></td>
-                    <td><p>The offset into the byte array of the start of the data to include in the RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The offset into the byte array of the start of the data to include in the RecognitionAudio.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><em>count</em></td>
-                    <td><p>The number of bytes to include in the RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The number of bytes to include in the RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
@@ -275,17 +276,17 @@ after this method returns will not be reflected in the RecognitionAudio.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromBytes_System_Byte___System_Int32_System_Int32__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method copies the data from the byte array; modifications to <em>bytes</em>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="2">This method copies the data from the byte array; modifications to <em>bytes</em>
 after this method returns will not be reflected in the RecognitionAudio.</p>
 </div>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromFile_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromFile(System.String)">FromFile(String)</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given file path.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given file path.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -305,7 +306,7 @@ after this method returns will not be reflected in the RecognitionAudio.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>path</em></td>
-                    <td><p>The file path to load RecognitionAudio data from. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The file path to load RecognitionAudio data from. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -321,13 +322,13 @@ after this method returns will not be reflected in the RecognitionAudio.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromFileAsync_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromFileAsync(System.String)">FromFileAsync(String)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given file path.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given file path.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -347,7 +348,7 @@ after this method returns will not be reflected in the RecognitionAudio.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>path</em></td>
-                    <td><p>The file path to load RecognitionAudio data from. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The file path to load RecognitionAudio data from. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -363,13 +364,13 @@ after this method returns will not be reflected in the RecognitionAudio.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromStorageUri_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromStorageUri(System.String)">FromStorageUri(String)</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> with a <see cref="!:RecognitionAudio.Source"></see> property referring to a Google Cloud
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> with a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio_Uri">Uri</a> property referring to a Google Cloud
 Storage URI.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -390,7 +391,7 @@ Storage URI.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>storageUri</em></td>
-                    <td><p>A Google Cloud Storage URI, of the form <code>gs://bucket-name/object-name</code>. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A Google Cloud Storage URI, of the form <code>gs://bucket-name/object-name</code>. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -406,13 +407,13 @@ Storage URI.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromStream_System_IO_Stream_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromStream(System.IO.Stream)">FromStream(Stream)</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given stream.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -432,7 +433,7 @@ Storage URI.</p>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><em>stream</em></td>
-                    <td><p>The stream to load RecognitionAudio data from. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The stream to load RecognitionAudio data from. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -448,13 +449,13 @@ Storage URI.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromStreamAsync_System_IO_Stream_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromStreamAsync(System.IO.Stream)">FromStreamAsync(Stream)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given stream.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by loading data from the given stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -474,7 +475,7 @@ Storage URI.</p>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><em>stream</em></td>
-                    <td><p>The stream to load RecognitionAudio data from. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The stream to load RecognitionAudio data from. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -490,13 +491,13 @@ Storage URI.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromUri_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromUri(System.String)">FromUri(String)</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -516,7 +517,7 @@ Storage URI.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>uri</em></td>
-                    <td><p>The URI to fetch. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The URI to fetch. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -532,13 +533,13 @@ Storage URI.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromUri_System_Uri_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromUri(System.Uri)">FromUri(Uri)</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -558,7 +559,7 @@ Storage URI.</p>
                   <tr>
                     <td><span class="xref">System.Uri</span></td>
                     <td><em>uri</em></td>
-                    <td><p>The URI to fetch. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The URI to fetch. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -574,13 +575,13 @@ Storage URI.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a></td>
-                    <td><p>The newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromUriAsync_System_String_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromUriAsync(System.String)">FromUriAsync(String)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -600,7 +601,7 @@ Storage URI.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>uri</em></td>
-                    <td><p>The URI to fetch. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The URI to fetch. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -616,13 +617,13 @@ Storage URI.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
-                    <td><p>A task representing the asynchronous operation. The result will be the newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation. The result will be the newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionAudio_FromUriAsync_System_Uri_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionAudio.FromUriAsync(System.Uri)">FromUriAsync(Uri)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Asynchronously constructs a <a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a> by downloading data from the given URI.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -642,7 +643,7 @@ Storage URI.</p>
                   <tr>
                     <td><span class="xref">System.Uri</span></td>
                     <td><em>uri</em></td>
-                    <td><p>The URI to fetch. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The URI to fetch. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -658,7 +659,7 @@ Storage URI.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.RecognitionAudio.html#Google_Cloud_Speech_V1Beta1_RecognitionAudio">RecognitionAudio</a>&gt;</td>
-                    <td><p>A task representing the asynchronous operation. The result will be the newly created RecognitionAudio.</p>
+                    <td><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation. The result will be the newly created RecognitionAudio.</p>
 </td>
                   </tr>
                 </tbody>
@@ -691,8 +692,8 @@ Storage URI.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

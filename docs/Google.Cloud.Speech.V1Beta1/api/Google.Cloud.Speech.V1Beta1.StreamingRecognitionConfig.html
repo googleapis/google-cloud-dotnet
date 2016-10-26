@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StreamingRecognitionConfig
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Cloud_Speech_V1Beta1_StreamingRecognitionConfig" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig">Class StreamingRecognitionConfig
               </h1>
-              <div class="markdown level0 summary"><p> The <code>StreamingRecognitionConfig</code> message provides information to the
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The <code>StreamingRecognitionConfig</code> message provides information to the
  recognizer that specifies how to process the request.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -103,7 +103,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognitionConfig_Config" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.Config">Config</h4>
-              <div class="markdown level1 summary"><p> [Required] The <code>config</code> message provides information to the recognizer
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> [Required] The <code>config</code> message provides information to the recognizer
  that specifies how to process the request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -127,7 +127,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognitionConfig_InterimResults" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.InterimResults">InterimResults</h4>
-              <div class="markdown level1 summary"><p> [Optional] If <code>true</code>, interim results (tentative hypotheses) may be
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> [Optional] If <code>true</code>, interim results (tentative hypotheses) may be
  returned as they become available (these interim results are indicated with
  the <code>is_final=false</code> flag).
  If <code>false</code> or omitted, only <code>is_final=true</code> result(s) are returned.</p>
@@ -153,15 +153,15 @@
                 </tbody>
               </table>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognitionConfig_SingleUtterance" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.SingleUtterance">SingleUtterance</h4>
-              <div class="markdown level1 summary"><p> [Optional] If <code>false</code> or omitted, the recognizer will perform continuous
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> [Optional] If <code>false</code> or omitted, the recognizer will perform continuous
  recognition (continuing to process audio even if the user pauses speaking)
  until the client closes the output stream (gRPC API) or when the maximum
- time limit has been reached. Multiple <code>SpeechRecognitionResult</code>s with the
- <code>is_final</code> flag set to <code>true</code> may be returned.</p>
-<p> If <code>true</code>, the recognizer will detect a single spoken utterance. When it
+ time limit has been reached. Multiple <code>StreamingRecognitionResult</code>s with
+ the <code>is_final</code> flag set to <code>true</code> may be returned.</p>
+<p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.yml" sourcestartlinenumber="8" sourceendlinenumber="11"> If <code>true</code>, the recognizer will detect a single spoken utterance. When it
  detects that the user has paused or stopped speaking, it will return an
  <code>END_OF_UTTERANCE</code> event and cease recognition. It will return no more than
- one <code>SpeechRecognitionResult</code> with the <code>is_final</code> flag set to <code>true</code>.</p>
+ one <code>StreamingRecognitionResult</code> with the <code>is_final</code> flag set to <code>true</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -211,8 +211,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

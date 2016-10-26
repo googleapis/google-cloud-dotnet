@@ -8,7 +8,7 @@
     <title>Google.Logging.V2 | Google.Logging.V2 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Logging.V2 | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,28 +57,28 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googleloggingv2">Google.Logging.V2</h1>
+              <h1 id="googleloggingv2" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Logging.V2</h1>
               
-<p><code>Google.Logging.V2</code> is a .NET client library for <a href="https://cloud.google.com/logging/">Google Stackdriver
+<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="6"><code>Google.Logging.V2</code> is a .NET client library for <a href="https://cloud.google.com/logging/" sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4">Google Stackdriver
 Logging</a>. Integration with
-<a href="https://logging.apache.org/log4net/">log4net</a> is provided by
+<a href="https://logging.apache.org/log4net/" sourcefile="index.md" sourcestartlinenumber="5" sourceendlinenumber="5">log4net</a> is provided by
 the <code>Google.Logging.Log4Net</code> package.</p>
-<h1 id="installation">Installation</h1>
-<p>Install the <code>Google.Logging.V2</code> package from NuGet. Add it to
+<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="8">Installation</h1>
+<p sourcefile="index.md" sourcestartlinenumber="10" sourceendlinenumber="15">Install the <code>Google.Logging.V2</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
 Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
-<p>If you wish to use the log4net integration, install the
+<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="18">If you wish to use the log4net integration, install the
 <code>Google.Logging.Log4Net</code> package in the same way.</p>
-<h1 id="authentication">Authentication</h1>
-<p>To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="20" sourceendlinenumber="20">Authentication</h1>
+<p sourcefile="index.md" sourcestartlinenumber="22" sourceendlinenumber="24">To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/" sourcefile="index.md" sourcestartlinenumber="23" sourceendlinenumber="23">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started-log4net">Getting started (log4net)</h1>
-<p>First create a <code>log4net</code> configuration file (<code>log4net.xml</code>) as below:</p>
+<pre sourcefile="index.md" sourcestartlinenumber="26" sourceendlinenumber="28"><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started-log4net" sourcefile="index.md" sourcestartlinenumber="30" sourceendlinenumber="30">Getting started (log4net)</h1>
+<p sourcefile="index.md" sourcestartlinenumber="32" sourceendlinenumber="32">First create a <code>log4net</code> configuration file (<code>log4net.xml</code>) as below:</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
 &lt;log4net&gt;
   &lt;appender name=&quot;CloudLogger&quot; type=&quot;Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net&quot;&gt;
@@ -93,7 +93,7 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
     &lt;appender-ref ref=&quot;CloudLogger&quot;/&gt;
   &lt;/root&gt;
 &lt;/log4net&gt;
-</code></pre><p>Edit the file replacing <code>PROJECT_ID</code> with your Google Cloud Project
+</code></pre><p sourcefile="index.md" sourcestartlinenumber="36" sourceendlinenumber="38">Edit the file replacing <code>PROJECT_ID</code> with your Google Cloud Project
 ID, and <code>LOG_ID</code> with an identifier for your application. Use this
 file to configure <code>log4net</code> and then log as normal.</p>
 <pre><code class="lang-cs">// Configure log4net to use Google Stackdriver logging from the XML configuration file.
@@ -103,13 +103,13 @@ XmlConfigurator.Configure(new FileInfo(&quot;log4net.xml&quot;));
 ILog log = LogManager.GetLogger(typeof(Program));
 // Log some information. This log entry will be sent to Google Stackdriver Logging.
 log.Info(&quot;An exciting log entry!&quot;);
-</code></pre><p>See the
-<a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md">readme</a>
+</code></pre><p sourcefile="index.md" sourcestartlinenumber="42" sourceendlinenumber="44">See the
+<a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/src/Google.Logging.Log4Net/readme.md" sourcefile="index.md" sourcestartlinenumber="43" sourceendlinenumber="43">readme</a>
 for details on all the configuration options.</p>
-<p>(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
-<h1 id="raw-rpc-api">Raw RPC API</h1>
-<p>If required,
-<a href="api/Google.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a>
+<p sourcefile="index.md" sourcestartlinenumber="46" sourceendlinenumber="46">(Depends on <code>Google.Logging.Type</code> for version-agnostic types.)</p>
+<h1 id="raw-rpc-api" sourcefile="index.md" sourcestartlinenumber="48" sourceendlinenumber="48">Raw RPC API</h1>
+<p sourcefile="index.md" sourcestartlinenumber="50" sourceendlinenumber="52">If required,
+<a href="api/Google.Logging.V2.LoggingServiceV2Client.html" sourcefile="index.md" sourcestartlinenumber="51" sourceendlinenumber="51">LoggingServiceV2Client</a>
 provides a low-level abstraction over the raw RPC API.</p>
 
             </article>
@@ -140,8 +140,8 @@ provides a low-level abstraction over the raw RPC API.</p>
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

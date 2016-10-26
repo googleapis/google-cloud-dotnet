@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LogMetric
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_LogMetric" data-uid="Google.Logging.V2.LogMetric">Class LogMetric
               </h1>
-              <div class="markdown level0 summary"><p> Describes a logs-based metric.  The value of the metric is the
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.LogMetric.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Describes a logs-based metric.  The value of the metric is the
  number of log entries that match a logs filter.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -103,7 +103,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Logging_V2_LogMetric_Description" data-uid="Google.Logging.V2.LogMetric.Description">Description</h4>
-              <div class="markdown level1 summary"><p> A description of this metric, which is used in documentation.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogMetric.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Optional. A description of this metric, which is used in documentation.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -126,8 +126,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogMetric_Filter" data-uid="Google.Logging.V2.LogMetric.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p> An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>.
- Example: <code>&quot;logName:syslog AND severity&amp;gt;=ERROR&quot;</code>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogMetric.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Required. An <a href="/logging/docs/view/advanced_filters" sourcefile="obj/api/Google.Logging.V2.LogMetric.yml" sourcestartlinenumber="2" sourceendlinenumber="2">advanced logs filter</a>.
+ Example: <code>&quot;resource.type=gae_app AND severity&amp;gt;=ERROR&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -150,12 +150,14 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogMetric_Name" data-uid="Google.Logging.V2.LogMetric.Name">Name</h4>
-              <div class="markdown level1 summary"><p> Required. The client-assigned metric identifier. Example:
- <code>&quot;severe_errors&quot;</code>.  Metric identifiers are limited to 1000
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogMetric.yml" sourcestartlinenumber="2" sourceendlinenumber="9"> Required. The client-assigned metric identifier. Example:
+ <code>&quot;severe_errors&quot;</code>.  Metric identifiers are limited to 100
  characters and can include only the following characters: <code>A-Z</code>,
- <code>a-z</code>, <code>0-9</code>, and the special characters <code>_-.,+!*&#39;,()%/\</code>.  The
+ <code>a-z</code>, <code>0-9</code>, and the special characters <code>_-.,+!*&#39;,()%/</code>.  The
  forward-slash character (<code>/</code>) denotes a hierarchy of name pieces,
- and it cannot be the first character of the name.</p>
+ and it cannot be the first character of the name.  The &#39;%&#39; character
+ is used to URL encode unsafe and reserved characters and must be
+ followed by two hexadecimal digits according to RFC 1738.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -173,6 +175,31 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Logging_V2_LogMetric_Version" data-uid="Google.Logging.V2.LogMetric.Version">Version</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogMetric.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Output only. The API version that created or updated this metric.
+ The version also dictates the syntax of the filter expression. When a value
+ for this field is missing, the default value of V2 should be assumed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LogMetric.Types.ApiVersion Version { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Logging.V2.LogMetric.Types.ApiVersion</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -205,8 +232,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

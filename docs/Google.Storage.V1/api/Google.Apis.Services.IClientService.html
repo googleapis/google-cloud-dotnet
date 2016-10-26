@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IClientService
+   | Google.Storage.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IClientService
+   | Google.Storage.V1 ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Apis_Services_IClientService" data-uid="Google.Apis.Services.IClientService">Interface IClientService
+              </h1>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="2" sourceendlinenumber="6">Client service contains all the necessary information a Google service requires. 
+Each concrete <a class="xref" href="Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest">IClientServiceRequest</a> has a reference to a service for 
+important properties like API key, application name, base Uri, etc.
+This service interface also contains serialization methods to serialize an object to stream and deserialize a 
+stream into an object.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.IDisposable.Dispose()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Apis.Services</h6>
+              <h6><strong>Assembly</strong>:Google.Apis.dll</h6>
+              <h5 id="Google_Apis_Services_IClientService_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public interface IClientService : IDisposable</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <h4 id="Google_Apis_Services_IClientService_ApiKey" data-uid="Google.Apis.Services.IClientService.ApiKey">ApiKey</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets the API-Key (DeveloperKey) which this service uses for all requests.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">string ApiKey { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_ApplicationName" data-uid="Google.Apis.Services.IClientService.ApplicationName">ApplicationName</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets the application name to be used in the User-Agent header.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">string ApplicationName { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_BasePath" data-uid="Google.Apis.Services.IClientService.BasePath">BasePath</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets the BasePath of the service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">string BasePath { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_BaseUri" data-uid="Google.Apis.Services.IClientService.BaseUri">BaseUri</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets the BaseUri of the service. All request paths should be relative to this URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">string BaseUri { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_Features" data-uid="Google.Apis.Services.IClientService.Features">Features</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets the supported features by this service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IList&lt;string&gt; Features { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_GZipEnabled" data-uid="Google.Apis.Services.IClientService.GZipEnabled">GZipEnabled</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets or sets whether this service supports GZip.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool GZipEnabled { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_HttpClient" data-uid="Google.Apis.Services.IClientService.HttpClient">HttpClient</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets the HTTP client which is used to create requests.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">ConfigurableHttpClient HttpClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Http.ConfigurableHttpClient.html#Google_Apis_Http_ConfigurableHttpClient">ConfigurableHttpClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_HttpClientInitializer" data-uid="Google.Apis.Services.IClientService.HttpClientInitializer">HttpClientInitializer</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets a HTTP client initializer which is able to custom properties on </p>
+<p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="3" sourceendlinenumber="3"><a class="xref" href="Google.Apis.Http.ConfigurableHttpClient.html#Google_Apis_Http_ConfigurableHttpClient">ConfigurableHttpClient</a> and </p>
+<p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="4" sourceendlinenumber="4"><a class="xref" href="Google.Apis.Http.ConfigurableMessageHandler.html#Google_Apis_Http_ConfigurableMessageHandler">ConfigurableMessageHandler</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IConfigurableHttpClientInitializer HttpClientInitializer { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Http.IConfigurableHttpClientInitializer.html#Google_Apis_Http_IConfigurableHttpClientInitializer">IConfigurableHttpClientInitializer</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_Name" data-uid="Google.Apis.Services.IClientService.Name">Name</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets the service name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_Serializer" data-uid="Google.Apis.Services.IClientService.Serializer">Serializer</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets the Serializer used by this service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">ISerializer Serializer { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.ISerializer.html#Google_Apis_ISerializer">ISerializer</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Apis_Services_IClientService_DeserializeError_System_Net_Http_HttpResponseMessage_" data-uid="Google.Apis.Services.IClientService.DeserializeError(System.Net.Http.HttpResponseMessage)">DeserializeError(HttpResponseMessage)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Deserializes an error response into a <a class="xref" href="Google.Apis.Requests.RequestError.html#Google_Apis_Requests_RequestError">RequestError</a> object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">Task&lt;RequestError&gt; DeserializeError(HttpResponseMessage response)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+                    <td><em>response</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Requests.RequestError.html#Google_Apis_Requests_RequestError">RequestError</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.GoogleApiException.html#Google_GoogleApiException">GoogleApiException</a></td>
+                    <td><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If no error is found in the response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_DeserializeResponse__1_System_Net_Http_HttpResponseMessage_" data-uid="Google.Apis.Services.IClientService.DeserializeResponse``1(System.Net.Http.HttpResponseMessage)">DeserializeResponse&lt;T&gt;(HttpResponseMessage)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Deserializes a response into the specified object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">Task&lt;T&gt; DeserializeResponse&lt;T&gt;(HttpResponseMessage response)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+                    <td><em>response</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_SerializeObject_System_Object_" data-uid="Google.Apis.Services.IClientService.SerializeObject(System.Object)">SerializeObject(Object)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Serializes an object into a string representation.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">string SerializeObject(object data)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>data</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Services_IClientService_SetRequestSerailizedContent_System_Net_Http_HttpRequestMessage_System_Object_" data-uid="Google.Apis.Services.IClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage,System.Object)">SetRequestSerailizedContent(HttpRequestMessage, Object)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.IClientService.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Sets the content of the request by the given body and the this service&#39;s configuration. 
+First the body object is serialized by the Serializer and then, if GZip is enabled, the content will be
+wrapped in a GZip stream, otherwise a regular string stream will be used.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void SetRequestSerailizedContent(HttpRequestMessage request, object body)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
+                    <td><em>request</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>body</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;IClientService&gt;(String)</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

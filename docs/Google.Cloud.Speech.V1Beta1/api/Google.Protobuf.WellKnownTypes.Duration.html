@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Duration
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,14 +70,14 @@
               
               <h1 id="Google_Protobuf_WellKnownTypes_Duration" data-uid="Google.Protobuf.WellKnownTypes.Duration">Class Duration
               </h1>
-              <div class="markdown level0 summary"><p> A Duration represents a signed, fixed-length span of time represented
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> A Duration represents a signed, fixed-length span of time represented
  as a count of seconds and fractions of seconds at nanosecond
  resolution. It is independent of any calendar and concepts like &quot;day&quot;
  or &quot;month&quot;. It is related to Timestamp in that the difference between
  two Timestamp values is a Duration and it can be added or subtracted
  from a Timestamp. Range is approximately +-10,000 years.</p>
-<p> Example 1: Compute Duration from two Timestamps in pseudo code.</p>
-<pre><code> Timestamp start = ...;
+<p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="9" sourceendlinenumber="9"> Example 1: Compute Duration from two Timestamps in pseudo code.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="11" sourceendlinenumber="24"><code> Timestamp start = ...;
  Timestamp end = ...;
  Duration duration = ...;
 
@@ -91,8 +91,8 @@
    duration.seconds -= 1;
    duration.nanos += 1000000000;
  }
-</code></pre><p> Example 2: Compute Timestamp from Timestamp + Duration in pseudo code.</p>
-<pre><code> Timestamp start = ...;
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="26" sourceendlinenumber="26"> Example 2: Compute Timestamp from Timestamp + Duration in pseudo code.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="28" sourceendlinenumber="41"><code> Timestamp start = ...;
  Duration duration = ...;
  Timestamp end = ...;
 
@@ -106,6 +106,10 @@
    end.seconds += 1;
    end.nanos -= 1000000000;
  }
+</code></pre><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="43" sourceendlinenumber="43"> Example 3: Compute Duration from datetime.timedelta in Python.</p>
+<pre sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="45" sourceendlinenumber="47"><code> td = datetime.timedelta(days=3, minutes=10)
+ duration = Duration()
+ duration.FromTimedelta(td)
 </code></pre></div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -137,7 +141,7 @@
               <h3 id="fields">Fields
               </h3>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_MaxSeconds" data-uid="Google.Protobuf.WellKnownTypes.Duration.MaxSeconds">MaxSeconds</h4>
-              <div class="markdown level1 summary"><p>The maximum permitted number of seconds.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The maximum permitted number of seconds.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -160,7 +164,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_MinSeconds" data-uid="Google.Protobuf.WellKnownTypes.Duration.MinSeconds">MinSeconds</h4>
-              <div class="markdown level1 summary"><p>The minimum permitted number of seconds.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The minimum permitted number of seconds.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -183,7 +187,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_NanosecondsPerSecond" data-uid="Google.Protobuf.WellKnownTypes.Duration.NanosecondsPerSecond">NanosecondsPerSecond</h4>
-              <div class="markdown level1 summary"><p>The number of nanoseconds in a second.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The number of nanoseconds in a second.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -206,7 +210,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_NanosecondsPerTick" data-uid="Google.Protobuf.WellKnownTypes.Duration.NanosecondsPerTick">NanosecondsPerTick</h4>
-              <div class="markdown level1 summary"><p>The number of nanoseconds in a BCL tick (as used by <span class="xref">TimeSpan</span> and <span class="xref">DateTime</span>).</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The number of nanoseconds in a BCL tick (as used by <span class="xref">TimeSpan</span> and <span class="xref">DateTime</span>).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -231,7 +235,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_Nanos" data-uid="Google.Protobuf.WellKnownTypes.Duration.Nanos">Nanos</h4>
-              <div class="markdown level1 summary"><p> Signed fractions of a second at nanosecond resolution of the span
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> Signed fractions of a second at nanosecond resolution of the span
  of time. Durations less than one second are represented with a 0
  <code>seconds</code> field and a positive or negative <code>nanos</code> field. For durations
  of one second or more, a non-zero value for the <code>nanos</code> field must be
@@ -259,7 +263,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_Seconds" data-uid="Google.Protobuf.WellKnownTypes.Duration.Seconds">Seconds</h4>
-              <div class="markdown level1 summary"><p> Signed seconds of the span of time. Must be from -315,576,000,000
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Signed seconds of the span of time. Must be from -315,576,000,000
  to +315,576,000,000 inclusive.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -285,7 +289,7 @@
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_FromTimeSpan_System_TimeSpan_" data-uid="Google.Protobuf.WellKnownTypes.Duration.FromTimeSpan(System.TimeSpan)">FromTimeSpan(TimeSpan)</h4>
-              <div class="markdown level1 summary"><p>Converts the given <span class="xref">TimeSpan</span> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Converts the given <span class="xref">TimeSpan</span> to a <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -305,7 +309,7 @@
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
                     <td><em>timeSpan</em></td>
-                    <td><p>The <code>TimeSpan</code> to convert.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The <code>TimeSpan</code> to convert.</p>
 </td>
                   </tr>
                 </tbody>
@@ -321,13 +325,13 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
-                    <td><p>The value of the given <code>TimeSpan</code>, as a <code>Duration</code>.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value of the given <code>TimeSpan</code>, as a <code>Duration</code>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_ToDiagnosticString" data-uid="Google.Protobuf.WellKnownTypes.Duration.ToDiagnosticString">ToDiagnosticString()</h4>
-              <div class="markdown level1 summary"><p>Returns a string representation of this <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> for diagnostic purposes.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns a string representation of this <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> for diagnostic purposes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -345,7 +349,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p>A string representation of this value.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A string representation of this value.</p>
 </td>
                   </tr>
                 </tbody>
@@ -353,14 +357,14 @@
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Protobuf.ICustomDiagnosticMessage.html#Google_Protobuf_ICustomDiagnosticMessage_ToDiagnosticString">ICustomDiagnosticMessage.ToDiagnosticString()</a></div>
               <h5 id="Google_Protobuf_WellKnownTypes_Duration_ToDiagnosticString_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Normally the returned value will be a JSON string value (including leading and trailing quotes) but
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="6">Normally the returned value will be a JSON string value (including leading and trailing quotes) but
 when the value is non-normalized or out of range, a JSON object representation will be returned
 instead, including a warning. This is to avoid exceptions being thrown when trying to
 diagnose problems - the regular JSON formatter will still throw an exception for non-normalized
 values.</p>
 </div>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_ToTimeSpan" data-uid="Google.Protobuf.WellKnownTypes.Duration.ToTimeSpan">ToTimeSpan()</h4>
-              <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> to a <span class="xref">TimeSpan</span>.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Converts this <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> to a <span class="xref">TimeSpan</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -378,13 +382,13 @@ values.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
-                    <td><p>The value of this duration, as a <code>TimeSpan</code>.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value of this duration, as a <code>TimeSpan</code>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Protobuf_WellKnownTypes_Duration_ToTimeSpan_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If the duration is not a precise number of ticks, it is truncated towards 0.</p>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If the duration is not a precise number of ticks, it is truncated towards 0.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -397,7 +401,7 @@ values.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>This value isn&#39;t a valid normalized duration, as
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="2">This value isn&#39;t a valid normalized duration, as
 described in the documentation.</p>
 </td>
                   </tr>
@@ -406,7 +410,7 @@ described in the documentation.</p>
               <h3 id="operators">Operators
               </h3>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_op_Addition_Google_Protobuf_WellKnownTypes_Duration_Google_Protobuf_WellKnownTypes_Duration_" data-uid="Google.Protobuf.WellKnownTypes.Duration.op_Addition(Google.Protobuf.WellKnownTypes.Duration,Google.Protobuf.WellKnownTypes.Duration)">Addition(Duration, Duration)</h4>
-              <div class="markdown level1 summary"><p>Adds the two specified <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> values together.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Adds the two specified <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> values together.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -426,13 +430,13 @@ described in the documentation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
                     <td><em>lhs</em></td>
-                    <td><p>The first value to add. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The first value to add. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
                     <td><em>rhs</em></td>
-                    <td><p>The second value to add. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The second value to add. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -453,7 +457,7 @@ described in the documentation.</p>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_op_Subtraction_Google_Protobuf_WellKnownTypes_Duration_Google_Protobuf_WellKnownTypes_Duration_" data-uid="Google.Protobuf.WellKnownTypes.Duration.op_Subtraction(Google.Protobuf.WellKnownTypes.Duration,Google.Protobuf.WellKnownTypes.Duration)">Subtraction(Duration, Duration)</h4>
-              <div class="markdown level1 summary"><p>Subtracts one <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> from another.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Subtracts one <a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a> from another.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -473,13 +477,13 @@ described in the documentation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
                     <td><em>lhs</em></td>
-                    <td><p>The duration to subtract from. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The duration to subtract from. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
                     <td><em>rhs</em></td>
-                    <td><p>The duration to subtract. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The duration to subtract. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -495,13 +499,13 @@ described in the documentation.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
-                    <td><p>The difference between the two specified durations.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The difference between the two specified durations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Protobuf_WellKnownTypes_Duration_op_UnaryNegation_Google_Protobuf_WellKnownTypes_Duration_" data-uid="Google.Protobuf.WellKnownTypes.Duration.op_UnaryNegation(Google.Protobuf.WellKnownTypes.Duration)">UnaryNegation(Duration)</h4>
-              <div class="markdown level1 summary"><p>Returns the result of negating the duration. For example, the negation of 5 minutes is -5 minutes.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Returns the result of negating the duration. For example, the negation of 5 minutes is -5 minutes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -521,7 +525,7 @@ described in the documentation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
                     <td><em>value</em></td>
-                    <td><p>The duration to negate. Must not be null.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The duration to negate. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -537,7 +541,7 @@ described in the documentation.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Duration.html#Google_Protobuf_WellKnownTypes_Duration">Duration</a></td>
-                    <td><p>The negated value of this duration.</p>
+                    <td><p sourcefile="obj/api/Google.Protobuf.WellKnownTypes.Duration.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The negated value of this duration.</p>
 </td>
                   </tr>
                 </tbody>
@@ -595,8 +599,8 @@ described in the documentation.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

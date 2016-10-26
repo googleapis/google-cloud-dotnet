@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreClient
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Datastore_V1_DatastoreClient" data-uid="Google.Datastore.V1.DatastoreClient">Class DatastoreClient
               </h1>
-              <div class="markdown level0 summary"><p>Datastore client wrapper, for convenient use.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Datastore client wrapper, for convenient use.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,7 +102,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Datastore_V1_DatastoreClient_DefaultEndpoint" data-uid="Google.Datastore.V1.DatastoreClient.DefaultEndpoint">DefaultEndpoint</h4>
-              <div class="markdown level1 summary"><p>The default endpoint for the Datastore service, which is a host of &quot;datastore.googleapis.com&quot; and a port of 443.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The default endpoint for the Datastore service, which is a host of &quot;datastore.googleapis.com&quot; and a port of 443.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -119,13 +119,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">ServiceEndpoint</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_DefaultScopes" data-uid="Google.Datastore.V1.DatastoreClient.DefaultScopes">DefaultScopes</h4>
-              <div class="markdown level1 summary"><p>The default Datastore scopes</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The default Datastore scopes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -148,11 +148,11 @@
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreClient_DefaultScopes_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>The default Datastore scopes are:</p>
-<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform">https://www.googleapis.com/auth/cloud-platform</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/datastore">https://www.googleapis.com/auth/datastore</a>&quot;</li></ul>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The default Datastore scopes are:</p>
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform" sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="3" sourceendlinenumber="3">https://www.googleapis.com/auth/cloud-platform</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/datastore" sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="3" sourceendlinenumber="3">https://www.googleapis.com/auth/datastore</a>&quot;</li></ul>
 </div>
               <h4 id="Google_Datastore_V1_DatastoreClient_GrpcClient" data-uid="Google.Datastore.V1.DatastoreClient.GrpcClient">GrpcClient</h4>
-              <div class="markdown level1 summary"><p>The underlying GRPC Datastore client.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The underlying gRPC Datastore client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -176,11 +176,9 @@
               </table>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Datastore_V1_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.AllocateIds(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">AllocateIds(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
-before it is inserted.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
+              <h4 id="Google_Datastore_V1_DatastoreClient_AllocateIds_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.AllocateIds(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIds(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="26" sourceendlinenumber="26">Example:</p>
 <pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
 KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;message&quot;);
 AllocateIdsResponse response = client.AllocateIds(projectId,
@@ -206,20 +204,17 @@ Entity entity2 = new Entity { Key = response.Keys[1], [&quot;text&quot;] = &quot
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p>A list of keys with incomplete key paths for which to allocate IDs.
-No key may be reserved/read-only.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -235,16 +230,22 @@ No key may be reserved/read-only.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.AllocateIdsResponse.html#Google_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a></td>
-                    <td><p>The RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.AllocateIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
-before it is inserted.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.AllocateIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="159" sourceendlinenumber="159">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId, keys);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;AllocateIdsResponse&gt; AllocateIdsAsync(string projectId, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -262,20 +263,17 @@ before it is inserted.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p>A list of keys with incomplete key paths for which to allocate IDs.
-No key may be reserved/read-only.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -291,16 +289,22 @@ No key may be reserved/read-only.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.AllocateIdsResponse.html#Google_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_AllocateIdsAsync_System_String_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1.DatastoreClient.AllocateIdsAsync(System.String,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},System.Threading.CancellationToken)">AllocateIdsAsync(String, IEnumerable&lt;Key&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
-before it is inserted.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="166" sourceendlinenumber="166">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId, keys);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;AllocateIdsResponse&gt; AllocateIdsAsync(string projectId, IEnumerable&lt;Key&gt; keys, CancellationToken cancellationToken)</code></pre>
@@ -318,20 +322,17 @@ before it is inserted.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p>A list of keys with incomplete key paths for which to allocate IDs.
-No key may be reserved/read-only.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -347,15 +348,21 @@ No key may be reserved/read-only.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.AllocateIdsResponse.html#Google_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_BeginTransaction_System_String_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.BeginTransaction(System.String,CallSettings)">BeginTransaction(String, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_BeginTransaction_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.BeginTransaction(System.String,Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="89" sourceendlinenumber="89">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+// Make the request
+BeginTransactionResponse response = datastoreClient.BeginTransaction(projectId);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual BeginTransactionResponse BeginTransaction(string projectId, CallSettings callSettings = null)</code></pre>
@@ -373,13 +380,12 @@ No key may be reserved/read-only.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -395,15 +401,21 @@ No key may be reserved/read-only.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.BeginTransactionResponse.html#Google_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a></td>
-                    <td><p>The RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.BeginTransactionAsync(System.String,CallSettings)">BeginTransactionAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.BeginTransactionAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="75" sourceendlinenumber="75">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+// Make the request
+BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(projectId);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(string projectId, CallSettings callSettings = null)</code></pre>
@@ -421,13 +433,12 @@ No key may be reserved/read-only.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -443,15 +454,21 @@ No key may be reserved/read-only.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.BeginTransactionResponse.html#Google_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_BeginTransactionAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Datastore.V1.DatastoreClient.BeginTransactionAsync(System.String,System.Threading.CancellationToken)">BeginTransactionAsync(String, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="82" sourceendlinenumber="82">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+// Make the request
+BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(projectId);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;BeginTransactionResponse&gt; BeginTransactionAsync(string projectId, CancellationToken cancellationToken)</code></pre>
@@ -469,13 +486,12 @@ No key may be reserved/read-only.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -491,16 +507,24 @@ No key may be reserved/read-only.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.BeginTransactionResponse.html#Google_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_Commit_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Commit(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},CallSettings)">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
-entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_Commit_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Commit(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">Commit(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="110" sourceendlinenumber="110">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Mode mode = Mode.Unspecified;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = datastoreClient.Commit(projectId, mode, transaction, mutations);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -518,44 +542,27 @@ entities.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Datastore.V1.CommitRequest.Types.Mode</span></td>
                     <td><em>mode</em></td>
-                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>transaction</em></td>
-                    <td><p>The identifier of the transaction associated with the commit. A
-transaction identifier is returned by a call to
-[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
                     <td><em>mutations</em></td>
-                    <td><p>The mutations to perform.</p>
-<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
-applied in order. The following sequences of mutations affecting a single
-entity are not permitted in a single <code>Commit</code> request:</p>
-<ul>
-<li><code>insert</code> followed by <code>insert</code></li>
-<li><code>update</code> followed by <code>insert</code></li>
-<li><code>upsert</code> followed by <code>insert</code></li>
-<li><code>delete</code> followed by <code>update</code></li>
-</ul>
-<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
-entity.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -571,16 +578,23 @@ entity.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a></td>
-                    <td><p>The RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_Commit_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Commit(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},CallSettings)">Commit(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
-entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_Commit_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Commit(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">Commit(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="131" sourceendlinenumber="131">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Mode mode = Mode.Unspecified;
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = datastoreClient.Commit(projectId, mode, mutations);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual CommitResponse Commit(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -598,36 +612,22 @@ entities.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Datastore.V1.CommitRequest.Types.Mode</span></td>
                     <td><em>mode</em></td>
-                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
                     <td><em>mutations</em></td>
-                    <td><p>The mutations to perform.</p>
-<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
-applied in order. The following sequences of mutations affecting a single
-entity are not permitted in a single <code>Commit</code> request:</p>
-<ul>
-<li><code>insert</code> followed by <code>insert</code></li>
-<li><code>update</code> followed by <code>insert</code></li>
-<li><code>upsert</code> followed by <code>insert</code></li>
-<li><code>delete</code> followed by <code>update</code></li>
-</ul>
-<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
-entity.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -643,16 +643,24 @@ entity.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a></td>
-                    <td><p>The RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
-entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="96" sourceendlinenumber="96">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Mode mode = Mode.Unspecified;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -670,44 +678,27 @@ entities.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Datastore.V1.CommitRequest.Types.Mode</span></td>
                     <td><em>mode</em></td>
-                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>transaction</em></td>
-                    <td><p>The identifier of the transaction associated with the commit. A
-transaction identifier is returned by a call to
-[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
                     <td><em>mutations</em></td>
-                    <td><p>The mutations to perform.</p>
-<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
-applied in order. The following sequences of mutations affecting a single
-entity are not permitted in a single <code>Commit</code> request:</p>
-<ul>
-<li><code>insert</code> followed by <code>insert</code></li>
-<li><code>update</code> followed by <code>insert</code></li>
-<li><code>upsert</code> followed by <code>insert</code></li>
-<li><code>delete</code> followed by <code>update</code></li>
-</ul>
-<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
-entity.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -723,16 +714,24 @@ entity.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_Google_Protobuf_ByteString_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,Google.Protobuf.ByteString,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},System.Threading.CancellationToken)">CommitAsync(String, CommitRequest.Types.Mode, ByteString, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
-entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="103" sourceendlinenumber="103">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Mode mode = Mode.Unspecified;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, transaction, mutations);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, ByteString transaction, IEnumerable&lt;Mutation&gt; mutations, CancellationToken cancellationToken)</code></pre>
@@ -750,44 +749,27 @@ entities.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Datastore.V1.CommitRequest.Types.Mode</span></td>
                     <td><em>mode</em></td>
-                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>transaction</em></td>
-                    <td><p>The identifier of the transaction associated with the commit. A
-transaction identifier is returned by a call to
-[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
                     <td><em>mutations</em></td>
-                    <td><p>The mutations to perform.</p>
-<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
-applied in order. The following sequences of mutations affecting a single
-entity are not permitted in a single <code>Commit</code> request:</p>
-<ul>
-<li><code>insert</code> followed by <code>insert</code></li>
-<li><code>update</code> followed by <code>insert</code></li>
-<li><code>upsert</code> followed by <code>insert</code></li>
-<li><code>delete</code> followed by <code>update</code></li>
-</ul>
-<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
-entity.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -803,16 +785,23 @@ entity.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
-entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},Google.Api.Gax.Grpc.CallSettings)">CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="117" sourceendlinenumber="117">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Mode mode = Mode.Unspecified;
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CallSettings callSettings = null)</code></pre>
@@ -830,36 +819,22 @@ entities.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Datastore.V1.CommitRequest.Types.Mode</span></td>
                     <td><em>mode</em></td>
-                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
                     <td><em>mutations</em></td>
-                    <td><p>The mutations to perform.</p>
-<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
-applied in order. The following sequences of mutations affecting a single
-entity are not permitted in a single <code>Commit</code> request:</p>
-<ul>
-<li><code>insert</code> followed by <code>insert</code></li>
-<li><code>update</code> followed by <code>insert</code></li>
-<li><code>upsert</code> followed by <code>insert</code></li>
-<li><code>delete</code> followed by <code>update</code></li>
-</ul>
-<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
-entity.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -875,16 +850,23 @@ entity.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_CommitAsync_System_String_Google_Datastore_V1_CommitRequest_Types_Mode_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Mutation__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1.DatastoreClient.CommitAsync(System.String,Google.Datastore.V1.CommitRequest.Types.Mode,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Mutation},System.Threading.CancellationToken)">CommitAsync(String, CommitRequest.Types.Mode, IEnumerable&lt;Mutation&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
-entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="124" sourceendlinenumber="124">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+Mode mode = Mode.Unspecified;
+IEnumerable&lt;Mutation&gt; mutations = new List&lt;Mutation&gt;();
+// Make the request
+CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;CommitResponse&gt; CommitAsync(string projectId, CommitRequest.Types.Mode mode, IEnumerable&lt;Mutation&gt; mutations, CancellationToken cancellationToken)</code></pre>
@@ -902,36 +884,22 @@ entities.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Datastore.V1.CommitRequest.Types.Mode</span></td>
                     <td><em>mode</em></td>
-                    <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Mutation.html#Google_Datastore_V1_Mutation">Mutation</a>&gt;</td>
                     <td><em>mutations</em></td>
-                    <td><p>The mutations to perform.</p>
-<p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
-applied in order. The following sequences of mutations affecting a single
-entity are not permitted in a single <code>Commit</code> request:</p>
-<ul>
-<li><code>insert</code> followed by <code>insert</code></li>
-<li><code>update</code> followed by <code>insert</code></li>
-<li><code>upsert</code> followed by <code>insert</code></li>
-<li><code>delete</code> followed by <code>update</code></li>
-</ul>
-<p>When mode is <code>NON_TRANSACTIONAL</code>, no two mutations may affect a single
-entity.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -947,61 +915,13 @@ entity.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_Create_Channel_Google_Datastore_V1_DatastoreSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Create(Channel,Google.Datastore.V1.DatastoreSettings)">Create(Channel, DatastoreSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> which uses the specified channel for remote operations.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static DatastoreClient Create(Channel channel, DatastoreSettings settings = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Channel</span></td>
-                    <td><em>channel</em></td>
-                    <td><p>The <see cref="!:Channel"></see> for remote operations. Must not be null.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a></td>
-                    <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
-                    <td><p>The created <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_Create_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Create(ServiceEndpoint,Google.Datastore.V1.DatastoreSettings)">Create(ServiceEndpoint, DatastoreSettings)</h4>
-              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>, applying defaults for all unspecified settings,
+              <h4 id="Google_Datastore_V1_DatastoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Datastore.V1.DatastoreSettings)">Create(ServiceEndpoint, DatastoreSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Synchronously creates a <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>, applying defaults for all unspecified settings,
 and creating a channel connecting to the given endpoint with application default credentials where
 necessary.</p>
 </div>
@@ -1021,15 +941,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">ServiceEndpoint</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <see cref="!:ServiceEndpoint"></see>.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Optional <span class="xref">ServiceEndpoint</span>.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a></td>
                     <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Optional <a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1045,13 +965,61 @@ necessary.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
-                    <td><p>The created <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The created <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_CreateAsync_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_" data-uid="Google.Datastore.V1.DatastoreClient.CreateAsync(ServiceEndpoint,Google.Datastore.V1.DatastoreSettings)">CreateAsync(ServiceEndpoint, DatastoreSettings)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>, applying defaults for all unspecified settings,
+              <h4 id="Google_Datastore_V1_DatastoreClient_Create_Grpc_Core_Channel_Google_Datastore_V1_DatastoreSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Create(Grpc.Core.Channel,Google.Datastore.V1.DatastoreSettings)">Create(Channel, DatastoreSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> which uses the specified channel for remote operations.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static DatastoreClient Create(Channel channel, DatastoreSettings settings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Grpc.Core.Channel.html#Grpc_Core_Channel">Channel</a></td>
+                    <td><em>channel</em></td>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The <a class="xref" href="Grpc.Core.Channel.html#Grpc_Core_Channel">Channel</a> for remote operations. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Optional <a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The created <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Datastore_V1_DatastoreClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_" data-uid="Google.Datastore.V1.DatastoreClient.CreateAsync(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Datastore.V1.DatastoreSettings)">CreateAsync(ServiceEndpoint, DatastoreSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Asynchronously creates a <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>, applying defaults for all unspecified settings,
 and creating a channel connecting to the given endpoint with application default credentials where
 necessary.</p>
 </div>
@@ -1071,15 +1039,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">ServiceEndpoint</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span></td>
                     <td><em>endpoint</em></td>
-                    <td><p>Optional <see cref="!:ServiceEndpoint"></see>.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Optional <span class="xref">ServiceEndpoint</span>.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a></td>
                     <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Optional <a class="xref" href="Google.Datastore.V1.DatastoreSettings.html#Google_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1095,15 +1063,14 @@ necessary.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>&gt;</td>
-                    <td><p>The task representing the created <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The task representing the created <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_Lookup_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Lookup(System.String,Google.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
+              <h4 id="Google_Datastore_V1_DatastoreClient_Lookup_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Lookup(System.String,Google.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">Lookup(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="5" sourceendlinenumber="5">Example:</p>
 <pre><code class="lang-cs">KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, &quot;book&quot;);
 Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
 Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
@@ -1134,25 +1101,22 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this lookup request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p>Keys of entities to look up.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1168,15 +1132,23 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.LookupResponse.html#Google_Datastore_V1_LookupResponse">LookupResponse</a></td>
-                    <td><p>The RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.LookupAsync(System.String,Google.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},CallSettings)">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.LookupAsync(System.String,Google.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="33" sourceendlinenumber="33">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+ReadOptions readOptions = new ReadOptions();
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptions, keys);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LookupResponse&gt; LookupAsync(string projectId, ReadOptions readOptions, IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -1194,25 +1166,22 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this lookup request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p>Keys of entities to look up.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1228,15 +1197,23 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.LookupResponse.html#Google_Datastore_V1_LookupResponse">LookupResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_LookupAsync_System_String_Google_Datastore_V1_ReadOptions_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Threading_CancellationToken_" data-uid="Google.Datastore.V1.DatastoreClient.LookupAsync(System.String,Google.Datastore.V1.ReadOptions,System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},System.Threading.CancellationToken)">LookupAsync(String, ReadOptions, IEnumerable&lt;Key&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="40" sourceendlinenumber="40">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+ReadOptions readOptions = new ReadOptions();
+IEnumerable&lt;Key&gt; keys = new List&lt;Key&gt;();
+// Make the request
+LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptions, keys);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;LookupResponse&gt; LookupAsync(string projectId, ReadOptions readOptions, IEnumerable&lt;Key&gt; keys, CancellationToken cancellationToken)</code></pre>
@@ -1254,25 +1231,22 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this lookup request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p>Keys of entities to look up.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1288,15 +1262,22 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.LookupResponse.html#Google_Datastore_V1_LookupResponse">LookupResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_Rollback_System_String_Google_Protobuf_ByteString_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Rollback(System.String,Google.Protobuf.ByteString,CallSettings)">Rollback(String, ByteString, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_Rollback_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.Rollback(System.String,Google.Protobuf.ByteString,Google.Api.Gax.Grpc.CallSettings)">Rollback(String, ByteString, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="152" sourceendlinenumber="152">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+RollbackResponse response = datastoreClient.Rollback(projectId, transaction);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual RollbackResponse Rollback(string projectId, ByteString transaction, CallSettings callSettings = null)</code></pre>
@@ -1314,20 +1295,17 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>transaction</em></td>
-                    <td><p>The transaction identifier, returned by a call to
-[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1343,15 +1321,22 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.RollbackResponse.html#Google_Datastore_V1_RollbackResponse">RollbackResponse</a></td>
-                    <td><p>The RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RollbackAsync(System.String,Google.Protobuf.ByteString,CallSettings)">RollbackAsync(String, ByteString, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RollbackAsync(System.String,Google.Protobuf.ByteString,Google.Api.Gax.Grpc.CallSettings)">RollbackAsync(String, ByteString, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="138" sourceendlinenumber="138">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RollbackResponse&gt; RollbackAsync(string projectId, ByteString transaction, CallSettings callSettings = null)</code></pre>
@@ -1369,20 +1354,17 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>transaction</em></td>
-                    <td><p>The transaction identifier, returned by a call to
-[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1398,15 +1380,22 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RollbackResponse.html#Google_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_RollbackAsync_System_String_Google_Protobuf_ByteString_System_Threading_CancellationToken_" data-uid="Google.Datastore.V1.DatastoreClient.RollbackAsync(System.String,Google.Protobuf.ByteString,System.Threading.CancellationToken)">RollbackAsync(String, ByteString, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="145" sourceendlinenumber="145">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+ByteString transaction = ByteString.CopyFromUtf8(&quot;&quot;);
+// Make the request
+RollbackResponse response = await datastoreClient.RollbackAsync(projectId, transaction);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RollbackResponse&gt; RollbackAsync(string projectId, ByteString transaction, CancellationToken cancellationToken)</code></pre>
@@ -1424,20 +1413,17 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
                     <td><em>transaction</em></td>
-                    <td><p>The transaction identifier, returned by a call to
-[Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1453,15 +1439,14 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RollbackResponse.html#Google_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_RunQuery_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RunQuery(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.GqlQuery,CallSettings)">RunQuery(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Queries for entities.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
+              <h4 id="Google_Datastore_V1_DatastoreClient_RunQuery_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RunQuery(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.GqlQuery,Google.Api.Gax.Grpc.CallSettings)">RunQuery(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="19" sourceendlinenumber="19">Example:</p>
 <pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
 GqlQuery gqlQuery = new GqlQuery
 {
@@ -1496,34 +1481,27 @@ foreach (EntityResult result in response.Batch.EntityResults)
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
                     <td><em>partitionId</em></td>
-                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
-Queries are scoped to a single partition.
-This partition ID is normalized with the standard default context
-partition ID.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this query.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
                     <td><em>gqlQuery</em></td>
-                    <td><p>The GQL query to run.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1539,15 +1517,14 @@ partition ID.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a></td>
-                    <td><p>The RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_RunQuery_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RunQuery(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.Query,CallSettings)">RunQuery(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Queries for entities.</p>
-</div>
-              <div class="markdown level1 conceptual"><p>Example:</p>
+              <h4 id="Google_Datastore_V1_DatastoreClient_RunQuery_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RunQuery(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.Query,Google.Api.Gax.Grpc.CallSettings)">RunQuery(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="12" sourceendlinenumber="12">Example:</p>
 <pre><code class="lang-cs">DatastoreClient client = DatastoreClient.Create();
 Query query = new Query(&quot;book&quot;)
 {
@@ -1581,34 +1558,27 @@ foreach (EntityResult result in response.Batch.EntityResults)
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
                     <td><em>partitionId</em></td>
-                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
-Queries are scoped to a single partition.
-This partition ID is normalized with the standard default context
-partition ID.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this query.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
                     <td><em>query</em></td>
-                    <td><p>The query to run.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1624,15 +1594,24 @@ partition ID.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a></td>
-                    <td><p>The RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RunQueryAsync(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.GqlQuery,CallSettings)">RunQueryAsync(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Queries for entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RunQueryAsync(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.GqlQuery,Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(String, PartitionId, ReadOptions, GqlQuery, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="61" sourceendlinenumber="61">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+PartitionId partitionId = new PartitionId();
+ReadOptions readOptions = new ReadOptions();
+GqlQuery gqlQuery = new GqlQuery();
+// Make the request
+RunQueryResponse response = await datastoreClient.RunQueryAsync(projectId, partitionId, readOptions, gqlQuery);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RunQueryResponse&gt; RunQueryAsync(string projectId, PartitionId partitionId, ReadOptions readOptions, GqlQuery gqlQuery, CallSettings callSettings = null)</code></pre>
@@ -1650,34 +1629,27 @@ partition ID.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
                     <td><em>partitionId</em></td>
-                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
-Queries are scoped to a single partition.
-This partition ID is normalized with the standard default context
-partition ID.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this query.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
                     <td><em>gqlQuery</em></td>
-                    <td><p>The GQL query to run.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1693,15 +1665,24 @@ partition ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_GqlQuery_System_Threading_CancellationToken_" data-uid="Google.Datastore.V1.DatastoreClient.RunQueryAsync(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.GqlQuery,System.Threading.CancellationToken)">RunQueryAsync(String, PartitionId, ReadOptions, GqlQuery, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Queries for entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="68" sourceendlinenumber="68">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+PartitionId partitionId = new PartitionId();
+ReadOptions readOptions = new ReadOptions();
+GqlQuery gqlQuery = new GqlQuery();
+// Make the request
+RunQueryResponse response = await datastoreClient.RunQueryAsync(projectId, partitionId, readOptions, gqlQuery);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RunQueryResponse&gt; RunQueryAsync(string projectId, PartitionId partitionId, ReadOptions readOptions, GqlQuery gqlQuery, CancellationToken cancellationToken)</code></pre>
@@ -1719,34 +1700,27 @@ partition ID.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
                     <td><em>partitionId</em></td>
-                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
-Queries are scoped to a single partition.
-This partition ID is normalized with the standard default context
-partition ID.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this query.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
                     <td><em>gqlQuery</em></td>
-                    <td><p>The GQL query to run.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1762,15 +1736,24 @@ partition ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RunQueryAsync(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.Query,CallSettings)">RunQueryAsync(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Queries for entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <h4 id="Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreClient.RunQueryAsync(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.Query,Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(String, PartitionId, ReadOptions, Query, CallSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="47" sourceendlinenumber="47">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+PartitionId partitionId = new PartitionId();
+ReadOptions readOptions = new ReadOptions();
+Query query = new Query();
+// Make the request
+RunQueryResponse response = await datastoreClient.RunQueryAsync(projectId, partitionId, readOptions, query);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RunQueryResponse&gt; RunQueryAsync(string projectId, PartitionId partitionId, ReadOptions readOptions, Query query, CallSettings callSettings = null)</code></pre>
@@ -1788,34 +1771,27 @@ partition ID.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
                     <td><em>partitionId</em></td>
-                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
-Queries are scoped to a single partition.
-This partition ID is normalized with the standard default context
-partition ID.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this query.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
                     <td><em>query</em></td>
-                    <td><p>The query to run.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">CallSettings</span></td>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
                     <td><em>callSettings</em></td>
-                    <td><p>If not null, applies overrides to this RPC call.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1831,15 +1807,24 @@ partition ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_RunQueryAsync_System_String_Google_Datastore_V1_PartitionId_Google_Datastore_V1_ReadOptions_Google_Datastore_V1_Query_System_Threading_CancellationToken_" data-uid="Google.Datastore.V1.DatastoreClient.RunQueryAsync(System.String,Google.Datastore.V1.PartitionId,Google.Datastore.V1.ReadOptions,Google.Datastore.V1.Query,System.Threading.CancellationToken)">RunQueryAsync(String, PartitionId, ReadOptions, Query, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Queries for entities.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreClient.md" sourcestartlinenumber="54" sourceendlinenumber="54">Example:</p>
+<pre><code class="lang-cs">// Create client
+DatastoreClient datastoreClient = DatastoreClient.Create();
+// Initialize request argument(s)
+string projectId = &quot;&quot;;
+PartitionId partitionId = new PartitionId();
+ReadOptions readOptions = new ReadOptions();
+Query query = new Query();
+// Make the request
+RunQueryResponse response = await datastoreClient.RunQueryAsync(projectId, partitionId, readOptions, query);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;RunQueryResponse&gt; RunQueryAsync(string projectId, PartitionId partitionId, ReadOptions readOptions, Query query, CancellationToken cancellationToken)</code></pre>
@@ -1857,34 +1842,27 @@ partition ID.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p>The ID of the project against which to make the request.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.PartitionId.html#Google_Datastore_V1_PartitionId">PartitionId</a></td>
                     <td><em>partitionId</em></td>
-                    <td><p>Entities are partitioned into subsets, identified by a partition ID.
-Queries are scoped to a single partition.
-This partition ID is normalized with the standard default context
-partition ID.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.ReadOptions.html#Google_Datastore_V1_ReadOptions">ReadOptions</a></td>
                     <td><em>readOptions</em></td>
-                    <td><p>The options for this query.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
                     <td><em>query</em></td>
-                    <td><p>The query to run.</p>
-</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p>A <span class="xref">CancellationToken</span> to use for this RPC.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A <span class="xref">CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1900,14 +1878,14 @@ partition ID.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
-                    <td><p>A Task containing the RPC response.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Datastore_V1_DatastoreClient_ShutdownDefaultChannelsAsync" data-uid="Google.Datastore.V1.DatastoreClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
-              <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Create_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">Create(ServiceEndpoint, DatastoreSettings)</a>
-and <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CreateAsync_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">CreateAsync(ServiceEndpoint, DatastoreSettings)</a>. Channels which weren&#39;t automatically
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Shuts down any channels automatically created by <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">Create(ServiceEndpoint, DatastoreSettings)</a>
+and <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">CreateAsync(ServiceEndpoint, DatastoreSettings)</a>. Channels which weren&#39;t automatically
 created are not affected.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -1926,14 +1904,14 @@ created are not affected.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p>A task representing the asynchronous shutdown operation.</p>
+                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous shutdown operation.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Create_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">Create(ServiceEndpoint, DatastoreSettings)</a>
-and <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CreateAsync_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">CreateAsync(ServiceEndpoint, DatastoreSettings)</a> will create new channels, which could
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreClient.yml" sourcestartlinenumber="1" sourceendlinenumber="3">After calling this method, further calls to <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">Create(ServiceEndpoint, DatastoreSettings)</a>
+and <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Datastore_V1_DatastoreSettings_">CreateAsync(ServiceEndpoint, DatastoreSettings)</a> will create new channels, which could
 in turn be shut down by another call to this method.</p>
 </div>
             </article>
@@ -1964,8 +1942,8 @@ in turn be shut down by another call to this method.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

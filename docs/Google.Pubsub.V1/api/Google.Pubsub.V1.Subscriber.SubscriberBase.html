@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Subscriber.SubscriberBase
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Pubsub_V1_Subscriber_SubscriberBase" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase">Class Subscriber.SubscriberBase
               </h1>
-              <div class="markdown level0 summary"><p>Base class for server-side implementations of Subscriber</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Base class for server-side implementations of Subscriber</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,11 +101,11 @@
               </div>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_Acknowledge_Google_Pubsub_V1_AcknowledgeRequest_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.Acknowledge(Google.Pubsub.V1.AcknowledgeRequest,ServerCallContext)">Acknowledge(AcknowledgeRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Acknowledges the messages associated with the <code>ack_ids</code> in the
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_Acknowledge_Google_Pubsub_V1_AcknowledgeRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.Acknowledge(Google.Pubsub.V1.AcknowledgeRequest,Grpc.Core.ServerCallContext)">Acknowledge(AcknowledgeRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Acknowledges the messages associated with the <code>ack_ids</code> in the
  <code>AcknowledgeRequest</code>. The Pub/Sub system can remove the relevant messages
  from the subscription.</p>
-<p> Acknowledging a message whose ack deadline has expired may succeed,
+<p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="6" sourceendlinenumber="8"> Acknowledging a message whose ack deadline has expired may succeed,
  but such a message may be redelivered later. Acknowledging a message more
  than once will not result in an error.</p>
 </div>
@@ -130,7 +130,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -151,12 +151,13 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_CreateSubscription_Google_Pubsub_V1_Subscription_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.CreateSubscription(Google.Pubsub.V1.Subscription,ServerCallContext)">CreateSubscription(Subscription, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Creates a subscription to a given topic for a given subscriber.
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_CreateSubscription_Google_Pubsub_V1_Subscription_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.CreateSubscription(Google.Pubsub.V1.Subscription,Grpc.Core.ServerCallContext)">CreateSubscription(Subscription, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Creates a subscription to a given topic.
  If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
  If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
-<p> If the name is not provided in the request, the server will assign a random
- name for this subscription on the same project as the topic.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="6" sourceendlinenumber="8"> If the name is not provided in the request, the server will assign a random
+ name for this subscription on the same project as the topic. Note that
+ for REST API requests, you must specify a name.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -179,7 +180,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -200,8 +201,8 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_DeleteSubscription_Google_Pubsub_V1_DeleteSubscriptionRequest_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.DeleteSubscription(Google.Pubsub.V1.DeleteSubscriptionRequest,ServerCallContext)">DeleteSubscription(DeleteSubscriptionRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Deletes an existing subscription. All pending messages in the subscription
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_DeleteSubscription_Google_Pubsub_V1_DeleteSubscriptionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.DeleteSubscription(Google.Pubsub.V1.DeleteSubscriptionRequest,Grpc.Core.ServerCallContext)">DeleteSubscription(DeleteSubscriptionRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Deletes an existing subscription. All pending messages in the subscription
  are immediately dropped. Calls to <code>Pull</code> after deletion will return
  <code>NOT_FOUND</code>. After a subscription is deleted, a new one may be created with
  the same name, but the new one has no association with the old
@@ -228,7 +229,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -249,8 +250,8 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_GetSubscription_Google_Pubsub_V1_GetSubscriptionRequest_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.GetSubscription(Google.Pubsub.V1.GetSubscriptionRequest,ServerCallContext)">GetSubscription(GetSubscriptionRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Gets the configuration details of a subscription.</p>
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_GetSubscription_Google_Pubsub_V1_GetSubscriptionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.GetSubscription(Google.Pubsub.V1.GetSubscriptionRequest,Grpc.Core.ServerCallContext)">GetSubscription(GetSubscriptionRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Gets the configuration details of a subscription.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -273,7 +274,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -294,8 +295,8 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_ListSubscriptions_Google_Pubsub_V1_ListSubscriptionsRequest_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.ListSubscriptions(Google.Pubsub.V1.ListSubscriptionsRequest,ServerCallContext)">ListSubscriptions(ListSubscriptionsRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Lists matching subscriptions.</p>
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_ListSubscriptions_Google_Pubsub_V1_ListSubscriptionsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.ListSubscriptions(Google.Pubsub.V1.ListSubscriptionsRequest,Grpc.Core.ServerCallContext)">ListSubscriptions(ListSubscriptionsRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Lists matching subscriptions.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -318,7 +319,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -339,11 +340,12 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_ModifyAckDeadline_Google_Pubsub_V1_ModifyAckDeadlineRequest_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.ModifyAckDeadline(Google.Pubsub.V1.ModifyAckDeadlineRequest,ServerCallContext)">ModifyAckDeadline(ModifyAckDeadlineRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Modifies the ack deadline for a specific message. This method is useful
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_ModifyAckDeadline_Google_Pubsub_V1_ModifyAckDeadlineRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.ModifyAckDeadline(Google.Pubsub.V1.ModifyAckDeadlineRequest,Grpc.Core.ServerCallContext)">ModifyAckDeadline(ModifyAckDeadlineRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Modifies the ack deadline for a specific message. This method is useful
  to indicate that more time is needed to process a message by the
  subscriber, or to make the message available for redelivery if the
- processing was interrupted.</p>
+ processing was interrupted. Note that this does not modify the
+ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -366,7 +368,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -387,9 +389,9 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_ModifyPushConfig_Google_Pubsub_V1_ModifyPushConfigRequest_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.ModifyPushConfig(Google.Pubsub.V1.ModifyPushConfigRequest,ServerCallContext)">ModifyPushConfig(ModifyPushConfigRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Modifies the <code>PushConfig</code> for a specified subscription.</p>
-<p> This may be used to change a push subscription to a pull one (signified by
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_ModifyPushConfig_Google_Pubsub_V1_ModifyPushConfigRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.ModifyPushConfig(Google.Pubsub.V1.ModifyPushConfigRequest,Grpc.Core.ServerCallContext)">ModifyPushConfig(ModifyPushConfigRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Modifies the <code>PushConfig</code> for a specified subscription.</p>
+<p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="4" sourceendlinenumber="7"> This may be used to change a push subscription to a pull one (signified by
  an empty <code>PushConfig</code>) or vice versa, or change the endpoint URL and other
  attributes of a push subscription. Messages will accumulate for delivery
  continuously through the call regardless of changes to the <code>PushConfig</code>.</p>
@@ -415,7 +417,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -436,8 +438,8 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_Pull_Google_Pubsub_V1_PullRequest_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.Pull(Google.Pubsub.V1.PullRequest,ServerCallContext)">Pull(PullRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Pulls messages from the server. Returns an empty list if there are no
+              <h4 id="Google_Pubsub_V1_Subscriber_SubscriberBase_Pull_Google_Pubsub_V1_PullRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Pubsub.V1.Subscriber.SubscriberBase.Pull(Google.Pubsub.V1.PullRequest,Grpc.Core.ServerCallContext)">Pull(PullRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.Subscriber.SubscriberBase.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Pulls messages from the server. Returns an empty list if there are no
  messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
  there are too many concurrent pull requests pending for the given
  subscription.</p>
@@ -463,7 +465,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -512,8 +514,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

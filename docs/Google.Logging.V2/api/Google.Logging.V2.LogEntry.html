@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LogEntry
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_LogEntry" data-uid="Google.Logging.V2.LogEntry">Class LogEntry
               </h1>
-              <div class="markdown level0 summary"><p> An individual entry in a log.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> An individual entry in a log.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,8 +102,8 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Logging_V2_LogEntry_HttpRequest" data-uid="Google.Logging.V2.LogEntry.HttpRequest">HttpRequest</h4>
-              <div class="markdown level1 summary"><p> Optional. Information about the HTTP request associated with this log entry,
- if applicable.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Optional. Information about the HTTP request associated with this
+ log entry, if applicable.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -126,9 +126,9 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_InsertId" data-uid="Google.Logging.V2.LogEntry.InsertId">InsertId</h4>
-              <div class="markdown level1 summary"><p> Optional. A unique ID for the log entry. If you provide this
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Optional. A unique ID for the log entry. If you provide this
  field, the logging service considers other log entries in the
- same log with the same ID as duplicates which can be removed.  If
+ same project with the same ID as duplicates which can be removed.  If
  omitted, Stackdriver Logging will generate a unique ID for this
  log entry.</p>
 </div>
@@ -153,7 +153,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_JsonPayload" data-uid="Google.Logging.V2.LogEntry.JsonPayload">JsonPayload</h4>
-              <div class="markdown level1 summary"><p> The log entry payload, represented as a structure that
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The log entry payload, represented as a structure that
  is expressed as a JSON object.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -177,7 +177,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_Labels" data-uid="Google.Logging.V2.LogEntry.Labels">Labels</h4>
-              <div class="markdown level1 summary"><p> Optional. A set of user-defined (key, value) data that provides additional
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Optional. A set of user-defined (key, value) data that provides additional
  information about the log entry.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -201,12 +201,12 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_LogName" data-uid="Google.Logging.V2.LogEntry.LogName">LogName</h4>
-              <div class="markdown level1 summary"><p> Required. The resource name of the log to which this log entry
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Required. The resource name of the log to which this log entry
  belongs. The format of the name is
  <code>&quot;projects/&amp;lt;project-id&amp;gt;/logs/&amp;lt;log-id&amp;gt;&quot;</code>.  Examples:
  <code>&quot;projects/my-projectid/logs/syslog&quot;</code>,
  <code>&quot;projects/my-projectid/logs/library.googleapis.com%2Fbook_log&quot;</code>.</p>
-<p> The log ID part of resource name must be less than 512 characters
+<p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="8" sourceendlinenumber="12"> The log ID part of resource name must be less than 512 characters
  long and can only include the following characters: upper and
  lower case alphanumeric characters: [A-Za-z0-9]; and punctuation
  characters: forward-slash, underscore, hyphen, and period.
@@ -233,7 +233,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_Operation" data-uid="Google.Logging.V2.LogEntry.Operation">Operation</h4>
-              <div class="markdown level1 summary"><p> Optional. Information about an operation associated with the log entry, if
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Optional. Information about an operation associated with the log entry, if
  applicable.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -279,9 +279,9 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_ProtoPayload" data-uid="Google.Logging.V2.LogEntry.ProtoPayload">ProtoPayload</h4>
-              <div class="markdown level1 summary"><p> The log entry payload, represented as a protocol buffer.
- You can only use <code>protoPayload</code> values that belong to a set of approved
- types.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The log entry payload, represented as a protocol buffer.  Some
+ Google Cloud Platform services use this field for their log
+ entry payloads.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -304,7 +304,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_Resource" data-uid="Google.Logging.V2.LogEntry.Resource">Resource</h4>
-              <div class="markdown level1 summary"><p> Required. The monitored resource associated with this log entry.
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Required. The monitored resource associated with this log entry.
  Example: a log entry that reports a database error would be
  associated with the monitored resource designating the particular
  database that reported the error.</p>
@@ -312,7 +312,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Api.MonitoredResource Resource { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public MonitoredResource Resource { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -324,13 +324,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_Severity" data-uid="Google.Logging.V2.LogEntry.Severity">Severity</h4>
-              <div class="markdown level1 summary"><p> Optional. The severity of the log entry. The default value is
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Optional. The severity of the log entry. The default value is
  <code>LogSeverity.DEFAULT</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -354,7 +354,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_TextPayload" data-uid="Google.Logging.V2.LogEntry.TextPayload">TextPayload</h4>
-              <div class="markdown level1 summary"><p> The log entry payload, represented as a Unicode string (UTF-8).</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The log entry payload, represented as a Unicode string (UTF-8).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -377,7 +377,7 @@
                 </tbody>
               </table>
               <h4 id="Google_Logging_V2_LogEntry_Timestamp" data-uid="Google.Logging.V2.LogEntry.Timestamp">Timestamp</h4>
-              <div class="markdown level1 summary"><p> Optional. The time the event described by the log entry occurred.  If
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogEntry.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Optional. The time the event described by the log entry occurred.  If
  omitted, Stackdriver Logging will use the time the log entry is received.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -428,8 +428,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

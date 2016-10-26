@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetQueryResultsOptions
    | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Bigquery_V2_GetQueryResultsOptions" data-uid="Google.Bigquery.V2.GetQueryResultsOptions">Class GetQueryResultsOptions
               </h1>
-              <div class="markdown level0 summary"><p>Options for <code>GetQueryResults</code> operations.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Bigquery.V2.GetQueryResultsOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Options for <code>GetQueryResults</code> operations.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,7 +102,7 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Bigquery_V2_GetQueryResultsOptions_PageSize" data-uid="Google.Bigquery.V2.GetQueryResultsOptions.PageSize">PageSize</h4>
-              <div class="markdown level1 summary"><p>The number of results to return per page. (This modifies the per-request page size;
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.GetQueryResultsOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The number of results to return per page. (This modifies the per-request page size;
 it does not affect the total number of results returned.)</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -125,8 +125,33 @@ it does not affect the total number of results returned.)</p>
                   </tr>
                 </tbody>
               </table>
+              <h4 id="Google_Bigquery_V2_GetQueryResultsOptions_PageToken" data-uid="Google.Bigquery.V2.GetQueryResultsOptions.PageToken">PageToken</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.GetQueryResultsOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The page token to use continue retrieving results after a previous request.
+If this property is non-null, <a class="xref" href="Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions_StartIndex">StartIndex</a> must be null.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string PageToken { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="Google_Bigquery_V2_GetQueryResultsOptions_StartIndex" data-uid="Google.Bigquery.V2.GetQueryResultsOptions.StartIndex">StartIndex</h4>
-              <div class="markdown level1 summary"><p>If set, the zero-based index of the first row of results to retrieve.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.GetQueryResultsOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">If set, the zero-based index of the first row of results to retrieve.
+If this property is non-null, <a class="xref" href="Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions_PageToken">PageToken</a> must be null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -149,7 +174,7 @@ it does not affect the total number of results returned.)</p>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_GetQueryResultsOptions_Timeout" data-uid="Google.Bigquery.V2.GetQueryResultsOptions.Timeout">Timeout</h4>
-              <div class="markdown level1 summary"><p>How long to wait for the query to complete before returning.
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.GetQueryResultsOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">How long to wait for the query to complete before returning.
 If not set, this is effectively 10 seconds.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -172,6 +197,10 @@ If not set, this is effectively 10 seconds.</p>
                   </tr>
                 </tbody>
               </table>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;GetQueryResultsOptions&gt;(String)</a>
+              </div>
             </article>
           </div>
           
@@ -200,8 +229,8 @@ If not set, this is effectively 10 seconds.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

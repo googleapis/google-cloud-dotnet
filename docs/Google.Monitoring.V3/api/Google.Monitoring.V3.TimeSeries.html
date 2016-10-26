@@ -70,9 +70,10 @@
               
               <h1 id="Google_Monitoring_V3_TimeSeries" data-uid="Google.Monitoring.V3.TimeSeries">Class TimeSeries
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> A collection of data points that describes the time-varying nature
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> A collection of data points that describes the time-varying values
  of a metric. A time series is identified by a combination of a
- fully-specified monitored resource and a fully-specified metric.</p>
+ fully-specified monitored resource and a fully-specified metric.
+ This type is used for both listing and creating time series.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -104,7 +105,8 @@
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Monitoring_V3_TimeSeries_Metric" data-uid="Google.Monitoring.V3.TimeSeries.Metric">Metric</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The fully-specified metric used to identify the time series.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The associated metric. A fully-specified metric used to identify the time
+ series.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -127,11 +129,14 @@
                 </tbody>
               </table>
               <h4 id="Google_Monitoring_V3_TimeSeries_MetricKind" data-uid="Google.Monitoring.V3.TimeSeries.MetricKind">MetricKind</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> The metric kind of the time series. This can be different than the metric
- kind specified in [google.api.MetricDescriptor] because of alignment and
- reduction operations on the data. This field is ignored when writing data;
- the value specified in the descriptor is used instead.
- @OutputOnly</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The metric kind of the time series. When listing time series, this metric
+ kind might be different from the metric kind of the associated metric if
+ this time series is an alignment or reduction of other time series.</p>
+<p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="6" sourceendlinenumber="10"> When creating a time series, this field is optional. If present, it must be
+ the same as the metric kind of the associated metric. If the associated
+ metric&#39;s descriptor must be auto-created, then this field specifies the
+ metric kind of the new descriptor and must be either <code>GAUGE</code> (the default)
+ or <code>CUMULATIVE</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -154,9 +159,13 @@
                 </tbody>
               </table>
               <h4 id="Google_Monitoring_V3_TimeSeries_Points" data-uid="Google.Monitoring.V3.TimeSeries.Points">Points</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The data points of this time series. When used as output, points will be
- sorted by decreasing time order. When used as input, points could be
- written in any orders.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The data points of this time series. When listing time series, the order of
+ the points is specified by the list method.</p>
+<p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="5" sourceendlinenumber="9"> When creating a time series, this field must contain exactly one point and
+ the point&#39;s type must be the same as the value type of the associated
+ metric. If the associated metric&#39;s descriptor must be auto-created, then
+ the value type of the descriptor is determined by the point&#39;s type, which
+ must be <code>BOOL</code>, <code>INT64</code>, <code>DOUBLE</code>, or <code>DISTRIBUTION</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -179,7 +188,8 @@
                 </tbody>
               </table>
               <h4 id="Google_Monitoring_V3_TimeSeries_Resource" data-uid="Google.Monitoring.V3.TimeSeries.Resource">Resource</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The fully-specified monitored resource used to identify the time series.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The associated resource. A fully-specified monitored resource used to
+ identify the time series.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -202,11 +212,11 @@
                 </tbody>
               </table>
               <h4 id="Google_Monitoring_V3_TimeSeries_ValueType" data-uid="Google.Monitoring.V3.TimeSeries.ValueType">ValueType</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> The value type of the time series. This can be different than the value
- type specified in [google.api.MetricDescriptor] because of alignment and
- reduction operations on the data. This field is ignored when writing data;
- the value specified in the descriptor is used instead.
- @OutputOnly</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The value type of the time series. When listing time series, this value
+ type might be different from the value type of the associated metric if
+ this time series is an alignment or reduction of other time series.</p>
+<p sourcefile="obj/api/Google.Monitoring.V3.TimeSeries.yml" sourcestartlinenumber="6" sourceendlinenumber="7"> When creating a time series, this field is optional. If present, it must be
+ the same as the type of the data in the <code>points</code> field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

@@ -1,0 +1,1168 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Google.Apis
+  name: Google.Apis
+  href: api/Google.Apis.html#Google_Apis
+  commentId: N:Google.Apis
+  fullName: Google.Apis
+- uid: Google.Apis.Download
+  name: Google.Apis.Download
+  href: api/Google.Apis.Download.html#Google_Apis_Download
+  commentId: N:Google.Apis.Download
+  fullName: Google.Apis.Download
+- uid: Google.Apis.Download.DownloadStatus
+  name: DownloadStatus
+  href: api/Google.Apis.Download.DownloadStatus.html#Google_Apis_Download_DownloadStatus
+  commentId: T:Google.Apis.Download.DownloadStatus
+  fullName: Google.Apis.Download.DownloadStatus
+- uid: Google.Apis.Download.DownloadStatus.Completed
+  name: Completed
+  href: api/Google.Apis.Download.DownloadStatus.html#Google_Apis_Download_DownloadStatus_Completed
+  commentId: F:Google.Apis.Download.DownloadStatus.Completed
+  fullName: Google.Apis.Download.DownloadStatus.Completed
+- uid: Google.Apis.Download.DownloadStatus.Downloading
+  name: Downloading
+  href: api/Google.Apis.Download.DownloadStatus.html#Google_Apis_Download_DownloadStatus_Downloading
+  commentId: F:Google.Apis.Download.DownloadStatus.Downloading
+  fullName: Google.Apis.Download.DownloadStatus.Downloading
+- uid: Google.Apis.Download.DownloadStatus.Failed
+  name: Failed
+  href: api/Google.Apis.Download.DownloadStatus.html#Google_Apis_Download_DownloadStatus_Failed
+  commentId: F:Google.Apis.Download.DownloadStatus.Failed
+  fullName: Google.Apis.Download.DownloadStatus.Failed
+- uid: Google.Apis.Download.DownloadStatus.NotStarted
+  name: NotStarted
+  href: api/Google.Apis.Download.DownloadStatus.html#Google_Apis_Download_DownloadStatus_NotStarted
+  commentId: F:Google.Apis.Download.DownloadStatus.NotStarted
+  fullName: Google.Apis.Download.DownloadStatus.NotStarted
+- uid: Google.Apis.Download.IDownloadProgress
+  name: IDownloadProgress
+  href: api/Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress
+  commentId: T:Google.Apis.Download.IDownloadProgress
+  fullName: Google.Apis.Download.IDownloadProgress
+- uid: Google.Apis.Download.IDownloadProgress.BytesDownloaded
+  name: BytesDownloaded
+  href: api/Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress_BytesDownloaded
+  commentId: P:Google.Apis.Download.IDownloadProgress.BytesDownloaded
+  fullName: Google.Apis.Download.IDownloadProgress.BytesDownloaded
+- uid: Google.Apis.Download.IDownloadProgress.Exception
+  name: Exception
+  href: api/Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress_Exception
+  commentId: P:Google.Apis.Download.IDownloadProgress.Exception
+  fullName: Google.Apis.Download.IDownloadProgress.Exception
+- uid: Google.Apis.Download.IDownloadProgress.Status
+  name: Status
+  href: api/Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress_Status
+  commentId: P:Google.Apis.Download.IDownloadProgress.Status
+  fullName: Google.Apis.Download.IDownloadProgress.Status
+- uid: Google.Apis.Download.IMediaDownloader
+  name: IMediaDownloader
+  href: api/Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader
+  commentId: T:Google.Apis.Download.IMediaDownloader
+  fullName: Google.Apis.Download.IMediaDownloader
+- uid: Google.Apis.Download.IMediaDownloader.ChunkSize
+  name: ChunkSize
+  href: api/Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_ChunkSize
+  commentId: P:Google.Apis.Download.IMediaDownloader.ChunkSize
+  fullName: Google.Apis.Download.IMediaDownloader.ChunkSize
+- uid: Google.Apis.Download.IMediaDownloader.Download(System.String,System.IO.Stream)
+  name: Download(String, Stream)
+  href: api/Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_Download_System_String_System_IO_Stream_
+  commentId: M:Google.Apis.Download.IMediaDownloader.Download(System.String,System.IO.Stream)
+  fullName: Google.Apis.Download.IMediaDownloader.Download(System.String, System.IO.Stream)
+- uid: Google.Apis.Download.IMediaDownloader.DownloadAsync(System.String,System.IO.Stream)
+  name: DownloadAsync(String, Stream)
+  href: api/Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_DownloadAsync_System_String_System_IO_Stream_
+  commentId: M:Google.Apis.Download.IMediaDownloader.DownloadAsync(System.String,System.IO.Stream)
+  fullName: Google.Apis.Download.IMediaDownloader.DownloadAsync(System.String, System.IO.Stream)
+- uid: Google.Apis.Download.IMediaDownloader.DownloadAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  name: DownloadAsync(String, Stream, CancellationToken)
+  href: api/Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_DownloadAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Download.IMediaDownloader.DownloadAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  fullName: Google.Apis.Download.IMediaDownloader.DownloadAsync(System.String, System.IO.Stream, System.Threading.CancellationToken)
+- uid: Google.Apis.Download.IMediaDownloader.ProgressChanged
+  name: ProgressChanged
+  href: api/Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_ProgressChanged
+  commentId: E:Google.Apis.Download.IMediaDownloader.ProgressChanged
+  fullName: Google.Apis.Download.IMediaDownloader.ProgressChanged
+- uid: Google.Apis.Download.MediaDownloader
+  name: MediaDownloader
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader
+  commentId: T:Google.Apis.Download.MediaDownloader
+  fullName: Google.Apis.Download.MediaDownloader
+- uid: Google.Apis.Download.MediaDownloader.#ctor(Google.Apis.Services.IClientService)
+  name: MediaDownloader(IClientService)
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader__ctor_Google_Apis_Services_IClientService_
+  commentId: M:Google.Apis.Download.MediaDownloader.#ctor(Google.Apis.Services.IClientService)
+  fullName: Google.Apis.Download.MediaDownloader.MediaDownloader(Google.Apis.Services.IClientService)
+- uid: Google.Apis.Download.MediaDownloader.ChunkSize
+  name: ChunkSize
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_ChunkSize
+  commentId: P:Google.Apis.Download.MediaDownloader.ChunkSize
+  fullName: Google.Apis.Download.MediaDownloader.ChunkSize
+- uid: Google.Apis.Download.MediaDownloader.Download(System.String,System.IO.Stream)
+  name: Download(String, Stream)
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_Download_System_String_System_IO_Stream_
+  commentId: M:Google.Apis.Download.MediaDownloader.Download(System.String,System.IO.Stream)
+  fullName: Google.Apis.Download.MediaDownloader.Download(System.String, System.IO.Stream)
+- uid: Google.Apis.Download.MediaDownloader.DownloadAsync(System.String,System.IO.Stream)
+  name: DownloadAsync(String, Stream)
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_DownloadAsync_System_String_System_IO_Stream_
+  commentId: M:Google.Apis.Download.MediaDownloader.DownloadAsync(System.String,System.IO.Stream)
+  fullName: Google.Apis.Download.MediaDownloader.DownloadAsync(System.String, System.IO.Stream)
+- uid: Google.Apis.Download.MediaDownloader.DownloadAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  name: DownloadAsync(String, Stream, CancellationToken)
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_DownloadAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Download.MediaDownloader.DownloadAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  fullName: Google.Apis.Download.MediaDownloader.DownloadAsync(System.String, System.IO.Stream, System.Threading.CancellationToken)
+- uid: Google.Apis.Download.MediaDownloader.MaximumChunkSize
+  name: MaximumChunkSize
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_MaximumChunkSize
+  commentId: F:Google.Apis.Download.MediaDownloader.MaximumChunkSize
+  fullName: Google.Apis.Download.MediaDownloader.MaximumChunkSize
+- uid: Google.Apis.Download.MediaDownloader.ProgressChanged
+  name: ProgressChanged
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_ProgressChanged
+  commentId: E:Google.Apis.Download.MediaDownloader.ProgressChanged
+  fullName: Google.Apis.Download.MediaDownloader.ProgressChanged
+- uid: Google.Apis.ETagAction
+  name: ETagAction
+  href: api/Google.Apis.ETagAction.html#Google_Apis_ETagAction
+  commentId: T:Google.Apis.ETagAction
+  fullName: Google.Apis.ETagAction
+- uid: Google.Apis.ETagAction.Default
+  name: Default
+  href: api/Google.Apis.ETagAction.html#Google_Apis_ETagAction_Default
+  commentId: F:Google.Apis.ETagAction.Default
+  fullName: Google.Apis.ETagAction.Default
+- uid: Google.Apis.ETagAction.IfMatch
+  name: IfMatch
+  href: api/Google.Apis.ETagAction.html#Google_Apis_ETagAction_IfMatch
+  commentId: F:Google.Apis.ETagAction.IfMatch
+  fullName: Google.Apis.ETagAction.IfMatch
+- uid: Google.Apis.ETagAction.IfNoneMatch
+  name: IfNoneMatch
+  href: api/Google.Apis.ETagAction.html#Google_Apis_ETagAction_IfNoneMatch
+  commentId: F:Google.Apis.ETagAction.IfNoneMatch
+  fullName: Google.Apis.ETagAction.IfNoneMatch
+- uid: Google.Apis.ETagAction.Ignore
+  name: Ignore
+  href: api/Google.Apis.ETagAction.html#Google_Apis_ETagAction_Ignore
+  commentId: F:Google.Apis.ETagAction.Ignore
+  fullName: Google.Apis.ETagAction.Ignore
+- uid: Google.Apis.Requests
+  name: Google.Apis.Requests
+  href: api/Google.Apis.Requests.html#Google_Apis_Requests
+  commentId: N:Google.Apis.Requests
+  fullName: Google.Apis.Requests
+- uid: Google.Apis.Requests.BatchRequest
+  name: BatchRequest
+  href: api/Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest
+  commentId: T:Google.Apis.Requests.BatchRequest
+  fullName: Google.Apis.Requests.BatchRequest
+- uid: Google.Apis.Requests.BatchRequest.#ctor(Google.Apis.Services.IClientService)
+  name: BatchRequest(IClientService)
+  href: api/Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest__ctor_Google_Apis_Services_IClientService_
+  commentId: M:Google.Apis.Requests.BatchRequest.#ctor(Google.Apis.Services.IClientService)
+  fullName: Google.Apis.Requests.BatchRequest.BatchRequest(Google.Apis.Services.IClientService)
+- uid: Google.Apis.Requests.BatchRequest.#ctor(Google.Apis.Services.IClientService,System.String)
+  name: BatchRequest(IClientService, String)
+  href: api/Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest__ctor_Google_Apis_Services_IClientService_System_String_
+  commentId: M:Google.Apis.Requests.BatchRequest.#ctor(Google.Apis.Services.IClientService,System.String)
+  fullName: Google.Apis.Requests.BatchRequest.BatchRequest(Google.Apis.Services.IClientService, System.String)
+- uid: Google.Apis.Requests.BatchRequest.Count
+  name: Count
+  href: api/Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest_Count
+  commentId: P:Google.Apis.Requests.BatchRequest.Count
+  fullName: Google.Apis.Requests.BatchRequest.Count
+- uid: Google.Apis.Requests.BatchRequest.ExecuteAsync
+  name: ExecuteAsync()
+  href: api/Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest_ExecuteAsync
+  commentId: M:Google.Apis.Requests.BatchRequest.ExecuteAsync
+  fullName: Google.Apis.Requests.BatchRequest.ExecuteAsync()
+- uid: Google.Apis.Requests.BatchRequest.ExecuteAsync(System.Threading.CancellationToken)
+  name: ExecuteAsync(CancellationToken)
+  href: api/Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest_ExecuteAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Requests.BatchRequest.ExecuteAsync(System.Threading.CancellationToken)
+  fullName: Google.Apis.Requests.BatchRequest.ExecuteAsync(System.Threading.CancellationToken)
+- uid: Google.Apis.Requests.BatchRequest.OnResponse`1
+  name: BatchRequest.OnResponse<TResponse>
+  href: api/Google.Apis.Requests.BatchRequest.OnResponse-1.html#Google_Apis_Requests_BatchRequest_OnResponse_1
+  commentId: T:Google.Apis.Requests.BatchRequest.OnResponse`1
+  name.vb: BatchRequest.OnResponse(Of TResponse)
+  fullName: Google.Apis.Requests.BatchRequest.OnResponse<TResponse>
+  fullName.vb: Google.Apis.Requests.BatchRequest.OnResponse(Of TResponse)
+- uid: Google.Apis.Requests.BatchRequest.Queue``1(Google.Apis.Requests.IClientServiceRequest,Google.Apis.Requests.BatchRequest.OnResponse{``0})
+  name: Queue<TResponse>(IClientServiceRequest, BatchRequest.OnResponse<TResponse>)
+  href: api/Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest_Queue__1_Google_Apis_Requests_IClientServiceRequest_Google_Apis_Requests_BatchRequest_OnResponse___0__
+  commentId: M:Google.Apis.Requests.BatchRequest.Queue``1(Google.Apis.Requests.IClientServiceRequest,Google.Apis.Requests.BatchRequest.OnResponse{``0})
+  name.vb: Queue(Of TResponse)(IClientServiceRequest, BatchRequest.OnResponse(Of TResponse))
+  fullName: Google.Apis.Requests.BatchRequest.Queue<TResponse>(Google.Apis.Requests.IClientServiceRequest, Google.Apis.Requests.BatchRequest.OnResponse<TResponse>)
+  fullName.vb: Google.Apis.Requests.BatchRequest.Queue(Of TResponse)(Google.Apis.Requests.IClientServiceRequest, Google.Apis.Requests.BatchRequest.OnResponse(Of TResponse))
+- uid: Google.Apis.Requests.ClientServiceRequest`1
+  name: ClientServiceRequest<TResponse>
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1
+  commentId: T:Google.Apis.Requests.ClientServiceRequest`1
+  name.vb: ClientServiceRequest(Of TResponse)
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse)
+- uid: Google.Apis.Requests.ClientServiceRequest`1.#ctor(Google.Apis.Services.IClientService)
+  name: ClientServiceRequest(IClientService)
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1__ctor_Google_Apis_Services_IClientService_
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.#ctor(Google.Apis.Services.IClientService)
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.ClientServiceRequest(Google.Apis.Services.IClientService)
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).ClientServiceRequest(Google.Apis.Services.IClientService)
+- uid: Google.Apis.Requests.ClientServiceRequest`1.CreateRequest(System.Nullable{System.Boolean})
+  name: CreateRequest(Nullable<Boolean>)
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_CreateRequest_System_Nullable_System_Boolean__
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.CreateRequest(System.Nullable{System.Boolean})
+  name.vb: CreateRequest(Nullable(Of Boolean))
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.CreateRequest(System.Nullable<System.Boolean>)
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).CreateRequest(System.Nullable(Of System.Boolean))
+- uid: Google.Apis.Requests.ClientServiceRequest`1.ETagAction
+  name: ETagAction
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_ETagAction
+  commentId: P:Google.Apis.Requests.ClientServiceRequest`1.ETagAction
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.ETagAction
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).ETagAction
+- uid: Google.Apis.Requests.ClientServiceRequest`1.Execute
+  name: Execute()
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_Execute
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.Execute
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.Execute()
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).Execute()
+- uid: Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsStream
+  name: ExecuteAsStream()
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_ExecuteAsStream
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsStream
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.ExecuteAsStream()
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).ExecuteAsStream()
+- uid: Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsStreamAsync
+  name: ExecuteAsStreamAsync()
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_ExecuteAsStreamAsync
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsStreamAsync
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.ExecuteAsStreamAsync()
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).ExecuteAsStreamAsync()
+- uid: Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsStreamAsync(System.Threading.CancellationToken)
+  name: ExecuteAsStreamAsync(CancellationToken)
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_ExecuteAsStreamAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsStreamAsync(System.Threading.CancellationToken)
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.ExecuteAsStreamAsync(System.Threading.CancellationToken)
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).ExecuteAsStreamAsync(System.Threading.CancellationToken)
+- uid: Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsync
+  name: ExecuteAsync()
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_ExecuteAsync
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsync
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.ExecuteAsync()
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).ExecuteAsync()
+- uid: Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsync(System.Threading.CancellationToken)
+  name: ExecuteAsync(CancellationToken)
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_ExecuteAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.ExecuteAsync(System.Threading.CancellationToken)
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.ExecuteAsync(System.Threading.CancellationToken)
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).ExecuteAsync(System.Threading.CancellationToken)
+- uid: Google.Apis.Requests.ClientServiceRequest`1.GenerateRequestUri
+  name: GenerateRequestUri()
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_GenerateRequestUri
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.GenerateRequestUri
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.GenerateRequestUri()
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).GenerateRequestUri()
+- uid: Google.Apis.Requests.ClientServiceRequest`1.GetBody
+  name: GetBody()
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_GetBody
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.GetBody
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.GetBody()
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).GetBody()
+- uid: Google.Apis.Requests.ClientServiceRequest`1.GetDefaultETagAction(System.String)
+  name: GetDefaultETagAction(String)
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_GetDefaultETagAction_System_String_
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.GetDefaultETagAction(System.String)
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.GetDefaultETagAction(System.String)
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).GetDefaultETagAction(System.String)
+- uid: Google.Apis.Requests.ClientServiceRequest`1.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_HttpMethod
+  commentId: P:Google.Apis.Requests.ClientServiceRequest`1.HttpMethod
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.HttpMethod
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).HttpMethod
+- uid: Google.Apis.Requests.ClientServiceRequest`1.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_InitParameters
+  commentId: M:Google.Apis.Requests.ClientServiceRequest`1.InitParameters
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.InitParameters()
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).InitParameters()
+- uid: Google.Apis.Requests.ClientServiceRequest`1.MethodName
+  name: MethodName
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_MethodName
+  commentId: P:Google.Apis.Requests.ClientServiceRequest`1.MethodName
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.MethodName
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).MethodName
+- uid: Google.Apis.Requests.ClientServiceRequest`1.RequestParameters
+  name: RequestParameters
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_RequestParameters
+  commentId: P:Google.Apis.Requests.ClientServiceRequest`1.RequestParameters
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.RequestParameters
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).RequestParameters
+- uid: Google.Apis.Requests.ClientServiceRequest`1.RestPath
+  name: RestPath
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_RestPath
+  commentId: P:Google.Apis.Requests.ClientServiceRequest`1.RestPath
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.RestPath
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).RestPath
+- uid: Google.Apis.Requests.ClientServiceRequest`1.Service
+  name: Service
+  href: api/Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1_Service
+  commentId: P:Google.Apis.Requests.ClientServiceRequest`1.Service
+  fullName: Google.Apis.Requests.ClientServiceRequest<TResponse>.Service
+  fullName.vb: Google.Apis.Requests.ClientServiceRequest(Of TResponse).Service
+- uid: Google.Apis.Requests.IClientServiceRequest
+  name: IClientServiceRequest
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest
+  commentId: T:Google.Apis.Requests.IClientServiceRequest
+  fullName: Google.Apis.Requests.IClientServiceRequest
+- uid: Google.Apis.Requests.IClientServiceRequest.CreateRequest(System.Nullable{System.Boolean})
+  name: CreateRequest(Nullable<Boolean>)
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_CreateRequest_System_Nullable_System_Boolean__
+  commentId: M:Google.Apis.Requests.IClientServiceRequest.CreateRequest(System.Nullable{System.Boolean})
+  name.vb: CreateRequest(Nullable(Of Boolean))
+  fullName: Google.Apis.Requests.IClientServiceRequest.CreateRequest(System.Nullable<System.Boolean>)
+  fullName.vb: Google.Apis.Requests.IClientServiceRequest.CreateRequest(System.Nullable(Of System.Boolean))
+- uid: Google.Apis.Requests.IClientServiceRequest.ExecuteAsStream
+  name: ExecuteAsStream()
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_ExecuteAsStream
+  commentId: M:Google.Apis.Requests.IClientServiceRequest.ExecuteAsStream
+  fullName: Google.Apis.Requests.IClientServiceRequest.ExecuteAsStream()
+- uid: Google.Apis.Requests.IClientServiceRequest.ExecuteAsStreamAsync
+  name: ExecuteAsStreamAsync()
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_ExecuteAsStreamAsync
+  commentId: M:Google.Apis.Requests.IClientServiceRequest.ExecuteAsStreamAsync
+  fullName: Google.Apis.Requests.IClientServiceRequest.ExecuteAsStreamAsync()
+- uid: Google.Apis.Requests.IClientServiceRequest.ExecuteAsStreamAsync(System.Threading.CancellationToken)
+  name: ExecuteAsStreamAsync(CancellationToken)
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_ExecuteAsStreamAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Requests.IClientServiceRequest.ExecuteAsStreamAsync(System.Threading.CancellationToken)
+  fullName: Google.Apis.Requests.IClientServiceRequest.ExecuteAsStreamAsync(System.Threading.CancellationToken)
+- uid: Google.Apis.Requests.IClientServiceRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_HttpMethod
+  commentId: P:Google.Apis.Requests.IClientServiceRequest.HttpMethod
+  fullName: Google.Apis.Requests.IClientServiceRequest.HttpMethod
+- uid: Google.Apis.Requests.IClientServiceRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_MethodName
+  commentId: P:Google.Apis.Requests.IClientServiceRequest.MethodName
+  fullName: Google.Apis.Requests.IClientServiceRequest.MethodName
+- uid: Google.Apis.Requests.IClientServiceRequest.RequestParameters
+  name: RequestParameters
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_RequestParameters
+  commentId: P:Google.Apis.Requests.IClientServiceRequest.RequestParameters
+  fullName: Google.Apis.Requests.IClientServiceRequest.RequestParameters
+- uid: Google.Apis.Requests.IClientServiceRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_RestPath
+  commentId: P:Google.Apis.Requests.IClientServiceRequest.RestPath
+  fullName: Google.Apis.Requests.IClientServiceRequest.RestPath
+- uid: Google.Apis.Requests.IClientServiceRequest.Service
+  name: Service
+  href: api/Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest_Service
+  commentId: P:Google.Apis.Requests.IClientServiceRequest.Service
+  fullName: Google.Apis.Requests.IClientServiceRequest.Service
+- uid: Google.Apis.Requests.IClientServiceRequest`1
+  name: IClientServiceRequest<TResponse>
+  href: api/Google.Apis.Requests.IClientServiceRequest-1.html#Google_Apis_Requests_IClientServiceRequest_1
+  commentId: T:Google.Apis.Requests.IClientServiceRequest`1
+  name.vb: IClientServiceRequest(Of TResponse)
+  fullName: Google.Apis.Requests.IClientServiceRequest<TResponse>
+  fullName.vb: Google.Apis.Requests.IClientServiceRequest(Of TResponse)
+- uid: Google.Apis.Requests.IClientServiceRequest`1.Execute
+  name: Execute()
+  href: api/Google.Apis.Requests.IClientServiceRequest-1.html#Google_Apis_Requests_IClientServiceRequest_1_Execute
+  commentId: M:Google.Apis.Requests.IClientServiceRequest`1.Execute
+  fullName: Google.Apis.Requests.IClientServiceRequest<TResponse>.Execute()
+  fullName.vb: Google.Apis.Requests.IClientServiceRequest(Of TResponse).Execute()
+- uid: Google.Apis.Requests.IClientServiceRequest`1.ExecuteAsync
+  name: ExecuteAsync()
+  href: api/Google.Apis.Requests.IClientServiceRequest-1.html#Google_Apis_Requests_IClientServiceRequest_1_ExecuteAsync
+  commentId: M:Google.Apis.Requests.IClientServiceRequest`1.ExecuteAsync
+  fullName: Google.Apis.Requests.IClientServiceRequest<TResponse>.ExecuteAsync()
+  fullName.vb: Google.Apis.Requests.IClientServiceRequest(Of TResponse).ExecuteAsync()
+- uid: Google.Apis.Requests.IClientServiceRequest`1.ExecuteAsync(System.Threading.CancellationToken)
+  name: ExecuteAsync(CancellationToken)
+  href: api/Google.Apis.Requests.IClientServiceRequest-1.html#Google_Apis_Requests_IClientServiceRequest_1_ExecuteAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Requests.IClientServiceRequest`1.ExecuteAsync(System.Threading.CancellationToken)
+  fullName: Google.Apis.Requests.IClientServiceRequest<TResponse>.ExecuteAsync(System.Threading.CancellationToken)
+  fullName.vb: Google.Apis.Requests.IClientServiceRequest(Of TResponse).ExecuteAsync(System.Threading.CancellationToken)
+- uid: Google.Apis.Requests.IDirectResponseSchema
+  name: IDirectResponseSchema
+  href: api/Google.Apis.Requests.IDirectResponseSchema.html#Google_Apis_Requests_IDirectResponseSchema
+  commentId: T:Google.Apis.Requests.IDirectResponseSchema
+  fullName: Google.Apis.Requests.IDirectResponseSchema
+- uid: Google.Apis.Requests.IDirectResponseSchema.ETag
+  name: ETag
+  href: api/Google.Apis.Requests.IDirectResponseSchema.html#Google_Apis_Requests_IDirectResponseSchema_ETag
+  commentId: P:Google.Apis.Requests.IDirectResponseSchema.ETag
+  fullName: Google.Apis.Requests.IDirectResponseSchema.ETag
+- uid: Google.Apis.Requests.PageStreamer`4
+  name: PageStreamer<TResource, TRequest, TResponse, TToken>
+  href: api/Google.Apis.Requests.PageStreamer-4.html#Google_Apis_Requests_PageStreamer_4
+  commentId: T:Google.Apis.Requests.PageStreamer`4
+  name.vb: PageStreamer(Of TResource, TRequest, TResponse, TToken)
+  fullName: Google.Apis.Requests.PageStreamer<TResource, TRequest, TResponse, TToken>
+  fullName.vb: Google.Apis.Requests.PageStreamer(Of TResource, TRequest, TResponse, TToken)
+- uid: Google.Apis.Requests.PageStreamer`4.#ctor(System.Action{`1,`3},System.Func{`2,`3},System.Func{`2,System.Collections.Generic.IEnumerable{`0}})
+  name: PageStreamer(Action<TRequest, TToken>, Func<TResponse, TToken>, Func<TResponse, IEnumerable<TResource>>)
+  href: api/Google.Apis.Requests.PageStreamer-4.html#Google_Apis_Requests_PageStreamer_4__ctor_System_Action__1__3__System_Func__2__3__System_Func__2_System_Collections_Generic_IEnumerable__0___
+  commentId: M:Google.Apis.Requests.PageStreamer`4.#ctor(System.Action{`1,`3},System.Func{`2,`3},System.Func{`2,System.Collections.Generic.IEnumerable{`0}})
+  name.vb: PageStreamer(Action(Of TRequest, TToken), Func(Of TResponse, TToken), Func(Of TResponse, IEnumerable(Of TResource)))
+  fullName: Google.Apis.Requests.PageStreamer<TResource, TRequest, TResponse, TToken>.PageStreamer(System.Action<TRequest, TToken>, System.Func<TResponse, TToken>, System.Func<TResponse, System.Collections.Generic.IEnumerable<TResource>>)
+  fullName.vb: Google.Apis.Requests.PageStreamer(Of TResource, TRequest, TResponse, TToken).PageStreamer(System.Action(Of TRequest, TToken), System.Func(Of TResponse, TToken), System.Func(Of TResponse, System.Collections.Generic.IEnumerable(Of TResource)))
+- uid: Google.Apis.Requests.PageStreamer`4.Fetch(`1)
+  name: Fetch(TRequest)
+  href: api/Google.Apis.Requests.PageStreamer-4.html#Google_Apis_Requests_PageStreamer_4_Fetch__1_
+  commentId: M:Google.Apis.Requests.PageStreamer`4.Fetch(`1)
+  fullName: Google.Apis.Requests.PageStreamer<TResource, TRequest, TResponse, TToken>.Fetch(TRequest)
+  fullName.vb: Google.Apis.Requests.PageStreamer(Of TResource, TRequest, TResponse, TToken).Fetch(TRequest)
+- uid: Google.Apis.Requests.PageStreamer`4.FetchAllAsync(`1,System.Threading.CancellationToken)
+  name: FetchAllAsync(TRequest, CancellationToken)
+  href: api/Google.Apis.Requests.PageStreamer-4.html#Google_Apis_Requests_PageStreamer_4_FetchAllAsync__1_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Requests.PageStreamer`4.FetchAllAsync(`1,System.Threading.CancellationToken)
+  fullName: Google.Apis.Requests.PageStreamer<TResource, TRequest, TResponse, TToken>.FetchAllAsync(TRequest, System.Threading.CancellationToken)
+  fullName.vb: Google.Apis.Requests.PageStreamer(Of TResource, TRequest, TResponse, TToken).FetchAllAsync(TRequest, System.Threading.CancellationToken)
+- uid: Google.Apis.Services
+  name: Google.Apis.Services
+  href: api/Google.Apis.Services.html#Google_Apis_Services
+  commentId: N:Google.Apis.Services
+  fullName: Google.Apis.Services
+- uid: Google.Apis.Services.BaseClientService
+  name: BaseClientService
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService
+  commentId: T:Google.Apis.Services.BaseClientService
+  fullName: Google.Apis.Services.BaseClientService
+- uid: Google.Apis.Services.BaseClientService.#ctor(Google.Apis.Services.BaseClientService.Initializer)
+  name: BaseClientService(BaseClientService.Initializer)
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService__ctor_Google_Apis_Services_BaseClientService_Initializer_
+  commentId: M:Google.Apis.Services.BaseClientService.#ctor(Google.Apis.Services.BaseClientService.Initializer)
+  fullName: Google.Apis.Services.BaseClientService.BaseClientService(Google.Apis.Services.BaseClientService.Initializer)
+- uid: Google.Apis.Services.BaseClientService.ApiKey
+  name: ApiKey
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_ApiKey
+  commentId: P:Google.Apis.Services.BaseClientService.ApiKey
+  fullName: Google.Apis.Services.BaseClientService.ApiKey
+- uid: Google.Apis.Services.BaseClientService.ApplicationName
+  name: ApplicationName
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_ApplicationName
+  commentId: P:Google.Apis.Services.BaseClientService.ApplicationName
+  fullName: Google.Apis.Services.BaseClientService.ApplicationName
+- uid: Google.Apis.Services.BaseClientService.BasePath
+  name: BasePath
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_BasePath
+  commentId: P:Google.Apis.Services.BaseClientService.BasePath
+  fullName: Google.Apis.Services.BaseClientService.BasePath
+- uid: Google.Apis.Services.BaseClientService.BaseUri
+  name: BaseUri
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_BaseUri
+  commentId: P:Google.Apis.Services.BaseClientService.BaseUri
+  fullName: Google.Apis.Services.BaseClientService.BaseUri
+- uid: Google.Apis.Services.BaseClientService.CreateBackOffHandler
+  name: CreateBackOffHandler()
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_CreateBackOffHandler
+  commentId: M:Google.Apis.Services.BaseClientService.CreateBackOffHandler
+  fullName: Google.Apis.Services.BaseClientService.CreateBackOffHandler()
+- uid: Google.Apis.Services.BaseClientService.DefaultMaxUrlLength
+  name: DefaultMaxUrlLength
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_DefaultMaxUrlLength
+  commentId: F:Google.Apis.Services.BaseClientService.DefaultMaxUrlLength
+  fullName: Google.Apis.Services.BaseClientService.DefaultMaxUrlLength
+- uid: Google.Apis.Services.BaseClientService.DeserializeError(System.Net.Http.HttpResponseMessage)
+  name: DeserializeError(HttpResponseMessage)
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_DeserializeError_System_Net_Http_HttpResponseMessage_
+  commentId: M:Google.Apis.Services.BaseClientService.DeserializeError(System.Net.Http.HttpResponseMessage)
+  fullName: Google.Apis.Services.BaseClientService.DeserializeError(System.Net.Http.HttpResponseMessage)
+- uid: Google.Apis.Services.BaseClientService.DeserializeResponse``1(System.Net.Http.HttpResponseMessage)
+  name: DeserializeResponse<T>(HttpResponseMessage)
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_DeserializeResponse__1_System_Net_Http_HttpResponseMessage_
+  commentId: M:Google.Apis.Services.BaseClientService.DeserializeResponse``1(System.Net.Http.HttpResponseMessage)
+  name.vb: DeserializeResponse(Of T)(HttpResponseMessage)
+  fullName: Google.Apis.Services.BaseClientService.DeserializeResponse<T>(System.Net.Http.HttpResponseMessage)
+  fullName.vb: Google.Apis.Services.BaseClientService.DeserializeResponse(Of T)(System.Net.Http.HttpResponseMessage)
+- uid: Google.Apis.Services.BaseClientService.Dispose
+  name: Dispose()
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_Dispose
+  commentId: M:Google.Apis.Services.BaseClientService.Dispose
+  fullName: Google.Apis.Services.BaseClientService.Dispose()
+- uid: Google.Apis.Services.BaseClientService.Features
+  name: Features
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_Features
+  commentId: P:Google.Apis.Services.BaseClientService.Features
+  fullName: Google.Apis.Services.BaseClientService.Features
+- uid: Google.Apis.Services.BaseClientService.GZipEnabled
+  name: GZipEnabled
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_GZipEnabled
+  commentId: P:Google.Apis.Services.BaseClientService.GZipEnabled
+  fullName: Google.Apis.Services.BaseClientService.GZipEnabled
+- uid: Google.Apis.Services.BaseClientService.HttpClient
+  name: HttpClient
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_HttpClient
+  commentId: P:Google.Apis.Services.BaseClientService.HttpClient
+  fullName: Google.Apis.Services.BaseClientService.HttpClient
+- uid: Google.Apis.Services.BaseClientService.HttpClientInitializer
+  name: HttpClientInitializer
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_HttpClientInitializer
+  commentId: P:Google.Apis.Services.BaseClientService.HttpClientInitializer
+  fullName: Google.Apis.Services.BaseClientService.HttpClientInitializer
+- uid: Google.Apis.Services.BaseClientService.Initializer
+  name: BaseClientService.Initializer
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer
+  commentId: T:Google.Apis.Services.BaseClientService.Initializer
+  fullName: Google.Apis.Services.BaseClientService.Initializer
+- uid: Google.Apis.Services.BaseClientService.Initializer.#ctor
+  name: Initializer()
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer__ctor
+  commentId: M:Google.Apis.Services.BaseClientService.Initializer.#ctor
+  fullName: Google.Apis.Services.BaseClientService.Initializer.Initializer()
+- uid: Google.Apis.Services.BaseClientService.Initializer.ApiKey
+  name: ApiKey
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer_ApiKey
+  commentId: P:Google.Apis.Services.BaseClientService.Initializer.ApiKey
+  fullName: Google.Apis.Services.BaseClientService.Initializer.ApiKey
+- uid: Google.Apis.Services.BaseClientService.Initializer.ApplicationName
+  name: ApplicationName
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer_ApplicationName
+  commentId: P:Google.Apis.Services.BaseClientService.Initializer.ApplicationName
+  fullName: Google.Apis.Services.BaseClientService.Initializer.ApplicationName
+- uid: Google.Apis.Services.BaseClientService.Initializer.DefaultExponentialBackOffPolicy
+  name: DefaultExponentialBackOffPolicy
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer_DefaultExponentialBackOffPolicy
+  commentId: P:Google.Apis.Services.BaseClientService.Initializer.DefaultExponentialBackOffPolicy
+  fullName: Google.Apis.Services.BaseClientService.Initializer.DefaultExponentialBackOffPolicy
+- uid: Google.Apis.Services.BaseClientService.Initializer.GZipEnabled
+  name: GZipEnabled
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer_GZipEnabled
+  commentId: P:Google.Apis.Services.BaseClientService.Initializer.GZipEnabled
+  fullName: Google.Apis.Services.BaseClientService.Initializer.GZipEnabled
+- uid: Google.Apis.Services.BaseClientService.Initializer.HttpClientFactory
+  name: HttpClientFactory
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer_HttpClientFactory
+  commentId: P:Google.Apis.Services.BaseClientService.Initializer.HttpClientFactory
+  fullName: Google.Apis.Services.BaseClientService.Initializer.HttpClientFactory
+- uid: Google.Apis.Services.BaseClientService.Initializer.HttpClientInitializer
+  name: HttpClientInitializer
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer_HttpClientInitializer
+  commentId: P:Google.Apis.Services.BaseClientService.Initializer.HttpClientInitializer
+  fullName: Google.Apis.Services.BaseClientService.Initializer.HttpClientInitializer
+- uid: Google.Apis.Services.BaseClientService.Initializer.MaxUrlLength
+  name: MaxUrlLength
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer_MaxUrlLength
+  commentId: P:Google.Apis.Services.BaseClientService.Initializer.MaxUrlLength
+  fullName: Google.Apis.Services.BaseClientService.Initializer.MaxUrlLength
+- uid: Google.Apis.Services.BaseClientService.Initializer.Serializer
+  name: Serializer
+  href: api/Google.Apis.Services.BaseClientService.Initializer.html#Google_Apis_Services_BaseClientService_Initializer_Serializer
+  commentId: P:Google.Apis.Services.BaseClientService.Initializer.Serializer
+  fullName: Google.Apis.Services.BaseClientService.Initializer.Serializer
+- uid: Google.Apis.Services.BaseClientService.Name
+  name: Name
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_Name
+  commentId: P:Google.Apis.Services.BaseClientService.Name
+  fullName: Google.Apis.Services.BaseClientService.Name
+- uid: Google.Apis.Services.BaseClientService.SerializeObject(System.Object)
+  name: SerializeObject(Object)
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_SerializeObject_System_Object_
+  commentId: M:Google.Apis.Services.BaseClientService.SerializeObject(System.Object)
+  fullName: Google.Apis.Services.BaseClientService.SerializeObject(System.Object)
+- uid: Google.Apis.Services.BaseClientService.Serializer
+  name: Serializer
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_Serializer
+  commentId: P:Google.Apis.Services.BaseClientService.Serializer
+  fullName: Google.Apis.Services.BaseClientService.Serializer
+- uid: Google.Apis.Services.BaseClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage,System.Object)
+  name: SetRequestSerailizedContent(HttpRequestMessage, Object)
+  href: api/Google.Apis.Services.BaseClientService.html#Google_Apis_Services_BaseClientService_SetRequestSerailizedContent_System_Net_Http_HttpRequestMessage_System_Object_
+  commentId: M:Google.Apis.Services.BaseClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage,System.Object)
+  fullName: Google.Apis.Services.BaseClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage, System.Object)
+- uid: Google.Apis.Services.IClientService
+  name: IClientService
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService
+  commentId: T:Google.Apis.Services.IClientService
+  fullName: Google.Apis.Services.IClientService
+- uid: Google.Apis.Services.IClientService.ApiKey
+  name: ApiKey
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_ApiKey
+  commentId: P:Google.Apis.Services.IClientService.ApiKey
+  fullName: Google.Apis.Services.IClientService.ApiKey
+- uid: Google.Apis.Services.IClientService.ApplicationName
+  name: ApplicationName
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_ApplicationName
+  commentId: P:Google.Apis.Services.IClientService.ApplicationName
+  fullName: Google.Apis.Services.IClientService.ApplicationName
+- uid: Google.Apis.Services.IClientService.BasePath
+  name: BasePath
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_BasePath
+  commentId: P:Google.Apis.Services.IClientService.BasePath
+  fullName: Google.Apis.Services.IClientService.BasePath
+- uid: Google.Apis.Services.IClientService.BaseUri
+  name: BaseUri
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_BaseUri
+  commentId: P:Google.Apis.Services.IClientService.BaseUri
+  fullName: Google.Apis.Services.IClientService.BaseUri
+- uid: Google.Apis.Services.IClientService.DeserializeError(System.Net.Http.HttpResponseMessage)
+  name: DeserializeError(HttpResponseMessage)
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_DeserializeError_System_Net_Http_HttpResponseMessage_
+  commentId: M:Google.Apis.Services.IClientService.DeserializeError(System.Net.Http.HttpResponseMessage)
+  fullName: Google.Apis.Services.IClientService.DeserializeError(System.Net.Http.HttpResponseMessage)
+- uid: Google.Apis.Services.IClientService.DeserializeResponse``1(System.Net.Http.HttpResponseMessage)
+  name: DeserializeResponse<T>(HttpResponseMessage)
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_DeserializeResponse__1_System_Net_Http_HttpResponseMessage_
+  commentId: M:Google.Apis.Services.IClientService.DeserializeResponse``1(System.Net.Http.HttpResponseMessage)
+  name.vb: DeserializeResponse(Of T)(HttpResponseMessage)
+  fullName: Google.Apis.Services.IClientService.DeserializeResponse<T>(System.Net.Http.HttpResponseMessage)
+  fullName.vb: Google.Apis.Services.IClientService.DeserializeResponse(Of T)(System.Net.Http.HttpResponseMessage)
+- uid: Google.Apis.Services.IClientService.Features
+  name: Features
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_Features
+  commentId: P:Google.Apis.Services.IClientService.Features
+  fullName: Google.Apis.Services.IClientService.Features
+- uid: Google.Apis.Services.IClientService.GZipEnabled
+  name: GZipEnabled
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_GZipEnabled
+  commentId: P:Google.Apis.Services.IClientService.GZipEnabled
+  fullName: Google.Apis.Services.IClientService.GZipEnabled
+- uid: Google.Apis.Services.IClientService.HttpClient
+  name: HttpClient
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_HttpClient
+  commentId: P:Google.Apis.Services.IClientService.HttpClient
+  fullName: Google.Apis.Services.IClientService.HttpClient
+- uid: Google.Apis.Services.IClientService.HttpClientInitializer
+  name: HttpClientInitializer
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_HttpClientInitializer
+  commentId: P:Google.Apis.Services.IClientService.HttpClientInitializer
+  fullName: Google.Apis.Services.IClientService.HttpClientInitializer
+- uid: Google.Apis.Services.IClientService.Name
+  name: Name
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_Name
+  commentId: P:Google.Apis.Services.IClientService.Name
+  fullName: Google.Apis.Services.IClientService.Name
+- uid: Google.Apis.Services.IClientService.SerializeObject(System.Object)
+  name: SerializeObject(Object)
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_SerializeObject_System_Object_
+  commentId: M:Google.Apis.Services.IClientService.SerializeObject(System.Object)
+  fullName: Google.Apis.Services.IClientService.SerializeObject(System.Object)
+- uid: Google.Apis.Services.IClientService.Serializer
+  name: Serializer
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_Serializer
+  commentId: P:Google.Apis.Services.IClientService.Serializer
+  fullName: Google.Apis.Services.IClientService.Serializer
+- uid: Google.Apis.Services.IClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage,System.Object)
+  name: SetRequestSerailizedContent(HttpRequestMessage, Object)
+  href: api/Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_SetRequestSerailizedContent_System_Net_Http_HttpRequestMessage_System_Object_
+  commentId: M:Google.Apis.Services.IClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage,System.Object)
+  fullName: Google.Apis.Services.IClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage, System.Object)
+- uid: Google.Apis.Upload
+  name: Google.Apis.Upload
+  href: api/Google.Apis.Upload.html#Google_Apis_Upload
+  commentId: N:Google.Apis.Upload
+  fullName: Google.Apis.Upload
+- uid: Google.Apis.Upload.IUploadProgress
+  name: IUploadProgress
+  href: api/Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress
+  commentId: T:Google.Apis.Upload.IUploadProgress
+  fullName: Google.Apis.Upload.IUploadProgress
+- uid: Google.Apis.Upload.IUploadProgress.BytesSent
+  name: BytesSent
+  href: api/Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress_BytesSent
+  commentId: P:Google.Apis.Upload.IUploadProgress.BytesSent
+  fullName: Google.Apis.Upload.IUploadProgress.BytesSent
+- uid: Google.Apis.Upload.IUploadProgress.Exception
+  name: Exception
+  href: api/Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress_Exception
+  commentId: P:Google.Apis.Upload.IUploadProgress.Exception
+  fullName: Google.Apis.Upload.IUploadProgress.Exception
+- uid: Google.Apis.Upload.IUploadProgress.Status
+  name: Status
+  href: api/Google.Apis.Upload.IUploadProgress.html#Google_Apis_Upload_IUploadProgress_Status
+  commentId: P:Google.Apis.Upload.IUploadProgress.Status
+  fullName: Google.Apis.Upload.IUploadProgress.Status
+- uid: Google.Apis.Upload.IUploadSessionData
+  name: IUploadSessionData
+  href: api/Google.Apis.Upload.IUploadSessionData.html#Google_Apis_Upload_IUploadSessionData
+  commentId: T:Google.Apis.Upload.IUploadSessionData
+  fullName: Google.Apis.Upload.IUploadSessionData
+- uid: Google.Apis.Upload.IUploadSessionData.UploadUri
+  name: UploadUri
+  href: api/Google.Apis.Upload.IUploadSessionData.html#Google_Apis_Upload_IUploadSessionData_UploadUri
+  commentId: P:Google.Apis.Upload.IUploadSessionData.UploadUri
+  fullName: Google.Apis.Upload.IUploadSessionData.UploadUri
+- uid: Google.Apis.Upload.ResumableUpload`1
+  name: ResumableUpload<TRequest>
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1
+  commentId: T:Google.Apis.Upload.ResumableUpload`1
+  name.vb: ResumableUpload(Of TRequest)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest)
+- uid: Google.Apis.Upload.ResumableUpload`1.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.IO.Stream,System.String)
+  name: ResumableUpload(IClientService, String, String, Stream, String)
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1__ctor_Google_Apis_Services_IClientService_System_String_System_String_System_IO_Stream_System_String_
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.IO.Stream,System.String)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ResumableUpload(Google.Apis.Services.IClientService, System.String, System.String, System.IO.Stream, System.String)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ResumableUpload(Google.Apis.Services.IClientService, System.String, System.String, System.IO.Stream, System.String)
+- uid: Google.Apis.Upload.ResumableUpload`1.Body
+  name: Body
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_Body
+  commentId: P:Google.Apis.Upload.ResumableUpload`1.Body
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.Body
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).Body
+- uid: Google.Apis.Upload.ResumableUpload`1.chunkSize
+  name: chunkSize
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_chunkSize
+  commentId: F:Google.Apis.Upload.ResumableUpload`1.chunkSize
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.chunkSize
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).chunkSize
+- uid: Google.Apis.Upload.ResumableUpload`1.ChunkSize
+  name: ChunkSize
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ChunkSize
+  commentId: P:Google.Apis.Upload.ResumableUpload`1.ChunkSize
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ChunkSize
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ChunkSize
+- uid: Google.Apis.Upload.ResumableUpload`1.ContentStream
+  name: ContentStream
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ContentStream
+  commentId: P:Google.Apis.Upload.ResumableUpload`1.ContentStream
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ContentStream
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ContentStream
+- uid: Google.Apis.Upload.ResumableUpload`1.ContentType
+  name: ContentType
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ContentType
+  commentId: P:Google.Apis.Upload.ResumableUpload`1.ContentType
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ContentType
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ContentType
+- uid: Google.Apis.Upload.ResumableUpload`1.DefaultChunkSize
+  name: DefaultChunkSize
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_DefaultChunkSize
+  commentId: F:Google.Apis.Upload.ResumableUpload`1.DefaultChunkSize
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.DefaultChunkSize
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).DefaultChunkSize
+- uid: Google.Apis.Upload.ResumableUpload`1.GetProgress
+  name: GetProgress()
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_GetProgress
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.GetProgress
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.GetProgress()
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).GetProgress()
+- uid: Google.Apis.Upload.ResumableUpload`1.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_HttpMethod
+  commentId: P:Google.Apis.Upload.ResumableUpload`1.HttpMethod
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.HttpMethod
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).HttpMethod
+- uid: Google.Apis.Upload.ResumableUpload`1.MinimumChunkSize
+  name: MinimumChunkSize
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_MinimumChunkSize
+  commentId: F:Google.Apis.Upload.ResumableUpload`1.MinimumChunkSize
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.MinimumChunkSize
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).MinimumChunkSize
+- uid: Google.Apis.Upload.ResumableUpload`1.Path
+  name: Path
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_Path
+  commentId: P:Google.Apis.Upload.ResumableUpload`1.Path
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.Path
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).Path
+- uid: Google.Apis.Upload.ResumableUpload`1.ProcessResponse(System.Net.Http.HttpResponseMessage)
+  name: ProcessResponse(HttpResponseMessage)
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ProcessResponse_System_Net_Http_HttpResponseMessage_
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.ProcessResponse(System.Net.Http.HttpResponseMessage)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ProcessResponse(System.Net.Http.HttpResponseMessage)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ProcessResponse(System.Net.Http.HttpResponseMessage)
+- uid: Google.Apis.Upload.ResumableUpload`1.ProgressChanged
+  name: ProgressChanged
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ProgressChanged
+  commentId: E:Google.Apis.Upload.ResumableUpload`1.ProgressChanged
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ProgressChanged
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ProgressChanged
+- uid: Google.Apis.Upload.ResumableUpload`1.Resume
+  name: Resume()
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_Resume
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.Resume
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.Resume()
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).Resume()
+- uid: Google.Apis.Upload.ResumableUpload`1.Resume(System.Uri)
+  name: Resume(Uri)
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_Resume_System_Uri_
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.Resume(System.Uri)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.Resume(System.Uri)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).Resume(System.Uri)
+- uid: Google.Apis.Upload.ResumableUpload`1.ResumeAsync
+  name: ResumeAsync()
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ResumeAsync
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.ResumeAsync
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ResumeAsync()
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ResumeAsync()
+- uid: Google.Apis.Upload.ResumableUpload`1.ResumeAsync(System.Threading.CancellationToken)
+  name: ResumeAsync(CancellationToken)
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ResumeAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.ResumeAsync(System.Threading.CancellationToken)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ResumeAsync(System.Threading.CancellationToken)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ResumeAsync(System.Threading.CancellationToken)
+- uid: Google.Apis.Upload.ResumableUpload`1.ResumeAsync(System.Uri)
+  name: ResumeAsync(Uri)
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ResumeAsync_System_Uri_
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.ResumeAsync(System.Uri)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ResumeAsync(System.Uri)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ResumeAsync(System.Uri)
+- uid: Google.Apis.Upload.ResumableUpload`1.ResumeAsync(System.Uri,System.Threading.CancellationToken)
+  name: ResumeAsync(Uri, CancellationToken)
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_ResumeAsync_System_Uri_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.ResumeAsync(System.Uri,System.Threading.CancellationToken)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.ResumeAsync(System.Uri, System.Threading.CancellationToken)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).ResumeAsync(System.Uri, System.Threading.CancellationToken)
+- uid: Google.Apis.Upload.ResumableUpload`1.SendNextChunkAsync(System.IO.Stream,System.Threading.CancellationToken)
+  name: SendNextChunkAsync(Stream, CancellationToken)
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_SendNextChunkAsync_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.SendNextChunkAsync(System.IO.Stream,System.Threading.CancellationToken)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.SendNextChunkAsync(System.IO.Stream, System.Threading.CancellationToken)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).SendNextChunkAsync(System.IO.Stream, System.Threading.CancellationToken)
+- uid: Google.Apis.Upload.ResumableUpload`1.Service
+  name: Service
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_Service
+  commentId: P:Google.Apis.Upload.ResumableUpload`1.Service
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.Service
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).Service
+- uid: Google.Apis.Upload.ResumableUpload`1.Upload
+  name: Upload()
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_Upload
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.Upload
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.Upload()
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).Upload()
+- uid: Google.Apis.Upload.ResumableUpload`1.UploadAsync
+  name: UploadAsync()
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_UploadAsync
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.UploadAsync
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.UploadAsync()
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).UploadAsync()
+- uid: Google.Apis.Upload.ResumableUpload`1.UploadAsync(System.Threading.CancellationToken)
+  name: UploadAsync(CancellationToken)
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_UploadAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Apis.Upload.ResumableUpload`1.UploadAsync(System.Threading.CancellationToken)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.UploadAsync(System.Threading.CancellationToken)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).UploadAsync(System.Threading.CancellationToken)
+- uid: Google.Apis.Upload.ResumableUpload`1.UploadSessionData
+  name: UploadSessionData
+  href: api/Google.Apis.Upload.ResumableUpload-1.html#Google_Apis_Upload_ResumableUpload_1_UploadSessionData
+  commentId: E:Google.Apis.Upload.ResumableUpload`1.UploadSessionData
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest>.UploadSessionData
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest).UploadSessionData
+- uid: Google.Apis.Upload.ResumableUpload`2
+  name: ResumableUpload<TRequest, TResponse>
+  href: api/Google.Apis.Upload.ResumableUpload-2.html#Google_Apis_Upload_ResumableUpload_2
+  commentId: T:Google.Apis.Upload.ResumableUpload`2
+  name.vb: ResumableUpload(Of TRequest, TResponse)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest, TResponse>
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest, TResponse)
+- uid: Google.Apis.Upload.ResumableUpload`2.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.IO.Stream,System.String)
+  name: ResumableUpload(IClientService, String, String, Stream, String)
+  href: api/Google.Apis.Upload.ResumableUpload-2.html#Google_Apis_Upload_ResumableUpload_2__ctor_Google_Apis_Services_IClientService_System_String_System_String_System_IO_Stream_System_String_
+  commentId: M:Google.Apis.Upload.ResumableUpload`2.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.IO.Stream,System.String)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest, TResponse>.ResumableUpload(Google.Apis.Services.IClientService, System.String, System.String, System.IO.Stream, System.String)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest, TResponse).ResumableUpload(Google.Apis.Services.IClientService, System.String, System.String, System.IO.Stream, System.String)
+- uid: Google.Apis.Upload.ResumableUpload`2.ProcessResponse(System.Net.Http.HttpResponseMessage)
+  name: ProcessResponse(HttpResponseMessage)
+  href: api/Google.Apis.Upload.ResumableUpload-2.html#Google_Apis_Upload_ResumableUpload_2_ProcessResponse_System_Net_Http_HttpResponseMessage_
+  commentId: M:Google.Apis.Upload.ResumableUpload`2.ProcessResponse(System.Net.Http.HttpResponseMessage)
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest, TResponse>.ProcessResponse(System.Net.Http.HttpResponseMessage)
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest, TResponse).ProcessResponse(System.Net.Http.HttpResponseMessage)
+- uid: Google.Apis.Upload.ResumableUpload`2.ResponseBody
+  name: ResponseBody
+  href: api/Google.Apis.Upload.ResumableUpload-2.html#Google_Apis_Upload_ResumableUpload_2_ResponseBody
+  commentId: P:Google.Apis.Upload.ResumableUpload`2.ResponseBody
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest, TResponse>.ResponseBody
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest, TResponse).ResponseBody
+- uid: Google.Apis.Upload.ResumableUpload`2.ResponseReceived
+  name: ResponseReceived
+  href: api/Google.Apis.Upload.ResumableUpload-2.html#Google_Apis_Upload_ResumableUpload_2_ResponseReceived
+  commentId: E:Google.Apis.Upload.ResumableUpload`2.ResponseReceived
+  fullName: Google.Apis.Upload.ResumableUpload<TRequest, TResponse>.ResponseReceived
+  fullName.vb: Google.Apis.Upload.ResumableUpload(Of TRequest, TResponse).ResponseReceived
+- uid: Google.Apis.Upload.UploadStatus
+  name: UploadStatus
+  href: api/Google.Apis.Upload.UploadStatus.html#Google_Apis_Upload_UploadStatus
+  commentId: T:Google.Apis.Upload.UploadStatus
+  fullName: Google.Apis.Upload.UploadStatus
+- uid: Google.Apis.Upload.UploadStatus.Completed
+  name: Completed
+  href: api/Google.Apis.Upload.UploadStatus.html#Google_Apis_Upload_UploadStatus_Completed
+  commentId: F:Google.Apis.Upload.UploadStatus.Completed
+  fullName: Google.Apis.Upload.UploadStatus.Completed
+- uid: Google.Apis.Upload.UploadStatus.Failed
+  name: Failed
+  href: api/Google.Apis.Upload.UploadStatus.html#Google_Apis_Upload_UploadStatus_Failed
+  commentId: F:Google.Apis.Upload.UploadStatus.Failed
+  fullName: Google.Apis.Upload.UploadStatus.Failed
+- uid: Google.Apis.Upload.UploadStatus.NotStarted
+  name: NotStarted
+  href: api/Google.Apis.Upload.UploadStatus.html#Google_Apis_Upload_UploadStatus_NotStarted
+  commentId: F:Google.Apis.Upload.UploadStatus.NotStarted
+  fullName: Google.Apis.Upload.UploadStatus.NotStarted
+- uid: Google.Apis.Upload.UploadStatus.Starting
+  name: Starting
+  href: api/Google.Apis.Upload.UploadStatus.html#Google_Apis_Upload_UploadStatus_Starting
+  commentId: F:Google.Apis.Upload.UploadStatus.Starting
+  fullName: Google.Apis.Upload.UploadStatus.Starting
+- uid: Google.Apis.Upload.UploadStatus.Uploading
+  name: Uploading
+  href: api/Google.Apis.Upload.UploadStatus.html#Google_Apis_Upload_UploadStatus_Uploading
+  commentId: F:Google.Apis.Upload.UploadStatus.Uploading
+  fullName: Google.Apis.Upload.UploadStatus.Uploading
+- uid: Google.Cloud.Metadata.V1
+  name: Google.Cloud.Metadata.V1
+  href: api/Google.Cloud.Metadata.V1.html#Google_Cloud_Metadata_V1
+  commentId: N:Google.Cloud.Metadata.V1
+  fullName: Google.Cloud.Metadata.V1
+- uid: Google.Cloud.Metadata.V1.MaintenanceStatus
+  name: MaintenanceStatus
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus
+  commentId: T:Google.Cloud.Metadata.V1.MaintenanceStatus
+  fullName: Google.Cloud.Metadata.V1.MaintenanceStatus
+- uid: Google.Cloud.Metadata.V1.MaintenanceStatus.Migrate
+  name: Migrate
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus_Migrate
+  commentId: F:Google.Cloud.Metadata.V1.MaintenanceStatus.Migrate
+  fullName: Google.Cloud.Metadata.V1.MaintenanceStatus.Migrate
+- uid: Google.Cloud.Metadata.V1.MaintenanceStatus.None
+  name: None
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus_None
+  commentId: F:Google.Cloud.Metadata.V1.MaintenanceStatus.None
+  fullName: Google.Cloud.Metadata.V1.MaintenanceStatus.None
+- uid: Google.Cloud.Metadata.V1.MaintenanceStatus.Unknown
+  name: Unknown
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus_Unknown
+  commentId: F:Google.Cloud.Metadata.V1.MaintenanceStatus.Unknown
+  fullName: Google.Cloud.Metadata.V1.MaintenanceStatus.Unknown
+- uid: Google.Cloud.Metadata.V1.MetadataClient
+  name: MetadataClient
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient
+  commentId: T:Google.Cloud.Metadata.V1.MetadataClient
+  fullName: Google.Cloud.Metadata.V1.MetadataClient
+- uid: Google.Cloud.Metadata.V1.MetadataClient.Create(Google.Apis.Http.ConfigurableHttpClient)
+  name: Create(ConfigurableHttpClient)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_Create_Google_Apis_Http_ConfigurableHttpClient_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.Create(Google.Apis.Http.ConfigurableHttpClient)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.Create(Google.Apis.Http.ConfigurableHttpClient)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.Create(Google.Apis.Http.IHttpClientFactory)
+  name: Create(IHttpClientFactory)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_Create_Google_Apis_Http_IHttpClientFactory_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.Create(Google.Apis.Http.IHttpClientFactory)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.Create(Google.Apis.Http.IHttpClientFactory)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken
+  name: GetAccessToken()
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetAccessToken
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken()
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync(System.Threading.CancellationToken)
+  name: GetAccessTokenAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetAccessTokenAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata(System.String)
+  name: GetCustomInstanceMetadata(String)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomInstanceMetadata_System_String_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata(System.String)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync(System.String,System.Threading.CancellationToken)
+  name: GetCustomInstanceMetadataAsync(String, CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomInstanceMetadataAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync(System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync(System.String, System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata(System.String)
+  name: GetCustomProjectMetadata(String)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomProjectMetadata_System_String_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata(System.String)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync(System.String,System.Threading.CancellationToken)
+  name: GetCustomProjectMetadataAsync(String, CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomProjectMetadataAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync(System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync(System.String, System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata
+  name: GetInstanceMetadata()
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadata
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata()
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync(System.Threading.CancellationToken)
+  name: GetInstanceMetadataAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadataAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus
+  name: GetMaintenanceStatus()
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatus
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus()
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
+  name: GetMaintenanceStatusAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatusAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata
+  name: GetProjectMetadata()
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetProjectMetadata
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata()
+- uid: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync(System.Threading.CancellationToken)
+  name: GetProjectMetadataAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetProjectMetadataAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.HttpClient
+  name: HttpClient
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_HttpClient
+  commentId: P:Google.Cloud.Metadata.V1.MetadataClient.HttpClient
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.HttpClient
+- uid: Google.Cloud.Metadata.V1.MetadataClient.InstanceMetadataChanged
+  name: InstanceMetadataChanged
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_InstanceMetadataChanged
+  commentId: E:Google.Cloud.Metadata.V1.MetadataClient.InstanceMetadataChanged
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.InstanceMetadataChanged
+- uid: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailable
+  name: IsServerAvailable()
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_IsServerAvailable
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailable
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailable()
+- uid: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync(System.Threading.CancellationToken)
+  name: IsServerAvailableAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_IsServerAvailableAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.MaintenanceStatusChanged
+  name: MaintenanceStatusChanged
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_MaintenanceStatusChanged
+  commentId: E:Google.Cloud.Metadata.V1.MetadataClient.MaintenanceStatusChanged
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.MaintenanceStatusChanged
+- uid: Google.Cloud.Metadata.V1.MetadataClient.ProjectMetadataChanged
+  name: ProjectMetadataChanged
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_ProjectMetadataChanged
+  commentId: E:Google.Cloud.Metadata.V1.MetadataClient.ProjectMetadataChanged
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.ProjectMetadataChanged
+- uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.TimeSpan)
+  name: WaitForChange(String, TimeSpan)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.TimeSpan)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String, System.TimeSpan)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)
+  name: WaitForChangeAsync(String, TimeSpan, CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String, System.TimeSpan, System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl
+  name: MetadataClientImpl
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl
+  commentId: T:Google.Cloud.Metadata.V1.MetadataClientImpl
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.#ctor(Google.Apis.Http.ConfigurableHttpClient)
+  name: MetadataClientImpl(ConfigurableHttpClient)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl__ctor_Google_Apis_Http_ConfigurableHttpClient_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.#ctor(Google.Apis.Http.ConfigurableHttpClient)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.MetadataClientImpl(Google.Apis.Http.ConfigurableHttpClient)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.#ctor(Google.Apis.Http.IHttpClientFactory)
+  name: MetadataClientImpl(IHttpClientFactory)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl__ctor_Google_Apis_Http_IHttpClientFactory_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.#ctor(Google.Apis.Http.IHttpClientFactory)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.MetadataClientImpl(Google.Apis.Http.IHttpClientFactory)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken
+  name: GetAccessToken()
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetAccessToken
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken()
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync(System.Threading.CancellationToken)
+  name: GetAccessTokenAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetAccessTokenAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata(System.String)
+  name: GetCustomInstanceMetadata(String)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomInstanceMetadata_System_String_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata(System.String)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync(System.String,System.Threading.CancellationToken)
+  name: GetCustomInstanceMetadataAsync(String, CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomInstanceMetadataAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync(System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync(System.String, System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata(System.String)
+  name: GetCustomProjectMetadata(String)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomProjectMetadata_System_String_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata(System.String)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync(System.String,System.Threading.CancellationToken)
+  name: GetCustomProjectMetadataAsync(String, CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomProjectMetadataAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync(System.String,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync(System.String, System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata
+  name: GetInstanceMetadata()
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetInstanceMetadata
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata()
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync(System.Threading.CancellationToken)
+  name: GetInstanceMetadataAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetInstanceMetadataAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus
+  name: GetMaintenanceStatus()
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMaintenanceStatus
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus()
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
+  name: GetMaintenanceStatusAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMaintenanceStatusAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata
+  name: GetProjectMetadata()
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetProjectMetadata
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata()
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync(System.Threading.CancellationToken)
+  name: GetProjectMetadataAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetProjectMetadataAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.HttpClient
+  name: HttpClient
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_HttpClient
+  commentId: P:Google.Cloud.Metadata.V1.MetadataClientImpl.HttpClient
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.HttpClient
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.InstanceMetadataChanged
+  name: InstanceMetadataChanged
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_InstanceMetadataChanged
+  commentId: E:Google.Cloud.Metadata.V1.MetadataClientImpl.InstanceMetadataChanged
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.InstanceMetadataChanged
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailable
+  name: IsServerAvailable()
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_IsServerAvailable
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailable
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailable()
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync(System.Threading.CancellationToken)
+  name: IsServerAvailableAsync(CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_IsServerAvailableAsync_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync(System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.MaintenanceStatusChanged
+  name: MaintenanceStatusChanged
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_MaintenanceStatusChanged
+  commentId: E:Google.Cloud.Metadata.V1.MetadataClientImpl.MaintenanceStatusChanged
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.MaintenanceStatusChanged
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.ProjectMetadataChanged
+  name: ProjectMetadataChanged
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_ProjectMetadataChanged
+  commentId: E:Google.Cloud.Metadata.V1.MetadataClientImpl.ProjectMetadataChanged
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.ProjectMetadataChanged
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String,System.TimeSpan)
+  name: WaitForChange(String, TimeSpan)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChange_System_String_System_TimeSpan_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String,System.TimeSpan)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String, System.TimeSpan)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)
+  name: WaitForChangeAsync(String, TimeSpan, CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String, System.TimeSpan, System.Threading.CancellationToken)

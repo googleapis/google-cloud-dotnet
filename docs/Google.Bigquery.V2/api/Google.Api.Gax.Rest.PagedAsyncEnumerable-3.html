@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;
    | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_Rest_PagedAsyncEnumerable_3" data-uid="Google.Api.Gax.Rest.PagedAsyncEnumerable`3">Class PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;
               </h1>
-              <div class="markdown level0 summary"><p>An asynchronous sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">An asynchronous sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -125,7 +125,7 @@
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Google_Api_Gax_Rest_PagedAsyncEnumerable_3__ctor_System_Func__0__Google_Api_Gax_Rest_IPageManager__0__1__2__" data-uid="Google.Api.Gax.Rest.PagedAsyncEnumerable`3.#ctor(System.Func{`0},Google.Api.Gax.Rest.IPageManager{`0,`1,`2})">PagedAsyncEnumerable(Func&lt;TRequest&gt;, IPageManager&lt;TRequest, TResponse, TResource&gt;)</h4>
-              <div class="markdown level1 summary"><p>Creates a new lazily-evaluated sequence from the given API call, initial request, and call settings.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a new lazily-evaluated sequence from the given API call, initial request, and call settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -145,13 +145,13 @@
                   <tr>
                     <td><span class="xref">System.Func</span>&lt;TRequest&gt;</td>
                     <td><em>requestProvider</em></td>
-                    <td><p>A factory used to create an initial request each time the sequence is iterated over.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A factory used to create an initial request each time the sequence is iterated over.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Rest.IPageManager-3.html#Google_Api_Gax_Rest_IPageManager_3">IPageManager</a>&lt;TRequest, TResponse, TResource&gt;</td>
                     <td><em>pageManager</em></td>
-                    <td><p>A manager to work with the requests and responses.</p>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A manager to work with the requests and responses.</p>
 </td>
                   </tr>
                 </tbody>
@@ -175,13 +175,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Rest.IResponseAsyncEnumerable-2.html#Google_Api_Gax_Rest_IResponseAsyncEnumerable_2">IResponseAsyncEnumerable</a>&lt;TResponse, TResource&gt;</td>
+                    <td><span class="xref">Google.Api.Gax.IResponseAsyncEnumerable</span>&lt;TResponse, TResource&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Api.Gax.Rest.IPagedAsyncEnumerable-2.html#Google_Api_Gax_Rest_IPagedAsyncEnumerable_2_AsPages">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;.AsPages()</a></div>
+                  <div><span class="xref">Google.Api.Gax.IPagedAsyncEnumerable&lt;TResponse, TResource&gt;.AsPages()</span></div>
               <h4 id="Google_Api_Gax_Rest_PagedAsyncEnumerable_3_GetEnumerator" data-uid="Google.Api.Gax.Rest.PagedAsyncEnumerable`3.GetEnumerator">GetEnumerator()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -199,11 +199,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">IAsyncEnumerator</span>&lt;TResource&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerator</span>&lt;TResource&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;TResource&gt;.GetEnumerator()</span></div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;&gt;(String)</a>
+              </div>
             </article>
           </div>
           
@@ -232,8 +238,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

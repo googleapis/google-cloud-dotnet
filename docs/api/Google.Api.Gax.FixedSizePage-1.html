@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FixedSizePage&lt;TResource&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,9 @@
               
               <h1 id="Google_Api_Gax_FixedSizePage_1" data-uid="Google.Api.Gax.FixedSizePage`1">Class FixedSizePage&lt;TResource&gt;
               </h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.FixedSizePage-1.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A page of resources which will only have fewer results than requested if
+there is no more data to fetch.</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
@@ -105,7 +107,7 @@
               <h6><strong>Assembly</strong>:Google.Api.Gax.dll</h6>
               <h5 id="Google_Api_Gax_FixedSizePage_1_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class FixedSizePage&lt;TResource&gt; : IPageResponse&lt;TResource&gt;, IEnumerable&lt;TResource&gt;, IEnumerable</code></pre>
+                <pre><code class="lang-csharp hljs">public sealed class FixedSizePage&lt;TResource&gt; : IEnumerable&lt;TResource&gt;, IEnumerable</code></pre>
               </div>
               <h5 class="typeParameters">Type Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -118,14 +120,15 @@
                 <tbody>
                   <tr>
                     <td><em>TResource</em></td>
-                    <td></td>
+                    <td>The type of resource within the page.</td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="constructors">Constructors
               </h3>
               <h4 id="Google_Api_Gax_FixedSizePage_1__ctor_System_Collections_Generic_IEnumerable__0__System_String_" data-uid="Google.Api.Gax.FixedSizePage`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.String)">FixedSizePage(IEnumerable&lt;TResource&gt;, String)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.FixedSizePage-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a fixed-size page from the given resource sequence and page token.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -144,12 +147,14 @@
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TResource&gt;</td>
                     <td><em>resources</em></td>
-                    <td></td>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.FixedSizePage-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The resources in the page.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>nextPageToken</em></td>
-                    <td></td>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.FixedSizePage-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The next page token.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -177,8 +182,6 @@
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Api.Gax.IPageResponse-1.html#Google_Api_Gax_IPageResponse_1_NextPageToken">IPageResponse&lt;TResource&gt;.NextPageToken</a></div>
               <h3 id="methods">Methods
               </h3>
               <h4 id="Google_Api_Gax_FixedSizePage_1_GetEnumerator" data-uid="Google.Api.Gax.FixedSizePage`1.GetEnumerator">GetEnumerator()</h4>
@@ -259,8 +262,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

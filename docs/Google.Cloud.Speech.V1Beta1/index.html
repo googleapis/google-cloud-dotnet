@@ -8,7 +8,7 @@
     <title>Google.Cloud.Speech.V1Beta1 | Google.Cloud.Speech.V1Beta1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Speech.V1Beta1 | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,39 +57,39 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googlecloudspeechv1beta1">Google.Cloud.Speech.V1Beta1</h1>
+              <h1 id="googlecloudspeechv1beta1" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Cloud.Speech.V1Beta1</h1>
               
-<p><code>Google.Cloud.Speech.V1Beta1</code> is a .NET client library for the <a href="https://cloud.google.com/speech">Google
+<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4"><code>Google.Cloud.Speech.V1Beta1</code> is a .NET client library for the <a href="https://cloud.google.com/speech" sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4">Google
 Cloud Speech API</a>.</p>
-<h1 id="installation">Installation</h1>
-<p>Install the <code>Google.Cloud.Speech.V1Beta1</code> package from our
-<a href="https://www.myget.org/gallery/google-dotnet-public">early access MyGet
+<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="6" sourceendlinenumber="6">Installation</h1>
+<p sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="12">Install the <code>Google.Cloud.Speech.V1Beta1</code> package from our
+<a href="https://www.myget.org/gallery/google-dotnet-public" sourcefile="index.md" sourcestartlinenumber="9" sourceendlinenumber="10">early access MyGet
 feed</a>.
 First onfigure your environment to include the appropriate NuGet feed
 URL:</p>
-<ul>
-<li>NuGet v2: <code>https://www.myget.org/F/google-dotnet-public/</code></li>
-<li>NuGet v3: <code>https://www.myget.org/F/google-dotnet-public/api/v3/index.json</code></li>
+<ul sourcefile="index.md" sourcestartlinenumber="14" sourceendlinenumber="15">
+<li sourcefile="index.md" sourcestartlinenumber="14" sourceendlinenumber="14">NuGet v2: <code>https://www.myget.org/F/google-dotnet-public/</code></li>
+<li sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">NuGet v3: <code>https://www.myget.org/F/google-dotnet-public/api/v3/index.json</code></li>
 </ul>
-<p>Next, add the package to your project in the normal way (for example
+<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="21">Next, add the package to your project in the normal way (for example
 by right-clicking on the project in Visual Studio and choosing
 &quot;Manage NuGet Packages...&quot;). Please ensure you enable pre-release
 packages (for example, in the Visual Studio NuGet user interface,
 check the &quot;Include prerelease&quot; box).</p>
-<h1 id="authentication">Authentication</h1>
-<p>To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="23" sourceendlinenumber="23">Authentication</h1>
+<p sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="27">To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/" sourcefile="index.md" sourcestartlinenumber="26" sourceendlinenumber="26">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started">Getting started</h1>
-<p>The simplest option is to use the synchronous, one-shot API as shown
+<pre sourcefile="index.md" sourcestartlinenumber="29" sourceendlinenumber="31"><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started" sourcefile="index.md" sourcestartlinenumber="33" sourceendlinenumber="33">Getting started</h1>
+<p sourcefile="index.md" sourcestartlinenumber="35" sourceendlinenumber="36">The simplest option is to use the synchronous, one-shot API as shown
 below in the sample code. More complex scenarios are considered further down this page.</p>
-<p>Note that the audio data should be mono rather than stereo, and the
+<p sourcefile="index.md" sourcestartlinenumber="38" sourceendlinenumber="39">Note that the audio data should be mono rather than stereo, and the
 format needs to be explicitly specified in the request.</p>
-<h1 id="sample-code">Sample code</h1>
-<h2 id="constructing-a-recognitionaudio-object">Constructing a RecognitionAudio object</h2>
-<p>There are various factory methods on the
-<a href="api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.html">RecognitionAudio</a> class to allow
+<h1 id="sample-code" sourcefile="index.md" sourcestartlinenumber="41" sourceendlinenumber="41">Sample code</h1>
+<h2 id="constructing-a-recognitionaudio-object" sourcefile="index.md" sourcestartlinenumber="43" sourceendlinenumber="43">Constructing a RecognitionAudio object</h2>
+<p sourcefile="index.md" sourcestartlinenumber="45" sourceendlinenumber="47">There are various factory methods on the
+<a href="api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.html" sourcefile="index.md" sourcestartlinenumber="46" sourceendlinenumber="46">RecognitionAudio</a> class to allow
 instances to be constructed from files, streams, byte arrays and URIs.</p>
 <pre><code class="lang-cs">RecognitionAudio audio1 = RecognitionAudio.FromFile(&quot;Sound/SpeechSample.flac&quot;);
 RecognitionAudio audio2 = RecognitionAudio.FromUri(&quot;https://.../HostedSpeech.flac&quot;);
@@ -102,18 +102,18 @@ using (Stream stream = OpenAudioStream()) // Any regular .NET stream
 {
     RecognitionAudio audio5 = RecognitionAudio.FromStream(stream);
 }
-</code></pre><h2 id="detect-speech-in-a-single-file">Detect speech in a single file</h2>
+</code></pre><h2 id="detect-speech-in-a-single-file" sourcefile="index.md" sourcestartlinenumber="51" sourceendlinenumber="51">Detect speech in a single file</h2>
 <pre><code class="lang-cs">SpeechClient client = SpeechClient.Create();
 RecognitionConfig config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
 SyncRecognizeResponse response = client.SyncRecognize(config, audio);
 Console.WriteLine(response);
-</code></pre><h1 id="synchronous-asynchronous-and-streaming-operations">Synchronous, asynchronous and streaming operations</h1>
-<p>The underlying RPC API contains three modes of operation.</p>
-<p>The simplest is via the SyncRecognize method. You make a single
+</code></pre><h1 id="synchronous-asynchronous-and-streaming-operations" sourcefile="index.md" sourcestartlinenumber="55" sourceendlinenumber="55">Synchronous, asynchronous and streaming operations</h1>
+<p sourcefile="index.md" sourcestartlinenumber="57" sourceendlinenumber="57">The underlying RPC API contains three modes of operation.</p>
+<p sourcefile="index.md" sourcestartlinenumber="59" sourceendlinenumber="62">The simplest is via the SyncRecognize method. You make a single
 request, and get a single response with the result of the analysis.
 Despite the name, this can still be invoked asynchronously from C#
 with <code>SpeechClient.SyncRecognizeAsync</code>.</p>
-<p>The AsyncRecognize method still requires all of the audio data to be
+<p sourcefile="index.md" sourcestartlinenumber="64" sourceendlinenumber="71">The AsyncRecognize method still requires all of the audio data to be
 passed in a single request, but the response from the RPC is a
 Google.Longrunning.Operation, representing an operation which could
 take some time to complete. It contains a token which can be used to
@@ -121,7 +121,7 @@ retrieve the results later - you can think of it as a more
 persistent and remote <code>Task&lt;T&gt;</code> to a first approximation. While this
 RPC works in the current Google.Cloud.Speech.V1Beta1 library, more
 work will be done to expose this functionality idiomatically.</p>
-<p>Finally, the RPC API supports StreamingRecognize, which is a
+<p sourcefile="index.md" sourcestartlinenumber="73" sourceendlinenumber="81">Finally, the RPC API supports StreamingRecognize, which is a
 bidirectional streaming API: the client makes a number of requests,
 and the server emits a number of responses. This enables a
 conversation to be transcribed in near real time, for example,
@@ -130,7 +130,7 @@ operations. The streaming API is not exposed in the
 Google.Cloud.Speech.V1Beta1.SpeechClient type yet, but you can use
 the underlying gRPC client directly for this functionality. Again,
 more work will be done to expose the streaming API in a friendly way.</p>
-<p>It is very likely that we will add a very thin abstraction layer
+<p sourcefile="index.md" sourcestartlinenumber="83" sourceendlinenumber="85">It is very likely that we will add a very thin abstraction layer
 over the top of the generated code, partly to avoid method names
 such as <code>AsyncRecognizeAsync</code> which are confusing.</p>
 
@@ -162,8 +162,8 @@ such as <code>AsyncRecognizeAsync</code> which are confusing.</p>
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

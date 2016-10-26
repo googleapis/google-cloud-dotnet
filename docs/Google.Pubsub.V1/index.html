@@ -8,7 +8,7 @@
     <title>Google.Pubsub.V1 | Google.Pubsub.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Pubsub.V1 | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,29 +57,29 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googlepubsubv1">Google.Pubsub.V1</h1>
+              <h1 id="googlepubsubv1" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Pubsub.V1</h1>
               
-<p><code>Google.Pubsub.V1</code> is a .NET client library for <a href="https://cloud.google.com/pubsub/">Cloud
+<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4"><code>Google.Pubsub.V1</code> is a .NET client library for <a href="https://cloud.google.com/pubsub/" sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4">Cloud
 Pub/Sub</a>.</p>
-<h1 id="installation">Installation</h1>
-<p>Install the <code>Google.Pubsub.V1</code> package from NuGet. Add it to
+<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="6" sourceendlinenumber="6">Installation</h1>
+<p sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="13">Install the <code>Google.Pubsub.V1</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
 Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
-<h1 id="authentication">Authentication</h1>
-<p>To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">Authentication</h1>
+<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="19">To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/" sourcefile="index.md" sourcestartlinenumber="18" sourceendlinenumber="18">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started">Getting started</h1>
-<p><a href="api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> and
-<a href="api/Google.Pubsub.V1.SubscriberClient.html">SubscriberClient</a>
+<pre sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="23"><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started" sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="25">Getting started</h1>
+<p sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="31"><a href="api/Google.Pubsub.V1.PublisherClient.html" sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="27">PublisherClient</a> and
+<a href="api/Google.Pubsub.V1.SubscriberClient.html" sourcefile="index.md" sourcestartlinenumber="28" sourceendlinenumber="28">SubscriberClient</a>
 provide a general-purpose abstraction over raw the RPC API, providing
 features such as page streaming to make client code cleaner and
 simpler.</p>
-<h1 id="sample-code">Sample code</h1>
+<h1 id="sample-code" sourcefile="index.md" sourcestartlinenumber="33" sourceendlinenumber="33">Sample code</h1>
 <pre><code class="lang-cs">// First create a topic.
 PublisherClient publisher = PublisherClient.Create();
 string topicName = PublisherClient.FormatTopicName(projectId, topicId);
@@ -149,8 +149,8 @@ publisher.DeleteTopic(topicName);
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PollJobOptions
    | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Bigquery_V2_PollJobOptions" data-uid="Google.Bigquery.V2.PollJobOptions">Class PollJobOptions
               </h1>
-              <div class="markdown level0 summary"><p>Options for <code>PollJob</code> operations. When no options are specified, the
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Options for operations that poll jobs until they have completed. When no options are specified, the
 default behavior is to poll forever, at one second intervals.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -103,13 +103,13 @@ default behavior is to poll forever, at one second intervals.</p>
               <h3 id="properties">Properties
               </h3>
               <h4 id="Google_Bigquery_V2_PollJobOptions_Deadline" data-uid="Google.Bigquery.V2.PollJobOptions.Deadline">Deadline</h4>
-              <div class="markdown level1 summary"><p>A deadline for polling; no requests will be made after this point
-in time.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A deadline for polling; no requests will be made after this point
+in time. Must have a <span class="xref">System.DateTime.Kind</span> of <span class="xref">System.DateTimeKind.Utc</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DateTimeOffset? Deadline { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public DateTime? Deadline { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -121,17 +121,17 @@ in time.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Bigquery_V2_PollJobOptions_Deadline_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Currently, requests are not cancelled at this deadline; it only
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Currently, requests are not cancelled at this deadline; it only
 affects when the last request is started.</p>
 </div>
               <h4 id="Google_Bigquery_V2_PollJobOptions_Interval" data-uid="Google.Bigquery.V2.PollJobOptions.Interval">Interval</h4>
-              <div class="markdown level1 summary"><p>The interval to delay between poll 
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The interval to delay between poll 
 requests.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -165,13 +165,13 @@ requests.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
-                    <td><p><em>value</em> is negative.</p>
+                    <td><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><em>value</em> is negative.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h4 id="Google_Bigquery_V2_PollJobOptions_MaxRequests" data-uid="Google.Bigquery.V2.PollJobOptions.MaxRequests">MaxRequests</h4>
-              <div class="markdown level1 summary"><p>The maximum number of poll requests to make.</p>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The maximum number of poll requests to make.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -194,14 +194,14 @@ requests.</p>
                 </tbody>
               </table>
               <h5 id="Google_Bigquery_V2_PollJobOptions_MaxRequests_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If the job has not completed after this number of requests has been made,
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="4">If the job has not completed after this number of requests has been made,
 the poll operation will fail with a <span class="xref">System.TimeoutException</span> as if
 a timeout had been set.</p>
 </div>
               <h4 id="Google_Bigquery_V2_PollJobOptions_Timeout" data-uid="Google.Bigquery.V2.PollJobOptions.Timeout">Timeout</h4>
-              <div class="markdown level1 summary"><p>The maximum overall time to poll for. Populating this property
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="4">The maximum overall time to poll for. Populating this property
 is equivalent to setting the <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Deadline">Deadline</a> property
-to &quot;the time of calling <code>PollJob</code>, plus the timeout&quot;.</p>
+to &quot;the time of calling <code>PollJobUntilCompleted</code>, plus the timeout&quot;.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -224,10 +224,14 @@ to &quot;the time of calling <code>PollJob</code>, plus the timeout&quot;.</p>
                 </tbody>
               </table>
               <h5 id="Google_Bigquery_V2_PollJobOptions_Timeout_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>A <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions">PollJobOptions</a> with both <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Timeout">Timeout</a>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Bigquery.V2.PollJobOptions.yml" sourcestartlinenumber="2" sourceendlinenumber="4">A <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions">PollJobOptions</a> with both <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Timeout">Timeout</a>
 and <a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions_Deadline">Deadline</a> set to non-null values is invalid,
 and will cause an exception to be thrown.</p>
 </div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;PollJobOptions&gt;(String)</a>
+              </div>
             </article>
           </div>
           
@@ -256,8 +260,8 @@ and will cause an exception to be thrown.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

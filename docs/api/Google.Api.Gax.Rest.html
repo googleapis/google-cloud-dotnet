@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Api.Gax.Rest
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -74,53 +74,20 @@
               <div class="markdown level0 remarks"></div>
                 <h3 id="classes">Classes
               </h3>
-                  <h4><a class="xref" href="Google.Api.Gax.Rest.FixedSizePage-1.html#Google_Api_Gax_Rest_FixedSizePage_1">FixedSizePage&lt;TResource&gt;</a></h4>
-                  <section></section>
-                  <h4><a class="xref" href="Google.Api.Gax.Rest.GaxRestPreconditions.html#Google_Api_Gax_Rest_GaxRestPreconditions">GaxRestPreconditions</a></h4>
-                  <section><p>Preconditions for checking method arguments, state etc.</p>
-</section>
                   <h4><a class="xref" href="Google.Api.Gax.Rest.PagedAsyncEnumerable-3.html#Google_Api_Gax_Rest_PagedAsyncEnumerable_3">PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;</a></h4>
-                  <section><p>An asynchronous sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
+                  <section><p sourcefile="obj/api/Google.Api.Gax.Rest.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">An asynchronous sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.Gax.Rest.PagedEnumerable-3.html#Google_Api_Gax_Rest_PagedEnumerable_3">PagedEnumerable&lt;TRequest, TResponse, TResource&gt;</a></h4>
-                  <section><p>A sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
+                  <section><p sourcefile="obj/api/Google.Api.Gax.Rest.PagedEnumerable-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper">UserAgentHelper</a></h4>
-                  <section><p>Common code used for building user agents in REST libraries.</p>
+                  <section><p sourcefile="obj/api/Google.Api.Gax.Rest.UserAgentHelper.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Common code used for building user agents in REST libraries.</p>
 </section>
                 <h3 id="interfaces">Interfaces
               </h3>
-                  <h4><a class="xref" href="Google.Api.Gax.Rest.IPagedAsyncEnumerable-2.html#Google_Api_Gax_Rest_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a></h4>
-                  <section><p>An asynchronous sequence of resources obtained via API responses. Application code
-can treat this as a simple sequence (with API calls automatically being made
-lazily as more results are required), or call <a class="xref" href="Google.Api.Gax.Rest.IPagedAsyncEnumerable-2.html#Google_Api_Gax_Rest_IPagedAsyncEnumerable_2_AsPages">AsPages()</a> to retrieve
-a page at a time, potentially with additional information.</p>
-</section>
-                  <h4><a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable-2.html#Google_Api_Gax_Rest_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a></h4>
-                  <section><p>A sequence of resources obtained via API responses, each of which contributes a page of resources.
-Application code can treat this as a simple sequence (with API calls automatically being made
-lazily as more results are required), or call <a class="xref" href="Google.Api.Gax.Rest.IPagedEnumerable-2.html#Google_Api_Gax_Rest_IPagedEnumerable_2_AsPages">AsPages()</a> to retrieve
-a page at a time, potentially with additional information.</p>
-</section>
                   <h4><a class="xref" href="Google.Api.Gax.Rest.IPageManager-3.html#Google_Api_Gax_Rest_IPageManager_3">IPageManager&lt;TRequest, TResponse, TResource&gt;</a></h4>
-                  <section></section>
-                  <h4><a class="xref" href="Google.Api.Gax.Rest.IResponseAsyncEnumerable-2.html#Google_Api_Gax_Rest_IResponseAsyncEnumerable_2">IResponseAsyncEnumerable&lt;TResponse, TResource&gt;</a></h4>
-                  <section><p>An asynchronous sequence of API responses, each of which contains a page of resources and
-potentially additional information (depending on the API).</p>
-</section>
-                  <h4><a class="xref" href="Google.Api.Gax.Rest.IResponseAsyncEnumerator-1.html#Google_Api_Gax_Rest_IResponseAsyncEnumerator_1">IResponseAsyncEnumerator&lt;T&gt;</a></h4>
-                  <section><p>An asynchronous iterator over a sequence of pages of resources. This is similar to a regular</p>
-<p><see cref="!:IAsyncEnumerator&lt;T&gt;"></see>, except it allows the size of the requested page to
-be modified along the way.</p>
-</section>
-                  <h4><a class="xref" href="Google.Api.Gax.Rest.IResponseEnumerable-2.html#Google_Api_Gax_Rest_IResponseEnumerable_2">IResponseEnumerable&lt;TResponse, TResource&gt;</a></h4>
-                  <section><p>A sequence of API responses, each of which contains a page of resources and
-potentially additional information (depending on the API).</p>
-</section>
-                  <h4><a class="xref" href="Google.Api.Gax.Rest.IResponseEnumerator-1.html#Google_Api_Gax_Rest_IResponseEnumerator_1">IResponseEnumerator&lt;T&gt;</a></h4>
-                  <section><p>An iterator over a sequence of pages of resources. This is similar to a regular</p>
-<p><span class="xref">IEnumerator&lt;T&gt;</span>, except it allows the size of the requested page to
-be modified along the way.</p>
+                  <section><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Interface describing the relationship between requests, responses and resources for
+page streaming.</p>
 </section>
             </article>
           </div>
@@ -150,8 +117,8 @@ be modified along the way.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

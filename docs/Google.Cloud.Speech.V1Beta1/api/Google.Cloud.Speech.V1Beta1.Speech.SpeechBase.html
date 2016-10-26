@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Speech.SpeechBase
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.4.0.0">
+    <meta name="generator" content="docfx 2.5.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Cloud_Speech_V1Beta1_Speech_SpeechBase" data-uid="Google.Cloud.Speech.V1Beta1.Speech.SpeechBase">Class Speech.SpeechBase
               </h1>
-              <div class="markdown level0 summary"><p>Base class for server-side implementations of Speech</p>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Base class for server-side implementations of Speech</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,15 +101,16 @@
               </div>
               <h3 id="methods">Methods
               </h3>
-              <h4 id="Google_Cloud_Speech_V1Beta1_Speech_SpeechBase_AsyncRecognize_Google_Cloud_Speech_V1Beta1_AsyncRecognizeRequest_ServerCallContext_" data-uid="Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.AsyncRecognize(Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest,ServerCallContext)">AsyncRecognize(AsyncRecognizeRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Perform asynchronous speech-recognition: receive results via the
- google.longrunning.Operations interface. <code>Operation.response</code> returns
- <code>AsyncRecognizeResponse</code>.</p>
+              <h4 id="Google_Cloud_Speech_V1Beta1_Speech_SpeechBase_AsyncRecognize_Google_Cloud_Speech_V1Beta1_AsyncRecognizeRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.AsyncRecognize(Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest,Grpc.Core.ServerCallContext)">AsyncRecognize(AsyncRecognizeRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Perform asynchronous speech-recognition: receive results via the
+ google.longrunning.Operations interface. Returns either an
+ <code>Operation.error</code> or an <code>Operation.response</code> which contains
+ an <code>AsyncRecognizeResponse</code> message.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Longrunning.Operation&gt; AsyncRecognize(AsyncRecognizeRequest request, ServerCallContext context)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; AsyncRecognize(AsyncRecognizeRequest request, ServerCallContext context)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -127,7 +128,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -143,13 +144,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Longrunning.Operation</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Cloud_Speech_V1Beta1_Speech_SpeechBase_StreamingRecognize_IAsyncStreamReader_Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest__IServerStreamWriter_Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse__ServerCallContext_" data-uid="Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.StreamingRecognize(IAsyncStreamReader{Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest},IServerStreamWriter{Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse},ServerCallContext)">StreamingRecognize(IAsyncStreamReader&lt;StreamingRecognizeRequest&gt;, IServerStreamWriter&lt;StreamingRecognizeResponse&gt;, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Perform bidirectional streaming speech-recognition: receive results while
+              <h4 id="Google_Cloud_Speech_V1Beta1_Speech_SpeechBase_StreamingRecognize_Grpc_Core_IAsyncStreamReader_Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest__Grpc_Core_IServerStreamWriter_Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse__Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.StreamingRecognize(Grpc.Core.IAsyncStreamReader{Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest},Grpc.Core.IServerStreamWriter{Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse},Grpc.Core.ServerCallContext)">StreamingRecognize(IAsyncStreamReader&lt;StreamingRecognizeRequest&gt;, IServerStreamWriter&lt;StreamingRecognizeResponse&gt;, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Perform bidirectional streaming speech-recognition: receive results while
  sending audio. This method is only available via the gRPC API (not REST).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -168,17 +169,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">IAsyncStreamReader</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest">StreamingRecognizeRequest</a>&gt;</td>
+                    <td><a class="xref" href="Grpc.Core.IAsyncStreamReader-1.html#Grpc_Core_IAsyncStreamReader_1">IAsyncStreamReader</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest">StreamingRecognizeRequest</a>&gt;</td>
                     <td><em>requestStream</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">IServerStreamWriter</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse">StreamingRecognizeResponse</a>&gt;</td>
+                    <td><a class="xref" href="Grpc.Core.IServerStreamWriter-1.html#Grpc_Core_IServerStreamWriter_1">IServerStreamWriter</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse">StreamingRecognizeResponse</a>&gt;</td>
                     <td><em>responseStream</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -199,8 +200,8 @@
                   </tr>
                 </tbody>
               </table>
-              <h4 id="Google_Cloud_Speech_V1Beta1_Speech_SpeechBase_SyncRecognize_Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest_ServerCallContext_" data-uid="Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.SyncRecognize(Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest,ServerCallContext)">SyncRecognize(SyncRecognizeRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p> Perform synchronous speech-recognition: receive results after all audio
+              <h4 id="Google_Cloud_Speech_V1Beta1_Speech_SpeechBase_SyncRecognize_Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.SyncRecognize(Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest,Grpc.Core.ServerCallContext)">SyncRecognize(SyncRecognizeRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.Speech.SpeechBase.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Perform synchronous speech-recognition: receive results after all audio
  has been sent and processed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -224,7 +225,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">ServerCallContext</span></td>
+                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -273,8 +274,8 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
