@@ -3,6 +3,7 @@
     "Google.Storage.V1",
     "Google.Longrunning",
     "Google.Iam.V1",
+    "Google.Devtools.Clouderrorreporting.V1Beta1",
     "../tools"
   ],
   "sdk": {
