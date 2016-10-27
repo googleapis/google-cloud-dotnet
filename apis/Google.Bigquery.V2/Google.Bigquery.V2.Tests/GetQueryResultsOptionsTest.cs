@@ -22,19 +22,59 @@ namespace Google.Bigquery.V2.Tests
     public class GetQueryResultsOptionsTest
     {
         [Fact]
-        public void ModifyRequest()
+        public void ModifyRequest_NoneSet()
+        {
+            var options = new GetQueryResultsOptions();
+            GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
+            options.ModifyRequest(request);
+            Assert.Equal(null, request.StartIndex);
+            Assert.Equal(null, request.PageToken);
+            Assert.Equal(null, request.MaxResults);
+            Assert.Equal(null, request.TimeoutMs);
+        }
+
+        [Fact]
+        public void ModifyRequest_AllSetExceptStartIndex()
+        {
+            var options = new GetQueryResultsOptions
+            {
+                PageSize = 25,
+                PageToken = "foo",
+                Timeout = TimeSpan.FromSeconds(5),
+            };
+            GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
+            options.ModifyRequest(request);
+            Assert.Equal("foo", request.PageToken);
+            Assert.Equal(25, request.MaxResults);
+            Assert.Equal(5 * 1000, request.TimeoutMs);
+        }
+
+        [Fact]
+        public void ModifyRequest_AllSetExceptPageToken()
         {
             var options = new GetQueryResultsOptions
             {
                 StartIndex = 10,
                 PageSize = 25,
-                Timeout = TimeSpan.FromSeconds(5)
+                Timeout = TimeSpan.FromSeconds(5),
             };
             GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
             options.ModifyRequest(request);
             Assert.Equal(10UL, request.StartIndex);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal(5 * 1000, request.TimeoutMs);
+        }
+
+        [Fact]
+        public void ModifyRequest_BothPageTokenAndStartIndexSet()
+        {
+            var options = new GetQueryResultsOptions
+            {
+                StartIndex = 10,
+                PageToken = "foo"
+            };
+            GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(request));
         }
     }
 }

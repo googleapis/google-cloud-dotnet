@@ -107,7 +107,8 @@ namespace Google.Bigquery.V2
         /// Cancels this job.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        public void Cancel(CancelJobOptions options = null) => _client.CancelJob(Reference, options);
+        /// <returns>The final state of the job.</returns>
+        public BigqueryJob Cancel(CancelJobOptions options = null) => _client.CancelJob(Reference, options);
 
         // TODO: Refresh? Could easily call GetJob, but can't easily modify *this* job...
     }

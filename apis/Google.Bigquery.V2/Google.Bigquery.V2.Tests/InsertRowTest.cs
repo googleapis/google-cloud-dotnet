@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using Xunit;
@@ -20,6 +21,13 @@ namespace Google.Bigquery.V2.Tests
 {
     public class InsertRowTest
     {
+        [Fact]
+        public void InsertId()
+        {
+            var row = new InsertRow("id");
+            Assert.Equal("id", row.InsertId);
+        }
+
         [Fact]
         public void InvalidFieldName()
         {
@@ -48,6 +56,14 @@ namespace Google.Bigquery.V2.Tests
             Assert.Equal("value1", rowData.Json["field1"]);
             Assert.Null(rowData.Json["field2"]);
             Assert.Equal(2, rowData.Json["field3"]);
+        }
+
+        [Fact]
+        public void AddDictionary()
+        {
+            var dictionary = new Dictionary<string, object> { { "field1", "value1" } };
+            var row = new InsertRow { dictionary };
+            Assert.Equal("value1", row["field1"]);
         }
 
         [Theory]
@@ -99,6 +115,24 @@ namespace Google.Bigquery.V2.Tests
             };
             var rowData = row.ToRowsData();
             Assert.Equal("2000-01-01 05:00:00Z", rowData.Json["field"]);
+        }
+
+        [Fact]
+        public void NestedRecordFormatting()
+        {
+            var nested = new InsertRow { { "inner", "value" } };
+            var outer = new InsertRow { { "outer", nested } };
+            var rowData = outer.ToRowsData();
+            var obj = (IDictionary<string, object>)rowData.Json["outer"];
+            Assert.Equal("value", obj["inner"]);
+        }
+
+        [Fact]
+        public void RepeatedValue()
+        {
+            var row = new InsertRow { { "numbers", new[] { 1, 2 } } };
+            var rowData = row.ToRowsData();
+            Assert.Equal(new object[] { 1, 2 }, rowData.Json["numbers"]);
         }
     }
 }

@@ -36,5 +36,19 @@ namespace Google.Bigquery.V2.Tests
             Assert.Equal(false, request.UseQueryCache);
             Assert.Equal(true, request.UseLegacySql);
         }
+
+        [Fact]
+        public void ToGetQueryResultsOptions()
+        {
+            var options = new ExecuteQueryOptions
+            {
+                DefaultDataset = new DatasetReference { ProjectId = "a", DatasetId = "b" },
+                PageSize = 25,
+                UseQueryCache = false,
+                UseLegacySql = true
+            };
+            var getQueryResultsOptions = options.ToGetQueryResultsOptions();
+            Assert.Equal(25, getQueryResultsOptions.PageSize);
+        }
     }
 }
