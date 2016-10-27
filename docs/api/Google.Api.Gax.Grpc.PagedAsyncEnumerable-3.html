@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;
+   | Google Cloud APIs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;
+   | Google Cloud APIs ">
+    <meta name="generator" content="docfx 2.5.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Api_Gax_Grpc_PagedAsyncEnumerable_3" data-uid="Google.Api.Gax.Grpc.PagedAsyncEnumerable`3">Class PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;
+              </h1>
+              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">An asynchronous sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Api.Gax.Grpc</h6>
+              <h6><strong>Assembly</strong>:Google.Api.Gax.Grpc.dll</h6>
+              <h5 id="Google_Api_Gax_Grpc_PagedAsyncEnumerable_3_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class PagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt; : IPagedAsyncEnumerable&lt;TResponse, TResource&gt;, IAsyncEnumerable&lt;TResource&gt; where TRequest : class, IPageRequest, IMessage&lt;TRequest&gt; where TResponse : class, IPageResponse&lt;TResource&gt;, IMessage&lt;TResponse&gt;</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>TRequest</em></td>
+                    <td>The API request type.</td>
+                  </tr>
+                  <tr>
+                    <td><em>TResponse</em></td>
+                    <td>The API response type. Each response contains a page of resources.</td>
+                  </tr>
+                  <tr>
+                    <td><em>TResource</em></td>
+                    <td>The resource type contained within the response.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="constructors">Constructors
+              </h3>
+              <h4 id="Google_Api_Gax_Grpc_PagedAsyncEnumerable_3__ctor_Google_Api_Gax_Grpc_ApiCall__0__1___0_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Api.Gax.Grpc.PagedAsyncEnumerable`3.#ctor(Google.Api.Gax.Grpc.ApiCall{`0,`1},`0,Google.Api.Gax.Grpc.CallSettings)">PagedAsyncEnumerable(ApiCall&lt;TRequest, TResponse&gt;, TRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a new lazily-evaluated asynchronous sequence from the given API call, initial request, and call settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public PagedAsyncEnumerable(ApiCall&lt;TRequest, TResponse&gt; apiCall, TRequest request, CallSettings callSettings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ApiCall-2.html#Google_Api_Gax_Grpc_ApiCall_2">ApiCall</a>&lt;TRequest, TResponse&gt;</td>
+                    <td><em>apiCall</em></td>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The API call made each time a page is required.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TRequest</span></td>
+                    <td><em>request</em></td>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The initial request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The settings to apply to each API call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Api_Gax_Grpc_PagedAsyncEnumerable_3__ctor_Google_Api_Gax_Grpc_ApiCall__0__1___0_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedAsyncEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The request is cloned each time the sequence is evaluated.</p>
+</div>
+              <h3 id="methods">Methods
+              </h3>
+              <h4 id="Google_Api_Gax_Grpc_PagedAsyncEnumerable_3_AsPages" data-uid="Google.Api.Gax.Grpc.PagedAsyncEnumerable`3.AsPages">AsPages()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IResponseAsyncEnumerable&lt;TResponse, TResource&gt; AsPages()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IResponseAsyncEnumerable-2.html#Google_Api_Gax_IResponseAsyncEnumerable_2">IResponseAsyncEnumerable</a>&lt;TResponse, TResource&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2_AsPages">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;.AsPages()</a></div>
+              <h4 id="Google_Api_Gax_Grpc_PagedAsyncEnumerable_3_GetEnumerator" data-uid="Google.Api.Gax.Grpc.PagedAsyncEnumerable`3.GetEnumerator">GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IAsyncEnumerator&lt;TResource&gt; GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerator</span>&lt;TResource&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;TResource&gt;.GetEnumerator()</span></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

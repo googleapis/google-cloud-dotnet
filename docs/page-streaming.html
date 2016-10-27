@@ -79,50 +79,44 @@ resources asynchronously return an
 <a href="api/Google.Api.Gax.IPagedAsyncEnumerable-2.html" sourcefile="page-streaming.md" sourcestartlinenumber="25" sourceendlinenumber="25">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>.
 These are equivalent other than their asynchrony, so
 this document focuses on the synchronous version for simplicity.</p>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="29" sourceendlinenumber="34">The interfaces used in this document are the ones used by gRPC-based libraries.
-REST-based libraries have equivalent interfaces in the <code>Google.Api.Gax.Rest</code> namespace.
-They operate in exactly the same way for client code, but the generic type parameters
-have slightly different constraints due to differences in the access protocol. See the
-<a href="api-layers.html" sourcefile="page-streaming.md" sourcestartlinenumber="33" sourceendlinenumber="33">API layers</a> documentation for more details about the differences between
-gRPC-based and REST-based libraries.</p>
-<h2 id="ipagedenumerabletresponse-tresource" sourcefile="page-streaming.md" sourcestartlinenumber="36" sourceendlinenumber="36"><code>IPagedEnumerable&lt;TResponse, TResource&gt;</code></h2>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="38" sourceendlinenumber="44">Let&#39;s look at the generic type parameters first. The <code>TResponse</code> is
+<h2 id="ipagedenumerabletresponse-tresource" sourcefile="page-streaming.md" sourcestartlinenumber="29" sourceendlinenumber="29"><code>IPagedEnumerable&lt;TResponse, TResource&gt;</code></h2>
+<p sourcefile="page-streaming.md" sourcestartlinenumber="31" sourceendlinenumber="37">Let&#39;s look at the generic type parameters first. The <code>TResponse</code> is
 the API response type for the list operation, and the <code>TResource</code> is
 the type of the resource being listed. In the Pub/Sub API for
 example, the <code>ListTopics</code> operation accepts a <code>ListTopicsRequest</code>
 and returns a <code>ListTopicsResponse</code> containing a set of <code>Topic</code>
-resources - so the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" sourcefile="page-streaming.md" sourcestartlinenumber="43" sourceendlinenumber="43">PublisherClient.ListTopics</a>
+resources - so the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" sourcefile="page-streaming.md" sourcestartlinenumber="36" sourceendlinenumber="36">PublisherClient.ListTopics</a>
 method returns an <code>IPagedEnumerable&lt;ListTopicsResponse, Topic&gt;</code>.</p>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="46" sourceendlinenumber="50"><code>IPagedEnumerable&lt;TResponse, TResource&gt;</code> implements
+<p sourcefile="page-streaming.md" sourcestartlinenumber="39" sourceendlinenumber="43"><code>IPagedEnumerable&lt;TResponse, TResource&gt;</code> implements
 <code>IEnumerable&lt;TResource&gt;</code>.  If you simply iterate over it, you will
 retrieve one resource at a time. The implementation will make API
 calls as it needs to, retrieving a page at a time and then returning
 the resources as the caller requests them.</p>
-<h2 id="iresponseenumerabletresponse-tresource" sourcefile="page-streaming.md" sourcestartlinenumber="52" sourceendlinenumber="52"><code>IResponseEnumerable&lt;TResponse, TResource&gt;</code></h2>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="54" sourceendlinenumber="62">For more advanced scenarios, however, your application may need access
+<h2 id="iresponseenumerabletresponse-tresource" sourcefile="page-streaming.md" sourcestartlinenumber="45" sourceendlinenumber="45"><code>IResponseEnumerable&lt;TResponse, TResource&gt;</code></h2>
+<p sourcefile="page-streaming.md" sourcestartlinenumber="47" sourceendlinenumber="55">For more advanced scenarios, however, your application may need access
 to the pages returned by the API instead. The
-<a href="api/Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2_AsPages" sourcefile="page-streaming.md" sourcestartlinenumber="56" sourceendlinenumber="56">IPagedEnumerable&lt;TResponse, TResource&gt;.AsPages()</a>
-method returns an <a href="api/Google.Api.Gax.IResponseEnumerable-2.html" sourcefile="page-streaming.md" sourcestartlinenumber="57" sourceendlinenumber="57">IResponseEnumerable&lt;TResponse, TResource&gt;</a> which
+<a href="api/Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2_AsPages" sourcefile="page-streaming.md" sourcestartlinenumber="49" sourceendlinenumber="49">IPagedEnumerable&lt;TResponse, TResource&gt;.AsPages()</a>
+method returns an <a href="api/Google.Api.Gax.IResponseEnumerable-2.html" sourcefile="page-streaming.md" sourcestartlinenumber="50" sourceendlinenumber="50">IResponseEnumerable&lt;TResponse, TResource&gt;</a> which
 implements <code>IEnumerable&lt;TResponse&gt;</code>, so you can iterate over the responses easily. Each
 response provides access to the individual resources within the page, and some APIs may
 provide additional information such as the time taken for the request or the total number of
 results across all pages. As you iterate over the pages, API requests are made
 transparently, propagating the page token from one response to the next request.</p>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="64" sourceendlinenumber="66"><code>IResponseEnumerable&lt;TResponse, TResource&gt;</code> provides one additional method, 
-<a href="api/Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_" sourcefile="page-streaming.md" sourcestartlinenumber="65" sourceendlinenumber="65">WithFixedSize()</a>
+<p sourcefile="page-streaming.md" sourcestartlinenumber="57" sourceendlinenumber="59"><code>IResponseEnumerable&lt;TResponse, TResource&gt;</code> provides one additional method, 
+<a href="api/Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_" sourcefile="page-streaming.md" sourcestartlinenumber="58" sourceendlinenumber="58">WithFixedSize()</a>
 to cater for web applications which require precise page sizes.</p>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="68" sourceendlinenumber="72">Although APIs generally allow the application to specify the page size to return, this
+<p sourcefile="page-streaming.md" sourcestartlinenumber="61" sourceendlinenumber="65">Although APIs generally allow the application to specify the page size to return, this
 is an upper limit rather than a hard requirement. It&#39;s possible for an API to return fewer results,
 even if more are available - for example, if the server notices that it is close to reaching the specified
 RPC deadline. While that&#39;s fine for many batch scenarios, it isn&#39;t ideal if the results are being presented to users,
 where typically you want to provide the exact same number of results per page.</p>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="74" sourceendlinenumber="78">The <code>WithFixedSize</code> method makes multiple API requests if necessary, in order to &quot;fill&quot; each page
+<p sourcefile="page-streaming.md" sourcestartlinenumber="67" sourceendlinenumber="71">The <code>WithFixedSize</code> method makes multiple API requests if necessary, in order to &quot;fill&quot; each page
 until it reaches the end of the resources being listed. The return value is an <code>IEnumerable&lt;FixedSizePage&lt;TResource&gt;&gt;</code>, where
-<a href="api/Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1" sourcefile="page-streaming.md" sourcestartlinenumber="76" sourceendlinenumber="76">FixedSizePage&lt;TResource&gt;</a> provides the items
+<a href="api/Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1" sourcefile="page-streaming.md" sourcestartlinenumber="69" sourceendlinenumber="69">FixedSizePage&lt;TResource&gt;</a> provides the items
 within each page, along with the page token used to retrieve the next page. (This would typically be used in a &quot;next page&quot; link
 in the web results.)</p>
-<h2 id="use-case-sample-code" sourcefile="page-streaming.md" sourcestartlinenumber="80" sourceendlinenumber="80">Use case sample code</h2>
-<h3 id="iterate-over-all-resources-ignoring-pagination" sourcefile="page-streaming.md" sourcestartlinenumber="82" sourceendlinenumber="82">Iterate over all resources, ignoring pagination</h3>
+<h2 id="use-case-sample-code" sourcefile="page-streaming.md" sourcestartlinenumber="73" sourceendlinenumber="73">Use case sample code</h2>
+<h3 id="iterate-over-all-resources-ignoring-pagination" sourcefile="page-streaming.md" sourcestartlinenumber="75" sourceendlinenumber="75">Iterate over all resources, ignoring pagination</h3>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
 string projectName = PublisherClient.FormatProjectName(projectId);
 IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
@@ -130,7 +124,7 @@ foreach (Topic topic in topics)
 {
     Console.WriteLine(topic.Name);
 }
-</code></pre><h3 id="iterate-over-all-resources-remembering-page-tokens" sourcefile="page-streaming.md" sourcestartlinenumber="86" sourceendlinenumber="86">Iterate over all resources, remembering page tokens</h3>
+</code></pre><h3 id="iterate-over-all-resources-remembering-page-tokens" sourcefile="page-streaming.md" sourcestartlinenumber="79" sourceendlinenumber="79">Iterate over all resources, remembering page tokens</h3>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
 string projectName = PublisherClient.FormatProjectName(projectId);
 IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
@@ -146,7 +140,7 @@ foreach (ListTopicsResponse page in topicPages)
     // in order to recover from failures. The page token can be passed into the ListTopics method.
     Console.WriteLine($&quot;Next page token: {page.NextPageToken}&quot;);
 }
-</code></pre><h3 id="obtain-a-single-page-of-results" sourcefile="page-streaming.md" sourcestartlinenumber="90" sourceendlinenumber="90">Obtain a single page of results</h3>
+</code></pre><h3 id="obtain-a-single-page-of-results" sourcefile="page-streaming.md" sourcestartlinenumber="83" sourceendlinenumber="83">Obtain a single page of results</h3>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
 string projectName = PublisherClient.FormatProjectName(projectId);
 IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
@@ -162,8 +156,8 @@ foreach (Topic topic in firstPage.Topics)
 // If you were processing items in batches, you might wish to store this
 // in order to recover from failures. The page token can be passed into the ListTopics method.
 Console.WriteLine($&quot;Next page token: {firstPage.NextPageToken}&quot;);
-</code></pre><h3 id="display-results-in-fixed-sized-pages" sourcefile="page-streaming.md" sourcestartlinenumber="94" sourceendlinenumber="94">Display results in fixed-sized pages</h3>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="96" sourceendlinenumber="96">This is typically used in web applications.</p>
+</code></pre><h3 id="display-results-in-fixed-sized-pages" sourcefile="page-streaming.md" sourcestartlinenumber="87" sourceendlinenumber="87">Display results in fixed-sized pages</h3>
+<p sourcefile="page-streaming.md" sourcestartlinenumber="89" sourceendlinenumber="89">This is typically used in web applications.</p>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
 string projectName = PublisherClient.FormatProjectName(projectId);
 IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageTokenFromRequest);
@@ -181,20 +175,20 @@ if (nextPage != null)
     // ... and embedding the next page token into a &quot;next page&quot; link.
     Console.WriteLine($&quot;Next page token: {nextPage.NextPageToken}&quot;);
 }
-</code></pre><h2 id="feedback" sourcefile="page-streaming.md" sourcestartlinenumber="100" sourceendlinenumber="100">Feedback</h2>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="102" sourceendlinenumber="103">We&#39;ve already been through a number of iterations of the page-streaming API,
+</code></pre><h2 id="feedback" sourcefile="page-streaming.md" sourcestartlinenumber="93" sourceendlinenumber="93">Feedback</h2>
+<p sourcefile="page-streaming.md" sourcestartlinenumber="95" sourceendlinenumber="96">We&#39;ve already been through a number of iterations of the page-streaming API,
 but would very much welcome feedback on it. A few thoughts:</p>
-<ul sourcefile="page-streaming.md" sourcestartlinenumber="105" sourceendlinenumber="111">
-<li sourcefile="page-streaming.md" sourcestartlinenumber="105" sourceendlinenumber="107">We could return a concrete class rather than having the <code>IPagedEnumerable&lt;,&gt;</code>
+<ul sourcefile="page-streaming.md" sourcestartlinenumber="98" sourceendlinenumber="104">
+<li sourcefile="page-streaming.md" sourcestartlinenumber="98" sourceendlinenumber="100">We could return a concrete class rather than having the <code>IPagedEnumerable&lt;,&gt;</code>
 interface. This would give us greater room for expansion in the future, but
 might make faking harder.</li>
-<li sourcefile="page-streaming.md" sourcestartlinenumber="108" sourceendlinenumber="111">We could move the <code>WithFixedSize</code> method into the returned type, so that
+<li sourcefile="page-streaming.md" sourcestartlinenumber="101" sourceendlinenumber="104">We could move the <code>WithFixedSize</code> method into the returned type, so that
 instead of calling <code>topics.AsPages().WithFixedSize(10)</code> you&#39;d call
 <code>topics.WithFixedSizedPages(10)</code>, for example. This would allow us to remove
 the <code>IResponseEnumerable&lt;,&gt;</code> interface.</li>
 </ul>
-<p sourcefile="page-streaming.md" sourcestartlinenumber="113" sourceendlinenumber="115">What other use cases should we consider? Does this meet your current needs?
-Please <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new" sourcefile="page-streaming.md" sourcestartlinenumber="114" sourceendlinenumber="114">raise an issue on github</a>
+<p sourcefile="page-streaming.md" sourcestartlinenumber="106" sourceendlinenumber="108">What other use cases should we consider? Does this meet your current needs?
+Please <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new" sourcefile="page-streaming.md" sourcestartlinenumber="107" sourceendlinenumber="107">raise an issue on github</a>
 to provide feedback.</p>
 
             </article>

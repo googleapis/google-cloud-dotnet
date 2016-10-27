@@ -6,6 +6,432 @@ references:
   href: api/Google.html#Google
   commentId: N:Google
   fullName: Google
+- uid: Google.Api.Gax
+  name: Google.Api.Gax
+  href: api/Google.Api.Gax.html#Google_Api_Gax
+  commentId: N:Google.Api.Gax
+  fullName: Google.Api.Gax
+- uid: Google.Api.Gax.Expiration
+  name: Expiration
+  href: api/Google.Api.Gax.Expiration.html#Google_Api_Gax_Expiration
+  commentId: T:Google.Api.Gax.Expiration
+  fullName: Google.Api.Gax.Expiration
+- uid: Google.Api.Gax.Expiration.Deadline
+  name: Deadline
+  href: api/Google.Api.Gax.Expiration.html#Google_Api_Gax_Expiration_Deadline
+  commentId: P:Google.Api.Gax.Expiration.Deadline
+  fullName: Google.Api.Gax.Expiration.Deadline
+- uid: Google.Api.Gax.Expiration.FromDeadline(System.DateTime)
+  name: FromDeadline(DateTime)
+  href: api/Google.Api.Gax.Expiration.html#Google_Api_Gax_Expiration_FromDeadline_System_DateTime_
+  commentId: M:Google.Api.Gax.Expiration.FromDeadline(System.DateTime)
+  fullName: Google.Api.Gax.Expiration.FromDeadline(System.DateTime)
+- uid: Google.Api.Gax.Expiration.FromTimeout(System.TimeSpan)
+  name: FromTimeout(TimeSpan)
+  href: api/Google.Api.Gax.Expiration.html#Google_Api_Gax_Expiration_FromTimeout_System_TimeSpan_
+  commentId: M:Google.Api.Gax.Expiration.FromTimeout(System.TimeSpan)
+  fullName: Google.Api.Gax.Expiration.FromTimeout(System.TimeSpan)
+- uid: Google.Api.Gax.Expiration.None
+  name: None
+  href: api/Google.Api.Gax.Expiration.html#Google_Api_Gax_Expiration_None
+  commentId: P:Google.Api.Gax.Expiration.None
+  fullName: Google.Api.Gax.Expiration.None
+- uid: Google.Api.Gax.Expiration.Timeout
+  name: Timeout
+  href: api/Google.Api.Gax.Expiration.html#Google_Api_Gax_Expiration_Timeout
+  commentId: P:Google.Api.Gax.Expiration.Timeout
+  fullName: Google.Api.Gax.Expiration.Timeout
+- uid: Google.Api.Gax.Expiration.Type
+  name: Type
+  href: api/Google.Api.Gax.Expiration.html#Google_Api_Gax_Expiration_Type
+  commentId: P:Google.Api.Gax.Expiration.Type
+  fullName: Google.Api.Gax.Expiration.Type
+- uid: Google.Api.Gax.ExpirationType
+  name: ExpirationType
+  href: api/Google.Api.Gax.ExpirationType.html#Google_Api_Gax_ExpirationType
+  commentId: T:Google.Api.Gax.ExpirationType
+  fullName: Google.Api.Gax.ExpirationType
+- uid: Google.Api.Gax.ExpirationType.Deadline
+  name: Deadline
+  href: api/Google.Api.Gax.ExpirationType.html#Google_Api_Gax_ExpirationType_Deadline
+  commentId: F:Google.Api.Gax.ExpirationType.Deadline
+  fullName: Google.Api.Gax.ExpirationType.Deadline
+- uid: Google.Api.Gax.ExpirationType.None
+  name: None
+  href: api/Google.Api.Gax.ExpirationType.html#Google_Api_Gax_ExpirationType_None
+  commentId: F:Google.Api.Gax.ExpirationType.None
+  fullName: Google.Api.Gax.ExpirationType.None
+- uid: Google.Api.Gax.ExpirationType.Timeout
+  name: Timeout
+  href: api/Google.Api.Gax.ExpirationType.html#Google_Api_Gax_ExpirationType_Timeout
+  commentId: F:Google.Api.Gax.ExpirationType.Timeout
+  fullName: Google.Api.Gax.ExpirationType.Timeout
+- uid: Google.Api.Gax.FixedSizePage`1
+  name: FixedSizePage<TResource>
+  href: api/Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1
+  commentId: T:Google.Api.Gax.FixedSizePage`1
+  name.vb: FixedSizePage(Of TResource)
+  fullName: Google.Api.Gax.FixedSizePage<TResource>
+  fullName.vb: Google.Api.Gax.FixedSizePage(Of TResource)
+- uid: Google.Api.Gax.FixedSizePage`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.String)
+  name: FixedSizePage(IEnumerable<TResource>, String)
+  href: api/Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1__ctor_System_Collections_Generic_IEnumerable__0__System_String_
+  commentId: M:Google.Api.Gax.FixedSizePage`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.String)
+  name.vb: FixedSizePage(IEnumerable(Of TResource), String)
+  fullName: Google.Api.Gax.FixedSizePage<TResource>.FixedSizePage(System.Collections.Generic.IEnumerable<TResource>, System.String)
+  fullName.vb: Google.Api.Gax.FixedSizePage(Of TResource).FixedSizePage(System.Collections.Generic.IEnumerable(Of TResource), System.String)
+- uid: Google.Api.Gax.FixedSizePage`1.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1_GetEnumerator
+  commentId: M:Google.Api.Gax.FixedSizePage`1.GetEnumerator
+  fullName: Google.Api.Gax.FixedSizePage<TResource>.GetEnumerator()
+  fullName.vb: Google.Api.Gax.FixedSizePage(Of TResource).GetEnumerator()
+- uid: Google.Api.Gax.FixedSizePage`1.NextPageToken
+  name: NextPageToken
+  href: api/Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1_NextPageToken
+  commentId: P:Google.Api.Gax.FixedSizePage`1.NextPageToken
+  fullName: Google.Api.Gax.FixedSizePage<TResource>.NextPageToken
+  fullName.vb: Google.Api.Gax.FixedSizePage(Of TResource).NextPageToken
+- uid: Google.Api.Gax.FixedSizePage`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Api.Gax.FixedSizePage`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Api.Gax.FixedSizePage<TResource>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: Google.Api.Gax.FixedSizePage(Of TResource).System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Api.Gax.GaxPreconditions
+  name: GaxPreconditions
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions
+  commentId: T:Google.Api.Gax.GaxPreconditions
+  fullName: Google.Api.Gax.GaxPreconditions
+- uid: Google.Api.Gax.GaxPreconditions.CheckArgument(System.Boolean,System.String,System.String)
+  name: CheckArgument(Boolean, String, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckArgument_System_Boolean_System_String_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckArgument(System.Boolean,System.String,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckArgument(System.Boolean, System.String, System.String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckArgument``1(System.Boolean,System.String,System.String,``0)
+  name: CheckArgument<T>(Boolean, String, String, T)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckArgument__1_System_Boolean_System_String_System_String___0_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckArgument``1(System.Boolean,System.String,System.String,``0)
+  name.vb: CheckArgument(Of T)(Boolean, String, String, T)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckArgument<T>(System.Boolean, System.String, System.String, T)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckArgument(Of T)(System.Boolean, System.String, System.String, T)
+- uid: Google.Api.Gax.GaxPreconditions.CheckArgument``2(System.Boolean,System.String,System.String,``0,``1)
+  name: CheckArgument<T1, T2>(Boolean, String, String, T1, T2)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckArgument__2_System_Boolean_System_String_System_String___0___1_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckArgument``2(System.Boolean,System.String,System.String,``0,``1)
+  name.vb: CheckArgument(Of T1, T2)(Boolean, String, String, T1, T2)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckArgument<T1, T2>(System.Boolean, System.String, System.String, T1, T2)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckArgument(Of T1, T2)(System.Boolean, System.String, System.String, T1, T2)
+- uid: Google.Api.Gax.GaxPreconditions.CheckArgumentRange(System.Int32,System.String,System.Int32,System.Int32)
+  name: CheckArgumentRange(Int32, String, Int32, Int32)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckArgumentRange_System_Int32_System_String_System_Int32_System_Int32_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckArgumentRange(System.Int32,System.String,System.Int32,System.Int32)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckArgumentRange(System.Int32, System.String, System.Int32, System.Int32)
+- uid: Google.Api.Gax.GaxPreconditions.CheckEnumValue``1(``0,System.String)
+  name: CheckEnumValue<T>(T, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckEnumValue__1___0_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckEnumValue``1(``0,System.String)
+  name.vb: CheckEnumValue(Of T)(T, String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckEnumValue<T>(T, System.String)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckEnumValue(Of T)(T, System.String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNotNull``1(``0,System.String)
+  name: CheckNotNull<T>(T, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNotNull__1___0_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNotNull``1(``0,System.String)
+  name.vb: CheckNotNull(Of T)(T, String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNotNull<T>(T, System.String)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckNotNull(Of T)(T, System.String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckNotNullOrEmpty(System.String,System.String)
+  name: CheckNotNullOrEmpty(String, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckNotNullOrEmpty_System_String_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckNotNullOrEmpty(System.String,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckNotNullOrEmpty(System.String, System.String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckState(System.Boolean,System.String)
+  name: CheckState(Boolean, String)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckState_System_Boolean_System_String_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckState(System.Boolean,System.String)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckState(System.Boolean, System.String)
+- uid: Google.Api.Gax.GaxPreconditions.CheckState``1(System.Boolean,System.String,``0)
+  name: CheckState<T>(Boolean, String, T)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckState__1_System_Boolean_System_String___0_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckState``1(System.Boolean,System.String,``0)
+  name.vb: CheckState(Of T)(Boolean, String, T)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckState<T>(System.Boolean, System.String, T)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckState(Of T)(System.Boolean, System.String, T)
+- uid: Google.Api.Gax.GaxPreconditions.CheckState``2(System.Boolean,System.String,``0,``1)
+  name: CheckState<T1, T2>(Boolean, String, T1, T2)
+  href: api/Google.Api.Gax.GaxPreconditions.html#Google_Api_Gax_GaxPreconditions_CheckState__2_System_Boolean_System_String___0___1_
+  commentId: M:Google.Api.Gax.GaxPreconditions.CheckState``2(System.Boolean,System.String,``0,``1)
+  name.vb: CheckState(Of T1, T2)(Boolean, String, T1, T2)
+  fullName: Google.Api.Gax.GaxPreconditions.CheckState<T1, T2>(System.Boolean, System.String, T1, T2)
+  fullName.vb: Google.Api.Gax.GaxPreconditions.CheckState(Of T1, T2)(System.Boolean, System.String, T1, T2)
+- uid: Google.Api.Gax.IClock
+  name: IClock
+  href: api/Google.Api.Gax.IClock.html#Google_Api_Gax_IClock
+  commentId: T:Google.Api.Gax.IClock
+  fullName: Google.Api.Gax.IClock
+- uid: Google.Api.Gax.IClock.GetCurrentDateTimeUtc
+  name: GetCurrentDateTimeUtc()
+  href: api/Google.Api.Gax.IClock.html#Google_Api_Gax_IClock_GetCurrentDateTimeUtc
+  commentId: M:Google.Api.Gax.IClock.GetCurrentDateTimeUtc
+  fullName: Google.Api.Gax.IClock.GetCurrentDateTimeUtc()
+- uid: Google.Api.Gax.IPagedAsyncEnumerable`2
+  name: IPagedAsyncEnumerable<TResponse, TResource>
+  href: api/Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2
+  commentId: T:Google.Api.Gax.IPagedAsyncEnumerable`2
+  name.vb: IPagedAsyncEnumerable(Of TResponse, TResource)
+  fullName: Google.Api.Gax.IPagedAsyncEnumerable<TResponse, TResource>
+  fullName.vb: Google.Api.Gax.IPagedAsyncEnumerable(Of TResponse, TResource)
+- uid: Google.Api.Gax.IPagedAsyncEnumerable`2.AsPages
+  name: AsPages()
+  href: api/Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2_AsPages
+  commentId: M:Google.Api.Gax.IPagedAsyncEnumerable`2.AsPages
+  fullName: Google.Api.Gax.IPagedAsyncEnumerable<TResponse, TResource>.AsPages()
+  fullName.vb: Google.Api.Gax.IPagedAsyncEnumerable(Of TResponse, TResource).AsPages()
+- uid: Google.Api.Gax.IPagedEnumerable`2
+  name: IPagedEnumerable<TResponse, TResource>
+  href: api/Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2
+  commentId: T:Google.Api.Gax.IPagedEnumerable`2
+  name.vb: IPagedEnumerable(Of TResponse, TResource)
+  fullName: Google.Api.Gax.IPagedEnumerable<TResponse, TResource>
+  fullName.vb: Google.Api.Gax.IPagedEnumerable(Of TResponse, TResource)
+- uid: Google.Api.Gax.IPagedEnumerable`2.AsPages
+  name: AsPages()
+  href: api/Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2_AsPages
+  commentId: M:Google.Api.Gax.IPagedEnumerable`2.AsPages
+  fullName: Google.Api.Gax.IPagedEnumerable<TResponse, TResource>.AsPages()
+  fullName.vb: Google.Api.Gax.IPagedEnumerable(Of TResponse, TResource).AsPages()
+- uid: Google.Api.Gax.IResponseAsyncEnumerable`2
+  name: IResponseAsyncEnumerable<TResponse, TResource>
+  href: api/Google.Api.Gax.IResponseAsyncEnumerable-2.html#Google_Api_Gax_IResponseAsyncEnumerable_2
+  commentId: T:Google.Api.Gax.IResponseAsyncEnumerable`2
+  name.vb: IResponseAsyncEnumerable(Of TResponse, TResource)
+  fullName: Google.Api.Gax.IResponseAsyncEnumerable<TResponse, TResource>
+  fullName.vb: Google.Api.Gax.IResponseAsyncEnumerable(Of TResponse, TResource)
+- uid: Google.Api.Gax.IResponseAsyncEnumerable`2.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Api.Gax.IResponseAsyncEnumerable-2.html#Google_Api_Gax_IResponseAsyncEnumerable_2_GetEnumerator
+  commentId: M:Google.Api.Gax.IResponseAsyncEnumerable`2.GetEnumerator
+  fullName: Google.Api.Gax.IResponseAsyncEnumerable<TResponse, TResource>.GetEnumerator()
+  fullName.vb: Google.Api.Gax.IResponseAsyncEnumerable(Of TResponse, TResource).GetEnumerator()
+- uid: Google.Api.Gax.IResponseAsyncEnumerable`2.WithFixedSize(System.Int32)
+  name: WithFixedSize(Int32)
+  href: api/Google.Api.Gax.IResponseAsyncEnumerable-2.html#Google_Api_Gax_IResponseAsyncEnumerable_2_WithFixedSize_System_Int32_
+  commentId: M:Google.Api.Gax.IResponseAsyncEnumerable`2.WithFixedSize(System.Int32)
+  fullName: Google.Api.Gax.IResponseAsyncEnumerable<TResponse, TResource>.WithFixedSize(System.Int32)
+  fullName.vb: Google.Api.Gax.IResponseAsyncEnumerable(Of TResponse, TResource).WithFixedSize(System.Int32)
+- uid: Google.Api.Gax.IResponseAsyncEnumerator`1
+  name: IResponseAsyncEnumerator<T>
+  href: api/Google.Api.Gax.IResponseAsyncEnumerator-1.html#Google_Api_Gax_IResponseAsyncEnumerator_1
+  commentId: T:Google.Api.Gax.IResponseAsyncEnumerator`1
+  name.vb: IResponseAsyncEnumerator(Of T)
+  fullName: Google.Api.Gax.IResponseAsyncEnumerator<T>
+  fullName.vb: Google.Api.Gax.IResponseAsyncEnumerator(Of T)
+- uid: Google.Api.Gax.IResponseAsyncEnumerator`1.MoveNext(System.Int32,System.Threading.CancellationToken)
+  name: MoveNext(Int32, CancellationToken)
+  href: api/Google.Api.Gax.IResponseAsyncEnumerator-1.html#Google_Api_Gax_IResponseAsyncEnumerator_1_MoveNext_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Google.Api.Gax.IResponseAsyncEnumerator`1.MoveNext(System.Int32,System.Threading.CancellationToken)
+  fullName: Google.Api.Gax.IResponseAsyncEnumerator<T>.MoveNext(System.Int32, System.Threading.CancellationToken)
+  fullName.vb: Google.Api.Gax.IResponseAsyncEnumerator(Of T).MoveNext(System.Int32, System.Threading.CancellationToken)
+- uid: Google.Api.Gax.IResponseEnumerable`2
+  name: IResponseEnumerable<TResponse, TResource>
+  href: api/Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2
+  commentId: T:Google.Api.Gax.IResponseEnumerable`2
+  name.vb: IResponseEnumerable(Of TResponse, TResource)
+  fullName: Google.Api.Gax.IResponseEnumerable<TResponse, TResource>
+  fullName.vb: Google.Api.Gax.IResponseEnumerable(Of TResponse, TResource)
+- uid: Google.Api.Gax.IResponseEnumerable`2.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2_GetEnumerator
+  commentId: M:Google.Api.Gax.IResponseEnumerable`2.GetEnumerator
+  fullName: Google.Api.Gax.IResponseEnumerable<TResponse, TResource>.GetEnumerator()
+  fullName.vb: Google.Api.Gax.IResponseEnumerable(Of TResponse, TResource).GetEnumerator()
+- uid: Google.Api.Gax.IResponseEnumerable`2.WithFixedSize(System.Int32)
+  name: WithFixedSize(Int32)
+  href: api/Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_
+  commentId: M:Google.Api.Gax.IResponseEnumerable`2.WithFixedSize(System.Int32)
+  fullName: Google.Api.Gax.IResponseEnumerable<TResponse, TResource>.WithFixedSize(System.Int32)
+  fullName.vb: Google.Api.Gax.IResponseEnumerable(Of TResponse, TResource).WithFixedSize(System.Int32)
+- uid: Google.Api.Gax.IResponseEnumerator`1
+  name: IResponseEnumerator<T>
+  href: api/Google.Api.Gax.IResponseEnumerator-1.html#Google_Api_Gax_IResponseEnumerator_1
+  commentId: T:Google.Api.Gax.IResponseEnumerator`1
+  name.vb: IResponseEnumerator(Of T)
+  fullName: Google.Api.Gax.IResponseEnumerator<T>
+  fullName.vb: Google.Api.Gax.IResponseEnumerator(Of T)
+- uid: Google.Api.Gax.IResponseEnumerator`1.MoveNext(System.Int32)
+  name: MoveNext(Int32)
+  href: api/Google.Api.Gax.IResponseEnumerator-1.html#Google_Api_Gax_IResponseEnumerator_1_MoveNext_System_Int32_
+  commentId: M:Google.Api.Gax.IResponseEnumerator`1.MoveNext(System.Int32)
+  fullName: Google.Api.Gax.IResponseEnumerator<T>.MoveNext(System.Int32)
+  fullName.vb: Google.Api.Gax.IResponseEnumerator(Of T).MoveNext(System.Int32)
+- uid: Google.Api.Gax.IScheduler
+  name: IScheduler
+  href: api/Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler
+  commentId: T:Google.Api.Gax.IScheduler
+  fullName: Google.Api.Gax.IScheduler
+- uid: Google.Api.Gax.IScheduler.Delay(System.TimeSpan)
+  name: Delay(TimeSpan)
+  href: api/Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Delay_System_TimeSpan_
+  commentId: M:Google.Api.Gax.IScheduler.Delay(System.TimeSpan)
+  fullName: Google.Api.Gax.IScheduler.Delay(System.TimeSpan)
+- uid: Google.Api.Gax.IScheduler.Schedule(System.Action,System.TimeSpan)
+  name: Schedule(Action, TimeSpan)
+  href: api/Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Schedule_System_Action_System_TimeSpan_
+  commentId: M:Google.Api.Gax.IScheduler.Schedule(System.Action,System.TimeSpan)
+  fullName: Google.Api.Gax.IScheduler.Schedule(System.Action, System.TimeSpan)
+- uid: Google.Api.Gax.IScheduler.Sleep(System.TimeSpan)
+  name: Sleep(TimeSpan)
+  href: api/Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Sleep_System_TimeSpan_
+  commentId: M:Google.Api.Gax.IScheduler.Sleep(System.TimeSpan)
+  fullName: Google.Api.Gax.IScheduler.Sleep(System.TimeSpan)
+- uid: Google.Api.Gax.PathTemplate
+  name: PathTemplate
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate
+  commentId: T:Google.Api.Gax.PathTemplate
+  fullName: Google.Api.Gax.PathTemplate
+- uid: Google.Api.Gax.PathTemplate.#ctor(System.String)
+  name: PathTemplate(String)
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate__ctor_System_String_
+  commentId: M:Google.Api.Gax.PathTemplate.#ctor(System.String)
+  fullName: Google.Api.Gax.PathTemplate.PathTemplate(System.String)
+- uid: Google.Api.Gax.PathTemplate.Expand(System.String[])
+  name: Expand(String[])
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate_Expand_System_String___
+  commentId: M:Google.Api.Gax.PathTemplate.Expand(System.String[])
+  name.vb: Expand(String())
+  fullName: Google.Api.Gax.PathTemplate.Expand(System.String[])
+  fullName.vb: Google.Api.Gax.PathTemplate.Expand(System.String())
+- uid: Google.Api.Gax.PathTemplate.ExpandWithService(System.String,System.String[])
+  name: ExpandWithService(String, String[])
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate_ExpandWithService_System_String_System_String___
+  commentId: M:Google.Api.Gax.PathTemplate.ExpandWithService(System.String,System.String[])
+  name.vb: ExpandWithService(String, String())
+  fullName: Google.Api.Gax.PathTemplate.ExpandWithService(System.String, System.String[])
+  fullName.vb: Google.Api.Gax.PathTemplate.ExpandWithService(System.String, System.String())
+- uid: Google.Api.Gax.PathTemplate.ParameterCount
+  name: ParameterCount
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate_ParameterCount
+  commentId: P:Google.Api.Gax.PathTemplate.ParameterCount
+  fullName: Google.Api.Gax.PathTemplate.ParameterCount
+- uid: Google.Api.Gax.PathTemplate.ParameterNames
+  name: ParameterNames
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate_ParameterNames
+  commentId: P:Google.Api.Gax.PathTemplate.ParameterNames
+  fullName: Google.Api.Gax.PathTemplate.ParameterNames
+- uid: Google.Api.Gax.PathTemplate.ParseName(System.String)
+  name: ParseName(String)
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate_ParseName_System_String_
+  commentId: M:Google.Api.Gax.PathTemplate.ParseName(System.String)
+  fullName: Google.Api.Gax.PathTemplate.ParseName(System.String)
+- uid: Google.Api.Gax.PathTemplate.ToString
+  name: ToString()
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate_ToString
+  commentId: M:Google.Api.Gax.PathTemplate.ToString
+  fullName: Google.Api.Gax.PathTemplate.ToString()
+- uid: Google.Api.Gax.PathTemplate.TryParseName(System.String,Google.Api.Gax.ResourceName@)
+  name: TryParseName(String, out ResourceName)
+  href: api/Google.Api.Gax.PathTemplate.html#Google_Api_Gax_PathTemplate_TryParseName_System_String_Google_Api_Gax_ResourceName__
+  commentId: M:Google.Api.Gax.PathTemplate.TryParseName(System.String,Google.Api.Gax.ResourceName@)
+  name.vb: TryParseName(String, ByRef ResourceName)
+  fullName: Google.Api.Gax.PathTemplate.TryParseName(System.String, out Google.Api.Gax.ResourceName)
+  fullName.vb: Google.Api.Gax.PathTemplate.TryParseName(System.String, ByRef Google.Api.Gax.ResourceName)
+- uid: Google.Api.Gax.Polling
+  name: Polling
+  href: api/Google.Api.Gax.Polling.html#Google_Api_Gax_Polling
+  commentId: T:Google.Api.Gax.Polling
+  fullName: Google.Api.Gax.Polling
+- uid: Google.Api.Gax.Polling.PollRepeatedly``1(System.Func{System.Nullable{System.DateTime},``0},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings)
+  name: PollRepeatedly<TResponse>(Func<Nullable<DateTime>, TResponse>, Predicate<TResponse>, IClock, IScheduler, PollSettings)
+  href: api/Google.Api.Gax.Polling.html#Google_Api_Gax_Polling_PollRepeatedly__1_System_Func_System_Nullable_System_DateTime____0__System_Predicate___0__Google_Api_Gax_IClock_Google_Api_Gax_IScheduler_Google_Api_Gax_PollSettings_
+  commentId: M:Google.Api.Gax.Polling.PollRepeatedly``1(System.Func{System.Nullable{System.DateTime},``0},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings)
+  name.vb: PollRepeatedly(Of TResponse)(Func(Of Nullable(Of DateTime), TResponse), Predicate(Of TResponse), IClock, IScheduler, PollSettings)
+  fullName: Google.Api.Gax.Polling.PollRepeatedly<TResponse>(System.Func<System.Nullable<System.DateTime>, TResponse>, System.Predicate<TResponse>, Google.Api.Gax.IClock, Google.Api.Gax.IScheduler, Google.Api.Gax.PollSettings)
+  fullName.vb: Google.Api.Gax.Polling.PollRepeatedly(Of TResponse)(System.Func(Of System.Nullable(Of System.DateTime), TResponse), System.Predicate(Of TResponse), Google.Api.Gax.IClock, Google.Api.Gax.IScheduler, Google.Api.Gax.PollSettings)
+- uid: Google.Api.Gax.Polling.PollRepeatedlyAsync``1(System.Func{System.Nullable{System.DateTime},System.Threading.Tasks.Task{``0}},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings)
+  name: PollRepeatedlyAsync<TResponse>(Func<Nullable<DateTime>, Task<TResponse>>, Predicate<TResponse>, IClock, IScheduler, PollSettings)
+  href: api/Google.Api.Gax.Polling.html#Google_Api_Gax_Polling_PollRepeatedlyAsync__1_System_Func_System_Nullable_System_DateTime__System_Threading_Tasks_Task___0___System_Predicate___0__Google_Api_Gax_IClock_Google_Api_Gax_IScheduler_Google_Api_Gax_PollSettings_
+  commentId: M:Google.Api.Gax.Polling.PollRepeatedlyAsync``1(System.Func{System.Nullable{System.DateTime},System.Threading.Tasks.Task{``0}},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings)
+  name.vb: PollRepeatedlyAsync(Of TResponse)(Func(Of Nullable(Of DateTime), Task(Of TResponse)), Predicate(Of TResponse), IClock, IScheduler, PollSettings)
+  fullName: Google.Api.Gax.Polling.PollRepeatedlyAsync<TResponse>(System.Func<System.Nullable<System.DateTime>, System.Threading.Tasks.Task<TResponse>>, System.Predicate<TResponse>, Google.Api.Gax.IClock, Google.Api.Gax.IScheduler, Google.Api.Gax.PollSettings)
+  fullName.vb: Google.Api.Gax.Polling.PollRepeatedlyAsync(Of TResponse)(System.Func(Of System.Nullable(Of System.DateTime), System.Threading.Tasks.Task(Of TResponse)), System.Predicate(Of TResponse), Google.Api.Gax.IClock, Google.Api.Gax.IScheduler, Google.Api.Gax.PollSettings)
+- uid: Google.Api.Gax.PollSettings
+  name: PollSettings
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings
+  commentId: T:Google.Api.Gax.PollSettings
+  fullName: Google.Api.Gax.PollSettings
+- uid: Google.Api.Gax.PollSettings.#ctor(Google.Api.Gax.Expiration,System.TimeSpan)
+  name: PollSettings(Expiration, TimeSpan)
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings__ctor_Google_Api_Gax_Expiration_System_TimeSpan_
+  commentId: M:Google.Api.Gax.PollSettings.#ctor(Google.Api.Gax.Expiration,System.TimeSpan)
+  fullName: Google.Api.Gax.PollSettings.PollSettings(Google.Api.Gax.Expiration, System.TimeSpan)
+- uid: Google.Api.Gax.PollSettings.Delay
+  name: Delay
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings_Delay
+  commentId: P:Google.Api.Gax.PollSettings.Delay
+  fullName: Google.Api.Gax.PollSettings.Delay
+- uid: Google.Api.Gax.PollSettings.Expiration
+  name: Expiration
+  href: api/Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings_Expiration
+  commentId: P:Google.Api.Gax.PollSettings.Expiration
+  fullName: Google.Api.Gax.PollSettings.Expiration
+- uid: Google.Api.Gax.ResourceMismatchException
+  name: ResourceMismatchException
+  href: api/Google.Api.Gax.ResourceMismatchException.html#Google_Api_Gax_ResourceMismatchException
+  commentId: T:Google.Api.Gax.ResourceMismatchException
+  fullName: Google.Api.Gax.ResourceMismatchException
+- uid: Google.Api.Gax.ResourceMismatchException.#ctor(System.String)
+  name: ResourceMismatchException(String)
+  href: api/Google.Api.Gax.ResourceMismatchException.html#Google_Api_Gax_ResourceMismatchException__ctor_System_String_
+  commentId: M:Google.Api.Gax.ResourceMismatchException.#ctor(System.String)
+  fullName: Google.Api.Gax.ResourceMismatchException.ResourceMismatchException(System.String)
+- uid: Google.Api.Gax.ResourceName
+  name: ResourceName
+  href: api/Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName
+  commentId: T:Google.Api.Gax.ResourceName
+  fullName: Google.Api.Gax.ResourceName
+- uid: Google.Api.Gax.ResourceName.#ctor(Google.Api.Gax.PathTemplate,System.String[])
+  name: ResourceName(PathTemplate, String[])
+  href: api/Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName__ctor_Google_Api_Gax_PathTemplate_System_String___
+  commentId: M:Google.Api.Gax.ResourceName.#ctor(Google.Api.Gax.PathTemplate,System.String[])
+  name.vb: ResourceName(PathTemplate, String())
+  fullName: Google.Api.Gax.ResourceName.ResourceName(Google.Api.Gax.PathTemplate, System.String[])
+  fullName.vb: Google.Api.Gax.ResourceName.ResourceName(Google.Api.Gax.PathTemplate, System.String())
+- uid: Google.Api.Gax.ResourceName.Clone
+  name: Clone()
+  href: api/Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName_Clone
+  commentId: M:Google.Api.Gax.ResourceName.Clone
+  fullName: Google.Api.Gax.ResourceName.Clone()
+- uid: Google.Api.Gax.ResourceName.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName_Item_System_Int32_
+  commentId: P:Google.Api.Gax.ResourceName.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Google.Api.Gax.ResourceName.Item[System.Int32]
+  fullName.vb: Google.Api.Gax.ResourceName.Item(System.Int32)
+- uid: Google.Api.Gax.ResourceName.Item(System.String)
+  name: Item[String]
+  href: api/Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName_Item_System_String_
+  commentId: P:Google.Api.Gax.ResourceName.Item(System.String)
+  name.vb: Item(String)
+  fullName: Google.Api.Gax.ResourceName.Item[System.String]
+  fullName.vb: Google.Api.Gax.ResourceName.Item(System.String)
+- uid: Google.Api.Gax.ResourceName.ServiceName
+  name: ServiceName
+  href: api/Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName_ServiceName
+  commentId: P:Google.Api.Gax.ResourceName.ServiceName
+  fullName: Google.Api.Gax.ResourceName.ServiceName
+- uid: Google.Api.Gax.ResourceName.Template
+  name: Template
+  href: api/Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName_Template
+  commentId: P:Google.Api.Gax.ResourceName.Template
+  fullName: Google.Api.Gax.ResourceName.Template
+- uid: Google.Api.Gax.ResourceName.ToString
+  name: ToString()
+  href: api/Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName_ToString
+  commentId: M:Google.Api.Gax.ResourceName.ToString
+  fullName: Google.Api.Gax.ResourceName.ToString()
 - uid: Google.Api.Gax.Rest
   name: Google.Api.Gax.Rest
   href: api/Google.Api.Gax.Rest.html#Google_Api_Gax_Rest
@@ -111,6 +537,46 @@ references:
   href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_GetDefaultUserAgent_System_Type_
   commentId: M:Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
   fullName: Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
+- uid: Google.Api.Gax.SystemClock
+  name: SystemClock
+  href: api/Google.Api.Gax.SystemClock.html#Google_Api_Gax_SystemClock
+  commentId: T:Google.Api.Gax.SystemClock
+  fullName: Google.Api.Gax.SystemClock
+- uid: Google.Api.Gax.SystemClock.GetCurrentDateTimeUtc
+  name: GetCurrentDateTimeUtc()
+  href: api/Google.Api.Gax.SystemClock.html#Google_Api_Gax_SystemClock_GetCurrentDateTimeUtc
+  commentId: M:Google.Api.Gax.SystemClock.GetCurrentDateTimeUtc
+  fullName: Google.Api.Gax.SystemClock.GetCurrentDateTimeUtc()
+- uid: Google.Api.Gax.SystemClock.Instance
+  name: Instance
+  href: api/Google.Api.Gax.SystemClock.html#Google_Api_Gax_SystemClock_Instance
+  commentId: P:Google.Api.Gax.SystemClock.Instance
+  fullName: Google.Api.Gax.SystemClock.Instance
+- uid: Google.Api.Gax.SystemScheduler
+  name: SystemScheduler
+  href: api/Google.Api.Gax.SystemScheduler.html#Google_Api_Gax_SystemScheduler
+  commentId: T:Google.Api.Gax.SystemScheduler
+  fullName: Google.Api.Gax.SystemScheduler
+- uid: Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan)
+  name: Delay(TimeSpan)
+  href: api/Google.Api.Gax.SystemScheduler.html#Google_Api_Gax_SystemScheduler_Delay_System_TimeSpan_
+  commentId: M:Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan)
+  fullName: Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan)
+- uid: Google.Api.Gax.SystemScheduler.Instance
+  name: Instance
+  href: api/Google.Api.Gax.SystemScheduler.html#Google_Api_Gax_SystemScheduler_Instance
+  commentId: P:Google.Api.Gax.SystemScheduler.Instance
+  fullName: Google.Api.Gax.SystemScheduler.Instance
+- uid: Google.Api.Gax.SystemScheduler.Schedule(System.Action,System.TimeSpan)
+  name: Schedule(Action, TimeSpan)
+  href: api/Google.Api.Gax.SystemScheduler.html#Google_Api_Gax_SystemScheduler_Schedule_System_Action_System_TimeSpan_
+  commentId: M:Google.Api.Gax.SystemScheduler.Schedule(System.Action,System.TimeSpan)
+  fullName: Google.Api.Gax.SystemScheduler.Schedule(System.Action, System.TimeSpan)
+- uid: Google.Api.Gax.SystemScheduler.Sleep(System.TimeSpan)
+  name: Sleep(TimeSpan)
+  href: api/Google.Api.Gax.SystemScheduler.html#Google_Api_Gax_SystemScheduler_Sleep_System_TimeSpan_
+  commentId: M:Google.Api.Gax.SystemScheduler.Sleep(System.TimeSpan)
+  fullName: Google.Api.Gax.SystemScheduler.Sleep(System.TimeSpan)
 - uid: Google.Apis
   name: Google.Apis
   href: api/Google.Apis.html#Google_Apis
