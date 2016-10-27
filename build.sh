@@ -25,8 +25,8 @@ fi
 if [ $(dotnet --info | grep "OS Platform" | grep -c Windows) -ne 0 ]
 then
   OS=Windows
-  $NUGET install -OutputDirectory packages -Version 4.6.519 OpenCover
-  $NUGET install -OutputDirectory packages -Version 2.4.5.0 ReportGenerator
+  $NUGET install -Verbosity quiet -OutputDirectory packages -Version 4.6.519 OpenCover
+  $NUGET install -Verbosity quiet -OutputDirectory packages -Version 2.4.5.0 ReportGenerator
   # Comment out the lines below to disable coverage
   OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
   REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
@@ -56,9 +56,11 @@ fi
 
 echo CLI args: $DOTNET_BUILD_ARGS
 
-echo Building
+echo Restoring
 
-dotnet restore tools apis
+dotnet restore -v Warning tools apis
+
+echo Building tools
 
 cd tools
 dotnet build $DOTNET_BUILD_ARGS `$FIND . -mindepth 1 -maxdepth 1 -name 'Google*' -type d `
@@ -80,7 +82,7 @@ do
   # we only do coverage tests on Windows.
   if [ $OS == "Windows" ]
   then
-    dotnet test -f net451 $DOTNET_TEST_ARGS $testdir
+    dotnet test --no-build  -f net451 $DOTNET_TEST_ARGS $testdir
     if [ -n "$OPENCOVER" ]
     then
       # OpenCover is picky about how it finds the excluded files. There may be a better approach than this,
@@ -93,7 +95,7 @@ do
       # so excludebyfile appears to be working. Odd.
       $OPENCOVER \
         -target:"c:\Program Files\dotnet\dotnet.exe" \
-        -targetargs:"test -f net451 $DOTNET_TEST_ARGS $testdir" \
+        -targetargs:"test --no-build -f net451 $DOTNET_TEST_ARGS $testdir" \
         -mergeoutput \
         -hideskipped:File \
         -output:$coverage/coverage.xml \
@@ -114,7 +116,7 @@ do
   then
     echo "Skipping $testdir, it will not run on .NET Core"
   else
-    dotnet test -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir
+    dotnet test --no-build -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir
   fi
 done
 
@@ -132,5 +134,5 @@ echo Packing
 # and no other projects do.
 for package in `$FIND . -name project.json | xargs grep -le 'version.*-\*' | sed 's/\/project.json//g'`
 do
-  dotnet pack $DOTNET_BUILD_ARGS $package
+  dotnet pack --no-build $DOTNET_BUILD_ARGS $package
 done
