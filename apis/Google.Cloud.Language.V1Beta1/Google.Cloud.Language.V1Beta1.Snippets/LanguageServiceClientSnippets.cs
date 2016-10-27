@@ -41,7 +41,7 @@ namespace Google.Cloud.Language.V1Beta1.Snippets
             Assert.Equal("Richard of York", response.Entities[0].Name);
         }
 
-        [Fact(Skip = "Polarity is 0 at the moment; need to investigate")]
+        [Fact]
         public void AnalyzeSentiment()
         {
             // Snippet: AnalyzeSentiment
