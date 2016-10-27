@@ -42,7 +42,7 @@ To show the layering involved, we'll use the Google.Datastore.V1 client library 
 An application using this library will typically end up with the following assemblies:
 
 - Google.Datastore.V1: the client library itself
-- Google.Api.Gax: a support library providing functionality required across multiple
+- Google.Api.Gax/Google.Api.Gax.Grpc: support libraries providing functionality required across multiple
   gRPC-based wrapper libraries, such as [page streaming](page-streaming.md).
 - Google.Protobuf: Protocol Buffer support library
 - Grpc.Auth and Grpc.Core: gRPC support libraries
@@ -109,7 +109,7 @@ An application using this library will typically end up with the following assem
 
 - Google.Storage.V1: the wrapper library
 - Google.Apis.Storage.v1: the REST service library that the wrapper library uses to call the REST API
-- Google.Api.Gax.Rest: a support library providing functionality required across multiple
+- Google.Api.Gax/Google.Api.Gax.Rest: support libraries providing functionality required across multiple
   REST-based wrapper libraries, such as [page streaming](page-streaming.md).
 - Google.Apis: support libraries used by all REST service libraries
   to perform REST-based operations

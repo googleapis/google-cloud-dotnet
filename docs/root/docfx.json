@@ -4,8 +4,9 @@
       "src": [
         {
           "files": [
-            "gax-dotnet/src/Google.Api.Gax.Rest/project.json",
-            "gax-dotnet/src/Google.Api.Gax/project.json"
+            "gax-dotnet/src/Google.Api.Gax/project.json",
+            "gax-dotnet/src/Google.Api.Gax.Grpc/project.json",
+            "gax-dotnet/src/Google.Api.Gax.Rest/project.json"
           ],
           "cwd": "../../external"
         }

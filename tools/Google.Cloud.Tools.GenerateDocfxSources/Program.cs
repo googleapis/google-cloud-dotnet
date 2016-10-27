@@ -33,6 +33,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             { "Google.Apis.Core", "google-api-dotnet-client/Src/Support/GoogleApis.Core/Net45/GoogleApis.Core_Net45.csproj" },
             { "Google.Apis.Auth", "google-api-dotnet-client/Src/Support/GoogleApis.Auth/Net45/GoogleApis.Auth_Net45.csproj" },
             { "Google.Api.Gax", "gax-dotnet/src/Google.Api.Gax/project.json" },
+            { "Google.Api.Gax.Grpc", "gax-dotnet/src/Google.Api.Gax.Grpc/project.json" },
             { "Google.Api.Gax.Rest", "gax-dotnet/src/Google.Api.Gax.Rest/project.json" },
             { "Google.Api.CommonProtos", "gax-dotnet/src/Google.Api.CommonProtos/project.json" },
             { "Grpc.Core", "grpc/src/csharp/Grpc.Core/Grpc.Core.csproj" },
