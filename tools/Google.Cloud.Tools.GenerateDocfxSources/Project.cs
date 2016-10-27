@@ -36,7 +36,20 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 
         // TODO: Handle dependencies in framework elements
         // TODO: Return version numbers as well
-        public IEnumerable<string> Dependencies => ((JObject)_json["dependencies"])?.Properties().Select(prop => prop.Name);
+        public IEnumerable<string> Dependencies
+        {
+            get
+            {
+                // We mostly only care about the explicit dependencies, but we should include Gax when we depend on Gax.Rest or Gax.Grpc.
+                var dependencies = new HashSet<string>(((JObject)_json["dependencies"])?.Properties().Select(prop => prop.Name));
+                if (dependencies.Contains("Google.Api.Gax.Rest") ||
+                    dependencies.Contains("Google.Api.Gax.Grpc"))
+                {
+                    dependencies.Add("Google.Api.Gax");
+                }
+                return dependencies;
+            }
+        }
 
         public static IEnumerable<Project> LoadProjects(string directory)
         {
