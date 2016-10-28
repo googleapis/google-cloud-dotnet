@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Devtools.Clouderrorreporting.V1beta1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;

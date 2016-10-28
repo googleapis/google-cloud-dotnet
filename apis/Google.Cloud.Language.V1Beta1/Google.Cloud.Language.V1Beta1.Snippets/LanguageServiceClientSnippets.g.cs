@@ -15,8 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Language.V1beta1;
-using Google.Cloud.Language.V1beta1.AnnotateTextRequest.Types;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -27,6 +25,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types;
 
 namespace Google.Cloud.Language.V1Beta1.Snippets
 {
