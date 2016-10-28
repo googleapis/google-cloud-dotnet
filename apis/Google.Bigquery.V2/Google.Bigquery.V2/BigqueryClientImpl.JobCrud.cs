@@ -25,6 +25,8 @@ namespace Google.Bigquery.V2
 {
     public partial class BigqueryClientImpl
     {
+        private static readonly PollSettings s_defaultPollSettings = new PollSettings(Expiration.None, TimeSpan.FromSeconds(5));
+
         private sealed class JobPageManager : IPageManager<ListRequest, JobList, BigqueryJob>
         {
             private readonly BigqueryClient _client;
@@ -59,25 +61,12 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryJob PollJobUntilCompleted(JobReference jobReference, PollJobOptions options = null)
+        public override BigqueryJob PollJobUntilCompleted(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            options?.Validate();
-
-            DateTime? deadline = options?.GetEffectiveDeadline() ?? DateTime.SpecifyKind(DateTime.MaxValue, DateTimeKind.Utc);
-            long maxRequests = options?.MaxRequests ?? long.MaxValue;
-            TimeSpan interval = options?.Interval ?? TimeSpan.FromSeconds(1);
-
-            for (long i = 0; i < maxRequests && DateTime.UtcNow < deadline; i++)
-            {
-                var job = GetJob(jobReference);
-                if (job.State == JobState.Done)
-                {
-                    return job;
-                }
-                Thread.Sleep(interval);
-            }
-            throw new TimeoutException($"Job {jobReference.JobId} did not complete in time.");
+            return Polling.PollRepeatedly(ignoredDeadline => GetJob(jobReference, options),
+                job => job.State == JobState.Done,
+                Clock, Scheduler, pollSettings ?? s_defaultPollSettings);
         }
 
         /// <inheritdoc />

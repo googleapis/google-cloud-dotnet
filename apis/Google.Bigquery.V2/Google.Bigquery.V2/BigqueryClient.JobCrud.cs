@@ -53,32 +53,35 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Polls the job with the specified ID in this client's project for completion.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJobUntilCompleted(JobReference,PollJobOptions)"/>.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJobUntilCompleted(JobReference,GetJobOptions,PollSettings)"/>.
         /// </summary>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
         /// <returns>The completed job.</returns>
-        public virtual BigqueryJob PollJobUntilCompleted(string jobId, PollJobOptions options = null) =>
-            PollJobUntilCompleted(GetJobReference(jobId), options);
+        public virtual BigqueryJob PollJobUntilCompleted(string jobId, GetJobOptions options = null, PollSettings pollSettings = null) =>
+            PollJobUntilCompleted(GetJobReference(jobId), options, pollSettings);
 
         /// <summary>
         /// Polls the job with the specified project ID and job ID.
-        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJobUntilCompleted(JobReference,PollJobOptions)"/>.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJobUntilCompleted(JobReference,GetJobOptions,PollSettings)"/>.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="jobId">The job ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
         /// <returns>The completed job.</returns>
-        public virtual BigqueryJob PollJobUntilCompleted(string projectId, string jobId, PollJobOptions options = null) =>
-            PollJobUntilCompleted(GetJobReference(projectId, jobId), options);
+        public virtual BigqueryJob PollJobUntilCompleted(string projectId, string jobId, GetJobOptions options = null, PollSettings pollSettings = null) =>
+            PollJobUntilCompleted(GetJobReference(projectId, jobId), options, pollSettings);
 
         /// <summary>
         /// Polls the specified job for completion.
         /// </summary>
         /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
         /// <returns>The completed job.</returns>
-        public virtual BigqueryJob PollJobUntilCompleted(JobReference jobReference, PollJobOptions options = null)
+        public virtual BigqueryJob PollJobUntilCompleted(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null)
         {
             throw new NotImplementedException();
         }

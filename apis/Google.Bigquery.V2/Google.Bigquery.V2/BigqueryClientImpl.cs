@@ -34,6 +34,10 @@ namespace Google.Bigquery.V2
         private static readonly object _applicationNameLock = new object();
         private static string _applicationName = UserAgentHelper.GetDefaultUserAgent(typeof(BigqueryClient));
 
+        // TODO: Allow these to be specified for testability.
+        private IClock Clock => SystemClock.Instance;
+        private IScheduler Scheduler => SystemScheduler.Instance;
+
         /// <summary>
         /// The default application name used when creating a <see cref="BigqueryService"/>.
         /// Defaults to "google-cloud-dotnet"; must not be null.
