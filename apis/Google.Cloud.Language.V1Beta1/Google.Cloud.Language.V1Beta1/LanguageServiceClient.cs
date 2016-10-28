@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Language.V1beta1;
+using Google.Cloud.Language.V1beta1.AnnotateTextRequest.Types;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -24,7 +25,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types;
 
 namespace Google.Cloud.Language.V1Beta1
 {
@@ -308,10 +308,11 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document. Currently, `analyzeSentiment` only supports English text
+        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -327,10 +328,11 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document. Currently, `analyzeSentiment` only supports English text
+        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -345,10 +347,11 @@ namespace Google.Cloud.Language.V1Beta1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document. Currently, `analyzeSentiment` only supports English text
+        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -364,13 +367,14 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Finds named entities (currently finds proper names) in the text,
+        /// entity types, salience, mentions for each entity, and other properties.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -387,13 +391,14 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Finds named entities (currently finds proper names) in the text,
+        /// entity types, salience, mentions for each entity, and other properties.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -410,13 +415,14 @@ namespace Google.Cloud.Language.V1Beta1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Finds named entities (currently finds proper names) in the text,
+        /// entity types, salience, mentions for each entity, and other properties.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -433,16 +439,19 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Advanced API that analyzes the document and provides a full set of text
+        /// annotations, including semantic, syntactic, and sentiment information. This
+        /// API is intended for users who are familiar with machine learning and need
+        /// in-depth text features to build upon.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="features">
-        ///
+        /// The enabled features.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -460,16 +469,19 @@ namespace Google.Cloud.Language.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Advanced API that analyzes the document and provides a full set of text
+        /// annotations, including semantic, syntactic, and sentiment information. This
+        /// API is intended for users who are familiar with machine learning and need
+        /// in-depth text features to build upon.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="features">
-        ///
+        /// The enabled features.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -488,16 +500,19 @@ namespace Google.Cloud.Language.V1Beta1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Advanced API that analyzes the document and provides a full set of text
+        /// annotations, including semantic, syntactic, and sentiment information. This
+        /// API is intended for users who are familiar with machine learning and need
+        /// in-depth text features to build upon.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="features">
-        ///
+        /// The enabled features.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -550,10 +565,11 @@ namespace Google.Cloud.Language.V1Beta1
         public override LanguageService.LanguageServiceClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document. Currently, `analyzeSentiment` only supports English text
+        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -571,10 +587,11 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Analyzes the sentiment of the provided text.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document. Currently, `analyzeSentiment` only supports English text
+        /// ([Document.language][google.cloud.language.v1beta1.Document.language]="EN").
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -592,13 +609,14 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Finds named entities (currently finds proper names) in the text,
+        /// entity types, salience, mentions for each entity, and other properties.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -618,13 +636,14 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Finds named entities (currently finds proper names) in the text,
+        /// entity types, salience, mentions for each entity, and other properties.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -644,16 +663,19 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Advanced API that analyzes the document and provides a full set of text
+        /// annotations, including semantic, syntactic, and sentiment information. This
+        /// API is intended for users who are familiar with machine learning and need
+        /// in-depth text features to build upon.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="features">
-        ///
+        /// The enabled features.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -675,16 +697,19 @@ namespace Google.Cloud.Language.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Advanced API that analyzes the document and provides a full set of text
+        /// annotations, including semantic, syntactic, and sentiment information. This
+        /// API is intended for users who are familiar with machine learning and need
+        /// in-depth text features to build upon.
         /// </summary>
         /// <param name="document">
-        ///
+        /// Input document.
         /// </param>
         /// <param name="features">
-        ///
+        /// The enabled features.
         /// </param>
         /// <param name="encodingType">
-        ///
+        /// The encoding type used by the API to calculate offsets.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

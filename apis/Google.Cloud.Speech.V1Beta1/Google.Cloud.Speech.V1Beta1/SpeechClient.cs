@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Speech.V1beta1;
 using Google.Longrunning;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -277,13 +277,15 @@ namespace Google.Cloud.Speech.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Perform synchronous speech-recognition: receive results after all audio
+        /// has been sent and processed.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -300,13 +302,15 @@ namespace Google.Cloud.Speech.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Perform synchronous speech-recognition: receive results after all audio
+        /// has been sent and processed.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -323,13 +327,15 @@ namespace Google.Cloud.Speech.V1Beta1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Perform synchronous speech-recognition: receive results after all audio
+        /// has been sent and processed.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -346,13 +352,17 @@ namespace Google.Cloud.Speech.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Perform asynchronous speech-recognition: receive results via the
+        /// google.longrunning.Operations interface. Returns either an
+        /// `Operation.error` or an `Operation.response` which contains
+        /// an `AsyncRecognizeResponse` message.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -369,13 +379,17 @@ namespace Google.Cloud.Speech.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Perform asynchronous speech-recognition: receive results via the
+        /// google.longrunning.Operations interface. Returns either an
+        /// `Operation.error` or an `Operation.response` which contains
+        /// an `AsyncRecognizeResponse` message.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -392,13 +406,17 @@ namespace Google.Cloud.Speech.V1Beta1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Perform asynchronous speech-recognition: receive results via the
+        /// google.longrunning.Operations interface. Returns either an
+        /// `Operation.error` or an `Operation.response` which contains
+        /// an `AsyncRecognizeResponse` message.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -447,13 +465,15 @@ namespace Google.Cloud.Speech.V1Beta1
         public override Speech.SpeechClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Perform synchronous speech-recognition: receive results after all audio
+        /// has been sent and processed.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -473,13 +493,15 @@ namespace Google.Cloud.Speech.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Perform synchronous speech-recognition: receive results after all audio
+        /// has been sent and processed.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -499,13 +521,17 @@ namespace Google.Cloud.Speech.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Perform asynchronous speech-recognition: receive results via the
+        /// google.longrunning.Operations interface. Returns either an
+        /// `Operation.error` or an `Operation.response` which contains
+        /// an `AsyncRecognizeResponse` message.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -525,13 +551,17 @@ namespace Google.Cloud.Speech.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Perform asynchronous speech-recognition: receive results via the
+        /// google.longrunning.Operations interface. Returns either an
+        /// `Operation.error` or an `Operation.response` which contains
+        /// an `AsyncRecognizeResponse` message.
         /// </summary>
         /// <param name="config">
-        ///
+        /// [Required] The `config` message provides information to the recognizer
+        /// that specifies how to process the request.
         /// </param>
         /// <param name="audio">
-        ///
+        /// [Required] The audio data to be recognized.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

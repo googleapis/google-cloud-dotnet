@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Devtools.Clouderrorreporting.V1beta1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -34,7 +35,6 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
         public async Task ListGroupStatsAsync()
         {
             // Snippet: ListGroupStatsAsync(string,QueryTimeRange,string,int?,CallSettings)
-            // Additional: ListGroupStatsAsync(string,QueryTimeRange,string,int?,CancellationToken)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
@@ -102,7 +102,6 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
         public async Task ListEventsAsync()
         {
             // Snippet: ListEventsAsync(string,string,string,int?,CallSettings)
-            // Additional: ListEventsAsync(string,string,string,int?,CancellationToken)
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)

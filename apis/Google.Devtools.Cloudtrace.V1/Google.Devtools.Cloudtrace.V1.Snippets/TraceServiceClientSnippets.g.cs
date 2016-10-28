@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Devtools.Cloudtrace.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -88,7 +89,6 @@ namespace Google.Devtools.Cloudtrace.V1.Snippets
         public async Task ListTracesAsync()
         {
             // Snippet: ListTracesAsync(string,string,int?,CallSettings)
-            // Additional: ListTracesAsync(string,string,int?,CancellationToken)
             // Create client
             TraceServiceClient traceServiceClient = TraceServiceClient.Create();
             // Initialize request argument(s)

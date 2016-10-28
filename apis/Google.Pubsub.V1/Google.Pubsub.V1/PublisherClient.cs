@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,10 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Iam.V1;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Google.Pubsub.V1;
 using Grpc.Core;
 using System;
 using System.Collections;
@@ -54,6 +57,9 @@ namespace Google.Pubsub.V1
             ListTopicsSettings = existing.ListTopicsSettings;
             ListTopicSubscriptionsSettings = existing.ListTopicSubscriptionsSettings;
             DeleteTopicSettings = existing.DeleteTopicSettings;
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
         }
 
         /// <summary>
@@ -355,6 +361,94 @@ namespace Google.Pubsub.V1
             )));
 
         /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublisherClient.SetIamPolicy</c> and <c>PublisherClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PublisherClient.SetIamPolicy</c> and
+        /// <c>PublisherClient.SetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings SetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublisherClient.GetIamPolicy</c> and <c>PublisherClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PublisherClient.GetIamPolicy</c> and
+        /// <c>PublisherClient.GetIamPolicyAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings GetIamPolicySettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublisherClient.TestIamPermissions</c> and <c>PublisherClient.TestIamPermissionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PublisherClient.TestIamPermissions</c> and
+        /// <c>PublisherClient.TestIamPermissionsAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings TestIamPermissionsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this <see cref="PublisherSettings"/> object.</returns>
@@ -492,7 +586,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Creates the given topic with the given name.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -516,7 +610,7 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Creates the given topic with the given name.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -539,7 +633,7 @@ namespace Google.Pubsub.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Creates the given topic with the given name.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -563,13 +657,15 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The messages in the request will be published on this topic.
         /// </param>
         /// <param name="messages">
-        ///
+        /// The messages to publish.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -586,13 +682,15 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The messages in the request will be published on this topic.
         /// </param>
         /// <param name="messages">
-        ///
+        /// The messages to publish.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -609,13 +707,15 @@ namespace Google.Pubsub.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The messages in the request will be published on this topic.
         /// </param>
         /// <param name="messages">
-        ///
+        /// The messages to publish.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -632,10 +732,10 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic to get.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -651,10 +751,10 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic to get.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -669,10 +769,10 @@ namespace Google.Pubsub.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic to get.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -688,10 +788,10 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        ///
+        /// The name of the cloud project that topics belong to.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -717,10 +817,10 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        ///
+        /// The name of the cloud project that topics belong to.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -746,10 +846,10 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Lists the name of the subscriptions for this topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic that subscriptions are attached to.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -775,10 +875,10 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Lists the name of the subscriptions for this topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic that subscriptions are attached to.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -804,10 +904,14 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// Name of the topic to delete.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -823,10 +927,14 @@ namespace Google.Pubsub.V1
         }
 
         /// <summary>
-        ///
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// Name of the topic to delete.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -841,10 +949,14 @@ namespace Google.Pubsub.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// Name of the topic to delete.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -854,6 +966,245 @@ namespace Google.Pubsub.V1
         /// </returns>
         public virtual void DeleteTopic(
             string topic,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy SetIamPolicy(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy GetIamPolicy(
+            string resource,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            IEnumerable<string> permissions,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -873,6 +1224,9 @@ namespace Google.Pubsub.V1
         private readonly ApiCall<ListTopicsRequest, ListTopicsResponse> _callListTopics;
         private readonly ApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse> _callListTopicSubscriptions;
         private readonly ApiCall<DeleteTopicRequest, Empty> _callDeleteTopic;
+        private readonly ApiCall<SetIamPolicyRequest, Policy> _callSetIamPolicy;
+        private readonly ApiCall<GetIamPolicyRequest, Policy> _callGetIamPolicy;
+        private readonly ApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.
@@ -884,6 +1238,7 @@ namespace Google.Pubsub.V1
             this.GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
             _clientHelper = new ClientHelper(effectiveSettings);
+            var grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
             _callCreateTopic = _clientHelper.BuildApiCall<Topic, Topic>(
                 GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic, effectiveSettings.CreateTopicSettings);
             _callPublish = _clientHelper.BuildApiCall<PublishRequest, PublishResponse>(
@@ -896,6 +1251,12 @@ namespace Google.Pubsub.V1
                 GrpcClient.ListTopicSubscriptionsAsync, GrpcClient.ListTopicSubscriptions, effectiveSettings.ListTopicSubscriptionsSettings);
             _callDeleteTopic = _clientHelper.BuildApiCall<DeleteTopicRequest, Empty>(
                 GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings);
+            _callSetIamPolicy = _clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
+                grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
+            _callGetIamPolicy = _clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
+                grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
+            _callTestIamPermissions = _clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
+                grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
         }
 
         /// <summary>
@@ -904,7 +1265,7 @@ namespace Google.Pubsub.V1
         public override Publisher.PublisherClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Creates the given topic with the given name.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -930,7 +1291,7 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates the given topic with the given name.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -956,13 +1317,15 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The messages in the request will be published on this topic.
         /// </param>
         /// <param name="messages">
-        ///
+        /// The messages to publish.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -982,13 +1345,15 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The messages in the request will be published on this topic.
         /// </param>
         /// <param name="messages">
-        ///
+        /// The messages to publish.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1008,10 +1373,10 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic to get.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1029,10 +1394,10 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets the configuration of a topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic to get.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1050,10 +1415,10 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        ///
+        /// The name of the cloud project that topics belong to.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1084,10 +1449,10 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        ///
+        /// The name of the cloud project that topics belong to.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1118,10 +1483,10 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists the name of the subscriptions for this topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic that subscriptions are attached to.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1152,10 +1517,10 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists the name of the subscriptions for this topic.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// The name of the topic that subscriptions are attached to.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1186,10 +1551,14 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// Name of the topic to delete.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1207,10 +1576,14 @@ namespace Google.Pubsub.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
         /// <param name="topic">
-        ///
+        /// Name of the topic to delete.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1224,6 +1597,182 @@ namespace Google.Pubsub.V1
                 new DeleteTopicRequest
                 {
                     Topic = topic,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Policy> SetIamPolicyAsync(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null) => _callSetIamPolicy.Async(
+                new SetIamPolicyRequest
+                {
+                    Resource = resource,
+                    Policy = policy,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Policy SetIamPolicy(
+            string resource,
+            Policy policy,
+            CallSettings callSettings = null) => _callSetIamPolicy.Sync(
+                new SetIamPolicyRequest
+                {
+                    Resource = resource,
+                    Policy = policy,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<Policy> GetIamPolicyAsync(
+            string resource,
+            CallSettings callSettings = null) => _callGetIamPolicy.Async(
+                new GetIamPolicyRequest
+                {
+                    Resource = resource,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Policy GetIamPolicy(
+            string resource,
+            CallSettings callSettings = null) => _callGetIamPolicy.Sync(
+                new GetIamPolicyRequest
+                {
+                    Resource = resource,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null) => _callTestIamPermissions.Async(
+                new TestIamPermissionsRequest
+                {
+                    Resource = resource,
+                    Permissions = { permissions },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            IEnumerable<string> permissions,
+            CallSettings callSettings = null) => _callTestIamPermissions.Sync(
+                new TestIamPermissionsRequest
+                {
+                    Resource = resource,
+                    Permissions = { permissions },
                 },
                 callSettings);
 

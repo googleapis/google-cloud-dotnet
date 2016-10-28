@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Monitoring.V3;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -137,7 +138,6 @@ namespace Google.Monitoring.V3.Snippets
         public async Task ListGroupMembersAsync()
         {
             // Snippet: ListGroupMembersAsync(string,string,int?,CallSettings)
-            // Additional: ListGroupMembersAsync(string,string,int?,CancellationToken)
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)

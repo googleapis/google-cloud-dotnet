@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Devtools.Cloudtrace.V1;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -134,7 +136,8 @@ namespace Google.Devtools.Cloudtrace.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
@@ -143,7 +146,7 @@ namespace Google.Devtools.Cloudtrace.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
-                retryFilter: NonIdempotentRetryFilter
+                retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
@@ -310,13 +313,17 @@ namespace Google.Devtools.Cloudtrace.V1
         }
 
         /// <summary>
-        ///
+        /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+        /// of a trace that you send matches that of an existing trace, any fields
+        /// in the existing trace and its spans are overwritten by the provided values,
+        /// and any new fields provided are merged with the existing trace data. If the
+        /// ID does not match, a new trace is created.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traces">
-        ///
+        /// The body of the message.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -333,13 +340,17 @@ namespace Google.Devtools.Cloudtrace.V1
         }
 
         /// <summary>
-        ///
+        /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+        /// of a trace that you send matches that of an existing trace, any fields
+        /// in the existing trace and its spans are overwritten by the provided values,
+        /// and any new fields provided are merged with the existing trace data. If the
+        /// ID does not match, a new trace is created.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traces">
-        ///
+        /// The body of the message.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -356,13 +367,17 @@ namespace Google.Devtools.Cloudtrace.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+        /// of a trace that you send matches that of an existing trace, any fields
+        /// in the existing trace and its spans are overwritten by the provided values,
+        /// and any new fields provided are merged with the existing trace data. If the
+        /// ID does not match, a new trace is created.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traces">
-        ///
+        /// The body of the message.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -379,13 +394,13 @@ namespace Google.Devtools.Cloudtrace.V1
         }
 
         /// <summary>
-        ///
+        /// Gets a single trace by its ID.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traceId">
-        ///
+        /// ID of the trace to return.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -402,13 +417,13 @@ namespace Google.Devtools.Cloudtrace.V1
         }
 
         /// <summary>
-        ///
+        /// Gets a single trace by its ID.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traceId">
-        ///
+        /// ID of the trace to return.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -425,13 +440,13 @@ namespace Google.Devtools.Cloudtrace.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Gets a single trace by its ID.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traceId">
-        ///
+        /// ID of the trace to return.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -448,10 +463,10 @@ namespace Google.Devtools.Cloudtrace.V1
         }
 
         /// <summary>
-        ///
+        /// Returns of a list of traces that match the specified filter conditions.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -477,10 +492,10 @@ namespace Google.Devtools.Cloudtrace.V1
         }
 
         /// <summary>
-        ///
+        /// Returns of a list of traces that match the specified filter conditions.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -541,13 +556,17 @@ namespace Google.Devtools.Cloudtrace.V1
         public override TraceService.TraceServiceClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+        /// of a trace that you send matches that of an existing trace, any fields
+        /// in the existing trace and its spans are overwritten by the provided values,
+        /// and any new fields provided are merged with the existing trace data. If the
+        /// ID does not match, a new trace is created.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traces">
-        ///
+        /// The body of the message.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -567,13 +586,17 @@ namespace Google.Devtools.Cloudtrace.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+        /// of a trace that you send matches that of an existing trace, any fields
+        /// in the existing trace and its spans are overwritten by the provided values,
+        /// and any new fields provided are merged with the existing trace data. If the
+        /// ID does not match, a new trace is created.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traces">
-        ///
+        /// The body of the message.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -593,13 +616,13 @@ namespace Google.Devtools.Cloudtrace.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets a single trace by its ID.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traceId">
-        ///
+        /// ID of the trace to return.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -619,13 +642,13 @@ namespace Google.Devtools.Cloudtrace.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets a single trace by its ID.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="traceId">
-        ///
+        /// ID of the trace to return.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -645,10 +668,10 @@ namespace Google.Devtools.Cloudtrace.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Returns of a list of traces that match the specified filter conditions.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -679,10 +702,10 @@ namespace Google.Devtools.Cloudtrace.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Returns of a list of traces that match the specified filter conditions.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// ID of the Cloud project where the trace data is stored.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.

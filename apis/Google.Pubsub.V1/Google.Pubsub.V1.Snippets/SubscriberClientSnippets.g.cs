@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,8 +16,10 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Iam.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Google.Pubsub.V1;
 using Grpc.Core;
 using System;
 using System.Collections;
@@ -90,7 +92,6 @@ namespace Google.Pubsub.V1.Snippets
         public async Task ListSubscriptionsAsync()
         {
             // Snippet: ListSubscriptionsAsync(string,string,int?,CallSettings)
-            // Additional: ListSubscriptionsAsync(string,string,int?,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
@@ -287,6 +288,85 @@ namespace Google.Pubsub.V1.Snippets
             PushConfig pushConfig = new PushConfig();
             // Make the request
             subscriberClient.ModifyPushConfig(formattedSubscription, pushConfig);
+            // End snippet
+        }
+
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
+            // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await subscriberClient.SetIamPolicyAsync(formattedResource, policy);
+            // End snippet
+        }
+
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string,Policy,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = subscriberClient.SetIamPolicy(formattedResource, policy);
+            // End snippet
+        }
+
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string,CallSettings)
+            // Additional: GetIamPolicyAsync(string,CancellationToken)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            // Make the request
+            Policy response = await subscriberClient.GetIamPolicyAsync(formattedResource);
+            // End snippet
+        }
+
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            // Make the request
+            Policy response = subscriberClient.GetIamPolicy(formattedResource);
+            // End snippet
+        }
+
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
+            // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            IEnumerable<string> permissions = new List<string>();
+            // Make the request
+            TestIamPermissionsResponse response = await subscriberClient.TestIamPermissionsAsync(formattedResource, permissions);
+            // End snippet
+        }
+
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            IEnumerable<string> permissions = new List<string>();
+            // Make the request
+            TestIamPermissionsResponse response = subscriberClient.TestIamPermissions(formattedResource, permissions);
             // End snippet
         }
 
