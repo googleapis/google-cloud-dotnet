@@ -18,3 +18,7 @@ releasebuild
 tmp
 googleapis
 toolkit
+
+# Testing
+integrationprogress.txt
+results.xml
