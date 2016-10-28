@@ -115,6 +115,7 @@ mkdir $OUTDIR
 $PROTOC \
   -I googleapis \
   -I $CORE_PROTOS_ROOT \
+  --include_source_info \
   -o $OUTDIR/protos.desc \
   $CORE_PROTOS_ROOT/google/protobuf/*.proto \
   `find googleapis -name '*.proto'`
