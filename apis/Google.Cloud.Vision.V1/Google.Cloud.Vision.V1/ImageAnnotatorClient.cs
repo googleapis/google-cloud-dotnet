@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Vision.V1;
 using Google.Protobuf.WellKnownTypes;

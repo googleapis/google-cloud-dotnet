@@ -17,8 +17,6 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Logging.V2;
-using Google.Logging.V2.WriteLogEntriesRequest.Types;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -884,7 +882,7 @@ namespace Google.Logging.V2
                 {
                     LogName = logName,
                     Resource = resource,
-                    Labels = labels,
+                    Labels = { labels },
                     Entries = { entries },
                 },
                 callSettings);
@@ -942,7 +940,7 @@ namespace Google.Logging.V2
                 {
                     LogName = logName,
                     Resource = resource,
-                    Labels = labels,
+                    Labels = { labels },
                     Entries = { entries },
                 },
                 callSettings);

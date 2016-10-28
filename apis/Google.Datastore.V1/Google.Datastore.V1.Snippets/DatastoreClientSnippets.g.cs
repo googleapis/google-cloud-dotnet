@@ -16,7 +16,6 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Datastore.V1;
-using Google.Datastore.V1.CommitRequest.Types;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -27,6 +26,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Datastore.V1.CommitRequest.Types;
 
 namespace Google.Datastore.V1.Snippets
 {

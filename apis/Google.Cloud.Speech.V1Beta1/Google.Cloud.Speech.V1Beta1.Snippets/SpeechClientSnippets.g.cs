@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Speech.V1beta1;
 using Google.Longrunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
