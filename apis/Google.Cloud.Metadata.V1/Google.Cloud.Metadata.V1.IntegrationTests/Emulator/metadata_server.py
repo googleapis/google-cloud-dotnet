@@ -513,6 +513,10 @@ FLAGS
   print "  %s %s=%s" % ("set" if os.name == 'nt' else "export", common.host_environment_variable, emulator_host)
   print "---------------------------------"
 
+  # If the process is killed while standard output is getting redirected, the output above
+  # may not make it to the consumer, so flush the output before running the server.
+  sys.stdout.flush()
+
   app.wsgi_app = HeaderCheckMiddleware(app.wsgi_app)
 
   while True:
