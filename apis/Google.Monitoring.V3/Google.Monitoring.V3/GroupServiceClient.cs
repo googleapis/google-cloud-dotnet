@@ -328,6 +328,7 @@ namespace Google.Monitoring.V3
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
+            "https://www.googleapis.com/auth/cloud-platform"
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
