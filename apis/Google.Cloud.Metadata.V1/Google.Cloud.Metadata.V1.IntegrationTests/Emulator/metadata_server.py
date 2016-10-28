@@ -18,13 +18,123 @@ from oauth2client import service_account
 from werkzeug.wrappers import Request
 import common, errno, getopt, json, logging, os, socket, string, sys, time
 
-numeric_project_id = 12345
-numeric_project_id_token = u'<NUMERIC_PROJECT_ID>'
-project_id = u'fake-project'
-project_id_token = u'<PROJECT_ID>'
+class ServerState:
+  _credential_scopes = ["https://www.googleapis.com/auth/cloud-platform",
+                        "https://www.googleapis.com/auth/userinfo.email"]
 
-credential_scopes = [ "https://www.googleapis.com/auth/cloud-platform", "https://www.googleapis.com/auth/userinfo.email" ]
-credentials = {}
+  def __init__(self, project_id, numeric_project_id, use_default_credentials, credentials_files):
+    self.project_id = project_id
+    self.numeric_project_id = numeric_project_id
+    
+    self._credentials = {}
+    if use_default_credentials:
+      self._useDefaultCredentials()
+    if credentials_files:
+      self._useCredentials(credentials_files)
+
+    self._loadData()
+
+  def _useCredentials(self, credentials_files):
+    for path in string.split(credentials_files, os.pathsep):
+      account_credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
+        path,
+        scopes = ServerState._credential_scopes)
+      self._credentials[account_credentials.service_account_email] = account_credentials
+
+  def _useDefaultCredentials(self):
+    self._credentials[u'default'] = service_account.ServiceAccountCredentials.get_application_default()
+
+  def _loadData(self):
+    with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'initial_data.json')) as initial_data_file:
+      self._all_data = json.load(initial_data_file, object_pairs_hook=OrderedDict)
+      indexed_lists = [
+        u'instance/disks',
+        u'instance/licenses',
+        u'instance/network-interfaces',
+        u'instance/network-interfaces/*/access-configs',
+        u'instance/network-interfaces/*/forwarded-ips',
+        u'instance/network-interfaces/*/ip-aliases'
+      ]
+      for indexed_list in indexed_lists:
+        components = indexed_list.split('/')
+        def process(data, i):
+          component = components[i]
+          if component == '*':
+            for item in data:
+              process(item, i + 1)
+          elif i == len(components) - 1:
+            data[component] = MetadataIndexedList(data[component])
+          else:
+            process(data[component], i + 1)
+
+        process(self._all_data, 0)
+
+      # Replace service-accounts if any credentials were specified via flags.
+      if len(self._credentials) != 0:
+        def make_service_account(email, account_credentials):
+          is_default = email == u'default'
+          return OrderedDict((
+              (u'aliases', [u'default'] if is_default else []),
+              (u'email', account_credentials.client_id if is_default else account_credentials.service_account_email),
+              (u'scopes', ServerState._credential_scopes),
+              (u'token', None) # Real values will be substituted here upon request.
+            ))
+        self._all_data[u'instance'][u'service-accounts'] = OrderedDict(
+          {email : make_service_account(email, self._credentials[email]) for email in self._credentials})
+
+      numeric_project_id_token = u'<NUMERIC_PROJECT_ID>'
+      project_id_token = u'<PROJECT_ID>'
+      def convertToMetadata(value):
+        if isinstance(value, OrderedDict):
+          result = OrderedDict()
+          for key in value:
+            new_key = key.replace(numeric_project_id_token, unicode(self.numeric_project_id))
+            new_key = new_key.replace(project_id_token, self.project_id)
+            result[new_key] = convertToMetadata(value[key])
+
+          return MetadataDict(result)
+
+        if isinstance(value, MetadataIndexedList):
+          return MetadataIndexedList([convertToMetadata(item) for item in value])
+
+        if isinstance(value, list):
+          return MetadataList([convertToMetadata(item) for item in value])
+
+        if isinstance(value, unicode):
+          if value == numeric_project_id_token:
+            return MetadataValue(self.numeric_project_id)
+
+          value = value.replace(numeric_project_id_token, unicode(self.numeric_project_id))
+          value = value.replace(project_id_token, self.project_id)
+          return MetadataString(value)
+
+        return MetadataValue(value)
+
+      self._all_data = convertToMetadata(self._all_data)
+
+  def getRawDataAt(self, path):
+    result = self._all_data
+    for component in path.split('/'):
+      if len(component) == 0:
+        continue
+
+      result = result.getChild(component)
+      if result is None:
+        return (None, not_found_error)
+
+    if path.endswith('/token'):
+      # Even though we might fully replace the result here, let the loop above run always so we ensure
+      # we have a path to a valid token at this point.
+      if len(self._credentials) != 0:
+        email = [component for component in path.split('/') if component][-2]
+        if email in self._credentials:
+          token_result = self._credentials[email].get_access_token()
+          result = MetadataDict(OrderedDict((
+            (u'access_token', MetadataString(token_result.access_token)),
+            (u'expires_in', MetadataValue(token_result.expires_in)),
+            (u'token_type', MetadataString(u'Bearer')))))
+
+    return (result, None)
 
 app = Flask(__name__)
 
@@ -234,89 +344,6 @@ class MetadataString(MetadataValue):
 not_found_error = formatResponse(u'Error: Not found', 404, common.content_type_html)
 bad_request_error = formatResponse(u'Error: bad request', 400, common.content_type_html)
 
-all_data = {}
-def loadData():
-  global all_data
-  global credential_scopes
-  global credentials
-
-  with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'initial_data.json')) as initial_data_file:
-    all_data = json.load(initial_data_file, object_pairs_hook=OrderedDict)
-    indexed_lists = [
-      u'instance/disks',
-      u'instance/licenses',
-      u'instance/network-interfaces',
-      u'instance/network-interfaces/*/access-configs',
-      u'instance/network-interfaces/*/forwarded-ips',
-      u'instance/network-interfaces/*/ip-aliases'
-    ]
-    for indexed_list in indexed_lists:
-      components = indexed_list.split('/')
-      def process(data, i):
-        component = components[i]
-        if component == '*':
-          for item in data:
-            process(item, i + 1)
-        elif i == len(components) - 1:
-          data[component] = MetadataIndexedList(data[component])
-        else:
-          process(data[component], i + 1)
-
-      process(all_data, 0)
-
-    # Replace service-accounts if any credentials were specified via flags.
-    if len(credentials) != 0:
-      def make_service_account(email, account_credentials):
-        is_default = email == u'default'
-        return OrderedDict((
-            (u'aliases', ([ u'default' ] if is_default else [])),
-            (u'email', (account_credentials.client_id if is_default else account_credentials.service_account_email)),
-            (u'scopes', credential_scopes),
-            (u'token', None) # Real values will be substituted here upon request.
-          ))
-      all_data[u'instance'][u'service-accounts'] = OrderedDict(
-        {email : make_service_account(email, credentials[email]) for email in credentials})
-
-    def convertToMetadata(value):
-      if isinstance(value, OrderedDict):
-        result = OrderedDict()
-        for key in value:
-          new_key = key.replace(numeric_project_id_token, unicode(numeric_project_id))
-          new_key = new_key.replace(project_id_token, project_id)
-          result[new_key] = convertToMetadata(value[key])
-
-        return MetadataDict(result)
-
-      if isinstance(value, MetadataIndexedList):
-        return MetadataIndexedList([convertToMetadata(item) for item in value])
-
-      if isinstance(value, list):
-        return MetadataList([convertToMetadata(item) for item in value])
-
-      if isinstance(value, unicode):
-        if value == numeric_project_id_token:
-          return MetadataValue(numeric_project_id)
-
-        value = value.replace(numeric_project_id_token, unicode(numeric_project_id))
-        value = value.replace(project_id_token, project_id)
-        return MetadataString(value)
-
-      return MetadataValue(value)
-
-    all_data = convertToMetadata(all_data)
-
-def getRawDataAt(parent_data, path):
-  result = parent_data
-  for component in path.split('/'):
-    if len(component) == 0:
-      continue
-
-    result = result.getChild(component)
-    if result is None:
-      return (None, not_found_error)
-
-  return (result, None)
-
 @app.after_request
 def add_headers(response):
   response.headers[common.server] = common.server_value
@@ -340,9 +367,7 @@ def getRootData():
 
 @app.route('/computeMetadata/v1/<path:path>', methods = ['GET'])
 def getData(path):
-  global all_data
-  global credentials
-
+  global state
   # TODO There are 500 max hanging gets (not sure if we need to enforce this)
   # TODO Actually handle waiting for changes and last_etag
 
@@ -367,7 +392,7 @@ def getData(path):
   if ends_with_slash:
     path = path[:-1]
 
-  (raw_data, error) = getRawDataAt(all_data, path)
+  (raw_data, error) = state.getRawDataAt(path)
   if error:
     return error
 
@@ -376,15 +401,6 @@ def getData(path):
     # Even though this acts like a directory, trailing slashes are not allowed for tokens.
     if ends_with_slash:
       return not_found_error
-
-    if len(credentials) != 0:
-      email = [component for component in path.split('/') if component][-2]
-      if email in credentials:
-        token_result = credentials[email].get_access_token()
-        raw_data = MetadataDict(OrderedDict((
-          (u'access_token', MetadataString(token_result.access_token)),
-          (u'expires_in', MetadataValue(token_result.expires_in)),
-          (u'token_type', MetadataString(u'Bearer')))))
 
     is_json = (alt != 'text')
     is_recursive = True
@@ -414,13 +430,9 @@ def getData(path):
                         common.content_type_json if is_json else common.content_type_text)
 
 if __name__ == '__main__':
-  test_project_id = project_id
-  project_id = os.environ.get('TEST_PROJECT')
 
-  port = None
-  is_for_testing = False
-  credentials_files = None
-  argv = sys.argv[1:]
+  fake_numeric_project_id = 12345
+  fake_project_id = u'fake-project'
   usage = """SYNOPSIS
      python metadata_server.py [-h] [-i <project_id>] [-d]
          [-c <json_credentials_files>] [-n <numeric_project_id>] [-t]
@@ -460,7 +472,18 @@ FLAGS
          A %s separated list of JSON files from which to obtain service account
          credentials for the emulated instance metadata. If this or
          --default_credentials are specified, the dummy service accounts will
-         not be used for the emulator.""" % (test_project_id, test_project_id, numeric_project_id, os.pathsep)
+         not be used for the emulator.""" % (fake_project_id,
+                                             fake_project_id,
+                                             fake_numeric_project_id,
+                                             os.pathsep)
+
+  port = None
+  is_for_testing = False
+  argv = sys.argv[1:]
+  project_id = None
+  numeric_project_id = None
+  use_default_credentials = False
+  credentials_files = None
   try:
     opts, args = getopt.getopt(argv, 'htdc:i:n:p:', ['help', 'test', "default_credentials", 'credentials=', 'id=', 'num_id=', 'port='])
   except getopt.GetoptError:
@@ -471,12 +494,11 @@ FLAGS
       print usage
       sys.exit()
     elif opt in ('-d', '--default_credentials'):
-      credentials[u'default'] = service_account.ServiceAccountCredentials.get_application_default()
+      use_default_credentials = True
     elif opt in ('-c', '--credentials'):
       credentials_files = arg
     elif opt in ('-i', '--id'):
       project_id = arg
-      test_project_id = arg
     elif opt in ('-n', '--num_id'):
       numeric_project_id = int(arg)
     elif opt in ('-t', '--test'):
@@ -484,17 +506,16 @@ FLAGS
     elif opt in ('-p', '--port'):
       port = int(arg)
 
-  if credentials_files:
-    for path in string.split(credentials_files, os.pathsep):
-      account_credentials = service_account.ServiceAccountCredentials.from_json_keyfile_name(
-        path,
-        scopes = credential_scopes)
-      credentials[account_credentials.service_account_email] = account_credentials
+  if not project_id:
+    if is_for_testing:
+      project_id = fake_project_id
+    else:
+      project_id = os.environ.get('TEST_PROJECT', fake_project_id)
 
-  if is_for_testing:
-    project_id = test_project_id
+  if not numeric_project_id:
+    numeric_project_id = fake_numeric_project_id
 
-  loadData()
+  state = ServerState(project_id, numeric_project_id, use_default_credentials, credentials_files)
 
   if not port:
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -506,8 +527,8 @@ FLAGS
 
   print "---------------------------------"
   print "Running Metadata Server Emulator with"
-  print "  Project ID: %s" %  project_id
-  print "  Numeric Project ID: %s" %  numeric_project_id
+  print "  Project ID: %s" %  state.project_id
+  print "  Numeric Project ID: %s" %  state.numeric_project_id
   print "---------------------------------"
   print "Use this environment variable to connect to the emulator"
   print "  %s %s=%s" % ("set" if os.name == 'nt' else "export", common.host_environment_variable, emulator_host)
