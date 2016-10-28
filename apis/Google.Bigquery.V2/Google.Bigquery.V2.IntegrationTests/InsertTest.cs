@@ -13,7 +13,9 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Xunit;
 
 namespace Google.Bigquery.V2.IntegrationTests
@@ -105,9 +107,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             table.Insert(row);
             // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = client.ExecuteQuery($"SELECT guid, position.x, position.y FROM {table} WHERE guid='{guid}'")
-                .PollUntilCompleted()
-                .GetRows()
+            var queryResults = WaitForRows(client, $"SELECT guid, position.x, position.y FROM {table} WHERE guid='{guid}'")
                 .Select(r => new { Guid = (string)r["guid"], X = (long)r["x"], Y = (long)r["y"] })
                 .ToList();
             var expectedResults = new[]
@@ -132,9 +132,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             table.Insert(row);
             // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = client.ExecuteQuery($"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid='{guid}' ORDER BY tag")
-                .PollUntilCompleted()
-                .GetRows()
+            var queryResults = WaitForRows(client, $"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid='{guid}' ORDER BY tag")
                 .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tag"] })
                 .ToList();
             var expectedResults = new[]
@@ -162,9 +160,7 @@ namespace Google.Bigquery.V2.IntegrationTests
             };
             table.Insert(row);
             // We know the format of Guid.ToString() is harmless. More care needed for arbitrary strings, of course!
-            var queryResults = client.ExecuteQuery($"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid='{guid}' ORDER BY name.first")
-                .PollUntilCompleted()
-                .GetRows()
+            var queryResults = WaitForRows(client, $"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid='{guid}' ORDER BY name.first")
                 .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["first"], LastName = (string)r["last"] })
                 .ToList();
             var expectedResults = new[]
@@ -173,6 +169,27 @@ namespace Google.Bigquery.V2.IntegrationTests
                 new { Guid = guid, FirstName = "x", LastName = "y" }
             };
             Assert.Equal(expectedResults, queryResults);
+        }
+
+        /// <summary>
+        /// Waits for a query to return a non-empty result set. Some inserts may take a few seconds before the results are visible
+        /// via queries - and much longer to show up in ListRows. (It looks like these are inserts with repeated fields and/or record fields.)
+        /// </summary>
+        private IEnumerable<BigqueryRow> WaitForRows(BigqueryClient client, string query)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                var rows = client.ExecuteQuery(query)
+                    .PollUntilCompleted()
+                    .GetRows()
+                    .ToList();
+                if (rows.Count > 0)
+                {
+                    return rows;
+                }
+                Thread.Sleep(1000);
+            }
+            throw new TimeoutException("Expected rows were not available after 5 seconds");
         }
 
         private InsertRow BuildRow(string player, long score, DateTime gameStarted) =>
