@@ -35,7 +35,7 @@ namespace Google.Monitoring.V3
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListGroups
+            // FIXME:Snippet: ListGroups
             GroupServiceClient client = GroupServiceClient.Create();
             string projectName = MetricServiceClient.FormatProjectName(projectId);
             IPagedEnumerable<ListGroupsResponse, Group> groups = client.ListGroups(projectName, "", "", "");
