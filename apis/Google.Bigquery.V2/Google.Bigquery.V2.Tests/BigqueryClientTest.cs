@@ -292,12 +292,13 @@ namespace Google.Bigquery.V2.Tests
         {
             var jobId = "job";
             var reference = GetJobReference(jobId);
-            var options = new PollJobOptions();
+            var options = new GetJobOptions();
+            var pollSettings = new PollSettings(Expiration.None, TimeSpan.Zero);
             VerifyEquivalent(new BigqueryJob(new DerivedBigqueryClient(), GetJob(reference)),
-                client => client.PollJobUntilCompleted(MatchesWhenSerialized(reference), options),
-                client => client.PollJobUntilCompleted(jobId, options),
-                client => client.PollJobUntilCompleted(ProjectId, jobId, options),
-                client => new BigqueryJob(client, GetJob(reference)).PollUntilCompleted(options));
+                client => client.PollJobUntilCompleted(MatchesWhenSerialized(reference), options, pollSettings),
+                client => client.PollJobUntilCompleted(jobId, options, pollSettings),
+                client => client.PollJobUntilCompleted(ProjectId, jobId, options, pollSettings),
+                client => new BigqueryJob(client, GetJob(reference)).PollUntilCompleted(options, pollSettings));
         }
 
         [Fact]
@@ -306,14 +307,14 @@ namespace Google.Bigquery.V2.Tests
             var jobId = "job";
             var reference = GetJobReference(jobId);
             var getQueryResultsOptions = new GetQueryResultsOptions();
-            var pollOptions = new PollJobOptions();
+            var pollSettings = new PollSettings(Expiration.None, TimeSpan.Zero);
             VerifyEquivalent(
                 new BigqueryQueryJob(new DerivedBigqueryClient(), new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions),
-                client => client.PollQueryUntilCompleted(MatchesWhenSerialized(reference), getQueryResultsOptions, pollOptions),
-                client => client.PollQueryUntilCompleted(jobId, getQueryResultsOptions, pollOptions),
-                client => client.PollQueryUntilCompleted(ProjectId, jobId, getQueryResultsOptions, pollOptions),
-                client => new BigqueryJob(client, GetJob(reference)).PollQueryUntilCompleted(getQueryResultsOptions, pollOptions),
-                client => new BigqueryQueryJob(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompleted(pollOptions));
+                client => client.PollQueryUntilCompleted(MatchesWhenSerialized(reference), getQueryResultsOptions, pollSettings),
+                client => client.PollQueryUntilCompleted(jobId, getQueryResultsOptions, pollSettings),
+                client => client.PollQueryUntilCompleted(ProjectId, jobId, getQueryResultsOptions, pollSettings),
+                client => new BigqueryJob(client, GetJob(reference)).PollQueryUntilCompleted(getQueryResultsOptions, pollSettings),
+                client => new BigqueryQueryJob(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompleted(pollSettings));
         }
 
         [Fact]

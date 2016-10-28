@@ -71,25 +71,11 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
-        public override BigqueryQueryJob PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollJobOptions pollOptions = null)
+        public override BigqueryQueryJob PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            pollOptions?.Validate();
-
-            DateTime? deadline = pollOptions?.GetEffectiveDeadline() ?? DateTime.SpecifyKind(DateTime.MaxValue, DateTimeKind.Utc);
-            long maxRequests = pollOptions?.MaxRequests ?? long.MaxValue;
-            TimeSpan interval = pollOptions?.Interval ?? TimeSpan.FromSeconds(1);
-
-            for (long i = 0; i < maxRequests && DateTime.UtcNow < deadline; i++)
-            {
-                var job = GetQueryJob(jobReference, options);
-                if (job.Completed)
-                {
-                    return job;
-                }
-                Thread.Sleep(interval);
-            }
-            throw new TimeoutException($"Job {jobReference.JobId} did not complete in time.");
+            return Polling.PollRepeatedly(ignoredDeadline => GetQueryJob(jobReference, options),
+                job => job.Completed, Clock, Scheduler, pollSettings ?? s_defaultPollSettings);
         }
 
         /// <inheritdoc />

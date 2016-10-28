@@ -71,11 +71,11 @@ namespace Google.Bigquery.V2
         /// <summary>
         /// Polls this query job until it has completed.
         /// </summary>
-        /// <param name="pollOptions">The options controlling polling. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
         /// <returns>This object, if it has already completed, or the results of polling repeatedly until
         /// the job has completed.</returns>
-        public BigqueryQueryJob PollUntilCompleted(PollJobOptions pollOptions = null) =>
-            Completed ? this : _client.PollQueryUntilCompleted(JobReference, _options, pollOptions: pollOptions);
+        public BigqueryQueryJob PollUntilCompleted(PollSettings pollSettings = null) =>
+            Completed ? this : _client.PollQueryUntilCompleted(JobReference, _options, pollSettings);
 
         // Note: this is a method rather than a property so that later we can add the async version.
 
@@ -85,7 +85,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <exception cref="InvalidOperationException">This object does not represent a completed job.</exception>
         /// <returns>A sequence of rows from the query results.</returns>
-        /// <seealso cref="PollUntilCompleted(PollJobOptions)"/>
+        /// <seealso cref="PollUntilCompleted(PollSettings)"/>
         public IEnumerable<BigqueryRow> GetRows()
         {
             if (!Completed)

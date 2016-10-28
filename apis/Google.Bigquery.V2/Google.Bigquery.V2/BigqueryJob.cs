@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 
 namespace Google.Bigquery.V2
@@ -84,17 +85,19 @@ namespace Google.Bigquery.V2
         /// Polls this job for completion.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
         /// <returns>The completed job.</returns>
-        public BigqueryJob PollUntilCompleted(PollJobOptions options = null) => _client.PollJobUntilCompleted(Reference, options);
+        public BigqueryJob PollUntilCompleted(GetJobOptions options = null, PollSettings pollSettings = null) =>
+            _client.PollJobUntilCompleted(Reference, options, pollSettings);
 
         /// <summary>
         /// Polls this job for completion, which must be a query job.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollOptions">The options controlling polling. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
         /// <returns>The completed job.</returns>
-        public BigqueryQueryJob PollQueryUntilCompleted(GetQueryResultsOptions options = null, PollJobOptions pollOptions = null) =>
-            _client.PollQueryUntilCompleted(Reference, options, pollOptions);
+        public BigqueryQueryJob PollQueryUntilCompleted(GetQueryResultsOptions options = null, PollSettings pollSettings = null) =>
+            _client.PollQueryUntilCompleted(Reference, options, pollSettings);
 
         /// <summary>
         /// Retrieves the result of this job, which must be a query job.
