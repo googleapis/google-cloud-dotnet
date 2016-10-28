@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Logging.V2;
+using Google.Logging.V2.WriteLogEntriesRequest.Types;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -91,7 +93,6 @@ namespace Google.Logging.V2.Snippets
         public async Task ListLogEntriesAsync()
         {
             // Snippet: ListLogEntriesAsync(IEnumerable<string>,string,string,string,int?,CallSettings)
-            // Additional: ListLogEntriesAsync(IEnumerable<string>,string,string,string,int?,CancellationToken)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)

@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,9 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Monitoring.V3;
+using Google.Monitoring.V3.ListTimeSeriesRequest.Types;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -25,7 +28,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Monitoring.V3.ListTimeSeriesRequest.Types;
 
 namespace Google.Monitoring.V3
 {
@@ -388,7 +390,6 @@ namespace Google.Monitoring.V3
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
-            "https://www.googleapis.com/auth/cloud-platform"
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
@@ -519,7 +520,8 @@ namespace Google.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -548,7 +550,8 @@ namespace Google.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -577,7 +580,10 @@ namespace Google.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The monitored resource descriptor to get.  The format is
+        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
+        /// The `{resource_type}` is a predefined type, such as
+        /// `cloudsql_database`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -596,7 +602,10 @@ namespace Google.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The monitored resource descriptor to get.  The format is
+        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
+        /// The `{resource_type}` is a predefined type, such as
+        /// `cloudsql_database`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -614,7 +623,10 @@ namespace Google.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The monitored resource descriptor to get.  The format is
+        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
+        /// The `{resource_type}` is a predefined type, such as
+        /// `cloudsql_database`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -633,7 +645,8 @@ namespace Google.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -662,7 +675,8 @@ namespace Google.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -691,7 +705,10 @@ namespace Google.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example value of `{metric_id}` is
+        /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -710,7 +727,10 @@ namespace Google.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example value of `{metric_id}` is
+        /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -728,7 +748,10 @@ namespace Google.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example value of `{metric_id}` is
+        /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -744,13 +767,17 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Creates a new metric descriptor.
+        /// User-created metric descriptors define
+        /// [custom metrics](/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="metricDescriptor">
-        ///
+        /// The new [custom metric](/monitoring/custom-metrics)
+        /// descriptor.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -767,13 +794,17 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Creates a new metric descriptor.
+        /// User-created metric descriptors define
+        /// [custom metrics](/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="metricDescriptor">
-        ///
+        /// The new [custom metric](/monitoring/custom-metrics)
+        /// descriptor.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -790,13 +821,17 @@ namespace Google.Monitoring.V3
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Creates a new metric descriptor.
+        /// User-created metric descriptors define
+        /// [custom metrics](/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="metricDescriptor">
-        ///
+        /// The new [custom metric](/monitoring/custom-metrics)
+        /// descriptor.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -813,10 +848,14 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Deletes a metric descriptor. Only user-created
+        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example of `{metric_id}` is:
+        /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -832,10 +871,14 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Deletes a metric descriptor. Only user-created
+        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example of `{metric_id}` is:
+        /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -850,10 +893,14 @@ namespace Google.Monitoring.V3
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Deletes a metric descriptor. Only user-created
+        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example of `{metric_id}` is:
+        /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -872,16 +919,25 @@ namespace Google.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// "projects/{project_id_or_number}".
         /// </param>
         /// <param name="filter">
+        /// A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
+        /// series should be returned.  The filter must specify a single metric type,
+        /// and can additionally specify metric labels and other information. For
+        /// example:
         ///
+        ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+        ///         metric.label.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        ///
+        /// The time interval for which results should be returned. Only time series
+        /// that contain data points in the specified interval are included
+        /// in the response.
         /// </param>
         /// <param name="view">
-        ///
+        /// Specifies which information is returned about the time series.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -913,16 +969,25 @@ namespace Google.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// "projects/{project_id_or_number}".
         /// </param>
         /// <param name="filter">
+        /// A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
+        /// series should be returned.  The filter must specify a single metric type,
+        /// and can additionally specify metric labels and other information. For
+        /// example:
         ///
+        ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+        ///         metric.label.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        ///
+        /// The time interval for which results should be returned. Only time series
+        /// that contain data points in the specified interval are included
+        /// in the response.
         /// </param>
         /// <param name="view">
-        ///
+        /// Specifies which information is returned about the time series.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -951,13 +1016,21 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Creates or adds data to one or more time series.
+        /// The response is empty if all time series in the request were written.
+        /// If any time series could not be written, a corresponding failure message is
+        /// included in the error response.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="timeSeries">
-        ///
+        /// The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -974,13 +1047,21 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Creates or adds data to one or more time series.
+        /// The response is empty if all time series in the request were written.
+        /// If any time series could not be written, a corresponding failure message is
+        /// included in the error response.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="timeSeries">
-        ///
+        /// The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -997,13 +1078,21 @@ namespace Google.Monitoring.V3
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Creates or adds data to one or more time series.
+        /// The response is empty if all time series in the request were written.
+        /// If any time series could not be written, a corresponding failure message is
+        /// included in the error response.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="timeSeries">
-        ///
+        /// The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1073,7 +1162,8 @@ namespace Google.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1107,7 +1197,8 @@ namespace Google.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1141,7 +1232,10 @@ namespace Google.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The monitored resource descriptor to get.  The format is
+        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
+        /// The `{resource_type}` is a predefined type, such as
+        /// `cloudsql_database`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1162,7 +1256,10 @@ namespace Google.Monitoring.V3
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The monitored resource descriptor to get.  The format is
+        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
+        /// The `{resource_type}` is a predefined type, such as
+        /// `cloudsql_database`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1183,7 +1280,8 @@ namespace Google.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1217,7 +1315,8 @@ namespace Google.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1251,7 +1350,10 @@ namespace Google.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example value of `{metric_id}` is
+        /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1272,7 +1374,10 @@ namespace Google.Monitoring.V3
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example value of `{metric_id}` is
+        /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1290,13 +1395,17 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates a new metric descriptor.
+        /// User-created metric descriptors define
+        /// [custom metrics](/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="metricDescriptor">
-        ///
+        /// The new [custom metric](/monitoring/custom-metrics)
+        /// descriptor.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1316,13 +1425,17 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates a new metric descriptor.
+        /// User-created metric descriptors define
+        /// [custom metrics](/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="metricDescriptor">
-        ///
+        /// The new [custom metric](/monitoring/custom-metrics)
+        /// descriptor.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1342,10 +1455,14 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a metric descriptor. Only user-created
+        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example of `{metric_id}` is:
+        /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1363,10 +1480,14 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a metric descriptor. Only user-created
+        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The metric descriptor on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+        /// An example of `{metric_id}` is:
+        /// `"custom.googleapis.com/my_test_metric"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1387,16 +1508,25 @@ namespace Google.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// "projects/{project_id_or_number}".
         /// </param>
         /// <param name="filter">
+        /// A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
+        /// series should be returned.  The filter must specify a single metric type,
+        /// and can additionally specify metric labels and other information. For
+        /// example:
         ///
+        ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+        ///         metric.label.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        ///
+        /// The time interval for which results should be returned. Only time series
+        /// that contain data points in the specified interval are included
+        /// in the response.
         /// </param>
         /// <param name="view">
-        ///
+        /// Specifies which information is returned about the time series.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1436,16 +1566,25 @@ namespace Google.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// "projects/{project_id_or_number}".
         /// </param>
         /// <param name="filter">
+        /// A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
+        /// series should be returned.  The filter must specify a single metric type,
+        /// and can additionally specify metric labels and other information. For
+        /// example:
         ///
+        ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+        ///         metric.label.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        ///
+        /// The time interval for which results should be returned. Only time series
+        /// that contain data points in the specified interval are included
+        /// in the response.
         /// </param>
         /// <param name="view">
-        ///
+        /// Specifies which information is returned about the time series.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1482,13 +1621,21 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates or adds data to one or more time series.
+        /// The response is empty if all time series in the request were written.
+        /// If any time series could not be written, a corresponding failure message is
+        /// included in the error response.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="timeSeries">
-        ///
+        /// The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1508,13 +1655,21 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates or adds data to one or more time series.
+        /// The response is empty if all time series in the request were written.
+        /// If any time series could not be written, a corresponding failure message is
+        /// included in the error response.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project on which to execute the request. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="timeSeries">
-        ///
+        /// The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

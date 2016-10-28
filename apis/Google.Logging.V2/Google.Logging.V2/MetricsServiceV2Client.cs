@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Logging.V2;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -411,10 +413,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Lists logs-based metrics.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource name containing the metrics.
+        /// Example: `"projects/my-project-id"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -440,10 +443,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Lists logs-based metrics.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource name containing the metrics.
+        /// Example: `"projects/my-project-id"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -469,10 +473,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Gets a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the desired metric.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -488,10 +493,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Gets a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the desired metric.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -506,10 +512,11 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Gets a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the desired metric.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -525,13 +532,17 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Creates a logs-based metric.
         /// </summary>
         /// <param name="parent">
+        /// The resource name of the project in which to create the metric.
+        /// Example: `"projects/my-project-id"`.
         ///
+        /// The new metric must be provided in the request.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The new logs-based metric, which must not have an identifier that
+        /// already exists.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -548,13 +559,17 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Creates a logs-based metric.
         /// </summary>
         /// <param name="parent">
+        /// The resource name of the project in which to create the metric.
+        /// Example: `"projects/my-project-id"`.
         ///
+        /// The new metric must be provided in the request.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The new logs-based metric, which must not have an identifier that
+        /// already exists.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -571,13 +586,17 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Creates a logs-based metric.
         /// </summary>
         /// <param name="parent">
+        /// The resource name of the project in which to create the metric.
+        /// Example: `"projects/my-project-id"`.
         ///
+        /// The new metric must be provided in the request.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The new logs-based metric, which must not have an identifier that
+        /// already exists.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -594,13 +613,20 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Creates or updates a logs-based metric.
         /// </summary>
         /// <param name="metricName">
+        /// The resource name of the metric to update.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
+        /// The updated metric must be provided in the request and have the
+        /// same identifier that is specified in `metricName`.
+        /// If the metric does not exist, it is created.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The updated metric, whose name must be the same as the
+        /// metric identifier in `metricName`. If `metricName` does not
+        /// exist, then a new metric is created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -617,13 +643,20 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Creates or updates a logs-based metric.
         /// </summary>
         /// <param name="metricName">
+        /// The resource name of the metric to update.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
+        /// The updated metric must be provided in the request and have the
+        /// same identifier that is specified in `metricName`.
+        /// If the metric does not exist, it is created.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The updated metric, whose name must be the same as the
+        /// metric identifier in `metricName`. If `metricName` does not
+        /// exist, then a new metric is created.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -640,13 +673,20 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Creates or updates a logs-based metric.
         /// </summary>
         /// <param name="metricName">
+        /// The resource name of the metric to update.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
+        /// The updated metric must be provided in the request and have the
+        /// same identifier that is specified in `metricName`.
+        /// If the metric does not exist, it is created.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The updated metric, whose name must be the same as the
+        /// metric identifier in `metricName`. If `metricName` does not
+        /// exist, then a new metric is created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -663,10 +703,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Deletes a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the metric to delete.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -682,10 +723,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Deletes a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the metric to delete.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -700,10 +742,11 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Deletes a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the metric to delete.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -760,10 +803,11 @@ namespace Google.Logging.V2
         public override MetricsServiceV2.MetricsServiceV2Client GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Lists logs-based metrics.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource name containing the metrics.
+        /// Example: `"projects/my-project-id"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -794,10 +838,11 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists logs-based metrics.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource name containing the metrics.
+        /// Example: `"projects/my-project-id"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -828,10 +873,11 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the desired metric.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -849,10 +895,11 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the desired metric.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -870,13 +917,17 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates a logs-based metric.
         /// </summary>
         /// <param name="parent">
+        /// The resource name of the project in which to create the metric.
+        /// Example: `"projects/my-project-id"`.
         ///
+        /// The new metric must be provided in the request.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The new logs-based metric, which must not have an identifier that
+        /// already exists.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -896,13 +947,17 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates a logs-based metric.
         /// </summary>
         /// <param name="parent">
+        /// The resource name of the project in which to create the metric.
+        /// Example: `"projects/my-project-id"`.
         ///
+        /// The new metric must be provided in the request.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The new logs-based metric, which must not have an identifier that
+        /// already exists.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -922,13 +977,20 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates or updates a logs-based metric.
         /// </summary>
         /// <param name="metricName">
+        /// The resource name of the metric to update.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
+        /// The updated metric must be provided in the request and have the
+        /// same identifier that is specified in `metricName`.
+        /// If the metric does not exist, it is created.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The updated metric, whose name must be the same as the
+        /// metric identifier in `metricName`. If `metricName` does not
+        /// exist, then a new metric is created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -948,13 +1010,20 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates or updates a logs-based metric.
         /// </summary>
         /// <param name="metricName">
+        /// The resource name of the metric to update.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         ///
+        /// The updated metric must be provided in the request and have the
+        /// same identifier that is specified in `metricName`.
+        /// If the metric does not exist, it is created.
         /// </param>
         /// <param name="metric">
-        ///
+        /// The updated metric, whose name must be the same as the
+        /// metric identifier in `metricName`. If `metricName` does not
+        /// exist, then a new metric is created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -974,10 +1043,11 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the metric to delete.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -995,10 +1065,11 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a logs-based metric.
         /// </summary>
         /// <param name="metricName">
-        ///
+        /// The resource name of the metric to delete.
+        /// Example: `"projects/my-project-id/metrics/my-metric-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Devtools.Clouderrorreporting.V1beta1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -324,13 +325,22 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Lists the specified groups.
         /// </summary>
         /// <param name="projectName">
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as <code>projects/</code> plus the
+        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
+        /// Platform project ID</a>.
         ///
+        /// Example: <code>projects/my-project-123</code>.
         /// </param>
         /// <param name="timeRange">
-        ///
+        /// [Required] List data for the given time range.
+        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
+        /// range are returned, unless the request contains an explicit group_id list.
+        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
+        /// occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -357,13 +367,22 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Lists the specified groups.
         /// </summary>
         /// <param name="projectName">
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as <code>projects/</code> plus the
+        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
+        /// Platform project ID</a>.
         ///
+        /// Example: <code>projects/my-project-123</code>.
         /// </param>
         /// <param name="timeRange">
-        ///
+        /// [Required] List data for the given time range.
+        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
+        /// range are returned, unless the request contains an explicit group_id list.
+        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
+        /// occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -390,13 +409,16 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Lists the specified events.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
-        ///
+        /// [Required] The group for which events shall be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -423,13 +445,16 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Lists the specified events.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
-        ///
+        /// [Required] The group for which events shall be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -456,10 +481,13 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -475,10 +503,13 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -493,10 +524,13 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -547,13 +581,22 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         public override ErrorStatsService.ErrorStatsServiceClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Lists the specified groups.
         /// </summary>
         /// <param name="projectName">
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as <code>projects/</code> plus the
+        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
+        /// Platform project ID</a>.
         ///
+        /// Example: <code>projects/my-project-123</code>.
         /// </param>
         /// <param name="timeRange">
-        ///
+        /// [Required] List data for the given time range.
+        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
+        /// range are returned, unless the request contains an explicit group_id list.
+        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
+        /// occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -586,13 +629,22 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists the specified groups.
         /// </summary>
         /// <param name="projectName">
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as <code>projects/</code> plus the
+        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
+        /// Platform project ID</a>.
         ///
+        /// Example: <code>projects/my-project-123</code>.
         /// </param>
         /// <param name="timeRange">
-        ///
+        /// [Required] List data for the given time range.
+        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
+        /// range are returned, unless the request contains an explicit group_id list.
+        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
+        /// occurrences are returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -625,13 +677,16 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists the specified events.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
-        ///
+        /// [Required] The group for which events shall be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -664,13 +719,16 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists the specified events.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
-        ///
+        /// [Required] The group for which events shall be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -703,10 +761,13 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -724,10 +785,13 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes all error events of a given project.
         /// </summary>
         /// <param name="projectName">
-        ///
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

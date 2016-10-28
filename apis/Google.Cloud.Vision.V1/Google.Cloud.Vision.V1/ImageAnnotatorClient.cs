@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Vision.V1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -245,10 +245,10 @@ namespace Google.Cloud.Vision.V1
         }
 
         /// <summary>
-        ///
+        /// Run image detection and annotation for a batch of images.
         /// </summary>
         /// <param name="requests">
-        ///
+        /// Individual image annotation requests for this batch.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -264,10 +264,10 @@ namespace Google.Cloud.Vision.V1
         }
 
         /// <summary>
-        ///
+        /// Run image detection and annotation for a batch of images.
         /// </summary>
         /// <param name="requests">
-        ///
+        /// Individual image annotation requests for this batch.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -282,10 +282,10 @@ namespace Google.Cloud.Vision.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Run image detection and annotation for a batch of images.
         /// </summary>
         /// <param name="requests">
-        ///
+        /// Individual image annotation requests for this batch.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -330,10 +330,10 @@ namespace Google.Cloud.Vision.V1
         public override ImageAnnotator.ImageAnnotatorClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Run image detection and annotation for a batch of images.
         /// </summary>
         /// <param name="requests">
-        ///
+        /// Individual image annotation requests for this batch.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -351,10 +351,10 @@ namespace Google.Cloud.Vision.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Run image detection and annotation for a batch of images.
         /// </summary>
         /// <param name="requests">
-        ///
+        /// Individual image annotation requests for this batch.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

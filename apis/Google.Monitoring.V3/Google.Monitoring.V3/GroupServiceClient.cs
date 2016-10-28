@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Monitoring.V3;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -326,7 +328,6 @@ namespace Google.Monitoring.V3
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
-            "https://www.googleapis.com/auth/cloud-platform"
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
@@ -435,10 +436,11 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to retrieve. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -454,10 +456,11 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to retrieve. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -472,10 +475,11 @@ namespace Google.Monitoring.V3
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to retrieve. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -491,13 +495,15 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project in which to create the group. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        ///
+        /// A group definition. It is an error to define the `name` field because
+        /// the system assigns the name.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -514,13 +520,15 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project in which to create the group. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        ///
+        /// A group definition. It is an error to define the `name` field because
+        /// the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -537,13 +545,15 @@ namespace Google.Monitoring.V3
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project in which to create the group. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        ///
+        /// A group definition. It is an error to define the `name` field because
+        /// the system assigns the name.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -560,10 +570,12 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Updates an existing group.
+        /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        ///
+        /// The new definition of the group.  All fields of the existing group,
+        /// excepting `name`, are replaced with the corresponding fields of this group.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -579,10 +591,12 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Updates an existing group.
+        /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        ///
+        /// The new definition of the group.  All fields of the existing group,
+        /// excepting `name`, are replaced with the corresponding fields of this group.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -597,10 +611,12 @@ namespace Google.Monitoring.V3
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Updates an existing group.
+        /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        ///
+        /// The new definition of the group.  All fields of the existing group,
+        /// excepting `name`, are replaced with the corresponding fields of this group.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -616,10 +632,11 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to delete. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -635,10 +652,11 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to delete. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -653,10 +671,11 @@ namespace Google.Monitoring.V3
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to delete. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -672,10 +691,11 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Lists the monitored resources that are members of a group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group whose members are listed. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -701,10 +721,11 @@ namespace Google.Monitoring.V3
         }
 
         /// <summary>
-        ///
+        /// Lists the monitored resources that are members of a group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group whose members are listed. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -774,10 +795,11 @@ namespace Google.Monitoring.V3
         public override GroupService.GroupServiceClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to retrieve. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -795,10 +817,11 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets a single group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to retrieve. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -816,13 +839,15 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project in which to create the group. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        ///
+        /// A group definition. It is an error to define the `name` field because
+        /// the system assigns the name.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -842,13 +867,15 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The project in which to create the group. The format is
+        /// `"projects/{project_id_or_number}"`.
         /// </param>
         /// <param name="group">
-        ///
+        /// A group definition. It is an error to define the `name` field because
+        /// the system assigns the name.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -868,10 +895,12 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Updates an existing group.
+        /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        ///
+        /// The new definition of the group.  All fields of the existing group,
+        /// excepting `name`, are replaced with the corresponding fields of this group.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -889,10 +918,12 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Updates an existing group.
+        /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        ///
+        /// The new definition of the group.  All fields of the existing group,
+        /// excepting `name`, are replaced with the corresponding fields of this group.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -910,10 +941,11 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to delete. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -931,10 +963,11 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes an existing group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group to delete. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -952,10 +985,11 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists the monitored resources that are members of a group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group whose members are listed. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -986,10 +1020,11 @@ namespace Google.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists the monitored resources that are members of a group.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The group whose members are listed. The format is
+        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.

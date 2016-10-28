@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Monitoring.V3;
+using Google.Monitoring.V3.ListTimeSeriesRequest.Types;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -27,7 +29,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Monitoring.V3.ListTimeSeriesRequest.Types;
 
 namespace Google.Monitoring.V3.Snippets
 {
@@ -36,7 +37,6 @@ namespace Google.Monitoring.V3.Snippets
         public async Task ListMonitoredResourceDescriptorsAsync()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(string,string,int?,CallSettings)
-            // Additional: ListMonitoredResourceDescriptorsAsync(string,string,int?,CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
@@ -127,7 +127,6 @@ namespace Google.Monitoring.V3.Snippets
         public async Task ListMetricDescriptorsAsync()
         {
             // Snippet: ListMetricDescriptorsAsync(string,string,int?,CallSettings)
-            // Additional: ListMetricDescriptorsAsync(string,string,int?,CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
@@ -270,7 +269,6 @@ namespace Google.Monitoring.V3.Snippets
         public async Task ListTimeSeriesAsync()
         {
             // Snippet: ListTimeSeriesAsync(string,string,TimeInterval,TimeSeriesView,string,int?,CallSettings)
-            // Additional: ListTimeSeriesAsync(string,string,TimeInterval,TimeSeriesView,string,int?,CancellationToken)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)

@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,8 +16,10 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Iam.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Google.Pubsub.V1;
 using Grpc.Core;
 using System;
 using System.Collections;
@@ -123,7 +125,6 @@ namespace Google.Pubsub.V1.Snippets
         public async Task ListTopicsAsync()
         {
             // Snippet: ListTopicsAsync(string,string,int?,CallSettings)
-            // Additional: ListTopicsAsync(string,string,int?,CancellationToken)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
@@ -189,7 +190,6 @@ namespace Google.Pubsub.V1.Snippets
         public async Task ListTopicSubscriptionsAsync()
         {
             // Snippet: ListTopicSubscriptionsAsync(string,string,int?,CallSettings)
-            // Additional: ListTopicSubscriptionsAsync(string,string,int?,CancellationToken)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
@@ -274,6 +274,85 @@ namespace Google.Pubsub.V1.Snippets
             string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
             // Make the request
             publisherClient.DeleteTopic(formattedTopic);
+            // End snippet
+        }
+
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
+            // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await publisherClient.SetIamPolicyAsync(formattedResource, policy);
+            // End snippet
+        }
+
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string,Policy,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = publisherClient.SetIamPolicy(formattedResource, policy);
+            // End snippet
+        }
+
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string,CallSettings)
+            // Additional: GetIamPolicyAsync(string,CancellationToken)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            // Make the request
+            Policy response = await publisherClient.GetIamPolicyAsync(formattedResource);
+            // End snippet
+        }
+
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            // Make the request
+            Policy response = publisherClient.GetIamPolicy(formattedResource);
+            // End snippet
+        }
+
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
+            // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            IEnumerable<string> permissions = new List<string>();
+            // Make the request
+            TestIamPermissionsResponse response = await publisherClient.TestIamPermissionsAsync(formattedResource, permissions);
+            // End snippet
+        }
+
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string,IEnumerable<string>,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            IEnumerable<string> permissions = new List<string>();
+            // Make the request
+            TestIamPermissionsResponse response = publisherClient.TestIamPermissions(formattedResource, permissions);
             // End snippet
         }
 

@@ -1,21 +1,37 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//     * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
 //
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Longrunning;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -353,10 +369,12 @@ namespace Google.Longrunning
         }
 
         /// <summary>
-        ///
+        /// Gets the latest state of a long-running operation.  Clients can use this
+        /// method to poll the operation result at intervals as recommended by the API
+        /// service.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -372,10 +390,12 @@ namespace Google.Longrunning
         }
 
         /// <summary>
-        ///
+        /// Gets the latest state of a long-running operation.  Clients can use this
+        /// method to poll the operation result at intervals as recommended by the API
+        /// service.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -390,10 +410,12 @@ namespace Google.Longrunning
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Gets the latest state of a long-running operation.  Clients can use this
+        /// method to poll the operation result at intervals as recommended by the API
+        /// service.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -409,13 +431,17 @@ namespace Google.Longrunning
         }
 
         /// <summary>
+        /// Lists operations that match the specified filter in the request. If the
+        /// server doesn't support this method, it returns `UNIMPLEMENTED`.
         ///
+        /// NOTE: the `name` binding below allows API services to override the binding
+        /// to use different resource name schemes, such as `users/*/operations`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation collection.
         /// </param>
         /// <param name="filter">
-        ///
+        /// The standard list filter.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -442,13 +468,17 @@ namespace Google.Longrunning
         }
 
         /// <summary>
+        /// Lists operations that match the specified filter in the request. If the
+        /// server doesn't support this method, it returns `UNIMPLEMENTED`.
         ///
+        /// NOTE: the `name` binding below allows API services to override the binding
+        /// to use different resource name schemes, such as `users/*/operations`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation collection.
         /// </param>
         /// <param name="filter">
-        ///
+        /// The standard list filter.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -475,10 +505,19 @@ namespace Google.Longrunning
         }
 
         /// <summary>
-        ///
+        /// Starts asynchronous cancellation on a long-running operation.  The server
+        /// makes a best effort to cancel the operation, but success is not
+        /// guaranteed.  If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// operation completed despite cancellation. On successful cancellation,
+        /// the operation is not deleted; instead, it becomes an operation with
+        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be cancelled.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -494,10 +533,19 @@ namespace Google.Longrunning
         }
 
         /// <summary>
-        ///
+        /// Starts asynchronous cancellation on a long-running operation.  The server
+        /// makes a best effort to cancel the operation, but success is not
+        /// guaranteed.  If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// operation completed despite cancellation. On successful cancellation,
+        /// the operation is not deleted; instead, it becomes an operation with
+        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be cancelled.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -512,10 +560,19 @@ namespace Google.Longrunning
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Starts asynchronous cancellation on a long-running operation.  The server
+        /// makes a best effort to cancel the operation, but success is not
+        /// guaranteed.  If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// operation completed despite cancellation. On successful cancellation,
+        /// the operation is not deleted; instead, it becomes an operation with
+        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be cancelled.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -531,10 +588,13 @@ namespace Google.Longrunning
         }
 
         /// <summary>
-        ///
+        /// Deletes a long-running operation. This method indicates that the client is
+        /// no longer interested in the operation result. It does not cancel the
+        /// operation. If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be deleted.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -550,10 +610,13 @@ namespace Google.Longrunning
         }
 
         /// <summary>
-        ///
+        /// Deletes a long-running operation. This method indicates that the client is
+        /// no longer interested in the operation result. It does not cancel the
+        /// operation. If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be deleted.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -568,10 +631,13 @@ namespace Google.Longrunning
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Deletes a long-running operation. This method indicates that the client is
+        /// no longer interested in the operation result. It does not cancel the
+        /// operation. If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be deleted.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -625,10 +691,12 @@ namespace Google.Longrunning
         public override Operations.OperationsClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Gets the latest state of a long-running operation.  Clients can use this
+        /// method to poll the operation result at intervals as recommended by the API
+        /// service.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -646,10 +714,12 @@ namespace Google.Longrunning
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets the latest state of a long-running operation.  Clients can use this
+        /// method to poll the operation result at intervals as recommended by the API
+        /// service.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -667,13 +737,17 @@ namespace Google.Longrunning
                 callSettings);
 
         /// <summary>
+        /// Lists operations that match the specified filter in the request. If the
+        /// server doesn't support this method, it returns `UNIMPLEMENTED`.
         ///
+        /// NOTE: the `name` binding below allows API services to override the binding
+        /// to use different resource name schemes, such as `users/*/operations`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation collection.
         /// </param>
         /// <param name="filter">
-        ///
+        /// The standard list filter.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -706,13 +780,17 @@ namespace Google.Longrunning
                 callSettings);
 
         /// <summary>
+        /// Lists operations that match the specified filter in the request. If the
+        /// server doesn't support this method, it returns `UNIMPLEMENTED`.
         ///
+        /// NOTE: the `name` binding below allows API services to override the binding
+        /// to use different resource name schemes, such as `users/*/operations`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation collection.
         /// </param>
         /// <param name="filter">
-        ///
+        /// The standard list filter.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -745,10 +823,19 @@ namespace Google.Longrunning
                 callSettings);
 
         /// <summary>
-        ///
+        /// Starts asynchronous cancellation on a long-running operation.  The server
+        /// makes a best effort to cancel the operation, but success is not
+        /// guaranteed.  If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// operation completed despite cancellation. On successful cancellation,
+        /// the operation is not deleted; instead, it becomes an operation with
+        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be cancelled.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -766,10 +853,19 @@ namespace Google.Longrunning
                 callSettings);
 
         /// <summary>
-        ///
+        /// Starts asynchronous cancellation on a long-running operation.  The server
+        /// makes a best effort to cancel the operation, but success is not
+        /// guaranteed.  If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// operation completed despite cancellation. On successful cancellation,
+        /// the operation is not deleted; instead, it becomes an operation with
+        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be cancelled.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -787,10 +883,13 @@ namespace Google.Longrunning
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a long-running operation. This method indicates that the client is
+        /// no longer interested in the operation result. It does not cancel the
+        /// operation. If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be deleted.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -808,10 +907,13 @@ namespace Google.Longrunning
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a long-running operation. This method indicates that the client is
+        /// no longer interested in the operation result. It does not cancel the
+        /// operation. If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.
         /// </summary>
         /// <param name="name">
-        ///
+        /// The name of the operation resource to be deleted.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

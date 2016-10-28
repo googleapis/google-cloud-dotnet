@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,9 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Logging.V2;
+using Google.Logging.V2.WriteLogEntriesRequest.Types;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -422,10 +425,12 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Deletes a log and all its log entries.
+        /// The log will reappear if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Required. The resource name of the log to delete.  Example:
+        /// `"projects/my-project/logs/syslog"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -441,10 +446,12 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Deletes a log and all its log entries.
+        /// The log will reappear if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Required. The resource name of the log to delete.  Example:
+        /// `"projects/my-project/logs/syslog"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -459,10 +466,12 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Deletes a log and all its log entries.
+        /// The log will reappear if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Required. The resource name of the log to delete.  Example:
+        /// `"projects/my-project/logs/syslog"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -478,19 +487,41 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Optional. A default log resource name that is assigned to all log entries
+        /// in `entries` that do not specify a value for `log_name`.  Example:
+        /// `"projects/my-project/logs/syslog"`.  See
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
+        /// Optional. A default monitored resource object that is assigned to all log
+        /// entries in `entries` that do not specify a value for `resource`. Example:
         ///
+        ///     { "type": "gce_instance",
+        ///       "labels": {
+        ///         "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
+        ///
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="labels">
-        ///
+        /// Optional. Default labels that are added to the `labels` field of all log
+        /// entries in `entries`. If a log entry already has a label with the same key
+        /// as a label in this parameter, then the log entry's label is not changed.
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
+        /// Required. The log entries to write. Values supplied for the fields
+        /// `log_name`, `resource`, and `labels` in this `entries.write` request are
+        /// added to those log entries that do not provide their own values for the
+        /// fields.
         ///
+        /// To improve throughput and to avoid exceeding the
+        /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
+        /// you should write multiple log entries at once rather than
+        /// calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -509,19 +540,41 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Optional. A default log resource name that is assigned to all log entries
+        /// in `entries` that do not specify a value for `log_name`.  Example:
+        /// `"projects/my-project/logs/syslog"`.  See
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
+        /// Optional. A default monitored resource object that is assigned to all log
+        /// entries in `entries` that do not specify a value for `resource`. Example:
         ///
+        ///     { "type": "gce_instance",
+        ///       "labels": {
+        ///         "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
+        ///
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="labels">
-        ///
+        /// Optional. Default labels that are added to the `labels` field of all log
+        /// entries in `entries`. If a log entry already has a label with the same key
+        /// as a label in this parameter, then the log entry's label is not changed.
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
+        /// Required. The log entries to write. Values supplied for the fields
+        /// `log_name`, `resource`, and `labels` in this `entries.write` request are
+        /// added to those log entries that do not provide their own values for the
+        /// fields.
         ///
+        /// To improve throughput and to avoid exceeding the
+        /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
+        /// you should write multiple log entries at once rather than
+        /// calling this method for each individual log entry.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -542,19 +595,41 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Optional. A default log resource name that is assigned to all log entries
+        /// in `entries` that do not specify a value for `log_name`.  Example:
+        /// `"projects/my-project/logs/syslog"`.  See
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
+        /// Optional. A default monitored resource object that is assigned to all log
+        /// entries in `entries` that do not specify a value for `resource`. Example:
         ///
+        ///     { "type": "gce_instance",
+        ///       "labels": {
+        ///         "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
+        ///
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="labels">
-        ///
+        /// Optional. Default labels that are added to the `labels` field of all log
+        /// entries in `entries`. If a log entry already has a label with the same key
+        /// as a label in this parameter, then the log entry's label is not changed.
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
+        /// Required. The log entries to write. Values supplied for the fields
+        /// `log_name`, `resource`, and `labels` in this `entries.write` request are
+        /// added to those log entries that do not provide their own values for the
+        /// fields.
         ///
+        /// To improve throughput and to avoid exceeding the
+        /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
+        /// you should write multiple log entries at once rather than
+        /// calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -573,16 +648,29 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Lists log entries.  Use this method to retrieve log entries from Cloud
+        /// Logging.  For ways to export log entries, see
+        /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="projectIds">
-        ///
+        /// Deprecated. One or more project identifiers or project numbers from which
+        /// to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
+        /// present, these project identifiers are converted to resource format and
+        /// added to the list of resources in `resourceNames`. Callers should use
+        /// `resourceNames` rather than this parameter.
         /// </param>
         /// <param name="filter">
-        ///
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries.
         /// </param>
         /// <param name="orderBy">
-        ///
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of `LogEntry.insertId`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -610,16 +698,29 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Lists log entries.  Use this method to retrieve log entries from Cloud
+        /// Logging.  For ways to export log entries, see
+        /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="projectIds">
-        ///
+        /// Deprecated. One or more project identifiers or project numbers from which
+        /// to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
+        /// present, these project identifiers are converted to resource format and
+        /// added to the list of resources in `resourceNames`. Callers should use
+        /// `resourceNames` rather than this parameter.
         /// </param>
         /// <param name="filter">
-        ///
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries.
         /// </param>
         /// <param name="orderBy">
-        ///
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of `LogEntry.insertId`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -685,10 +786,12 @@ namespace Google.Logging.V2
         public override LoggingServiceV2.LoggingServiceV2Client GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Deletes a log and all its log entries.
+        /// The log will reappear if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Required. The resource name of the log to delete.  Example:
+        /// `"projects/my-project/logs/syslog"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -706,10 +809,12 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a log and all its log entries.
+        /// The log will reappear if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Required. The resource name of the log to delete.  Example:
+        /// `"projects/my-project/logs/syslog"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -727,19 +832,41 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Optional. A default log resource name that is assigned to all log entries
+        /// in `entries` that do not specify a value for `log_name`.  Example:
+        /// `"projects/my-project/logs/syslog"`.  See
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
+        /// Optional. A default monitored resource object that is assigned to all log
+        /// entries in `entries` that do not specify a value for `resource`. Example:
         ///
+        ///     { "type": "gce_instance",
+        ///       "labels": {
+        ///         "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
+        ///
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="labels">
-        ///
+        /// Optional. Default labels that are added to the `labels` field of all log
+        /// entries in `entries`. If a log entry already has a label with the same key
+        /// as a label in this parameter, then the log entry's label is not changed.
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
+        /// Required. The log entries to write. Values supplied for the fields
+        /// `log_name`, `resource`, and `labels` in this `entries.write` request are
+        /// added to those log entries that do not provide their own values for the
+        /// fields.
         ///
+        /// To improve throughput and to avoid exceeding the
+        /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
+        /// you should write multiple log entries at once rather than
+        /// calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -757,25 +884,47 @@ namespace Google.Logging.V2
                 {
                     LogName = logName,
                     Resource = resource,
-                    Labels = { labels },
+                    Labels = labels,
                     Entries = { entries },
                 },
                 callSettings);
 
         /// <summary>
-        ///
+        /// Writes log entries to Stackdriver Logging.  All log entries are
+        /// written by this method.
         /// </summary>
         /// <param name="logName">
-        ///
+        /// Optional. A default log resource name that is assigned to all log entries
+        /// in `entries` that do not specify a value for `log_name`.  Example:
+        /// `"projects/my-project/logs/syslog"`.  See
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
+        /// Optional. A default monitored resource object that is assigned to all log
+        /// entries in `entries` that do not specify a value for `resource`. Example:
         ///
+        ///     { "type": "gce_instance",
+        ///       "labels": {
+        ///         "zone": "us-central1-a", "instance_id": "00000000000000000000" }}
+        ///
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="labels">
-        ///
+        /// Optional. Default labels that are added to the `labels` field of all log
+        /// entries in `entries`. If a log entry already has a label with the same key
+        /// as a label in this parameter, then the log entry's label is not changed.
+        /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
+        /// Required. The log entries to write. Values supplied for the fields
+        /// `log_name`, `resource`, and `labels` in this `entries.write` request are
+        /// added to those log entries that do not provide their own values for the
+        /// fields.
         ///
+        /// To improve throughput and to avoid exceeding the
+        /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
+        /// you should write multiple log entries at once rather than
+        /// calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -793,22 +942,35 @@ namespace Google.Logging.V2
                 {
                     LogName = logName,
                     Resource = resource,
-                    Labels = { labels },
+                    Labels = labels,
                     Entries = { entries },
                 },
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists log entries.  Use this method to retrieve log entries from Cloud
+        /// Logging.  For ways to export log entries, see
+        /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="projectIds">
-        ///
+        /// Deprecated. One or more project identifiers or project numbers from which
+        /// to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
+        /// present, these project identifiers are converted to resource format and
+        /// added to the list of resources in `resourceNames`. Callers should use
+        /// `resourceNames` rather than this parameter.
         /// </param>
         /// <param name="filter">
-        ///
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries.
         /// </param>
         /// <param name="orderBy">
-        ///
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of `LogEntry.insertId`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -843,16 +1005,29 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists log entries.  Use this method to retrieve log entries from Cloud
+        /// Logging.  For ways to export log entries, see
+        /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="projectIds">
-        ///
+        /// Deprecated. One or more project identifiers or project numbers from which
+        /// to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
+        /// present, these project identifiers are converted to resource format and
+        /// added to the list of resources in `resourceNames`. Callers should use
+        /// `resourceNames` rather than this parameter.
         /// </param>
         /// <param name="filter">
-        ///
+        /// Optional. A filter that chooses which log entries to return.  See [Advanced
+        /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
+        /// match the filter are returned.  An empty filter matches all log entries.
         /// </param>
         /// <param name="orderBy">
-        ///
+        /// Optional. How the results should be sorted.  Presently, the only permitted
+        /// values are `"timestamp asc"` (default) and `"timestamp desc"`. The first
+        /// option returns entries in order of increasing values of
+        /// `LogEntry.timestamp` (oldest first), and the second option returns entries
+        /// in order of decreasing timestamps (newest first).  Entries with equal
+        /// timestamps are returned in order of `LogEntry.insertId`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.

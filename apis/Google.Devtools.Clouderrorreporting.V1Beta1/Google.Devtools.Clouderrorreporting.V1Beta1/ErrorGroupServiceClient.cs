@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Devtools.Clouderrorreporting.V1beta1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -295,10 +295,17 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
+        /// [Required] The group resource name. Written as
+        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
+        /// Call
+        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
+        /// <code>groupStats.list</code></a> to return a list of groups belonging to
+        /// this project.
         ///
+        /// Example: <code>projects/my-project-123/groups/my-group</code>
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -314,10 +321,17 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
+        /// [Required] The group resource name. Written as
+        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
+        /// Call
+        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
+        /// <code>groupStats.list</code></a> to return a list of groups belonging to
+        /// this project.
         ///
+        /// Example: <code>projects/my-project-123/groups/my-group</code>
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -332,10 +346,17 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
+        /// [Required] The group resource name. Written as
+        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
+        /// Call
+        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
+        /// <code>groupStats.list</code></a> to return a list of groups belonging to
+        /// this project.
         ///
+        /// Example: <code>projects/my-project-123/groups/my-group</code>
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -351,10 +372,11 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Replace the data for the specified group.
+        /// Fails if the group does not exist.
         /// </summary>
         /// <param name="group">
-        ///
+        /// [Required] The group which replaces the resource on the server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -370,10 +392,11 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         }
 
         /// <summary>
-        ///
+        /// Replace the data for the specified group.
+        /// Fails if the group does not exist.
         /// </summary>
         /// <param name="group">
-        ///
+        /// [Required] The group which replaces the resource on the server.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -388,10 +411,11 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Replace the data for the specified group.
+        /// Fails if the group does not exist.
         /// </summary>
         /// <param name="group">
-        ///
+        /// [Required] The group which replaces the resource on the server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -439,10 +463,17 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         public override ErrorGroupService.ErrorGroupServiceClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
+        /// [Required] The group resource name. Written as
+        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
+        /// Call
+        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
+        /// <code>groupStats.list</code></a> to return a list of groups belonging to
+        /// this project.
         ///
+        /// Example: <code>projects/my-project-123/groups/my-group</code>
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -460,10 +491,17 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
+        /// [Required] The group resource name. Written as
+        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
+        /// Call
+        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
+        /// <code>groupStats.list</code></a> to return a list of groups belonging to
+        /// this project.
         ///
+        /// Example: <code>projects/my-project-123/groups/my-group</code>
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -481,10 +519,11 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Replace the data for the specified group.
+        /// Fails if the group does not exist.
         /// </summary>
         /// <param name="group">
-        ///
+        /// [Required] The group which replaces the resource on the server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -502,10 +541,11 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Replace the data for the specified group.
+        /// Fails if the group does not exist.
         /// </summary>
         /// <param name="group">
-        ///
+        /// [Required] The group which replaces the resource on the server.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

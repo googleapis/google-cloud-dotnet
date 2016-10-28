@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Logging.V2;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -411,10 +413,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Lists sinks.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The cloud resource containing the sinks.
+        /// Example: `"projects/my-logging-project"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -440,10 +443,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Lists sinks.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The cloud resource containing the sinks.
+        /// Example: `"projects/my-logging-project"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -469,10 +473,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Gets a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to return.
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -488,10 +493,11 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Gets a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to return.
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -506,10 +512,11 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Gets a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to return.
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -525,13 +532,16 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Creates a sink.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource in which to create the sink.
+        /// Example: `"projects/my-project-id"`.
+        /// The new sink must be provided in the request.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The new sink, whose `name` parameter is a sink identifier that
+        /// is not already in use.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -548,13 +558,16 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Creates a sink.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource in which to create the sink.
+        /// Example: `"projects/my-project-id"`.
+        /// The new sink must be provided in the request.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The new sink, whose `name` parameter is a sink identifier that
+        /// is not already in use.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -571,13 +584,16 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Creates a sink.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource in which to create the sink.
+        /// Example: `"projects/my-project-id"`.
+        /// The new sink must be provided in the request.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The new sink, whose `name` parameter is a sink identifier that
+        /// is not already in use.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -594,13 +610,17 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Updates or creates a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to update, including the parent
+        /// resource and the sink identifier.  If the sink does not exist, this method
+        /// creates the sink.  Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sinkName`.  If `sinkName` does not exist, then
+        /// this method creates a new sink.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -617,13 +637,17 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Updates or creates a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to update, including the parent
+        /// resource and the sink identifier.  If the sink does not exist, this method
+        /// creates the sink.  Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sinkName`.  If `sinkName` does not exist, then
+        /// this method creates a new sink.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -640,13 +664,17 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Updates or creates a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to update, including the parent
+        /// resource and the sink identifier.  If the sink does not exist, this method
+        /// creates the sink.  Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sinkName`.  If `sinkName` does not exist, then
+        /// this method creates a new sink.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -663,10 +691,13 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Deletes a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to delete, including the parent
+        /// resource and the sink identifier.  Example:
+        /// `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if the sink
+        /// does not exist.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -682,10 +713,13 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        ///
+        /// Deletes a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to delete, including the parent
+        /// resource and the sink identifier.  Example:
+        /// `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if the sink
+        /// does not exist.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -700,10 +734,13 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Deletes a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to delete, including the parent
+        /// resource and the sink identifier.  Example:
+        /// `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if the sink
+        /// does not exist.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -760,10 +797,11 @@ namespace Google.Logging.V2
         public override ConfigServiceV2.ConfigServiceV2Client GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Lists sinks.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The cloud resource containing the sinks.
+        /// Example: `"projects/my-logging-project"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -794,10 +832,11 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Lists sinks.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The cloud resource containing the sinks.
+        /// Example: `"projects/my-logging-project"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -828,10 +867,11 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to return.
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -849,10 +889,11 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Gets a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to return.
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -870,13 +911,16 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates a sink.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource in which to create the sink.
+        /// Example: `"projects/my-project-id"`.
+        /// The new sink must be provided in the request.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The new sink, whose `name` parameter is a sink identifier that
+        /// is not already in use.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -896,13 +940,16 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Creates a sink.
         /// </summary>
         /// <param name="parent">
-        ///
+        /// Required. The resource in which to create the sink.
+        /// Example: `"projects/my-project-id"`.
+        /// The new sink must be provided in the request.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The new sink, whose `name` parameter is a sink identifier that
+        /// is not already in use.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -922,13 +969,17 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Updates or creates a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to update, including the parent
+        /// resource and the sink identifier.  If the sink does not exist, this method
+        /// creates the sink.  Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sinkName`.  If `sinkName` does not exist, then
+        /// this method creates a new sink.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -948,13 +999,17 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Updates or creates a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to update, including the parent
+        /// resource and the sink identifier.  If the sink does not exist, this method
+        /// creates the sink.  Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="sink">
-        ///
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sinkName`.  If `sinkName` does not exist, then
+        /// this method creates a new sink.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -974,10 +1029,13 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to delete, including the parent
+        /// resource and the sink identifier.  Example:
+        /// `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if the sink
+        /// does not exist.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -995,10 +1053,13 @@ namespace Google.Logging.V2
                 callSettings);
 
         /// <summary>
-        ///
+        /// Deletes a sink.
         /// </summary>
         /// <param name="sinkName">
-        ///
+        /// Required. The resource name of the sink to delete, including the parent
+        /// resource and the sink identifier.  Example:
+        /// `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if the sink
+        /// does not exist.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

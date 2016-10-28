@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using Google.Api.Gax.Grpc;
+using Google.Devtools.Clouderrorreporting.V1beta1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -38,9 +39,9 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
             string formattedProjectName = ReportErrorsServiceClient.FormatProjectName("[PROJECT]");
-            ReportedErrorEvent @event = new ReportedErrorEvent();
+            ReportedErrorEvent event = new ReportedErrorEvent();
             // Make the request
-            ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(formattedProjectName, @event);
+            ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(formattedProjectName, event);
             // End snippet
         }
 
@@ -51,9 +52,9 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
             string formattedProjectName = ReportErrorsServiceClient.FormatProjectName("[PROJECT]");
-            ReportedErrorEvent @event = new ReportedErrorEvent();
+            ReportedErrorEvent event = new ReportedErrorEvent();
             // Make the request
-            ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(formattedProjectName, @event);
+            ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(formattedProjectName, event);
             // End snippet
         }
 

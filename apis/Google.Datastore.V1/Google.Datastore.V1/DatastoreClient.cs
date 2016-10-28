@@ -1,4 +1,4 @@
-// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Datastore.V1;
+using Google.Datastore.V1.CommitRequest.Types;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -25,7 +26,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Datastore.V1.CommitRequest.Types;
 
 namespace Google.Datastore.V1
 {
@@ -400,16 +400,16 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Looks up entities by key.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this lookup request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// Keys of entities to look up.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -427,16 +427,16 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Looks up entities by key.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this lookup request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// Keys of entities to look up.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -455,16 +455,16 @@ namespace Google.Datastore.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Looks up entities by key.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this lookup request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// Keys of entities to look up.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -482,19 +482,22 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="query">
-        ///
+        /// The query to run.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -513,19 +516,22 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="query">
-        ///
+        /// The query to run.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -546,19 +552,22 @@ namespace Google.Datastore.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="query">
-        ///
+        /// The query to run.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -577,19 +586,22 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="gqlQuery">
-        ///
+        /// The GQL query to run.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -608,19 +620,22 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="gqlQuery">
-        ///
+        /// The GQL query to run.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -641,19 +656,22 @@ namespace Google.Datastore.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="gqlQuery">
-        ///
+        /// The GQL query to run.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -672,10 +690,10 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Begins a new transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -691,10 +709,10 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Begins a new transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -709,10 +727,10 @@ namespace Google.Datastore.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Begins a new transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -728,19 +746,34 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -759,19 +792,34 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -792,19 +840,34 @@ namespace Google.Datastore.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -823,16 +886,29 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -850,16 +926,29 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -878,16 +967,29 @@ namespace Google.Datastore.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -905,13 +1007,14 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Rolls back a transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The transaction identifier, returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -928,13 +1031,14 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Rolls back a transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The transaction identifier, returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -951,13 +1055,14 @@ namespace Google.Datastore.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Rolls back a transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The transaction identifier, returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -974,13 +1079,15 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// A list of keys with incomplete key paths for which to allocate IDs.
+        /// No key may be reserved/read-only.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -997,13 +1104,15 @@ namespace Google.Datastore.V1
         }
 
         /// <summary>
-        ///
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// A list of keys with incomplete key paths for which to allocate IDs.
+        /// No key may be reserved/read-only.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -1020,13 +1129,15 @@ namespace Google.Datastore.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        ///
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// A list of keys with incomplete key paths for which to allocate IDs.
+        /// No key may be reserved/read-only.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1087,16 +1198,16 @@ namespace Google.Datastore.V1
         public override Datastore.DatastoreClient GrpcClient { get; }
 
         /// <summary>
-        ///
+        /// Looks up entities by key.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this lookup request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// Keys of entities to look up.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1118,16 +1229,16 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Looks up entities by key.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this lookup request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// Keys of entities to look up.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1149,19 +1260,22 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="query">
-        ///
+        /// The query to run.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1185,19 +1299,22 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="query">
-        ///
+        /// The query to run.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1221,19 +1338,22 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="gqlQuery">
-        ///
+        /// The GQL query to run.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1257,19 +1377,22 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Queries for entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="partitionId">
-        ///
+        /// Entities are partitioned into subsets, identified by a partition ID.
+        /// Queries are scoped to a single partition.
+        /// This partition ID is normalized with the standard default context
+        /// partition ID.
         /// </param>
         /// <param name="readOptions">
-        ///
+        /// The options for this query.
         /// </param>
         /// <param name="gqlQuery">
-        ///
+        /// The GQL query to run.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1293,10 +1416,10 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Begins a new transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1314,10 +1437,10 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Begins a new transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1335,19 +1458,34 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1371,19 +1509,34 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The identifier of the transaction associated with the commit. A
+        /// transaction identifier is returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1407,16 +1560,29 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1438,16 +1604,29 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="mode">
-        ///
+        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
         /// </param>
         /// <param name="mutations">
+        /// The mutations to perform.
         ///
+        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+        /// applied in order. The following sequences of mutations affecting a single
+        /// entity are not permitted in a single `Commit` request:
+        ///
+        /// - `insert` followed by `insert`
+        /// - `update` followed by `insert`
+        /// - `upsert` followed by `insert`
+        /// - `delete` followed by `update`
+        ///
+        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+        /// entity.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1469,13 +1648,14 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Rolls back a transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The transaction identifier, returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1495,13 +1675,14 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Rolls back a transaction.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="transaction">
-        ///
+        /// The transaction identifier, returned by a call to
+        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1521,13 +1702,15 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// A list of keys with incomplete key paths for which to allocate IDs.
+        /// No key may be reserved/read-only.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1547,13 +1730,15 @@ namespace Google.Datastore.V1
                 callSettings);
 
         /// <summary>
-        ///
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
         /// </summary>
         /// <param name="projectId">
-        ///
+        /// The ID of the project against which to make the request.
         /// </param>
         /// <param name="keys">
-        ///
+        /// A list of keys with incomplete key paths for which to allocate IDs.
+        /// No key may be reserved/read-only.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
