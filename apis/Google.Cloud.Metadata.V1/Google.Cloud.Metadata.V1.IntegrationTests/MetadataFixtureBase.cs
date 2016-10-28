@@ -20,6 +20,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
+using System.Text;
 using Xunit;
 
 namespace Google.Cloud.Metadata.V1.IntegrationTests
@@ -31,6 +32,8 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
     {
         private const string EmulatorEnvironmentVariable = "METADATA_EMULATOR_HOST";
 
+        private readonly StringBuilder emulatorErrorOutput = new StringBuilder();
+        private readonly StringBuilder emulatorOutput = new StringBuilder();
         private readonly Process emulatorProcess;
         private readonly string emulatorPath;
 
@@ -63,14 +66,46 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
             Environment.SetEnvironmentVariable(EmulatorEnvironmentVariable, $"localhost:{port}");
 
-            emulatorProcess = Process.Start("python", $"{emulatorFilePath} --test --port {port}");
-            emulatorProcess.EnableRaisingEvents = true;
+            var startInfo = new ProcessStartInfo("python", $"{emulatorFilePath} --test --port {port}");
+            startInfo.RedirectStandardError = true;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.UseShellExecute = false;
+            emulatorProcess = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
             emulatorProcess.Exited += EmulatorProcess_Exited;
+            emulatorProcess.OutputDataReceived += (sender, e) =>
+            {
+                if (e.Data != null)
+                {
+                    emulatorOutput.AppendLine(e.Data);
+                }
+            };
+            emulatorProcess.ErrorDataReceived += (sender, e) =>
+            {
+                if (e.Data != null)
+                {
+                    emulatorErrorOutput.AppendLine(e.Data);
+                }
+            };
+            emulatorProcess.Start();
+            emulatorProcess.BeginOutputReadLine();
+            emulatorProcess.BeginErrorReadLine();
         }
 
         private void EmulatorProcess_Exited(object sender, EventArgs e)
         {
-            throw new InvalidOperationException("The metadata server emulator exited with code " + emulatorProcess.ExitCode);
+            var message = $"The metadata server emulator exited with code {emulatorProcess.ExitCode}";
+
+            var output = emulatorOutput.ToString();
+            if (!string.IsNullOrEmpty(output))
+            {
+                message += $"\nOutput:\n-------\n{output}\n--------------------";
+            }
+            var error = emulatorErrorOutput.ToString();
+            if (!string.IsNullOrEmpty(error))
+            {
+                message += $"\nError Output:\n-------------\n{error}\n--------------------";
+            }
+            throw new InvalidOperationException(message);
         }
 
         public void Dispose()
