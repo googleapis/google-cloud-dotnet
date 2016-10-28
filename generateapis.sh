@@ -127,12 +127,8 @@ generate_api Google.Logging.V2 google/logging/v2 logging.yaml google/logging/typ
 generate_api Google.Devtools.Cloudtrace.V1 google/devtools/cloudtrace/v1 trace.yaml
 generate_api Google.Devtools.Clouderrorreporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
 generate_api Google.Longrunning google/longrunning longrunning/longrunning.yaml
-
-# TODO: Work out a better way of expressing this dependency; we don't want
-# to generate the code for IAM, just know that it exists.
 generate_api Google.Pubsub.V1 google/pubsub/v1 pubsub.yaml
-# TODO: Get the YAML files this relies on checked in, or work out an
-# alternative.
-generate_api Google.Iam.V1 google/iam/v1 iam_metaapi.yaml
 generate_api Google.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Monitoring.V3 google/monitoring/v3 monitoring.yaml
+
+# TODO: Generate just the grpc/protos for IAM.
