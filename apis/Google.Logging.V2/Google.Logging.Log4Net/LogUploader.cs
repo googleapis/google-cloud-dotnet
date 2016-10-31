@@ -133,7 +133,7 @@ namespace Google.Logging.Log4Net
                 {
                     // Always retry, regardless of error, as there's nothing much else to be done.
                     await _scheduler.Delay(errorDelay);
-                    errorDelay = errorDelay.Scale(_serverErrorBackoffSettings.DelayMultiplier);
+                    errorDelay = new TimeSpan((long)(errorDelay.Ticks * _serverErrorBackoffSettings.DelayMultiplier));
                     if (errorDelay > _serverErrorBackoffSettings.MaxDelay)
                     {
                         errorDelay = _serverErrorBackoffSettings.MaxDelay;
