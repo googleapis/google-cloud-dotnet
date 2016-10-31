@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from collections import OrderedDict
-import common, datetime, json, os, urllib2
+import common, datetime, json, os, urllib, urllib2
 
 # These tests can be run with pytest: http://doc.pytest.org/en/latest/index.html
 
@@ -23,6 +23,7 @@ except KeyError:
   raise Exception('%s must be set' % common.host_environment_variable)
 
 request_template = server_address + '/computeMetadata/v1/{}'
+update_template = server_address + '/emulator/v1/update/{}'
 
 def check_header(headers, url, key, value):
   assert headers.get(key.lower()) == value
@@ -31,8 +32,8 @@ def expect_content_absolute(url, expected, expected_content_type, expect_metadat
   request = urllib2.Request(url, headers={common.metadata_flavor : common.metadata_flavor_google})
   try:
     response = urllib2.urlopen(request)
-  except urllib2.URLError:
-    raise Exception('The emulator cannot be reached at %s' % server_address)
+  except urllib2.URLError as e:
+    raise Exception('Error connecting to emulator at %s - %s' % (server_address, e))
 
   headers = response.info().dict
 
@@ -67,8 +68,30 @@ def expect_error(path, expected_code, metadata_flavor_value=common.metadata_flav
     check_header(e.headers, url, common.server, common.server_value)
     check_header(e.headers, url, common.content_type, common.content_type_html)
     assert e.code == expected_code
-  except urllib2.URLError:
-    raise Exception('The emulator cannot be reached at %s' % server_address)
+  except urllib2.URLError as e:
+    raise Exception('Error connecting to emulator at %s - %s' % (server_address, e))
+
+def expect_error_updating_content(path, new_data, expected_code):
+  if not isinstance(new_data, str):
+    new_data = json.dumps(new_data, separators=(',', ':'))
+
+  data = urllib.urlencode({'data': new_data})
+  url = update_template.format(path)
+  request = urllib2.Request(url,
+                            data,
+                            headers={common.metadata_flavor: common.metadata_flavor_google})
+  
+  try:
+    response = urllib2.urlopen(request)
+    # This will always fail but I'm asserting so the response appears in the test results
+    assert response.read() is None
+  except urllib2.HTTPError as e:
+    check_header(e.headers, url, common.metadata_flavor, common.metadata_flavor_google)
+    check_header(e.headers, url, common.server, common.server_value)
+    check_header(e.headers, url, common.content_type, common.content_type_html)
+    assert e.code == expected_code
+  except urllib2.URLError as e:
+    raise Exception('Error connecting to emulator at %s - %s' % (server_address, e))
 
 def check_path(path, expected, default='text'):
   expected_json = json.dumps(expected, separators=(',', ':'))
@@ -129,6 +152,20 @@ def check_dir_recursive(path, expected, test_trailing_slash=True, use_recursive_
   expect_content(path + query, expected, common.content_type_json, expect_metadata_header)
   if test_trailing_slash:
     expect_content(path + '/' + query, expected, common.content_type_json, expect_metadata_header)
+
+def update_content(path, new_data):
+  if not isinstance(new_data, str):
+    new_data = json.dumps(new_data, separators=(',', ':'))
+
+  data = urllib.urlencode({'data': new_data})
+  request = urllib2.Request(update_template.format(path),
+                            data,
+                            headers={common.metadata_flavor: common.metadata_flavor_google})
+  
+  try:
+    urllib2.urlopen(request)
+  except urllib2.URLError as e:
+    raise Exception('Error connecting to emulator at %s - %s' % (server_address, e))
 
 def test_root():
   check_dir_absolute(server_address, '0.1/\ncomputeMetadata/\n')
@@ -330,6 +367,9 @@ def test_recursive_token_4():
                       use_recursive_field=True,
                       expect_metadata_header=False)
 
+def test_recursive_instance_attributes():
+  check_dir_recursive('instance/attributes', '{"my_instance_key1":"my_instance_value1"}')
+
 def test_recursive_instance_disks():
   check_dir_recursive('instance/disks', '[{"deviceName":"boot","index":0,"mode":"READ_WRITE","type":"PERSISTENT"}]')
 
@@ -455,3 +495,88 @@ def test_timeout_sec():
   end = datetime.datetime.now()
   elapsed = end - start
   assert elapsed.seconds > 5
+
+def test_update_string():
+  path = 'instance/cpu-platform'
+  original = 'Intel Haswell'
+  changed = 'My Platform'
+
+  check_path(path, original)
+  update_content(path, changed)
+  try:
+    check_path(path, changed)
+  finally:
+    update_content(path, original)
+
+def test_update_int():
+  path = 'instance/id'
+  original = 67890
+  changed = 43985743985
+
+  check_path(path, original)
+  update_content(path, changed)
+  try:
+    check_path(path, changed)
+  finally:
+    update_content(path, original)
+
+def test_update_indexed_list():
+  path = 'instance/licenses'
+  original = [
+      {
+        "id": "0"
+      }
+    ]
+  changed = [
+      {
+        "id": "42"
+      },
+      {
+        "id": "43587"
+      }
+    ]
+
+  check_dir_recursive(path, json.dumps(original, separators=(',', ':')))
+  update_content(path, changed)
+  try:
+    check_dir_recursive(path, json.dumps(changed, separators=(',', ':')))
+  finally:
+    update_content(path, original)
+
+def test_update_list():
+  path = 'instance/tags'
+  original = ['a', 'b', 'c']
+  changed = ['tag1', 'tag2']
+
+  check_path(path, original, default='json')
+  update_content(path, changed)
+  try:
+    check_path(path, changed, default='json')
+  finally:
+    update_content(path, original)
+
+def test_update_directory():
+  path = 'instance/attributes'
+  original = {'my_instance_key1':
+              'my_instance_value1'}
+  changed = {'abc': 'value1',
+             'xyz': 'value2'}
+
+  check_dir_recursive(path, json.dumps(original, separators=(',', ':')))
+  update_content(path, changed)
+  try:
+    check_dir_recursive(path, json.dumps(changed, separators=(',', ':')))
+  finally:
+    update_content(path, original)
+
+def test_update_invalid_path():
+  path = 'instance/foo'
+  changed = 'bar'
+  expect_error_updating_content(path, changed, 404)
+
+def test_update_invalid_value():
+  path = 'instance/attributes'
+  changed = {'abc': 'value1',
+             'complex' : { 'foo': 'bar' },
+             'xyz': 'value2'}
+  expect_error_updating_content(path, changed, 400)
