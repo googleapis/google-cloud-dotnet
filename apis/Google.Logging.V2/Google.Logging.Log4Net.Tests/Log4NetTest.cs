@@ -238,7 +238,7 @@ namespace Google.Logging.Log4Net.Tests
             Assert.Equal(2, uploadedEntries.Count);
             // Check the "lost-entries" payload text and timestamp are correct
             Assert.Equal(string.Format(s_lostMsg, TimeOfs(0), TimeOfs(3)), uploadedEntries[0].TextPayload);
-            Assert.Equal(fakeClock.GetCurrentDateTimeUtc(), uploadedEntries[0].Timestamp());
+            Assert.Equal(fakeClock.GetCurrentDateTimeUtc(), uploadedEntries[0].Timestamp.ToDateTime());
             // Check the single successfully logged message is correct
             Assert.Equal("Message4", uploadedEntries[1].TextPayload.Trim());
         }

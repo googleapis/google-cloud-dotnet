@@ -20,24 +20,18 @@ namespace Google.Logging.Log4Net
 {
     internal static class Extensions
     {
-        private static readonly DateTime s_epochZero = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-
-        public static DateTime Timestamp(this LogEntry entry) =>
-            s_epochZero
-                + TimeSpan.FromSeconds(entry.Timestamp.Seconds)
-                + TimeSpan.FromTicks(entry.Timestamp.Nanos / 100);
-
         public static Timestamp ToTimestamp(this DateTime dt)
         {
-            TimeSpan sinceEpoch = dt - s_epochZero;
-            return new Timestamp
+            switch (dt.Kind)
             {
-                Seconds = sinceEpoch.Ticks / TimeSpan.TicksPerSecond,
-                Nanos = (int)((sinceEpoch.Ticks % TimeSpan.TicksPerSecond) * (1000000000L / TimeSpan.TicksPerSecond))
-            };
+                case DateTimeKind.Local:
+                    dt = dt.ToUniversalTime();
+                    break;
+                case DateTimeKind.Unspecified:
+                    dt = DateTime.SpecifyKind(dt, DateTimeKind.Utc);
+                    break;
+            }
+            return Timestamp.FromDateTime(dt);
         }
-
-        public static TimeSpan Scale(this TimeSpan dt, double scale) =>
-            new TimeSpan((long)(dt.Ticks * scale));
     }
 }

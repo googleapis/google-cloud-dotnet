@@ -59,11 +59,11 @@ namespace Google.Logging.Log4Net
                         _currentMemorySize -= lostEntry.Size;
                         if (lostRange == null)
                         {
-                            lostRange = new DateTimeRange(lostEntry.LogEntryExtra.Entry.Timestamp(), lostEntry.LogEntryExtra.Entry.Timestamp());
+                            lostRange = new DateTimeRange(lostEntry.LogEntryExtra.Entry.Timestamp.ToDateTime(), lostEntry.LogEntryExtra.Entry.Timestamp.ToDateTime());
                         }
                         else
                         {
-                            lostRange = lostRange.WithTo(lostEntry.LogEntryExtra.Entry.Timestamp());
+                            lostRange = lostRange.WithTo(lostEntry.LogEntryExtra.Entry.Timestamp.ToDateTime());
                         }
                     }
                     var sizedEntry = new LogEntryExtraSize(entry, _maxMemorySize > 0 ? entry.Entry.CalculateSize() : 0);
