@@ -20,10 +20,10 @@
 
   "dependencies": {
     "Google.Api.Gax.Rest": "1.0.0-beta03",
-    "Google.Apis": "1.16.0",
-    "Google.Apis.Auth": "1.16.0",
-    "Google.Apis.Bigquery.v2": "1.16.0.591",
-    "Google.Apis.Core": "1.16.0"
+    "Google.Apis": "1.18.0",
+    "Google.Apis.Auth": "1.18.0",
+    "Google.Apis.Bigquery.v2": "1.18.0.659",
+    "Google.Apis.Core": "1.18.0"
   },
   "frameworks": {
     "net45": { },

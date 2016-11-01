@@ -15,7 +15,6 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Threading;
 using Xunit;
 
 namespace Google.Bigquery.V2.Snippets

@@ -58,11 +58,11 @@ namespace Google.Bigquery.V2
             }
             if (CreateDisposition != null)
             {
-                loadRequest.CreateDisposition = EnumMap<CreateDisposition>.ToApiValue(CreateDisposition.Value);
+                loadRequest.CreateDisposition = EnumMap.ToApiValue(CreateDisposition.Value);
             }
             if (WriteDisposition != null)
             {
-                loadRequest.WriteDisposition = EnumMap<WriteDisposition>.ToApiValue(WriteDisposition.Value);
+                loadRequest.WriteDisposition = EnumMap.ToApiValue(WriteDisposition.Value);
             }
         }
     }

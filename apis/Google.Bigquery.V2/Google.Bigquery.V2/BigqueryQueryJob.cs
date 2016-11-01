@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -135,7 +136,7 @@ namespace Google.Bigquery.V2
             }
             GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
             List<BigqueryRow> rows = new List<BigqueryRow>(maxRows);
-            if ((_options.PageSize == null || _options.PageSize > maxRows) && _response.Rows?.Count > maxRows)
+            if ((clonedOptions.PageSize == null || clonedOptions.PageSize > maxRows) && _response.Rows?.Count > maxRows)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = maxRows;

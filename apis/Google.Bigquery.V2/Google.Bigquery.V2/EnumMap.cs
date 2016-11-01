@@ -32,6 +32,15 @@ namespace Google.Bigquery.V2
     }
 
     /// <summary>
+    /// Helpers for EnumMap{T} to take advantage of type inference.
+    /// </summary>
+    internal static class EnumMap
+    {
+        internal static string ToApiValue<T>(T value, string paramName = "value") where T : struct =>
+            EnumMap<T>.ToApiValue(value, paramName);
+    }
+
+    /// <summary>
     /// Conversion between enum values and their API representations.
     /// (Could make this a regular class, but we basically need an instance per type...)
     /// </summary>

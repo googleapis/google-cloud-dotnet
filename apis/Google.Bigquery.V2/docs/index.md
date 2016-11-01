@@ -37,6 +37,17 @@ with datasets, tables and query results simpler.
 
 [!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#QueryOverview)]
 
+## Parameterized queries
+
+Queries can be provided with parameters, either using names (the
+default):
+
+[!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#ParameterizedQueryNamedParameters)]
+
+Or using positional parameters:
+
+[!code-cs[](obj/snippets/Google.Bigquery.V2.BigqueryClient.txt#ParameterizedQueryPositionalParameters)]
+
 ## Using legacy SQL
 
 By default, [BigqueryClient](obj/api/Google.Bigquery.V2.BigqueryClient.yml)
