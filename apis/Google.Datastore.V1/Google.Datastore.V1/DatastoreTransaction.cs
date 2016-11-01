@@ -11,14 +11,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using static Google.Datastore.V1.CommitRequest.Types;
 
 namespace Google.Datastore.V1
 {
@@ -44,43 +41,34 @@ namespace Google.Datastore.V1
     /// Disposing of a transaction calls <see cref="Rollback(CallSettings)"/> if the transaction has not already been committed
     /// or rolled back.
     /// </para>
+    /// <para>
+    /// This is an abstract class, implemented by <see cref="DatastoreTransactionImpl"/> for production use. Users creating their own
+    /// <see cref="DatastoreDb"/> subclasses may choose to create fake implementations for testing purposes. There are no abstract
+    /// methods in this class; instead, all methods either delegate to another or throw <see cref="NotImplementedException"/>.
+    /// </para>
     /// </summary>
-    public sealed class DatastoreTransaction : IDisposable
+    public abstract class DatastoreTransaction : IDisposable
     {
         /// <summary>
         /// The ID of the transaction, used implicitly in operations performed with this object.
         /// </summary>
-        public ByteString TransactionId { get; }
-
-        private readonly DatastoreClient _client;
-        private readonly string _projectId;
-        private readonly PartitionId _partitionId;
-        private readonly List<Mutation> _mutations = new List<Mutation>();
-        private readonly ReadOptions _readOptions;
-        private bool _active;
+        public virtual ByteString TransactionId { get { throw new NotImplementedException(); } }
 
         /// <summary>
-        /// Constructs a <see cref="DatastoreTransaction"/> from a client, project ID and transaction ID.
+        /// Constructs an instance of <see cref="DatastoreClientImpl"/> with the given arguments.
+        /// Clients using the <see cref="DatastoreDb"/> abstraction layer would normally call
+        /// <see cref="DatastoreDb.BeginTransaction(CallSettings)"/> or <see cref="DatastoreDb.BeginTransactionAsync(CallSettings)"/>
+        /// instead of calling this method directly.
         /// </summary>
-        /// <remarks>
-        /// While this can be constructed manually, the expectation is that instances of this class are obtained via
-        /// <see cref="DatastoreDb.BeginTransaction(CallSettings)"/> or <see cref="DatastoreDb.BeginTransactionAsync(CallSettings)"/>.
-        /// </remarks>
-        /// <param name="client">The client to use for Datastore operations.</param>
-        /// <param name="projectId">The ID of the project of the Datastore operations.</param>
+        /// <param name="client">The client to use for Datastore operations. Must not be null.</param>
+        /// <param name="projectId">The ID of the project of the Datastore operations. Must not be null.</param>
         /// <param name="namespaceId">The ID of the namespace which is combined with <paramref name="projectId"/> to form a partition ID
-        /// to use in query operations.</param>
+        /// to use in query operations. May be null.</param>
         /// <param name="transactionId">The transaction obtained by an earlier <see cref="DatastoreClient.BeginTransaction(string, CallSettings)"/>
-        /// or the asynchronous equivalent.</param>
-        public DatastoreTransaction(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId)
-        {
-            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
-            _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _partitionId = new PartitionId(projectId, namespaceId);
-            TransactionId = GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            _readOptions = new ReadOptions { Transaction = TransactionId };
-            _active = true;
-        }
+        /// or the asynchronous equivalent. Must not be null</param>
+        /// <returns>A <see cref="DatastoreTransaction"/> representation of the specified transaction.</returns>
+        public static DatastoreTransaction Create(DatastoreClient client, string projectId, string namespaceId, ByteString transactionId)
+            => new DatastoreTransactionImpl(client, projectId, namespaceId, transactionId);
 
         /// <summary>
         /// Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
@@ -93,11 +81,13 @@ namespace Google.Datastore.V1
         /// by this query have been modified while the transaction is active. Note that modifications performed
         /// as part of this operation are not reflected in the query results.
         /// </para>
+        /// <para>The default implementation of this method delegates to <see cref="RunQueryLazily(Query, CallSettings)"/>
+        /// and calls <see cref="LazyDatastoreQuery.GetAllResults"/> on the return value.</para>
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>The complete query results.</returns>
-        public DatastoreQueryResults RunQuery(Query query, CallSettings callSettings = null) =>
+        public virtual DatastoreQueryResults RunQuery(Query query, CallSettings callSettings = null) =>
             RunQueryLazily(query, callSettings).GetAllResults();
 
         /// <summary>
@@ -111,11 +101,13 @@ namespace Google.Datastore.V1
         /// by this query have been modified while the transaction is active. Note that modifications performed
         /// as part of this operation are not reflected in the query results.
         /// </para>
+        /// <para>The default implementation of this method delegates to <see cref="RunQueryLazilyAsync(Query, CallSettings)"/>
+        /// and calls <see cref="AsyncLazyDatastoreQuery.GetAllResultsAsync"/> on the return value.</para>
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is the complete set of query results.</returns>
-        public Task<DatastoreQueryResults> RunQueryAsync(Query query, CallSettings callSettings = null) =>
+        public virtual Task<DatastoreQueryResults> RunQueryAsync(Query query, CallSettings callSettings = null) =>
             RunQueryLazilyAsync(query, callSettings).GetAllResultsAsync();
 
         /// <summary>
@@ -136,18 +128,9 @@ namespace Google.Datastore.V1
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="LazyDatastoreQuery"/> representing the the lazy query results.</returns>
-        public LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)
+        public virtual LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)
         {
-            GaxPreconditions.CheckNotNull(query, nameof(query));
-            var request = new RunQueryRequest
-            {
-                ProjectId = _projectId,
-                PartitionId = _partitionId,
-                Query = query,
-                ReadOptions = _readOptions
-            };
-            var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
-            return new LazyDatastoreQuery(streamer.Sync());
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -168,18 +151,9 @@ namespace Google.Datastore.V1
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the result of the query.</returns>
-        public AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, CallSettings callSettings = null)
+        public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(Query query, CallSettings callSettings = null)
         {
-            GaxPreconditions.CheckNotNull(query, nameof(query));
-            var request = new RunQueryRequest
-            {
-                ProjectId = _projectId,
-                PartitionId = _partitionId,
-                Query = query,
-                ReadOptions = _readOptions
-            };
-            var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
-            return new AsyncLazyDatastoreQuery(streamer.Async());
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -193,11 +167,13 @@ namespace Google.Datastore.V1
         /// by this query have been modified while the transaction is active. Note that modifications performed
         /// as part of this operation are not reflected in the query results.
         /// </para>
+        /// <para>The default implementation of this method delegates to <see cref="RunQueryLazily(GqlQuery, CallSettings)"/>
+        /// and calls <see cref="LazyDatastoreQuery.GetAllResults"/> on the return value.</para>
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>The complete query results.</returns>
-        public DatastoreQueryResults RunQuery(GqlQuery query, CallSettings callSettings = null) =>
+        public virtual DatastoreQueryResults RunQuery(GqlQuery query, CallSettings callSettings = null) =>
             RunQueryLazily(query, callSettings).GetAllResults();
 
         /// <summary>
@@ -211,11 +187,13 @@ namespace Google.Datastore.V1
         /// by this query have been modified while the transaction is active. Note that modifications performed
         /// as part of this operation are not reflected in the query results.
         /// </para>
+        /// <para>The default implementation of this method delegates to <see cref="RunQueryLazilyAsync(GqlQuery, CallSettings)"/>
+        /// and calls <see cref="AsyncLazyDatastoreQuery.GetAllResultsAsync"/> on the return value.</para>
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is the complete set of query results.</returns>
-        public Task<DatastoreQueryResults> RunQueryAsync(GqlQuery query, CallSettings callSettings = null) =>
+        public virtual Task<DatastoreQueryResults> RunQueryAsync(GqlQuery query, CallSettings callSettings = null) =>
             RunQueryLazilyAsync(query, callSettings).GetAllResultsAsync();
 
         /// <summary>
@@ -236,18 +214,9 @@ namespace Google.Datastore.V1
         /// <param name="gqlQuery">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="LazyDatastoreQuery"/> representing the result of the query.</returns>
-        public LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, CallSettings callSettings = null)
+        public virtual LazyDatastoreQuery RunQueryLazily(GqlQuery gqlQuery, CallSettings callSettings = null)
         {
-            GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
-            var request = new RunQueryRequest
-            {
-                ProjectId = _projectId,
-                PartitionId = _partitionId,
-                GqlQuery = gqlQuery,
-                ReadOptions = _readOptions
-            };
-            var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
-            return new LazyDatastoreQuery(streamer.Sync());
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -268,18 +237,9 @@ namespace Google.Datastore.V1
         /// <param name="gqlQuery">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the result of the query.</returns>
-        public AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, CallSettings callSettings = null)
+        public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(GqlQuery gqlQuery, CallSettings callSettings = null)
         {
-            GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
-            var request = new RunQueryRequest
-            {
-                ProjectId = _projectId,
-                PartitionId = _partitionId,
-                GqlQuery = gqlQuery,
-                ReadOptions = _readOptions
-            };
-            var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
-            return new AsyncLazyDatastoreQuery(streamer.Async());
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -289,7 +249,7 @@ namespace Google.Datastore.V1
         /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The entity with the specified key, or <c>null</c> if no such entity exists.</returns>
-        public Entity Lookup(Key key, CallSettings callSettings = null) => Lookup(new[] { key }, callSettings)[0];
+        public virtual Entity Lookup(Key key, CallSettings callSettings = null) => Lookup(new[] { key }, callSettings)[0];
 
         /// <summary>
         /// Looks up a collection of entities by key.
@@ -308,7 +268,7 @@ namespace Google.Datastore.V1
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public IReadOnlyList<Entity> Lookup(params Key[] keys) => Lookup(keys, null);
+        public virtual IReadOnlyList<Entity> Lookup(params Key[] keys) => Lookup(keys, null);
 
         /// <summary>
         /// Looks up a collection of entities by key.
@@ -320,8 +280,10 @@ namespace Google.Datastore.V1
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            DatastoreDb.LookupImpl(_client, _projectId, _readOptions, keys, callSettings);
+        public virtual IReadOnlyList<Entity> Lookup(IEnumerable<Key> keys, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Looks up a single entity by key asynchronously.
@@ -330,7 +292,7 @@ namespace Google.Datastore.V1
         /// <param name="key">The key to look up. Must not be null, and must be complete.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The entity with the specified key, or <c>null</c> if no such entity exists.</returns>
-        public async Task<Entity> LookupAsync(Key key, CallSettings callSettings = null)
+        public virtual async Task<Entity> LookupAsync(Key key, CallSettings callSettings = null)
         {
             var results = await LookupAsync(new[] { key }, callSettings).ConfigureAwait(false);
             return results[0];
@@ -353,7 +315,7 @@ namespace Google.Datastore.V1
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public Task<IReadOnlyList<Entity>> LookupAsync(params Key[] keys) => LookupAsync(keys, null);
+        public virtual Task<IReadOnlyList<Entity>> LookupAsync(params Key[] keys) => LookupAsync(keys, null);
 
         /// <summary>
         /// Looks up a collection of entities by key asynchronously.
@@ -365,82 +327,94 @@ namespace Google.Datastore.V1
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
         /// references, or <c>null</c> where the key was not found.</returns>
-        public Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, CallSettings callSettings = null) =>
-            DatastoreDb.LookupImplAsync(_client, _projectId, _readOptions, keys, callSettings);        
-
-        private void AddMutations<T>(IEnumerable<T> values, Func<T, Mutation> conversion, string paramName)
+        public virtual Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, CallSettings callSettings = null)
         {
-            GaxPreconditions.CheckNotNull(values, paramName);
-            _mutations.AddRange(values.Select(conversion));
+            throw new NotImplementedException();
         }
 
         /// <summary>
         /// Adds upsert operations for all the specified keys to this transaction.
         /// </summary>
         /// <param name="entities">The entities to upsert. Must not be null.</param>
-        public void Upsert(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToUpsert(), nameof(entities));
+        public virtual void Upsert(IEnumerable<Entity> entities)
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Adds upsert operations for all the specified keys to this transaction.
         /// </summary>
+        /// <remarks>This method delegates to <see cref="Upsert(IEnumerable{Entity})"/>.</remarks>
         /// <param name="entities">The entities to upsert. Must not be null.</param>
-        public void Upsert(params Entity[] entities) => Upsert((IEnumerable<Entity>)entities);
+        public virtual void Upsert(params Entity[] entities) => Upsert((IEnumerable<Entity>)entities);
 
         /// <summary>
         /// Adds update operations for all the specified keys to this transaction.
         /// </summary>
         /// <param name="entities">The entities to update. Must not be null.</param>
-        public void Update(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToUpdate(), nameof(entities));
+        public virtual void Update(IEnumerable<Entity> entities)
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Adds update operations for all the specified keys to this transaction.
         /// </summary>
+        /// <remarks>This method delegates to <see cref="Update(IEnumerable{Entity})"/>.</remarks>
         /// <param name="entities">The entities to update. Must not be null.</param>
-        public void Update(params Entity[] entities) => Update((IEnumerable<Entity>)entities);
+        public virtual void Update(params Entity[] entities) => Update((IEnumerable<Entity>)entities);
 
         /// <summary>
         /// Adds insert operations for all the specified keys to this transaction.
         /// </summary>
         /// <param name="entities">The entities to insert. Must not be null.</param>
-        public void Insert(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToInsert(), nameof(entities));
+        public virtual void Insert(IEnumerable<Entity> entities)
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Adds insert operations for all the specified keys to this transaction.
         /// </summary>
+        /// <remarks>This method delegates to <see cref="Insert(IEnumerable{Entity})"/>.</remarks>
         /// <param name="entities">The entities to insert. Must not be null.</param>
-        public void Insert(params Entity[] entities) => Insert((IEnumerable<Entity>)entities);
+        public virtual void Insert(params Entity[] entities) => Insert((IEnumerable<Entity>)entities);
 
         /// <summary>
         /// Adds delete operations for all the specified keys to this transaction.
         /// </summary>
         /// <param name="entities">The entities to delete. Must not be null.</param>
-        public void Delete(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToDelete(), nameof(entities));
+        public virtual void Delete(IEnumerable<Entity> entities)
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Adds delete operations for all the specified keys to this transaction.
         /// </summary>
+        /// <remarks>This method delegates to <see cref="Delete(IEnumerable{Entity})"/>.</remarks>
         /// <param name="entities">The entities to delete. Must not be null.</param>
-        public void Delete(params Entity[] entities) => Delete((IEnumerable<Entity>)entities);
+        public virtual void Delete(params Entity[] entities) => Delete((IEnumerable<Entity>)entities);
 
         /// <summary>
         /// Adds deletion operations for all the specified keys to this transaction.
         /// </summary>
         /// <param name="keys">The keys to delete. Must not be null.</param>
-        public void Delete(IEnumerable<Key> keys) => AddMutations(keys, e => e.ToDelete(), nameof(keys));
+        public virtual void Delete(IEnumerable<Key> keys)
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Adds deletion operations for all the specified keys to this transaction.
         /// </summary>
+        /// <remarks>This method delegates to <see cref="Delete(IEnumerable{Key})"/>.</remarks>
         /// <param name="keys">The keys to delete. Must not be null.</param>
-        public void Delete(params Key[] keys) => Delete((IEnumerable<Key>)keys);
+        public virtual void Delete(params Key[] keys) => Delete((IEnumerable<Key>)keys);
 
         /// <summary>
         /// Commits all mutations in this transaction.
         /// </summary>
         /// <exception cref="InvalidOperationException">The transaction has already been committed or rolled back.</exception>
         /// <returns>The response from the commit operation. This can be used to determine server-allocated keys.</returns>
-        public CommitResponse Commit(CallSettings callSettings = null)
+        public virtual CommitResponse Commit(CallSettings callSettings = null)
         {
-            // TODO: What if there are no mutations? Just rollback?
-            CheckActive();
-            var response = _client.Commit(_projectId, Mode.Transactional, TransactionId, _mutations);
-            _active = false;
-            return response;
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -449,13 +423,9 @@ namespace Google.Datastore.V1
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <exception cref="InvalidOperationException">The transaction has already been committed or rolled back.</exception>
         /// <returns>The response from the commit operation. This can be used to determine server-allocated keys.</returns>
-        public async Task<CommitResponse> CommitAsync(CallSettings callSettings = null)
+        public virtual Task<CommitResponse> CommitAsync(CallSettings callSettings = null)
         {
-            // TODO: What if there are no mutations? Just rollback?
-            CheckActive();
-            var response = await _client.CommitAsync(_projectId, Mode.Transactional, TransactionId, _mutations, callSettings);
-            _active = false;
-            return response;
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -465,12 +435,9 @@ namespace Google.Datastore.V1
         /// is still active, so a <c>using</c> statement is normally preferable to this.</remarks>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <exception cref="InvalidOperationException">The transaction has already been committed or rolled back.</exception>
-        public RollbackResponse Rollback(CallSettings callSettings = null)
+        public virtual RollbackResponse Rollback(CallSettings callSettings = null)
         {
-            CheckActive();
-            var response = _client.Rollback(_projectId, TransactionId, callSettings);
-            _active = false;
-            return response;
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -480,32 +447,18 @@ namespace Google.Datastore.V1
         /// is still active, so a <c>using</c> statement is normally preferable to this.</remarks>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <exception cref="InvalidOperationException">The transaction has already been committed or rolled back.</exception>
-        public async Task<RollbackResponse> RollbackAsync(CallSettings callSettings = null)
+        public virtual Task<RollbackResponse> RollbackAsync(CallSettings callSettings = null)
         {
-            CheckActive();
-            var response = await _client.RollbackAsync(_projectId, TransactionId, callSettings);
-            _active = false;
-            return response;
+            throw new NotImplementedException();
         }
 
         /// <summary>
         /// If the transaction has already been committed, this operation is a no-op.
         /// Otherwise, it rolls back the transaction.
         /// </summary>
-        public void Dispose()
+        public virtual void Dispose()
         {
-            if (_active)
-            {
-                Rollback();
-            }
-        }
-
-        private void CheckActive()
-        {
-            if (!_active)
-            {
-                throw new InvalidOperationException("Transaction has already been committed or rolled back");
-            }
+            throw new NotImplementedException();
         }
     }
 }
