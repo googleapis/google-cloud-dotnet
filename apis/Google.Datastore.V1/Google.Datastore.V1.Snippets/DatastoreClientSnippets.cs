@@ -146,7 +146,7 @@ namespace Google.Datastore.V1.Snippets
             };
 
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, namespaceId, transactionId))
+            using (DatastoreTransaction transaction = DatastoreTransaction.Create(client, projectId, namespaceId, transactionId))
             {
                 transaction.Insert(book1, book2);
                 CommitResponse response = transaction.Commit();
@@ -251,7 +251,7 @@ namespace Google.Datastore.V1.Snippets
                 ["tags"] = new[] { "tag1", "tag2" }
             };
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, namespaceId, transactionId))
+            using (DatastoreTransaction transaction = DatastoreTransaction.Create(client, projectId, namespaceId, transactionId))
             {
                 transaction.Insert(entity);
                 var commitResponse = transaction.Commit();
@@ -333,7 +333,7 @@ namespace Google.Datastore.V1.Snippets
             // Sample: UpdateEntity
             DatastoreClient client = DatastoreClient.Create();
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, namespaceId, transactionId))
+            using (DatastoreTransaction transaction = DatastoreTransaction.Create(client, projectId, namespaceId, transactionId))
             {
                 Entity entity = transaction.Lookup(key);
                 entity["priority"] = 5;
@@ -610,7 +610,7 @@ namespace Google.Datastore.V1.Snippets
             // Sample: TransactionReadAndWrite
             DatastoreClient client = DatastoreClient.Create();
             ByteString transactionId = client.BeginTransaction(projectId).Transaction;
-            using (DatastoreTransaction transaction = new DatastoreTransaction(client, projectId, namespaceId, transactionId))
+            using (DatastoreTransaction transaction = DatastoreTransaction.Create(client, projectId, namespaceId, transactionId))
             {
                 // The return value from DatastoreTransaction.Get contains the fetched entities
                 // in the same order as they are in the call.
