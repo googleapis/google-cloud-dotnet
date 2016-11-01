@@ -153,7 +153,7 @@ namespace Google.Bigquery.V2.Tests
             new object[] { "TimeSpan", TimeSpan.FromHours(1), BigqueryParameterType.Time },
             new object[] { "DateTime (local)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Local), BigqueryParameterType.DateTime },
             new object[] { "DateTime (unspecified)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Unspecified), BigqueryParameterType.DateTime },
-            new object[] { "DateTime (UTC)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Utc), BigqueryParameterType.Timestamp },
+            new object[] { "DateTime (UTC)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Utc), BigqueryParameterType.DateTime },
             new object[] { "DateTimeOffset", new DateTimeOffset(2016, 10, 31, 0, 0, 0, TimeSpan.FromHours(2)), BigqueryParameterType.Timestamp },
             new object[] { "Byte[]", new byte[] { 1, 2 }, BigqueryParameterType.Bytes },
         };
@@ -169,11 +169,7 @@ namespace Google.Bigquery.V2.Tests
             new object[] { "Single[]", new float[0], BigqueryParameterType.Float64 },
             new object[] { "Double[]", new double[0], BigqueryParameterType.Float64 },
             new object[] { "TimeSpan[]", new TimeSpan[0], BigqueryParameterType.Time },
-            new object[] { "DateTime[] (local first)", new[] { new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Local), default(DateTime) }, BigqueryParameterType.DateTime },
-            new object[] { "DateTime[] (unspecified first)", new[] { new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Unspecified), default(DateTime) }, BigqueryParameterType.DateTime },
-            // Both values have to be UTC, as everything in the array must be valid for the inferred type.
-            new object[] { "DateTime[] (UTC first)", new[] { new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Utc), new DateTime(2017, 10, 31, 0, 0, 0, DateTimeKind.Utc)}, BigqueryParameterType.Timestamp },
-            new object[] { "DateTime[] (empty)", new DateTime[0], BigqueryParameterType.DateTime },
+            new object[] { "DateTime[]", new DateTime[0], BigqueryParameterType.DateTime },
             new object[] { "DateTimeOffset[]", new DateTimeOffset[0], BigqueryParameterType.Timestamp },
             new object[] { "Byte[][]", new byte[0][], BigqueryParameterType.Bytes },
         };

@@ -55,20 +55,13 @@ namespace Google.Bigquery.V2
     ///   which will be inferred from the value's element type if not otherwise specified.</description></item>
     /// </list>
     /// <para>
-    /// If the parameter type is null, it is inferred from the value. In most cases that is obvious from the above
-    /// table, but for date and time values the process is more complicated. A <see cref="TimeSpan"/> value is
-    /// always assumed to be a <see cref="BigqueryParameterType.Time"/>, and a <see cref="DateTimeOffset"/> value is
-    /// always assumed to be a <see cref="BigqueryParameterType.Timestamp"/>. A <see cref="DateTime"/> value is assumed
-    /// to be <see cref="BigqueryParameterType.DateTime"/> if its <see cref="DateTime.Kind"/> is <see cref="DateTimeKind.Unspecified"/>
-    /// or <see cref="DateTimeKind.Local"/>, but <see cref="BigqueryParameterType.Timestamp"/> if its <c>Kind</c> is
-    /// <see cref="DateTimeKind.Utc"/>.
+    /// If the parameter type is null, it is inferred from the value. A <see cref="TimeSpan"/> value is
+    /// always assumed to be a <see cref="BigqueryParameterType.Time"/>, a <see cref="DateTimeOffset"/> value is
+    /// always assumed to be a <see cref="BigqueryParameterType.Timestamp"/>, and a <see cref="DateTime"/> value is assumed
+    /// to be <see cref="BigqueryParameterType.DateTime"/> regardless of its <see cref="DateTime.Kind"/>.
     /// </para>
     /// <para>
-    /// If an array parameter doesn't specify the array type, the type is inferred from the type of the value. If the value
-    /// is a list of <see cref="DateTime"/> values, then the first value is used to infer the type,
-    /// defaulting to <see cref="BigqueryParameterType.DateTime"/>
-    /// if the value is empty. If the value implements <see cref="IReadOnlyList{T}"/> for multiple type parameters,
-    /// the type inferred is undefined.
+    /// If an array parameter doesn't specify the array type, the type is inferred from the type of the value.
     /// </para>
     /// <para>
     /// Array parameters must not have a value of null, and all the elements must be non-null as well.
@@ -111,6 +104,7 @@ namespace Google.Bigquery.V2
             { typeof(bool), BigqueryParameterType.Bool },
             { typeof(string), BigqueryParameterType.String },
             { typeof(byte[]), BigqueryParameterType.Bytes },
+            { typeof(DateTime), BigqueryParameterType.DateTime },
             { typeof(DateTimeOffset), BigqueryParameterType.Timestamp },
             { typeof(TimeSpan), BigqueryParameterType.Time },
         };
@@ -310,11 +304,6 @@ namespace Google.Bigquery.V2
             {
                 return BigqueryParameterType.Array;
             }
-            if (value is DateTime)
-            {
-                DateTime dt = (DateTime)value;
-                return dt.Kind == DateTimeKind.Utc ? BigqueryParameterType.Timestamp : BigqueryParameterType.DateTime;
-            }
             // We should never get here, as we should have validated that the value is vaguely sensible on the Value setter.
             throw new InvalidOperationException($"Unsupported value type: {value.GetType()}");
         }
@@ -334,26 +323,7 @@ namespace Google.Bigquery.V2
             {
                 throw new InvalidOperationException("Array parameter values cannot contain null elements");
             }
-            BigqueryParameterType actualArrayType;
-            if (arrayType == null)
-            {
-                Type clrArrayType = GetArrayElementType(value);
-                if (!s_typeMapping.TryGetValue(clrArrayType, out actualArrayType))
-                {
-                    // This would indicate a bug in this class
-                    if (clrArrayType != typeof(DateTime))
-                    {
-                        throw new InvalidOperationException($"Invalid value for array parameter: {value.GetType()}");
-                    }
-                    // The default DateTime value has a type of Unspecified, leading to an array type of DateTime.
-                    DateTime sampleValue = values.Cast<DateTime>().FirstOrDefault();
-                    actualArrayType = sampleValue.Kind == DateTimeKind.Utc ? BigqueryParameterType.Timestamp : BigqueryParameterType.DateTime;
-                }
-            }
-            else
-            {
-                actualArrayType = arrayType.Value;
-            }
+            BigqueryParameterType actualArrayType = arrayType ?? s_typeMapping[GetArrayElementType(value)];
             parameter.ParameterType = new QueryParameterType
             {
                 Type = EnumMap.ToApiValue(BigqueryParameterType.Array),
