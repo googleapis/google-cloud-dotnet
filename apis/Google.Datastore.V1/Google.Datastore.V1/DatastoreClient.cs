@@ -1220,14 +1220,17 @@ namespace Google.Datastore.V1
             string projectId,
             ReadOptions readOptions,
             IEnumerable<Key> keys,
-            CallSettings callSettings = null) => _callLookup.Async(
-                new LookupRequest
-                {
-                    ProjectId = projectId,
-                    ReadOptions = readOptions,
-                    Keys = { keys },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new LookupRequest
+            {
+                ProjectId = projectId,
+                ReadOptions = readOptions,
+                Keys = { keys },
+            };
+            ModifyLookupRequest(ref request, ref callSettings);
+            return _callLookup.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up entities by key.
@@ -1251,14 +1254,21 @@ namespace Google.Datastore.V1
             string projectId,
             ReadOptions readOptions,
             IEnumerable<Key> keys,
-            CallSettings callSettings = null) => _callLookup.Sync(
-                new LookupRequest
-                {
-                    ProjectId = projectId,
-                    ReadOptions = readOptions,
-                    Keys = { keys },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new LookupRequest
+            {
+                ProjectId = projectId,
+                ReadOptions = readOptions,
+                Keys = { keys },
+            };
+            ModifyLookupRequest(ref request, ref callSettings);
+            return _callLookup.Sync(request, callSettings);
+        }
+
+        // Partial method to allow for fine-tuning of requests and settings when performing
+        // a ModifyLookup request.
+        partial void ModifyLookupRequest(ref LookupRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Queries for entities.
@@ -1289,15 +1299,18 @@ namespace Google.Datastore.V1
             PartitionId partitionId,
             ReadOptions readOptions,
             Query query,
-            CallSettings callSettings = null) => _callRunQuery.Async(
-                new RunQueryRequest
-                {
-                    ProjectId = projectId,
-                    PartitionId = partitionId,
-                    ReadOptions = readOptions,
-                    Query = query,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                ReadOptions = readOptions,
+                Query = query,
+            };
+            ModifyRunQueryRequest(ref request, ref callSettings);
+            return _callRunQuery.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Queries for entities.
@@ -1328,15 +1341,18 @@ namespace Google.Datastore.V1
             PartitionId partitionId,
             ReadOptions readOptions,
             Query query,
-            CallSettings callSettings = null) => _callRunQuery.Sync(
-                new RunQueryRequest
-                {
-                    ProjectId = projectId,
-                    PartitionId = partitionId,
-                    ReadOptions = readOptions,
-                    Query = query,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                ReadOptions = readOptions,
+                Query = query,
+            };
+            ModifyRunQueryRequest(ref request, ref callSettings);
+            return _callRunQuery.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Queries for entities.
@@ -1367,15 +1383,18 @@ namespace Google.Datastore.V1
             PartitionId partitionId,
             ReadOptions readOptions,
             GqlQuery gqlQuery,
-            CallSettings callSettings = null) => _callRunQuery.Async(
-                new RunQueryRequest
-                {
-                    ProjectId = projectId,
-                    PartitionId = partitionId,
-                    ReadOptions = readOptions,
-                    GqlQuery = gqlQuery,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                ReadOptions = readOptions,
+                GqlQuery = gqlQuery,
+            };
+            ModifyRunQueryRequest(ref request, ref callSettings);
+            return _callRunQuery.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Queries for entities.
@@ -1406,15 +1425,22 @@ namespace Google.Datastore.V1
             PartitionId partitionId,
             ReadOptions readOptions,
             GqlQuery gqlQuery,
-            CallSettings callSettings = null) => _callRunQuery.Sync(
-                new RunQueryRequest
-                {
-                    ProjectId = projectId,
-                    PartitionId = partitionId,
-                    ReadOptions = readOptions,
-                    GqlQuery = gqlQuery,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                ReadOptions = readOptions,
+                GqlQuery = gqlQuery,
+            };
+            ModifyRunQueryRequest(ref request, ref callSettings);
+            return _callRunQuery.Sync(request, callSettings);
+        }
+
+        // Partial method to allow for fine-tuning of requests and settings when performing
+        // a RunQuery request.
+        partial void ModifyRunQueryRequest(ref RunQueryRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Begins a new transaction.
@@ -1430,12 +1456,15 @@ namespace Google.Datastore.V1
         /// </returns>
         public override Task<BeginTransactionResponse> BeginTransactionAsync(
             string projectId,
-            CallSettings callSettings = null) => _callBeginTransaction.Async(
-                new BeginTransactionRequest
-                {
-                    ProjectId = projectId,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new BeginTransactionRequest
+            {
+                ProjectId = projectId,
+            };
+            ModifyBeginTransactionRequest(ref request, ref callSettings);
+            return _callBeginTransaction.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Begins a new transaction.
@@ -1451,12 +1480,19 @@ namespace Google.Datastore.V1
         /// </returns>
         public override BeginTransactionResponse BeginTransaction(
             string projectId,
-            CallSettings callSettings = null) => _callBeginTransaction.Sync(
-                new BeginTransactionRequest
-                {
-                    ProjectId = projectId,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new BeginTransactionRequest
+            {
+                ProjectId = projectId,
+            };
+            ModifyBeginTransactionRequest(ref request, ref callSettings);
+            return _callBeginTransaction.Sync(request, callSettings);
+        }
+
+        // Partial method to allow for fine-tuning of requests and settings when performing
+        // a BeginTransaction request.
+        partial void ModifyBeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -1499,15 +1535,18 @@ namespace Google.Datastore.V1
             Mode mode,
             ByteString transaction,
             IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => _callCommit.Async(
-                new CommitRequest
-                {
-                    ProjectId = projectId,
-                    Mode = mode,
-                    Transaction = transaction,
-                    Mutations = { mutations },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new CommitRequest
+            {
+                ProjectId = projectId,
+                Mode = mode,
+                Transaction = transaction,
+                Mutations = { mutations },
+            };
+            ModifyCommitRequest(ref request, ref callSettings);
+            return _callCommit.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -1550,15 +1589,18 @@ namespace Google.Datastore.V1
             Mode mode,
             ByteString transaction,
             IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => _callCommit.Sync(
-                new CommitRequest
-                {
-                    ProjectId = projectId,
-                    Mode = mode,
-                    Transaction = transaction,
-                    Mutations = { mutations },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new CommitRequest
+            {
+                ProjectId = projectId,
+                Mode = mode,
+                Transaction = transaction,
+                Mutations = { mutations },
+            };
+            ModifyCommitRequest(ref request, ref callSettings);
+            return _callCommit.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -1595,14 +1637,17 @@ namespace Google.Datastore.V1
             string projectId,
             Mode mode,
             IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => _callCommit.Async(
-                new CommitRequest
-                {
-                    ProjectId = projectId,
-                    Mode = mode,
-                    Mutations = { mutations },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new CommitRequest
+            {
+                ProjectId = projectId,
+                Mode = mode,
+                Mutations = { mutations },
+            };
+            ModifyCommitRequest(ref request, ref callSettings);
+            return _callCommit.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -1639,14 +1684,21 @@ namespace Google.Datastore.V1
             string projectId,
             Mode mode,
             IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null) => _callCommit.Sync(
-                new CommitRequest
-                {
-                    ProjectId = projectId,
-                    Mode = mode,
-                    Mutations = { mutations },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new CommitRequest
+            {
+                ProjectId = projectId,
+                Mode = mode,
+                Mutations = { mutations },
+            };
+            ModifyCommitRequest(ref request, ref callSettings);
+            return _callCommit.Sync(request, callSettings);
+        }
+
+        // Partial method to allow for fine-tuning of requests and settings when performing
+        // a Commit request.
+        partial void ModifyCommitRequest(ref CommitRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Rolls back a transaction.
@@ -1667,13 +1719,16 @@ namespace Google.Datastore.V1
         public override Task<RollbackResponse> RollbackAsync(
             string projectId,
             ByteString transaction,
-            CallSettings callSettings = null) => _callRollback.Async(
-                new RollbackRequest
-                {
-                    ProjectId = projectId,
-                    Transaction = transaction,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new RollbackRequest
+            {
+                ProjectId = projectId,
+                Transaction = transaction,
+            };
+            ModifyRollbackRequest(ref request, ref callSettings);
+            return _callRollback.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Rolls back a transaction.
@@ -1694,13 +1749,20 @@ namespace Google.Datastore.V1
         public override RollbackResponse Rollback(
             string projectId,
             ByteString transaction,
-            CallSettings callSettings = null) => _callRollback.Sync(
-                new RollbackRequest
-                {
-                    ProjectId = projectId,
-                    Transaction = transaction,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new RollbackRequest
+            {
+                ProjectId = projectId,
+                Transaction = transaction,
+            };
+            ModifyRollbackRequest(ref request, ref callSettings);
+            return _callRollback.Sync(request, callSettings);
+        }
+
+        // Partial method to allow for fine-tuning of requests and settings when performing
+        // a Rollback request.
+        partial void ModifyRollbackRequest(ref RollbackRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Allocates IDs for the given keys, which is useful for referencing an entity
@@ -1722,13 +1784,16 @@ namespace Google.Datastore.V1
         public override Task<AllocateIdsResponse> AllocateIdsAsync(
             string projectId,
             IEnumerable<Key> keys,
-            CallSettings callSettings = null) => _callAllocateIds.Async(
-                new AllocateIdsRequest
-                {
-                    ProjectId = projectId,
-                    Keys = { keys },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new AllocateIdsRequest
+            {
+                ProjectId = projectId,
+                Keys = { keys },
+            };
+            ModifyAllocateIdsRequest(ref request, ref callSettings);
+            return _callAllocateIds.Async(request, callSettings);
+        } 
 
         /// <summary>
         /// Allocates IDs for the given keys, which is useful for referencing an entity
@@ -1750,14 +1815,20 @@ namespace Google.Datastore.V1
         public override AllocateIdsResponse AllocateIds(
             string projectId,
             IEnumerable<Key> keys,
-            CallSettings callSettings = null) => _callAllocateIds.Sync(
-                new AllocateIdsRequest
-                {
-                    ProjectId = projectId,
-                    Keys = { keys },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            var request = new AllocateIdsRequest
+            {
+                ProjectId = projectId,
+                Keys = { keys },
+            };
+            ModifyAllocateIdsRequest(ref request, ref callSettings);
+            return _callAllocateIds.Sync(request, callSettings);
+        }
 
+        // Partial method to allow for fine-tuning of requests and settings when performing
+        // an AllocateIds request.
+        partial void ModifyAllocateIdsRequest(ref AllocateIdsRequest request, ref CallSettings settings);
     }
 
     // Partial classes to enable page-streaming
