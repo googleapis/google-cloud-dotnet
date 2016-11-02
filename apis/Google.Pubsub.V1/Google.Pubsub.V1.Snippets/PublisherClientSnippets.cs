@@ -21,6 +21,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using Google.Iam.V1;
 
 namespace Google.Pubsub.V1.Snippets
 {
@@ -196,6 +197,22 @@ namespace Google.Pubsub.V1.Snippets
             string topicName = PublisherClient.FormatTopicName(projectId, topicId);
             await client.DeleteTopicAsync(topicName);
             Console.WriteLine($"Deleted {topicName}");
+            // End snippet
+        }
+
+        [Fact]
+        public void GetIamPolicy()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+
+            PublisherClient.Create().CreateTopic(PublisherClient.FormatTopicName(projectId, topicId));
+
+            // Snippet: GetIamPolicy
+            PublisherClient client = PublisherClient.Create();
+            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            Policy policy = client.GetIamPolicy(topicName);
+            Console.WriteLine($"Policy for {topicName}: {policy}");
             // End snippet
         }
     }
