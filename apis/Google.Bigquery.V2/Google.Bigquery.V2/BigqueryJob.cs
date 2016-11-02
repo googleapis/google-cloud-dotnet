@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -112,6 +114,48 @@ namespace Google.Bigquery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The final state of the job.</returns>
         public BigqueryJob Cancel(CancelJobOptions options = null) => _client.CancelJob(Reference, options);
+
+        /// <summary>
+        /// Asynchronously polls this job for completion.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the completed job.</returns>
+        public Task<BigqueryJob> PollUntilCompletedAsync(GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.PollJobUntilCompletedAsync(Reference, options, pollSettings, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously polls this job for completion, which must be a query job.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the completed job.</returns>
+        public Task<BigqueryQueryJob> PollQueryUntilCompletedAsync(GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.PollQueryUntilCompletedAsync(Reference, options, pollSettings, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously retrieves the result of this job, which must be a query job.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a <see cref="BigqueryQueryJob"/> representation of the query.</returns>
+        public Task<BigqueryQueryJob> GetQueryResultsAsync(GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.GetQueryJobAsync(Reference, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously cancels this job.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the final state of the job.</returns>
+        public Task<BigqueryJob> CancelAsync(CancelJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.CancelJobAsync(Reference, options, cancellationToken);
 
         // TODO: Refresh? Could easily call GetJob, but can't easily modify *this* job...
     }
