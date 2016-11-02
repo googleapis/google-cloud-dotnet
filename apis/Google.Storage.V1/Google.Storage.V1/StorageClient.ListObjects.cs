@@ -37,7 +37,7 @@ namespace Google.Storage.V1
         /// This parameter may be null, in which case no filtering is performed.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
-        /// <returns>An asynchronous sequence of pages of objects in the specified bucket.</returns>
+        /// <returns>An asynchronous sequence of objects in the specified bucket.</returns>
         public virtual IPagedAsyncEnumerable<Objects, Object> ListObjectsAsync(
             string bucket,
             string prefix,
@@ -58,7 +58,7 @@ namespace Google.Storage.V1
         /// This parameter may be null, in which case no filtering is performed.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
-        /// <returns>A sequence of pages of objects in the specified bucket.</returns>
+        /// <returns>A sequence of objects in the specified bucket.</returns>
         public virtual IPagedEnumerable<Objects, Object> ListObjects(string bucket, string prefix, ListObjectsOptions options = null)
         {
             throw new NotImplementedException();

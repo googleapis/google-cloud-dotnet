@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -171,6 +173,181 @@ namespace Google.Bigquery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
         public virtual IPagedEnumerable<TableDataList, BigqueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously executes a query.
+        /// </summary>
+        /// <param name="sql">The SQL query. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigqueryQueryJob"/> representing the query.</returns>
+        public virtual Task<BigqueryQueryJob> ExecuteQueryAsync(string sql, ExecuteQueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously executes a command. This overload allows query parameterization, and is preferred over
+        /// <see cref="ExecuteQueryAsync(string, ExecuteQueryOptions,CancellationToken)"/> when values need to be passed in.
+        /// </summary>
+        /// <param name="command">The command to execute. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigqueryQueryJob"/> representing the query.</returns>
+        public virtual Task<BigqueryQueryJob> ExecuteQueryAsync(BigqueryCommand command, ExecuteQueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously creates a job for a SQL query, with more facilities than <see cref="ExecuteQueryAsync(string, ExecuteQueryOptions,CancellationToken)"/>, including the option
+        /// to store the results in a persistent table.
+        /// </summary>
+        /// <param name="sql">The SQL query. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>The query job created. Use <see cref="GetQueryJobAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
+        /// the results of the query.</returns>
+        public virtual Task<BigqueryJob> CreateQueryJobAsync(string sql, CreateQueryJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously creates a job for a query/command, with more facilities than <see cref="ExecuteQueryAsync(BigqueryCommand, ExecuteQueryOptions,CancellationToken)"/>,
+        /// including the option to store the results in a persistent table. This overload allows query parameterization, and is preferred over
+        /// <see cref="CreateQueryJobAsync(string, CreateQueryJobOptions,CancellationToken)"/> when values need to be passed in.
+        /// </summary>
+        /// <param name="command">The command to execute. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>The query job created. Use <see cref="GetQueryJobAsync(JobReference,GetQueryResultsOptions,CancellationToken)"/> to retrieve
+        /// the results of the query.</returns>
+        public virtual Task<BigqueryJob> CreateQueryJobAsync(BigqueryCommand command, CreateQueryJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously retrieves the results of the query job with specified by project ID and job ID.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="GetQueryJobAsync(JobReference, GetQueryResultsOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigqueryQueryJob"/> representing the query.</returns>
+        public virtual Task<BigqueryQueryJob> GetQueryResultsAsync(string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetQueryJobAsync(GetJobReference(jobId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously retrieves the results of the query job with the specified ID in this clients project.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="GetQueryJobAsync(JobReference, GetQueryResultsOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigqueryQueryJob"/> representing the query.</returns>
+        public virtual Task<BigqueryQueryJob> GetQueryResultsAsync(string projectId, string jobId, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetQueryJobAsync(GetJobReference(projectId, jobId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously retrieves the results of a query job.
+        /// </summary>
+        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigqueryQueryJob"/> representing the query.</returns>
+        public virtual Task<BigqueryQueryJob> GetQueryJobAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously polls the query job with the specified project ID and job ID until it has completed. The job must represent a query.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigqueryQueryJob"/> representing the query.</returns>
+        public virtual Task<BigqueryQueryJob> PollQueryUntilCompletedAsync(string projectId, string jobId, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
+            => PollQueryUntilCompletedAsync(GetJobReference(projectId, jobId), options, pollSettings, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously polls the query job with the specified job ID in this project until it has completed. The job must represent a query.
+        /// </summary>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigqueryQueryJob"/> representing the query.</returns>
+        public virtual Task<BigqueryQueryJob> PollQueryUntilCompletedAsync(string jobId, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
+            => PollQueryUntilCompletedAsync(GetJobReference(jobId), options, pollSettings, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously polls the given job until it has completed. The job must represent a query.
+        /// </summary>
+        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the <see cref="BigqueryQueryJob"/> representing the query.</returns>
+        public virtual Task<BigqueryQueryJob> PollQueryUntilCompletedAsync(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <c>SELECT * FROM ...</c> query.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="ListRowsAsync(TableReference, TableSchema, ListRowsOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
+        /// the table first.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of the rows within the table.</returns>
+        public virtual IPagedAsyncEnumerable<TableDataList, BigqueryRow> ListRowsAsync(string projectId, string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null)
+        {
+            return ListRowsAsync(GetTableReference(projectId, datasetId, tableId), schema, options);
+        }
+
+        /// <summary>
+        /// Lists the rows within a table within this client's project specified by dataset ID and table ID, similar to a <c>SELECT * FROM ...</c> query.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="ListRowsAsync(TableReference, TableSchema, ListRowsOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
+        /// the table first.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of the rows within the table.</returns>
+        public virtual IPagedAsyncEnumerable<TableDataList, BigqueryRow> ListRowsAsync(string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
+            ListRowsAsync(GetTableReference(datasetId, tableId), schema, options);
+
+        /// <summary>
+        /// Lists the rows within a table, similar to a <c>SELECT * FROM ...</c> query.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
+        /// the table first.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of the rows within the table.</returns>
+        public virtual IPagedAsyncEnumerable<TableDataList, BigqueryRow> ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             throw new NotImplementedException();
         }

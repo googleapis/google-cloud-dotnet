@@ -19,6 +19,8 @@ using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -131,6 +133,100 @@ namespace Google.Bigquery.V2
                 return request;
             };
             return new PagedEnumerable<TabledataResource.ListRequest, TableDataList, BigqueryRow>(
+                requestProvider,
+                pageManager);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigqueryQueryJob> ExecuteQueryAsync(string sql, ExecuteQueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
+            options?.ModifyRequest(queryRequest);
+            var request = Service.Jobs.Query(queryRequest, ProjectId);
+            var queryResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigqueryQueryJob(this, queryResponse, options);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigqueryQueryJob> ExecuteQueryAsync(BigqueryCommand command, ExecuteQueryOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(command, nameof(command));
+            var queryRequest = new QueryRequest { UseLegacySql = false };
+            command.PopulateQueryRequest(queryRequest);
+            options?.ModifyRequest(queryRequest);
+            var request = Service.Jobs.Query(queryRequest, ProjectId);
+            var queryResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigqueryQueryJob(this, queryResponse, options);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigqueryJob> CreateQueryJobAsync(string sql, CreateQueryJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(sql, nameof(sql));
+            var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
+            options?.ModifyRequest(query);
+            var job = await Service.Jobs.Insert(new Job
+            {
+                Configuration = new JobConfiguration
+                {
+                    Query = query
+                },
+            }, ProjectId).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigqueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigqueryJob> CreateQueryJobAsync(BigqueryCommand command, CreateQueryJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(command, nameof(command));
+            var query = new JobConfigurationQuery { UseLegacySql = false };
+            command.PopulateJobConfigurationQuery(query);
+            options?.ModifyRequest(query);
+            var job = await Service.Jobs.Insert(new Job
+            {
+                Configuration = new JobConfiguration
+                {
+                    Query = query
+                },
+            }, ProjectId).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigqueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        public override Task<BigqueryQueryJob> PollQueryUntilCompletedAsync(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+            return Polling.PollRepeatedlyAsync(ignoredDeadline => GetQueryJobAsync(jobReference, options, cancellationToken),
+                job => job.Completed, Clock, Scheduler, pollSettings ?? s_defaultPollSettings);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigqueryQueryJob> GetQueryJobAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
+
+            var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
+            options?.ModifyRequest(request);
+            var firstResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigqueryQueryJob(this, firstResponse, options);
+        }
+
+        /// <inheritdoc />
+        public override IPagedAsyncEnumerable<TableDataList, BigqueryRow> ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            schema = schema ?? GetSchema(tableReference);
+
+            var pageManager = new TableRowPageManager(this, schema);
+
+            Func<TabledataResource.ListRequest> requestProvider = () =>
+            {
+                var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+                options?.ModifyRequest(request);
+                return request;
+            };
+            return new PagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigqueryRow>(
                 requestProvider,
                 pageManager);
         }

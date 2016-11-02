@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -28,7 +30,7 @@ namespace Google.Bigquery.V2
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The requested dataset.</returns>
+        /// <returns>The requested table.</returns>
         public virtual BigqueryTable GetTable(string projectId, string datasetId, string tableId, GetTableOptions options = null) =>
             GetTable(GetTableReference(projectId, datasetId, tableId), options);
 
@@ -39,7 +41,7 @@ namespace Google.Bigquery.V2
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The requested dataset.</returns>
+        /// <returns>The requested table.</returns>
         public virtual BigqueryTable GetTable(string datasetId, string tableId, GetTableOptions options = null) =>
             GetTable(GetTableReference(datasetId, tableId), options);
 
@@ -61,7 +63,7 @@ namespace Google.Bigquery.V2
         /// <param name="projectId">The ID of the project containing the dataset. Must not be null.</param>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of tables within the dataset.</returns>
+        /// <returns>A sequence of tables within the dataset.</returns>
         public virtual IPagedEnumerable<TableList, BigqueryTable> ListTables(string projectId, string datasetId, ListTablesOptions options = null) =>
             ListTables(GetDatasetReference(projectId, datasetId), options);
 
@@ -71,7 +73,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of tables within the dataset.</returns>
+        /// <returns>A sequence of tables within the dataset.</returns>
         public virtual IPagedEnumerable<TableList, BigqueryTable> ListTables(string datasetId, ListTablesOptions options = null) =>
             ListTables(GetDatasetReference(datasetId), options);
 
@@ -80,7 +82,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of tables within the dataset.</returns>
+        /// <returns>A sequence of tables within the dataset.</returns>
         public virtual IPagedEnumerable<TableList, BigqueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
         {
             throw new NotImplementedException();
@@ -193,6 +195,207 @@ namespace Google.Bigquery.V2
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         public virtual void DeleteTable(TableReference tableReference, DeleteTableOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Retrieves a table given a project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetTableAsync(TableReference,GetTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested table.</returns>
+        public virtual Task<BigqueryTable> GetTableAsync(string projectId, string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetTableAsync(GetTableReference(projectId, datasetId, tableId), options, cancellationToken);
+
+        /// <summary>
+        /// Retrieves a table within this client's project given the dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetTableAsync(TableReference,GetTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested table.</returns>
+        public virtual Task<BigqueryTable> GetTableAsync(string datasetId, string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetTableAsync(GetTableReference(datasetId, tableId), options, cancellationToken);
+
+        /// <summary>
+        /// Retrieves a table.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested table.</returns>
+        public virtual Task<BigqueryTable> GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the tables in a dataset specified by project ID and dataset ID.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ListTablesAsync(DatasetReference, ListTablesOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The ID of the project containing the dataset. Must not be null.</param>
+        /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of tables within the dataset.</returns>
+        public virtual IPagedAsyncEnumerable<TableList, BigqueryTable> ListTablesAsync(string projectId, string datasetId, ListTablesOptions options = null) =>
+            ListTablesAsync(GetDatasetReference(projectId, datasetId), options);
+
+        /// <summary>
+        /// Lists the tables in a dataset specified by dataset ID, where the dataset is in this client's project.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="ListTablesAsync(DatasetReference, ListTablesOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of tables within the dataset.</returns>
+        public virtual IPagedAsyncEnumerable<TableList, BigqueryTable> ListTablesAsync(string datasetId, ListTablesOptions options = null) =>
+            ListTablesAsync(GetDatasetReference(datasetId), options);
+
+        /// <summary>
+        /// Lists the tables in a dataset.
+        /// </summary>
+        /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A sequence of tables within the dataset.</returns>
+        public virtual IPagedAsyncEnumerable<TableList, BigqueryTable> ListTablesAsync(DatasetReference datasetReference, ListTablesOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a table specified by a project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateTableAsync(TableReference, TableSchema, CreateTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the newly created table.</returns>
+        public virtual Task<BigqueryTable> CreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            CreateTableAsync(GetTableReference(projectId, datasetId, tableId), schema, options, cancellationToken);
+
+        /// <summary>
+        /// Creates a table within this project, specified by a dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateTableAsync(TableReference, TableSchema, CreateTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the newly created table.</returns>
+        public virtual Task<BigqueryTable> CreateTableAsync(string datasetId, string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            CreateTableAsync(GetTableReference(datasetId, tableId), schema, options, cancellationToken);
+
+        /// <summary>
+        /// Creates a table with the given schema.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema for the new table. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the newly created table.</returns>
+        public virtual Task<BigqueryTable> CreateTableAsync(TableReference tableReference, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Attempts to fetch a table specified by project ID, dataset ID and table ID, creating it if it doesn't exist.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetOrCreateTableAsync(TableReference, TableSchema, GetTableOptions, CreateTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the existing or new table.</returns>
+        public virtual Task<BigqueryTable> GetOrCreateTableAsync(string projectId, string datasetId, string tableId, TableSchema schema,
+            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetOrCreateTableAsync(GetTableReference(projectId, datasetId, tableId), schema, getOptions, createOptions, cancellationToken);
+
+        /// <summary>
+        /// Attempts to fetch the specified table within this client's project, creating it if it doesn't exist.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="GetOrCreateTableAsync(TableReference, TableSchema, GetTableOptions, CreateTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the existing or new table.</returns>
+        public virtual Task<BigqueryTable> GetOrCreateTableAsync(string datasetId, string tableId, TableSchema schema,
+            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetOrCreateTableAsync(GetTableReference(datasetId, tableId), schema, getOptions, createOptions, cancellationToken);
+
+        /// <summary>
+        /// Attempts to fetch a table, creating it if it doesn't exist.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the existing or new table.</returns>
+        public virtual Task<BigqueryTable> GetOrCreateTableAsync(TableReference tableReference, TableSchema schema,
+            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="DeleteTableAsync(TableReference,DeleteTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task DeleteTableAsync(string projectId, string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            DeleteTableAsync(GetTableReference(projectId, datasetId, tableId), options, cancellationToken);
+
+        /// <summary>
+        /// Deletes a table within this project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="DeleteTableAsync(TableReference,DeleteTableOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task DeleteTableAsync(string datasetId, string tableId, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            DeleteTableAsync(GetTableReference(datasetId, tableId), options, cancellationToken);
+
+        /// <summary>
+        /// Deletes a table.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }

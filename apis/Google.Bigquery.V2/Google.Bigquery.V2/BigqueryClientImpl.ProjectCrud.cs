@@ -49,6 +49,15 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
+        public override IPagedAsyncEnumerable<ProjectList, CloudProject> ListProjectsAsync(ListProjectsOptions options = null)
+        {
+            var pageManager = new ProjectsPageManager(this);
+            return new PagedAsyncEnumerable<ListRequest, ProjectList, CloudProject>(
+                () => CreateListProjectsRequest(options),
+                pageManager);
+        }
+
+        /// <inheritdoc />
         private ListRequest CreateListProjectsRequest(ListProjectsOptions options)
         {
             var request = Service.Projects.List();
