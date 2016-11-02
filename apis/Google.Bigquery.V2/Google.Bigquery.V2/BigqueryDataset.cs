@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -145,5 +147,90 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         public void Delete(DeleteDatasetOptions options = null) => _client.DeleteDataset(Reference, options);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of CSV data to a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public Task<BigqueryJob> UploadCsvAsync(string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UploadCsvAsync(GetTableReference(tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of JSON data to a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public Task<BigqueryJob> UploadJsonAsync(string tableId, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UploadJsonAsync(GetTableReference(tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously lists the tables within this dataset.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigqueryClient.ListTablesAsync(DatasetReference, ListTablesOptions)"/>.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of tables within this dataset.</returns>
+        public IPagedAsyncEnumerable<TableList, BigqueryTable> ListTablesAsync(ListTablesOptions options = null) => _client.ListTablesAsync(Reference, options);
+
+        /// <summary>
+        /// Asynchronously creates a table within this dataset.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.CreateTableAsync(TableReference, TableSchema, CreateTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the newly created table.</returns>
+        public Task<BigqueryTable> CreateTableAsync(string tableId, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.CreateTableAsync(GetTableReference(tableId), schema, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously retrieves a table within this dataset.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.GetTableAsync(TableReference, GetTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested table.</returns>
+        public Task<BigqueryTable> GetTableAsync(string tableId, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.GetTableAsync(GetTableReference(tableId), options, cancellationToken);
+
+        /// <summary>
+        /// Attempts to fetch the specified table within this dataset, creating it if it doesn't exist.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.GetOrCreateTableAsync(TableReference, TableSchema, GetTableOptions, CreateTableOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema to use to create the table if necessary. Must not be null.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the existing or new table.</returns>
+        public Task<BigqueryTable> GetOrCreateTableAsync(string tableId, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.GetOrCreateTableAsync(GetTableReference(tableId), schema, getOptions, createOptions, cancellationToken);
+
+        /// <summary>
+        /// Deletes this dataset.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.DeleteTable(TableReference, DeleteTableOptions)"/>.
+        /// </summary>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public Task DeleteAsync(DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.DeleteDatasetAsync(Reference, options, cancellationToken);
     }
 }

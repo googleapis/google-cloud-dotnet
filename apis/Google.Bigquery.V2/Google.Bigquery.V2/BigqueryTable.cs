@@ -18,6 +18,8 @@ using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -129,6 +131,68 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         public void Delete(DeleteTableOptions options = null) => _client.DeleteTable(Reference, options);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of CSV data to this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A data upload job.</returns>
+        public Task<BigqueryJob> UploadCsvAsync(Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UploadCsvAsync(Reference, Schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of JSON data to this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A data upload job.</returns>
+        public Task<BigqueryJob> UploadJsonAsync(Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UploadJsonAsync(Reference, Schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously lists the rows within this table, similar to a <c>SELECT * FROM ...</c> query.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of the rows within the table.</returns>
+        public IPagedAsyncEnumerable<TableDataList, BigqueryRow> ListRowsAsync(ListRowsOptions options = null) => _client.ListRowsAsync(Reference, Schema, options);
+
+        /// <summary>
+        /// Asynchronously inserts a single row of data into this table.
+        /// </summary>
+        /// <param name="row">The data to insert. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        public Task InsertAsync(InsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.InsertAsync(Reference, row, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously inserts all the given rows of data into this table.
+        /// </summary>
+        /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        public Task InsertAsync(IEnumerable<InsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.InsertAsync(Reference, rows, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously inserts all the given rows of data into this table.
+        /// </summary>
+        /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
+        public Task InsertAsync(params InsertRow[] rows) =>
+            _client.InsertAsync(Reference, rows);
+
+        /// <summary>
+        /// Asynchronously deletes this table.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        public Task DeleteAsync(DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.DeleteTableAsync(Reference, options, cancellationToken);
 
         /// <summary>
         /// Returns the fully-qualified ID of the table in Legacy SQL format. The Legacy SQL
