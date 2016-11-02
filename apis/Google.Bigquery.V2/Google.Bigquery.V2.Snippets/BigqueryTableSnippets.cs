@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Bigquery.V2.Snippets
@@ -55,6 +56,31 @@ namespace Google.Bigquery.V2.Snippets
 
             // We set up 7 results in the fixture. Other tests may add more.
             Assert.True(result.Count() >= 7);
+        }
+
+        [Fact]
+        public async Task ListRowsAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
+            // Snippet: ListRowsAsync
+            BigqueryClient client = BigqueryClient.Create(projectId);
+            BigqueryTable table = client.GetTable(datasetId, tableId);
+            IPagedAsyncEnumerable<TableDataList, BigqueryRow> result = table.ListRowsAsync();
+            await result.ForEachAsync(row =>
+            {
+                DateTime timestamp = (DateTime)row["game_started"];
+                long level = (long)row["level"];
+                long score = (long)row["score"];
+                string player = (string)row["player"];
+                Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
+            });
+            // End snippet
+
+            // We set up 7 results in the fixture. Other tests may add more.
+            Assert.True(await result.Count() >= 7);
         }
     }
 }
