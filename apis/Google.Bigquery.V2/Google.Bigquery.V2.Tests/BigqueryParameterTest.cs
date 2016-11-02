@@ -34,7 +34,6 @@ namespace Google.Bigquery.V2.Tests
 
             // Float64
             ScalarTest("Float64 parameter, Int16 value", BigqueryParameterType.Float64, (short)10, "10"),
-            ScalarTest("Float64 parameter, Int16 value", BigqueryParameterType.Float64, (short)10, "10"),
             ScalarTest("Float64 parameter, Int32 value", BigqueryParameterType.Float64, (int)10, "10"),
             ScalarTest("Float64 parameter, Int64 value", BigqueryParameterType.Float64, (long)10, "10"),
             ScalarTest("Float64 parameter, UInt16 value", BigqueryParameterType.Float64, (ushort)10, "10"),
