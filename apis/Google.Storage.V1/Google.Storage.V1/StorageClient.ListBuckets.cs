@@ -31,7 +31,7 @@ namespace Google.Storage.V1
         /// <param name="projectId">The ID of the project to list the buckets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
-        /// <returns>An asynchronous sequence of pages of buckets.</returns>
+        /// <returns>An asynchronous sequence of buckets.</returns>
         public virtual IPagedAsyncEnumerable<Buckets, Bucket> ListBucketsAsync(string projectId, ListBucketsOptions options = null)
         {
             throw new NotImplementedException();
@@ -47,7 +47,7 @@ namespace Google.Storage.V1
         /// <param name="projectId">The ID of the project to list the buckets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
-        /// <returns>A sequence of pages of buckets within the project.</returns>
+        /// <returns>A sequence of buckets within the project.</returns>
         public virtual IPagedEnumerable<Buckets, Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
         {
             throw new NotImplementedException();

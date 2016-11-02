@@ -27,8 +27,21 @@ namespace Google.Bigquery.V2
         /// The project associated with this client is irrelevant for this operation.
         /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of tables within the dataset.</returns>
+        /// <returns>A sequence of tables within the dataset.</returns>
         public virtual IPagedEnumerable<ProjectList, CloudProject> ListProjects(ListProjectsOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously lists the cloud projects available using the current credentials.
+        /// </summary>
+        /// <remarks>
+        /// The project associated with this client is irrelevant for this operation.
+        /// </remarks>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of tables within the dataset.</returns>
+        public virtual IPagedAsyncEnumerable<ProjectList, CloudProject> ListProjectsAsync(ListProjectsOptions options = null)
         {
             throw new NotImplementedException();
         }

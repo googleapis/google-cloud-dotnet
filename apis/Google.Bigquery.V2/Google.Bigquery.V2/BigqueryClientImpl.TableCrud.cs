@@ -18,6 +18,8 @@ using Google.Apis.Bigquery.v2.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Threading;
+using System.Threading.Tasks;
 using static Google.Apis.Bigquery.v2.TablesResource;
 
 namespace Google.Bigquery.V2
@@ -105,5 +107,67 @@ namespace Google.Bigquery.V2
             options?.ModifyRequest(request);
             request.Execute();
         }
+
+        /// <inheritdoc />
+        public override async Task<BigqueryTable> GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+
+            var request = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            options?.ModifyRequest(request);
+            var resource = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigqueryTable(this, resource);
+        }
+
+        /// <inheritdoc />
+        public override IPagedAsyncEnumerable<TableList, BigqueryTable> ListTablesAsync(DatasetReference datasetReference, ListTablesOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
+
+            var pageManager = new TablePageManager(this);
+            return new PagedAsyncEnumerable<ListRequest, TableList, BigqueryTable>(
+                () => CreateListTablesRequest(datasetReference, options),
+                pageManager);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigqueryTable> CreateTableAsync(TableReference tableReference, TableSchema schema,
+            CreateTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+
+            var table = new Table { TableReference = tableReference, Schema = schema };
+            var request = Service.Tables.Insert(table, tableReference.ProjectId, tableReference.DatasetId);
+            options?.ModifyRequest(table, request);
+            var result = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigqueryTable(this, result);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigqueryTable> GetOrCreateTableAsync(TableReference tableReference, TableSchema schema,
+            GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+
+            try
+            {
+                // TODO: Validate the schema matches?
+                return await GetTableAsync(tableReference, getOptions, cancellationToken).ConfigureAwait(false);
+            }
+            catch (GoogleApiException ex) when (ex.HttpStatusCode == HttpStatusCode.NotFound)
+            {
+                return await CreateTableAsync(tableReference, schema, createOptions, cancellationToken).ConfigureAwait(false);
+            }
+        }
+
+        /// <inheritdoc />
+        public override async Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            options?.ModifyRequest(request);
+            await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+        }
+
     }
 }

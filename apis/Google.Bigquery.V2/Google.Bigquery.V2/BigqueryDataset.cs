@@ -96,7 +96,7 @@ namespace Google.Bigquery.V2
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigqueryClient.ListTables(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of tables within this dataset.</returns>
+        /// <returns>A sequence of tables within this dataset.</returns>
         public IPagedEnumerable<TableList, BigqueryTable> ListTables(ListTablesOptions options = null) => _client.ListTables(Reference, options);
 
         /// <summary>

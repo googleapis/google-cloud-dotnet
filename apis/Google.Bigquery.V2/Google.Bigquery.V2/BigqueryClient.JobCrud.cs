@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -25,7 +27,7 @@ namespace Google.Bigquery.V2
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListJobs(ProjectReference, ListJobsOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of the jobs within this project.</returns>
+        /// <returns>A sequence of the jobs within this project.</returns>
         public virtual IPagedEnumerable<JobList, BigqueryJob> ListJobs(ListJobsOptions options = null) =>
             ListJobs(GetProjectReference(ProjectId), options);
 
@@ -35,7 +37,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="projectId">The project to list the jobs from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of the jobs within the specified project.</returns>
+        /// <returns>A sequence of the jobs within the specified project.</returns>
         public virtual IPagedEnumerable<JobList, BigqueryJob> ListJobs(string projectId, ListJobsOptions options = null) =>
             ListJobs(GetProjectReference(projectId), options);
 
@@ -45,7 +47,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of the jobs within the specified project.</returns>
+        /// <returns>A sequence of the jobs within the specified project.</returns>
         public virtual IPagedEnumerable<JobList, BigqueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
         {
             throw new NotImplementedException();
@@ -146,6 +148,154 @@ namespace Google.Bigquery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The final state of the job.</returns>
         public virtual BigqueryJob CancelJob(JobReference jobReference, CancelJobOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously lists the jobs within this client's project.
+        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListJobsAsync(ProjectReference, ListJobsOptions)"/>.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of the jobs within this project.</returns>
+        public virtual IPagedAsyncEnumerable<JobList, BigqueryJob> ListJobsAsync(ListJobsOptions options = null) =>
+            ListJobsAsync(GetProjectReference(ProjectId), options);
+
+        /// <summary>
+        /// Asynchronously lists the jobs within the specified project.
+        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListJobsAsync(ProjectReference, ListJobsOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project to list the jobs from. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of the jobs within the specified project.</returns>
+        public virtual IPagedAsyncEnumerable<JobList, BigqueryJob> ListJobsAsync(string projectId, ListJobsOptions options = null) =>
+            ListJobsAsync(GetProjectReference(projectId), options);
+
+        /// <summary>
+        /// Asynchronously lists the jobs within the specified project.
+        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasetsAsync(ProjectReference, ListDatasetsOptions)"/>.
+        /// </summary>
+        /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of the jobs within the specified project.</returns>
+        public virtual IPagedAsyncEnumerable<JobList, BigqueryJob> ListJobsAsync(ProjectReference projectReference, ListJobsOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Polls the job with the specified ID in this client's project for completion.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJobUntilCompletedAsync(JobReference,GetJobOptions,PollSettings,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the completed job.</returns>
+        public virtual Task<BigqueryJob> PollJobUntilCompletedAsync(string jobId, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            PollJobUntilCompletedAsync(GetJobReference(jobId), options, pollSettings, cancellationToken);
+
+        /// <summary>
+        /// Polls the job with the specified project ID and job ID.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="PollJobUntilCompletedAsync(JobReference,GetJobOptions,PollSettings,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the completed job.</returns>
+        public virtual Task<BigqueryJob> PollJobUntilCompletedAsync(string projectId, string jobId, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            PollJobUntilCompletedAsync(GetJobReference(projectId, jobId), options, pollSettings, cancellationToken);
+
+        /// <summary>
+        /// Polls the specified job for completion.
+        /// </summary>
+        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the completed job.</returns>
+        public virtual Task<BigqueryJob> PollJobUntilCompletedAsync(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Retrieves the job with the specified ID within this client's project.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="GetJobAsync(JobReference,GetJobOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the retrieved job.</returns>
+        public virtual Task<BigqueryJob> GetJobAsync(string jobId, GetJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetJobAsync(GetJobReference(jobId), options, cancellationToken);
+
+        /// <summary>
+        /// Retrieves a job given a project ID and job ID.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="GetJobAsync(JobReference,GetJobOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the retrieved job.</returns>
+        public virtual Task<BigqueryJob> GetJobAsync(string projectId, string jobId, GetJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetJobAsync(GetJobReference(projectId, jobId), options, cancellationToken);
+
+        /// <summary>
+        /// Retrieves a job.
+        /// </summary>
+        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the retrieved job.</returns>
+        public virtual Task<BigqueryJob> GetJobAsync(JobReference jobReference, GetJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously cancels the job with the specified ID in this client's project.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="CancelJobAsync(JobReference, CancelJobOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the final state of job.</returns>
+        public virtual Task<BigqueryJob> CancelJobAsync(string jobId, CancelJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            CancelJobAsync(GetJobReference(jobId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously cancels the job with the specified project ID and job ID.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="CancelJobAsync(JobReference, CancelJobOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="jobId">The job ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the final state of job.</returns>
+        public virtual Task<BigqueryJob> CancelJobAsync(string projectId, string jobId, CancelJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            CancelJobAsync(GetJobReference(projectId, jobId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously cancels a job.
+        /// </summary>
+        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the final state of job.</returns>
+        public virtual Task<BigqueryJob> CancelJobAsync(JobReference jobReference, CancelJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }

@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2
 {
@@ -57,7 +59,7 @@ namespace Google.Bigquery.V2
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of datasets within this project.</returns>
+        /// <returns>A sequence of datasets within this project.</returns>
         public virtual IPagedEnumerable<DatasetList, BigqueryDataset> ListDatasets(ListDatasetsOptions options = null) =>
             ListDatasets(GetProjectReference(ProjectId), options);
 
@@ -67,7 +69,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="projectId">The project to list the datasets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of datasets within the specified project.</returns>
+        /// <returns>A sequence of datasets within the specified project.</returns>
         public virtual IPagedEnumerable<DatasetList, BigqueryDataset> ListDatasets(string projectId, ListDatasetsOptions options = null) =>
             ListDatasets(GetProjectReference(projectId), options);
 
@@ -77,7 +79,7 @@ namespace Google.Bigquery.V2
         /// </summary>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>A sequence of pages of datasets within the specified project.</returns>
+        /// <returns>A sequence of datasets within the specified project.</returns>
         public virtual IPagedEnumerable<DatasetList, BigqueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
             throw new NotImplementedException();
@@ -175,6 +177,197 @@ namespace Google.Bigquery.V2
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         public virtual void DeleteDataset(DatasetReference datasetReference, DeleteDatasetOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously retrieves a dataset within this client's project given the dataset ID.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="GetDatasetAsync(DatasetReference,GetDatasetOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested dataset.</returns>
+        public virtual Task<BigqueryDataset> GetDatasetAsync(string datasetId, GetDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetDatasetAsync(GetDatasetReference(datasetId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously retrieves a dataset given a project ID and dataset ID.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="GetDatasetAsync(DatasetReference,GetDatasetOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested dataset.</returns>
+        public virtual Task<BigqueryDataset> GetDatasetAsync(string projectId, string datasetId,
+            GetDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetDatasetAsync(GetDatasetReference(projectId, datasetId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously retrieves a dataset.
+        /// </summary>
+        /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested dataset.</returns>
+        public virtual Task<BigqueryDataset> GetDatasetAsync(DatasetReference datasetReference,
+            GetDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously lists the datasets within this client's project.
+        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasetsAsync(ProjectReference, ListDatasetsOptions)"/>.
+        /// </summary>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of datasets within this project.</returns>
+        public virtual IPagedAsyncEnumerable<DatasetList, BigqueryDataset> ListDatasetsAsync(ListDatasetsOptions options = null) =>
+            ListDatasetsAsync(GetProjectReference(ProjectId), options);
+
+        /// <summary>
+        /// Asynchronously lists the datasets within the specified project.
+        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasetsAsync(ProjectReference, ListDatasetsOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project to list the datasets from. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of datasets within the specified project.</returns>
+        public virtual IPagedAsyncEnumerable<DatasetList, BigqueryDataset> ListDatasetsAsync(string projectId, ListDatasetsOptions options = null) =>
+            ListDatasetsAsync(GetProjectReference(projectId), options);
+
+        /// <summary>
+        /// Asynchronously lists the datasets within the specified project.
+        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasetsAsync(ProjectReference, ListDatasetsOptions)"/>.
+        /// </summary>
+        /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of datasets within the specified project.</returns>
+        public virtual IPagedAsyncEnumerable<DatasetList, BigqueryDataset> ListDatasetsAsync(ProjectReference projectReference, ListDatasetsOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously creates a dataset with the specified ID in this client's project.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="CreateDatasetAsync(DatasetReference,CreateDatasetOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The new dataset ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the created dataset.</returns>
+        public virtual Task<BigqueryDataset> CreateDatasetAsync(string datasetId,
+            CreateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            CreateDatasetAsync(GetDatasetReference(datasetId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a dataset with the specified ID in specified project.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="CreateDatasetAsync(DatasetReference,CreateDatasetOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The ID of the project in which to create the dataset. Must not be null.</param>
+        /// <param name="datasetId">The new dataset ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the created dataset.</returns>
+        public virtual Task<BigqueryDataset> CreateDatasetAsync(string projectId, string datasetId,
+            CreateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            CreateDatasetAsync(GetDatasetReference(projectId, datasetId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates the specified dataset.
+        /// </summary>
+        /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the created dataset.</returns>
+        public virtual Task<BigqueryDataset> CreateDatasetAsync(DatasetReference datasetReference,
+            CreateDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously attempts to fetch the specified dataset within this client's project, creating it if it doesn't exist.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="GetOrCreateDatasetAsync(DatasetReference,GetDatasetOptions,CreateDatasetOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// The existing or new dataset.</returns>
+        public virtual Task<BigqueryDataset> GetOrCreateDatasetAsync(string datasetId,
+            GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetOrCreateDatasetAsync(GetDatasetReference(datasetId), getOptions, createOptions, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously attempts to fetch the specified dataset within the given project, creating it if it doesn't exist.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="GetOrCreateDatasetAsync(DatasetReference,GetDatasetOptions,CreateDatasetOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// The existing or new dataset.</returns>
+        public virtual Task<BigqueryDataset> GetOrCreateDatasetAsync(string projectId, string datasetId,
+            GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            GetOrCreateDatasetAsync(GetDatasetReference(projectId, datasetId), getOptions, createOptions, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously attempts to fetch the specified dataset, creating it if it doesn't exist.
+        /// </summary>
+        /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// The existing or new dataset.</returns>
+        public virtual Task<BigqueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null,
+            CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously deletes the specified dataset within this client's project.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="DeleteDatasetAsync(DatasetReference,DeleteDatasetOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task DeleteDatasetAsync(string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            DeleteDatasetAsync(GetDatasetReference(datasetId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously deletes the specified dataset within the given project.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="DeleteDatasetAsync(DatasetReference,DeleteDatasetOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task DeleteDatasetAsync(string projectId, string datasetId, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            DeleteDatasetAsync(GetDatasetReference(projectId, datasetId), options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously deletes the specified dataset.
+        /// </summary>
+        /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        public virtual Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
