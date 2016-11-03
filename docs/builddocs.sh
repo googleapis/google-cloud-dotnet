@@ -55,22 +55,22 @@ mkdir output/assembled
 
 # For Google.Api.Gax and Google.Api.Gax.Rest
 fetch gax-dotnet googleapis
-dotnet restore external/gax-dotnet
+dotnet restore -v Warning external/gax-dotnet
 
 # For Google.Protobuf
 fetch protobuf google
-dotnet restore external/protobuf
+dotnet restore -v Warning external/protobuf
 # Remove // comments in project.json; dotnet cli is fine with it, but docfx isn't.
 sed -i -r 's/\s+\/\/.*//g' external/protobuf/csharp/src/Google.Protobuf/project.json
 
 # For Grpc.Core etc
 fetch grpc grpc
-dotnet restore external/grpc/src/csharp
+dotnet restore -v Warning external/grpc/src/csharp
 
 # For all REST-based APIs
 fetch google-api-dotnet-client google
 mkdir -p external/google-api-dotnet-client/NuPkgs/Support
-dotnet restore external/google-api-dotnet-client
+dotnet restore -v Warning external/google-api-dotnet-client
 
 # TODO: google/google-api-dotnet-client, but those projects
 # don't work with docfx right now
@@ -80,7 +80,7 @@ if [ -z "$apis" ]
 then
   # Build all APIs, which means every ../apis subdirectory with a "docs" subdirectory,
   # and "root" which is the special top-level docs.
-  apis="`find ../apis -mindepth 2 -maxdepth 2 -name docs -type d | cut -d/ -f3` root"
+  apis="`/usr/bin/find ../apis -mindepth 2 -maxdepth 2 -name docs -type d | cut -d/ -f3` root"
 fi
 
 for api in $apis
