@@ -4,9 +4,9 @@
 
 All client libraries wrapping gRPC-based APIs (see the [API layers](api-layers.md) article)
 allow customization of RPC calls by using
-[CallSettings](obj/api/Google.Api.Gax.CallSettings.yml). If `CallSettings` are
+[CallSettings](obj/api/Google.Api.Gax.Grpc.CallSettings.yml). If `CallSettings` are
 not specified sensible defaults are automatically provided.
-See the [CallSettings documentation](obj/api/Google.Api.Gax.CallSettings.yml)
+See the [CallSettings documentation](obj/api/Google.Api.Gax.Grpc.CallSettings.yml)
 for descriptions of the available properties.
 
 The underlying gRPC API uses
@@ -30,9 +30,9 @@ property is used.
 The client-wide `CallSettings` is higher-priority than per-RPC-method `CallSettings`
 because it is often useful to be able to easily specify common properties to use
 for all RPC invocations. For example, a common set of
-[headers](obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Headers);
+[headers](obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_Headers);
 or a common
-[deadline](obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Timing)
+[deadline](obj/api/Google.Api.Gax.Grpc.CallSettings.yml#Google_Api_Gax_Grpc_CallSettings_Timing)
 for multiple RPC invocations.
 
 ## Examples
