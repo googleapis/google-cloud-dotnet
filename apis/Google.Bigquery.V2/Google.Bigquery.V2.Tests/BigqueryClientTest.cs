@@ -26,6 +26,8 @@ using System.Reflection;
 using Xunit;
 using System.Collections;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Bigquery.V2.Tests
 {
@@ -428,6 +430,323 @@ namespace Google.Bigquery.V2.Tests
                 client => new BigqueryTable(client, GetTable(reference)).Insert(rows[0], rows[1]));
         }
 
+        [Fact]
+        public void CreateDatasetAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new CreateDatasetOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryDataset(new DerivedBigqueryClient(), GetDataset(reference)),
+                client => client.CreateDatasetAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.CreateDatasetAsync(datasetId, options, token),
+                client => client.CreateDatasetAsync(ProjectId, datasetId, options, token));
+        }
+
+        [Fact]
+        public void DeleteDatasetAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new DeleteDatasetOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(
+                client => client.DeleteDatasetAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.DeleteDatasetAsync(datasetId, options, token),
+                client => client.DeleteDatasetAsync(ProjectId, datasetId, options, token));
+        }
+
+        [Fact]
+        public void GetDatasetAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new GetDatasetOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryDataset(new DerivedBigqueryClient(), GetDataset(reference)),
+                client => client.GetDatasetAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.GetDatasetAsync(datasetId, options, token),
+                client => client.GetDatasetAsync(ProjectId, datasetId, options, token));
+        }
+
+        [Fact]
+        public void GetOrCreateDatasetAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var getOptions = new GetDatasetOptions();
+            var createOptions = new CreateDatasetOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryDataset(new DerivedBigqueryClient(), GetDataset(reference)),
+                client => client.GetOrCreateDatasetAsync(MatchesWhenSerialized(reference), getOptions, createOptions, token),
+                client => client.GetOrCreateDatasetAsync(datasetId, getOptions, createOptions, token),
+                client => client.GetOrCreateDatasetAsync(ProjectId, datasetId, getOptions, createOptions, token));
+        }
+
+        [Fact]
+        public void ListDatasetsAsyncEquivalents()
+        {
+            var reference = new ProjectReference { ProjectId = ProjectId };
+            var options = new ListDatasetsOptions();
+            VerifyEquivalent(new UnimplementedPagedAsyncEnumerable<DatasetList, BigqueryDataset>(),
+                client => client.ListDatasetsAsync(MatchesWhenSerialized(reference), options),
+                client => client.ListDatasetsAsync(options),
+                client => client.ListDatasetsAsync(ProjectId, options));
+        }
+
+        [Fact]
+        public void CreateTableAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var schema = new TableSchemaBuilder().Build();
+            var reference = GetTableReference(datasetId, tableId);
+            var options = new CreateTableOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryTable(new DerivedBigqueryClient(), GetTable(reference)),
+                client => client.CreateTableAsync(MatchesWhenSerialized(reference), schema, options, token),
+                client => client.CreateTableAsync(datasetId, tableId, schema, options, token),
+                client => client.CreateTableAsync(ProjectId, datasetId, tableId, schema, options, token),
+                client => new BigqueryDataset(client, GetDataset(datasetId)).CreateTableAsync(tableId, schema, options, token));
+        }
+
+        [Fact]
+        public void DeleteTableAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var schema = new TableSchemaBuilder().Build();
+            var reference = GetTableReference(datasetId, tableId);
+            var options = new DeleteTableOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(
+                client => client.DeleteTableAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.DeleteTableAsync(datasetId, tableId, options, token),
+                client => client.DeleteTableAsync(ProjectId, datasetId, tableId, options, token),
+                client => new BigqueryTable(client, new Table { TableReference = reference }).DeleteAsync(options, token));
+        }
+
+        [Fact]
+        public void GetTableAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var options = new GetTableOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryTable(new DerivedBigqueryClient(), GetTable(reference)),
+                client => client.GetTableAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.GetTableAsync(datasetId, tableId, options, token),
+                client => client.GetTableAsync(ProjectId, datasetId, tableId, options, token),
+                client => new BigqueryDataset(client, GetDataset(datasetId)).GetTableAsync(tableId, options, token));
+        }
+
+        [Fact]
+        public void GetOrCreateTableAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var schema = new TableSchemaBuilder().Build();
+            var reference = GetTableReference(datasetId, tableId);
+            var getOptions = new GetTableOptions();
+            var createOptions = new CreateTableOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryTable(new DerivedBigqueryClient(), GetTable(reference)),
+                client => client.GetOrCreateTableAsync(MatchesWhenSerialized(reference), schema, getOptions, createOptions, token),
+                client => client.GetOrCreateTableAsync(datasetId, tableId, schema, getOptions, createOptions, token),
+                client => client.GetOrCreateTableAsync(ProjectId, datasetId, tableId, schema, getOptions, createOptions, token),
+                client => new BigqueryDataset(client, GetDataset(datasetId)).GetOrCreateTableAsync(tableId, schema, getOptions, createOptions, token));
+        }
+
+        [Fact]
+        public void ListTablesAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ListTablesOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalent(new UnimplementedPagedAsyncEnumerable<TableList, BigqueryTable>(),
+                client => client.ListTablesAsync(MatchesWhenSerialized(reference), options),
+                client => client.ListTablesAsync(datasetId, options),
+                client => client.ListTablesAsync(ProjectId, datasetId, options),
+                client => new BigqueryDataset(client, GetDataset(datasetId)).ListTablesAsync(options));
+        }
+
+        [Fact]
+        public void GetJobAsyncEquivalents()
+        {
+            var jobId = "job";
+            var reference = GetJobReference(jobId);
+            var options = new GetJobOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryJob(new DerivedBigqueryClient(), GetJob(reference)),
+                client => client.GetJobAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.GetJobAsync(jobId, options, token),
+                client => client.GetJobAsync(ProjectId, jobId, options, token));
+        }
+
+        [Fact]
+        public void CancelJobAsyncEquivalents()
+        {
+            var jobId = "job";
+            var reference = GetJobReference(jobId);
+            var options = new CancelJobOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryJob(new DerivedBigqueryClient(), GetJob(reference)),
+                client => client.CancelJobAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.CancelJobAsync(jobId, options, token),
+                client => client.CancelJobAsync(ProjectId, jobId, options, token),
+                client => new BigqueryJob(client, GetJob(reference)).CancelAsync(options, token));
+        }
+
+        [Fact]
+        public void PollJobUntilCompletedAsyncEquivalents()
+        {
+            var jobId = "job";
+            var reference = GetJobReference(jobId);
+            var options = new GetJobOptions();
+            var pollSettings = new PollSettings(Expiration.None, TimeSpan.Zero);
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigqueryJob(new DerivedBigqueryClient(), GetJob(reference)),
+                client => client.PollJobUntilCompletedAsync(MatchesWhenSerialized(reference), options, pollSettings, token),
+                client => client.PollJobUntilCompletedAsync(jobId, options, pollSettings, token),
+                client => client.PollJobUntilCompletedAsync(ProjectId, jobId, options, pollSettings, token),
+                client => new BigqueryJob(client, GetJob(reference)).PollUntilCompletedAsync(options, pollSettings, token));
+        }
+
+        [Fact]
+        public void PollQueryUntilCompletedAsyncEquivalents()
+        {
+            var jobId = "job";
+            var reference = GetJobReference(jobId);
+            var getQueryResultsOptions = new GetQueryResultsOptions();
+            var pollSettings = new PollSettings(Expiration.None, TimeSpan.Zero);
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(
+                new BigqueryQueryJob(new DerivedBigqueryClient(), new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions),
+                client => client.PollQueryUntilCompletedAsync(MatchesWhenSerialized(reference), getQueryResultsOptions, pollSettings, token),
+                client => client.PollQueryUntilCompletedAsync(jobId, getQueryResultsOptions, pollSettings, token),
+                client => client.PollQueryUntilCompletedAsync(ProjectId, jobId, getQueryResultsOptions, pollSettings, token),
+                client => new BigqueryJob(client, GetJob(reference)).PollQueryUntilCompletedAsync(getQueryResultsOptions, pollSettings, token),
+                client => new BigqueryQueryJob(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompletedAsync(pollSettings, token));
+        }
+
+        [Fact]
+        public void ListJobsAsyncEquivalents()
+        {
+            var reference = new ProjectReference { ProjectId = ProjectId };
+            var options = new ListJobsOptions();
+            VerifyEquivalent(new UnimplementedPagedAsyncEnumerable<JobList, BigqueryJob>(),
+                client => client.ListJobsAsync(MatchesWhenSerialized(reference), options),
+                client => client.ListJobsAsync(options),
+                client => client.ListJobsAsync(ProjectId, options));
+        }
+
+        [Fact]
+        public void ListRowsAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = GetTableReference(datasetId, tableId);
+            var schema = new TableSchemaBuilder().Build();
+            var options = new ListRowsOptions();
+            VerifyEquivalent(new UnimplementedPagedAsyncEnumerable<TableDataList, BigqueryRow>(),
+                client => client.ListRowsAsync(MatchesWhenSerialized(reference), schema, options),
+                client => client.ListRowsAsync(datasetId, tableId, schema, options),
+                client => client.ListRowsAsync(ProjectId, datasetId, tableId, schema, options),
+                client => new BigqueryTable(client, GetTable(reference, schema)).ListRowsAsync(options));
+        }
+
+        [Fact]
+        public void UploadCsvAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var tableReference = GetTableReference(datasetId, tableId);
+            var schema = new TableSchemaBuilder().Build();
+            var options = new UploadCsvOptions();
+            var token = new CancellationTokenSource().Token;
+            var stream = new MemoryStream();
+            VerifyEquivalentAsync(new BigqueryJob(new DerivedBigqueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadCsvAsync(MatchesWhenSerialized(tableReference), schema, stream, options, token),
+                client => client.UploadCsvAsync(datasetId, tableId, schema, stream, options, token),
+                client => client.UploadCsvAsync(ProjectId, datasetId, tableId, schema, stream, options, token),
+                client => new BigqueryTable(client, GetTable(tableReference, schema)).UploadCsvAsync(stream, options, token));
+        }
+
+        [Fact]
+        public void UploadJsonAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var tableReference = GetTableReference(datasetId, tableId);
+            var schema = new TableSchemaBuilder().Build();
+            var options = new UploadJsonOptions();
+            var token = new CancellationTokenSource().Token;
+            var stream = new MemoryStream();
+            VerifyEquivalentAsync(new BigqueryJob(new DerivedBigqueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadJsonAsync(MatchesWhenSerialized(tableReference), schema, stream, options, token),
+                client => client.UploadJsonAsync(datasetId, tableId, schema, stream, options, token),
+                client => client.UploadJsonAsync(ProjectId, datasetId, tableId, schema, stream, options, token),
+                client => new BigqueryTable(client, GetTable(tableReference, schema)).UploadJsonAsync(stream, options, token));
+        }
+
+        [Fact]
+        public void InsertAsyncEquivalents_SingleRow()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = new TableReference { ProjectId = ProjectId, DatasetId = datasetId, TableId = tableId };
+            var schema = new TableSchemaBuilder().Build();
+            var options = new InsertOptions();
+            var token = new CancellationTokenSource().Token;
+            var stream = new MemoryStream();
+            var row = new InsertRow();
+            VerifyEquivalentAsync(
+                client => client.InsertAsync(MatchesWhenSerialized(reference), new[] { row }, options, token),
+                client => client.InsertAsync(datasetId, tableId, row, options, token),
+                client => client.InsertAsync(ProjectId, datasetId, tableId, row, options, token),
+                client => new BigqueryTable(client, GetTable(reference)).InsertAsync(row, options, token));
+        }
+
+        [Fact]
+        public void InsertAsyncEquivalents_RowCollection()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = new TableReference { ProjectId = ProjectId, DatasetId = datasetId, TableId = tableId };
+            var schema = new TableSchemaBuilder().Build();
+            var options = new InsertOptions();
+            var token = new CancellationTokenSource().Token;
+            var stream = new MemoryStream();
+            var rows = new[] { new InsertRow(), new InsertRow() };
+            VerifyEquivalentAsync(
+                client => client.InsertAsync(MatchesWhenSerialized(reference), rows, options, token),
+                client => client.InsertAsync(datasetId, tableId, rows, options, token),
+                client => client.InsertAsync(ProjectId, datasetId, tableId, rows, options, token),
+                client => new BigqueryTable(client, GetTable(reference)).InsertAsync(rows, options, token));
+        }
+
+        [Fact]
+        public void InsertAsyncEquivalents_ParamsRows()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var reference = new TableReference { ProjectId = ProjectId, DatasetId = datasetId, TableId = tableId };
+            var schema = new TableSchemaBuilder().Build();
+            var options = new InsertOptions();
+            var token = new CancellationTokenSource().Token;
+            var stream = new MemoryStream();
+            var rows = new[] { new InsertRow(), new InsertRow() };
+            VerifyEquivalentAsync(
+                client => client.InsertAsync(MatchesWhenSerialized(reference), rows, null, default(CancellationToken)),
+                client => client.InsertAsync(datasetId, tableId, rows[0], rows[1]),
+                client => client.InsertAsync(ProjectId, datasetId, tableId, rows[0], rows[1]),
+                client => new BigqueryTable(client, GetTable(reference)).InsertAsync(rows[0], rows[1]));
+        }
+
         private T MatchesWhenSerialized<T>(T expected)
         {
             string serialized = JsonConvert.SerializeObject(expected);
@@ -459,6 +778,37 @@ namespace Google.Bigquery.V2.Tests
                 mock.CallBase = true;
                 mock.Setup(underlyingCall);
                 call(mock.Object);
+                mock.VerifyAll();
+            }
+        }
+
+        private void VerifyEquivalentAsync<TResult>(
+            TResult result,
+            Expression<Func<DerivedBigqueryClient, Task<TResult>>> underlyingCall,
+            params Func<BigqueryClient, Task<TResult>>[] equivalentCalls) where TResult : class
+        {
+            var taskResult = Task.FromResult(result);
+            foreach (var call in equivalentCalls)
+            {
+                var mock = new Mock<DerivedBigqueryClient>();
+                mock.CallBase = true;
+                mock.Setup(underlyingCall).Returns(taskResult);
+                Assert.Same(taskResult, call(mock.Object));
+                mock.VerifyAll();
+            }
+        }
+
+        private void VerifyEquivalentAsync(
+            Expression<Func<DerivedBigqueryClient, Task>> underlyingCall,
+            params Func<BigqueryClient, Task>[] equivalentCalls)
+        {
+            var taskResult = Task.FromResult(0);
+            foreach (var call in equivalentCalls)
+            {
+                var mock = new Mock<DerivedBigqueryClient>();
+                mock.CallBase = true;
+                mock.Setup(underlyingCall).Returns(taskResult);
+                Assert.Same(taskResult, call(mock.Object));
                 mock.VerifyAll();
             }
         }
@@ -500,6 +850,19 @@ namespace Google.Bigquery.V2.Tests
             }
 
             IEnumerator IEnumerable.GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        private class UnimplementedPagedAsyncEnumerable<TResponse, TResource> : IPagedAsyncEnumerable<TResponse, TResource>
+        {
+            public IResponseAsyncEnumerable<TResponse, TResource> AsPages()
+            {
+                throw new NotImplementedException();
+            }
+
+            public IAsyncEnumerator<TResource> GetEnumerator()
             {
                 throw new NotImplementedException();
             }

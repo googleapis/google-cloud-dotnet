@@ -24,13 +24,13 @@
     "Google.Apis.Auth": "1.18.0",
     "Google.Apis.Bigquery.v2": "1.18.0.659",
     "Google.Apis.Core": "1.18.0",
-    "System.Interactive.Async": "3.1.0-rc"
+    "System.Interactive.Async": "3.1.0-rc2"
   },
   "frameworks": {
     "net45": { },
     "netstandard1.3": {
       "dependencies": {
-        "System.Threading.Thread": "4.0.0" 
+        "System.Threading.Thread": "4.0.0"
       }
     }
   }
