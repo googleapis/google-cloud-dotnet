@@ -807,7 +807,7 @@ namespace Google.Bigquery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = Guid.NewGuid().ToString().Replace("-", "_");
 
-            // Snippet: CreateTable(string,string,*,*)
+            // Snippet: CreateTableAsync(string,string,*,*,*)
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             TableSchema schema = new TableSchemaBuilder
             {

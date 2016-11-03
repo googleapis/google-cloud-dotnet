@@ -87,7 +87,8 @@ namespace Google.Bigquery.V2
         /// Polls this job for completion.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
+        /// May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
         public BigqueryJob PollUntilCompleted(GetJobOptions options = null, PollSettings pollSettings = null) =>
             _client.PollJobUntilCompleted(Reference, options, pollSettings);
@@ -96,7 +97,8 @@ namespace Google.Bigquery.V2
         /// Polls this job for completion, which must be a query job.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
+        /// May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
         public BigqueryQueryJob PollQueryUntilCompleted(GetQueryResultsOptions options = null, PollSettings pollSettings = null) =>
             _client.PollQueryUntilCompleted(Reference, options, pollSettings);
@@ -119,7 +121,8 @@ namespace Google.Bigquery.V2
         /// Asynchronously polls this job for completion.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
+        /// May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the completed job.</returns>
@@ -130,7 +133,8 @@ namespace Google.Bigquery.V2
         /// Asynchronously polls this job for completion, which must be a query job.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
+        /// May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the completed job.</returns>

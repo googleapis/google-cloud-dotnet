@@ -75,7 +75,6 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Lists the datasets within the specified project.
-        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -242,7 +241,6 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Asynchronously lists the datasets within the specified project.
-        /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasetsAsync(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
