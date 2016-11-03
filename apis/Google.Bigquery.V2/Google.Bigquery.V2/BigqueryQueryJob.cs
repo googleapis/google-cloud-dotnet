@@ -103,7 +103,7 @@ namespace Google.Bigquery.V2
             clonedOptions.PageToken = _response.PageToken;
             while (clonedOptions.PageToken != null)
             {
-                var job = _client.GetQueryJob(JobReference, clonedOptions);
+                var job = _client.GetQueryResults(JobReference, clonedOptions);
                 foreach (var row in job.ResponseRows)
                 {
                     yield return row;
@@ -139,7 +139,7 @@ namespace Google.Bigquery.V2
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = maxRows;
-                return _client.GetQueryJob(JobReference, clonedOptions).GetResultSet(maxRows);
+                return _client.GetQueryResults(JobReference, clonedOptions).GetResultSet(maxRows);
             }
             // First add the rows from the first response which is part of the state
             // of the object.
@@ -151,7 +151,7 @@ namespace Google.Bigquery.V2
             {
                 clonedOptions.PageToken = pageToken;
                 clonedOptions.PageSize = maxRows - rows.Count;
-                var job = _client.GetQueryJob(JobReference, clonedOptions);
+                var job = _client.GetQueryResults(JobReference, clonedOptions);
                 rows.AddRange(job.ResponseRows);
                 pageToken = job._response.PageToken;
 
@@ -217,7 +217,7 @@ namespace Google.Bigquery.V2
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 clonedOptions.PageSize = maxRows;
-                var newQueryJob = await _client.GetQueryJobAsync(JobReference, clonedOptions, cancellationToken).ConfigureAwait(false);
+                var newQueryJob = await _client.GetQueryResultsAsync(JobReference, clonedOptions, cancellationToken).ConfigureAwait(false);
                 return await newQueryJob.GetResultSetAsync(maxRows, cancellationToken).ConfigureAwait(false);
             }
             // First add the rows from the first response which is part of the state
@@ -230,7 +230,7 @@ namespace Google.Bigquery.V2
             {
                 clonedOptions.PageToken = pageToken;
                 clonedOptions.PageSize = maxRows - rows.Count;
-                var job = await _client.GetQueryJobAsync(JobReference, clonedOptions, cancellationToken).ConfigureAwait(false);
+                var job = await _client.GetQueryResultsAsync(JobReference, clonedOptions, cancellationToken).ConfigureAwait(false);
                 rows.AddRange(job.ResponseRows);
                 pageToken = job._response.PageToken;
 
@@ -296,7 +296,7 @@ namespace Google.Bigquery.V2
                     {
                         return false;
                     }
-                    var nextResults = await _job._client.GetQueryJobAsync(_job.JobReference, _options, cancellationToken).ConfigureAwait(false);
+                    var nextResults = await _job._client.GetQueryResultsAsync(_job.JobReference, _options, cancellationToken).ConfigureAwait(false);
                     _options.PageToken = nextResults._response.PageToken;
                     _underlyingIterator = nextResults.ResponseRows.GetEnumerator();
                 }

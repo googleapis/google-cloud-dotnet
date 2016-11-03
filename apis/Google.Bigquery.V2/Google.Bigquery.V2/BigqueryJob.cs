@@ -85,6 +85,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Polls this job for completion.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigqueryClient.PollJobUntilCompleted(JobReference, GetJobOptions, PollSettings)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
@@ -95,6 +96,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Polls this job for completion, which must be a query job.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigqueryClient.PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
@@ -105,13 +107,15 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Retrieves the result of this job, which must be a query job.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigqueryClient.GetQueryResults(JobReference, GetQueryResultsOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public BigqueryQueryJob GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryJob(Reference, options);
+        public BigqueryQueryJob GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryResults(Reference, options);
 
         /// <summary>
         /// Cancels this job.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigqueryClient.CancelJob(JobReference, CancelJobOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The final state of the job.</returns>
@@ -119,6 +123,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Asynchronously polls this job for completion.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigqueryClient.PollJobUntilCompletedAsync(JobReference, GetJobOptions, PollSettings, CancellationToken)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
@@ -131,6 +136,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Asynchronously polls this job for completion, which must be a query job.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigqueryClient.PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
@@ -143,16 +149,18 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Asynchronously retrieves the result of this job, which must be a query job.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigqueryClient.GetQueryResultsAsync(JobReference, GetQueryResultsOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a <see cref="BigqueryQueryJob"/> representation of the query.</returns>
         public Task<BigqueryQueryJob> GetQueryResultsAsync(GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
-            _client.GetQueryJobAsync(Reference, options, cancellationToken);
+            _client.GetQueryResultsAsync(Reference, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously cancels this job.
+        /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigqueryClient.CancelJobAsync(JobReference, CancelJobOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>

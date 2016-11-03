@@ -389,7 +389,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
-            BigqueryQueryJob result = client.GetQueryJob(job.Reference);
+            BigqueryQueryJob result = client.GetQueryResults(job.Reference);
             foreach (BigqueryRow row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -1004,7 +1004,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
-            BigqueryQueryJob result = await client.GetQueryJobAsync(job.Reference);
+            BigqueryQueryJob result = await client.GetQueryResults(job.Reference);
             await result.GetRowsAsync().ForEachAsync(row =>
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");

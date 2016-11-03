@@ -98,6 +98,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Lists the rows within this table, similar to a <c>SELECT * FROM ...</c> query.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.ListRows(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
@@ -105,6 +106,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Inserts a single row of data into this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.Insert(TableReference, InsertRow, InsertOptions)"/>.
         /// </summary>
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -113,6 +115,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Inserts all the given rows of data into this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.Insert(TableReference, IEnumerable{InsertRow}, InsertOptions)"/>.
         /// </summary>
         /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -121,6 +124,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Inserts all the given rows of data into this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.Insert(TableReference, InsertRow[])"/>.
         /// </summary>
         /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
         public void Insert(params InsertRow[] rows) =>
@@ -128,6 +132,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Deletes this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.DeleteTable(TableReference, DeleteTableOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         public void Delete(DeleteTableOptions options = null) => _client.DeleteTable(Reference, options);
@@ -139,7 +144,8 @@ namespace Google.Bigquery.V2
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A data upload job.</returns>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
         public Task<BigqueryJob> UploadCsvAsync(Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.UploadCsvAsync(Reference, Schema, input, options, cancellationToken);
 
@@ -150,12 +156,14 @@ namespace Google.Bigquery.V2
         /// <param name="input">The stream of input data. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A data upload job.</returns>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
         public Task<BigqueryJob> UploadJsonAsync(Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.UploadJsonAsync(Reference, Schema, input, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously lists the rows within this table, similar to a <c>SELECT * FROM ...</c> query.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.ListRowsAsync(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the rows within the table.</returns>
@@ -163,34 +171,42 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Asynchronously inserts a single row of data into this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.InsertAsync(TableReference, InsertRow, InsertOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task InsertAsync(InsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.InsertAsync(Reference, row, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously inserts all the given rows of data into this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.InsertAsync(TableReference, IEnumerable{InsertRow}, InsertOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task InsertAsync(IEnumerable<InsertRow> rows, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.InsertAsync(Reference, rows, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously inserts all the given rows of data into this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.InsertAsync(TableReference, InsertRow[])"/>.
         /// </summary>
         /// <param name="rows">The rows to insert. Must not be null or contain null entries.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task InsertAsync(params InsertRow[] rows) =>
             _client.InsertAsync(Reference, rows);
 
         /// <summary>
         /// Asynchronously deletes this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.DeleteTableAsync(TableReference, DeleteTableOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public Task DeleteAsync(DeleteTableOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.DeleteTableAsync(Reference, options, cancellationToken);
 
@@ -199,7 +215,7 @@ namespace Google.Bigquery.V2
         /// format uses square brackets instead of backticks to surround the ID, and uses a colon
         /// instead of a period between the project ID and the dataset ID.
         /// </summary>
-        /// <returns>The fully-qualified </returns>
+        /// <returns>The fully-qualified ID of the table in Legacy SQL format.</returns>
         public string ToLegacySqlFormat() => $"[{Reference.ProjectId}:{Reference.DatasetId}.{Reference.TableId}]";
 
         /// <summary>

@@ -103,12 +103,12 @@ namespace Google.Bigquery.V2
         public override BigqueryQueryJob PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            return Polling.PollRepeatedly(ignoredDeadline => GetQueryJob(jobReference, options),
+            return Polling.PollRepeatedly(ignoredDeadline => GetQueryResults(jobReference, options),
                 job => job.Completed, Clock, Scheduler, pollSettings ?? s_defaultPollSettings);
         }
 
         /// <inheritdoc />
-        public override BigqueryQueryJob GetQueryJob(JobReference jobReference, GetQueryResultsOptions options = null)
+        public override BigqueryQueryJob GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
@@ -197,12 +197,12 @@ namespace Google.Bigquery.V2
         public override Task<BigqueryQueryJob> PollQueryUntilCompletedAsync(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
-            return Polling.PollRepeatedlyAsync(ignoredDeadline => GetQueryJobAsync(jobReference, options, cancellationToken),
+            return Polling.PollRepeatedlyAsync(ignoredDeadline => GetQueryResultsAsync(jobReference, options, cancellationToken),
                 job => job.Completed, Clock, Scheduler, pollSettings ?? s_defaultPollSettings);
         }
 
         /// <inheritdoc />
-        public override async Task<BigqueryQueryJob> GetQueryJobAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<BigqueryQueryJob> GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
