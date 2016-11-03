@@ -325,6 +325,7 @@ namespace Google.Bigquery.V2
         /// <param name="row">The data to insert. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
         public virtual Task InsertAsync(string projectId, string datasetId, string tableId, InsertRow row, InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             InsertAsync(GetTableReference(projectId, datasetId, tableId), row, options, cancellationToken);
 

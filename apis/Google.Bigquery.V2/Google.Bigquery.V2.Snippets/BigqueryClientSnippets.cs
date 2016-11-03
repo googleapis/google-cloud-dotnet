@@ -111,7 +111,7 @@ namespace Google.Bigquery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string historyTableId = _fixture.HistoryTableId;
 
-            // Snippet: ExecuteQuery
+            // Snippet: ExecuteQuery(string,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, historyTableId);
             BigqueryQueryJob result = client.ExecuteQuery(
@@ -371,7 +371,7 @@ namespace Google.Bigquery.V2.Snippets
             string historyTableId = _fixture.HistoryTableId;
             string queryTableId = Guid.NewGuid().ToString().Replace('-', '_');
 
-            // Snippet: CreateQueryJob(*,*)
+            // Snippet: CreateQueryJob(string,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             BigqueryTable table = client.GetTable(datasetId, historyTableId);
             TableReference destination = client.GetTableReference(datasetId, queryTableId);
@@ -389,7 +389,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
-            BigqueryQueryJob result = client.GetQueryJob(job.Reference);
+            BigqueryQueryJob result = client.GetQueryResults(job.Reference);
             foreach (BigqueryRow row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -653,7 +653,7 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Sample: QueryOverview
+            // Sample: QueryOverviewAsync
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             BigqueryTable table = await client.GetTableAsync("bigquery-public-data", "samples", "shakespeare");
 
@@ -673,7 +673,7 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Sample: LegacySql
+            // Sample: LegacySqlAsync
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             BigqueryTable table = await client.GetTableAsync("bigquery-public-data", "samples", "shakespeare");
 
@@ -693,7 +693,7 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Sample: InsertOverview
+            // Sample: InsertOverviewAsync
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
 
             // Create the dataset if it doesn't exist.
@@ -725,7 +725,7 @@ namespace Google.Bigquery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string historyTableId = _fixture.HistoryTableId;
 
-            // Snippet: ExecuteQueryAsync
+            // Snippet: ExecuteQueryAsync(string,*,*)
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             BigqueryTable table = await client.GetTableAsync(datasetId, historyTableId);
             BigqueryQueryJob result = await client.ExecuteQueryAsync(
@@ -787,7 +787,7 @@ namespace Google.Bigquery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
 
-            // Snippet: ListTablesAsync(string,ListTablesOptions,CancellationToken)
+            // Snippet: ListTablesAsync(string,ListTablesOptions)
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             List<BigqueryTable> tables = await client.ListTablesAsync(datasetId).Take(20).ToList();
             foreach (BigqueryTable table in tables)
@@ -807,7 +807,7 @@ namespace Google.Bigquery.V2.Snippets
             string datasetId = _fixture.GameDatasetId;
             string tableId = Guid.NewGuid().ToString().Replace("-", "_");
 
-            // Snippet: CreateTable(string,string,*,*)
+            // Snippet: CreateTableAsync(string,string,*,*,*)
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             TableSchema schema = new TableSchemaBuilder
             {
@@ -986,7 +986,7 @@ namespace Google.Bigquery.V2.Snippets
             string historyTableId = _fixture.HistoryTableId;
             string queryTableId = Guid.NewGuid().ToString().Replace('-', '_');
 
-            // Snippet: CreateQueryJobAsync(*,*)
+            // Snippet: CreateQueryJobAsync(string,*,*)
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             BigqueryTable table = await client.GetTableAsync(datasetId, historyTableId);
             TableReference destination = client.GetTableReference(datasetId, queryTableId);
@@ -1004,7 +1004,7 @@ namespace Google.Bigquery.V2.Snippets
 
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
-            BigqueryQueryJob result = await client.GetQueryJobAsync(job.Reference);
+            BigqueryQueryJob result = await client.GetQueryResultsAsync(job.Reference);
             await result.GetRowsAsync().ForEachAsync(row =>
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -1022,7 +1022,7 @@ namespace Google.Bigquery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListJobsAsync(*,*)
+            // Snippet: ListJobsAsync(ListJobsOptions)
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             List<BigqueryJob> jobs = await client.ListJobsAsync().Take(20).ToList();
             foreach (BigqueryJob job in jobs)
@@ -1190,7 +1190,7 @@ namespace Google.Bigquery.V2.Snippets
         [Fact]
         public async Task ListProjectsAsync()
         {
-            // Snippet: ListProjectsAsync(*,*)
+            // Snippet: ListProjectsAsync(*)
             BigqueryClient client = BigqueryClient.Create("irrelevant");
             IPagedAsyncEnumerable<ProjectList, CloudProject> projects = client.ListProjectsAsync();
             await projects.ForEachAsync(project =>
@@ -1225,7 +1225,7 @@ namespace Google.Bigquery.V2.Snippets
         [Fact]
         public async Task ParameterizedQueryAsync_PositionalParameters()
         {
-            /// Sample: ParameterizedQueryPositionalParameters
+            /// Sample: ParameterizedQueryPositionalParametersAsync
             BigqueryClient client = BigqueryClient.Create(_fixture.ProjectId);
             BigqueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigqueryCommand command = new BigqueryCommand($"SELECT player, score, level FROM {table} WHERE score >= ? AND level >= ?");

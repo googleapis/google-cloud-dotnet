@@ -143,7 +143,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Deletes this dataset.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.DeleteTable(TableReference, DeleteTableOptions)"/>.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigqueryClient.DeleteDataset(DatasetReference, DeleteDatasetOptions)"/>.
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         public void Delete(DeleteDatasetOptions options = null) => _client.DeleteDataset(Reference, options);
@@ -225,7 +225,7 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Deletes this dataset.
-        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.DeleteTable(TableReference, DeleteTableOptions)"/>.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigqueryClient.DeleteDatasetAsync(string, string, DeleteDatasetOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>

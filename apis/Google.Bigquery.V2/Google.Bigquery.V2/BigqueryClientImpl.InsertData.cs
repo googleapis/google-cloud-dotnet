@@ -13,12 +13,9 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
-using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -28,6 +25,8 @@ namespace Google.Bigquery.V2
 {
     public partial class BigqueryClientImpl
     {
+        // TODO: Allow JSON and CSV to be loaded from a TextReader? Tricky, but useful.
+
         /// <inheritdoc />
         public override BigqueryJob UploadCsv(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null)
         {
@@ -46,7 +45,6 @@ namespace Google.Bigquery.V2
             return UploadData(configuration, input, "text/csv");
         }
 
-        // Load it from a TextReader? Tricky, but useful.
         /// <inheritdoc />
         public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null)
         {
@@ -144,7 +142,6 @@ namespace Google.Bigquery.V2
             return await UploadDataAsync(configuration, input, "text/csv", cancellationToken).ConfigureAwait(false);
         }
 
-        // Load it from a TextReader? Tricky, but useful.
         /// <inheritdoc />
         public override async Task<BigqueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, Stream input,
             UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
