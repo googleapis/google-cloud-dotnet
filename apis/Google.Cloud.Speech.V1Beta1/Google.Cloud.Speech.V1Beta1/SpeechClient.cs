@@ -464,6 +464,10 @@ namespace Google.Cloud.Speech.V1Beta1
         /// </summary>
         public override Speech.SpeechClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_SyncRecognizeRequest(ref SyncRecognizeRequest request, ref CallSettings settings);
+        partial void Modify_AsyncRecognizeRequest(ref AsyncRecognizeRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Perform synchronous speech-recognition: receive results after all audio
         /// has been sent and processed.
@@ -484,13 +488,16 @@ namespace Google.Cloud.Speech.V1Beta1
         public override Task<SyncRecognizeResponse> SyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null) => _callSyncRecognize.Async(
-                new SyncRecognizeRequest
-                {
-                    Config = config,
-                    Audio = audio,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            SyncRecognizeRequest request = new SyncRecognizeRequest
+            {
+                Config = config,
+                Audio = audio,
+            };
+            Modify_SyncRecognizeRequest(ref request, ref callSettings);
+            return _callSyncRecognize.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Perform synchronous speech-recognition: receive results after all audio
@@ -512,13 +519,16 @@ namespace Google.Cloud.Speech.V1Beta1
         public override SyncRecognizeResponse SyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null) => _callSyncRecognize.Sync(
-                new SyncRecognizeRequest
-                {
-                    Config = config,
-                    Audio = audio,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            SyncRecognizeRequest request = new SyncRecognizeRequest
+            {
+                Config = config,
+                Audio = audio,
+            };
+            Modify_SyncRecognizeRequest(ref request, ref callSettings);
+            return _callSyncRecognize.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Perform asynchronous speech-recognition: receive results via the
@@ -542,13 +552,16 @@ namespace Google.Cloud.Speech.V1Beta1
         public override Task<Operation> AsyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null) => _callAsyncRecognize.Async(
-                new AsyncRecognizeRequest
-                {
-                    Config = config,
-                    Audio = audio,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AsyncRecognizeRequest request = new AsyncRecognizeRequest
+            {
+                Config = config,
+                Audio = audio,
+            };
+            Modify_AsyncRecognizeRequest(ref request, ref callSettings);
+            return _callAsyncRecognize.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Perform asynchronous speech-recognition: receive results via the
@@ -572,13 +585,16 @@ namespace Google.Cloud.Speech.V1Beta1
         public override Operation AsyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null) => _callAsyncRecognize.Sync(
-                new AsyncRecognizeRequest
-                {
-                    Config = config,
-                    Audio = audio,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AsyncRecognizeRequest request = new AsyncRecognizeRequest
+            {
+                Config = config,
+                Audio = audio,
+            };
+            Modify_AsyncRecognizeRequest(ref request, ref callSettings);
+            return _callAsyncRecognize.Sync(request, callSettings);
+        }
 
     }
 

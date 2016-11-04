@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Datastore.V1;
 using Google.Protobuf;
@@ -26,7 +27,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Datastore.V1.CommitRequest.Types;
 
 namespace Google.Datastore.V1.Snippets
 {
@@ -150,13 +150,13 @@ namespace Google.Datastore.V1.Snippets
 
         public async Task CommitAsync1()
         {
-            // Snippet: CommitAsync(string,Mode,ByteString,IEnumerable<Mutation>,CallSettings)
-            // Additional: CommitAsync(string,Mode,ByteString,IEnumerable<Mutation>,CancellationToken)
+            // Snippet: CommitAsync(string,CommitRequest.Types.Mode,ByteString,IEnumerable<Mutation>,CallSettings)
+            // Additional: CommitAsync(string,CommitRequest.Types.Mode,ByteString,IEnumerable<Mutation>,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            Mode mode = Mode.Unspecified;
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.ModeUnspecified;
             ByteString transaction = ByteString.CopyFromUtf8("");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
@@ -166,12 +166,12 @@ namespace Google.Datastore.V1.Snippets
 
         public void Commit1()
         {
-            // Snippet: Commit(string,Mode,ByteString,IEnumerable<Mutation>,CallSettings)
+            // Snippet: Commit(string,CommitRequest.Types.Mode,ByteString,IEnumerable<Mutation>,CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            Mode mode = Mode.Unspecified;
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.ModeUnspecified;
             ByteString transaction = ByteString.CopyFromUtf8("");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
@@ -181,13 +181,13 @@ namespace Google.Datastore.V1.Snippets
 
         public async Task CommitAsync2()
         {
-            // Snippet: CommitAsync(string,Mode,IEnumerable<Mutation>,CallSettings)
-            // Additional: CommitAsync(string,Mode,IEnumerable<Mutation>,CancellationToken)
+            // Snippet: CommitAsync(string,CommitRequest.Types.Mode,IEnumerable<Mutation>,CallSettings)
+            // Additional: CommitAsync(string,CommitRequest.Types.Mode,IEnumerable<Mutation>,CancellationToken)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            Mode mode = Mode.Unspecified;
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.ModeUnspecified;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
@@ -196,12 +196,12 @@ namespace Google.Datastore.V1.Snippets
 
         public void Commit2()
         {
-            // Snippet: Commit(string,Mode,IEnumerable<Mutation>,CallSettings)
+            // Snippet: Commit(string,CommitRequest.Types.Mode,IEnumerable<Mutation>,CallSettings)
             // Create client
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            Mode mode = Mode.Unspecified;
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.ModeUnspecified;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = datastoreClient.Commit(projectId, mode, mutations);

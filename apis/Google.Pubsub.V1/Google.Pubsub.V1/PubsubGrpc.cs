@@ -21,7 +21,6 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Grpc.Core;
-using static Google.Iam.V1.IAMPolicy;
 
 namespace Google.Pubsub.V1 {
   /// <summary>
@@ -225,15 +224,6 @@ namespace Google.Pubsub.V1 {
       protected SubscriberClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
-      
-      // IMPLEMENTATION NOTE: This will be in a partial class eventually.
-
-      /// <summary>
-      /// Creates a new instance of <see cref="IAMPolicyClient"/> using the same call invoker
-      /// as this client.
-      /// </summary>
-      /// <returns>A new IAM client for the same target as this client.</returns>
-      public virtual IAMPolicyClient CreateIAMPolicyClient() => new IAMPolicyClient(CallInvoker);
 
       /// <summary>
       ///  Creates a subscription to a given topic.
@@ -740,15 +730,6 @@ namespace Google.Pubsub.V1 {
       protected PublisherClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
-
-      // IMPLEMENTATION NOTE: This will be in a partial class eventually.
-
-      /// <summary>
-      /// Creates a new instance of <see cref="IAMPolicyClient"/> using the same call invoker
-      /// as this client.
-      /// </summary>
-      /// <returns>A new IAM client for the same target as this client.</returns>
-      public virtual IAMPolicyClient CreateIAMPolicyClient() => new IAMPolicyClient(CallInvoker);
 
       /// <summary>
       ///  Creates the given topic with the given name.

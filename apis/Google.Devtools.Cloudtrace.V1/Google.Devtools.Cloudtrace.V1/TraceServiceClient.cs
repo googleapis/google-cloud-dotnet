@@ -16,7 +16,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Devtools.Cloudtrace.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -555,6 +554,11 @@ namespace Google.Devtools.Cloudtrace.V1
         /// </summary>
         public override TraceService.TraceServiceClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_PatchTracesRequest(ref PatchTracesRequest request, ref CallSettings settings);
+        partial void Modify_GetTraceRequest(ref GetTraceRequest request, ref CallSettings settings);
+        partial void Modify_ListTracesRequest(ref ListTracesRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
         /// of a trace that you send matches that of an existing trace, any fields
@@ -577,13 +581,16 @@ namespace Google.Devtools.Cloudtrace.V1
         public override Task PatchTracesAsync(
             string projectId,
             Traces traces,
-            CallSettings callSettings = null) => _callPatchTraces.Async(
-                new PatchTracesRequest
-                {
-                    ProjectId = projectId,
-                    Traces = traces,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            PatchTracesRequest request = new PatchTracesRequest
+            {
+                ProjectId = projectId,
+                Traces = traces,
+            };
+            Modify_PatchTracesRequest(ref request, ref callSettings);
+            return _callPatchTraces.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -607,13 +614,16 @@ namespace Google.Devtools.Cloudtrace.V1
         public override void PatchTraces(
             string projectId,
             Traces traces,
-            CallSettings callSettings = null) => _callPatchTraces.Sync(
-                new PatchTracesRequest
-                {
-                    ProjectId = projectId,
-                    Traces = traces,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            PatchTracesRequest request = new PatchTracesRequest
+            {
+                ProjectId = projectId,
+                Traces = traces,
+            };
+            Modify_PatchTracesRequest(ref request, ref callSettings);
+            _callPatchTraces.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single trace by its ID.
@@ -633,13 +643,16 @@ namespace Google.Devtools.Cloudtrace.V1
         public override Task<Trace> GetTraceAsync(
             string projectId,
             string traceId,
-            CallSettings callSettings = null) => _callGetTrace.Async(
-                new GetTraceRequest
-                {
-                    ProjectId = projectId,
-                    TraceId = traceId,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetTraceRequest request = new GetTraceRequest
+            {
+                ProjectId = projectId,
+                TraceId = traceId,
+            };
+            Modify_GetTraceRequest(ref request, ref callSettings);
+            return _callGetTrace.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single trace by its ID.
@@ -659,13 +672,16 @@ namespace Google.Devtools.Cloudtrace.V1
         public override Trace GetTrace(
             string projectId,
             string traceId,
-            CallSettings callSettings = null) => _callGetTrace.Sync(
-                new GetTraceRequest
-                {
-                    ProjectId = projectId,
-                    TraceId = traceId,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetTraceRequest request = new GetTraceRequest
+            {
+                ProjectId = projectId,
+                TraceId = traceId,
+            };
+            Modify_GetTraceRequest(ref request, ref callSettings);
+            return _callGetTrace.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns of a list of traces that match the specified filter conditions.
@@ -691,15 +707,17 @@ namespace Google.Devtools.Cloudtrace.V1
             string projectId,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListTracesRequest, ListTracesResponse, Trace>(
-                _callListTraces,
-                new ListTracesRequest
-                {
-                    ProjectId = projectId,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListTracesRequest request = new ListTracesRequest
+            {
+                ProjectId = projectId,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListTracesRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
+        }
 
         /// <summary>
         /// Returns of a list of traces that match the specified filter conditions.
@@ -725,15 +743,17 @@ namespace Google.Devtools.Cloudtrace.V1
             string projectId,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListTracesRequest, ListTracesResponse, Trace>(
-                _callListTraces,
-                new ListTracesRequest
-                {
-                    ProjectId = projectId,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListTracesRequest request = new ListTracesRequest
+            {
+                ProjectId = projectId,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListTracesRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
+        }
 
     }
 

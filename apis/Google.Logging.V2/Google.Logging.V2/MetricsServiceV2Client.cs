@@ -16,7 +16,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Logging.V2;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -327,6 +326,25 @@ namespace Google.Logging.V2
         public static string FormatParentName(string projectId) => ParentTemplate.Expand(projectId);
 
         /// <summary>
+        /// Path template for a sink resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>sink</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate SinkTemplate { get; } = new PathTemplate("projects/{project}/sinks/{sink}");
+
+        /// <summary>
+        /// Creates a sink resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="sinkId">The sink ID.</param>
+        /// <returns>
+        /// The full sink resource name.
+        /// </returns>
+        public static string FormatSinkName(string projectId, string sinkId) => SinkTemplate.Expand(projectId, sinkId);
+
+        /// <summary>
         /// Path template for a metric resource. Parameters:
         /// <list type="bullet">
         /// <item><description>project</description></item>
@@ -344,6 +362,25 @@ namespace Google.Logging.V2
         /// The full metric resource name.
         /// </returns>
         public static string FormatMetricName(string projectId, string metricId) => MetricTemplate.Expand(projectId, metricId);
+
+        /// <summary>
+        /// Path template for a log resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>log</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate LogTemplate { get; } = new PathTemplate("projects/{project}/logs/{log}");
+
+        /// <summary>
+        /// Creates a log resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="logId">The log ID.</param>
+        /// <returns>
+        /// The full log resource name.
+        /// </returns>
+        public static string FormatLogName(string projectId, string logId) => LogTemplate.Expand(projectId, logId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -802,6 +839,13 @@ namespace Google.Logging.V2
         /// </summary>
         public override MetricsServiceV2.MetricsServiceV2Client GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_ListLogMetricsRequest(ref ListLogMetricsRequest request, ref CallSettings settings);
+        partial void Modify_GetLogMetricRequest(ref GetLogMetricRequest request, ref CallSettings settings);
+        partial void Modify_CreateLogMetricRequest(ref CreateLogMetricRequest request, ref CallSettings settings);
+        partial void Modify_UpdateLogMetricRequest(ref UpdateLogMetricRequest request, ref CallSettings settings);
+        partial void Modify_DeleteLogMetricRequest(ref DeleteLogMetricRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Lists logs-based metrics.
         /// </summary>
@@ -827,15 +871,17 @@ namespace Google.Logging.V2
             string parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(
-                _callListLogMetrics,
-                new ListLogMetricsRequest
-                {
-                    Parent = parent,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListLogMetricsRequest request = new ListLogMetricsRequest
+            {
+                Parent = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListLogMetricsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(_callListLogMetrics, request, callSettings);
+        }
 
         /// <summary>
         /// Lists logs-based metrics.
@@ -862,15 +908,17 @@ namespace Google.Logging.V2
             string parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(
-                _callListLogMetrics,
-                new ListLogMetricsRequest
-                {
-                    Parent = parent,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListLogMetricsRequest request = new ListLogMetricsRequest
+            {
+                Parent = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListLogMetricsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(_callListLogMetrics, request, callSettings);
+        }
 
         /// <summary>
         /// Gets a logs-based metric.
@@ -887,12 +935,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override Task<LogMetric> GetLogMetricAsync(
             string metricName,
-            CallSettings callSettings = null) => _callGetLogMetric.Async(
-                new GetLogMetricRequest
-                {
-                    MetricName = metricName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetLogMetricRequest request = new GetLogMetricRequest
+            {
+                MetricName = metricName,
+            };
+            Modify_GetLogMetricRequest(ref request, ref callSettings);
+            return _callGetLogMetric.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a logs-based metric.
@@ -909,12 +960,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override LogMetric GetLogMetric(
             string metricName,
-            CallSettings callSettings = null) => _callGetLogMetric.Sync(
-                new GetLogMetricRequest
-                {
-                    MetricName = metricName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetLogMetricRequest request = new GetLogMetricRequest
+            {
+                MetricName = metricName,
+            };
+            Modify_GetLogMetricRequest(ref request, ref callSettings);
+            return _callGetLogMetric.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a logs-based metric.
@@ -938,13 +992,16 @@ namespace Google.Logging.V2
         public override Task<LogMetric> CreateLogMetricAsync(
             string parent,
             LogMetric metric,
-            CallSettings callSettings = null) => _callCreateLogMetric.Async(
-                new CreateLogMetricRequest
-                {
-                    Parent = parent,
-                    Metric = metric,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateLogMetricRequest request = new CreateLogMetricRequest
+            {
+                Parent = parent,
+                Metric = metric,
+            };
+            Modify_CreateLogMetricRequest(ref request, ref callSettings);
+            return _callCreateLogMetric.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a logs-based metric.
@@ -968,13 +1025,16 @@ namespace Google.Logging.V2
         public override LogMetric CreateLogMetric(
             string parent,
             LogMetric metric,
-            CallSettings callSettings = null) => _callCreateLogMetric.Sync(
-                new CreateLogMetricRequest
-                {
-                    Parent = parent,
-                    Metric = metric,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateLogMetricRequest request = new CreateLogMetricRequest
+            {
+                Parent = parent,
+                Metric = metric,
+            };
+            Modify_CreateLogMetricRequest(ref request, ref callSettings);
+            return _callCreateLogMetric.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates or updates a logs-based metric.
@@ -1001,13 +1061,16 @@ namespace Google.Logging.V2
         public override Task<LogMetric> UpdateLogMetricAsync(
             string metricName,
             LogMetric metric,
-            CallSettings callSettings = null) => _callUpdateLogMetric.Async(
-                new UpdateLogMetricRequest
-                {
-                    MetricName = metricName,
-                    Metric = metric,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            UpdateLogMetricRequest request = new UpdateLogMetricRequest
+            {
+                MetricName = metricName,
+                Metric = metric,
+            };
+            Modify_UpdateLogMetricRequest(ref request, ref callSettings);
+            return _callUpdateLogMetric.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates or updates a logs-based metric.
@@ -1034,13 +1097,16 @@ namespace Google.Logging.V2
         public override LogMetric UpdateLogMetric(
             string metricName,
             LogMetric metric,
-            CallSettings callSettings = null) => _callUpdateLogMetric.Sync(
-                new UpdateLogMetricRequest
-                {
-                    MetricName = metricName,
-                    Metric = metric,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            UpdateLogMetricRequest request = new UpdateLogMetricRequest
+            {
+                MetricName = metricName,
+                Metric = metric,
+            };
+            Modify_UpdateLogMetricRequest(ref request, ref callSettings);
+            return _callUpdateLogMetric.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a logs-based metric.
@@ -1057,12 +1123,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override Task DeleteLogMetricAsync(
             string metricName,
-            CallSettings callSettings = null) => _callDeleteLogMetric.Async(
-                new DeleteLogMetricRequest
-                {
-                    MetricName = metricName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteLogMetricRequest request = new DeleteLogMetricRequest
+            {
+                MetricName = metricName,
+            };
+            Modify_DeleteLogMetricRequest(ref request, ref callSettings);
+            return _callDeleteLogMetric.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a logs-based metric.
@@ -1079,12 +1148,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override void DeleteLogMetric(
             string metricName,
-            CallSettings callSettings = null) => _callDeleteLogMetric.Sync(
-                new DeleteLogMetricRequest
-                {
-                    MetricName = metricName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteLogMetricRequest request = new DeleteLogMetricRequest
+            {
+                MetricName = metricName,
+            };
+            Modify_DeleteLogMetricRequest(ref request, ref callSettings);
+            _callDeleteLogMetric.Sync(request, callSettings);
+        }
 
     }
 

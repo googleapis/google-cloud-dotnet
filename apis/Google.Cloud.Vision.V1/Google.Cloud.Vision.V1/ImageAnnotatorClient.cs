@@ -16,7 +16,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Vision.V1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -330,6 +329,9 @@ namespace Google.Cloud.Vision.V1
         /// </summary>
         public override ImageAnnotator.ImageAnnotatorClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_BatchAnnotateImagesRequest(ref BatchAnnotateImagesRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Run image detection and annotation for a batch of images.
         /// </summary>
@@ -344,12 +346,15 @@ namespace Google.Cloud.Vision.V1
         /// </returns>
         public override Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
             IEnumerable<AnnotateImageRequest> requests,
-            CallSettings callSettings = null) => _callBatchAnnotateImages.Async(
-                new BatchAnnotateImagesRequest
-                {
-                    Requests = { requests },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+            {
+                Requests = { requests },
+            };
+            Modify_BatchAnnotateImagesRequest(ref request, ref callSettings);
+            return _callBatchAnnotateImages.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Run image detection and annotation for a batch of images.
@@ -365,12 +370,15 @@ namespace Google.Cloud.Vision.V1
         /// </returns>
         public override BatchAnnotateImagesResponse BatchAnnotateImages(
             IEnumerable<AnnotateImageRequest> requests,
-            CallSettings callSettings = null) => _callBatchAnnotateImages.Sync(
-                new BatchAnnotateImagesRequest
-                {
-                    Requests = { requests },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+            {
+                Requests = { requests },
+            };
+            Modify_BatchAnnotateImagesRequest(ref request, ref callSettings);
+            return _callBatchAnnotateImages.Sync(request, callSettings);
+        }
 
     }
 
