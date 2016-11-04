@@ -7,7 +7,7 @@ set -e
 OS=linux
 [[ ${OS} = "windows" ]] && EXE_SUFFIX=.exe || EXE_SUFFIX=
 
-GRPC_VERSION=1.0.1-pre1
+GRPC_VERSION=1.0.1
 PROTOBUF_VERSION=3.1.0
 PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/protoc${EXE_SUFFIX}
 GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/grpc_csharp_plugin${EXE_SUFFIX}

@@ -19,12 +19,8 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.0-beta03",
-    "Google.Apis": "1.18.0",
-    "Google.Apis.Auth": "1.18.0",
-    "Google.Apis.Bigquery.v2": "1.18.0.659",
-    "Google.Apis.Core": "1.18.0",
-    "System.Interactive.Async": "3.1.0-rc2"
+    "Google.Api.Gax.Rest": "1.0.0-beta04",
+    "Google.Apis.Bigquery.v2": "1.18.0.659"
   },
   "frameworks": {
     "net45": { },
