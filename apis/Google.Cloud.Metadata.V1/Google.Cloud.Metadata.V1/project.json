@@ -19,8 +19,8 @@
   },
 
   "dependencies": {
-    "Google.Apis": "1.16.0",
-    "Google.Apis.Compute.v1": "1.16.0.589"
+    "Google.Apis": "1.18.0",
+    "Google.Apis.Compute.v1": "1.18.0.650"
   },
 
   "frameworks": {

@@ -19,11 +19,8 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.0-beta03",
-    "Google.Apis": "1.16.0",
-    "Google.Apis.Auth": "1.16.0",
-    "Google.Apis.Core": "1.16.0",
-    "Google.Apis.Storage.v1": "1.16.0.579"
+    "Google.Api.Gax.Rest": "1.0.0-beta04",
+    "Google.Apis.Storage.v1": "1.18.0.658"
   },
   "frameworks": {
     "net45": { },
