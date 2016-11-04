@@ -19,7 +19,6 @@ using Google.Api.Gax.Grpc;
 using Google.Iam.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
-using Google.Pubsub.V1;
 using Grpc.Core;
 using System;
 using System.Collections;
@@ -498,6 +497,25 @@ namespace Google.Pubsub.V1
         /// The full project resource name.
         /// </returns>
         public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
+
+        /// <summary>
+        /// Path template for a subscription resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>subscription</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate SubscriptionTemplate { get; } = new PathTemplate("projects/{project}/subscriptions/{subscription}");
+
+        /// <summary>
+        /// Creates a subscription resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="subscriptionId">The subscription ID.</param>
+        /// <returns>
+        /// The full subscription resource name.
+        /// </returns>
+        public static string FormatSubscriptionName(string projectId, string subscriptionId) => SubscriptionTemplate.Expand(projectId, subscriptionId);
 
         /// <summary>
         /// Path template for a topic resource. Parameters:
@@ -1264,6 +1282,17 @@ namespace Google.Pubsub.V1
         /// </summary>
         public override Publisher.PublisherClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_Topic(ref Topic request, ref CallSettings settings);
+        partial void Modify_PublishRequest(ref PublishRequest request, ref CallSettings settings);
+        partial void Modify_GetTopicRequest(ref GetTopicRequest request, ref CallSettings settings);
+        partial void Modify_ListTopicsRequest(ref ListTopicsRequest request, ref CallSettings settings);
+        partial void Modify_ListTopicSubscriptionsRequest(ref ListTopicSubscriptionsRequest request, ref CallSettings settings);
+        partial void Modify_DeleteTopicRequest(ref DeleteTopicRequest request, ref CallSettings settings);
+        partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings);
+        partial void Modify_GetIamPolicyRequest(ref GetIamPolicyRequest request, ref CallSettings settings);
+        partial void Modify_TestIamPermissionsRequest(ref TestIamPermissionsRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
@@ -1283,12 +1312,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Task<Topic> CreateTopicAsync(
             string name,
-            CallSettings callSettings = null) => _callCreateTopic.Async(
-                new Topic
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            Topic request = new Topic
+            {
+                Name = name,
+            };
+            Modify_Topic(ref request, ref callSettings);
+            return _callCreateTopic.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates the given topic with the given name.
@@ -1309,12 +1341,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Topic CreateTopic(
             string name,
-            CallSettings callSettings = null) => _callCreateTopic.Sync(
-                new Topic
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            Topic request = new Topic
+            {
+                Name = name,
+            };
+            Modify_Topic(ref request, ref callSettings);
+            return _callCreateTopic.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
@@ -1336,13 +1371,16 @@ namespace Google.Pubsub.V1
         public override Task<PublishResponse> PublishAsync(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            CallSettings callSettings = null) => _callPublish.Async(
-                new PublishRequest
-                {
-                    Topic = topic,
-                    Messages = { messages },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            PublishRequest request = new PublishRequest
+            {
+                Topic = topic,
+                Messages = { messages },
+            };
+            Modify_PublishRequest(ref request, ref callSettings);
+            return _callPublish.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
@@ -1364,13 +1402,16 @@ namespace Google.Pubsub.V1
         public override PublishResponse Publish(
             string topic,
             IEnumerable<PubsubMessage> messages,
-            CallSettings callSettings = null) => _callPublish.Sync(
-                new PublishRequest
-                {
-                    Topic = topic,
-                    Messages = { messages },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            PublishRequest request = new PublishRequest
+            {
+                Topic = topic,
+                Messages = { messages },
+            };
+            Modify_PublishRequest(ref request, ref callSettings);
+            return _callPublish.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the configuration of a topic.
@@ -1386,12 +1427,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Task<Topic> GetTopicAsync(
             string topic,
-            CallSettings callSettings = null) => _callGetTopic.Async(
-                new GetTopicRequest
-                {
-                    Topic = topic,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetTopicRequest request = new GetTopicRequest
+            {
+                Topic = topic,
+            };
+            Modify_GetTopicRequest(ref request, ref callSettings);
+            return _callGetTopic.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the configuration of a topic.
@@ -1407,12 +1451,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Topic GetTopic(
             string topic,
-            CallSettings callSettings = null) => _callGetTopic.Sync(
-                new GetTopicRequest
-                {
-                    Topic = topic,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetTopicRequest request = new GetTopicRequest
+            {
+                Topic = topic,
+            };
+            Modify_GetTopicRequest(ref request, ref callSettings);
+            return _callGetTopic.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching topics.
@@ -1438,15 +1485,17 @@ namespace Google.Pubsub.V1
             string project,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(
-                _callListTopics,
-                new ListTopicsRequest
-                {
-                    Project = project,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListTopicsRequest request = new ListTopicsRequest
+            {
+                Project = project,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListTopicsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching topics.
@@ -1472,15 +1521,17 @@ namespace Google.Pubsub.V1
             string project,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(
-                _callListTopics,
-                new ListTopicsRequest
-                {
-                    Project = project,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListTopicsRequest request = new ListTopicsRequest
+            {
+                Project = project,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListTopicsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
+        }
 
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
@@ -1506,15 +1557,17 @@ namespace Google.Pubsub.V1
             string topic,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, string>(
-                _callListTopicSubscriptions,
-                new ListTopicSubscriptionsRequest
-                {
-                    Topic = topic,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
+            {
+                Topic = topic,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListTopicSubscriptionsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, string>(_callListTopicSubscriptions, request, callSettings);
+        }
 
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
@@ -1540,15 +1593,17 @@ namespace Google.Pubsub.V1
             string topic,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, string>(
-                _callListTopicSubscriptions,
-                new ListTopicSubscriptionsRequest
-                {
-                    Topic = topic,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
+            {
+                Topic = topic,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListTopicSubscriptionsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, string>(_callListTopicSubscriptions, request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
@@ -1568,12 +1623,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Task DeleteTopicAsync(
             string topic,
-            CallSettings callSettings = null) => _callDeleteTopic.Async(
-                new DeleteTopicRequest
-                {
-                    Topic = topic,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                Topic = topic,
+            };
+            Modify_DeleteTopicRequest(ref request, ref callSettings);
+            return _callDeleteTopic.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
@@ -1593,12 +1651,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override void DeleteTopic(
             string topic,
-            CallSettings callSettings = null) => _callDeleteTopic.Sync(
-                new DeleteTopicRequest
-                {
-                    Topic = topic,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                Topic = topic,
+            };
+            Modify_DeleteTopicRequest(ref request, ref callSettings);
+            _callDeleteTopic.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
@@ -1624,13 +1685,16 @@ namespace Google.Pubsub.V1
         public override Task<Policy> SetIamPolicyAsync(
             string resource,
             Policy policy,
-            CallSettings callSettings = null) => _callSetIamPolicy.Async(
-                new SetIamPolicyRequest
-                {
-                    Resource = resource,
-                    Policy = policy,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = resource,
+                Policy = policy,
+            };
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
@@ -1656,13 +1720,16 @@ namespace Google.Pubsub.V1
         public override Policy SetIamPolicy(
             string resource,
             Policy policy,
-            CallSettings callSettings = null) => _callSetIamPolicy.Sync(
-                new SetIamPolicyRequest
-                {
-                    Resource = resource,
-                    Policy = policy,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = resource,
+                Policy = policy,
+            };
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -1682,12 +1749,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Task<Policy> GetIamPolicyAsync(
             string resource,
-            CallSettings callSettings = null) => _callGetIamPolicy.Async(
-                new GetIamPolicyRequest
-                {
-                    Resource = resource,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = resource,
+            };
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -1707,12 +1777,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Policy GetIamPolicy(
             string resource,
-            CallSettings callSettings = null) => _callGetIamPolicy.Sync(
-                new GetIamPolicyRequest
-                {
-                    Resource = resource,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = resource,
+            };
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -1737,13 +1810,16 @@ namespace Google.Pubsub.V1
         public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
             IEnumerable<string> permissions,
-            CallSettings callSettings = null) => _callTestIamPermissions.Async(
-                new TestIamPermissionsRequest
-                {
-                    Resource = resource,
-                    Permissions = { permissions },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = resource,
+                Permissions = { permissions },
+            };
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -1768,13 +1844,16 @@ namespace Google.Pubsub.V1
         public override TestIamPermissionsResponse TestIamPermissions(
             string resource,
             IEnumerable<string> permissions,
-            CallSettings callSettings = null) => _callTestIamPermissions.Sync(
-                new TestIamPermissionsRequest
-                {
-                    Resource = resource,
-                    Permissions = { permissions },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = resource,
+                Permissions = { permissions },
+            };
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
 
     }
 

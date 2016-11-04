@@ -240,6 +240,25 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
         /// <summary>
+        /// Path template for a group resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>group</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate GroupTemplate { get; } = new PathTemplate("projects/{project}/groups/{group}");
+
+        /// <summary>
+        /// Creates a group resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="groupId">The group ID.</param>
+        /// <returns>
+        /// The full group resource name.
+        /// </returns>
+        public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
+
+        /// <summary>
         /// Path template for a project resource. Parameters:
         /// <list type="bullet">
         /// <item><description>project</description></item>
@@ -579,6 +598,11 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </summary>
         public override ErrorStatsService.ErrorStatsServiceClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_ListGroupStatsRequest(ref ListGroupStatsRequest request, ref CallSettings settings);
+        partial void Modify_ListEventsRequest(ref ListEventsRequest request, ref CallSettings settings);
+        partial void Modify_DeleteEventsRequest(ref DeleteEventsRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Lists the specified groups.
         /// </summary>
@@ -616,16 +640,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(
-                _callListGroupStats,
-                new ListGroupStatsRequest
-                {
-                    ProjectName = projectName,
-                    TimeRange = timeRange,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListGroupStatsRequest request = new ListGroupStatsRequest
+            {
+                ProjectName = projectName,
+                TimeRange = timeRange,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListGroupStatsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified groups.
@@ -664,16 +690,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(
-                _callListGroupStats,
-                new ListGroupStatsRequest
-                {
-                    ProjectName = projectName,
-                    TimeRange = timeRange,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListGroupStatsRequest request = new ListGroupStatsRequest
+            {
+                ProjectName = projectName,
+                TimeRange = timeRange,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListGroupStatsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified events.
@@ -706,16 +734,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
             string groupId,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(
-                _callListEvents,
-                new ListEventsRequest
-                {
-                    ProjectName = projectName,
-                    GroupId = groupId,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
+            {
+                ProjectName = projectName,
+                GroupId = groupId,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListEventsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
+        }
 
         /// <summary>
         /// Lists the specified events.
@@ -748,16 +778,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
             string groupId,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(
-                _callListEvents,
-                new ListEventsRequest
-                {
-                    ProjectName = projectName,
-                    GroupId = groupId,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListEventsRequest request = new ListEventsRequest
+            {
+                ProjectName = projectName,
+                GroupId = groupId,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListEventsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
+        }
 
         /// <summary>
         /// Deletes all error events of a given project.
@@ -776,12 +808,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public override Task<DeleteEventsResponse> DeleteEventsAsync(
             string projectName,
-            CallSettings callSettings = null) => _callDeleteEvents.Async(
-                new DeleteEventsRequest
-                {
-                    ProjectName = projectName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteEventsRequest request = new DeleteEventsRequest
+            {
+                ProjectName = projectName,
+            };
+            Modify_DeleteEventsRequest(ref request, ref callSettings);
+            return _callDeleteEvents.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes all error events of a given project.
@@ -800,12 +835,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public override DeleteEventsResponse DeleteEvents(
             string projectName,
-            CallSettings callSettings = null) => _callDeleteEvents.Sync(
-                new DeleteEventsRequest
-                {
-                    ProjectName = projectName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteEventsRequest request = new DeleteEventsRequest
+            {
+                ProjectName = projectName,
+            };
+            Modify_DeleteEventsRequest(ref request, ref callSettings);
+            return _callDeleteEvents.Sync(request, callSettings);
+        }
 
     }
 

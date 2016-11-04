@@ -16,7 +16,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Logging.V2;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -344,6 +343,44 @@ namespace Google.Logging.V2
         /// The full sink resource name.
         /// </returns>
         public static string FormatSinkName(string projectId, string sinkId) => SinkTemplate.Expand(projectId, sinkId);
+
+        /// <summary>
+        /// Path template for a metric resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>metric</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate MetricTemplate { get; } = new PathTemplate("projects/{project}/metrics/{metric}");
+
+        /// <summary>
+        /// Creates a metric resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="metricId">The metric ID.</param>
+        /// <returns>
+        /// The full metric resource name.
+        /// </returns>
+        public static string FormatMetricName(string projectId, string metricId) => MetricTemplate.Expand(projectId, metricId);
+
+        /// <summary>
+        /// Path template for a log resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>log</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate LogTemplate { get; } = new PathTemplate("projects/{project}/logs/{log}");
+
+        /// <summary>
+        /// Creates a log resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="logId">The log ID.</param>
+        /// <returns>
+        /// The full log resource name.
+        /// </returns>
+        public static string FormatLogName(string projectId, string logId) => LogTemplate.Expand(projectId, logId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -796,6 +833,13 @@ namespace Google.Logging.V2
         /// </summary>
         public override ConfigServiceV2.ConfigServiceV2Client GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_ListSinksRequest(ref ListSinksRequest request, ref CallSettings settings);
+        partial void Modify_GetSinkRequest(ref GetSinkRequest request, ref CallSettings settings);
+        partial void Modify_CreateSinkRequest(ref CreateSinkRequest request, ref CallSettings settings);
+        partial void Modify_UpdateSinkRequest(ref UpdateSinkRequest request, ref CallSettings settings);
+        partial void Modify_DeleteSinkRequest(ref DeleteSinkRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Lists sinks.
         /// </summary>
@@ -821,15 +865,17 @@ namespace Google.Logging.V2
             string parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(
-                _callListSinks,
-                new ListSinksRequest
-                {
-                    Parent = parent,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
+            {
+                Parent = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListSinksRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(_callListSinks, request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -856,15 +902,17 @@ namespace Google.Logging.V2
             string parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(
-                _callListSinks,
-                new ListSinksRequest
-                {
-                    Parent = parent,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
+            {
+                Parent = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListSinksRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(_callListSinks, request, callSettings);
+        }
 
         /// <summary>
         /// Gets a sink.
@@ -881,12 +929,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override Task<LogSink> GetSinkAsync(
             string sinkName,
-            CallSettings callSettings = null) => _callGetSink.Async(
-                new GetSinkRequest
-                {
-                    SinkName = sinkName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetSinkRequest request = new GetSinkRequest
+            {
+                SinkName = sinkName,
+            };
+            Modify_GetSinkRequest(ref request, ref callSettings);
+            return _callGetSink.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a sink.
@@ -903,12 +954,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override LogSink GetSink(
             string sinkName,
-            CallSettings callSettings = null) => _callGetSink.Sync(
-                new GetSinkRequest
-                {
-                    SinkName = sinkName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetSinkRequest request = new GetSinkRequest
+            {
+                SinkName = sinkName,
+            };
+            Modify_GetSinkRequest(ref request, ref callSettings);
+            return _callGetSink.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a sink.
@@ -931,13 +985,16 @@ namespace Google.Logging.V2
         public override Task<LogSink> CreateSinkAsync(
             string parent,
             LogSink sink,
-            CallSettings callSettings = null) => _callCreateSink.Async(
-                new CreateSinkRequest
-                {
-                    Parent = parent,
-                    Sink = sink,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                Parent = parent,
+                Sink = sink,
+            };
+            Modify_CreateSinkRequest(ref request, ref callSettings);
+            return _callCreateSink.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a sink.
@@ -960,13 +1017,16 @@ namespace Google.Logging.V2
         public override LogSink CreateSink(
             string parent,
             LogSink sink,
-            CallSettings callSettings = null) => _callCreateSink.Sync(
-                new CreateSinkRequest
-                {
-                    Parent = parent,
-                    Sink = sink,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                Parent = parent,
+                Sink = sink,
+            };
+            Modify_CreateSinkRequest(ref request, ref callSettings);
+            return _callCreateSink.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates or creates a sink.
@@ -990,13 +1050,16 @@ namespace Google.Logging.V2
         public override Task<LogSink> UpdateSinkAsync(
             string sinkName,
             LogSink sink,
-            CallSettings callSettings = null) => _callUpdateSink.Async(
-                new UpdateSinkRequest
-                {
-                    SinkName = sinkName,
-                    Sink = sink,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkName = sinkName,
+                Sink = sink,
+            };
+            Modify_UpdateSinkRequest(ref request, ref callSettings);
+            return _callUpdateSink.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Updates or creates a sink.
@@ -1020,13 +1083,16 @@ namespace Google.Logging.V2
         public override LogSink UpdateSink(
             string sinkName,
             LogSink sink,
-            CallSettings callSettings = null) => _callUpdateSink.Sync(
-                new UpdateSinkRequest
-                {
-                    SinkName = sinkName,
-                    Sink = sink,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkName = sinkName,
+                Sink = sink,
+            };
+            Modify_UpdateSinkRequest(ref request, ref callSettings);
+            return _callUpdateSink.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a sink.
@@ -1045,12 +1111,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override Task DeleteSinkAsync(
             string sinkName,
-            CallSettings callSettings = null) => _callDeleteSink.Async(
-                new DeleteSinkRequest
-                {
-                    SinkName = sinkName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteSinkRequest request = new DeleteSinkRequest
+            {
+                SinkName = sinkName,
+            };
+            Modify_DeleteSinkRequest(ref request, ref callSettings);
+            return _callDeleteSink.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a sink.
@@ -1069,12 +1138,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override void DeleteSink(
             string sinkName,
-            CallSettings callSettings = null) => _callDeleteSink.Sync(
-                new DeleteSinkRequest
-                {
-                    SinkName = sinkName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteSinkRequest request = new DeleteSinkRequest
+            {
+                SinkName = sinkName,
+            };
+            Modify_DeleteSinkRequest(ref request, ref callSettings);
+            _callDeleteSink.Sync(request, callSettings);
+        }
 
     }
 

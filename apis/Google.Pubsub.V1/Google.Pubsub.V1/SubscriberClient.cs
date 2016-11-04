@@ -19,7 +19,6 @@ using Google.Api.Gax.Grpc;
 using Google.Iam.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
-using Google.Pubsub.V1;
 using Grpc.Core;
 using System;
 using System.Collections;
@@ -1724,6 +1723,19 @@ namespace Google.Pubsub.V1
         /// </summary>
         public override Subscriber.SubscriberClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_Subscription(ref Subscription request, ref CallSettings settings);
+        partial void Modify_GetSubscriptionRequest(ref GetSubscriptionRequest request, ref CallSettings settings);
+        partial void Modify_ListSubscriptionsRequest(ref ListSubscriptionsRequest request, ref CallSettings settings);
+        partial void Modify_DeleteSubscriptionRequest(ref DeleteSubscriptionRequest request, ref CallSettings settings);
+        partial void Modify_ModifyAckDeadlineRequest(ref ModifyAckDeadlineRequest request, ref CallSettings settings);
+        partial void Modify_AcknowledgeRequest(ref AcknowledgeRequest request, ref CallSettings settings);
+        partial void Modify_PullRequest(ref PullRequest request, ref CallSettings settings);
+        partial void Modify_ModifyPushConfigRequest(ref ModifyPushConfigRequest request, ref CallSettings settings);
+        partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings);
+        partial void Modify_GetIamPolicyRequest(ref GetIamPolicyRequest request, ref CallSettings settings);
+        partial void Modify_TestIamPermissionsRequest(ref TestIamPermissionsRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Creates a subscription to a given topic.
         /// If the subscription already exists, returns `ALREADY_EXISTS`.
@@ -1783,15 +1795,18 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null) => _callCreateSubscription.Async(
-                new Subscription
-                {
-                    Name = name,
-                    Topic = topic,
-                    PushConfig = pushConfig,
-                    AckDeadlineSeconds = ackDeadlineSeconds,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            Subscription request = new Subscription
+            {
+                Name = name,
+                Topic = topic,
+                PushConfig = pushConfig,
+                AckDeadlineSeconds = ackDeadlineSeconds,
+            };
+            Modify_Subscription(ref request, ref callSettings);
+            return _callCreateSubscription.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a subscription to a given topic.
@@ -1852,15 +1867,18 @@ namespace Google.Pubsub.V1
             string topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null) => _callCreateSubscription.Sync(
-                new Subscription
-                {
-                    Name = name,
-                    Topic = topic,
-                    PushConfig = pushConfig,
-                    AckDeadlineSeconds = ackDeadlineSeconds,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            Subscription request = new Subscription
+            {
+                Name = name,
+                Topic = topic,
+                PushConfig = pushConfig,
+                AckDeadlineSeconds = ackDeadlineSeconds,
+            };
+            Modify_Subscription(ref request, ref callSettings);
+            return _callCreateSubscription.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the configuration details of a subscription.
@@ -1876,12 +1894,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Task<Subscription> GetSubscriptionAsync(
             string subscription,
-            CallSettings callSettings = null) => _callGetSubscription.Async(
-                new GetSubscriptionRequest
-                {
-                    Subscription = subscription,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetSubscriptionRequest request = new GetSubscriptionRequest
+            {
+                Subscription = subscription,
+            };
+            Modify_GetSubscriptionRequest(ref request, ref callSettings);
+            return _callGetSubscription.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the configuration details of a subscription.
@@ -1897,12 +1918,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Subscription GetSubscription(
             string subscription,
-            CallSettings callSettings = null) => _callGetSubscription.Sync(
-                new GetSubscriptionRequest
-                {
-                    Subscription = subscription,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetSubscriptionRequest request = new GetSubscriptionRequest
+            {
+                Subscription = subscription,
+            };
+            Modify_GetSubscriptionRequest(ref request, ref callSettings);
+            return _callGetSubscription.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1928,15 +1952,17 @@ namespace Google.Pubsub.V1
             string project,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(
-                _callListSubscriptions,
-                new ListSubscriptionsRequest
-                {
-                    Project = project,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                Project = project,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListSubscriptionsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
+        }
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -1962,15 +1988,17 @@ namespace Google.Pubsub.V1
             string project,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(
-                _callListSubscriptions,
-                new ListSubscriptionsRequest
-                {
-                    Project = project,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                Project = project,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListSubscriptionsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
@@ -1990,12 +2018,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Task DeleteSubscriptionAsync(
             string subscription,
-            CallSettings callSettings = null) => _callDeleteSubscription.Async(
-                new DeleteSubscriptionRequest
-                {
-                    Subscription = subscription,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
+            {
+                Subscription = subscription,
+            };
+            Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
+            return _callDeleteSubscription.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an existing subscription. All pending messages in the subscription
@@ -2015,12 +2046,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override void DeleteSubscription(
             string subscription,
-            CallSettings callSettings = null) => _callDeleteSubscription.Sync(
-                new DeleteSubscriptionRequest
-                {
-                    Subscription = subscription,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
+            {
+                Subscription = subscription,
+            };
+            Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
+            _callDeleteSubscription.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
@@ -2052,14 +2086,17 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null) => _callModifyAckDeadline.Async(
-                new ModifyAckDeadlineRequest
-                {
-                    Subscription = subscription,
-                    AckIds = { ackIds },
-                    AckDeadlineSeconds = ackDeadlineSeconds,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
+            {
+                Subscription = subscription,
+                AckIds = { ackIds },
+                AckDeadlineSeconds = ackDeadlineSeconds,
+            };
+            Modify_ModifyAckDeadlineRequest(ref request, ref callSettings);
+            return _callModifyAckDeadline.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
@@ -2091,14 +2128,17 @@ namespace Google.Pubsub.V1
             string subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null) => _callModifyAckDeadline.Sync(
-                new ModifyAckDeadlineRequest
-                {
-                    Subscription = subscription,
-                    AckIds = { ackIds },
-                    AckDeadlineSeconds = ackDeadlineSeconds,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
+            {
+                Subscription = subscription,
+                AckIds = { ackIds },
+                AckDeadlineSeconds = ackDeadlineSeconds,
+            };
+            Modify_ModifyAckDeadlineRequest(ref request, ref callSettings);
+            _callModifyAckDeadline.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
@@ -2125,13 +2165,16 @@ namespace Google.Pubsub.V1
         public override Task AcknowledgeAsync(
             string subscription,
             IEnumerable<string> ackIds,
-            CallSettings callSettings = null) => _callAcknowledge.Async(
-                new AcknowledgeRequest
-                {
-                    Subscription = subscription,
-                    AckIds = { ackIds },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AcknowledgeRequest request = new AcknowledgeRequest
+            {
+                Subscription = subscription,
+                AckIds = { ackIds },
+            };
+            Modify_AcknowledgeRequest(ref request, ref callSettings);
+            return _callAcknowledge.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
@@ -2158,13 +2201,16 @@ namespace Google.Pubsub.V1
         public override void Acknowledge(
             string subscription,
             IEnumerable<string> ackIds,
-            CallSettings callSettings = null) => _callAcknowledge.Sync(
-                new AcknowledgeRequest
-                {
-                    Subscription = subscription,
-                    AckIds = { ackIds },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AcknowledgeRequest request = new AcknowledgeRequest
+            {
+                Subscription = subscription,
+                AckIds = { ackIds },
+            };
+            Modify_AcknowledgeRequest(ref request, ref callSettings);
+            _callAcknowledge.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
@@ -2196,14 +2242,17 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CallSettings callSettings = null) => _callPull.Async(
-                new PullRequest
-                {
-                    Subscription = subscription,
-                    ReturnImmediately = returnImmediately,
-                    MaxMessages = maxMessages,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            PullRequest request = new PullRequest
+            {
+                Subscription = subscription,
+                ReturnImmediately = returnImmediately,
+                MaxMessages = maxMessages,
+            };
+            Modify_PullRequest(ref request, ref callSettings);
+            return _callPull.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
@@ -2235,14 +2284,17 @@ namespace Google.Pubsub.V1
             string subscription,
             bool returnImmediately,
             int maxMessages,
-            CallSettings callSettings = null) => _callPull.Sync(
-                new PullRequest
-                {
-                    Subscription = subscription,
-                    ReturnImmediately = returnImmediately,
-                    MaxMessages = maxMessages,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            PullRequest request = new PullRequest
+            {
+                Subscription = subscription,
+                ReturnImmediately = returnImmediately,
+                MaxMessages = maxMessages,
+            };
+            Modify_PullRequest(ref request, ref callSettings);
+            return _callPull.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
@@ -2272,13 +2324,16 @@ namespace Google.Pubsub.V1
         public override Task ModifyPushConfigAsync(
             string subscription,
             PushConfig pushConfig,
-            CallSettings callSettings = null) => _callModifyPushConfig.Async(
-                new ModifyPushConfigRequest
-                {
-                    Subscription = subscription,
-                    PushConfig = pushConfig,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ModifyPushConfigRequest request = new ModifyPushConfigRequest
+            {
+                Subscription = subscription,
+                PushConfig = pushConfig,
+            };
+            Modify_ModifyPushConfigRequest(ref request, ref callSettings);
+            return _callModifyPushConfig.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
@@ -2308,13 +2363,16 @@ namespace Google.Pubsub.V1
         public override void ModifyPushConfig(
             string subscription,
             PushConfig pushConfig,
-            CallSettings callSettings = null) => _callModifyPushConfig.Sync(
-                new ModifyPushConfigRequest
-                {
-                    Subscription = subscription,
-                    PushConfig = pushConfig,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ModifyPushConfigRequest request = new ModifyPushConfigRequest
+            {
+                Subscription = subscription,
+                PushConfig = pushConfig,
+            };
+            Modify_ModifyPushConfigRequest(ref request, ref callSettings);
+            _callModifyPushConfig.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
@@ -2340,13 +2398,16 @@ namespace Google.Pubsub.V1
         public override Task<Policy> SetIamPolicyAsync(
             string resource,
             Policy policy,
-            CallSettings callSettings = null) => _callSetIamPolicy.Async(
-                new SetIamPolicyRequest
-                {
-                    Resource = resource,
-                    Policy = policy,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = resource,
+                Policy = policy,
+            };
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
@@ -2372,13 +2433,16 @@ namespace Google.Pubsub.V1
         public override Policy SetIamPolicy(
             string resource,
             Policy policy,
-            CallSettings callSettings = null) => _callSetIamPolicy.Sync(
-                new SetIamPolicyRequest
-                {
-                    Resource = resource,
-                    Policy = policy,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = resource,
+                Policy = policy,
+            };
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -2398,12 +2462,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Task<Policy> GetIamPolicyAsync(
             string resource,
-            CallSettings callSettings = null) => _callGetIamPolicy.Async(
-                new GetIamPolicyRequest
-                {
-                    Resource = resource,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = resource,
+            };
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -2423,12 +2490,15 @@ namespace Google.Pubsub.V1
         /// </returns>
         public override Policy GetIamPolicy(
             string resource,
-            CallSettings callSettings = null) => _callGetIamPolicy.Sync(
-                new GetIamPolicyRequest
-                {
-                    Resource = resource,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = resource,
+            };
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -2453,13 +2523,16 @@ namespace Google.Pubsub.V1
         public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
             IEnumerable<string> permissions,
-            CallSettings callSettings = null) => _callTestIamPermissions.Async(
-                new TestIamPermissionsRequest
-                {
-                    Resource = resource,
-                    Permissions = { permissions },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = resource,
+                Permissions = { permissions },
+            };
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -2484,13 +2557,16 @@ namespace Google.Pubsub.V1
         public override TestIamPermissionsResponse TestIamPermissions(
             string resource,
             IEnumerable<string> permissions,
-            CallSettings callSettings = null) => _callTestIamPermissions.Sync(
-                new TestIamPermissionsRequest
-                {
-                    Resource = resource,
-                    Permissions = { permissions },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = resource,
+                Permissions = { permissions },
+            };
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
 
     }
 

@@ -24,7 +24,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types;
 
 namespace Google.Cloud.Language.V1Beta1
 {
@@ -461,7 +460,7 @@ namespace Google.Cloud.Language.V1Beta1
         /// </returns>
         public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
-            Features features,
+            AnnotateTextRequest.Types.Features features,
             EncodingType encodingType,
             CallSettings callSettings = null)
         {
@@ -491,7 +490,7 @@ namespace Google.Cloud.Language.V1Beta1
         /// </returns>
         public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
-            Features features,
+            AnnotateTextRequest.Types.Features features,
             EncodingType encodingType,
             CancellationToken cancellationToken) => AnnotateTextAsync(
                 document,
@@ -522,7 +521,7 @@ namespace Google.Cloud.Language.V1Beta1
         /// </returns>
         public virtual AnnotateTextResponse AnnotateText(
             Document document,
-            Features features,
+            AnnotateTextRequest.Types.Features features,
             EncodingType encodingType,
             CallSettings callSettings = null)
         {
@@ -564,6 +563,11 @@ namespace Google.Cloud.Language.V1Beta1
         /// </summary>
         public override LanguageService.LanguageServiceClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_AnalyzeSentimentRequest(ref AnalyzeSentimentRequest request, ref CallSettings settings);
+        partial void Modify_AnalyzeEntitiesRequest(ref AnalyzeEntitiesRequest request, ref CallSettings settings);
+        partial void Modify_AnnotateTextRequest(ref AnnotateTextRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Analyzes the sentiment of the provided text.
         /// </summary>
@@ -579,12 +583,15 @@ namespace Google.Cloud.Language.V1Beta1
         /// </returns>
         public override Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             Document document,
-            CallSettings callSettings = null) => _callAnalyzeSentiment.Async(
-                new AnalyzeSentimentRequest
-                {
-                    Document = document,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
+            {
+                Document = document,
+            };
+            Modify_AnalyzeSentimentRequest(ref request, ref callSettings);
+            return _callAnalyzeSentiment.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Analyzes the sentiment of the provided text.
@@ -601,12 +608,15 @@ namespace Google.Cloud.Language.V1Beta1
         /// </returns>
         public override AnalyzeSentimentResponse AnalyzeSentiment(
             Document document,
-            CallSettings callSettings = null) => _callAnalyzeSentiment.Sync(
-                new AnalyzeSentimentRequest
-                {
-                    Document = document,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
+            {
+                Document = document,
+            };
+            Modify_AnalyzeSentimentRequest(ref request, ref callSettings);
+            return _callAnalyzeSentiment.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Finds named entities (currently finds proper names) in the text,
@@ -627,13 +637,16 @@ namespace Google.Cloud.Language.V1Beta1
         public override Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
             EncodingType encodingType,
-            CallSettings callSettings = null) => _callAnalyzeEntities.Async(
-                new AnalyzeEntitiesRequest
-                {
-                    Document = document,
-                    EncodingType = encodingType,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
+            {
+                Document = document,
+                EncodingType = encodingType,
+            };
+            Modify_AnalyzeEntitiesRequest(ref request, ref callSettings);
+            return _callAnalyzeEntities.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Finds named entities (currently finds proper names) in the text,
@@ -654,13 +667,16 @@ namespace Google.Cloud.Language.V1Beta1
         public override AnalyzeEntitiesResponse AnalyzeEntities(
             Document document,
             EncodingType encodingType,
-            CallSettings callSettings = null) => _callAnalyzeEntities.Sync(
-                new AnalyzeEntitiesRequest
-                {
-                    Document = document,
-                    EncodingType = encodingType,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
+            {
+                Document = document,
+                EncodingType = encodingType,
+            };
+            Modify_AnalyzeEntitiesRequest(ref request, ref callSettings);
+            return _callAnalyzeEntities.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Advanced API that analyzes the document and provides a full set of text
@@ -685,16 +701,19 @@ namespace Google.Cloud.Language.V1Beta1
         /// </returns>
         public override Task<AnnotateTextResponse> AnnotateTextAsync(
             Document document,
-            Features features,
+            AnnotateTextRequest.Types.Features features,
             EncodingType encodingType,
-            CallSettings callSettings = null) => _callAnnotateText.Async(
-                new AnnotateTextRequest
-                {
-                    Document = document,
-                    Features = features,
-                    EncodingType = encodingType,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AnnotateTextRequest request = new AnnotateTextRequest
+            {
+                Document = document,
+                Features = features,
+                EncodingType = encodingType,
+            };
+            Modify_AnnotateTextRequest(ref request, ref callSettings);
+            return _callAnnotateText.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Advanced API that analyzes the document and provides a full set of text
@@ -719,16 +738,19 @@ namespace Google.Cloud.Language.V1Beta1
         /// </returns>
         public override AnnotateTextResponse AnnotateText(
             Document document,
-            Features features,
+            AnnotateTextRequest.Types.Features features,
             EncodingType encodingType,
-            CallSettings callSettings = null) => _callAnnotateText.Sync(
-                new AnnotateTextRequest
-                {
-                    Document = document,
-                    Features = features,
-                    EncodingType = encodingType,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            AnnotateTextRequest request = new AnnotateTextRequest
+            {
+                Document = document,
+                Features = features,
+                EncodingType = encodingType,
+            };
+            Modify_AnnotateTextRequest(ref request, ref callSettings);
+            return _callAnnotateText.Sync(request, callSettings);
+        }
 
     }
 

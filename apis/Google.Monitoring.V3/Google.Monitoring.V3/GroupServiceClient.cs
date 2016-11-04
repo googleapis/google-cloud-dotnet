@@ -17,7 +17,6 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Monitoring.V3;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -325,10 +324,17 @@ namespace Google.Monitoring.V3
         /// <remarks>
         /// The default GroupService scopes are:
         /// <list type="bullet">
+        /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/monitoring"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/monitoring.read"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/monitoring.write"</description></item>
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
-            "https://www.googleapis.com/auth/cloud-platform"
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/monitoring",
+            "https://www.googleapis.com/auth/monitoring.read",
+            "https://www.googleapis.com/auth/monitoring.write",
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
@@ -368,6 +374,44 @@ namespace Google.Monitoring.V3
         /// The full group resource name.
         /// </returns>
         public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
+
+        /// <summary>
+        /// Path template for a metric_descriptor resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>metricDescriptor</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate MetricDescriptorTemplate { get; } = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
+
+        /// <summary>
+        /// Creates a metric_descriptor resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="metricDescriptorId">The metricDescriptor ID.</param>
+        /// <returns>
+        /// The full metric_descriptor resource name.
+        /// </returns>
+        public static string FormatMetricDescriptorName(string projectId, string metricDescriptorId) => MetricDescriptorTemplate.Expand(projectId, metricDescriptorId);
+
+        /// <summary>
+        /// Path template for a monitored_resource_descriptor resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>monitoredResourceDescriptor</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate MonitoredResourceDescriptorTemplate { get; } = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
+
+        /// <summary>
+        /// Creates a monitored_resource_descriptor resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID.</param>
+        /// <returns>
+        /// The full monitored_resource_descriptor resource name.
+        /// </returns>
+        public static string FormatMonitoredResourceDescriptorName(string projectId, string monitoredResourceDescriptorId) => MonitoredResourceDescriptorTemplate.Expand(projectId, monitoredResourceDescriptorId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -795,6 +839,14 @@ namespace Google.Monitoring.V3
         /// </summary>
         public override GroupService.GroupServiceClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_ListGroupsRequest(ref ListGroupsRequest request, ref CallSettings settings);
+        partial void Modify_GetGroupRequest(ref GetGroupRequest request, ref CallSettings settings);
+        partial void Modify_CreateGroupRequest(ref CreateGroupRequest request, ref CallSettings settings);
+        partial void Modify_UpdateGroupRequest(ref UpdateGroupRequest request, ref CallSettings settings);
+        partial void Modify_DeleteGroupRequest(ref DeleteGroupRequest request, ref CallSettings settings);
+        partial void Modify_ListGroupMembersRequest(ref ListGroupMembersRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Gets a single group.
         /// </summary>
@@ -810,12 +862,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override Task<Group> GetGroupAsync(
             string name,
-            CallSettings callSettings = null) => _callGetGroup.Async(
-                new GetGroupRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetGroupRequest request = new GetGroupRequest
+            {
+                Name = name,
+            };
+            Modify_GetGroupRequest(ref request, ref callSettings);
+            return _callGetGroup.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single group.
@@ -832,12 +887,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override Group GetGroup(
             string name,
-            CallSettings callSettings = null) => _callGetGroup.Sync(
-                new GetGroupRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetGroupRequest request = new GetGroupRequest
+            {
+                Name = name,
+            };
+            Modify_GetGroupRequest(ref request, ref callSettings);
+            return _callGetGroup.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new group.
@@ -859,13 +917,16 @@ namespace Google.Monitoring.V3
         public override Task<Group> CreateGroupAsync(
             string name,
             Group group,
-            CallSettings callSettings = null) => _callCreateGroup.Async(
-                new CreateGroupRequest
-                {
-                    Name = name,
-                    Group = group,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Name = name,
+                Group = group,
+            };
+            Modify_CreateGroupRequest(ref request, ref callSettings);
+            return _callCreateGroup.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new group.
@@ -887,13 +948,16 @@ namespace Google.Monitoring.V3
         public override Group CreateGroup(
             string name,
             Group group,
-            CallSettings callSettings = null) => _callCreateGroup.Sync(
-                new CreateGroupRequest
-                {
-                    Name = name,
-                    Group = group,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateGroupRequest request = new CreateGroupRequest
+            {
+                Name = name,
+                Group = group,
+            };
+            Modify_CreateGroupRequest(ref request, ref callSettings);
+            return _callCreateGroup.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates an existing group.
@@ -911,12 +975,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override Task<Group> UpdateGroupAsync(
             Group group,
-            CallSettings callSettings = null) => _callUpdateGroup.Async(
-                new UpdateGroupRequest
-                {
-                    Group = group,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                Group = group,
+            };
+            Modify_UpdateGroupRequest(ref request, ref callSettings);
+            return _callUpdateGroup.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Updates an existing group.
@@ -934,12 +1001,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override Group UpdateGroup(
             Group group,
-            CallSettings callSettings = null) => _callUpdateGroup.Sync(
-                new UpdateGroupRequest
-                {
-                    Group = group,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                Group = group,
+            };
+            Modify_UpdateGroupRequest(ref request, ref callSettings);
+            return _callUpdateGroup.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an existing group.
@@ -956,12 +1026,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override Task DeleteGroupAsync(
             string name,
-            CallSettings callSettings = null) => _callDeleteGroup.Async(
-                new DeleteGroupRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteGroupRequest request = new DeleteGroupRequest
+            {
+                Name = name,
+            };
+            Modify_DeleteGroupRequest(ref request, ref callSettings);
+            return _callDeleteGroup.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an existing group.
@@ -978,12 +1051,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override void DeleteGroup(
             string name,
-            CallSettings callSettings = null) => _callDeleteGroup.Sync(
-                new DeleteGroupRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteGroupRequest request = new DeleteGroupRequest
+            {
+                Name = name,
+            };
+            Modify_DeleteGroupRequest(ref request, ref callSettings);
+            _callDeleteGroup.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1010,15 +1086,17 @@ namespace Google.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(
-                _callListGroupMembers,
-                new ListGroupMembersRequest
-                {
-                    Name = name,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
+            {
+                Name = name,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListGroupMembersRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1045,15 +1123,17 @@ namespace Google.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(
-                _callListGroupMembers,
-                new ListGroupMembersRequest
-                {
-                    Name = name,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
+            {
+                Name = name,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListGroupMembersRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
+        }
 
     }
 

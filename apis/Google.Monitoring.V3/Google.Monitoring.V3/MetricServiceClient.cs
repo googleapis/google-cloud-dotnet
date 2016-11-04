@@ -17,7 +17,6 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Monitoring.V3;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -27,7 +26,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Monitoring.V3.ListTimeSeriesRequest.Types;
 
 namespace Google.Monitoring.V3
 {
@@ -387,10 +385,17 @@ namespace Google.Monitoring.V3
         /// <remarks>
         /// The default MetricService scopes are:
         /// <list type="bullet">
+        /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/monitoring"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/monitoring.read"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/monitoring.write"</description></item>
         /// </list>
         /// </remarks>
         public static IReadOnlyList<string> DefaultScopes { get; } = new ReadOnlyCollection<string>(new string[] {
-            "https://www.googleapis.com/auth/cloud-platform"
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/monitoring",
+            "https://www.googleapis.com/auth/monitoring.read",
+            "https://www.googleapis.com/auth/monitoring.write",
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
@@ -411,6 +416,25 @@ namespace Google.Monitoring.V3
         /// The full project resource name.
         /// </returns>
         public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
+
+        /// <summary>
+        /// Path template for a group resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>group</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate GroupTemplate { get; } = new PathTemplate("projects/{project}/groups/{group}");
+
+        /// <summary>
+        /// Creates a group resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="groupId">The group ID.</param>
+        /// <returns>
+        /// The full group resource name.
+        /// </returns>
+        public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
 
         /// <summary>
         /// Path template for a metric_descriptor resource. Parameters:
@@ -958,7 +982,7 @@ namespace Google.Monitoring.V3
             string name,
             string filter,
             TimeInterval interval,
-            TimeSeriesView view,
+            ListTimeSeriesRequest.Types.TimeSeriesView view,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -1008,7 +1032,7 @@ namespace Google.Monitoring.V3
             string name,
             string filter,
             TimeInterval interval,
-            TimeSeriesView view,
+            ListTimeSeriesRequest.Types.TimeSeriesView view,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -1159,6 +1183,16 @@ namespace Google.Monitoring.V3
         /// </summary>
         public override MetricService.MetricServiceClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref CallSettings settings);
+        partial void Modify_GetMonitoredResourceDescriptorRequest(ref GetMonitoredResourceDescriptorRequest request, ref CallSettings settings);
+        partial void Modify_ListMetricDescriptorsRequest(ref ListMetricDescriptorsRequest request, ref CallSettings settings);
+        partial void Modify_GetMetricDescriptorRequest(ref GetMetricDescriptorRequest request, ref CallSettings settings);
+        partial void Modify_CreateMetricDescriptorRequest(ref CreateMetricDescriptorRequest request, ref CallSettings settings);
+        partial void Modify_DeleteMetricDescriptorRequest(ref DeleteMetricDescriptorRequest request, ref CallSettings settings);
+        partial void Modify_ListTimeSeriesRequest(ref ListTimeSeriesRequest request, ref CallSettings settings);
+        partial void Modify_CreateTimeSeriesRequest(ref CreateTimeSeriesRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
@@ -1184,15 +1218,17 @@ namespace Google.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(
-                _callListMonitoredResourceDescriptors,
-                new ListMonitoredResourceDescriptorsRequest
-                {
-                    Name = name,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
+            {
+                Name = name,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+        }
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
@@ -1219,15 +1255,17 @@ namespace Google.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(
-                _callListMonitoredResourceDescriptors,
-                new ListMonitoredResourceDescriptorsRequest
-                {
-                    Name = name,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
+            {
+                Name = name,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
@@ -1246,12 +1284,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             string name,
-            CallSettings callSettings = null) => _callGetMonitoredResourceDescriptor.Async(
-                new GetMonitoredResourceDescriptorRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                Name = name,
+            };
+            Modify_GetMonitoredResourceDescriptorRequest(ref request, ref callSettings);
+            return _callGetMonitoredResourceDescriptor.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
@@ -1270,12 +1311,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             string name,
-            CallSettings callSettings = null) => _callGetMonitoredResourceDescriptor.Sync(
-                new GetMonitoredResourceDescriptorRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
+            {
+                Name = name,
+            };
+            Modify_GetMonitoredResourceDescriptorRequest(ref request, ref callSettings);
+            return _callGetMonitoredResourceDescriptor.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
@@ -1302,15 +1346,17 @@ namespace Google.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(
-                _callListMetricDescriptors,
-                new ListMetricDescriptorsRequest
-                {
-                    Name = name,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
+            {
+                Name = name,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
+        }
 
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
@@ -1337,15 +1383,17 @@ namespace Google.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(
-                _callListMetricDescriptors,
-                new ListMetricDescriptorsRequest
-                {
-                    Name = name,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
+            {
+                Name = name,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
@@ -1364,12 +1412,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override Task<MetricDescriptor> GetMetricDescriptorAsync(
             string name,
-            CallSettings callSettings = null) => _callGetMetricDescriptor.Async(
-                new GetMetricDescriptorRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                Name = name,
+            };
+            Modify_GetMetricDescriptorRequest(ref request, ref callSettings);
+            return _callGetMetricDescriptor.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
@@ -1388,12 +1439,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override MetricDescriptor GetMetricDescriptor(
             string name,
-            CallSettings callSettings = null) => _callGetMetricDescriptor.Sync(
-                new GetMetricDescriptorRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
+            {
+                Name = name,
+            };
+            Modify_GetMetricDescriptorRequest(ref request, ref callSettings);
+            return _callGetMetricDescriptor.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new metric descriptor.
@@ -1417,13 +1471,16 @@ namespace Google.Monitoring.V3
         public override Task<MetricDescriptor> CreateMetricDescriptorAsync(
             string name,
             MetricDescriptor metricDescriptor,
-            CallSettings callSettings = null) => _callCreateMetricDescriptor.Async(
-                new CreateMetricDescriptorRequest
-                {
-                    Name = name,
-                    MetricDescriptor = metricDescriptor,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                Name = name,
+                MetricDescriptor = metricDescriptor,
+            };
+            Modify_CreateMetricDescriptorRequest(ref request, ref callSettings);
+            return _callCreateMetricDescriptor.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new metric descriptor.
@@ -1447,13 +1504,16 @@ namespace Google.Monitoring.V3
         public override MetricDescriptor CreateMetricDescriptor(
             string name,
             MetricDescriptor metricDescriptor,
-            CallSettings callSettings = null) => _callCreateMetricDescriptor.Sync(
-                new CreateMetricDescriptorRequest
-                {
-                    Name = name,
-                    MetricDescriptor = metricDescriptor,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
+            {
+                Name = name,
+                MetricDescriptor = metricDescriptor,
+            };
+            Modify_CreateMetricDescriptorRequest(ref request, ref callSettings);
+            return _callCreateMetricDescriptor.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
@@ -1473,12 +1533,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override Task DeleteMetricDescriptorAsync(
             string name,
-            CallSettings callSettings = null) => _callDeleteMetricDescriptor.Async(
-                new DeleteMetricDescriptorRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                Name = name,
+            };
+            Modify_DeleteMetricDescriptorRequest(ref request, ref callSettings);
+            return _callDeleteMetricDescriptor.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
@@ -1498,12 +1561,15 @@ namespace Google.Monitoring.V3
         /// </returns>
         public override void DeleteMetricDescriptor(
             string name,
-            CallSettings callSettings = null) => _callDeleteMetricDescriptor.Sync(
-                new DeleteMetricDescriptorRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
+            {
+                Name = name,
+            };
+            Modify_DeleteMetricDescriptorRequest(ref request, ref callSettings);
+            _callDeleteMetricDescriptor.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
@@ -1547,21 +1613,23 @@ namespace Google.Monitoring.V3
             string name,
             string filter,
             TimeInterval interval,
-            TimeSeriesView view,
+            ListTimeSeriesRequest.Types.TimeSeriesView view,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(
-                _callListTimeSeries,
-                new ListTimeSeriesRequest
-                {
-                    Name = name,
-                    Filter = filter,
-                    Interval = interval,
-                    View = view,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
+            {
+                Name = name,
+                Filter = filter,
+                Interval = interval,
+                View = view,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListTimeSeriesRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
+        }
 
         /// <summary>
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
@@ -1605,21 +1673,23 @@ namespace Google.Monitoring.V3
             string name,
             string filter,
             TimeInterval interval,
-            TimeSeriesView view,
+            ListTimeSeriesRequest.Types.TimeSeriesView view,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(
-                _callListTimeSeries,
-                new ListTimeSeriesRequest
-                {
-                    Name = name,
-                    Filter = filter,
-                    Interval = interval,
-                    View = view,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListTimeSeriesRequest request = new ListTimeSeriesRequest
+            {
+                Name = name,
+                Filter = filter,
+                Interval = interval,
+                View = view,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListTimeSeriesRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
+        }
 
         /// <summary>
         /// Creates or adds data to one or more time series.
@@ -1647,13 +1717,16 @@ namespace Google.Monitoring.V3
         public override Task CreateTimeSeriesAsync(
             string name,
             IEnumerable<TimeSeries> timeSeries,
-            CallSettings callSettings = null) => _callCreateTimeSeries.Async(
-                new CreateTimeSeriesRequest
-                {
-                    Name = name,
-                    TimeSeries = { timeSeries },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                Name = name,
+                TimeSeries = { timeSeries },
+            };
+            Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
+            return _callCreateTimeSeries.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Creates or adds data to one or more time series.
@@ -1681,13 +1754,16 @@ namespace Google.Monitoring.V3
         public override void CreateTimeSeries(
             string name,
             IEnumerable<TimeSeries> timeSeries,
-            CallSettings callSettings = null) => _callCreateTimeSeries.Sync(
-                new CreateTimeSeriesRequest
-                {
-                    Name = name,
-                    TimeSeries = { timeSeries },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                Name = name,
+                TimeSeries = { timeSeries },
+            };
+            Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
+            _callCreateTimeSeries.Sync(request, callSettings);
+        }
 
     }
 

@@ -28,7 +28,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Monitoring.V3.ListTimeSeriesRequest.Types;
 
 namespace Google.Monitoring.V3.Snippets
 {
@@ -268,14 +267,14 @@ namespace Google.Monitoring.V3.Snippets
 
         public async Task ListTimeSeriesAsync()
         {
-            // Snippet: ListTimeSeriesAsync(string,string,TimeInterval,TimeSeriesView,string,int?,CallSettings)
+            // Snippet: ListTimeSeriesAsync(string,string,TimeInterval,ListTimeSeriesRequest.Types.TimeSeriesView,string,int?,CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
             string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
             string filter = "";
             TimeInterval interval = new TimeInterval();
-            TimeSeriesView view = TimeSeriesView.Full;
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
             IPagedAsyncEnumerable<ListTimeSeriesResponse,TimeSeries> response =
                 metricServiceClient.ListTimeSeriesAsync(formattedName, filter, interval, view);
@@ -304,14 +303,14 @@ namespace Google.Monitoring.V3.Snippets
 
         public void ListTimeSeries()
         {
-            // Snippet: ListTimeSeries(string,string,TimeInterval,TimeSeriesView,string,int?,CallSettings)
+            // Snippet: ListTimeSeries(string,string,TimeInterval,ListTimeSeriesRequest.Types.TimeSeriesView,string,int?,CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
             string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
             string filter = "";
             TimeInterval interval = new TimeInterval();
-            TimeSeriesView view = TimeSeriesView.Full;
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
             IPagedEnumerable<ListTimeSeriesResponse,TimeSeries> response =
                 metricServiceClient.ListTimeSeries(formattedName, filter, interval, view);

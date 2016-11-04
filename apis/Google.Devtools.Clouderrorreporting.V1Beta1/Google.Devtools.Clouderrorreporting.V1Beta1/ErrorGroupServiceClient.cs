@@ -227,6 +227,23 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
 
+        /// <summary>
+        /// Path template for a project resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
+
+        /// <summary>
+        /// Creates a project resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <returns>
+        /// The full project resource name.
+        /// </returns>
+        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
+
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
@@ -462,6 +479,10 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </summary>
         public override ErrorGroupService.ErrorGroupServiceClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_GetGroupRequest(ref GetGroupRequest request, ref CallSettings settings);
+        partial void Modify_UpdateGroupRequest(ref UpdateGroupRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Get the specified group.
         /// </summary>
@@ -483,12 +504,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public override Task<ErrorGroup> GetGroupAsync(
             string groupName,
-            CallSettings callSettings = null) => _callGetGroup.Async(
-                new GetGroupRequest
-                {
-                    GroupName = groupName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupName = groupName,
+            };
+            Modify_GetGroupRequest(ref request, ref callSettings);
+            return _callGetGroup.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Get the specified group.
@@ -511,12 +535,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public override ErrorGroup GetGroup(
             string groupName,
-            CallSettings callSettings = null) => _callGetGroup.Sync(
-                new GetGroupRequest
-                {
-                    GroupName = groupName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetGroupRequest request = new GetGroupRequest
+            {
+                GroupName = groupName,
+            };
+            Modify_GetGroupRequest(ref request, ref callSettings);
+            return _callGetGroup.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Replace the data for the specified group.
@@ -533,12 +560,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public override Task<ErrorGroup> UpdateGroupAsync(
             ErrorGroup group,
-            CallSettings callSettings = null) => _callUpdateGroup.Async(
-                new UpdateGroupRequest
-                {
-                    Group = group,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                Group = group,
+            };
+            Modify_UpdateGroupRequest(ref request, ref callSettings);
+            return _callUpdateGroup.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Replace the data for the specified group.
@@ -555,12 +585,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// </returns>
         public override ErrorGroup UpdateGroup(
             ErrorGroup group,
-            CallSettings callSettings = null) => _callUpdateGroup.Sync(
-                new UpdateGroupRequest
-                {
-                    Group = group,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            UpdateGroupRequest request = new UpdateGroupRequest
+            {
+                Group = group,
+            };
+            Modify_UpdateGroupRequest(ref request, ref callSettings);
+            return _callUpdateGroup.Sync(request, callSettings);
+        }
 
     }
 

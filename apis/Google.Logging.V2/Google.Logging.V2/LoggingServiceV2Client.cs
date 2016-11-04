@@ -337,6 +337,44 @@ namespace Google.Logging.V2
         public static string FormatParentName(string projectId) => ParentTemplate.Expand(projectId);
 
         /// <summary>
+        /// Path template for a sink resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>sink</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate SinkTemplate { get; } = new PathTemplate("projects/{project}/sinks/{sink}");
+
+        /// <summary>
+        /// Creates a sink resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="sinkId">The sink ID.</param>
+        /// <returns>
+        /// The full sink resource name.
+        /// </returns>
+        public static string FormatSinkName(string projectId, string sinkId) => SinkTemplate.Expand(projectId, sinkId);
+
+        /// <summary>
+        /// Path template for a metric resource. Parameters:
+        /// <list type="bullet">
+        /// <item><description>project</description></item>
+        /// <item><description>metric</description></item>
+        /// </list>
+        /// </summary>
+        public static PathTemplate MetricTemplate { get; } = new PathTemplate("projects/{project}/metrics/{metric}");
+
+        /// <summary>
+        /// Creates a metric resource name from its component IDs.
+        /// </summary>
+        /// <param name="projectId">The project ID.</param>
+        /// <param name="metricId">The metric ID.</param>
+        /// <returns>
+        /// The full metric resource name.
+        /// </returns>
+        public static string FormatMetricName(string projectId, string metricId) => MetricTemplate.Expand(projectId, metricId);
+
+        /// <summary>
         /// Path template for a log resource. Parameters:
         /// <list type="bullet">
         /// <item><description>project</description></item>
@@ -783,6 +821,12 @@ namespace Google.Logging.V2
         /// </summary>
         public override LoggingServiceV2.LoggingServiceV2Client GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_DeleteLogRequest(ref DeleteLogRequest request, ref CallSettings settings);
+        partial void Modify_WriteLogEntriesRequest(ref WriteLogEntriesRequest request, ref CallSettings settings);
+        partial void Modify_ListLogEntriesRequest(ref ListLogEntriesRequest request, ref CallSettings settings);
+        partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Deletes a log and all its log entries.
         /// The log will reappear if it receives new entries.
@@ -799,12 +843,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override Task DeleteLogAsync(
             string logName,
-            CallSettings callSettings = null) => _callDeleteLog.Async(
-                new DeleteLogRequest
-                {
-                    LogName = logName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogName = logName,
+            };
+            Modify_DeleteLogRequest(ref request, ref callSettings);
+            return _callDeleteLog.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a log and all its log entries.
@@ -822,12 +869,15 @@ namespace Google.Logging.V2
         /// </returns>
         public override void DeleteLog(
             string logName,
-            CallSettings callSettings = null) => _callDeleteLog.Sync(
-                new DeleteLogRequest
-                {
-                    LogName = logName,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogName = logName,
+            };
+            Modify_DeleteLogRequest(ref request, ref callSettings);
+            _callDeleteLog.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Writes log entries to Stackdriver Logging.  All log entries are
@@ -877,15 +927,18 @@ namespace Google.Logging.V2
             MonitoredResource resource,
             IDictionary<string, string> labels,
             IEnumerable<LogEntry> entries,
-            CallSettings callSettings = null) => _callWriteLogEntries.Async(
-                new WriteLogEntriesRequest
-                {
-                    LogName = logName,
-                    Resource = resource,
-                    Labels = { labels },
-                    Entries = { entries },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            WriteLogEntriesRequest request = new WriteLogEntriesRequest
+            {
+                LogName = logName,
+                Resource = resource,
+                Labels = { labels },
+                Entries = { entries },
+            };
+            Modify_WriteLogEntriesRequest(ref request, ref callSettings);
+            return _callWriteLogEntries.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Writes log entries to Stackdriver Logging.  All log entries are
@@ -935,15 +988,18 @@ namespace Google.Logging.V2
             MonitoredResource resource,
             IDictionary<string, string> labels,
             IEnumerable<LogEntry> entries,
-            CallSettings callSettings = null) => _callWriteLogEntries.Sync(
-                new WriteLogEntriesRequest
-                {
-                    LogName = logName,
-                    Resource = resource,
-                    Labels = { labels },
-                    Entries = { entries },
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            WriteLogEntriesRequest request = new WriteLogEntriesRequest
+            {
+                LogName = logName,
+                Resource = resource,
+                Labels = { labels },
+                Entries = { entries },
+            };
+            Modify_WriteLogEntriesRequest(ref request, ref callSettings);
+            return _callWriteLogEntries.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from Cloud
@@ -990,17 +1046,19 @@ namespace Google.Logging.V2
             string orderBy,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(
-                _callListLogEntries,
-                new ListLogEntriesRequest
-                {
-                    ProjectIds = { projectIds },
-                    Filter = filter,
-                    OrderBy = orderBy,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
+            {
+                ProjectIds = { projectIds },
+                Filter = filter,
+                OrderBy = orderBy,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListLogEntriesRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
+        }
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from Cloud
@@ -1047,17 +1105,19 @@ namespace Google.Logging.V2
             string orderBy,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(
-                _callListLogEntries,
-                new ListLogEntriesRequest
-                {
-                    ProjectIds = { projectIds },
-                    Filter = filter,
-                    OrderBy = orderBy,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListLogEntriesRequest request = new ListLogEntriesRequest
+            {
+                ProjectIds = { projectIds },
+                Filter = filter,
+                OrderBy = orderBy,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListLogEntriesRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
+        }
 
     }
 

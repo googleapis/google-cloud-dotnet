@@ -30,7 +30,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Longrunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -690,6 +689,12 @@ namespace Google.Longrunning
         /// </summary>
         public override Operations.OperationsClient GrpcClient { get; }
 
+        // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
+        partial void Modify_GetOperationRequest(ref GetOperationRequest request, ref CallSettings settings);
+        partial void Modify_ListOperationsRequest(ref ListOperationsRequest request, ref CallSettings settings);
+        partial void Modify_CancelOperationRequest(ref CancelOperationRequest request, ref CallSettings settings);
+        partial void Modify_DeleteOperationRequest(ref DeleteOperationRequest request, ref CallSettings settings);
+
         /// <summary>
         /// Gets the latest state of a long-running operation.  Clients can use this
         /// method to poll the operation result at intervals as recommended by the API
@@ -706,12 +711,15 @@ namespace Google.Longrunning
         /// </returns>
         public override Task<Operation> GetOperationAsync(
             string name,
-            CallSettings callSettings = null) => _callGetOperation.Async(
-                new GetOperationRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetOperationRequest request = new GetOperationRequest
+            {
+                Name = name,
+            };
+            Modify_GetOperationRequest(ref request, ref callSettings);
+            return _callGetOperation.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the latest state of a long-running operation.  Clients can use this
@@ -729,12 +737,15 @@ namespace Google.Longrunning
         /// </returns>
         public override Operation GetOperation(
             string name,
-            CallSettings callSettings = null) => _callGetOperation.Sync(
-                new GetOperationRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            GetOperationRequest request = new GetOperationRequest
+            {
+                Name = name,
+            };
+            Modify_GetOperationRequest(ref request, ref callSettings);
+            return _callGetOperation.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
@@ -768,16 +779,18 @@ namespace Google.Longrunning
             string filter,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedAsyncEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(
-                _callListOperations,
-                new ListOperationsRequest
-                {
-                    Name = name,
-                    Filter = filter,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListOperationsRequest request = new ListOperationsRequest
+            {
+                Name = name,
+                Filter = filter,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListOperationsRequest(ref request, ref callSettings);
+            return new PagedAsyncEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
+        }
 
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
@@ -811,16 +824,18 @@ namespace Google.Longrunning
             string filter,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null) => new PagedEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(
-                _callListOperations,
-                new ListOperationsRequest
-                {
-                    Name = name,
-                    Filter = filter,
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            ListOperationsRequest request = new ListOperationsRequest
+            {
+                Name = name,
+                Filter = filter,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            };
+            Modify_ListOperationsRequest(ref request, ref callSettings);
+            return new PagedEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
+        }
 
         /// <summary>
         /// Starts asynchronous cancellation on a long-running operation.  The server
@@ -845,12 +860,15 @@ namespace Google.Longrunning
         /// </returns>
         public override Task CancelOperationAsync(
             string name,
-            CallSettings callSettings = null) => _callCancelOperation.Async(
-                new CancelOperationRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CancelOperationRequest request = new CancelOperationRequest
+            {
+                Name = name,
+            };
+            Modify_CancelOperationRequest(ref request, ref callSettings);
+            return _callCancelOperation.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Starts asynchronous cancellation on a long-running operation.  The server
@@ -875,12 +893,15 @@ namespace Google.Longrunning
         /// </returns>
         public override void CancelOperation(
             string name,
-            CallSettings callSettings = null) => _callCancelOperation.Sync(
-                new CancelOperationRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            CancelOperationRequest request = new CancelOperationRequest
+            {
+                Name = name,
+            };
+            Modify_CancelOperationRequest(ref request, ref callSettings);
+            _callCancelOperation.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a long-running operation. This method indicates that the client is
@@ -899,12 +920,15 @@ namespace Google.Longrunning
         /// </returns>
         public override Task DeleteOperationAsync(
             string name,
-            CallSettings callSettings = null) => _callDeleteOperation.Async(
-                new DeleteOperationRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteOperationRequest request = new DeleteOperationRequest
+            {
+                Name = name,
+            };
+            Modify_DeleteOperationRequest(ref request, ref callSettings);
+            return _callDeleteOperation.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a long-running operation. This method indicates that the client is
@@ -923,12 +947,15 @@ namespace Google.Longrunning
         /// </returns>
         public override void DeleteOperation(
             string name,
-            CallSettings callSettings = null) => _callDeleteOperation.Sync(
-                new DeleteOperationRequest
-                {
-                    Name = name,
-                },
-                callSettings);
+            CallSettings callSettings = null)
+        {
+            DeleteOperationRequest request = new DeleteOperationRequest
+            {
+                Name = name,
+            };
+            Modify_DeleteOperationRequest(ref request, ref callSettings);
+            _callDeleteOperation.Sync(request, callSettings);
+        }
 
     }
 

@@ -14,7 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Language.V1Beta1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -25,7 +27,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Language.V1Beta1.AnnotateTextRequest.Types;
 
 namespace Google.Cloud.Language.V1Beta1.Snippets
 {
@@ -85,13 +86,13 @@ namespace Google.Cloud.Language.V1Beta1.Snippets
 
         public async Task AnnotateTextAsync()
         {
-            // Snippet: AnnotateTextAsync(Document,Features,EncodingType,CallSettings)
-            // Additional: AnnotateTextAsync(Document,Features,EncodingType,CancellationToken)
+            // Snippet: AnnotateTextAsync(Document,AnnotateTextRequest.Types.Features,EncodingType,CallSettings)
+            // Additional: AnnotateTextAsync(Document,AnnotateTextRequest.Types.Features,EncodingType,CancellationToken)
             // Create client
             LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
             // Initialize request argument(s)
             Document document = new Document();
-            Features features = new Features();
+            AnnotateTextRequest.Types.Features features = new AnnotateTextRequest.Types.Features();
             EncodingType encodingType = EncodingType.None;
             // Make the request
             AnnotateTextResponse response = await languageServiceClient.AnnotateTextAsync(document, features, encodingType);
@@ -100,12 +101,12 @@ namespace Google.Cloud.Language.V1Beta1.Snippets
 
         public void AnnotateText()
         {
-            // Snippet: AnnotateText(Document,Features,EncodingType,CallSettings)
+            // Snippet: AnnotateText(Document,AnnotateTextRequest.Types.Features,EncodingType,CallSettings)
             // Create client
             LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
             // Initialize request argument(s)
             Document document = new Document();
-            Features features = new Features();
+            AnnotateTextRequest.Types.Features features = new AnnotateTextRequest.Types.Features();
             EncodingType encodingType = EncodingType.None;
             // Make the request
             AnnotateTextResponse response = languageServiceClient.AnnotateText(document, features, encodingType);
