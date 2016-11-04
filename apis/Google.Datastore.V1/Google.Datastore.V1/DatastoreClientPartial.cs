@@ -22,32 +22,32 @@ namespace Google.Datastore.V1
         private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
         private const string ResourcePrefixHeaderValuePrefix = "projects/";
 
-        partial void ModifyAllocateIdsRequest(ref AllocateIdsRequest request, ref CallSettings settings)
+        partial void Modify_AllocateIdsRequest(ref AllocateIdsRequest request, ref CallSettings settings)
         {
             settings = settings.WithHeader(ResourcePrefixHeader, "projects/" + request.ProjectId);
         }
 
-        partial void ModifyBeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings)
+        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings)
         {
             settings = settings.WithHeader(ResourcePrefixHeader, "projects/" + request.ProjectId);
         }
 
-        partial void ModifyCommitRequest(ref CommitRequest request, ref CallSettings settings)
+        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings)
         {
             settings = settings.WithHeader(ResourcePrefixHeader, "projects/" + request.ProjectId);
         }
 
-        partial void ModifyLookupRequest(ref LookupRequest request, ref CallSettings settings)
+        partial void Modify_LookupRequest(ref LookupRequest request, ref CallSettings settings)
         {
             settings = settings.WithHeader(ResourcePrefixHeader, "projects/" + request.ProjectId);
         }
 
-        partial void ModifyRollbackRequest(ref RollbackRequest request, ref CallSettings settings)
+        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings)
         {
             settings = settings.WithHeader(ResourcePrefixHeader, "projects/" + request.ProjectId);
         }
 
-        partial void ModifyRunQueryRequest(ref RunQueryRequest request, ref CallSettings settings)
+        partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings)
         {
             settings = settings.WithHeader(ResourcePrefixHeader, "projects/" + request.ProjectId);
         }
