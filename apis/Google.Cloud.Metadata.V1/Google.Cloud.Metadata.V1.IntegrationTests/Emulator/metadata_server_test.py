@@ -48,11 +48,13 @@ def expect_content_absolute(url, expected, expected_content_type, expect_metadat
   contents = response.read()
   assert expected == contents
 
+  return headers.get(common.etag.lower())
+
 def expect_content(path, expected, expected_content_type, expect_metadata_header=True):
-  expect_content_absolute(request_template.format(path),
-                          expected,
-                          expected_content_type,
-                          expect_metadata_header)
+  return expect_content_absolute(request_template.format(path),
+                                 expected,
+                                 expected_content_type,
+                                 expect_metadata_header)
 
 def expect_error(path, expected_code, metadata_flavor_value=common.metadata_flavor_google):
   url = request_template.format(path)
@@ -100,26 +102,35 @@ def check_path(path, expected, default='text'):
   else:
     expected_text = unicode(expected)
     
-  expect_content(path,
-                 expected_text if default == 'text' else expected_json,
-                 common.content_type_text if default == 'text' else common.content_type_json)
-  expect_content(path + "?alt=text", expected_text, common.content_type_text)
-  expect_content(path + "?alt=json", expected_json, common.content_type_json)
+  etag1 = expect_content(path,
+                         expected_text if default == 'text' else expected_json,
+                         common.content_type_text if default == 'text' else common.content_type_json)
+  etag2 = expect_content(path + "?alt=text", expected_text, common.content_type_text)
+  etag3 = expect_content(path + "?alt=json", expected_json, common.content_type_json) 
+  assert len(etag1) == 16
+  assert etag1 == etag2
+  assert etag1 == etag3
 
 def check_dir(path, expected):
-  expect_content(path, expected, common.content_type_text)
+  etag1 = expect_content(path, expected, common.content_type_text)
+  assert len(etag1) == 16
   if path:
-    expect_content(path + '/', expected, common.content_type_text)
+    etag2 = expect_content(path + '/', expected, common.content_type_text)
+    assert etag1 == etag2
 
 def check_dir_absolute(url, expected):
-  expect_content_absolute(url, expected, common.content_type_text)
-  expect_content_absolute(url + '/', expected, common.content_type_text)
+  etag1 = expect_content_absolute(url, expected, common.content_type_text)
+  etag2 = expect_content_absolute(url + '/', expected, common.content_type_text)
+  assert len(etag1) == 16
+  assert etag1 == etag2
 
 def check_dir_recursive(path, expected, test_trailing_slash=True, use_recursive_field=True, expect_metadata_header=True):
   query = '?recursive=true' if use_recursive_field else ''
-  expect_content(path + query, expected, common.content_type_json, expect_metadata_header)
+  etag1 = expect_content(path + query, expected, common.content_type_json, expect_metadata_header)
   if test_trailing_slash:
-    expect_content(path + '/' + query, expected, common.content_type_json, expect_metadata_header)
+    etag2 = expect_content(path + '/' + query, expected, common.content_type_json, expect_metadata_header)
+  else:
+    etag2 = etag1
 
   data = json.loads(expected, object_pairs_hook=OrderedDict)
 
@@ -144,14 +155,25 @@ def check_dir_recursive(path, expected, test_trailing_slash=True, use_recursive_
 
   expected_text = convertToText('', data)
   query = '?recursive=true&alt=text' if use_recursive_field else '?alt=text'
-  expect_content(path + query, expected_text, common.content_type_text, expect_metadata_header)
+  etag3 = expect_content(path + query, expected_text, common.content_type_text, expect_metadata_header)
   if test_trailing_slash:
-    expect_content(path + '/' + query, expected_text, common.content_type_text, expect_metadata_header)
+    etag4 = expect_content(path + '/' + query, expected_text, common.content_type_text, expect_metadata_header)
+  else:
+    etag4 = etag3
   
   query = '?recursive=true&alt=json' if use_recursive_field else '?alt=json'
-  expect_content(path + query, expected, common.content_type_json, expect_metadata_header)
+  etag5 = expect_content(path + query, expected, common.content_type_json, expect_metadata_header)
   if test_trailing_slash:
-    expect_content(path + '/' + query, expected, common.content_type_json, expect_metadata_header)
+    etag6 = expect_content(path + '/' + query, expected, common.content_type_json, expect_metadata_header)
+  else:
+    etag6 = etag5
+
+  assert len(etag1) == 16
+  assert etag1 == etag2
+  assert etag1 == etag3
+  assert etag1 == etag4
+  assert etag1 == etag5
+  assert etag1 == etag6
 
 def update_content(path, new_data):
   if not isinstance(new_data, str):
@@ -580,3 +602,28 @@ def test_update_invalid_value():
              'complex' : { 'foo': 'bar' },
              'xyz': 'value2'}
   expect_error_updating_content(path, changed, 400)
+
+def test_etags_differ_based_on_recursive():
+  etag1 = expect_content('instance/disks?recursive=true',
+                         '[{"deviceName":"boot","index":0,"mode":"READ_WRITE","type":"PERSISTENT"}]',
+                         common.content_type_json)
+  etag2 = expect_content('instance/disks',
+                         '0/\n',
+                         common.content_type_text)
+  assert etag1 != etag2
+
+def test_etag_reverts_when_original_value_restored():
+  path = 'instance/cpu-platform'
+  original = 'Intel Haswell'
+  changed = 'My Platform'
+
+  etag1 = expect_content(path, original, common.content_type_text)
+  update_content(path, changed)
+  try:
+    etag2 = expect_content(path, changed, common.content_type_text)
+    assert etag1 != etag2
+  finally:
+    update_content(path, original)
+
+  etag3 = expect_content(path, original, common.content_type_text)
+  assert etag1 == etag3
