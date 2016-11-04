@@ -28,7 +28,7 @@ namespace Google.Pubsub.V1 {
   ///  The service that an application uses to manipulate subscriptions and to
   ///  consume messages from a subscription via the `Pull` method.
   /// </summary>
-  public static class Subscriber
+  public static partial class Subscriber
   {
     static readonly string __ServiceName = "google.pubsub.v1.Subscriber";
 
@@ -204,7 +204,7 @@ namespace Google.Pubsub.V1 {
     }
 
     /// <summary>Client for Subscriber</summary>
-    public class SubscriberClient : ClientBase<SubscriberClient>
+    public partial class SubscriberClient : ClientBase<SubscriberClient>
     {
       /// <summary>Creates a new client for Subscriber</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -225,15 +225,6 @@ namespace Google.Pubsub.V1 {
       protected SubscriberClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
-
-      // IMPLEMENTATION NOTE: This will be in a partial class eventually.
-
-      /// <summary>
-      /// Creates a new instance of <see cref="IAMPolicyClient"/> using the same call invoker
-      /// as this client.
-      /// </summary>
-      /// <returns>A new IAM client for the same target as this client.</returns>
-      public virtual IAMPolicyClient CreateIAMPolicyClient() => new IAMPolicyClient(CallInvoker);
       
       /// <summary>
       ///  Creates a subscription to a given topic.
@@ -596,7 +587,7 @@ namespace Google.Pubsub.V1 {
   ///  The service that an application uses to manipulate topics, and to send
   ///  messages to a topic.
   /// </summary>
-  public static class Publisher
+  public static partial class Publisher
   {
     static readonly string __ServiceName = "google.pubsub.v1.Publisher";
 
@@ -719,7 +710,7 @@ namespace Google.Pubsub.V1 {
     }
 
     /// <summary>Client for Publisher</summary>
-    public class PublisherClient : ClientBase<PublisherClient>
+    public partial class PublisherClient : ClientBase<PublisherClient>
     {
       /// <summary>Creates a new client for Publisher</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -740,15 +731,6 @@ namespace Google.Pubsub.V1 {
       protected PublisherClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
-
-      // IMPLEMENTATION NOTE: This will be in a partial class eventually.
-
-      /// <summary>
-      /// Creates a new instance of <see cref="IAMPolicyClient"/> using the same call invoker
-      /// as this client.
-      /// </summary>
-      /// <returns>A new IAM client for the same target as this client.</returns>
-      public virtual IAMPolicyClient CreateIAMPolicyClient() => new IAMPolicyClient(CallInvoker);
 
       /// <summary>
       ///  Creates the given topic with the given name.
