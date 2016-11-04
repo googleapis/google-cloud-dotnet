@@ -156,7 +156,7 @@ namespace Google.Datastore.V1.Snippets
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.ModeUnspecified;
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
             ByteString transaction = ByteString.CopyFromUtf8("");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
@@ -171,7 +171,7 @@ namespace Google.Datastore.V1.Snippets
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.ModeUnspecified;
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
             ByteString transaction = ByteString.CopyFromUtf8("");
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
@@ -187,7 +187,7 @@ namespace Google.Datastore.V1.Snippets
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.ModeUnspecified;
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mutations);
@@ -201,7 +201,7 @@ namespace Google.Datastore.V1.Snippets
             DatastoreClient datastoreClient = DatastoreClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.ModeUnspecified;
+            CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
             IEnumerable<Mutation> mutations = new List<Mutation>();
             // Make the request
             CommitResponse response = datastoreClient.Commit(projectId, mode, mutations);
