@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PublisherClientImpl
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Pubsub_V1_PublisherClientImpl" data-uid="Google.Pubsub.V1.PublisherClientImpl">Class PublisherClientImpl
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Publisher client wrapper implementation, for convenient use.</p>
+              <div class="markdown level0 summary"><p>Publisher client wrapper implementation, for convenient use.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -92,6 +92,12 @@
                 </div>
                 <div>
                   <a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatProjectName_System_String_">PublisherClient.FormatProjectName(String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_SubscriptionTemplate">PublisherClient.SubscriptionTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatSubscriptionName_System_String_System_String_">PublisherClient.FormatSubscriptionName(String, String)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TopicTemplate">PublisherClient.TopicTemplate</a>
@@ -124,6 +130,15 @@
                   <a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_DeleteTopicAsync_System_String_System_Threading_CancellationToken_">PublisherClient.DeleteTopicAsync(String, CancellationToken)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_SetIamPolicyAsync_System_String_Google_Iam_V1_Policy_System_Threading_CancellationToken_">PublisherClient.SetIamPolicyAsync(String, Policy, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_GetIamPolicyAsync_System_String_System_Threading_CancellationToken_">PublisherClient.GetIamPolicyAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_">PublisherClient.TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CancellationToken)</a>
+                </div>
+                <div>
                   <span class="xref">System.Object.ToString()</span>
                 </div>
                 <div>
@@ -144,8 +159,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Pubsub_V1_PublisherClientImpl__ctor_" data-uid="Google.Pubsub.V1.PublisherClientImpl.#ctor*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl__ctor_Google_Pubsub_V1_Publisher_PublisherClient_Google_Pubsub_V1_PublisherSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.#ctor(Google.Pubsub.V1.Publisher.PublisherClient,Google.Pubsub.V1.PublisherSettings)">PublisherClientImpl(Publisher.PublisherClient, PublisherSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.</p>
+              <div class="markdown level1 summary"><p>Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -165,21 +181,22 @@
                   <tr>
                     <td><a class="xref" href="Google.Pubsub.V1.Publisher.PublisherClient.html#Google_Pubsub_V1_Publisher_PublisherClient">Publisher.PublisherClient</a></td>
                     <td><em>grpcClient</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The underlying gRPC client.</p>
+                    <td><p>The underlying gRPC client.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings">PublisherSettings</a></td>
                     <td><em>settings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The base <a class="xref" href="Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings">PublisherSettings</a> used within this client </p>
+                    <td><p>The base <a class="xref" href="Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings">PublisherSettings</a> used within this client </p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_GrpcClient_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GrpcClient*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_GrpcClient" data-uid="Google.Pubsub.V1.PublisherClientImpl.GrpcClient">GrpcClient</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The underlying gRPC Publisher client.</p>
+              <div class="markdown level1 summary"><p>The underlying gRPC Publisher client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -205,8 +222,10 @@
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_GrpcClient">PublisherClient.GrpcClient</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_CreateTopic_" data-uid="Google.Pubsub.V1.PublisherClientImpl.CreateTopic*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_CreateTopic_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.CreateTopic(System.String,Google.Api.Gax.Grpc.CallSettings)">CreateTopic(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates the given topic with the given name.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -225,7 +244,7 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="7">The name of the topic. It must have the format
+                    <td><p>The name of the topic. It must have the format
 <code>&quot;projects/{project}/topics/{topic}&quot;</code>. <code>{topic}</code> must start with a letter,
 and contain only letters (<code>[A-Za-z]</code>), numbers (<code>[0-9]</code>), dashes (<code>-</code>),
 underscores (<code>_</code>), periods (<code>.</code>), tildes (<code>~</code>), plus (<code>+</code>) or percent
@@ -236,7 +255,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -252,15 +271,17 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_CreateTopic_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.CreateTopic(String, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_CreateTopicAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.CreateTopicAsync*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_CreateTopicAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.CreateTopicAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">CreateTopicAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates the given topic with the given name.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -279,7 +300,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="7">The name of the topic. It must have the format
+                    <td><p>The name of the topic. It must have the format
 <code>&quot;projects/{project}/topics/{topic}&quot;</code>. <code>{topic}</code> must start with a letter,
 and contain only letters (<code>[A-Za-z]</code>), numbers (<code>[0-9]</code>), dashes (<code>-</code>),
 underscores (<code>_</code>), periods (<code>.</code>), tildes (<code>~</code>), plus (<code>+</code>) or percent
@@ -290,7 +311,7 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -305,16 +326,22 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_CreateTopicAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.CreateTopicAsync(String, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_DeleteTopic_" data-uid="Google.Pubsub.V1.PublisherClientImpl.DeleteTopic*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_DeleteTopic_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.DeleteTopic(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteTopic(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes the topic with the given name. Returns <code>NOT_FOUND</code> if the topic
+does not exist. After a topic is deleted, a new topic may be created with
+the same name; this is an entirely new topic with none of the old
+configuration or subscriptions. Existing subscriptions to this topic are
+not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -333,20 +360,27 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td></td>
+                    <td><p>Name of the topic to delete.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_DeleteTopic_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.DeleteTopic(String, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_DeleteTopicAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.DeleteTopicAsync*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_DeleteTopicAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.DeleteTopicAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteTopicAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes the topic with the given name. Returns <code>NOT_FOUND</code> if the topic
+does not exist. After a topic is deleted, a new topic may be created with
+the same name; this is an entirely new topic with none of the old
+configuration or subscriptions. Existing subscriptions to this topic are
+not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -365,12 +399,13 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td></td>
+                    <td><p>Name of the topic to delete.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -386,15 +421,127 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_DeleteTopicAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.DeleteTopicAsync(String, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_GetIamPolicy_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GetIamPolicy*"></a>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_GetIamPolicy_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GetIamPolicy(System.String,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicy(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets the access control policy for a resource.
+Returns an empty policy if the resource exists and does not have a policy
+set.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Policy GetIamPolicy(string resource, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>resource</em></td>
+                    <td><p>REQUIRED: The resource for which the policy is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Iam.V1.Policy.html#Google_Iam_V1_Policy">Policy</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_GetIamPolicy_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetIamPolicy(String, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_GetIamPolicyAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GetIamPolicyAsync*"></a>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_GetIamPolicyAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GetIamPolicyAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicyAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets the access control policy for a resource.
+Returns an empty policy if the resource exists and does not have a policy
+set.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Policy&gt; GetIamPolicyAsync(string resource, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>resource</em></td>
+                    <td><p>REQUIRED: The resource for which the policy is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Iam.V1.Policy.html#Google_Iam_V1_Policy">Policy</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_GetIamPolicyAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetIamPolicyAsync(String, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_GetTopic_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GetTopic*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_GetTopic_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GetTopic(System.String,Google.Api.Gax.Grpc.CallSettings)">GetTopic(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets the configuration of a topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -413,12 +560,13 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td></td>
+                    <td><p>The name of the topic to get.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -434,15 +582,17 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_GetTopic_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetTopic(String, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_GetTopicAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GetTopicAsync*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_GetTopicAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.GetTopicAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetTopicAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets the configuration of a topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -461,12 +611,13 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td></td>
+                    <td><p>The name of the topic to get.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -481,16 +632,18 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_GetTopicAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetTopicAsync(String, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_ListTopics_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopics*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopics(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTopics(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists matching topics.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -509,26 +662,27 @@ must not start with <code>&quot;goog&quot;</code>.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>project</em></td>
-                    <td></td>
+                    <td><p>The name of the cloud project that topics belong to.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -543,16 +697,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable sequence of <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A pageable sequence of <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopics(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_ListTopicsAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicsAsync*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTopicsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists matching topics.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -571,26 +727,27 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>project</em></td>
-                    <td></td>
+                    <td><p>The name of the cloud project that topics belong to.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -605,16 +762,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable asynchronous sequence of <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicsResponse.html#Google_Pubsub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Pubsub.V1.Topic.html#Google_Pubsub_V1_Topic">Topic</a> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopicsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_ListTopicSubscriptions_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicSubscriptions*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicSubscriptions(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTopicSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists the name of the subscriptions for this topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -633,26 +792,27 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td></td>
+                    <td><p>The name of the topic that subscriptions are attached to.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -667,16 +827,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable sequence of <span class="xref">String</span> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A pageable sequence of <span class="xref">System.String</span> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopicSubscriptions_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicSubscriptions(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_ListTopicSubscriptionsAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicSubscriptionsAsync*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_ListTopicSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.ListTopicSubscriptionsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTopicSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists the name of the subscriptions for this topic.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -695,26 +857,27 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td></td>
+                    <td><p>The name of the topic that subscriptions are attached to.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -729,16 +892,20 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable asynchronous sequence of <span class="xref">String</span> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Pubsub.V1.ListTopicSubscriptionsResponse.html#Google_Pubsub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <span class="xref">System.String</span> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopicSubscriptionsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicSubscriptionsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_Publish_" data-uid="Google.Pubsub.V1.PublisherClientImpl.Publish*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_Publish_System_String_System_Collections_Generic_IEnumerable_Google_Pubsub_V1_PubsubMessage__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.Publish(System.String,System.Collections.Generic.IEnumerable{Google.Pubsub.V1.PubsubMessage},Google.Api.Gax.Grpc.CallSettings)">Publish(String, IEnumerable&lt;PubsubMessage&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Adds one or more messages to the topic. Returns <code>NOT_FOUND</code> if the topic
+does not exist. The message payload must not be empty; it must contain
+either a non-empty data field, or at least one attribute.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -757,17 +924,19 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td></td>
+                    <td><p>The messages in the request will be published on this topic.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.PubsubMessage.html#Google_Pubsub_V1_PubsubMessage">PubsubMessage</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Pubsub.V1.PubsubMessage.html#Google_Pubsub_V1_PubsubMessage">PubsubMessage</a>&gt;</td>
                     <td><em>messages</em></td>
-                    <td></td>
+                    <td><p>The messages to publish.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -783,15 +952,19 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Pubsub.V1.PublishResponse.html#Google_Pubsub_V1_PublishResponse">PublishResponse</a></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Publish_System_String_System_Collections_Generic_IEnumerable_Google_Pubsub_V1_PubsubMessage__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.Publish(String, IEnumerable&lt;PubsubMessage&gt;, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_PublishAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.PublishAsync*"></a>
               <h4 id="Google_Pubsub_V1_PublisherClientImpl_PublishAsync_System_String_System_Collections_Generic_IEnumerable_Google_Pubsub_V1_PubsubMessage__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.PublishAsync(System.String,System.Collections.Generic.IEnumerable{Google.Pubsub.V1.PubsubMessage},Google.Api.Gax.Grpc.CallSettings)">PublishAsync(String, IEnumerable&lt;PubsubMessage&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Adds one or more messages to the topic. Returns <code>NOT_FOUND</code> if the topic
+does not exist. The message payload must not be empty; it must contain
+either a non-empty data field, or at least one attribute.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -810,17 +983,19 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>topic</em></td>
-                    <td></td>
+                    <td><p>The messages in the request will be published on this topic.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Pubsub.V1.PubsubMessage.html#Google_Pubsub_V1_PubsubMessage">PubsubMessage</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Pubsub.V1.PubsubMessage.html#Google_Pubsub_V1_PubsubMessage">PubsubMessage</a>&gt;</td>
                     <td><em>messages</em></td>
-                    <td></td>
+                    <td><p>The messages to publish.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -835,14 +1010,264 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Pubsub.V1.PublishResponse.html#Google_Pubsub_V1_PublishResponse">PublishResponse</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Pubsub.V1.PublisherClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Pubsub.V1.PublishResponse.html#Google_Pubsub_V1_PublishResponse">PublishResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_PublishAsync_System_String_System_Collections_Generic_IEnumerable_Google_Pubsub_V1_PubsubMessage__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.PublishAsync(String, IEnumerable&lt;PubsubMessage&gt;, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_SetIamPolicy_" data-uid="Google.Pubsub.V1.PublisherClientImpl.SetIamPolicy*"></a>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_SetIamPolicy_System_String_Google_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.SetIamPolicy(System.String,Google.Iam.V1.Policy,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicy(String, Policy, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Sets the access control policy on the specified resource. Replaces any
+existing policy.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Policy SetIamPolicy(string resource, Policy policy, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>resource</em></td>
+                    <td><p>REQUIRED: The resource for which the policy is being specified.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Iam.V1.Policy.html#Google_Iam_V1_Policy">Policy</a></td>
+                    <td><em>policy</em></td>
+                    <td><p>REQUIRED: The complete policy to be applied to the <code>resource</code>. The size of
+the policy is limited to a few 10s of KB. An empty policy is a
+valid policy but certain Cloud Platform services (such as Projects)
+might reject them.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Iam.V1.Policy.html#Google_Iam_V1_Policy">Policy</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_SetIamPolicy_System_String_Google_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.SetIamPolicy(String, Policy, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_SetIamPolicyAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.SetIamPolicyAsync*"></a>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_SetIamPolicyAsync_System_String_Google_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.SetIamPolicyAsync(System.String,Google.Iam.V1.Policy,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicyAsync(String, Policy, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Sets the access control policy on the specified resource. Replaces any
+existing policy.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Policy&gt; SetIamPolicyAsync(string resource, Policy policy, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>resource</em></td>
+                    <td><p>REQUIRED: The resource for which the policy is being specified.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Iam.V1.Policy.html#Google_Iam_V1_Policy">Policy</a></td>
+                    <td><em>policy</em></td>
+                    <td><p>REQUIRED: The complete policy to be applied to the <code>resource</code>. The size of
+the policy is limited to a few 10s of KB. An empty policy is a
+valid policy but certain Cloud Platform services (such as Projects)
+might reject them.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Iam.V1.Policy.html#Google_Iam_V1_Policy">Policy</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_SetIamPolicyAsync_System_String_Google_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.SetIamPolicyAsync(String, Policy, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_TestIamPermissions_" data-uid="Google.Pubsub.V1.PublisherClientImpl.TestIamPermissions*"></a>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_TestIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.TestIamPermissions(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Api.Gax.Grpc.CallSettings)">TestIamPermissions(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns permissions that a caller has on the specified resource.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override TestIamPermissionsResponse TestIamPermissions(string resource, IEnumerable&lt;string&gt; permissions, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>resource</em></td>
+                    <td><p>REQUIRED: The resource for which the policy detail is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>permissions</em></td>
+                    <td><p>The set of permissions to check for the <code>resource</code>. Permissions with
+wildcards (such as &#39;<em>&#39; or &#39;storage.</em>&#39;) are not allowed. For more
+information see
+<a href="https://cloud.google.com/iam/docs/overview#permissions">IAM Overview</a>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Iam.V1.TestIamPermissionsResponse.html#Google_Iam_V1_TestIamPermissionsResponse">TestIamPermissionsResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TestIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.TestIamPermissions(String, IEnumerable&lt;String&gt;, CallSettings)</a></div>
+              <a id="Google_Pubsub_V1_PublisherClientImpl_TestIamPermissionsAsync_" data-uid="Google.Pubsub.V1.PublisherClientImpl.TestIamPermissionsAsync*"></a>
+              <h4 id="Google_Pubsub_V1_PublisherClientImpl_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Pubsub.V1.PublisherClientImpl.TestIamPermissionsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},Google.Api.Gax.Grpc.CallSettings)">TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns permissions that a caller has on the specified resource.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(string resource, IEnumerable&lt;string&gt; permissions, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>resource</em></td>
+                    <td><p>REQUIRED: The resource for which the policy detail is being requested.
+<code>resource</code> is usually specified as a path. For example, a Project
+resource is specified as <code>projects/{project}</code>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>permissions</em></td>
+                    <td><p>The set of permissions to check for the <code>resource</code>. Permissions with
+wildcards (such as &#39;<em>&#39; or &#39;storage.</em>&#39;) are not allowed. For more
+information see
+<a href="https://cloud.google.com/iam/docs/overview#permissions">IAM Overview</a>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Iam.V1.TestIamPermissionsResponse.html#Google_Iam_V1_TestIamPermissionsResponse">TestIamPermissionsResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a></div>
             </article>
           </div>
           
@@ -871,7 +1296,6 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

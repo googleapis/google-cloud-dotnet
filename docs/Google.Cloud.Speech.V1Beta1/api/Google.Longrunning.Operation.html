@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Operation
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,8 +70,8 @@
               
               <h1 id="Google_Longrunning_Operation" data-uid="Google.Longrunning.Operation">Class Operation
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Longrunning.Operation.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> This resource represents a long-running operation that is the result of a
- network API call.</p>
+              <div class="markdown level0 summary"><p>This resource represents a long-running operation that is the result of a
+network API call.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,10 +102,11 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Longrunning_Operation_Done_" data-uid="Google.Longrunning.Operation.Done*"></a>
               <h4 id="Google_Longrunning_Operation_Done" data-uid="Google.Longrunning.Operation.Done">Done</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Longrunning.Operation.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> If the value is <code>false</code>, it means the operation is still in progress.
- If true, the operation is completed, and either <code>error</code> or <code>response</code> is
- available.</p>
+              <div class="markdown level1 summary"><p>If the value is <code>false</code>, it means the operation is still in progress.
+If true, the operation is completed, and either <code>error</code> or <code>response</code> is
+available.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -127,8 +128,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Longrunning_Operation_Error_" data-uid="Google.Longrunning.Operation.Error*"></a>
               <h4 id="Google_Longrunning_Operation_Error" data-uid="Google.Longrunning.Operation.Error">Error</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Longrunning.Operation.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The error result of the operation in case of failure or cancellation.</p>
+              <div class="markdown level1 summary"><p>The error result of the operation in case of failure or cancellation.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -145,16 +147,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Status.html#Google_Rpc_Status">Status</a></td>
+                    <td><span class="xref">Google.Rpc.Status</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Longrunning_Operation_Metadata_" data-uid="Google.Longrunning.Operation.Metadata*"></a>
               <h4 id="Google_Longrunning_Operation_Metadata" data-uid="Google.Longrunning.Operation.Metadata">Metadata</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Longrunning.Operation.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Service-specific metadata associated with the operation.  It typically
- contains progress information and common metadata such as create time.
- Some services might not provide such metadata.  Any method that returns a
- long-running operation should document the metadata type, if any.</p>
+              <div class="markdown level1 summary"><p>Service-specific metadata associated with the operation.  It typically
+contains progress information and common metadata such as create time.
+Some services might not provide such metadata.  Any method that returns a
+long-running operation should document the metadata type, if any.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -171,15 +174,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html#Google_Protobuf_WellKnownTypes_Any">Any</a></td>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Any</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Longrunning_Operation_Name_" data-uid="Google.Longrunning.Operation.Name*"></a>
               <h4 id="Google_Longrunning_Operation_Name" data-uid="Google.Longrunning.Operation.Name">Name</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Longrunning.Operation.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The server-assigned name, which is only unique within the same service that
- originally returns it. If you use the default HTTP mapping, the
- <code>name</code> should have the format of <code>operations/some/unique/name</code>.</p>
+              <div class="markdown level1 summary"><p>The server-assigned name, which is only unique within the same service that
+originally returns it. If you use the default HTTP mapping, the
+<code>name</code> should have the format of <code>operations/some/unique/name</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -201,15 +205,16 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Longrunning_Operation_Response_" data-uid="Google.Longrunning.Operation.Response*"></a>
               <h4 id="Google_Longrunning_Operation_Response" data-uid="Google.Longrunning.Operation.Response">Response</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Longrunning.Operation.yml" sourcestartlinenumber="2" sourceendlinenumber="9"> The normal response of the operation in case of success.  If the original
- method returns no data on success, such as <code>Delete</code>, the response is
- <code>google.protobuf.Empty</code>.  If the original method is standard
- <code>Get</code>/<code>Create</code>/<code>Update</code>, the response should be the resource.  For other
- methods, the response should have the type <code>XxxResponse</code>, where <code>Xxx</code>
- is the original method name.  For example, if the original method name
- is <code>TakeSnapshot()</code>, the inferred response type is
- <code>TakeSnapshotResponse</code>.</p>
+              <div class="markdown level1 summary"><p>The normal response of the operation in case of success.  If the original
+method returns no data on success, such as <code>Delete</code>, the response is
+<code>google.protobuf.Empty</code>.  If the original method is standard
+<code>Get</code>/<code>Create</code>/<code>Update</code>, the response should be the resource.  For other
+methods, the response should have the type <code>XxxResponse</code>, where <code>Xxx</code>
+is the original method name.  For example, if the original method name
+is <code>TakeSnapshot()</code>, the inferred response type is
+<code>TakeSnapshotResponse</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -226,11 +231,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html#Google_Protobuf_WellKnownTypes_Any">Any</a></td>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Any</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Longrunning_Operation_ResultCase_" data-uid="Google.Longrunning.Operation.ResultCase*"></a>
               <h4 id="Google_Longrunning_Operation_ResultCase" data-uid="Google.Longrunning.Operation.ResultCase">ResultCase</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -281,7 +287,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

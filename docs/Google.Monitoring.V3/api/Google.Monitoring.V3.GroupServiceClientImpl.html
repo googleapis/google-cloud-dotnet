@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GroupServiceClientImpl
    | Google.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Monitoring_V3_GroupServiceClientImpl" data-uid="Google.Monitoring.V3.GroupServiceClientImpl">Class GroupServiceClientImpl
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">GroupService client wrapper implementation, for convenient use.</p>
+              <div class="markdown level0 summary"><p>GroupService client wrapper implementation, for convenient use.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -98,6 +98,18 @@
                 </div>
                 <div>
                   <a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_FormatGroupName_System_String_System_String_">GroupServiceClient.FormatGroupName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_MetricDescriptorTemplate">GroupServiceClient.MetricDescriptorTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_FormatMetricDescriptorName_System_String_System_String_">GroupServiceClient.FormatMetricDescriptorName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_MonitoredResourceDescriptorTemplate">GroupServiceClient.MonitoredResourceDescriptorTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_FormatMonitoredResourceDescriptorName_System_String_System_String_">GroupServiceClient.FormatMonitoredResourceDescriptorName(String, String)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Monitoring_V3_GroupServiceSettings_">GroupServiceClient.CreateAsync(ServiceEndpoint, GroupServiceSettings)</a>
@@ -144,8 +156,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl__ctor_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.#ctor*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl__ctor_Google_Monitoring_V3_GroupService_GroupServiceClient_Google_Monitoring_V3_GroupServiceSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.#ctor(Google.Monitoring.V3.GroupService.GroupServiceClient,Google.Monitoring.V3.GroupServiceSettings)">GroupServiceClientImpl(GroupService.GroupServiceClient, GroupServiceSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a client wrapper for the GroupService service, with the specified gRPC client and settings.</p>
+              <div class="markdown level1 summary"><p>Constructs a client wrapper for the GroupService service, with the specified gRPC client and settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -165,21 +178,22 @@
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.GroupService.GroupServiceClient.html#Google_Monitoring_V3_GroupService_GroupServiceClient">GroupService.GroupServiceClient</a></td>
                     <td><em>grpcClient</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The underlying gRPC client.</p>
+                    <td><p>The underlying gRPC client.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.GroupServiceSettings.html#Google_Monitoring_V3_GroupServiceSettings">GroupServiceSettings</a></td>
                     <td><em>settings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The base <a class="xref" href="Google.Monitoring.V3.GroupServiceSettings.html#Google_Monitoring_V3_GroupServiceSettings">GroupServiceSettings</a> used within this client </p>
+                    <td><p>The base <a class="xref" href="Google.Monitoring.V3.GroupServiceSettings.html#Google_Monitoring_V3_GroupServiceSettings">GroupServiceSettings</a> used within this client </p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_GrpcClient_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.GrpcClient*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_GrpcClient" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.GrpcClient">GrpcClient</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The underlying gRPC GroupService client.</p>
+              <div class="markdown level1 summary"><p>The underlying gRPC GroupService client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -205,8 +219,10 @@
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_GrpcClient">GroupServiceClient.GrpcClient</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_CreateGroup_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.CreateGroup*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_CreateGroup_System_String_Google_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.CreateGroup(System.String,Google.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)">CreateGroup(String, Group, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a new group.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -225,17 +241,21 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The project in which to create the group. The format is
+<code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a></td>
                     <td><em>group</em></td>
-                    <td></td>
+                    <td><p>A group definition. It is an error to define the <code>name</code> field because
+the system assigns the name.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -251,15 +271,17 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_CreateGroup_System_String_Google_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.CreateGroup(String, Group, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_CreateGroupAsync_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.CreateGroupAsync*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_CreateGroupAsync_System_String_Google_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.CreateGroupAsync(System.String,Google.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)">CreateGroupAsync(String, Group, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a new group.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -278,17 +300,21 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The project in which to create the group. The format is
+<code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a></td>
                     <td><em>group</em></td>
-                    <td></td>
+                    <td><p>A group definition. It is an error to define the <code>name</code> field because
+the system assigns the name.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -303,16 +329,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_CreateGroupAsync_System_String_Google_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.CreateGroupAsync(String, Group, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_DeleteGroup_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.DeleteGroup*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_DeleteGroup_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.DeleteGroup(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteGroup(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes an existing group.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -331,20 +359,24 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The group to delete. The format is
+<code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_DeleteGroup_System_String_Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.DeleteGroup(String, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_DeleteGroupAsync_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.DeleteGroupAsync*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_DeleteGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.DeleteGroupAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteGroupAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes an existing group.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -363,12 +395,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The group to delete. The format is
+<code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -384,15 +418,17 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.DeleteGroupAsync(String, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_GetGroup_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.GetGroup*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_GetGroup_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.GetGroup(System.String,Google.Api.Gax.Grpc.CallSettings)">GetGroup(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets a single group.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -411,12 +447,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The group to retrieve. The format is
+<code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -432,15 +470,17 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_GetGroup_System_String_Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.GetGroup(String, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_GetGroupAsync_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.GetGroupAsync*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_GetGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.GetGroupAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetGroupAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets a single group.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -459,12 +499,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The group to retrieve. The format is
+<code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -479,16 +521,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_GetGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.GetGroupAsync(String, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_ListGroupMembers_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.ListGroupMembers*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_ListGroupMembers_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.ListGroupMembers(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupMembers(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -507,26 +551,28 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The group whose members are listed. The format is
+<code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -541,16 +587,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Monitoring.V3.ListGroupMembersResponse.html#Google_Monitoring_V3_ListGroupMembersResponse">ListGroupMembersResponse</a>, <a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable sequence of <a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Monitoring.V3.ListGroupMembersResponse.html#Google_Monitoring_V3_ListGroupMembersResponse">ListGroupMembersResponse</a>, <a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a>&gt;</td>
+                    <td><p>A pageable sequence of <a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_ListGroupMembers_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.ListGroupMembers(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_ListGroupMembersAsync_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.ListGroupMembersAsync*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_ListGroupMembersAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.ListGroupMembersAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupMembersAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists the monitored resources that are members of a group.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -569,26 +617,28 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td></td>
+                    <td><p>The group whose members are listed. The format is
+<code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -603,16 +653,19 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Monitoring.V3.ListGroupMembersResponse.html#Google_Monitoring_V3_ListGroupMembersResponse">ListGroupMembersResponse</a>, <a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable asynchronous sequence of <a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Monitoring.V3.ListGroupMembersResponse.html#Google_Monitoring_V3_ListGroupMembersResponse">ListGroupMembersResponse</a>, <a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.ListGroupMembersAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_UpdateGroup_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.UpdateGroup*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_UpdateGroup_Google_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.UpdateGroup(Google.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)">UpdateGroup(Group, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates an existing group.
+You can change any group attributes except <code>name</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -631,12 +684,14 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a></td>
                     <td><em>group</em></td>
-                    <td></td>
+                    <td><p>The new definition of the group.  All fields of the existing group,
+excepting <code>name</code>, are replaced with the corresponding fields of this group.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -652,15 +707,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Monitoring.V3.GroupServiceClient.html#Google_Monitoring_V3_GroupServiceClient_UpdateGroup_Google_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_">GroupServiceClient.UpdateGroup(Group, CallSettings)</a></div>
+              <a id="Google_Monitoring_V3_GroupServiceClientImpl_UpdateGroupAsync_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.UpdateGroupAsync*"></a>
               <h4 id="Google_Monitoring_V3_GroupServiceClientImpl_UpdateGroupAsync_Google_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Monitoring.V3.GroupServiceClientImpl.UpdateGroupAsync(Google.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)">UpdateGroupAsync(Group, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates an existing group.
+You can change any group attributes except <code>name</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -679,12 +737,14 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a></td>
                     <td><em>group</em></td>
-                    <td></td>
+                    <td><p>The new definition of the group.  All fields of the existing group,
+excepting <code>name</code>, are replaced with the corresponding fields of this group.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -699,8 +759,8 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Monitoring.V3.GroupServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Monitoring.V3.Group.html#Google_Monitoring_V3_Group">Group</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
@@ -735,7 +795,6 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

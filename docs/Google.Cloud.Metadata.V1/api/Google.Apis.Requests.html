@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Apis.Requests
    | Google.Cloud.Metadata.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,40 +75,40 @@
                 <h3 id="classes">Classes
               </h3>
                   <h4><a class="xref" href="Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest">BatchRequest</a></h4>
-                  <section><p sourcefile="obj/api/Google.Apis.Requests.BatchRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A batch request which represents individual requests to Google servers. You should add a single service 
+                  <section><p>A batch request which represents individual requests to Google servers. You should add a single service 
 request using the <a class="xref" href="Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest_Queue__1_Google_Apis_Requests_IClientServiceRequest_Google_Apis_Requests_BatchRequest_OnResponse___0__">Queue&lt;TResponse&gt;(IClientServiceRequest, BatchRequest.OnResponse&lt;TResponse&gt;)</a> method and execute all individual requests using </p>
-<p sourcefile="obj/api/Google.Apis.Requests.BatchRequest.yml" sourcestartlinenumber="4" sourceendlinenumber="5"><a class="xref" href="Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest_ExecuteAsync">ExecuteAsync()</a>. More information about the batch protocol is available in 
-<a href="https://developers.google.com/storage/docs/json_api/v1/how-tos/batch" sourcefile="obj/api/Google.Apis.Requests.BatchRequest.yml" sourcestartlinenumber="5" sourceendlinenumber="5">https://developers.google.com/storage/docs/json_api/v1/how-tos/batch</a>.</p>
+<p><a class="xref" href="Google.Apis.Requests.BatchRequest.html#Google_Apis_Requests_BatchRequest_ExecuteAsync">ExecuteAsync()</a>. More information about the batch protocol is available in 
+<a href="https://developers.google.com/storage/docs/json_api/v1/how-tos/batch">https://developers.google.com/storage/docs/json_api/v1/how-tos/batch</a>.</p>
 <remarks>
 Current implementation doesn&#39;t retry on unsuccessful individual response and doesn&#39;t support requests with 
 different access tokens (different users or scopes).
 </remarks>
 </section>
                   <h4><a class="xref" href="Google.Apis.Requests.ClientServiceRequest-1.html#Google_Apis_Requests_ClientServiceRequest_1">ClientServiceRequest&lt;TResponse&gt;</a></h4>
-                  <section><p sourcefile="obj/api/Google.Apis.Requests.ClientServiceRequest-1.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Represents an abstract, strongly typed request base class to make requests to a service.
+                  <section><p>Represents an abstract, strongly typed request base class to make requests to a service.
 Supports a strongly typed response.</p>
 </section>
                   <h4><a class="xref" href="Google.Apis.Requests.PageStreamer-4.html#Google_Apis_Requests_PageStreamer_4">PageStreamer&lt;TResource, TRequest, TResponse, TToken&gt;</a></h4>
-                  <section><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A page streamer is a helper to provide both synchronous and asynchronous page streaming
+                  <section><p>A page streamer is a helper to provide both synchronous and asynchronous page streaming
 of a listable or queryable resource.</p>
 </section>
                 <h3 id="interfaces">Interfaces
               </h3>
                   <h4><a class="xref" href="Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest">IClientServiceRequest</a></h4>
-                  <section><p sourcefile="obj/api/Google.Apis.Requests.IClientServiceRequest.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A client service request which supports both sync and async execution to get the stream.</p>
+                  <section><p>A client service request which supports both sync and async execution to get the stream.</p>
 </section>
                   <h4><a class="xref" href="Google.Apis.Requests.IClientServiceRequest-1.html#Google_Apis_Requests_IClientServiceRequest_1">IClientServiceRequest&lt;TResponse&gt;</a></h4>
-                  <section><p sourcefile="obj/api/Google.Apis.Requests.IClientServiceRequest-1.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A client service request which inherits from <a class="xref" href="Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest">IClientServiceRequest</a> and represents a specific 
+                  <section><p>A client service request which inherits from <a class="xref" href="Google.Apis.Requests.IClientServiceRequest.html#Google_Apis_Requests_IClientServiceRequest">IClientServiceRequest</a> and represents a specific 
 service request with the given response type. It supports both sync and async execution to get the response.</p>
 </section>
                   <h4><a class="xref" href="Google.Apis.Requests.IDirectResponseSchema.html#Google_Apis_Requests_IDirectResponseSchema">IDirectResponseSchema</a></h4>
-                  <section><p sourcefile="obj/api/Google.Apis.Requests.IDirectResponseSchema.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Interface containing additional response-properties which will be added to every schema type which is 
+                  <section><p>Interface containing additional response-properties which will be added to every schema type which is 
 a direct response to a request.</p>
 </section>
                 <h3 id="delegates">Delegates
               </h3>
                   <h4><a class="xref" href="Google.Apis.Requests.BatchRequest.OnResponse-1.html#Google_Apis_Requests_BatchRequest_OnResponse_1">BatchRequest.OnResponse&lt;TResponse&gt;</a></h4>
-                  <section><p sourcefile="obj/api/Google.Apis.Requests.BatchRequest.OnResponse-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A concrete type callback for an individual response.</p>
+                  <section><p>A concrete type callback for an individual response.</p>
 </section>
             </article>
           </div>
@@ -138,7 +138,6 @@ a direct response to a request.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

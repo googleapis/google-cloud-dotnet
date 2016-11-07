@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Rpc
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -75,58 +75,59 @@
                 <h3 id="classes">Classes
               </h3>
                   <h4><a class="xref" href="Google.Rpc.BadRequest.html#Google_Rpc_BadRequest">BadRequest</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.BadRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Describes violations in a client request. This error type focuses on the
- syntactic aspects of the request.</p>
+                  <section><p>Describes violations in a client request. This error type focuses on the
+syntactic aspects of the request.</p>
 </section>
                   <h4><a class="xref" href="Google.Rpc.DebugInfo.html#Google_Rpc_DebugInfo">DebugInfo</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.DebugInfo.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Describes additional debugging info.</p>
+                  <section><p>Describes additional debugging info.</p>
 </section>
                   <h4><a class="xref" href="Google.Rpc.Help.html#Google_Rpc_Help">Help</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.Help.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Provides links to documentation or for performing an out of band action.</p>
-<p sourcefile="obj/api/Google.Rpc.Help.yml" sourcestartlinenumber="4" sourceendlinenumber="6"> For example, if a quota check failed with an error indicating the calling
- project hasn&#39;t enabled the accessed service, this can contain a URL pointing
- directly to the right place in the developer console to flip the bit.</p>
+                  <section><p>Provides links to documentation or for performing an out of band action.</p>
+<p>For example, if a quota check failed with an error indicating the calling
+project hasn&#39;t enabled the accessed service, this can contain a URL pointing
+directly to the right place in the developer console to flip the bit.</p>
 </section>
                   <h4><a class="xref" href="Google.Rpc.QuotaFailure.html#Google_Rpc_QuotaFailure">QuotaFailure</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.QuotaFailure.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Describes how a quota check failed.</p>
-<p sourcefile="obj/api/Google.Rpc.QuotaFailure.yml" sourcestartlinenumber="4" sourceendlinenumber="9"> For example if a daily limit was exceeded for the calling project,
- a service could respond with a QuotaFailure detail containing the project
- id and the description of the quota limit that was exceeded.  If the
- calling project hasn&#39;t enabled the service in the developer console, then
- a service could respond with the project id and set <code>service_disabled</code>
- to true.</p>
-<p sourcefile="obj/api/Google.Rpc.QuotaFailure.yml" sourcestartlinenumber="11" sourceendlinenumber="12"> Also see RetryDetail and Help types for other details about handling a
- quota failure.</p>
+                  <section><p>Describes how a quota check failed.</p>
+<p>For example if a daily limit was exceeded for the calling project,
+a service could respond with a QuotaFailure detail containing the project
+id and the description of the quota limit that was exceeded.  If the
+calling project hasn&#39;t enabled the service in the developer console, then
+a service could respond with the project id and set <code>service_disabled</code>
+to true.</p>
+<p>Also see RetryDetail and Help types for other details about handling a
+quota failure.</p>
 </section>
                   <h4><a class="xref" href="Google.Rpc.RequestInfo.html#Google_Rpc_RequestInfo">RequestInfo</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.RequestInfo.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Contains metadata about the request that clients can attach when filing a bug
- or providing other forms of feedback.</p>
+                  <section><p>Contains metadata about the request that clients can attach when filing a bug
+or providing other forms of feedback.</p>
 </section>
                   <h4><a class="xref" href="Google.Rpc.ResourceInfo.html#Google_Rpc_ResourceInfo">ResourceInfo</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.ResourceInfo.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Describes the resource that is being accessed.</p>
+                  <section><p>Describes the resource that is being accessed.</p>
 </section>
                   <h4><a class="xref" href="Google.Rpc.RetryInfo.html#Google_Rpc_RetryInfo">RetryInfo</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.RetryInfo.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Describes when the clients can retry a failed request. Clients could ignore
- the recommendation here or retry when this information is missing from error
- responses.</p>
-<p sourcefile="obj/api/Google.Rpc.RetryInfo.yml" sourcestartlinenumber="6" sourceendlinenumber="7"> It&#39;s always recommended that clients should use exponential backoff when
- retrying.</p>
-<p sourcefile="obj/api/Google.Rpc.RetryInfo.yml" sourcestartlinenumber="9" sourceendlinenumber="14"> Clients should wait until <code>retry_delay</code> amount of time has passed since
- receiving the error response before retrying.  If retrying requests also
- fail, clients should use an exponential backoff scheme to gradually increase
- the delay between retries based on <code>retry_delay</code>, until either a maximum
- number of retires have been reached or a maximum retry delay cap has been
- reached.</p>
+                  <section><p>Describes when the clients can retry a failed request. Clients could ignore
+the recommendation here or retry when this information is missing from error
+responses.</p>
+<p>It&#39;s always recommended that clients should use exponential backoff when
+retrying.</p>
+<p>Clients should wait until <code>retry_delay</code> amount of time has passed since
+receiving the error response before retrying.  If retrying requests also
+fail, clients should use an exponential backoff scheme to gradually increase
+the delay between retries based on <code>retry_delay</code>, until either a maximum
+number of retires have been reached or a maximum retry delay cap has been
+reached.</p>
 </section>
                   <h4><a class="xref" href="Google.Rpc.Status.html#Google_Rpc_Status">Status</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The <code>Status</code> type defines a logical error model that is suitable for different
- programming environments, including REST APIs and RPC APIs. It is used by
- <a href="https://github.com/grpc" sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="4" sourceendlinenumber="4">gRPC</a>. The error model is designed to be:</p>
-<ul sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="6" sourceendlinenumber="53">
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="6" sourceendlinenumber="6">Simple to use and understand for most users</li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="35"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Flexible enough to meet unexpected needs</p>
-<h1 id="overview" sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="9" sourceendlinenumber="9">Overview</h1>
-<p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="15">The <code>Status</code> message contains three pieces of data: error code, error message,
+                  <section><p>The <code>Status</code> type defines a logical error model that is suitable for different
+programming environments, including REST APIs and RPC APIs. It is used by
+<a href="https://github.com/grpc">gRPC</a>. The error model is designed to be:</p>
+<ul>
+<li>Simple to use and understand for most users</li>
+<li>Flexible enough to meet unexpected needs</li>
+</ul>
+<h1 id="overview">Overview</h1>
+<p>The <code>Status</code> message contains three pieces of data: error code, error message,
 and error details. The error code should be an enum value of
 [google.rpc.Code][google.rpc.Code], but it may accept additional error codes if needed.  The
 error message should be a developer-facing English message that helps
@@ -135,53 +136,52 @@ error message is needed, put the localized message in the error details or
 localize it in the client. The optional error details may contain arbitrary
 information about the error. There is a predefined set of error detail types
 in the package <code>google.rpc</code> which can be used for common error conditions.</p>
-<h1 id="language-mapping" sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="21" sourceendlinenumber="21">Language mapping</h1>
-<p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="11">The <code>Status</code> message is the logical representation of the error model, but it
+<h1 id="language-mapping">Language mapping</h1>
+<p>The <code>Status</code> message is the logical representation of the error model, but it
 is not necessarily the actual wire format. When the <code>Status</code> message is
 exposed in different client libraries and different wire protocols, it can be
 mapped differently. For example, it will likely be mapped to some exceptions
 in Java, but more likely mapped to some error codes in C.</p>
-<h1 id="other-uses" sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="29" sourceendlinenumber="29">Other uses</h1>
-<p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="9">The error model and the <code>Status</code> message can be used in a variety of
+<h1 id="other-uses">Other uses</h1>
+<p>The error model and the <code>Status</code> message can be used in a variety of
 environments, either with or without APIs, to provide a
 consistent developer experience across different environments.</p>
-<p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Example uses of this error model include:</p>
+<p>Example uses of this error model include:</p>
+<ul>
+<li><p>Partial errors. If a service needs to return partial errors to the client,
+it may embed the <code>Status</code> in the normal response to indicate the partial
+errors.</p>
 </li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="37" sourceendlinenumber="39"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="37" sourceendlinenumber="39">Partial errors. If a service needs to return partial errors to the client,
-  it may embed the <code>Status</code> in the normal response to indicate the partial
-  errors.</p>
+<li><p>Workflow errors. A typical workflow has multiple steps. Each step may
+have a <code>Status</code> message for error reporting purpose.</p>
 </li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="41" sourceendlinenumber="42"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="41" sourceendlinenumber="42">Workflow errors. A typical workflow has multiple steps. Each step may
-  have a <code>Status</code> message for error reporting purpose.</p>
+<li><p>Batch operations. If a client uses batch request and batch response, the
+<code>Status</code> message should be used directly inside batch response, one for
+each error sub-response.</p>
 </li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="44" sourceendlinenumber="46"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="44" sourceendlinenumber="46">Batch operations. If a client uses batch request and batch response, the
-  <code>Status</code> message should be used directly inside batch response, one for
-  each error sub-response.</p>
+<li><p>Asynchronous operations. If an API call embeds asynchronous operation
+results in its response, the status of those operations should be
+represented directly using the <code>Status</code> message.</p>
 </li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="48" sourceendlinenumber="50"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="48" sourceendlinenumber="50">Asynchronous operations. If an API call embeds asynchronous operation
-  results in its response, the status of those operations should be
-  represented directly using the <code>Status</code> message.</p>
-</li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="52" sourceendlinenumber="53"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="52" sourceendlinenumber="53">Logging. If some API errors are stored in logs, the message <code>Status</code> could
-  be used directly after any stripping needed for security/privacy reasons.</p>
+<li><p>Logging. If some API errors are stored in logs, the message <code>Status</code> could
+be used directly after any stripping needed for security/privacy reasons.</p>
 </li>
 </ul>
 </section>
                 <h3 id="enums">Enums
               </h3>
                   <h4><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></h4>
-                  <section><p sourcefile="obj/api/Google.Rpc.Code.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The canonical error codes for Google APIs.
- Warnings:</p>
-<ul sourcefile="obj/api/Google.Rpc.Code.yml" sourcestartlinenumber="5" sourceendlinenumber="12">
-<li sourcefile="obj/api/Google.Rpc.Code.yml" sourcestartlinenumber="5" sourceendlinenumber="5">Do not change any numeric assignments.</li>
-<li sourcefile="obj/api/Google.Rpc.Code.yml" sourcestartlinenumber="6" sourceendlinenumber="12"><p sourcefile="obj/api/Google.Rpc.Code.yml" sourcestartlinenumber="6" sourceendlinenumber="7">Changes to this list should be made only if there is a compelling
-need that can&#39;t be satisfied in another way.</p>
-<p sourcefile="obj/api/Google.Rpc.Code.yml" sourcestartlinenumber="6" sourceendlinenumber="9">Sometimes multiple error codes may apply.  Services should return
+                  <section><p>The canonical error codes for Google APIs.
+Warnings:</p>
+<ul>
+<li>Do not change any numeric assignments.</li>
+<li>Changes to this list should be made only if there is a compelling
+need that can&#39;t be satisfied in another way.</li>
+</ul>
+<p>Sometimes multiple error codes may apply.  Services should return
 the most specific error code that applies.  For example, prefer
 <code>OUT_OF_RANGE</code> over <code>FAILED_PRECONDITION</code> if both codes apply.
 Similarly prefer <code>NOT_FOUND</code> or <code>ALREADY_EXISTS</code> over <code>FAILED_PRECONDITION</code>.</p>
-</li>
-</ul>
 </section>
             </article>
           </div>
@@ -211,7 +211,6 @@ Similarly prefer <code>NOT_FOUND</code> or <code>ALREADY_EXISTS</code> over <cod
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

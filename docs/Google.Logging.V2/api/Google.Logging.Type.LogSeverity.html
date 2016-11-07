@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum LogSeverity
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,18 +70,18 @@
               
               <h1 id="Google_Logging_Type_LogSeverity" data-uid="Google.Logging.Type.LogSeverity">Enum LogSeverity
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> The severity of the event described in a log entry, expressed as one of the
- standard severity levels listed below.  For your reference, the levels are
- assigned the listed numeric values. The effect of using numeric values other
- than those listed is undefined.</p>
-<p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="7" sourceendlinenumber="9"> You can filter for log entries by severity.  For example, the following
- filter expression will match log entries with severities <code>INFO</code>, <code>NOTICE</code>,
- and <code>WARNING</code>:</p>
-<pre sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="11" sourceendlinenumber="11"><code> severity &amp;gt; DEBUG AND severity &amp;lt;= WARNING
-</code></pre><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="13" sourceendlinenumber="16"> If you are writing log entries, you should map other severity encodings to
- one of these standard levels. For example, you might map all of Java&#39;s FINE,
- FINER, and FINEST levels to <code>LogSeverity.DEBUG</code>. You can preserve the
- original severity level in the log entry payload if you wish.</p>
+              <div class="markdown level0 summary"><p>The severity of the event described in a log entry, expressed as one of the
+standard severity levels listed below.  For your reference, the levels are
+assigned the listed numeric values. The effect of using numeric values other
+than those listed is undefined.</p>
+<p>You can filter for log entries by severity.  For example, the following
+filter expression will match log entries with severities <code>INFO</code>, <code>NOTICE</code>,
+and <code>WARNING</code>:</p>
+<p>severity &gt; DEBUG AND severity &lt;= WARNING</p>
+<p>If you are writing log entries, you should map other severity encodings to
+one of these standard levels. For example, you might map all of Java&#39;s FINE,
+FINER, and FINEST levels to <code>LogSeverity.DEBUG</code>. You can preserve the
+original severity level in the log entry payload if you wish.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Google.Logging.Type</h6>
@@ -102,48 +102,48 @@
                 <tbody>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Alert">Alert</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> (700) A person must take an action immediately.</p>
+                    <td><p>(700) A person must take an action immediately.</p>
 </td>
                   </tr>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Critical">Critical</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> (600) Critical events cause more severe problems or outages.</p>
+                    <td><p>(600) Critical events cause more severe problems or outages.</p>
 </td>
                   </tr>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Debug">Debug</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> (100) Debug or trace information.</p>
+                    <td><p>(100) Debug or trace information.</p>
 </td>
                   </tr>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Default">Default</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> (0) The log entry has no assigned severity level.</p>
+                    <td><p>(0) The log entry has no assigned severity level.</p>
 </td>
                   </tr>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Emergency">Emergency</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> (800) One or more systems are unusable.</p>
+                    <td><p>(800) One or more systems are unusable.</p>
 </td>
                   </tr>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Error">Error</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> (500) Error events are likely to cause problems.</p>
+                    <td><p>(500) Error events are likely to cause problems.</p>
 </td>
                   </tr>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Info">Info</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> (200) Routine information, such as ongoing status or performance.</p>
+                    <td><p>(200) Routine information, such as ongoing status or performance.</p>
 </td>
                   </tr>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Notice">Notice</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> (300) Normal but significant events, such as start up, shut down, or
- a configuration change.</p>
+                    <td><p>(300) Normal but significant events, such as start up, shut down, or
+a configuration change.</p>
 </td>
                   </tr>
                   <tr>
                     <td id="Google_Logging_Type_LogSeverity_Warning">Warning</td>
-                    <td><p sourcefile="obj/api/Google.Logging.Type.LogSeverity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> (400) Warning events might cause problems.</p>
+                    <td><p>(400) Warning events might cause problems.</p>
 </td>
                   </tr>
                 </tbody>
@@ -176,7 +176,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

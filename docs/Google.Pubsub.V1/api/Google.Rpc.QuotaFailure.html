@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QuotaFailure
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,15 +70,15 @@
               
               <h1 id="Google_Rpc_QuotaFailure" data-uid="Google.Rpc.QuotaFailure">Class QuotaFailure
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Rpc.QuotaFailure.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Describes how a quota check failed.</p>
-<p sourcefile="obj/api/Google.Rpc.QuotaFailure.yml" sourcestartlinenumber="4" sourceendlinenumber="9"> For example if a daily limit was exceeded for the calling project,
- a service could respond with a QuotaFailure detail containing the project
- id and the description of the quota limit that was exceeded.  If the
- calling project hasn&#39;t enabled the service in the developer console, then
- a service could respond with the project id and set <code>service_disabled</code>
- to true.</p>
-<p sourcefile="obj/api/Google.Rpc.QuotaFailure.yml" sourcestartlinenumber="11" sourceendlinenumber="12"> Also see RetryDetail and Help types for other details about handling a
- quota failure.</p>
+              <div class="markdown level0 summary"><p>Describes how a quota check failed.</p>
+<p>For example if a daily limit was exceeded for the calling project,
+a service could respond with a QuotaFailure detail containing the project
+id and the description of the quota limit that was exceeded.  If the
+calling project hasn&#39;t enabled the service in the developer console, then
+a service could respond with the project id and set <code>service_disabled</code>
+to true.</p>
+<p>Also see RetryDetail and Help types for other details about handling a
+quota failure.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -103,6 +103,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Rpc_QuotaFailure__ctor_" data-uid="Google.Rpc.QuotaFailure.#ctor*"></a>
               <h4 id="Google_Rpc_QuotaFailure__ctor" data-uid="Google.Rpc.QuotaFailure.#ctor">QuotaFailure()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -110,6 +111,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public QuotaFailure()</code></pre>
               </div>
+              <a id="Google_Rpc_QuotaFailure__ctor_" data-uid="Google.Rpc.QuotaFailure.#ctor*"></a>
               <h4 id="Google_Rpc_QuotaFailure__ctor_Google_Rpc_QuotaFailure_" data-uid="Google.Rpc.QuotaFailure.#ctor(Google.Rpc.QuotaFailure)">QuotaFailure(QuotaFailure)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -136,8 +138,9 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Rpc_QuotaFailure_Violations_" data-uid="Google.Rpc.QuotaFailure.Violations*"></a>
               <h4 id="Google_Rpc_QuotaFailure_Violations" data-uid="Google.Rpc.QuotaFailure.Violations">Violations</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Rpc.QuotaFailure.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Describes all quota violations.</p>
+              <div class="markdown level1 summary"><p>Describes all quota violations.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -154,13 +157,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">Google.Rpc.QuotaFailure.Types.Violation</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Rpc_QuotaFailure_CalculateSize_" data-uid="Google.Rpc.QuotaFailure.CalculateSize*"></a>
               <h4 id="Google_Rpc_QuotaFailure_CalculateSize" data-uid="Google.Rpc.QuotaFailure.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -184,7 +188,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Rpc_QuotaFailure_Clone_" data-uid="Google.Rpc.QuotaFailure.Clone*"></a>
               <h4 id="Google_Rpc_QuotaFailure_Clone" data-uid="Google.Rpc.QuotaFailure.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -208,7 +213,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;QuotaFailure&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Rpc_QuotaFailure_GetHashCode_" data-uid="Google.Rpc.QuotaFailure.GetHashCode*"></a>
               <h4 id="Google_Rpc_QuotaFailure_GetHashCode" data-uid="Google.Rpc.QuotaFailure.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -233,6 +239,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Rpc_QuotaFailure_MergeFrom_" data-uid="Google.Rpc.QuotaFailure.MergeFrom*"></a>
               <h4 id="Google_Rpc_QuotaFailure_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Rpc.QuotaFailure.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -251,14 +258,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Rpc_QuotaFailure_MergeFrom_" data-uid="Google.Rpc.QuotaFailure.MergeFrom*"></a>
               <h4 id="Google_Rpc_QuotaFailure_MergeFrom_Google_Rpc_QuotaFailure_" data-uid="Google.Rpc.QuotaFailure.MergeFrom(Google.Rpc.QuotaFailure)">MergeFrom(QuotaFailure)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -284,7 +292,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;QuotaFailure&gt;.MergeFrom(QuotaFailure)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Rpc_QuotaFailure_ToString_" data-uid="Google.Rpc.QuotaFailure.ToString*"></a>
               <h4 id="Google_Rpc_QuotaFailure_ToString" data-uid="Google.Rpc.QuotaFailure.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -309,6 +318,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Rpc_QuotaFailure_WriteTo_" data-uid="Google.Rpc.QuotaFailure.WriteTo*"></a>
               <h4 id="Google_Rpc_QuotaFailure_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Rpc.QuotaFailure.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -327,14 +337,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -363,7 +373,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

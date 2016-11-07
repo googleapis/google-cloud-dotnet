@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MediaDownloader
    | Google.Cloud.Metadata.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Apis_Download_MediaDownloader" data-uid="Google.Apis.Download.MediaDownloader">Class MediaDownloader
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Apis.Download.MediaDownloader.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A media downloader implementation which handles media downloads.</p>
+              <div class="markdown level0 summary"><p>A media downloader implementation which handles media downloads.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,8 +101,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Apis_Download_MediaDownloader__ctor_" data-uid="Google.Apis.Download.MediaDownloader.#ctor*"></a>
               <h4 id="Google_Apis_Download_MediaDownloader__ctor_Google_Apis_Services_IClientService_" data-uid="Google.Apis.Download.MediaDownloader.#ctor(Google.Apis.Services.IClientService)">MediaDownloader(IClientService)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Download.MediaDownloader.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Constructs a new downloader with the given client service.</p>
+              <div class="markdown level1 summary"><p>Constructs a new downloader with the given client service.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -129,7 +130,7 @@
               <h3 id="fields">Fields
               </h3>
               <h4 id="Google_Apis_Download_MediaDownloader_MaximumChunkSize" data-uid="Google.Apis.Download.MediaDownloader.MaximumChunkSize">MaximumChunkSize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Download.MediaDownloader.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Maximum chunk size. Default value is 10*MB.</p>
+              <div class="markdown level1 summary"><p>Maximum chunk size. Default value is 10*MB.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -153,8 +154,9 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Apis_Download_MediaDownloader_ChunkSize_" data-uid="Google.Apis.Download.MediaDownloader.ChunkSize*"></a>
               <h4 id="Google_Apis_Download_MediaDownloader_ChunkSize" data-uid="Google.Apis.Download.MediaDownloader.ChunkSize">ChunkSize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Download.MediaDownloader.yml" sourcestartlinenumber="2" sourceendlinenumber="5">Gets or sets the amount of data that will be downloaded before notifying the caller of
+              <div class="markdown level1 summary"><p>Gets or sets the amount of data that will be downloaded before notifying the caller of
 the download&#39;s progress.
 Must not exceed <a class="xref" href="Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_MaximumChunkSize">MaximumChunkSize</a>.
 Default value is <a class="xref" href="Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_MaximumChunkSize">MaximumChunkSize</a>.</p>
@@ -183,6 +185,7 @@ Default value is <a class="xref" href="Google.Apis.Download.MediaDownloader.html
                   <div><a class="xref" href="Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_ChunkSize">IMediaDownloader.ChunkSize</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Apis_Download_MediaDownloader_Download_" data-uid="Google.Apis.Download.MediaDownloader.Download*"></a>
               <h4 id="Google_Apis_Download_MediaDownloader_Download_System_String_System_IO_Stream_" data-uid="Google.Apis.Download.MediaDownloader.Download(System.String,System.IO.Stream)">Download(String, Stream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -229,6 +232,7 @@ Default value is <a class="xref" href="Google.Apis.Download.MediaDownloader.html
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_Download_System_String_System_IO_Stream_">IMediaDownloader.Download(String, Stream)</a></div>
+              <a id="Google_Apis_Download_MediaDownloader_DownloadAsync_" data-uid="Google.Apis.Download.MediaDownloader.DownloadAsync*"></a>
               <h4 id="Google_Apis_Download_MediaDownloader_DownloadAsync_System_String_System_IO_Stream_" data-uid="Google.Apis.Download.MediaDownloader.DownloadAsync(System.String,System.IO.Stream)">DownloadAsync(String, Stream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -268,13 +272,14 @@ Default value is <a class="xref" href="Google.Apis.Download.MediaDownloader.html
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_DownloadAsync_System_String_System_IO_Stream_">IMediaDownloader.DownloadAsync(String, Stream)</a></div>
+              <a id="Google_Apis_Download_MediaDownloader_DownloadAsync_" data-uid="Google.Apis.Download.MediaDownloader.DownloadAsync*"></a>
               <h4 id="Google_Apis_Download_MediaDownloader_DownloadAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_" data-uid="Google.Apis.Download.MediaDownloader.DownloadAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)">DownloadAsync(String, Stream, CancellationToken)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -319,7 +324,7 @@ Default value is <a class="xref" href="Google.Apis.Download.MediaDownloader.html
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -345,7 +350,7 @@ Default value is <a class="xref" href="Google.Apis.Download.MediaDownloader.html
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
+                    <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -380,7 +385,6 @@ Default value is <a class="xref" href="Google.Apis.Download.MediaDownloader.html
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

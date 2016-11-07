@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>BigQuery API design | Google.Bigquery.V2 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="BigQuery API design | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,67 +57,67 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="bigquery-api-design" sourcefile="design.md" sourcestartlinenumber="1" sourceendlinenumber="1">BigQuery API design</h1>
+              <h1 id="bigquery-api-design">BigQuery API design</h1>
               
-<p sourcefile="design.md" sourcestartlinenumber="3" sourceendlinenumber="5">The <code>Google.Bigquery.V2</code> package wraps a lot of the functionality of
+<p>The <code>Google.Bigquery.V2</code> package wraps a lot of the functionality of
 the underlying REST API. This document lays out the patterns
 involved to help guide further API extensions.</p>
-<h2 id="status" sourcefile="design.md" sourcestartlinenumber="7" sourceendlinenumber="7">Status</h2>
-<p sourcefile="design.md" sourcestartlinenumber="9" sourceendlinenumber="11">This package is effectively experimental at this time. Some
+<h2 id="status">Status</h2>
+<p>This package is effectively experimental at this time. Some
 functionality is missing, and a lot is likely to change. Big ticket
 work items:</p>
-<ul sourcefile="design.md" sourcestartlinenumber="13" sourceendlinenumber="19">
-<li sourcefile="design.md" sourcestartlinenumber="13" sourceendlinenumber="14">Review query approach, exposing more information and being more
+<ul>
+<li>Review query approach, exposing more information and being more
 consistent</li>
-<li sourcefile="design.md" sourcestartlinenumber="15" sourceendlinenumber="16">Alternative approaches for providing data and schema, e.g. simple property
+<li>Alternative approaches for providing data and schema, e.g. simple property
 binding. (Note: we&#39;re not trying to become an ORM...)</li>
-<li sourcefile="design.md" sourcestartlinenumber="17" sourceendlinenumber="19">Async operations. (API design is progressing with sync-only
+<li>Async operations. (API design is progressing with sync-only
 operations; asynchrony will be added when we&#39;re done with that
 first pass.)</li>
 </ul>
-<h2 id="bigqueryclient" sourcefile="design.md" sourcestartlinenumber="21" sourceendlinenumber="21"><code>BigqueryClient</code></h2>
-<p sourcefile="design.md" sourcestartlinenumber="23" sourceendlinenumber="27">Like other API wrappers, <code>BigqueryClient</code> is the entry point for
+<h2 id="bigqueryclient"><code>BigqueryClient</code></h2>
+<p>Like other API wrappers, <code>BigqueryClient</code> is the entry point for
 everything. This is an abstract class (to allow for mocking) with
 <code>Create</code>/<code>CreateAsync</code> static methods which construct instances of
 <code>BigqueryClientImpl</code>. The implementation can be constructed directly
 if necessary, e.g. for constructor-based dependency injection.</p>
-<p sourcefile="design.md" sourcestartlinenumber="29" sourceendlinenumber="32">Methods which need to interact with the service should be declared
+<p>Methods which need to interact with the service should be declared
 and documented in <code>BigqueryClient</code>, as virtual methods which throw
 <code>NotImplementedException</code>. They are then implemented in
 <code>BigqueryClientImpl</code>.</p>
-<p sourcefile="design.md" sourcestartlinenumber="34" sourceendlinenumber="38">The canonical way of identifying any of the entities is via a <em>reference</em>,
+<p>The canonical way of identifying any of the entities is via a <em>reference</em>,
 e.g. <code>DatasetReference</code>, <code>JobReference</code>, <code>TableReference</code>,
 <code>ProjectReference</code>. It is easy to construct a reference either manually or via
 <code>BigqueryClient</code> or a parent entity (e.g.
 <code>BigqueryDataset.GetTableReference</code>).</p>
-<p sourcefile="design.md" sourcestartlinenumber="40" sourceendlinenumber="46">Any operation on <code>BigqueryClient</code> must <em>at least</em> have a
+<p>Any operation on <code>BigqueryClient</code> must <em>at least</em> have a
 canonical form accepting a suitable reference. It <em>may</em> also have
 other overloads to retrieve entities via just component IDs. The
 overloads must be virtual to support simple mocking, but should not
 be overridden in the implementation. The documentation must be clear
 that the overloads simply delegate to the canonical form using a
 <code>*Reference</code> constructed with a <code>Get*Reference</code> method.</p>
-<p sourcefile="design.md" sourcestartlinenumber="48" sourceendlinenumber="50">The <code>Get*Reference</code> methods in <code>BigqueryClient</code> are not virtual;
+<p>The <code>Get*Reference</code> methods in <code>BigqueryClient</code> are not virtual;
 they are not a point of interaction with the service and so do not
 require faking for test purposes.</p>
-<p sourcefile="design.md" sourcestartlinenumber="52" sourceendlinenumber="56"><code>BigqueryClient</code> requires a project ID to be specified, as almost
+<p><code>BigqueryClient</code> requires a project ID to be specified, as almost
 all Bigquery operations require a project ID, and almost all
 operations will use the same one. The project ID is typically used
 as an invisible default, but it is still possible to query a
 dataset/table/job in a different project.</p>
-<h2 id="datasets-tables-and-results" sourcefile="design.md" sourcestartlinenumber="58" sourceendlinenumber="58">Datasets, tables and results</h2>
-<p sourcefile="design.md" sourcestartlinenumber="60" sourceendlinenumber="62">All the relevant operations are available on <code>BigqueryClient</code>, but
+<h2 id="datasets-tables-and-results">Datasets, tables and results</h2>
+<p>All the relevant operations are available on <code>BigqueryClient</code>, but
 many are more conveniently placed on other classes representing
 entities:</p>
-<ul sourcefile="design.md" sourcestartlinenumber="64" sourceendlinenumber="65">
-<li sourcefile="design.md" sourcestartlinenumber="64" sourceendlinenumber="64"><code>BigqueryDataset</code>: a dataset containing tables</li>
-<li sourcefile="design.md" sourcestartlinenumber="65" sourceendlinenumber="65"><code>BigqueryTable</code>: a table</li>
+<ul>
+<li><code>BigqueryDataset</code>: a dataset containing tables</li>
+<li><code>BigqueryTable</code>: a table</li>
 </ul>
-<p sourcefile="design.md" sourcestartlinenumber="67" sourceendlinenumber="67">Additionally, <code>BigqueryResult</code> represents the result of a query.</p>
-<p sourcefile="design.md" sourcestartlinenumber="69" sourceendlinenumber="70">The <code>Bigquery</code> prefix here avoids confusion with the underlying
+<p>Additionally, <code>BigqueryResult</code> represents the result of a query.</p>
+<p>The <code>Bigquery</code> prefix here avoids confusion with the underlying
 REST-based resources, which are still available.</p>
-<h2 id="synchronous-vs-asynchronous-c-calls" sourcefile="design.md" sourcestartlinenumber="72" sourceendlinenumber="72">Synchronous vs asynchronous C# calls</h2>
-<p sourcefile="design.md" sourcestartlinenumber="74" sourceendlinenumber="75">All API calls potentially involving server interaction come in sync
+<h2 id="synchronous-vs-asynchronous-c-calls">Synchronous vs asynchronous C# calls</h2>
+<p>All API calls potentially involving server interaction come in sync
 and async flavours. (Or at least, they will do...)</p>
 
             </article>
@@ -148,7 +148,6 @@ and async flavours. (Or at least, they will do...)</p>
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

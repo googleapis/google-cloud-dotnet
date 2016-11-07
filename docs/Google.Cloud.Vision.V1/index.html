@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Google.Cloud.Vision.V1 | Google.Cloud.Vision.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Vision.V1 | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,34 +57,34 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googlecloudvisionv1" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Cloud.Vision.V1</h1>
+              <h1 id="googlecloudvisionv1">Google.Cloud.Vision.V1</h1>
               
-<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4"><code>Google.Cloud.Vision.V1</code> is a .NET client library for the <a href="https://cloud.google.com/vision" sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4">Google
+<p><code>Google.Cloud.Vision.V1</code> is a .NET client library for the <a href="https://cloud.google.com/vision">Google
 Cloud Vision API</a>.</p>
-<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="6" sourceendlinenumber="6">Installation</h1>
-<p sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="13">Install the <code>Google.Cloud.Vision.V1</code> package from NuGet. Add it to
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Cloud.Vision.V1</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
 Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
-<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">Authentication</h1>
-<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="19">To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/" sourcefile="index.md" sourcestartlinenumber="18" sourceendlinenumber="18">Google Cloud SDK</a>. After that is
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="23"><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started" sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="25">Getting started</h1>
-<p sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="28">All operations are performed through
-<a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html" sourcefile="index.md" sourcestartlinenumber="28" sourceendlinenumber="28">ImageAnnotatorClient</a>.</p>
-<p sourcefile="index.md" sourcestartlinenumber="30" sourceendlinenumber="34">The &quot;core&quot; method <a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_" sourcefile="index.md" sourcestartlinenumber="30" sourceendlinenumber="30">BatchAnnotateImages</a>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>All operations are performed through
+<a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>.</p>
+<p>The &quot;core&quot; method <a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_">BatchAnnotateImages</a>
 can perform multiple (potentially different) annotations on multiple
 images, but convenience methods are provided for common cases of
 working with a single image, and for performing a single annotation
 operation on a single image.</p>
-<h1 id="sample-code" sourcefile="index.md" sourcestartlinenumber="36" sourceendlinenumber="36">Sample code</h1>
-<h2 id="constructing-an-image-object" sourcefile="index.md" sourcestartlinenumber="38" sourceendlinenumber="38">Constructing an Image object</h2>
-<p sourcefile="index.md" sourcestartlinenumber="40" sourceendlinenumber="42">There are various factory methods on the
-<a href="api/Google.Cloud.Vision.V1.Image.html" sourcefile="index.md" sourcestartlinenumber="41" sourceendlinenumber="41">Image</a> class to allow
+<h1 id="sample-code">Sample code</h1>
+<h2 id="constructing-an-image-object">Constructing an Image object</h2>
+<p>There are various factory methods on the
+<a href="api/Google.Cloud.Vision.V1.Image.html">Image</a> class to allow
 instances to be constructed from files, streams, byte arrays and URIs.</p>
 <pre><code class="lang-cs">Image image1 = Image.FromFile(&quot;Pictures/LocalImage.jpg&quot;);
 Image image2 = Image.FromUri(&quot;https://cloud.google.com/images/devtools-icon-64x64.png&quot;);
@@ -97,43 +97,43 @@ using (Stream stream = OpenImageStream()) // Any regular .NET stream
 {
     Image image5 = Image.FromStream(stream);
 }
-</code></pre><p sourcefile="index.md" sourcestartlinenumber="46" sourceendlinenumber="46">All IO-related methods have async equivalents.</p>
-<h2 id="detect-faces-in-a-single-image" sourcefile="index.md" sourcestartlinenumber="48" sourceendlinenumber="48">Detect faces in a single image</h2>
+</code></pre><p>All IO-related methods have async equivalents.</p>
+<h2 id="detect-faces-in-a-single-image">Detect faces in a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 IReadOnlyList&lt;FaceAnnotation&gt; result = client.DetectFaces(image);
 foreach (FaceAnnotation face in result)
 {
     Console.WriteLine($&quot;Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}&quot;);
 }            
-</code></pre><h2 id="detect-text-in-a-single-image" sourcefile="index.md" sourcestartlinenumber="52" sourceendlinenumber="52">Detect text in a single image</h2>
+</code></pre><h2 id="detect-text-in-a-single-image">Detect text in a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 IReadOnlyList&lt;EntityAnnotation&gt; textAnnotations = client.DetectText(image);
 foreach (EntityAnnotation text in textAnnotations)
 {
     Console.WriteLine($&quot;Description: {text.Description}&quot;);
 }
-</code></pre><h2 id="detect-labels-in-a-single-image" sourcefile="index.md" sourcestartlinenumber="56" sourceendlinenumber="56">Detect labels in a single image</h2>
+</code></pre><h2 id="detect-labels-in-a-single-image">Detect labels in a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 IReadOnlyList&lt;EntityAnnotation&gt; labels = client.DetectLabels(image);
 foreach (EntityAnnotation label in labels)
 {
     Console.WriteLine($&quot;Score: {(int)(label.Score * 100)}%; Description: {label.Description}&quot;);
 }
-</code></pre><h2 id="detect-landmarks-in-a-single-image" sourcefile="index.md" sourcestartlinenumber="60" sourceendlinenumber="60">Detect landmarks in a single image</h2>
+</code></pre><h2 id="detect-landmarks-in-a-single-image">Detect landmarks in a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 IReadOnlyList&lt;EntityAnnotation&gt; result = client.DetectLandmarks(image);
 foreach (EntityAnnotation landmark in result)
 {
     Console.WriteLine($&quot;Score: {(int)(landmark.Score * 100)}%; Description: {landmark.Description}&quot;);
 }
-</code></pre><h2 id="detect-logos-in-a-single-image" sourcefile="index.md" sourcestartlinenumber="64" sourceendlinenumber="64">Detect logos in a single image</h2>
+</code></pre><h2 id="detect-logos-in-a-single-image">Detect logos in a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 IReadOnlyList&lt;EntityAnnotation&gt; logos = client.DetectLogos(image);
 foreach (EntityAnnotation logo in logos)
 {
     Console.WriteLine($&quot;Description: {logo.Description}&quot;);
 }
-</code></pre><h2 id="perform-safe-search-processing-on-a-single-image" sourcefile="index.md" sourcestartlinenumber="68" sourceendlinenumber="68">Perform &quot;safe search&quot; processing on a single image</h2>
+</code></pre><h2 id="perform-safe-search-processing-on-a-single-image">Perform &quot;safe search&quot; processing on a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 SafeSearchAnnotation annotation = client.DetectSafeSearch(image);
 // Each category is classified as Very Unlikely, Unlikely, Possible, Likely or Very Likely.
@@ -141,12 +141,12 @@ Console.WriteLine($&quot;Adult? {annotation.Adult}&quot;);
 Console.WriteLine($&quot;Spoof? {annotation.Spoof}&quot;);
 Console.WriteLine($&quot;Violence? {annotation.Violence}&quot;);
 Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
-</code></pre><h2 id="perform-image-property-processing-on-a-single-image" sourcefile="index.md" sourcestartlinenumber="72" sourceendlinenumber="72">Perform image property processing on a single image</h2>
+</code></pre><h2 id="perform-image-property-processing-on-a-single-image">Perform image property processing on a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 ImageProperties properties = client.DetectImageProperties(image);
 ColorInfo dominantColor = properties.DominantColors.Colors.OrderByDescending(c =&gt; c.PixelFraction).First();
 Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
-</code></pre><h2 id="detect-faces-and-landmarks-in-a-single-image" sourcefile="index.md" sourcestartlinenumber="76" sourceendlinenumber="76">Detect faces and landmarks in a single image</h2>
+</code></pre><h2 id="detect-faces-and-landmarks-in-a-single-image">Detect faces and landmarks in a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 AnnotateImageRequest request = new AnnotateImageRequest
 {
@@ -174,7 +174,7 @@ if (response.Error != null)
 {
     Console.WriteLine($&quot;Error detected: {response.Error}&quot;);
 }
-</code></pre><h2 id="detect-faces-in-one-image-and-logos-in-another" sourcefile="index.md" sourcestartlinenumber="80" sourceendlinenumber="80">Detect faces in one image and logos in another</h2>
+</code></pre><h2 id="detect-faces-in-one-image-and-logos-in-another">Detect faces in one image and logos in another</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 // Perform face recognition on one image, and logo recognition on another.
 AnnotateImageRequest request1 = new AnnotateImageRequest
@@ -203,9 +203,9 @@ foreach (Status error in response.Responses.Select(r =&gt; r.Error))
 {
     Console.WriteLine($&quot;Error detected: error&quot;);
 }
-</code></pre><h2 id="error-handling" sourcefile="index.md" sourcestartlinenumber="84" sourceendlinenumber="84">Error handling</h2>
-<p sourcefile="index.md" sourcestartlinenumber="86" sourceendlinenumber="88">All the methods which annotate a single image (and therefore have a single response) throw
-(<a href="api/Google.Cloud.Vision.V1.AnnotateImageException.html" sourcefile="index.md" sourcestartlinenumber="87" sourceendlinenumber="87">AnnotateImageException</a> if the response
+</code></pre><h2 id="error-handling">Error handling</h2>
+<p>All the methods which annotate a single image (and therefore have a single response) throw
+(<a href="api/Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> if the response
 contains an error.</p>
 <pre><code class="lang-cs">Image image = new Image(); // No content or source!
 ImageAnnotatorClient client = ImageAnnotatorClient.Create();
@@ -219,8 +219,8 @@ catch (AnnotateImageException e)
     AnnotateImageResponse response = e.Response;
     Console.WriteLine(response.Error);
 }
-</code></pre><p sourcefile="index.md" sourcestartlinenumber="92" sourceendlinenumber="95">The <a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_" sourcefile="index.md" sourcestartlinenumber="92" sourceendlinenumber="92">BatchAnnotateImages</a>
-method does not throw this exception, but <a href="api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html##Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError" sourcefile="index.md" sourcestartlinenumber="93" sourceendlinenumber="93">BatchAnnotateImagesResponse.ThrowOnAnyError()</a> checks
+</code></pre><p>The <a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_">BatchAnnotateImages</a>
+method does not throw this exception, but <a href="api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html##Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError">BatchAnnotateImagesResponse.ThrowOnAnyError()</a> checks
 all responses are successful, throwing an AggregateException if there are any errors.
 The AggregateException contains one AnnotateImageException for each response that contains an error.</p>
 <pre><code class="lang-cs">Image image = new Image(); // No content or source!
@@ -279,7 +279,6 @@ catch (AggregateException e)
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

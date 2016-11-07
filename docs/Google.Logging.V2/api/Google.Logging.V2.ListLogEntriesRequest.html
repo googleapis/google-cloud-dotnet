@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListLogEntriesRequest
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_ListLogEntriesRequest" data-uid="Google.Logging.V2.ListLogEntriesRequest">Class ListLogEntriesRequest
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The parameters to <code>ListLogEntries</code>.</p>
+              <div class="markdown level0 summary"><p>The parameters to <code>ListLogEntries</code>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,10 +101,11 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Logging_V2_ListLogEntriesRequest_Filter_" data-uid="Google.Logging.V2.ListLogEntriesRequest.Filter*"></a>
               <h4 id="Google_Logging_V2_ListLogEntriesRequest_Filter" data-uid="Google.Logging.V2.ListLogEntriesRequest.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Optional. A filter that chooses which log entries to return.  See <a href="/logging/docs/view/advanced_filters" sourcefile="obj/api/Google.Logging.V2.ListLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Advanced
- Logs Filters</a>.  Only log entries that
- match the filter are returned.  An empty filter matches all log entries.</p>
+              <div class="markdown level1 summary"><p>Optional. A filter that chooses which log entries to return.  See <a href="/logging/docs/view/advanced_filters">Advanced
+Logs Filters</a>.  Only log entries that
+match the filter are returned.  An empty filter matches all log entries.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -126,13 +127,14 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_ListLogEntriesRequest_OrderBy_" data-uid="Google.Logging.V2.ListLogEntriesRequest.OrderBy*"></a>
               <h4 id="Google_Logging_V2_ListLogEntriesRequest_OrderBy" data-uid="Google.Logging.V2.ListLogEntriesRequest.OrderBy">OrderBy</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> Optional. How the results should be sorted.  Presently, the only permitted
- values are <code>&quot;timestamp asc&quot;</code> (default) and <code>&quot;timestamp desc&quot;</code>. The first
- option returns entries in order of increasing values of
- <code>LogEntry.timestamp</code> (oldest first), and the second option returns entries
- in order of decreasing timestamps (newest first).  Entries with equal
- timestamps are returned in order of <code>LogEntry.insertId</code>.</p>
+              <div class="markdown level1 summary"><p>Optional. How the results should be sorted.  Presently, the only permitted
+values are <code>&quot;timestamp asc&quot;</code> (default) and <code>&quot;timestamp desc&quot;</code>. The first
+option returns entries in order of increasing values of
+<code>LogEntry.timestamp</code> (oldest first), and the second option returns entries
+in order of decreasing timestamps (newest first).  Entries with equal
+timestamps are returned in order of <code>LogEntry.insertId</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -154,10 +156,11 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_ListLogEntriesRequest_PageSize_" data-uid="Google.Logging.V2.ListLogEntriesRequest.PageSize*"></a>
               <h4 id="Google_Logging_V2_ListLogEntriesRequest_PageSize" data-uid="Google.Logging.V2.ListLogEntriesRequest.PageSize">PageSize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Optional. The maximum number of results to return from this request.
- Non-positive values are ignored.  The presence of <code>nextPageToken</code> in the
- response indicates that more results might be available.</p>
+              <div class="markdown level1 summary"><p>Optional. The maximum number of results to return from this request.
+Non-positive values are ignored.  The presence of <code>nextPageToken</code> in the
+response indicates that more results might be available.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -181,11 +184,12 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Api.Gax.Grpc.IPageRequest.html#Google_Api_Gax_Grpc_IPageRequest_PageSize">IPageRequest.PageSize</a></div>
+              <a id="Google_Logging_V2_ListLogEntriesRequest_PageToken_" data-uid="Google.Logging.V2.ListLogEntriesRequest.PageToken*"></a>
               <h4 id="Google_Logging_V2_ListLogEntriesRequest_PageToken" data-uid="Google.Logging.V2.ListLogEntriesRequest.PageToken">PageToken</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Optional. If present, then retrieve the next batch of results from the
- preceding call to this method.  <code>pageToken</code> must be the value of
- <code>nextPageToken</code> from the previous response.  The values of other method
- parameters should be identical to those in the previous call.</p>
+              <div class="markdown level1 summary"><p>Optional. If present, then retrieve the next batch of results from the
+preceding call to this method.  <code>pageToken</code> must be the value of
+<code>nextPageToken</code> from the previous response.  The values of other method
+parameters should be identical to those in the previous call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -209,12 +213,13 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Api.Gax.Grpc.IPageRequest.html#Google_Api_Gax_Grpc_IPageRequest_PageToken">IPageRequest.PageToken</a></div>
+              <a id="Google_Logging_V2_ListLogEntriesRequest_ProjectIds_" data-uid="Google.Logging.V2.ListLogEntriesRequest.ProjectIds*"></a>
               <h4 id="Google_Logging_V2_ListLogEntriesRequest_ProjectIds" data-uid="Google.Logging.V2.ListLogEntriesRequest.ProjectIds">ProjectIds</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Deprecated. One or more project identifiers or project numbers from which
- to retrieve log entries.  Examples: <code>&quot;my-project-1A&quot;</code>, <code>&quot;1234567890&quot;</code>. If
- present, these project identifiers are converted to resource format and
- added to the list of resources in <code>resourceNames</code>. Callers should use
- <code>resourceNames</code> rather than this parameter.</p>
+              <div class="markdown level1 summary"><p>Deprecated. One or more project identifiers or project numbers from which
+to retrieve log entries.  Examples: <code>&quot;my-project-1A&quot;</code>, <code>&quot;1234567890&quot;</code>. If
+present, these project identifiers are converted to resource format and
+added to the list of resources in <code>resourceNames</code>. Callers should use
+<code>resourceNames</code> rather than this parameter.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -231,15 +236,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_ListLogEntriesRequest_ResourceNames_" data-uid="Google.Logging.V2.ListLogEntriesRequest.ResourceNames*"></a>
               <h4 id="Google_Logging_V2_ListLogEntriesRequest_ResourceNames" data-uid="Google.Logging.V2.ListLogEntriesRequest.ResourceNames">ResourceNames</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ListLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Optional. One or more cloud resources from which to retrieve log entries.
- Example: <code>&quot;projects/my-project-1A&quot;</code>, <code>&quot;projects/1234567890&quot;</code>.  Projects
- listed in <code>projectIds</code> are added to this list.</p>
+              <div class="markdown level1 summary"><p>Optional. One or more cloud resources from which to retrieve log entries.
+Example: <code>&quot;projects/my-project-1A&quot;</code>, <code>&quot;projects/1234567890&quot;</code>.  Projects
+listed in <code>projectIds</code> are added to this list.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -256,7 +262,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -289,7 +295,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WriteLogEntriesRequest
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_WriteLogEntriesRequest" data-uid="Google.Logging.V2.WriteLogEntriesRequest">Class WriteLogEntriesRequest
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The parameters to WriteLogEntries.</p>
+              <div class="markdown level0 summary"><p>The parameters to WriteLogEntries.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,15 +101,16 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Logging_V2_WriteLogEntriesRequest_Entries_" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Entries*"></a>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_Entries" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Entries">Entries</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Required. The log entries to write. Values supplied for the fields
- <code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
- added to those log entries that do not provide their own values for the
- fields.</p>
-<p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="7" sourceendlinenumber="10"> To improve throughput and to avoid exceeding the
- <a href="/logging/quota-policy" sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="8" sourceendlinenumber="8">quota limit</a> for calls to <code>entries.write</code>,
- you should write multiple log entries at once rather than
- calling this method for each individual log entry.</p>
+              <div class="markdown level1 summary"><p>Required. The log entries to write. Values supplied for the fields
+<code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
+added to those log entries that do not provide their own values for the
+fields.</p>
+<p>To improve throughput and to avoid exceeding the
+<a href="/logging/quota-policy">quota limit</a> for calls to <code>entries.write</code>,
+you should write multiple log entries at once rather than
+calling this method for each individual log entry.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -126,16 +127,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Logging.V2.LogEntry.html#Google_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_WriteLogEntriesRequest_Labels_" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Labels*"></a>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_Labels" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Labels">Labels</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Optional. Default labels that are added to the <code>labels</code> field of all log
- entries in <code>entries</code>. If a log entry already has a label with the same key
- as a label in this parameter, then the log entry&#39;s label is not changed.
- See [LogEntry][google.logging.v2.LogEntry].</p>
+              <div class="markdown level1 summary"><p>Optional. Default labels that are added to the <code>labels</code> field of all log
+entries in <code>entries</code>. If a log entry already has a label with the same key
+as a label in this parameter, then the log entry&#39;s label is not changed.
+See [LogEntry][google.logging.v2.LogEntry].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -152,16 +154,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html#Google_Protobuf_Collections_MapField_2">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_WriteLogEntriesRequest_LogName_" data-uid="Google.Logging.V2.WriteLogEntriesRequest.LogName*"></a>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_LogName" data-uid="Google.Logging.V2.WriteLogEntriesRequest.LogName">LogName</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Optional. A default log resource name that is assigned to all log entries
- in <code>entries</code> that do not specify a value for <code>log_name</code>.  Example:
- <code>&quot;projects/my-project/logs/syslog&quot;</code>.  See
- [LogEntry][google.logging.v2.LogEntry].</p>
+              <div class="markdown level1 summary"><p>Optional. A default log resource name that is assigned to all log entries
+in <code>entries</code> that do not specify a value for <code>log_name</code>.  Example:
+<code>&quot;projects/my-project/logs/syslog&quot;</code>.  See
+[LogEntry][google.logging.v2.LogEntry].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -183,12 +186,13 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_WriteLogEntriesRequest_PartialSuccess_" data-uid="Google.Logging.V2.WriteLogEntriesRequest.PartialSuccess*"></a>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_PartialSuccess" data-uid="Google.Logging.V2.WriteLogEntriesRequest.PartialSuccess">PartialSuccess</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Optional. Whether valid entries should be written even if some other
- entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
- entry is not written, the response status will be the error associated
- with one of the failed entries and include error details in the form of
- WriteLogEntriesPartialErrors.</p>
+              <div class="markdown level1 summary"><p>Optional. Whether valid entries should be written even if some other
+entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
+entry is not written, the response status will be the error associated
+with one of the failed entries and include error details in the form of
+WriteLogEntriesPartialErrors.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -210,13 +214,14 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_WriteLogEntriesRequest_Resource_" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Resource*"></a>
               <h4 id="Google_Logging_V2_WriteLogEntriesRequest_Resource" data-uid="Google.Logging.V2.WriteLogEntriesRequest.Resource">Resource</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Optional. A default monitored resource object that is assigned to all log
- entries in <code>entries</code> that do not specify a value for <code>resource</code>. Example:</p>
-<pre sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="5" sourceendlinenumber="7"><code> { &quot;type&quot;: &quot;gce_instance&quot;,
-   &quot;labels&quot;: {
-     &quot;zone&quot;: &quot;us-central1-a&quot;, &quot;instance_id&quot;: &quot;00000000000000000000&quot; }}
-</code></pre><p sourcefile="obj/api/Google.Logging.V2.WriteLogEntriesRequest.yml" sourcestartlinenumber="9" sourceendlinenumber="9"> See [LogEntry][google.logging.v2.LogEntry].</p>
+              <div class="markdown level1 summary"><p>Optional. A default monitored resource object that is assigned to all log
+entries in <code>entries</code> that do not specify a value for <code>resource</code>. Example:</p>
+<p>{ &quot;type&quot;: &quot;gce_instance&quot;,
+ &quot;labels&quot;: {
+   &quot;zone&quot;: &quot;us-central1-a&quot;, &quot;instance_id&quot;: &quot;00000000000000000000&quot; }}</p>
+<p>See [LogEntry][google.logging.v2.LogEntry].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -266,7 +271,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

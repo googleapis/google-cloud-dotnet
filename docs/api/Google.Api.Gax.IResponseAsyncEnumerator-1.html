@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IResponseAsyncEnumerator&lt;T&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,8 +70,8 @@
               
               <h1 id="Google_Api_Gax_IResponseAsyncEnumerator_1" data-uid="Google.Api.Gax.IResponseAsyncEnumerator`1">Interface IResponseAsyncEnumerator&lt;T&gt;
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.IResponseAsyncEnumerator-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">An asynchronous iterator over a sequence of pages of resources. This is similar to a regular</p>
-<p sourcefile="obj/api/Google.Api.Gax.IResponseAsyncEnumerator-1.yml" sourcestartlinenumber="3" sourceendlinenumber="4"><span class="xref">IAsyncEnumerator&lt;T&gt;</span>, except it allows the size of the requested page to
+              <div class="markdown level0 summary"><p>An asynchronous iterator over a sequence of pages of resources. This is similar to a regular</p>
+<p><span class="xref">System.Collections.Generic.IAsyncEnumerator&lt;T&gt;</span>, except it allows the size of the requested page to
 be modified along the way.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -110,8 +110,9 @@ be modified along the way.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_IResponseAsyncEnumerator_1_MoveNext_" data-uid="Google.Api.Gax.IResponseAsyncEnumerator`1.MoveNext*"></a>
               <h4 id="Google_Api_Gax_IResponseAsyncEnumerator_1_MoveNext_System_Int32_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.IResponseAsyncEnumerator`1.MoveNext(System.Int32,System.Threading.CancellationToken)">MoveNext(Int32, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.IResponseAsyncEnumerator-1.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Advance to the next page in the sequence, requesting the specified page size.</p>
+              <div class="markdown level1 summary"><p>Advance to the next page in the sequence, requesting the specified page size.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -131,13 +132,13 @@ be modified along the way.</p>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.IResponseAsyncEnumerator-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The number of resources to include in the next page.</p>
+                    <td><p>The number of resources to include in the next page.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.IResponseAsyncEnumerator-1.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A cancellation token for the asynchronous operation.</p>
+                    <td><p>A cancellation token for the asynchronous operation.</p>
 </td>
                   </tr>
                 </tbody>
@@ -152,8 +153,8 @@ be modified along the way.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.IResponseAsyncEnumerator-1.yml" sourcestartlinenumber="1" sourceendlinenumber="2">A task with a result of <code>true</code> if the enumerator was successfully advanced to the next element or
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td><p>A task with a result of <code>true</code> if the enumerator was successfully advanced to the next element or
 <code>false</code> if the enumerator has passed the end of the collection.</p>
 </td>
                   </tr>
@@ -187,7 +188,6 @@ be modified along the way.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

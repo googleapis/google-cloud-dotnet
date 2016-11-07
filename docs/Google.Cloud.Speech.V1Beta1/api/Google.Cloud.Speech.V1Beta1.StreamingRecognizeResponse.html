@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StreamingRecognizeResponse
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,63 +70,65 @@
               
               <h1 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse">Class StreamingRecognizeResponse
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> <code>StreamingRecognizeResponse</code> is the only message returned to the client by
- <code>StreamingRecognize</code>. A series of one or more <code>StreamingRecognizeResponse</code>
- messages are streamed back to the client.</p>
-<p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="6" sourceendlinenumber="7"> Here&#39;s an example of a series of ten <code>StreamingRecognizeResponse</code>s that might
- be returned while processing audio:</p>
-<ol sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="9" sourceendlinenumber="58">
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="9" sourceendlinenumber="9"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="9" sourceendlinenumber="9">endpointer_type: START_OF_SPEECH</p>
+              <div class="markdown level0 summary"><p><code>StreamingRecognizeResponse</code> is the only message returned to the client by
+<code>StreamingRecognize</code>. A series of one or more <code>StreamingRecognizeResponse</code>
+messages are streamed back to the client.</p>
+<p>Here&#39;s an example of a series of ten <code>StreamingRecognizeResponse</code>s that might
+be returned while processing audio:</p>
+<ol>
+<li><p>endpointer_type: START_OF_SPEECH</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="11" sourceendlinenumber="12"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="11" sourceendlinenumber="12">results { alternatives { transcript: &quot;tube&quot; } stability: 0.01 }
+<li><p>results { alternatives { transcript: &quot;tube&quot; } stability: 0.01 }
 result_index: 0</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="14" sourceendlinenumber="15"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="14" sourceendlinenumber="15">results { alternatives { transcript: &quot;to be a&quot; } stability: 0.01 }
+<li><p>results { alternatives { transcript: &quot;to be a&quot; } stability: 0.01 }
 result_index: 0</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="17" sourceendlinenumber="19"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="17" sourceendlinenumber="19">results { alternatives { transcript: &quot;to be&quot; } stability: 0.9 }
+<li><p>results { alternatives { transcript: &quot;to be&quot; } stability: 0.9 }
 results { alternatives { transcript: &quot; or not to be&quot; } stability: 0.01 }
 result_index: 0</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="21" sourceendlinenumber="25"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="21" sourceendlinenumber="21">results { alternatives { transcript: &quot;to be or not to be&quot;</p>
-<pre sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="22" sourceendlinenumber="24"><code>                     confidence: 0.92 }
-      alternatives { transcript: &quot;to bee or not to bee&quot; }
-      is_final: true }
-</code></pre><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="21" sourceendlinenumber="21">result_index: 0</p>
+<li><p>results { alternatives { transcript: &quot;to be or not to be&quot;</p>
+<pre><code>                confidence: 0.92 }
+ alternatives { transcript: &quot;to bee or not to bee&quot; }
+ is_final: true }
+</code></pre><p>result_index: 0</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="27" sourceendlinenumber="28"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="27" sourceendlinenumber="28">results { alternatives { transcript: &quot; that&#39;s&quot; } stability: 0.01 }
+<li><p>results { alternatives { transcript: &quot; that&#39;s&quot; } stability: 0.01 }
 result_index: 1</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="30" sourceendlinenumber="32"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="30" sourceendlinenumber="32">results { alternatives { transcript: &quot; that is&quot; } stability: 0.9 }
+<li><p>results { alternatives { transcript: &quot; that is&quot; } stability: 0.9 }
 results { alternatives { transcript: &quot; the question&quot; } stability: 0.01 }
 result_index: 1</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="34" sourceendlinenumber="34"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="34" sourceendlinenumber="34">endpointer_type: END_OF_SPEECH</p>
+<li><p>endpointer_type: END_OF_SPEECH</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="36" sourceendlinenumber="40"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="36" sourceendlinenumber="36">results { alternatives { transcript: &quot; that is the question&quot;</p>
-<pre sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="37" sourceendlinenumber="39"><code>                     confidence: 0.98 }
-      alternatives { transcript: &quot; that was the question&quot; }
-      is_final: true }
-</code></pre><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="36" sourceendlinenumber="36">result_index: 1</p>
+<li><p>results { alternatives { transcript: &quot; that is the question&quot;</p>
+<pre><code>                confidence: 0.98 }
+ alternatives { transcript: &quot; that was the question&quot; }
+ is_final: true }
+</code></pre><p>result_index: 1</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="42" sourceendlinenumber="44"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="42" sourceendlinenumber="42">endpointer_type: END_OF_AUDIO</p>
-<p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="42" sourceendlinenumber="42">Notes:</p>
+<li><p>endpointer_type: END_OF_AUDIO</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="46" sourceendlinenumber="48"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="46" sourceendlinenumber="48">Only two of the above responses #5 and #9 contain final results, they are
+</ol>
+<p>Notes:</p>
+<ul>
+<li><p>Only two of the above responses #5 and #9 contain final results, they are
 indicated by <code>is_final: true</code>. Concatenating these together generates the
 full transcript: &quot;to be or not to be that is the question&quot;.</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="50" sourceendlinenumber="53"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="50" sourceendlinenumber="53">The others contain interim <code>results</code>. #4 and #7 contain two interim
+<li><p>The others contain interim <code>results</code>. #4 and #7 contain two interim
 <code>results</code>, the first portion has a high stability and is less likely to
 change, the second portion has a low stability and is very likely to
 change. A UI designer might choose to show only high stability <code>results</code>.</p>
 </li>
-<li sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="55" sourceendlinenumber="58"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="55" sourceendlinenumber="58">The <code>result_index</code> indicates the portion of audio that has had final
+<li><p>The <code>result_index</code> indicates the portion of audio that has had final
 results returned, and is no longer being processed. For example, the
 <code>results</code> in #6 and later correspond to the portion of audio after
 &quot;to be or not to be&quot;.</p>
 </li>
-</ol>
+</ul>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -157,8 +159,9 @@ results returned, and is no longer being processed. For example, the
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_EndpointerType_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.EndpointerType*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_EndpointerType" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.EndpointerType">EndpointerType</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> [Output-only] Indicates the type of endpointer event.</p>
+              <div class="markdown level1 summary"><p>[Output-only] Indicates the type of endpointer event.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -175,14 +178,15 @@ results returned, and is no longer being processed. For example, the
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_Error_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Error*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_Error" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Error">Error</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> [Output-only] If set, returns a [google.rpc.Status][] message that
- specifies the error for the operation.</p>
+              <div class="markdown level1 summary"><p>[Output-only] If set, returns a [google.rpc.Status][] message that
+specifies the error for the operation.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -199,15 +203,16 @@ results returned, and is no longer being processed. For example, the
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Status.html#Google_Rpc_Status">Status</a></td>
+                    <td><span class="xref">Google.Rpc.Status</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_ResultIndex_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.ResultIndex*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_ResultIndex" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.ResultIndex">ResultIndex</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> [Output-only] Indicates the lowest index in the <code>results</code> array that has
- changed. The repeated <code>StreamingRecognitionResult</code> results overwrite past
- results at this index and higher.</p>
+              <div class="markdown level1 summary"><p>[Output-only] Indicates the lowest index in the <code>results</code> array that has
+changed. The repeated <code>StreamingRecognitionResult</code> results overwrite past
+results at this index and higher.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -229,11 +234,12 @@ results returned, and is no longer being processed. For example, the
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_Results_" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Results*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse_Results" data-uid="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Results">Results</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> [Output-only] This repeated list contains zero or more results that
- correspond to consecutive portions of the audio currently being processed.
- It contains zero or one <code>is_final=true</code> result (the newly settled portion),
- followed by zero or more <code>is_final=false</code> results.</p>
+              <div class="markdown level1 summary"><p>[Output-only] This repeated list contains zero or more results that
+correspond to consecutive portions of the audio currently being processed.
+It contains zero or one <code>is_final=true</code> result (the newly settled portion),
+followed by zero or more <code>is_final=false</code> results.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -250,7 +256,7 @@ results returned, and is no longer being processed. For example, the
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult.html#Google_Cloud_Speech_V1Beta1_StreamingRecognitionResult">StreamingRecognitionResult</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult.html#Google_Cloud_Speech_V1Beta1_StreamingRecognitionResult">StreamingRecognitionResult</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -283,7 +289,6 @@ results returned, and is no longer being processed. For example, the
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

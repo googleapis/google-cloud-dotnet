@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConfigChange
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,11 +70,11 @@
               
               <h1 id="Google_Api_ConfigChange" data-uid="Google.Api.ConfigChange">Class ConfigChange
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Output generated from semantically comparing two versions of a service
- configuration.</p>
-<p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="5" sourceendlinenumber="7"> Includes detailed information about a field that have changed with
- applicable advice about potential consequences for the change, such as
- backwards-incompatibility.</p>
+              <div class="markdown level0 summary"><p>Output generated from semantically comparing two versions of a service
+configuration.</p>
+<p>Includes detailed information about a field that have changed with
+applicable advice about potential consequences for the change, such as
+backwards-incompatibility.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -99,6 +99,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_ConfigChange__ctor_" data-uid="Google.Api.ConfigChange.#ctor*"></a>
               <h4 id="Google_Api_ConfigChange__ctor" data-uid="Google.Api.ConfigChange.#ctor">ConfigChange()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -106,6 +107,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public ConfigChange()</code></pre>
               </div>
+              <a id="Google_Api_ConfigChange__ctor_" data-uid="Google.Api.ConfigChange.#ctor*"></a>
               <h4 id="Google_Api_ConfigChange__ctor_Google_Api_ConfigChange_" data-uid="Google.Api.ConfigChange.#ctor(Google.Api.ConfigChange)">ConfigChange(ConfigChange)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -132,9 +134,10 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_ConfigChange_Advices_" data-uid="Google.Api.ConfigChange.Advices*"></a>
               <h4 id="Google_Api_ConfigChange_Advices" data-uid="Google.Api.ConfigChange.Advices">Advices</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Collection of advice provided for this change, useful for determining the
- possible impact of this change.</p>
+              <div class="markdown level1 summary"><p>Collection of advice provided for this change, useful for determining the
+possible impact of this change.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -151,13 +154,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.Advice.html#Google_Api_Advice">Advice</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.Advice.html#Google_Api_Advice">Advice</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_ConfigChange_ChangeType_" data-uid="Google.Api.ConfigChange.ChangeType*"></a>
               <h4 id="Google_Api_ConfigChange_ChangeType" data-uid="Google.Api.ConfigChange.ChangeType">ChangeType</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The type for this change, either ADDED, REMOVED, or MODIFIED.</p>
+              <div class="markdown level1 summary"><p>The type for this change, either ADDED, REMOVED, or MODIFIED.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -179,17 +183,18 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_ConfigChange_Element_" data-uid="Google.Api.ConfigChange.Element*"></a>
               <h4 id="Google_Api_ConfigChange_Element" data-uid="Google.Api.ConfigChange.Element">Element</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> Object hierarchy path to the change, with levels separated by a &#39;.&#39;
- character. For repeated fields, an applicable unique identifier field is
- used for the index (usually selector, name, or id). For maps, the term
- &#39;key&#39; is used. If the field has no unique identifier, the numeric index
- is used.
- Examples:</p>
-<ul sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="8" sourceendlinenumber="10">
-<li sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="8" sourceendlinenumber="8">visibility.rules[selector==&quot;google.LibraryService.CreateBook&quot;].restriction</li>
-<li sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="9" sourceendlinenumber="9">quota.metric_rules[selector==&quot;google&quot;].metric_costs[key==&quot;reads&quot;].value</li>
-<li sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="10" sourceendlinenumber="10">logging.producer_destinations[0]</li>
+              <div class="markdown level1 summary"><p>Object hierarchy path to the change, with levels separated by a &#39;.&#39;
+character. For repeated fields, an applicable unique identifier field is
+used for the index (usually selector, name, or id). For maps, the term
+&#39;key&#39; is used. If the field has no unique identifier, the numeric index
+is used.
+Examples:</p>
+<ul>
+<li>visibility.rules[selector==&quot;google.LibraryService.CreateBook&quot;].restriction</li>
+<li>quota.metric_rules[selector==&quot;google&quot;].metric_costs[key==&quot;reads&quot;].value</li>
+<li>logging.producer_destinations[0]</li>
 </ul>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -212,9 +217,10 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_ConfigChange_NewValue_" data-uid="Google.Api.ConfigChange.NewValue*"></a>
               <h4 id="Google_Api_ConfigChange_NewValue" data-uid="Google.Api.ConfigChange.NewValue">NewValue</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Value of the changed object in the new Service configuration,
- in JSON format. This field will not be populated if ChangeType == REMOVED.</p>
+              <div class="markdown level1 summary"><p>Value of the changed object in the new Service configuration,
+in JSON format. This field will not be populated if ChangeType == REMOVED.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -236,9 +242,10 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_ConfigChange_OldValue_" data-uid="Google.Api.ConfigChange.OldValue*"></a>
               <h4 id="Google_Api_ConfigChange_OldValue" data-uid="Google.Api.ConfigChange.OldValue">OldValue</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.ConfigChange.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Value of the changed object in the old Service configuration,
- in JSON format. This field will not be populated if ChangeType == ADDED.</p>
+              <div class="markdown level1 summary"><p>Value of the changed object in the old Service configuration,
+in JSON format. This field will not be populated if ChangeType == ADDED.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -262,6 +269,7 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_ConfigChange_CalculateSize_" data-uid="Google.Api.ConfigChange.CalculateSize*"></a>
               <h4 id="Google_Api_ConfigChange_CalculateSize" data-uid="Google.Api.ConfigChange.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -285,7 +293,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_ConfigChange_Clone_" data-uid="Google.Api.ConfigChange.Clone*"></a>
               <h4 id="Google_Api_ConfigChange_Clone" data-uid="Google.Api.ConfigChange.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -309,7 +318,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;ConfigChange&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_ConfigChange_GetHashCode_" data-uid="Google.Api.ConfigChange.GetHashCode*"></a>
               <h4 id="Google_Api_ConfigChange_GetHashCode" data-uid="Google.Api.ConfigChange.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -334,6 +344,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_ConfigChange_MergeFrom_" data-uid="Google.Api.ConfigChange.MergeFrom*"></a>
               <h4 id="Google_Api_ConfigChange_MergeFrom_Google_Api_ConfigChange_" data-uid="Google.Api.ConfigChange.MergeFrom(Google.Api.ConfigChange)">MergeFrom(ConfigChange)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -359,7 +370,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;ConfigChange&gt;.MergeFrom(ConfigChange)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_ConfigChange_MergeFrom_" data-uid="Google.Api.ConfigChange.MergeFrom*"></a>
               <h4 id="Google_Api_ConfigChange_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.ConfigChange.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -378,14 +390,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_ConfigChange_ToString_" data-uid="Google.Api.ConfigChange.ToString*"></a>
               <h4 id="Google_Api_ConfigChange_ToString" data-uid="Google.Api.ConfigChange.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -410,6 +423,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_ConfigChange_WriteTo_" data-uid="Google.Api.ConfigChange.WriteTo*"></a>
               <h4 id="Google_Api_ConfigChange_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.ConfigChange.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -428,14 +442,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -464,7 +478,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

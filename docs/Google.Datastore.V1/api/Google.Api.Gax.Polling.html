@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Polling
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_Polling" data-uid="Google.Api.Gax.Polling">Class Polling
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Helper methods for polling scenarios.</p>
+              <div class="markdown level0 summary"><p>Helper methods for polling scenarios.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,8 +101,9 @@
               </div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_Polling_PollRepeatedly_" data-uid="Google.Api.Gax.Polling.PollRepeatedly*"></a>
               <h4 id="Google_Api_Gax_Polling_PollRepeatedly__1_System_Func_System_Nullable_System_DateTime____0__System_Predicate___0__Google_Api_Gax_IClock_Google_Api_Gax_IScheduler_Google_Api_Gax_PollSettings_" data-uid="Google.Api.Gax.Polling.PollRepeatedly``1(System.Func{System.Nullable{System.DateTime},``0},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings)">PollRepeatedly&lt;TResponse&gt;(Func&lt;Nullable&lt;DateTime&gt;, TResponse&gt;, Predicate&lt;TResponse&gt;, IClock, IScheduler, PollSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Repeatedly calls the specified polling action, delaying between calls,
+              <div class="markdown level1 summary"><p>Repeatedly calls the specified polling action, delaying between calls,
 until a given condition is met in the response.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -121,36 +122,36 @@ until a given condition is met in the response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;, TResponse&gt;</td>
+                    <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;, TResponse&gt;</td>
                     <td><em>pollAction</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The poll action, typically performing an RPC. The value passed to the
+                    <td><p>The poll action, typically performing an RPC. The value passed to the
 action is the overall deadline, so that the RPC settings can be adjusted accordingly. A null value
 indicates no deadline.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Predicate</span>&lt;TResponse&gt;</td>
+                    <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TResponse&gt;</td>
                     <td><em>completionPredicate</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The test for whether to return the response (<code>true</code>) or continue
+                    <td><p>The test for whether to return the response (<code>true</code>) or continue
 polling (<code>false</code>). Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.IClock.html#Google_Api_Gax_IClock">IClock</a></td>
                     <td><em>clock</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The clock to use for determining deadlines. Must not be null.</p>
+                    <td><p>The clock to use for determining deadlines. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler">IScheduler</a></td>
                     <td><em>scheduler</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The scheduler to use for delaying between calls. Must not be null.</p>
+                    <td><p>The scheduler to use for delaying between calls. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
                     <td><em>pollSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The poll settings, controlling timeouts, call settings and delays.</p>
+                    <td><p>The poll settings, controlling timeouts, call settings and delays.</p>
 </td>
                   </tr>
                 </tbody>
@@ -166,7 +167,7 @@ polling (<code>false</code>). Must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">TResponse</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The completed response.</p>
+                    <td><p>The completed response.</p>
 </td>
                   </tr>
                 </tbody>
@@ -197,13 +198,14 @@ polling (<code>false</code>). Must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.TimeoutException</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The timeout specified in the poll settings expired.</p>
+                    <td><p>The timeout specified in the poll settings expired.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Polling_PollRepeatedlyAsync_" data-uid="Google.Api.Gax.Polling.PollRepeatedlyAsync*"></a>
               <h4 id="Google_Api_Gax_Polling_PollRepeatedlyAsync__1_System_Func_System_Nullable_System_DateTime__System_Threading_Tasks_Task___0___System_Predicate___0__Google_Api_Gax_IClock_Google_Api_Gax_IScheduler_Google_Api_Gax_PollSettings_" data-uid="Google.Api.Gax.Polling.PollRepeatedlyAsync``1(System.Func{System.Nullable{System.DateTime},System.Threading.Tasks.Task{``0}},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings)">PollRepeatedlyAsync&lt;TResponse&gt;(Func&lt;Nullable&lt;DateTime&gt;, Task&lt;TResponse&gt;&gt;, Predicate&lt;TResponse&gt;, IClock, IScheduler, PollSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Asynchronously repeatedly calls the specified polling action, delaying between calls,
+              <div class="markdown level1 summary"><p>Asynchronously repeatedly calls the specified polling action, delaying between calls,
 until a given condition is met in the response.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -222,36 +224,36 @@ until a given condition is met in the response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;, <span class="xref">System.Threading.Tasks.Task</span>&lt;TResponse&gt;&gt;</td>
+                    <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;, <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;TResponse&gt;&gt;</td>
                     <td><em>pollAction</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The poll action, typically performing an RPC. The value passed to the
+                    <td><p>The poll action, typically performing an RPC. The value passed to the
 action is the overall deadline, so that the RPC settings can be adjusted accordingly. A null
 value indicates no deadline.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Predicate</span>&lt;TResponse&gt;</td>
+                    <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TResponse&gt;</td>
                     <td><em>completionPredicate</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The test for whether to return the response (<code>true</code>) or continue
+                    <td><p>The test for whether to return the response (<code>true</code>) or continue
 polling (<code>false</code>). Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.IClock.html#Google_Api_Gax_IClock">IClock</a></td>
                     <td><em>clock</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The clock to use for determining deadlines. Must not be null.</p>
+                    <td><p>The clock to use for determining deadlines. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler">IScheduler</a></td>
                     <td><em>scheduler</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The scheduler to use for delaying between calls. Must not be null.</p>
+                    <td><p>The scheduler to use for delaying between calls. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
                     <td><em>pollSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The poll settings, controlling timeouts, call settings and delays.</p>
+                    <td><p>The poll settings, controlling timeouts, call settings and delays.</p>
 </td>
                   </tr>
                 </tbody>
@@ -266,8 +268,8 @@ polling (<code>false</code>). Must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TResponse&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Polling.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation. The result of the task will be the completed response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;TResponse&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task will be the completed response.</p>
 </td>
                   </tr>
                 </tbody>
@@ -315,7 +317,6 @@ polling (<code>false</code>). Must not be null.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HttpRule
    | Google.Devtools.Cloudtrace.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,34 +70,34 @@
               
               <h1 id="Google_Api_HttpRule" data-uid="Google.Api.HttpRule">Class HttpRule
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> <code>HttpRule</code> defines the mapping of an RPC method to one or more HTTP
- REST APIs.  The mapping determines what portions of the request
- message are populated from the path, query parameters, or body of
- the HTTP request.  The mapping is typically specified as an
- <code>google.api.http</code> annotation, see &quot;google/api/annotations.proto&quot;
- for details.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="9" sourceendlinenumber="12"> The mapping consists of a field specifying the path template and
- method kind.  The path template can refer to fields in the request
- message, as in the example below which describes a REST GET
- operation on a resource collection of messages:</p>
-<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="14" sourceendlinenumber="30"><code class="lang-proto"> service Messaging {
-   rpc GetMessage(GetMessageRequest) returns (Message) {
-     option (google.api.http).get = &quot;/v1/messages/{message_id}/{sub.subfield}&quot;;
-   }
- }
- message GetMessageRequest {
-   message SubMessage {
-     string subfield = 1;
-   }
-   string message_id = 1; // mapped to the URL
-   SubMessage sub = 2;    // `sub.subfield` is url-mapped
- }
- message Message {
-   string text = 1; // content of the resource
- }
-</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="32" sourceendlinenumber="33"> This definition enables an automatic, bidrectional mapping of HTTP
- JSON to RPC. Example:</p>
-<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="35" sourceendlinenumber="37">
+              <div class="markdown level0 summary"><p><code>HttpRule</code> defines the mapping of an RPC method to one or more HTTP
+REST APIs.  The mapping determines what portions of the request
+message are populated from the path, query parameters, or body of
+the HTTP request.  The mapping is typically specified as an
+<code>google.api.http</code> annotation, see &quot;google/api/annotations.proto&quot;
+for details.</p>
+<p>The mapping consists of a field specifying the path template and
+method kind.  The path template can refer to fields in the request
+message, as in the example below which describes a REST GET
+operation on a resource collection of messages:</p>
+<pre><code class="lang-proto">service Messaging {
+rpc GetMessage(GetMessageRequest) returns (Message) {
+option (google.api.http).get = &quot;/v1/messages/{message_id}/{sub.subfield}&quot;;
+}
+}
+message GetMessageRequest {
+message SubMessage {
+string subfield = 1;
+}
+string message_id = 1; // mapped to the URL
+SubMessage sub = 2;    // `sub.subfield` is url-mapped
+}
+message Message {
+string text = 1; // content of the resource
+}
+</code></pre><p>This definition enables an automatic, bidrectional mapping of HTTP
+JSON to RPC. Example:</p>
+<table>
 <thead>
 <tr>
 <th>HTTP</th>
@@ -106,27 +106,27 @@
 </thead>
 <tbody>
 <tr>
-<td> <code>GET /v1/messages/123456/foo</code></td>
+<td><code>GET /v1/messages/123456/foo</code></td>
 <td><code>GetMessage(message_id: &quot;123456&quot; sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="39" sourceendlinenumber="41"> In general, not only fields but also field paths can be referenced
- from a path pattern. Fields mapped to the path pattern cannot be
- repeated and must have a primitive (non-message) type.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="43" sourceendlinenumber="45"> Any fields in the request message which are not bound by the path
- pattern automatically become (optional) HTTP query
- parameters. Assume the following definition of the request message:</p>
-<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="47" sourceendlinenumber="56"><code class="lang-proto"> message GetMessageRequest {
-   message SubMessage {
-     string subfield = 1;
-   }
-   string message_id = 1; // mapped to the URL
-   int64 revision = 2;    // becomes a parameter
-   SubMessage sub = 3;    // `sub.subfield` becomes a parameter
- }
-</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="58" sourceendlinenumber="58"> This enables a HTTP JSON to RPC mapping as below:</p>
-<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="60" sourceendlinenumber="62">
+<p>In general, not only fields but also field paths can be referenced
+from a path pattern. Fields mapped to the path pattern cannot be
+repeated and must have a primitive (non-message) type.</p>
+<p>Any fields in the request message which are not bound by the path
+pattern automatically become (optional) HTTP query
+parameters. Assume the following definition of the request message:</p>
+<pre><code class="lang-proto">message GetMessageRequest {
+message SubMessage {
+string subfield = 1;
+}
+string message_id = 1; // mapped to the URL
+int64 revision = 2;    // becomes a parameter
+SubMessage sub = 3;    // `sub.subfield` becomes a parameter
+}
+</code></pre><p>This enables a HTTP JSON to RPC mapping as below:</p>
+<table>
 <thead>
 <tr>
 <th>HTTP</th>
@@ -135,34 +135,34 @@
 </thead>
 <tbody>
 <tr>
-<td> <code>GET /v1/messages/123456?revision=2&amp;amp;sub.subfield=foo</code></td>
+<td><code>GET /v1/messages/123456?revision=2&amp;amp;sub.subfield=foo</code></td>
 <td><code>GetMessage(message_id: &quot;123456&quot; revision: 2 sub: SubMessage(subfield: &quot;foo&quot;))</code></td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="64" sourceendlinenumber="67"> Note that fields which are mapped to HTTP parameters must have a
- primitive type or a repeated primitive type. Message types are not
- allowed. In the case of a repeated type, the parameter can be
- repeated in the URL, as in <code>...?param=A&amp;amp;param=B</code>.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="69" sourceendlinenumber="71"> For HTTP method kinds which allow a request body, the <code>body</code> field
- specifies the mapping. Consider a REST update method on the
- message resource collection:</p>
-<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="73" sourceendlinenumber="86"><code class="lang-proto"> service Messaging {
-   rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
-     option (google.api.http) = {
-       put: &quot;/v1/messages/{message_id}&quot;
-       body: &quot;message&quot;
-     };
-   }
- }
- message UpdateMessageRequest {
-   string message_id = 1; // mapped to the URL
-   Message message = 2;   // mapped to the body
- }
-</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="88" sourceendlinenumber="90"> The following HTTP JSON to RPC mapping is enabled, where the
- representation of the JSON in the request body is determined by
- protos JSON encoding:</p>
-<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="92" sourceendlinenumber="94">
+<p>Note that fields which are mapped to HTTP parameters must have a
+primitive type or a repeated primitive type. Message types are not
+allowed. In the case of a repeated type, the parameter can be
+repeated in the URL, as in <code>...?param=A&amp;amp;param=B</code>.</p>
+<p>For HTTP method kinds which allow a request body, the <code>body</code> field
+specifies the mapping. Consider a REST update method on the
+message resource collection:</p>
+<pre><code class="lang-proto">service Messaging {
+rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
+option (google.api.http) = {
+ put: &quot;/v1/messages/{message_id}&quot;
+ body: &quot;message&quot;
+};
+}
+}
+message UpdateMessageRequest {
+string message_id = 1; // mapped to the URL
+Message message = 2;   // mapped to the body
+}
+</code></pre><p>The following HTTP JSON to RPC mapping is enabled, where the
+representation of the JSON in the request body is determined by
+protos JSON encoding:</p>
+<table>
 <thead>
 <tr>
 <th>HTTP</th>
@@ -171,29 +171,29 @@
 </thead>
 <tbody>
 <tr>
-<td> <code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
+<td><code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
 <td><code>UpdateMessage(message_id: &quot;123456&quot; message { text: &quot;Hi!&quot; })</code></td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="96" sourceendlinenumber="99"> The special name <code>*</code> can be used in the body mapping to define that
- every field not bound by the path template should be mapped to the
- request body.  This enables the following alternative definition of
- the update method:</p>
-<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="101" sourceendlinenumber="114"><code class="lang-proto"> service Messaging {
-   rpc UpdateMessage(Message) returns (Message) {
-     option (google.api.http) = {
-       put: &quot;/v1/messages/{message_id}&quot;
-       body: &quot;*&quot;
-     };
-   }
- }
- message Message {
-   string message_id = 1;
-   string text = 2;
- }
-</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="116" sourceendlinenumber="116"> The following HTTP JSON to RPC mapping is enabled:</p>
-<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="118" sourceendlinenumber="120">
+<p>The special name <code>*</code> can be used in the body mapping to define that
+every field not bound by the path template should be mapped to the
+request body.  This enables the following alternative definition of
+the update method:</p>
+<pre><code class="lang-proto">service Messaging {
+rpc UpdateMessage(Message) returns (Message) {
+option (google.api.http) = {
+ put: &quot;/v1/messages/{message_id}&quot;
+ body: &quot;*&quot;
+};
+}
+}
+message Message {
+string message_id = 1;
+string text = 2;
+}
+</code></pre><p>The following HTTP JSON to RPC mapping is enabled:</p>
+<table>
 <thead>
 <tr>
 <th>HTTP</th>
@@ -202,35 +202,35 @@
 </thead>
 <tbody>
 <tr>
-<td> <code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
+<td><code>PUT /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }</code></td>
 <td><code>UpdateMessage(message_id: &quot;123456&quot; text: &quot;Hi!&quot;)</code></td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="122" sourceendlinenumber="126"> Note that when using <code>*</code> in the body mapping, it is not possible to
- have HTTP parameters, as all fields not bound by the path end in
- the body. This makes this option more rarely used in practice of
- defining REST APIs. The common usage of <code>*</code> is in custom methods
- which don&#39;t use the URL at all for transferring data.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="128" sourceendlinenumber="129"> It is possible to define multiple HTTP methods for one RPC by using
- the <code>additional_bindings</code> option. Example:</p>
-<pre sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="131" sourceendlinenumber="146"><code class="lang-proto"> service Messaging {
-   rpc GetMessage(GetMessageRequest) returns (Message) {
-     option (google.api.http) = {
-       get: &quot;/v1/messages/{message_id}&quot;
-       additional_bindings {
-         get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
-       }
-     };
-   }
+<p>Note that when using <code>*</code> in the body mapping, it is not possible to
+have HTTP parameters, as all fields not bound by the path end in
+the body. This makes this option more rarely used in practice of
+defining REST APIs. The common usage of <code>*</code> is in custom methods
+which don&#39;t use the URL at all for transferring data.</p>
+<p>It is possible to define multiple HTTP methods for one RPC by using
+the <code>additional_bindings</code> option. Example:</p>
+<pre><code class="lang-proto">service Messaging {
+rpc GetMessage(GetMessageRequest) returns (Message) {
+option (google.api.http) = {
+ get: &quot;/v1/messages/{message_id}&quot;
+ additional_bindings {
+   get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
  }
- message GetMessageRequest {
-   string message_id = 1;
-   string user_id = 2;
- }
-</code></pre><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="148" sourceendlinenumber="149"> This enables the following two alternative HTTP JSON to RPC
- mappings:</p>
-<table sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="151" sourceendlinenumber="154">
+};
+}
+}
+message GetMessageRequest {
+string message_id = 1;
+string user_id = 2;
+}
+</code></pre><p>This enables the following two alternative HTTP JSON to RPC
+mappings:</p>
+<table>
 <thead>
 <tr>
 <th>HTTP</th>
@@ -239,55 +239,54 @@
 </thead>
 <tbody>
 <tr>
-<td> <code>GET /v1/messages/123456</code></td>
+<td><code>GET /v1/messages/123456</code></td>
 <td><code>GetMessage(message_id: &quot;123456&quot;)</code></td>
 </tr>
 <tr>
-<td> <code>GET /v1/users/me/messages/123456</code></td>
+<td><code>GET /v1/users/me/messages/123456</code></td>
 <td><code>GetMessage(user_id: &quot;me&quot; message_id: &quot;123456&quot;)</code></td>
 </tr>
 </tbody>
 </table>
-<h1 id="rules-for-http-mapping" sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="156" sourceendlinenumber="156">Rules for HTTP mapping</h1>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="158" sourceendlinenumber="159"> The rules for mapping HTTP path, query parameters, and body fields
- to the request message are as follows:</p>
-<ol sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="161" sourceendlinenumber="202">
-<li sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="161" sourceendlinenumber="162">The <code>body</code> field specifies either <code>*</code> or a field path, or is
+<h1 id="rules-for-http-mapping">Rules for HTTP mapping</h1>
+<p>The rules for mapping HTTP path, query parameters, and body fields
+to the request message are as follows:</p>
+<ol>
+<li>The <code>body</code> field specifies either <code>*</code> or a field path, or is
 omitted. If omitted, it assumes there is no HTTP body.</li>
-<li sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="163" sourceendlinenumber="168">Leaf fields (recursive expansion of nested messages in the
+<li>Leaf fields (recursive expansion of nested messages in the
 request) can be classified into three types:
- (a) Matched in the URL template.
- (b) Covered by body (if body is <code>*</code>, everything except (a) fields;
-     else everything under the body field)
- (c) All other fields.</li>
-<li sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="169" sourceendlinenumber="169">URL query parameters found in the HTTP request are mapped to (c) fields.</li>
-<li sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="202"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="170">Any body sent with an HTTP request can contain only (b) fields.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="170">The syntax of the path template is as follows:</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="175"> Template = &quot;/&quot; Segments [ Verb ] ;
- Segments = Segment { &quot;/&quot; Segment } ;
- Segment  = &quot;<em>&quot; | &quot;</em>*&quot; | LITERAL | Variable ;
- Variable = &quot;{&quot; FieldPath [ &quot;=&quot; Segments ] &quot;}&quot; ;
- FieldPath = IDENT { &quot;.&quot; IDENT } ;
- Verb     = &quot;:&quot; LITERAL ;</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="172">The syntax <code>*</code> matches a single path segment. It follows the semantics of
-<a href="https://tools.ietf.org/html/rfc6570" sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="171" sourceendlinenumber="171">RFC 6570</a> Section 3.2.2 Simple String
+(a) Matched in the URL template.
+(b) Covered by body (if body is <code>*</code>, everything except (a) fields;
+else everything under the body field)
+(c) All other fields.</li>
+<li>URL query parameters found in the HTTP request are mapped to (c) fields.</li>
+<li>Any body sent with an HTTP request can contain only (b) fields.</li>
+</ol>
+<p>The syntax of the path template is as follows:</p>
+<p>Template = &quot;/&quot; Segments [ Verb ] ;
+Segments = Segment { &quot;/&quot; Segment } ;
+Segment  = &quot;<em>&quot; | &quot;</em>*&quot; | LITERAL | Variable ;
+Variable = &quot;{&quot; FieldPath [ &quot;=&quot; Segments ] &quot;}&quot; ;
+FieldPath = IDENT { &quot;.&quot; IDENT } ;
+Verb     = &quot;:&quot; LITERAL ;</p>
+<p>The syntax <code>*</code> matches a single path segment. It follows the semantics of
+<a href="https://tools.ietf.org/html/rfc6570">RFC 6570</a> Section 3.2.2 Simple String
 Expansion.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="172">The syntax <code>**</code> matches zero or more path segments. It follows the semantics
-of <a href="https://tools.ietf.org/html/rfc6570" sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="171" sourceendlinenumber="171">RFC 6570</a> Section 3.2.3 Reserved
+<p>The syntax <code>**</code> matches zero or more path segments. It follows the semantics
+of <a href="https://tools.ietf.org/html/rfc6570">RFC 6570</a> Section 3.2.3 Reserved
 Expansion.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="170">The syntax <code>LITERAL</code> matches literal text in the URL path.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="173">The syntax <code>Variable</code> matches the entire path as specified by its template;
+<p>The syntax <code>LITERAL</code> matches literal text in the URL path.</p>
+<p>The syntax <code>Variable</code> matches the entire path as specified by its template;
 this nested template must not contain further variables. If a variable
 matches a single path segment, its template may be omitted, e.g. <code>{var}</code>
 is equivalent to <code>{var=*}</code>.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="171">NOTE: the field paths in variables and in the <code>body</code> must not refer to
+<p>NOTE: the field paths in variables and in the <code>body</code> must not refer to
 repeated fields or map fields.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="170" sourceendlinenumber="173">Use CustomHttpPattern to specify any HTTP method that is not included in the
+<p>Use CustomHttpPattern to specify any HTTP method that is not included in the
 <code>pattern</code> field, such as HEAD, or &quot;*&quot; to leave the HTTP method unspecified for
 a given URL path rule. The wild-card rule is useful for services that provide
 content to Web (HTML) clients.</p>
-</li>
-</ol>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -312,6 +311,7 @@ content to Web (HTML) clients.</p>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_HttpRule__ctor_" data-uid="Google.Api.HttpRule.#ctor*"></a>
               <h4 id="Google_Api_HttpRule__ctor" data-uid="Google.Api.HttpRule.#ctor">HttpRule()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -319,6 +319,7 @@ content to Web (HTML) clients.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public HttpRule()</code></pre>
               </div>
+              <a id="Google_Api_HttpRule__ctor_" data-uid="Google.Api.HttpRule.#ctor*"></a>
               <h4 id="Google_Api_HttpRule__ctor_Google_Api_HttpRule_" data-uid="Google.Api.HttpRule.#ctor(Google.Api.HttpRule)">HttpRule(HttpRule)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -345,10 +346,11 @@ content to Web (HTML) clients.</p>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_HttpRule_AdditionalBindings_" data-uid="Google.Api.HttpRule.AdditionalBindings*"></a>
               <h4 id="Google_Api_HttpRule_AdditionalBindings" data-uid="Google.Api.HttpRule.AdditionalBindings">AdditionalBindings</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Additional HTTP bindings for the selector. Nested bindings must
- not contain an <code>additional_bindings</code> field themselves (that is,
- the nesting may only be one level deep).</p>
+              <div class="markdown level1 summary"><p>Additional HTTP bindings for the selector. Nested bindings must
+not contain an <code>additional_bindings</code> field themselves (that is,
+the nesting may only be one level deep).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -365,16 +367,17 @@ content to Web (HTML) clients.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.HttpRule.html#Google_Api_HttpRule">HttpRule</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.HttpRule.html#Google_Api_HttpRule">HttpRule</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_Body_" data-uid="Google.Api.HttpRule.Body*"></a>
               <h4 id="Google_Api_HttpRule_Body" data-uid="Google.Api.HttpRule.Body">Body</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> The name of the request field whose value is mapped to the HTTP body, or
- <code>*</code> for mapping all fields not captured by the path pattern to the HTTP
- body. NOTE: the referred field must not be a repeated field and must be
- present at the top-level of response message type.</p>
+              <div class="markdown level1 summary"><p>The name of the request field whose value is mapped to the HTTP body, or
+<code>*</code> for mapping all fields not captured by the path pattern to the HTTP
+body. NOTE: the referred field must not be a repeated field and must be
+present at the top-level of response message type.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -396,8 +399,9 @@ content to Web (HTML) clients.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_Custom_" data-uid="Google.Api.HttpRule.Custom*"></a>
               <h4 id="Google_Api_HttpRule_Custom" data-uid="Google.Api.HttpRule.Custom">Custom</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Custom pattern is used for defining custom verbs.</p>
+              <div class="markdown level1 summary"><p>Custom pattern is used for defining custom verbs.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -419,8 +423,9 @@ content to Web (HTML) clients.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_Delete_" data-uid="Google.Api.HttpRule.Delete*"></a>
               <h4 id="Google_Api_HttpRule_Delete" data-uid="Google.Api.HttpRule.Delete">Delete</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Used for deleting a resource.</p>
+              <div class="markdown level1 summary"><p>Used for deleting a resource.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -442,8 +447,9 @@ content to Web (HTML) clients.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_Get_" data-uid="Google.Api.HttpRule.Get*"></a>
               <h4 id="Google_Api_HttpRule_Get" data-uid="Google.Api.HttpRule.Get">Get</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Used for listing and getting information about resources.</p>
+              <div class="markdown level1 summary"><p>Used for listing and getting information about resources.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -465,8 +471,9 @@ content to Web (HTML) clients.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_Patch_" data-uid="Google.Api.HttpRule.Patch*"></a>
               <h4 id="Google_Api_HttpRule_Patch" data-uid="Google.Api.HttpRule.Patch">Patch</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Used for updating a resource.</p>
+              <div class="markdown level1 summary"><p>Used for updating a resource.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -488,6 +495,7 @@ content to Web (HTML) clients.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_PatternCase_" data-uid="Google.Api.HttpRule.PatternCase*"></a>
               <h4 id="Google_Api_HttpRule_PatternCase" data-uid="Google.Api.HttpRule.PatternCase">PatternCase</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -510,8 +518,9 @@ content to Web (HTML) clients.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_Post_" data-uid="Google.Api.HttpRule.Post*"></a>
               <h4 id="Google_Api_HttpRule_Post" data-uid="Google.Api.HttpRule.Post">Post</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Used for creating a resource.</p>
+              <div class="markdown level1 summary"><p>Used for creating a resource.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -533,8 +542,9 @@ content to Web (HTML) clients.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_Put_" data-uid="Google.Api.HttpRule.Put*"></a>
               <h4 id="Google_Api_HttpRule_Put" data-uid="Google.Api.HttpRule.Put">Put</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Used for updating a resource.</p>
+              <div class="markdown level1 summary"><p>Used for updating a resource.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -556,9 +566,10 @@ content to Web (HTML) clients.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_HttpRule_Selector_" data-uid="Google.Api.HttpRule.Selector*"></a>
               <h4 id="Google_Api_HttpRule_Selector" data-uid="Google.Api.HttpRule.Selector">Selector</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Selects methods to which this rule applies.</p>
-<p sourcefile="obj/api/Google.Api.HttpRule.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> Refer to [selector][google.api.DocumentationRule.selector] for syntax details.</p>
+              <div class="markdown level1 summary"><p>Selects methods to which this rule applies.</p>
+<p>Refer to [selector][google.api.DocumentationRule.selector] for syntax details.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -582,6 +593,7 @@ content to Web (HTML) clients.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_HttpRule_CalculateSize_" data-uid="Google.Api.HttpRule.CalculateSize*"></a>
               <h4 id="Google_Api_HttpRule_CalculateSize" data-uid="Google.Api.HttpRule.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -605,7 +617,8 @@ content to Web (HTML) clients.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_HttpRule_ClearPattern_" data-uid="Google.Api.HttpRule.ClearPattern*"></a>
               <h4 id="Google_Api_HttpRule_ClearPattern" data-uid="Google.Api.HttpRule.ClearPattern">ClearPattern()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -613,6 +626,7 @@ content to Web (HTML) clients.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public void ClearPattern()</code></pre>
               </div>
+              <a id="Google_Api_HttpRule_Clone_" data-uid="Google.Api.HttpRule.Clone*"></a>
               <h4 id="Google_Api_HttpRule_Clone" data-uid="Google.Api.HttpRule.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -636,7 +650,8 @@ content to Web (HTML) clients.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;HttpRule&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_HttpRule_GetHashCode_" data-uid="Google.Api.HttpRule.GetHashCode*"></a>
               <h4 id="Google_Api_HttpRule_GetHashCode" data-uid="Google.Api.HttpRule.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -661,6 +676,7 @@ content to Web (HTML) clients.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_HttpRule_MergeFrom_" data-uid="Google.Api.HttpRule.MergeFrom*"></a>
               <h4 id="Google_Api_HttpRule_MergeFrom_Google_Api_HttpRule_" data-uid="Google.Api.HttpRule.MergeFrom(Google.Api.HttpRule)">MergeFrom(HttpRule)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -686,7 +702,8 @@ content to Web (HTML) clients.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;HttpRule&gt;.MergeFrom(HttpRule)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_HttpRule_MergeFrom_" data-uid="Google.Api.HttpRule.MergeFrom*"></a>
               <h4 id="Google_Api_HttpRule_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.HttpRule.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -705,14 +722,15 @@ content to Web (HTML) clients.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_HttpRule_ToString_" data-uid="Google.Api.HttpRule.ToString*"></a>
               <h4 id="Google_Api_HttpRule_ToString" data-uid="Google.Api.HttpRule.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -737,6 +755,7 @@ content to Web (HTML) clients.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_HttpRule_WriteTo_" data-uid="Google.Api.HttpRule.WriteTo*"></a>
               <h4 id="Google_Api_HttpRule_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.HttpRule.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -755,14 +774,14 @@ content to Web (HTML) clients.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -791,7 +810,6 @@ content to Web (HTML) clients.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

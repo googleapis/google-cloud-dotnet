@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BackoffSettings
    | Google.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_Grpc_BackoffSettings" data-uid="Google.Api.Gax.Grpc.BackoffSettings">Class BackoffSettings
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Backoff settings used within <a class="xref" href="Google.Api.Gax.Grpc.RetrySettings.html#Google_Api_Gax_Grpc_RetrySettings">RetrySettings</a> to implement
+              <div class="markdown level0 summary"><p>Backoff settings used within <a class="xref" href="Google.Api.Gax.Grpc.RetrySettings.html#Google_Api_Gax_Grpc_RetrySettings">RetrySettings</a> to implement
 exponential backoff.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -102,8 +102,9 @@ exponential backoff.</p>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_Gax_Grpc_BackoffSettings__ctor_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.#ctor*"></a>
               <h4 id="Google_Api_Gax_Grpc_BackoffSettings__ctor_System_TimeSpan_System_TimeSpan_System_Double_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.#ctor(System.TimeSpan,System.TimeSpan,System.Double)">BackoffSettings(TimeSpan, TimeSpan, Double)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a new instance with the specified settings.</p>
+              <div class="markdown level1 summary"><p>Creates a new instance with the specified settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -123,20 +124,20 @@ exponential backoff.</p>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
                     <td><em>delay</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The initial delay, either for the first retry or as the initial RPC timeout.</p>
+                    <td><p>The initial delay, either for the first retry or as the initial RPC timeout.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
                     <td><em>maxDelay</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
+                    <td><p>The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
 this maximum is used instead.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Double</span></td>
                     <td><em>delayMultiplier</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.
+                    <td><p>The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.
 Defaults to 1.0.</p>
 </td>
                   </tr>
@@ -144,8 +145,9 @@ Defaults to 1.0.</p>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_Gax_Grpc_BackoffSettings_Delay_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.Delay*"></a>
               <h4 id="Google_Api_Gax_Grpc_BackoffSettings_Delay" data-uid="Google.Api.Gax.Grpc.BackoffSettings.Delay">Delay</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The initial delay, either for the first retry or as the initial RPC timeout.</p>
+              <div class="markdown level1 summary"><p>The initial delay, either for the first retry or as the initial RPC timeout.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -167,8 +169,9 @@ Defaults to 1.0.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_BackoffSettings_DelayMultiplier_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.DelayMultiplier*"></a>
               <h4 id="Google_Api_Gax_Grpc_BackoffSettings_DelayMultiplier" data-uid="Google.Api.Gax.Grpc.BackoffSettings.DelayMultiplier">DelayMultiplier</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.</p>
+              <div class="markdown level1 summary"><p>The multiplier to apply to the delay on each iteration; must be greater than or equal to 1.0.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -198,8 +201,9 @@ of 0.1s; a delay between the second response and the third request of 0.2s, and 
 between the third response and the fourth request.
 </p>
 </div>
+              <a id="Google_Api_Gax_Grpc_BackoffSettings_MaxDelay_" data-uid="Google.Api.Gax.Grpc.BackoffSettings.MaxDelay*"></a>
               <h4 id="Google_Api_Gax_Grpc_BackoffSettings_MaxDelay" data-uid="Google.Api.Gax.Grpc.BackoffSettings.MaxDelay">MaxDelay</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.BackoffSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
+              <div class="markdown level1 summary"><p>The maximum delay to use. If the increasing delay due to the delay multiplier exceeds this,
 this maximum is used instead.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -250,7 +254,6 @@ this maximum is used instead.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

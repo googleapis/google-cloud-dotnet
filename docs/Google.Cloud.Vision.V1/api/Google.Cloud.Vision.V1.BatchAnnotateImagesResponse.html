@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BatchAnnotateImagesResponse
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Cloud_Vision_V1_BatchAnnotateImagesResponse" data-uid="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse">Class BatchAnnotateImagesResponse
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Response to a batch image annotation request.</p>
+              <div class="markdown level0 summary"><p>Response to a batch image annotation request.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,8 +101,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_Responses_" data-uid="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Responses*"></a>
               <h4 id="Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_Responses" data-uid="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Responses">Responses</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Individual responses to image annotation requests within the batch.</p>
+              <div class="markdown level1 summary"><p>Individual responses to image annotation requests within the batch.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -119,19 +120,20 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse">AnnotateImageResponse</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse">AnnotateImageResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError_" data-uid="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.ThrowOnAnyError*"></a>
               <h4 id="Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_ThrowOnAnyError" data-uid="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.ThrowOnAnyError">ThrowOnAnyError()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="2" sourceendlinenumber="4">If the <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_Error">Error</a> property is non-null for any response within <a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_Responses">Responses</a>,
+              <div class="markdown level1 summary"><p>If the <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_Error">Error</a> property is non-null for any response within <a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_Responses">Responses</a>,
 throws an <span class="xref">System.AggregateException</span>, containing one <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a>
 for each failed response. Otherwise, returns <code>this</code> (so that the method can be called in a fluent manner).</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.md" sourcestartlinenumber="5" sourceendlinenumber="5">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">Image image = new Image(); // No content or source!
 // Just a single request in this example, but usually BatchAnnotateImages would be
 // used with multiple requests.
@@ -175,7 +177,7 @@ catch (AggregateException e)
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a></td>
-                    <td><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><code>this</code> if no responses contain errors.</p>
+                    <td><p><code>this</code> if no responses contain errors.</p>
 </td>
                   </tr>
                 </tbody>
@@ -191,7 +193,7 @@ catch (AggregateException e)
                 <tbody>
                   <tr>
                     <td><span class="xref">System.AggregateException</span></td>
-                    <td><p sourcefile="obj/api/Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_Error">Error</a> property is non-null on one or
+                    <td><p>The <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_Error">Error</a> property is non-null on one or
 more element of <a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse_Responses">Responses</a>.</p>
 </td>
                   </tr>
@@ -225,7 +227,6 @@ more element of <a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImages
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

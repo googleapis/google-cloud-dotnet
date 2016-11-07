@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MonitoredResource
    | Google.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,19 +70,19 @@
               
               <h1 id="Google_Api_MonitoredResource" data-uid="Google.Api.MonitoredResource">Class MonitoredResource
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.MonitoredResource.yml" sourcestartlinenumber="2" sourceendlinenumber="10"> An object representing a resource that can be used for monitoring, logging,
- billing, or other purposes. Examples include virtual machine instances,
- databases, and storage devices such as disks. The <code>type</code> field identifies a
- [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object that describes the resource&#39;s
- schema. Information in the <code>labels</code> field identifies the actual resource and
- its attributes according to the schema. For example, a particular Compute
- Engine VM instance could be represented by the following object, because the
- [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] for <code>&quot;gce_instance&quot;</code> has labels
- <code>&quot;instance_id&quot;</code> and <code>&quot;zone&quot;</code>:</p>
-<pre sourcefile="obj/api/Google.Api.MonitoredResource.yml" sourcestartlinenumber="12" sourceendlinenumber="14"><code> { &quot;type&quot;: &quot;gce_instance&quot;,
-   &quot;labels&quot;: { &quot;instance_id&quot;: &quot;12345678901234&quot;,
-               &quot;zone&quot;: &quot;us-central1-a&quot; }}
-</code></pre></div>
+              <div class="markdown level0 summary"><p>An object representing a resource that can be used for monitoring, logging,
+billing, or other purposes. Examples include virtual machine instances,
+databases, and storage devices such as disks. The <code>type</code> field identifies a
+[MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object that describes the resource&#39;s
+schema. Information in the <code>labels</code> field identifies the actual resource and
+its attributes according to the schema. For example, a particular Compute
+Engine VM instance could be represented by the following object, because the
+[MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] for <code>&quot;gce_instance&quot;</code> has labels
+<code>&quot;instance_id&quot;</code> and <code>&quot;zone&quot;</code>:</p>
+<p>{ &quot;type&quot;: &quot;gce_instance&quot;,
+ &quot;labels&quot;: { &quot;instance_id&quot;: &quot;12345678901234&quot;,
+             &quot;zone&quot;: &quot;us-central1-a&quot; }}</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
@@ -106,6 +106,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_MonitoredResource__ctor_" data-uid="Google.Api.MonitoredResource.#ctor*"></a>
               <h4 id="Google_Api_MonitoredResource__ctor" data-uid="Google.Api.MonitoredResource.#ctor">MonitoredResource()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -113,6 +114,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public MonitoredResource()</code></pre>
               </div>
+              <a id="Google_Api_MonitoredResource__ctor_" data-uid="Google.Api.MonitoredResource.#ctor*"></a>
               <h4 id="Google_Api_MonitoredResource__ctor_Google_Api_MonitoredResource_" data-uid="Google.Api.MonitoredResource.#ctor(Google.Api.MonitoredResource)">MonitoredResource(MonitoredResource)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -139,10 +141,11 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_MonitoredResource_Labels_" data-uid="Google.Api.MonitoredResource.Labels*"></a>
               <h4 id="Google_Api_MonitoredResource_Labels" data-uid="Google.Api.MonitoredResource.Labels">Labels</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.MonitoredResource.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Required. Values for all of the labels listed in the associated monitored
- resource descriptor. For example, Cloud SQL databases use the labels
- <code>&quot;database_id&quot;</code> and <code>&quot;zone&quot;</code>.</p>
+              <div class="markdown level1 summary"><p>Required. Values for all of the labels listed in the associated monitored
+resource descriptor. For example, Cloud SQL databases use the labels
+<code>&quot;database_id&quot;</code> and <code>&quot;zone&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -159,15 +162,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html#Google_Protobuf_Collections_MapField_2">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_MonitoredResource_Type_" data-uid="Google.Api.MonitoredResource.Type*"></a>
               <h4 id="Google_Api_MonitoredResource_Type" data-uid="Google.Api.MonitoredResource.Type">Type</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.MonitoredResource.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Required. The monitored resource type. This field must match
- the <code>type</code> field of a [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object. For
- example, the type of a Cloud SQL database is <code>&quot;cloudsql_database&quot;</code>.</p>
+              <div class="markdown level1 summary"><p>Required. The monitored resource type. This field must match
+the <code>type</code> field of a [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object. For
+example, the type of a Cloud SQL database is <code>&quot;cloudsql_database&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -191,6 +195,7 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_MonitoredResource_CalculateSize_" data-uid="Google.Api.MonitoredResource.CalculateSize*"></a>
               <h4 id="Google_Api_MonitoredResource_CalculateSize" data-uid="Google.Api.MonitoredResource.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -214,7 +219,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_MonitoredResource_Clone_" data-uid="Google.Api.MonitoredResource.Clone*"></a>
               <h4 id="Google_Api_MonitoredResource_Clone" data-uid="Google.Api.MonitoredResource.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -238,7 +244,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;MonitoredResource&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_MonitoredResource_GetHashCode_" data-uid="Google.Api.MonitoredResource.GetHashCode*"></a>
               <h4 id="Google_Api_MonitoredResource_GetHashCode" data-uid="Google.Api.MonitoredResource.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -263,6 +270,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_MonitoredResource_MergeFrom_" data-uid="Google.Api.MonitoredResource.MergeFrom*"></a>
               <h4 id="Google_Api_MonitoredResource_MergeFrom_Google_Api_MonitoredResource_" data-uid="Google.Api.MonitoredResource.MergeFrom(Google.Api.MonitoredResource)">MergeFrom(MonitoredResource)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -288,7 +296,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;MonitoredResource&gt;.MergeFrom(MonitoredResource)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_MonitoredResource_MergeFrom_" data-uid="Google.Api.MonitoredResource.MergeFrom*"></a>
               <h4 id="Google_Api_MonitoredResource_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.MonitoredResource.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -307,14 +316,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_MonitoredResource_ToString_" data-uid="Google.Api.MonitoredResource.ToString*"></a>
               <h4 id="Google_Api_MonitoredResource_ToString" data-uid="Google.Api.MonitoredResource.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -339,6 +349,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_MonitoredResource_WriteTo_" data-uid="Google.Api.MonitoredResource.WriteTo*"></a>
               <h4 id="Google_Api_MonitoredResource_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.MonitoredResource.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -357,14 +368,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -393,7 +404,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Datastore.DatastoreBase
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Datastore_V1_Datastore_DatastoreBase" data-uid="Google.Datastore.V1.Datastore.DatastoreBase">Class Datastore.DatastoreBase
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Datastore.V1.Datastore.DatastoreBase.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Base class for server-side implementations of Datastore</p>
+              <div class="markdown level0 summary"><p>Base class for server-side implementations of Datastore</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,9 +101,10 @@
               </div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Datastore_V1_Datastore_DatastoreBase_AllocateIds_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.AllocateIds*"></a>
               <h4 id="Google_Datastore_V1_Datastore_DatastoreBase_AllocateIds_Google_Datastore_V1_AllocateIdsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.AllocateIds(Google.Datastore.V1.AllocateIdsRequest,Grpc.Core.ServerCallContext)">AllocateIds(AllocateIdsRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Datastore.DatastoreBase.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Allocates IDs for the given keys, which is useful for referencing an entity
- before it is inserted.</p>
+              <div class="markdown level1 summary"><p>Allocates IDs for the given keys, which is useful for referencing an entity
+before it is inserted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -126,7 +127,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -142,13 +143,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.AllocateIdsResponse.html#Google_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.AllocateIdsResponse.html#Google_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Datastore_DatastoreBase_BeginTransaction_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.BeginTransaction*"></a>
               <h4 id="Google_Datastore_V1_Datastore_DatastoreBase_BeginTransaction_Google_Datastore_V1_BeginTransactionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.BeginTransaction(Google.Datastore.V1.BeginTransactionRequest,Grpc.Core.ServerCallContext)">BeginTransaction(BeginTransactionRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Datastore.DatastoreBase.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Begins a new transaction.</p>
+              <div class="markdown level1 summary"><p>Begins a new transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -171,7 +173,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -187,14 +189,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.BeginTransactionResponse.html#Google_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.BeginTransactionResponse.html#Google_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Datastore_DatastoreBase_Commit_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.Commit*"></a>
               <h4 id="Google_Datastore_V1_Datastore_DatastoreBase_Commit_Google_Datastore_V1_CommitRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.Commit(Google.Datastore.V1.CommitRequest,Grpc.Core.ServerCallContext)">Commit(CommitRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Datastore.DatastoreBase.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Commits a transaction, optionally creating, deleting or modifying some
- entities.</p>
+              <div class="markdown level1 summary"><p>Commits a transaction, optionally creating, deleting or modifying some
+entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -217,7 +220,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -233,13 +236,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.CommitResponse.html#Google_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Datastore_DatastoreBase_Lookup_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.Lookup*"></a>
               <h4 id="Google_Datastore_V1_Datastore_DatastoreBase_Lookup_Google_Datastore_V1_LookupRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.Lookup(Google.Datastore.V1.LookupRequest,Grpc.Core.ServerCallContext)">Lookup(LookupRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Datastore.DatastoreBase.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Looks up entities by key.</p>
+              <div class="markdown level1 summary"><p>Looks up entities by key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -262,7 +266,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -278,13 +282,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.LookupResponse.html#Google_Datastore_V1_LookupResponse">LookupResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.LookupResponse.html#Google_Datastore_V1_LookupResponse">LookupResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Datastore_DatastoreBase_Rollback_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.Rollback*"></a>
               <h4 id="Google_Datastore_V1_Datastore_DatastoreBase_Rollback_Google_Datastore_V1_RollbackRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.Rollback(Google.Datastore.V1.RollbackRequest,Grpc.Core.ServerCallContext)">Rollback(RollbackRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Datastore.DatastoreBase.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Rolls back a transaction.</p>
+              <div class="markdown level1 summary"><p>Rolls back a transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -307,7 +312,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -323,13 +328,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RollbackResponse.html#Google_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.RollbackResponse.html#Google_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Datastore_DatastoreBase_RunQuery_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.RunQuery*"></a>
               <h4 id="Google_Datastore_V1_Datastore_DatastoreBase_RunQuery_Google_Datastore_V1_RunQueryRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Datastore.V1.Datastore.DatastoreBase.RunQuery(Google.Datastore.V1.RunQueryRequest,Grpc.Core.ServerCallContext)">RunQuery(RunQueryRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Datastore.DatastoreBase.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Queries for entities.</p>
+              <div class="markdown level1 summary"><p>Queries for entities.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -352,7 +358,7 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.ServerCallContext.html#Grpc_Core_ServerCallContext">ServerCallContext</a></td>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
                     <td><em>context</em></td>
                     <td></td>
                   </tr>
@@ -368,7 +374,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -401,7 +407,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AsyncLazyDatastoreQuery
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Datastore_V1_AsyncLazyDatastoreQuery" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery">Class AsyncLazyDatastoreQuery
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Datastore.V1.AsyncLazyDatastoreQuery.yml" sourcestartlinenumber="2" sourceendlinenumber="6">A Datastore query which is executed lazily. Iterating over this object will provide a sequence
+              <div class="markdown level0 summary"><p>A Datastore query which is executed lazily. Iterating over this object will provide a sequence
 of entities; alternatively, all the results can be fetched using <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery_GetAllResultsAsync">GetAllResultsAsync()</a>,
 or for diagnostic use cases the RPC responses can be viewed using <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery_AsResponses">AsResponses()</a>.
 The lazy evaluation is important: if you iterate over the query multiple times, it will execute
@@ -105,8 +105,9 @@ multiple times, potentially returning different results each time.</p>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Datastore_V1_AsyncLazyDatastoreQuery__ctor_" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery.#ctor*"></a>
               <h4 id="Google_Datastore_V1_AsyncLazyDatastoreQuery__ctor_System_Collections_Generic_IAsyncEnumerable_Google_Datastore_V1_RunQueryResponse__" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery.#ctor(System.Collections.Generic.IAsyncEnumerable{Google.Datastore.V1.RunQueryResponse})">AsyncLazyDatastoreQuery(IAsyncEnumerable&lt;RunQueryResponse&gt;)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.AsyncLazyDatastoreQuery.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Constructs a new instance from the given sequence of responses. This constructor
+              <div class="markdown level1 summary"><p>Constructs a new instance from the given sequence of responses. This constructor
 is only present to facilitate testing; application code will normally obtain instances
 of this class by calling <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
 </div>
@@ -126,22 +127,23 @@ of this class by calling <a class="xref" href="Google.Datastore.V1.DatastoreDb.h
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
                     <td><em>responses</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.AsyncLazyDatastoreQuery.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The responses to return.</p>
+                    <td><p>The responses to return.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_AsyncLazyDatastoreQuery__ctor_System_Collections_Generic_IAsyncEnumerable_Google_Datastore_V1_RunQueryResponse___remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.AsyncLazyDatastoreQuery.yml" sourcestartlinenumber="2" sourceendlinenumber="4">The sequence of responses will be returned directly from <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery_AsResponses">AsResponses()</a>, and
+              <div class="markdown level1 remarks"><p>The sequence of responses will be returned directly from <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery_AsResponses">AsResponses()</a>, and
 used to lazily construct the other sequences returned by this class. It should not
 contain any null references.</p>
 </div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Datastore_V1_AsyncLazyDatastoreQuery_AsResponses_" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery.AsResponses*"></a>
               <h4 id="Google_Datastore_V1_AsyncLazyDatastoreQuery_AsResponses" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery.AsResponses">AsResponses()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.AsyncLazyDatastoreQuery.yml" sourcestartlinenumber="2" sourceendlinenumber="6">This method is for advanced use cases only, where more diagnostic information is required;
+              <div class="markdown level1 summary"><p>This method is for advanced use cases only, where more diagnostic information is required;
 most application code should merely iterate over the query results as <a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>
 values, or call <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery_GetAllResultsAsync">GetAllResultsAsync()</a>.
 The results of this query are returned as a sequence of <a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a> values
@@ -162,14 +164,15 @@ exactly as returned by the Datastore API.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.AsyncLazyDatastoreQuery.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A sequence of <a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a> values.</p>
+                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><p>A sequence of <a class="xref" href="Google.Datastore.V1.RunQueryResponse.html#Google_Datastore_V1_RunQueryResponse">RunQueryResponse</a> values.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_AsyncLazyDatastoreQuery_GetAllResultsAsync_" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery.GetAllResultsAsync*"></a>
               <h4 id="Google_Datastore_V1_AsyncLazyDatastoreQuery_GetAllResultsAsync" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery.GetAllResultsAsync">GetAllResultsAsync()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.AsyncLazyDatastoreQuery.yml" sourcestartlinenumber="2" sourceendlinenumber="6">Reads all the results from this query, until either the query-specified limit or end cursor
+              <div class="markdown level1 summary"><p>Reads all the results from this query, until either the query-specified limit or end cursor
 is reached, or there is no more data to read. Note that all the entities are read into memory,
 so this method is not appropriate for use cases where a query could return a very large number
 of results. However, it is the simplest approach to use cases where the query is bounded, such
@@ -190,13 +193,14 @@ as displaying a page of results at a time in a web application.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.AsyncLazyDatastoreQuery.yml" sourcestartlinenumber="1" sourceendlinenumber="2">A task representing the asynchronous operation. When completed, the result of the task
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. When completed, the result of the task
 is the complete set of query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_AsyncLazyDatastoreQuery_GetEnumerator_" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery.GetEnumerator*"></a>
               <h4 id="Google_Datastore_V1_AsyncLazyDatastoreQuery_GetEnumerator" data-uid="Google.Datastore.V1.AsyncLazyDatastoreQuery.GetEnumerator">GetEnumerator()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -214,13 +218,13 @@ is the complete set of query results.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerator</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerator&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;Google.Datastore.V1.Entity&gt;.GetEnumerator()</span></div>
+                  <div><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;.GetEnumerator()</span></div>
             </article>
           </div>
           
@@ -249,7 +253,6 @@ is the complete set of query results.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

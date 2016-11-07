@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Monitoring
    | Google.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,42 +70,54 @@
               
               <h1 id="Google_Api_Monitoring" data-uid="Google.Api.Monitoring">Class Monitoring
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Monitoring.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Monitoring configuration of the service.</p>
-<p sourcefile="obj/api/Google.Api.Monitoring.yml" sourcestartlinenumber="4" sourceendlinenumber="9"> The example below shows how to configure monitored resources and metrics
- for monitoring. In the example, a monitored resource and two metrics are
- defined. The <code>library.googleapis.com/book/returned_count</code> metric is sent
- to both producer and consumer projects, whereas the
- <code>library.googleapis.com/book/overdue_count</code> metric is only sent to the
- consumer project.</p>
-<pre sourcefile="obj/api/Google.Api.Monitoring.yml" sourcestartlinenumber="11" sourceendlinenumber="38"><code> monitored_resources:
- - type: library.googleapis.com/branch
-   labels:
-   - key: /city
-     description: The city where the library branch is located in.
-   - key: /name
-     description: The name of the branch.
- metrics:
- - name: library.googleapis.com/book/returned_count
-   metric_kind: DELTA
-   value_type: INT64
-   labels:
-   - key: /customer_id
- - name: library.googleapis.com/book/overdue_count
-   metric_kind: GAUGE
-   value_type: INT64
-   labels:
-   - key: /customer_id
- monitoring:
-   producer_destinations:
-   - monitored_resource: library.googleapis.com/branch
-     metrics:
-     - library.googleapis.com/book/returned_count
-   consumer_destinations:
-   - monitored_resource: library.googleapis.com/branch
-     metrics:
-     - library.googleapis.com/book/returned_count
-     - library.googleapis.com/book/overdue_count
-</code></pre></div>
+              <div class="markdown level0 summary"><p>Monitoring configuration of the service.</p>
+<p>The example below shows how to configure monitored resources and metrics
+for monitoring. In the example, a monitored resource and two metrics are
+defined. The <code>library.googleapis.com/book/returned_count</code> metric is sent
+to both producer and consumer projects, whereas the
+<code>library.googleapis.com/book/overdue_count</code> metric is only sent to the
+consumer project.</p>
+<p>monitored_resources:</p>
+<ul>
+<li>type: library.googleapis.com/branch
+labels:<ul>
+<li>key: /city
+description: The city where the library branch is located in.</li>
+<li>key: /name
+description: The name of the branch.
+metrics:</li>
+</ul>
+</li>
+<li>name: library.googleapis.com/book/returned_count
+metric_kind: DELTA
+value_type: INT64
+labels:<ul>
+<li>key: /customer_id</li>
+</ul>
+</li>
+<li>name: library.googleapis.com/book/overdue_count
+metric_kind: GAUGE
+value_type: INT64
+labels:<ul>
+<li>key: /customer_id
+monitoring:
+producer_destinations:</li>
+<li>monitored_resource: library.googleapis.com/branch
+metrics:<ul>
+<li>library.googleapis.com/book/returned_count
+consumer_destinations:</li>
+</ul>
+</li>
+<li>monitored_resource: library.googleapis.com/branch
+metrics:<ul>
+<li>library.googleapis.com/book/returned_count</li>
+<li>library.googleapis.com/book/overdue_count</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
@@ -129,6 +141,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_Monitoring__ctor_" data-uid="Google.Api.Monitoring.#ctor*"></a>
               <h4 id="Google_Api_Monitoring__ctor" data-uid="Google.Api.Monitoring.#ctor">Monitoring()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -136,6 +149,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public Monitoring()</code></pre>
               </div>
+              <a id="Google_Api_Monitoring__ctor_" data-uid="Google.Api.Monitoring.#ctor*"></a>
               <h4 id="Google_Api_Monitoring__ctor_Google_Api_Monitoring_" data-uid="Google.Api.Monitoring.#ctor(Google.Api.Monitoring)">Monitoring(Monitoring)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -162,11 +176,12 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_Monitoring_ConsumerDestinations_" data-uid="Google.Api.Monitoring.ConsumerDestinations*"></a>
               <h4 id="Google_Api_Monitoring_ConsumerDestinations" data-uid="Google.Api.Monitoring.ConsumerDestinations">ConsumerDestinations</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Monitoring.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Monitoring configurations for sending metrics to the consumer project.
- There can be multiple consumer destinations, each one must have a
- different monitored resource type. A metric can be used in at most
- one consumer destination.</p>
+              <div class="markdown level1 summary"><p>Monitoring configurations for sending metrics to the consumer project.
+There can be multiple consumer destinations, each one must have a
+different monitored resource type. A metric can be used in at most
+one consumer destination.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -183,16 +198,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">Google.Api.Monitoring.Types.MonitoringDestination</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Monitoring_ProducerDestinations_" data-uid="Google.Api.Monitoring.ProducerDestinations*"></a>
               <h4 id="Google_Api_Monitoring_ProducerDestinations" data-uid="Google.Api.Monitoring.ProducerDestinations">ProducerDestinations</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Monitoring.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Monitoring configurations for sending metrics to the producer project.
- There can be multiple producer destinations, each one must have a
- different monitored resource type. A metric can be used in at most
- one producer destination.</p>
+              <div class="markdown level1 summary"><p>Monitoring configurations for sending metrics to the producer project.
+There can be multiple producer destinations, each one must have a
+different monitored resource type. A metric can be used in at most
+one producer destination.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -209,13 +225,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">Google.Api.Monitoring.Types.MonitoringDestination</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Monitoring_CalculateSize_" data-uid="Google.Api.Monitoring.CalculateSize*"></a>
               <h4 id="Google_Api_Monitoring_CalculateSize" data-uid="Google.Api.Monitoring.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -239,7 +256,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_Monitoring_Clone_" data-uid="Google.Api.Monitoring.Clone*"></a>
               <h4 id="Google_Api_Monitoring_Clone" data-uid="Google.Api.Monitoring.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -263,7 +281,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;Monitoring&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_Monitoring_GetHashCode_" data-uid="Google.Api.Monitoring.GetHashCode*"></a>
               <h4 id="Google_Api_Monitoring_GetHashCode" data-uid="Google.Api.Monitoring.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -288,6 +307,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_Monitoring_MergeFrom_" data-uid="Google.Api.Monitoring.MergeFrom*"></a>
               <h4 id="Google_Api_Monitoring_MergeFrom_Google_Api_Monitoring_" data-uid="Google.Api.Monitoring.MergeFrom(Google.Api.Monitoring)">MergeFrom(Monitoring)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -313,7 +333,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;Monitoring&gt;.MergeFrom(Monitoring)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_Monitoring_MergeFrom_" data-uid="Google.Api.Monitoring.MergeFrom*"></a>
               <h4 id="Google_Api_Monitoring_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Monitoring.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -332,14 +353,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_Monitoring_ToString_" data-uid="Google.Api.Monitoring.ToString*"></a>
               <h4 id="Google_Api_Monitoring_ToString" data-uid="Google.Api.Monitoring.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -364,6 +386,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_Monitoring_WriteTo_" data-uid="Google.Api.Monitoring.WriteTo*"></a>
               <h4 id="Google_Api_Monitoring_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Monitoring.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -382,14 +405,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -418,7 +441,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

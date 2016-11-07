@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GaxPreconditions
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_GaxPreconditions" data-uid="Google.Api.Gax.GaxPreconditions">Class GaxPreconditions
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Preconditions for checking method arguments, state etc.</p>
+              <div class="markdown level0 summary"><p>Preconditions for checking method arguments, state etc.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,8 +101,9 @@
               </div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckArgument_" data-uid="Google.Api.Gax.GaxPreconditions.CheckArgument*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckArgument_System_Boolean_System_String_System_String_" data-uid="Google.Api.Gax.GaxPreconditions.CheckArgument(System.Boolean,System.String,System.String)">CheckArgument(Boolean, String, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that given argument-based condition is met, throwing an <span class="xref">System.ArgumentException</span> otherwise.</p>
+              <div class="markdown level1 summary"><p>Checks that given argument-based condition is met, throwing an <span class="xref">System.ArgumentException</span> otherwise.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -122,27 +123,28 @@
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
                     <td><em>condition</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The (already evaluated) condition to check.</p>
+                    <td><p>The (already evaluated) condition to check.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>paramName</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The name of the parameter whose value is being tested.</p>
+                    <td><p>The name of the parameter whose value is being tested.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>message</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The message to include in the exception, if generated. This should not
+                    <td><p>The message to include in the exception, if generated. This should not
 use interpolation, as the interpolation would be performed regardless of whether or not an exception
 is thrown.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckArgument_" data-uid="Google.Api.Gax.GaxPreconditions.CheckArgument*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckArgument__1_System_Boolean_System_String_System_String___0_" data-uid="Google.Api.Gax.GaxPreconditions.CheckArgument``1(System.Boolean,System.String,System.String,``0)">CheckArgument&lt;T&gt;(Boolean, String, String, T)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that given argument-based condition is met, throwing an <span class="xref">System.ArgumentException</span> otherwise.</p>
+              <div class="markdown level1 summary"><p>Checks that given argument-based condition is met, throwing an <span class="xref">System.ArgumentException</span> otherwise.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -162,26 +164,26 @@ is thrown.</p>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
                     <td><em>condition</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The (already evaluated) condition to check.</p>
+                    <td><p>The (already evaluated) condition to check.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>paramName</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The name of the parameter whose value is being tested.</p>
+                    <td><p>The name of the parameter whose value is being tested.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>format</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The format string to use to create the exception message if the
+                    <td><p>The format string to use to create the exception message if the
 condition is not met.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">T</span></td>
                     <td><em>arg0</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The argument to the format string.</p>
+                    <td><p>The argument to the format string.</p>
 </td>
                   </tr>
                 </tbody>
@@ -201,8 +203,9 @@ condition is not met.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckArgument_" data-uid="Google.Api.Gax.GaxPreconditions.CheckArgument*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckArgument__2_System_Boolean_System_String_System_String___0___1_" data-uid="Google.Api.Gax.GaxPreconditions.CheckArgument``2(System.Boolean,System.String,System.String,``0,``1)">CheckArgument&lt;T1, T2&gt;(Boolean, String, String, T1, T2)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that given argument-based condition is met, throwing an <span class="xref">System.ArgumentException</span> otherwise.</p>
+              <div class="markdown level1 summary"><p>Checks that given argument-based condition is met, throwing an <span class="xref">System.ArgumentException</span> otherwise.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -222,32 +225,32 @@ condition is not met.</p>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
                     <td><em>condition</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The (already evaluated) condition to check.</p>
+                    <td><p>The (already evaluated) condition to check.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>paramName</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The name of the parameter whose value is being tested.</p>
+                    <td><p>The name of the parameter whose value is being tested.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>format</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The format string to use to create the exception message if the
+                    <td><p>The format string to use to create the exception message if the
 condition is not met.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">T1</span></td>
                     <td><em>arg0</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The first argument to the format string.</p>
+                    <td><p>The first argument to the format string.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">T2</span></td>
                     <td><em>arg1</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The second argument to the format string.</p>
+                    <td><p>The second argument to the format string.</p>
 </td>
                   </tr>
                 </tbody>
@@ -271,8 +274,9 @@ condition is not met.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckArgumentRange_" data-uid="Google.Api.Gax.GaxPreconditions.CheckArgumentRange*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckArgumentRange_System_Int32_System_String_System_Int32_System_Int32_" data-uid="Google.Api.Gax.GaxPreconditions.CheckArgumentRange(System.Int32,System.String,System.Int32,System.Int32)">CheckArgumentRange(Int32, String, Int32, Int32)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that the given argument value is valid.</p>
+              <div class="markdown level1 summary"><p>Checks that the given argument value is valid.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -292,25 +296,25 @@ condition is not met.</p>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><em>argument</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value of the argument passed to the calling method.</p>
+                    <td><p>The value of the argument passed to the calling method.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>paramName</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The name of the parameter in the calling method.</p>
+                    <td><p>The name of the parameter in the calling method.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><em>minInclusive</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The smallest valid value.</p>
+                    <td><p>The smallest valid value.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><em>maxInclusive</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The largest valid value.</p>
+                    <td><p>The largest valid value.</p>
 </td>
                   </tr>
                 </tbody>
@@ -326,15 +330,15 @@ condition is not met.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><em>argument</em> if it was in range</p>
+                    <td><p><em>argument</em> if it was in range</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_GaxPreconditions_CheckArgumentRange_System_Int32_System_String_System_Int32_System_Int32__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Note that the upper bound (<em>maxInclusive</em>) is inclusive,
+              <div class="markdown level1 remarks"><p>Note that the upper bound (<em>maxInclusive</em>) is inclusive,
 not exclusive. This is deliberate, to allow the specification of ranges which include</p>
-<p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="4" sourceendlinenumber="4"><span class="xref">System.Int32.MaxValue</span>.</p>
+<p><span class="xref">System.Int32.MaxValue</span>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -347,13 +351,14 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The argument was outside the specified range.</p>
+                    <td><p>The argument was outside the specified range.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckEnumValue_" data-uid="Google.Api.Gax.GaxPreconditions.CheckEnumValue*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckEnumValue__1___0_System_String_" data-uid="Google.Api.Gax.GaxPreconditions.CheckEnumValue``1(``0,System.String)">CheckEnumValue&lt;T&gt;(T, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that the given value is in fact defined in the enum used as the type argument of the method.</p>
+              <div class="markdown level1 summary"><p>Checks that the given value is in fact defined in the enum used as the type argument of the method.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -373,13 +378,13 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                   <tr>
                     <td><span class="xref">T</span></td>
                     <td><em>value</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value to check.</p>
+                    <td><p>The value to check.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>paramName</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The name of the parameter whose value is being tested.</p>
+                    <td><p>The name of the parameter whose value is being tested.</p>
 </td>
                   </tr>
                 </tbody>
@@ -395,7 +400,7 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><em>value</em> if it was a defined value</p>
+                    <td><p><em>value</em> if it was a defined value</p>
 </td>
                   </tr>
                 </tbody>
@@ -415,8 +420,9 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckNotNull_" data-uid="Google.Api.Gax.GaxPreconditions.CheckNotNull*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckNotNull__1___0_System_String_" data-uid="Google.Api.Gax.GaxPreconditions.CheckNotNull``1(``0,System.String)">CheckNotNull&lt;T&gt;(T, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that the given argument (to the calling method) is non-null.</p>
+              <div class="markdown level1 summary"><p>Checks that the given argument (to the calling method) is non-null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -436,13 +442,13 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                   <tr>
                     <td><span class="xref">T</span></td>
                     <td><em>argument</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The argument provided for the parameter.</p>
+                    <td><p>The argument provided for the parameter.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>paramName</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The name of the parameter in the calling method.</p>
+                    <td><p>The name of the parameter in the calling method.</p>
 </td>
                   </tr>
                 </tbody>
@@ -458,7 +464,7 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><em>argument</em> if it is not null</p>
+                    <td><p><em>argument</em> if it is not null</p>
 </td>
                   </tr>
                 </tbody>
@@ -489,13 +495,14 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentNullException</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><em>argument</em> is null</p>
+                    <td><p><em>argument</em> is null</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckNotNullOrEmpty_" data-uid="Google.Api.Gax.GaxPreconditions.CheckNotNullOrEmpty*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckNotNullOrEmpty_System_String_System_String_" data-uid="Google.Api.Gax.GaxPreconditions.CheckNotNullOrEmpty(System.String,System.String)">CheckNotNullOrEmpty(String, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that a string argument is neither null, nor an empty string.</p>
+              <div class="markdown level1 summary"><p>Checks that a string argument is neither null, nor an empty string.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -515,13 +522,13 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>argument</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The argument provided for the parameter.</p>
+                    <td><p>The argument provided for the parameter.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>paramName</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The name of the parameter in the calling method.</p>
+                    <td><p>The name of the parameter in the calling method.</p>
 </td>
                   </tr>
                 </tbody>
@@ -537,7 +544,7 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><em>argument</em> if it is not null or empty</p>
+                    <td><p><em>argument</em> if it is not null or empty</p>
 </td>
                   </tr>
                 </tbody>
@@ -553,18 +560,19 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentNullException</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><em>argument</em> is null</p>
+                    <td><p><em>argument</em> is null</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.ArgumentException</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><em>argument</em> is empty</p>
+                    <td><p><em>argument</em> is empty</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckState_" data-uid="Google.Api.Gax.GaxPreconditions.CheckState*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckState_System_Boolean_System_String_" data-uid="Google.Api.Gax.GaxPreconditions.CheckState(System.Boolean,System.String)">CheckState(Boolean, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that given condition is met, throwing an <span class="xref">System.InvalidOperationException</span> otherwise.</p>
+              <div class="markdown level1 summary"><p>Checks that given condition is met, throwing an <span class="xref">System.InvalidOperationException</span> otherwise.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -584,21 +592,22 @@ not exclusive. This is deliberate, to allow the specification of ranges which in
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
                     <td><em>condition</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The (already evaluated) condition to check.</p>
+                    <td><p>The (already evaluated) condition to check.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>message</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The message to include in the exception, if generated. This should not
+                    <td><p>The message to include in the exception, if generated. This should not
 use interpolation, as the interpolation would be performed regardless of whether or
 not an exception is thrown.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckState_" data-uid="Google.Api.Gax.GaxPreconditions.CheckState*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckState__1_System_Boolean_System_String___0_" data-uid="Google.Api.Gax.GaxPreconditions.CheckState``1(System.Boolean,System.String,``0)">CheckState&lt;T&gt;(Boolean, String, T)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that given condition is met, throwing an <span class="xref">System.InvalidOperationException</span> otherwise.</p>
+              <div class="markdown level1 summary"><p>Checks that given condition is met, throwing an <span class="xref">System.InvalidOperationException</span> otherwise.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -618,20 +627,20 @@ not an exception is thrown.</p>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
                     <td><em>condition</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The (already evaluated) condition to check.</p>
+                    <td><p>The (already evaluated) condition to check.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>format</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The format string to use to create the exception message if the
+                    <td><p>The format string to use to create the exception message if the
 condition is not met.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">T</span></td>
                     <td><em>arg0</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The argument to the format string.</p>
+                    <td><p>The argument to the format string.</p>
 </td>
                   </tr>
                 </tbody>
@@ -651,8 +660,9 @@ condition is not met.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_GaxPreconditions_CheckState_" data-uid="Google.Api.Gax.GaxPreconditions.CheckState*"></a>
               <h4 id="Google_Api_Gax_GaxPreconditions_CheckState__2_System_Boolean_System_String___0___1_" data-uid="Google.Api.Gax.GaxPreconditions.CheckState``2(System.Boolean,System.String,``0,``1)">CheckState&lt;T1, T2&gt;(Boolean, String, T1, T2)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Checks that given condition is met, throwing an <span class="xref">System.InvalidOperationException</span> otherwise.</p>
+              <div class="markdown level1 summary"><p>Checks that given condition is met, throwing an <span class="xref">System.InvalidOperationException</span> otherwise.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -672,26 +682,26 @@ condition is not met.</p>
                   <tr>
                     <td><span class="xref">System.Boolean</span></td>
                     <td><em>condition</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The (already evaluated) condition to check.</p>
+                    <td><p>The (already evaluated) condition to check.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>format</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The format string to use to create the exception message if the
+                    <td><p>The format string to use to create the exception message if the
 condition is not met.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">T1</span></td>
                     <td><em>arg0</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The first argument to the format string.</p>
+                    <td><p>The first argument to the format string.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">T2</span></td>
                     <td><em>arg1</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.GaxPreconditions.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The second argument to the format string.</p>
+                    <td><p>The second argument to the format string.</p>
 </td>
                   </tr>
                 </tbody>
@@ -743,7 +753,6 @@ condition is not met.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PagedEnumerable&lt;TRequest, TResponse, TResource&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_Grpc_PagedEnumerable_3" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3">Class PagedEnumerable&lt;TRequest, TResponse, TResource&gt;
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedEnumerable-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
+              <div class="markdown level0 summary"><p>A sequence of resources, obtained lazily via API operations which retrieve a page at a time.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -133,8 +133,9 @@
               </table>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_Gax_Grpc_PagedEnumerable_3__ctor_" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3.#ctor*"></a>
               <h4 id="Google_Api_Gax_Grpc_PagedEnumerable_3__ctor_Google_Api_Gax_Grpc_ApiCall__0__1___0_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3.#ctor(Google.Api.Gax.Grpc.ApiCall{`0,`1},`0,Google.Api.Gax.Grpc.CallSettings)">PagedEnumerable(ApiCall&lt;TRequest, TResponse&gt;, TRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedEnumerable-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a new lazily-evaluated sequence from the given API call, initial request, and call settings.</p>
+              <div class="markdown level1 summary"><p>Creates a new lazily-evaluated sequence from the given API call, initial request, and call settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -152,30 +153,31 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ApiCall-2.html#Google_Api_Gax_Grpc_ApiCall_2">ApiCall</a>&lt;TRequest, TResponse&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ApiCall-2.html#Google_Api_Gax_Grpc_ApiCall_2">ApiCall&lt;TRequest, TResponse&gt;</a>&lt;TRequest, TResponse&gt;</td>
                     <td><em>apiCall</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The API call made each time a page is required.</p>
+                    <td><p>The API call made each time a page is required.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">TRequest</span></td>
                     <td><em>request</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The initial request.</p>
+                    <td><p>The initial request.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The settings to apply to each API call.</p>
+                    <td><p>The settings to apply to each API call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_Grpc_PagedEnumerable_3__ctor_Google_Api_Gax_Grpc_ApiCall__0__1___0_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.Grpc.PagedEnumerable-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The request is cloned each time the sequence is evaluated.</p>
+              <div class="markdown level1 remarks"><p>The request is cloned each time the sequence is evaluated.</p>
 </div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_Grpc_PagedEnumerable_3_AsPages_" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3.AsPages*"></a>
               <h4 id="Google_Api_Gax_Grpc_PagedEnumerable_3_AsPages" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3.AsPages">AsPages()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -193,13 +195,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2">IResponseEnumerable</a>&lt;TResponse, TResource&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2">IResponseEnumerable&lt;TResponse, TResource&gt;</a>&lt;TResponse, TResource&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2_AsPages">IPagedEnumerable&lt;TResponse, TResource&gt;.AsPages()</a></div>
+              <a id="Google_Api_Gax_Grpc_PagedEnumerable_3_GetEnumerator_" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3.GetEnumerator*"></a>
               <h4 id="Google_Api_Gax_Grpc_PagedEnumerable_3_GetEnumerator" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3.GetEnumerator">GetEnumerator()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -217,15 +220,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;TResource&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator&lt;T&gt;</span>&lt;TResource&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;TResource&gt;.GetEnumerator()</span></div>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
               <h3 id="eii">Explicit Interface Implementations
               </h3>
+              <a id="Google_Api_Gax_Grpc_PagedEnumerable_3_System_Collections_IEnumerable_GetEnumerator_" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3.System#Collections#IEnumerable#GetEnumerator*"></a>
               <h4 id="Google_Api_Gax_Grpc_PagedEnumerable_3_System_Collections_IEnumerable_GetEnumerator" data-uid="Google.Api.Gax.Grpc.PagedEnumerable`3.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -278,7 +282,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

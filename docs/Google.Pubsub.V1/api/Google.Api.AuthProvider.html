@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AuthProvider
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,8 +70,8 @@
               
               <h1 id="Google_Api_AuthProvider" data-uid="Google.Api.AuthProvider">Class AuthProvider
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Configuration for an anthentication provider, including support for
- <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32" sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="3" sourceendlinenumber="3">JSON Web Token (JWT)</a>.</p>
+              <div class="markdown level0 summary"><p>Configuration for an anthentication provider, including support for
+<a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32">JSON Web Token (JWT)</a>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -96,6 +96,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_AuthProvider__ctor_" data-uid="Google.Api.AuthProvider.#ctor*"></a>
               <h4 id="Google_Api_AuthProvider__ctor" data-uid="Google.Api.AuthProvider.#ctor">AuthProvider()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -103,6 +104,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public AuthProvider()</code></pre>
               </div>
+              <a id="Google_Api_AuthProvider__ctor_" data-uid="Google.Api.AuthProvider.#ctor*"></a>
               <h4 id="Google_Api_AuthProvider__ctor_Google_Api_AuthProvider_" data-uid="Google.Api.AuthProvider.#ctor(Google.Api.AuthProvider)">AuthProvider(AuthProvider)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -129,10 +131,11 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_AuthProvider_Id_" data-uid="Google.Api.AuthProvider.Id*"></a>
               <h4 id="Google_Api_AuthProvider_Id" data-uid="Google.Api.AuthProvider.Id">Id</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The unique identifier of the auth provider. It will be referred to by
- <code>AuthRequirement.provider_id</code>.</p>
-<p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="5" sourceendlinenumber="5"> Example: &quot;bookstore_auth&quot;.</p>
+              <div class="markdown level1 summary"><p>The unique identifier of the auth provider. It will be referred to by
+<code>AuthRequirement.provider_id</code>.</p>
+<p>Example: &quot;bookstore_auth&quot;.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -154,12 +157,13 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_AuthProvider_Issuer_" data-uid="Google.Api.AuthProvider.Issuer*"></a>
               <h4 id="Google_Api_AuthProvider_Issuer" data-uid="Google.Api.AuthProvider.Issuer">Issuer</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Identifies the principal that issued the JWT. See
- <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1" sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="3" sourceendlinenumber="3">https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1</a>
- Usually a URL or an email address.</p>
-<p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="6" sourceendlinenumber="7"> Example: <a href="https://securetoken.google.com" sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="6" sourceendlinenumber="6">https://securetoken.google.com</a>
- Example: 1234567-compute@developer.gserviceaccount.com</p>
+              <div class="markdown level1 summary"><p>Identifies the principal that issued the JWT. See
+<a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1">https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1</a>
+Usually a URL or an email address.</p>
+<p>Example: <a href="https://securetoken.google.com">https://securetoken.google.com</a>
+Example: 1234567-compute@developer.gserviceaccount.com</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -181,18 +185,18 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_AuthProvider_JwksUri_" data-uid="Google.Api.AuthProvider.JwksUri*"></a>
               <h4 id="Google_Api_AuthProvider_JwksUri" data-uid="Google.Api.AuthProvider.JwksUri">JwksUri</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> URL of the provider&#39;s public key set to validate signature of the JWT. See
- <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata" sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="3" sourceendlinenumber="3">OpenID Discovery</a>.
- Optional if the key set document:</p>
-<ul sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="5" sourceendlinenumber="10">
-<li sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="5" sourceendlinenumber="7">can be retrieved from
-[OpenID Discovery](<a href="https://openid.net/specs/openid-connect-discovery-1_0.html" sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="6" sourceendlinenumber="6">https://openid.net/specs/openid-connect-discovery-1_0.html</a>
+              <div class="markdown level1 summary"><p>URL of the provider&#39;s public key set to validate signature of the JWT. See
+<a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata">OpenID Discovery</a>.
+Optional if the key set document:</p>
+<ul>
+<li>can be retrieved from
+[OpenID Discovery](<a href="https://openid.net/specs/openid-connect-discovery-1_0.html">https://openid.net/specs/openid-connect-discovery-1_0.html</a>
 of the issuer.</li>
-<li sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="8" sourceendlinenumber="10"><p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="8" sourceendlinenumber="8">can be inferred from the email domain of the issuer (e.g. a Google service account).</p>
-<p sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="8" sourceendlinenumber="8">Example: <a href="https://www.googleapis.com/oauth2/v1/certs" sourcefile="obj/api/Google.Api.AuthProvider.yml" sourcestartlinenumber="8" sourceendlinenumber="8">https://www.googleapis.com/oauth2/v1/certs</a></p>
-</li>
+<li>can be inferred from the email domain of the issuer (e.g. a Google service account).</li>
 </ul>
+<p>Example: <a href="https://www.googleapis.com/oauth2/v1/certs">https://www.googleapis.com/oauth2/v1/certs</a></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -216,6 +220,7 @@ of the issuer.</li>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_AuthProvider_CalculateSize_" data-uid="Google.Api.AuthProvider.CalculateSize*"></a>
               <h4 id="Google_Api_AuthProvider_CalculateSize" data-uid="Google.Api.AuthProvider.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -239,7 +244,8 @@ of the issuer.</li>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_AuthProvider_Clone_" data-uid="Google.Api.AuthProvider.Clone*"></a>
               <h4 id="Google_Api_AuthProvider_Clone" data-uid="Google.Api.AuthProvider.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -263,7 +269,8 @@ of the issuer.</li>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;AuthProvider&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_AuthProvider_GetHashCode_" data-uid="Google.Api.AuthProvider.GetHashCode*"></a>
               <h4 id="Google_Api_AuthProvider_GetHashCode" data-uid="Google.Api.AuthProvider.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -288,6 +295,7 @@ of the issuer.</li>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_AuthProvider_MergeFrom_" data-uid="Google.Api.AuthProvider.MergeFrom*"></a>
               <h4 id="Google_Api_AuthProvider_MergeFrom_Google_Api_AuthProvider_" data-uid="Google.Api.AuthProvider.MergeFrom(Google.Api.AuthProvider)">MergeFrom(AuthProvider)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -313,7 +321,8 @@ of the issuer.</li>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;AuthProvider&gt;.MergeFrom(AuthProvider)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_AuthProvider_MergeFrom_" data-uid="Google.Api.AuthProvider.MergeFrom*"></a>
               <h4 id="Google_Api_AuthProvider_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.AuthProvider.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -332,14 +341,15 @@ of the issuer.</li>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_AuthProvider_ToString_" data-uid="Google.Api.AuthProvider.ToString*"></a>
               <h4 id="Google_Api_AuthProvider_ToString" data-uid="Google.Api.AuthProvider.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -364,6 +374,7 @@ of the issuer.</li>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_AuthProvider_WriteTo_" data-uid="Google.Api.AuthProvider.WriteTo*"></a>
               <h4 id="Google_Api_AuthProvider_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.AuthProvider.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -382,14 +393,14 @@ of the issuer.</li>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -418,7 +429,6 @@ of the issuer.</li>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

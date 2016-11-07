@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Money
    | Google.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Type_Money" data-uid="Google.Type.Money">Class Money
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Type.Money.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Represents an amount of money with its currency type.</p>
+              <div class="markdown level0 summary"><p>Represents an amount of money with its currency type.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -95,6 +95,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Type_Money__ctor_" data-uid="Google.Type.Money.#ctor*"></a>
               <h4 id="Google_Type_Money__ctor" data-uid="Google.Type.Money.#ctor">Money()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -102,6 +103,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public Money()</code></pre>
               </div>
+              <a id="Google_Type_Money__ctor_" data-uid="Google.Type.Money.#ctor*"></a>
               <h4 id="Google_Type_Money__ctor_Google_Type_Money_" data-uid="Google.Type.Money.#ctor(Google.Type.Money)">Money(Money)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -128,8 +130,9 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Type_Money_CurrencyCode_" data-uid="Google.Type.Money.CurrencyCode*"></a>
               <h4 id="Google_Type_Money_CurrencyCode" data-uid="Google.Type.Money.CurrencyCode">CurrencyCode</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Type.Money.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The 3-letter currency code defined in ISO 4217.</p>
+              <div class="markdown level1 summary"><p>The 3-letter currency code defined in ISO 4217.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -151,13 +154,14 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Type_Money_Nanos_" data-uid="Google.Type.Money.Nanos*"></a>
               <h4 id="Google_Type_Money_Nanos" data-uid="Google.Type.Money.Nanos">Nanos</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Type.Money.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> Number of nano (10^-9) units of the amount.
- The value must be between -999,999,999 and +999,999,999 inclusive.
- If <code>units</code> is positive, <code>nanos</code> must be positive or zero.
- If <code>units</code> is zero, <code>nanos</code> can be positive, zero, or negative.
- If <code>units</code> is negative, <code>nanos</code> must be negative or zero.
- For example $-1.75 is represented as <code>units</code>=-1 and <code>nanos</code>=-750,000,000.</p>
+              <div class="markdown level1 summary"><p>Number of nano (10^-9) units of the amount.
+The value must be between -999,999,999 and +999,999,999 inclusive.
+If <code>units</code> is positive, <code>nanos</code> must be positive or zero.
+If <code>units</code> is zero, <code>nanos</code> can be positive, zero, or negative.
+If <code>units</code> is negative, <code>nanos</code> must be negative or zero.
+For example $-1.75 is represented as <code>units</code>=-1 and <code>nanos</code>=-750,000,000.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -179,9 +183,10 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Type_Money_Units_" data-uid="Google.Type.Money.Units*"></a>
               <h4 id="Google_Type_Money_Units" data-uid="Google.Type.Money.Units">Units</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Type.Money.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The whole units of the amount.
- For example if <code>currencyCode</code> is <code>&quot;USD&quot;</code>, then 1 unit is one US dollar.</p>
+              <div class="markdown level1 summary"><p>The whole units of the amount.
+For example if <code>currencyCode</code> is <code>&quot;USD&quot;</code>, then 1 unit is one US dollar.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -205,6 +210,7 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Type_Money_CalculateSize_" data-uid="Google.Type.Money.CalculateSize*"></a>
               <h4 id="Google_Type_Money_CalculateSize" data-uid="Google.Type.Money.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -228,7 +234,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Type_Money_Clone_" data-uid="Google.Type.Money.Clone*"></a>
               <h4 id="Google_Type_Money_Clone" data-uid="Google.Type.Money.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -252,7 +259,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;Money&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Type_Money_GetHashCode_" data-uid="Google.Type.Money.GetHashCode*"></a>
               <h4 id="Google_Type_Money_GetHashCode" data-uid="Google.Type.Money.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -277,6 +285,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Type_Money_MergeFrom_" data-uid="Google.Type.Money.MergeFrom*"></a>
               <h4 id="Google_Type_Money_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Type.Money.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -295,14 +304,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Type_Money_MergeFrom_" data-uid="Google.Type.Money.MergeFrom*"></a>
               <h4 id="Google_Type_Money_MergeFrom_Google_Type_Money_" data-uid="Google.Type.Money.MergeFrom(Google.Type.Money)">MergeFrom(Money)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -328,7 +338,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;Money&gt;.MergeFrom(Money)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Type_Money_ToString_" data-uid="Google.Type.Money.ToString*"></a>
               <h4 id="Google_Type_Money_ToString" data-uid="Google.Type.Money.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -353,6 +364,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Type_Money_WriteTo_" data-uid="Google.Type.Money.WriteTo*"></a>
               <h4 id="Google_Type_Money_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Type.Money.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -371,14 +383,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -407,7 +419,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

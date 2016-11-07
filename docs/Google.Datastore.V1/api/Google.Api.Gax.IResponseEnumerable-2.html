@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IResponseEnumerable&lt;TResponse, TResource&gt;
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_IResponseEnumerable_2" data-uid="Google.Api.Gax.IResponseEnumerable`2">Interface IResponseEnumerable&lt;TResponse, TResource&gt;
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.IResponseEnumerable-2.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A sequence of API responses, each of which contains a page of resources and
+              <div class="markdown level0 summary"><p>A sequence of API responses, each of which contains a page of resources and
 potentially additional information (depending on the API).</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -101,8 +101,9 @@ potentially additional information (depending on the API).</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_IResponseEnumerable_2_GetEnumerator_" data-uid="Google.Api.Gax.IResponseEnumerable`2.GetEnumerator*"></a>
               <h4 id="Google_Api_Gax_IResponseEnumerable_2_GetEnumerator" data-uid="Google.Api.Gax.IResponseEnumerable`2.GetEnumerator">GetEnumerator()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.IResponseEnumerable-2.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Begins lazily iterating over the sequence of pages, with an iterator allowing the page size to
+              <div class="markdown level1 summary"><p>Begins lazily iterating over the sequence of pages, with an iterator allowing the page size to
 be specified on each step.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -120,14 +121,15 @@ be specified on each step.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IResponseEnumerator-1.html#Google_Api_Gax_IResponseEnumerator_1">IResponseEnumerator</a>&lt;TResponse&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.IResponseEnumerable-2.yml" sourcestartlinenumber="1" sourceendlinenumber="1">An iterator over the pages in the sequence.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IResponseEnumerator-1.html#Google_Api_Gax_IResponseEnumerator_1">IResponseEnumerator&lt;T&gt;</a>&lt;TResponse&gt;</td>
+                    <td><p>An iterator over the pages in the sequence.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_" data-uid="Google.Api.Gax.IResponseEnumerable`2.WithFixedSize*"></a>
               <h4 id="Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_" data-uid="Google.Api.Gax.IResponseEnumerable`2.WithFixedSize(System.Int32)">WithFixedSize(Int32)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.IResponseEnumerable-2.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a lazily-evaluated sequence of pages of resources, where each page other
+              <div class="markdown level1 summary"><p>Creates a lazily-evaluated sequence of pages of resources, where each page other
 than the final one is guaranteed to contain exactly <em>pageSize</em> resources.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -148,7 +150,7 @@ than the final one is guaranteed to contain exactly <em>pageSize</em> resources.
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.IResponseEnumerable-2.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The page size. Must be greater than 0.</p>
+                    <td><p>The page size. Must be greater than 0.</p>
 </td>
                   </tr>
                 </tbody>
@@ -163,14 +165,14 @@ than the final one is guaranteed to contain exactly <em>pageSize</em> resources.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1">FixedSizePage</a>&lt;TResource&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.IResponseEnumerable-2.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A lazily-evaluated sequence of fixed-size pages.</p>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1">FixedSizePage&lt;TResource&gt;</a>&lt;TResource&gt;&gt;</td>
+                    <td><p>A lazily-evaluated sequence of fixed-size pages.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.IResponseEnumerable-2.yml" sourcestartlinenumber="2" sourceendlinenumber="5">&quot;Natural&quot; pages returned by the API may contain a smaller number of resources than requested.
+              <div class="markdown level1 remarks"><p>&quot;Natural&quot; pages returned by the API may contain a smaller number of resources than requested.
 For example, a request for a page with 100 resources may return a page with 80 resources but
 a next page token for more to be retrieved. This is suitable for batch-processing, but not
 for user-visible paging such as in a web application, where fixed-size pages are expected.</p>
@@ -203,7 +205,6 @@ for user-visible paging such as in a web application, where fixed-size pages are
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

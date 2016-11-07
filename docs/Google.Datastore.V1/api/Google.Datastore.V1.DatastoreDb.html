@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreDb
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Datastore_V1_DatastoreDb" data-uid="Google.Datastore.V1.DatastoreDb">Class DatastoreDb
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="3">An abstraction over <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> to simplify operations. Use the <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1_DatastoreClient_">Create(String, String, DatastoreClient)</a>
+              <div class="markdown level0 summary"><p>An abstraction over <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> to simplify operations. Use the <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1_DatastoreClient_">Create(String, String, DatastoreClient)</a>
 method to obtain an instance of this class.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -118,8 +118,9 @@ to construct instances; alternatively, you can construct a <a class="xref" href=
 </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Datastore_V1_DatastoreDb_Client_" data-uid="Google.Datastore.V1.DatastoreDb.Client*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Client" data-uid="Google.Datastore.V1.DatastoreDb.Client">Client</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> used for all remote operations.</p>
+              <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a> used for all remote operations.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -141,8 +142,9 @@ to construct instances; alternatively, you can construct a <a class="xref" href=
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_NamespaceId_" data-uid="Google.Datastore.V1.DatastoreDb.NamespaceId*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_NamespaceId" data-uid="Google.Datastore.V1.DatastoreDb.NamespaceId">NamespaceId</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The ID of the namespace this instance operates on.</p>
+              <div class="markdown level1 summary"><p>The ID of the namespace this instance operates on.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -164,8 +166,9 @@ to construct instances; alternatively, you can construct a <a class="xref" href=
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_ProjectId_" data-uid="Google.Datastore.V1.DatastoreDb.ProjectId*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_ProjectId" data-uid="Google.Datastore.V1.DatastoreDb.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The ID of the project this instance operates on.</p>
+              <div class="markdown level1 summary"><p>The ID of the project this instance operates on.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -189,10 +192,11 @@ to construct instances; alternatively, you can construct a <a class="xref" href=
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Datastore_V1_DatastoreDb_AllocateId_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateId*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_AllocateId_Google_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateId(Google.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">AllocateId(Key, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Allocates an ID for a single incomplete key.</p>
+              <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="82" sourceendlinenumber="82">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
 Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
@@ -214,13 +218,13 @@ Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
                     <td><em>key</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The incomplete key to allocate an ID for.</p>
+                    <td><p>The incomplete key to allocate an ID for.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -236,18 +240,19 @@ Key key = db.AllocateId(keyFactory.CreateIncompleteKey());
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The complete key.</p>
+                    <td><p>The complete key.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_AllocateId_Google_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_AllocateIdAsync_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIdAsync_Google_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdAsync(Google.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">AllocateIdAsync(Key, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Allocates an ID for a single incomplete key asynchronously.</p>
+              <div class="markdown level1 summary"><p>Allocates an ID for a single incomplete key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="89" sourceendlinenumber="89">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
 Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
@@ -269,13 +274,13 @@ Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
                     <td><em>key</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The incomplete key to allocate an ID for.</p>
+                    <td><p>The incomplete key to allocate an ID for.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -290,19 +295,20 @@ Key key = await db.AllocateIdAsync(keyFactory.CreateIncompleteKey());
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The complete key.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>The complete key.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_AllocateIdAsync_Google_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_AllocateIds_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIds*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIds_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIds(Google.Datastore.V1.Key[])">AllocateIds(Key[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Allocates IDs for a collection of incomplete keys.</p>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="96" sourceendlinenumber="96">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
 IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
@@ -324,7 +330,7 @@ IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateIncompleteKey(),
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The incomplete keys. Must not be null or contain null elements.</p>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
 </td>
                   </tr>
                 </tbody>
@@ -339,8 +345,8 @@ IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateIncompleteKey(),
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -352,8 +358,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_AllocateIds_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIds*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIds(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Allocates IDs for a collection of incomplete keys.</p>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -371,15 +378,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The incomplete keys. Must not be null or contain null elements.</p>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -394,16 +401,17 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdsAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdsAsync(Google.Datastore.V1.Key[])">AllocateIdsAsync(Key[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Allocates IDs for a collection of incomplete keys asynchronously.</p>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="103" sourceendlinenumber="103">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
 IReadOnlyList&lt;Key&gt; keys = await db.AllocateIdsAsync(keyFactory.CreateIncompleteKey(), keyFactory.CreateIncompleteKey());
@@ -425,7 +433,7 @@ IReadOnlyList&lt;Key&gt; keys = await db.AllocateIdsAsync(keyFactory.CreateIncom
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The incomplete keys. Must not be null or contain null elements.</p>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
 </td>
                   </tr>
                 </tbody>
@@ -440,8 +448,8 @@ IReadOnlyList&lt;Key&gt; keys = await db.AllocateIdsAsync(keyFactory.CreateIncom
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -453,8 +461,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdsAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.AllocateIdsAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Allocates IDs for a collection of incomplete keys asynchronously.</p>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -472,15 +481,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The incomplete keys. Must not be null or contain null elements.</p>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -495,14 +504,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <em>keys</em>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_BeginTransaction_" data-uid="Google.Datastore.V1.DatastoreDb.BeginTransaction*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.BeginTransaction(Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Begins a transaction, returning a <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+              <div class="markdown level1 summary"><p>Begins a transaction, returning a <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -522,7 +532,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -538,13 +548,14 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A new <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> for this object&#39;s project.</p>
+                    <td><p>A new <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> for this object&#39;s project.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_BeginTransactionAsync_" data-uid="Google.Datastore.V1.DatastoreDb.BeginTransactionAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Begins a transaction asynchronously, returning a <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+              <div class="markdown level1 summary"><p>Begins a transaction asynchronously, returning a <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -564,7 +575,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -579,14 +590,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A new <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> for this object&#39;s project.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a>&gt;</td>
+                    <td><p>A new <a class="xref" href="Google.Datastore.V1.DatastoreTransaction.html#Google_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> for this object&#39;s project.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_Create_" data-uid="Google.Datastore.V1.DatastoreDb.Create*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Create_System_String_System_String_Google_Datastore_V1_DatastoreClient_" data-uid="Google.Datastore.V1.DatastoreDb.Create(System.String,System.String,Google.Datastore.V1.DatastoreClient)">Create(String, String, DatastoreClient)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a> to operate on the partition identified by <em>projectId</em>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a> to operate on the partition identified by <em>projectId</em>
 and <em>namespaceId</em>, using the <em>client</em> to perform remote operations.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -607,19 +619,19 @@ and <em>namespaceId</em>, using the <em>client</em> to perform remote operations
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The project ID to use in all operations.</p>
+                    <td><p>The project ID to use in all operations.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>namespaceId</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The namespace ID to use in operations requiring a partition.</p>
+                    <td><p>The namespace ID to use in operations requiring a partition.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
                     <td><em>client</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The client to use for remote operations. If this is null, an instance will be created
+                    <td><p>The client to use for remote operations. If this is null, an instance will be created
 using default settings.</p>
 </td>
                   </tr>
@@ -636,13 +648,14 @@ using default settings.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a> operating on the specified partition.</p>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb">DatastoreDb</a> operating on the specified partition.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_CreateKeyFactory_" data-uid="Google.Datastore.V1.DatastoreDb.CreateKeyFactory*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_CreateKeyFactory_System_String_" data-uid="Google.Datastore.V1.DatastoreDb.CreateKeyFactory(System.String)">CreateKeyFactory(String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a key factory for root entities in this objects&#39;s partition.</p>
+              <div class="markdown level1 summary"><p>Creates a key factory for root entities in this objects&#39;s partition.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -662,7 +675,7 @@ using default settings.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>kind</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The kind of entity key to create. Must not be null.</p>
+                    <td><p>The kind of entity key to create. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -678,13 +691,14 @@ using default settings.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.KeyFactory.html#Google_Datastore_V1_KeyFactory">KeyFactory</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A key factory with the specified kind and this object&#39;s partition.</p>
+                    <td><p>A key factory with the specified kind and this object&#39;s partition.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Delete(Google.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Delete(Entity, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a single entity, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -704,22 +718,23 @@ using default settings.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>entity</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity to delete. Must not be null.</p>
+                    <td><p>The entity to delete. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.Delete(Google.Datastore.V1.Entity[])">Delete(Entity[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a collection of entities, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -739,7 +754,7 @@ using default settings.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to delete. Must not be null or contain null entries.</p>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -751,8 +766,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Delete(Google.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">Delete(Key, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a single key, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -772,22 +788,23 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
                     <td><em>key</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The key to delete. Must not be null.</p>
+                    <td><p>The key to delete. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Delete_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.Delete(Google.Datastore.V1.Key[])">Delete(Key[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a collection of keys, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -807,7 +824,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keys to delete. Must not be null or contain null entries.</p>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -819,8 +836,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a collection of entities, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -838,21 +856,22 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to delete. Must not be null or contain null entries.</p>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">Delete(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a collection of keys, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -870,21 +889,22 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keys to delete. Must not be null or contain null entries.</p>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(Google.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(Entity, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a single entity, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -904,13 +924,13 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>entity</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity to delete. Must not be null.</p>
+                    <td><p>The entity to delete. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -926,16 +946,17 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation.</p>
+                    <td><p>A task representing the asynchronous operation.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(Google.Datastore.V1.Entity[])">DeleteAsync(Entity[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a collection of entities, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -955,7 +976,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to delete. Must not be null or contain null entries.</p>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -971,7 +992,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation.</p>
+                    <td><p>A task representing the asynchronous operation.</p>
 </td>
                   </tr>
                 </tbody>
@@ -983,8 +1004,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(Google.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(Key, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a single key, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1004,13 +1026,13 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
                     <td><em>key</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The key to delete. Must not be null.</p>
+                    <td><p>The key to delete. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1031,10 +1053,11 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(Google.Datastore.V1.Key[])">DeleteAsync(Key[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a collection of keys, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1054,7 +1077,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keys to delete. Must not be null or contain null entries.</p>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1081,8 +1104,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a collection of entities, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1100,15 +1124,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to delete. Must not be null or contain null entries.</p>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1124,13 +1148,14 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation.</p>
+                    <td><p>A task representing the asynchronous operation.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Deletes a collection of keys, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1148,15 +1173,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keys to delete. Must not be null or contain null entries.</p>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1176,8 +1201,9 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Insert_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Insert(Google.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Insert(Entity, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Inserts a single entity, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1197,13 +1223,13 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>entity</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity to insert. Must not be null.</p>
+                    <td><p>The entity to insert. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1219,19 +1245,20 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The key of the inserted entity if it was allocated by the server, or
+                    <td><p>The key of the inserted entity if it was allocated by the server, or
 <code>null</code> if the inserted entity had a predefined key.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_Insert_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Insert_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.Insert(Google.Datastore.V1.Entity[])">Insert(Entity[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Inserts a collection of entities, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="68" sourceendlinenumber="68">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
 Entity book1 = new Entity
@@ -1270,7 +1297,7 @@ Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to insert. Must not be null or contain null entries.</p>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1285,8 +1312,8 @@ Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="3">A collection of keys of inserted entities, in the same order as <em>entities</em>.
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of inserted entities, in the same order as <em>entities</em>.
 Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
 the collection.</p>
 </td>
@@ -1300,8 +1327,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Insert(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Inserts a collection of entities, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1319,15 +1347,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to insert. Must not be null or contain null entries.</p>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1342,16 +1370,17 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="3">A collection of keys of inserted entities, in the same order as <em>entities</em>.
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of keys of inserted entities, in the same order as <em>entities</em>.
 Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
 the collection.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_InsertAsync_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync(Google.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">InsertAsync(Entity, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Inserts a single entity, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1371,13 +1400,13 @@ the collection.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>entity</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity to insert. Must not be null.</p>
+                    <td><p>The entity to insert. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1392,20 +1421,21 @@ the collection.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="2">A task representing the asynchronous operation. The result of the task is the key of the inserted entity
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the key of the inserted entity
 if it was allocated by the server, or <code>null</code> if the inserted entity had a predefined key.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_InsertAsync_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_InsertAsync_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync(Google.Datastore.V1.Entity[])">InsertAsync(Entity[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Inserts a collection of entities, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="75" sourceendlinenumber="75">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
 Entity book1 = new Entity
@@ -1444,7 +1474,7 @@ Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to insert. Must not be null or contain null entries.</p>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1459,8 +1489,8 @@ Console.WriteLine($&quot;Inserted keys: {string.Join(&quot;,&quot;, insertedKeys
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="4">A task representing the asynchronous operation. The result of the task is
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
 a collection of keys of inserted entities, in the same order as <em>entities</em>.
 Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
 the collection.</p>
@@ -1475,8 +1505,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.InsertAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Inserts a collection of entities, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1494,15 +1525,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to insert. Must not be null or contain null entries.</p>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1517,8 +1548,8 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="4">A task representing the asynchronous operation. The result of the task is
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
 a collection of keys of inserted entities, in the same order as <em>entities</em>.
 Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
 the collection.</p>
@@ -1526,8 +1557,9 @@ the collection.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_Lookup_" data-uid="Google.Datastore.V1.DatastoreDb.Lookup*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Lookup_Google_Datastore_V1_Key_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Lookup(Google.Datastore.V1.Key,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">Lookup(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Looks up a single entity by key.</p>
+              <div class="markdown level1 summary"><p>Looks up a single entity by key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1547,19 +1579,19 @@ the collection.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
                     <td><em>key</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The key to look up. Must not be null, and must be complete.</p>
+                    <td><p>The key to look up. Must not be null, and must be complete.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The desired read consistency of the lookup, or null to use the default.</p>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1575,18 +1607,19 @@ the collection.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity with the specified key, or <code>null</code> if no such entity exists.</p>
+                    <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_Lookup_Google_Datastore_V1_Key_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Lookup_" data-uid="Google.Datastore.V1.DatastoreDb.Lookup*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Lookup_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.Lookup(Google.Datastore.V1.Key[])">Lookup(Key[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Looks up a collection of entities by key.</p>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="5" sourceendlinenumber="5">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
 Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
@@ -1613,7 +1646,7 @@ Console.WriteLine(entities[1]); // Nothing (value is null reference)
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1628,8 +1661,8 @@ Console.WriteLine(entities[1]); // Nothing (value is null reference)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="2">A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
                   </tr>
@@ -1640,14 +1673,15 @@ references, or <code>null</code> where the key was not found.</p>
 This call may perform multiple RPC operations in order to look up all keys.
 </p>
 <p>
-This overload does not support the <span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span> or <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> to be specified due to restrictions with
+This overload does not support the <span class="xref"></span> or <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> to be specified due to restrictions with
 methods containing a parameter array and optional parameters.
 It simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the read consistency and call settings.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Lookup_" data-uid="Google.Datastore.V1.DatastoreDb.Lookup*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Lookup(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Looks up a collection of entities by key.</p>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1665,21 +1699,21 @@ value for the read consistency and call settings.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The desired read consistency of the lookup, or null to use the default.</p>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1694,18 +1728,19 @@ value for the read consistency and call settings.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="2">A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">This call may perform multiple RPC operations in order to look up all keys.</p>
+              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_LookupAsync_" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_LookupAsync_Google_Datastore_V1_Key_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync(Google.Datastore.V1.Key,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Looks up a single entity by key asynchronously.</p>
+              <div class="markdown level1 summary"><p>Looks up a single entity by key asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1725,19 +1760,19 @@ references, or <code>null</code> where the key was not found.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
                     <td><em>key</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The key to look up. Must not be null, and must be complete.</p>
+                    <td><p>The key to look up. Must not be null, and must be complete.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The desired read consistency of the lookup, or null to use the default.</p>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1752,17 +1787,18 @@ references, or <code>null</code> where the key was not found.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity with the specified key, or <code>null</code> if no such entity exists.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_LookupAsync_Google_Datastore_V1_Key_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_LookupAsync_" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_LookupAsync_Google_Datastore_V1_Key___" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync(Google.Datastore.V1.Key[])">LookupAsync(Key[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Looks up a collection of entities by key asynchronously.</p>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1782,7 +1818,7 @@ references, or <code>null</code> where the key was not found.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>[]</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1797,8 +1833,8 @@ references, or <code>null</code> where the key was not found.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="2">A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
                   </tr>
@@ -1809,14 +1845,15 @@ references, or <code>null</code> where the key was not found.</p>
 This call may perform multiple RPC operations in order to look up all keys.
 </p>
 <p>
-This overload does not support the <span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span> or <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> to be specified due to restrictions with
+This overload does not support the <span class="xref"></span> or <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> to be specified due to restrictions with
 methods containing a parameter array and optional parameters.
 It simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the read consistency and call settings.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_LookupAsync_" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.LookupAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Key},System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Looks up a collection of entities by key asynchronously.</p>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1834,21 +1871,21 @@ value for the read consistency and call settings.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
                     <td><em>keys</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The desired read consistency of the lookup, or null to use the default.</p>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1863,22 +1900,23 @@ value for the read consistency and call settings.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="2">A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;&gt;</td>
+                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Key__System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">This call may perform multiple RPC operations in order to look up all keys.</p>
+              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_RunQuery_" data-uid="Google.Datastore.V1.DatastoreDb.RunQuery*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_RunQuery_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQuery(Google.Datastore.V1.GqlQuery,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Runs the given query eagerly, retrieving all results in memory and indicating whether more
+              <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
 results may be available beyond the query&#39;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="54" sourceendlinenumber="54">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 GqlQuery gqlQuery = new GqlQuery
 {
@@ -1915,19 +1953,19 @@ foreach (Entity entity in results.Entities)
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
                     <td><em>query</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The query to execute. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, overrides the read consistency of the query.</p>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1943,17 +1981,18 @@ foreach (Entity entity in results.Entities)
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The complete query results.</p>
+                    <td><p>The complete query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_RunQuery_" data-uid="Google.Datastore.V1.DatastoreDb.RunQuery*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_RunQuery_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQuery(Google.Datastore.V1.Query,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQuery(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Runs the given query eagerly, retrieving all results in memory and indicating whether more
+              <div class="markdown level1 summary"><p>Runs the given query eagerly, retrieving all results in memory and indicating whether more
 results may be available beyond the query&#39;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="40" sourceendlinenumber="40">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 Query query = new Query(&quot;book&quot;)
 {
@@ -1987,19 +2026,19 @@ foreach (Entity entity in results.Entities)
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
                     <td><em>query</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The query to execute. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, overrides the read consistency of the query.</p>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2015,17 +2054,18 @@ foreach (Entity entity in results.Entities)
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The complete query results.</p>
+                    <td><p>The complete query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_RunQueryAsync_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Datastore.V1.GqlQuery,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
 results may be available beyond the query&#39;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="61" sourceendlinenumber="61">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 GqlQuery gqlQuery = new GqlQuery
 {
@@ -2059,19 +2099,19 @@ foreach (Entity entity in results.Entities)
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
                     <td><em>query</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The query to execute. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, overrides the read consistency of the query.</p>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2086,18 +2126,19 @@ foreach (Entity entity in results.Entities)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_RunQueryAsync_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryAsync_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryAsync(Google.Datastore.V1.Query,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
+              <div class="markdown level1 summary"><p>Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
 results may be available beyond the query&#39;s limit. Use this method when your query has a limited
 number of results, for example to build a web application which fetches results in pages.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="47" sourceendlinenumber="47">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 Query query = new Query(&quot;book&quot;)
 {
@@ -2130,19 +2171,19 @@ foreach (Entity entity in results.Entities)
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
                     <td><em>query</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The query to execute. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, overrides the read consistency of the query.</p>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2157,16 +2198,17 @@ foreach (Entity entity in results.Entities)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.DatastoreQueryResults.html#Google_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazily*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazily(Google.Datastore.V1.GqlQuery,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lazily executes the given GQL query for asynchronous consumption.</p>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="26" sourceendlinenumber="26">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 GqlQuery gqlQuery = new GqlQuery
 {
@@ -2200,19 +2242,19 @@ foreach (Entity entity in results)
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
                     <td><em>gqlQuery</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The query to execute. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, overrides the read consistency of the query.</p>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2228,20 +2270,21 @@ foreach (Entity entity in results)
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the lazy query results.</p>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the lazy query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="4">The results are requested lazily: no API calls will be made until the application starts
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
 iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazily*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazily(Google.Datastore.V1.Query,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lazily executes the given structured query.</p>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="12" sourceendlinenumber="12">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 Query query = new Query(&quot;book&quot;)
 {
@@ -2274,19 +2317,19 @@ foreach (Entity entity in results)
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
                     <td><em>query</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The query to execute. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, overrides the read consistency of the query.</p>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2302,20 +2345,21 @@ foreach (Entity entity in results)
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the lazy query results.</p>
+                    <td><p>A <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the lazy query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="4">The results are requested lazily: no API calls will be made until the application starts
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
 iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazilyAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1.GqlQuery,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lazily executes the given GQL query for asynchronous consumption.</p>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="33" sourceendlinenumber="33">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 GqlQuery gqlQuery = new GqlQuery
 {
@@ -2349,19 +2393,19 @@ await results.ForEachAsync(entity =&gt;
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.GqlQuery.html#Google_Datastore_V1_GqlQuery">GqlQuery</a></td>
                     <td><em>gqlQuery</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The query to execute. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, overrides the read consistency of the query.</p>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2377,20 +2421,21 @@ await results.ForEachAsync(entity =&gt;
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">An <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
+                    <td><p>An <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_GqlQuery_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="4">The results are requested lazily: no API calls will be made until the application starts
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
 iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazilyAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.RunQueryLazilyAsync(Google.Datastore.V1.Query,System.Nullable{Google.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lazily executes the given structured query for asynchronous consumption.</p>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query for asynchronous consumption.</p>
 </div>
-              <div class="markdown level1 conceptual"><p sourcefile="obj/snippets/Google.Datastore.V1.DatastoreDb.md" sourcestartlinenumber="19" sourceendlinenumber="19">Example:</p>
+              <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 Query query = new Query(&quot;book&quot;)
 {
@@ -2423,19 +2468,19 @@ await results.ForEachAsync(entity =&gt;
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Query.html#Google_Datastore_V1_Query">Query</a></td>
                     <td><em>query</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The query to execute. Must not be null.</p>
+                    <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td><em>readConsistency</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, overrides the read consistency of the query.</p>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to RPC calls.</p>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2451,18 +2496,19 @@ await results.ForEachAsync(entity =&gt;
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">An <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
+                    <td><p>An <a class="xref" href="Google.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Datastore_V1_Query_System_Nullable_Google_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="4">The results are requested lazily: no API calls will be made until the application starts
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
 iterating over the results. Iterating over the same <a class="xref" href="Google.Datastore.V1.LazyDatastoreQuery.html#Google_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Update_" data-uid="Google.Datastore.V1.DatastoreDb.Update*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Update_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Update(Google.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Update(Entity, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Updates a single entity, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2482,22 +2528,23 @@ multiple times will execute the query again, potentially returning different res
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>entity</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity to update. Must not be null.</p>
+                    <td><p>The entity to update. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_Update_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Update_" data-uid="Google.Datastore.V1.DatastoreDb.Update*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Update_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.Update(Google.Datastore.V1.Entity[])">Update(Entity[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Updates a collection of entities, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2517,7 +2564,7 @@ multiple times will execute the query again, potentially returning different res
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to update. Must not be null or contain null entries.</p>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2529,8 +2576,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Update_" data-uid="Google.Datastore.V1.DatastoreDb.Update*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Update(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Update(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Updates a collection of entities, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2548,21 +2596,22 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to update. Must not be null or contain null entries.</p>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_UpdateAsync_" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync(Google.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">UpdateAsync(Entity, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Updates a single entity, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2582,13 +2631,13 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>entity</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity to update. Must not be null.</p>
+                    <td><p>The entity to update. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2604,16 +2653,17 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation.</p>
+                    <td><p>A task representing the asynchronous operation.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_UpdateAsync_" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync(Google.Datastore.V1.Entity[])">UpdateAsync(Entity[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Updates a collection of entities, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2633,7 +2683,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to update. Must not be null or contain null entries.</p>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2649,7 +2699,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation.</p>
+                    <td><p>A task representing the asynchronous operation.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2661,8 +2711,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_UpdateAsync_" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.UpdateAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Updates a collection of entities, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2680,15 +2731,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to update. Must not be null or contain null entries.</p>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2704,13 +2755,14 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A task representing the asynchronous operation.</p>
+                    <td><p>A task representing the asynchronous operation.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_Upsert_" data-uid="Google.Datastore.V1.DatastoreDb.Upsert*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Upsert_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Upsert(Google.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Upsert(Entity, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Upserts a single entity, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2730,13 +2782,13 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>entity</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity to upsert. Must not be null.</p>
+                    <td><p>The entity to upsert. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2752,17 +2804,18 @@ To specify options, create a collection or array explicitly, and call <a class="
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="2"><code>null</code> if the entity was updated or was inserted with a predefined key, or the new key if the entity was inserted
+                    <td><p><code>null</code> if the entity was updated or was inserted with a predefined key, or the new key if the entity was inserted
     and the mutation allocated the key.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_Upsert_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Upsert_" data-uid="Google.Datastore.V1.DatastoreDb.Upsert*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Upsert_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.Upsert(Google.Datastore.V1.Entity[])">Upsert(Entity[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Upserts a collection of entities, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2782,7 +2835,7 @@ To specify options, create a collection or array explicitly, and call <a class="
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to upsert. Must not be null or contain null entries.</p>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2797,8 +2850,8 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="4">A collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
 which had an incomplete key - requiring the server to allocate a new key - will have a non-null
 value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
 with a predefined key will have a null value in the collection.</p>
@@ -2813,8 +2866,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_Upsert_" data-uid="Google.Datastore.V1.DatastoreDb.Upsert*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.Upsert(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Upserts a collection of entities, non-transactionally.</p>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2832,15 +2886,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to upsert. Must not be null or contain null entries.</p>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2855,8 +2909,8 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="4">A collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
 which had an incomplete key - requiring the server to allocate a new key - will have a non-null
 value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
 with a predefined key will have a null value in the collection.</p>
@@ -2864,8 +2918,9 @@ with a predefined key will have a null value in the collection.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_DatastoreDb_UpsertAsync_" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync(Google.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">UpsertAsync(Entity, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Upserts a single entity, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2885,13 +2940,13 @@ with a predefined key will have a null value in the collection.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a></td>
                     <td><em>entity</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity to upsert. Must not be null.</p>
+                    <td><p>The entity to upsert. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2906,8 +2961,8 @@ with a predefined key will have a null value in the collection.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="3">A task representing the asynchronous operation. The result of the task is
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
 <code>null</code> if the entity was updated or was inserted with a predefined key, or the
 new key if the entity was inserted and the mutation allocated the key.</p>
 </td>
@@ -2915,10 +2970,11 @@ new key if the entity was inserted and the mutation allocated the key.</p>
                 </tbody>
               </table>
               <h5 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_Google_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_UpsertAsync_" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_Google_Datastore_V1_Entity___" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync(Google.Datastore.V1.Entity[])">UpsertAsync(Entity[])</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Upserts a collection of entities, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2938,7 +2994,7 @@ new key if the entity was inserted and the mutation allocated the key.</p>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>[]</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to upsert. Must not be null or contain null entries.</p>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                 </tbody>
@@ -2953,8 +3009,8 @@ new key if the entity was inserted and the mutation allocated the key.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="5">A task representing the asynchronous operation. The result of the task is
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
 a collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
 which had an incomplete key - requiring the server to allocate a new key - will have a non-null
 value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
@@ -2970,8 +3026,9 @@ Call settings are not supported on this call due to restrictions with methods co
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_DatastoreDb_UpsertAsync_" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync*"></a>
               <h4 id="Google_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Datastore.V1.DatastoreDb.UpsertAsync(System.Collections.Generic.IEnumerable{Google.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Upserts a collection of entities, non-transactionally and asynchronously.</p>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -2989,15 +3046,15 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity">Entity</a>&gt;</td>
                     <td><em>entities</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entities to upsert. Must not be null or contain null entries.</p>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -3012,8 +3069,8 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.DatastoreDb.yml" sourcestartlinenumber="1" sourceendlinenumber="5">A task representing the asynchronous operation. The result of the task is
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Key.html#Google_Datastore_V1_Key">Key</a>&gt;&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
 a collection of allocated keys, in the same order as <em>entities</em>. Each inserted entity
 which had an incomplete key - requiring the server to allocate a new key - will have a non-null
 value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
@@ -3050,7 +3107,6 @@ with a predefined key will have a null value in the collection.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

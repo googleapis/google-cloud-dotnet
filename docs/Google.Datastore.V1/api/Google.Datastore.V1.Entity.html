@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Entity
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,10 +70,10 @@
               
               <h1 id="Google_Datastore_V1_Entity" data-uid="Google.Datastore.V1.Entity">Class Entity
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A Datastore data object.</p>
-<p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="4" sourceendlinenumber="6"> An entity is limited to 1 megabyte when stored. That <em>roughly</em>
- corresponds to a limit of 1 megabyte for the serialized form of this
- message.</p>
+              <div class="markdown level0 summary"><p>A Datastore data object.</p>
+<p>An entity is limited to 1 megabyte when stored. That <em>roughly</em>
+corresponds to a limit of 1 megabyte for the serialized form of this
+message.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -104,8 +104,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Datastore_V1_Entity_Item_" data-uid="Google.Datastore.V1.Entity.Item*"></a>
               <h4 id="Google_Datastore_V1_Entity_Item_System_String_" data-uid="Google.Datastore.V1.Entity.Item(System.String)">Item[String]</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Indexer presenting a null-friendly view of the entity properties.</p>
+              <div class="markdown level1 summary"><p>Indexer presenting a null-friendly view of the entity properties.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -125,7 +126,7 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Property name to access. The name itself must not be null.</p>
+                    <td><p>Property name to access. The name itself must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -141,7 +142,7 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Datastore.V1.Value.html#Google_Datastore_V1_Value">Value</a></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The property value associated with the key.</p>
+                    <td><p>The property value associated with the key.</p>
 </td>
                   </tr>
                 </tbody>
@@ -156,12 +157,13 @@ When using the setter of the indexer, setting a null value removes the
 property if it is present. To explicitly set a null value, use <a class="xref" href="Google.Datastore.V1.Value.html#Google_Datastore_V1_Value_ForNull">ForNull()</a>.
 </p>
 </div>
+              <a id="Google_Datastore_V1_Entity_Key_" data-uid="Google.Datastore.V1.Entity.Key*"></a>
               <h4 id="Google_Datastore_V1_Entity_Key" data-uid="Google.Datastore.V1.Entity.Key">Key</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The entity&#39;s key.</p>
-<p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="4" sourceendlinenumber="7"> An entity must have a key, unless otherwise documented (for example,
- an entity in <code>Value.entity_value</code> may have no key).
- An entity&#39;s kind is its key path&#39;s last element&#39;s kind,
- or null if it has no key.</p>
+              <div class="markdown level1 summary"><p>The entity&#39;s key.</p>
+<p>An entity must have a key, unless otherwise documented (for example,
+an entity in <code>Value.entity_value</code> may have no key).
+An entity&#39;s kind is its key path&#39;s last element&#39;s kind,
+or null if it has no key.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -183,13 +185,14 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Entity_Properties_" data-uid="Google.Datastore.V1.Entity.Properties*"></a>
               <h4 id="Google_Datastore_V1_Entity_Properties" data-uid="Google.Datastore.V1.Entity.Properties">Properties</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> The entity&#39;s properties.
- The map&#39;s keys are property names.
- A property name matching regex <code>__.*__</code> is reserved.
- A reserved property name is forbidden in certain documented contexts.
- The name must not contain more than 500 characters.
- The name cannot be <code>&quot;&quot;</code>.</p>
+              <div class="markdown level1 summary"><p>The entity&#39;s properties.
+The map&#39;s keys are property names.
+A property name matching regex <code>__.*__</code> is reserved.
+A reserved property name is forbidden in certain documented contexts.
+The name must not contain more than 500 characters.
+The name cannot be <code>&quot;&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -206,15 +209,16 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html#Google_Protobuf_Collections_MapField_2">MapField</a>&lt;<span class="xref">System.String</span>, <a class="xref" href="Google.Datastore.V1.Value.html#Google_Datastore_V1_Value">Value</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Google.Datastore.V1.Value.html#Google_Datastore_V1_Value">Value</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Datastore_V1_Entity_ToDelete_" data-uid="Google.Datastore.V1.Entity.ToDelete*"></a>
               <h4 id="Google_Datastore_V1_Entity_ToDelete" data-uid="Google.Datastore.V1.Entity.ToDelete">ToDelete()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a mutation representating a delete of this entity, via its <a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity_Key">Key</a> property.</p>
+              <div class="markdown level1 summary"><p>Creates a mutation representating a delete of this entity, via its <a class="xref" href="Google.Datastore.V1.Entity.html#Google_Datastore_V1_Entity_Key">Key</a> property.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -247,13 +251,14 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity does not have a key.</p>
+                    <td><p>The entity does not have a key.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Entity_ToInsert_" data-uid="Google.Datastore.V1.Entity.ToInsert*"></a>
               <h4 id="Google_Datastore_V1_Entity_ToInsert" data-uid="Google.Datastore.V1.Entity.ToInsert">ToInsert()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a mutation representating an insert of this entity.</p>
+              <div class="markdown level1 summary"><p>Creates a mutation representating an insert of this entity.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -286,13 +291,14 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity does not have a key.</p>
+                    <td><p>The entity does not have a key.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Entity_ToUpdate_" data-uid="Google.Datastore.V1.Entity.ToUpdate*"></a>
               <h4 id="Google_Datastore_V1_Entity_ToUpdate" data-uid="Google.Datastore.V1.Entity.ToUpdate">ToUpdate()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a mutation representating an update of this entity.</p>
+              <div class="markdown level1 summary"><p>Creates a mutation representating an update of this entity.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -325,13 +331,14 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity does not have a key.</p>
+                    <td><p>The entity does not have a key.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Entity_ToUpsert_" data-uid="Google.Datastore.V1.Entity.ToUpsert*"></a>
               <h4 id="Google_Datastore_V1_Entity_ToUpsert" data-uid="Google.Datastore.V1.Entity.ToUpsert">ToUpsert()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a mutation representating an upsert of this entity.</p>
+              <div class="markdown level1 summary"><p>Creates a mutation representating an upsert of this entity.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -364,7 +371,7 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.Entity.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The entity does not have a key.</p>
+                    <td><p>The entity does not have a key.</p>
 </td>
                   </tr>
                 </tbody>
@@ -397,7 +404,6 @@ property if it is present. To explicitly set a null value, use <a class="xref" h
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

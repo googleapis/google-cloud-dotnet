@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Resource names | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Resource names | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,29 +57,29 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="resource-names" sourcefile="resource-names.md" sourcestartlinenumber="1" sourceendlinenumber="1">Resource names</h1>
+              <h1 id="resource-names">Resource names</h1>
               
-<h2 id="concepts" sourcefile="resource-names.md" sourcestartlinenumber="3" sourceendlinenumber="3">Concepts</h2>
-<p sourcefile="resource-names.md" sourcestartlinenumber="5" sourceendlinenumber="8">Many Google Cloud Platform APIs deal with multiple resources. Historically there
+<h2 id="concepts">Concepts</h2>
+<p>Many Google Cloud Platform APIs deal with multiple resources. Historically there
 have been many different approaches to identifying these resources, but new APIs
 are coalescing around the idea of a single <em>resource name</em> which uniquely identifies
 that resource within an API.</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="10" sourceendlinenumber="13">A resource name is a path-like structure, typically alternating between fixed collection
+<p>A resource name is a path-like structure, typically alternating between fixed collection
 names and an identifier within that collection. Throughout this page, we will use
-the example of the <a href="https://cloud.google.com/pubsub/overview" sourcefile="resource-names.md" sourcestartlinenumber="12" sourceendlinenumber="12">Google Cloud Pub/Sub API</a>,
-which is exposed by the <a href="https://www.nuget.org/packages/Google.Pubsub.V1" sourcefile="resource-names.md" sourcestartlinenumber="13" sourceendlinenumber="13">Google.Pubsub.V1 NuGet package</a>.</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="15" sourceendlinenumber="17">In Cloud Pub/Sub, a publisher creates a <em>topic</em> within a <em>project</em>, and a subscriber creates
+the example of the <a href="https://cloud.google.com/pubsub/overview">Google Cloud Pub/Sub API</a>,
+which is exposed by the <a href="https://www.nuget.org/packages/Google.Pubsub.V1">Google.Pubsub.V1 NuGet package</a>.</p>
+<p>In Cloud Pub/Sub, a publisher creates a <em>topic</em> within a <em>project</em>, and a subscriber creates
 a <em>subscription</em> to that topic, also within a project. (The topic and subscription may be in different projects.)
 It is possible to list the topics or subscriptions within a project.</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="19" sourceendlinenumber="19">To make everything concrete, we&#39;ll consider three resources:</p>
-<ul sourcefile="resource-names.md" sourcestartlinenumber="21" sourceendlinenumber="23">
-<li sourcefile="resource-names.md" sourcestartlinenumber="21" sourceendlinenumber="21">Project: <code>projects/petstore</code></li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="22" sourceendlinenumber="22">Topic: <code>projects/petstore/topics/offers</code></li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="23" sourceendlinenumber="23">Subscription: <code>projects/petstore_web/subscriptions/pet_offers</code></li>
+<p>To make everything concrete, we&#39;ll consider three resources:</p>
+<ul>
+<li>Project: <code>projects/petstore</code></li>
+<li>Topic: <code>projects/petstore/topics/offers</code></li>
+<li>Subscription: <code>projects/petstore_web/subscriptions/pet_offers</code></li>
 </ul>
-<p sourcefile="resource-names.md" sourcestartlinenumber="25" sourceendlinenumber="25">(We&#39;ve deliberately used a different project in the subscription to highlight that they don&#39;t have to be the same.)</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="27" sourceendlinenumber="28">The names above are the ones you would see and use in the Pub/Sub API. For example, to list all the topics
-in the <code>projects/petstore</code> project, you would use the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_" sourcefile="resource-names.md" sourcestartlinenumber="28" sourceendlinenumber="28">PublisherClient.ListTopics</a> method:</p>
+<p>(We&#39;ve deliberately used a different project in the subscription to highlight that they don&#39;t have to be the same.)</p>
+<p>The names above are the ones you would see and use in the Pub/Sub API. For example, to list all the topics
+in the <code>projects/petstore</code> project, you would use the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">PublisherClient.ListTopics</a> method:</p>
 <pre><code class="lang-cs">var client = PublisherClient.Create();
 var topics = client.ListTopics(&quot;projects/petstore&quot;);
 foreach (Topic topic in topics)
@@ -87,56 +87,56 @@ foreach (Topic topic in topics)
     // Output would include projects/petstore/topics/offers
     Console.WriteLine(topic.Name);
 }
-</code></pre><p sourcefile="resource-names.md" sourcestartlinenumber="32" sourceendlinenumber="33">Using a single string as a resource name makes many things simple - such as referring to a resource in a logging or monitoring API.
+</code></pre><p>Using a single string as a resource name makes many things simple - such as referring to a resource in a logging or monitoring API.
 However, there are times when an application would more naturally consider <em>resource IDs</em> - the parts within an resource name that vary.</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="35" sourceendlinenumber="35">For example, within our topic resource name (<code>projects/petstore/topics/offers</code>) there are two resource IDs:</p>
-<ul sourcefile="resource-names.md" sourcestartlinenumber="37" sourceendlinenumber="38">
-<li sourcefile="resource-names.md" sourcestartlinenumber="37" sourceendlinenumber="37">The project ID (<code>petstore</code>)</li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="38" sourceendlinenumber="38">The topic ID (<code>offers</code>)</li>
+<p>For example, within our topic resource name (<code>projects/petstore/topics/offers</code>) there are two resource IDs:</p>
+<ul>
+<li>The project ID (<code>petstore</code>)</li>
+<li>The topic ID (<code>offers</code>)</li>
 </ul>
-<p sourcefile="resource-names.md" sourcestartlinenumber="40" sourceendlinenumber="42">We can&#39;t tell you when your application will need to use resource IDs and when it will need to use resource names, but we&#39;d recommend
+<p>We can&#39;t tell you when your application will need to use resource IDs and when it will need to use resource names, but we&#39;d recommend
 using the terms &quot;name&quot; and &quot;ID&quot; in a manner consistent with the API terminology. The more you can use resource names in your code, the
 less parsing and formatting you&#39;ll need to perform, of course.</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="44" sourceendlinenumber="45">You should not perform the formatting and parsing yourself, as it is error-prone and tedious. Instead, use the functionality
+<p>You should not perform the formatting and parsing yourself, as it is error-prone and tedious. Instead, use the functionality
 provided by the class libraries, as described below.</p>
-<h2 id="formatting-a-resource-name-from-resource-ids" sourcefile="resource-names.md" sourcestartlinenumber="47" sourceendlinenumber="47">Formatting a resource name from resource IDs</h2>
-<p sourcefile="resource-names.md" sourcestartlinenumber="49" sourceendlinenumber="49">For each resource used by a particular API client, a static format method is generated. For example, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html" sourcefile="resource-names.md" sourcestartlinenumber="49" sourceendlinenumber="49">PublisherClient</a> class has two format methods:</p>
-<ul sourcefile="resource-names.md" sourcestartlinenumber="51" sourceendlinenumber="52">
-<li sourcefile="resource-names.md" sourcestartlinenumber="51" sourceendlinenumber="51"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatProjectName_System_String_" sourcefile="resource-names.md" sourcestartlinenumber="51" sourceendlinenumber="51">FormatProjectName(string)</a></li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="52" sourceendlinenumber="52"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatTopicName_System_String_System_String_" sourcefile="resource-names.md" sourcestartlinenumber="52" sourceendlinenumber="52">FormatTopicName(string, string)</a></li>
+<h2 id="formatting-a-resource-name-from-resource-ids">Formatting a resource name from resource IDs</h2>
+<p>For each resource used by a particular API client, a static format method is generated. For example, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> class has two format methods:</p>
+<ul>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatProjectName_System_String_">FormatProjectName(string)</a></li>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatTopicName_System_String_System_String_">FormatTopicName(string, string)</a></li>
 </ul>
-<p sourcefile="resource-names.md" sourcestartlinenumber="54" sourceendlinenumber="54">Likewise, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html" sourcefile="resource-names.md" sourcestartlinenumber="54" sourceendlinenumber="54">SubscriberClient</a> class has three methods:</p>
-<ul sourcefile="resource-names.md" sourcestartlinenumber="55" sourceendlinenumber="57">
-<li sourcefile="resource-names.md" sourcestartlinenumber="55" sourceendlinenumber="55"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatProjectName_System_String_" sourcefile="resource-names.md" sourcestartlinenumber="55" sourceendlinenumber="55">FormatProjectName(string)</a></li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="56" sourceendlinenumber="56"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatTopicName_System_String_System_String_" sourcefile="resource-names.md" sourcestartlinenumber="56" sourceendlinenumber="56">FormatTopicName(string, string)</a></li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="57" sourceendlinenumber="57"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatSubscriptionName_System_String_System_String_" sourcefile="resource-names.md" sourcestartlinenumber="57" sourceendlinenumber="57">FormatSubscriptionName(string, string)</a></li>
+<p>Likewise, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html">SubscriberClient</a> class has three methods:</p>
+<ul>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatProjectName_System_String_">FormatProjectName(string)</a></li>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatTopicName_System_String_System_String_">FormatTopicName(string, string)</a></li>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatSubscriptionName_System_String_System_String_">FormatSubscriptionName(string, string)</a></li>
 </ul>
-<p sourcefile="resource-names.md" sourcestartlinenumber="59" sourceendlinenumber="60">(A publisher never needs to format a subscription name, whereas a subscriber <em>does</em> need to format a topic name in order to
+<p>(A publisher never needs to format a subscription name, whereas a subscriber <em>does</em> need to format a topic name in order to
 create a subscription.)</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="62" sourceendlinenumber="62">Each format method has one parameter for each resource ID present in the resource name, in the order in which they appear in the resource name.</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="64" sourceendlinenumber="64">Here&#39;s an example of formatting the resource name for our <code>offers</code> topic:</p>
+<p>Each format method has one parameter for each resource ID present in the resource name, in the order in which they appear in the resource name.</p>
+<p>Here&#39;s an example of formatting the resource name for our <code>offers</code> topic:</p>
 <pre><code class="lang-cs">string projectId = &quot;petstore&quot;;
 string topicId = &quot;offers&quot;;
 string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 // The value of topicName is now &quot;projects/petstore/topics/offers&quot;
-</code></pre><h2 id="parsing-resource-ids-from-a-resource-name" sourcefile="resource-names.md" sourcestartlinenumber="68" sourceendlinenumber="68">Parsing resource IDs from a resource name</h2>
-<p sourcefile="resource-names.md" sourcestartlinenumber="70" sourceendlinenumber="74">As well as the format methods, a static property is provided for each resource, of type
-<a href="api/Google.Api.Gax.PathTemplate.html" sourcefile="resource-names.md" sourcestartlinenumber="71" sourceendlinenumber="71">PathTemplate</a>. This can be used to parse a resource name (as a string)
-into a <a href="api/Google.Api.Gax.ResourceName.html" sourcefile="resource-names.md" sourcestartlinenumber="72" sourceendlinenumber="72">ResourceName</a> object. The resource IDs can then be extracted from
+</code></pre><h2 id="parsing-resource-ids-from-a-resource-name">Parsing resource IDs from a resource name</h2>
+<p>As well as the format methods, a static property is provided for each resource, of type
+<a href="api/Google.Api.Gax.PathTemplate.html">PathTemplate</a>. This can be used to parse a resource name (as a string)
+into a <a href="api/Google.Api.Gax.ResourceName.html">ResourceName</a> object. The resource IDs can then be extracted from
 that object either by index or by name. The names of the resource IDs match the names of the parameters in the corresponding
 <code>Format</code> methods.</p>
-<p sourcefile="resource-names.md" sourcestartlinenumber="76" sourceendlinenumber="76">The <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html" sourcefile="resource-names.md" sourcestartlinenumber="76" sourceendlinenumber="76">PublisherClient</a> class has two template properties:</p>
-<ul sourcefile="resource-names.md" sourcestartlinenumber="78" sourceendlinenumber="79">
-<li sourcefile="resource-names.md" sourcestartlinenumber="78" sourceendlinenumber="78"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ProjectTemplate" sourcefile="resource-names.md" sourcestartlinenumber="78" sourceendlinenumber="78">ProjectTemplate</a></li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="79" sourceendlinenumber="79"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TopicTemplate" sourcefile="resource-names.md" sourcestartlinenumber="79" sourceendlinenumber="79">TopicTemplate</a></li>
+<p>The <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> class has two template properties:</p>
+<ul>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ProjectTemplate">ProjectTemplate</a></li>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TopicTemplate">TopicTemplate</a></li>
 </ul>
-<p sourcefile="resource-names.md" sourcestartlinenumber="81" sourceendlinenumber="81">Likewise, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html" sourcefile="resource-names.md" sourcestartlinenumber="81" sourceendlinenumber="81">SubscriberClient</a> class has three properties:</p>
-<ul sourcefile="resource-names.md" sourcestartlinenumber="82" sourceendlinenumber="84">
-<li sourcefile="resource-names.md" sourcestartlinenumber="82" sourceendlinenumber="82"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ProjectTemplate" sourcefile="resource-names.md" sourcestartlinenumber="82" sourceendlinenumber="82">ProjectTemplate</a></li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="83" sourceendlinenumber="83"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_TopicTemplate" sourcefile="resource-names.md" sourcestartlinenumber="83" sourceendlinenumber="83">TopicTemplate</a></li>
-<li sourcefile="resource-names.md" sourcestartlinenumber="84" sourceendlinenumber="84"><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_SubscriptionTemplate" sourcefile="resource-names.md" sourcestartlinenumber="84" sourceendlinenumber="84">SubscriptionTemplate</a></li>
+<p>Likewise, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html">SubscriberClient</a> class has three properties:</p>
+<ul>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ProjectTemplate">ProjectTemplate</a></li>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_TopicTemplate">TopicTemplate</a></li>
+<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_SubscriptionTemplate">SubscriptionTemplate</a></li>
 </ul>
-<p sourcefile="resource-names.md" sourcestartlinenumber="86" sourceendlinenumber="86">Example of extracting resource IDs by index:</p>
+<p>Example of extracting resource IDs by index:</p>
 <pre><code class="lang-cs">string topicName = &quot;projects/petstore/topics/offers&quot;;
 ResourceName parsedName = PublisherClient.TopicTemplate.ParseName(topicName);
 string projectId = parsedName[0];
@@ -144,7 +144,7 @@ string topicId = parsedName[1];
 
 // The value of projectId is now &quot;petstore&quot;
 // The value of topicId is now &quot;offers&quot;
-</code></pre><p sourcefile="resource-names.md" sourcestartlinenumber="90" sourceendlinenumber="90">Example of extracting resource IDs by name:</p>
+</code></pre><p>Example of extracting resource IDs by name:</p>
 <pre><code class="lang-cs">string topicName = &quot;projects/petstore/topics/offers&quot;;
 ResourceName parsedName = PublisherClient.TopicTemplate.ParseName(topicName);
 string projectId = parsedName[&quot;project&quot;];
@@ -181,7 +181,6 @@ string topicId = parsedName[&quot;topic&quot;];
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

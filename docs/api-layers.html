@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>API layers | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="API layers | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,123 +57,123 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="api-layers" sourcefile="api-layers.md" sourcestartlinenumber="1" sourceendlinenumber="1">API layers</h1>
+              <h1 id="api-layers">API layers</h1>
               
-<h2 id="introduction" sourcefile="api-layers.md" sourcestartlinenumber="3" sourceendlinenumber="3">Introduction</h2>
-<p sourcefile="api-layers.md" sourcestartlinenumber="5" sourceendlinenumber="7">The Google Cloud Platform client libraries have been designed to make simple
+<h2 id="introduction">Introduction</h2>
+<p>The Google Cloud Platform client libraries have been designed to make simple
 operations as simple as possible, without sacrificing fine-grained tuning where
 necessary.</p>
-<p sourcefile="api-layers.md" sourcestartlinenumber="9" sourceendlinenumber="10">This article describes the different abstraction layers of the libraries, and how to take
+<p>This article describes the different abstraction layers of the libraries, and how to take
 advantage of each of them at the appropriate time.</p>
-<h2 id="background-grpc-and-rest-apis" sourcefile="api-layers.md" sourcestartlinenumber="12" sourceendlinenumber="12">Background: gRPC and REST APIs</h2>
-<p sourcefile="api-layers.md" sourcestartlinenumber="14" sourceendlinenumber="18">For a long time, most Google APIs - including those in Google Cloud Platform - have
+<h2 id="background-grpc-and-rest-apis">Background: gRPC and REST APIs</h2>
+<p>For a long time, most Google APIs - including those in Google Cloud Platform - have
 used a REST-based approach, usually using JSON to represent the resources. These APIs
-have been self-describing using the <a href="https://developers.google.com/discovery/" sourcefile="api-layers.md" sourcestartlinenumber="16" sourceendlinenumber="16">Google API Discovery Service</a>,
+have been self-describing using the <a href="https://developers.google.com/discovery/">Google API Discovery Service</a>,
 which has been used to generate per-API packages under the umbrella of the
-<a href="https://developers.google.com/api-client-library/dotnet" sourcefile="api-layers.md" sourcestartlinenumber="18" sourceendlinenumber="18">&quot;API Client Library for .NET&quot;</a>.</p>
-<p sourcefile="api-layers.md" sourcestartlinenumber="20" sourceendlinenumber="23">In November 2014, Google introduce gRPC, a new RPC framework offering efficient multi-plexing,
+<a href="https://developers.google.com/api-client-library/dotnet">&quot;API Client Library for .NET&quot;</a>.</p>
+<p>In November 2014, Google introduce gRPC, a new RPC framework offering efficient multi-plexing,
 bidirectional streaming and many other features. New APIs are now being provided with access via
 either the REST-based HTTP 1.1 and JSON, or gRPC over HTTP 2.0 and
-<a href="https://developers.google.com/protocol-buffers/" sourcefile="api-layers.md" sourcestartlinenumber="23" sourceendlinenumber="23">Protocol Buffers</a>.</p>
-<p sourcefile="api-layers.md" sourcestartlinenumber="25" sourceendlinenumber="29">The google-cloud-dotnet project provides client libraries for a mixture of these APIs. In particular,
+<a href="https://developers.google.com/protocol-buffers/">Protocol Buffers</a>.</p>
+<p>The google-cloud-dotnet project provides client libraries for a mixture of these APIs. In particular,
 <code>Google.Storage.V1</code> and <code>Google.Bigquery.V2</code> are hand-written layers over the existing REST-based
-libraries for the <a href="https://cloud.google.com/storage" sourcefile="api-layers.md" sourcestartlinenumber="27" sourceendlinenumber="27">Google Cloud Storage</a> and
-<a href="https://cloud.google.com/bigquery" sourcefile="api-layers.md" sourcestartlinenumber="28" sourceendlinenumber="28">BigQuery</a> APIs, whereas other libraries target gRPC-based APIs.
+libraries for the <a href="https://cloud.google.com/storage">Google Cloud Storage</a> and
+<a href="https://cloud.google.com/bigquery">BigQuery</a> APIs, whereas other libraries target gRPC-based APIs.
 Where gRPC access to an API is available, our client libraries use it.</p>
-<h2 id="layers-of-grpc-based-libraries" sourcefile="api-layers.md" sourcestartlinenumber="31" sourceendlinenumber="31">Layers of gRPC-based libraries</h2>
-<p sourcefile="api-layers.md" sourcestartlinenumber="33" sourceendlinenumber="34">All gRPC-based libraries contain generated code, and some also contain hand-written code. The 
+<h2 id="layers-of-grpc-based-libraries">Layers of gRPC-based libraries</h2>
+<p>All gRPC-based libraries contain generated code, and some also contain hand-written code. The 
 generated code comes from three sources:</p>
-<ul sourcefile="api-layers.md" sourcestartlinenumber="36" sourceendlinenumber="39">
-<li sourcefile="api-layers.md" sourcestartlinenumber="36" sourceendlinenumber="36"><a href="https://github.com/googleapis/toolkit" sourcefile="api-layers.md" sourcestartlinenumber="36" sourceendlinenumber="36">Google API Tools</a> generation for clients</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="37" sourceendlinenumber="37"><a href="http://www.grpc.io" sourcefile="api-layers.md" sourcestartlinenumber="37" sourceendlinenumber="37">gRPC</a> raw RPC service generation</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="38" sourceendlinenumber="39"><a href="https://developers.google.com/protocol-buffers/" sourcefile="api-layers.md" sourcestartlinenumber="38" sourceendlinenumber="38">Protocol Buffer</a> generation
+<ul>
+<li><a href="https://github.com/googleapis/toolkit">Google API Tools</a> generation for clients</li>
+<li><a href="http://www.grpc.io">gRPC</a> raw RPC service generation</li>
+<li><a href="https://developers.google.com/protocol-buffers/">Protocol Buffer</a> generation
 for request, response and resource messages and enums</li>
 </ul>
-<p sourcefile="api-layers.md" sourcestartlinenumber="41" sourceendlinenumber="42">To show the layering involved, we&#39;ll use the Google.Datastore.V1 client library as an example.
+<p>To show the layering involved, we&#39;ll use the Google.Datastore.V1 client library as an example.
 An application using this library will typically end up with the following assemblies:</p>
-<ul sourcefile="api-layers.md" sourcestartlinenumber="44" sourceendlinenumber="52">
-<li sourcefile="api-layers.md" sourcestartlinenumber="44" sourceendlinenumber="44">Google.Datastore.V1: the client library itself</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="45" sourceendlinenumber="46">Google.Api.Gax/Google.Api.Gax.Grpc: support libraries providing functionality required across multiple
-gRPC-based wrapper libraries, such as <a href="page-streaming.html" sourcefile="api-layers.md" sourcestartlinenumber="46" sourceendlinenumber="46">page streaming</a>.</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="47" sourceendlinenumber="47">Google.Protobuf: Protocol Buffer support library</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="48" sourceendlinenumber="48">Grpc.Auth and Grpc.Core: gRPC support libraries</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="49" sourceendlinenumber="50">Google.Apis.Auth and Google.Apis.Auth.PlatformServices: support libraries used by both
+<ul>
+<li>Google.Datastore.V1: the client library itself</li>
+<li>Google.Api.Gax/Google.Api.Gax.Grpc: support libraries providing functionality required across multiple
+gRPC-based wrapper libraries, such as <a href="page-streaming.html">page streaming</a>.</li>
+<li>Google.Protobuf: Protocol Buffer support library</li>
+<li>Grpc.Auth and Grpc.Core: gRPC support libraries</li>
+<li>Google.Apis.Auth and Google.Apis.Auth.PlatformServices: support libraries used by both
 REST service libraries and gRPC libraries for authentication</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="51" sourceendlinenumber="52">Dependencies from the above libraries for HTTP, JSON serialization, cryptography, and
+<li>Dependencies from the above libraries for HTTP, JSON serialization, cryptography, and
 asynchronous sequences</li>
 </ul>
-<p sourcefile="api-layers.md" sourcestartlinenumber="54" sourceendlinenumber="55">Within <code>Google.Datastore.V1</code> there are three abstraction layers, all within
+<p>Within <code>Google.Datastore.V1</code> there are three abstraction layers, all within
 the <code>Google.Datastore.V1</code> namespace, with the following entry points:</p>
-<ul sourcefile="api-layers.md" sourcestartlinenumber="57" sourceendlinenumber="73">
-<li sourcefile="api-layers.md" sourcestartlinenumber="57" sourceendlinenumber="61"><a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreDb.html" sourcefile="api-layers.md" sourcestartlinenumber="57" sourceendlinenumber="57">DatastoreDb</a> is hand-written code
+<ul>
+<li><a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreDb.html">DatastoreDb</a> is hand-written code
 to provide the most idiomatic experience. For example, using <code>DatastoreDb</code> avoids the project ID
 from being specified on every call, and uses the <code>IDisposable</code> pattern to make
-<a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreTransaction.html" sourcefile="api-layers.md" sourcestartlinenumber="60" sourceendlinenumber="60">DatastoreTransaction</a>
+<a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a>
 simple to work with.</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="62" sourceendlinenumber="69"><a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreClient.html" sourcefile="api-layers.md" sourcestartlinenumber="62" sourceendlinenumber="62">DatastoreClient</a> is generated by the
+<li><a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreClient.html">DatastoreClient</a> is generated by the
 Google API Tools. This is still a higher level of abstraction than the raw RPC, supporting 
-features such as <a href="page-streaming.html" sourcefile="api-layers.md" sourcestartlinenumber="64" sourceendlinenumber="64">page streaming</a> and automatic creation of requests from the 
+features such as <a href="page-streaming.html">page streaming</a> and automatic creation of requests from the 
 constituent parameters, but it has less semantic awareness than the hand-written layer.
 An instance of <code>DatastoreClient</code> is available from a <code>DatastoreDb</code> via the
-<a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Client" sourcefile="api-layers.md" sourcestartlinenumber="67" sourceendlinenumber="67">DatastoreDb.Client</a> property if necessary.
+<a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreDb.html#Google_Datastore_V1_DatastoreDb_Client">DatastoreDb.Client</a> property if necessary.
 Code which does not use <code>DatastoreDb</code> at all can simply call
-<a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Create" sourcefile="api-layers.md" sourcestartlinenumber="69" sourceendlinenumber="69">DatastoreClient.Create()</a> instead.</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="70" sourceendlinenumber="73"><a href="Google.Datastore.V1/api/Google.Datastore.V1.Datastore.DatastoreClient.html" sourcefile="api-layers.md" sourcestartlinenumber="70" sourceendlinenumber="70">Datastore.DatastoreClient</a> is
+<a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_Create">DatastoreClient.Create()</a> instead.</li>
+<li><a href="Google.Datastore.V1/api/Google.Datastore.V1.Datastore.DatastoreClient.html">Datastore.DatastoreClient</a> is
 the gRPC-generated RPC access class. Very few applications will need to use this, but an instance can be retrieved
 from the higher level <code>DatastoreClient</code> class via the
-<a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_GrpcClient" sourcefile="api-layers.md" sourcestartlinenumber="73" sourceendlinenumber="73">DatastoreClient.GrpcClient</a> property if necessary.</li>
+<a href="Google.Datastore.V1/api/Google.Datastore.V1.DatastoreClient.html#Google_Datastore_V1_DatastoreClient_GrpcClient">DatastoreClient.GrpcClient</a> property if necessary.</li>
 </ul>
-<p sourcefile="api-layers.md" sourcestartlinenumber="75" sourceendlinenumber="83">Additional hand-written code exists in the form of extension methods and additions to the partial 
+<p>Additional hand-written code exists in the form of extension methods and additions to the partial 
 classes generated by the Protocol Buffer code generator. This does not act as a separate abstraction
 layer, but as a set of extensions to the generated code. Examples include the conversion operators on
-<a href="Google.Datastore.V1/api/Google.Datastore.V1.Value.html" sourcefile="api-layers.md" sourcestartlinenumber="78" sourceendlinenumber="78">Value</a>, the static factory methods
-in <a href="Google.Datastore.V1/api/Google.Datastore.V1.Filter.html" sourcefile="api-layers.md" sourcestartlinenumber="79" sourceendlinenumber="79">Filter</a>, the constructors
-for <a href="Google.Datastore.V1/api/Google.Datastore.V1.PartitionId.html" sourcefile="api-layers.md" sourcestartlinenumber="80" sourceendlinenumber="80">PartitionId</a> and
-<a href="Google.Datastore.V1/api/Google.Datastore.V1.Query.html" sourcefile="api-layers.md" sourcestartlinenumber="81" sourceendlinenumber="81">Query</a>, and
-<a href="Google.Datastore.V1/api/Google.Datastore.V1.QueryExtensions.html" sourcefile="api-layers.md" sourcestartlinenumber="82" sourceendlinenumber="82">extension methods</a> for
+<a href="Google.Datastore.V1/api/Google.Datastore.V1.Value.html">Value</a>, the static factory methods
+in <a href="Google.Datastore.V1/api/Google.Datastore.V1.Filter.html">Filter</a>, the constructors
+for <a href="Google.Datastore.V1/api/Google.Datastore.V1.PartitionId.html">PartitionId</a> and
+<a href="Google.Datastore.V1/api/Google.Datastore.V1.Query.html">Query</a>, and
+<a href="Google.Datastore.V1/api/Google.Datastore.V1.QueryExtensions.html">extension methods</a> for
 repeated fields. The extensions certainly don&#39;t have to be used, but they can lead to much simpler code.</p>
-<p sourcefile="api-layers.md" sourcestartlinenumber="85" sourceendlinenumber="91">Different libraries may include different amounts of wrapping. In Datastore, although the
+<p>Different libraries may include different amounts of wrapping. In Datastore, although the
 <code>DatastoreDb</code> abstraction layer helps simplify code by removing redundant specification of
 project IDs and allowing mutations to be built up in memory before being committed in a transaction,
 the objects used to describe the queries and entities are still the Protocol Buffer messages. In other
 APIs, the entities themselves may be wrapped in a hand-written layer to make them easier to work with.
 Some libraries may not provide any hand-written code at all: simple APIs are often very usable just
 with the code generated by the Google API Tools.</p>
-<p sourcefile="api-layers.md" sourcestartlinenumber="93" sourceendlinenumber="96">Importantly, these abstraction layers are transparent rather than opaque: if a higher level abstraction
+<p>Importantly, these abstraction layers are transparent rather than opaque: if a higher level abstraction
 doesn&#39;t provide the level of control you need, you can always use the next level of abstraction down.
 This approach allows access to all the features of the API while higher level abstractions are
 built incrementally based on feedback.</p>
-<h2 id="layers-of-rest-based-libraries" sourcefile="api-layers.md" sourcestartlinenumber="98" sourceendlinenumber="98">Layers of REST-based libraries</h2>
-<p sourcefile="api-layers.md" sourcestartlinenumber="100" sourceendlinenumber="102">The REST-based libraries wrap existing generated code provided in other NuGet packages. For example,
+<h2 id="layers-of-rest-based-libraries">Layers of REST-based libraries</h2>
+<p>The REST-based libraries wrap existing generated code provided in other NuGet packages. For example,
 <code>Google.Storage.V1</code> depends on <code>Google.Apis.Storage.v1</code>. The wrapper libraries exist to provide
 a more idiomatic way of working with the APIs than is exposed by the auto-generated code.</p>
-<p sourcefile="api-layers.md" sourcestartlinenumber="104" sourceendlinenumber="105">Where functionality hasn&#39;t been explicitly wrapped, application code can always access
+<p>Where functionality hasn&#39;t been explicitly wrapped, application code can always access
 the underlying REST service.</p>
-<p sourcefile="api-layers.md" sourcestartlinenumber="107" sourceendlinenumber="108">To show the layering involved, we&#39;ll use the Google.Storage.V1 client library as an example.
+<p>To show the layering involved, we&#39;ll use the Google.Storage.V1 client library as an example.
 An application using this library will typically end up with the following assemblies:</p>
-<ul sourcefile="api-layers.md" sourcestartlinenumber="110" sourceendlinenumber="119">
-<li sourcefile="api-layers.md" sourcestartlinenumber="110" sourceendlinenumber="110">Google.Storage.V1: the wrapper library</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="111" sourceendlinenumber="111">Google.Apis.Storage.v1: the REST service library that the wrapper library uses to call the REST API</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="112" sourceendlinenumber="113">Google.Api.Gax/Google.Api.Gax.Rest: support libraries providing functionality required across multiple
-REST-based wrapper libraries, such as <a href="page-streaming.html" sourcefile="api-layers.md" sourcestartlinenumber="113" sourceendlinenumber="113">page streaming</a>.</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="114" sourceendlinenumber="115">Google.Apis: support libraries used by all REST service libraries
+<ul>
+<li>Google.Storage.V1: the wrapper library</li>
+<li>Google.Apis.Storage.v1: the REST service library that the wrapper library uses to call the REST API</li>
+<li>Google.Api.Gax/Google.Api.Gax.Rest: support libraries providing functionality required across multiple
+REST-based wrapper libraries, such as <a href="page-streaming.html">page streaming</a>.</li>
+<li>Google.Apis: support libraries used by all REST service libraries
 to perform REST-based operations</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="116" sourceendlinenumber="117">Google.Apis.Auth and Google.Apis.Auth.PlatformServices: support libraries used by both
+<li>Google.Apis.Auth and Google.Apis.Auth.PlatformServices: support libraries used by both
 REST service libraries and gRPC libraries for authentication</li>
-<li sourcefile="api-layers.md" sourcestartlinenumber="118" sourceendlinenumber="119">Dependencies from the above libraries for HTTP, logging, JSON serialization, cryptography, and
+<li>Dependencies from the above libraries for HTTP, logging, JSON serialization, cryptography, and
 asynchronous sequences</li>
 </ul>
-<p sourcefile="api-layers.md" sourcestartlinenumber="121" sourceendlinenumber="128">For simple use cases, you can simply use the
-<a href="Google.Storage.V1/api/Google.Storage.V1.StorageClient.html" sourcefile="api-layers.md" sourcestartlinenumber="122" sourceendlinenumber="122">Google.Storage.V1.StorageClient</a> class.
+<p>For simple use cases, you can simply use the
+<a href="Google.Storage.V1/api/Google.Storage.V1.StorageClient.html">Google.Storage.V1.StorageClient</a> class.
 If your application code requires functionality which isn&#39;t wrapped, you can use the
-<a href="Google.Storage.V1/api/Google.Storage.V1.StorageClient.html##Google_Storage_V1_StorageClient_Service" sourcefile="api-layers.md" sourcestartlinenumber="124" sourceendlinenumber="124">StorageClient.Service</a> property
+<a href="Google.Storage.V1/api/Google.Storage.V1.StorageClient.html##Google_Storage_V1_StorageClient_Service">StorageClient.Service</a> property
 to obtain a reference to a <code>Google.Apis.Storage.v1.StorageService</code> which can be used
 for all other operations. This is the same <code>StorageService</code> object that the <code>StorageClient</code>
 uses for its API calls, with whatever authentication information you provided when creating
 the client.</p>
-<p sourcefile="api-layers.md" sourcestartlinenumber="130" sourceendlinenumber="133">The intent is that the most commonly-used functionality should be wrapped, however: if you
+<p>The intent is that the most commonly-used functionality should be wrapped, however: if you
 find yourself frequently having to dig below the <code>StorageClient</code> abstraction, please
-<a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new" sourcefile="api-layers.md" sourcestartlinenumber="132" sourceendlinenumber="132">file a feature request</a>
+<a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new">file a feature request</a>
 with details of what functionality isn&#39;t being wrapped at the moment.</p>
 
             </article>
@@ -204,7 +204,6 @@ with details of what functionality isn&#39;t being wrapped at the moment.</p>
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

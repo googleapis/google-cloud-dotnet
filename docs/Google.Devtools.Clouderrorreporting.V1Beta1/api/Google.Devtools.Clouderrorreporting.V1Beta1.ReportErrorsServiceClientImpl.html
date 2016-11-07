@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ReportErrorsServiceClientImpl
    | Google.Devtools.Clouderrorreporting.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl">Class ReportErrorsServiceClientImpl
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">ReportErrorsService client wrapper implementation, for convenient use.</p>
+              <div class="markdown level0 summary"><p>ReportErrorsService client wrapper implementation, for convenient use.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -86,6 +86,12 @@
                 </div>
                 <div>
                   <a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClient_DefaultScopes">ReportErrorsServiceClient.DefaultScopes</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClient_GroupTemplate">ReportErrorsServiceClient.GroupTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClient_FormatGroupName_System_String_System_String_">ReportErrorsServiceClient.FormatGroupName(String, String)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClient_ProjectTemplate">ReportErrorsServiceClient.ProjectTemplate</a>
@@ -129,8 +135,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl__ctor_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.#ctor*"></a>
               <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl__ctor_Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsService_ReportErrorsServiceClient_Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceSettings_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.#ctor(Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsService.ReportErrorsServiceClient,Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceSettings)">ReportErrorsServiceClientImpl(ReportErrorsService.ReportErrorsServiceClient, ReportErrorsServiceSettings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a client wrapper for the ReportErrorsService service, with the specified gRPC client and settings.</p>
+              <div class="markdown level1 summary"><p>Constructs a client wrapper for the ReportErrorsService service, with the specified gRPC client and settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -150,21 +157,22 @@
                   <tr>
                     <td><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsService.ReportErrorsServiceClient.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsService_ReportErrorsServiceClient">ReportErrorsService.ReportErrorsServiceClient</a></td>
                     <td><em>grpcClient</em></td>
-                    <td><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The underlying gRPC client.</p>
+                    <td><p>The underlying gRPC client.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceSettings.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceSettings">ReportErrorsServiceSettings</a></td>
                     <td><em>settings</em></td>
-                    <td><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The base <a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceSettings.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceSettings">ReportErrorsServiceSettings</a> used within this client </p>
+                    <td><p>The base <a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceSettings.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceSettings">ReportErrorsServiceSettings</a> used within this client </p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl_GrpcClient_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.GrpcClient*"></a>
               <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl_GrpcClient" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.GrpcClient">GrpcClient</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The underlying gRPC ReportErrorsService client.</p>
+              <div class="markdown level1 summary"><p>The underlying gRPC ReportErrorsService client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -190,8 +198,16 @@
               <div><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClient_GrpcClient">ReportErrorsServiceClient.GrpcClient</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl_ReportErrorEvent_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.ReportErrorEvent*"></a>
               <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl_ReportErrorEvent_System_String_Google_Devtools_Clouderrorreporting_V1Beta1_ReportedErrorEvent_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.ReportErrorEvent(System.String,Google.Devtools.Clouderrorreporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)">ReportErrorEvent(String, ReportedErrorEvent, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Report an individual error event.</p>
+<p>This endpoint accepts <strong>either</strong> an OAuth token,
+<strong>or</strong> an
+<a href="https://support.google.com/cloud/answer/6158862">API key</a>
+for authentication. To use an API key, append it to the URL as the value of
+a <code>key</code> parameter. For example:</p>
+<pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456</pre>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -210,7 +226,11 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectName</em></td>
-                    <td></td>
+                    <td><p>[Required] The resource name of the Google Cloud Platform project. Written
+as <code>projects/</code> plus the
+<a href="https://support.google.com/cloud/answer/6158840">Google Cloud Platform project ID</a>.
+Example: <code>projects/my-project-123</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportedErrorEvent.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportedErrorEvent">ReportedErrorEvent</a></td>
@@ -220,7 +240,7 @@
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -236,15 +256,23 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorEventResponse">ReportErrorEventResponse</a></td>
-                    <td><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEvent_System_String_Google_Devtools_Clouderrorreporting_V1Beta1_ReportedErrorEvent_Google_Api_Gax_Grpc_CallSettings_">ReportErrorsServiceClient.ReportErrorEvent(String, ReportedErrorEvent, CallSettings)</a></div>
+              <a id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl_ReportErrorEventAsync_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.ReportErrorEventAsync*"></a>
               <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorsServiceClientImpl_ReportErrorEventAsync_System_String_Google_Devtools_Clouderrorreporting_V1Beta1_ReportedErrorEvent_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.ReportErrorEventAsync(System.String,Google.Devtools.Clouderrorreporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)">ReportErrorEventAsync(String, ReportedErrorEvent, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Report an individual error event.</p>
+<p>This endpoint accepts <strong>either</strong> an OAuth token,
+<strong>or</strong> an
+<a href="https://support.google.com/cloud/answer/6158862">API key</a>
+for authentication. To use an API key, append it to the URL as the value of
+a <code>key</code> parameter. For example:</p>
+<pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456</pre>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -263,7 +291,11 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectName</em></td>
-                    <td></td>
+                    <td><p>[Required] The resource name of the Google Cloud Platform project. Written
+as <code>projects/</code> plus the
+<a href="https://support.google.com/cloud/answer/6158840">Google Cloud Platform project ID</a>.
+Example: <code>projects/my-project-123</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportedErrorEvent.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportedErrorEvent">ReportedErrorEvent</a></td>
@@ -273,7 +305,7 @@
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -288,8 +320,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorEventResponse">ReportErrorEventResponse</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse.html#Google_Devtools_Clouderrorreporting_V1Beta1_ReportErrorEventResponse">ReportErrorEventResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
@@ -324,7 +356,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetQueryResultsResponse
    | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -100,8 +100,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_CacheHit_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.CacheHit*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_CacheHit" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.CacheHit">CacheHit</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Whether the query result was fetched from the query cache.</p>
+              <div class="markdown level1 summary"><p>Whether the query result was fetched from the query cache.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -119,13 +120,14 @@ public virtual bool ? CacheHit { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_Errors_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.Errors*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_Errors" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.Errors">Errors</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="2">[Output-only] All errors and warnings encountered during the running of the job. Errors here do not
+              <div class="markdown level1 summary"><p>[Output-only] All errors and warnings encountered during the running of the job. Errors here do not
 necessarily mean that the job has completed or was unsuccessful.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -144,13 +146,14 @@ public virtual IList&lt;ErrorProto&gt; Errors { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.ErrorProto.html#Google_Apis_Bigquery_v2_Data_ErrorProto">ErrorProto</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.ErrorProto.html#Google_Apis_Bigquery_v2_Data_ErrorProto">ErrorProto</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_ETag_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.ETag*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_ETag" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.ETag">ETag</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A hash of this response.</p>
+              <div class="markdown level1 summary"><p>A hash of this response.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -174,9 +177,10 @@ public virtual string ETag { get; set; }</code></pre>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Apis.Requests.IDirectResponseSchema.html#Google_Apis_Requests_IDirectResponseSchema_ETag">IDirectResponseSchema.ETag</a></div>
+                  <div><span class="xref">Google.Apis.Requests.IDirectResponseSchema.ETag</span></div>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_JobComplete_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.JobComplete*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_JobComplete" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.JobComplete">JobComplete</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Whether the query has completed or not. If rows or totalRows are present, this will always be true.
+              <div class="markdown level1 summary"><p>Whether the query has completed or not. If rows or totalRows are present, this will always be true.
 If this is false, totalRows will not be available.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -195,13 +199,14 @@ public virtual bool ? JobComplete { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_JobReference_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.JobReference*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_JobReference" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.JobReference">JobReference</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="4">Reference to the BigQuery Job that was created to run the query. This field will be present even if
+              <div class="markdown level1 summary"><p>Reference to the BigQuery Job that was created to run the query. This field will be present even if
 the original request timed out, in which case GetQueryResults can be used to read the results once the query
 has completed. Since this API only returns the first page of results, subsequent pages can be fetched via
 the same mechanism (GetQueryResults).</p>
@@ -227,8 +232,9 @@ public virtual JobReference JobReference { get; set; }</code></pre>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_Kind_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.Kind*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_Kind" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.Kind">Kind</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The resource type of the response.</p>
+              <div class="markdown level1 summary"><p>The resource type of the response.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -251,8 +257,9 @@ public virtual string Kind { get; set; }</code></pre>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_NumDmlAffectedRows_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.NumDmlAffectedRows*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_NumDmlAffectedRows" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.NumDmlAffectedRows">NumDmlAffectedRows</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="2">[Output-only, Experimental] The number of rows affected by a DML statement. Present only for DML
+              <div class="markdown level1 summary"><p>[Output-only, Experimental] The number of rows affected by a DML statement. Present only for DML
 statements INSERT, UPDATE or DELETE.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -271,13 +278,14 @@ public virtual long ? NumDmlAffectedRows { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_PageToken_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.PageToken*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_PageToken" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.PageToken">PageToken</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A token used for paging results.</p>
+              <div class="markdown level1 summary"><p>A token used for paging results.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -300,8 +308,9 @@ public virtual string PageToken { get; set; }</code></pre>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_Rows_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.Rows*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_Rows" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.Rows">Rows</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="3">An object with as many results as can be contained within the maximum permitted reply size. To get
+              <div class="markdown level1 summary"><p>An object with as many results as can be contained within the maximum permitted reply size. To get
 any additional rows, you can call GetQueryResults and specify the jobReference returned above. Present only
 when the query completes successfully.</p>
 </div>
@@ -321,13 +330,14 @@ public virtual IList&lt;TableRow&gt; Rows { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableRow.html#Google_Apis_Bigquery_v2_Data_TableRow">TableRow</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableRow.html#Google_Apis_Bigquery_v2_Data_TableRow">TableRow</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_Schema_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.Schema*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_Schema" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.Schema">Schema</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The schema of the results. Present only when the query completes successfully.</p>
+              <div class="markdown level1 summary"><p>The schema of the results. Present only when the query completes successfully.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -350,8 +360,9 @@ public virtual TableSchema Schema { get; set; }</code></pre>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_TotalBytesProcessed_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.TotalBytesProcessed*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_TotalBytesProcessed" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.TotalBytesProcessed">TotalBytesProcessed</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The total number of bytes processed for this query.</p>
+              <div class="markdown level1 summary"><p>The total number of bytes processed for this query.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -369,13 +380,14 @@ public virtual long ? TotalBytesProcessed { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_TotalRows_" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.TotalRows*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_GetQueryResultsResponse_TotalRows" data-uid="Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.TotalRows">TotalRows</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Bigquery.v2.Data.GetQueryResultsResponse.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The total number of rows in the complete query result set, which can be more than the number of
+              <div class="markdown level1 summary"><p>The total number of rows in the complete query result set, which can be more than the number of
 rows in this single page of results. Present only when the query completes successfully.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -394,15 +406,11 @@ public virtual ulong ? TotalRows { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="extensionmethods">Extension Methods</h3>
-              <div>
-                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;GetQueryResultsResponse&gt;(String)</a>
-              </div>
             </article>
           </div>
           
@@ -431,7 +439,6 @@ public virtual ulong ? TotalRows { get; set; }</code></pre>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Call settings | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Call settings | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,40 +57,40 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="call-settings" sourcefile="call-settings.md" sourcestartlinenumber="1" sourceendlinenumber="1">Call settings</h1>
+              <h1 id="call-settings">Call settings</h1>
               
-<h2 id="introduction" sourcefile="call-settings.md" sourcestartlinenumber="3" sourceendlinenumber="3">Introduction</h2>
-<p sourcefile="call-settings.md" sourcestartlinenumber="5" sourceendlinenumber="10">All client libraries wrapping gRPC-based APIs (see the <a href="api-layers.html" sourcefile="call-settings.md" sourcestartlinenumber="5" sourceendlinenumber="5">API layers</a> article)
+<h2 id="introduction">Introduction</h2>
+<p>All client libraries wrapping gRPC-based APIs (see the <a href="api-layers.html">API layers</a> article)
 allow customization of RPC calls by using
-<a href="obj/api/Google.Api.Gax.CallSettings.yml" sourcefile="call-settings.md" sourcestartlinenumber="7" sourceendlinenumber="7">CallSettings</a>. If <code>CallSettings</code> are
+<a href="api/Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a>. If <code>CallSettings</code> are
 not specified sensible defaults are automatically provided.
-See the <a href="obj/api/Google.Api.Gax.CallSettings.yml" sourcefile="call-settings.md" sourcestartlinenumber="9" sourceendlinenumber="9">CallSettings documentation</a>
+See the <a href="api/Google.Api.Gax.Grpc.CallSettings.html">CallSettings documentation</a>
 for descriptions of the available properties.</p>
-<p sourcefile="call-settings.md" sourcestartlinenumber="12" sourceendlinenumber="16">The underlying gRPC API uses
-<a href="http://www.grpc.io/grpc/csharp/html/T_Grpc_Core_CallOptions.htm" sourcefile="call-settings.md" sourcestartlinenumber="13" sourceendlinenumber="13">CallOptions</a>,
+<p>The underlying gRPC API uses
+<a href="http://www.grpc.io/grpc/csharp/html/T_Grpc_Core_CallOptions.htm">CallOptions</a>,
 which provides a slightly reduced feature set compared to <code>CallSettings</code>.
 Client libraries automatically construct a <code>CallOptions</code> from <code>Callsettings</code>
 to <code>CallOptions</code> as required.</p>
-<p sourcefile="call-settings.md" sourcestartlinenumber="18" sourceendlinenumber="18">There are three distinct places where <code>CallSettings</code> may optionally be provided:</p>
-<ul sourcefile="call-settings.md" sourcestartlinenumber="20" sourceendlinenumber="23">
-<li sourcefile="call-settings.md" sourcestartlinenumber="20" sourceendlinenumber="20">When calling an RPC method <em>(highest priority)</em>.</li>
-<li sourcefile="call-settings.md" sourcestartlinenumber="21" sourceendlinenumber="22">Client-wide when creating a client object (for example, using
-<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_" sourcefile="call-settings.md" sourcestartlinenumber="22" sourceendlinenumber="22">PublisherClient.Create()</a>).</li>
-<li sourcefile="call-settings.md" sourcestartlinenumber="23" sourceendlinenumber="23">Per-RPC-method when creating a client object <em>(lowest priority)</em>.</li>
+<p>There are three distinct places where <code>CallSettings</code> may optionally be provided:</p>
+<ul>
+<li>When calling an RPC method <em>(highest priority)</em>.</li>
+<li>Client-wide when creating a client object (for example, using
+<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_Create_Google_Api_Gax_ServiceEndpoint_Google_Pubsub_V1_PublisherSettings_">PublisherClient.Create()</a>).</li>
+<li>Per-RPC-method when creating a client object <em>(lowest priority)</em>.</li>
 </ul>
-<p sourcefile="call-settings.md" sourcestartlinenumber="25" sourceendlinenumber="28">It&#39;s important to understand exactly which properties of which <code>CallSettings</code> will be used during an RPC invocation.
+<p>It&#39;s important to understand exactly which properties of which <code>CallSettings</code> will be used during an RPC invocation.
 The three <code>CallSettings</code> objects are merged into a single effective <code>CallSettings</code>.
 Each property is merged separately: the highest priority non-<code>null</code> value for each
 property is used.</p>
-<p sourcefile="call-settings.md" sourcestartlinenumber="30" sourceendlinenumber="36">The client-wide <code>CallSettings</code> is higher-priority than per-RPC-method <code>CallSettings</code>
+<p>The client-wide <code>CallSettings</code> is higher-priority than per-RPC-method <code>CallSettings</code>
 because it is often useful to be able to easily specify common properties to use
 for all RPC invocations. For example, a common set of
-<a href="obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Headers" sourcefile="call-settings.md" sourcestartlinenumber="33" sourceendlinenumber="33">headers</a>;
+<a href="api/Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings_Headers">headers</a>;
 or a common
-<a href="obj/api/Google.Api.Gax.CallSettings.yml#Google_Api_Gax_CallSettings_Timing" sourcefile="call-settings.md" sourcestartlinenumber="35" sourceendlinenumber="35">deadline</a>
+<a href="api/Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings_Timing">deadline</a>
 for multiple RPC invocations.</p>
-<h2 id="examples" sourcefile="call-settings.md" sourcestartlinenumber="38" sourceendlinenumber="38">Examples</h2>
-<h3 id="per-rpc-highest-priority" sourcefile="call-settings.md" sourcestartlinenumber="40" sourceendlinenumber="40">Per-RPC (highest priority)</h3>
+<h2 id="examples">Examples</h2>
+<h3 id="per-rpc-highest-priority">Per-RPC (highest priority)</h3>
 <pre><code class="lang-cs">// Create a PublisherClient with default settings.
 PublisherClient client = PublisherClient.Create();
 // Format topicName from the projectId and topicId.
@@ -99,7 +99,7 @@ string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 CallSettings callSettings = new CallSettings(null, null, null, metadata =&gt; metadata.Add(&quot;ClientVersion&quot;, &quot;1.0.0&quot;), null, null);
 // This will cause the custom &#39;ClientVersion&#39; header to be included in the RPC call.
 Topic topic = client.CreateTopic(topicName, callSettings);
-</code></pre><h3 id="client-configuration-client-wide" sourcefile="call-settings.md" sourcestartlinenumber="44" sourceendlinenumber="44">Client configuration; client-wide</h3>
+</code></pre><h3 id="client-configuration-client-wide">Client configuration; client-wide</h3>
 <pre><code class="lang-cs">// Create a default PublisherSettings, with a custom header for calls to all RPC methods.
 PublisherSettings publisherSettings = new PublisherSettings
 {
@@ -111,7 +111,7 @@ string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 // The custom &#39;ClientVersion&#39; header will be included in the RPC call, due to
 // the client being configured with &#39;publishersettings&#39; above.
 Topic topic = client.CreateTopic(topicName);
-</code></pre><h3 id="client-configuration-per-rpc-method-lowest-priority" sourcefile="call-settings.md" sourcestartlinenumber="48" sourceendlinenumber="48">Client configuration; per-RPC-method (lowest priority)</h3>
+</code></pre><h3 id="client-configuration-per-rpc-method-lowest-priority">Client configuration; per-RPC-method (lowest priority)</h3>
 <pre><code class="lang-cs">// Create a default PublisherSettings, with a custom header for calls
 // to the CreateTopic RPC method.
 PublisherSettings publisherSettings = new PublisherSettings();
@@ -122,7 +122,7 @@ string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 // The custom &#39;ClientVersion&#39; header will be included in the RPC call, due to
 // the client being configured with &#39;publishersettings&#39; above.
 Topic topic = client.CreateTopic(topicName);
-</code></pre><h3 id="multiple-callsettings-specified" sourcefile="call-settings.md" sourcestartlinenumber="52" sourceendlinenumber="52">Multiple <code>Callsettings</code> specified</h3>
+</code></pre><h3 id="multiple-callsettings-specified">Multiple <code>Callsettings</code> specified</h3>
 <pre><code class="lang-cs">// Create a default PublisherSettings, with customizations for CreateTopic RPCs:
 // * A custom &quot;ClientVersion&quot; header.
 // * A custom 5-second timeout Timing.
@@ -151,10 +151,10 @@ string topicName = PublisherClient.FormatTopicName(projectId, topicId);
 // * A Timing deadline of &#39;deadline&#39; (*not* the overridden 5-second timeout).
 // * The CancellationToken &#39;cancellationToken&#39; (*not* CancellationToken.None).
 Topic topic = client.CreateTopic(topicName, CallSettings.FromCancellationToken(cancellationToken));
-</code></pre><h2 id="defaults" sourcefile="call-settings.md" sourcestartlinenumber="56" sourceendlinenumber="56">Defaults</h2>
-<p sourcefile="call-settings.md" sourcestartlinenumber="58" sourceendlinenumber="60">By default there is a per-RPC-method client configuration that specifies a sensible
+</code></pre><h2 id="defaults">Defaults</h2>
+<p>By default there is a per-RPC-method client configuration that specifies a sensible
 retry policy for every method. See, for example,
-<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_CreateTopicSettings" sourcefile="call-settings.md" sourcestartlinenumber="60" sourceendlinenumber="60">PublisherSettings.CreateTopicSettings</a></p>
+<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_CreateTopicSettings">PublisherSettings.CreateTopicSettings</a></p>
 
             </article>
           </div>
@@ -184,7 +184,6 @@ retry policy for every method. See, for example,
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

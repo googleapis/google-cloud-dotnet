@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UsageRule
    | Google.Cloud.Language.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,25 +70,29 @@
               
               <h1 id="Google_Api_UsageRule" data-uid="Google.Api.UsageRule">Class UsageRule
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Usage configuration rules for the service.</p>
-<p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> NOTE: Under development.</p>
-<p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="6" sourceendlinenumber="11"> Use this rule to configure unregistered calls for the service. Unregistered
- calls are calls that do not contain consumer project identity.
- (Example: calls that do not contain an API key).
- By default, API methods do not allow unregistered calls, and each method call
- must be identified by a consumer project identity. Use this rule to
- allow/disallow unregistered calls.</p>
-<p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="13" sourceendlinenumber="13"> Example of an API that wants to allow unregistered calls for entire service.</p>
-<pre sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="15" sourceendlinenumber="18"><code> usage:
-   rules:
-   - selector: &quot;*&quot;
-     allow_unregistered_calls: true
-</code></pre><p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> Example of a method that wants to allow unregistered calls.</p>
-<pre sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="22" sourceendlinenumber="25"><code> usage:
-   rules:
-   - selector: &quot;google.example.library.v1.LibraryService.CreateBook&quot;
-     allow_unregistered_calls: true
-</code></pre></div>
+              <div class="markdown level0 summary"><p>Usage configuration rules for the service.</p>
+<p>NOTE: Under development.</p>
+<p>Use this rule to configure unregistered calls for the service. Unregistered
+calls are calls that do not contain consumer project identity.
+(Example: calls that do not contain an API key).
+By default, API methods do not allow unregistered calls, and each method call
+must be identified by a consumer project identity. Use this rule to
+allow/disallow unregistered calls.</p>
+<p>Example of an API that wants to allow unregistered calls for entire service.</p>
+<p>usage:
+ rules:</p>
+<ul>
+<li>selector: &quot;*&quot;
+allow_unregistered_calls: true</li>
+</ul>
+<p>Example of a method that wants to allow unregistered calls.</p>
+<p>usage:
+ rules:</p>
+<ul>
+<li>selector: &quot;google.example.library.v1.LibraryService.CreateBook&quot;
+allow_unregistered_calls: true</li>
+</ul>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
@@ -112,6 +116,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_UsageRule__ctor_" data-uid="Google.Api.UsageRule.#ctor*"></a>
               <h4 id="Google_Api_UsageRule__ctor" data-uid="Google.Api.UsageRule.#ctor">UsageRule()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -119,6 +124,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public UsageRule()</code></pre>
               </div>
+              <a id="Google_Api_UsageRule__ctor_" data-uid="Google.Api.UsageRule.#ctor*"></a>
               <h4 id="Google_Api_UsageRule__ctor_Google_Api_UsageRule_" data-uid="Google.Api.UsageRule.#ctor(Google.Api.UsageRule)">UsageRule(UsageRule)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -145,8 +151,9 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_UsageRule_AllowUnregisteredCalls_" data-uid="Google.Api.UsageRule.AllowUnregisteredCalls*"></a>
               <h4 id="Google_Api_UsageRule_AllowUnregisteredCalls" data-uid="Google.Api.UsageRule.AllowUnregisteredCalls">AllowUnregisteredCalls</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> True, if the method allows unregistered calls; false otherwise.</p>
+              <div class="markdown level1 summary"><p>True, if the method allows unregistered calls; false otherwise.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -168,10 +175,11 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_UsageRule_Selector_" data-uid="Google.Api.UsageRule.Selector*"></a>
               <h4 id="Google_Api_UsageRule_Selector" data-uid="Google.Api.UsageRule.Selector">Selector</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all
- methods in all APIs.</p>
-<p sourcefile="obj/api/Google.Api.UsageRule.yml" sourcestartlinenumber="5" sourceendlinenumber="5"> Refer to [selector][google.api.DocumentationRule.selector] for syntax details.</p>
+              <div class="markdown level1 summary"><p>Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all
+methods in all APIs.</p>
+<p>Refer to [selector][google.api.DocumentationRule.selector] for syntax details.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -195,6 +203,7 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_UsageRule_CalculateSize_" data-uid="Google.Api.UsageRule.CalculateSize*"></a>
               <h4 id="Google_Api_UsageRule_CalculateSize" data-uid="Google.Api.UsageRule.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -218,7 +227,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_UsageRule_Clone_" data-uid="Google.Api.UsageRule.Clone*"></a>
               <h4 id="Google_Api_UsageRule_Clone" data-uid="Google.Api.UsageRule.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -242,7 +252,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;UsageRule&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_UsageRule_GetHashCode_" data-uid="Google.Api.UsageRule.GetHashCode*"></a>
               <h4 id="Google_Api_UsageRule_GetHashCode" data-uid="Google.Api.UsageRule.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -267,6 +278,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_UsageRule_MergeFrom_" data-uid="Google.Api.UsageRule.MergeFrom*"></a>
               <h4 id="Google_Api_UsageRule_MergeFrom_Google_Api_UsageRule_" data-uid="Google.Api.UsageRule.MergeFrom(Google.Api.UsageRule)">MergeFrom(UsageRule)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -292,7 +304,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;UsageRule&gt;.MergeFrom(UsageRule)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_UsageRule_MergeFrom_" data-uid="Google.Api.UsageRule.MergeFrom*"></a>
               <h4 id="Google_Api_UsageRule_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.UsageRule.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -311,14 +324,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_UsageRule_ToString_" data-uid="Google.Api.UsageRule.ToString*"></a>
               <h4 id="Google_Api_UsageRule_ToString" data-uid="Google.Api.UsageRule.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -343,6 +357,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_UsageRule_WriteTo_" data-uid="Google.Api.UsageRule.WriteTo*"></a>
               <h4 id="Google_Api_UsageRule_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.UsageRule.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -361,14 +376,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -397,7 +412,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

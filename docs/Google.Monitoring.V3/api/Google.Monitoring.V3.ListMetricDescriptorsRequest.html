@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListMetricDescriptorsRequest
    | Google.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Monitoring_V3_ListMetricDescriptorsRequest" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest">Class ListMetricDescriptorsRequest
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListMetricDescriptorsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The <code>ListMetricDescriptors</code> request.</p>
+              <div class="markdown level0 summary"><p>The <code>ListMetricDescriptors</code> request.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,15 +101,16 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Monitoring_V3_ListMetricDescriptorsRequest_Filter_" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest.Filter*"></a>
               <h4 id="Google_Monitoring_V3_ListMetricDescriptorsRequest_Filter" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListMetricDescriptorsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> If this field is empty, all custom and
- system-defined metric descriptors are returned.
- Otherwise, the <a href="/monitoring/api/v3/filters" sourcefile="obj/api/Google.Monitoring.V3.ListMetricDescriptorsRequest.yml" sourcestartlinenumber="4" sourceendlinenumber="4">filter</a>
- specifies which metric descriptors are to be
- returned. For example, the following filter matches all
- <a href="/monitoring/custom-metrics" sourcefile="obj/api/Google.Monitoring.V3.ListMetricDescriptorsRequest.yml" sourcestartlinenumber="7" sourceendlinenumber="7">custom metrics</a>:</p>
-<pre sourcefile="obj/api/Google.Monitoring.V3.ListMetricDescriptorsRequest.yml" sourcestartlinenumber="9" sourceendlinenumber="9"><code> metric.type = starts_with(&quot;custom.googleapis.com/&quot;)
-</code></pre></div>
+              <div class="markdown level1 summary"><p>If this field is empty, all custom and
+system-defined metric descriptors are returned.
+Otherwise, the <a href="/monitoring/api/v3/filters">filter</a>
+specifies which metric descriptors are to be
+returned. For example, the following filter matches all
+<a href="/monitoring/custom-metrics">custom metrics</a>:</p>
+<p>metric.type = starts_with(&quot;custom.googleapis.com/&quot;)</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -130,9 +131,10 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Monitoring_V3_ListMetricDescriptorsRequest_Name_" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest.Name*"></a>
               <h4 id="Google_Monitoring_V3_ListMetricDescriptorsRequest_Name" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest.Name">Name</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListMetricDescriptorsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The project on which to execute the request. The format is
- <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
+              <div class="markdown level1 summary"><p>The project on which to execute the request. The format is
+<code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -154,8 +156,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Monitoring_V3_ListMetricDescriptorsRequest_PageSize_" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest.PageSize*"></a>
               <h4 id="Google_Monitoring_V3_ListMetricDescriptorsRequest_PageSize" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest.PageSize">PageSize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListMetricDescriptorsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A positive number that is the maximum number of results to return.</p>
+              <div class="markdown level1 summary"><p>A positive number that is the maximum number of results to return.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -179,10 +182,11 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Api.Gax.Grpc.IPageRequest.html#Google_Api_Gax_Grpc_IPageRequest_PageSize">IPageRequest.PageSize</a></div>
+              <a id="Google_Monitoring_V3_ListMetricDescriptorsRequest_PageToken_" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest.PageToken*"></a>
               <h4 id="Google_Monitoring_V3_ListMetricDescriptorsRequest_PageToken" data-uid="Google.Monitoring.V3.ListMetricDescriptorsRequest.PageToken">PageToken</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.ListMetricDescriptorsRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> If this field is not empty then it must contain the <code>nextPageToken</code> value
- returned by a previous call to this method.  Using this field causes the
- method to return additional results from the previous method call.</p>
+              <div class="markdown level1 summary"><p>If this field is not empty then it must contain the <code>nextPageToken</code> value
+returned by a previous call to this method.  Using this field causes the
+method to return additional results from the previous method call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -234,7 +238,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

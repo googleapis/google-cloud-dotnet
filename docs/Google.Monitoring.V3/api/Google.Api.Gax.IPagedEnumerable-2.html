@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IPagedEnumerable&lt;TResponse, TResource&gt;
    | Google.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_IPagedEnumerable_2" data-uid="Google.Api.Gax.IPagedEnumerable`2">Interface IPagedEnumerable&lt;TResponse, TResource&gt;
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.IPagedEnumerable-2.yml" sourcestartlinenumber="2" sourceendlinenumber="5">A sequence of resources obtained via API responses, each of which contributes a page of resources.
+              <div class="markdown level0 summary"><p>A sequence of resources obtained via API responses, each of which contributes a page of resources.
 Application code can treat this as a simple sequence (with API calls automatically being made
 lazily as more results are required), or call <a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2_AsPages">AsPages()</a> to retrieve
 a page at a time, potentially with additional information.</p>
@@ -79,7 +79,7 @@ a page at a time, potentially with additional information.</p>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">System.Collections.Generic.IEnumerable&lt;TResource&gt;.GetEnumerator()</span>
+                  <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span>
                 </div>
               </div>
               <h6><strong>Namespace</strong>:Google.Api.Gax</h6>
@@ -109,8 +109,9 @@ a page at a time, potentially with additional information.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_IPagedEnumerable_2_AsPages_" data-uid="Google.Api.Gax.IPagedEnumerable`2.AsPages*"></a>
               <h4 id="Google_Api_Gax_IPagedEnumerable_2_AsPages" data-uid="Google.Api.Gax.IPagedEnumerable`2.AsPages">AsPages()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.IPagedEnumerable-2.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Returns the sequence of API responses, each of which contributes a page of
+              <div class="markdown level1 summary"><p>Returns the sequence of API responses, each of which contributes a page of
 resources to this sequence.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -128,8 +129,8 @@ resources to this sequence.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2">IResponseEnumerable</a>&lt;TResponse, TResource&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.IPagedEnumerable-2.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A sequence of API responses, each containing a page of resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2">IResponseEnumerable&lt;TResponse, TResource&gt;</a>&lt;TResponse, TResource&gt;</td>
+                    <td><p>A sequence of API responses, each containing a page of resources.</p>
 </td>
                   </tr>
                 </tbody>
@@ -162,7 +163,6 @@ resources to this sequence.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

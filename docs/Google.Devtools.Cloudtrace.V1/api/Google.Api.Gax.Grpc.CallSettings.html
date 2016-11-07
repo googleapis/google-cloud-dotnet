@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CallSettings
    | Google.Devtools.Cloudtrace.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_Grpc_CallSettings" data-uid="Google.Api.Gax.Grpc.CallSettings">Class CallSettings
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Settings to determine how an RPC operates. This type is immutable.</p>
+              <div class="markdown level0 summary"><p>Settings to determine how an RPC operates. This type is immutable.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,8 +101,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_Gax_Grpc_CallSettings__ctor_" data-uid="Google.Api.Gax.Grpc.CallSettings.#ctor*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings__ctor_System_Nullable_System_Threading_CancellationToken__Grpc_Core_CallCredentials_Google_Api_Gax_Grpc_CallTiming_System_Action_Grpc_Core_Metadata__Grpc_Core_WriteOptions_Grpc_Core_ContextPropagationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.#ctor(System.Nullable{System.Threading.CancellationToken},Grpc.Core.CallCredentials,Google.Api.Gax.Grpc.CallTiming,System.Action{Grpc.Core.Metadata},Grpc.Core.WriteOptions,Grpc.Core.ContextPropagationToken)">CallSettings(Nullable&lt;CancellationToken&gt;, CallCredentials, CallTiming, Action&lt;Metadata&gt;, WriteOptions, ContextPropagationToken)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs an instance with the specified settings.</p>
+              <div class="markdown level1 summary"><p>Constructs an instance with the specified settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -120,47 +121,48 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Threading.CancellationToken</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Threading.CancellationToken</span>&gt;</td>
                     <td><em>cancellationToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Cancellation token that can be used for cancelling the call.</p>
+                    <td><p>Cancellation token that can be used for cancelling the call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.CallCredentials.html#Grpc_Core_CallCredentials">CallCredentials</a></td>
+                    <td><span class="xref">Grpc.Core.CallCredentials</span></td>
                     <td><em>credentials</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Credentials to use for the call.</p>
+                    <td><p>Credentials to use for the call.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html#Google_Api_Gax_Grpc_CallTiming">CallTiming</a></td>
                     <td><em>timing</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html#Google_Api_Gax_Grpc_CallTiming">CallTiming</a> to use, or null for default retry/expiration behavior.</p>
+                    <td><p><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html#Google_Api_Gax_Grpc_CallTiming">CallTiming</a> to use, or null for default retry/expiration behavior.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Grpc.Core.Metadata.html#Grpc_Core_Metadata">Metadata</a>&gt;</td>
+                    <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">Grpc.Core.Metadata</span>&gt;</td>
                     <td><em>headerMutation</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Action to modify the headers to send at the beginning of the call.</p>
+                    <td><p>Action to modify the headers to send at the beginning of the call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.WriteOptions.html#Grpc_Core_WriteOptions">WriteOptions</a></td>
+                    <td><span class="xref">Grpc.Core.WriteOptions</span></td>
                     <td><em>writeOptions</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><a class="xref" href="Grpc.Core.WriteOptions.html#Grpc_Core_WriteOptions">WriteOptions</a> that will be used for the call.</p>
+                    <td><p><span class="xref">Grpc.Core.WriteOptions</span> that will be used for the call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.ContextPropagationToken.html#Grpc_Core_ContextPropagationToken">ContextPropagationToken</a></td>
+                    <td><span class="xref">Grpc.Core.ContextPropagationToken</span></td>
                     <td><em>propagationToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1"><a class="xref" href="Grpc.Core.ContextPropagationToken.html#Grpc_Core_ContextPropagationToken">ContextPropagationToken</a> for propagating settings from a parent call.</p>
+                    <td><p><span class="xref">Grpc.Core.ContextPropagationToken</span> for propagating settings from a parent call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_Gax_Grpc_CallSettings_CancellationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.CancellationToken*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_CancellationToken" data-uid="Google.Api.Gax.Grpc.CallSettings.CancellationToken">CancellationToken</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Cancellation token that can be used for cancelling the call.</p>
+              <div class="markdown level1 summary"><p>Cancellation token that can be used for cancelling the call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -177,13 +179,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Threading.CancellationToken</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Threading.CancellationToken</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_CallSettings_Credentials_" data-uid="Google.Api.Gax.Grpc.CallSettings.Credentials*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_Credentials" data-uid="Google.Api.Gax.Grpc.CallSettings.Credentials">Credentials</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Credentials to use for the call.</p>
+              <div class="markdown level1 summary"><p>Credentials to use for the call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -200,13 +203,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.CallCredentials.html#Grpc_Core_CallCredentials">CallCredentials</a></td>
+                    <td><span class="xref">Grpc.Core.CallCredentials</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_CallSettings_HeaderMutation_" data-uid="Google.Api.Gax.Grpc.CallSettings.HeaderMutation*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_HeaderMutation" data-uid="Google.Api.Gax.Grpc.CallSettings.HeaderMutation">HeaderMutation</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Delegate to mutate the metadata which will be sent at the start of the call,
+              <div class="markdown level1 summary"><p>Delegate to mutate the metadata which will be sent at the start of the call,
 typically to add custom headers.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -224,13 +228,14 @@ typically to add custom headers.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Grpc.Core.Metadata.html#Grpc_Core_Metadata">Metadata</a>&gt;</td>
+                    <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">Grpc.Core.Metadata</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_CallSettings_PropagationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.PropagationToken*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_PropagationToken" data-uid="Google.Api.Gax.Grpc.CallSettings.PropagationToken">PropagationToken</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2"><a class="xref" href="Grpc.Core.ContextPropagationToken.html#Grpc_Core_ContextPropagationToken">ContextPropagationToken</a> for propagating settings from a parent call.</p>
+              <div class="markdown level1 summary"><p><span class="xref">Grpc.Core.ContextPropagationToken</span> for propagating settings from a parent call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -247,13 +252,14 @@ typically to add custom headers.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.ContextPropagationToken.html#Grpc_Core_ContextPropagationToken">ContextPropagationToken</a></td>
+                    <td><span class="xref">Grpc.Core.ContextPropagationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_CallSettings_Timing_" data-uid="Google.Api.Gax.Grpc.CallSettings.Timing*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_Timing" data-uid="Google.Api.Gax.Grpc.CallSettings.Timing">Timing</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2"><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html#Google_Api_Gax_Grpc_CallTiming">CallTiming</a> to use, or null for default retry/expiration behavior.</p>
+              <div class="markdown level1 summary"><p><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html#Google_Api_Gax_Grpc_CallTiming">CallTiming</a> to use, or null for default retry/expiration behavior.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -276,10 +282,11 @@ typically to add custom headers.</p>
                 </tbody>
               </table>
               <h5 id="Google_Api_Gax_Grpc_CallSettings_Timing_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Allows selecting between retry and simple expiration.</p>
+              <div class="markdown level1 remarks"><p>Allows selecting between retry and simple expiration.</p>
 </div>
+              <a id="Google_Api_Gax_Grpc_CallSettings_WriteOptions_" data-uid="Google.Api.Gax.Grpc.CallSettings.WriteOptions*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_WriteOptions" data-uid="Google.Api.Gax.Grpc.CallSettings.WriteOptions">WriteOptions</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2"><a class="xref" href="Grpc.Core.WriteOptions.html#Grpc_Core_WriteOptions">WriteOptions</a> that will be used for the call.</p>
+              <div class="markdown level1 summary"><p><span class="xref">Grpc.Core.WriteOptions</span> that will be used for the call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -296,15 +303,16 @@ typically to add custom headers.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.WriteOptions.html#Grpc_Core_WriteOptions">WriteOptions</a></td>
+                    <td><span class="xref">Grpc.Core.WriteOptions</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_Grpc_CallSettings_FromCallCredentials_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCallCredentials*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_FromCallCredentials_Grpc_Core_CallCredentials_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCallCredentials(Grpc.Core.CallCredentials)">FromCallCredentials(CallCredentials)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified call credentials, or returns null
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified call credentials, or returns null
 if <em>credentials</em> is null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -323,9 +331,9 @@ if <em>credentials</em> is null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Grpc.Core.CallCredentials.html#Grpc_Core_CallCredentials">CallCredentials</a></td>
+                    <td><span class="xref">Grpc.Core.CallCredentials</span></td>
                     <td><em>credentials</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The call credentials for the new settings.</p>
+                    <td><p>The call credentials for the new settings.</p>
 </td>
                   </tr>
                 </tbody>
@@ -341,13 +349,14 @@ if <em>credentials</em> is null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A new instance, or null if <em>credentials</em> is null.</p>
+                    <td><p>A new instance, or null if <em>credentials</em> is null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_CallSettings_FromCallTiming_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCallTiming*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_FromCallTiming_Google_Api_Gax_Grpc_CallTiming_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCallTiming(Google.Api.Gax.Grpc.CallTiming)">FromCallTiming(CallTiming)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified call timing, or returns null
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified call timing, or returns null
 if <em>timing</em> is null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -368,7 +377,7 @@ if <em>timing</em> is null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallTiming.html#Google_Api_Gax_Grpc_CallTiming">CallTiming</a></td>
                     <td><em>timing</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The call timing for the new settings.</p>
+                    <td><p>The call timing for the new settings.</p>
 </td>
                   </tr>
                 </tbody>
@@ -384,13 +393,14 @@ if <em>timing</em> is null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A new instance or null if <em>timing</em> is null..</p>
+                    <td><p>A new instance or null if <em>timing</em> is null..</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_CallSettings_FromCancellationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCancellationToken*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_FromCancellationToken_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromCancellationToken(System.Threading.CancellationToken)">FromCancellationToken(CancellationToken)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified cancellation token.</p>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified cancellation token.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -410,7 +420,7 @@ if <em>timing</em> is null.</p>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The cancellation token for the new settings.</p>
+                    <td><p>The cancellation token for the new settings.</p>
 </td>
                   </tr>
                 </tbody>
@@ -426,13 +436,14 @@ if <em>timing</em> is null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A new instance.</p>
+                    <td><p>A new instance.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_CallSettings_FromHeader_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromHeader*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_FromHeader_System_String_System_String_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromHeader(System.String,System.String)">FromHeader(String, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified header name and value.</p>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified header name and value.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -452,13 +463,13 @@ if <em>timing</em> is null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>name</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The name of the header to add. Must not be null.</p>
+                    <td><p>The name of the header to add. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>value</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value of the header to add. Must not be null.</p>
+                    <td><p>The value of the header to add. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -474,13 +485,14 @@ if <em>timing</em> is null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A new instance.</p>
+                    <td><p>A new instance.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Grpc_CallSettings_FromHeaderMutation_" data-uid="Google.Api.Gax.Grpc.CallSettings.FromHeaderMutation*"></a>
               <h4 id="Google_Api_Gax_Grpc_CallSettings_FromHeaderMutation_System_Action_Grpc_Core_Metadata__" data-uid="Google.Api.Gax.Grpc.CallSettings.FromHeaderMutation(System.Action{Grpc.Core.Metadata})">FromHeaderMutation(Action&lt;Metadata&gt;)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified header mutation, or returns null
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> for the specified header mutation, or returns null
 if <em>headerMutation</em> is null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -499,9 +511,9 @@ if <em>headerMutation</em> is null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Grpc.Core.Metadata.html#Grpc_Core_Metadata">Metadata</a>&gt;</td>
+                    <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<span class="xref">Grpc.Core.Metadata</span>&gt;</td>
                     <td><em>headerMutation</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Action to modify the headers to send at the beginning of the call.</p>
+                    <td><p>Action to modify the headers to send at the beginning of the call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -517,26 +529,26 @@ if <em>headerMutation</em> is null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Grpc.CallSettings.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A new instance, or null if <em>headerMutation</em> is null..</p>
+                    <td><p>A new instance, or null if <em>headerMutation</em> is null..</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
-                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_MergedWith_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_CallSettings_">CallSettingsExtensions.MergedWith(CallSettings)</a>
+                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_MergedWith_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_CallSettings_">CallSettingsExtensions.MergedWith(CallSettings, CallSettings)</a>
               </div>
               <div>
-                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCancellationToken_Google_Api_Gax_Grpc_CallSettings_System_Threading_CancellationToken_">CallSettingsExtensions.WithCancellationToken(CancellationToken)</a>
+                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCancellationToken_Google_Api_Gax_Grpc_CallSettings_System_Threading_CancellationToken_">CallSettingsExtensions.WithCancellationToken(CallSettings, CancellationToken)</a>
               </div>
               <div>
-                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallCredentials_Google_Api_Gax_Grpc_CallSettings_Grpc_Core_CallCredentials_">CallSettingsExtensions.WithCallCredentials(CallCredentials)</a>
+                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallCredentials_Google_Api_Gax_Grpc_CallSettings_Grpc_Core_CallCredentials_">CallSettingsExtensions.WithCallCredentials(CallSettings, CallCredentials)</a>
               </div>
               <div>
-                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallTiming_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_CallTiming_">CallSettingsExtensions.WithCallTiming(CallTiming)</a>
+                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithCallTiming_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_CallTiming_">CallSettingsExtensions.WithCallTiming(CallSettings, CallTiming)</a>
               </div>
               <div>
-                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithHeader_Google_Api_Gax_Grpc_CallSettings_System_String_System_String_">CallSettingsExtensions.WithHeader(String, String)</a>
+                  <a class="xref" href="Google.Api.Gax.Grpc.CallSettingsExtensions.html#Google_Api_Gax_Grpc_CallSettingsExtensions_WithHeader_Google_Api_Gax_Grpc_CallSettings_System_String_System_String_">CallSettingsExtensions.WithHeader(CallSettings, String, String)</a>
               </div>
             </article>
           </div>
@@ -566,7 +578,6 @@ if <em>headerMutation</em> is null.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

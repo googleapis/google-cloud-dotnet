@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SystemScheduler
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_SystemScheduler" data-uid="Google.Api.Gax.SystemScheduler">Class SystemScheduler
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.SystemScheduler.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Singleton implementation of <a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler">IScheduler</a> which uses <span class="xref">System.Threading.Tasks.Task.Delay(System.TimeSpan)</span>
+              <div class="markdown level0 summary"><p>Singleton implementation of <a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler">IScheduler</a> which uses <span class="xref">System.Threading.Tasks.Task.Delay(System.TimeSpan)</span>
 and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> internally.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -102,8 +102,9 @@ and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> int
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_Gax_SystemScheduler_Instance_" data-uid="Google.Api.Gax.SystemScheduler.Instance*"></a>
               <h4 id="Google_Api_Gax_SystemScheduler_Instance" data-uid="Google.Api.Gax.SystemScheduler.Instance">Instance</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.SystemScheduler.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Retrieves the singleton instance.</p>
+              <div class="markdown level1 summary"><p>Retrieves the singleton instance.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -127,6 +128,7 @@ and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> int
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_SystemScheduler_Delay_" data-uid="Google.Api.Gax.SystemScheduler.Delay*"></a>
               <h4 id="Google_Api_Gax_SystemScheduler_Delay_System_TimeSpan_" data-uid="Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan)">Delay(TimeSpan)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -168,52 +170,7 @@ and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> int
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Delay_System_TimeSpan_">IScheduler.Delay(TimeSpan)</a></div>
-              <h4 id="Google_Api_Gax_SystemScheduler_Schedule_System_Action_System_TimeSpan_" data-uid="Google.Api.Gax.SystemScheduler.Schedule(System.Action,System.TimeSpan)">Schedule(Action, TimeSpan)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task Schedule(Action action, TimeSpan timeSpan)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Action</span></td>
-                    <td><em>action</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>timeSpan</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Schedule_System_Action_System_TimeSpan_">IScheduler.Schedule(Action, TimeSpan)</a></div>
+              <a id="Google_Api_Gax_SystemScheduler_Sleep_" data-uid="Google.Api.Gax.SystemScheduler.Sleep*"></a>
               <h4 id="Google_Api_Gax_SystemScheduler_Sleep_System_TimeSpan_" data-uid="Google.Api.Gax.SystemScheduler.Sleep(System.TimeSpan)">Sleep(TimeSpan)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -268,7 +225,6 @@ and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> int
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigqueryResultSet
    | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Bigquery_V2_BigqueryResultSet" data-uid="Google.Bigquery.V2.BigqueryResultSet">Class BigqueryResultSet
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A set of results loaded into memory from a <a class="xref" href="Google.Bigquery.V2.BigqueryQueryJob.html#Google_Bigquery_V2_BigqueryQueryJob">BigqueryQueryJob</a>, up to a given maximum count.
+              <div class="markdown level0 summary"><p>A set of results loaded into memory from a <a class="xref" href="Google.Bigquery.V2.BigqueryQueryJob.html#Google_Bigquery_V2_BigqueryQueryJob">BigqueryQueryJob</a>, up to a given maximum count.
 A page token may be present to indicate that more results are available.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -102,8 +102,9 @@ A page token may be present to indicate that more results are available.</p>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Bigquery_V2_BigqueryResultSet__ctor_" data-uid="Google.Bigquery.V2.BigqueryResultSet.#ctor*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryResultSet__ctor_System_Collections_Generic_List_Google_Bigquery_V2_BigqueryRow__Google_Apis_Bigquery_v2_Data_TableSchema_Google_Apis_Bigquery_v2_Data_JobReference_System_String_" data-uid="Google.Bigquery.V2.BigqueryResultSet.#ctor(System.Collections.Generic.List{Google.Bigquery.V2.BigqueryRow},Google.Apis.Bigquery.v2.Data.TableSchema,Google.Apis.Bigquery.v2.Data.JobReference,System.String)">BigqueryResultSet(List&lt;BigqueryRow&gt;, TableSchema, JobReference, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a result set with the given rows and schema, retrieved from the specified job.</p>
+              <div class="markdown level1 summary"><p>Constructs a result set with the given rows and schema, retrieved from the specified job.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -121,27 +122,27 @@ A page token may be present to indicate that more results are available.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryRow.html#Google_Bigquery_V2_BigqueryRow">BigqueryRow</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.List&lt;T&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryRow.html#Google_Bigquery_V2_BigqueryRow">BigqueryRow</a>&gt;</td>
                     <td><em>rows</em></td>
-                    <td><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The rows returned in the query. Must not be null.</p>
+                    <td><p>The rows returned in the query. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
                     <td><em>schema</em></td>
-                    <td><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The schema of the results. Must not be null.</p>
+                    <td><p>The schema of the results. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
                     <td><em>jobReference</em></td>
-                    <td><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Reference to the job this result set was fetched from. Must not be null.</p>
+                    <td><p>Reference to the job this result set was fetched from. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The page token to use to fetch further results. May be null, indicating
+                    <td><p>The page token to use to fetch further results. May be null, indicating
 that there are no more results.</p>
 </td>
                   </tr>
@@ -149,8 +150,9 @@ that there are no more results.</p>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Bigquery_V2_BigqueryResultSet_JobReference_" data-uid="Google.Bigquery.V2.BigqueryResultSet.JobReference*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryResultSet_JobReference" data-uid="Google.Bigquery.V2.BigqueryResultSet.JobReference">JobReference</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Reference to the job this result set was fetched from.</p>
+              <div class="markdown level1 summary"><p>Reference to the job this result set was fetched from.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -172,8 +174,9 @@ that there are no more results.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Bigquery_V2_BigqueryResultSet_PageToken_" data-uid="Google.Bigquery.V2.BigqueryResultSet.PageToken*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryResultSet_PageToken" data-uid="Google.Bigquery.V2.BigqueryResultSet.PageToken">PageToken</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="2" sourceendlinenumber="4">If non-null, indicates more results may be available. Use this page
+              <div class="markdown level1 summary"><p>If non-null, indicates more results may be available. Use this page
 token to fetch subsequent rows. This will never be present if fewer rows
 are returned than were requested, and will never be empty.</p>
 </div>
@@ -197,8 +200,9 @@ are returned than were requested, and will never be empty.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Bigquery_V2_BigqueryResultSet_Rows_" data-uid="Google.Bigquery.V2.BigqueryResultSet.Rows*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryResultSet_Rows" data-uid="Google.Bigquery.V2.BigqueryResultSet.Rows">Rows</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The rows returned in the query.</p>
+              <div class="markdown level1 summary"><p>The rows returned in the query.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -215,13 +219,14 @@ are returned than were requested, and will never be empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryRow.html#Google_Bigquery_V2_BigqueryRow">BigqueryRow</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryRow.html#Google_Bigquery_V2_BigqueryRow">BigqueryRow</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Bigquery_V2_BigqueryResultSet_Schema_" data-uid="Google.Bigquery.V2.BigqueryResultSet.Schema*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryResultSet_Schema" data-uid="Google.Bigquery.V2.BigqueryResultSet.Schema">Schema</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryResultSet.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Schema of the results (even if there are no rows).</p>
+              <div class="markdown level1 summary"><p>Schema of the results (even if there are no rows).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -243,10 +248,6 @@ are returned than were requested, and will never be empty.</p>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="extensionmethods">Extension Methods</h3>
-              <div>
-                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;BigqueryResultSet&gt;(String)</a>
-              </div>
             </article>
           </div>
           
@@ -275,7 +276,6 @@ are returned than were requested, and will never be empty.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

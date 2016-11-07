@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConfigServiceV2ClientImpl
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_ConfigServiceV2ClientImpl" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl">Class ConfigServiceV2ClientImpl
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">ConfigServiceV2 client wrapper implementation, for convenient use.</p>
+              <div class="markdown level0 summary"><p>ConfigServiceV2 client wrapper implementation, for convenient use.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -98,6 +98,18 @@
                 </div>
                 <div>
                   <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_FormatSinkName_System_String_System_String_">ConfigServiceV2Client.FormatSinkName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_MetricTemplate">ConfigServiceV2Client.MetricTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_FormatMetricName_System_String_System_String_">ConfigServiceV2Client.FormatMetricName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_LogTemplate">ConfigServiceV2Client.LogTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_FormatLogName_System_String_System_String_">ConfigServiceV2Client.FormatLogName(String, String)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Logging_V2_ConfigServiceV2Settings_">ConfigServiceV2Client.CreateAsync(ServiceEndpoint, ConfigServiceV2Settings)</a>
@@ -144,8 +156,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl__ctor_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.#ctor*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl__ctor_Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client_Google_Logging_V2_ConfigServiceV2Settings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.#ctor(Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client,Google.Logging.V2.ConfigServiceV2Settings)">ConfigServiceV2ClientImpl(ConfigServiceV2.ConfigServiceV2Client, ConfigServiceV2Settings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a client wrapper for the ConfigServiceV2 service, with the specified gRPC client and settings.</p>
+              <div class="markdown level1 summary"><p>Constructs a client wrapper for the ConfigServiceV2 service, with the specified gRPC client and settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -165,21 +178,22 @@
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.ConfigServiceV2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2_ConfigServiceV2Client">ConfigServiceV2.ConfigServiceV2Client</a></td>
                     <td><em>grpcClient</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The underlying gRPC client.</p>
+                    <td><p>The underlying gRPC client.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings">ConfigServiceV2Settings</a></td>
                     <td><em>settings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The base <a class="xref" href="Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings">ConfigServiceV2Settings</a> used within this client </p>
+                    <td><p>The base <a class="xref" href="Google.Logging.V2.ConfigServiceV2Settings.html#Google_Logging_V2_ConfigServiceV2Settings">ConfigServiceV2Settings</a> used within this client </p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_GrpcClient_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.GrpcClient*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_GrpcClient" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.GrpcClient">GrpcClient</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The underlying gRPC ConfigServiceV2 client.</p>
+              <div class="markdown level1 summary"><p>The underlying gRPC ConfigServiceV2 client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -205,8 +219,10 @@
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_GrpcClient">ConfigServiceV2Client.GrpcClient</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_CreateSink_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.CreateSink*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_CreateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.CreateSink(System.String,Google.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">CreateSink(String, LogSink, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -225,17 +241,22 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>parent</em></td>
-                    <td></td>
+                    <td><p>Required. The resource in which to create the sink.
+Example: <code>&quot;projects/my-project-id&quot;</code>.
+The new sink must be provided in the request.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a></td>
                     <td><em>sink</em></td>
-                    <td></td>
+                    <td><p>Required. The new sink, whose <code>name</code> parameter is a sink identifier that
+is not already in use.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -251,15 +272,17 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.CreateSink(String, LogSink, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_CreateSinkAsync_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.CreateSinkAsync*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_CreateSinkAsync_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.CreateSinkAsync(System.String,Google.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">CreateSinkAsync(String, LogSink, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -278,17 +301,22 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>parent</em></td>
-                    <td></td>
+                    <td><p>Required. The resource in which to create the sink.
+Example: <code>&quot;projects/my-project-id&quot;</code>.
+The new sink must be provided in the request.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a></td>
                     <td><em>sink</em></td>
-                    <td></td>
+                    <td><p>Required. The new sink, whose <code>name</code> parameter is a sink identifier that
+is not already in use.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -303,16 +331,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.CreateSinkAsync(String, LogSink, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_DeleteSink_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.DeleteSink*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_DeleteSink_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.DeleteSink(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteSink(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -331,20 +361,26 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>sinkName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the sink to delete, including the parent
+resource and the sink identifier.  Example:
+<code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.  It is an error if the sink
+does not exist.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_DeleteSink_System_String_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.DeleteSink(String, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_DeleteSinkAsync_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.DeleteSinkAsync*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_DeleteSinkAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.DeleteSinkAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteSinkAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -363,12 +399,16 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>sinkName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the sink to delete, including the parent
+resource and the sink identifier.  Example:
+<code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.  It is an error if the sink
+does not exist.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -384,15 +424,17 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.DeleteSinkAsync(String, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_GetSink_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.GetSink*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_GetSink_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.GetSink(System.String,Google.Api.Gax.Grpc.CallSettings)">GetSink(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -411,12 +453,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>sinkName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the sink to return.
+Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -432,15 +476,17 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_GetSink_System_String_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.GetSink(String, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_GetSinkAsync_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.GetSinkAsync*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_GetSinkAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.GetSinkAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetSinkAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -459,12 +505,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>sinkName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the sink to return.
+Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -479,16 +527,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_GetSinkAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.GetSinkAsync(String, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_ListSinks_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.ListSinks*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_ListSinks_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.ListSinks(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListSinks(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists sinks.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -507,26 +557,28 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>parent</em></td>
-                    <td></td>
+                    <td><p>Required. The cloud resource containing the sinks.
+Example: <code>&quot;projects/my-logging-project&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -541,16 +593,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Logging.V2.ListSinksResponse.html#Google_Logging_V2_ListSinksResponse">ListSinksResponse</a>, <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable sequence of <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Logging.V2.ListSinksResponse.html#Google_Logging_V2_ListSinksResponse">ListSinksResponse</a>, <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
+                    <td><p>A pageable sequence of <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_ListSinks_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.ListSinks(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_ListSinksAsync_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.ListSinksAsync*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_ListSinksAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.ListSinksAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListSinksAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists sinks.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -569,26 +623,28 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>parent</em></td>
-                    <td></td>
+                    <td><p>Required. The cloud resource containing the sinks.
+Example: <code>&quot;projects/my-logging-project&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -603,16 +659,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Logging.V2.ListSinksResponse.html#Google_Logging_V2_ListSinksResponse">ListSinksResponse</a>, <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable asynchronous sequence of <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Logging.V2.ListSinksResponse.html#Google_Logging_V2_ListSinksResponse">ListSinksResponse</a>, <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_ListSinksAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.ListSinksAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_UpdateSink_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.UpdateSink*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_UpdateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.UpdateSink(System.String,Google.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">UpdateSink(String, LogSink, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -631,17 +689,23 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>sinkName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the sink to update, including the parent
+resource and the sink identifier.  If the sink does not exist, this method
+creates the sink.  Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a></td>
                     <td><em>sink</em></td>
-                    <td></td>
+                    <td><p>Required. The updated sink, whose name is the same identifier that appears
+as part of <code>sinkName</code>.  If <code>sinkName</code> does not exist, then
+this method creates a new sink.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -657,15 +721,17 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.ConfigServiceV2Client.html#Google_Logging_V2_ConfigServiceV2Client_UpdateSink_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.UpdateSink(String, LogSink, CallSettings)</a></div>
+              <a id="Google_Logging_V2_ConfigServiceV2ClientImpl_UpdateSinkAsync_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.UpdateSinkAsync*"></a>
               <h4 id="Google_Logging_V2_ConfigServiceV2ClientImpl_UpdateSinkAsync_System_String_Google_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.ConfigServiceV2ClientImpl.UpdateSinkAsync(System.String,Google.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">UpdateSinkAsync(String, LogSink, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -684,17 +750,23 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>sinkName</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name of the sink to update, including the parent
+resource and the sink identifier.  If the sink does not exist, this method
+creates the sink.  Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a></td>
                     <td><em>sink</em></td>
-                    <td></td>
+                    <td><p>Required. The updated sink, whose name is the same identifier that appears
+as part of <code>sinkName</code>.  If <code>sinkName</code> does not exist, then
+this method creates a new sink.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -709,8 +781,8 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.ConfigServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Logging.V2.LogSink.html#Google_Logging_V2_LogSink">LogSink</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
@@ -745,7 +817,6 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

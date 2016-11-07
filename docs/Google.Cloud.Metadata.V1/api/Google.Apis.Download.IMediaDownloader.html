@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IMediaDownloader
    | Google.Cloud.Metadata.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Apis_Download_IMediaDownloader" data-uid="Google.Apis.Download.IMediaDownloader">Interface IMediaDownloader
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Apis.Download.IMediaDownloader.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Media download which uses download file part by part, by <a class="xref" href="Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_ChunkSize">ChunkSize</a>.</p>
+              <div class="markdown level0 summary"><p>Media download which uses download file part by part, by <a class="xref" href="Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_ChunkSize">ChunkSize</a>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Google.Apis.Download</h6>
@@ -81,8 +81,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Apis_Download_IMediaDownloader_ChunkSize_" data-uid="Google.Apis.Download.IMediaDownloader.ChunkSize*"></a>
               <h4 id="Google_Apis_Download_IMediaDownloader_ChunkSize" data-uid="Google.Apis.Download.IMediaDownloader.ChunkSize">ChunkSize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Download.IMediaDownloader.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Gets or sets the chunk size to download, it defines the size of each part.</p>
+              <div class="markdown level1 summary"><p>Gets or sets the chunk size to download, it defines the size of each part.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -106,8 +107,9 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Apis_Download_IMediaDownloader_Download_" data-uid="Google.Apis.Download.IMediaDownloader.Download*"></a>
               <h4 id="Google_Apis_Download_IMediaDownloader_Download_System_String_System_IO_Stream_" data-uid="Google.Apis.Download.IMediaDownloader.Download(System.String,System.IO.Stream)">Download(String, Stream)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Download.IMediaDownloader.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Downloads synchronously the given URL to the given stream.</p>
+              <div class="markdown level1 summary"><p>Downloads synchronously the given URL to the given stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -151,8 +153,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Download_IMediaDownloader_DownloadAsync_" data-uid="Google.Apis.Download.IMediaDownloader.DownloadAsync*"></a>
               <h4 id="Google_Apis_Download_IMediaDownloader_DownloadAsync_System_String_System_IO_Stream_" data-uid="Google.Apis.Download.IMediaDownloader.DownloadAsync(System.String,System.IO.Stream)">DownloadAsync(String, Stream)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Download.IMediaDownloader.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Downloads asynchronously the given URL to the given stream.</p>
+              <div class="markdown level1 summary"><p>Downloads asynchronously the given URL to the given stream.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -191,13 +194,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Download_IMediaDownloader_DownloadAsync_" data-uid="Google.Apis.Download.IMediaDownloader.DownloadAsync*"></a>
               <h4 id="Google_Apis_Download_IMediaDownloader_DownloadAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_" data-uid="Google.Apis.Download.IMediaDownloader.DownloadAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)">DownloadAsync(String, Stream, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Download.IMediaDownloader.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Downloads asynchronously the given URL to the given stream. This download method supports a cancellation 
+              <div class="markdown level1 summary"><p>Downloads asynchronously the given URL to the given stream. This download method supports a cancellation 
 token to cancel a request before it was completed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -242,20 +246,20 @@ token to cancel a request before it was completed.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Apis_Download_IMediaDownloader_DownloadAsync_System_String_System_IO_Stream_System_Threading_CancellationToken__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Apis.Download.IMediaDownloader.yml" sourcestartlinenumber="2" sourceendlinenumber="3">In case the download fails <a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress_Exception">Exception</a> will contain the exception that
+              <div class="markdown level1 remarks"><p>In case the download fails <a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress_Exception">Exception</a> will contain the exception that
 cause the failure. The only exception which will be thrown is </p>
-<p sourcefile="obj/api/Google.Apis.Download.IMediaDownloader.yml" sourcestartlinenumber="4" sourceendlinenumber="4"><span class="xref">System.Threading.Tasks.TaskCanceledException</span> which indicates that the task was canceled.</p>
+<p><span class="xref">System.Threading.Tasks.TaskCanceledException</span> which indicates that the task was canceled.</p>
 </div>
               <h3 id="events">Events
               </h3>
               <h4 id="Google_Apis_Download_IMediaDownloader_ProgressChanged" data-uid="Google.Apis.Download.IMediaDownloader.ProgressChanged">ProgressChanged</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Download.IMediaDownloader.yml" sourcestartlinenumber="1" sourceendlinenumber="1">An event which notifies when the download status has been changed.</p>
+              <div class="markdown level1 summary"><p>An event which notifies when the download status has been changed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -272,7 +276,7 @@ cause the failure. The only exception which will be thrown is </p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
+                    <td><span class="xref">System.Action&lt;T&gt;</span>&lt;<a class="xref" href="Google.Apis.Download.IDownloadProgress.html#Google_Apis_Download_IDownloadProgress">IDownloadProgress</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -305,7 +309,6 @@ cause the failure. The only exception which will be thrown is </p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

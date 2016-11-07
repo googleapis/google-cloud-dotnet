@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BillingStatusRule
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,21 +70,20 @@
               
               <h1 id="Google_Api_BillingStatusRule" data-uid="Google.Api.BillingStatusRule">Class BillingStatusRule
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Defines the billing status requirements for operations.</p>
-<p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="4" sourceendlinenumber="6"> When used with
- <a href="https://cloud.google.com/service-control/" sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="5" sourceendlinenumber="5">Service Control API</a>, the
- following statuses are supported:</p>
-<ul sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="8" sourceendlinenumber="16">
-<li sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="8" sourceendlinenumber="9"><strong>current</strong>: the associated billing account is up to date and capable of
-             paying for resource usages.</li>
-<li sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="10" sourceendlinenumber="16"><p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="10" sourceendlinenumber="10"><strong>delinquent</strong>: the associated billing account has a correctable problem,</p>
-<pre sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="11" sourceendlinenumber="11"><code>            such as late payment.
-</code></pre><p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="10" sourceendlinenumber="13">Mostly services should only allow <code>current</code> status when serving requests.
+              <div class="markdown level0 summary"><p>Defines the billing status requirements for operations.</p>
+<p>When used with
+<a href="https://cloud.google.com/service-control/">Service Control API</a>, the
+following statuses are supported:</p>
+<ul>
+<li><strong>current</strong>: the associated billing account is up to date and capable of
+        paying for resource usages.</li>
+<li><strong>delinquent</strong>: the associated billing account has a correctable problem,
+           such as late payment.</li>
+</ul>
+<p>Mostly services should only allow <code>current</code> status when serving requests.
 In addition, services can choose to allow both <code>current</code> and <code>delinquent</code>
 statuses when serving read-only requests to resources. If the list of
 allowed_statuses is empty, it means no billing requirement.</p>
-</li>
-</ul>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -109,6 +108,7 @@ allowed_statuses is empty, it means no billing requirement.</p>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_BillingStatusRule__ctor_" data-uid="Google.Api.BillingStatusRule.#ctor*"></a>
               <h4 id="Google_Api_BillingStatusRule__ctor" data-uid="Google.Api.BillingStatusRule.#ctor">BillingStatusRule()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -116,6 +116,7 @@ allowed_statuses is empty, it means no billing requirement.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public BillingStatusRule()</code></pre>
               </div>
+              <a id="Google_Api_BillingStatusRule__ctor_" data-uid="Google.Api.BillingStatusRule.#ctor*"></a>
               <h4 id="Google_Api_BillingStatusRule__ctor_Google_Api_BillingStatusRule_" data-uid="Google.Api.BillingStatusRule.#ctor(Google.Api.BillingStatusRule)">BillingStatusRule(BillingStatusRule)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -142,9 +143,10 @@ allowed_statuses is empty, it means no billing requirement.</p>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_BillingStatusRule_AllowedStatuses_" data-uid="Google.Api.BillingStatusRule.AllowedStatuses*"></a>
               <h4 id="Google_Api_BillingStatusRule_AllowedStatuses" data-uid="Google.Api.BillingStatusRule.AllowedStatuses">AllowedStatuses</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Allowed billing statuses. The billing status check passes if the actual
- billing status matches any of the provided values here.</p>
+              <div class="markdown level1 summary"><p>Allowed billing statuses. The billing status check passes if the actual
+billing status matches any of the provided values here.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -161,14 +163,15 @@ allowed_statuses is empty, it means no billing requirement.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_BillingStatusRule_Selector_" data-uid="Google.Api.BillingStatusRule.Selector*"></a>
               <h4 id="Google_Api_BillingStatusRule_Selector" data-uid="Google.Api.BillingStatusRule.Selector">Selector</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.BillingStatusRule.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Selects the operation names to which this rule applies.
- Refer to [selector][google.api.DocumentationRule.selector] for syntax details.</p>
+              <div class="markdown level1 summary"><p>Selects the operation names to which this rule applies.
+Refer to [selector][google.api.DocumentationRule.selector] for syntax details.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -192,6 +195,7 @@ allowed_statuses is empty, it means no billing requirement.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_BillingStatusRule_CalculateSize_" data-uid="Google.Api.BillingStatusRule.CalculateSize*"></a>
               <h4 id="Google_Api_BillingStatusRule_CalculateSize" data-uid="Google.Api.BillingStatusRule.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -215,7 +219,8 @@ allowed_statuses is empty, it means no billing requirement.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_BillingStatusRule_Clone_" data-uid="Google.Api.BillingStatusRule.Clone*"></a>
               <h4 id="Google_Api_BillingStatusRule_Clone" data-uid="Google.Api.BillingStatusRule.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -239,7 +244,8 @@ allowed_statuses is empty, it means no billing requirement.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;BillingStatusRule&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_BillingStatusRule_GetHashCode_" data-uid="Google.Api.BillingStatusRule.GetHashCode*"></a>
               <h4 id="Google_Api_BillingStatusRule_GetHashCode" data-uid="Google.Api.BillingStatusRule.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -264,6 +270,7 @@ allowed_statuses is empty, it means no billing requirement.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_BillingStatusRule_MergeFrom_" data-uid="Google.Api.BillingStatusRule.MergeFrom*"></a>
               <h4 id="Google_Api_BillingStatusRule_MergeFrom_Google_Api_BillingStatusRule_" data-uid="Google.Api.BillingStatusRule.MergeFrom(Google.Api.BillingStatusRule)">MergeFrom(BillingStatusRule)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -289,7 +296,8 @@ allowed_statuses is empty, it means no billing requirement.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;BillingStatusRule&gt;.MergeFrom(BillingStatusRule)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_BillingStatusRule_MergeFrom_" data-uid="Google.Api.BillingStatusRule.MergeFrom*"></a>
               <h4 id="Google_Api_BillingStatusRule_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.BillingStatusRule.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -308,14 +316,15 @@ allowed_statuses is empty, it means no billing requirement.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_BillingStatusRule_ToString_" data-uid="Google.Api.BillingStatusRule.ToString*"></a>
               <h4 id="Google_Api_BillingStatusRule_ToString" data-uid="Google.Api.BillingStatusRule.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -340,6 +349,7 @@ allowed_statuses is empty, it means no billing requirement.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_BillingStatusRule_WriteTo_" data-uid="Google.Api.BillingStatusRule.WriteTo*"></a>
               <h4 id="Google_Api_BillingStatusRule_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.BillingStatusRule.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -358,14 +368,14 @@ allowed_statuses is empty, it means no billing requirement.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -394,7 +404,6 @@ allowed_statuses is empty, it means no billing requirement.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

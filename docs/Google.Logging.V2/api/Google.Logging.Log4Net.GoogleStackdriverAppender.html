@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GoogleStackdriverAppender
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_Log4Net_GoogleStackdriverAppender" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender">Class GoogleStackdriverAppender
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Appends logging events to Google Stackdriver Logging.</p>
+              <div class="markdown level0 summary"><p>Appends logging events to Google Stackdriver Logging.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -152,13 +152,14 @@
                 <pre><code class="lang-csharp hljs">public sealed class GoogleStackdriverAppender : AppenderSkeleton, IBulkAppender, IAppender, IOptionHandler</code></pre>
               </div>
               <h5 id="Google_Logging_Log4Net_GoogleStackdriverAppender_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="5">Logging events are sent to Google Stackdriver Logging asychronously,
+              <div class="markdown level0 remarks"><p>Logging events are sent to Google Stackdriver Logging asychronously,
 via a local buffer. This  is to ensure that server errors or increased
 network/server latency don&#39;t cause slow-downs in the program being logged.
 TODO: Explain all the configuration options.</p>
 </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender__ctor_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.#ctor*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender__ctor" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.#ctor">GoogleStackdriverAppender()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -168,8 +169,9 @@ TODO: Explain all the configuration options.</p>
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_File_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.File*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_File" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.File">File</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The path prefix to the files that logging will be written to.</p>
+              <div class="markdown level1 summary"><p>The path prefix to the files that logging will be written to.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -191,8 +193,9 @@ TODO: Explain all the configuration options.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_LocalQueueType_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.LocalQueueType*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_LocalQueueType" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.LocalQueueType">LocalQueueType</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The local queuing mechanism, used before the log is sent to Google Logging.
+              <div class="markdown level1 summary"><p>The local queuing mechanism, used before the log is sent to Google Logging.
 Defaults to <a class="xref" href="Google.Logging.Log4Net.LocalQueueType.html#Google_Logging_Log4Net_LocalQueueType_Memory">Memory</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -237,8 +240,9 @@ cause the oldest queued log entries to be permanently lost.
 </li></ul>
 </p>
 </div>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_LogId_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.LogId*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_LogId" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.LogId">LogId</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">LogID for all log entries. Must be configured.</p>
+              <div class="markdown level1 summary"><p>LogID for all log entries. Must be configured.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -260,8 +264,9 @@ cause the oldest queued log entries to be permanently lost.
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxFileSize_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxFileSize*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxFileSize" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxFileSize">MaxFileSize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The maximum size in bytes that each log file is allowed to reach, before being rolled over. Defaults to 10Mb.</p>
+              <div class="markdown level1 summary"><p>The maximum size in bytes that each log file is allowed to reach, before being rolled over. Defaults to 10Mb.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -283,8 +288,9 @@ cause the oldest queued log entries to be permanently lost.
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxMemoryCount_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxMemoryCount*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxMemoryCount" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxMemoryCount">MaxMemoryCount</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The maximum count of log entries allowed in the in-memory logging queue. Defaults to 1,000
+              <div class="markdown level1 summary"><p>The maximum count of log entries allowed in the in-memory logging queue. Defaults to 1,000
 Not used for file-based queueing.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -307,8 +313,9 @@ Not used for file-based queueing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxMemorySize_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxMemorySize*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxMemorySize" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxMemorySize">MaxMemorySize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The maximum bytes of memory used by in-memory logging queue. Defaults to unconfigured.
+              <div class="markdown level1 summary"><p>The maximum bytes of memory used by in-memory logging queue. Defaults to unconfigured.
 Not used for file-based queuing.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -331,8 +338,9 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxSizeRollBackups_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxSizeRollBackups*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxSizeRollBackups" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxSizeRollBackups">MaxSizeRollBackups</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The maximum number of backup files that are kept before the oldest is erased. Defaults to 10.</p>
+              <div class="markdown level1 summary"><p>The maximum number of backup files that are kept before the oldest is erased. Defaults to 10.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -354,8 +362,9 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxUploadBatchSize_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxUploadBatchSize*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_MaxUploadBatchSize" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.MaxUploadBatchSize">MaxUploadBatchSize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The maximum batch size when uploading to Google Cloud Logging. Defaults to 100.</p>
+              <div class="markdown level1 summary"><p>The maximum batch size when uploading to Google Cloud Logging. Defaults to 100.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -377,8 +386,9 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_ProjectId_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ProjectId*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_ProjectId" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The project ID for all log entries. Must be configured.</p>
+              <div class="markdown level1 summary"><p>The project ID for all log entries. Must be configured.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -400,8 +410,9 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_ResourceType_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ResourceType*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_ResourceType" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ResourceType">ResourceType</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The resource type of log entries. Defaults to &quot;global&quot;.</p>
+              <div class="markdown level1 summary"><p>The resource type of log entries. Defaults to &quot;global&quot;.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -423,8 +434,9 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffDelaySeconds_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffDelaySeconds*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffDelaySeconds" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffDelaySeconds">ServerErrorBackoffDelaySeconds</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">On receiving a server error during log upload, the initial delay in seconds before retry.</p>
+              <div class="markdown level1 summary"><p>On receiving a server error during log upload, the initial delay in seconds before retry.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -446,8 +458,9 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMaxDelaySeconds_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMaxDelaySeconds*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMaxDelaySeconds" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMaxDelaySeconds">ServerErrorBackoffMaxDelaySeconds</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The maxmimum retry delay when receiving multiple consecutive server errors during log upload.</p>
+              <div class="markdown level1 summary"><p>The maxmimum retry delay when receiving multiple consecutive server errors during log upload.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -469,8 +482,9 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMultiplier_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMultiplier*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMultiplier" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMultiplier">ServerErrorBackoffMultiplier</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.Log4Net.GoogleStackdriverAppender.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The multiplier applied to the retry delay when receiving multiple consecutive server errors during log upload.</p>
+              <div class="markdown level1 summary"><p>The multiplier applied to the retry delay when receiving multiple consecutive server errors during log upload.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -494,6 +508,7 @@ Not used for file-based queuing.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_ActivateOptions_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ActivateOptions*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_ActivateOptions" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.ActivateOptions">ActivateOptions()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -503,6 +518,7 @@ Not used for file-based queuing.</p>
               </div>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">log4net.Appender.AppenderSkeleton.ActivateOptions()</span></div>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_AddCustomLabel_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.AddCustomLabel*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_AddCustomLabel_Google_Logging_Log4Net_GoogleStackdriverAppender_Label_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.AddCustomLabel(Google.Logging.Log4Net.GoogleStackdriverAppender.Label)">AddCustomLabel(GoogleStackdriverAppender.Label)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -527,6 +543,7 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_AddWithMetaData_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.AddWithMetaData*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_AddWithMetaData_Google_Logging_Log4Net_MetaDataType_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.AddWithMetaData(Google.Logging.Log4Net.MetaDataType)">AddWithMetaData(MetaDataType)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -551,6 +568,7 @@ Not used for file-based queuing.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_Append_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.Append*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_Append_log4net_Core_LoggingEvent_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent)">Append(LoggingEvent)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -577,6 +595,7 @@ Not used for file-based queuing.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent)</span></div>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_Append_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.Append*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_Append_log4net_Core_LoggingEvent___" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent[])">Append(LoggingEvent[])</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -603,6 +622,7 @@ Not used for file-based queuing.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent[])</span></div>
+              <a id="Google_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync*"></a>
               <h4 id="Google_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_System_TimeSpan_" data-uid="Google.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync(System.TimeSpan)">WaitUntilEmptyAsync(TimeSpan)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -670,7 +690,6 @@ Not used for file-based queuing.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

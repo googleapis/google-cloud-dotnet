@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IPageManager&lt;TRequest, TResponse, TResource&gt;
    | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Api_Gax_Rest_IPageManager_3" data-uid="Google.Api.Gax.Rest.IPageManager`3">Interface IPageManager&lt;TRequest, TResponse, TResource&gt;
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Interface describing the relationship between requests, responses and resources for
+              <div class="markdown level0 summary"><p>Interface describing the relationship between requests, responses and resources for
 page streaming.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -105,8 +105,9 @@ page streaming.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_Rest_IPageManager_3_GetNextPageToken_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetNextPageToken*"></a>
               <h4 id="Google_Api_Gax_Rest_IPageManager_3_GetNextPageToken__1_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetNextPageToken(`1)">GetNextPageToken(TResponse)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Extracts the next page token from a response.</p>
+              <div class="markdown level1 summary"><p>Extracts the next page token from a response.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -126,7 +127,7 @@ page streaming.</p>
                   <tr>
                     <td><span class="xref">TResponse</span></td>
                     <td><em>response</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The response to extract the next page token from.</p>
+                    <td><p>The response to extract the next page token from.</p>
 </td>
                   </tr>
                 </tbody>
@@ -142,13 +143,14 @@ page streaming.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The next page token, or <code>null</code> if this is the final page of results.</p>
+                    <td><p>The next page token, or <code>null</code> if this is the final page of results.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Rest_IPageManager_3_GetResources_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetResources*"></a>
               <h4 id="Google_Api_Gax_Rest_IPageManager_3_GetResources__1_" data-uid="Google.Api.Gax.Rest.IPageManager`3.GetResources(`1)">GetResources(TResponse)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Extracts resources from a response.</p>
+              <div class="markdown level1 summary"><p>Extracts resources from a response.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -168,7 +170,7 @@ page streaming.</p>
                   <tr>
                     <td><span class="xref">TResponse</span></td>
                     <td><em>response</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The response containing the resources.</p>
+                    <td><p>The response containing the resources.</p>
 </td>
                   </tr>
                 </tbody>
@@ -183,14 +185,15 @@ page streaming.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TResource&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The resources in the response, or <code>null</code> if it contains no resources.</p>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TResource&gt;</td>
+                    <td><p>The resources in the response, or <code>null</code> if it contains no resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Rest_IPageManager_3_SetPageSize_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageSize*"></a>
               <h4 id="Google_Api_Gax_Rest_IPageManager_3_SetPageSize__0_System_Int32_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageSize(`0,System.Int32)">SetPageSize(TRequest, Int32)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Applies the given page size to the given request.</p>
+              <div class="markdown level1 summary"><p>Applies the given page size to the given request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -210,19 +213,20 @@ page streaming.</p>
                   <tr>
                     <td><span class="xref">TRequest</span></td>
                     <td><em>request</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The request to modify.</p>
+                    <td><p>The request to modify.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The page size for the next remote call.</p>
+                    <td><p>The page size for the next remote call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Gax_Rest_IPageManager_3_SetPageToken_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageToken*"></a>
               <h4 id="Google_Api_Gax_Rest_IPageManager_3_SetPageToken__0_System_String_" data-uid="Google.Api.Gax.Rest.IPageManager`3.SetPageToken(`0,System.String)">SetPageToken(TRequest, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Applies the given page token to the given request.</p>
+              <div class="markdown level1 summary"><p>Applies the given page token to the given request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -242,21 +246,17 @@ page streaming.</p>
                   <tr>
                     <td><span class="xref">TRequest</span></td>
                     <td><em>request</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The request to modify.</p>
+                    <td><p>The request to modify.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Api.Gax.Rest.IPageManager-3.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The page token for the next remote call.</p>
+                    <td><p>The page token for the next remote call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="extensionmethods">Extension Methods</h3>
-              <div>
-                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;IPageManager&lt;TRequest, TResponse, TResource&gt;&gt;(String)</a>
-              </div>
             </article>
           </div>
           
@@ -285,7 +285,6 @@ page streaming.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

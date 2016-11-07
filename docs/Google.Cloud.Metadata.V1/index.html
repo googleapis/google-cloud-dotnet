@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Google.Cloud.Metadata.V1 | Google.Cloud.Metadata.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Metadata.V1 | Google.Cloud.Metadata.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,48 +57,48 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googlecloudmetadatav1" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Cloud.Metadata.V1</h1>
+              <h1 id="googlecloudmetadatav1">Google.Cloud.Metadata.V1</h1>
               
-<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4"><code>Google.Cloud.Metadata.V1</code> is a .NET client library for the <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata" sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4">Google
+<p><code>Google.Cloud.Metadata.V1</code> is a .NET client library for the <a href="https://cloud.google.com/compute/docs/storing-retrieving-metadata">Google
 Compute Engine Metadata Server</a>.</p>
-<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="6" sourceendlinenumber="6">Installation</h1>
-<p sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="13">Install the <code>Google.Cloud.Metadata.V1</code> package from NuGet. Add it to
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Cloud.Metadata.V1</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
 Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
-<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">Authentication</h1>
-<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="19">The metadata server is only available locally on a Google Compute
+<h1 id="authentication">Authentication</h1>
+<p>The metadata server is only available locally on a Google Compute
 Engine VM instance. The instance automatically has access to the
 metadata server API so no authentication is necessary.</p>
-<h1 id="getting-started" sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="21">Getting started</h1>
-<p sourcefile="index.md" sourcestartlinenumber="23" sourceendlinenumber="31">All operations are performed through
-<a href="api/Google.Cloud.Metadata.V1.MetadataClient.html" sourcefile="index.md" sourcestartlinenumber="24" sourceendlinenumber="24">MetadataClient</a>.
+<h1 id="getting-started">Getting started</h1>
+<p>All operations are performed through
+<a href="api/Google.Cloud.Metadata.V1.MetadataClient.html">MetadataClient</a>.
 This class provides methods and events for retrieving metadata
 information about the project or instance. This can also include
 custom key/value pairs associated with either the project or
 instance. Neither this library nor the metadata server API provide
 support for modifying custom metadata. Modifications must be done
-via the <a href="https://cloud.google.com/compute/docs/reference/latest/" sourcefile="index.md" sourcestartlinenumber="30" sourceendlinenumber="30">Compute Engine API</a>
-or the <a href="https://console.cloud.google.com" sourcefile="index.md" sourcestartlinenumber="31" sourceendlinenumber="31">Google Cloud Console</a>.</p>
-<h1 id="sample-code" sourcefile="index.md" sourcestartlinenumber="33" sourceendlinenumber="33">Sample code</h1>
-<h1 id="getting-instance-metadata" sourcefile="index.md" sourcestartlinenumber="35" sourceendlinenumber="35">Getting instance metadata</h1>
+via the <a href="https://cloud.google.com/compute/docs/reference/latest/">Compute Engine API</a>
+or the <a href="https://console.cloud.google.com">Google Cloud Console</a>.</p>
+<h1 id="sample-code">Sample code</h1>
+<h1 id="getting-instance-metadata">Getting instance metadata</h1>
 <pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
 Instance instance = client.GetInstanceMetadata();
 Console.Write(instance.Zone);
-</code></pre><h1 id="getting-a-custom-metadata-value" sourcefile="index.md" sourcestartlinenumber="39" sourceendlinenumber="39">Getting a custom metadata value</h1>
+</code></pre><h1 id="getting-a-custom-metadata-value">Getting a custom metadata value</h1>
 <pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
 string customValue = client.GetCustomInstanceMetadata(&quot;my_instance_key1&quot;);
 Console.WriteLine(customValue);
-</code></pre><h1 id="getting-the-maintenance-status" sourcefile="index.md" sourcestartlinenumber="43" sourceendlinenumber="43">Getting the maintenance status</h1>
+</code></pre><h1 id="getting-the-maintenance-status">Getting the maintenance status</h1>
 <pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
 MaintenanceStatus status = client.GetMaintenanceStatus();
 if (status == MaintenanceStatus.Migrate)
 {
     // Backup data
 }
-</code></pre><h1 id="waiting-for-changes" sourcefile="index.md" sourcestartlinenumber="47" sourceendlinenumber="47">Waiting for changes</h1>
+</code></pre><h1 id="waiting-for-changes">Waiting for changes</h1>
 <pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
 string result = client.WaitForChange(&quot;instance/attributes&quot;, timeout: TimeSpan.FromSeconds(5));
 JObject currentCustomMetadata = JObject.Parse(result);
@@ -135,7 +135,6 @@ foreach(JProperty customMetadata in currentCustomMetadata.Properties())
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

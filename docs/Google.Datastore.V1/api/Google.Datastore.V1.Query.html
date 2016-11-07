@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Query
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Datastore_V1_Query" data-uid="Google.Datastore.V1.Query">Class Query
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A query for entities.</p>
+              <div class="markdown level0 summary"><p>A query for entities.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,8 +101,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Datastore_V1_Query__ctor_" data-uid="Google.Datastore.V1.Query.#ctor*"></a>
               <h4 id="Google_Datastore_V1_Query__ctor_System_String_" data-uid="Google.Datastore.V1.Query.#ctor(System.String)">Query(String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a query over the given kind.</p>
+              <div class="markdown level1 summary"><p>Creates a query over the given kind.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -122,17 +123,18 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>kind</em></td>
-                    <td><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The kind of the query. Must not be null.</p>
+                    <td><p>The kind of the query. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Datastore_V1_Query_DistinctOn_" data-uid="Google.Datastore.V1.Query.DistinctOn*"></a>
               <h4 id="Google_Datastore_V1_Query_DistinctOn" data-uid="Google.Datastore.V1.Query.DistinctOn">DistinctOn</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The properties to make distinct. The query results will contain the first
- result for each distinct combination of values for the given properties
- (if empty, all results are returned).</p>
+              <div class="markdown level1 summary"><p>The properties to make distinct. The query results will contain the first
+result for each distinct combination of values for the given properties
+(if empty, all results are returned).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -149,15 +151,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Datastore.V1.PropertyReference.html#Google_Datastore_V1_PropertyReference">PropertyReference</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.PropertyReference.html#Google_Datastore_V1_PropertyReference">PropertyReference</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Query_EndCursor_" data-uid="Google.Datastore.V1.Query.EndCursor*"></a>
               <h4 id="Google_Datastore_V1_Query_EndCursor" data-uid="Google.Datastore.V1.Query.EndCursor">EndCursor</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> An ending point for the query results. Query cursors are
- returned in query result batches and
- <a href="https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets" sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="4" sourceendlinenumber="4">can only be used to limit the same query</a>.</p>
+              <div class="markdown level1 summary"><p>An ending point for the query results. Query cursors are
+returned in query result batches and
+<a href="https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets">can only be used to limit the same query</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -174,13 +177,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Query_Filter_" data-uid="Google.Datastore.V1.Query.Filter*"></a>
               <h4 id="Google_Datastore_V1_Query_Filter" data-uid="Google.Datastore.V1.Query.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The filter to apply.</p>
+              <div class="markdown level1 summary"><p>The filter to apply.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -202,9 +206,10 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Query_Kind_" data-uid="Google.Datastore.V1.Query.Kind*"></a>
               <h4 id="Google_Datastore_V1_Query_Kind" data-uid="Google.Datastore.V1.Query.Kind">Kind</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The kinds to query (if empty, returns entities of all kinds).
- Currently at most 1 kind may be specified.</p>
+              <div class="markdown level1 summary"><p>The kinds to query (if empty, returns entities of all kinds).
+Currently at most 1 kind may be specified.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -221,16 +226,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Datastore.V1.KindExpression.html#Google_Datastore_V1_KindExpression">KindExpression</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.KindExpression.html#Google_Datastore_V1_KindExpression">KindExpression</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Query_Limit_" data-uid="Google.Datastore.V1.Query.Limit*"></a>
               <h4 id="Google_Datastore_V1_Query_Limit" data-uid="Google.Datastore.V1.Query.Limit">Limit</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> The maximum number of results to return. Applies after all other
- constraints. Optional.
- Unspecified is interpreted as no limit.
- Must be &gt;= 0 if specified.</p>
+              <div class="markdown level1 summary"><p>The maximum number of results to return. Applies after all other
+constraints. Optional.
+Unspecified is interpreted as no limit.
+Must be &gt;= 0 if specified.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -247,14 +253,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Query_Offset_" data-uid="Google.Datastore.V1.Query.Offset*"></a>
               <h4 id="Google_Datastore_V1_Query_Offset" data-uid="Google.Datastore.V1.Query.Offset">Offset</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The number of results to skip. Applies before limit, but after all other
- constraints. Optional. Must be &gt;= 0 if specified.</p>
+              <div class="markdown level1 summary"><p>The number of results to skip. Applies before limit, but after all other
+constraints. Optional. Must be &gt;= 0 if specified.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -276,8 +283,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Query_Order_" data-uid="Google.Datastore.V1.Query.Order*"></a>
               <h4 id="Google_Datastore_V1_Query_Order" data-uid="Google.Datastore.V1.Query.Order">Order</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The order to apply to the query results (if empty, order is unspecified).</p>
+              <div class="markdown level1 summary"><p>The order to apply to the query results (if empty, order is unspecified).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -294,13 +302,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Datastore.V1.PropertyOrder.html#Google_Datastore_V1_PropertyOrder">PropertyOrder</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.PropertyOrder.html#Google_Datastore_V1_PropertyOrder">PropertyOrder</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Query_Projection_" data-uid="Google.Datastore.V1.Query.Projection*"></a>
               <h4 id="Google_Datastore_V1_Query_Projection" data-uid="Google.Datastore.V1.Query.Projection">Projection</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The projection to return. Defaults to returning all properties.</p>
+              <div class="markdown level1 summary"><p>The projection to return. Defaults to returning all properties.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -317,15 +326,16 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Datastore.V1.Projection.html#Google_Datastore_V1_Projection">Projection</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Datastore.V1.Projection.html#Google_Datastore_V1_Projection">Projection</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Datastore_V1_Query_StartCursor_" data-uid="Google.Datastore.V1.Query.StartCursor*"></a>
               <h4 id="Google_Datastore_V1_Query_StartCursor" data-uid="Google.Datastore.V1.Query.StartCursor">StartCursor</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> A starting point for the query results. Query cursors are
- returned in query result batches and
- <a href="https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets" sourcefile="obj/api/Google.Datastore.V1.Query.yml" sourcestartlinenumber="4" sourceendlinenumber="4">can only be used to continue the same query</a>.</p>
+              <div class="markdown level1 summary"><p>A starting point for the query results. Query cursors are
+returned in query result batches and
+<a href="https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets">can only be used to continue the same query</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -342,7 +352,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -375,7 +385,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

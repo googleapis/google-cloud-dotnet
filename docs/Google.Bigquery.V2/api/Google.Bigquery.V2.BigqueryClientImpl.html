@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigqueryClientImpl
    | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Bigquery_V2_BigqueryClientImpl" data-uid="Google.Bigquery.V2.BigqueryClientImpl">Class BigqueryClientImpl
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Wrapper around <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a> to provide simpler operations.</p>
+              <div class="markdown level0 summary"><p>Wrapper around <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a> to provide simpler operations.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -139,6 +139,36 @@
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_System_String_System_String_Google_Bigquery_V2_DeleteDatasetOptions_">BigqueryClient.DeleteDataset(String, String, DeleteDatasetOptions)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDatasetAsync_System_String_Google_Bigquery_V2_GetDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.GetDatasetAsync(String, GetDatasetOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDatasetAsync_System_String_System_String_Google_Bigquery_V2_GetDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.GetDatasetAsync(String, String, GetDatasetOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasetsAsync_Google_Bigquery_V2_ListDatasetsOptions_">BigqueryClient.ListDatasetsAsync(ListDatasetsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasetsAsync_System_String_Google_Bigquery_V2_ListDatasetsOptions_">BigqueryClient.ListDatasetsAsync(String, ListDatasetsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDatasetAsync_System_String_Google_Bigquery_V2_CreateDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.CreateDatasetAsync(String, CreateDatasetOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDatasetAsync_System_String_System_String_Google_Bigquery_V2_CreateDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.CreateDatasetAsync(String, String, CreateDatasetOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDatasetAsync_System_String_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.GetOrCreateDatasetAsync(String, GetDatasetOptions, CreateDatasetOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDatasetAsync_System_String_System_String_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.GetOrCreateDatasetAsync(String, String, GetDatasetOptions, CreateDatasetOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDatasetAsync_System_String_Google_Bigquery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.DeleteDatasetAsync(String, DeleteDatasetOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDatasetAsync_System_String_System_String_Google_Bigquery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.DeleteDatasetAsync(String, String, DeleteDatasetOptions, CancellationToken)</a>
+                </div>
+                <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">BigqueryClient.UploadCsv(String, String, String, TableSchema, Stream, UploadCsvOptions)</a>
                 </div>
                 <div>
@@ -175,16 +205,52 @@
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">BigqueryClient.Insert(String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsvAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_System_Threading_CancellationToken_">BigqueryClient.UploadCsvAsync(String, String, String, TableSchema, Stream, UploadCsvOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsvAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_System_Threading_CancellationToken_">BigqueryClient.UploadCsvAsync(String, String, TableSchema, Stream, UploadCsvOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJsonAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_System_Threading_CancellationToken_">BigqueryClient.UploadJsonAsync(String, String, String, TableSchema, Stream, UploadJsonOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJsonAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_System_Threading_CancellationToken_">BigqueryClient.UploadJsonAsync(String, String, TableSchema, Stream, UploadJsonOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_System_Threading_CancellationToken_">BigqueryClient.InsertAsync(String, String, String, InsertRow, InsertOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_System_String_System_String_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_System_Threading_CancellationToken_">BigqueryClient.InsertAsync(String, String, InsertRow, InsertOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow_Google_Bigquery_V2_InsertOptions_System_Threading_CancellationToken_">BigqueryClient.InsertAsync(TableReference, InsertRow, InsertOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_System_String_System_String_System_String_Google_Bigquery_V2_InsertRow___">BigqueryClient.InsertAsync(String, String, String, InsertRow[])</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_System_String_System_String_Google_Bigquery_V2_InsertRow___">BigqueryClient.InsertAsync(String, String, InsertRow[])</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_InsertRow___">BigqueryClient.InsertAsync(TableReference, InsertRow[])</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_System_Threading_CancellationToken_">BigqueryClient.InsertAsync(String, String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_System_Threading_CancellationToken_">BigqueryClient.InsertAsync(String, String, IEnumerable&lt;InsertRow&gt;, InsertOptions, CancellationToken)</a>
+                </div>
+                <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobs(ListJobsOptions)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_System_String_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobs(String, ListJobsOptions)</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompleted_System_String_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollJobUntilCompleted(String, PollJobOptions)</a>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompleted_System_String_Google_Bigquery_V2_GetJobOptions_Google_Api_Gax_PollSettings_">BigqueryClient.PollJobUntilCompleted(String, GetJobOptions, PollSettings)</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompleted_System_String_System_String_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollJobUntilCompleted(String, String, PollJobOptions)</a>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompleted_System_String_System_String_Google_Bigquery_V2_GetJobOptions_Google_Api_Gax_PollSettings_">BigqueryClient.PollJobUntilCompleted(String, String, GetJobOptions, PollSettings)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_System_String_Google_Bigquery_V2_GetJobOptions_">BigqueryClient.GetJob(String, GetJobOptions)</a>
@@ -199,22 +265,64 @@
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_System_String_System_String_Google_Bigquery_V2_CancelJobOptions_">BigqueryClient.CancelJob(String, String, CancelJobOptions)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobsAsync_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobsAsync(ListJobsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobsAsync_System_String_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobsAsync(String, ListJobsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompletedAsync_System_String_Google_Bigquery_V2_GetJobOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">BigqueryClient.PollJobUntilCompletedAsync(String, GetJobOptions, PollSettings, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompletedAsync_System_String_System_String_Google_Bigquery_V2_GetJobOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">BigqueryClient.PollJobUntilCompletedAsync(String, String, GetJobOptions, PollSettings, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobAsync_System_String_Google_Bigquery_V2_GetJobOptions_System_Threading_CancellationToken_">BigqueryClient.GetJobAsync(String, GetJobOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobAsync_System_String_System_String_Google_Bigquery_V2_GetJobOptions_System_Threading_CancellationToken_">BigqueryClient.GetJobAsync(String, String, GetJobOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJobAsync_System_String_Google_Bigquery_V2_CancelJobOptions_System_Threading_CancellationToken_">BigqueryClient.CancelJobAsync(String, CancelJobOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJobAsync_System_String_System_String_Google_Bigquery_V2_CancelJobOptions_System_Threading_CancellationToken_">BigqueryClient.CancelJobAsync(String, String, CancelJobOptions, CancellationToken)</a>
+                </div>
+                <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_System_String_Google_Bigquery_V2_GetQueryResultsOptions_">BigqueryClient.GetQueryResults(String, GetQueryResultsOptions)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_System_String_System_String_Google_Bigquery_V2_GetQueryResultsOptions_">BigqueryClient.GetQueryResults(String, String, GetQueryResultsOptions)</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompleted_System_String_System_String_Google_Bigquery_V2_GetQueryResultsOptions_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollQueryUntilCompleted(String, String, GetQueryResultsOptions, PollJobOptions)</a>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompleted_System_String_System_String_Google_Bigquery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_">BigqueryClient.PollQueryUntilCompleted(String, String, GetQueryResultsOptions, PollSettings)</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompleted_System_String_Google_Bigquery_V2_GetQueryResultsOptions_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollQueryUntilCompleted(String, GetQueryResultsOptions, PollJobOptions)</a>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompleted_System_String_Google_Bigquery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_">BigqueryClient.PollQueryUntilCompleted(String, GetQueryResultsOptions, PollSettings)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRows(String, String, String, TableSchema, ListRowsOptions)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRows(String, String, TableSchema, ListRowsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResultsAsync_System_String_Google_Bigquery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">BigqueryClient.GetQueryResultsAsync(String, GetQueryResultsOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResultsAsync_System_String_System_String_Google_Bigquery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">BigqueryClient.GetQueryResultsAsync(String, String, GetQueryResultsOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompletedAsync_System_String_System_String_Google_Bigquery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">BigqueryClient.PollQueryUntilCompletedAsync(String, String, GetQueryResultsOptions, PollSettings, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompletedAsync_System_String_Google_Bigquery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">BigqueryClient.PollQueryUntilCompletedAsync(String, GetQueryResultsOptions, PollSettings, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRowsAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRowsAsync(String, String, String, TableSchema, ListRowsOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRowsAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRowsAsync(String, String, TableSchema, ListRowsOptions)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_System_String_System_String_System_String_Google_Bigquery_V2_GetTableOptions_">BigqueryClient.GetTable(String, String, String, GetTableOptions)</a>
@@ -247,6 +355,36 @@
                   <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_">BigqueryClient.DeleteTable(String, String, DeleteTableOptions)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTableAsync_System_String_System_String_System_String_Google_Bigquery_V2_GetTableOptions_System_Threading_CancellationToken_">BigqueryClient.GetTableAsync(String, String, String, GetTableOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTableAsync_System_String_System_String_Google_Bigquery_V2_GetTableOptions_System_Threading_CancellationToken_">BigqueryClient.GetTableAsync(String, String, GetTableOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTablesAsync_System_String_System_String_Google_Bigquery_V2_ListTablesOptions_">BigqueryClient.ListTablesAsync(String, String, ListTablesOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTablesAsync_System_String_Google_Bigquery_V2_ListTablesOptions_">BigqueryClient.ListTablesAsync(String, ListTablesOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTableAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_System_Threading_CancellationToken_">BigqueryClient.CreateTableAsync(String, String, String, TableSchema, CreateTableOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTableAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_System_Threading_CancellationToken_">BigqueryClient.CreateTableAsync(String, String, TableSchema, CreateTableOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTableAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_System_Threading_CancellationToken_">BigqueryClient.GetOrCreateTableAsync(String, String, String, TableSchema, GetTableOptions, CreateTableOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTableAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_System_Threading_CancellationToken_">BigqueryClient.GetOrCreateTableAsync(String, String, TableSchema, GetTableOptions, CreateTableOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTableAsync_System_String_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_System_Threading_CancellationToken_">BigqueryClient.DeleteTableAsync(String, String, String, DeleteTableOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTableAsync_System_String_System_String_Google_Bigquery_V2_DeleteTableOptions_System_Threading_CancellationToken_">BigqueryClient.DeleteTableAsync(String, String, DeleteTableOptions, CancellationToken)</a>
+                </div>
+                <div>
                   <span class="xref">System.Object.ToString()</span>
                 </div>
                 <div>
@@ -266,16 +404,17 @@
                 <pre><code class="lang-csharp hljs">public sealed class BigqueryClientImpl : BigqueryClient</code></pre>
               </div>
               <h5 id="Google_Bigquery_V2_BigqueryClientImpl_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">This is the &quot;default&quot; implementation of <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>. Most client code
+              <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>. Most client code
 should refer to <a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>, creating instances with</p>
-<p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="4" sourceendlinenumber="4"><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(String, GoogleCredential)</a> and</p>
-<p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="5" sourceendlinenumber="6"><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">CreateAsync(String, GoogleCredential)</a>. The constructor
+<p><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Create_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(String, GoogleCredential)</a> and</p>
+<p><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateAsync_System_String_Google_Apis_Auth_OAuth2_GoogleCredential_">CreateAsync(String, GoogleCredential)</a>. The constructor
 of this class is public for the sake of constructor-based dependency injection.</p>
 </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl__ctor_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.#ctor*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl__ctor_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Apis_Bigquery_v2_BigqueryService_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.#ctor(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Apis.Bigquery.v2.BigqueryService)">BigqueryClientImpl(ProjectReference, BigqueryService)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a new client wrapping the given <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a>.</p>
+              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -295,19 +434,20 @@ of this class is public for the sake of constructor-based dependency injection.<
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a></td>
                     <td><em>projectReference</em></td>
-                    <td><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A fully-qualified identifier for the project. Must not be null.</p>
+                    <td><p>A fully-qualified identifier for the project. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a></td>
                     <td><em>service</em></td>
-                    <td><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The service to wrap. Must not be null.</p>
+                    <td><p>The service to wrap. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl__ctor_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.#ctor*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl__ctor_System_String_Google_Apis_Bigquery_v2_BigqueryService_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.#ctor(System.String,Google.Apis.Bigquery.v2.BigqueryService)">BigqueryClientImpl(String, BigqueryService)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a new client wrapping the given <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a>.</p>
+              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -327,21 +467,22 @@ of this class is public for the sake of constructor-based dependency injection.<
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>projectId</em></td>
-                    <td><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The ID of the project to work with. Must not be null.</p>
+                    <td><p>The ID of the project to work with. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a></td>
                     <td><em>service</em></td>
-                    <td><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The service to wrap. Must not be null.</p>
+                    <td><p>The service to wrap. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ApplicationName_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ApplicationName*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ApplicationName" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ApplicationName">ApplicationName</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The default application name used when creating a <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a>.
+              <div class="markdown level1 summary"><p>The default application name used when creating a <a class="xref" href="Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService">BigqueryService</a>.
 Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -365,9 +506,10 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </tbody>
               </table>
               <h5 id="Google_Bigquery_V2_BigqueryClientImpl_ApplicationName_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Most applications will never want to set this, which is why it&#39;s in this class rather than</p>
-<p sourcefile="obj/api/Google.Bigquery.V2.BigqueryClientImpl.yml" sourcestartlinenumber="3" sourceendlinenumber="3"><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>.</p>
+              <div class="markdown level1 remarks"><p>Most applications will never want to set this, which is why it&#39;s in this class rather than</p>
+<p><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient">BigqueryClient</a>.</p>
 </div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ProjectId_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ProjectId*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ProjectId" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ProjectId">ProjectId</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -392,6 +534,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ProjectId">BigqueryClient.ProjectId</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_Service_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.Service*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_Service" data-uid="Google.Bigquery.V2.BigqueryClientImpl.Service">Service</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -418,6 +561,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Service">BigqueryClient.Service</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CancelJob_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CancelJob*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CancelJob(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.CancelJobOptions)">CancelJob(JobReference, CancelJobOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -464,6 +608,59 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_">BigqueryClient.CancelJob(JobReference, CancelJobOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CancelJobAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CancelJobAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CancelJobAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CancelJobAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.CancelJobOptions,System.Threading.CancellationToken)">CancelJobAsync(JobReference, CancelJobOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryJob&gt; CancelJobAsync(JobReference jobReference, CancelJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CancelJobOptions.html#Google_Bigquery_V2_CancelJobOptions">CancelJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CancelJobAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_CancelJobOptions_System_Threading_CancellationToken_">BigqueryClient.CancelJobAsync(JobReference, CancelJobOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CreateDataset_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateDataset*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.CreateDatasetOptions)">CreateDataset(DatasetReference, CreateDatasetOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -510,6 +707,106 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_">BigqueryClient.CreateDataset(DatasetReference, CreateDatasetOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CreateDatasetAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateDatasetAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.CreateDatasetOptions,System.Threading.CancellationToken)">CreateDatasetAsync(DatasetReference, CreateDatasetOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryDataset&gt; CreateDatasetAsync(DatasetReference datasetReference, CreateDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateDatasetOptions.html#Google_Bigquery_V2_CreateDatasetOptions">CreateDatasetOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_CreateDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.CreateDatasetAsync(DatasetReference, CreateDatasetOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJob_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJob*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJob_Google_Bigquery_V2_BigqueryCommand_Google_Bigquery_V2_CreateQueryJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJob(Google.Bigquery.V2.BigqueryCommand,Google.Bigquery.V2.CreateQueryJobOptions)">CreateQueryJob(BigqueryCommand, CreateQueryJobOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryJob CreateQueryJob(BigqueryCommand command, CreateQueryJobOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryCommand.html#Google_Bigquery_V2_BigqueryCommand">BigqueryCommand</a></td>
+                    <td><em>command</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions">CreateQueryJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateQueryJob_Google_Bigquery_V2_BigqueryCommand_Google_Bigquery_V2_CreateQueryJobOptions_">BigqueryClient.CreateQueryJob(BigqueryCommand, CreateQueryJobOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJob_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJob*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJob_System_String_Google_Bigquery_V2_CreateQueryJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJob(System.String,Google.Bigquery.V2.CreateQueryJobOptions)">CreateQueryJob(String, CreateQueryJobOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -556,6 +853,111 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateQueryJob_System_String_Google_Bigquery_V2_CreateQueryJobOptions_">BigqueryClient.CreateQueryJob(String, CreateQueryJobOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJobAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJobAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJobAsync_Google_Bigquery_V2_BigqueryCommand_Google_Bigquery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJobAsync(Google.Bigquery.V2.BigqueryCommand,Google.Bigquery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)">CreateQueryJobAsync(BigqueryCommand, CreateQueryJobOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryJob&gt; CreateQueryJobAsync(BigqueryCommand command, CreateQueryJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryCommand.html#Google_Bigquery_V2_BigqueryCommand">BigqueryCommand</a></td>
+                    <td><em>command</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions">CreateQueryJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateQueryJobAsync_Google_Bigquery_V2_BigqueryCommand_Google_Bigquery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_">BigqueryClient.CreateQueryJobAsync(BigqueryCommand, CreateQueryJobOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJobAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJobAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateQueryJobAsync_System_String_Google_Bigquery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateQueryJobAsync(System.String,Google.Bigquery.V2.CreateQueryJobOptions,System.Threading.CancellationToken)">CreateQueryJobAsync(String, CreateQueryJobOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryJob&gt; CreateQueryJobAsync(string sql, CreateQueryJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sql</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateQueryJobOptions.html#Google_Bigquery_V2_CreateQueryJobOptions">CreateQueryJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateQueryJobAsync_System_String_Google_Bigquery_V2_CreateQueryJobOptions_System_Threading_CancellationToken_">BigqueryClient.CreateQueryJobAsync(String, CreateQueryJobOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CreateTable_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateTable*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateTable(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.CreateTableOptions)">CreateTable(TableReference, TableSchema, CreateTableOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -607,6 +1009,64 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_">BigqueryClient.CreateTable(TableReference, TableSchema, CreateTableOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_CreateTableAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateTableAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_CreateTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.CreateTableAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.CreateTableOptions,System.Threading.CancellationToken)">CreateTableAsync(TableReference, TableSchema, CreateTableOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryTable&gt; CreateTableAsync(TableReference tableReference, TableSchema schema, CreateTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateTableOptions.html#Google_Bigquery_V2_CreateTableOptions">CreateTableOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_CreateTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_CreateTableOptions_System_Threading_CancellationToken_">BigqueryClient.CreateTableAsync(TableReference, TableSchema, CreateTableOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_DeleteDataset_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteDataset*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.DeleteDatasetOptions)">DeleteDataset(DatasetReference, DeleteDatasetOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -638,6 +1098,59 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_">BigqueryClient.DeleteDataset(DatasetReference, DeleteDatasetOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_DeleteDatasetAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteDatasetAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_DeleteDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.DeleteDatasetOptions,System.Threading.CancellationToken)">DeleteDatasetAsync(DatasetReference, DeleteDatasetOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task DeleteDatasetAsync(DatasetReference datasetReference, DeleteDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.DeleteDatasetOptions.html#Google_Bigquery_V2_DeleteDatasetOptions">DeleteDatasetOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_DeleteDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.DeleteDatasetAsync(DatasetReference, DeleteDatasetOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_DeleteTable_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteTable*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_DeleteTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteTable(Google.Apis.Bigquery.v2.Data.TableReference,Google.Bigquery.V2.DeleteTableOptions)">DeleteTable(TableReference, DeleteTableOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -669,6 +1182,106 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_DeleteTableOptions_">BigqueryClient.DeleteTable(TableReference, DeleteTableOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_DeleteTableAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteTableAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_DeleteTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_DeleteTableOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.DeleteTableAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Bigquery.V2.DeleteTableOptions,System.Threading.CancellationToken)">DeleteTableAsync(TableReference, DeleteTableOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task DeleteTableAsync(TableReference tableReference, DeleteTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.DeleteTableOptions.html#Google_Bigquery_V2_DeleteTableOptions">DeleteTableOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_DeleteTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_DeleteTableOptions_System_Threading_CancellationToken_">BigqueryClient.DeleteTableAsync(TableReference, DeleteTableOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQuery_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQuery*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQuery_Google_Bigquery_V2_BigqueryCommand_Google_Bigquery_V2_ExecuteQueryOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQuery(Google.Bigquery.V2.BigqueryCommand,Google.Bigquery.V2.ExecuteQueryOptions)">ExecuteQuery(BigqueryCommand, ExecuteQueryOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryQueryJob ExecuteQuery(BigqueryCommand command, ExecuteQueryOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryCommand.html#Google_Bigquery_V2_BigqueryCommand">BigqueryCommand</a></td>
+                    <td><em>command</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ExecuteQueryOptions.html#Google_Bigquery_V2_ExecuteQueryOptions">ExecuteQueryOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryQueryJob.html#Google_Bigquery_V2_BigqueryQueryJob">BigqueryQueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ExecuteQuery_Google_Bigquery_V2_BigqueryCommand_Google_Bigquery_V2_ExecuteQueryOptions_">BigqueryClient.ExecuteQuery(BigqueryCommand, ExecuteQueryOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQuery_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQuery*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQuery_System_String_Google_Bigquery_V2_ExecuteQueryOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQuery(System.String,Google.Bigquery.V2.ExecuteQueryOptions)">ExecuteQuery(String, ExecuteQueryOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -715,6 +1328,111 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ExecuteQuery_System_String_Google_Bigquery_V2_ExecuteQueryOptions_">BigqueryClient.ExecuteQuery(String, ExecuteQueryOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQueryAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQueryAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQueryAsync_Google_Bigquery_V2_BigqueryCommand_Google_Bigquery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQueryAsync(Google.Bigquery.V2.BigqueryCommand,Google.Bigquery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)">ExecuteQueryAsync(BigqueryCommand, ExecuteQueryOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryQueryJob&gt; ExecuteQueryAsync(BigqueryCommand command, ExecuteQueryOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.BigqueryCommand.html#Google_Bigquery_V2_BigqueryCommand">BigqueryCommand</a></td>
+                    <td><em>command</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ExecuteQueryOptions.html#Google_Bigquery_V2_ExecuteQueryOptions">ExecuteQueryOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryQueryJob.html#Google_Bigquery_V2_BigqueryQueryJob">BigqueryQueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ExecuteQueryAsync_Google_Bigquery_V2_BigqueryCommand_Google_Bigquery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_">BigqueryClient.ExecuteQueryAsync(BigqueryCommand, ExecuteQueryOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQueryAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQueryAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ExecuteQueryAsync_System_String_Google_Bigquery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ExecuteQueryAsync(System.String,Google.Bigquery.V2.ExecuteQueryOptions,System.Threading.CancellationToken)">ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryQueryJob&gt; ExecuteQueryAsync(string sql, ExecuteQueryOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>sql</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ExecuteQueryOptions.html#Google_Bigquery_V2_ExecuteQueryOptions">ExecuteQueryOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryQueryJob.html#Google_Bigquery_V2_BigqueryQueryJob">BigqueryQueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ExecuteQueryAsync_System_String_Google_Bigquery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_">BigqueryClient.ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetDataset_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetDataset*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.GetDatasetOptions)">GetDataset(DatasetReference, GetDatasetOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -761,6 +1479,59 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_">BigqueryClient.GetDataset(DatasetReference, GetDatasetOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetDatasetAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetDatasetAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.GetDatasetOptions,System.Threading.CancellationToken)">GetDatasetAsync(DatasetReference, GetDatasetOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryDataset&gt; GetDatasetAsync(DatasetReference datasetReference, GetDatasetOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetDatasetOptions.html#Google_Bigquery_V2_GetDatasetOptions">GetDatasetOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.GetDatasetAsync(DatasetReference, GetDatasetOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetJob_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetJob*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetJob(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetJobOptions)">GetJob(JobReference, GetJobOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -807,6 +1578,59 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_">BigqueryClient.GetJob(JobReference, GetJobOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetJobAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetJobAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetJobAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetJobAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetJobOptions,System.Threading.CancellationToken)">GetJobAsync(JobReference, GetJobOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryJob&gt; GetJobAsync(JobReference jobReference, GetJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetJobOptions.html#Google_Bigquery_V2_GetJobOptions">GetJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetJobAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_System_Threading_CancellationToken_">BigqueryClient.GetJobAsync(JobReference, GetJobOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateDataset_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateDataset*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions)">GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -858,6 +1682,64 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_">BigqueryClient.GetOrCreateDataset(DatasetReference, GetDatasetOptions, CreateDatasetOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateDatasetAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateDatasetAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateDatasetAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.GetDatasetOptions,Google.Bigquery.V2.CreateDatasetOptions,System.Threading.CancellationToken)">GetOrCreateDatasetAsync(DatasetReference, GetDatasetOptions, CreateDatasetOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryDataset&gt; GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetDatasetOptions.html#Google_Bigquery_V2_GetDatasetOptions">GetDatasetOptions</a></td>
+                    <td><em>getOptions</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateDatasetOptions.html#Google_Bigquery_V2_CreateDatasetOptions">CreateDatasetOptions</a></td>
+                    <td><em>createOptions</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateDatasetAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_GetDatasetOptions_Google_Bigquery_V2_CreateDatasetOptions_System_Threading_CancellationToken_">BigqueryClient.GetOrCreateDatasetAsync(DatasetReference, GetDatasetOptions, CreateDatasetOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateTable_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateTable*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateTable(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions)">GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -914,12 +1796,75 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_">BigqueryClient.GetOrCreateTable(TableReference, TableSchema, GetTableOptions, CreateTableOptions)</a></div>
-              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetQueryJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetQueryJob(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetQueryResultsOptions)">GetQueryJob(JobReference, GetQueryResultsOptions)</h4>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateTableAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateTableAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetOrCreateTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetOrCreateTableAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.GetTableOptions,Google.Bigquery.V2.CreateTableOptions,System.Threading.CancellationToken)">GetOrCreateTableAsync(TableReference, TableSchema, GetTableOptions, CreateTableOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override BigqueryQueryJob GetQueryJob(JobReference jobReference, GetQueryResultsOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryTable&gt; GetOrCreateTableAsync(TableReference tableReference, TableSchema schema, GetTableOptions getOptions = null, CreateTableOptions createOptions = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetTableOptions.html#Google_Bigquery_V2_GetTableOptions">GetTableOptions</a></td>
+                    <td><em>getOptions</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.CreateTableOptions.html#Google_Bigquery_V2_CreateTableOptions">CreateTableOptions</a></td>
+                    <td><em>createOptions</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetOrCreateTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_GetTableOptions_Google_Bigquery_V2_CreateTableOptions_System_Threading_CancellationToken_">BigqueryClient.GetOrCreateTableAsync(TableReference, TableSchema, GetTableOptions, CreateTableOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetQueryResults_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetQueryResults*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetQueryResults(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetQueryResultsOptions)">GetQueryResults(JobReference, GetQueryResultsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryQueryJob GetQueryResults(JobReference jobReference, GetQueryResultsOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -959,7 +1904,60 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryJob_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_">BigqueryClient.GetQueryJob(JobReference, GetQueryResultsOptions)</a></div>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResults_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_">BigqueryClient.GetQueryResults(JobReference, GetQueryResultsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetQueryResultsAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetQueryResultsAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetQueryResultsAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetQueryResultsAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetQueryResultsOptions,System.Threading.CancellationToken)">GetQueryResultsAsync(JobReference, GetQueryResultsOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryQueryJob&gt; GetQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions">GetQueryResultsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryQueryJob.html#Google_Bigquery_V2_BigqueryQueryJob">BigqueryQueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetQueryResultsAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_System_Threading_CancellationToken_">BigqueryClient.GetQueryResultsAsync(JobReference, GetQueryResultsOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetTable_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetTable*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_GetTableOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetTable(Google.Apis.Bigquery.v2.Data.TableReference,Google.Bigquery.V2.GetTableOptions)">GetTable(TableReference, GetTableOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1006,6 +2004,59 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTable_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_GetTableOptions_">BigqueryClient.GetTable(TableReference, GetTableOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_GetTableAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetTableAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_GetTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_GetTableOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.GetTableAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Bigquery.V2.GetTableOptions,System.Threading.CancellationToken)">GetTableAsync(TableReference, GetTableOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryTable&gt; GetTableAsync(TableReference tableReference, GetTableOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetTableOptions.html#Google_Bigquery_V2_GetTableOptions">GetTableOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_GetTableAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Bigquery_V2_GetTableOptions_System_Threading_CancellationToken_">BigqueryClient.GetTableAsync(TableReference, GetTableOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_Insert_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.Insert*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.Insert(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions)">Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1029,7 +2080,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow">InsertRow</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow">InsertRow</a>&gt;</td>
                     <td><em>rows</em></td>
                     <td></td>
                   </tr>
@@ -1042,6 +2093,64 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_">BigqueryClient.Insert(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_InsertAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.InsertAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Bigquery.V2.InsertRow},Google.Bigquery.V2.InsertOptions,System.Threading.CancellationToken)">InsertAsync(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task InsertAsync(TableReference tableReference, IEnumerable&lt;InsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.InsertRow.html#Google_Bigquery_V2_InsertRow">InsertRow</a>&gt;</td>
+                    <td><em>rows</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.InsertOptions.html#Google_Bigquery_V2_InsertOptions">InsertOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Bigquery_V2_InsertRow__Google_Bigquery_V2_InsertOptions_System_Threading_CancellationToken_">BigqueryClient.InsertAsync(TableReference, IEnumerable&lt;InsertRow&gt;, InsertOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListDatasets_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListDatasets*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListDatasets(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)">ListDatasets(ProjectReference, ListDatasetsOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1081,13 +2190,61 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetList.html#Google_Apis_Bigquery_v2_Data_DatasetList">DatasetList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetList.html#Google_Apis_Bigquery_v2_Data_DatasetList">DatasetList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">BigqueryClient.ListDatasets(ProjectReference, ListDatasetsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListDatasetsAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListDatasetsAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListDatasetsAsync_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListDatasetsAsync(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListDatasetsOptions)">ListDatasetsAsync(ProjectReference, ListDatasetsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;DatasetList, BigqueryDataset&gt; ListDatasetsAsync(ProjectReference projectReference, ListDatasetsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a></td>
+                    <td><em>projectReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListDatasetsOptions.html#Google_Bigquery_V2_ListDatasetsOptions">ListDatasetsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetList.html#Google_Apis_Bigquery_v2_Data_DatasetList">DatasetList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryDataset.html#Google_Bigquery_V2_BigqueryDataset">BigqueryDataset</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListDatasetsAsync_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListDatasetsOptions_">BigqueryClient.ListDatasetsAsync(ProjectReference, ListDatasetsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListJobs_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListJobs*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListJobs(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListJobsOptions)">ListJobs(ProjectReference, ListJobsOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1127,13 +2284,61 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobList.html#Google_Apis_Bigquery_v2_Data_JobList">JobList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobList.html#Google_Apis_Bigquery_v2_Data_JobList">JobList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobs_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobs(ProjectReference, ListJobsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListJobsAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListJobsAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListJobsAsync_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListJobsAsync(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Bigquery.V2.ListJobsOptions)">ListJobsAsync(ProjectReference, ListJobsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;JobList, BigqueryJob&gt; ListJobsAsync(ProjectReference projectReference, ListJobsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectReference.html#Google_Apis_Bigquery_v2_Data_ProjectReference">ProjectReference</a></td>
+                    <td><em>projectReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListJobsOptions.html#Google_Bigquery_V2_ListJobsOptions">ListJobsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.JobList.html#Google_Apis_Bigquery_v2_Data_JobList">JobList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListJobsAsync_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Bigquery_V2_ListJobsOptions_">BigqueryClient.ListJobsAsync(ProjectReference, ListJobsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListProjects_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListProjects*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListProjects_Google_Bigquery_V2_ListProjectsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListProjects(Google.Bigquery.V2.ListProjectsOptions)">ListProjects(ListProjectsOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1168,13 +2373,56 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectList.html#Google_Apis_Bigquery_v2_Data_ProjectList">ProjectList</a>, <a class="xref" href="Google.Bigquery.V2.CloudProject.html#Google_Bigquery_V2_CloudProject">CloudProject</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectList.html#Google_Apis_Bigquery_v2_Data_ProjectList">ProjectList</a>, <a class="xref" href="Google.Bigquery.V2.CloudProject.html#Google_Bigquery_V2_CloudProject">CloudProject</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListProjects_Google_Bigquery_V2_ListProjectsOptions_">BigqueryClient.ListProjects(ListProjectsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListProjectsAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListProjectsAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListProjectsAsync_Google_Bigquery_V2_ListProjectsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListProjectsAsync(Google.Bigquery.V2.ListProjectsOptions)">ListProjectsAsync(ListProjectsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;ProjectList, CloudProject&gt; ListProjectsAsync(ListProjectsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListProjectsOptions.html#Google_Bigquery_V2_ListProjectsOptions">ListProjectsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.ProjectList.html#Google_Apis_Bigquery_v2_Data_ProjectList">ProjectList</a>, <a class="xref" href="Google.Bigquery.V2.CloudProject.html#Google_Bigquery_V2_CloudProject">CloudProject</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListProjectsAsync_Google_Bigquery_V2_ListProjectsOptions_">BigqueryClient.ListProjectsAsync(ListProjectsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListRows_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListRows*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListRows(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.ListRowsOptions)">ListRows(TableReference, TableSchema, ListRowsOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1219,13 +2467,66 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableDataList.html#Google_Apis_Bigquery_v2_Data_TableDataList">TableDataList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryRow.html#Google_Bigquery_V2_BigqueryRow">BigqueryRow</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableDataList.html#Google_Apis_Bigquery_v2_Data_TableDataList">TableDataList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryRow.html#Google_Bigquery_V2_BigqueryRow">BigqueryRow</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRows(TableReference, TableSchema, ListRowsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListRowsAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListRowsAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Bigquery.V2.ListRowsOptions)">ListRowsAsync(TableReference, TableSchema, ListRowsOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;TableDataList, BigqueryRow&gt; ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListRowsOptions.html#Google_Bigquery_V2_ListRowsOptions">ListRowsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableDataList.html#Google_Apis_Bigquery_v2_Data_TableDataList">TableDataList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryRow.html#Google_Bigquery_V2_BigqueryRow">BigqueryRow</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Bigquery_V2_ListRowsOptions_">BigqueryClient.ListRowsAsync(TableReference, TableSchema, ListRowsOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListTables_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListTables*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListTables(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.ListTablesOptions)">ListTables(DatasetReference, ListTablesOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1265,19 +2566,67 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableList.html#Google_Apis_Bigquery_v2_Data_TableList">TableList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableList.html#Google_Apis_Bigquery_v2_Data_TableList">TableList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTables_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">BigqueryClient.ListTables(DatasetReference, ListTablesOptions)</a></div>
-              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_PollJobUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_PollJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollJobUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.PollJobOptions)">PollJobUntilCompleted(JobReference, PollJobOptions)</h4>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_ListTablesAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListTablesAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_ListTablesAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.ListTablesAsync(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Bigquery.V2.ListTablesOptions)">ListTablesAsync(DatasetReference, ListTablesOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override BigqueryJob PollJobUntilCompleted(JobReference jobReference, PollJobOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override IPagedAsyncEnumerable&lt;TableList, BigqueryTable&gt; ListTablesAsync(DatasetReference datasetReference, ListTablesOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.DatasetReference.html#Google_Apis_Bigquery_v2_Data_DatasetReference">DatasetReference</a></td>
+                    <td><em>datasetReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.ListTablesOptions.html#Google_Bigquery_V2_ListTablesOptions">ListTablesOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableList.html#Google_Apis_Bigquery_v2_Data_TableList">TableList</a>, <a class="xref" href="Google.Bigquery.V2.BigqueryTable.html#Google_Bigquery_V2_BigqueryTable">BigqueryTable</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_ListTablesAsync_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Bigquery_V2_ListTablesOptions_">BigqueryClient.ListTablesAsync(DatasetReference, ListTablesOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_PollJobUntilCompleted_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollJobUntilCompleted*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_PollJobUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_Google_Api_Gax_PollSettings_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollJobUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetJobOptions,Google.Api.Gax.PollSettings)">PollJobUntilCompleted(JobReference, GetJobOptions, PollSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryJob PollJobUntilCompleted(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1295,8 +2644,13 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions">PollJobOptions</a></td>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetJobOptions.html#Google_Bigquery_V2_GetJobOptions">GetJobOptions</a></td>
                     <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
+                    <td><em>pollSettings</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1317,13 +2671,71 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollJobUntilCompleted(JobReference, PollJobOptions)</a></div>
-              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_PollQueryUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_Google_Bigquery_V2_PollJobOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollQueryUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetQueryResultsOptions,Google.Bigquery.V2.PollJobOptions)">PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollJobOptions)</h4>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_Google_Api_Gax_PollSettings_">BigqueryClient.PollJobUntilCompleted(JobReference, GetJobOptions, PollSettings)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_PollJobUntilCompletedAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollJobUntilCompletedAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_PollJobUntilCompletedAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollJobUntilCompletedAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetJobOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)">PollJobUntilCompletedAsync(JobReference, GetJobOptions, PollSettings, CancellationToken)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override BigqueryQueryJob PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollJobOptions pollOptions = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryJob&gt; PollJobUntilCompletedAsync(JobReference jobReference, GetJobOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetJobOptions.html#Google_Bigquery_V2_GetJobOptions">GetJobOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
+                    <td><em>pollSettings</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollJobUntilCompletedAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetJobOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">BigqueryClient.PollJobUntilCompletedAsync(JobReference, GetJobOptions, PollSettings, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_PollQueryUntilCompleted_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollQueryUntilCompleted*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_PollQueryUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollQueryUntilCompleted(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings)">PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigqueryQueryJob PollQueryUntilCompleted(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1346,8 +2758,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Bigquery.V2.PollJobOptions.html#Google_Bigquery_V2_PollJobOptions">PollJobOptions</a></td>
-                    <td><em>pollOptions</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
+                    <td><em>pollSettings</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1368,7 +2780,65 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_Google_Bigquery_V2_PollJobOptions_">BigqueryClient.PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollJobOptions)</a></div>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompleted_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_">BigqueryClient.PollQueryUntilCompleted(JobReference, GetQueryResultsOptions, PollSettings)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_PollQueryUntilCompletedAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollQueryUntilCompletedAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_PollQueryUntilCompletedAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.PollQueryUntilCompletedAsync(Google.Apis.Bigquery.v2.Data.JobReference,Google.Bigquery.V2.GetQueryResultsOptions,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)">PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryQueryJob&gt; PollQueryUntilCompletedAsync(JobReference jobReference, GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.JobReference.html#Google_Apis_Bigquery_v2_Data_JobReference">JobReference</a></td>
+                    <td><em>jobReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.GetQueryResultsOptions.html#Google_Bigquery_V2_GetQueryResultsOptions">GetQueryResultsOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
+                    <td><em>pollSettings</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryQueryJob.html#Google_Bigquery_V2_BigqueryQueryJob">BigqueryQueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_PollQueryUntilCompletedAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Bigquery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">BigqueryClient.PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_UploadCsv_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadCsv*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadCsv(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions)">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1425,6 +2895,69 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_">BigqueryClient.UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_UploadCsvAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadCsvAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_UploadCsvAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadCsvAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadCsvOptions,System.Threading.CancellationToken)">UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryJob&gt; UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.UploadCsvOptions.html#Google_Bigquery_V2_UploadCsvOptions">UploadCsvOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadCsvAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadCsvOptions_System_Threading_CancellationToken_">BigqueryClient.UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)</a></div>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_UploadJson_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadJson*"></a>
               <h4 id="Google_Bigquery_V2_BigqueryClientImpl_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadJson(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions)">UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -1481,10 +3014,68 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJson_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_">BigqueryClient.UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)</a></div>
-              <h3 id="extensionmethods">Extension Methods</h3>
-              <div>
-                  <a class="xref" href="Google.Apis.Util.Utilities.html#Google_Apis_Util_Utilities_ThrowIfNull__1___0_System_String_">Utilities.ThrowIfNull&lt;BigqueryClientImpl&gt;(String)</a>
+              <a id="Google_Bigquery_V2_BigqueryClientImpl_UploadJsonAsync_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadJsonAsync*"></a>
+              <h4 id="Google_Bigquery_V2_BigqueryClientImpl_UploadJsonAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_System_Threading_CancellationToken_" data-uid="Google.Bigquery.V2.BigqueryClientImpl.UploadJsonAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Bigquery.V2.UploadJsonOptions,System.Threading.CancellationToken)">UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigqueryJob&gt; UploadJsonAsync(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Bigquery.V2.UploadJsonOptions.html#Google_Bigquery_V2_UploadJsonOptions">UploadJsonOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Bigquery.V2.BigqueryJob.html#Google_Bigquery_V2_BigqueryJob">BigqueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Bigquery.V2.BigqueryClient.html#Google_Bigquery_V2_BigqueryClient_UploadJsonAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Bigquery_V2_UploadJsonOptions_System_Threading_CancellationToken_">BigqueryClient.UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions, CancellationToken)</a></div>
             </article>
           </div>
           
@@ -1513,7 +3104,6 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

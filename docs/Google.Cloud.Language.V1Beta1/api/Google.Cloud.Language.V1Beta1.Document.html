@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Document
    | Google.Cloud.Language.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,8 +70,8 @@
               
               <h1 id="Google_Cloud_Language_V1Beta1_Document" data-uid="Google.Cloud.Language.V1Beta1.Document">Class Document
               </h1>
-              <div class="markdown level0 summary"><h6 id="" sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="2" sourceendlinenumber="2">##########################################################</h6>
-<p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> Represents the input to API methods.</p>
+              <div class="markdown level0 summary"><h6 id="">##########################################################</h6>
+<p>Represents the input to API methods.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,8 +102,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Cloud_Language_V1Beta1_Document_Content_" data-uid="Google.Cloud.Language.V1Beta1.Document.Content*"></a>
               <h4 id="Google_Cloud_Language_V1Beta1_Document_Content" data-uid="Google.Cloud.Language.V1Beta1.Document.Content">Content</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The content of the input in string format.</p>
+              <div class="markdown level1 summary"><p>The content of the input in string format.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -125,8 +126,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Language_V1Beta1_Document_GcsContentUri_" data-uid="Google.Cloud.Language.V1Beta1.Document.GcsContentUri*"></a>
               <h4 id="Google_Cloud_Language_V1Beta1_Document_GcsContentUri" data-uid="Google.Cloud.Language.V1Beta1.Document.GcsContentUri">GcsContentUri</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The Google Cloud Storage URI where the file content is located.</p>
+              <div class="markdown level1 summary"><p>The Google Cloud Storage URI where the file content is located.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -148,20 +150,19 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Language_V1Beta1_Document_Language_" data-uid="Google.Cloud.Language.V1Beta1.Document.Language*"></a>
               <h4 id="Google_Cloud_Language_V1Beta1_Document_Language" data-uid="Google.Cloud.Language.V1Beta1.Document.Language">Language</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> The language of the document (if not specified, the language is
- automatically detected). Both ISO and BCP-47 language codes are
- accepted.&lt;br&gt;
- <strong>Current Language Restrictions:</strong></p>
-<ul sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="7" sourceendlinenumber="12">
-<li sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="7" sourceendlinenumber="12">Only English, Spanish, and Japanese textual content
-are supported, with the following additional restriction:<ul sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="9" sourceendlinenumber="12">
-<li sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="9" sourceendlinenumber="12"><code>analyzeSentiment</code> only supports English text.
+              <div class="markdown level1 summary"><p>The language of the document (if not specified, the language is
+automatically detected). Both ISO and BCP-47 language codes are
+accepted.&lt;br&gt;
+<strong>Current Language Restrictions:</strong></p>
+<ul>
+<li>Only English, Spanish, and Japanese textual content
+are supported, with the following additional restriction:</li>
+<li><code>analyzeSentiment</code> only supports English text.
 If the language (either specified by the caller or automatically detected)
 is not supported by the called API method, an <code>INVALID_ARGUMENT</code> error
 is returned.</li>
-</ul>
-</li>
 </ul>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -184,6 +185,7 @@ is returned.</li>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Language_V1Beta1_Document_SourceCase_" data-uid="Google.Cloud.Language.V1Beta1.Document.SourceCase*"></a>
               <h4 id="Google_Cloud_Language_V1Beta1_Document_SourceCase" data-uid="Google.Cloud.Language.V1Beta1.Document.SourceCase">SourceCase</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -206,9 +208,10 @@ is returned.</li>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Language_V1Beta1_Document_Type_" data-uid="Google.Cloud.Language.V1Beta1.Document.Type*"></a>
               <h4 id="Google_Cloud_Language_V1Beta1_Document_Type" data-uid="Google.Cloud.Language.V1Beta1.Document.Type">Type</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Required. If the type is not set or is <code>TYPE_UNSPECIFIED</code>,
- returns an <code>INVALID_ARGUMENT</code> error.</p>
+              <div class="markdown level1 summary"><p>Required. If the type is not set or is <code>TYPE_UNSPECIFIED</code>,
+returns an <code>INVALID_ARGUMENT</code> error.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -225,15 +228,16 @@ is returned.</li>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Cloud.Language.V1Beta1.Document.Types.Type</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Cloud_Language_V1Beta1_Document_FromHtml_" data-uid="Google.Cloud.Language.V1Beta1.Document.FromHtml*"></a>
               <h4 id="Google_Cloud_Language_V1Beta1_Document_FromHtml_System_String_System_String_" data-uid="Google.Cloud.Language.V1Beta1.Document.FromHtml(System.String,System.String)">FromHtml(String, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a document from an HTML string and optional language.</p>
+              <div class="markdown level1 summary"><p>Constructs a document from an HTML string and optional language.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -253,13 +257,13 @@ is returned.</li>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>html</em></td>
-                    <td><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The HTML text of the document. Must not be null.</p>
+                    <td><p>The HTML text of the document. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>language</em></td>
-                    <td><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The language of the document, as an ISO or BCP-47 language code.
+                    <td><p>The language of the document, as an ISO or BCP-47 language code.
 This may be empty or null (the default), in which case the language will be detected
 by the Natural Language service.</p>
 </td>
@@ -277,13 +281,14 @@ by the Natural Language service.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document">Document</a></td>
-                    <td><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created document.</p>
+                    <td><p>The newly created document.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Language_V1Beta1_Document_FromPlainText_" data-uid="Google.Cloud.Language.V1Beta1.Document.FromPlainText*"></a>
               <h4 id="Google_Cloud_Language_V1Beta1_Document_FromPlainText_System_String_System_String_" data-uid="Google.Cloud.Language.V1Beta1.Document.FromPlainText(System.String,System.String)">FromPlainText(String, String)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a document from a plain text string and optional language.</p>
+              <div class="markdown level1 summary"><p>Constructs a document from a plain text string and optional language.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -303,13 +308,13 @@ by the Natural Language service.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>text</em></td>
-                    <td><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The text of the document. Must not be null.</p>
+                    <td><p>The text of the document. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>language</em></td>
-                    <td><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The language of the document, as an ISO or BCP-47 language code.
+                    <td><p>The language of the document, as an ISO or BCP-47 language code.
 This may be empty or null (the default), in which case the language will be detected
 by the Natural Language service.</p>
 </td>
@@ -327,7 +332,7 @@ by the Natural Language service.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document">Document</a></td>
-                    <td><p sourcefile="obj/api/Google.Cloud.Language.V1Beta1.Document.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The newly created document.</p>
+                    <td><p>The newly created document.</p>
 </td>
                   </tr>
                 </tbody>
@@ -360,7 +365,6 @@ by the Natural Language service.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

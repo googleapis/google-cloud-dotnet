@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PushConfig
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Pubsub_V1_PushConfig" data-uid="Google.Pubsub.V1.PushConfig">Class PushConfig
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Configuration for a push delivery endpoint.</p>
+              <div class="markdown level0 summary"><p>Configuration for a push delivery endpoint.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,25 +101,26 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Pubsub_V1_PushConfig_Attributes_" data-uid="Google.Pubsub.V1.PushConfig.Attributes*"></a>
               <h4 id="Google_Pubsub_V1_PushConfig_Attributes" data-uid="Google.Pubsub.V1.PushConfig.Attributes">Attributes</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Endpoint configuration attributes.</p>
-<p sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="4" sourceendlinenumber="5"> Every endpoint has a set of API supported attributes that can be used to
- control different aspects of the message delivery.</p>
-<p sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="7" sourceendlinenumber="12"> The currently supported attribute is <code>x-goog-version</code>, which you can
- use to change the format of the push message. This attribute
- indicates the version of the data expected by the endpoint. This
- controls the shape of the envelope (i.e. its fields and metadata).
- The endpoint version is based on the version of the Pub/Sub
- API.</p>
-<p sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="14" sourceendlinenumber="18"> If not present during the <code>CreateSubscription</code> call, it will default to
- the version of the API used to make such call. If not present during a
- <code>ModifyPushConfig</code> call, its value will not be changed. <code>GetSubscription</code>
- calls will always return a valid version, even if the subscription was
- created without this attribute.</p>
-<p sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> The possible values for this attribute are:</p>
-<ul sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="22" sourceendlinenumber="23">
-<li sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="22" sourceendlinenumber="22"><code>v1beta1</code>: uses the push format defined in the v1beta1 Pub/Sub API.</li>
-<li sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="23" sourceendlinenumber="23"><code>v1</code> or <code>v1beta2</code>: uses the push format defined in the v1 Pub/Sub API.</li>
+              <div class="markdown level1 summary"><p>Endpoint configuration attributes.</p>
+<p>Every endpoint has a set of API supported attributes that can be used to
+control different aspects of the message delivery.</p>
+<p>The currently supported attribute is <code>x-goog-version</code>, which you can
+use to change the format of the push message. This attribute
+indicates the version of the data expected by the endpoint. This
+controls the shape of the envelope (i.e. its fields and metadata).
+The endpoint version is based on the version of the Pub/Sub
+API.</p>
+<p>If not present during the <code>CreateSubscription</code> call, it will default to
+the version of the API used to make such call. If not present during a
+<code>ModifyPushConfig</code> call, its value will not be changed. <code>GetSubscription</code>
+calls will always return a valid version, even if the subscription was
+created without this attribute.</p>
+<p>The possible values for this attribute are:</p>
+<ul>
+<li><code>v1beta1</code>: uses the push format defined in the v1beta1 Pub/Sub API.</li>
+<li><code>v1</code> or <code>v1beta2</code>: uses the push format defined in the v1 Pub/Sub API.</li>
 </ul>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -137,14 +138,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html#Google_Protobuf_Collections_MapField_2">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Pubsub_V1_PushConfig_PushEndpoint_" data-uid="Google.Pubsub.V1.PushConfig.PushEndpoint*"></a>
               <h4 id="Google_Pubsub_V1_PushConfig_PushEndpoint" data-uid="Google.Pubsub.V1.PushConfig.PushEndpoint">PushEndpoint</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> A URL locating the endpoint to which messages should be pushed.
- For example, a Webhook endpoint might use &quot;<a href="https://example.com/push" sourcefile="obj/api/Google.Pubsub.V1.PushConfig.yml" sourcestartlinenumber="3" sourceendlinenumber="3">https://example.com/push</a>&quot;.</p>
+              <div class="markdown level1 summary"><p>A URL locating the endpoint to which messages should be pushed.
+For example, a Webhook endpoint might use &quot;<a href="https://example.com/push">https://example.com/push</a>&quot;.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -194,7 +196,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

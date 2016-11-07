@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RecognitionConfig
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,8 +70,8 @@
               
               <h1 id="Google_Cloud_Speech_V1Beta1_RecognitionConfig" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig">Class RecognitionConfig
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The <code>RecognitionConfig</code> message provides information to the recognizer
- that specifies how to process the request.</p>
+              <div class="markdown level0 summary"><p>The <code>RecognitionConfig</code> message provides information to the recognizer
+that specifies how to process the request.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,8 +102,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_Encoding_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.Encoding*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_Encoding" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.Encoding">Encoding</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> [Required] Encoding of audio data sent in all <code>RecognitionAudio</code> messages.</p>
+              <div class="markdown level1 summary"><p>[Required] Encoding of audio data sent in all <code>RecognitionAudio</code> messages.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -120,17 +121,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.AudioEncoding</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_LanguageCode_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.LanguageCode*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_LanguageCode" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.LanguageCode">LanguageCode</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> [Optional] The language of the supplied audio as a BCP-47 language tag.
- Example: &quot;en-GB&quot;  <a href="https://www.rfc-editor.org/rfc/bcp/bcp47.txt" sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="3" sourceendlinenumber="3">https://www.rfc-editor.org/rfc/bcp/bcp47.txt</a>
- If omitted, defaults to &quot;en-US&quot;. See
- <a href="https://cloud.google.com/speech/docs/best-practices#language_support" sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="5" sourceendlinenumber="5">Language Support</a>
- for a list of the currently supported language codes.</p>
+              <div class="markdown level1 summary"><p>[Optional] The language of the supplied audio as a BCP-47 language tag.
+Example: &quot;en-GB&quot;  <a href="https://www.rfc-editor.org/rfc/bcp/bcp47.txt">https://www.rfc-editor.org/rfc/bcp/bcp47.txt</a>
+If omitted, defaults to &quot;en-US&quot;. See
+<a href="https://cloud.google.com/speech/docs/best-practices#language_support">Language Support</a>
+for a list of the currently supported language codes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -152,13 +154,14 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_MaxAlternatives_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.MaxAlternatives*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_MaxAlternatives" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.MaxAlternatives">MaxAlternatives</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> [Optional] Maximum number of recognition hypotheses to be returned.
- Specifically, the maximum number of <code>SpeechRecognitionAlternative</code> messages
- within each <code>SpeechRecognitionResult</code>.
- The server may return fewer than <code>max_alternatives</code>.
- Valid values are <code>0</code>-<code>30</code>. A value of <code>0</code> or <code>1</code> will return a maximum of
- <code>1</code>. If omitted, defaults to <code>1</code>.</p>
+              <div class="markdown level1 summary"><p>[Optional] Maximum number of recognition hypotheses to be returned.
+Specifically, the maximum number of <code>SpeechRecognitionAlternative</code> messages
+within each <code>SpeechRecognitionResult</code>.
+The server may return fewer than <code>max_alternatives</code>.
+Valid values are <code>0</code>-<code>30</code>. A value of <code>0</code> or <code>1</code> will return a maximum of
+<code>1</code>. If omitted, defaults to <code>1</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -180,11 +183,12 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_ProfanityFilter_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.ProfanityFilter*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_ProfanityFilter" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.ProfanityFilter">ProfanityFilter</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> [Optional] If set to <code>true</code>, the server will attempt to filter out
- profanities, replacing all but the initial character in each filtered word
- with asterisks, e.g. &quot;f***&quot;. If set to <code>false</code> or omitted, profanities
- won&#39;t be filtered out.</p>
+              <div class="markdown level1 summary"><p>[Optional] If set to <code>true</code>, the server will attempt to filter out
+profanities, replacing all but the initial character in each filtered word
+with asterisks, e.g. &quot;f***&quot;. If set to <code>false</code> or omitted, profanities
+won&#39;t be filtered out.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -206,12 +210,13 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_SampleRate_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.SampleRate*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_SampleRate" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.SampleRate">SampleRate</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> [Required] Sample rate in Hertz of the audio data sent in all
- <code>RecognitionAudio</code> messages. Valid values are: 8000-48000.
- 16000 is optimal. For best results, set the sampling rate of the audio
- source to 16000 Hz. If that&#39;s not possible, use the native sample rate of
- the audio source (instead of re-sampling).</p>
+              <div class="markdown level1 summary"><p>[Required] Sample rate in Hertz of the audio data sent in all
+<code>RecognitionAudio</code> messages. Valid values are: 8000-48000.
+16000 is optimal. For best results, set the sampling rate of the audio
+source to 16000 Hz. If that&#39;s not possible, use the native sample rate of
+the audio source (instead of re-sampling).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -233,8 +238,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_SpeechContext_" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.SpeechContext*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_RecognitionConfig_SpeechContext" data-uid="Google.Cloud.Speech.V1Beta1.RecognitionConfig.SpeechContext">SpeechContext</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Cloud.Speech.V1Beta1.RecognitionConfig.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> [Optional] A means to provide context to assist the speech recognition.</p>
+              <div class="markdown level1 summary"><p>[Optional] A means to provide context to assist the speech recognition.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -284,7 +290,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

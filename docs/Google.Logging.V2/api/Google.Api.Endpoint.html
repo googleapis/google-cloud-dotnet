@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Endpoint
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,41 +70,43 @@
               
               <h1 id="Google_Api_Endpoint" data-uid="Google.Api.Endpoint">Class Endpoint
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> <code>Endpoint</code> describes a network endpoint that serves a set of APIs.
- A service may expose any number of endpoints, and all endpoints share the
- same service configuration, such as quota configuration and monitoring
- configuration.</p>
-<p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="7" sourceendlinenumber="7"> Example service configuration:</p>
-<pre sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="9" sourceendlinenumber="25"><code> name: library-example.googleapis.com
- endpoints:
-   # Below entry makes &#39;google.example.library.v1.Library&#39;
-   # API be served from endpoint address library-example.googleapis.com.
-   # It also allows HTTP OPTIONS calls to be passed to the backend, for
-   # it to decide whether the subsequent cross-origin request is
-   # allowed to proceed.
- - name: library-example.googleapis.com
-   apis: google.example.library.v1.Library
-   allow_cors: true
-   # Below entry makes &#39;google.example.library.v1.Library&#39;
-   # API be served from endpoint address
-   # google.example.library-example.v1.LibraryManager.
- - name: library-manager.googleapis.com
-   apis: google.example.library.v1.LibraryManager
-   # BNS address for a borg job. Can specify a task by appending
-   # &quot;/taskId&quot; (e.g. &quot;/0&quot;) to the job spec.
-</code></pre><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="27" sourceendlinenumber="27"> Example OpenAPI extension for endpoint with allow_cors set to true:</p>
-<pre sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="29" sourceendlinenumber="39"><code> {
-   &quot;swagger&quot;: &quot;2.0&quot;,
-   &quot;info&quot;: {
-     &quot;description&quot;: &quot;A simple...&quot;
-   },
-   &quot;host&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
-   &quot;x-google-endpoints&quot;: [{
-     &quot;name&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
-     &quot;allow_cors&quot;: &quot;true&quot;
-   }]
- }
-</code></pre></div>
+              <div class="markdown level0 summary"><p><code>Endpoint</code> describes a network endpoint that serves a set of APIs.
+A service may expose any number of endpoints, and all endpoints share the
+same service configuration, such as quota configuration and monitoring
+configuration.</p>
+<p>Example service configuration:</p>
+<p>name: library-example.googleapis.com
+endpoints:</p>
+<h1 id="below-entry-makes-googleexamplelibraryv1library">Below entry makes &#39;google.example.library.v1.Library&#39;</h1>
+<h1 id="api-be-served-from-endpoint-address-library-examplegoogleapiscom">API be served from endpoint address library-example.googleapis.com.</h1>
+<h1 id="it-also-allows-http-options-calls-to-be-passed-to-the-backend-for">It also allows HTTP OPTIONS calls to be passed to the backend, for</h1>
+<h1 id="it-to-decide-whether-the-subsequent-cross-origin-request-is">it to decide whether the subsequent cross-origin request is</h1>
+<h1 id="allowed-to-proceed">allowed to proceed.</h1>
+<ul>
+<li>name: library-example.googleapis.com
+apis: google.example.library.v1.Library
+allow_cors: true
+# Below entry makes &#39;google.example.library.v1.Library&#39;
+# API be served from endpoint address
+# google.example.library-example.v1.LibraryManager.</li>
+<li>name: library-manager.googleapis.com
+apis: google.example.library.v1.LibraryManager
+# BNS address for a borg job. Can specify a task by appending
+# &quot;/taskId&quot; (e.g. &quot;/0&quot;) to the job spec.</li>
+</ul>
+<p>Example OpenAPI extension for endpoint with allow_cors set to true:</p>
+<p>{
+ &quot;swagger&quot;: &quot;2.0&quot;,
+ &quot;info&quot;: {
+   &quot;description&quot;: &quot;A simple...&quot;
+ },
+ &quot;host&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
+ &quot;x-google-endpoints&quot;: [{
+   &quot;name&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
+   &quot;allow_cors&quot;: &quot;true&quot;
+ }]
+}</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
@@ -128,6 +130,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_Endpoint__ctor_" data-uid="Google.Api.Endpoint.#ctor*"></a>
               <h4 id="Google_Api_Endpoint__ctor" data-uid="Google.Api.Endpoint.#ctor">Endpoint()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -135,6 +138,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public Endpoint()</code></pre>
               </div>
+              <a id="Google_Api_Endpoint__ctor_" data-uid="Google.Api.Endpoint.#ctor*"></a>
               <h4 id="Google_Api_Endpoint__ctor_Google_Api_Endpoint_" data-uid="Google.Api.Endpoint.#ctor(Google.Api.Endpoint)">Endpoint(Endpoint)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -161,11 +165,12 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_Endpoint_Aliases_" data-uid="Google.Api.Endpoint.Aliases*"></a>
               <h4 id="Google_Api_Endpoint_Aliases" data-uid="Google.Api.Endpoint.Aliases">Aliases</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> DEPRECATED: This field is no longer supported. Instead of using aliases,
- please specify multiple [google.api.Endpoint][google.api.Endpoint] for each of the intented
- alias.</p>
-<p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="6" sourceendlinenumber="6"> Additional names that this endpoint will be hosted on.</p>
+              <div class="markdown level1 summary"><p>DEPRECATED: This field is no longer supported. Instead of using aliases,
+please specify multiple [google.api.Endpoint][google.api.Endpoint] for each of the intented
+alias.</p>
+<p>Additional names that this endpoint will be hosted on.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -182,18 +187,19 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Endpoint_AllowCors_" data-uid="Google.Api.Endpoint.AllowCors*"></a>
               <h4 id="Google_Api_Endpoint_AllowCors" data-uid="Google.Api.Endpoint.AllowCors">AllowCors</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> Allowing
- <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="3" sourceendlinenumber="3">CORS</a>, aka
- cross-domain traffic, would allow the backends served from this endpoint to
- receive and respond to HTTP OPTIONS requests. The response will be used by
- the browser to determine whether the subsequent cross-origin request is
- allowed to proceed.</p>
+              <div class="markdown level1 summary"><p>Allowing
+<a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a>, aka
+cross-domain traffic, would allow the backends served from this endpoint to
+receive and respond to HTTP OPTIONS requests. The response will be used by
+the browser to determine whether the subsequent cross-origin request is
+allowed to proceed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -215,8 +221,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Endpoint_Apis_" data-uid="Google.Api.Endpoint.Apis*"></a>
               <h4 id="Google_Api_Endpoint_Apis" data-uid="Google.Api.Endpoint.Apis">Apis</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The list of APIs served by this endpoint.</p>
+              <div class="markdown level1 summary"><p>The list of APIs served by this endpoint.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -233,13 +240,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Endpoint_Features_" data-uid="Google.Api.Endpoint.Features*"></a>
               <h4 id="Google_Api_Endpoint_Features" data-uid="Google.Api.Endpoint.Features">Features</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The list of features enabled on this endpoint.</p>
+              <div class="markdown level1 summary"><p>The list of features enabled on this endpoint.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -256,13 +264,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Endpoint_Name_" data-uid="Google.Api.Endpoint.Name*"></a>
               <h4 id="Google_Api_Endpoint_Name" data-uid="Google.Api.Endpoint.Name">Name</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Endpoint.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The canonical name of this endpoint.</p>
+              <div class="markdown level1 summary"><p>The canonical name of this endpoint.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -286,6 +295,7 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Endpoint_CalculateSize_" data-uid="Google.Api.Endpoint.CalculateSize*"></a>
               <h4 id="Google_Api_Endpoint_CalculateSize" data-uid="Google.Api.Endpoint.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -309,7 +319,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_Endpoint_Clone_" data-uid="Google.Api.Endpoint.Clone*"></a>
               <h4 id="Google_Api_Endpoint_Clone" data-uid="Google.Api.Endpoint.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -333,7 +344,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;Endpoint&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_Endpoint_GetHashCode_" data-uid="Google.Api.Endpoint.GetHashCode*"></a>
               <h4 id="Google_Api_Endpoint_GetHashCode" data-uid="Google.Api.Endpoint.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -358,6 +370,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_Endpoint_MergeFrom_" data-uid="Google.Api.Endpoint.MergeFrom*"></a>
               <h4 id="Google_Api_Endpoint_MergeFrom_Google_Api_Endpoint_" data-uid="Google.Api.Endpoint.MergeFrom(Google.Api.Endpoint)">MergeFrom(Endpoint)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -383,7 +396,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;Endpoint&gt;.MergeFrom(Endpoint)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_Endpoint_MergeFrom_" data-uid="Google.Api.Endpoint.MergeFrom*"></a>
               <h4 id="Google_Api_Endpoint_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Endpoint.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -402,14 +416,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_Endpoint_ToString_" data-uid="Google.Api.Endpoint.ToString*"></a>
               <h4 id="Google_Api_Endpoint_ToString" data-uid="Google.Api.Endpoint.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -434,6 +449,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_Endpoint_WriteTo_" data-uid="Google.Api.Endpoint.WriteTo*"></a>
               <h4 id="Google_Api_Endpoint_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Endpoint.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -452,14 +468,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -488,7 +504,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Google.Bigquery.V2 | Google.Bigquery.V2 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Bigquery.V2 | Google.Bigquery.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,33 +57,33 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googlebigqueryv2" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Bigquery.V2</h1>
+              <h1 id="googlebigqueryv2">Google.Bigquery.V2</h1>
               
-<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="6"><code>Google.Bigquery.V2</code> is a .NET client library for <a href="https://cloud.google.com/bigquery/" sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4">Google
+<p><code>Google.Bigquery.V2</code> is a .NET client library for <a href="https://cloud.google.com/bigquery/">Google
 BigQuery</a>. It wraps the
 <code>Google.Apis.Bigquery.v2</code> generated library, providing a
 higher-level API to make it easier to use.</p>
-<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="8">Installation</h1>
-<p sourcefile="index.md" sourcestartlinenumber="10" sourceendlinenumber="15">Install the <code>Google.Bigquery.V2</code> package from NuGet. Add it to
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Bigquery.V2</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
 Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
-<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="17">Authentication</h1>
-<p sourcefile="index.md" sourcestartlinenumber="19" sourceendlinenumber="21">To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/" sourcefile="index.md" sourcestartlinenumber="20" sourceendlinenumber="20">Google Cloud SDK</a>. After that is
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre sourcefile="index.md" sourcestartlinenumber="23" sourceendlinenumber="25"><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started" sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="27">Getting started</h1>
-<p sourcefile="index.md" sourcestartlinenumber="29" sourceendlinenumber="32">Common operations are exposed via the
-<a href="api/Google.Bigquery.V2.BigqueryClient.html" sourcefile="index.md" sourcestartlinenumber="30" sourceendlinenumber="30">BigqueryClient</a>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>Common operations are exposed via the
+<a href="api/Google.Bigquery.V2.BigqueryClient.html">BigqueryClient</a>
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.</p>
-<h1 id="sample-code" sourcefile="index.md" sourcestartlinenumber="34" sourceendlinenumber="34">Sample code</h1>
-<h2 id="querying" sourcefile="index.md" sourcestartlinenumber="36" sourceendlinenumber="36">Querying</h2>
-<pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
-var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
+<h1 id="sample-code">Sample code</h1>
+<h2 id="querying">Querying</h2>
+<pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
+BigqueryTable table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
 
 string sql = $&quot;SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10&quot;;
 BigqueryQueryJob query = client.ExecuteQuery(sql).PollUntilCompleted();
@@ -92,15 +92,41 @@ foreach (BigqueryRow row in query.GetRows())
 {
     Console.WriteLine($&quot;{row[&quot;title&quot;]}: {row[&quot;unique_words&quot;]}&quot;);
 }
-</code></pre><h2 id="using-legacy-sql" sourcefile="index.md" sourcestartlinenumber="40" sourceendlinenumber="40">Using legacy SQL</h2>
-<p sourcefile="index.md" sourcestartlinenumber="42" sourceendlinenumber="47">By default, <a href="api/Google.Bigquery.V2.BigqueryClient.html" sourcefile="index.md" sourcestartlinenumber="42" sourceendlinenumber="42">BigqueryClient</a>
-uses <a href="https://cloud.google.com/bigquery/sql-reference/" sourcefile="index.md" sourcestartlinenumber="43" sourceendlinenumber="43">Standard SQL</a>. To
-use <a href="https://cloud.google.com/bigquery/query-reference" sourcefile="index.md" sourcestartlinenumber="44" sourceendlinenumber="44">Legacy SQL</a>,
+</code></pre><h2 id="parameterized-queries">Parameterized queries</h2>
+<p>Queries can be provided with parameters, either using names (the
+default):</p>
+<pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(_fixture.ProjectId);
+BigqueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+BigqueryCommand command = new BigqueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
+// Note: could also use a collection initializer to populate the parameters.
+command.Parameters.Add(&quot;level&quot;, BigqueryParameterType.Int64).Value = 2;
+command.Parameters.Add(&quot;score&quot;, BigqueryParameterType.Int64).Value = 1500;
+IEnumerable&lt;BigqueryRow&gt; queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
+foreach (BigqueryRow row in queryResults)
+{
+    Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
+}
+</code></pre><p>Or using positional parameters:</p>
+<pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(_fixture.ProjectId);
+BigqueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+BigqueryCommand command = new BigqueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= ? AND level &gt;= ?&quot;);
+command.ParameterMode = BigqueryParameterMode.Positional;
+command.Parameters.Add(BigqueryParameterType.Int64, 1500); // For score
+command.Parameters.Add(BigqueryParameterType.Int64, 2); // For level
+IEnumerable&lt;BigqueryRow&gt; queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
+foreach (BigqueryRow row in queryResults)
+{
+    Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
+}
+</code></pre><h2 id="using-legacy-sql">Using legacy SQL</h2>
+<p>By default, <a href="api/Google.Bigquery.V2.BigqueryClient.html">BigqueryClient</a>
+uses <a href="https://cloud.google.com/bigquery/sql-reference/">Standard SQL</a>. To
+use <a href="https://cloud.google.com/bigquery/query-reference">Legacy SQL</a>,
 simply set <code>UseLegacySql</code> to true in the query options, and make
 sure that you use the legacy format for the table name, as shown
 below.</p>
-<pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
-var table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
+<pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
+BigqueryTable table = client.GetTable(&quot;bigquery-public-data&quot;, &quot;samples&quot;, &quot;shakespeare&quot;);
 
 string sql = $&quot;SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}&quot;;
 BigqueryQueryJob query = client.ExecuteQuery(sql, new ExecuteQueryOptions { UseLegacySql = true }).PollUntilCompleted();
@@ -109,14 +135,14 @@ foreach (BigqueryRow row in query.GetRows())
 {
     Console.WriteLine($&quot;{row[&quot;title&quot;]}: {row[&quot;unique_words&quot;]}&quot;);
 }
-</code></pre><h2 id="data-insertion" sourcefile="index.md" sourcestartlinenumber="51" sourceendlinenumber="51">Data insertion</h2>
-<pre><code class="lang-cs">var client = BigqueryClient.Create(projectId);
+</code></pre><h2 id="data-insertion">Data insertion</h2>
+<pre><code class="lang-cs">BigqueryClient client = BigqueryClient.Create(projectId);
 
 // Create the dataset if it doesn&#39;t exist.
-var dataset = client.GetOrCreateDataset(&quot;mydata&quot;);
+BigqueryDataset dataset = client.GetOrCreateDataset(&quot;mydata&quot;);
 
 // Create the table if it doesn&#39;t exist.
-var table = dataset.GetOrCreateTable(&quot;scores&quot;, new TableSchemaBuilder
+BigqueryTable table = dataset.GetOrCreateTable(&quot;scores&quot;, new TableSchemaBuilder
 {
     { &quot;player&quot;, BigqueryDbType.String },
     { &quot;gameStarted&quot;, BigqueryDbType.Timestamp },
@@ -160,7 +186,6 @@ table.Insert(new InsertRow
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Documentation
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,42 +70,41 @@
               
               <h1 id="Google_Api_Documentation" data-uid="Google.Api.Documentation">Class Documentation
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> <code>Documentation</code> provides the information for describing a service.</p>
-<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="4" sourceendlinenumber="9"> Example:
- &lt;pre&gt;&lt;code&gt;documentation:
-   summary: &gt;
-     The Google Calendar API gives access
-     to most calendar features.
-   pages:</p>
-<ul sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="10" sourceendlinenumber="58">
-<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="10" sourceendlinenumber="11">name: Overview
+              <div class="markdown level0 summary"><p><code>Documentation</code> provides the information for describing a service.</p>
+<p>Example:
+&lt;pre&gt;&lt;code&gt;documentation:
+summary: &gt;
+The Google Calendar API gives access
+to most calendar features.
+pages:</p>
+<ul>
+<li>name: Overview
 content: &amp;#40;== include google/foo/overview.md ==&amp;#41;</li>
-<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="12" sourceendlinenumber="17">name: Tutorial
+<li>name: Tutorial
 content: &amp;#40;== include google/foo/tutorial.md ==&amp;#41;
-subpages;<ul sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="15" sourceendlinenumber="17">
-<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="15" sourceendlinenumber="17">name: Java
+subpages;</li>
+<li>name: Java
 content: &amp;#40;== include google/foo/tutorial_java.md ==&amp;#41;
 rules:</li>
-</ul>
-</li>
-<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="18" sourceendlinenumber="20">selector: google.calendar.Calendar.Get
+<li>selector: google.calendar.Calendar.Get
 description: &gt;
-  ...</li>
-<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="58"><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="29">selector: google.calendar.Calendar.Put
+...</li>
+<li>selector: google.calendar.Calendar.Put
 description: &gt;
-  ...
+...
 &lt;/code&gt;&lt;/pre&gt;
 Documentation is provided in markdown syntax. In addition to
 standard markdown features, definition lists, tables and fenced
 code blocks are supported. Section headers can be provided and are
 interpreted relative to the section nesting of the context where
-a documentation fragment is embedded.</p>
-<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="23">Documentation from the IDL is merged with documentation defined
+a documentation fragment is embedded.</li>
+</ul>
+<p>Documentation from the IDL is merged with documentation defined
 via the config at normalization time, where documentation provided
 by config rules overrides IDL provided.</p>
-<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="22">A number of constructs specific to the API platform are supported
+<p>A number of constructs specific to the API platform are supported
 in documentation text.</p>
-<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="21" sourceendlinenumber="41">In order to reference a proto element, the following
+<p>In order to reference a proto element, the following
 notation can be used:
 &lt;pre&gt;&lt;code&gt;&amp;#91;fully.qualified.proto.name]&amp;#91;]&lt;/code&gt;&lt;/pre&gt;
 To override the display text used for the link, this can be used:
@@ -126,8 +125,6 @@ to infer the resource from the operations in a collection:
 &lt;pre&gt;&lt;code&gt;&amp;#40;== resource_for v1.shelves.books ==&amp;#41;&lt;/code&gt;&lt;/pre&gt;
 The directive <code>suppress_warning</code> does not directly affect documentation
 and is documented together with service config validation.</p>
-</li>
-</ul>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -152,6 +149,7 @@ and is documented together with service config validation.</p>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_Documentation__ctor_" data-uid="Google.Api.Documentation.#ctor*"></a>
               <h4 id="Google_Api_Documentation__ctor" data-uid="Google.Api.Documentation.#ctor">Documentation()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -159,6 +157,7 @@ and is documented together with service config validation.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public Documentation()</code></pre>
               </div>
+              <a id="Google_Api_Documentation__ctor_" data-uid="Google.Api.Documentation.#ctor*"></a>
               <h4 id="Google_Api_Documentation__ctor_Google_Api_Documentation_" data-uid="Google.Api.Documentation.#ctor(Google.Api.Documentation)">Documentation(Documentation)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -185,8 +184,9 @@ and is documented together with service config validation.</p>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_Documentation_DocumentationRootUrl_" data-uid="Google.Api.Documentation.DocumentationRootUrl*"></a>
               <h4 id="Google_Api_Documentation_DocumentationRootUrl" data-uid="Google.Api.Documentation.DocumentationRootUrl">DocumentationRootUrl</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The URL to the root of documentation.</p>
+              <div class="markdown level1 summary"><p>The URL to the root of documentation.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -208,18 +208,19 @@ and is documented together with service config validation.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Documentation_Overview_" data-uid="Google.Api.Documentation.Overview*"></a>
               <h4 id="Google_Api_Documentation_Overview" data-uid="Google.Api.Documentation.Overview">Overview</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="2" sourceendlinenumber="10"> Declares a single overview page. For example:
- &lt;pre&gt;&lt;code&gt;documentation:
-   summary: ...
-   overview: &amp;#40;== include overview.md ==&amp;#41;
- &lt;/code&gt;&lt;/pre&gt;
- This is a shortcut for the following declaration (using pages style):
- &lt;pre&gt;&lt;code&gt;documentation:
-   summary: ...
-   pages:</p>
-<ul sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="11" sourceendlinenumber="14">
-<li sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="11" sourceendlinenumber="14">name: Overview
+              <div class="markdown level1 summary"><p>Declares a single overview page. For example:
+&lt;pre&gt;&lt;code&gt;documentation:
+summary: ...
+overview: &amp;#40;== include overview.md ==&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;
+This is a shortcut for the following declaration (using pages style):
+&lt;pre&gt;&lt;code&gt;documentation:
+summary: ...
+pages:</p>
+<ul>
+<li>name: Overview
 content: &amp;#40;== include overview.md ==&amp;#41;
 &lt;/code&gt;&lt;/pre&gt;
 Note: you cannot specify both <code>overview</code> field and <code>pages</code> field.</li>
@@ -245,8 +246,9 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Documentation_Pages_" data-uid="Google.Api.Documentation.Pages*"></a>
               <h4 id="Google_Api_Documentation_Pages" data-uid="Google.Api.Documentation.Pages">Pages</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The top level pages for the documentation set.</p>
+              <div class="markdown level1 summary"><p>The top level pages for the documentation set.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -263,14 +265,15 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.Page.html#Google_Api_Page">Page</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.Page.html#Google_Api_Page">Page</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Documentation_Rules_" data-uid="Google.Api.Documentation.Rules*"></a>
               <h4 id="Google_Api_Documentation_Rules" data-uid="Google.Api.Documentation.Rules">Rules</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A list of documentation rules that apply to individual API elements.</p>
-<p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> <strong>NOTE:</strong> All service configuration rules follow &quot;last one wins&quot; order.</p>
+              <div class="markdown level1 summary"><p>A list of documentation rules that apply to individual API elements.</p>
+<p><strong>NOTE:</strong> All service configuration rules follow &quot;last one wins&quot; order.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -287,14 +290,15 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.DocumentationRule.html#Google_Api_DocumentationRule">DocumentationRule</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.DocumentationRule.html#Google_Api_DocumentationRule">DocumentationRule</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Documentation_Summary_" data-uid="Google.Api.Documentation.Summary*"></a>
               <h4 id="Google_Api_Documentation_Summary" data-uid="Google.Api.Documentation.Summary">Summary</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Documentation.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> A short summary of what the service does. Can only be provided by
- plain text.</p>
+              <div class="markdown level1 summary"><p>A short summary of what the service does. Can only be provided by
+plain text.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -318,6 +322,7 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Documentation_CalculateSize_" data-uid="Google.Api.Documentation.CalculateSize*"></a>
               <h4 id="Google_Api_Documentation_CalculateSize" data-uid="Google.Api.Documentation.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -341,7 +346,8 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_Documentation_Clone_" data-uid="Google.Api.Documentation.Clone*"></a>
               <h4 id="Google_Api_Documentation_Clone" data-uid="Google.Api.Documentation.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -365,7 +371,8 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;Documentation&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_Documentation_GetHashCode_" data-uid="Google.Api.Documentation.GetHashCode*"></a>
               <h4 id="Google_Api_Documentation_GetHashCode" data-uid="Google.Api.Documentation.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -390,6 +397,7 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_Documentation_MergeFrom_" data-uid="Google.Api.Documentation.MergeFrom*"></a>
               <h4 id="Google_Api_Documentation_MergeFrom_Google_Api_Documentation_" data-uid="Google.Api.Documentation.MergeFrom(Google.Api.Documentation)">MergeFrom(Documentation)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -415,7 +423,8 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;Documentation&gt;.MergeFrom(Documentation)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_Documentation_MergeFrom_" data-uid="Google.Api.Documentation.MergeFrom*"></a>
               <h4 id="Google_Api_Documentation_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Documentation.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -434,14 +443,15 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_Documentation_ToString_" data-uid="Google.Api.Documentation.ToString*"></a>
               <h4 id="Google_Api_Documentation_ToString" data-uid="Google.Api.Documentation.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -466,6 +476,7 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_Documentation_WriteTo_" data-uid="Google.Api.Documentation.WriteTo*"></a>
               <h4 id="Google_Api_Documentation_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Documentation.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -484,14 +495,14 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -520,7 +531,6 @@ Note: you cannot specify both <code>overview</code> field and <code>pages</code>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

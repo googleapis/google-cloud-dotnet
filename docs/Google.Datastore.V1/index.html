@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Google.Datastore.V1 | Google.Datastore.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Datastore.V1 | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,34 +57,34 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googledatastorev1" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Datastore.V1</h1>
+              <h1 id="googledatastorev1">Google.Datastore.V1</h1>
               
-<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4"><code>Google.Datastore.V1</code> is a .NET client library for <a href="https://cloud.google.com/datastore/docs/concepts/overview" sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4">Google
+<p><code>Google.Datastore.V1</code> is a .NET client library for <a href="https://cloud.google.com/datastore/docs/concepts/overview">Google
 Cloud Datastore</a>.</p>
-<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="6" sourceendlinenumber="6">Installation</h1>
-<p sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="13">Install the <code>Google.Datastore.V1</code> package from NuGet. Add it to
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Datastore.V1</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
 Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
-<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">Authentication</h1>
-<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="19">To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/" sourcefile="index.md" sourcestartlinenumber="18" sourceendlinenumber="18">Google Cloud SDK</a>. After that is
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="23"><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started" sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="25">Getting started</h1>
-<p sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="32">The <a href="api/Google.Datastore.V1.DatastoreDb.html" sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="27">DatastoreDb</a>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>The <a href="api/Google.Datastore.V1.DatastoreDb.html">DatastoreDb</a>
 class is provided as a wrapper for
-<a href="api/Google.Datastore.V1.DatastoreClient.html" sourcefile="index.md" sourcestartlinenumber="29" sourceendlinenumber="29">DatastoreClient</a>,
+<a href="api/Google.Datastore.V1.DatastoreClient.html">DatastoreClient</a>,
 simplifying operations considerably by assuming all operations act
 on the same partition, and providing page streaming operations on
 structured query results.</p>
-<p sourcefile="index.md" sourcestartlinenumber="34" sourceendlinenumber="36">Several custom conversions, additional constructors,
-factory methods (particularly on <a href="api/Google.Datastore.V1.Filter.html" sourcefile="index.md" sourcestartlinenumber="35" sourceendlinenumber="35">Filter</a>
+<p>Several custom conversions, additional constructors,
+factory methods (particularly on <a href="api/Google.Datastore.V1.Filter.html">Filter</a>
 are provided to simplify working with the protobuf messages.</p>
-<h1 id="sample-code" sourcefile="index.md" sourcestartlinenumber="38" sourceendlinenumber="38">Sample code</h1>
-<p sourcefile="index.md" sourcestartlinenumber="40" sourceendlinenumber="40">Inserting data:</p>
+<h1 id="sample-code">Sample code</h1>
+<p>Inserting data:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
 var keyFactory = db.CreateKeyFactory(&quot;message&quot;);
@@ -102,7 +102,7 @@ using (DatastoreTransaction transaction = db.BeginTransaction())
     var insertedKey = commitResponse.MutationResults[0].Key;
     Console.WriteLine($&quot;Inserted key: {insertedKey}&quot;);
 }
-</code></pre><p sourcefile="index.md" sourcestartlinenumber="44" sourceendlinenumber="44">Querying data:</p>
+</code></pre><p>Querying data:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
 // Print the messages created in the last 5 minutes, most recent first
@@ -147,7 +147,6 @@ foreach (Entity entity in db.RunQueryLazily(query))
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

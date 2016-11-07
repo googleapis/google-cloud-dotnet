@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Iam.V1
+   | Google.Pubsub.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Iam.V1
+   | Google.Pubsub.V1 ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Iam_V1" data-uid="Google.Iam.V1">Namespace Google.Iam.V1
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Google.Iam.V1.Binding.html#Google_Iam_V1_Binding">Binding</a></h4>
+                  <section><p>Associates <code>members</code> with a <code>role</code>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Iam.V1.GetIamPolicyRequest.html#Google_Iam_V1_GetIamPolicyRequest">GetIamPolicyRequest</a></h4>
+                  <section><p>Request message for <code>GetIamPolicy</code> method.</p>
+</section>
+                  <h4><a class="xref" href="Google.Iam.V1.IAMPolicy.html#Google_Iam_V1_IAMPolicy">IAMPolicy</a></h4>
+                  <section><h2 id="api-overview">API Overview</h2>
+<p>Manages Identity and Access Management (IAM) policies.</p>
+<p>Any implementation of an API that offers access control features
+implements the google.iam.v1.IAMPolicy interface.</p>
+<h2 id="data-model">Data model</h2>
+<p>Access control is applied when a principal (user or service account), takes
+some action on a resource exposed by a service. Resources, identified by
+URI-like names, are the unit of access control specification. Service
+implementations can choose the granularity of access control and the
+supported permissions for their resources.
+For example one database service may allow access control to be
+specified only at the Table level, whereas another might allow access control
+to also be specified at the Column level.</p>
+<h2 id="policy-structure">Policy Structure</h2>
+<p>See google.iam.v1.Policy</p>
+<p>This is intentionally not a CRUD style API because access control policies
+are created and deleted implicitly with the resources to which they are
+attached.</p>
+</section>
+                  <h4><a class="xref" href="Google.Iam.V1.IAMPolicy.IAMPolicyBase.html#Google_Iam_V1_IAMPolicy_IAMPolicyBase">IAMPolicy.IAMPolicyBase</a></h4>
+                  <section><p>Base class for server-side implementations of IAMPolicy</p>
+</section>
+                  <h4><a class="xref" href="Google.Iam.V1.IAMPolicy.IAMPolicyClient.html#Google_Iam_V1_IAMPolicy_IAMPolicyClient">IAMPolicy.IAMPolicyClient</a></h4>
+                  <section><p>Client for IAMPolicy</p>
+</section>
+                  <h4><a class="xref" href="Google.Iam.V1.Policy.html#Google_Iam_V1_Policy">Policy</a></h4>
+                  <section><p>Defines an Identity and Access Management (IAM) policy. It is used to
+specify access control policies for Cloud Platform resources.</p>
+<p>A <code>Policy</code> consists of a list of <code>bindings</code>. A <code>Binding</code> binds a list of
+<code>members</code> to a <code>role</code>, where the members can be user accounts, Google groups,
+Google domains, and service accounts. A <code>role</code> is a named list of permissions
+defined by IAM.</p>
+<p><strong>Example</strong></p>
+<p>{
+ &quot;bindings&quot;: [
+   {
+     &quot;role&quot;: &quot;roles/owner&quot;,
+     &quot;members&quot;: [
+       &quot;user:mike@example.com&quot;,
+       &quot;group:admins@example.com&quot;,
+       &quot;domain:google.com&quot;,
+       &quot;serviceAccount:my-other-app@appspot.gserviceaccount.com&quot;,
+     ]
+   },
+   {
+     &quot;role&quot;: &quot;roles/viewer&quot;,
+     &quot;members&quot;: [&quot;user:sean@example.com&quot;]
+   }
+ ]
+}</p>
+<p>For a description of IAM and its features, see the
+<a href="https://cloud.google.com/iam">IAM developer&#39;s guide</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Iam.V1.SetIamPolicyRequest.html#Google_Iam_V1_SetIamPolicyRequest">SetIamPolicyRequest</a></h4>
+                  <section><p>Request message for <code>SetIamPolicy</code> method.</p>
+</section>
+                  <h4><a class="xref" href="Google.Iam.V1.TestIamPermissionsRequest.html#Google_Iam_V1_TestIamPermissionsRequest">TestIamPermissionsRequest</a></h4>
+                  <section><p>Request message for <code>TestIamPermissions</code> method.</p>
+</section>
+                  <h4><a class="xref" href="Google.Iam.V1.TestIamPermissionsResponse.html#Google_Iam_V1_TestIamPermissionsResponse">TestIamPermissionsResponse</a></h4>
+                  <section><p>Response message for <code>TestIamPermissions</code> method.</p>
+</section>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

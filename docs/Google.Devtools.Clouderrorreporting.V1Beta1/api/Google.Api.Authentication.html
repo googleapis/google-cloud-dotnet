@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Authentication
    | Google.Devtools.Clouderrorreporting.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,19 +70,22 @@
               
               <h1 id="Google_Api_Authentication" data-uid="Google.Api.Authentication">Class Authentication
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> <code>Authentication</code> defines the authentication configuration for an API.</p>
-<p sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> Example for an API targeted for external use:</p>
-<pre sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="6" sourceendlinenumber="15"><code> name: calendar.googleapis.com
- authentication:
-   rules:
-   - selector: &quot;*&quot;
-     oauth:
-       canonical_scopes: https://www.googleapis.com/auth/calendar
-
-   - selector: google.calendar.Delegate
-     oauth:
-       canonical_scopes: https://www.googleapis.com/auth/calendar.read
-</code></pre></div>
+              <div class="markdown level0 summary"><p><code>Authentication</code> defines the authentication configuration for an API.</p>
+<p>Example for an API targeted for external use:</p>
+<p>name: calendar.googleapis.com
+authentication:
+ rules:</p>
+<ul>
+<li><p>selector: &quot;*&quot;
+oauth:
+  canonical_scopes: <a href="https://www.googleapis.com/auth/calendar">https://www.googleapis.com/auth/calendar</a></p>
+</li>
+<li><p>selector: google.calendar.Delegate
+oauth:
+  canonical_scopes: <a href="https://www.googleapis.com/auth/calendar.read">https://www.googleapis.com/auth/calendar.read</a></p>
+</li>
+</ul>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
@@ -106,6 +109,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_Authentication__ctor_" data-uid="Google.Api.Authentication.#ctor*"></a>
               <h4 id="Google_Api_Authentication__ctor" data-uid="Google.Api.Authentication.#ctor">Authentication()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -113,6 +117,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public Authentication()</code></pre>
               </div>
+              <a id="Google_Api_Authentication__ctor_" data-uid="Google.Api.Authentication.#ctor*"></a>
               <h4 id="Google_Api_Authentication__ctor_Google_Api_Authentication_" data-uid="Google.Api.Authentication.#ctor(Google.Api.Authentication)">Authentication(Authentication)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -139,8 +144,9 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_Authentication_Providers_" data-uid="Google.Api.Authentication.Providers*"></a>
               <h4 id="Google_Api_Authentication_Providers" data-uid="Google.Api.Authentication.Providers">Providers</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Defines a set of authentication providers that a service supports.</p>
+              <div class="markdown level1 summary"><p>Defines a set of authentication providers that a service supports.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -157,14 +163,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.AuthProvider.html#Google_Api_AuthProvider">AuthProvider</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.AuthProvider.html#Google_Api_AuthProvider">AuthProvider</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Authentication_Rules_" data-uid="Google.Api.Authentication.Rules*"></a>
               <h4 id="Google_Api_Authentication_Rules" data-uid="Google.Api.Authentication.Rules">Rules</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A list of authentication rules that apply to individual API methods.</p>
-<p sourcefile="obj/api/Google.Api.Authentication.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> <strong>NOTE:</strong> All service configuration rules follow &quot;last one wins&quot; order.</p>
+              <div class="markdown level1 summary"><p>A list of authentication rules that apply to individual API methods.</p>
+<p><strong>NOTE:</strong> All service configuration rules follow &quot;last one wins&quot; order.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -181,13 +188,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.AuthenticationRule.html#Google_Api_AuthenticationRule">AuthenticationRule</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.AuthenticationRule.html#Google_Api_AuthenticationRule">AuthenticationRule</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Authentication_CalculateSize_" data-uid="Google.Api.Authentication.CalculateSize*"></a>
               <h4 id="Google_Api_Authentication_CalculateSize" data-uid="Google.Api.Authentication.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -211,7 +219,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_Authentication_Clone_" data-uid="Google.Api.Authentication.Clone*"></a>
               <h4 id="Google_Api_Authentication_Clone" data-uid="Google.Api.Authentication.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -235,7 +244,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;Authentication&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_Authentication_GetHashCode_" data-uid="Google.Api.Authentication.GetHashCode*"></a>
               <h4 id="Google_Api_Authentication_GetHashCode" data-uid="Google.Api.Authentication.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -260,6 +270,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_Authentication_MergeFrom_" data-uid="Google.Api.Authentication.MergeFrom*"></a>
               <h4 id="Google_Api_Authentication_MergeFrom_Google_Api_Authentication_" data-uid="Google.Api.Authentication.MergeFrom(Google.Api.Authentication)">MergeFrom(Authentication)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -285,7 +296,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;Authentication&gt;.MergeFrom(Authentication)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_Authentication_MergeFrom_" data-uid="Google.Api.Authentication.MergeFrom*"></a>
               <h4 id="Google_Api_Authentication_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Authentication.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -304,14 +316,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_Authentication_ToString_" data-uid="Google.Api.Authentication.ToString*"></a>
               <h4 id="Google_Api_Authentication_ToString" data-uid="Google.Api.Authentication.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -336,6 +349,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_Authentication_WriteTo_" data-uid="Google.Api.Authentication.WriteTo*"></a>
               <h4 id="Google_Api_Authentication_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Authentication.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -354,14 +368,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -390,7 +404,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

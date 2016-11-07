@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SystemParameters
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,11 +70,11 @@
               
               <h1 id="Google_Api_SystemParameters" data-uid="Google.Api.SystemParameters">Class SystemParameters
               </h1>
-              <div class="markdown level0 summary"><h3 id="system-parameter-configuration" sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="2" sourceendlinenumber="2">System parameter configuration</h3>
-<p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="4" sourceendlinenumber="7"> A system parameter is a special kind of parameter defined by the API
- system, not by an individual API. It is typically mapped to an HTTP header
- and/or a URL query parameter. This configuration specifies which methods
- change the names of the system parameters.</p>
+              <div class="markdown level0 summary"><h3 id="system-parameter-configuration">System parameter configuration</h3>
+<p>A system parameter is a special kind of parameter defined by the API
+system, not by an individual API. It is typically mapped to an HTTP header
+and/or a URL query parameter. This configuration specifies which methods
+change the names of the system parameters.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -99,6 +99,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_SystemParameters__ctor_" data-uid="Google.Api.SystemParameters.#ctor*"></a>
               <h4 id="Google_Api_SystemParameters__ctor" data-uid="Google.Api.SystemParameters.#ctor">SystemParameters()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -106,6 +107,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public SystemParameters()</code></pre>
               </div>
+              <a id="Google_Api_SystemParameters__ctor_" data-uid="Google.Api.SystemParameters.#ctor*"></a>
               <h4 id="Google_Api_SystemParameters__ctor_Google_Api_SystemParameters_" data-uid="Google.Api.SystemParameters.#ctor(Google.Api.SystemParameters)">SystemParameters(SystemParameters)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -132,31 +134,40 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_SystemParameters_Rules_" data-uid="Google.Api.SystemParameters.Rules*"></a>
               <h4 id="Google_Api_SystemParameters_Rules" data-uid="Google.Api.SystemParameters.Rules">Rules</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Define system parameters.</p>
-<p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="4" sourceendlinenumber="7"> The parameters defined here will override the default parameters
- implemented by the system. If this field is missing from the service
- config, default system parameters will be used. Default system parameters
- and names is implementation-dependent.</p>
-<p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="9" sourceendlinenumber="9"> Example: define api key and alt name for all methods</p>
-<p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="11" sourceendlinenumber="12"> system_parameters
-   rules:</p>
-<pre sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="13" sourceendlinenumber="18"><code> - selector: &quot;*&quot;
-   parameters:
-     - name: api_key
-       url_query_parameter: api_key
-     - name: alt
-       http_header: Response-Content-Type
-</code></pre><p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="20" sourceendlinenumber="20"> Example: define 2 api key names for a specific method.</p>
-<p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="22" sourceendlinenumber="23"> system_parameters
-   rules:</p>
-<pre sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="24" sourceendlinenumber="29"><code> - selector: &quot;/ListShelves&quot;
-   parameters:
-     - name: api_key
-       http_header: Api-Key1
-     - name: api_key
-       http_header: Api-Key2
-</code></pre><p sourcefile="obj/api/Google.Api.SystemParameters.yml" sourcestartlinenumber="31" sourceendlinenumber="31"> <strong>NOTE:</strong> All service configuration rules follow &quot;last one wins&quot; order.</p>
+              <div class="markdown level1 summary"><p>Define system parameters.</p>
+<p>The parameters defined here will override the default parameters
+implemented by the system. If this field is missing from the service
+config, default system parameters will be used. Default system parameters
+and names is implementation-dependent.</p>
+<p>Example: define api key and alt name for all methods</p>
+<p>system_parameters
+rules:</p>
+<ul>
+<li>selector: &quot;*&quot;
+parameters:<ul>
+<li>name: api_key
+url_query_parameter: api_key</li>
+<li>name: alt
+http_header: Response-Content-Type</li>
+</ul>
+</li>
+</ul>
+<p>Example: define 2 api key names for a specific method.</p>
+<p>system_parameters
+rules:</p>
+<ul>
+<li>selector: &quot;/ListShelves&quot;
+parameters:<ul>
+<li>name: api_key
+http_header: Api-Key1</li>
+<li>name: api_key
+http_header: Api-Key2</li>
+</ul>
+</li>
+</ul>
+<p><strong>NOTE:</strong> All service configuration rules follow &quot;last one wins&quot; order.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -173,13 +184,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.SystemParameterRule.html#Google_Api_SystemParameterRule">SystemParameterRule</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.SystemParameterRule.html#Google_Api_SystemParameterRule">SystemParameterRule</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_SystemParameters_CalculateSize_" data-uid="Google.Api.SystemParameters.CalculateSize*"></a>
               <h4 id="Google_Api_SystemParameters_CalculateSize" data-uid="Google.Api.SystemParameters.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -203,7 +215,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_SystemParameters_Clone_" data-uid="Google.Api.SystemParameters.Clone*"></a>
               <h4 id="Google_Api_SystemParameters_Clone" data-uid="Google.Api.SystemParameters.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -227,7 +240,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;SystemParameters&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_SystemParameters_GetHashCode_" data-uid="Google.Api.SystemParameters.GetHashCode*"></a>
               <h4 id="Google_Api_SystemParameters_GetHashCode" data-uid="Google.Api.SystemParameters.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -252,6 +266,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_SystemParameters_MergeFrom_" data-uid="Google.Api.SystemParameters.MergeFrom*"></a>
               <h4 id="Google_Api_SystemParameters_MergeFrom_Google_Api_SystemParameters_" data-uid="Google.Api.SystemParameters.MergeFrom(Google.Api.SystemParameters)">MergeFrom(SystemParameters)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -277,7 +292,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;SystemParameters&gt;.MergeFrom(SystemParameters)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_SystemParameters_MergeFrom_" data-uid="Google.Api.SystemParameters.MergeFrom*"></a>
               <h4 id="Google_Api_SystemParameters_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.SystemParameters.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -296,14 +312,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_SystemParameters_ToString_" data-uid="Google.Api.SystemParameters.ToString*"></a>
               <h4 id="Google_Api_SystemParameters_ToString" data-uid="Google.Api.SystemParameters.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -328,6 +345,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_SystemParameters_WriteTo_" data-uid="Google.Api.SystemParameters.WriteTo*"></a>
               <h4 id="Google_Api_SystemParameters_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.SystemParameters.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -346,14 +364,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -382,7 +400,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

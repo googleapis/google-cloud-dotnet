@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Group
    | Google.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,29 +70,29 @@
               
               <h1 id="Google_Monitoring_V3_Group" data-uid="Google.Monitoring.V3.Group">Class Group
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> The description of a dynamic collection of monitored resources. Each group
- has a filter that is matched against monitored resources and their associated
- metadata. If a group&#39;s filter matches an available monitored resource, then
- that resource is a member of that group.  Groups can contain any number of
- monitored resources, and each monitored resource can be a member of any
- number of groups.</p>
-<p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="9" sourceendlinenumber="15"> Groups can be nested in parent-child hierarchies. The <code>parentName</code> field
- identifies an optional parent for each group.  If a group has a parent, then
- the only monitored resources available to be matched by the group&#39;s filter
- are the resources contained in the parent group.  In other words, a group
- contains the monitored resources that match its filter and the filters of all
- the group&#39;s ancestors.  A group without a parent can contain any monitored
- resource.</p>
-<p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="17" sourceendlinenumber="23"> For example, consider an infrastructure running a set of instances with two
- user-defined tags: <code>&quot;environment&quot;</code> and <code>&quot;role&quot;</code>. A parent group has a filter,
- <code>environment=&quot;production&quot;</code>.  A child of that parent group has a filter,
- <code>role=&quot;transcoder&quot;</code>.  The parent group contains all instances in the
- production environment, regardless of their roles.  The child group contains
- instances that have the transcoder role <em>and</em> are in the production
- environment.</p>
-<p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="25" sourceendlinenumber="27"> The monitored resources contained in a group can change at any moment,
- depending on what resources exist and what filters are associated with the
- group and its ancestors.</p>
+              <div class="markdown level0 summary"><p>The description of a dynamic collection of monitored resources. Each group
+has a filter that is matched against monitored resources and their associated
+metadata. If a group&#39;s filter matches an available monitored resource, then
+that resource is a member of that group.  Groups can contain any number of
+monitored resources, and each monitored resource can be a member of any
+number of groups.</p>
+<p>Groups can be nested in parent-child hierarchies. The <code>parentName</code> field
+identifies an optional parent for each group.  If a group has a parent, then
+the only monitored resources available to be matched by the group&#39;s filter
+are the resources contained in the parent group.  In other words, a group
+contains the monitored resources that match its filter and the filters of all
+the group&#39;s ancestors.  A group without a parent can contain any monitored
+resource.</p>
+<p>For example, consider an infrastructure running a set of instances with two
+user-defined tags: <code>&quot;environment&quot;</code> and <code>&quot;role&quot;</code>. A parent group has a filter,
+<code>environment=&quot;production&quot;</code>.  A child of that parent group has a filter,
+<code>role=&quot;transcoder&quot;</code>.  The parent group contains all instances in the
+production environment, regardless of their roles.  The child group contains
+instances that have the transcoder role <em>and</em> are in the production
+environment.</p>
+<p>The monitored resources contained in a group can change at any moment,
+depending on what resources exist and what filters are associated with the
+group and its ancestors.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -123,8 +123,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Monitoring_V3_Group_DisplayName_" data-uid="Google.Monitoring.V3.Group.DisplayName*"></a>
               <h4 id="Google_Monitoring_V3_Group_DisplayName" data-uid="Google.Monitoring.V3.Group.DisplayName">DisplayName</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A user-assigned name for this group, used only for display purposes.</p>
+              <div class="markdown level1 summary"><p>A user-assigned name for this group, used only for display purposes.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -146,8 +147,9 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Monitoring_V3_Group_Filter_" data-uid="Google.Monitoring.V3.Group.Filter*"></a>
               <h4 id="Google_Monitoring_V3_Group_Filter" data-uid="Google.Monitoring.V3.Group.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The filter used to determine which monitored resources belong to this group.</p>
+              <div class="markdown level1 summary"><p>The filter used to determine which monitored resources belong to this group.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -169,9 +171,10 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Monitoring_V3_Group_IsCluster_" data-uid="Google.Monitoring.V3.Group.IsCluster*"></a>
               <h4 id="Google_Monitoring_V3_Group_IsCluster" data-uid="Google.Monitoring.V3.Group.IsCluster">IsCluster</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> If true, the members of this group are considered to be a cluster.
- The system can perform additional analysis on groups that are clusters.</p>
+              <div class="markdown level1 summary"><p>If true, the members of this group are considered to be a cluster.
+The system can perform additional analysis on groups that are clusters.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -193,12 +196,13 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Monitoring_V3_Group_Name_" data-uid="Google.Monitoring.V3.Group.Name*"></a>
               <h4 id="Google_Monitoring_V3_Group_Name" data-uid="Google.Monitoring.V3.Group.Name">Name</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Output only. The name of this group. The format is
- <code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
- When creating a group, this field is ignored and a new name is created
- consisting of the project specified in the call to <code>CreateGroup</code>
- and a unique <code>{group_id}</code> that is generated automatically.</p>
+              <div class="markdown level1 summary"><p>Output only. The name of this group. The format is
+<code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
+When creating a group, this field is ignored and a new name is created
+consisting of the project specified in the call to <code>CreateGroup</code>
+and a unique <code>{group_id}</code> that is generated automatically.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -220,10 +224,11 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Monitoring_V3_Group_ParentName_" data-uid="Google.Monitoring.V3.Group.ParentName*"></a>
               <h4 id="Google_Monitoring_V3_Group_ParentName" data-uid="Google.Monitoring.V3.Group.ParentName">ParentName</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Monitoring.V3.Group.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The name of the group&#39;s parent, if it has one.
- The format is <code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
- For groups with no parent, <code>parentName</code> is the empty string, <code>&quot;&quot;</code>.</p>
+              <div class="markdown level1 summary"><p>The name of the group&#39;s parent, if it has one.
+The format is <code>&quot;projects/{project_id_or_number}/groups/{group_id}&quot;</code>.
+For groups with no parent, <code>parentName</code> is the empty string, <code>&quot;&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -273,7 +278,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

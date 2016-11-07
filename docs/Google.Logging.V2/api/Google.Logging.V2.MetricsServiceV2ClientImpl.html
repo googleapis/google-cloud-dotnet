@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MetricsServiceV2ClientImpl
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_MetricsServiceV2ClientImpl" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl">Class MetricsServiceV2ClientImpl
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">MetricsServiceV2 client wrapper implementation, for convenient use.</p>
+              <div class="markdown level0 summary"><p>MetricsServiceV2 client wrapper implementation, for convenient use.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -94,10 +94,22 @@
                   <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_FormatParentName_System_String_">MetricsServiceV2Client.FormatParentName(String)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_SinkTemplate">MetricsServiceV2Client.SinkTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_FormatSinkName_System_String_System_String_">MetricsServiceV2Client.FormatSinkName(String, String)</a>
+                </div>
+                <div>
                   <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_MetricTemplate">MetricsServiceV2Client.MetricTemplate</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_FormatMetricName_System_String_System_String_">MetricsServiceV2Client.FormatMetricName(String, String)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_LogTemplate">MetricsServiceV2Client.LogTemplate</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_FormatLogName_System_String_System_String_">MetricsServiceV2Client.FormatLogName(String, String)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Logging_V2_MetricsServiceV2Settings_">MetricsServiceV2Client.CreateAsync(ServiceEndpoint, MetricsServiceV2Settings)</a>
@@ -144,8 +156,9 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl__ctor_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.#ctor*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl__ctor_Google_Logging_V2_MetricsServiceV2_MetricsServiceV2Client_Google_Logging_V2_MetricsServiceV2Settings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.#ctor(Google.Logging.V2.MetricsServiceV2.MetricsServiceV2Client,Google.Logging.V2.MetricsServiceV2Settings)">MetricsServiceV2ClientImpl(MetricsServiceV2.MetricsServiceV2Client, MetricsServiceV2Settings)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Constructs a client wrapper for the MetricsServiceV2 service, with the specified gRPC client and settings.</p>
+              <div class="markdown level1 summary"><p>Constructs a client wrapper for the MetricsServiceV2 service, with the specified gRPC client and settings.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -165,21 +178,22 @@
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.MetricsServiceV2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2_MetricsServiceV2Client">MetricsServiceV2.MetricsServiceV2Client</a></td>
                     <td><em>grpcClient</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The underlying gRPC client.</p>
+                    <td><p>The underlying gRPC client.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings">MetricsServiceV2Settings</a></td>
                     <td><em>settings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The base <a class="xref" href="Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings">MetricsServiceV2Settings</a> used within this client </p>
+                    <td><p>The base <a class="xref" href="Google.Logging.V2.MetricsServiceV2Settings.html#Google_Logging_V2_MetricsServiceV2Settings">MetricsServiceV2Settings</a> used within this client </p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_GrpcClient_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.GrpcClient*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_GrpcClient" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.GrpcClient">GrpcClient</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The underlying gRPC MetricsServiceV2 client.</p>
+              <div class="markdown level1 summary"><p>The underlying gRPC MetricsServiceV2 client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -205,8 +219,10 @@
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_GrpcClient">MetricsServiceV2Client.GrpcClient</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_CreateLogMetric_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.CreateLogMetric*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_CreateLogMetric_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.CreateLogMetric(System.String,Google.Logging.V2.LogMetric,Google.Api.Gax.Grpc.CallSettings)">CreateLogMetric(String, LogMetric, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -225,17 +241,22 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>parent</em></td>
-                    <td></td>
+                    <td><p>The resource name of the project in which to create the metric.
+Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+<p>The new metric must be provided in the request.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
                     <td><em>metric</em></td>
-                    <td></td>
+                    <td><p>The new logs-based metric, which must not have an identifier that
+already exists.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -251,15 +272,17 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_CreateLogMetric_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.CreateLogMetric(String, LogMetric, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_CreateLogMetricAsync_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.CreateLogMetricAsync*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_CreateLogMetricAsync_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.CreateLogMetricAsync(System.String,Google.Logging.V2.LogMetric,Google.Api.Gax.Grpc.CallSettings)">CreateLogMetricAsync(String, LogMetric, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -278,17 +301,22 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>parent</em></td>
-                    <td></td>
+                    <td><p>The resource name of the project in which to create the metric.
+Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+<p>The new metric must be provided in the request.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
                     <td><em>metric</em></td>
-                    <td></td>
+                    <td><p>The new logs-based metric, which must not have an identifier that
+already exists.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -303,16 +331,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_CreateLogMetricAsync_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.CreateLogMetricAsync(String, LogMetric, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_DeleteLogMetric_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.DeleteLogMetric*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_DeleteLogMetric_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.DeleteLogMetric(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteLogMetric(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -331,20 +361,24 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the metric to delete.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_DeleteLogMetric_System_String_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.DeleteLogMetric(String, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_DeleteLogMetricAsync_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.DeleteLogMetricAsync*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_DeleteLogMetricAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.DeleteLogMetricAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteLogMetricAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -363,12 +397,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the metric to delete.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -384,15 +420,17 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_DeleteLogMetricAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.DeleteLogMetricAsync(String, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_GetLogMetric_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.GetLogMetric*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_GetLogMetric_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.GetLogMetric(System.String,Google.Api.Gax.Grpc.CallSettings)">GetLogMetric(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -411,12 +449,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the desired metric.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -432,15 +472,17 @@
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_GetLogMetric_System_String_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.GetLogMetric(String, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_GetLogMetricAsync_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.GetLogMetricAsync*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_GetLogMetricAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.GetLogMetricAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetLogMetricAsync(String, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -459,12 +501,14 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the desired metric.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -479,16 +523,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_GetLogMetricAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.GetLogMetricAsync(String, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetrics_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetrics*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetrics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetrics(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogMetrics(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -507,26 +553,28 @@
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>parent</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name containing the metrics.
+Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -541,16 +589,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsResponse.html#Google_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable sequence of <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2">IPagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsResponse.html#Google_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A pageable sequence of <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ListLogMetrics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.ListLogMetrics(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetricsAsync_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetricsAsync*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetricsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetricsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListLogMetricsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -569,26 +619,28 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>parent</em></td>
-                    <td></td>
+                    <td><p>Required. The resource name containing the metrics.
+Example: <code>&quot;projects/my-project-id&quot;</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>pageToken</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The token returned from the previous request.
+                    <td><p>The token returned from the previous request.
 A value of <code>null</code> or an empty string retrieves the first page.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><em>pageSize</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="3">The size of page to request. The response will not be larger than this, but may be smaller.
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
 A value of <code>null</code> or 0 uses a server-defined page size.</p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -603,16 +655,18 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsResponse.html#Google_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A pageable asynchronous sequence of <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a> resources.</p>
+                    <td><a class="xref" href="Google.Api.Gax.IPagedAsyncEnumerable-2.html#Google_Api_Gax_IPagedAsyncEnumerable_2">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Logging.V2.ListLogMetricsResponse.html#Google_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a> resources.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_ListLogMetricsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.ListLogMetricsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetric_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetric*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetric_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetric(System.String,Google.Logging.V2.LogMetric,Google.Api.Gax.Grpc.CallSettings)">UpdateLogMetric(String, LogMetric, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -631,17 +685,25 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the metric to update.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+<p>The updated metric must be provided in the request and have the
+same identifier that is specified in <code>metricName</code>.
+If the metric does not exist, it is created.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
                     <td><em>metric</em></td>
-                    <td></td>
+                    <td><p>The updated metric, whose name must be the same as the
+metric identifier in <code>metricName</code>. If <code>metricName</code> does not
+exist, then a new metric is created.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -657,15 +719,17 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">The RPC response.</p>
+                    <td><p>The RPC response.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Logging.V2.MetricsServiceV2Client.html#Google_Logging_V2_MetricsServiceV2Client_UpdateLogMetric_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.UpdateLogMetric(String, LogMetric, CallSettings)</a></div>
+              <a id="Google_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetricAsync_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetricAsync*"></a>
               <h4 id="Google_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetricAsync_System_String_Google_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetricAsync(System.String,Google.Logging.V2.LogMetric,Google.Api.Gax.Grpc.CallSettings)">UpdateLogMetricAsync(String, LogMetric, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -684,17 +748,25 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>metricName</em></td>
-                    <td></td>
+                    <td><p>The resource name of the metric to update.
+Example: <code>&quot;projects/my-project-id/metrics/my-metric-id&quot;</code>.</p>
+<p>The updated metric must be provided in the request and have the
+same identifier that is specified in <code>metricName</code>.
+If the metric does not exist, it is created.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a></td>
                     <td><em>metric</em></td>
-                    <td></td>
+                    <td><p>The updated metric, whose name must be the same as the
+metric identifier in <code>metricName</code>. If <code>metricName</code> does not
+exist, then a new metric is created.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
                     <td><em>callSettings</em></td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">If not null, applies overrides to this RPC call.</p>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>
@@ -709,8 +781,8 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Logging.V2.MetricsServiceV2ClientImpl.yml" sourcestartlinenumber="2" sourceendlinenumber="2">A Task containing the RPC response.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Logging.V2.LogMetric.html#Google_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
@@ -745,7 +817,6 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

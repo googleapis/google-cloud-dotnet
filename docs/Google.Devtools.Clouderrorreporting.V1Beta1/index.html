@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Google.Devtools.Clouderrorreporting.V1Beta1 | Google.Devtools.Clouderrorreporting.V1Beta1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Devtools.Clouderrorreporting.V1Beta1 | Google.Devtools.Clouderrorreporting.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,42 +57,42 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googledevtoolsclouderrorreportingv1beta1" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Devtools.Clouderrorreporting.V1Beta1</h1>
+              <h1 id="googledevtoolsclouderrorreportingv1beta1">Google.Devtools.Clouderrorreporting.V1Beta1</h1>
               
-<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="5"><code>Google.Devtools.Clouderrorreporting.V1Beta1</code> is a .NET client
-library for the <a href="https://cloud.google.com/error-reporting/" sourcefile="index.md" sourcestartlinenumber="4" sourceendlinenumber="5">Stackdriver Error Reporting
+<p><code>Google.Devtools.Clouderrorreporting.V1Beta1</code> is a .NET client
+library for the <a href="https://cloud.google.com/error-reporting/">Stackdriver Error Reporting
 API</a>.</p>
-<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="7" sourceendlinenumber="7">Installation</h1>
-<p sourcefile="index.md" sourcestartlinenumber="9" sourceendlinenumber="13">Install the <code>Google.Devtools.Clouderrorreporting.V1Beta1</code> package from our
-<a href="https://www.myget.org/gallery/google-dotnet-public" sourcefile="index.md" sourcestartlinenumber="10" sourceendlinenumber="11">early access MyGet
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Devtools.Clouderrorreporting.V1Beta1</code> package from our
+<a href="https://www.myget.org/gallery/google-dotnet-public">early access MyGet
 feed</a>.
 First onfigure your environment to include the appropriate NuGet feed
 URL:</p>
-<ul sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="16">
-<li sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">NuGet v2: <code>https://www.myget.org/F/google-dotnet-public/</code></li>
-<li sourcefile="index.md" sourcestartlinenumber="16" sourceendlinenumber="16">NuGet v3: <code>https://www.myget.org/F/google-dotnet-public/api/v3/index.json</code></li>
+<ul>
+<li>NuGet v2: <code>https://www.myget.org/F/google-dotnet-public/</code></li>
+<li>NuGet v3: <code>https://www.myget.org/F/google-dotnet-public/api/v3/index.json</code></li>
 </ul>
-<p sourcefile="index.md" sourcestartlinenumber="18" sourceendlinenumber="22">Next, add the package to your project in the normal way (for example
+<p>Next, add the package to your project in the normal way (for example
 by right-clicking on the project in Visual Studio and choosing
 &quot;Manage NuGet Packages...&quot;). Please ensure you enable pre-release
 packages (for example, in the Visual Studio NuGet user interface,
 check the &quot;Include prerelease&quot; box).</p>
-<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="24" sourceendlinenumber="24">Authentication</h1>
-<p sourcefile="index.md" sourcestartlinenumber="26" sourceendlinenumber="28">To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/" sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="27">Google Cloud SDK</a>. After that is
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre sourcefile="index.md" sourcestartlinenumber="30" sourceendlinenumber="32"><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started" sourcefile="index.md" sourcestartlinenumber="34" sourceendlinenumber="34">Getting started</h1>
-<p sourcefile="index.md" sourcestartlinenumber="36" sourceendlinenumber="36">There are three client classes to be aware of:</p>
-<ul sourcefile="index.md" sourcestartlinenumber="38" sourceendlinenumber="40">
-<li sourcefile="index.md" sourcestartlinenumber="38" sourceendlinenumber="38"><a href="api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupServiceClient.html" sourcefile="index.md" sourcestartlinenumber="38" sourceendlinenumber="38">ErrorGroupServiceClient</a></li>
-<li sourcefile="index.md" sourcestartlinenumber="39" sourceendlinenumber="39"><a href="api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorStatsServiceClient.html" sourcefile="index.md" sourcestartlinenumber="39" sourceendlinenumber="39">ErrorStatsServiceClient</a></li>
-<li sourcefile="index.md" sourcestartlinenumber="40" sourceendlinenumber="40"><a href="api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.html" sourcefile="index.md" sourcestartlinenumber="40" sourceendlinenumber="40">ReportErrorsServiceClient</a></li>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>There are three client classes to be aware of:</p>
+<ul>
+<li><a href="api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupServiceClient.html">ErrorGroupServiceClient</a></li>
+<li><a href="api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorStatsServiceClient.html">ErrorStatsServiceClient</a></li>
+<li><a href="api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.html">ReportErrorsServiceClient</a></li>
 </ul>
-<p sourcefile="index.md" sourcestartlinenumber="42" sourceendlinenumber="43">In each case, create an instance using the static <code>Create</code> method,
+<p>In each case, create an instance using the static <code>Create</code> method,
 optionally specifying a service endpoint and settings.</p>
-<h1 id="sample-code" sourcefile="index.md" sourcestartlinenumber="45" sourceendlinenumber="45">Sample code</h1>
-<h2 id="report-an-error" sourcefile="index.md" sourcestartlinenumber="47" sourceendlinenumber="47">Report an error</h2>
+<h1 id="sample-code">Sample code</h1>
+<h2 id="report-an-error">Report an error</h2>
 <pre><code class="lang-cs">ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
 string projectName = ReportErrorsServiceClient.FormatProjectName(projectId);
 ReportedErrorEvent error = new ReportedErrorEvent
@@ -119,7 +119,7 @@ ReportedErrorEvent error = new ReportedErrorEvent
     }
 };
 client.ReportErrorEvent(projectName, error);
-</code></pre><h2 id="list-error-groups-with-statistics" sourcefile="index.md" sourcestartlinenumber="51" sourceendlinenumber="51">List error groups with statistics</h2>
+</code></pre><h2 id="list-error-groups-with-statistics">List error groups with statistics</h2>
 <pre><code class="lang-cs">ErrorStatsServiceClient client = ErrorStatsServiceClient.Create();
 string projectName = ErrorStatsServiceClient.FormatProjectName(projectId);
 IPagedEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; groupStats = client.ListGroupStats(
@@ -160,7 +160,6 @@ foreach (ErrorGroupStats item in groupStats)
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

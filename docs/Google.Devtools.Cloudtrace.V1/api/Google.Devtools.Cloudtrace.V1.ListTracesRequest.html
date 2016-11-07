@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListTracesRequest
    | Google.Devtools.Cloudtrace.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,8 +70,8 @@
               
               <h1 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest">Class ListTracesRequest
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The request message for the <code>ListTraces</code> method. All fields are required
- unless specified.</p>
+              <div class="markdown level0 summary"><p>The request message for the <code>ListTraces</code> method. All fields are required
+unless specified.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,9 +102,10 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_EndTime_" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.EndTime*"></a>
               <h4 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_EndTime" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.EndTime">EndTime</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Start of the time interval (inclusive) during which the trace data was
- collected from the application.</p>
+              <div class="markdown level1 summary"><p>Start of the time interval (inclusive) during which the trace data was
+collected from the application.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -121,13 +122,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_Filter_" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.Filter*"></a>
               <h4 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_Filter" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> An optional filter for the request.</p>
+              <div class="markdown level1 summary"><p>An optional filter for the request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -149,20 +151,20 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_OrderBy_" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.OrderBy*"></a>
               <h4 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_OrderBy" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.OrderBy">OrderBy</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Field used to sort the returned traces. Optional.
- Can be one of the following:</p>
-<ul sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="5" sourceendlinenumber="14">
-<li sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="5" sourceendlinenumber="5"><code>trace_id</code></li>
-<li sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="6" sourceendlinenumber="6"><code>name</code> (<code>name</code> field of root span in the trace)</li>
-<li sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="7" sourceendlinenumber="8"><code>duration</code> (difference between <code>end_time</code> and <code>start_time</code> fields of
- the root span)</li>
-<li sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="9" sourceendlinenumber="14"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="9" sourceendlinenumber="9"><code>start</code> (<code>start_time</code> field of the root span)</p>
-<p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="9" sourceendlinenumber="10">Descending order can be specified by appending <code>desc</code> to the sort field
-(for example, <code>name desc</code>).</p>
-<p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="9" sourceendlinenumber="9">Only one sort field is permitted.</p>
-</li>
+              <div class="markdown level1 summary"><p>Field used to sort the returned traces. Optional.
+Can be one of the following:</p>
+<ul>
+<li><code>trace_id</code></li>
+<li><code>name</code> (<code>name</code> field of root span in the trace)</li>
+<li><code>duration</code> (difference between <code>end_time</code> and <code>start_time</code> fields of
+the root span)</li>
+<li><code>start</code> (<code>start_time</code> field of the root span)</li>
 </ul>
+<p>Descending order can be specified by appending <code>desc</code> to the sort field
+(for example, <code>name desc</code>).</p>
+<p>Only one sort field is permitted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -184,10 +186,11 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_PageSize_" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.PageSize*"></a>
               <h4 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_PageSize" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.PageSize">PageSize</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Maximum number of traces to return. If not specified or &lt;= 0, the
- implementation selects a reasonable value.  The implementation may
- return fewer traces than the requested page size. Optional.</p>
+              <div class="markdown level1 summary"><p>Maximum number of traces to return. If not specified or &lt;= 0, the
+implementation selects a reasonable value.  The implementation may
+return fewer traces than the requested page size. Optional.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -211,9 +214,10 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Api.Gax.Grpc.IPageRequest.html#Google_Api_Gax_Grpc_IPageRequest_PageSize">IPageRequest.PageSize</a></div>
+              <a id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_PageToken_" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.PageToken*"></a>
               <h4 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_PageToken" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.PageToken">PageToken</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Token identifying the page of results to return. If provided, use the
- value of the <code>next_page_token</code> field from a previous request. Optional.</p>
+              <div class="markdown level1 summary"><p>Token identifying the page of results to return. If provided, use the
+value of the <code>next_page_token</code> field from a previous request. Optional.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -237,8 +241,9 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Api.Gax.Grpc.IPageRequest.html#Google_Api_Gax_Grpc_IPageRequest_PageToken">IPageRequest.PageToken</a></div>
+              <a id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_ProjectId_" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.ProjectId*"></a>
               <h4 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_ProjectId" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> ID of the Cloud project where the trace data is stored.</p>
+              <div class="markdown level1 summary"><p>ID of the Cloud project where the trace data is stored.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -260,9 +265,10 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_StartTime_" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.StartTime*"></a>
               <h4 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_StartTime" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.StartTime">StartTime</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> End of the time interval (inclusive) during which the trace data was
- collected from the application.</p>
+              <div class="markdown level1 summary"><p>End of the time interval (inclusive) during which the trace data was
+collected from the application.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -279,14 +285,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_View_" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.View*"></a>
               <h4 id="Google_Devtools_Cloudtrace_V1_ListTracesRequest_View" data-uid="Google.Devtools.Cloudtrace.V1.ListTracesRequest.View">View</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Cloudtrace.V1.ListTracesRequest.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Type of data returned for traces in the list. Optional. Default is
- <code>MINIMAL</code>.</p>
+              <div class="markdown level1 summary"><p>Type of data returned for traces in the list. Optional. Default is
+<code>MINIMAL</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -303,7 +310,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Devtools.Cloudtrace.V1.ListTracesRequest.Types.ViewType</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -336,7 +343,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

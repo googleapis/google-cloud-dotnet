@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Billing
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,37 +70,45 @@
               
               <h1 id="Google_Api_Billing" data-uid="Google.Api.Billing">Class Billing
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Billing related configuration of the service.</p>
-<p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="4" sourceendlinenumber="4"> The following example shows how to configure metrics for billing:</p>
-<pre sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="6" sourceendlinenumber="16"><code> metrics:
- - name: library.googleapis.com/read_calls
-   metric_kind: DELTA
-   value_type: INT64
- - name: library.googleapis.com/write_calls
-   metric_kind: DELTA
-   value_type: INT64
- billing:
-   metrics:
-   - library.googleapis.com/read_calls
-   - library.googleapis.com/write_calls
-</code></pre><p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="18" sourceendlinenumber="23"> The next example shows how to enable billing status check and customize the
- check behavior. It makes sure billing status check is included in the <code>Check</code>
- method of <a href="https://cloud.google.com/service-control/" sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="20" sourceendlinenumber="20">Service Control API</a>.
- In the example, &quot;google.storage.Get&quot; method can be served when the billing
- status is either <code>current</code> or <code>delinquent</code>, while &quot;google.storage.Write&quot;
- method can only be served when the billing status is <code>current</code>:</p>
-<pre sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="25" sourceendlinenumber="32"><code> billing:
-   rules:
-   - selector: google.storage.Get
-     allowed_statuses:
-     - current
-     - delinquent
-   - selector: google.storage.Write
-     allowed_statuses: current
-</code></pre><p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="34" sourceendlinenumber="37"> Mostly services should only allow <code>current</code> status when serving requests.
- In addition, services can choose to allow both <code>current</code> and <code>delinquent</code>
- statuses when serving read-only requests to resources. If there&#39;s no
- matching selector for operation, no billing status check will be performed.</p>
+              <div class="markdown level0 summary"><p>Billing related configuration of the service.</p>
+<p>The following example shows how to configure metrics for billing:</p>
+<p>metrics:</p>
+<ul>
+<li>name: library.googleapis.com/read_calls
+metric_kind: DELTA
+value_type: INT64</li>
+<li>name: library.googleapis.com/write_calls
+metric_kind: DELTA
+value_type: INT64
+billing:
+metrics:<ul>
+<li>library.googleapis.com/read_calls</li>
+<li>library.googleapis.com/write_calls</li>
+</ul>
+</li>
+</ul>
+<p>The next example shows how to enable billing status check and customize the
+check behavior. It makes sure billing status check is included in the <code>Check</code>
+method of <a href="https://cloud.google.com/service-control/">Service Control API</a>.
+In the example, &quot;google.storage.Get&quot; method can be served when the billing
+status is either <code>current</code> or <code>delinquent</code>, while &quot;google.storage.Write&quot;
+method can only be served when the billing status is <code>current</code>:</p>
+<p>billing:
+ rules:</p>
+<ul>
+<li>selector: google.storage.Get
+allowed_statuses:<ul>
+<li>current</li>
+<li>delinquent</li>
+</ul>
+</li>
+<li>selector: google.storage.Write
+allowed_statuses: current</li>
+</ul>
+<p>Mostly services should only allow <code>current</code> status when serving requests.
+In addition, services can choose to allow both <code>current</code> and <code>delinquent</code>
+statuses when serving read-only requests to resources. If there&#39;s no
+matching selector for operation, no billing status check will be performed.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -125,6 +133,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_Billing__ctor_" data-uid="Google.Api.Billing.#ctor*"></a>
               <h4 id="Google_Api_Billing__ctor" data-uid="Google.Api.Billing.#ctor">Billing()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -132,6 +141,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public Billing()</code></pre>
               </div>
+              <a id="Google_Api_Billing__ctor_" data-uid="Google.Api.Billing.#ctor*"></a>
               <h4 id="Google_Api_Billing__ctor_Google_Api_Billing_" data-uid="Google.Api.Billing.#ctor(Google.Api.Billing)">Billing(Billing)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -158,9 +168,10 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_Billing_Metrics_" data-uid="Google.Api.Billing.Metrics*"></a>
               <h4 id="Google_Api_Billing_Metrics" data-uid="Google.Api.Billing.Metrics">Metrics</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> Names of the metrics to report to billing. Each name must
- be defined in [Service.metrics][google.api.Service.metrics] section.</p>
+              <div class="markdown level1 summary"><p>Names of the metrics to report to billing. Each name must
+be defined in [Service.metrics][google.api.Service.metrics] section.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -177,13 +188,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Billing_Rules_" data-uid="Google.Api.Billing.Rules*"></a>
               <h4 id="Google_Api_Billing_Rules" data-uid="Google.Api.Billing.Rules">Rules</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.Billing.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> A list of billing status rules for configuring billing status check.</p>
+              <div class="markdown level1 summary"><p>A list of billing status rules for configuring billing status check.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -200,13 +212,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Api.BillingStatusRule.html#Google_Api_BillingStatusRule">BillingStatusRule</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Api.BillingStatusRule.html#Google_Api_BillingStatusRule">BillingStatusRule</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Billing_CalculateSize_" data-uid="Google.Api.Billing.CalculateSize*"></a>
               <h4 id="Google_Api_Billing_CalculateSize" data-uid="Google.Api.Billing.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -230,7 +243,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_Billing_Clone_" data-uid="Google.Api.Billing.Clone*"></a>
               <h4 id="Google_Api_Billing_Clone" data-uid="Google.Api.Billing.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -254,7 +268,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;Billing&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_Billing_GetHashCode_" data-uid="Google.Api.Billing.GetHashCode*"></a>
               <h4 id="Google_Api_Billing_GetHashCode" data-uid="Google.Api.Billing.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -279,6 +294,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_Billing_MergeFrom_" data-uid="Google.Api.Billing.MergeFrom*"></a>
               <h4 id="Google_Api_Billing_MergeFrom_Google_Api_Billing_" data-uid="Google.Api.Billing.MergeFrom(Google.Api.Billing)">MergeFrom(Billing)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -304,7 +320,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;Billing&gt;.MergeFrom(Billing)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_Billing_MergeFrom_" data-uid="Google.Api.Billing.MergeFrom*"></a>
               <h4 id="Google_Api_Billing_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Billing.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -323,14 +340,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_Billing_ToString_" data-uid="Google.Api.Billing.ToString*"></a>
               <h4 id="Google_Api_Billing_ToString" data-uid="Google.Api.Billing.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -355,6 +373,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_Billing_WriteTo_" data-uid="Google.Api.Billing.WriteTo*"></a>
               <h4 id="Google_Api_Billing_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Billing.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -373,14 +392,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -409,7 +428,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

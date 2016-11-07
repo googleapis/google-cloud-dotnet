@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PubsubMessage
    | Google.Pubsub.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,8 +70,8 @@
               
               <h1 id="Google_Pubsub_V1_PubsubMessage" data-uid="Google.Pubsub.V1.PubsubMessage">Class PubsubMessage
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PubsubMessage.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> A message data and its attributes. The message payload must not be empty;
- it must contain either a non-empty data field, or at least one attribute.</p>
+              <div class="markdown level0 summary"><p>A message data and its attributes. The message payload must not be empty;
+it must contain either a non-empty data field, or at least one attribute.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -102,8 +102,9 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Pubsub_V1_PubsubMessage_Attributes_" data-uid="Google.Pubsub.V1.PubsubMessage.Attributes*"></a>
               <h4 id="Google_Pubsub_V1_PubsubMessage_Attributes" data-uid="Google.Pubsub.V1.PubsubMessage.Attributes">Attributes</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PubsubMessage.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Optional attributes for this message.</p>
+              <div class="markdown level1 summary"><p>Optional attributes for this message.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -120,14 +121,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.MapField-2.html#Google_Protobuf_Collections_MapField_2">MapField</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Pubsub_V1_PubsubMessage_Data_" data-uid="Google.Pubsub.V1.PubsubMessage.Data*"></a>
               <h4 id="Google_Pubsub_V1_PubsubMessage_Data" data-uid="Google.Pubsub.V1.PubsubMessage.Data">Data</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PubsubMessage.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The message payload. For JSON requests, the value of this field must be
- <a href="https://tools.ietf.org/html/rfc4648" sourcefile="obj/api/Google.Pubsub.V1.PubsubMessage.yml" sourcestartlinenumber="3" sourceendlinenumber="3">base64-encoded</a>.</p>
+              <div class="markdown level1 summary"><p>The message payload. For JSON requests, the value of this field must be
+<a href="https://tools.ietf.org/html/rfc4648">base64-encoded</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -144,16 +146,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.ByteString.html#Google_Protobuf_ByteString">ByteString</a></td>
+                    <td><span class="xref">Google.Protobuf.ByteString</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Pubsub_V1_PubsubMessage_MessageId_" data-uid="Google.Pubsub.V1.PubsubMessage.MessageId*"></a>
               <h4 id="Google_Pubsub_V1_PubsubMessage_MessageId" data-uid="Google.Pubsub.V1.PubsubMessage.MessageId">MessageId</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PubsubMessage.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> ID of this message, assigned by the server when the message is published.
- Guaranteed to be unique within the topic. This value may be read by a
- subscriber that receives a <code>PubsubMessage</code> via a <code>Pull</code> call or a push
- delivery. It must not be populated by the publisher in a <code>Publish</code> call.</p>
+              <div class="markdown level1 summary"><p>ID of this message, assigned by the server when the message is published.
+Guaranteed to be unique within the topic. This value may be read by a
+subscriber that receives a <code>PubsubMessage</code> via a <code>Pull</code> call or a push
+delivery. It must not be populated by the publisher in a <code>Publish</code> call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -175,10 +178,11 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Pubsub_V1_PubsubMessage_PublishTime_" data-uid="Google.Pubsub.V1.PubsubMessage.PublishTime*"></a>
               <h4 id="Google_Pubsub_V1_PubsubMessage_PublishTime" data-uid="Google.Pubsub.V1.PubsubMessage.PublishTime">PublishTime</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Pubsub.V1.PubsubMessage.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The time at which the message was published, populated by the server when
- it receives the <code>Publish</code> call. It must not be populated by the
- publisher in a <code>Publish</code> call.</p>
+              <div class="markdown level1 summary"><p>The time at which the message was published, populated by the server when
+it receives the <code>Publish</code> call. It must not be populated by the
+publisher in a <code>Publish</code> call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -195,7 +199,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.WellKnownTypes.Timestamp.html#Google_Protobuf_WellKnownTypes_Timestamp">Timestamp</a></td>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -228,7 +232,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

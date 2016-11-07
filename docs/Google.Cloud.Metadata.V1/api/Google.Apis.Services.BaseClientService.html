@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BaseClientService
    | Google.Cloud.Metadata.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,11 +70,11 @@
               
               <h1 id="Google_Apis_Services_BaseClientService" data-uid="Google.Apis.Services.BaseClientService">Class BaseClientService
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Apis.Services.BaseClientService.yml" sourcestartlinenumber="2" sourceendlinenumber="5">A base class for a client service which provides common mechanism for all services, like 
+              <div class="markdown level0 summary"><p>A base class for a client service which provides common mechanism for all services, like 
 serialization and GZip support.  It should be safe to use a single service instance to make server requests
 concurrently from multiple threads. 
 This class adds a special <span class="xref">Google.Apis.Http.IHttpExecuteInterceptor</span> to the </p>
-<p sourcefile="obj/api/Google.Apis.Services.BaseClientService.yml" sourcestartlinenumber="6" sourceendlinenumber="11"><span class="xref">Google.Apis.Http.ConfigurableMessageHandler</span> execute interceptor list, which uses the given 
+<p><span class="xref">Google.Apis.Http.ConfigurableMessageHandler</span> execute interceptor list, which uses the given 
 Authenticator. It calls to its applying authentication method, and injects the &quot;Authorization&quot; header in the 
 request.
 If the given Authenticator implements <span class="xref">Google.Apis.Http.IHttpUnsuccessfulResponseHandler</span>, this 
@@ -110,8 +110,9 @@ response handler list.</p>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Apis_Services_BaseClientService__ctor_" data-uid="Google.Apis.Services.BaseClientService.#ctor*"></a>
               <h4 id="Google_Apis_Services_BaseClientService__ctor_Google_Apis_Services_BaseClientService_Initializer_" data-uid="Google.Apis.Services.BaseClientService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">BaseClientService(BaseClientService.Initializer)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.BaseClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Constructs a new base client with the specified initializer.</p>
+              <div class="markdown level1 summary"><p>Constructs a new base client with the specified initializer.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -138,7 +139,7 @@ response handler list.</p>
               <h3 id="fields">Fields
               </h3>
               <h4 id="Google_Apis_Services_BaseClientService_DefaultMaxUrlLength" data-uid="Google.Apis.Services.BaseClientService.DefaultMaxUrlLength">DefaultMaxUrlLength</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.BaseClientService.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The default maximum allowed length of a URL string for GET requests.</p>
+              <div class="markdown level1 summary"><p>The default maximum allowed length of a URL string for GET requests.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -162,6 +163,7 @@ response handler list.</p>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Apis_Services_BaseClientService_ApiKey_" data-uid="Google.Apis.Services.BaseClientService.ApiKey*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_ApiKey" data-uid="Google.Apis.Services.BaseClientService.ApiKey">ApiKey</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -186,6 +188,7 @@ response handler list.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_ApiKey">IClientService.ApiKey</a></div>
+              <a id="Google_Apis_Services_BaseClientService_ApplicationName_" data-uid="Google.Apis.Services.BaseClientService.ApplicationName*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_ApplicationName" data-uid="Google.Apis.Services.BaseClientService.ApplicationName">ApplicationName</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -210,6 +213,7 @@ response handler list.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_ApplicationName">IClientService.ApplicationName</a></div>
+              <a id="Google_Apis_Services_BaseClientService_BasePath_" data-uid="Google.Apis.Services.BaseClientService.BasePath*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_BasePath" data-uid="Google.Apis.Services.BaseClientService.BasePath">BasePath</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -234,6 +238,7 @@ response handler list.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_BasePath">IClientService.BasePath</a></div>
+              <a id="Google_Apis_Services_BaseClientService_BaseUri_" data-uid="Google.Apis.Services.BaseClientService.BaseUri*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_BaseUri" data-uid="Google.Apis.Services.BaseClientService.BaseUri">BaseUri</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -258,6 +263,7 @@ response handler list.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_BaseUri">IClientService.BaseUri</a></div>
+              <a id="Google_Apis_Services_BaseClientService_Features_" data-uid="Google.Apis.Services.BaseClientService.Features*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_Features" data-uid="Google.Apis.Services.BaseClientService.Features">Features</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -275,13 +281,14 @@ response handler list.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_Features">IClientService.Features</a></div>
+              <a id="Google_Apis_Services_BaseClientService_GZipEnabled_" data-uid="Google.Apis.Services.BaseClientService.GZipEnabled*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_GZipEnabled" data-uid="Google.Apis.Services.BaseClientService.GZipEnabled">GZipEnabled</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -306,6 +313,7 @@ response handler list.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_GZipEnabled">IClientService.GZipEnabled</a></div>
+              <a id="Google_Apis_Services_BaseClientService_HttpClient_" data-uid="Google.Apis.Services.BaseClientService.HttpClient*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_HttpClient" data-uid="Google.Apis.Services.BaseClientService.HttpClient">HttpClient</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -323,13 +331,14 @@ response handler list.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Http.ConfigurableHttpClient</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_HttpClient">IClientService.HttpClient</a></div>
+              <a id="Google_Apis_Services_BaseClientService_HttpClientInitializer_" data-uid="Google.Apis.Services.BaseClientService.HttpClientInitializer*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_HttpClientInitializer" data-uid="Google.Apis.Services.BaseClientService.HttpClientInitializer">HttpClientInitializer</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -347,13 +356,14 @@ response handler list.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Http.IConfigurableHttpClientInitializer</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_HttpClientInitializer">IClientService.HttpClientInitializer</a></div>
+              <a id="Google_Apis_Services_BaseClientService_Name_" data-uid="Google.Apis.Services.BaseClientService.Name*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_Name" data-uid="Google.Apis.Services.BaseClientService.Name">Name</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -378,6 +388,7 @@ response handler list.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_Name">IClientService.Name</a></div>
+              <a id="Google_Apis_Services_BaseClientService_Serializer_" data-uid="Google.Apis.Services.BaseClientService.Serializer*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_Serializer" data-uid="Google.Apis.Services.BaseClientService.Serializer">Serializer</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -395,7 +406,7 @@ response handler list.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.ISerializer</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -404,11 +415,12 @@ response handler list.</p>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_Serializer">IClientService.Serializer</a></div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Apis_Services_BaseClientService_CreateBackOffHandler_" data-uid="Google.Apis.Services.BaseClientService.CreateBackOffHandler*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_CreateBackOffHandler" data-uid="Google.Apis.Services.BaseClientService.CreateBackOffHandler">CreateBackOffHandler()</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Services.BaseClientService.yml" sourcestartlinenumber="2" sourceendlinenumber="4">Creates the back-off handler with <span class="xref">Google.Apis.Util.ExponentialBackOff</span>. 
+              <div class="markdown level1 summary"><p>Creates the back-off handler with <span class="xref">Google.Apis.Util.ExponentialBackOff</span>. 
 Overrides this method to change the default behavior of back-off handler (e.g. you can change the maximum
 waited request&#39;s time span, or create a back-off handler with you own implementation of </p>
-<p sourcefile="obj/api/Google.Apis.Services.BaseClientService.yml" sourcestartlinenumber="5" sourceendlinenumber="5"><span class="xref">Google.Apis.Util.IBackOff</span>).</p>
+<p><span class="xref">Google.Apis.Util.IBackOff</span>).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -425,11 +437,12 @@ waited request&#39;s time span, or create a back-off handler with you own implem
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Apis.Http.BackOffHandler</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Services_BaseClientService_DeserializeError_" data-uid="Google.Apis.Services.BaseClientService.DeserializeError*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_DeserializeError_System_Net_Http_HttpResponseMessage_" data-uid="Google.Apis.Services.BaseClientService.DeserializeError(System.Net.Http.HttpResponseMessage)">DeserializeError(HttpResponseMessage)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -464,13 +477,14 @@ waited request&#39;s time span, or create a back-off handler with you own implem
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Requests.RequestError</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_DeserializeError_System_Net_Http_HttpResponseMessage_">IClientService.DeserializeError(HttpResponseMessage)</a></div>
+              <a id="Google_Apis_Services_BaseClientService_DeserializeResponse_" data-uid="Google.Apis.Services.BaseClientService.DeserializeResponse*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_DeserializeResponse__1_System_Net_Http_HttpResponseMessage_" data-uid="Google.Apis.Services.BaseClientService.DeserializeResponse``1(System.Net.Http.HttpResponseMessage)">DeserializeResponse&lt;T&gt;(HttpResponseMessage)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -505,7 +519,7 @@ waited request&#39;s time span, or create a back-off handler with you own implem
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;T&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -527,6 +541,7 @@ waited request&#39;s time span, or create a back-off handler with you own implem
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_DeserializeResponse__1_System_Net_Http_HttpResponseMessage_">IClientService.DeserializeResponse&lt;T&gt;(HttpResponseMessage)</a></div>
+              <a id="Google_Apis_Services_BaseClientService_Dispose_" data-uid="Google.Apis.Services.BaseClientService.Dispose*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_Dispose" data-uid="Google.Apis.Services.BaseClientService.Dispose">Dispose()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -536,6 +551,7 @@ waited request&#39;s time span, or create a back-off handler with you own implem
               </div>
               <h5 class="implements">Implements</h5>
                   <div><span class="xref">System.IDisposable.Dispose()</span></div>
+              <a id="Google_Apis_Services_BaseClientService_SerializeObject_" data-uid="Google.Apis.Services.BaseClientService.SerializeObject*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_SerializeObject_System_Object_" data-uid="Google.Apis.Services.BaseClientService.SerializeObject(System.Object)">SerializeObject(Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -577,6 +593,7 @@ waited request&#39;s time span, or create a back-off handler with you own implem
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Services.IClientService.html#Google_Apis_Services_IClientService_SerializeObject_System_Object_">IClientService.SerializeObject(Object)</a></div>
+              <a id="Google_Apis_Services_BaseClientService_SetRequestSerailizedContent_" data-uid="Google.Apis.Services.BaseClientService.SetRequestSerailizedContent*"></a>
               <h4 id="Google_Apis_Services_BaseClientService_SetRequestSerailizedContent_System_Net_Http_HttpRequestMessage_System_Object_" data-uid="Google.Apis.Services.BaseClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage,System.Object)">SetRequestSerailizedContent(HttpRequestMessage, Object)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -636,7 +653,6 @@ waited request&#39;s time span, or create a back-off handler with you own implem
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

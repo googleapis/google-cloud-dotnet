@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ErrorContext
    | Google.Devtools.Clouderrorreporting.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,10 +70,10 @@
               
               <h1 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorContext" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext">Class ErrorContext
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> A description of the context in which an error occurred.
- This data should be provided by the application when reporting an error,
- unless the
- error report has been generated automatically from Google App Engine logs.</p>
+              <div class="markdown level0 summary"><p>A description of the context in which an error occurred.
+This data should be provided by the application when reporting an error,
+unless the
+error report has been generated automatically from Google App Engine logs.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -104,9 +104,10 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorContext_HttpRequest_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.HttpRequest*"></a>
               <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorContext_HttpRequest" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.HttpRequest">HttpRequest</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The HTTP request which was processed when the error was
- triggered.</p>
+              <div class="markdown level1 summary"><p>The HTTP request which was processed when the error was
+triggered.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -128,13 +129,14 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorContext_ReportLocation_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.ReportLocation*"></a>
               <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorContext_ReportLocation" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.ReportLocation">ReportLocation</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> The location in the source code where the decision was made to
- report the error, usually the place where it was logged.
- For a logged exception this would be the source line where the
- exception is logged, usually close to the place where it was
- caught. This value is in contrast to <code>Exception.cause_location</code>,
- which describes the source line where the exception was thrown.</p>
+              <div class="markdown level1 summary"><p>The location in the source code where the decision was made to
+report the error, usually the place where it was logged.
+For a logged exception this would be the source line where the
+exception is logged, usually close to the place where it was
+caught. This value is in contrast to <code>Exception.cause_location</code>,
+which describes the source line where the exception was thrown.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -156,15 +158,16 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorContext_User_" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.User*"></a>
               <h4 id="Google_Devtools_Clouderrorreporting_V1Beta1_ErrorContext_User" data-uid="Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.User">User</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.yml" sourcestartlinenumber="2" sourceendlinenumber="9"> The user who caused or was affected by the crash.
- This can be a user ID, an email address, or an arbitrary token that
- uniquely identifies the user.
- When sending an error report, leave this field empty if the user was not
- logged in. In this case the
- Error Reporting system will use other data, such as remote IP address, to
- distinguish affected users. See <code>affected_users_count</code> in
- <code>ErrorGroupStats</code>.</p>
+              <div class="markdown level1 summary"><p>The user who caused or was affected by the crash.
+This can be a user ID, an email address, or an arbitrary token that
+uniquely identifies the user.
+When sending an error report, leave this field empty if the user was not
+logged in. In this case the
+Error Reporting system will use other data, such as remote IP address, to
+distinguish affected users. See <code>affected_users_count</code> in
+<code>ErrorGroupStats</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -214,7 +217,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

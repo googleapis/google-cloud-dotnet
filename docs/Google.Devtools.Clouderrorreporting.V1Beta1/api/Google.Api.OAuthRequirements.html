@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OAuthRequirements
    | Google.Devtools.Clouderrorreporting.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,20 +70,20 @@
               
               <h1 id="Google_Api_OAuthRequirements" data-uid="Google.Api.OAuthRequirements">Class OAuthRequirements
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> OAuth scopes are a way to define data and permissions on data. For example,
- there are scopes defined for &quot;Read-only access to Google Calendar&quot; and
- &quot;Access to Cloud Platform&quot;. Users can consent to a scope for an application,
- giving it permission to access that data on their behalf.</p>
-<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="7" sourceendlinenumber="8"> OAuth scope specifications should be fairly coarse grained; a user will need
- to see and understand the text description of what your scope means.</p>
-<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="10" sourceendlinenumber="12"> In most cases: use one or at most two OAuth scopes for an entire family of
- products. If your product has multiple APIs, you should probably be sharing
- the OAuth scope across all of those APIs.</p>
-<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="14" sourceendlinenumber="15"> When you need finer grained OAuth consent screens: talk with your product
- management about how developers will use them in practice.</p>
-<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="17" sourceendlinenumber="19"> Please note that even though each of the canonical scopes is enough for a
- request to be accepted and passed to the backend, a request can still fail
- due to the backend requiring additional scopes or permissions.</p>
+              <div class="markdown level0 summary"><p>OAuth scopes are a way to define data and permissions on data. For example,
+there are scopes defined for &quot;Read-only access to Google Calendar&quot; and
+&quot;Access to Cloud Platform&quot;. Users can consent to a scope for an application,
+giving it permission to access that data on their behalf.</p>
+<p>OAuth scope specifications should be fairly coarse grained; a user will need
+to see and understand the text description of what your scope means.</p>
+<p>In most cases: use one or at most two OAuth scopes for an entire family of
+products. If your product has multiple APIs, you should probably be sharing
+the OAuth scope across all of those APIs.</p>
+<p>When you need finer grained OAuth consent screens: talk with your product
+management about how developers will use them in practice.</p>
+<p>Please note that even though each of the canonical scopes is enough for a
+request to be accepted and passed to the backend, a request can still fail
+due to the backend requiring additional scopes or permissions.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -108,6 +108,7 @@
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Api_OAuthRequirements__ctor_" data-uid="Google.Api.OAuthRequirements.#ctor*"></a>
               <h4 id="Google_Api_OAuthRequirements__ctor" data-uid="Google.Api.OAuthRequirements.#ctor">OAuthRequirements()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -115,6 +116,7 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public OAuthRequirements()</code></pre>
               </div>
+              <a id="Google_Api_OAuthRequirements__ctor_" data-uid="Google.Api.OAuthRequirements.#ctor*"></a>
               <h4 id="Google_Api_OAuthRequirements__ctor_Google_Api_OAuthRequirements_" data-uid="Google.Api.OAuthRequirements.#ctor(Google.Api.OAuthRequirements)">OAuthRequirements(OAuthRequirements)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -141,13 +143,14 @@
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Api_OAuthRequirements_CanonicalScopes_" data-uid="Google.Api.OAuthRequirements.CanonicalScopes*"></a>
               <h4 id="Google_Api_OAuthRequirements_CanonicalScopes" data-uid="Google.Api.OAuthRequirements.CanonicalScopes">CanonicalScopes</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> The list of publicly documented OAuth scopes that are allowed access. An
- OAuth token containing any of these scopes will be accepted.</p>
-<p sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="5" sourceendlinenumber="5"> Example:</p>
-<pre sourcefile="obj/api/Google.Api.OAuthRequirements.yml" sourcestartlinenumber="7" sourceendlinenumber="8"><code>  canonical_scopes: https://www.googleapis.com/auth/calendar,
-                    https://www.googleapis.com/auth/calendar.read
-</code></pre></div>
+              <div class="markdown level1 summary"><p>The list of publicly documented OAuth scopes that are allowed access. An
+OAuth token containing any of these scopes will be accepted.</p>
+<p>Example:</p>
+<p>canonical_scopes: <a href="https://www.googleapis.com/auth/calendar">https://www.googleapis.com/auth/calendar</a>,
+                  <a href="https://www.googleapis.com/auth/calendar.read">https://www.googleapis.com/auth/calendar.read</a></p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -170,6 +173,7 @@
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_OAuthRequirements_CalculateSize_" data-uid="Google.Api.OAuthRequirements.CalculateSize*"></a>
               <h4 id="Google_Api_OAuthRequirements_CalculateSize" data-uid="Google.Api.OAuthRequirements.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -193,7 +197,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Api_OAuthRequirements_Clone_" data-uid="Google.Api.OAuthRequirements.Clone*"></a>
               <h4 id="Google_Api_OAuthRequirements_Clone" data-uid="Google.Api.OAuthRequirements.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -217,7 +222,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;OAuthRequirements&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Api_OAuthRequirements_GetHashCode_" data-uid="Google.Api.OAuthRequirements.GetHashCode*"></a>
               <h4 id="Google_Api_OAuthRequirements_GetHashCode" data-uid="Google.Api.OAuthRequirements.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -242,6 +248,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_OAuthRequirements_MergeFrom_" data-uid="Google.Api.OAuthRequirements.MergeFrom*"></a>
               <h4 id="Google_Api_OAuthRequirements_MergeFrom_Google_Api_OAuthRequirements_" data-uid="Google.Api.OAuthRequirements.MergeFrom(Google.Api.OAuthRequirements)">MergeFrom(OAuthRequirements)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -267,7 +274,8 @@
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;OAuthRequirements&gt;.MergeFrom(OAuthRequirements)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Api_OAuthRequirements_MergeFrom_" data-uid="Google.Api.OAuthRequirements.MergeFrom*"></a>
               <h4 id="Google_Api_OAuthRequirements_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.OAuthRequirements.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -286,14 +294,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Api_OAuthRequirements_ToString_" data-uid="Google.Api.OAuthRequirements.ToString*"></a>
               <h4 id="Google_Api_OAuthRequirements_ToString" data-uid="Google.Api.OAuthRequirements.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -318,6 +327,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_OAuthRequirements_WriteTo_" data-uid="Google.Api.OAuthRequirements.WriteTo*"></a>
               <h4 id="Google_Api_OAuthRequirements_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.OAuthRequirements.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -336,14 +346,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -372,7 +382,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

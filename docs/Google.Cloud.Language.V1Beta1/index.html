@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -8,7 +8,7 @@
     <title>Google.Cloud.Language.V1Beta1 | Google.Cloud.Language.V1Beta1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Language.V1Beta1 | Google.Cloud.Language.V1Beta1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -57,41 +57,41 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="googlecloudlanguagev1beta1" sourcefile="index.md" sourcestartlinenumber="1" sourceendlinenumber="1">Google.Cloud.Language.V1Beta1</h1>
+              <h1 id="googlecloudlanguagev1beta1">Google.Cloud.Language.V1Beta1</h1>
               
-<p sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4"><code>Google.Cloud.Language.V1Beta1</code> is a .NET client library for the <a href="https://cloud.google.com/natural-language" sourcefile="index.md" sourcestartlinenumber="3" sourceendlinenumber="4">Google
+<p><code>Google.Cloud.Language.V1Beta1</code> is a .NET client library for the <a href="https://cloud.google.com/natural-language">Google
 Cloud Natural Language API</a>.</p>
-<h1 id="installation" sourcefile="index.md" sourcestartlinenumber="6" sourceendlinenumber="6">Installation</h1>
-<p sourcefile="index.md" sourcestartlinenumber="8" sourceendlinenumber="13">Install the <code>Google.Cloud.Language.V1Beta1</code> package from NuGet. Add it to
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Cloud.Language.V1Beta1</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
 Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
-<h1 id="authentication" sourcefile="index.md" sourcestartlinenumber="15" sourceendlinenumber="15">Authentication</h1>
-<p sourcefile="index.md" sourcestartlinenumber="17" sourceendlinenumber="19">To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/" sourcefile="index.md" sourcestartlinenumber="18" sourceendlinenumber="18">Google Cloud SDK</a>. After that is
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre sourcefile="index.md" sourcestartlinenumber="21" sourceendlinenumber="23"><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started" sourcefile="index.md" sourcestartlinenumber="25" sourceendlinenumber="25">Getting started</h1>
-<p sourcefile="index.md" sourcestartlinenumber="27" sourceendlinenumber="28">All operations are performed through
-<a href="api/Google.Cloud.Language.V1Beta1.LanguageServiceClient.html" sourcefile="index.md" sourcestartlinenumber="28" sourceendlinenumber="28">LanguageServiceClient</a>.</p>
-<p sourcefile="index.md" sourcestartlinenumber="30" sourceendlinenumber="36">All the methods on the client require a
-<a href="api/Google.Cloud.Language.V1Beta1.Document.html" sourcefile="index.md" sourcestartlinenumber="31" sourceendlinenumber="31">Document</a> to
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>All operations are performed through
+<a href="api/Google.Cloud.Language.V1Beta1.LanguageServiceClient.html">LanguageServiceClient</a>.</p>
+<p>All the methods on the client require a
+<a href="api/Google.Cloud.Language.V1Beta1.Document.html">Document</a> to
 analyze. The Document class provides convenient factory methods
-<a href="api/Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document_FromPlainText_System_String_System_String_" sourcefile="index.md" sourcestartlinenumber="33" sourceendlinenumber="33">Document.FromPlainText</a>
-and <a href="api/Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document_FromHtml_System_String_System_String_" sourcefile="index.md" sourcestartlinenumber="34" sourceendlinenumber="34">Document.FromHtml</a>
+<a href="api/Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document_FromPlainText_System_String_System_String_">Document.FromPlainText</a>
+and <a href="api/Google.Cloud.Language.V1Beta1.Document.html#Google_Cloud_Language_V1Beta1_Document_FromHtml_System_String_System_String_">Document.FromHtml</a>
 to construct instances from text available in your application, or
 you can specify a Google Cloud Storage URI.</p>
-<h1 id="sample-code" sourcefile="index.md" sourcestartlinenumber="38" sourceendlinenumber="38">Sample code</h1>
-<h2 id="analyze-sentiment-in-a-document" sourcefile="index.md" sourcestartlinenumber="40" sourceendlinenumber="40">Analyze sentiment in a document</h2>
+<h1 id="sample-code">Sample code</h1>
+<h2 id="analyze-sentiment-in-a-document">Analyze sentiment in a document</h2>
 <pre><code class="lang-cs">LanguageServiceClient client = LanguageServiceClient.Create();
 Document document = Document.FromPlainText(&quot;You&#39;re simply the best - better than all the rest.&quot;);
 AnalyzeSentimentResponse response = client.AnalyzeSentiment(document);
 Console.WriteLine($&quot;Detected language: {response.Language}&quot;);
 Console.WriteLine($&quot;Sentiment polarity: {response.DocumentSentiment.Polarity}&quot;);
 Console.WriteLine($&quot;Sentiment magnitude: {response.DocumentSentiment.Magnitude}&quot;);
-</code></pre><h2 id="analyze-entities-in-a-document" sourcefile="index.md" sourcestartlinenumber="44" sourceendlinenumber="44">Analyze entities in a document</h2>
+</code></pre><h2 id="analyze-entities-in-a-document">Analyze entities in a document</h2>
 <pre><code class="lang-cs">LanguageServiceClient client = LanguageServiceClient.Create();
 Document document = Document.FromPlainText(&quot;Richard of York gave battle in vain.&quot;);
 AnalyzeEntitiesResponse response = client.AnalyzeEntities(document);
@@ -101,7 +101,7 @@ foreach (Entity entity in response.Entities)
 {
     Console.WriteLine($&quot;  {entity.Name} ({(int) (entity.Salience * 100)}%)&quot;);
 }
-</code></pre><h2 id="extract-syntax-and-analyze-entities" sourcefile="index.md" sourcestartlinenumber="48" sourceendlinenumber="48">Extract syntax and analyze entities</h2>
+</code></pre><h2 id="extract-syntax-and-analyze-entities">Extract syntax and analyze entities</h2>
 <pre><code class="lang-cs">LanguageServiceClient client = LanguageServiceClient.Create();
 Document document = Document.FromPlainText(&quot;Richard of York gave battle in vain.&quot;);
 // &quot;Features&quot; selects which features you wish to enable. Here we want to extract syntax
@@ -147,7 +147,6 @@ foreach (Entity entity in response.Entities)
     </div>
     
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>

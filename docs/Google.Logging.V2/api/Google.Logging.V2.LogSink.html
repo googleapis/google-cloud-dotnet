@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LogSink
    | Google.Logging.V2 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Logging_V2_LogSink" data-uid="Google.Logging.V2.LogSink">Class LogSink
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> Describes a sink used to export log entries outside Stackdriver Logging.</p>
+              <div class="markdown level0 summary"><p>Describes a sink used to export log entries outside Stackdriver Logging.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -101,14 +101,15 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Logging_V2_LogSink_Destination_" data-uid="Google.Logging.V2.LogSink.Destination*"></a>
               <h4 id="Google_Logging_V2_LogSink_Destination" data-uid="Google.Logging.V2.LogSink.Destination">Destination</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> Required. The export destination. See
- <a href="/logging/docs/api/tasks/exporting-logs" sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="3" sourceendlinenumber="3">Exporting Logs With Sinks</a>.
- Examples:</p>
-<pre sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="6" sourceendlinenumber="8"><code> &quot;storage.googleapis.com/my-gcs-bucket&quot;
- &quot;bigquery.googleapis.com/projects/my-project-id/datasets/my-dataset&quot;
- &quot;pubsub.googleapis.com/projects/my-project/topics/my-topic&quot;
-</code></pre></div>
+              <div class="markdown level1 summary"><p>Required. The export destination. See
+<a href="/logging/docs/api/tasks/exporting-logs">Exporting Logs With Sinks</a>.
+Examples:</p>
+<p>&quot;storage.googleapis.com/my-gcs-bucket&quot;
+&quot;bigquery.googleapis.com/projects/my-project-id/datasets/my-dataset&quot;
+&quot;pubsub.googleapis.com/projects/my-project/topics/my-topic&quot;</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -129,15 +130,16 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_LogSink_Filter_" data-uid="Google.Logging.V2.LogSink.Filter*"></a>
               <h4 id="Google_Logging_V2_LogSink_Filter" data-uid="Google.Logging.V2.LogSink.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="2" sourceendlinenumber="7"> Optional. An <a href="/logging/docs/view/advanced_filters" sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="2" sourceendlinenumber="2">advanced logs filter</a>.
- Only log entries matching the filter are exported. The filter
- must be consistent with the log entry format specified by the
- <code>outputVersionFormat</code> parameter, regardless of the format of the
- log entry that was originally written to Stackdriver Logging.
- Example filter (V2 format):</p>
-<pre sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="9" sourceendlinenumber="9"><code> logName=projects/my-projectid/logs/syslog AND severity&amp;gt;=ERROR
-</code></pre></div>
+              <div class="markdown level1 summary"><p>Optional. An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>.
+Only log entries matching the filter are exported. The filter
+must be consistent with the log entry format specified by the
+<code>outputVersionFormat</code> parameter, regardless of the format of the
+log entry that was originally written to Stackdriver Logging.
+Example filter (V2 format):</p>
+<p>logName=projects/my-projectid/logs/syslog AND severity&gt;=ERROR</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -158,12 +160,13 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_LogSink_Name_" data-uid="Google.Logging.V2.LogSink.Name*"></a>
               <h4 id="Google_Logging_V2_LogSink_Name" data-uid="Google.Logging.V2.LogSink.Name">Name</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Required. The client-assigned sink identifier, unique within the
- project. Example: <code>&quot;my-syslog-errors-to-pubsub&quot;</code>.  Sink identifiers are
- limited to 1000 characters and can include only the following characters:
- <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, and the special characters <code>_-.</code>.  The maximum length
- of the name is 100 characters.</p>
+              <div class="markdown level1 summary"><p>Required. The client-assigned sink identifier, unique within the
+project. Example: <code>&quot;my-syslog-errors-to-pubsub&quot;</code>.  Sink identifiers are
+limited to 1000 characters and can include only the following characters:
+<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, and the special characters <code>_-.</code>.  The maximum length
+of the name is 100 characters.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -185,11 +188,12 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_LogSink_OutputVersionFormat_" data-uid="Google.Logging.V2.LogSink.OutputVersionFormat*"></a>
               <h4 id="Google_Logging_V2_LogSink_OutputVersionFormat" data-uid="Google.Logging.V2.LogSink.OutputVersionFormat">OutputVersionFormat</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="2" sourceendlinenumber="5"> Optional. The log entry version to use for this sink&#39;s exported log
- entries.  This version does not have to correspond to the version of the
- log entry that was written to Stackdriver Logging. If omitted, the
- v2 format is used.</p>
+              <div class="markdown level1 summary"><p>Optional. The log entry version to use for this sink&#39;s exported log
+entries.  This version does not have to correspond to the version of the
+log entry that was written to Stackdriver Logging. If omitted, the
+v2 format is used.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -206,21 +210,22 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Logging.V2.LogSink.Types.VersionFormat</span></td>
+                    <td><span class="xref"></span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Logging_V2_LogSink_WriterIdentity_" data-uid="Google.Logging.V2.LogSink.WriterIdentity*"></a>
               <h4 id="Google_Logging_V2_LogSink_WriterIdentity" data-uid="Google.Logging.V2.LogSink.WriterIdentity">WriterIdentity</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="2" sourceendlinenumber="6"> Output only. The iam identity to which the destination needs to grant write
- access.  This may be a service account or a group.
- Examples (Do not assume these specific values):
-    &quot;serviceAccount:cloud-logs@system.gserviceaccount.com&quot;
-    &quot;group:cloud-logs@google.com&quot;</p>
-<p sourcefile="obj/api/Google.Logging.V2.LogSink.yml" sourcestartlinenumber="8" sourceendlinenumber="11">   For GCS destinations, the role &quot;roles/owner&quot; is required on the bucket
-   For Cloud Pubsub destinations, the role &quot;roles/pubsub.publisher&quot; is
-     required on the topic
-   For BigQuery, the role &quot;roles/editor&quot; is required on the dataset</p>
+              <div class="markdown level1 summary"><p>Output only. The iam identity to which the destination needs to grant write
+access.  This may be a service account or a group.
+Examples (Do not assume these specific values):
+&quot;serviceAccount:cloud-logs@system.gserviceaccount.com&quot;
+&quot;group:cloud-logs@google.com&quot;</p>
+<p>For GCS destinations, the role &quot;roles/owner&quot; is required on the bucket
+For Cloud Pubsub destinations, the role &quot;roles/pubsub.publisher&quot; is
+required on the topic
+For BigQuery, the role &quot;roles/editor&quot; is required on the dataset</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -270,7 +275,6 @@
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

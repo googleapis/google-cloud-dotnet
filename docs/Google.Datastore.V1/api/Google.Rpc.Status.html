@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Status
    | Google.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,14 +70,15 @@
               
               <h1 id="Google_Rpc_Status" data-uid="Google.Rpc.Status">Class Status
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> The <code>Status</code> type defines a logical error model that is suitable for different
- programming environments, including REST APIs and RPC APIs. It is used by
- <a href="https://github.com/grpc" sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="4" sourceendlinenumber="4">gRPC</a>. The error model is designed to be:</p>
-<ul sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="6" sourceendlinenumber="53">
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="6" sourceendlinenumber="6">Simple to use and understand for most users</li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="35"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Flexible enough to meet unexpected needs</p>
-<h1 id="overview" sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="9" sourceendlinenumber="9">Overview</h1>
-<p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="15">The <code>Status</code> message contains three pieces of data: error code, error message,
+              <div class="markdown level0 summary"><p>The <code>Status</code> type defines a logical error model that is suitable for different
+programming environments, including REST APIs and RPC APIs. It is used by
+<a href="https://github.com/grpc">gRPC</a>. The error model is designed to be:</p>
+<ul>
+<li>Simple to use and understand for most users</li>
+<li>Flexible enough to meet unexpected needs</li>
+</ul>
+<h1 id="overview">Overview</h1>
+<p>The <code>Status</code> message contains three pieces of data: error code, error message,
 and error details. The error code should be an enum value of
 [google.rpc.Code][google.rpc.Code], but it may accept additional error codes if needed.  The
 error message should be a developer-facing English message that helps
@@ -86,35 +87,35 @@ error message is needed, put the localized message in the error details or
 localize it in the client. The optional error details may contain arbitrary
 information about the error. There is a predefined set of error detail types
 in the package <code>google.rpc</code> which can be used for common error conditions.</p>
-<h1 id="language-mapping" sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="21" sourceendlinenumber="21">Language mapping</h1>
-<p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="11">The <code>Status</code> message is the logical representation of the error model, but it
+<h1 id="language-mapping">Language mapping</h1>
+<p>The <code>Status</code> message is the logical representation of the error model, but it
 is not necessarily the actual wire format. When the <code>Status</code> message is
 exposed in different client libraries and different wire protocols, it can be
 mapped differently. For example, it will likely be mapped to some exceptions
 in Java, but more likely mapped to some error codes in C.</p>
-<h1 id="other-uses" sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="29" sourceendlinenumber="29">Other uses</h1>
-<p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="9">The error model and the <code>Status</code> message can be used in a variety of
+<h1 id="other-uses">Other uses</h1>
+<p>The error model and the <code>Status</code> message can be used in a variety of
 environments, either with or without APIs, to provide a
 consistent developer experience across different environments.</p>
-<p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="7" sourceendlinenumber="7">Example uses of this error model include:</p>
+<p>Example uses of this error model include:</p>
+<ul>
+<li><p>Partial errors. If a service needs to return partial errors to the client,
+it may embed the <code>Status</code> in the normal response to indicate the partial
+errors.</p>
 </li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="37" sourceendlinenumber="39"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="37" sourceendlinenumber="39">Partial errors. If a service needs to return partial errors to the client,
-  it may embed the <code>Status</code> in the normal response to indicate the partial
-  errors.</p>
+<li><p>Workflow errors. A typical workflow has multiple steps. Each step may
+have a <code>Status</code> message for error reporting purpose.</p>
 </li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="41" sourceendlinenumber="42"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="41" sourceendlinenumber="42">Workflow errors. A typical workflow has multiple steps. Each step may
-  have a <code>Status</code> message for error reporting purpose.</p>
+<li><p>Batch operations. If a client uses batch request and batch response, the
+<code>Status</code> message should be used directly inside batch response, one for
+each error sub-response.</p>
 </li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="44" sourceendlinenumber="46"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="44" sourceendlinenumber="46">Batch operations. If a client uses batch request and batch response, the
-  <code>Status</code> message should be used directly inside batch response, one for
-  each error sub-response.</p>
+<li><p>Asynchronous operations. If an API call embeds asynchronous operation
+results in its response, the status of those operations should be
+represented directly using the <code>Status</code> message.</p>
 </li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="48" sourceendlinenumber="50"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="48" sourceendlinenumber="50">Asynchronous operations. If an API call embeds asynchronous operation
-  results in its response, the status of those operations should be
-  represented directly using the <code>Status</code> message.</p>
-</li>
-<li sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="52" sourceendlinenumber="53"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="52" sourceendlinenumber="53">Logging. If some API errors are stored in logs, the message <code>Status</code> could
-  be used directly after any stripping needed for security/privacy reasons.</p>
+<li><p>Logging. If some API errors are stored in logs, the message <code>Status</code> could
+be used directly after any stripping needed for security/privacy reasons.</p>
 </li>
 </ul>
 </div>
@@ -141,6 +142,7 @@ consistent developer experience across different environments.</p>
               </div>
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Rpc_Status__ctor_" data-uid="Google.Rpc.Status.#ctor*"></a>
               <h4 id="Google_Rpc_Status__ctor" data-uid="Google.Rpc.Status.#ctor">Status()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -148,6 +150,7 @@ consistent developer experience across different environments.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public Status()</code></pre>
               </div>
+              <a id="Google_Rpc_Status__ctor_" data-uid="Google.Rpc.Status.#ctor*"></a>
               <h4 id="Google_Rpc_Status__ctor_Google_Rpc_Status_" data-uid="Google.Rpc.Status.#ctor(Google.Rpc.Status)">Status(Status)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -174,8 +177,9 @@ consistent developer experience across different environments.</p>
               </table>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Rpc_Status_Code_" data-uid="Google.Rpc.Status.Code*"></a>
               <h4 id="Google_Rpc_Status_Code" data-uid="Google.Rpc.Status.Code">Code</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="2" sourceendlinenumber="2"> The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].</p>
+              <div class="markdown level1 summary"><p>The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -197,9 +201,10 @@ consistent developer experience across different environments.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Rpc_Status_Details_" data-uid="Google.Rpc.Status.Details*"></a>
               <h4 id="Google_Rpc_Status_Details" data-uid="Google.Rpc.Status.Details">Details</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="2" sourceendlinenumber="3"> A list of messages that carry the error details.  There will be a
- common set of message types for APIs to use.</p>
+              <div class="markdown level1 summary"><p>A list of messages that carry the error details.  There will be a
+common set of message types for APIs to use.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -216,15 +221,16 @@ consistent developer experience across different environments.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.Collections.RepeatedField-1.html#Google_Protobuf_Collections_RepeatedField_1">RepeatedField</a>&lt;<a class="xref" href="Google.Protobuf.WellKnownTypes.Any.html#Google_Protobuf_WellKnownTypes_Any">Any</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Rpc_Status_Message_" data-uid="Google.Rpc.Status.Message*"></a>
               <h4 id="Google_Rpc_Status_Message" data-uid="Google.Rpc.Status.Message">Message</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Rpc.Status.yml" sourcestartlinenumber="2" sourceendlinenumber="4"> A developer-facing error message, which should be in English. Any
- user-facing error message should be localized and sent in the
- [google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client.</p>
+              <div class="markdown level1 summary"><p>A developer-facing error message, which should be in English. Any
+user-facing error message should be localized and sent in the
+[google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -248,6 +254,7 @@ consistent developer experience across different environments.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Rpc_Status_CalculateSize_" data-uid="Google.Rpc.Status.CalculateSize*"></a>
               <h4 id="Google_Rpc_Status_CalculateSize" data-uid="Google.Rpc.Status.CalculateSize">CalculateSize()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -271,7 +278,8 @@ consistent developer experience across different environments.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_CalculateSize">IMessage.CalculateSize()</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
+              <a id="Google_Rpc_Status_Clone_" data-uid="Google.Rpc.Status.Clone*"></a>
               <h4 id="Google_Rpc_Status_Clone" data-uid="Google.Rpc.Status.Clone">Clone()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -295,7 +303,8 @@ consistent developer experience across different environments.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IDeepCloneable-1.html#Google_Protobuf_IDeepCloneable_1_Clone">IDeepCloneable&lt;Status&gt;.Clone()</a></div>
+                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
+              <a id="Google_Rpc_Status_GetHashCode_" data-uid="Google.Rpc.Status.GetHashCode*"></a>
               <h4 id="Google_Rpc_Status_GetHashCode" data-uid="Google.Rpc.Status.GetHashCode">GetHashCode()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -320,6 +329,7 @@ consistent developer experience across different environments.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Rpc_Status_MergeFrom_" data-uid="Google.Rpc.Status.MergeFrom*"></a>
               <h4 id="Google_Rpc_Status_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Rpc.Status.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -338,14 +348,15 @@ consistent developer experience across different environments.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedInputStream.html#Google_Protobuf_CodedInputStream">CodedInputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
                     <td><em>input</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_MergeFrom_Google_Protobuf_CodedInputStream_">IMessage.MergeFrom(CodedInputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
+              <a id="Google_Rpc_Status_MergeFrom_" data-uid="Google.Rpc.Status.MergeFrom*"></a>
               <h4 id="Google_Rpc_Status_MergeFrom_Google_Rpc_Status_" data-uid="Google.Rpc.Status.MergeFrom(Google.Rpc.Status)">MergeFrom(Status)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -371,7 +382,8 @@ consistent developer experience across different environments.</p>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage-1.html#Google_Protobuf_IMessage_1_MergeFrom__0_">IMessage&lt;Status&gt;.MergeFrom(Status)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
+              <a id="Google_Rpc_Status_ToString_" data-uid="Google.Rpc.Status.ToString*"></a>
               <h4 id="Google_Rpc_Status_ToString" data-uid="Google.Rpc.Status.ToString">ToString()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -396,6 +408,7 @@ consistent developer experience across different environments.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Rpc_Status_WriteTo_" data-uid="Google.Rpc.Status.WriteTo*"></a>
               <h4 id="Google_Rpc_Status_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Rpc.Status.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
@@ -414,14 +427,14 @@ consistent developer experience across different environments.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Protobuf.CodedOutputStream.html#Google_Protobuf_CodedOutputStream">CodedOutputStream</a></td>
+                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
                     <td><em>output</em></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Protobuf.IMessage.html#Google_Protobuf_IMessage_WriteTo_Google_Protobuf_CodedOutputStream_">IMessage.WriteTo(CodedOutputStream)</a></div>
+                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           
@@ -450,7 +463,6 @@ consistent developer experience across different environments.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>

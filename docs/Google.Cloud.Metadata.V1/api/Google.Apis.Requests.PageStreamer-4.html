@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PageStreamer&lt;TResource, TRequest, TResponse, TToken&gt;
    | Google.Cloud.Metadata.V1 ">
-    <meta name="generator" content="docfx 2.5.4.0">
+    <meta name="generator" content="docfx 2.7.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -70,7 +70,7 @@
               
               <h1 id="Google_Apis_Requests_PageStreamer_4" data-uid="Google.Apis.Requests.PageStreamer`4">Class PageStreamer&lt;TResource, TRequest, TResponse, TToken&gt;
               </h1>
-              <div class="markdown level0 summary"><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="2" sourceendlinenumber="3">A page streamer is a helper to provide both synchronous and asynchronous page streaming
+              <div class="markdown level0 summary"><p>A page streamer is a helper to provide both synchronous and asynchronous page streaming
 of a listable or queryable resource.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
@@ -152,8 +152,9 @@ private static readonly snippetPageStreamer = new PageStreamer&lt;SearchResult, 
 
               <h3 id="constructors">Constructors
               </h3>
+              <a id="Google_Apis_Requests_PageStreamer_4__ctor_" data-uid="Google.Apis.Requests.PageStreamer`4.#ctor*"></a>
               <h4 id="Google_Apis_Requests_PageStreamer_4__ctor_System_Action__1__3__System_Func__2__3__System_Func__2_System_Collections_Generic_IEnumerable__0___" data-uid="Google.Apis.Requests.PageStreamer`4.#ctor(System.Action{`1,`3},System.Func{`2,`3},System.Func{`2,System.Collections.Generic.IEnumerable{`0}})">PageStreamer(Action&lt;TRequest, TToken&gt;, Func&lt;TResponse, TToken&gt;, Func&lt;TResponse, IEnumerable&lt;TResource&gt;&gt;)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Creates a paginator for later use.</p>
+              <div class="markdown level1 summary"><p>Creates a paginator for later use.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -171,23 +172,23 @@ private static readonly snippetPageStreamer = new PageStreamer&lt;SearchResult, 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Action</span>&lt;TRequest, TToken&gt;</td>
+                    <td><span class="xref">System.Action&lt;T1, T2&gt;</span>&lt;TRequest, TToken&gt;</td>
                     <td><em>requestModifier</em></td>
-                    <td><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Action to modify a request to include the specified page token.
+                    <td><p>Action to modify a request to include the specified page token.
 Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;TResponse, TToken&gt;</td>
+                    <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TResponse, TToken&gt;</td>
                     <td><em>tokenExtractor</em></td>
-                    <td><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Function to extract the next page token from a response.
+                    <td><p>Function to extract the next page token from a response.
 Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;TResponse, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TResource&gt;&gt;</td>
+                    <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;TResponse, <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TResource&gt;&gt;</td>
                     <td><em>resourceExtractor</em></td>
-                    <td><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="1" sourceendlinenumber="3">Function to extract a sequence of resources from a response.
+                    <td><p>Function to extract a sequence of resources from a response.
 Must not be null, although it can return null if it is passed a response which contains no
 resources.</p>
 </td>
@@ -196,8 +197,9 @@ resources.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Apis_Requests_PageStreamer_4_Fetch_" data-uid="Google.Apis.Requests.PageStreamer`4.Fetch*"></a>
               <h4 id="Google_Apis_Requests_PageStreamer_4_Fetch__1_" data-uid="Google.Apis.Requests.PageStreamer`4.Fetch(`1)">Fetch(TRequest)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Lazily fetches resources a page at a time.</p>
+              <div class="markdown level1 summary"><p>Lazily fetches resources a page at a time.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -217,7 +219,7 @@ resources.</p>
                   <tr>
                     <td><span class="xref">TRequest</span></td>
                     <td><em>request</em></td>
-                    <td><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="1" sourceendlinenumber="4">The initial request to send. If this contains a page token,
+                    <td><p>The initial request to send. If this contains a page token,
 that token is maintained. This will be modified with new page tokens over time, and should not
 be changed by the caller. (The caller should clone the request if they want an independent object
 to use in other calls or to modify.) Must not be null.</p>
@@ -235,14 +237,15 @@ to use in other calls or to modify.) Must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TResource&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A sequence of resources, which are fetched a page at a time. Must not be null.</p>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TResource&gt;</td>
+                    <td><p>A sequence of resources, which are fetched a page at a time. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Requests_PageStreamer_4_FetchAllAsync_" data-uid="Google.Apis.Requests.PageStreamer`4.FetchAllAsync*"></a>
               <h4 id="Google_Apis_Requests_PageStreamer_4_FetchAllAsync__1_System_Threading_CancellationToken_" data-uid="Google.Apis.Requests.PageStreamer`4.FetchAllAsync(`1,System.Threading.CancellationToken)">FetchAllAsync(TRequest, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Asynchronously (but eagerly) fetches a complete set of resources, potentially making multiple requests.</p>
+              <div class="markdown level1 summary"><p>Asynchronously (but eagerly) fetches a complete set of resources, potentially making multiple requests.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -262,7 +265,7 @@ to use in other calls or to modify.) Must not be null.</p>
                   <tr>
                     <td><span class="xref">TRequest</span></td>
                     <td><em>request</em></td>
-                    <td><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="1" sourceendlinenumber="4">The initial request to send. If this contains a page token,
+                    <td><p>The initial request to send. If this contains a page token,
 that token is maintained. This will be modified with new page tokens over time, and should not
 be changed by the caller. (The caller should clone the request if they want an independent object
 to use in other calls or to modify.) Must not be null.</p>
@@ -285,8 +288,8 @@ to use in other calls or to modify.) Must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IList</span>&lt;TResource&gt;&gt;</td>
-                    <td><p sourcefile="obj/api/Google.Apis.Requests.PageStreamer-4.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A sequence of resources, which are fetched asynchronously and a page at a time.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;TResource&gt;&gt;</td>
+                    <td><p>A sequence of resources, which are fetched asynchronously and a page at a time.</p>
 </td>
                   </tr>
                 </tbody>
@@ -319,7 +322,6 @@ to use in other calls or to modify.) Must not be null.</p>
     </div>
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
     <script type="text/javascript" src="../styles/main.js"></script>
   </body>
