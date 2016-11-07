@@ -24,6 +24,8 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 # Getting started
 
+See the [Datastore Quickstart](https://cloud.google.com/datastore/docs/quickstart) for an introduction with runnable code samples.
+
 The [DatastoreDb](obj/api/Google.Datastore.V1.DatastoreDb.yml)
 class is provided as a wrapper for
 [DatastoreClient](obj/api/Google.Datastore.V1.DatastoreClient.yml),
@@ -44,3 +46,6 @@ Inserting data:
 Querying data:
 
 [!code-cs[](obj/snippets/Google.Datastore.V1.DatastoreDb.txt#QueryOverview)]
+
+Lots more samples:
+[github.com/GoogleCloudPlatform/dotnet-docs-samples](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/tree/master/datastore/api)
