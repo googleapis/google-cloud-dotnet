@@ -39,7 +39,7 @@ namespace Google.Storage.V1
         /// <inheritdoc />
         public override IPagedAsyncEnumerable<Objects, Object> ListObjectsAsync(
             string bucket,
-            string prefix,
+            string prefix = null,
             ListObjectsOptions options = null)
         {
             ValidateBucketName(bucket);
@@ -48,7 +48,7 @@ namespace Google.Storage.V1
         }
 
         /// <inheritdoc />
-        public override IPagedEnumerable<Objects, Object> ListObjects(string bucket, string prefix, ListObjectsOptions options = null)
+        public override IPagedEnumerable<Objects, Object> ListObjects(string bucket, string prefix = null, ListObjectsOptions options = null)
         {
             ValidateBucketName(bucket);
             return new PagedEnumerable<ObjectsResource.ListRequest, Objects, Object>(

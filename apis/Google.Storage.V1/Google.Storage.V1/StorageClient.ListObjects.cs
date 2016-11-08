@@ -34,13 +34,13 @@ namespace Google.Storage.V1
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
         /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
-        /// This parameter may be null, in which case no filtering is performed.</param>
+        /// This parameter may be null or empty, in which case no filtering is performed.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of objects in the specified bucket.</returns>
         public virtual IPagedAsyncEnumerable<Objects, Object> ListObjectsAsync(
             string bucket,
-            string prefix,
+            string prefix = null,
             ListObjectsOptions options = null)
         {
             throw new NotImplementedException();
@@ -55,11 +55,11 @@ namespace Google.Storage.V1
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
         /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
-        /// This parameter may be null, in which case no filtering is performed.</param>
+        /// This parameter may be null or empty, in which case no filtering is performed.</param>
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>A sequence of objects in the specified bucket.</returns>
-        public virtual IPagedEnumerable<Objects, Object> ListObjects(string bucket, string prefix, ListObjectsOptions options = null)
+        public virtual IPagedEnumerable<Objects, Object> ListObjects(string bucket, string prefix = null, ListObjectsOptions options = null)
         {
             throw new NotImplementedException();
         }
