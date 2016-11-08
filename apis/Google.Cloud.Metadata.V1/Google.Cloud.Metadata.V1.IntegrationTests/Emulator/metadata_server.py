@@ -16,7 +16,7 @@ from collections import OrderedDict
 from flask import Flask, request
 from oauth2client import service_account
 from werkzeug.wrappers import Request
-import common, errno, getopt, json, logging, os, socket, string, sys, time
+import common, errno, getopt, hashlib, json, logging, os, socket, string, sys, time
 
 class ServerState:
   _credential_scopes = ["https://www.googleapis.com/auth/cloud-platform",
@@ -74,7 +74,7 @@ class ServerState:
           {email : make_service_account(email, self._credentials[email]) for email in self._credentials})
 
       all_data = self.prepareLoadedData(u'', loaded_data)
-      assert all_data
+      assert all_data is not None
       self.setAllData(all_data)
 
   def prepareLoadedData(self, path, data):
@@ -221,7 +221,27 @@ def excludeKeyInRecursiveGet(key):
   return key == u'token'
 
 def formatResponse(data, status_code, content_type):
+  """Creates a response tuple for the current request.
+  Args:
+    data: The content data for the response.
+    status_code: The HTTP status code for the response.
+    content_type: The content type of the response data.
+  """
   return data, status_code, {common.content_type: content_type}
+
+def formatMetadataResponse(data, data_to_hash, status_code, content_type):
+  """Creates a response tuple for the current request.
+  Args:
+    data: The content data for the response.
+    data_to_hash: The data to hash to obtain the ETag header value.
+    status_code: The HTTP status code for the response.
+    content_type: The content type of the response data.
+  """
+  md5 = hashlib.md5()
+  md5.update(data_to_hash)
+  etag = md5.hexdigest()[-16:]
+  return data, status_code, {common.content_type: content_type,
+                             common.etag: etag}
 
 class HeaderCheckMiddleware(object):
   def __init__(self, app):
@@ -567,11 +587,13 @@ def add_headers(response):
 
 @app.route('/', methods = ['GET'])
 def root():
-  return formatResponse(u'0.1/\ncomputeMetadata/\n', 200, common.content_type_text)
+  result = u'0.1/\ncomputeMetadata/\n'
+  return formatMetadataResponse(result, result, 200, common.content_type_text)
 
 @app.route('/computeMetadata/', methods = ['GET'])
 def computeMetadataRoot():
-  return formatResponse(u'v1/\nv1beta1/\n', 200, common.content_type_text)
+  result = u'v1/\nv1beta1/\n'
+  return formatMetadataResponse(result, result, 200, common.content_type_text)
 
 @app.route('/computeMetadata/v1/', methods = ['GET'])
 def getRootData():
@@ -615,10 +637,16 @@ def getData(path):
       return not_found_error
 
     is_json = (alt != 'text')
+    is_json_default = True
     is_recursive = True
   else:
-    # recursive directory requests and instance/tags default to json
-    is_json = (alt == 'json' or ((path.endswith('/tags') or (is_recursive and is_directory)) and alt != 'text'))
+    def should_be_json(alt):
+      # recursive directory requests and instance/tags default to json
+      return (alt == 'json' or ((path.endswith('/tags') or (is_recursive and is_directory)) and alt != 'text'))
+
+    is_json = should_be_json(alt)
+    is_json_default = should_be_json('')
+
     if ends_with_slash and not is_directory:
       return not_found_error
 
@@ -637,9 +665,16 @@ def getData(path):
   if error:
     return error
 
-  return formatResponse(result,
-                        200,
-                        common.content_type_json if is_json else common.content_type_text)
+  if is_json == is_json_default:
+    result_to_hash = result
+  else:
+    (result_to_hash, _) = raw_data.prepareResult(is_recursive, is_directory, is_json_default, '')
+    assert result_to_hash is not None
+
+  return formatMetadataResponse(result,
+                                result_to_hash,
+                                200,
+                                common.content_type_json if is_json else common.content_type_text)
 
 def getUpdatedData():
   result = request.form.get('data')
