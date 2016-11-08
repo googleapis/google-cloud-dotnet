@@ -16,6 +16,7 @@ using Google.Apis.Download;
 using System;
 using System.Diagnostics;
 using System.Globalization;
+using System.Net.Http.Headers;
 
 namespace Google.Cloud.Storage.V1
 {
@@ -55,11 +56,20 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public long? IfMetagenerationNotMatch { get; set; }
 
+        /// <summary>
+        /// If non-null, limits the range of bytes of the object to download.
+        /// </summary>
+        public RangeHeaderValue Range { get; set; }
+
         internal void ModifyDownloader(MediaDownloader downloader)
         {
             if (ChunkSize != null)
             {
                 downloader.ChunkSize = ChunkSize.Value;
+            }
+            if (Range != null)
+            {
+                downloader.Range = Range;
             }
         }
 
