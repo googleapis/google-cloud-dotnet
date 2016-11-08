@@ -20,7 +20,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>DeleteBucket</c> operations.
     /// </summary>
-    public class DeleteBucketOptions
+    public sealed class DeleteBucketOptions
     {
         /// <summary>
         /// Precondition for deletion: the bucket is only deleted if its

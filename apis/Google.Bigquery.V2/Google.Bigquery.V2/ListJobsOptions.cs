@@ -20,7 +20,7 @@ namespace Google.Bigquery.V2
     /// <summary>
     /// Options for <c>ListJobs</c> operations.
     /// </summary>
-    public class ListJobsOptions
+    public sealed class ListJobsOptions
     {
         /// <summary>
         /// If set, only return jobs in the specified state.

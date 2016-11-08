@@ -22,7 +22,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>GetBucket</c> operations.
     /// </summary>
-    public class GetBucketOptions
+    public sealed class GetBucketOptions
     {
         /// <summary>
         /// Precondition for retrieval: the bucket is only fetched if its

@@ -22,38 +22,38 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>DownloadObject</c> operations.
     /// </summary>
-    public class DownloadObjectOptions
+    public sealed class DownloadObjectOptions
     {
         /// <summary>
         /// The chunk size to use for each request.
         /// </summary>
-        public int? ChunkSize;
+        public int? ChunkSize { get; set; }
 
         /// <summary>
         /// The generation to download. When not specified, the latest version
         /// is always downloaded.
         /// </summary>
-        public long? Generation;
+        public long? Generation { get; set; }
 
         /// <summary>
         /// Precondition for download: the object is only downloaded if its generation matches the given value.
         /// </summary>
-        public long? IfGenerationMatch;
+        public long? IfGenerationMatch { get; set; }
 
         /// <summary>
         /// Precondition for download: the object is only downloaded if its generation does not match the given value.
         /// </summary>
-        public long? IfGenerationNotMatch;
+        public long? IfGenerationNotMatch { get; set; }
 
         /// <summary>
         /// Precondition for download: the object is only downloaded if its meta-generation matches the given value.
         /// </summary>
-        public long? IfMetagenerationMatch;
+        public long? IfMetagenerationMatch { get; set; }
 
         /// <summary>
         /// Precondition for download: the object is only downloaded if its meta-generation does not match the given value.
         /// </summary>
-        public long? IfMetagenerationNotMatch;
+        public long? IfMetagenerationNotMatch { get; set; }
 
         internal void ModifyDownloader(MediaDownloader downloader)
         {

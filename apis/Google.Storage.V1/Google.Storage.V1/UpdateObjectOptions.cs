@@ -22,7 +22,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>UpdateObject</c> operations.
     /// </summary>
-    public class UpdateObjectOptions
+    public sealed class UpdateObjectOptions
     {
         /// <summary>
         /// If present, selects a specific revision of this object (as opposed to the latest version, the default).

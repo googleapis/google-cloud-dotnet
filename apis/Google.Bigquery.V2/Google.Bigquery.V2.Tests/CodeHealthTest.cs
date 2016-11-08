@@ -12,27 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Bigquery.v2;
+using Google.Cloud.ClientTesting;
+using Xunit;
 
-namespace Google.Bigquery.V2
+namespace Google.Bigquery.V2.Tests
 {
-    /// <summary>
-    /// Options used when listing datasets. Details TBD.
-    /// </summary>
-    public sealed class ListDatasetsOptions
+    public class CodeHealthTest
     {
-        /// <summary>
-        /// The number of results to return per page. (This modifies the per-request page size;
-        /// it does not affect the total number of results returned.)
-        /// </summary>
-        public int? PageSize { get; set; }
-
-        internal void ModifyRequest(DatasetsResource.ListRequest request)
+        [Fact]
+        public void PrivateFields()
         {
-            if (PageSize != null)
-            {
-                request.MaxResults = PageSize;
-            }
+            CodeHealthTester.AssertAllFieldsPrivate(typeof(BigqueryClient));
+        }
+
+        [Fact]
+        public void SealedClasses()
+        {
+            CodeHealthTester.AssertClassesAreSealedOrAbstract(typeof(BigqueryClient));
         }
     }
 }

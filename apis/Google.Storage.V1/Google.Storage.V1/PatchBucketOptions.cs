@@ -22,24 +22,24 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>PatchBucket</c> operations.
     /// </summary>
-    public class PatchBucketOptions
+    public sealed class PatchBucketOptions
     {        
         /// <summary>
         /// Precondition for patch: the bucket is only patched if its current
         /// meta-generation matches the given value.
         /// </summary>
-        public long? IfMetagenerationMatch;
+        public long? IfMetagenerationMatch { get; set; }
 
         /// <summary>
         /// Precondition for patch: the bucket is only patched if its current
         /// meta-generation does not match the given value.
         /// </summary>
-        public long? IfMetagenerationNotMatch;
+        public long? IfMetagenerationNotMatch { get; set; }
 
         /// <summary>
         /// The projection of the updated object to return.
         /// </summary>
-        public Projection? Projection;
+        public Projection? Projection { get; set; }
 
         /// <summary>
         /// A pre-defined ACL of the bucket for simple access control scenarios.
