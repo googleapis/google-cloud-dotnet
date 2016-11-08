@@ -22,7 +22,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>PatchObject</c> operations.
     /// </summary>
-    public class PatchObjectOptions
+    public sealed class PatchObjectOptions
     {
         /// <summary>
         /// If present, selects a specific revision of this object (as opposed to the latest version, the default).
@@ -33,35 +33,35 @@ namespace Google.Storage.V1
         /// Precondition for patch: the object is only patched if the existing object's
         /// generation matches the given value.
         /// </summary>
-        public long? IfGenerationMatch;
+        public long? IfGenerationMatch { get; set; }
 
         /// <summary>
         /// Precondition for patch: the object is only patched if the existing object's
         /// generation does not match the given value.
         /// </summary>
-        public long? IfGenerationNotMatch;
+        public long? IfGenerationNotMatch { get; set; }
 
         /// <summary>
         /// Precondition for patch: the object is only patched if the existing object's
         /// meta-generation matches the given value.
         /// </summary>
-        public long? IfMetagenerationMatch;
+        public long? IfMetagenerationMatch { get; set; }
 
         /// <summary>
         /// Precondition for patch: the object is only patched if the existing object's
         /// meta-generation does not match the given value.
         /// </summary>
-        public long? IfMetagenerationNotMatch;
+        public long? IfMetagenerationNotMatch { get; set; }
 
         /// <summary>
         /// The projection of the updated object to return.
         /// </summary>
-        public Projection? Projection;
+        public Projection? Projection { get; set; }
 
         /// <summary>
         /// A pre-defined ACL for simple access control scenarios.
         /// </summary>
-        public PredefinedObjectAcl? PredefinedAcl;
+        public PredefinedObjectAcl? PredefinedAcl { get; set; }
 
         internal void ModifyRequest(PatchRequest request)
         {

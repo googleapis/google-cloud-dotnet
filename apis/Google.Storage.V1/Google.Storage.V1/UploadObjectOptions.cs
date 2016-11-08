@@ -25,7 +25,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>UploadObject</c> operations.
     /// </summary>
-    public class UploadObjectOptions
+    public sealed class UploadObjectOptions
     {
         /// <summary>
         /// The minimum chunk size for uploading.

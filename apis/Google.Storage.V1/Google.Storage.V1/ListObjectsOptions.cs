@@ -21,7 +21,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>ListObjects</c> operations.
     /// </summary>
-    public class ListObjectsOptions
+    public sealed class ListObjectsOptions
     {
         // TODO: We can't currently return both objects *and* prefixes. Should we have a separate ListPrefixes method?
         // Something more complex? It's unclear how common this is.

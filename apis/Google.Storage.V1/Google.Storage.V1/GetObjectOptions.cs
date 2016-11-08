@@ -22,7 +22,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>GetObject</c> operations.
     /// </summary>
-    public class GetObjectOptions
+    public sealed class GetObjectOptions
     {
         /// <summary>
         /// The generation of the object resource to fetch. When not

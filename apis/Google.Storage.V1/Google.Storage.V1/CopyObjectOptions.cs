@@ -22,7 +22,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>CopyObject</c> operations.
     /// </summary>
-    public class CopyObjectOptions
+    public sealed class CopyObjectOptions
     {
         // TODO: maxBytesRewrittenPerCall? Specific to rewrite...
 

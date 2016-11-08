@@ -20,7 +20,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>DeleteObject</c> operations.
     /// </summary>
-    public class DeleteObjectOptions
+    public sealed class DeleteObjectOptions
     {
         /// <summary>
         /// The generation to delete. If this is not specified, the latest

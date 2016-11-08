@@ -21,7 +21,7 @@ namespace Google.Storage.V1
     /// <summary>
     /// Options for <c>ListBuckets</c> operations.
     /// </summary>
-    public class ListBucketsOptions
+    public sealed class ListBucketsOptions
     {
         /// <summary>
         /// The prefix to match. Only buckets with names that start with this string will be returned.

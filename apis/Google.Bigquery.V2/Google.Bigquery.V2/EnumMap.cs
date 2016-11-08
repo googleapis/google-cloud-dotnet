@@ -21,7 +21,7 @@ using System.Reflection;
 namespace Google.Bigquery.V2
 {
     [AttributeUsage(AttributeTargets.Field)]
-    internal class ApiValueAttribute : Attribute
+    internal sealed class ApiValueAttribute : Attribute
     {
         public string Value { get; set; }
 

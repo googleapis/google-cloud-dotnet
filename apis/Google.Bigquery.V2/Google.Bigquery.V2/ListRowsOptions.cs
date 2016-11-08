@@ -19,7 +19,7 @@ namespace Google.Bigquery.V2
     /// <summary>
     /// Options for <c>ListRows</c> operations.
     /// </summary>
-    public class ListRowsOptions
+    public sealed class ListRowsOptions
     {
         /// <summary>
         /// The number of results to return per page. (This modifies the per-request page size;

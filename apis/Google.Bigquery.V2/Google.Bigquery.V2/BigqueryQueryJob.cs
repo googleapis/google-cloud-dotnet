@@ -27,7 +27,7 @@ namespace Google.Bigquery.V2
     /// <summary>
     /// A job known to be running a query. The job may not have completed yet.
     /// </summary>
-    public class BigqueryQueryJob
+    public sealed class BigqueryQueryJob
     {
         private readonly GetQueryResultsResponse _response;
         private readonly BigqueryClient _client;
@@ -254,7 +254,7 @@ namespace Google.Bigquery.V2
                 TotalRows = response.TotalRows
             };
 
-        private class AsyncRowEnumerable : IAsyncEnumerable<BigqueryRow>
+        private sealed class AsyncRowEnumerable : IAsyncEnumerable<BigqueryRow>
         {
             private readonly BigqueryQueryJob _job;
 
@@ -269,7 +269,7 @@ namespace Google.Bigquery.V2
             }
         }
 
-        private class AsyncRowEnumerator : IAsyncEnumerator<BigqueryRow>
+        private sealed class AsyncRowEnumerator : IAsyncEnumerator<BigqueryRow>
         {
             private readonly BigqueryQueryJob _job;
             private readonly GetQueryResultsOptions _options;
