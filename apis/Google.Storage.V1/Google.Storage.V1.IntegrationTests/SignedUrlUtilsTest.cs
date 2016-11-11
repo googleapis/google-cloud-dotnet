@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Json;
 using System;
 using System.IO;
 using System.Linq;
@@ -27,113 +25,142 @@ using Xunit;
 
 namespace Google.Storage.V1.IntegrationTests
 {
+    using System.Runtime.CompilerServices;
     using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
     public class SignedUrlUtilsTest
     {
-        private readonly string _credentialsFilePath = GetCredentialsFilePath();
-        private readonly TimeSpan _duration = TimeSpan.FromSeconds(5);
+        private static readonly TimeSpan _duration = TimeSpan.FromSeconds(5);
         private readonly StorageFixture _fixture;
-        private readonly HttpClient _httpClient = new HttpClient();
 
         public SignedUrlUtilsTest(StorageFixture fixture)
         {
             _fixture = fixture;
+            _fixture.RegisterDelayTests(this);
+        }
+
+        private static string GetTestName([CallerMemberName] string methodName = null)
+        {
+            return nameof(SignedUrlUtilsTest) + methodName;
         }
 
         [Fact]
-        public async void DeleteTest()
+        public async Task DeleteTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void DeleteTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
             var name = GenerateName();
+            string url = null;
 
-            var url = SignedUrlUtils.Create(
-                bucket,
-                name,
-                _credentialsFilePath,
-                _duration,
-                HttpMethod.Delete);
+            _fixture.RegisterDelayTest(GetTestName(nameof(DeleteTest)), _duration,
+                beforeDelay: async duration =>
+                {
+                    url = SignedUrlUtils.Create(
+                        bucket,
+                        name,
+                        _fixture.CredentialsFilePath,
+                        duration,
+                        HttpMethod.Delete);
 
-            // Upload an object which can be deleted with the URL.
-            await _fixture.Client.UploadObjectAsync(bucket, name, "", new MemoryStream(_fixture.SmallContent));
+                    // Upload an object which can be deleted with the URL.
+                    await _fixture.Client.UploadObjectAsync(bucket, name, "", new MemoryStream(_fixture.SmallContent));
 
-            // Verify that the URL works initially.
-            var response = await _httpClient.DeleteAsync(url);
-            Assert.True(response.IsSuccessStatusCode);
-            var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
-            Assert.Null(obj);
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.DeleteAsync(url);
+                    Assert.True(response.IsSuccessStatusCode);
+                    var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    Assert.Null(obj);
 
-            // Restore the object and wait until the URL expires. 
-            await _fixture.Client.UploadObjectAsync(bucket, name, "", new MemoryStream(_fixture.SmallContent));
-            await Task.Delay(_duration);
+                    // Restore the object. 
+                    await _fixture.Client.UploadObjectAsync(bucket, name, "", new MemoryStream(_fixture.SmallContent));
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var response = await _fixture.HttpClient.DeleteAsync(url);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                    var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    Assert.NotNull(obj);
 
-            // Verify that the URL no longer works.
-            response = await _httpClient.DeleteAsync(url);
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-            obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
-            Assert.NotNull(obj);
-
-            // Cleanup
-            await _fixture.Client.DeleteObjectAsync(bucket, name);
+                    // Cleanup
+                    await _fixture.Client.DeleteObjectAsync(bucket, name);
+                });
         }
 
         [Fact]
-        public async void GetTest()
+        public async Task GetTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void GetTest_InitDelayTest()
         {
-            var url = SignedUrlUtils.Create(
-                _fixture.ReadBucket,
-                _fixture.SmallObject,
-                _credentialsFilePath,
-                _duration);
+            string url = null;
 
-            // Verify that the URL works initially.
-            var response = await _httpClient.GetAsync(url);
-            var result = await response.Content.ReadAsByteArrayAsync();
-            Assert.Equal(_fixture.SmallContent, result);
+            _fixture.RegisterDelayTest(GetTestName(nameof(GetTest)), _duration,
+                beforeDelay: async duration =>
+                {
+                    url = SignedUrlUtils.Create(
+                        _fixture.ReadBucket,
+                        _fixture.SmallObject,
+                        _fixture.CredentialsFilePath,
+                        duration);
 
-            // Wait until the URL expires.
-            await Task.Delay(_duration);
-
-            // Verify that the URL no longer works.
-            response = await _httpClient.GetAsync(url);
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.GetAsync(url);
+                    var result = await response.Content.ReadAsByteArrayAsync();
+                    Assert.Equal(_fixture.SmallContent, result);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var response = await _fixture.HttpClient.GetAsync(url);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                });
         }
 
         [Fact]
-        public async void GetBucketTest()
+        public async Task GetBucketTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void GetBucketTest_InitDelayTest()
         {
             var bucket = _fixture.ReadBucket;
+            string url = null;
 
-            var url = SignedUrlUtils.Create(
-                bucket,
-                null,
-                _credentialsFilePath,
-                _duration);
+            _fixture.RegisterDelayTest(GetTestName(nameof(GetBucketTest)), _duration,
+                beforeDelay: async duration =>
+                {
+                    url = SignedUrlUtils.Create(
+                        bucket,
+                        null,
+                        _fixture.CredentialsFilePath,
+                        duration);
 
-            // Verify that the URL works initially.
-            var response = await _httpClient.GetAsync(url);
-            var result = await response.Content.ReadAsStringAsync();
-            var document = XDocument.Parse(result);
-            var ns = document.Root.GetDefaultNamespace();
-            var keys = document.Root.Elements(ns + "Contents").Select(contents => contents.Element(ns + "Key").Value).ToList();
-            var objectNames = await _fixture.Client.ListObjectsAsync(bucket, null).Select(o => o.Name).ToList();
-            Assert.Equal(objectNames, keys);
-
-            // Wait until the URL expires.
-            await Task.Delay(_duration);
-
-            // Verify that the URL no longer works.
-            response = await _httpClient.GetAsync(url);
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.GetAsync(url);
+                    var result = await response.Content.ReadAsStringAsync();
+                    var document = XDocument.Parse(result);
+                    var ns = document.Root.GetDefaultNamespace();
+                    var keys = document.Root.Elements(ns + "Contents").Select(contents => contents.Element(ns + "Key").Value).ToList();
+                    var objectNames = await _fixture.Client.ListObjectsAsync(bucket, null).Select(o => o.Name).ToList();
+                    Assert.Equal(objectNames, keys);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var response = await _fixture.HttpClient.GetAsync(url);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                });
         }
 
         [Fact]
-        public async void GetWithCustomerSuppliedEncryptionKeysTest()
+        public async Task GetWithCustomerSuppliedEncryptionKeysTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void GetWithCustomerSuppliedEncryptionKeysTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
             var name = GenerateName();
             var data = _fixture.SmallContent;
+            string url = null;
 
             string key;
             string hash;
@@ -145,30 +172,6 @@ namespace Google.Storage.V1.IntegrationTests
                 key = Convert.ToBase64String(keyBytes);
                 hash = Convert.ToBase64String(sha256.ComputeHash(keyBytes));
             }
-
-            // TODO: Replace this with calls to the StorageClient if/when it supports customer-supplied encryption keys.
-            var putRequest = new HttpRequestMessage()
-            {
-                Content = new ByteArrayContent(data),
-                Method = HttpMethod.Put,
-                Headers = {
-                    { "x-goog-encryption-algorithm", "AES256" },
-                    { "x-goog-encryption-key", key },
-                    { "x-goog-encryption-key-sha256", hash }
-                }
-            };
-            putRequest.RequestUri = new Uri(SignedUrlUtils.Create(
-                bucket,
-                name,
-                _credentialsFilePath,
-                expiration: null,
-                request: putRequest));
-            var response = await _httpClient.SendAsync(putRequest);
-            Assert.True(response.IsSuccessStatusCode);
-
-            // Make sure the encryption succeeded.
-            await Assert.ThrowsAsync<GoogleApiException>(
-                () => _fixture.Client.DownloadObjectAsync(bucket, name, new MemoryStream()));
             
             Func<HttpRequestMessage> createGetRequest = () => new HttpRequestMessage()
             {
@@ -179,51 +182,84 @@ namespace Google.Storage.V1.IntegrationTests
                     { "x-goog-encryption-key-sha256", hash }
                 }
             };
-            var request = createGetRequest();
-            var url = SignedUrlUtils.Create(
-                bucket,
-                name,
-                _credentialsFilePath,
-                _duration,
-                request);
-            request.RequestUri = new Uri(url);
 
-            // Verify that the URL works initially.
-            response = await _httpClient.SendAsync(request);
-            var result = await response.Content.ReadAsByteArrayAsync();
-            Assert.Equal(data, result);
+            _fixture.RegisterDelayTest(GetTestName(nameof(GetWithCustomerSuppliedEncryptionKeysTest)), _duration,
+                beforeDelay: async duration =>
+                {
+                    // TODO: Replace this with calls to the StorageClient if/when it supports customer-supplied encryption keys.
+                    var putRequest = new HttpRequestMessage()
+                    {
+                        Content = new ByteArrayContent(data),
+                        Method = HttpMethod.Put,
+                        Headers = {
+                            { "x-goog-encryption-algorithm", "AES256" },
+                            { "x-goog-encryption-key", key },
+                            { "x-goog-encryption-key-sha256", hash }
+                        }
+                    };
 
-            // Wait until the URL expires.
-            await Task.Delay(_duration);
+                    putRequest.RequestUri = new Uri(SignedUrlUtils.Create(
+                        bucket,
+                        name,
+                        _fixture.CredentialsFilePath,
+                        expiration: null,
+                        request: putRequest));
+                    var response = await _fixture.HttpClient.SendAsync(putRequest);
+                    Assert.True(response.IsSuccessStatusCode);
 
-            // Verify that the URL no longer works.
-            request = createGetRequest();
-            request.RequestUri = new Uri(url);
-            response = await _httpClient.SendAsync(request);
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                    // Make sure the encryption succeeded.
+                    await Assert.ThrowsAsync<GoogleApiException>(
+                        () => _fixture.Client.DownloadObjectAsync(bucket, name, new MemoryStream()));
 
-            // Cleanup
-            await _fixture.Client.DeleteObjectAsync(bucket, name);
+                    var request = createGetRequest();
+                    url = SignedUrlUtils.Create(
+                        bucket,
+                        name,
+                        _fixture.CredentialsFilePath,
+                        duration,
+                        request);
+                    request.RequestUri = new Uri(url);
+
+                    // Verify that the URL works initially.
+                    response = await _fixture.HttpClient.SendAsync(request);
+                    var result = await response.Content.ReadAsByteArrayAsync();
+                    Assert.Equal(data, result);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var request = createGetRequest();
+                    request.RequestUri = new Uri(url);
+                    var response = await _fixture.HttpClient.SendAsync(request);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+
+                    // Cleanup
+                    await _fixture.Client.DeleteObjectAsync(bucket, name);
+                });
         }
 
         [Fact]
-        public async void GetNoExpirationTest()
+        public async Task GetNoExpirationTest()
         {
             var url = SignedUrlUtils.Create(
                 _fixture.ReadBucket,
                 _fixture.SmallObject,
-                _credentialsFilePath,
+                _fixture.CredentialsFilePath,
                 expiration: null);
 
             // Verify that the URL works.
-            var response = await _httpClient.GetAsync(url);
+            var response = await _fixture.HttpClient.GetAsync(url);
             var result = await response.Content.ReadAsByteArrayAsync();
             Assert.Equal(_fixture.SmallContent, result);
         }
 
         [Fact]
-        public async void GetWithCustomHeadersTest()
+        public async Task GetWithCustomHeadersTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void GetWithCustomHeadersTest_InitDelayTest()
         {
+            string url = null;
+
             Func<HttpRequestMessage> createRequest = () => new HttpRequestMessage()
             {
                 Method = HttpMethod.Get,
@@ -233,94 +269,124 @@ namespace Google.Storage.V1.IntegrationTests
                     { "x-goog-foo", new [] { "A B  C", "def" } }
                 }
             };
-            var request = createRequest();
-            var url = SignedUrlUtils.Create(
-                _fixture.ReadBucket,
-                _fixture.SmallObject,
-                _credentialsFilePath,
-                _duration,
-                request);
-            request.RequestUri = new Uri(url);
 
-            // Verify that the URL works initially.
-            var response = await _httpClient.SendAsync(request);
-            var result = await response.Content.ReadAsByteArrayAsync();
-            Assert.Equal(_fixture.SmallContent, result);
+            _fixture.RegisterDelayTest(GetTestName(nameof(GetWithCustomHeadersTest)), _duration,
+                beforeDelay: async duration =>
+                {
+                    var request = createRequest();
+                    url = SignedUrlUtils.Create(
+                        _fixture.ReadBucket,
+                        _fixture.SmallObject,
+                        _fixture.CredentialsFilePath,
+                        duration,
+                        request);
+                    request.RequestUri = new Uri(url);
 
-            // Wait until the URL expires.
-            await Task.Delay(_duration);
-
-            // Verify that the URL no longer works.
-            request = createRequest();
-            request.RequestUri = new Uri(url);
-            response = await _httpClient.SendAsync(request);
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.SendAsync(request);
+                    var result = await response.Content.ReadAsByteArrayAsync();
+                    Assert.Equal(_fixture.SmallContent, result);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var request = createRequest();
+                    request.RequestUri = new Uri(url);
+                    var response = await _fixture.HttpClient.SendAsync(request);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                });
         }
 
         [Fact]
-        public async void HeadTest()
+        public async Task HeadTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void HeadTest_InitDelayTest()
         {
-            var url = SignedUrlUtils.Create(
-                _fixture.ReadBucket,
-                _fixture.SmallObject,
-                _credentialsFilePath,
-                _duration,
-                HttpMethod.Head);
-            Func<HttpRequestMessage> createRequest = () => new HttpRequestMessage(HttpMethod.Head, url);
+            Func<HttpRequestMessage> createRequest = null;
+            string url = null;
 
-            // Verify that the URL works initially.
-            var response = await _httpClient.SendAsync(createRequest());
-            Assert.True(response.IsSuccessStatusCode);
+            _fixture.RegisterDelayTest(GetTestName(nameof(HeadTest)), _duration,
+                beforeDelay: async duration =>
+                {
+                    url = SignedUrlUtils.Create(
+                        _fixture.ReadBucket,
+                        _fixture.SmallObject,
+                        _fixture.CredentialsFilePath,
+                        duration,
+                        HttpMethod.Head);
+                    createRequest = () => new HttpRequestMessage(HttpMethod.Head, url);
 
-            // Wait until the URL expires.
-            await Task.Delay(_duration);
-
-            // Verify that the URL no longer works.
-            response = await _httpClient.SendAsync(createRequest());
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.SendAsync(createRequest());
+                    Assert.True(response.IsSuccessStatusCode);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var response = await _fixture.HttpClient.SendAsync(createRequest());
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                });
         }
 
         [Fact]
-        public async void HeadWithGetMethodSignedURLTest()
+        public async Task HeadWithGetMethodSignedURLTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void HeadWithGetMethodSignedURLTest_InitDelayTest()
         {
-            var url = SignedUrlUtils.Create(
-                _fixture.ReadBucket,
-                _fixture.SmallObject,
-                _credentialsFilePath,
-                _duration,
-                HttpMethod.Get);
-            Func<HttpRequestMessage> createRequest = () => new HttpRequestMessage(HttpMethod.Head, url);
+            Func<HttpRequestMessage> createRequest = null;
+            string url = null;
 
-            // Verify that the URL works initially.
-            var response = await _httpClient.SendAsync(createRequest());
-            Assert.True(response.IsSuccessStatusCode);
+            _fixture.RegisterDelayTest(GetTestName(nameof(HeadWithGetMethodSignedURLTest)), _duration,
+                beforeDelay: async duration =>
+                {
+                    url = SignedUrlUtils.Create(
+                        _fixture.ReadBucket,
+                        _fixture.SmallObject,
+                        _fixture.CredentialsFilePath,
+                        duration,
+                        HttpMethod.Get);
+                    createRequest = () => new HttpRequestMessage(HttpMethod.Head, url);
 
-            // Wait until the URL expires.
-            await Task.Delay(_duration);
-
-            // Verify that the URL no longer works.
-            response = await _httpClient.SendAsync(createRequest());
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.SendAsync(createRequest());
+                    Assert.True(response.IsSuccessStatusCode);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var response = await _fixture.HttpClient.SendAsync(createRequest());
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                });
         }
 
         [Fact]
-        public async void PutTest()
+        public async Task PutTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void PutTest_InitDelayTest()
         {
-            var expireAction1 = await PutTestHelper(useContentMD5: false, useContentType: false);
-            var expireAction2 = await PutTestHelper(useContentMD5: true, useContentType: false);
-            var expireAction3 = await PutTestHelper(useContentMD5: false, useContentType: true);
-            var expireAction4 = await PutTestHelper(useContentMD5: true, useContentType: true);
+            Func<Task> expireAction1 = null;
+            Func<Task> expireAction2 = null;
+            Func<Task> expireAction3 = null;
+            Func<Task> expireAction4 = null;
 
-            // Wait for all URLs to expire.
-            await Task.Delay(_duration);
-
-            await expireAction1();
-            await expireAction2();
-            await expireAction3();
-            await expireAction4();
+            _fixture.RegisterDelayTest(GetTestName(nameof(PutTest)), _duration,
+                beforeDelay: async duration =>
+                {
+                    expireAction1 = await PutTestHelper(duration, useContentMD5: false, useContentType: false);
+                    expireAction2 = await PutTestHelper(duration, useContentMD5: true, useContentType: false);
+                    expireAction3 = await PutTestHelper(duration, useContentMD5: false, useContentType: true);
+                    expireAction4 = await PutTestHelper(duration, useContentMD5: true, useContentType: true);
+                },
+                afterDelay: async () =>
+                {
+                    await expireAction1();
+                    await expireAction2();
+                    await expireAction3();
+                    await expireAction4();
+                });
         }
 
-        private async Task<Func<Task>> PutTestHelper(bool useContentMD5, bool useContentType)
+        private async Task<Func<Task>> PutTestHelper(TimeSpan duration, bool useContentMD5, bool useContentType)
         {
             var bucket = _fixture.SingleVersionBucket;
             var name = GenerateName();
@@ -346,13 +412,13 @@ namespace Google.Storage.V1.IntegrationTests
             var url = SignedUrlUtils.Create(
                 bucket,
                 name,
-                _credentialsFilePath,
-                _duration,
+                _fixture.CredentialsFilePath,
+                duration,
                 HttpMethod.Put,
                 contentHeaders: content.Headers.ToDictionary(h => h.Key, h => h.Value));
 
             // Verify that the URL works initially.
-            var response = await _httpClient.PutAsync(url, content);
+            var response = await _fixture.HttpClient.PutAsync(url, content);
             Assert.True(response.IsSuccessStatusCode);
             var result = new MemoryStream();
             await _fixture.Client.DownloadObjectAsync(bucket, name, result);
@@ -365,7 +431,7 @@ namespace Google.Storage.V1.IntegrationTests
             {
                 // Verify that the URL no longer works.
                 content = createPutContent();
-                response = await _httpClient.PutAsync(url, content);
+                response = await _fixture.HttpClient.PutAsync(url, content);
                 Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
                 var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
                 Assert.Null(obj);
@@ -373,11 +439,14 @@ namespace Google.Storage.V1.IntegrationTests
         }
 
         [Fact]
-        public async void PutWithCustomHeadersTest()
+        public async Task PutWithCustomHeadersTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void PutWithCustomHeadersTest_InitDelayTest()
         {
             var bucket = _fixture.SingleVersionBucket;
             var name = GenerateName();
             var data = _fixture.SmallContent;
+            string url = null;
 
             Func<HttpRequestMessage> createRequest = () =>
             {
@@ -404,96 +473,39 @@ namespace Google.Storage.V1.IntegrationTests
                     };
                 }
             };
-            var request = createRequest();
-            var url = SignedUrlUtils.Create(
-                bucket,
-                name,
-                _credentialsFilePath,
-                _duration,
-                request);
-            request.RequestUri = new Uri(url);
 
-            // Verify that the URL works initially.
-            var response = await _httpClient.SendAsync(request);
-            Assert.True(response.IsSuccessStatusCode);
-            var result = new MemoryStream();
-            await _fixture.Client.DownloadObjectAsync(bucket, name, result);
-            Assert.Equal(result.ToArray(), _fixture.SmallContent);
-
-            // Reset the state and wait until the URL expires.
-            await _fixture.Client.DeleteObjectAsync(bucket, name);
-            await Task.Delay(_duration);
-
-            // Verify that the URL no longer works.
-            request = createRequest();
-            request.RequestUri = new Uri(url);
-            response = await _httpClient.SendAsync(request);
-            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-            var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
-            Assert.Null(obj);
-        }
-
-        private static string GetCredentialsFilePath()
-        {
-            // TODO: This is taken and changed slightly from DefaultCredentialProvider. Expose the pieces necessary so we don't need to duplicate logic.
-            var credentialFilePath = Environment.GetEnvironmentVariable(CredentialEnvironmentVariable) ?? GetWellKnownCredentialFilePath();
-            if (!string.IsNullOrEmpty(credentialFilePath) && File.Exists(credentialFilePath))
-            {
-                try
+            _fixture.RegisterDelayTest(GetTestName(nameof(PutWithCustomHeadersTest)), _duration,
+                beforeDelay: async duration =>
                 {
-                    using (var credentialStream = File.OpenRead(credentialFilePath))
-                    {
-                        var credentialParameters = NewtonsoftJsonSerializer.Instance.Deserialize<JsonCredentialParameters>(credentialStream);
-                        if (credentialParameters.Type == JsonCredentialParameters.ServiceAccountCredentialType)
-                        {
-                            return credentialFilePath;
-                        }
-                    }
-                }
-                catch (Exception e)
+                    var request = createRequest();
+                    url = SignedUrlUtils.Create(
+                        bucket,
+                        name,
+                        _fixture.CredentialsFilePath,
+                        duration,
+                        request);
+                    request.RequestUri = new Uri(url);
+
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.SendAsync(request);
+                    Assert.True(response.IsSuccessStatusCode);
+                    var result = new MemoryStream();
+                    await _fixture.Client.DownloadObjectAsync(bucket, name, result);
+                    Assert.Equal(result.ToArray(), _fixture.SmallContent);
+
+                    // Reset the state.
+                    await _fixture.Client.DeleteObjectAsync(bucket, name);
+                },
+                afterDelay: async () =>
                 {
-                    throw new InvalidOperationException("Error deserializing JSON credential data.", e);
-                }
-            }
-
-            throw new InvalidOperationException($"Set the {CredentialEnvironmentVariable} environment variable to a service account credentials JSON file");
-        }
-
-        // TODO: Everything below is taking from DefaultCredentialProvider. Try to expose it somehow to we don't need to duplicate logic.
-
-        /// <summary>
-        /// Environment variable override which stores the default application credentials file path.
-        /// </summary>
-        private const string CredentialEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
-
-        /// <summary>Well known file which stores the default application credentials.</summary>
-        private const string WellKnownCredentialsFile = "application_default_credentials.json";
-
-        /// <summary>Environment variable which contains the Application Data settings.</summary>
-        private const string AppdataEnvironmentVariable = "APPDATA";
-
-        /// <summary>Environment variable which contains the location of home directory on UNIX systems.</summary>
-        private const string HomeEnvironmentVariable = "HOME";
-
-        /// <summary>GCloud configuration directory in Windows, relative to %APPDATA%.</summary>
-        private const string CloudSDKConfigDirectoryWindows = "gcloud";
-
-        /// <summary>GCloud configuration directory on Linux/Mac, relative to $HOME.</summary>
-        private static readonly string CloudSDKConfigDirectoryUnix = Path.Combine(".config", "gcloud");
-
-        private static string GetWellKnownCredentialFilePath()
-        {
-            var appData = Environment.GetEnvironmentVariable(AppdataEnvironmentVariable);
-            if (appData != null)
-            {
-                return Path.Combine(appData, CloudSDKConfigDirectoryWindows, WellKnownCredentialsFile);
-            }
-            var unixHome = Environment.GetEnvironmentVariable(HomeEnvironmentVariable);
-            if (unixHome != null)
-            {
-                return Path.Combine(unixHome, CloudSDKConfigDirectoryUnix, WellKnownCredentialsFile);
-            }
-            return Path.Combine(CloudSDKConfigDirectoryWindows, WellKnownCredentialsFile);
+                    // Verify that the URL no longer works.
+                    var request = createRequest();
+                    request.RequestUri = new Uri(url);
+                    var response = await _fixture.HttpClient.SendAsync(request);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                    var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    Assert.Null(obj);
+                });
         }
     }
 }
