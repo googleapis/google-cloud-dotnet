@@ -131,6 +131,28 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
         {
             var client = MetadataClient.Create();
 
+            var task = Task.Run(async () =>
+            {
+                await Task.Delay(TimeSpan.FromSeconds(1));
+                await _fixture.UpdateMetadata("instance/attributes/my_instance_key1", "foo");
+                await _fixture.UpdateMetadata("instance/attributes/my_instance_key1", "my_instance_value1");
+            });
+            try
+            {
+                var result = client.WaitForChange("instance/attributes");
+                Assert.Equal(result, "{\"my_instance_key1\":\"foo\"}");
+            }
+            finally
+            {
+                task.Wait();
+            }
+        }
+
+        [Fact]
+        public void WaitForChangeTimeout()
+        {
+            var client = MetadataClient.Create();
+
             // Wait for change on a value key
             var sw = Stopwatch.StartNew();
             var result = client.WaitForChange("instance/tags", TimeSpan.FromSeconds(7));
