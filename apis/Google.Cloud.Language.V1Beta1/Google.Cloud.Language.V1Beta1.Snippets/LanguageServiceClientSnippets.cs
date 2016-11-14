@@ -37,7 +37,7 @@ namespace Google.Cloud.Language.V1Beta1.Snippets
             }
             // End sample
 
-            Assert.Equal(1, response.Entities.Count);
+            Assert.Equal(3, response.Entities.Count);
             Assert.Equal("Richard of York", response.Entities[0].Name);
         }
 
@@ -86,7 +86,7 @@ namespace Google.Cloud.Language.V1Beta1.Snippets
             Assert.Equal(Tag.Noun, response.Tokens[0].PartOfSpeech.Tag);
             Assert.Equal(".", response.Tokens[7].Text.Content);
             Assert.Equal(Tag.Punct, response.Tokens[7].PartOfSpeech.Tag);
-            Assert.Equal(1, response.Entities.Count);
+            Assert.Equal(3, response.Entities.Count);
             Assert.Equal("Richard of York", response.Entities[0].Name);
         }
     }
