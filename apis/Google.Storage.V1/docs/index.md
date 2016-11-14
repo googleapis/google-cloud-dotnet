@@ -42,8 +42,8 @@ a Google account.
 For example, Signed URLs can be created to provide read-only access to
 existing objects:
 
-[!code-cs[](obj/snippets/Google.Storage.V1.SignedUrlUtils.txt#SignedURLGet)]
+[!code-cs[](obj/snippets/Google.Storage.V1.UrlSigner.txt#SignedURLGet)]
 
 Or write-only access to put specific object content into a bucket:
 
-[!code-cs[](obj/snippets/Google.Storage.V1.SignedUrlUtils.txt#SignedURLPut)]
+[!code-cs[](obj/snippets/Google.Storage.V1.UrlSigner.txt#SignedURLPut)]

@@ -28,13 +28,11 @@ using Xunit;
 namespace Google.Storage.V1.Snippets
 {
     [Collection(nameof(StorageSnippetFixture))]
-    public class SignedUrlUtilsSnippets
+    public class UrlSignerSnippets
     {
-        private readonly string credentialsFilePath = GetCredentialsFilePath();
         private readonly StorageSnippetFixture _fixture;
-        private readonly HttpClient httpClient = new HttpClient();
 
-        public SignedUrlUtilsSnippets(StorageSnippetFixture fixture)
+        public UrlSignerSnippets(StorageSnippetFixture fixture)
         {
             _fixture = fixture;
         }
@@ -44,13 +42,15 @@ namespace Google.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
             var objectName = _fixture.HelloStorageObjectName;
+            var credentialsFilePath = GetCredentialsFilePath();
+            var httpClient = new HttpClient();
 
             // Sample: SignedURLGet
             // Create a signed URL which can be used to get a specific object for one hour.
-            string url = SignedUrlUtils.Create(
+            UrlSigner urlSigner = UrlSigner.FromServiceAccountPath(credentialsFilePath);
+            string url = urlSigner.Sign(
                 bucketName,
                 objectName,
-                credentialsFilePath,
                 TimeSpan.FromHours(1),
                 HttpMethod.Get);
 
@@ -66,14 +66,16 @@ namespace Google.Storage.V1.Snippets
         public async void SignedURLPut()
         {
             var bucketName = _fixture.BucketName;
+            var credentialsFilePath = GetCredentialsFilePath();
+            var httpClient = new HttpClient();
 
             // Sample: SignedURLPut
             // Create a signed URL which allows the requester to PUT data with the text/plain content-type.
+            UrlSigner urlSigner = UrlSigner.FromServiceAccountPath(credentialsFilePath);
             var destination = "places/world.txt";
-            string url = SignedUrlUtils.Create(
+            string url = urlSigner.Sign(
                 bucketName,
                 destination,
-                credentialsFilePath,
                 TimeSpan.FromHours(1),
                 HttpMethod.Put,
                 contentHeaders: new Dictionary<string, IEnumerable<string>> {

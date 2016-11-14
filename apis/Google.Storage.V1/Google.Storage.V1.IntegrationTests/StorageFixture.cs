@@ -97,9 +97,9 @@ namespace Google.Storage.V1.IntegrationTests
         public HttpClient HttpClient { get; } = new HttpClient();
 
         /// <summary>
-        /// Gets the path to a service account credentials JSON file.
+        /// Gets a <see cref="UrlSigner"/> instance which can be used for testing.
         /// </summary>
-        public string CredentialsFilePath { get; } = GetCredentialsFilePath();
+        public UrlSigner UrlSigner { get; } = UrlSigner.FromServiceAccountPath(GetCredentialsFilePath());
 
         public IEnumerable<string> ReadBucketObjects => new[] { SmallObject, LargeObject, SmallThenLargeObject }.Concat(s_objectsInFolders);
 
