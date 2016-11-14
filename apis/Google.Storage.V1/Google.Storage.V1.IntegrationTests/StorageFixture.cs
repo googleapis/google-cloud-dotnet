@@ -11,12 +11,20 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Json;
 using Google.Apis.Storage.v1.Data;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Reflection;
+using System.Runtime.ExceptionServices;
 using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Storage.V1.IntegrationTests
@@ -83,6 +91,16 @@ namespace Google.Storage.V1.IntegrationTests
         /// </summary>
         public string SmallThenLargeObject { get; } = "small_then_large.txt";
 
+        /// <summary>
+        /// Gets an HTTP client that can be used to make requests during a test.
+        /// </summary>
+        public HttpClient HttpClient { get; } = new HttpClient();
+
+        /// <summary>
+        /// Gets the path to a service account credentials JSON file.
+        /// </summary>
+        public string CredentialsFilePath { get; } = GetCredentialsFilePath();
+
         public IEnumerable<string> ReadBucketObjects => new[] { SmallObject, LargeObject, SmallThenLargeObject }.Concat(s_objectsInFolders);
 
         /// <summary>
@@ -101,6 +119,10 @@ namespace Google.Storage.V1.IntegrationTests
 
         private readonly List<string> _bucketsToDelete = new List<string>();
         private readonly List<string> _localFilesToDelete = new List<string>();
+
+        private readonly HashSet<string> _classesWithDelayTests = new HashSet<string>();
+        private readonly Dictionary<string, DelayTestInfo> _delayTests = new Dictionary<string, DelayTestInfo>();
+        private bool _delayTestsNeedToStart;
 
         public StorageFixture()
         {
@@ -142,6 +164,116 @@ namespace Google.Storage.V1.IntegrationTests
         {
             _bucketsToDelete.Add(bucket);
         }
+        
+        internal async Task FinishDelayTest(string testName)
+        {
+            if (_delayTestsNeedToStart)
+            {
+                _delayTestsNeedToStart = false;
+                foreach (var testInfo in _delayTests.Values)
+                {
+                    await testInfo.StartTest();
+                }
+            }
+
+            DelayTestInfo currentTestInfo;
+            Assert.True(_delayTests.TryGetValue(testName, out currentTestInfo), $"{testName} was not registered or was finalized twice.");
+
+            currentTestInfo.OnTestFinalizing();
+            var now = DateTimeOffset.UtcNow;
+            if (now < currentTestInfo.DelayExpiration.Value)
+            {
+                await Task.Delay(currentTestInfo.DelayExpiration.Value - now);
+            }
+
+            await currentTestInfo.AfterDelayAction();
+            _delayTests.Remove(testName);
+        }
+
+        internal void RegisterDelayTests(object testClass)
+        {
+            var type = testClass.GetType();
+            if (_classesWithDelayTests.Add(type.FullName))
+            {
+                var testMethodInits = from method in type.GetTypeInfo().DeclaredMethods
+                                      where method.IsPrivate && method.Name.EndsWith("_InitDelayTest")
+                                      select method;
+                foreach (var testMethodInit in testMethodInits)
+                {
+                    testMethodInit.Invoke(testClass, null);
+                }
+            }
+        }
+        
+        internal void RegisterDelayTest(string testName, TimeSpan duration, Func<TimeSpan, Task> beforeDelay, Func<Task> afterDelay)
+        {
+            Assert.False(_delayTests.ContainsKey(testName), $"{testName} was registered twice");
+            _delayTests.Add(testName, new DelayTestInfo(duration, beforeDelay, afterDelay));
+            _delayTestsNeedToStart = true;
+        }
+
+        private static string GetCredentialsFilePath()
+        {
+            // TODO: This is taken and changed slightly from DefaultCredentialProvider. Expose the pieces necessary so we don't need to duplicate logic.
+            var credentialFilePath = Environment.GetEnvironmentVariable(CredentialEnvironmentVariable) ?? GetWellKnownCredentialFilePath();
+            if (!string.IsNullOrEmpty(credentialFilePath) && File.Exists(credentialFilePath))
+            {
+                try
+                {
+                    using (var credentialStream = File.OpenRead(credentialFilePath))
+                    {
+                        var credentialParameters = NewtonsoftJsonSerializer.Instance.Deserialize<JsonCredentialParameters>(credentialStream);
+                        if (credentialParameters.Type == JsonCredentialParameters.ServiceAccountCredentialType)
+                        {
+                            return credentialFilePath;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new InvalidOperationException("Error deserializing JSON credential data.", e);
+                }
+            }
+
+            throw new InvalidOperationException($"Set the {CredentialEnvironmentVariable} environment variable to a service account credentials JSON file");
+        }
+
+        // TODO: Everything below is taking from DefaultCredentialProvider. Try to expose it somehow to we don't need to duplicate logic.
+
+        /// <summary>
+        /// Environment variable override which stores the default application credentials file path.
+        /// </summary>
+        private const string CredentialEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
+
+        /// <summary>Well known file which stores the default application credentials.</summary>
+        private const string WellKnownCredentialsFile = "application_default_credentials.json";
+
+        /// <summary>Environment variable which contains the Application Data settings.</summary>
+        private const string AppdataEnvironmentVariable = "APPDATA";
+
+        /// <summary>Environment variable which contains the location of home directory on UNIX systems.</summary>
+        private const string HomeEnvironmentVariable = "HOME";
+
+        /// <summary>GCloud configuration directory in Windows, relative to %APPDATA%.</summary>
+        private const string CloudSDKConfigDirectoryWindows = "gcloud";
+
+        /// <summary>GCloud configuration directory on Linux/Mac, relative to $HOME.</summary>
+        private static readonly string CloudSDKConfigDirectoryUnix = Path.Combine(".config", "gcloud");
+
+        private static string GetWellKnownCredentialFilePath()
+        {
+            var appData = Environment.GetEnvironmentVariable(AppdataEnvironmentVariable);
+            if (appData != null)
+            {
+                return Path.Combine(appData, CloudSDKConfigDirectoryWindows, WellKnownCredentialsFile);
+            }
+            var unixHome = Environment.GetEnvironmentVariable(HomeEnvironmentVariable);
+            if (unixHome != null)
+            {
+                return Path.Combine(unixHome, CloudSDKConfigDirectoryUnix, WellKnownCredentialsFile);
+            }
+            return Path.Combine(CloudSDKConfigDirectoryWindows, WellKnownCredentialsFile);
+        }
 
         public void Dispose()
         {
@@ -154,6 +286,48 @@ namespace Google.Storage.V1.IntegrationTests
                     client.DeleteObject(obj, new DeleteObjectOptions { Generation = obj.Generation });
                 }
                 client.DeleteBucket(bucket);
+            }
+        }
+
+        private class DelayTestInfo
+        {
+            private ExceptionDispatchInfo _exceptionDispatchInfo;
+
+            public DateTimeOffset? DelayExpiration { get; private set; }
+            public Func<Task> AfterDelayAction { get; }
+            public Func<TimeSpan, Task> BeforeDelayTask { get; }
+            public TimeSpan Duration { get; }
+
+            public DelayTestInfo(TimeSpan duration, Func<TimeSpan, Task> beforeDelayTask, Func<Task> afterDelayAction)
+            {
+                AfterDelayAction = afterDelayAction;
+                BeforeDelayTask = beforeDelayTask;
+                Duration = duration;
+            }
+
+            public async Task StartTest()
+            {
+                if (DelayExpiration == null)
+                {
+                    try
+                    {
+                        await BeforeDelayTask(Duration);
+                    }
+                    catch (Exception ex)
+                    {
+                        _exceptionDispatchInfo = ExceptionDispatchInfo.Capture(ex);
+                    }
+                    DelayExpiration = DateTimeOffset.UtcNow + Duration;
+                }
+            }
+
+            public void OnTestFinalizing()
+            {
+                Debug.Assert(DelayExpiration != null, "A delay test is finalizing before being started.");
+                if (_exceptionDispatchInfo != null)
+                {
+                    _exceptionDispatchInfo.Throw();
+                }
             }
         }
     }
