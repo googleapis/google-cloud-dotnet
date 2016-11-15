@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -25,7 +26,6 @@ using Xunit;
 
 namespace Google.Storage.V1.IntegrationTests
 {
-    using System.Runtime.CompilerServices;
     using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
@@ -42,7 +42,7 @@ namespace Google.Storage.V1.IntegrationTests
 
         private static string GetTestName([CallerMemberName] string methodName = null)
         {
-            return nameof(UrlSignerTest) + methodName;
+            return $"{nameof(UrlSignerTest)}.{methodName}";
         }
 
         [Fact]
@@ -54,7 +54,7 @@ namespace Google.Storage.V1.IntegrationTests
             var name = GenerateName();
             string url = null;
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(DeleteTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     url = _fixture.UrlSigner.Sign(bucket, name, duration, HttpMethod.Delete);
@@ -91,7 +91,7 @@ namespace Google.Storage.V1.IntegrationTests
         {
             string url = null;
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(GetTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     url = _fixture.UrlSigner.Sign(_fixture.ReadBucket, _fixture.SmallObject, duration);
@@ -117,7 +117,7 @@ namespace Google.Storage.V1.IntegrationTests
             var bucket = _fixture.ReadBucket;
             string url = null;
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(GetBucketTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     url = _fixture.UrlSigner.Sign(bucket, null, duration);
@@ -170,7 +170,7 @@ namespace Google.Storage.V1.IntegrationTests
                 }
             };
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(GetWithCustomerSuppliedEncryptionKeysTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     // TODO: Replace this with calls to the StorageClient if/when it supports customer-supplied encryption keys.
@@ -247,7 +247,7 @@ namespace Google.Storage.V1.IntegrationTests
                 }
             };
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(GetWithCustomHeadersTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     var request = createRequest();
@@ -281,7 +281,7 @@ namespace Google.Storage.V1.IntegrationTests
             Func<HttpRequestMessage> createRequest = null;
             string url = null;
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(HeadTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     url = _fixture.UrlSigner.Sign(
@@ -311,7 +311,7 @@ namespace Google.Storage.V1.IntegrationTests
             Func<HttpRequestMessage> createRequest = null;
             string url = null;
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(HeadWithGetMethodSignedURLTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     url = _fixture.UrlSigner.Sign(
@@ -343,7 +343,7 @@ namespace Google.Storage.V1.IntegrationTests
             Func<Task> expireAction3 = null;
             Func<Task> expireAction4 = null;
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(PutTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     expireAction1 = await PutTestHelper(duration, useContentMD5: false, useContentType: false);
@@ -447,7 +447,7 @@ namespace Google.Storage.V1.IntegrationTests
                 }
             };
 
-            _fixture.RegisterDelayTest(GetTestName(nameof(PutWithCustomHeadersTest)), _duration,
+            _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
                     var request = createRequest();

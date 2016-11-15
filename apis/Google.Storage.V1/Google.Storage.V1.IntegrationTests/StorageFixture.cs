@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Json;
 using Google.Apis.Storage.v1.Data;
@@ -22,6 +23,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +40,9 @@ namespace Google.Storage.V1.IntegrationTests
     public sealed class StorageFixture : IDisposable, ICollectionFixture<StorageFixture>
     {
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
+        public const string DelayTestSuffix = "_InitDelayTest";
+
+        private static TypeInfo _delayTestsTypeBeingRegistered;
 
         /// <summary>
         /// Name of a bucket which already exists, but has no canned data. Mostly used
@@ -167,6 +172,9 @@ namespace Google.Storage.V1.IntegrationTests
         
         internal async Task FinishDelayTest(string testName)
         {
+            DelayTestInfo currentTestInfo;
+            GaxPreconditions.CheckState(_delayTests.TryGetValue(testName, out currentTestInfo), $"{testName} was not registered or was finalized twice.");
+
             if (_delayTestsNeedToStart)
             {
                 _delayTestsNeedToStart = false;
@@ -175,9 +183,6 @@ namespace Google.Storage.V1.IntegrationTests
                     await testInfo.StartTest();
                 }
             }
-
-            DelayTestInfo currentTestInfo;
-            Assert.True(_delayTests.TryGetValue(testName, out currentTestInfo), $"{testName} was not registered or was finalized twice.");
 
             currentTestInfo.OnTestFinalizing();
             var now = DateTimeOffset.UtcNow;
@@ -192,22 +197,44 @@ namespace Google.Storage.V1.IntegrationTests
 
         internal void RegisterDelayTests(object testClass)
         {
-            var type = testClass.GetType();
-            if (_classesWithDelayTests.Add(type.FullName))
+            try
             {
-                var testMethodInits = from method in type.GetTypeInfo().DeclaredMethods
-                                      where method.IsPrivate && method.Name.EndsWith("_InitDelayTest")
-                                      select method;
-                foreach (var testMethodInit in testMethodInits)
+                GaxPreconditions.CheckState(_delayTestsTypeBeingRegistered == null, "We should not be recursively registering delay tests.");
+                _delayTestsTypeBeingRegistered = testClass.GetType().GetTypeInfo();
+                if (_classesWithDelayTests.Add(_delayTestsTypeBeingRegistered.FullName))
                 {
-                    testMethodInit.Invoke(testClass, null);
+                    var testMethodInits = from method in _delayTestsTypeBeingRegistered.DeclaredMethods
+                                          where method.IsPrivate && method.Name.EndsWith(DelayTestSuffix)
+                                          select method;
+                    foreach (var testMethodInit in testMethodInits)
+                    {
+                        testMethodInit.Invoke(testClass, null);
+                    }
                 }
+            }
+            finally
+            {
+                _delayTestsTypeBeingRegistered = null;
             }
         }
         
-        internal void RegisterDelayTest(string testName, TimeSpan duration, Func<TimeSpan, Task> beforeDelay, Func<Task> afterDelay)
+        internal void RegisterDelayTest(TimeSpan duration, Func<TimeSpan, Task> beforeDelay, Func<Task> afterDelay, [CallerMemberName] string initMethodName = null)
         {
-            Assert.False(_delayTests.ContainsKey(testName), $"{testName} was registered twice");
+            GaxPreconditions.CheckArgument(
+                initMethodName.EndsWith(StorageFixture.DelayTestSuffix),
+                initMethodName,
+                $"The delay test initialization method name must end with {StorageFixture.DelayTestSuffix}");
+
+            var methodName = initMethodName.Substring(0, initMethodName.Length - StorageFixture.DelayTestSuffix.Length);
+            var testName = $"{_delayTestsTypeBeingRegistered.Name}.{methodName}";
+            GaxPreconditions.CheckState(!_delayTests.ContainsKey(testName), $"{testName} was registered twice");
+            GaxPreconditions.CheckState(
+                _delayTestsTypeBeingRegistered.GetDeclaredMethod(methodName) != null,
+                $"There is no test named {testName} representing the delay test.");
+            GaxPreconditions.CheckState(
+                _delayTestsTypeBeingRegistered.GetDeclaredMethod(methodName).GetCustomAttribute(typeof(FactAttribute)) != null,
+                $"{testName} must have the {nameof(FactAttribute)} attribute.");
+
             _delayTests.Add(testName, new DelayTestInfo(duration, beforeDelay, afterDelay));
             _delayTestsNeedToStart = true;
         }
