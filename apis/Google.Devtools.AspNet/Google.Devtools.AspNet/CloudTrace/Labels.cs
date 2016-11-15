@@ -78,7 +78,6 @@ namespace Google.Devtools.AspNet
             };
         }
 
-
         /// <summary>
         /// Creates a a map of labels to represent a <see cref="StackTrace"/> for a span.
         /// </summary>

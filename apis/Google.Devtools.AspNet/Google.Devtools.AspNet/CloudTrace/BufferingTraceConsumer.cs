@@ -48,6 +48,7 @@ namespace Google.Devtools.AspNet
 
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _bufferSize = bufferSize;
+
             _traces = new Traces();
             _size = 0;
         }
