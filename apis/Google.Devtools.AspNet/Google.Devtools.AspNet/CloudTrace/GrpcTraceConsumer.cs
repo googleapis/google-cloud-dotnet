@@ -21,7 +21,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A <see cref="ITraceConsumer"/> that will send recieved traces to the Stackdriver Trace API.
     /// </summary>
-    public sealed class GrpcTraceConsumer : ITraceConsumer
+    internal sealed class GrpcTraceConsumer : ITraceConsumer
     {
         private readonly Task<TraceServiceClient> _client;
 

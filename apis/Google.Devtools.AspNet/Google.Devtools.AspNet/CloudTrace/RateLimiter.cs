@@ -21,7 +21,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A simple rate limiter that will allow tracing based on a given QPS.
     /// </summary>
-    public sealed class RateLimiter
+    internal sealed class RateLimiter
     {
         // A mutex to protect the rate limiter instance.
         private static object _instanceMutex = new object();

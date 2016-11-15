@@ -24,7 +24,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A simple implemnetation of the <see cref="IManagedTracer"/> that handles spans in a stack.
     /// </summary>
-    public sealed class SimpleManagedTracer : IManagedTracer
+    internal sealed class SimpleManagedTracer : IManagedTracer
     {
         // The trace consumer to push the trace to when completed.
         private readonly ITraceConsumer _consumer;
