@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using System;
-using System.Diagnostics;
 using System.Threading;
 
 namespace Google.Devtools.AspNet

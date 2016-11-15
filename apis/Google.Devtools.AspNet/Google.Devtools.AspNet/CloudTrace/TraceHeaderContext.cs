@@ -68,6 +68,7 @@ namespace Google.Devtools.AspNet
         {
             GaxPreconditions.CheckNotNull(wrapper, nameof(wrapper));
             string header = wrapper.Headers.Get(TraceHeader);
+
             if (header == null)
             {
                 return InvalidTraceHeaderContext;
@@ -82,19 +83,11 @@ namespace Google.Devtools.AspNet
             string traceId = match.Groups[1].Value;
             ulong spanId;
             if (!ulong.TryParse(match.Groups[2].Value, out spanId))
-<<<<<<< 2f44b913decc63bd8cbad014232d0508d223950d
-
             {
                 return InvalidTraceHeaderContext;
             }
             bool hasMask = match.Groups.Count > 4 && match.Groups[4].Success;
             int traceMask = hasMask ? Convert.ToInt32(match.Groups[4].Value) : 0;
-=======
-            {
-                return InvalidTraceHeaderContext;
-            }
-            int traceMask = match.Groups.Count > 4 ? Convert.ToInt32(match.Groups[4].Value) : 0;
->>>>>>> Updates from PR #541
             bool shouldTrace = traceMask > 0;
             return new TraceHeaderContext(traceId, spanId, shouldTrace);
         }
